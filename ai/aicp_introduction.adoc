@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_introduction.html 
+keywords: tr-4798, tr4798, 4798, NetApp AI, Machine, Deep learning, introduction 
+summary: 이 보고서는 데이터 네임스페이스를 빠르게 클론 복제하는 방법을 보여 줍니다. 추적 및 버전 관리를 위해 거의 즉각적인 데이터 생성 및 모델 기준선을 통합하는 AI 교육 워크플로우를 정의하고 구현하는 방법을 보여줍니다. 또한, 사이트 및 지역 전반에서 데이터를 원활하게 복제하고 대규모 데이터 세트에 액세스할 수 있는 Jupyter Notebook 작업 공간을 신속하게 프로비저닝하는 방법도 보여 줍니다. 
+---
+= TR-4798: NetApp AI Control Plane
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Mike Oglesby, NetApp에서 직접 지원합니다
+
+모든 규모와 업종에 상관없이 모든 기업과 조직은 실제 문제를 해결하고 혁신적인 제품과 서비스를 제공하며 경쟁이 갈수록 치열해지는 시장에서 경쟁 우위를 확보하기 위해 인공 지능(AI), 머신 러닝(ML), 딥 러닝(DL)으로 눈을 돌리고 있습니다. AI, ML 및 DL의 사용이 증가함에 따라 워크로드 확장성 및 데이터 가용성을 비롯한 많은 과제에 직면하게 됩니다. 이 문서에서는 NetApp 데이터 관리 기능을 널리 사용되는 오픈 소스 툴 및 프레임워크와 결합하여 제공하는 솔루션인 NetApp AI Control Plane을 사용하여 이러한 과제를 해결하는 방법을 보여줍니다.
+
+이 보고서는 데이터 네임스페이스를 빠르게 클론 복제하는 방법을 보여 줍니다. 또한, 사이트 및 지역 전반에서 데이터를 원활하게 복제하여 결합형 통합 AI/ML/DL 데이터 파이프라인을 생성하는 방법을 보여줍니다. 또한 추적 가능성 및 버전 관리를 위한 데이터 및 모델 기준선의 거의 즉각적인 생성을 통합하는 AI, ML 및 DL 교육 워크플로우를 정의하고 구현하는 방법을 안내합니다. 이 솔루션을 사용하면 모든 모델 훈련을 다시 모델을 훈련 및/또는 검증하는 데 사용된 정확한 데이터 세트로 추적할 수 있습니다. 마지막으로, 이 문서에서는 방대한 데이터 세트에 액세스하여 Jupyter Notebook 작업 공간을 신속하게 프로비저닝하는 방법을 설명합니다.
+
+참고: 동일한 데이터 세트에 대한 공유 액세스가 필요한 다수의 GPU 서버가 포함된 대규모 HPC 스타일 분산 교육이거나 병렬 파일 시스템이 필요하거나 선호한다면, 확인해 보십시오 link:https://www.netapp.com/pdf.html?item=/media/31317-tr-4890.pdf["TR-4890"^]. 이 기술 보고서에서는 을 포함하는 방법을 설명합니다  NetApp AI Control Plane의 일부로, 이 솔루션은 소수의 NVIDIA DGX A100 시스템에서 완전한 140개 노드 SuperPOD까지 확장하도록 설계되었습니다.
+
+NetApp AI Control Plane은 데이터 과학자 및 데이터 엔지니어를 대상으로 하므로 최소한의 NetApp 또는 NetApp ONTAP ® 전문 지식이 필요합니다. 이 솔루션에서는 단순하고 친숙한 툴과 인터페이스를 사용하여 데이터 관리 기능을 실행할 수 있습니다. 귀사 환경에 NetApp 스토리지가 이미 구축되어 있다면 지금 바로 NetApp AI Control Plane을 시험 구동할 수 있습니다. 솔루션을 시험하고 싶지만 NetApp 스토리지가 없는 경우, 를 방문하십시오 http://cloud.netapp.com/["cloud.netapp.com"^]클라우드 기반 NetApp 스토리지 솔루션을 사용하여 몇 분 이내에 시스템을 구축하고 실행할 수 있습니다. 다음 그림은 솔루션을 시각적으로 보여 줍니다.
+
+image:aicp_image1.png["오류: 그래픽 이미지가 없습니다"]
+
+link:aicp_concepts_and_components.html["다음: 개념 및 구성 요소."]

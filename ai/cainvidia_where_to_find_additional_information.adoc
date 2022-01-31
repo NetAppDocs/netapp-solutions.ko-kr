@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: ai/cainvidia_where_to_find_additional_information.html 
+keywords: Additional Information, NVIDIA 
+summary:  
+---
+= 추가 정보를 찾을 수 있는 위치
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 리소스를 참조하십시오.
+
+* NVIDIA DGX Station, V100 GPU, GPU Cloud
++
+** NVIDIA DGX 스테이션https://www.nvidia.com/en-us/data-center/dgx-station/["https://www.nvidia.com/en-us/data-center/dgx-station/"^]
+** NVIDIA V100 Tensor 코어 GPUhttps://www.nvidia.com/en-us/data-center/tesla-v100/["https://www.nvidia.com/en-us/data-center/tesla-v100/"^]
+** NGChttps://www.nvidia.com/en-us/gpu-cloud/["https://www.nvidia.com/en-us/gpu-cloud/"^]
+
+
+* NVIDIA Jarvis 다중 모드 프레임워크
++
+** NVIDIA Jarvishttps://developer.nvidia.com/nvidia-jarvis["https://developer.nvidia.com/nvidia-jarvis"^]
+** NVIDIA Jarvis 조기 액세스https://developer.nvidia.com/nvidia-jarvis-early-access["https://developer.nvidia.com/nvidia-jarvis-early-access"^]
+
+
+* NVIDIA 니모
++
+** NVIDIA 니모https://developer.nvidia.com/nvidia-nemo["https://developer.nvidia.com/nvidia-nemo"^]
+** 개발자 가이드 를 참조하십시오https://nvidia.github.io/NeMo/["https://nvidia.github.io/NeMo/"^]
+
+
+* NetApp AFF 시스템
++
+** NetApp AFF A 시리즈 데이터시트https://www.netapp.com/us/media/ds-3582.pdf["https://www.netapp.com/us/media/ds-3582.pdf"^]
+** All Flash FAS에서 NetApp 플래시의 이점https://www.netapp.com/us/media/ds-3733.pdf["https://www.netapp.com/us/media/ds-3733.pdf"^]
+** ONTAP 9 정보 라이브러리http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
+** NetApp ONTAP FlexGroup 볼륨 기술 보고서https://www.netapp.com/us/media/tr-4557.pdf["https://www.netapp.com/us/media/tr-4557.pdf"^]
+
+
+* NetApp ONTAP AI를 참조하십시오
++
+** DGX-1 및 Cisco 네트워킹 기반 ONTAP AI 설계 가이드https://www.netapp.com/us/media/nva-1121-design.pdf["https://www.netapp.com/us/media/nva-1121-design.pdf"^]
+** DGX-1 및 Cisco 네트워킹 지원 ONTAP AI 배포 가이드https://www.netapp.com/us/media/nva-1121-deploy.pdf["https://www.netapp.com/us/media/nva-1121-deploy.pdf"^]
+** DGX-1 및 Mellanox 네트워킹 설계 가이드를 지원하는 ONTAP AIhttp://www.netapp.com/us/media/nva-1138-design.pdf["http://www.netapp.com/us/media/nva-1138-design.pdf"^]
+** DGX-2 기반 ONTAP AI 설계 가이드https://www.netapp.com/us/media/nva-1135-design.pdf["https://www.netapp.com/us/media/nva-1135-design.pdf"^]
+
+
+

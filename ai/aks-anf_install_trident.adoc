@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_install_trident.html 
+keywords:  
+summary:  
+---
+= Trident를 설치합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_peer_aks_vnet_and_azure_netapp_files_vnet.html["이전: 피어 AKS VNET 및 Azure NetApp Files VNET"]
+
+Hrom을 사용하여 Trident를 설치하려면 다음 단계를 완료하십시오.
+
+. Helm을 설치합니다(설치 지침은 를 참조하십시오 https://helm.sh/docs/intro/install/["출처"^])를 클릭합니다.
+. Trident 20.01.1 설치 프로그램을 다운로드하고 압축을 풉니다.
++
+....
+$wget
+$tar -xf trident-installer-21.01.1.tar.gz
+....
+. 디렉터리를 '트리덴트 - 설치자'로 변경합니다.
++
+....
+$cd trident-installer
+....
+. 시스템 '$path'의 디렉토리에 tridentctl을 복사합니다.
++
+....
+$sudo cp ./tridentctl /usr/local/bin
+....
+. Kubernetes(K8s) 클러스터에 Trident를 설치하고 H제어( https://scaleoutsean.github.io/2021/02/02/trident-21.01-install-with-helm-on-netapp-hci.html["출처"^]):
++
+.. 디렉터리를 'helm' 디렉토리로 변경합니다.
++
+....
+$cd helm
+....
+.. Trident를 설치합니다.
++
+....
+$helm install trident trident-operator-21.01.1.tgz --namespace trident --create-namespace
+....
+.. Trident Pod의 상태를 확인합니다.
++
+....
+$kubectl -n trident get pods
+....
++
+모든 Pod가 가동되어 실행 중이면 Trident가 설치되어 앞으로 이동할 수 있습니다.
+
+
+
+. AKS에 대한 Azure NetApp Files 백엔드 및 스토리지 클래스를 설정합니다.
++
+.. Azure 서비스 원칙을 만듭니다.
++
+서비스 보안 주체는 Trident가 Azure와 통신하여 Azure NetApp Files 리소스를 조작하는 방법입니다.
+
++
+....
+$az ad sp create-for-rbac --name ""
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+....
+{
+"appId": "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", 
+"displayName": "netapptrident", 
+"name": "", 
+"password": "xxxxxxxxxxxxxxx.xxxxxxxxxxxxxx", 
+"tenant": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"
+} 
+....
+
+
+. Trident 백엔드 json 파일(예: "anf-backend.json")을 생성합니다.
+. 원하는 텍스트 편집기를 사용하여 'anf-backend.json' 파일 안에 다음 필드를 입력합니다.
++
+....
+{
+    "version": 1,
+    "storageDriverName": "azure-netapp-files",
+    "subscriptionID": "fakec765-4774-fake-ae98-a721add4fake",
+    "tenantID": "fakef836-edc1-fake-bff9-b2d865eefake",
+    "clientID": "fake0f63-bf8e-fake-8076-8de91e57fake",
+    "clientSecret": "SECRET",
+    "location": "westeurope",
+    "serviceLevel": "Standard",
+    "virtualNetwork": "anf-vnet",
+    "subnet": "default",
+    "nfsMountOptions": "vers=3,proto=tcp",
+    "limitVolumeSize": "500Gi",
+    "defaults": {
+    "exportRule": "0.0.0.0/0",
+    "size": "200Gi"
+}
+....
+. 다음 필드로 대체합니다.
++
+** '스크립트 ID'입니다. Azure 구독 ID입니다.
+** 텐antID. 이전 단계에서 'az ad sp'의 출력에서 Azure 테넌트 ID입니다.
+** '클라이언트 ID'. 이전 단계에서 'az ad sp'의 출력에서 귀하의 appID.
+** 'clientSecret' 이전 단계에서 사용한 'az ad sp' 출력의 암호입니다.
+
+
+. 구성 파일로 anf-backend.json을 사용하여 trident 네임스페이스에 Azure NetApp Files 백엔드를 생성하도록 Trident에 지시합니다.
++
+....
+$tridentctl create backend -f anf-backend.json -n trident
+....
++
+image:aks-anf_image8.png["오류: 그래픽 이미지가 없습니다"]
+
+. 스토리지 클래스를 생성합니다. Kubernetes 사용자는 이름으로 스토리지 클래스를 지정하는 PVC를 사용하여 볼륨을 프로비저닝합니다. K8s에게 이전 단계에서 만든 Trident 백엔드를 참조하는 스토리지 클래스 "azurenetappfiles"를 생성하도록 지시합니다.
+. 스토리지 클래스 및 복사본을 위한 YAML('anf-storage-class.yAML') 파일을 생성합니다.
++
+....
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+name: azurenetappfiles
+provisioner: netapp.io/trident
+parameters:
+backendType: "azure-netapp-files"
+$kubectl create -f anf-storage-class.yaml
+....
+. 스토리지 클래스가 생성되었는지 확인합니다.
++
+....
+kubectl get sc azurenetappfiles
+....
+
+
+image:aks-anf_image9.png["오류: 그래픽 이미지가 없습니다"]
+
+link:aks-anf_set_up_dask_with_rapids_deployment_on_aks_using_helm.html["다음: 헬름으로 AKS에서 RAPIDS를 사용하여 Dask를 설정합니다."]

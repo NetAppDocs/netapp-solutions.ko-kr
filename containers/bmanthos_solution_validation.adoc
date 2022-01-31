@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: containers/bmanthos_solution_validation.html 
+keywords: validation, google cloud, nginx 
+summary: 이 솔루션의 현재 배포는 Google Cloud 팀이 제공하는 도구를 사용하여 두 가지 엄격한 검증 프로세스를 거쳤습니다. 
+---
+= 솔루션 검증
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 솔루션의 현재 배포는 Google Cloud 팀이 제공하는 도구를 사용하여 두 가지 엄격한 검증 프로세스를 거쳤습니다. 이러한 검증에는 다음 테스트의 하위 집합이 포함됩니다.
+
+* Anthos 지원 플랫폼에 대한 파트너 검증:
++
+** 베어 메탈 플랫폼 서비스의 모든 Anthos가 설치 및 실행 중인지 확인합니다.
+** 베어 메탈 클러스터의 물리적 Anthos를 4개의 작업자 노드에서 3개로 확장하고 4개로 다시 확장합니다.
+** 사용자 지정 네임스페이스를 만들고 삭제합니다.
+** Nginx 웹 서버 배포를 생성하여 복제 수를 늘려 배포를 확장합니다.
+** Nginx 응용 프로그램에 대한 침투를 생성하고 index.html을 말하여 연결을 확인합니다.
+** 모든 테스트 제품군 작업을 성공적으로 정리하고 클러스터를 사전 테스트 상태로 되돌립니다.
+
+
+* Anthos 지원 스토리지에 대한 파트너 검증:
++
+** 영구 볼륨 클레임을 사용하여 구축을 생성합니다.
+** NetApp Trident를 사용하여 NetApp ONTAP에서 요청된 영구 볼륨을 프로비저닝하고 연결합니다.
+** 영구 볼륨의 분리 및 다시 연결 기능을 확인합니다.
+** 노드의 다른 Pod에서 영구 볼륨의 멀티 연결 읽기 전용 액세스를 검증합니다.
+** 오프라인 볼륨 크기 조정 작업을 확인합니다.
+** 영구 볼륨이 클러스터 확장 작업을 수행하는지 확인합니다.
+
+
+
+
+link:bmanthos_conclusion.html["다음: 결론."]

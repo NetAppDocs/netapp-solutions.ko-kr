@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_load_criteo_click_logs_day_15_in_pandas_and_train_a_scikit-learn_random_forest_model.html 
+keywords: criteo, click log, pandas, scikit-learn, random, forest, model, dataframes, 
+summary: 이 페이지에서는 Pandas 및 Dask DataFrames를 사용하여 Criteo Terabyte 데이터 세트에서 Click Logs 데이터를 로드하는 방법을 설명합니다. 이 사용 사례는 광고 교환을 위한 디지털 광고에서 광고 클릭 여부를 예측하여 사용자의 프로필을 작성하는 데 사용됩니다. 또한 교환에서 자동화된 파이프라인에서 정확한 모델을 사용하지 않는 경우도 해당됩니다. 
+---
+= Pandas에서 Logs day 15를 로드하여 좌골키트을 훈련합니다. 무작위 포리스트 모델을 학습하십시오
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_libraries_for_data_processing_and_model_training.html["이전: 데이터 처리 및 모델 훈련을 위한 라이브러리."]
+
+이 섹션에서는 Pandas 및 Dask DataFrames를 사용하여 Criteo Terabyte 데이터 세트에서 Click Logs 데이터를 로드하는 방법을 설명합니다. 이 사용 사례는 광고 교환을 위한 디지털 광고에서 광고 클릭 여부를 예측하여 사용자의 프로필을 작성하는 데 사용됩니다. 또한 교환에서 자동화된 파이프라인에서 정확한 모델을 사용하지 않는 경우도 해당됩니다.
+
+Click Logs 데이터 세트에서 15일차 데이터를 로드하여 총 45GB를 기록했습니다. Jupyter Notebook CTR-PandasRF-Collated에서 다음 셀을 실행하면 처음 5000만 개의 행이 포함된 Pandas DataFrame을 생성하고 좌골키트학습 무작위 포리스트 모델을 생성합니다.
+
+....
+%%time
+import pandas as pd
+import numpy as np
+header = ['col'+str(i) for i in range (1,41)] #note that according to criteo, the first column in the dataset is Click Through (CT). Consist of 40 columns
+first_row_taken = 50_000_000 # use this in pd.read_csv() if your compute resource is limited.
+# total number of rows in day15 is 20B
+# take 50M rows
+"""
+Read data & display the following metrics:
+1. Total number of rows per day
+2. df loading time in the cluster
+3. Train a random forest model
+"""
+df = pd.read_csv(file, nrows=first_row_taken, delimiter='\t', names=header)
+# take numerical columns
+df_sliced = df.iloc[:, 0:14]
+# split data into training and Y
+Y = df_sliced.pop('col1') # first column is binary (click or not)
+# change df_sliced data types & fillna
+df_sliced = df_sliced.astype(np.float32).fillna(0)
+from sklearn.ensemble import RandomForestClassifier
+# Random Forest building parameters
+# n_streams = 8 # optimization
+max_depth = 10
+n_bins = 16
+n_trees = 10
+rf_model = RandomForestClassifier(max_depth=max_depth, n_estimators=n_trees)
+rf_model.fit(df_sliced, Y)
+....
+훈련된 무작위 포리스트 모델을 사용하여 예측을 수행하려면 이 전자 필기장에서 다음 단락을 실행하십시오. 중복을 피하기 위해 15일째부터 마지막 100만 행을 테스트 세트로 테스트했습니다. 또한 이 셀은 예측의 정확도를 계산하고, 사용자가 광고를 클릭하는지 여부를 모델이 정확하게 예측한 발생 비율로 정의됩니다. 이 노트북에서 잘 모르는 구성 요소를 검토하려면 을 참조하십시오 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html["공식 좌골 키트 - 학습 문서"^].
+
+....
+# testing data, last 1M rows in day15
+test_file = '/data/day_15_test'
+with open(test_file) as g:
+    print(g.readline())
+
+# dataFrame processing for test data
+test_df = pd.read_csv(test_file, delimiter='\t', names=header)
+test_df_sliced = test_df.iloc[:, 0:14]
+test_Y = test_df_sliced.pop('col1')
+test_df_sliced = test_df_sliced.astype(np.float32).fillna(0)
+# prediction & calculating error
+pred_df = rf_model.predict(test_df_sliced)
+from sklearn import metrics
+# Model Accuracy
+print("Accuracy:",metrics.accuracy_score(test_Y, pred_df))
+....
+link:aks-anf_load_day_15_in_dask_and_train_a_dask_cuml_random_forest_model.html["다음: Dask에서 Day 15를 로드하여 Dask cuML 무작위 포리스트 모델을 교육합니다."]

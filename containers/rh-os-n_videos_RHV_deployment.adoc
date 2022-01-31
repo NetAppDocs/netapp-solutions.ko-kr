@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_videos_RHV_deployment.html 
+keywords: video, demonstration, RHV, Deployment 
+summary:  
+---
+= RHV 기반 Red Hat OpenShift Deployment: NetApp 기반 Red Hat OpenShift
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+video::OCPonRHVDemo.mp4[]
+link:rh-os-n_additional_information.html["다음: 추가 정보: NetApp의 Red Hat OpenShift"]

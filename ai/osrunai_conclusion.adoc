@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_conclusion.html 
+keywords:  
+summary:  
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 및 Run: AI는 이 기술 보고서에서 AI 워크로드 오케스트레이션을 단순화하기 위한 Run:AI 플랫폼과 함께 NetApp ONTAP AI 솔루션의 고유한 기능을 시연했습니다. 이전 단계에서는 딥 러닝을 위한 데이터 파이프라인 및 워크로드 오케스트레이션의 프로세스를 간소화하는 참조 아키텍처를 제공합니다. 이러한 솔루션을 구현하려는 고객은 NetApp 및 Run:AI에 자세한 내용을 문의하도록 권장합니다.
+
+link:osrunai_testing_details_for_section_4.8.html["다음: 섹션 4.8의 테스트 세부 정보"]

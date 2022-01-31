@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_where_to_find_additional_information.html 
+keywords:  
+summary:  
+---
+= 추가 정보를 찾을 수 있는 위치
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 리소스를 참조하십시오.
+
+* NVIDIA DGX 시스템
++
+** NVIDIA DGX-1 시스템https://www.nvidia.com/en-us/data-center/dgx-1/[]
+** NVIDIA V100 Tensor 코어 GPUhttps://www.nvidia.com/en-us/data-center/tesla-v100/[]
+** NGChttps://www.nvidia.com/en-us/gpu-cloud/[]
+
+
+* 실행: AI 컨테이너 오케스트레이션 솔루션
++
+** 실행: AI 제품 소개https://docs.run.ai/home/components/[]
+** AI 설치 설명서를 실행하십시오https://docs.run.ai/Administrator/Cluster-Setup/Installing-Run-AI-on-an-on-premise-Kubernetes-Cluster/[]
+
+** Run:AI CLI에서 작업 제출https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Launch-Unattended-Training-Workloads-/[]
+
+** 실행 시 GPU 분할 할당: AI CLIhttps://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Using-GPU-Fractions/[]
+
+
+* NetApp AI Control Plane
++
+** 기술 보고서https://www.netapp.com/us/media/tr-4798.pdf[]
+** 간단한 데모https://youtu.be/gfr_sO27Rvo[]
+** GitHub 리포지토리https://github.com/NetApp/kubeflow_jupyter_pipeline[]
+
+
+* NetApp AFF 시스템
++
+** NetApp AFF A 시리즈 데이터시트https://www.netapp.com/us/media/ds-3582.pdf[]
+** All Flash FAS에서 NetApp 플래시의 이점https://www.netapp.com/us/media/ds-3733.pdf[]
+** ONTAP 9 정보 라이브러리http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286[]
+** NetApp ONTAP FlexGroup 볼륨 기술 보고서https://www.netapp.com/us/media/tr-4557.pdf[]
+
+
+* NetApp ONTAP AI를 참조하십시오
++
+** DGX-1 및 Cisco 네트워킹 기반 ONTAP AI 설계 가이드https://www.netapp.com/us/media/nva-1121-design.pdf[]
+** DGX-1 및 Cisco 네트워킹 지원 ONTAP AI 배포 가이드https://www.netapp.com/us/media/nva-1121-deploy.pdf[]
+** DGX-1 및 Mellanox 네트워킹 설계 가이드를 지원하는 ONTAP AIhttp://www.netapp.com/us/media/nva-1138-design.pdf[]
+** DGX-2 기반 ONTAP AI 설계 가이드https://www.netapp.com/us/media/nva-1135-design.pdf[]
+
+
+

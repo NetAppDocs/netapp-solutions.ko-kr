@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_deploy_grafana_dashboard.html 
+keywords: NetApp, AI, ML, Cleanup, Grafana 
+summary:  
+---
+= Grafana 대시보드 배포
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+모든 것이 배포되면 새 데이터에 대한 추론을 실행합니다. 이 모델은 네트워크 장치 장비의 고장을 예측합니다. 예측 결과는 Iguazio 시간 계열 테이블에 저장됩니다. Iguazio의 보안 및 데이터 액세스 정책과 통합된 플랫폼을 통해 Grafana로 결과를 시각화할 수 있습니다.
+
+제공된 JSON 파일을 클러스터의 Grafana 인터페이스로 가져와 대시보드를 구축할 수 있습니다.
+
+. Grafana 서비스가 실행 중인지 확인하려면 서비스 아래를 살펴보십시오.
++
+image:mlrun_image22.png["오류: 그래픽 이미지가 없습니다"]
+
+. 이 인스턴스가 없으면 서비스 섹션에서 인스턴스를 배포합니다.
++
+.. 새 서비스를 클릭합니다.
+.. 목록에서 Grafana를 선택합니다.
+.. 기본값을 그대로 사용합니다.
+.. 다음 단계를 클릭합니다.
+.. 사용자 ID를 입력합니다.
+.. 서비스 저장 을 클릭합니다.
+.. 맨 위에 있는 변경 내용 적용을 클릭합니다.
+
+
+. 대시보드를 배포하려면 Jupyter 인터페이스를 통해 NetopsPredictions-Dashboard.json 파일을 다운로드합니다.
++
+image:mlrun_image23.png["오류: 그래픽 이미지가 없습니다"]
+
+. 서비스 섹션에서 Grafana를 열고 대시보드를 가져옵니다.
++
+image:mlrun_image24.png["오류: 그래픽 이미지가 없습니다"]
+
+. Upload(*.json) File을 클릭하고 앞서 다운로드한 파일('NetopsPredictions - Dashboard.json')을 선택한다. 업로드가 완료되면 대시보드가 표시됩니다.
+
+
+image:mlrun_image25.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== 정리 기능을 배포합니다
+
+많은 데이터를 생성할 때 정리 및 정리하는 것이 중요합니다. 이를 위해 정리 기능을 정리 iynb 공책에 배치한다.
+
+
+
+== 이점
+
+NetApp과 Iguazio는 Docker, Kubernetes와 같은 오케스트레이션 툴과 함께 Kubeflow, Apache Spark 및 TensorFlow 등의 필수 프레임워크를 구축하여 AI 및 ML 애플리케이션의 구축 속도를 높이고 단순화합니다. NetApp과 Iguazio는 엔드 투 엔드 데이터 파이프라인을 통합함으로써 수많은 고급 컴퓨팅 워크로드에서 발생하는 지연 시간과 복잡성을 줄이고 개발 및 운영 간의 격차를 효과적으로 좁혀줍니다. 데이터 과학자는 대규모 데이터 세트에서 쿼리를 실행하고 교육 단계 동안 권한 있는 사용자와 데이터 및 알고리즘 모델을 안전하게 공유할 수 있습니다. 컨테이너식 모델이 운영 환경에 준비되면 개발 환경에서 운영 환경으로 쉽게 이동할 수 있습니다.
+
+link:mlrun_conclusion.html["다음: 결론"]

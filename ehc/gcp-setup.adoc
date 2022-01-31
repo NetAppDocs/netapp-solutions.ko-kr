@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: ehc/gcp-setup.html 
+keywords: NetApp Solutions, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, config, configuration, 
+summary:  
+---
+= Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.
+
+이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
+
+
+NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+* link:#deploy["GCVE 배포 및 구성"]
+* link:#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+
+
+
+
+== GCVE 배포 및 구성
+
+GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.
+
+“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.
+
+전제 조건:
+
+* VMware Engine Service Admin IAM 역할을 설정합니다
+* link:https://docs.netapp.com/us-en/occm/task_replicating_data.html["VMware Engine API 액세스 및 노드 할당량을 설정합니다"]
+* CIDR 범위가 온-프레미스 또는 클라우드 서브넷과 겹치지 않도록 하십시오. CIDR 범위는 /27 이상이어야 합니다.
+
+
+image:gcve-deploy-1.png[""]
+
+참고: 프라이빗 클라우드를 생성하는 데 30분에서 2시간까지 걸릴 수 있습니다.
+
+
+
+== GCVE에 대한 개인 액세스를 활성화합니다
+
+프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.
+
+이렇게 하면 Cloud Volumes ONTAP 인스턴스가 실행 중인 VPC 네트워크가 GCVE 프라이빗 클라우드와 통신할 수 있습니다. 이렇게 하려면 를 따르십시오 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart["GCP 문서"]. 클라우드 볼륨 서비스의 경우 테넌트 호스트 프로젝트 간에 일회성 피어링을 수행하여 VMware 엔진과 Cloud Volumes Service 간에 연결을 설정합니다. 자세한 단계는 다음과 같습니다 .
+
+image:gcve-access-1.png[""]
+
+CloudOwner@gve.loca l 사용자를 사용하여 vCenter에 로그인합니다. 자격 증명을 액세스하려면 VMware Engine 포털로 이동하여 리소스 로 이동한 다음 적절한 프라이빗 클라우드를 선택합니다. 기본 정보 섹션에서 vCenter 로그인 정보(vCenter Server, HCX Manager) 또는 NSX-T 로그인 정보(NSX Manager)에 대한 보기 링크를 클릭합니다.
+
+image:gcve-access-2.png[""]
+
+Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (https://10.0.16.6/)[] admin 사용자 이름을 CloudOwner@gve.loca l 로 사용하여 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.
+
+사내 네트워크에서 VMware Engine 프라이빗 클라우드로 연결하려면 클라우드 VPN 또는 Cloud Interconnect를 활용하여 적절한 연결을 설정하고 필요한 포트가 열려 있는지 확인합니다. 자세한 단계는 다음과 같습니다 link:https://ubuntu.com/server/docs/service-iscsi["링크"].
+
+image:gcve-access-3.png[""]
+
+image:gcve-access-4.png[""]

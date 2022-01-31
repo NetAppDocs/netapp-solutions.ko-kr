@@ -1,0 +1,66 @@
+---
+section: data-access
+title: 데이터 마이그레이션 및 데이터 보호
+entries:
+- title: 데이터 마이그레이션
+  entries:
+  - title: NetApp XCP의 모범 사례 지침
+    type: solutions
+    entries:
+    - title: 소개
+      url: "/xcp/xcp-bp-introduction.html"
+    - title: NetApp XCP
+      url: "/xcp/xcp-bp-netapp-xcp-overview.html"
+    - title: 마이그레이션 워크플로우
+      url: "/xcp/xcp-bp-migration-workflow-overview.html"
+    - title: 파일 분석
+      url: "/xcp/xcp-bp-file-analytics.html"
+    - title: 배포 단계
+      url: "/xcp/xcp-bp-deployment-steps.html"
+    - title: 사이징 지침
+      url: "/xcp/xcp-bp-sizing-guidelines-overview.html"
+    - title: 성능 튜닝
+      url: "/xcp/xcp-bp-performance-tuning.html"
+    - title: 고객 시나리오
+      entries:
+      - title: 개요
+        url: "/xcp/xcp-bp-customer-scenarios-overview.html"
+      - title: 데이터 레이크에서 ONTAP NFS로
+        url: "/xcp/xcp-bp-data-lake-to-ontap-nfs.html"
+      - title: 고성능 컴퓨팅에서 ONTAP NFS로
+        url: "/xcp/xcp-bp-high-performance-computing-to-ontap-nfs.html"
+      - title: xCP Data Mover를 사용하여 수백만 개의 작은 파일을 유연한 스토리지로 마이그레이션합니다
+        url: "/xcp/xcp-bp-using-the-xcp-data-mover-to-migrate-millions-of-small-files-to-flexible-storage.html"
+      - title: xCP Data Mover를 사용하여 대용량 파일을 마이그레이션합니다
+        url: "/xcp/xcp-bp-using-the-xcp-data-mover-to-migrate-large-files.html"
+      - title: 중복 파일
+        url: "/xcp/xcp-bp-duplicate-files.html"
+      - title: 특정 날짜 기반 스캔 및 데이터 복사
+        url: "/xcp/xcp-bp-specific-date-based-scan-and-copy-of-data.html"
+      - title: SMB/CIFS 공유에서 CSV 파일 생성
+        url: "/xcp/xcp-bp-creating-a-csv-file-from-smb-cifs-share.html"
+      - title: 7-Mode에서 ONTAP로 데이터 마이그레이션
+        url: "/xcp/xcp-bp-data-migration-from-7-mode-to-ontap.html"
+      - title: 소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션
+        url: "/xcp/xcp-bp-cifs-data-migration-with-acls-from-a-source-storage-box-to-ontap.html"
+    - title: 모범 사례 지침 및 권장사항
+      url: "/xcp/xcp-bp-best-practice-guidelines-and-recommendations.html"
+    - title: 문제 해결
+      url: "/xcp/xcp-bp-troubleshooting.html"
+    - title: 추가 정보를 찾을 수 있는 위치
+      url: "/xcp/xcp-bp-where-to-find-additional-information.html"
+    - title: 버전 기록
+      url: "/xcp/xcp-bp-version-history.html"
+- title: 데이터 보호
+  entries:
+  - title: NetApp E-Series 및 Commvault 데이터 플랫폼 V11
+    url: https://www.netapp.com/pdf.html?item=/media/17042-tr4320pdf.pdf
+  - title: Veeam Backup Replication 9.5의 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지 모범
+      사례
+    url: https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf
+  - title: NetApp E-Series 스토리지를 사용한 Veritas NetBackup 구축
+    url: https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf
+- title: 보안
+  entries:
+  - title: NIST Multitenant Infrastructure용 HyTrust를 사용한 FISMA 보안 제어
+    url: https://www.netapp.com/us/media/nva-1143.pdf

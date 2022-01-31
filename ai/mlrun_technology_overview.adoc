@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_technology_overview.html 
+keywords: NetApp Technology Overview ONTAP AI 
+summary:  
+---
+= 기술 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== NetApp 개요
+
+NetApp은 하이브리드 클라우드 환경에서 데이터 관련 최고의 권위자입니다. NetApp은 클라우드와 온프레미스 환경에서 애플리케이션 및 데이터의 관리를 간소화하여 디지털 혁신을 앞당기는 다양한 하이브리드 클라우드 데이터 서비스를 제공합니다. NetApp은 파트너와 함께 글로벌 조직이 데이터의 잠재력을 극대화하여 고객과의 접점을 확대하고 혁신을 촉진하며 운영을 최적화할 수 있도록 돕고 있습니다.
+
+
+
+== NetApp ONTAP AI를 참조하십시오
+
+NVIDIA DGX 시스템과 NetApp 클라우드 연결형 All-Flash 스토리지를 기반으로 하는 NetApp ONTAP AI를 사용하면 데이터 흐름을 안정적으로 간소화하고 에지에서 코어 및 클라우드에 이르는 Data Fabric을 사용하여 분석, 훈련, 추론의 속도를 높일 수 있습니다. 이 아키텍처는 IT 조직에 다음과 같은 이점을 제공하는 아키텍처를 제공합니다.
+
+* 설계 복잡성 제거
+* 컴퓨팅과 스토리지를 독립적으로 확장할 수 있습니다
+* 고객이 작은 규모로 시작한 후 원활하게 확장할 수 있도록 지원
+* 다양한 성능 및 비용 포인트를 위한 다양한 스토리지 옵션을 제공합니다.NetApp ONTAP AI는 NVIDIA DGX-1, 페타플롭 확장 AI 시스템, NVIDIA Mellanox 고성능 이더넷 스위치를 통합한 통합 인프라 스택을 제공하여 AI 워크로드를 통합하고 구축을 간소화하고 ROI를 가속합니다. NetApp은 이 기술 보고서를 위해 하나의 DGX-1 및 NetApp AFF A800 스토리지 시스템과 함께 ONTAP AI를 활용했습니다. 다음 이미지는 이 검증에 사용된 DGX-1 시스템과 ONTAP AI의 토폴로지를 보여줍니다.
+
+
+image:mlrun_image3.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== NetApp AI Control Plane
+
+NetApp AI Control Plane을 사용하면 최고의 확장성, 간소화된 구축, 무중단 데이터 가용성을 제공하는 솔루션을 통해 AI 및 ML을 활용할 수 있습니다. AI Control Plane 솔루션은 Kubernetes 및 Kubeflow를 NetApp 구현 Data Fabric과 통합합니다. 클라우드 네이티브 구현을 위한 업계 표준 컨테이너 오케스트레이션 플랫폼인 Kubernetes는 워크로드 확장성 및 이동성을 지원합니다. Kubeflow는 관리 및 구현을 간소화하여 개발자가 더 많은 데이터 과학을 더 빠르게 수행할 수 있도록 지원하는 오픈 소스 머신 러닝 플랫폼입니다. NetApp 구현 Data Fabric은 최고의 데이터 가용성 및 이동성을 제공하여 에지, 코어, 클라우드에 이르는 파이프라인 전반에서 데이터에 액세스할 수 있도록 합니다. 이 기술 보고서에서는 MLRun 파이프라인에서 NetApp AI Control Plane을 사용합니다. 다음 이미지는 각 클러스터에 대해 서로 다른 엔드포인트를 가질 수 있는 Kubernetes 클러스터 관리 페이지를 보여줍니다. NFS 영구 볼륨을 Kubernetes 클러스터에 연결했고 다음 이미지에는 클러스터에 연결된 영구 볼륨이 표시됩니다. 여기서 https://www.netapp.com/us/media/ds-netapp-project-trident.pdf["NetApp 트라이던트"^] 영구 스토리지 지원 및 데이터 관리 기능을 제공합니다.
+
+image:mlrun_image4.png["오류: 그래픽 이미지가 없습니다"]
+
+image:mlrun_image5.png["오류: 그래픽 이미지가 없습니다"]
+
+image:mlrun_image6.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== Iguazio 개요
+
+Iguazio Data Science Platform은 완전히 통합되고 안전한 PaaS(Data Science Platform as a Service)로서 개발을 간소화하고, 성능을 가속화하고, 협업을 촉진하며, 운영 문제를 해결합니다. 이 플랫폼에는 다음과 같은 구성 요소가 통합되어 있으며 이과지오 데이터 과학 플랫폼이 다음 이미지에 나와 있습니다.
+
+* Jupyter Notebooks, 통합 분석 엔진 및 Python 패키지를 포함하는 데이터 과학 워크벤치입니다
+* 실험 추적 및 자동화된 파이프라인 기능을 사용하여 관리 모델링
+* 확장 가능한 Kubernetes 클러스터를 통해 데이터 및 ML 서비스를 관리했습니다
+* Nuclio는 실시간 서버리스 기능 프레임워크입니다
+* SQL, NoSQL, 시계열 데이터베이스, 파일(단순한 개체), 스트리밍을 지원하는 매우 빠르고 안전한 데이터 계층입니다
+* NetApp, Amazon S3, HDFS, SQL 데이터베이스, 스트리밍 또는 메시징 프로토콜 등의 타사 데이터 소스와 통합
+* Grafana 기반의 실시간 대시보드
+
+
+image:mlrun_image7.png["오류: 그래픽 이미지가 없습니다"]
+
+link:mlrun_software_and_hardware_requirements.html["다음: 소프트웨어 및 하드웨어 요구 사항"]

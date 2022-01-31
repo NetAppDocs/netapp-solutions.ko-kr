@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_install_and_set_up_the_aks_cluster.html 
+keywords: aks, install, cluster, node type, system, worker 
+summary: 이 페이지에서는 AKS 클러스터를 설정하는 데 필요한 단계를 설명합니다. 
+---
+= AKS 클러스터를 설치하고 설정합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_click-through_rate_prediction_use_case_summary.html["이전: 클릭률 예측 사용 사례 요약"]
+
+AKS 클러스터를 설치 및 설정하려면 웹 페이지를 참조하십시오 https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal["AKS 클러스터를 생성합니다"^] 그런 다음 다음 다음 단계를 완료합니다.
+
+. 노드 유형(시스템 [CPU] 또는 작업자 [GPU] 노드)을 선택할 때 다음을 선택합니다.
++
+.. 기본 시스템 노드는 표준 DS2v2('agentpool' 기본 3개 노드)여야 합니다.
+.. 그런 다음 이름이 "gpupool"인 사용자 그룹(GPU 노드의 경우)에 대해 작업자 노드 Standard_NC6s_v3 풀(최소 3개 노드)을 추가합니다.
++
+image:aks-anf_image3.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+. 배포에는 5~10분이 소요됩니다. 완료되면 Connect to Cluster를 클릭합니다.
+. 새로 생성된 AKS 클러스터에 연결하려면 로컬 환경(랩톱/PC)에서 다음을 설치합니다.
++
+.. 를 사용하는 Kubernetes 명령줄 툴입니다 https://kubernetes.io/docs/tasks/tools/install-kubectl/["특정 OS에 대한 지침이 제공됩니다"^]
+.. 문서에 설명된 대로 Azure CLI를 사용할 수 있습니다. https://docs.microsoft.com/cli/azure/install-azure-cli["Azure CLI를 설치합니다"^]
+
+
+. 터미널에서 AKS 클러스터에 액세스하려면 'az login'을 입력하고 자격 증명을 입력합니다.
+. 다음 두 명령을 실행합니다.
++
+....
+az account set --subscription xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx
+aks get-credentials --resource-group resourcegroup --name aksclustername
+....
+. Azure CLI:kubeck get nodes를 입력합니다.
+. 다음 예와 같이 6개 노드가 모두 가동되어 실행 중인 경우 AKS 클러스터가 로컬 환경에 준비 및 연결됩니다
+
+
+image:aks-anf_image4.png["오류: 그래픽 이미지가 없습니다"]
+
+link:aks-anf_create_a_delegated_subnet_for_azure_netapp_files.html["다음: Azure NetApp Files에 대해 위임된 서브넷을 만듭니다."]

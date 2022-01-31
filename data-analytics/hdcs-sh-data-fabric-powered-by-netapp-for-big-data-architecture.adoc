@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/hdcs-sh-data-fabric-powered-by-netapp-for-big-data-architecture.html 
+keywords: architecture, data fabric, use cases, nfs, big data 
+summary: 'NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경에서 데이터 관리를 단순화하고 통합하여 디지털 전환을 가속합니다. NetApp이 제공하는 Data Fabric은 데이터 가시성 및 통찰력, 데이터 액세스 및 제어, 데이터 보호 및 보안을 위해 일관되고 통합된 데이터 관리 서비스 및 애플리케이션(구성 요소)을 제공합니다.' 
+---
+= NetApp에서 제공하는 빅데이터 아키텍처 관련 Data Fabric
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:hdcs-sh-solution-overview.html["이전: 솔루션 개요"]
+
+NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경에서 데이터 관리를 단순화하고 통합하여 디지털 전환을 가속합니다.
+
+NetApp이 제공하는 Data Fabric은 데이터 가시성과 통찰력, 데이터 액세스 및 제어, 데이터 보호 및 보안을 위한 일관성 있는 통합 데이터 관리 서비스 및 애플리케이션(구성 요소)을 제공합니다(아래 그림 참조).
+
+image:hdcs-sh-image1.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== 검증된 Data Fabric 고객 사용 사례
+
+NetApp이 제공하는 Data Fabric은 고객에게 다음과 같은 9가지 검증된 사용 사례를 제공합니다.
+
+* 분석 워크로드 가속화
+* DevOps 혁신 가속
+* 클라우드 호스팅 인프라 구축
+* 클라우드 데이터 서비스 통합
+* 데이터 보호 및 보안
+* 비정형데이터의 최적화
+* 데이터 센터의 효율성 확보
+* 데이터 통찰력 및 제어 제공
+* 단순화 및 자동화
+
+
+본 문서는 9가지 사용 사례 중 2가지(솔루션 포함)를 다룹니다.
+
+* 분석 워크로드 가속화
+* 데이터 보호 및 보안
+
+
+
+
+=== NetApp NFS 직접 액세스
+
+아래 그림에 표시된 NetApp NFS 직접 액세스(이전의 NetApp In-Place Analytics Module)를 사용하면 데이터를 이동하거나 복사하지 않고도 기존 또는 새로운 NFSv3 또는 NFSv4 데이터에 대해 빅데이터 분석 작업을 실행할 수 있습니다. 여러 데이터 복제본을 방지하고 소스와 데이터를 동기화할 필요가 없습니다. 예를 들어 금융 부문에서 데이터를 한 위치에서 다른 위치로 이동하는 것은 쉬운 일이 아닌 법적 의무를 준수해야 합니다. 이 시나리오에서는 NetApp NFS 직접 액세스가 원래의 위치에서 재무 데이터를 분석합니다. 또 다른 주요 이점은 NetApp NFS 직접 액세스를 사용하여 기본 Hadoop 명령을 사용하여 Hadoop 데이터를 간편하게 보호하고 NetApp의 강력한 데이터 관리 포트폴리오를 활용하여 데이터 보호 워크플로우를 활성화할 수 있다는 것입니다.
+
+image:hdcs-sh-image2.png["오류: 그래픽 이미지가 없습니다"]
+
+NetApp NFS 직접 액세스에서는 Hadoop/Spark 클러스터에 다음과 같은 두 가지 유형의 구축 옵션을 제공합니다.
+
+* 기본적으로 Hadoop/Spark 클러스터는 데이터 스토리지와 기본 파일 시스템에 HDFS(Hadoop Distributed File System)를 사용합니다. NetApp NFS 직접 액세스는 기본 HDFS를 NFS 스토리지로 대체하여 NFS 데이터에 대한 직접 분석 작업을 지원합니다.
+* 다른 구축 옵션에서 NetApp NFS 직접 액세스는 NFS를 단일 Hadoop/Spark 클러스터의 HDFS와 함께 추가 스토리지로 구성할 수 있도록 지원합니다. 이 경우 고객은 NFS 내보내기를 통해 데이터를 공유하고 HDFS 데이터와 함께 동일한 클러스터에서 데이터를 액세스할 수 있습니다.
+
+
+NetApp NFS 직접 액세스를 사용할 때의 주요 이점은 다음과 같습니다.
+
+* 현재 위치의 데이터를 분석하여 분석 데이터를 HDFS와 같은 Hadoop 인프라스트럭처로 이동하는 데 시간과 성능이 많이 소모되는 작업을 방지합니다.
+* 복제본 수를 3개부터 1개로 줄입니다.
+* 사용자가 컴퓨팅 및 스토리지를 분리하여 독립적으로 확장할 수 있습니다.
+* ONTAP의 강력한 데이터 관리 기능을 활용하여 엔터프라이즈 데이터 보호 기능을 제공합니다.
+* Hortonworks 데이터 플랫폼에서 인증되었습니다.
+* 하이브리드 데이터 분석을 구축할 수 있습니다.
+* 동적 다중 스레드 기능을 활용하여 백업 시간을 단축합니다.
+
+
+
+
+=== 빅 데이터를 위한 구성 요소
+
+NetApp 기반의 Data Fabric은 아래 그림과 같이 데이터 액세스, 제어, 보호 및 보안을 위한 데이터 관리 서비스와 애플리케이션(구성 요소)을 통합합니다.
+
+image:hdcs-sh-image3.png["오류: 그래픽 이미지가 없습니다"]
+
+위 그림의 구성 요소는 다음과 같습니다.
+
+* * NetApp NFS 직접 액세스 * 는 추가 소프트웨어 또는 드라이버 요구사항 없이 최신 Hadoop 및 Spark 클러스터를 NetApp NFS 볼륨에 직접 액세스할 수 있도록 지원합니다.
+* * NetApp Cloud Volumes ONTAP 및 클라우드 볼륨 서비스. * Microsoft Azure 클라우드 서비스의 AWS(Amazon Web Services) 또는 ANF(Azure NetApp Files)에서 실행되는 ONTAP를 기반으로 하는 소프트웨어 정의 연결형 스토리지.
+* NetApp SnapMirror 기술 *. 사내 및 ONTAP 클라우드 또는 NPS 인스턴스 간에 데이터 보호 기능을 제공합니다.
+* * 클라우드 서비스 공급자 * 이러한 공급자에는 AWS, Microsoft Azure, Google Cloud 및 IBM Cloud가 포함됩니다.
+* * PaaS. * AWS의 EMR(Amazon Elastic MapReduce) 및 Databricks와 같은 클라우드 기반 분석 서비스와 Microsoft Azure HDInsight 및 Azure Databricks
+
+
+link:hdcs-sh-hadoop-data-protection-and-netapp.html["이제 Hadoop 데이터 보호와 NetApp이 모두 필요합니다."]

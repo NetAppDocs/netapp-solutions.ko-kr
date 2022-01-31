@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: automation/automation_rhel_centos_setup.html 
+summary: NetApp 솔루션 자동화는 구성 및 관리를 위해 RedHat Ansible을 활용합니다. 
+keywords: netapp, solutions, automation, ansible, terraform 
+---
+= NetApp 솔루션 자동화
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./media/
+
+
+
+
+=== 절차를 참조하십시오
+
+. Ansible 제어 노드 요구사항:
++
+.. 다음 패키지가 설치된 RHEL/CentOS 시스템:
++
+... 3장
+... Pip3
+... Ansible(버전 2.10.0 이상)
+... 기트
+
+
+
+
+
+
+위의 요구사항을 설치하지 않은 새로운 RHEL/CentOS 시스템을 사용하는 경우 다음 단계를 따라 해당 시스템을 Ansible 제어 노드로 설정하십시오.
+
+. RHEL-8/RHEL-7용 Ansible 리포지토리를 지원합니다
++
+.. RHEL-8의 경우(아래 명령을 루트로 실행)
++
+[source, cli]
+----
+subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
+----
+.. RHEL-7의 경우(아래 명령을 루트로 실행)
++
+[source, cli]
+----
+subscription-manager repos --enable rhel-7-server-ansible-2.9-rpms
+----
+
+
+. sh 파일을 만듭니다
++
+[source, cli]
+----
+vi setup.sh
+----
+. 파일에 아래 내용을 붙여 넣습니다
++
+[source, cli]
+----
+#!/bin/bash
+echo "Installing Python ------>"
+sudo yum -y install python3 >/dev/null
+echo "Installing Python Pip ------>"
+sudo yum -y install python3-pip >/dev/null
+echo "Installing Ansible ------>"
+python3 -W ignore -m pip --disable-pip-version-check install ansible >/dev/null
+echo "Installing git ------>"
+sudo yum -y install git >/dev/null
+----
+. 파일을 실행 파일로 만듭니다
++
+[source, cli]
+----
+chmod +x setup.sh
+----
+. 스크립트를 루트로 실행합니다.
++
+[source, cli]
+----
+./setup.sh
+----
+

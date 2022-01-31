@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: ent-apps-db/db_protection_getting_started.html 
+keywords: Linux, RHEL Oracle19c, NFS, ONTAP 
+summary: 이 페이지에서는 NetApp ONTAP 스토리지에 Oracle 데이터 보호를 구축하는 자동화된 방법에 대해 설명합니다. 
+---
+= 시작하기
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 솔루션은 AWX/Tower 환경에서 실행되도록 설계되었습니다.
+
+
+
+== AWX/타워
+
+AWX/Tower 환경의 경우 ONTAP 클러스터 관리 및 Oracle 서버(IP 및 호스트 이름)의 인벤토리 생성, 자격 증명 생성, NetApp Automation GitHub에서 Ansible 코드를 가져오는 프로젝트 구성, 자동화를 시작하는 작업 템플릿 등이 있습니다.
+
+. 이 솔루션은 프라이빗 클라우드 시나리오(사내-사내), 하이브리드 클라우드(사내-퍼블릭 클라우드 간 Cloud Volumes ONTAP[CVO])에서 실행되도록 설계되었습니다.
+. 사용자 환경에 맞는 변수를 입력하고 이를 복사하여 작업 템플릿의 추가 VAR 필드에 붙여 넣습니다.
+. 추가 VAR이 작업 템플릿에 추가되면 자동화를 시작할 수 있습니다.
+. 자동화는 3단계(설정, Oracle 바이너리, 데이터베이스, 로그 및 로그용 복제 일정)와 DR 사이트에서 데이터베이스를 복구하기 위한 4단계로 구성됩니다.
+. CVO 데이터 보호에 필요한 키 및 토큰을 얻기 위한 자세한 지침은 을 참조하십시오 link:automation/authentication_tokens.html["CVO 및 Connector 구축을 위한 사전 요구 사항을 수집합니다"]
+
+
+
+
+== 요구 사항
+
+[role="tabbed-block"]
+====
+.strong class="big">온프레미스</strong><strong>|</strong>
+--
+[cols="3, 9"]
+|===
+| 방법입니다 | 요구 사항 
+
+
+.4+| * Ansible 환경 * | AWX/타워 
+
+
+| Ansible v. 2.10 이상 
+
+
+| Python 3 
+
+
+| Python 라이브러리 - NetApp-lib-xmltodictt-jmespath 
+
+
+.3+| * ONTAP * | ONTAP 버전 9.8 이상 
+
+
+| 두 개의 데이터 애그리게이트 
+
+
+| NFS VLAN 및 ifgrp가 생성되었습니다 
+
+
+.5+| * Oracle 서버 * | RHEL 7/8 
+
+
+| Oracle Linux 7/8 
+
+
+| NFS, 공용 및 선택적 관리를 위한 네트워크 인터페이스 
+
+
+| 소스의 기존 Oracle 환경과 대상(DR 사이트 또는 퍼블릭 클라우드)의 동급 Linux 운영 체제 
+|===
+--
+.strong class="big">CVO</strong>
+--
+[cols="3, 9"]
+|===
+| 방법입니다 | 요구 사항 
+
+
+.4+| * Ansible 환경 * | AWX/타워 
+
+
+| Ansible v. 2.10 이상 
+
+
+| Python 3 
+
+
+| Python 라이브러리 - NetApp-lib-xmltodictt-jmespath 
+
+
+.3+| * ONTAP * | ONTAP 버전 9.8 이상 
+
+
+| 두 개의 데이터 애그리게이트 
+
+
+| NFS VLAN 및 ifgrp가 생성되었습니다 
+
+
+.6+| * Oracle 서버 * |  
+
+
+| RHEL 7/8 
+
+
+| Oracle Linux 7/8 
+
+
+| NFS, 공용 및 선택적 관리를 위한 네트워크 인터페이스 
+
+
+| 소스의 기존 Oracle 환경과 대상(DR 사이트 또는 퍼블릭 클라우드)의 동급 Linux 운영 체제 
+
+
+| Oracle EC2 인스턴스에 적절한 스왑 공간을 설정합니다. 기본적으로 일부 EC2 인스턴스는 0 스왑으로 구축됩니다 
+
+
+.3+| * Cloud Manager/AWS * | AWS 액세스/비밀 키 
+
+
+| NetApp Cloud Manager 계정 
+
+
+| NetApp Cloud Manager 업데이트 토큰 
+|===
+--
+====
+
+
+== 자동화 세부 정보
+
+[role="tabbed-block"]
+====
+.strong class="big">온프레미스</strong><strong>|</strong>
+--
+이 자동 배포는 3개의 개별 역할로 구성된 단일 Ansible 플레이북을 통해 설계되었습니다. 역할은 ONTAP, Linux 및 Oracle 구성을 위한 것입니다. 다음 표에서는 자동화되고 있는 작업을 설명합니다.
+
+[cols="3, 9"]
+|===
+| 플레이북 | 작업 
+
+
+.5+| * ONTAP_설정 * | ONTAP 환경 사전 점검 
+
+
+| 소스 클러스터에서 Intercluster LIF 생성(선택 사항) 
+
+
+| 대상 클러스터에 Intercluster LIF 생성(선택 사항) 
+
+
+| 클러스터 및 SVM 피어링 생성 
+
+
+| 대상 SnapMirror 생성 및 지정된 Oracle 볼륨의 초기화 
+
+
+.4+| * ora_replication_cg * | /etc/oratab의 각 데이터베이스에 대해 백업 모드를 활성화합니다 
+
+
+| Oracle 바이너리 및 데이터베이스 볼륨의 스냅샷을 생성합니다 
+
+
+| SnapMirror가 업데이트되었습니다 
+
+
+| /etc/oratab에서 각 데이터베이스의 백업 모드를 해제합니다 
+
+
+.3+| * ora_replication_log * | /etc/oratab에 있는 각 데이터베이스의 현재 로그를 전환합니다 
+
+
+| Oracle Log 볼륨의 스냅숏입니다 
+
+
+| SnapMirror가 업데이트되었습니다 
+
+
+.5+| * ora_RECOVERY * | SnapMirror를 꺾습니다 
+
+
+| NFS를 사용하도록 설정하고 타겟에서 Oracle 볼륨에 대한 접합 경로를 생성합니다 
+
+
+| DR Oracle 호스트를 구성합니다 
+
+
+| Oracle 볼륨을 마운트하고 확인합니다 
+
+
+| Oracle 데이터베이스 복구 및 시작 
+|===
+--
+.strong class="big">CVO</strong>
+--
+이 자동 배포는 3개의 개별 역할로 구성된 단일 Ansible 플레이북을 통해 설계되었습니다. 역할은 ONTAP, Linux 및 Oracle 구성을 위한 것입니다. 다음 표에서는 자동화되고 있는 작업을 설명합니다.
+
+[cols="4, 9"]
+|===
+| 플레이북 | 작업 
+
+
+.7+| * cvo_setup * | 환경 사전 점검 
+
+
+| AWS 구성/AWS 액세스 키 ID/비밀 키/기본 지역 
+
+
+| AWS 역할 생성 
+
+
+| AWS에서 NetApp Cloud Manager Connector 인스턴스 생성 
+
+
+| AWS에서 CVO(Cloud Volumes ONTAP) 인스턴스 생성 
+
+
+| NetApp Cloud Manager에 온프레미스 소스 ONTAP 클러스터를 추가하십시오 
+
+
+| 대상 SnapMirror 생성 및 지정된 Oracle 볼륨의 초기화 
+
+
+.4+| * ora_replication_cg * | /etc/oratab의 각 데이터베이스에 대해 백업 모드를 활성화합니다 
+
+
+| Oracle 바이너리 및 데이터베이스 볼륨의 스냅샷을 생성합니다 
+
+
+| SnapMirror가 업데이트되었습니다 
+
+
+| /etc/oratab에서 각 데이터베이스의 백업 모드를 해제합니다 
+
+
+.3+| * ora_replication_log * | /etc/oratab에 있는 각 데이터베이스의 현재 로그를 전환합니다 
+
+
+| Oracle Log 볼륨의 스냅숏입니다 
+
+
+| SnapMirror가 업데이트되었습니다 
+
+
+.5+| * ora_RECOVERY * | SnapMirror를 꺾습니다 
+
+
+| NFS를 사용하도록 설정하고 타겟 CVO에서 Oracle 볼륨의 접합 경로를 생성합니다 
+
+
+| DR Oracle 호스트를 구성합니다 
+
+
+| Oracle 볼륨을 마운트하고 확인합니다 
+
+
+| Oracle 데이터베이스 복구 및 시작 
+|===
+--
+====
+
+
+== 기본 매개변수
+
+자동화를 간소화하기 위해 필요한 많은 Oracle 매개 변수를 기본값으로 사전 설정하였습니다. 일반적으로 대부분의 배포에서 기본 매개 변수를 변경할 필요는 없습니다. 고급 사용자는 기본 매개 변수를 주의 깊게 변경할 수 있습니다. 기본 매개 변수는 각 역할 폴더의 defaults 디렉토리에 있습니다.
+
+
+
+== 라이센스
+
+GitHub 리포지토리에 설명된 대로 라이센스 정보를 읽어야 합니다. 이 리포지토리의 콘텐츠에 액세스, 다운로드, 설치 또는 사용하면 라이선스 조항에 동의하는 것입니다 link:https://github.com/NetApp-Automation/na_oracle19c_deploy/blob/master/LICENSE.TXT["여기"^].
+
+이 저장소의 컨텐츠에서 파생 저작물을 생성 및/또는 공유하는 데는 특정 제한이 있습니다. 의 약관을 읽었는지 확인하십시오 link:https://github.com/NetApp-Automation/na_oracle19c_deploy/blob/master/LICENSE.TXT["라이센스"^] 콘텐츠를 사용하기 전에. 모든 약관에 동의하지 않는 경우 이 리포지토리에서 콘텐츠를 액세스, 다운로드 또는 사용하지 마십시오.
+
+준비가 되면 를 클릭합니다 link:db_protection_awx_automation.html["자세한 AWX/Tower 절차를 보려면 여기를 클릭하십시오"].

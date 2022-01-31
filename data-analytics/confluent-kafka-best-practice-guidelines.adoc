@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/confluent-kafka-best-practice-guidelines.html 
+keywords: best practices, guidelines, nfs, san 
+summary: 이 섹션에서는 이 인증에서 얻은 교훈을 설명합니다. 
+---
+= 모범 사례 지침
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:confluent-kafka-confluent-kafka-rebalance.html["이전: Confluent 자체 재조정 클러스터"]
+
+* NetApp의 검증을 기반으로 S3 오브젝트 스토리지는 데이터를 유창하게 유지하는 데 가장 적합합니다.
+* 처리량이 높은 SAN(특히 FC)을 사용하여 브로커의 핫 데이터 또는 로컬 디스크를 유지할 수 있습니다. 왜냐하면, ContFluent 계층형 스토리지 구성에서 브로커 데이터 디렉토리에 있는 데이터의 크기는 데이터가 오브젝트 스토리지로 이동되는 세그먼트 크기 및 보존 시간을 기준으로 합니다.
+* 오브젝트 저장소는 세그먼트일 때 더 나은 성능을 제공합니다. 바이트 수는 더 높고 512MB를 테스트했습니다.
+* Kafka에서는 해당 주제에 대해 생성된 각 레코드에 대한 키 또는 값(바이트)의 길이가 length.key.value 매개 변수에 의해 제어됩니다. StorageGRID의 경우 S3 오브젝트 수집 및 검색 성능이 더 높은 값으로 향상되었습니다. 예를 들어, 512바이트는 5.8GBps 검색, 1024바이트는 7.5GBps S3 검색, 2048바이트는 10Gbps 가까이 제공
+
+
+다음 그림은 length.key.value를 기준으로 S3 오브젝트 수집 및 조회 결과를 나타낸 것이다.
+
+image:confluent-kafka-image11.png["오류: 그래픽 이미지가 없습니다"]
+
+* * Kafka 튜닝. * 계층형 스토리지의 성능을 향상시키려면 TierFetcherNumThreads 및 TierArchivernumThreads를 늘릴 수 있습니다. 일반적으로 TierFetchernumThreads를 물리적 CPU 코어 수와 일치하도록 늘리고 TierArchivernumThreads를 CPU 코어 수의 절반으로 늘리고자 합니다. 예를 들어, 서버 속성에서 8개의 물리적 코어가 있는 컴퓨터를 사용하는 경우 confluent.tier.fetcher.num.threads=8 및 confluent.tier.Archiver.num.threads=4를 설정합니다.
+* * 항목 삭제에 대한 시간 간격 * 주제가 삭제되면 객체 저장소에서 로그 세그먼트 파일 삭제가 즉시 시작되지 않습니다. 대신 이 파일을 삭제하기 전에 기본값이 3시간인 시간 간격이 있습니다. confluent.tier.topic.delete.check.interval.ms 구성을 수정하여 이 간격의 값을 변경할 수 있습니다. 주제 또는 클러스터를 삭제하는 경우 해당 버킷의 오브젝트도 수동으로 삭제할 수 있습니다.
+* * 계층형 스토리지 내부 항목에 대한 ACL. * 온-프레미스 배포의 권장 모범 사례는 계층형 스토리지에 사용되는 내부 항목에 대해 ACL 허가자를 활성화하는 것입니다. 이 데이터에 대한 액세스를 브로커 사용자에게만 제한하려면 ACL 규칙을 설정합니다. 이렇게 하면 내부 항목이 안전하게 보호되며 계층형 스토리지 데이터 및 메타데이터에 대한 무단 액세스가 방지됩니다.
+
+
+[listing]
+----
+kafka-acls --bootstrap-server localhost:9092 --command-config adminclient-configs.conf \
+--add --allow-principal User:<kafka> --operation All --topic "_confluent-tier-state"
+----
+
+NOTE: 사용자 '<Kafka>'를 배포의 실제 브로커 교장으로 바꿉니다.
+
+예를 들어, "confluent-tier-state" 명령은 계층형 스토리지의 내부 항목에 대한 ACL을 설정합니다. 현재 계층형 스토리지와 관련된 내부 주제는 하나뿐입니다. 이 예제에서는 내부 항목의 모든 작업에 대해 Kafka의 주요 권한을 제공하는 ACL을 만듭니다.
+
+link:confluent-kafka-sizing.html["다음: 사이징."]

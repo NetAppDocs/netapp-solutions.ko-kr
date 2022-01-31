@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: vdi-vds/hcvdivds_hybrid_cloud_vdi_with_virtual_desktop_service.html 
+keywords: TR-4861, VDS, Windows Virtual Desktop, Remote Desktop Services, Virtual Desktop Services, 
+summary: 'NetApp VDS(가상 데스크톱 서비스)는 주요 퍼블릭 클라우드 및 프라이빗 클라우드에서 RDS(원격 데스크톱 서비스)를 조정합니다. VDS는 Microsoft Azure에서 WVD(Windows Virtual Desktop)를 지원합니다. VDS는 SMB 파일 공유 설정(사용자 프로필, 공유 데이터 및 사용자 홈 드라이브의 경우), Windows 기능, 응용 프로그램 및 에이전트 설치, 방화벽 및 정책 등을 포함하여 WVD 또는 RDS 배포 후 수행해야 하는 많은 작업을 자동화합니다.' 
+---
+= TR-4861: 가상 데스크탑 서비스를 지원하는 하이브리드 클라우드 VDI
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp, Suresh Thoppay
+
+NetApp VDS(가상 데스크톱 서비스)는 주요 퍼블릭 클라우드 및 프라이빗 클라우드에서 RDS(원격 데스크톱 서비스)를 조정합니다. VDS는 Microsoft Azure에서 WVD(Windows Virtual Desktop)를 지원합니다. VDS는 SMB 파일 공유 설정(사용자 프로필, 공유 데이터 및 사용자 홈 드라이브의 경우), Windows 기능, 응용 프로그램 및 에이전트 설치, 방화벽 및 정책 등을 포함하여 WVD 또는 RDS 배포 후 수행해야 하는 많은 작업을 자동화합니다.
+
+사용자는 전용 데스크톱, 공유 데스크톱 및 원격 응용 프로그램에 대해 VDS를 사용합니다. VDS는 데스크톱의 응용 프로그램 관리를 자동화하기 위한 스크립트 이벤트를 제공하며 관리할 이미지 수를 줄입니다.
+
+VDS는 퍼블릭 및 프라이빗 클라우드 환경 전반의 배포를 처리하기 위한 단일 관리 포털을 제공합니다.
+
+
+
+== 고객 가치
+
+2020년에 원격 인력이 급증함에 따라 비즈니스 연속성 요구사항이 달라졌습니다. IT 부서는 가상 데스크톱을 신속하게 프로비저닝해야 하는 새로운 과제에 직면하여 프로비저닝 민첩성과 원격 관리, 그리고 사내 및 클라우드 리소스를 손쉽게 프로비저닝할 수 있는 하이브리드 클라우드의 TCO 이점을 필요로 합니다. 다음과 같은 기능을 갖춘 하이브리드 클라우드 솔루션이 필요합니다.
+
+* COVID 이후 작업 공간의 현실을 해결하고 글로벌 역학으로 유연한 작업 모델을 지원합니다
+* 작업 근로자부터 고급 사용자에 이르기까지 모든 직원의 작업 환경 배포를 단순화하고 가속화함으로써 교대 근무 환경을 지원합니다
+* 물리적 위치에 관계없이 풍부하고 안전한 VDI 리소스를 제공하여 인력을 모바일화합니다
+* 하이브리드 클라우드의 구축 간소화
+* 위험 감소 관리를 자동화 및 단순화합니다
+
+
+link:hcvdivds_use_cases.html["다음으로, 사용 사례를 살펴보겠습니다"]

@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_conclusion.html 
+keywords: 'Azure NetApp Files, RAPIDS AI, click-though rate (CTR) prediction, Machine Learning, Retail, E-commerce, Azure, Jupyter Notebook, Cloud computing, Digital marketing, Kubernetes' 
+summary: Docker, Kubernetes 등의 오케스트레이션 툴과 통합된 Azure NetApp Files, RAPIDS, DASK를 사용하면 대규모 ML 처리 및 훈련 구축을 더 빠르게 처리하고 간소화할 수 있습니다. 이 솔루션은 엔드 투 엔드 데이터 파이프라인을 통합함으로써 수많은 고급 컴퓨팅 워크로드에서 발생하는 지연 시간과 복잡성을 줄여 개발과 운영 간의 격차를 효과적으로 해소합니다. 
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_dataset_and_model_versioning_using_netapp_dataops_toolkit.html["이전: NetApp DataOps 툴킷을 사용하여 데이터 세트 및 모델 버전 관리"]
+
+Azure NetApp Files, RAPIDS 및 DASK는 Docker, Kubernetes 등의 오케스트레이션 툴과 통합하여 대규모 ML 처리 및 훈련 구축을 간소화하고 있습니다. 이 솔루션은 엔드 투 엔드 데이터 파이프라인을 통합함으로써 수많은 고급 컴퓨팅 워크로드에서 발생하는 지연 시간과 복잡성을 줄여 개발과 운영 간의 격차를 효과적으로 해소합니다. 데이터 과학자는 대규모 데이터 세트에서 쿼리를 실행하고 교육 단계 동안 다른 사용자와 데이터 및 알고리즘 모델을 안전하게 공유할 수 있습니다.
+
+자체 AI/ML 파이프라인을 구축할 때는 아키텍처 구성 요소의 통합, 관리, 보안 및 접근성을 구성하는 것이 매우 어렵습니다. 개발자가 자신의 환경에 액세스하고 제어하도록 하는 것은 또 다른 도전 과제입니다.
+
+클라우드에 엔드 투 엔드 분산 교육 모델 및 데이터 파이프라인을 구축하여 총 워크플로우 완료 시간을 GPU 가속 데이터 처리 및 컴퓨팅 프레임워크를 활용하지 않는 기존의 오픈 소스 접근 방식에 비해 크게 두 배나 단축한 것으로 입증되었습니다.
+
+NetApp, Microsoft, 오픈 소스 오케스트레이션 프레임워크 및 NVIDIA가 결합되어 최신 기술을 유연한 관리 서비스로 통합하여 기술 채택을 가속화하고 새로운 AI/ML 애플리케이션의 출시 시기를 앞당길 수 있습니다. 이러한 고급 서비스는 사내 및 하이브리드 구축 아키텍처용으로 쉽게 포팅할 수 있는 클라우드 네이티브 환경에서 제공됩니다.
+
+link:aks-anf_where_to_find_additional_information.html["다음: 추가 정보를 찾을 위치."]

@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: vdi-vds/hcvdivds_application_management.html 
+keywords: tech worker, application, Remote Desktop Services, VDS 
+summary: 작업 작업자는 사용 가능한 응용 프로그램 목록에서 응용 프로그램을 빠르게 시작할 수 있습니다. 앱 서비스는 원격 데스크톱 서비스 세션 호스트에서 애플리케이션을 게시합니다. WVD를 통해 앱 그룹은 다중 세션 Windows 10 호스트 풀에서 유사한 기능을 제공합니다. 
+---
+= 애플리케이션 관리
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+작업 작업자는 사용 가능한 응용 프로그램 목록에서 응용 프로그램을 빠르게 시작할 수 있습니다. 앱 서비스는 원격 데스크톱 서비스 세션 호스트에서 애플리케이션을 게시합니다. WVD를 통해 앱 그룹은 다중 세션 Windows 10 호스트 풀에서 유사한 기능을 제공합니다.
+
+사무실 근로자가 파워 유저를 위해 서비스 보드를 사용하여 필요한 애플리케이션을 수동으로 프로비저닝하거나 NetApp VDS의 스크립트 기반 이벤트 기능을 사용하여 자동으로 프로비저닝할 수 있습니다.
+
+자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/virtual-desktop-service/guide_application_entitlement.html["NetApp Application Entitlement 페이지"^].
+
+link:hcvdivds_why_ontap.html["다음: 가상 데스크탑 서비스를 위한 ONTAP 기능"]

@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_multitenancy_configuration.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
+---
+= 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+모든 멀티테넌트 솔루션의 경우 사용자는 필요한 것보다 더 많은 클러스터 리소스에 액세스할 수 없습니다. 따라서 다중 테넌시 구성의 일부로 구성할 전체 리소스 세트는 클러스터 관리자, 스토리지 관리자 및 각 프로젝트를 작업하는 개발자가 구성합니다.
+
+다음 표에는 여러 사용자가 수행해야 하는 여러 작업이 정리되어 있습니다.
+
+|===
+| 역할 | 작업 
+
+
+.4+| * 클러스터 관리자 * | 다양한 애플리케이션 또는 워크로드를 위한 프로젝트를 생성합니다 
+
+
+| storage-admin에 대한 ClusterRoles 및 RoleBindings를 생성합니다 
+
+
+| 특정 프로젝트에 대한 액세스를 할당하는 개발자를 위한 역할 및 RoleBindings를 만듭니다 
+
+
+| [선택 사항] 특정 노드에서 Pod를 예약하도록 프로젝트를 구성합니다 
+
+
+.4+| * 스토리지 - 관리자 * | NetApp ONTAP에서 SVM을 생성합니다 
+
+
+| Trident 백엔드를 생성합니다 
+
+
+| StorageClasses를 생성합니다 
+
+
+| 스토리지 리소스 할당량을 생성합니다 
+
+
+.3+| 개발자 * | 할당된 프로젝트에서 PVC 또는 POD를 생성하거나 패치하기 위한 액세스를 검증합니다 
+
+
+| 다른 프로젝트에서 PVC 또는 POD를 생성하거나 패치하기 위한 액세스를 검증합니다 
+
+
+| 프로젝트, 리소스 할당량 및 StorageClasses를 보거나 편집하려면 액세스 유효성을 검사합니다 
+|===
+link:rh-os-n_use_case_multitenancy_configuration_prerequisites.html["다음: 필수 구성 요소."]

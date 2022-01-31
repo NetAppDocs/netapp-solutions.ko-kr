@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/hdcs-sh-overview-of-hadoop-data-protection-use-cases.html 
+keywords: summary, overview, backup, devtest, data protection 
+summary: '이 섹션에서는 이 백서의 초점을 구성하는 데이터 보호 활용 사례에 대해 자세히 설명합니다. 나머지 섹션에서는 고객 문제(시나리오), 요구 사항 및 당면 과제, 솔루션 등 각 사용 사례에 대한 자세한 정보를 제공합니다.' 
+---
+= Hadoop 데이터 보호 활용 사례 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:hdcs-sh-hadoop-data-protection-and-netapp.html["이전: Hadoop 데이터 보호 및 NetApp"]
+
+이 섹션에서는 이 백서의 초점을 구성하는 데이터 보호 활용 사례에 대해 자세히 설명합니다. 나머지 섹션에서는 고객 문제(시나리오), 요구 사항 및 당면 과제, 솔루션 등 각 사용 사례에 대한 자세한 정보를 제공합니다.
+
+
+
+== 사용 사례 1: Hadoop 데이터 백업
+
+이 활용 사례에서 In-Place Analytics Module은 대형 금융 기관에서 긴 백업 시간을 24시간 이상으로 단축하면서 몇 시간 미만으로 단축하도록 지원했습니다.
+
+
+
+== 사용 사례 2: 클라우드에서 사내로 백업 및 재해 복구
+
+NetApp에서 제공하는 Data Fabric을 구성 요소로 사용함으로써 대규모 브로드캐스트 회사는 주문형, 즉각적인 데이터 전송 같은 다양한 데이터 전송 모드에 따라 클라우드 데이터를 사내 데이터 센터에 백업하는 요구사항을 충족시킬 수 있었습니다. 또는 Hadoop/Spark 클러스터 로드를 기반으로 합니다.
+
+
+
+== 사용 사례 3: 기존 Hadoop 데이터에 대해 DevTest 활성화
+
+NetApp 솔루션을 통해 온라인 음악 유통업체는 다양한 지점에서 공간 효율적인 다중 Hadoop 클러스터를 신속하게 구축하여 보고서를 생성하고 예약된 정책을 사용하여 일일 DevTest 작업을 실행할 수 있었습니다.
+
+
+
+== 사용 사례 4: 데이터 보호 및 멀티 클라우드 연결
+
+한 대형 서비스 공급자는 NetApp이 제공하는 Data Fabric을 사용하여 다양한 클라우드 인스턴스에서 고객에게 멀티 클라우드 분석을 제공합니다.
+
+
+
+== 사용 사례 5: 분석 워크로드 가속화
+
+가장 큰 금융 서비스 및 투자 은행 중 하나는 NetApp 네트워크 연결 스토리지 솔루션을 사용하여 I/O 대기 시간을 줄이고 정량 재무 분석 플랫폼을 가속화했습니다.
+
+link:hdcs-sh-use-case-1--backing-up-hadoop-data.html["다음: 활용 사례 1 - Hadoop 데이터 백업"]

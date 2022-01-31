@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/hdcs-sh-use-case-4--data-protection-and-multicloud-connectivity.html 
+keywords: iot, aws, nps, azure, analytics application 
+summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 멀티 클라우드 연결을 제공하는 클라우드 서비스 파트너와 관련이 있습니다. 
+---
+= 사용 사례 4: 데이터 보호 및 멀티 클라우드 연결
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:hdcs-sh-use-case-3--enabling-devtest-on-existing-hadoop-data.html["이전: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest 설정"]
+
+이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 멀티 클라우드 연결을 제공하는 클라우드 서비스 파트너와 관련이 있습니다.
+
+
+
+== 시나리오
+
+이 시나리오에서는 여러 소스에서 AWS로 수신된 IoT 데이터가 NPS의 중앙 위치에 저장됩니다. NPS 스토리지는 AWS 및 Azure에 위치한 Spark/Hadoop 클러스터에 연결되므로, 여러 클라우드에서 실행되는 빅데이터 분석 애플리케이션이 동일한 데이터에 액세스할 수 있습니다.
+
+
+
+== 요구사항 및 당면 과제
+
+이 사용 사례의 주요 요구사항과 과제는 다음과 같습니다.
+
+* 고객은 여러 클라우드를 사용하여 동일한 데이터에 대한 분석 작업을 실행하려고 합니다.
+* 다양한 센서와 허브를 통해 사내, 클라우드와 같은 다양한 소스로부터 데이터를 받아야 합니다.
+* 솔루션은 효율적이고 비용 효율적이어야 합니다.
+* 주요 과제는 사내 및 다른 클라우드 간에 하이브리드 분석 서비스를 제공하는 비용 효율적이고 효율적인 솔루션을 구축하는 것입니다.
+
+
+
+
+== 해결 방법
+
+이 이미지는 데이터 보호 및 멀티 클라우드 연결 솔루션을 보여줍니다.
+
+image:hdcs-sh-image12.png["오류: 그래픽 이미지가 없습니다"]
+
+위 그림과 같이 센서의 데이터가 스트리밍되어 Kafka를 통해 AWS Spark 클러스터로 수집됩니다. 이 데이터는 Equinix 데이터 센터 내의 클라우드 공급자 외부에 있는 NPS에 있는 NFS 공유에 저장됩니다. NetApp NPS는 Direct Connect와 Express Route 연결을 통해 Amazon AWS 및 Microsoft Azure에 연결되므로, 고객은 데이터 이동 없는 분석 모듈을 활용하여 Amazon 및 AWS 분석 클러스터 모두에서 데이터에 액세스할 수 있습니다. 이 접근 방식은 여러 하이퍼 스케일러의 클라우드 분석 문제를 해결합니다.
+
+따라서 사내 스토리지와 NPS 스토리지 모두 ONTAP 소프트웨어를 실행하므로 SnapMirror는 사내 클러스터에 NPS 데이터를 미러링하여 사내 및 여러 클라우드에 하이브리드 클라우드 분석을 제공할 수 있습니다.
+
+최적의 성능을 위해 일반적으로 여러 네트워크 인터페이스 및 직접 연결/빠른 경로를 사용하여 클라우드 인스턴스에서 데이터에 액세스할 것을 권장합니다.
+
+link:hdcs-sh-use-case-5--accelerate-analytic-workloads.html["다음: 사용 사례 5 - 분석 워크로드 가속화"]

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-architecture-sizing-options.html 
+keywords: architecture, sizing, computer server, shared storage 
+summary: 다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 수 있습니다. 
+---
+= 아키텍처 사이징 옵션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-test-results.html["이전: 테스트 결과."]
+
+다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 수 있습니다.
+
+
+
+== 컴퓨팅 서버
+
+우리는 SE350에서 지원되는 최저 수준의 CPU인 Intel Xeon D-2123IT CPU를 4개의 물리적 코어와 60W TDP로 사용했습니다. 서버는 CPU 교체를 지원하지 않지만 보다 강력한 CPU로 주문할 수 있습니다. 지원되는 최상위 CPU는 16개의 코어가 있는 Intel Xeon D-2183IT, 2.20GHz에서 실행되는 100W입니다. 이렇게 하면 CPU 계산 기능이 크게 향상됩니다. CPU는 추론 워크로드 자체를 실행하는 데 병목 지점이 되지 않지만, 데이터 처리와 추론과 관련된 다른 작업에 도움이 됩니다. 현재 NVIDIA T4는 에지 사용 사례에 사용할 수 있는 유일한 GPU이므로, 현재는 GPU를 업그레이드하거나 다운그레이드할 수 없습니다.
+
+
+
+== 공유 스토리지
+
+테스트 및 검증을 위해 최대 스토리지 용량이 50.5TB, 순차적 읽기의 경우 처리량 4.4GBps, 소규모 랜덤 읽기의 경우 230K IOPS를 지원하는 NetApp AFF C190 시스템이 이 문서의 목적에 사용되었으며 에지 추론 워크로드에 적합한 것으로 입증되었습니다.
+
+그러나 스토리지 용량 또는 더 빠른 네트워킹 속도가 필요한 경우 NetApp AFF A220 또는 을 사용해야 합니다 https://tv.netapp.com/detail/video/6211798209001/netapp-aff-a250-virtual-tour-and-demo["NetApp AFF A250"^] 기술을 자세히 소개합니다. 또한 최대 1.5PB의 용량을 가진 NetApp EF280 시스템도 이 솔루션 검증을 위해 10Gbps 대역폭 사용이 사용되었습니다. 더 높은 대역폭으로 더 많은 스토리지 용량을 원하는 경우, 사용할 수 있습니다.
+
+link:ai-edge-conclusion.html["다음: 결론."]

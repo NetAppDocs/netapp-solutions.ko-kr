@@ -1,0 +1,225 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-technology-overview.html 
+keywords: tech, technology, overview, aff, a220, a250, ef280, ef300, 
+summary: 이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합니다. 
+---
+= 기술 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-introduction.html["이전: 소개."]
+
+
+
+== NetApp AFF 시스템
+
+최첨단 NetApp AFF 스토리지 시스템을 사용하면 AI 추론 구축을 통해 에지에서 업계 최고 수준의 성능, 탁월한 유연성, 클라우드 통합, 동급 최고의 데이터 관리로 엔터프라이즈 스토리지 요구사항을 충족할 수 있습니다. 플래시 전용으로 설계된 NetApp AFF 시스템은 비즈니스 크리티컬 데이터를 더 빠르게 처리하고 관리, 보호할 수 있도록 지원합니다.
+
+* 엔트리 레벨 NetApp AFF 스토리지 시스템은 FAS2750 하드웨어 및 SSD 플래시 미디어를 기반으로 합니다
+* HA 구성의 컨트롤러 2개
+
+
+image:ai-edge-image5.png["오류: 그래픽 이미지가 없습니다"]
+
+NetApp 엔트리 레벨 AFF C190 스토리지 시스템은 다음 기능을 지원합니다.
+
+* 최대 드라이브 수는 24x 960GB SSD입니다
+* 두 가지 가능한 구성:
++
+** 이더넷(10GbE): 10GBASE-T(RJ-45) 포트 4개
+** 유니파이드(16Gb FC 또는 10GbE): 4x UTA2(Unified Target Adapter 2) 포트
+
+
+* 최대 50.5TB의 유효 용량
++
+
+NOTE: NAS 워크로드의 경우, 단일 엔트리 레벨 AFF C190 시스템은 연속 읽기의 경우 4.4GBps의 처리량과 작은 랜덤 읽기의 경우 1ms 이하의 지연 시간으로 230K IOPS를 지원합니다.
+
+
+
+
+
+== NetApp AFF A220을 참조하십시오
+
+또한, NetApp은 대규모 구축을 위해 더 뛰어난 성능과 확장성을 제공하는 다른 엔트리급 스토리지 시스템을 제공합니다. NAS 워크로드의 경우 단일 엔트리 레벨 AFF A220 시스템이 다음을 지원합니다.
+
+* 순차적 읽기의 경우 6.2GBps의 처리량
+* 375K IOPS, 1ms 미만의 지연 시간으로 소규모 랜덤 읽기 지원
+* 최대 드라이브 수는 144x 960GB, 3.8TB 또는 7.6TB SSD입니다
+* AFF A220은 1PB 이상의 실제 용량으로 확장됩니다
+
+
+
+
+== NetApp AFF A250
+
+* 최대 실제 용량은 35PB이며 최대 스케일아웃 2-24개 노드(HA 쌍 12개)를 지원하는 경우
+* AFF A220보다 45% 이상 높은 성능 향상을 제공합니다
+* 440k IOPS 랜덤 읽기 @ 1ms
+* 최신 NetApp ONTAP 릴리스 ONTAP 9.8을 기반으로 구축
+* HA 및 클러스터 인터커넥트에 2개의 25GB 이더넷을 활용합니다
+
+
+
+
+== NetApp E-Series EF 시스템
+
+EF-Series는 엔트리 레벨 및 미드레인지 All-Flash SAN 스토리지 어레이 제품군으로, NetApp SANtricity 소프트웨어를 사용하여 데이터에 더 빠르게 액세스하고 가치를 더 빠르게 창출할 수 있습니다. 이러한 시스템은 SAS 및 NVMe 플래시 스토리지를 모두 제공하며 경제적인 가격으로 최고 수준의 IOPS, 100마이크로초 미만의 응답 시간, 최대 44GBps의 대역폭을 제공하므로 AI 추론 및 고성능 컴퓨팅(HPC)과 같은 까다로운 애플리케이션과 혼합 워크로드에 적합합니다.
+
+다음 그림에서는 NetApp EF280 스토리지 시스템을 보여 줍니다.
+
+image:ai-edge-image7.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== NetApp EF280
+
+* 32Gb/16Gb FC, 25Gb/10Gb iSCSI 및 12Gb SAS 지원
+* 최대 실제 용량은 총 1.5PB의 96개 드라이브입니다
+* 10GBps 처리량(순차적 읽기)
+* 300K IOPS(랜덤 읽기)
+* NetApp EF280은 NetApp 포트폴리오에서 가장 경제적인 All-Flash 어레이(AFA)입니다
+
+
+
+
+== NetApp EF300
+
+* 24x NVMe SSD 드라이브로 총 367TB 용량 지원
+* 총 240x NL-SAS HDD, 96x SAS SSD 또는 그 조합 확장 옵션
+* 100Gb NVMe/IB, NVMe/RoCE, iSER/IB 및 SRP/IB
+* 32Gb NVMe/FC, FCP
+* 25GB iSCSI
+* 20GBps(순차적 읽기)
+* 670K IOPS(랜덤 읽기)
+
+
+
+NOTE: 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/19339-DS-4082.pdf["NetApp EF-Series NetApp EF-Series All-Flash 어레이 EF600, F300, EF570, EF280 데이터시트"^].
+
+
+
+== NetApp ONTAP 9
+
+NetApp의 최신 세대 스토리지 관리 소프트웨어인 ONTAP 9.8.1을 통해 기업은 인프라를 현대화하고 클라우드 지원 데이터 센터로 전환할 수 있습니다. ONTAP는 업계 최고 수준의 데이터 관리 기능을 활용하여 데이터가 상주하는 위치와 상관없이 단일 툴셋으로 데이터를 관리하고 보호할 수 있습니다. 필요에 따라 에지, 코어, 클라우드 등 어느 위치로도 데이터를 자유롭게 이동할 수 있습니다. ONTAP 9.8.1에는 데이터 관리를 단순화하고, 중요 데이터를 더 빨리 처리하고 보호하고, 하이브리드 클라우드 아키텍처 전반에서 차세대 인프라 기능을 지원하는 다양한 기능이 포함되어 있습니다.
+
+
+
+=== 데이터 관리를 단순화하십시오
+
+애플리케이션 및 데이터 세트에 적절한 리소스가 사용될 수 있도록 데이터 관리는 엔터프라이즈 IT 운영에 매우 중요합니다. ONTAP에는 운영을 간소화 및 단순화하고 총 운영 비용을 절감할 수 있는 다음과 같은 기능이 포함되어 있습니다.
+
+* * 인라인 데이터 컴팩션 및 확대된 중복제거. * 데이터 컴팩션은 스토리지 블록 내부의 낭비되는 공간을 줄이고, 중복제거는 실제 용량을 크게 증가시킵니다. 이는 로컬에 저장된 데이터와 클라우드로 계층화된 데이터에 적용됩니다.
+* * 최소, 최대 및 적응형 서비스 품질(AQoS). * 세분화된 서비스 품질(QoS) 제어는 공유 수준이 높은 환경에서 중요 애플리케이션의 성능 수준을 유지하는 데 도움이 됩니다.
+* * NetApp FabricPool. * 이 기능은 콜드 데이터를 AWS(Amazon Web Services), Azure, NetApp StorageGRID 스토리지 솔루션을 포함한 퍼블릭 및 프라이빗 클라우드 스토리지 옵션으로 자동 계층화합니다. FabricPool에 대한 자세한 내용은 를 참조하십시오 link:https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598"^].
+
+
+
+
+=== 데이터 가속화 및 보호
+
+ONTAP 9은 탁월한 수준의 성능과 데이터 보호를 제공하며 다음과 같은 방법으로 이러한 기능을 확장합니다.
+
+* * 성능 및 낮은 지연 시간 * ONTAP는 가장 짧은 지연 시간으로 가장 높은 처리량을 제공합니다.
+* * 데이터 보호. * ONTAP는 모든 플랫폼에서 공통 관리를 지원하는 내장 데이터 보호 기능을 제공합니다.
+* * NVE(NetApp 볼륨 암호화). * ONTAP는 온보드 및 외부 키 관리를 모두 지원하여 네이티브 볼륨 레벨 암호화를 제공합니다.
+* * 멀티테넌시 및 다단계 인증 * ONTAP를 통해 인프라 리소스를 최고 수준의 보안으로 공유할 수 있습니다.
+
+
+
+
+=== 미래 지향형 인프라
+
+ONTAP 9은 다음과 같은 기능을 통해 지속적으로 변화하는 까다로운 비즈니스 요구사항을 충족할 수 있도록 지원합니다.
+
+* * 원활한 확장 및 무중단 운영 * ONTAP은 기존 컨트롤러 및 스케일아웃 클러스터에 무중단으로 용량을 추가할 수 있도록 지원합니다. 고객은 고비용이 따르는 데이터 마이그레이션이나 운영 중단 없이 NVMe 및 32Gb FC와 같은 최신 기술로 업그레이드할 수 있습니다.
+* * 클라우드 연결. * ONTAP은 클라우드에 가장 많이 연결되는 스토리지 관리 소프트웨어로, 모든 퍼블릭 클라우드에서 소프트웨어 정의 스토리지(ONTAP Select) 및 클라우드 네이티브 인스턴스(NetApp Cloud Volumes Service) 옵션이 제공됩니다.
+* 새로운 애플리케이션과의 통합 * ONTAP는 기존 엔터프라이즈 앱을 지원하는 인프라와 동일한 인프라를 사용하여 자율주행 차량, 스마트 시티, Industry 4.0과 같은 차세대 플랫폼 및 애플리케이션을 위한 엔터프라이즈급 데이터 서비스를 제공합니다.
+
+
+
+
+== NetApp SANtricity를 참조하십시오
+
+NetApp SANtricity는 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이에 업계 최고의 성능, 안정성, 단순성을 제공하도록 설계되었습니다. 데이터 분석, 비디오 감시, 백업 및 복구 등 워크로드가 많은 애플리케이션에서 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이의 성능과 활용률을 극대화합니다. SANtricity를 사용하면 스토리지를 온라인 상태로 유지하면서 구성 조정, 유지 관리, 용량 확장 및 기타 작업을 완료할 수 있습니다. 또한 SANtricity는 사용하기 쉬운 온박스형 시스템 관리자 인터페이스를 통해 뛰어난 데이터 보호, 사전 예방 모니터링 및 인증 보안을 제공합니다. 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/7676-ds-3891.pdf["NetApp E-Series SANtricity 소프트웨어 데이터시트 를 참조하십시오"^].
+
+
+
+=== 최적의 성능
+
+성능에 최적화된 SANtricity 소프트웨어는 모든 데이터 분석, 비디오 감시 및 백업 앱에 높은 IOPS 및 처리량과 짧은 지연 시간으로 데이터를 제공합니다. IOPS가 높고 지연 시간이 짧은 애플리케이션과 대역폭과 처리량이 높은 애플리케이션의 성능을 더욱 높이십시오.
+
+
+
+=== 가동 시간 극대화
+
+스토리지가 온라인 상태일 때 모든 관리 작업을 완료하십시오. I/O를 중단하지 않고 구성을 변경하거나, 유지보수를 수행하거나, 용량을 확장할 수 있습니다 자동화된 기능, 온라인 구성, 최첨단 DPP(Dynamic Disk Pool) 기술 등을 통해 동급 최고의 안정성을 실현합니다.
+
+
+
+=== 편안한 휴식
+
+SANtricity 소프트웨어는 사용이 간편한 온박스형 시스템 관리자 인터페이스를 통해 뛰어난 데이터 보호, 사전 예방 모니터링 및 인증 보안을 제공합니다. 스토리지 관리 업무를 간소화합니다. 모든 E-Series 스토리지 시스템의 고급 튜닝에 필요한 유연성 확보 언제 어디서나 NetApp E-Series 시스템을 관리할 수 있습니다. NetApp의 온박스 웹 기반 인터페이스는 관리 워크플로우를 간소화합니다.
+
+
+
+== NetApp 트라이던트
+
+https://netapp.io/persistent-storage-provisioner-for-kubernetes/["트라이던트"^] NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(예: ML 개발자 및 데이터 과학자)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 NetApp 고급 데이터 관리 기능을 활용할 수 있습니다.
+
+
+
+== NetApp Cloud Sync를 참조하십시오
+
+https://docs.netapp.com/us-en/occm/concept_cloud_sync.html["Cloud Sync"^] 는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, Amazon S3(Amazon Simple Storage Service), Amazon Elastic File System(Amazon EFS), Azure Blob, Google Cloud Storage 간에 파일을 전송해야 하는 경우 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync를 사용하면 파일을 필요한 곳으로 빠르고 안전하게 이동할 수 있습니다. 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 미리 정의된 일정에 따라 데이터를 지속적으로 동기화하여 변경된 부분만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다. Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software as a Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. AWS, Azure, Google Cloud Platform 또는 온프레미스에서 Cloud Sync 데이터 브로커를 구축할 수 있습니다.
+
+
+
+=== Lenovo ThinkSystem 서버
+
+Lenovo ThinkSystem 서버는 현재 고객의 과제를 해결하고 미래의 과제를 해결할 수 있는 혁신적인 모듈식 설계 접근 방식을 제공하는 혁신적인 하드웨어, 소프트웨어 및 서비스를 갖추고 있습니다. 이러한 서버는 동급 최강의 업계 표준 기술과 차별화된 Lenovo의 혁신적인 기술을 결합하여 x86 서버에서 최대한의 유연성을 제공합니다.
+
+Lenovo ThinkSystem 서버 배포의 주요 이점은 다음과 같습니다.
+
+* 비즈니스 성장에 맞춰 확장할 수 있는 모듈식 설계
+* 업계 최고 수준의 복원력으로 예기치 못한 가동 중지의 비용이 많이 드는 시간을 절약할 수 있습니다
+* 빠른 플래시 기술을 통해 지연 시간을 단축하고, 응답 시간을 단축하며, 데이터 관리를 실시간으로 수행할 수 있습니다
+
+
+AI 분야에서 Lenovo는 기업들이 워크로드에 대한 ML 및 AI의 이점을 이해하고 적용할 수 있도록 실질적인 접근 방식을 취하고 있습니다. Lenovo 고객은 Lenovo AI Innovation Center의 Lenovo AI 제품을 살펴보고 평가하여 해당 사용 사례의 가치를 완벽하게 파악할 수 있습니다. 가치 창출 시간을 단축하기 위해 이 고객 중심 접근 방식은 AI에 사용하고 최적화할 수 있는 솔루션 개발 플랫폼에 대한 개념 증명을 고객에게 제공합니다.
+
+
+
+=== Lenovo ThinkSystem SE350 Edge 서버
+
+에지 컴퓨팅을 사용하면 데이터 센터 또는 클라우드로 전송되기 전에 네트워크 에지에서 IoT 장치의 데이터를 분석할 수 있습니다. 아래 그림과 같이 Lenovo ThinkSystem SE350은 견고하며 환경 친화적인 소형 폼 팩터에서 유연성, 연결, 보안 및 원격 관리 기능에 중점을 두고 엣지에서의 배포를 위한 고유한 요구 사항을 충족하도록 설계되었습니다.
+
+에지 AI 워크로드에 대한 가속화를 지원할 수 있는 유연성을 갖춘 인텔 제온 D 프로세서를 장착한 SE350은 데이터 센터 외부의 다양한 환경에서 서버 배포의 과제를 해결하기 위해 특별히 제작되었습니다.
+
+image:ai-edge-image8.png["오류: 그래픽 이미지가 없습니다"]
+
+image:ai-edge-image9.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+==== MLPerf
+
+MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입니다. 여기에는 영상 분류, 물체 감지, 의료 영상 및 NLP(자연어 처리)를 비롯한 다양한 적용 AI 영역을 다룹니다. 이 검증에서는 이 검증이 완료될 때 MLPerf 추론의 최신 반복인 Inference v0.7 워크로드를 사용했습니다. 를 클릭합니다 https://mlcommons.org/en/news/mlperf-inference-v07/["MLPerf Inference v0.7"^] 데이터 센터 및 에지 시스템을 위한 새로운 벤치마크 4개가 포함된 제품군:
+
+* * BERT. * Transformers(BERT)의 양방향 Encoder Representation은 Squad 데이터 세트를 사용하여 질문 답변에 맞게 미세 조정되었습니다.
+* * DLRM. * DLRM(Deep Learning Recommendation Model)은 CTR(Click-Through Rates)을 최적화하도록 교육받은 개인 설정 및 권장 모델입니다.
+* * 3D U-Net. * 3D U-Net 아키텍처는 Brain Tumor Segmentation(뇌종양 분할) 데이터 세트에 대한 교육을 받습니다.
+* * RNN-T * Recurrent Neural Network Transducer(RNN-T)는 LibriSpeech의 하위 집합에 대한 교육을 받은 자동 음성 인식(ASR) 모델입니다. MLPerf Inference 결과 및 코드는 공개적으로 사용할 수 있으며 Apache 라이센스에 따라 릴리스됩니다. MLPerf Inference에는 다음과 같은 시나리오를 지원하는 Edge 분산이 있습니다.
+* * 단일 스트림. * 이 시나리오는 스마트폰에서 실행되는 오프라인 AI 쿼리와 같이 응답성이 중요한 요소인 시스템을 모방합니다. 개별 쿼리가 시스템으로 전송되고 응답 시간이 기록됩니다. 모든 응답의 90번째 백분위수 지연 시간이 결과로 보고됩니다.
+* * 멀티스트림. * 이 벤치마크는 여러 센서의 입력을 처리하는 시스템을 위한 것입니다. 테스트 중에 쿼리는 고정된 시간 간격으로 전송됩니다. QoS 제약(허용되는 최대 지연 시간)이 적용됩니다. QoS 제한을 충족하는 동안 시스템에서 처리할 수 있는 스트림의 수를 보고합니다.
+* * Offline. * 배치 처리 응용 프로그램을 다루는 가장 간단한 시나리오이며 메트릭은 초당 샘플 처리량입니다. 모든 데이터를 시스템에서 사용할 수 있으며 벤치마크는 모든 샘플을 처리하는 데 걸리는 시간을 측정합니다.
+
+
+Lenovo는 이 문서에 사용된 서버인 T4가 포함된 SE350에 대한 MLPerf Inference 점수를 게시했습니다. 의 결과를 참조하십시오 https://mlperf.org/inference-results-0-7/["https://mlperf.org/inference-results-0-7/"] 입력 #0.7-145의 "Edge, Closed Division" 섹션에 있습니다.
+
+link:ai-edge-test-plan.html["다음: 테스트 계획."]

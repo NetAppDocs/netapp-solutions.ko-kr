@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_training_time_comparison.html 
+keywords: training, time, comparison, pandas, dask, 
+summary: 이 페이지에서는 기존 Pandas를 이용한 모델 교육 시간을 DASK와 비교합니다. Pandas의 경우, 메모리 오버플로를 방지하기 위해 처리 시간이 느려지기 때문에 더 적은 양의 데이터를 로드했습니다. 따라서 공정한 비교를 제공하기 위해 결과를 보간했습니다. 
+---
+= 교육 시간 비교
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_monitor_dask_using_native_task_streams_dashboard.html["이전: 기본 작업 스트림 대시보드를 사용하여 Dask를 모니터링합니다."]
+
+이 섹션에서는 기존 Pandas를 사용한 모델 교육 시간을 DASK와 비교합니다. Pandas의 경우, 메모리 오버플로를 방지하기 위해 처리 시간이 느려지기 때문에 더 적은 양의 데이터를 로드했습니다. 따라서 공정한 비교를 제공하기 위해 결과를 보간했습니다.
+
+다음 표에서는 Pandas 무작위 포리스트 모델에 사용되는 데이터(데이터 세트의 15일 당 20억 개 중 5천만 개 행)가 상당히 적은 경우의 원시 교육 시간 비교를 보여 줍니다. 이 샘플은 사용 가능한 모든 데이터의 0.25% 이하만을 사용합니다. Dask-cuML의 경우 사용 가능한 모든 20억 행에 대해 무작위 포리스트 모델을 교육했습니다. 두 가지 접근 방식은 비슷한 훈련 시간을 낳았습니다.
+
+|===
+| 접근 방식 | 교육 시간 
+
+
+| Scikit-learn: 15일째에 50M 행만 교육 데이터로 사용합니다 | 47분 21초 
+
+
+| RAPIDS-DASK: 15일 안에 20B 행을 모두 훈련 데이터로 사용 | 1시간, 12분, 11초 
+|===
+다음 표와 같이 교육 시간 결과를 선형적으로 보간할 경우 Dask와 함께 분산 훈련을 사용하면 큰 이점이 있습니다. 기존의 Pandas scikit-learn 접근 방식을 통해 클릭 로그를 하루에 45GB의 데이터를 처리하고 교육하는 데 13일이 걸리는 반면, RAPIDS-Dask 방식을 사용하면 같은 양의 데이터를 262.39배 더 빠르게 처리할 수 있습니다.
+
+|===
+| 접근 방식 | 교육 시간 
+
+
+| Scikit-learn: 15일째에 20B 행을 모두 훈련 데이터로 사용합니다 | 13일, 3시간, 40분, 11초 
+
+
+| RAPIDS-DASK: 15일 안에 20B 행을 모두 훈련 데이터로 사용 | 1시간, 12분, 11초 
+|===
+이전 표에서 RAPIDS와 DASK를 사용하여 여러 GPU 인스턴스에 데이터 처리 및 모델 훈련을 분산하면, Scikit-learn 모델 훈련을 통해 기존 PandDataFrame 처리에 비해 실행 시간이 상당히 짧아진다는 것을 알 수 있습니다. 이 프레임워크를 통해 다중 노드, 다중 GPU 클러스터의 온프레미스뿐만 아니라 클라우드에서 스케일업 및 스케일아웃이 가능합니다.
+
+link:aks-anf_monitor_dask_and_rapids_with_prometheus_and_grafana.html["다음: Prometheus 및 Grafana를 사용하여 Dask 및 RAPIDS를 모니터링합니다."]

@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: ent-apps-db/hybrid_dbops_snapcenter_requirements.html 
+summary: 이 솔루션은 하이브리드 클라우드 설정에서 개발/테스트 및 재해 복구 작업에 널리 사용되는 모든 퍼블릭 클라우드에 버스트가 가능한 온프레미스 운영 데이터베이스를 지원하도록 설계되었습니다. 
+keywords: requirements, virtualized, bare metal, versions, automation 
+---
+= SnapCenter 요구 사항
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+link:hybrid_dbops_snapcenter_architecture.html["이전: 솔루션 아키텍처."]
+
+이 솔루션은 하이브리드 클라우드 설정에서 개발/테스트 및 재해 복구 작업에 널리 사용되는 모든 퍼블릭 클라우드에 버스트가 가능한 온프레미스 운영 데이터베이스를 지원하도록 설계되었습니다.
+
+이 솔루션은 현재 SnapCenter에서 지원하는 모든 데이터베이스를 지원하지만 Oracle 및 SQL Server 데이터베이스만 여기에 나와 있습니다. 이 솔루션은 베어 메탈 워크로드도 지원되지만 가상화된 데이터베이스 워크로드에서 검증을 받았습니다.
+
+ONTAP 스토리지 클러스터에서 DB 호스트에 제공된 DB 볼륨이 있는 운영 데이터베이스 서버가 사내에서 호스팅된다고 가정합니다. SnapCenter 소프트웨어는 데이터베이스 백업 및 클라우드 데이터 복제를 위해 사내에 설치됩니다. Ansible 컨트롤러를 사용할 것을 권장하지만, 퍼블릭 클라우드의 개발/테스트 인스턴스 또는 대기 DR 인스턴스와 동기화되는 데이터베이스 배포 자동화 또는 OS 커널 및 DB 구성에는 필요하지 않습니다.
+
+
+
+== 요구 사항
+
+[cols="3, 9"]
+|===
+| 방법입니다 | 요구 사항 
+
+
+.7+| * 사내 * | SnapCenter에서 지원하는 모든 데이터베이스 및 버전 
+
+
+| SnapCenter v4.4 이상 
+
+
+| Ansible v2.09 이상 
+
+
+| ONTAP 클러스터 9.x 
+
+
+| 인터클러스터 LIF가 구성되었습니다 
+
+
+| 온프레미스에서 클라우드 VPC로 연결(VPN, 상호 연결 등) 
+
+
+| 네트워킹 포트 open-ssh 22-tcp 8145, 8146, 10000, 11104, 11105 
+
+
+.3+| * 클라우드-AWS * | https://docs.netapp.com/us-en/occm/task_creating_connectors_aws.html["Cloud Manager 커넥터"^] 
+
+
+| https://docs.netapp.com/us-en/occm/task_getting_started_aws.html["Cloud Volumes ONTAP"^] 
+
+
+| DB OS EC2 인스턴스를 온프레미스에 일치시킵니다 
+
+
+.3+| * 클라우드 - Azure * | https://docs.netapp.com/us-en/occm/task_creating_connectors_azure.html["Cloud Manager 커넥터"^] 
+
+
+| https://docs.netapp.com/us-en/occm/task_getting_started_azure.html["Cloud Volumes ONTAP"^] 
+
+
+| DB OS Azure 가상 시스템을 온프레미스에 일치시킵니다 
+
+
+.3+| * Cloud-GCP * | https://docs.netapp.com/us-en/occm/task_creating_connectors_gcp.html["Cloud Manager 커넥터"^] 
+
+
+| https://docs.netapp.com/us-en/occm/task_getting_started_gcp.html["Cloud Volumes ONTAP"^] 
+
+
+| DB OS Google Compute Engine 인스턴스를 온프레미스에 일치시킵니다 
+|===
+link:hybrid_dbops_snapcenter_prerequisite.html["다음: 사전 요구 사항 구성."]

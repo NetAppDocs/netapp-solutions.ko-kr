@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: ehc/ehc-support-configs.html 
+keywords: NetApp Solutions, ehc, enterprise hybrid cloud, hyperscalers, vmware, supported config, config, configuration 
+summary:  
+---
+= 엔터프라이즈 하이브리드 클라우드(EHC)에 지원되는 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.
+
+[cols="6, 3, 3, 3"]
+|===
+
+
+|  | * Azure AVS * | * AWS VMC * | * GCP GCVE * 
+
+
+| * CVO(Cloud Volumes ONTAP) * | link:azure-guest.html#cvo["게스트가 연결되었습니다"] | link:aws-guest.html#cvo["게스트가 연결되었습니다"] | link:gcp-guest.html#cvo["게스트가 연결되었습니다"] 
+
+
+| CVS(Cloud Volumes Service) * | - | - | link:gcp-guest.html#cvs["게스트가 연결되었습니다"]
+link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["네이티브 데이터 저장소 ^1"^] 
+
+
+| * Azure NetApp Files(ANF) * | link:azure-guest.html#anf["게스트가 연결되었습니다"]
+link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["네이티브 데이터 저장소 ^1"^] | 해당 없음 | 해당 없음 
+
+
+| * FSx ONTAP * | 해당 없음 | link:aws-guest.html#fsx-ontap["게스트가 연결되었습니다"]
+link:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["네이티브 데이터 저장소 ^1"^] | 해당 없음 
+|===
+
+NOTE: 1-현재 비공개 미리보기에 있습니다

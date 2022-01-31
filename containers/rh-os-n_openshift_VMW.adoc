@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_openshift_VMW.html 
+keywords: OpenShift, VMware vSphere, ESXi 
+summary: VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 가상 서버 및 네트워크를 중앙에서 관리하기 위한 가상화 플랫폼입니다. 
+---
+= VMware vSphere의 OpenShift입니다
+
+
+VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 가상 서버 및 네트워크를 중앙에서 관리하기 위한 가상화 플랫폼입니다.
+
+VMware vSphere에 대한 자세한 내용은 를 참조하십시오 https://www.vmware.com/products/vsphere.html["VMware vSphere 웹 사이트"^].
+
+VMware vSphere는 다음과 같은 기능을 제공합니다.
+
+* * VMware vCenter Server. * VMware vCenter Server는 단일 콘솔에서 모든 호스트와 VM에 대한 통합 관리를 제공하고 클러스터, 호스트 및 VM의 성능 모니터링을 집계합니다.
+* * VMware vSphere vMotion * VMware vCenter를 사용하면 요청 시 중단 없이 클러스터 내의 노드 간에 VM을 핫 마이그레이션할 수 있습니다.
+* * vSphere High Availability. * 호스트 장애 시 운영 중단을 방지하기 위해 VMware vSphere를 사용하면 호스트를 클러스터링하고 고가용성을 구성할 수 있습니다. 호스트 장애로 인해 중단된 VM은 클러스터의 다른 호스트에서 곧 재부팅되어 서비스가 복구됩니다.
+* * DRS(Distributed Resource Scheduler). * VMware vSphere 클러스터는 호스팅 중인 VM의 리소스 요구 사항을 로드 밸런싱하도록 구성할 수 있습니다. 리소스 경합 상태의 VM은 클러스터의 다른 노드로 핫 마이그레이션할 수 있으므로 충분한 리소스를 사용할 수 있습니다.
+
+
+image:redhat_openshift_image33.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== 네트워크 설계
+
+NetApp 기반 Red Hat OpenShift 솔루션은 2개의 데이터 스위치를 사용하여 25Gbps의 기본 데이터 연결을 제공합니다. 또한 스토리지 노드의 대역 내 관리를 위해 1Gbps에서 연결을 제공하는 두 개의 추가 관리 스위치와 IPMI 기능의 대역 외 관리를 사용합니다. OCP는 VMware vSphere에서 클러스터 관리를 위해 VM 논리 네트워크를 사용합니다. 이 섹션에서는 솔루션에 사용되는 각 가상 네트워크 세그먼트의 배열 및 용도에 대해 설명하고 솔루션 구축을 위한 사전 요구 사항을 설명합니다.
+
+
+
+=== VLAN 요구 사항
+
+VMware vSphere의 Red Hat OpenShift는 VLAN(Virtual Local Area Network)을 사용하여 서로 다른 목적으로 네트워크 트래픽을 논리적으로 분리하도록 설계되었습니다. 이 구성은 고객의 요구에 맞게 확장하거나 특정 네트워크 서비스에 대한 추가 격리를 제공할 수 있습니다. 다음 표에는 NetApp 솔루션의 유효성을 검사하는 동안 솔루션을 구현하는 데 필요한 VLAN이 나와 있습니다.
+
+|===
+| VLAN | 목적 | VLAN ID입니다 
+
+
+| 대역외 관리 네트워크 | 물리적 노드 및 IPMI에 대한 관리 | 16 
+
+
+| VM 네트워크 | 가상 게스트 네트워크 액세스 | 181 
+
+
+| 스토리지 네트워크 | ONTAP NFS용 스토리지 네트워크 | 184 
+
+
+| 스토리지 네트워크 | ONTAP iSCSI용 스토리지 네트워크 | 185 
+
+
+| 대역내 관리 네트워크 | ESXi 노드, vCenter Server, ONTAP Select에 대한 관리 | 3480 
+
+
+| 스토리지 네트워크 | NetApp Element iSCSI용 스토리지 네트워크 | 3481 
+
+
+| 마이그레이션 네트워크 | 가상 게스트 마이그레이션을 위한 네트워크 | 3482 
+|===
+
+
+=== 네트워크 인프라 지원 리소스
+
+OpenShift Container Platform을 배포하기 전에 다음 인프라를 구축해야 합니다.
+
+* 대역 내 관리 네트워크 및 VM 네트워크에서 액세스할 수 있는 전체 호스트 이름 확인을 제공하는 DNS 서버가 하나 이상 있어야 합니다.
+* 대역내 관리 네트워크 및 VM 네트워크에서 액세스할 수 있는 NTP 서버가 하나 이상 있어야 합니다.
+* (선택 사항) 대역내 관리 네트워크와 VM 네트워크 모두에 대한 아웃바운드 인터넷 연결.
+
+
+
+
+== 운영 구축 모범 사례
+
+이 섹션에는 이 솔루션을 운영 환경에 구축하기 전에 고려해야 하는 몇 가지 모범 사례가 나와 있습니다.
+
+
+
+=== 최소 3개의 노드로 구성된 ESXi 클러스터에 OpenShift를 배포합니다
+
+이 문서에 설명된 검증된 아키텍처는 2개의 ESXi 하이퍼바이저 노드를 구축하고 VMware vSphere HA 및 VMware vMotion을 활성화하여 내결함성 구성을 보장하여 HA 작업에 적합한 최소 하드웨어 구축을 제공합니다. 이 구성을 사용하면 배포된 VM이 두 하이퍼바이저 간에 마이그레이션되고 하나의 호스트를 사용할 수 없게 될 경우 재부팅됩니다.
+
+Red Hat OpenShift는 처음에 3개의 마스터 노드와 함께 배포되기 때문에 일부 환경에서는 2노드 구성의 최소 2개의 마스터가 동일한 노드를 차지할 수 있으며, 이로 인해 특정 노드를 사용할 수 없게 될 경우 OpenShift에 장애가 발생할 수 있습니다. 따라서 OpenShift 마스터를 균등하게 배포하여 내결함성을 한층 더 높일 수 있도록 ESXi 하이퍼바이저 노드를 3개 이상 구축해야 하는 것이 Red Hat의 모범 사례입니다.
+
+
+
+=== 가상 머신 및 호스트 선호도를 구성합니다
+
+VM 및 호스트 친화성을 활성화하여 여러 하이퍼바이저 노드에 OpenShift 마스터를 배포할 수 있습니다.
+
+유사성 또는 반유사성은 VM 및/또는 호스트 세트에 대한 규칙을 정의하는 방법으로, VM이 그룹의 동일한 호스트 또는 호스트에서 함께 실행되는지 아니면 다른 호스트에서 실행되는지를 결정합니다. VM 및/또는 동일한 매개 변수와 조건 집합을 가진 호스트로 구성된 선호도 그룹을 생성하여 VM에 적용됩니다. 선호도 그룹의 VM이 그룹의 동일한 호스트에서 실행되는지, 아니면 다른 호스트에서 개별적으로 실행되는지에 따라 선호도 그룹의 매개 변수는 양의 선호도 또는 음의 선호도를 정의할 수 있습니다.
+
+선호도 그룹을 구성하려면 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-FF28F29C-8B67-4EFF-A2EF-63B3537E6934.html["vSphere 6.7 설명서: DRS 선호도 규칙 사용"^].
+
+
+
+=== OpenShift 배포에 사용자 지정 설치 파일을 사용합니다
+
+IPI를 사용하면 이 문서 앞부분에서 설명한 대화형 마법사를 통해 OpenShift 클러스터를 쉽게 배포할 수 있습니다. 그러나 클러스터 배포의 일부로 일부 기본값을 변경해야 할 수도 있습니다.
+
+이 경우 즉시 클러스터를 배포하지 않고도 마법사를 실행하고 작업을 수행할 수 있지만 마법사는 나중에 클러스터를 배포할 수 있는 구성 파일을 만듭니다. IPI 기본값을 변경해야 하거나 다중 테넌시와 같은 다른 용도로 환경에 여러 동일한 클러스터를 배포하려는 경우 매우 유용합니다. OpenShift에 대한 사용자 지정 설치 구성을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere-installer-provisioned-customizations.html["Red Hat OpenShift 사용자 지정과 함께 vSphere에 클러스터 설치"^].
+
+link:rh-os-n_overview_netapp.html["다음은 NetApp 스토리지 개요입니다."]

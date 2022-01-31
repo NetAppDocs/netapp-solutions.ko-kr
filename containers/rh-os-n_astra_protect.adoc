@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_astra_protect.html 
+summary: Astra Control Center에서 애플리케이션 워크로드를 관리하고 나면 해당 워크로드에 대한 보호 설정을 구성할 수 있습니다. 
+keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
+---
+= 애플리케이션 보호
+
+
+Astra Control Center에서 애플리케이션 워크로드를 관리하고 나면 해당 워크로드에 대한 보호 설정을 구성할 수 있습니다.
+
+
+
+== 애플리케이션 스냅샷 생성
+
+애플리케이션의 스냅샷은 해당 스냅샷 복사본을 기반으로 애플리케이션을 특정 시점으로 복원하거나 클론 복제하는 데 사용할 수 있는 ONTAP 스냅샷 복사본을 생성합니다.
+
+. 응용 프로그램의 스냅샷을 만들려면 앱 > 관리 탭으로 이동하여 스냅샷 복사본을 만들 응용 프로그램을 클릭합니다. 응용 프로그램 이름 옆의 드롭다운 메뉴를 클릭하고 스냅샷 을 클릭합니다.
++
+image:redhat_openshift_image101.jpg["Astra Control Center 스냅샷 버튼"]
+
+. 스냅샷 세부 정보를 입력하고 검토 를 클릭한 다음 스냅샷 을 클릭합니다. 스냅샷을 생성하는 데 약 1분이 소요되며 스냅샷이 성공적으로 생성된 후 상태를 사용할 수 있습니다.
+
+
+image:redhat_openshift_image102.jpg["Astra Control Center에서 스냅샷을 생성합니다"]
+
+
+
+== 애플리케이션 백업 생성
+
+애플리케이션 백업에서는 애플리케이션의 활성 상태와 애플리케이션 리소스의 구성을 캡처하여 파일로 저장한 다음 원격 오브젝트 스토리지 버킷에 저장합니다.
+
+Astra Control Center에서 관리 대상 애플리케이션을 백업 및 복구하려면 백업 ONTAP 시스템에 대한 고급 사용자 설정을 사전 요구 사항으로 구성해야 합니다. 이렇게 하려면 다음 명령을 입력합니다.
+
+[listing]
+----
+ONTAP::> export-policy rule modify -vserver ocp-trident -policyname default -ruleindex 1 -superuser sys
+ONTAP::> export-policy rule modify -policyname default -ruleindex 1 -anon 65534 -vserver ocp-trident
+----
+. Astra Control Center에서 관리 대상 응용 프로그램의 백업을 생성하려면 Apps > Managed 탭으로 이동하여 백업할 응용 프로그램을 클릭합니다. 응용 프로그램 이름 옆의 드롭다운 메뉴를 클릭하고 백업을 클릭합니다.
++
+image:redhat_openshift_image103.jpg["Astra Control Center 백업 버튼"]
+
+. 백업 세부 정보를 입력하고 백업 파일을 보관할 객체 스토리지 버킷을 선택한 다음 검토 를 클릭하고 세부 정보를 검토한 후 백업 을 클릭합니다. 애플리케이션 및 데이터의 크기에 따라 백업이 몇 분 정도 걸릴 수 있으며 백업이 성공적으로 완료된 후 백업 상태를 사용할 수 있게 됩니다.
+
+
+image:redhat_openshift_image104.jpg["Astra Control Center에서 백업을 생성합니다"]
+
+
+
+== 응용 프로그램 복원 또는 복제
+
+버튼을 한 번만 누르면 애플리케이션을 원래 클러스터에 복원하거나 개발/테스트 또는 애플리케이션 보호 및 재해 복구를 위해 원격 클러스터로 복제할 수 있습니다.
+
+. 애플리케이션을 복원 또는 복제하려면 앱 > 관리 탭으로 이동하고 해당 앱을 클릭합니다. 애플리케이션 이름 옆의 드롭다운 메뉴를 클릭하고 클론 을 클릭합니다.
++
+image:redhat_openshift_image105.jpg["Astra Control Center 클론 버튼"]
+
+. 새 네임스페이스의 세부 정보를 입력하고 복원하거나 클론 복제할 클러스터를 선택한 다음 기존 스냅샷이나 애플리케이션의 현재 상태 백업에서 복원 또는 클론 복제할지 여부를 선택합니다. 그런 다음 검토 를 클릭하고 세부 정보를 검토한 후 복제 를 클릭합니다.
++
+image:redhat_openshift_image106.jpg["Astra Control Center 복구"]
+
+. 새 애플리케이션은 검색 상태로 전환되지만, Astra Control Center는 선택한 클러스터에 애플리케이션을 생성합니다. 응용 프로그램의 모든 리소스가 Astra에 의해 설치 및 감지되면 응용 프로그램은 사용 가능 상태로 전환됩니다.
+
+
+image:redhat_openshift_image107.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
+
+link:rh-os-n_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]

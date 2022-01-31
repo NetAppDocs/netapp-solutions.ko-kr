@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_network_device_failure_prediction_use_case_summary.html 
+keywords: NetApp, Device, Failure, Prediction 
+summary:  
+---
+= 네트워크 장치 오류 예측 사용 사례 요약
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 사용 사례는 아시아 통신 분야의 이과지오 고객을 기반으로 합니다. 매년 100K 기업 고객 및 125k 네트워크 중단 이벤트가 발생하면서 네트워크 장애가 고객에게 영향을 미치지 않도록 사전에 조치를 취하고 예측해야 했습니다. 이 솔루션은 다음과 같은 이점을 제공합니다.
+
+* 네트워크 장애에 대한 예측 분석
+* 발권 시스템과 통합
+* 네트워크 장애를 방지하기 위한 사전 예방 조치 이과지오(Iguazio)의 구현 결과, 60%의 장애를 사전에 예방했습니다.
+
+
+link:mlrun_setup_overview.html["다음: 설정 개요"]

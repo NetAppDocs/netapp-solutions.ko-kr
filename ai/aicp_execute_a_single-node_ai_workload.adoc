@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_execute_a_single-node_ai_workload.html 
+keywords: Single-Node, AI, Kubernetes, cluster, PVC 
+summary: Kubernetes 클러스터에서 단일 노드 AI 및 ML 작업을 실행하려면 배포 점프 호스트에서 이 페이지의 작업을 수행하십시오. 
+---
+= 단일 노드 AI 워크로드 실행
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Kubernetes 클러스터에서 단일 노드 AI 및 ML 작업을 실행하려면 배포 점프 호스트에서 다음 작업을 수행하십시오. Trident를 사용하면 페타바이트에 이를 수 있는 데이터 볼륨을 빠르고 쉽게 만들어 Kubernetes 워크로드에 액세스할 수 있습니다. Kubernetes Pod에서 데이터 볼륨에 액세스할 수 있도록 하려면 POD 정의에 PVC를 지정하기만 하면 됩니다. 이 단계는 Kubernetes 네이티브 운영이므로 NetApp의 전문성이 필요하지 않습니다.
+
+
+NOTE: 이 섹션에서는 Kubernetes 클러스터에서 실행하려고 하는 특정 AI 및 ML 워크로드를 이미 컨테이너화(Docker 컨테이너 형식)했다고 가정합니다.
+
+. 다음 명령 예는 ImageNet 데이터 세트를 사용하는 TensorFlow 벤치마크 워크로드에 대한 Kubernetes 작업 생성을 보여줍니다. ImageNet 데이터 세트에 대한 자세한 내용은 를 참조하십시오 http://www.image-net.org["ImageNet 웹 사이트"^].
++
+이 예시 작업은 8개의 GPU를 요청하므로 8개 이상의 GPU를 갖춘 단일 GPU 작업자 노드에서 실행할 수 있습니다. 이 예시 작업은 8개 이상의 GPU를 갖춘 작업자 노드가 없거나 현재 다른 워크로드를 사용 중인 클러스터에 제출할 수 있습니다. 이 경우 해당 작업자 노드를 사용할 수 있을 때까지 작업은 보류 중 상태로 유지됩니다.
+
++
+또한 스토리지 대역폭을 최대화하기 위해 필요한 교육 데이터가 들어 있는 볼륨이 이 작업에서 생성되는 POD 내에 두 번 마운트됩니다. 포드에도 다른 볼륨이 마운트됩니다. 이 두 번째 볼륨은 결과 및 메트릭을 저장하는 데 사용됩니다. 이러한 용적은 PVC 이름을 사용하여 작업 정의에서 참조됩니다. Kubernetes 작업에 대한 자세한 내용은 를 참조하십시오 https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/["Kubernetes 공식 문서"^].
+
++
+이 예시 작업이 생성하는 포드의 /dev/shm에 Memory의 midium 값을 가진 emptyDir 볼륨이 실장된다. Docker 컨테이너 런타임을 통해 자동으로 생성되는 '/dev/shm' 가상 볼륨의 기본 크기는 TensorFlow의 요구 사항에 비해 부족할 수 있습니다. 다음 예제와 같이 "emptyDir" 볼륨을 마운트하면 충분히 큰 "/dev/shm" 가상 볼륨이 제공됩니다. 'emptyDir' 볼륨에 대한 자세한 내용은 를 참조하십시오 https://kubernetes.io/docs/concepts/storage/volumes/["Kubernetes 공식 문서"^].
+
++
+이 예제 작업 정의에 지정된 단일 컨테이너에는 'ecurityContext > privileged' 값이 'true'로 지정됩니다. 이 값은 컨테이너가 호스트에 대한 루트 액세스 권한을 효과적으로 가지고 있음을 의미합니다. 이 경우 실행되는 특정 워크로드에 루트 액세스가 필요하므로 이 주석이 사용됩니다. 특히, 워크로드가 수행하는 명확한 캐시 작업에서는 루트 액세스가 필요합니다. 이 "특권" 주석이 필요한지 여부는 실행 중인 특정 워크로드의 요구 사항에 따라 달라집니다.
+
++
+....
+$ cat << EOF > ./netapp-tensorflow-single-imagenet.yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: netapp-tensorflow-single-imagenet
+spec:
+  backoffLimit: 5
+  template:
+    spec:
+      volumes:
+      - name: dshm
+        emptyDir:
+          medium: Memory
+      - name: testdata-iface1
+        persistentVolumeClaim:
+          claimName: pb-fg-all-iface1
+      - name: testdata-iface2
+        persistentVolumeClaim:
+          claimName: pb-fg-all-iface2
+      - name: results
+        persistentVolumeClaim:
+          claimName: tensorflow-results
+      containers:
+      - name: netapp-tensorflow-py2
+        image: netapp/tensorflow-py2:19.03.0
+        command: ["python", "/netapp/scripts/run.py", "--dataset_dir=/mnt/mount_0/dataset/imagenet", "--dgx_version=dgx1", "--num_devices=8"]
+        resources:
+          limits:
+            nvidia.com/gpu: 8
+        volumeMounts:
+        - mountPath: /dev/shm
+          name: dshm
+        - mountPath: /mnt/mount_0
+          name: testdata-iface1
+        - mountPath: /mnt/mount_1
+          name: testdata-iface2
+        - mountPath: /tmp
+          name: results
+        securityContext:
+          privileged: true
+      restartPolicy: Never
+EOF
+$ kubectl create -f ./netapp-tensorflow-single-imagenet.yaml
+job.batch/netapp-tensorflow-single-imagenet created
+$ kubectl get jobs
+NAME                                       COMPLETIONS   DURATION   AGE
+netapp-tensorflow-single-imagenet          0/1           24s        24s
+....
+. 1단계에서 만든 작업이 올바르게 실행 중인지 확인합니다. 다음 명령 예에서는 작업 정의에 지정된 대로 작업에 대해 단일 POD가 생성되었으며 이 POD가 현재 GPU 작업자 노드 중 하나에서 실행되고 있음을 확인합니다.
++
+....
+$ kubectl get pods -o wide
+NAME                                             READY   STATUS      RESTARTS   AGE
+IP              NODE            NOMINATED NODE
+netapp-tensorflow-single-imagenet-m7x92          1/1     Running     0          3m    10.233.68.61    10.61.218.154   <none>
+....
+. 1단계에서 생성한 작업이 성공적으로 완료되었는지 확인합니다. 다음 명령 예에서는 작업이 성공적으로 완료되었음을 확인합니다.
++
+....
+$ kubectl get jobs
+NAME                                             COMPLETIONS   DURATION   AGE
+netapp-tensorflow-single-imagenet                1/1           5m42s      10m
+$ kubectl get pods
+NAME                                                   READY   STATUS      RESTARTS   AGE
+netapp-tensorflow-single-imagenet-m7x92                0/1     Completed   0          11m
+$ kubectl logs netapp-tensorflow-single-imagenet-m7x92
+[netapp-tensorflow-single-imagenet-m7x92:00008] PMIX ERROR: NO-PERMISSIONS in file gds_dstore.c at line 702
+[netapp-tensorflow-single-imagenet-m7x92:00008] PMIX ERROR: NO-PERMISSIONS in file gds_dstore.c at line 711
+Total images/sec = 6530.59125
+================ Clean Cache !!! ==================
+mpirun -allow-run-as-root -np 1 -H localhost:1 bash -c 'sync; echo 1 > /proc/sys/vm/drop_caches'
+=========================================
+mpirun -allow-run-as-root -np 8 -H localhost:8 -bind-to none -map-by slot -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH -x PATH python /netapp/tensorflow/benchmarks_190205/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model=resnet50 --batch_size=256 --device=gpu --force_gpu_compatible=True --num_intra_threads=1 --num_inter_threads=48 --variable_update=horovod --batch_group_size=20 --num_batches=500 --nodistortions --num_gpus=1 --data_format=NCHW --use_fp16=True --use_tf_layers=False --data_name=imagenet --use_datasets=True --data_dir=/mnt/mount_0/dataset/imagenet --datasets_parallel_interleave_cycle_length=10 --datasets_sloppy_parallel_interleave=False --num_mounts=2 --mount_prefix=/mnt/mount_%d --datasets_prefetch_buffer_size=2000 --datasets_use_prefetch=True --datasets_num_private_threads=4 --horovod_device=gpu > /tmp/20190814_105450_tensorflow_horovod_rdma_resnet50_gpu_8_256_b500_imagenet_nodistort_fp16_r10_m2_nockpt.txt 2>&1
+....
+. * 선택 사항: * 작업 아티팩트 정리. 다음 예제 명령은 1단계에서 만든 작업 오브젝트의 삭제를 보여 줍니다.
++
+작업 개체를 삭제하면 Kubernetes에서 연결된 포드를 자동으로 삭제합니다.
+
++
+....
+$ kubectl get jobs
+NAME                                             COMPLETIONS   DURATION   AGE
+netapp-tensorflow-single-imagenet                1/1           5m42s      10m
+$ kubectl get pods
+NAME                                                   READY   STATUS      RESTARTS   AGE
+netapp-tensorflow-single-imagenet-m7x92                0/1     Completed   0          11m
+$ kubectl delete job netapp-tensorflow-single-imagenet
+job.batch "netapp-tensorflow-single-imagenet" deleted
+$ kubectl get jobs
+No resources found.
+$ kubectl get pods
+No resources found.
+....
+
+
+link:aicp_execute_a_synchronous_distributed_ai_workload.html["다음: 동기 분산 AI 워크로드 실행"]

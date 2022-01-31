@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: xcp/xcp-bp-troubleshooting.html 
+keywords: troubleshooting, problems, error 70, 
+summary: 이 섹션에서는 NetApp XCP를 사용한 데이터 마이그레이션에 대한 문제 해결 지침을 제공합니다. 
+---
+= 문제 해결
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:xcp-bp-best-practice-guidelines-and-recommendations.html["이전: 모범 사례 지침 및 권장 사항"]
+
+
+
+= 오류 1: xCP가 NFS3 오류와 함께 실패했습니다. 70: xcp.log 파일의 오래된 파일 오류입니다
+
+* 이유 및 지침. *
+
+소스 폴더를 마운트하고 폴더가 있는지 확인합니다. 파일이 없거나 제거된 경우 '파일 핸들 표시' 오류가 발생하며, 이 경우 오류를 무시할 수 있습니다.
+
+
+
+= 오류 2: NetApp NFS 대상 볼륨에 공간이 있지만 xCP NFS 오류 28: 장치에 공간이 남아 있지 않습니다
+
+* 이유 및 지침. *
+
+. df 명령을 실행하거나 스토리지를 확인하여 NFS 대상 볼륨의 공간을 확인합니다.
++
+....
+root@workr-140: USER3# df -h /xcpdest
+Filesystem                 Size  Used Avail Use% Mounted on
+10.63.150.127:/xcpsrc_vol  4.3T  1.7T  2.6T  40% /xcpsrc_vol
+....
+. 스토리지 컨트롤러의 inode를 확인합니다.
++
+....
+A800-Node1-2::> volume show -volume xcpdest -fields files,files-used
+vserver        volume  files    files-used
+-------------- ------- -------- ----------
+A800-Node1_vs1 xcpdest 21251126 21251126
+A800-Node1-2::>
+....
+. inode를 사용하는 경우 다음 명령을 실행하여 inode 수를 늘립니다.
++
+....
+A800-Node1-2::> volume modify -volume xcpdest -vserver A800-Node1_vs1 -files 40000000
+Volume modify successful on volume xcpdest of Vserver A800-Node1_vs1.
+A800-Node1-2::> volume show -volume xcpdest -fields files,files-used
+vserver        volume  files    files-used
+-------------- ------- -------- ----------
+A800-Node1_vs1 xcpdest 39999990 21251126
+A800-Node1-2::>
+....
+
+
+link:xcp-bp-where-to-find-additional-information.html["다음: 추가 정보를 찾을 위치."]

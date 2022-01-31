@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_configuring_kubernetes_cluster.html 
+keywords: NetApp, Kubernetes, Cluster, Configuring 
+summary:  
+---
+= Kubernetes 클러스터 구성 중
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션은 클라우드 및 온프레미스 구축을 위한 두 부분으로 나누어져 있습니다.
+
+
+
+== 클라우드 구축 Kubernetes 구성
+
+NetApp Cloud Manager를 통해 Iguazio Kubernetes 클러스터 연결을 정의할 수 있습니다. Trident를 사용하려면 클러스터의 여러 리소스에 액세스하여 볼륨을 사용할 수 있어야 합니다.
+
+. 액세스를 설정하려면 Iguazio 노드 중 하나에서 Kubernetes 구성 파일을 가져옵니다. 이 파일은 `/home/Iguazio/.kube/config.' 아래에 있습니다 이 파일을 바탕 화면에 다운로드합니다.
+. 구성할 클러스터 검색 으로 이동합니다.
++
+image:mlrun_image9.png["오류: 그래픽 이미지가 없습니다"]
+
+. Kubernetes 구성 파일을 업로드합니다. 다음 이미지를 참조하십시오.
++
+image:mlrun_image10.PNG["오류: 그래픽 이미지가 없습니다"]
+
+. Trident를 구축하고 클러스터와 볼륨을 연결합니다. Iguazio 클러스터에 영구 볼륨 정의 및 할당에 대한 다음 이미지를 참조하십시오. 이 프로세스는 Iguazio의 Kubernetes 클러스터에 영구 볼륨(PV)을 만듭니다. 이를 사용하려면 먼저 영구 볼륨 클레임(PVC)을 정의해야 합니다.
+
+
+image:mlrun_image5.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== 온프레미스 구축 Kubernetes 구성
+
+NetApp Trident의 사내 설치에 대한 자세한 내용은 을 참조하십시오 https://www.netapp.com/us/media/tr-4798.pdf["TR-4798"^] 를 참조하십시오. Kubernetes 클러스터를 구성하고 NetApp Trident를 설치한 후 Trident를 Iguazio 클러스터에 연결하여 데이터 및 모델의 Snapshot 복사본 생성 등의 NetApp 데이터 관리 기능을 사용할 수 있습니다.
+
+link:mlrun_define_persistent_volume_claim.html["Next(다음): 영구 볼륨 클레임을 정의합니다"]

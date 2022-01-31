@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: ehc/azure-setup.html 
+keywords: NetApp Solutions, microsoft azure, avs, azure, vmware managed cloud, enterprise, hybrid, cloud, cloud volumes ontap, cvo 
+summary:  
+---
+= Azure에서 가상화 환경을 구축하고 구성합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.
+
+이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
+
+
+NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+* link:#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
+* link:#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
+* link:#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
+
+
+
+
+== 리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다
+
+Azure VMware 솔루션을 사용하려면 먼저 확인된 구독 내에 리소스 공급자를 등록해야 합니다.
+
+. Azure 포털에 로그인합니다.
+. Azure 포털 메뉴에서 모든 서비스를 선택합니다.
+. 모든 서비스 대화 상자에서 구독을 입력한 다음 구독 을 선택합니다.
+. 보려면 구독 목록에서 구독을 선택합니다.
+. 리소스 공급자 를 선택하고 검색에 Microsoft.AVS 를 입력합니다.
+. 리소스 공급자가 등록되지 않은 경우 등록 을 선택합니다.
++
+image:avs-register-create-pc-1.png[""]
+
++
+image:avs-register-create-pc-2.png[""]
+
+. 리소스 공급자를 등록한 후 Azure 포털을 사용하여 Azure VMware Solution 프라이빗 클라우드를 생성합니다.
+. Azure 포털에 로그인합니다.
+. 새 리소스 만들기 를 선택합니다.
+. Marketplace 검색 텍스트 상자에 Azure VMware Solution을 입력하고 결과에서 선택합니다.
+. Azure VMware 솔루션 페이지에서 생성 을 선택합니다.
+. 기본 탭에서 필드에 값을 입력하고 검토 + 만들기를 선택합니다.
+
+
+참고:
+
+* 빠른 시작을 위해 계획 단계에서 필요한 정보를 수집합니다.
+* 기존 리소스 그룹을 선택하거나 프라이빗 클라우드에 대한 새 리소스 그룹을 생성합니다. 리소스 그룹은 Azure 리소스가 배포 및 관리되는 논리적 컨테이너입니다.
+* CIDR 주소가 고유하며 다른 Azure 가상 네트워크 또는 온-프레미스 네트워크와 겹치지 않도록 하십시오. CIDR은 프라이빗 클라우드 관리 네트워크를 나타내며 vCenter Server 및 NSX-T Manager와 같은 클러스터 관리 서비스에 사용됩니다. /22 주소 공간을 사용하는 것이 좋습니다. 이 예에서는 10.21.0.0/22 가 사용됩니다.
+
+
+image:avs-register-create-pc-3.png[""]
+
+프로비저닝 프로세스는 약 4~5시간이 소요됩니다. 프로세스가 완료된 후 Azure 포털에서 프라이빗 클라우드에 액세스하여 성공적으로 배포되었는지 확인합니다. 구축이 완료되면 성공 상태가 표시됩니다.
+
+Azure VMware 솔루션 프라이빗 클라우드에는 Azure 가상 네트워크가 필요합니다. Azure VMware 솔루션은 사내 vCenter를 지원하지 않으므로 기존 사내 환경과 통합하려면 추가 단계가 필요합니다. 또한 ExpressRoute 회로 및 가상 네트워크 게이트웨이를 설정해야 합니다. 클러스터 프로비저닝이 완료될 때까지 기다리는 동안 새 가상 네트워크를 생성하거나 기존 가상 네트워크를 사용하여 Azure VMware 솔루션에 연결합니다.
+
+image:avs-register-create-pc-4.png[""]
+
+
+
+== 새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다
+
+새 Azure VNet(Virtual Network)을 생성하려면 Azure VNET Connect 탭을 선택합니다. 또는 가상 네트워크 생성 마법사를 사용하여 Azure 포털에서 수동으로 생성할 수도 있습니다.
+
+. Azure VMware Solution 프라이빗 클라우드로 이동하고 관리 옵션 아래에서 접속 구성에 액세스합니다.
+. Azure VNET Connect를 선택합니다.
+. 새 VNET를 생성하려면 Create New 옵션을 선택합니다.
++
+이 기능을 사용하면 VNET를 Azure VMware Solution 프라이빗 클라우드에 연결할 수 있습니다. VNET는 Azure VMware Solution에서 ExpressRoute를 통해 생성된 프라이빗 클라우드에 필요한 구성 요소(예: 점프 박스, Azure NetApp Files와 같은 공유 서비스, 클라우드 볼륨 ONTAP)를 자동으로 생성하여 이 가상 네트워크의 워크로드 간 통신을 지원합니다.
+
++
+* 참고: * VNET 주소 공간은 사설 클라우드 CIDR과 겹치지 않아야 합니다.
+
++
+image:azure-connect-gateway-1.png[""]
+
+. 새 VNET에 대한 정보를 제공하거나 업데이트하고 OK(확인) 를 선택합니다.
+
+
+image:azure-connect-gateway-2.png[""]
+
+제공된 주소 범위 및 게이트웨이 서브넷이 있는 VNET는 지정된 가입 및 리소스 그룹에 생성됩니다.
+
+
+NOTE: VNET를 수동으로 생성하는 경우 해당 SKU와 ExpressRoute를 게이트웨이 유형으로 사용하여 가상 네트워크 게이트웨이를 생성합니다. 구축이 완료되면 인증 키를 사용하여 Azure VMware Solution 프라이빗 클라우드가 포함된 가상 네트워크 게이트웨이에 ExpressRoute 연결을 연결합니다. 자세한 내용은 을 참조하십시오 link:https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#create-a-vnet-manually["Azure에서 VMware 프라이빗 클라우드에 대한 네트워킹을 구성합니다"].
+
+
+
+== Azure VMware Solution 프라이빗 클라우드에 대한 네트워크 연결 및 액세스 검증
+
+Azure VMware 솔루션에서는 사내 VMware vCenter를 통해 프라이빗 클라우드를 관리할 수 없습니다. 대신, 점프 호스트는 Azure VMware Solution vCenter 인스턴스에 연결하는 데 필요합니다. 지정된 리소스 그룹에 점프 호스트를 생성하고 Azure VMware Solution vCenter에 로그인합니다. 이 점프 호스트는 연결을 위해 생성된 동일한 가상 네트워크의 Windows VM이고 vCenter 및 NSX Manager에 대한 액세스를 제공해야 합니다.
+
+image:azure-validate-network-1.png[""]
+
+가상 시스템을 프로비저닝한 후에는 연결 옵션을 사용하여 RDP에 액세스합니다.
+
+image:azure-validate-network-2.png[""]
+
+새로 생성된 이 점프 호스트 가상 머신에서 클라우드 관리자 사용자를 사용하여 vCenter에 로그인합니다. 자격 증명에 액세스하려면 Azure 포털로 이동하여 ID로 이동합니다(프라이빗 클라우드 내의 관리 옵션 아래). 프라이빗 클라우드 vCenter 및 NSX-T Manager의 URL 및 사용자 자격 증명은 여기에서 복사할 수 있습니다.
+
+image:azure-validate-network-3.png[""]
+
+Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (https://10.21.0.2/)[] 관리자 사용자 이름을 * cloudadmin@vsphere.loca l * 로 사용하고 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.
+
+
+NOTE: 웹 클라이언트 URL은 프로비저닝된 각 SDDC에 따라 다릅니다.
+
+image:azure-validate-network-4.png[""]
+
+image:azure-validate-network-5.png[""]
+
+이제 Azure VMware Solution SDDC가 구축 및 구성되었습니다. ExpressRoute Global Reach를 활용하여 사내 환경을 Azure VMware 솔루션 프라이빗 클라우드에 연결합니다. 자세한 내용은 을 참조하십시오 link:https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud["온프레미스 환경을 Azure VMware 솔루션에 대해 알아보십시오"].

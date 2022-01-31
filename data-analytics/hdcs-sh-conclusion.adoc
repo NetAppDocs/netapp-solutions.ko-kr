@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/hdcs-sh-conclusion.html 
+keywords: conclusion, summary, data protection, hadoop, more information, Acknowledgements, version history 
+summary: 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 충족하기 위해 NetApp에서 제공하는 사용 사례 및 솔루션을 요약합니다. 
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:hdcs-sh-use-case-5--accelerate-analytic-workloads.html["이전: 사용 사례 5 - 분석 워크로드 가속화"]
+
+이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 충족하기 위해 NetApp에서 제공하는 사용 사례 및 솔루션을 요약합니다. 고객은 NetApp이 제공하는 Data Fabric을 사용하여 다음을 수행할 수 있습니다.
+
+* NetApp의 풍부한 데이터 관리 기능과 Hadoop 기본 워크플로우와의 통합을 활용하여 적합한 데이터 보호 솔루션을 유연하게 선택할 수 있습니다.
+* Hadoop 클러스터의 백업 윈도우 시간을 약 70% 단축
+* Hadoop 클러스터 백업으로 인한 성능 영향을 없앱니다.
+* 여러 클라우드 공급자로부터 데이터 보호 및 데이터 액세스를 동시에 단일 분석 데이터 소스에 제공
+* FlexClone ® 기술을 사용하여 빠르고 공간 효율적인 Hadoop 클러스터 복사본을 생성합니다.
+
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* NetApp 빅데이터 분석 솔루션
++
+https://www.netapp.com/us/solutions/applications/big-data-analytics/index.aspx["https://www.netapp.com/us/solutions/applications/big-data-analytics/index.aspx"^]
+
+* NetApp 스토리지를 사용하는 Apache Spark 워크로드
++
+https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf["https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf"^]
+
+* Apache Spark용 NetApp 스토리지 솔루션
++
+https://www.netapp.com/media/16864-tr-4570.pdf["https://www.netapp.com/media/16864-tr-4570.pdf"^]
+
+* NetApp에서 지원하는 Data Fabric 기반 Apache Hadoop
++
+https://www.netapp.com/media/16877-tr-4529.pdf["https://www.netapp.com/media/16877-tr-4529.pdf"^]
+
+* NetApp 데이터 이동 없는 분석 모듈
++
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071["https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071"^]
+
+
+
+
+
+== 감사의 말
+
+* Paul Burland, 영업 담당자, ANZ Victoria District Sales, NetApp
+* Hoseb Dermanilian, NetApp 비즈니스 개발 매니저
+* Lee Dorrier, NetApp MPSG 이사
+* David Thiessen, 시스템 엔지니어, ANZ Victoria District SE, NetApp
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2018년 1월 | 최초 릴리스 
+
+
+| 버전 2.0 | 2021년 10월 | 사용 사례 5로 업데이트: 분석 워크로드 가속화 
+|===

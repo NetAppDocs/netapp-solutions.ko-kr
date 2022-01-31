@@ -1,0 +1,784 @@
+---
+sidebar: sidebar 
+permalink: ai/runai-ld_lane_detection_distributed_training_with_run_ai.html 
+keywords: azure, lane, detection, training, case, tusimple, dataset, aks, subnet, virtual, network, run, ai, deploy, install, download, process, back, end, storage, horovod, snapshot 
+summary: 이 섹션에서는 RUN AI Orchestrator를 사용하여 규모에 따라 차선 감지 분산 교육을 수행할 수 있는 플랫폼을 설정하는 방법에 대해 자세히 설명합니다. 
+---
+= 차선 감지 – AI를 통한 분산 훈련
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 섹션에서는 RUN:AI Orchestrator를 사용하여 규모에 따라 차선 감지 분산 교육을 수행할 수 있는 플랫폼을 설정하는 방법에 대해 자세히 설명합니다. 모든 솔루션 요소의 설치와 해당 플랫폼에서 분산된 교육 작업을 실행하는 방법에 대해 설명합니다. ML 버전 관리는 데이터 및 모델 재현성을 달성하기 위한 Run:AI 실험과 연결된 NetApp SnapshotTM을 사용하여 완료됩니다. ML 버전 관리는 모델 추적, 팀 구성원 간 작업 공유, 결과 재현성, 새로운 모델 버전을 운영 환경에 롤링하며 데이터 관리에 중요한 역할을 합니다. NetApp ML 버전 제어(Snapshot)는 각 실험과 관련된 데이터, 훈련된 모델 및 로그의 시점 버전을 캡처할 수 있습니다. 풍부한 API 지원을 통해 run:AI 플랫폼과 쉽게 통합할 수 있습니다. 교육 상태에 따라 이벤트를 트리거하기만 하면 됩니다. 또한, Kubernetes(K8s) 상에서 실행 중인 코드나 컨테이너의 아무 것도 변경하지 않고 전체 실험의 상태를 포착해야 합니다.
+
+마지막으로, 이 기술 보고서에서는 AKS의 여러 GPU 지원 노드에 대한 성능 평가를 마무리합니다.
+
+
+
+== TuSimple 데이터 세트를 사용하여 차선 감지 사용 사례에 대한 분산 교육
+
+이 기술 보고서에서 분산된 교육은 차선 감지를 위한 TuSimple 데이터 세트에 대해 수행됩니다. Horovod는 AKS를 통해 Kubernetes 클러스터의 여러 GPU 노드에 대해 동시에 데이터 분산 교육을 수행하기 위한 교육 코드에 사용됩니다. 코드는 TuSimple 데이터 다운로드 및 처리를 위한 컨테이너 이미지로 패키징됩니다. 처리된 데이터는 NetApp Trident 플러그인에서 할당한 영구 볼륨에 저장됩니다. 교육에서는 하나 이상의 컨테이너 이미지가 생성되고 데이터를 다운로드하는 동안 생성된 영구 볼륨에 저장된 데이터를 사용합니다.
+
+데이터 및 교육 작업을 제출하려면 RUN:AI를 사용하여 리소스 할당 및 관리를 오케스트레이션하십시오. Run: AI를 사용하면 Horovod에 필요한 MPI(Message Passing Interface) 작업을 수행할 수 있습니다. 이 레이아웃을 통해 여러 GPU 노드가 서로 통신하여 각 교육 미니 일괄 처리 후 교육 가중치를 업데이트할 수 있습니다. 또한 UI 및 CLI를 통해 교육을 모니터링할 수 있으므로 실험 진행 상황을 쉽게 모니터링할 수 있습니다.
+
+NetApp Snapshot은 교육 코드 내에 통합되어 모든 실험에 대한 데이터 상태 및 훈련 모델을 캡처합니다. 이 기능을 사용하면 사용된 데이터 및 코드의 버전과 생성된 관련 교육 모델을 추적할 수 있습니다.
+
+
+
+== AKS 설정 및 설치
+
+AKS 클러스터의 설정 및 설치는 로 이동하십시오 https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal["AKS 클러스터를 생성합니다"^]. 그런 다음 다음 다음 일련의 단계를 수행합니다.
+
+. 노드 유형(시스템(CPU) 또는 작업자(GPU) 노드인지 여부)을 선택할 때 다음을 선택합니다.
++
+.. S tandard_DS2_v2 크기의 1차 시스템 노드 agentpool을 추가합니다. 기본 3개 노드를 사용합니다.
+.. Standard_NC6s_v3 풀 크기로 작업자 노드 'gpupool'을 추가합니다. GPU 노드에 대해 최소 3개의 노드를 사용합니다.
++
+image:runai-ld_image3.png["오류: 그래픽 이미지가 없습니다"]
+
++
+
+NOTE: 배포에는 5~10분이 소요됩니다.
+
+
+
+. 구축이 완료되면 Connect to Cluster를 클릭합니다. 새로 생성한 AKS 클러스터에 연결하려면 로컬 환경(랩톱/PC)에서 Kubernetes 명령줄 도구를 설치하십시오. 를 방문하십시오 https://kubernetes.io/docs/tasks/tools/install-kubectl/["도구를 설치합니다"^] OS에 따라 설치합니다.
+. https://docs.microsoft.com/cli/azure/install-azure-cli["로컬 환경에 Azure CLI를 설치합니다"^].
+. 터미널에서 AKS 클러스터에 액세스하려면 먼저 'az login'을 입력하고 자격 증명을 입력하십시오.
+. 다음 두 명령을 실행합니다.
++
+....
+az account set --subscription xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx
+aks get-credentials --resource-group resourcegroup --name aksclustername
+....
+. Azure CLI에서 다음 명령을 입력합니다.
++
+....
+kubectl get nodes
+....
++
+
+NOTE: 여기에 표시된 대로 6개 노드가 모두 가동되어 실행 중이면 AKS 클러스터가 로컬 환경에 연결되고 준비됩니다.
+
++
+image:runai-ld_image4.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+== Azure NetApp Files에 대해 위임된 서브넷을 생성합니다
+
+Azure NetApp Files에 대해 위임된 서브넷을 만들려면 다음 단계를 수행하십시오.
+
+. Azure 포털 내의 가상 네트워크로 이동합니다. 새로 생성한 가상 네트워크를 찾습니다. 여기에 표시된 대로 AKS-VNET와 같은 접두사가 있어야 합니다. 가상 네트워크의 이름을 클릭합니다.
++
+image:runai-ld_image5.png["오류: 그래픽 이미지가 없습니다"]
+
+. 서브넷 을 클릭하고 상단 도구 모음에서 + 서브넷 을 선택합니다.
++
+image:runai-ld_image6.png["오류: 그래픽 이미지가 없습니다"]
+
+. 서브넷에 ANF.SN과 같은 이름을 입력하고 Subnet Delegation 제목에서 Microsoft.NetApp/volumes 을 선택합니다. 다른 어떤 것도 변경하지 마십시오. 확인 을 클릭합니다.
++
+image:runai-ld_image7.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+Azure NetApp Files 볼륨은 애플리케이션 클러스터에 할당되며 Kubernetes에서 영구 볼륨 청구(PVC)로 사용됩니다. 또한, 이러한 할당을 통해 볼륨을 Jupyter 노트북, 서버리스 기능 등과 같은 다양한 서비스에 유연하게 매핑할 수 있습니다
+
+서비스 사용자는 다양한 방법으로 플랫폼의 스토리지를 사용할 수 있습니다. Azure NetApp Files의 주요 이점은 다음과 같습니다.
+
+* 사용자에게 스냅샷을 사용할 수 있는 기능을 제공합니다.
+* 사용자가 Azure NetApp Files 볼륨에 대량의 데이터를 저장할 수 있도록 지원
+* 대규모 파일 세트에서 모델을 실행할 때 Azure NetApp Files 볼륨의 성능 이점을 확보
+
+
+
+
+== Azure NetApp Files 설정
+
+Azure NetApp Files 설정을 완료하려면 먼저 에 설명된 대로 구성해야 합니다 https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes["QuickStart: Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다"^].
+
+하지만 Trident를 통해 볼륨을 생성하므로 Azure NetApp Files용 NFS 볼륨을 생성하는 단계를 생략할 수 있습니다. 계속하기 전에 다음 사항을 확인하십시오.
+
+. https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-register["Azure NetApp Files 및 NetApp 리소스 공급자에 등록(Azure 클라우드 셸 이용)"^].
+. https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["Azure NetApp Files에서 계정을 생성했습니다"^].
+. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["용량 풀을 설정합니다"^] (요구사항에 따라 최소 4TiB 표준 또는 프리미엄).
+
+
+
+
+== AKS 가상 네트워크 및 Azure NetApp Files 가상 네트워크 피어링
+
+다음으로 다음 단계를 수행하여 Azure NetApp Files VNET를 사용하여 AKS 가상 네트워크(VNET)를 수행하십시오.
+
+. Azure 포털 맨 위의 검색 상자에 가상 네트워크를 입력합니다.
+. VNET AKS-VNET-NAME을 클릭한 다음 검색 필드에 Pebsearch를 입력합니다.
+. 추가 를 클릭하고 아래 표에 제공된 정보를 입력합니다.
++
+|===
+| 필드에 입력합니다 | 값 또는 설명입니다 
+
+
+| 피어링 링크 이름 | AKS-VNET-NAME_to_anf 
+
+
+| SubscriptionID(하위 스크립트 ID) | 피어링을 사용하는 Azure NetApp Files VNET의 구독 
+
+
+| VNET 피어링 파트너 | Azure NetApp Files VNET 
+|===
++
+
+NOTE: 모든 별표 이외의 섹션은 기본적으로 그대로 둡니다
+
+. 추가 또는 확인 을 클릭하여 가상 네트워크에 피어링을 추가합니다.
+
+
+자세한 내용은 를 참조하십시오 https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal["가상 네트워크 피어링을 생성, 변경 또는 삭제합니다"^].
+
+
+
+== 트라이던트
+
+Trident는 NetApp에서 애플리케이션 컨테이너 영구 스토리지를 위해 유지하는 오픈 소스 프로젝트입니다. Trident는 Pod 자체로 실행되는 외부 공급자 컨트롤러로 구축되어 볼륨을 모니터링하고 프로비저닝 프로세스를 완전히 자동화했습니다.
+
+NetApp Trident를 사용하면 교육 데이터 세트 및 교육 받은 모델을 저장하기 위한 영구 볼륨을 생성하여 K8s와 원활하게 통합할 수 있습니다. 이 기능을 사용하면 데이터 과학자와 데이터 엔지니어가 데이터 세트를 수동으로 저장하고 관리해야 하는 번거로움 없이 K8s를 더 쉽게 사용할 수 있습니다. 또한 Trident는 논리적 API 통합을 통해 데이터 관리 관련 작업을 통합하므로 데이터 과학자가 새로운 데이터 플랫폼 관리에 대해 배울 필요가 없습니다.
+
+
+
+=== Trident를 설치합니다
+
+Trident 소프트웨어를 설치하려면 다음 단계를 완료하십시오.
+
+. https://helm.sh/docs/intro/install/["첫 번째 설치 Helm"^].
+. Trident 21.01.1 설치 프로그램을 다운로드하고 압축을 풉니다.
++
+....
+wget https://github.com/NetApp/trident/releases/download/v21.01.1/trident-installer-21.01.1.tar.gz
+tar -xf trident-installer-21.01.1.tar.gz
+....
+. 디렉터리를 '트리덴트 - 설치자'로 변경합니다.
++
+....
+cd trident-installer
+....
+. tridentctl을 시스템 '$path'의 디렉토리에 복사합니다
++
+....
+cp ./tridentctl /usr/local/bin
+....
+. Helm을 사용하여 K8s 클러스터에 Trident 설치:
++
+.. 디렉터리를 Helm 디렉토리로 변경합니다.
++
+....
+cd helm
+....
+.. Trident를 설치합니다.
++
+....
+helm install trident trident-operator-21.01.1.tgz --namespace trident --create-namespace
+....
+.. Trident Pod의 상태를 확인합니다. 일반적인 K8s 방식:
++
+....
+kubectl -n trident get pods
+....
+.. 모든 Pod가 가동되어 실행 중이면 Trident가 설치되어 앞으로 이동하기에 좋습니다.
+
+
+
+
+
+
+== Azure NetApp Files 백엔드 및 스토리지 클래스 설정
+
+Azure NetApp Files 백엔드 및 스토리지 클래스를 설정하려면 다음 단계를 수행하십시오.
+
+. 홈 디렉토리로 다시 전환합니다.
++
+....
+cd ~
+....
+. 의 클론을 생성합니다 https://github.com/dedmari/lane-detection-SCNN-horovod.git["프로젝트 리포지토리"^] 차선 감지 SCNN-horovod.
+. 트리덴트-구성 디렉토리로 이동합니다.
++
+....
+cd ./lane-detection-SCNN-horovod/trident-config
+....
+. Azure 서비스 원칙 생성(서비스 원칙은 Trident가 Azure와 통신하여 Azure NetApp Files 리소스에 액세스하는 방법입니다.)
++
+....
+az ad sp create-for-rbac --name
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+....
+{
+  "appId": "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "displayName": "netapptrident",
+    "name": "http://netapptrident",
+    "password": "xxxxxxxxxxxxxxx.xxxxxxxxxxxxxx",
+    "tenant": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"
+ }
+....
+. Trident의 백엔드 json 파일을 생성합니다.
+. 원하는 텍스트 편집기를 사용하여 아래 표의 "anf-backend.json" 파일 안에 있는 다음 필드를 작성합니다.
++
+|===
+| 필드에 입력합니다 | 값 
+
+
+| 구독 ID | Azure 구독 ID입니다 
+
+
+| 텐antID | Azure 테넌트 ID(이전 단계의 az ad SP 출력에서) 
+
+
+| 클라이언트 ID입니다 | appID(이전 단계의 az ad SP 출력에서) 
+
+
+| clientSecret | 암호(이전 단계의 az ad SP 출력에서) 
+|===
++
+파일은 다음 예제와 같습니다.
+
++
+....
+{
+    "version": 1,
+    "storageDriverName": "azure-netapp-files",
+    "subscriptionID": "fakec765-4774-fake-ae98-a721add4fake",
+    "tenantID": "fakef836-edc1-fake-bff9-b2d865eefake",
+    "clientID": "fake0f63-bf8e-fake-8076-8de91e57fake",
+    "clientSecret": "SECRET",
+    "location": "westeurope",
+    "serviceLevel": "Standard",
+    "virtualNetwork": "anf-vnet",
+    "subnet": "default",
+    "nfsMountOptions": "vers=3,proto=tcp",
+    "limitVolumeSize": "500Gi",
+    "defaults": {
+    "exportRule": "0.0.0.0/0",
+    "size": "200Gi"
+}
+....
+. 다음과 같이 구성 파일로 anf-backend.json을 사용하여 trident 네임스페이스에 Azure NetApp Files 백엔드를 생성하도록 Trident에 지시합니다.
++
+....
+tridentctl create backend -f anf-backend.json -n trident
+....
+. 스토리지 클래스를 생성합니다.
++
+.. K8 사용자는 이름별로 저장소 클래스를 지정하는 PVC를 사용하여 체적을 프로비저닝합니다. K8s에게 다음을 사용하여 이전 단계에서 생성한 Azure NetApp Files 백엔드를 참조하는 스토리지 클래스 "azurenetappfiles"를 생성하도록 지시합니다.
++
+....
+kubectl create -f anf-storage-class.yaml
+....
+.. 다음 명령을 사용하여 스토리지 클래스가 생성되었는지 확인합니다.
++
+....
+kubectl get sc azurenetappfiles
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image8.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+
+
+== AKS에 볼륨 스냅샷 구성 요소를 구축하고 설정합니다
+
+클러스터에서 올바른 볼륨 스냅샷 구성 요소가 사전 설치되지 않은 경우 다음 단계를 실행하여 이러한 구성 요소를 수동으로 설치할 수 있습니다.
+
+
+NOTE: AKS 1.18.14에는 Snapshot Controller가 사전 설치되어 있지 않습니다.
+
+. 다음 명령을 사용하여 스냅샷 베타 CRD를 설치합니다.
++
+....
+kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+....
+. GitHub에서 다음 문서를 사용하여 Snapshot Controller를 설치합니다.
++
+....
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+....
+. K8s 'volumesnapshotclass'를 설정합니다. 볼륨 스냅샷을 생성하기 전에 https://netapp-trident.readthedocs.io/en/stable-v20.01/kubernetes/concepts/objects.html["볼륨 스냅샷 클래스입니다"^] 설정해야 합니다. Azure NetApp Files용 볼륨 스냅샷 클래스를 생성하고 NetApp Snapshot 기술을 사용하여 ML 버전 관리를 달성하는 데 사용합니다. volumesapshotclass NetApp-CSI-snapclass를 생성하고 다음과 같이 기본 'volumesnapshotclass'로 설정합니다.
++
+....
+kubectl create -f netapp-volume-snapshot-class.yaml
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image9.png["오류: 그래픽 이미지가 없습니다"]
+
+. 다음 명령을 사용하여 볼륨 스냅샷 복사본 클래스가 생성되었는지 확인합니다.
++
+....
+kubectl get volumesnapshotclass
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image10.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+== AI 설치 를 실행하십시오
+
+run:AI를 설치하려면 다음 단계를 완료하십시오.
+
+. https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/["설치 실행: AKS에 AI 클러스터"^].
+. app.runai.ai 으로 이동하여 새 프로젝트 만들기 를 클릭하고 이름을 차선 감지 로 지정합니다. 이렇게 하면 runai로 시작하는 K8s 클러스터의 이름 뒤에 프로젝트 이름이 붙습니다. 이 경우 생성된 네임스페이스는 runai-lane-detection입니다.
++
+image:runai-ld_image11.png["오류: 그래픽 이미지가 없습니다"]
+
+. https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/["설치 실행: AI CLI"^].
+. 터미널에서 다음 명령을 사용하여 레인 감지를 기본 run:AI 프로젝트로 설정합니다.
++
+....
+`runai config project lane-detection`
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image12.png["오류: 그래픽 이미지가 없습니다"]
+
+. 프로젝트 네임스페이스(예: lane-detection)에 대해 ClusterRole 및 ClusterRoleBinding을 만들어 runai-lane-detection 네임스페이스에 속한 기본 서비스 계정은 작업 실행 중에 'volumesnapshot' 작업을 수행할 수 있는 권한을 갖습니다.
++
+.. 다음 명령을 사용하여 'runai-lane-detection'이 존재하는지 확인하기 위한 네임스페이스를 나열합니다.
++
+....
+kubectl get namespaces
+....
++
+출력은 다음 예와 같이 나타나야 합니다.
+
++
+image:runai-ld_image13.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+. 다음 명령을 사용하여 ClusterRole의 "netaprosnapshot" 및 ClusterRoleBinding" netappsnapshot을 생성합니다.
++
+....
+`kubectl create -f runai-project-snap-role.yaml`
+`kubectl create -f runai-project-snap-role-binding.yaml`
+....
+
+
+
+
+== 실행:AI 작업으로 TuSimple 데이터 세트를 다운로드하고 처리합니다
+
+실행 시 TuSimple 데이터 세트를 다운로드하고 처리하는 프로세스는 선택 사항입니다. AI 작업은 선택 사항입니다. 여기에는 다음 단계가 포함됩니다.
+
+. 기존 Docker 이미지(예: muneer7589/download-tusimple:1.0)를 사용하려면 Docker 이미지를 빌드하고 푸시하거나 이 단계를 생략합니다
++
+.. 홈 디렉토리로 이동합니다.
++
+....
+cd ~
+....
+.. 'lane-detection-SCNN-horovod' 프로젝트의 데이터 디렉토리로 이동합니다.
++
+....
+cd ./lane-detection-SCNN-horovod/data
+....
+.. build_image.sh 쉘 스크립트를 수정하고 Docker 리포지토리를 사용자 위치로 변경합니다. 예를 들어, 'muneer7589'를 Docker 리포지토리 이름으로 바꿉니다. Docker 이미지 이름과 태그(예: dowload-tusimple, 1.0)를 변경할 수도 있습니다.
++
+image:runai-ld_image14.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 스크립트를 실행하여 Docker 이미지를 구축하고 다음 명령을 사용하여 Docker 저장소로 푸시합니다.
++
+....
+chmod +x build_image.sh
+./build_image.sh
+....
+
+
+. Run:AI 작업을 제출하여 NetApp Trident가 동적으로 생성한 'PVC'에 TuSimple 레인 감지 데이터 세트를 다운로드, 추출, 전처리 및 저장합니다.
++
+.. 다음 명령을 사용하여 run:AI 작업을 제출하십시오.
++
+....
+runai submit
+--name download-tusimple-data
+--pvc azurenetappfiles:100Gi:/mnt
+--image muneer7589/download-tusimple:1.0
+....
+.. 실행:AI 작업을 제출하려면 아래 표의 정보를 입력하십시오.
++
+|===
+| 필드에 입력합니다 | 값 또는 설명입니다 
+
+
+| -이름 | 작업의 이름입니다 
+
+
+| -PVC | [StorageClassName]:Size:ContainerMountPath 형식의 PVC 위의 작업 제출에서 스토리지 클래스 azurenetappfiles가 있는 Trident를 사용하여 필요 시 PVC를 만듭니다. 여기서 영구 볼륨 용량은 100Gi 이며 경로 /mnt에 마운트됩니다. 
+
+
+| ?곸긽 | 이 작업에 대한 컨테이너를 생성할 때 사용할 Docker 이미지입니다 
+|===
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image15.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 제출된 RUN:AI 작업을 나열합니다.
++
+....
+runai list jobs
+....
++
+image:runai-ld_image16.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 제출된 작업 로그를 확인하십시오.
++
+....
+runai logs download-tusimple-data -t 10
+....
++
+image:runai-ld_image17.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 만든 PVC를 나열합니다. 다음 단계에서 이 'PVC' 명령을 사용하여 훈련하십시오.
++
+....
+kubectl get pvc | grep download-tusimple-data
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image18.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 실행 중인 작업 확인: AI UI (또는 'app.run.ai`).
++
+image:runai-ld_image19.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+
+
+== Horovod를 사용하여 분산 차선 감지 교육을 수행합니다
+
+Horovod를 사용하여 분산 차선 감지 교육을 수행하는 것은 선택적 프로세스입니다. 그러나 다음과 같은 단계가 있습니다.
+
+. 기존 Docker 이미지(예: 'muneer7589/dist-lane-detection: 3.1):'를 사용하려면 Docker 이미지를 빌드하고 푸시하거나 이 단계를 건너뜁니다
++
+.. 홈 디렉토리로 이동합니다.
++
+....
+cd ~
+....
+.. 프로젝트 디렉터리 레인 감지 SCNN-horovod로 이동합니다
++
+....
+cd ./lane-detection-SCNN-horovod
+....
+.. 'build_image.sh' 쉘 스크립트를 수정하고 Docker 리포지토리를 사용자 이름으로 변경합니다(예: 'muneer7589'를 Docker 리포지토리 이름으로 대체). Docker 이미지 이름과 태그(dist-lane-detection, 3.1 등)도 변경할 수 있습니다.
++
+image:runai-ld_image20.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 스크립트를 실행하여 Docker 이미지를 구축하고 Docker 저장소로 이동합니다.
++
+....
+chmod +x build_image.sh
+./build_image.sh
+....
+
+
+. 배포 교육(MPI)을 수행하기 위한 AI 작업 제출:
++
+.. 러닝 제출 사용: 이전 단계에서 PVC를 자동으로 생성하기 위한 AI(데이터 다운로드용)만 RWO 액세스를 허용할 수 있습니다. 이 경우 여러 Pod 또는 노드가 동일한 PVC에 대한 분산 교육 액세스를 허용하지 않습니다. 액세스 모드를 ReadWriteMany로 업데이트하고 Kubernetes 패치를 사용하여 업데이트합니다.
+.. 먼저 다음 명령을 실행하여 PVC의 볼륨 이름을 가져옵니다.
++
+....
+kubectl get pvc | grep download-tusimple-data
+....
++
+image:runai-ld_image21.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 볼륨을 패치하고 ReadWriteMany에 대한 액세스 모드를 업데이트합니다(다음 명령에서 볼륨 이름을 사용자 이름으로 바꾸기).
++
+....
+kubectl patch pv pvc-bb03b74d-2c17-40c4-a445-79f3de8d16d5 -p '{"spec":{"accessModes":["ReadWriteMany"]}}'
+....
+.. 아래 표의 정보를 사용하여 배포된 교육 작업을 실행하기 위한 AI MPI 작업 제출:
++
+....
+runai submit-mpi
+--name dist-lane-detection-training
+--large-shm
+--processes=3
+--gpu 1
+--pvc pvc-download-tusimple-data-0:/mnt
+--image muneer7589/dist-lane-detection:3.1
+-e USE_WORKERS="true"
+-e NUM_WORKERS=4
+-e BATCH_SIZE=33
+-e USE_VAL="false"
+-e VAL_BATCH_SIZE=99
+-e ENABLE_SNAPSHOT="true"
+-e PVC_NAME="pvc-download-tusimple-data-0"
+....
++
+|===
+| 필드에 입력합니다 | 값 또는 설명입니다 
+
+
+| 이름 | 분산된 교육 작업의 이름입니다 
+
+
+| 대형 shm | 대용량 /dev/shm 디바이스 마운트 RAM에 마운트된 공유 파일 시스템이며 여러 CPU 작업자가 CPU RAM에 배치를 처리 및 로드할 수 있을 만큼 충분한 크기의 공유 메모리를 제공합니다. 
+
+
+| 프로세스 | 분산된 교육 프로세스 수 
+
+
+| GPU | 이 작업에서 작업에 할당할 GPU/프로세스 수, GPU 작업자 프로세스 3개(--프로세스=3)가 있으며, 각각 단일 GPU(--GPU 1)로 할당됩니다. 
+
+
+| PVC | 이전 작업(download-tusimple-data-0)에서 생성한 기존 영구 볼륨(PVC-download-tusimple-data-0)을 사용하고 path /mnt에 마운트됩니다 
+
+
+| 이미지 | 이 작업에 대한 컨테이너를 생성할 때 사용할 Docker 이미지입니다 
+
+
+2+| 컨테이너에 설정할 환경 변수를 정의합니다 
+
+
+| 작업자 사용 | 인수를 true로 설정하면 다중 프로세스 데이터 로드가 설정됩니다 
+
+
+| 작업자 수 | 데이터 로더 작업자 프로세스의 수입니다 
+
+
+| batch_size를 선택합니다 | 교육 배치 크기 
+
+
+| VAL을 사용합니다 | 인수를 TRUE로 설정하면 유효성 검사가 허용됩니다 
+
+
+| Val_batch_size를 선택합니다 | 검증 배치 크기 
+
+
+| snapshot을 설정합니다 | 인수를 TRUE로 설정하면 ML 버전 관리를 위해 데이터 및 훈련된 모델 스냅샷을 생성할 수 있습니다 
+
+
+| PVC_이름 | 스냅샷을 생성할 PVC의 이름입니다. 위의 작업 제출에서 데이터 세트 및 교육 모델로 구성된 PVC-download-tusimple-data-0의 스냅샷을 촬영하고 있습니다 
+|===
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image22.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 제출된 작업을 나열합니다.
++
+....
+runai list jobs
+....
++
+image:runai-ld_image23.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 제출된 작업 로그:
++
+....
+runai logs dist-lane-detection-training
+....
++
+image:runai-ld_image24.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 아래 그림과 같이 RUN TO/RUN TO/AI GUI(또는 app.runai.ai): RUN:AI 대시보드 에서 교육 작업을 확인하십시오. 첫 번째 그림에서는 분산 훈련 작업에 할당된 3개의 GPU를 AKS의 3개 노드에 분산시키고, 두 번째 실행인 AI 작업에 대해 자세히 설명합니다.
++
+image:runai-ld_image25.png["오류: 그래픽 이미지가 없습니다"]
+
++
+image:runai-ld_image26.png["오류: 그래픽 이미지가 없습니다"]
+
+.. 교육이 완료되면 RUN:AI 작업과 연결되고 생성된 NetApp Snapshot 복사본이 있는지 확인하십시오.
++
+....
+runai logs dist-lane-detection-training --tail 1
+....
++
+image:runai-ld_image27.png["오류: 그래픽 이미지가 없습니다"]
+
++
+....
+kubectl get volumesnapshots | grep download-tusimple-data-0
+....
+
+
+
+
+
+
+== NetApp 스냅샷 복사본에서 데이터를 복원합니다
+
+NetApp Snapshot 복사본에서 데이터를 복원하려면 다음 단계를 수행하십시오.
+
+. 홈 디렉토리로 이동합니다.
++
+....
+cd ~
+....
+. 프로젝트 디렉터리 'lane-detection-SCNN-horovod'로 이동합니다.
++
+....
+cd ./lane-detection-SCNN-horovod
+....
+. restore-snaphot-vc.yaML을 수정하고 데이터 복원을 원하는 스냅샷 사본으로 dataSource의 이름 필드를 업데이트합니다. 이 예제에서는 데이터 복원 위치를 PVC 이름으로 변경할 수도 있습니다.
++
+image:runai-ld_image29.png["오류: 그래픽 이미지가 없습니다"]
+
+. restore-snapshot-pvc.yAML을 사용하여 새로운 PVC를 생성한다.
++
+....
+kubectl create -f restore-snapshot-pvc.yaml
+....
++
+출력은 다음 예와 같이 표시되어야 합니다.
+
++
+image:runai-ld_image30.png["오류: 그래픽 이미지가 없습니다"]
+
+. 방금 복원한 데이터를 교육에 사용하려는 경우, 작업 제출은 이전과 동일하게 유지되며, 교육 작업을 제출할 때 다음 명령에 표시된 것처럼 'PVC_NAME'만 복원된 'PVC_NAME'으로 교체합니다.
++
+....
+runai submit-mpi
+--name dist-lane-detection-training
+--large-shm
+--processes=3
+--gpu 1
+--pvc restored-tusimple:/mnt
+--image muneer7589/dist-lane-detection:3.1
+-e USE_WORKERS="true"
+-e NUM_WORKERS=4
+-e BATCH_SIZE=33
+-e USE_VAL="false"
+-e VAL_BATCH_SIZE=99
+-e ENABLE_SNAPSHOT="true"
+-e PVC_NAME="restored-tusimple"
+....
+
+
+
+
+== 성능 평가
+
+솔루션의 선형 확장성을 보여주기 위해 GPU 1개와 GPU 3개 등 두 가지 시나리오에서 성능 테스트를 수행했습니다. TuSimple 레인 감지 데이터 세트에 대한 교육 중에 GPU 할당, GPU 및 메모리 사용률, 다양한 단일 및 3노드 메트릭이 캡처되었습니다. 교육 프로세스 중 리소스 활용도를 분석하기 위해 데이터가 5배 증가합니다.
+
+이 솔루션을 통해 고객은 작은 데이터 세트와 몇 개의 GPU로 시작할 수 있습니다. 데이터의 양과 GPU 수요가 증가하면 고객은 표준 계층의 테라바이트를 동적으로 확장하고 프리미엄 계층까지 신속하게 확장하여 데이터 이동 없이 테라바이트당 처리량의 4배를 얻을 수 있습니다. 이 프로세스는 섹션, link:runai-ld_lane_detection_distributed_training_with_run_ai.html#azure-netapp-files-service-levels["Azure NetApp Files 서비스 레벨"].
+
+GPU 1개의 처리 시간은 12시간 45분이었습니다. 3개 노드에서 3개의 GPU를 처리하는 데 약 4시간 30분이 소요되었습니다.
+
+이 문서의 나머지 부분에서는 개별 비즈니스 요구 사항에 따른 성능 및 확장성의 예를 보여 줍니다.
+
+아래 그림은 1 GPU 할당 및 메모리 활용률을 보여 줍니다.
+
+image:runai-ld_image31.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 단일 노드 GPU 활용률을 보여 줍니다.
+
+image:runai-ld_image32.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 단일 노드 메모리 크기(16GB)를 보여줍니다.
+
+image:runai-ld_image33.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 단일 노드 GPU 수(1)를 보여줍니다.
+
+image:runai-ld_image34.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 단일 노드 GPU 할당(%)을 보여줍니다.
+
+image:runai-ld_image35.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 3개 노드에서 GPU 할당 및 메모리인 3개의 GPU를 보여줍니다.
+
+image:runai-ld_image36.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 3개 노드의 사용률(%)에서 3개의 GPU를 보여줍니다.
+
+image:runai-ld_image37.png["오류: 그래픽 이미지가 없습니다"]
+
+아래 그림은 3개 노드의 메모리 사용률(%)에서 3개의 GPU를 보여줍니다.
+
+image:runai-ld_image38.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== Azure NetApp Files 서비스 레벨
+
+볼륨을 를 사용하는 다른 용량 풀로 이동하여 기존 볼륨의 서비스 수준을 변경할 수 있습니다 https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-service-levels["서비스 레벨"^] 볼륨에 대한 을 선택합니다. 볼륨에 대한 이 기존 서비스 수준 변경 사항은 데이터를 마이그레이션할 필요가 없습니다. 볼륨에 대한 액세스에도 영향을 주지 않습니다.
+
+
+
+=== 볼륨의 서비스 수준을 동적으로 변경합니다
+
+볼륨의 서비스 수준을 변경하려면 다음 단계를 수행하십시오.
+
+. 볼륨 페이지에서 서비스 수준을 변경할 볼륨을 마우스 오른쪽 단추로 클릭합니다. 풀 변경 을 선택합니다.
++
+image:runai-ld_image39.png["오류: 그래픽 이미지가 없습니다"]
+
+. Change Pool 창에서 볼륨을 이동할 용량 풀을 선택합니다. 그런 다음 확인을 클릭합니다.
++
+image:runai-ld_image40.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+=== 서비스 수준 변경 자동화
+
+동적 서비스 수준 변경은 현재 공개 미리 보기에 있지만 기본적으로 활성화되어 있지 않습니다. Azure 구독에서 이 기능을 활성화하려면 “ 문서에 제공된 다음 단계를 수행하십시오 file:///C:\Users\crich\Downloads\•%09https:\docs.microsoft.com\azure\azure-netapp-files\dynamic-change-volume-service-level["볼륨의 서비스 수준을 동적으로 변경합니다"^].”
+
+* Azure:CLI에 대해 다음 명령을 사용할 수도 있습니다. Azure NetApp Files의 풀 크기 변경에 대한 자세한 내용은 를 참조하십시오 https://docs.microsoft.com/cli/azure/netappfiles/volume?view=azure-cli-latest-az_netappfiles_volume_pool_change["AZ NetApp 파일 볼륨: ANF(Azure NetApp Files) 볼륨 리소스 관리"^].
++
+....
+az netappfiles volume pool-change -g mygroup
+--account-name myaccname
+-pool-name mypoolname
+--name myvolname
+--new-pool-resource-id mynewresourceid
+....
+* 여기에 표시된 'et-aznetapfilesvolumepool' cmdlet은 Azure NetApp Files 볼륨의 풀을 변경할 수 있습니다. 볼륨 풀 크기 및 Azure PowerShell 변경에 대한 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/powershell/module/az.netappfiles/set-aznetappfilesvolumepool?view=azps-5.8.0["Azure NetApp Files 볼륨의 풀을 변경합니다"^].
++
+....
+Set-AzNetAppFilesVolumePool
+-ResourceGroupName "MyRG"
+-AccountName "MyAnfAccount"
+-PoolName "MyAnfPool"
+-Name "MyAnfVolume"
+-NewPoolResourceId 7d6e4069-6c78-6c61-7bf6-c60968e45fbf
+....
+

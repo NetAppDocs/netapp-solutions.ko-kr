@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-test-plan.html 
+keywords: test, plan, mlperf, inference, benchmarks 
+summary: 이 문서는 MLPerf Inference v0.7 코드, MLPerf Inference v1.1 코드 및 규칙을 따릅니다. 이 단원에 나와 있는 표에 정의된 대로 모서리에서 추론을 위해 설계된 벤치마크를 실행했습니다. 
+---
+= 테스트 계획
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-technology-overview.html["이전: 기술 개요"]
+
+이 문서는 MLPerf Inference v0.7을 따릅니다 https://github.com/mlperf/inference_results_v0.7/tree/master/closed/Lenovo["코드"^], MLPerf Inference v1.1, 및. 아래 표에 정의된 대로 에지에서 추론을 위해 설계된 MLPerf 벤치마크를 실행했습니다.
+
+|===
+| 영역 | 작업 | 모델 | 데이터 세트 | QSL 크기 | 품질 | 멀티스트림 지연 제한 
+
+
+| 비전 | 영상 분류 | Resnet50v1.5 | ImageNet(224x224) | 1024 | FP32의 99% | 50ms 
+
+
+| 비전 | 물체 감지(대형) | SSD-ResNet34 | 코코(1200x1200) | 64 | FP32의 99% | 66ms 
+
+
+| 비전 | 물체 감지(소형) | SSD - MobileNetsv1 | 코코(300x300) | 256 | FP32의 99% | 50ms 
+
+
+| 비전 | 의료 영상 분할 | 3D UNET | 2019 (224x224x160) | 16 | FP32의 99% 및 99.9% | 해당 없음 
+
+
+| 음성 | 텍스트 음성 변환 | RNNT | 리브리스페흐(LiBrispeech) 개발 - 청소 | 2513 | FP32의 99% | 해당 없음 
+
+
+| 언어 | 언어 처리 | 베르 | 스쿼드 v1.1 | 10833 | FP32의 99% | 해당 없음 
+|===
+다음 표에는 Edge 벤치마크 시나리오가 나와 있습니다.
+
+|===
+| 영역 | 작업 | 시나리오 
+
+
+| 비전 | 영상 분류 | 단일 스트림, 오프라인, 멀티스트림 
+
+
+| 비전 | 물체 감지(대형) | 단일 스트림, 오프라인, 멀티스트림 
+
+
+| 비전 | 물체 감지(소형) | 단일 스트림, 오프라인, 멀티스트림 
+
+
+| 비전 | 의료 영상 분할 | 단일 스트림, 오프라인 
+
+
+| 음성 | 텍스트 음성 변환 | 단일 스트림, 오프라인 
+
+
+| 언어 | 언어 처리 | 단일 스트림, 오프라인 
+|===
+이 검증에서 개발된 네트워크 스토리지 아키텍처를 사용하여 이러한 벤치마크를 수행한 결과 및 이전에 MLPerf에 제출한 에지 서버에서 로컬 실행의 결과를 비교했습니다. 이와 비교하여 공유 스토리지가 추론 성능에 미치는 영향을 확인합니다.
+
+link:ai-edge-test-configuration.html["다음: 구성을 테스트합니다."]

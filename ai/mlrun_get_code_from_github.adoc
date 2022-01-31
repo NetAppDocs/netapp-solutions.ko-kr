@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_get_code_from_github.html 
+keywords: NetApp GitHub Cloud Volume 
+summary:  
+---
+= GitHub에서 코드를 가져옵니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이제 Iguazio 클러스터와 개발자 환경에서 NetApp Cloud Volume 또는 NetApp Trident 볼륨을 사용할 수 있으므로 애플리케이션 검토를 시작할 수 있습니다.
+
+사용자는 고유한 작업 공간(디렉터리)을 가지고 있습니다. 모든 노트북에서 사용자 디렉토리 경로는 "/User"입니다. Iguazio 플랫폼은 디렉토리를 관리합니다. 위의 지침을 따르면 NetApp Cloud 볼륨은 '/NetApp' 디렉토리에 있습니다.
+
+Jupyter 터미널을 사용하여 GitHub에서 코드를 가져옵니다.
+
+image:mlrun_image12.png["오류: 그래픽 이미지가 없습니다"]
+
+Jupyter 터미널 프롬프트에서 프로젝트를 복제합니다.
+
+....
+cd /User
+git clone .
+....
+이제 Jupyter 작업 공간의 파일 트리에 'netops-netapp' 폴더가 표시됩니다.
+
+link:mlrun_configure_working_environment.html["다음: 작업 환경 구성"]

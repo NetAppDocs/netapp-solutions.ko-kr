@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-test-procedure.html 
+keywords: procedure, operating system, ubuntu, nvidia, docker, criteo, brats 
+summary: 이 섹션에서는 이 솔루션을 검증하는 데 사용되는 테스트 절차를 설명합니다. 
+---
+= 테스트 절차
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-test-configuration.html["이전: 구성을 테스트합니다."]
+
+이 검증에서 다음 테스트 절차를 사용했습니다.
+
+
+
+=== 운영 체제 및 AI 추론 설정
+
+AFF C190의 경우 NVIDIA GPU를 지원하고 MLPerf를 사용하는 NVIDIA 드라이버 및 Docker와 함께 Ubuntu 18.04를 사용했습니다 https://github.com/mlperf/inference_results_v0.7/tree/master/closed/Lenovo["코드"^] MLPerf Inference v0.7에 대한 Lenovo 제출의 일부로 사용할 수 있습니다.
+
+EF280의 경우 NVIDIA GPU 및 MLPerf를 지원하는 Ubuntu 20.04와 NVIDIA 드라이버 및 Docker를 사용했습니다 https://github.com/mlcommons/inference_results_v1.1/tree/main/closed/Lenovo["코드"^] MLPerf Inference v1.1에 대한 Lenovo 제출의 일부로 제공됩니다.
+
+AI 추론을 설정하려면 다음 단계를 수행하십시오.
+
+. 등록이 필요한 데이터 세트, ImageNet 2012 검증 세트, Critio Terabyte 데이터 세트 및 브라츠 2019 교육 세트를 다운로드한 다음 파일의 압축을 풉니다.
+. 최소 1TB의 작업 디렉토리를 생성하고 디렉토리를 참조하는 환경 변수 MLPERF_Scratch_path를 정의합니다.
++
+네트워크 스토리지 활용 사례나 로컬 데이터로 테스트할 때 로컬 디스크에 대해 공유 스토리지에서 이 디렉토리를 공유해야 합니다.
+
+. make "prebuild" 명령을 실행하여 필요한 추론 작업을 위해 Docker 컨테이너를 빌드하고 실행합니다.
++
+
+NOTE: 다음 명령은 실행 중인 Docker 컨테이너 내에서 모두 실행됩니다.
+
++
+** MLPerf Inference 태스크에 대한 사전 교육 AI 모델 'MAKE download_model'을 다운로드합니다
+** 무료로 다운로드할 수 있는 추가 데이터셋 'make download_data'를 다운로드하세요
+** 데이터 사전 처리: preprocess_data를 만든다
+** 러닝: 메이크 빌드.
+** 컴퓨팅 서버의 GPU에 최적화된 추론 엔진 'make generate_gservers'를 구축합니다
+** 추론 워크로드를 실행하려면 다음 명령을 실행합니다(하나의 명령).
+
+
+
+
+....
+make run_harness RUN_ARGS="--benchmarks=<BENCHMARKS> --scenarios=<SCENARIOS>"
+....
+
+
+=== AI 추론 실행
+
+세 가지 유형의 실행이 실행되었습니다.
+
+* 로컬 스토리지를 사용하는 단일 서버 AI 추론
+* 네트워크 스토리지를 사용하여 단일 서버 AI 추론
+* 네트워크 스토리지를 사용하여 다중 서버 AI 추론
+
+
+link:ai-edge-test-results.html["다음: 테스트 결과."]

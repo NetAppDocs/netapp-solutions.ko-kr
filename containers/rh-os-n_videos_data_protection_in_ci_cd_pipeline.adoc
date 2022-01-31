@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_videos_data_protection_in_ci_cd_pipeline.html 
+keywords: video, demonstration, Data Protection in CI/CD pipeline, NetApp ONTAP, Astra Trident, Astra Control Center, Red Hat OpenShift, Data Protection for Kubernetes workloads, Data protection in CI/CD pipeline, Data protection and DevOps 
+summary: Astra Control Center를 통해 CI/CD 파이프라인에서 데이터 보호를 활성화합니다 
+---
+= Astra Control Center를 통한 CI/CD 파이프라인의 데이터 보호
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+video::rh-os-n_videos_data_protection_in_ci_cd_pipeline.mp4[]
+link:rh-os-n_additional_information.html["다음: 추가 정보: NetApp의 Red Hat OpenShift"]

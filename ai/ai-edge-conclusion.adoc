@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-conclusion.html 
+keywords: acknowledgements, version history, additional information 
+summary: AI 기반 자동화 및 에지 컴퓨팅은 비즈니스 조직이 디지털 혁신을 달성하고 운영 효율성과 안전을 극대화할 수 있도록 지원하는 선도적인 접근 방식입니다. 에지 컴퓨팅은 데이터 센터와 데이터를 전송할 필요가 없기 때문에 훨씬 더 빠르게 처리됩니다. 따라서 데이터를 데이터 센터 또는 클라우드로 전송하는 데 따른 비용이 절감됩니다. 
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-architecture-sizing-options.html["이전: 아키텍처 사이징 옵션"]
+
+AI 기반 자동화 및 에지 컴퓨팅은 비즈니스 조직이 디지털 혁신을 달성하고 운영 효율성과 안전을 극대화할 수 있도록 지원하는 선도적인 접근 방식입니다. 에지 컴퓨팅은 데이터 센터와 데이터를 전송할 필요가 없기 때문에 훨씬 더 빠르게 처리됩니다. 따라서 데이터를 데이터 센터 또는 클라우드로 전송하는 데 따른 비용이 절감됩니다. 에지에 구축된 AI 추론 모델을 사용하여 거의 실시간으로 의사 결정을 내려야 하는 경우 지연 시간이 단축되고 속도가 빨라질 수 있습니다.
+
+NetApp 스토리지 시스템은 로컬 SSD 스토리지와 동일하거나 더 우수한 성능을 제공하여 데이터 과학자, 데이터 엔지니어, AI/ML 개발자 및 비즈니스 또는 IT 의사 결정자에게 다음과 같은 이점을 제공합니다.
+
+* AI 시스템, 분석 및 기타 중요한 비즈니스 시스템 간에 데이터를 손쉽게 공유 이러한 데이터 공유는 인프라 오버헤드를 줄이고 성능을 향상하며 기업 전체에서 데이터 관리를 간소화합니다.
+* 컴퓨팅과 스토리지를 독립적으로 확장하므로 비용을 최소화하고 리소스 사용량을 높일 수 있습니다.
+* 즉각적이고 공간 효율적인 사용자 작업 공간, 통합 버전 제어 및 자동화된 구축을 위해 통합 Snapshot 복사본과 클론을 사용하여 개발 및 구축 워크플로우를 간소화했습니다.
+* 재해 복구 및 비즈니스 연속성을 위한 엔터프라이즈급 데이터 보호 기능 이 문서에 제공된 NetApp 및 Lenovo 솔루션은 에지에서 엔터프라이즈급 AI 추론 배포에 이상적인 유연한 스케일아웃 아키텍처입니다.
+
+
+
+
+== 감사의 말
+
+* J.J. Falkanger, 선임 Lenovo, HPC 및 AI 솔루션 매니저
+* Dave Arnette, NetApp 기술 마케팅 엔지니어
+* Joey Parnell, 기술 팀장 E-Series AI 솔루션, NetApp
+* Cody Harryman, NetApp QA 엔지니어
+
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* NetApp AFF A-Series 어레이 제품 페이지 를 참조하십시오
++
+https://www.netapp.com/data-storage/aff-a-series/["https://www.netapp.com/data-storage/aff-a-series/"^]
+
+* NetApp ONTAP 데이터 관리 소프트웨어 - ONTAP 9 정보 라이브러리
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
+
+* TR-4727: NetApp EF-Series 소개
++
+https://www.netapp.com/pdf.html?item=/media/17179-tr4727pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17179-tr4727pdf.pdf"^]
+
+* NetApp E-Series SANtricity 소프트웨어 데이터시트 를 참조하십시오
++
+https://www.netapp.com/pdf.html?item=/media/19775-ds-3171-66862.pdf["https://www.netapp.com/pdf.html?item=/media/19775-ds-3171-66862.pdf"^]
+
+* 컨테이너용 NetApp 영구 스토리지 - NetApp Trident
++
+https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
+
+* MLPerf
++
+** https://mlcommons.org/en/["https://mlcommons.org/en/"^]
+** http://www.image-net.org/["http://www.image-net.org/"^]
+** https://mlcommons.org/en/news/mlperf-inference-v11/["https://mlcommons.org/en/news/mlperf-inference-v11/"^]
+
+
+* NetApp Cloud Sync를 참조하십시오
++
+https://docs.netapp.com/us-en/occm/concept_cloud_sync.html#how-cloud-sync-works["https://docs.netapp.com/us-en/occm/concept_cloud_sync.html#how-cloud-sync-works"^]
+
+* TensorFlow 벤치마크
++
+https://github.com/tensorflow/benchmarks["https://github.com/tensorflow/benchmarks"^]
+
+* Lenovo ThinkSystem SE350 Edge 서버
++
+https://lenovopress.com/lp1168["https://lenovopress.com/lp1168"^]
+
+* Lenovo ThinkSystem DM5100F 유니파이드 플래시 스토리지 어레이
++
+https://lenovopress.com/lp1365-thinksystem-dm5100f-unified-flash-storage-array^["https://lenovopress.com/lp1365-thinksystem-dm5100f-unified-flash-storage-array"^]
+
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2021년 3월 | 최초 릴리스 
+
+
+| 버전 2.0 | 2021년 10월 | EF 및 MLPerf Inference v1.1로 업데이트되었습니다 
+|===

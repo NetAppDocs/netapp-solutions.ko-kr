@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_deploying_the_application.html 
+keywords: NetApp Deploying Application 
+summary:  
+---
+= 응용 프로그램 배포
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+다음 섹션에서는 응용 프로그램을 설치하고 배포하는 방법에 대해 설명합니다.
+
+link:mlrun_get_code_from_github.html["다음: GitHub에서 코드를 가져옵니다"].

@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_resnet-50_with_imagenet_dataset_benchmark_summary.html 
+keywords:  
+summary:  
+---
+= ImageNet 데이터 세트 벤치마크 요약을 통한 ResNet-50
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+산업 표준 벤치마크 도구 TensorFlow 벤치마크를 사용하여 이 시스템의 운영 및 성능을 검증했습니다. 이미지 분류를 위해 유명한 CNN(Convolutional Neural Network) DL 모델인 ResNet-50을 교육하기 위해 ImageNet 데이터 세트를 사용합니다. ResNet-50은 더욱 빠른 처리 시간으로 정확한 교육 결과를 제공하므로 스토리지에서 충분한 수요를 창출할 수 있습니다.
+
+link:osrunai_run_ai_installation.html["다음: AI 설치를 실행합니다"]

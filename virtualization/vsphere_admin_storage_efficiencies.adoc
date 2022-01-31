@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: virtualization/vsphere_admin_storage_efficiencies.html 
+keywords: vSphere, efficiency, efficiencies, deduplication, compaction, compression, zero-block, inline, flexclone, adp, disk partitioning, ONTAP 
+summary: 이 페이지에서는 ONTAP의 스토리지 효율성을 설명합니다. 
+---
+= ONTAP 스토리지 효율성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 이야기를 자세히 알아보십시오
+
+NetApp은 운영 워크로드에 대한 중복 제거 기능을 최초로 제공했지만 이 분야에서 최초이자 마지막 기술이 아니었습니다. 공간 효율적인 데이터 보호 메커니즘인 ONTAP 스냅샷 복사본에서 시작되어, 성능 저하 없이 VM의 읽기/쓰기 복사본을 즉시 만들어 운영 및 백업을 지원합니다. NetApp은 계속해서 중복제거, 압축, 제로 블록 중복제거 등과 같은 인라인 기능을 제공하여 고가의 SSD에서 최대한의 스토리지를 짜내었습니다. 가장 최근에 ONTAP은 컴팩션을 추가하여 스토리지 효율성을 강화합니다.
+
+* * 인라인 제로 블록 중복제거. * 제로 블록 전체에서 낭비되는 공간을 없앱니다.
+* * 인라인 압축 * 데이터 블록을 압축하여 필요한 물리적 스토리지의 양을 줄입니다.
+* * 인라인 데이터 중복 제거. * 디스크에 있는 기존 블록을 사용하여 들어오는 블록을 제거합니다.
+* * 인라인 데이터 컴팩션 * 소규모 I/O 작업과 파일을 각 물리적 블록에 압축
+
+
+image:vsphere_admin_storage_efficiencies.png["스토리지 효율성"]
+
+중복제거, 데이터 압축, 데이터 컴팩션을 함께 실행하거나 독립적으로 실행하여 FlexVol 볼륨에서 최적의 공간 절약 효과를 달성할 수 있습니다. 이러한 기능을 결합하여 고객은 VSI의 경우 최대 5:1, VDI의 경우 최대 30:1의 비용을 절감할 수 있었습니다.
+
+
+NOTE: ONTAP 스토리지 효율성에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/ontap-9/index.jsp["중복제거, 데이터 압축, 데이터 컴팩션을 사용하여 스토리지 효율성을 높입니다"] ONTAP 9 문서 센터

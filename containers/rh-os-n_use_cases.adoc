@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_cases.html 
+keywords: validation, use-cases, application, multitenancy, virtualization, pipeline 
+summary:  
+---
+= 솔루션 검증 및 사용 사례: NetApp 기반 Red Hat OpenShift
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 페이지에서 제공되는 예는 NetApp 기반의 Red Hat OpenShift에 대한 솔루션 검증 및 사용 사례입니다.
+
+* link:rh-os-n_use_case_pipeline["영구 스토리지로 Jenkins CI/CD 파이프라인을 구축합니다"]
+* link:rh-os-n_use_case_multitenancy_overview.html["NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시를 구성합니다"]
+* link:rh-os-n_use_case_openshift_virtualization_overview.html["NetApp ONTAP 기반의 Red Hat OpenShift 가상화"]
+* link:rh-os-n_use_case_advanced_cluster_management_overview.html["NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리"]
+
+
+link:rh-os-n_videos_and_demos.html["다음: 비디오 및 데모."]

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_overview_netapp.html 
+keywords: NetApp, ONTAP, Element, Storage 
+summary: NetApp은 Trident Storage Orchestrator를 사용하여 Red Hat OpenShift에 구축된 애플리케이션용 스토리지를 프로비저닝할 수 있는 여러 스토리지 플랫폼을 제공합니다. 
+---
+= NetApp 스토리지 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp은 Astra Trident Storage Orchestrator를 사용하여 Red Hat OpenShift에 구축된 애플리케이션용 스토리지를 프로비저닝할 수 있는 여러 스토리지 플랫폼을 보유하고 있습니다.
+
+image:redhat_openshift_image43.png["오류: 그래픽 이미지가 없습니다"]
+
+* AFF 및 FAS 시스템에서 NetApp ONTAP를 실행하고 파일 기반(NFS) 및 블록 기반(iSCSI) 사용 사례에 대한 스토리지를 제공합니다.
+* Cloud Volumes ONTAP와 ONTAP Select는 각각 클라우드 및 가상 공간에서도 동일한 이점을 제공합니다.
+* NetApp Cloud Volumes Service(AWS/GCP) 및 Azure NetApp Files는 클라우드에서 파일 기반 스토리지를 제공합니다.
+* NetApp Element 스토리지 시스템은 확장성이 뛰어난 환경에서 블록 기반(iSCSI) 사용 사례를 제공합니다.
+
+
+
+NOTE: NetApp 포트폴리오의 각 스토리지 시스템은 온프레미스 사이트와 클라우드 간에 데이터 관리와 이동을 모두 쉽게 하여 데이터가 애플리케이션의 위치에 있도록 보장합니다.
+
+다음 페이지는 NetApp OpenShift에서 검증된 NetApp 스토리지 시스템에 대한 추가 정보를 제공합니다.
+
+* link:rh-os-n_netapp_ontap.html["NetApp ONTAP를 참조하십시오"]
+* link:rh-os-n_netapp_element.html["NetApp Element"]
+
+
+link:rh-os-n_overview_storint.html["다음으로, NetApp 스토리지 통합 개요를 살펴보겠습니다"]

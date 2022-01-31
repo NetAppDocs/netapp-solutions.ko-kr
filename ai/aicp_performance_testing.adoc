@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_performance_testing.html 
+keywords: Performance, Testing, benchmark, Tensorflow, Docker 
+summary: 우리는 이 솔루션 작성의 일부로 간단한 성능 비교를 수행했습니다. Kubernetes를 사용하여 몇 가지 표준 NetApp 벤치마킹 작업을 실행했고, 단순한 Docker 실행 명령을 사용하여 수행한 실행과 벤치마크 결과를 비교했습니다. 
+---
+= 성능 테스트
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+우리는 이 솔루션 작성의 일부로 간단한 성능 비교를 수행했습니다. Kubernetes를 사용하여 몇 가지 표준 NetApp AI 벤치마킹 작업을 실행했으며, 단순한 Docker 실행 명령을 사용하여 수행한 실행과 벤치마크 결과를 비교했습니다. 뚜렷한 성능 차이는 없었습니다. 따라서, 컨테이너화된 AI 교육 작업을 오케스트레이션하기 위해 Kubernetes를 사용할 경우 성능에 부정적인 영향을 미치지 않는다는 결론을 내렸습니다. 성능 비교 결과는 다음 표를 참조하십시오.
+
+|===
+| 벤치마크 | 데이터 세트 | Docker 실행(이미지/초) | Kubernetes(이미지/초) 
+
+
+| 단일 노드 TensorFlow | 합성 데이터 | 6,667.2475 | 6,661.93125 
+
+
+| 단일 노드 TensorFlow | ImageNet | 6,570.2025 | 6,530.59125 
+
+
+| 동기식 분산 2노드 TensorFlow | 합성 데이터 | 13,213.70625 | 13,218.288125 
+
+
+| 동기식 분산 2노드 TensorFlow | ImageNet | 12,941.69125 | 12,881.33875 
+|===
+link:aicp_conclusion.html["다음: 결론."]

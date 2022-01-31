@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_multitenancy_architecture.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
+---
+= 있습니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp ONTAP에서 지원하는 Red Hat OpenShift 및 Astra Trident는 기본적으로 워크로드 간 격리를 제공하지 않지만 멀티 테넌시를 구성하는 데 사용할 수 있는 다양한 기능을 제공합니다. NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터에서 멀티테넌트 솔루션을 설계하는 방법을 잘 이해하기 위해 일련의 요구 사항이 있는 예제를 고려하고 이 솔루션에 대한 구성을 개략적으로 설명합니다.
+
+한 조직이 Red Hat OpenShift 클러스터에서 두 개의 다른 팀이 진행 중인 두 프로젝트의 일부로 두 개의 워크로드를 실행하는 것으로 가정해 보겠습니다. 이러한 워크로드의 데이터는 NetApp ONTAP NAS 백엔드의 Astra Trident가 동적으로 프로비저닝한 PVC에 있습니다. 조직은 이러한 두 워크로드를 위한 멀티테넌트 솔루션을 설계하고 이러한 프로젝트에 사용되는 리소스를 격리하여 보안 및 성능이 유지되도록 해야 합니다. 이러한 애플리케이션은 주로 해당 애플리케이션을 지원하는 데이터에 초점을 맞춥니다.
+
+다음 그림은 NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터의 멀티 테넌트 솔루션을 보여줍니다.
+
+image::redhat_openshift_image40.jpg[NetApp ONTAP에서 지원하는 Astra Trident와 Red Hat OpenShift 클러스터의 멀티 테넌시]
+
+
+
+== 기술 요구 사항
+
+. NetApp ONTAP 스토리지 클러스터
+. Red Hat OpenShift 클러스터
+. 아스트라 트리덴트
+
+
+
+
+== Red Hat OpenShift – 클러스터 리소스
+
+Red Hat OpenShift 클러스터의 관점에서 볼 때 가장 먼저 해야 할 리소스는 프로젝트입니다. OpenShift 프로젝트는 전체 OpenShift 클러스터를 여러 가상 클러스터로 분할하는 클러스터 리소스로 볼 수 있습니다. 따라서 프로젝트 수준에서 격리하면 다중 임차를 구성할 수 있는 기반이 제공됩니다.
+
+다음으로, 클러스터에서 RBAC를 구성합니다. 가장 좋은 방법은 모든 개발자가 IDP(Identity Provider)에서 단일 프로젝트 또는 작업 부하를 단일 사용자 그룹으로 구성하도록 하는 것입니다. Red Hat OpenShift는 IDP 통합 및 사용자 그룹 동기화를 지원하므로 IDP의 사용자 및 그룹을 클러스터로 가져올 수 있습니다. 이렇게 하면 클러스터 관리자가 프로젝트 전용 클러스터 리소스의 액세스를 해당 프로젝트에서 작업하는 사용자 그룹 또는 그룹으로 분리하여 모든 클러스터 리소스에 대한 무단 액세스를 제한할 수 있습니다. Red Hat OpenShift와의 IDP 통합에 대한 자세한 내용은 설명서를 참조하십시오 https://docs.openshift.com/container-platform/4.7/authentication/understanding-identity-provider.html["여기"^].
+
+
+
+== NetApp ONTAP를 참조하십시오
+
+각 프로젝트에 대해 스토리지에서 생성된 볼륨이 별도의 스토리지에 생성된 것처럼 호스트에 나타나도록 하기 위해 Red Hat OpenShift 클러스터의 영구 스토리지 공급자 역할을 하는 공유 스토리지를 격리하는 것이 중요합니다. 이를 위해 프로젝트나 작업 부하가 있는 것처럼 NetApp ONTAP에 SVM(스토리지 가상 시스템)을 최대한 많이 생성하고 각 SVM을 작업 부하에 전용으로 사용합니다.
+
+
+
+== 아스트라 트리덴트
+
+NetApp ONTAP에서 생성된 다양한 프로젝트에 대해 서로 다른 SVM을 생성한 후 각 SVM을 다른 Trident 백엔드에 매핑해야 합니다. Trident의 백엔드 구성은 OpenShift 클러스터 리소스에 영구 스토리지를 할당하는 역할을 하므로 SVM에 매핑할 세부 정보가 필요합니다. 이 드라이버는 최소한 백엔드의 프로토콜 드라이버여야 합니다. 선택적으로, 볼륨에 스토리지의 용량을 할당하는 방법을 정의하고 볼륨 크기 또는 애그리게이트 사용량 등에 대한 제한을 설정할 수 있습니다. NetApp ONTAP용 Trident 백엔드의 정의에 대한 자세한 내용을 확인할 수 있습니다 https://netapp-trident.readthedocs.io/en/stable-v21.01/kubernetes/operations/tasks/backends/ontap/index.html["여기"^].
+
+
+
+== Red Hat OpenShift – 스토리지 리소스
+
+Trident 백엔드를 구성한 후 다음 단계는 StorageClasses를 구성하는 것입니다. 백엔드가 있는 만큼 스토리지 클래스를 구성하여 각 스토리지 클래스 액세스 권한을 통해 백엔드에서 볼륨을 한 개만 스핀업할 수 있습니다. 스토리지 클래스를 정의하는 동안 storagePools 매개 변수를 사용하여 StorageClass를 특정 Trident 백엔드에 매핑할 수 있습니다. 스토리지 클래스를 정의하는 세부 정보를 찾을 수 있습니다 https://netapp-trident.readthedocs.io/en/stable-v18.07/kubernetes/concepts/objects.html#kubernetes-storageclass-objects["여기"^]. 따라서 StorageClass에서 Trident 백엔드로 일대일로 매핑하여 하나의 SVM을 가리키도록 합니다. 이렇게 하면 해당 프로젝트에 할당된 StorageClass를 통해 모든 스토리지 청구가 해당 프로젝트 전용 SVM에서 서비스됩니다.
+
+스토리지 클래스는 이름이 같은 리소스가 아니므로 다른 네임스페이스나 프로젝트의 Pod를 통해 한 프로젝트의 스토리지 클래스에 대한 스토리지 클레임이 거부되도록 하려면 어떻게 해야 합니까? 리소스 할당량을 사용하면 됩니다. ResourceQuotas 는 프로젝트당 리소스의 총 사용량을 제어하는 개체입니다. 프로젝트의 개체에서 사용할 수 있는 총 리소스 양뿐만 아니라 수를 제한할 수 있습니다. 리소스 할당량을 사용하면 프로젝트의 거의 모든 리소스를 제한할 수 있으며, 이러한 리소스를 효율적으로 사용하면 리소스 오버 프로비저닝 또는 과소비로 인한 비용 및 운영 중단을 줄일 수 있습니다. 설명서를 참조하십시오 https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html["여기"^] 를 참조하십시오.
+
+이 활용 사례에서는 특정 프로젝트의 포드를 해당 프로젝트 전용이 아닌 스토리지 클래스에서 스토리지를 청구하는 것을 제한해야 합니다. 이렇게 하려면 "<storage-class-name>.storageclass.storage.k8s.io/persistentvolumeclaims"를 0으로 설정하여 다른 스토리지 클래스에 대한 영구 볼륨 클레임을 제한해야 합니다. 또한 클러스터 관리자는 프로젝트의 개발자가 리소스 할당량을 수정할 수 있는 액세스 권한이 없어야 합니다.
+
+link:rh-os-n_use_case_multitenancy_configuration.html["다음: 구성."]

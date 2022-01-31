@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_software_and_hardware_requirements.html 
+keywords: NetApp, Software, Hardware, Network, Requirements 
+summary:  
+---
+= 소프트웨어 및 하드웨어 요구 사항
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 네트워크 구성
+
+다음은 클라우드에서 설정하기 위한 네트워크 구성 요구 사항입니다.
+
+* Iguazio 클러스터와 NetApp Cloud Volumes는 동일한 가상 프라이빗 클라우드에 있어야 합니다.
+* 클라우드 관리자는 Iguazio 앱 노드의 포트 6443에 액세스할 수 있어야 합니다.
+* 이 기술 보고서에서는 Amazon Web Services를 사용했습니다. 그러나 사용자는 모든 클라우드 공급자에 솔루션을 배포할 수 있습니다.NVIDIA DGX-1을 사용하는 ONTAP AI에서의 온프레미스 테스트를 위해 이과지오에서 호스팅하는 DNS 서비스를 편리하게 사용했습니다.
+
+
+클라이언트는 동적으로 생성된 DNS 도메인에 액세스할 수 있어야 합니다. 고객은 원하는 경우 자체 DNS를 사용할 수 있습니다.
+
+
+
+== 하드웨어 요구 사항
+
+Iguazio는 자체 클러스터에 설치할 수 있습니다. NetApp은 NVIDIA DGX-1 시스템을 통해 NetApp ONTAP AI의 솔루션을 검증했습니다. 다음 표에는 이 솔루션을 테스트하는 데 사용되는 하드웨어가 정리되어 있습니다.
+
+|===
+| 하드웨어 | 수량 
+
+
+| DGX-1 시스템 | 1 
+
+
+| NetApp AFF A800 시스템 | 1개의 고가용성(HA) 2노드에 컨트롤러 2개와 NVMe SSD 48개(3.8TB 이상) 포함 
+
+
+| Cisco Nexus 3232C 네트워크 스위치 | 2 
+|===
+다음 표에는 사내 테스트에 필요한 소프트웨어 구성 요소가 나열되어 있습니다.
+
+|===
+| 소프트웨어 | 버전 또는 기타 정보 
+
+
+| NetApp ONTAP 데이터 관리 소프트웨어 | 9.7 
+
+
+| Cisco NX-OS 스위치 펌웨어 | 7.0(3) I6(1) 
+
+
+| NVIDIA DGX OS | 4.4-Ubuntu 18.04 LTS 
+
+
+| Docker 컨테이너 플랫폼 | 19.03.5 
+
+
+| 컨테이너 버전입니다 | 20.01-tF1-py2 
+
+
+| 머신 러닝 프레임워크 | TensorFlow 1.15.0 
+
+
+| 이과시오 | 버전 2.8 이상 
+
+
+| ESX Server를 선택합니다 | 6.5 
+|===
+이 솔루션은 Iguazio 버전 2.5 및 NetApp Cloud Volumes ONTAP for AWS로 완전히 테스트되었습니다. Iguazio 클러스터와 NetApp 소프트웨어가 모두 AWS에서 실행되고 있습니다.
+
+|===
+| 소프트웨어 | 버전 또는 유형 
+
+
+| 이과시오 | 버전 2.8 이상 
+
+
+| 앱 노드 | M5.4xLarge 
+
+
+| 데이터 노드 | I3.4xLarge 
+|===
+link:mlrun_network_device_failure_prediction_use_case_summary.html["다음: 네트워크 장치 오류 예측 사용 사례 요약"]

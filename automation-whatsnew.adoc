@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: automation-whatsnew.html 
+summary: NetApp 솔루션의 자동화 기능에 대한 최신 추가 사항 
+keywords: netapp, solutions, automation, ansible, what's new 
+---
+= 솔루션 자동화의 새로운 기능
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./media/
+
+
+NetApp 솔루션을 위한 최신 자동화 기능에 대한 개요
+
+[cols="1,1"]
+|===
+
+
+2+| * 솔루션 자동화 시작하기 * 
+
+
+| link:automation/automation_rhel_centos_setup.html["RHEL/CentOS에서 CLI 배포를 위해 Ansible Control Node를 설정합니다"] | link:automation/automation_ubuntu_debian_setup.html["Ubuntu/Debian에서 CLI 배포를 위해 Ansible Control Node를 설정합니다"] 
+
+
+| link:automation/setup_awx.html["타워/AWX 배포용으로 Ansible 타워 또는 AWX를 설치합니다"] |  
+
+
+2+| * 하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다 * 
+
+
+| link:ent-db/marketing_overview.html["NFS 기반 ONTAP용 Oracle 19c의 자동 구축"] |  
+|===

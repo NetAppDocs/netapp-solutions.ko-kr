@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_click_through_rate_prediction_data_processing_and_model_training.html 
+keywords:  
+summary:  
+---
+= 클릭률 예측 데이터 처리 및 모델 교육을 통해
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+

@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/confluent-kafka-conclusion.html 
+keywords: conclusion 
+summary: 이 문서에서는 Confluent Kafka 인증 테스트, 성능 결과, 조정, Kafka 커넥터 및 자체 재조정 기능을 포함하여 NetApp 스토리지에서 Kafka를 사용하는 모범 사례 지침을 제공합니다. 
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:confluent-kafka-sizing.html["이전: 사이징."]
+
+이 문서에서는 검증 테스트, 계층형 스토리지 성능 결과, 튜닝, Confluent S3 커넥터 및 셀프 밸런싱 기능을 포함하여 NetApp 스토리지와 함께 Contuent Tiered Storage를 사용하기 위한 모범 사례 지침을 제공합니다. ILM 정책, 검증을 위한 다양한 성능 테스트 및 산업 표준 S3 API를 통한 유창한 성능을 고려할 때 NetApp StorageGRID 오브젝트 스토리지는 유창한 계층형 스토리지를 위한 최적의 선택입니다.
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
+
+* 아파치 카프카란
++
+https://www.confluent.io/what-is-apache-kafka/["https://www.confluent.io/what-is-apache-kafka/"^]
+
+* NetApp 제품 설명서
++
+https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
+
+* S3 싱크 매개 변수 세부 정보
++
+https://docs.confluent.io/kafka-connect-s3-sink/current/configuration_options.html["https://docs.confluent.io/kafka-connect-s3-sink/current/configuration_options.html#s3-configuration-options"^]
+
+* 아파치 카프카
++
+https://en.wikipedia.org/wiki/Apache_Kafka["https://en.wikipedia.org/wiki/Apache_Kafka"^]
+
+* Confluent 플랫폼의 무한 스토리지
++
+https://www.confluent.io/blog/infinite-kafka-storage-in-confluent-platform/["https://www.confluent.io/blog/infinite-kafka-storage-in-confluent-platform/"^]
+
+* ContFluent Tiered Storage - 모범 사례 및 사이징
++
+https://docs.confluent.io/platform/current/kafka/tiered-storage.html#best-practices-and-recommendations["https://docs.confluent.io/platform/current/kafka/tiered-storage.html#best-practices-and-recommendations"^]
+
+* Confluent 플랫폼용 Amazon S3 싱크 커넥터
++
+https://docs.confluent.io/kafka-connect-s3-sink/current/overview.html["https://docs.confluent.io/kafka-connect-s3-sink/current/overview.html"^]
+
+* Kafka 사이징
++
+https://eventsizer.io["https://eventsizer.io"]
+
+* StorageGRID 사이징
++
+https://fusion.netapp.com/["https://fusion.netapp.com/"^]
+
+* Kafka 활용 사례
++
+https://kafka.apache.org/uses["https://kafka.apache.org/uses"^]
+
+* confluent platform 6.0의 자체 균형 조정 Kafka 클러스터
++
+https://www.confluent.io/blog/self-balancing-kafka-clusters-in-confluent-platform-6-0/["https://www.confluent.io/blog/self-balancing-kafka-clusters-in-confluent-platform-6-0/"^]
+
++
+https://www.confluent.io/blog/confluent-platform-6-0-delivers-the-most-powerful-event-streaming-platform-to-date/["https://www.confluent.io/blog/confluent-platform-6-0-delivers-the-most-powerful-event-streaming-platform-to-date/"^]
+
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2021년 12월 | 최초 릴리스. 
+|===

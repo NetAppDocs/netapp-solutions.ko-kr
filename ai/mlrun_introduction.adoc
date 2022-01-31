@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_introduction.html 
+keywords: NetApp, MLRun, Introduction, Audience, Solution 
+summary:  
+---
+= TR-4834: MLRun 파이프라인에 대한 NetApp과 Iguazio
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Rick Huang, David Arnette, NetApp Marcelo Litovsky, Iguazio
+
+이 문서에서는 NetApp ONTAP AI, NetApp AI Control Plane, NetApp Cloud Volumes 소프트웨어 및 Iguazio 데이터 과학 플랫폼을 사용하는 MLRun 파이프라인의 세부 정보를 다룹니다. Nuclio serverless 기능, Kubernetes Persistent Volumes, NetApp Cloud Volumes, NetApp Snapshot 복사본, Grafana 대시보드를 사용했습니다. 네트워크 장애 감지 시뮬레이션을 위한 종단 간 데이터 파이프라인을 구축하기 위한 Iguazio 플랫폼의 기타 서비스. Iguazio 및 NetApp 기술을 통합하여 사내와 클라우드에서 모델 구축, 데이터 복제 및 운영 모니터링 기능을 빠르게 구현합니다.
+
+데이터 과학자의 작업은 머신 러닝(ML) 및 인공 지능(AI) 모델의 훈련 및 튜닝에 중점을 두어야 합니다. 그러나 Google의 조사에 따르면 데이터 과학자는 다음 이미지에서와 같이 모델을 엔터프라이즈 애플리케이션과 연동하고 대규모로 실행하는 방법을 찾는 데 80% 정도 시간을 소비합니다. AI/ML 워크플로우에서 모델 개발을 묘사한 것으로 나타났습니다.
+
+image:mlrun_image1.png["오류: 그래픽 이미지가 없습니다"]
+
+엔드 투 엔드 AI/ML 프로젝트를 관리하려면 엔터프라이즈 구성 요소를 더 잘 이해해야 합니다. DevOps가 이러한 유형의 구성 요소를 정의, 통합 및 배포했지만 머신 러닝 작업은 AI/ML 프로젝트를 포함하는 비슷한 흐름을 목표로 합니다. 엔터프라이즈에서 엔드 투 엔드 AI/ML 파이프라인이 어떤 영향을 받는지 알아보려면 다음 필수 구성요소 목록을 참조하십시오.
+
+* 스토리지
+* 네트워킹
+* 데이터베이스를 지원합니다
+* 파일 시스템
+* 컨테이너
+* CI/CD(Continuous Integration and Continuous Deployment) 파이프라인
+* 개발 IDE(통합 개발 환경)
+* 보안
+* 데이터 액세스 정책
+* 하드웨어
+* 클라우드
+* 포함되었습니다
+* 데이터 과학 도구 세트 및 라이브러리
+
+
+이 문서에서는 NetApp과 Iguazio 간의 파트너십을 통해 엔드 투 엔드 AI/ML 파이프라인 개발을 획기적으로 단순화하는 방법을 보여줍니다. 이러한 단순화 덕분에 모든 AI/ML 애플리케이션의 출시 시기를 앞당길 수 있습니다.
+
+
+
+== 대상
+
+데이터 과학의 세계는 정보 기술 및 비즈니스의 여러 분야에 영향을 줍니다.
+
+* 데이터 과학자는 자신이 선택한 도구와 라이브러리를 사용할 수 있는 유연성이 필요합니다.
+* 데이터 엔지니어는 데이터 흐름과 데이터 위치를 알아야 합니다.
+* DevOps 엔지니어는 새로운 AI/ML 애플리케이션을 CI/CD 파이프라인에 통합하는 툴을 필요로 합니다.
+* 비즈니스 사용자는 AI/ML 애플리케이션에 액세스할 수 있기를 원합니다. NetApp과 Iguazio가 각 역할을 통해 당사의 플랫폼을 통해 비즈니스에서 가치를 창출하는 방법을 설명합니다.
+
+
+
+
+== 솔루션 개요
+
+이 솔루션은 AI/ML 애플리케이션의 라이프사이클 뒤에 있습니다. 먼저 데이터 과학자의 작업을 통해 데이터를 준비하고 모델을 훈련 및 구축하는 데 필요한 다양한 단계를 정의합니다. 또한 아티팩트를 추적하고, 실행을 실험하고, Kubeflow에 배포할 수 있는 능력을 갖춘 전체 파이프라인을 생성하는 데 필요한 작업을 수행합니다. 전체 주기를 완료하기 위해 NetApp Cloud Volumes와 파이프라인을 통합하여 다음 이미지와 같이 데이터 버전 관리를 지원합니다.
+
+image:mlrun_image2.png["오류: 그래픽 이미지가 없습니다"]
+
+link:mlrun_technology_overview.html["다음: 기술 개요"]

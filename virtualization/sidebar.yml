@@ -1,0 +1,182 @@
+---
+section: virtualization
+title: 포함되었습니다
+url: "/virtualization/index.html"
+entries:
+- title: NetApp 및 VMware 시작하기
+  url: "/virtualization/netapp-vmware.html"
+- title: ONTAP용 VMware 가상화
+  entries:
+  - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
+    type: solutions
+    entries:
+    - title: 소개
+      url: "/virtualization/vsphere_admin_introduction.html"
+    - title: 유니파이드 스토리지
+      url: "/virtualization/vsphere_admin_unified_storage.html"
+    - title: 스토리지 효율성
+      url: "/virtualization/vsphere_admin_storage_efficiencies.html"
+    - title: 가상 볼륨 및 스토리지 정책 기반 관리
+      url: "/virtualization/vsphere_admin_vvols_and_spbm.html"
+    - title: 하이브리드 클라우드
+      url: "/virtualization/vsphere_admin_hybrid_cloud.html"
+  - title: ONTAP를 사용하는 VMware vSphere 모범 사례
+    url: "/virtualization/vsphere_ontap_ontap_for_vsphere.html"
+    type: solutions
+    entries:
+    - title: vSphere를 위한 ONTAP 기능
+      url: "/virtualization/vsphere_ontap_ontap_capabilities_for_vsphere.html"
+    - title: 모범 사례
+      url: "/virtualization/vsphere_ontap_best_practices.html"
+    - title: 기타 vSphere 기능
+      url: "/virtualization/vsphere_ontap_other_capabilities_for_vsphere.html"
+    - title: ONTAP 및 vSphere 릴리즈별 정보입니다
+      url: "/virtualization/vsphere_ontap_ontap_and_vsphere_release-specific_information.html"
+    - title: 권장되는 ESXi 호스트 및 기타 ONTAP 설정
+      url: "/virtualization/vsphere_ontap_recommended_esxi_host_and_other_ontap_settings.html"
+    - title: 추가 정보를 찾을 수 있는 위치
+      url: "/virtualization/vsphere_ontap_where_to_find_additional_information.html"
+    - title: 문의하기
+      url: "/virtualization/vsphere_ontap_contact_us.html"
+  - title: NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자
+    url: "/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
+    type: solutions
+    entries:
+    - title: SRM 및 ONTAP 도구의 새로운 기능
+      url: "/virtualization/vsrm-ontap9_new_features_with_srm_and_ontap_tools.html"
+    - title: 배포 모범 사례
+      url: "/virtualization/vsrm-ontap9_deployment_best_practices.html"
+    - title: 운영 모범 사례
+      url: "/virtualization/vsrm-ontap9_operational_best_practices.html"
+    - title: 복제 토폴로지
+      url: "/virtualization/vsrm-ontap9_replication_topologies.html"
+    - title: VVOL 복제 사용 시 SRM 문제 해결
+      url: "/virtualization/vsrm-ontap9_appendix_a__troubleshooting_srm_when_using_vvols_replication.html"
+    - title: 결론
+      url: "/virtualization/vsrm-ontap9_conclusion.html"
+    - title: 추가 정보
+      url: "/virtualization/vsrm-ontap9_additional_information.html"
+  - title: VMware vSphere용 ONTAP 툴 - 제품 보안
+    url: "/virtualization/tools-vmware-secure-development-activities.html"
+  - title: VMware vSphere 자동화
+    url: "/virtualization/vsphere_auto_introduction.html"
+    type: solutions
+    entries:
+    - title: 기존 블록 스토리지 용량 할당
+      url: "/virtualization/vsphere_ontap_auto_block.html"
+      entries:
+      - title: VMFS - Fibre Channel
+        url: "/virtualization/vsphere_ontap_auto_block_fc.html"
+      - title: VMFS - Fibre Channel over Ethernet
+        url: "/virtualization/vsphere_ontap_auto_block_fcoe.html"
+      - title: VMFS-iSCSI
+        url: "/virtualization/vsphere_ontap_auto_block_iscsi.html"
+      - title: VMFS-NVMe over Fabric을 참조하십시오
+        url: "/virtualization/vsphere_ontap_auto_block_nvmeof.html"
+    - title: 기존 파일 스토리지 용량 할당
+      url: "/virtualization/vsphere_ontap_auto_file.html"
+      entries:
+      - title: NFS-v3
+        url: "/virtualization/vsphere_ontap_auto_file_nfs.html"
+      - title: NFS-v4.1
+        url: "/virtualization/vsphere_ontap_auto_file_nfs41.html"
+  - title: ONTAP for VMware vSphere의 새로운 기능
+    url: "/virtualization/vsphere_ontap_whats_new.html"
+- title: VMware - 퍼블릭 클라우드
+  entries:
+  - title: 개요
+    url: "/ehc/ehc-overview.html"
+  - title: 하이퍼스케일러 클라우드의 VMware Cloud
+    url: "/ehc/ehc-hyperscalers.html"
+  - title: 지원되는 구성
+    url: "/ehc/ehc-support-configs.html"
+  - title: 하이퍼스케일 구성의 VMware
+    url: "/ehc/ehc-config-vmware.html"
+  - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
+    url: "/ehc/ehc-datastore.html"
+  - title: 요약 및 결론
+    url: "/ehc/ehc-summary.html"
+- title: VMware 하이브리드 클라우드 사용 사례
+  entries:
+  - title: 사용 사례 개요
+    url: "/ehc/ehc-use-cases.html"
+- title: 가상 데스크톱
+  entries:
+  - title: VDS(가상 데스크톱 서비스)
+    entries:
+    - title: NetApp 가상 데스크톱 서비스 기반의 하이브리드 클라우드 VDI
+      url: "/vdi-vds/hcvdivds_hybrid_cloud_vdi_with_virtual_desktop_service.html"
+      type: solutions
+      entries:
+      - title: 사용 사례
+        url: "/vdi-vds/hcvdivds_use_cases.html"
+      - title: NetApp 가상 데스크톱 서비스 개요
+        url: "/vdi-vds/hcvdivds_netapp_virtual_desktop_service_overview.html"
+      - title: NetApp HCI 개요
+        url: "/vdi-vds/hcvdivds_netapp_hci_overview.html"
+      - title: NVIDIA 라이센싱
+        url: "/vdi-vds/hcvdivds_nvidia_licensing.html"
+      - title: 구축
+        url: "/vdi-vds/hcvdivds_deployment.html"
+      - title: 하이브리드 클라우드 환경
+        url: "/vdi-vds/hcvdivds_hybrid_cloud_environment.html"
+      - title: Login VSI를 사용한 단일 서버 로드 테스트
+        url: "/vdi-vds/hcvdivds_single_server_load_test_with_login_vsi.html"
+      - title: 관리 포털
+        url: "/vdi-vds/hcvdivds_management_portal.html"
+      - title: 사용자 관리
+        url: "/vdi-vds/hcvdivds_user_management.html"
+      - title: 작업 영역 관리
+        url: "/vdi-vds/hcvdivds_workspace_management.html"
+      - title: 애플리케이션 관리
+        url: "/vdi-vds/hcvdivds_application_management.html"
+      - title: 가상 데스크톱 서비스용 ONTAP 기능
+        url: "/vdi-vds/hcvdivds_why_ontap.html"
+      - title: 데이터 관리
+        url: "/vdi-vds/hcvdivds_data_management.html"
+      - title: 운영 관리
+        url: "/vdi-vds/hcvdivds_operation_management.html"
+      - title: 도구 및 로그
+        url: "/vdi-vds/hcvdivds_tools_and_logs.html"
+      - title: GPU 고려 사항
+        url: "/vdi-vds/hcvdivds_gpu_considerations.html"
+      - title: 솔루션을 제공합니다
+        url: "/vdi-vds/hcvdivds_solutions_for_industry.html"
+      - title: 결론
+        url: "/vdi-vds/hcvdivds_conclusion.html"
+      - title: 추가 정보를 찾을 수 있는 위치
+        url: "/vdi-vds/hcvdivds_where_to_find_additional_information.html"
+    - title: 'ESG 기술 검증: NetApp 가상 데스크톱 서비스를 통해 엔터프라이즈 규모의 VDI'
+      url: https://www.esg-global.com/validation/esg-technical-validation-vdi-at-enterprise-scale-with-netapp-virtual-desktop-service
+  - title: VMware Horizon을 참조하십시오
+    entries:
+    - title: VMware를 통한 최종 사용자 컴퓨팅(설계 가이드)
+      url: https://www.netapp.com/us/media/nva-1132-design.pdf
+    - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(설계 가이드)
+      url: https://www.netapp.com/us/media/nva-1129-design.pdf
+    - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)
+      url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
+    - title: 3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅
+      url: https://www.netapp.com/us/media/tr-4792.pdf
+  - title: FlexPod 데스크톱 가상화 솔루션
+    url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt1_general-table0=Desktop%20Virtualization
+- title: 데모 및 자습서
+  entries:
+  - title: 비디오
+    url: "/virtualization/vsphere_demos_videos.html"
+- title: 블로그
+  entries:
+  - title: NetApp 및 VMware Cloud Foundation(VCF)
+    entries:
+    - title: '1부: 시작하기'
+      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-getting-started
+    - title: '2부: VCF 및 ONTAP 주 저장소'
+      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-ontap-principal-storage
+    - title: '3부: VCF 및 Element Principal storage'
+      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-element-principal-storage
+    - title: '4부: VMware용 ONTAP 툴 및 보조 스토리지'
+      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-supplemental-storage
+  - title: 클라우드 기반 VMware 구축을 위한 스토리지 최적화
+    url: https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments
+  - title: NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오
+    url: https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution

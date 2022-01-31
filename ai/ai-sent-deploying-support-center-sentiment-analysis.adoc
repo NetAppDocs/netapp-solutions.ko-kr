@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-sent-deploying-support-center-sentiment-analysis.html 
+keywords: deploy, NetApp DataOps Toolkit, NGC Configuration, NVIDIA RIVA Server, NVIDIA TAO Toolkit, Export TAO models to RIVA 
+summary: 이 섹션에서는 이 솔루션을 배포하는 데 필요한 세부 단계를 설명합니다. 
+---
+= 지원 센터 정서 분석 배포
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-sent-design-considerations.html["이전: 설계 고려 사항."]
+
+솔루션 배포에는 다음 구성 요소가 포함됩니다.
+
+. NetApp DataOps 툴킷
+. NGC 구성
+. NVIDIA Riva 서버
+. NVIDIA TAO 툴킷
+. TAO 모델을 Riva로 내보냅니다
+
+
+배포를 수행하려면 다음 단계를 수행하십시오.
+
+
+
+== NetApp DataOps 툴킷: 지원 센터 정서 분석
+
+를 사용합니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^]에서 다음 단계를 완료합니다.
+
+. PIP 도구 키트를 설치합니다.
++
+....
+python3 -m pip install netapp-dataops-traditional
+....
+. 데이터 관리를 구성합니다
++
+....
+netapp_dataops_cli.py config
+....
+
+
+
+
+== NGC 구성: 지원 센터 정서 분석
+
+를 눌러 설정합니다 https://ngc.nvidia.com/setup/installers/cli["NGC"^]에서 다음 단계를 완료합니다.
+
+. NGC를 다운로드합니다.
++
+....
+wget -O ngccli_linux.zip https://ngc.nvidia.com/downloads/ngccli_linux.zip && unzip -o ngccli_linux.zip && chmod u+x ngc
+....
+. 현재 디렉터리를 경로에 추가합니다.
++
+....
+echo "export PATH=\"\$PATH:$(pwd)\"" >> ~/.bash_profile && source ~/.bash_profile
+....
+. 명령을 실행할 수 있도록 NGC CLI를 구성해야 합니다. 메시지가 나타나면 API 키를 포함하여 다음 명령을 입력합니다.
++
+....
+ngc config set
+....
+
+
+Linux 기반이 아닌 운영 체제는 을 참조하십시오 https://ngc.nvidia.com/setup/installers/cli["여기"^].
+
+
+
+== NVIDIA Riva 서버: 지원 센터 정서 분석
+
+를 눌러 설정합니다 https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html["NVIDIA Riva"^]에서 다음 단계를 완료합니다.
+
+. NGC에서 Riva 파일을 다운로드합니다.
++
+....
+ngc registry resource download-version nvidia/riva/riva_quickstart:1.4.0-beta
+....
+. Riva 설정 초기화('Riva_init.sh')
+. Riva 서버('Riva_start.sh')를 시작합니다.
+. Riva client('Riva_start_client.sh')를 시작합니다.
+. Riva 클라이언트 내에서 오디오 처리 라이브러리( https://ffmpeg.org/download.html["FFmpeg"^])
++
+....
+apt-get install ffmpeg
+....
+. 를 시작합니다 https://jupyter-server.readthedocs.io/en/latest/["Jupyter를 선택합니다"^] 서버.
+. Riva Inference Pipeline 노트북을 실행합니다.
+
+
+
+
+== NVIDIA TAO Toolkit: 지원 센터 정서 분석
+
+NVIDIA TAO 툴킷을 설정하려면 다음 단계를 수행하십시오.
+
+. 를 준비하고 활성화합니다 https://docs.python.org/3/library/venv.html["가상 환경"^] TAO 툴킷을 참조하십시오.
+. 를 설치합니다 https://docs.nvidia.com/tao/tao-toolkit/text/tao_toolkit_quick_start_guide.html["필수 패키지"^].
+. 교육 및 미세 조정 중에 사용된 이미지를 수동으로 당깁니다.
++
+....
+docker pull nvcr.io/nvidia/tao/tao-toolkit-pyt:v3.21.08-py3
+....
+. 를 시작합니다 https://jupyter-server.readthedocs.io/en/latest/["Jupyter를 선택합니다"^] 서버.
+. TAO 미세 조정 노트북을 실행합니다.
+
+
+
+
+== TAO 모델을 Riva로 내보내기: 지원 센터 정서 분석
+
+사용합니다 https://docs.nvidia.com/tao/tao-toolkit/text/riva_tao_integration.html["Riva의 Tao 툴킷 모델"^]에서 다음 단계를 완료합니다.
+
+. TAO 미세 조정 노트북에 모델을 저장합니다.
+. TAO 교육을 받은 모델을 Riva 모델 디렉토리에 복사합니다.
+. Riva 서버('Riva_start.sh')를 시작합니다.
+
+
+
+
+== 구축 방해
+
+다음은 자체 솔루션을 개발할 때 고려해야 할 몇 가지 사항입니다.
+
+* NetApp DataOps 툴킷은 데이터 스토리지 시스템이 최적으로 실행되도록 하기 위해 먼저 설치됩니다.
+* NVIDIA NGC는 이미지와 모델의 다운로드를 인증하기 때문에 다른 무엇보다도 먼저 설치해야 합니다.
+* TAO 툴킷을 설치하기 전에 Riva를 설치해야 합니다. Riva 설치는 필요에 따라 Docker 데몬을 구성하여 이미지를 가져옵니다.
+* 모델을 다운로드하려면 DGX 및 Docker에 인터넷 액세스 권한이 있어야 합니다.
+
+
+link:ai-sent-validation-results.html["다음: 확인 결과."]

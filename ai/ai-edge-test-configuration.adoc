@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-edge-test-configuration.html 
+keywords: test, configuration, network infrastructure, storage provisioning, SE350 server 
+summary: 이 섹션에서는 테스트된 구성, 네트워크 인프라, SE350 서버 및 스토리지 프로비저닝 세부 정보에 대해 설명합니다. 
+---
+= 구성을 테스트합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-edge-test-plan.html["이전: 테스트 계획."]
+
+다음 그림은 테스트 구성을 보여 줍니다. NetApp AFF C190 스토리지 시스템과 Lenovo ThinkSystem SE350 서버 2대(각각 NVIDIA T4 가속기 1대)를 사용했습니다. 이러한 구성요소는 10GbE 네트워크 스위치를 통해 연결됩니다. 네트워크 스토리지는 검증/테스트 데이터 세트와 사전 교육 모델을 보유하고 있습니다. 서버는 컴퓨팅 기능을 제공하며 스토리지는 NFS 프로토콜을 통해 액세스됩니다.
+
+이 섹션에서는 테스트된 구성, 네트워크 인프라, SE350 서버 및 스토리지 프로비저닝 세부 정보에 대해 설명합니다. 다음 표에서는 솔루션 아키텍처의 기본 구성 요소를 보여 줍니다.
+
+|===
+| 솔루션 구성 요소 | 세부 정보 
+
+
+| Lenovo ThinkSystem 서버  a| 
+* 각각 NVIDIA T4 GPU 카드 1개가 장착된 SE350 서버 2대
+
+
+
+
+|   a| 
+* 각 서버에는 2.20GHz 및 128GB RAM에서 4개의 물리적 코어가 실행되는 Intel Xeon D-2123IT CPU 1개가 포함되어 있습니다
+
+
+
+
+| 엔트리 레벨 NetApp AFF 스토리지 시스템(HA 쌍,  a| 
+* NetApp ONTAP 9 소프트웨어
+* 24x 960GB SSD
+* NFS 프로토콜
+* 컨트롤러당 1개의 인터페이스 그룹으로, 마운트 지점에 4개의 논리 IP 주소를 사용합니다
+
+
+|===
+image:ai-edge-image10.png["오류: 그래픽 이미지가 없습니다"]
+
+다음 표에는 스토리지 구성이 2RU, 24개 드라이브 슬롯이 포함된 AFF C190에 나와 있습니다.
+
+|===
+| 컨트롤러 | 집계 | FlexGroup 볼륨 | 애그리게이트 크기 | 볼륨 크기 | 운영 체제 마운트 지점 
+
+
+| 컨트롤러1 | 집계1 | /netapplenovo_AI_FG | 8.42TiB | 15TB | /NetApp_Lenovo_FG입니다 
+
+
+| 컨트롤러 2 | 집계2 |  | 8.42TiB |  |  
+|===
+/netappLenovo_AI_FG 폴더에는 모델 검증에 사용된 데이터 세트가 포함되어 있습니다.
+
+아래 그림은 테스트 구성을 보여 줍니다. NetApp EF280 스토리지 시스템과 두 개의 Lenovo ThinkSystem SE350 서버(각각 NVIDIA T4 가속기 1개 포함)를 사용했습니다. 이러한 구성요소는 10GbE 네트워크 스위치를 통해 연결됩니다. 네트워크 스토리지는 검증/테스트 데이터 세트와 사전 교육 모델을 보유하고 있습니다. 서버는 컴퓨팅 기능을 제공하며 스토리지는 NFS 프로토콜을 통해 액세스됩니다.
+
+다음 표에는 EF280에 대한 스토리지 구성이 나와 있습니다.
+
+|===
+| 컨트롤러 | 볼륨 그룹 | 볼륨 | 볼륨 크기 | DDPsize를 참조하십시오 | 연결 방법 
+
+
+| 컨트롤러1 | DDP1 | 볼륨 1 | 8.42TiB | 16TB | SE350-1에서 iSCSI LUN 0으로 
+
+
+| 컨트롤러 2 |  | 볼륨 2 | 8.42TiB |  | SE350-2를 iSCSI LUN 1로 설정합니다 
+|===
+image:ai-edge-image11.png["오류: 그래픽 이미지가 없습니다"]
+
+link:ai-edge-test-procedure.html["다음: 테스트 절차"]

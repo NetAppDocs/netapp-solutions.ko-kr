@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: automation/authentication_tokens.html 
+summary: 이 페이지에서는 NetApp Cloud Manager를 통해 CVO 및 Cloud Manager Connector 구축에 필요한 업데이트 토큰 및 액세스/비밀 키를 수집하는 데 필요한 자세한 정보를 제공합니다. 
+keywords: netapp, solutions, automation, ansible 
+---
+= NetApp 솔루션 자동화
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+
+
+== NetApp Cloud Manager를 사용하여 CVO 및 Connector의 AWS 인증 요구사항
+
+AWX/Ansible Tower를 통해 Ansible 플레이북을 사용하여 CVO 및 커넥터의 자동 배포를 구성하려면 다음 정보가 필요합니다.
+
+
+
+=== AWS에서 액세스/비밀 키 획득
+
+. Cloud Manager에 CVO 및 Connector를 구축하려면 AWS 액세스/암호 키가 필요합니다. IAM --> 사용자 --> 사용자 이름 --> 보안 자격 증명 --> 액세스 키 생성을 실행하여 AWS 콘솔에서 키를 획득합니다.
+. 액세스 키를 복사하여 Connector 및 CVO 구축에 사용하도록 안전하게 보관합니다.
+
+
+
+NOTE: 키를 분실한 경우 다른 액세스 키를 생성하고 분실한 키를 삭제할 수 있습니다
+
+image::access_keys.png[토큰 새로 고침]
+
+
+
+=== NetApp Cloud Central에서 업데이트 토큰 획득
+
+. 에서 계정 자격 증명을 사용하여 Cloud Central 계정에 로그인합니다 https://services.cloud.netapp.com/refresh-token[]
+. 새로 고침 토큰을 생성하고 배포를 위해 저장합니다.
+
+
+image::token_authentication.png[토큰 새로 고침]
+
+
+
+=== 클라이언트 ID를 가져오는 중입니다
+
+. API 페이지에 액세스하여 에서 클라이언트 ID를 복사합니다 https://services.cloud.netapp.com/developer-hub[].
+. 오른쪽 위 모서리에 있는 "인증 방법 알아보기"를 클릭합니다.
+. 로그인 시 사용자 이름/암호가 필요한 경우 나타나는 인증 창에서 일반 액세스에서 클라이언트 ID를 복사합니다. SSO를 사용하는 페더레이션 사용자는 "토큰 새로 고침 탭"에서 클라이언트 ID를 복사해야 합니다.
+
+
+image::client_id.JPG[클라이언트 ID입니다]
+
+
+
+=== AWS에서 키 쌍 획득
+
+. AWS 콘솔에서 "키 쌍"을 검색하고 "PEM"이 있는 키 쌍을 생성합니다. KEY_PAIR의 이름을 기억하시고, 이 이름을 사용하여 커넥터를 전개해 보겠습니다.
+
+
+image::key_pair.png[키 쌍]
+
+
+
+=== 계정 ID를 획득하는 중입니다
+
+. Cloud Manager에서 계정 -> 계정 관리 를 클릭한 다음 AWX 변수에 사용할 계정 ID를 복사합니다.
+
+
+image::account_id.JPG[클라이언트 ID입니다]

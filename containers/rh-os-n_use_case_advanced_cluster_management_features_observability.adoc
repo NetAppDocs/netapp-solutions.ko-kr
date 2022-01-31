@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_advanced_cluster_management_features_observability.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, ONTAP, Trident, Red Hat OpenShift, Advanced Cluster Management, Advanced Cluster Management for Kubernetes 
+summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
+---
+= 기능: NetApp OpenShift에서 Kubernetes용 고급 클러스터 관리
+
+
+
+
+== 관찰 가능성
+
+Kubernetes용 고급 클러스터 관리를 사용하면 모든 클러스터에서 노드, 포드, 애플리케이션 및 워크로드를 모니터링할 수 있습니다.
+
+. 환경 관찰 > 개요 로 이동합니다.
++
+image::redhat_openshift_image82.jpg[관찰 가능성 홈 페이지]
+
+. 모든 클러스터에 있는 모든 Pod 및 워크로드는 다양한 필터를 기준으로 모니터링 및 정렬됩니다. 해당 데이터를 보려면 Pod를 클릭합니다.
++
+image::redhat_openshift_image83.jpg[포드 관찰]
+
+. 다양한 데이터 요소를 기반으로 클러스터 전체의 모든 노드를 모니터링하고 분석합니다. 노드를 클릭하여 해당 세부 정보를 자세히 확인합니다.
++
+image::redhat_openshift_image84.jpg[노드를 관찰합니다]
+
+. 모든 클러스터는 다양한 클러스터 리소스 및 매개 변수를 기반으로 모니터링 및 구성됩니다. 클러스터 세부 정보를 보려면 클러스터 를 클릭합니다.
++
+image::redhat_openshift_image85.jpg[클러스터 관찰]
+
+
+
+link:rh-os-n_use_case_advanced_cluster_management_features_create_resources.html["다음: 기능 - 리소스 생성"]

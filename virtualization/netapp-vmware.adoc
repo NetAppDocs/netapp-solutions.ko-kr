@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: virtualization/netapp-vmware.html 
+keywords: netapp, vmware, getting, started 
+summary:  
+---
+= NetApp 및 VMware 시작하기
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[cols="7,3a"]
+|===
+
+
+ a| 
+VMware on NetApp: 여정이 시작됩니다!
+
+VMware 환경 혁신을 시작할 준비가 되었으면 최신 솔루션 개요를 살펴보고 최신 기술 솔루션 및 제품 데모를 검토하십시오. 다음 단계로 진행할 준비가 되면 NetApp 및 VMware 전문가 커뮤니티를 통해 데이터 센터 현대화, 하이브리드 클라우드 또는 컨테이너식 애플리케이션 이니셔티브를 계획하고 실행할 수 있습니다.
+
+어디서부터 시작해야 할지 잘 모르십니까? link:https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Please%20let%20us%20know%20how%20we%20can%20help:%20&title=Contact%20Our%20VMware%20Experts["연락처"] NetApp의 VMware 전문가 구성원
+
+
+NOTE: 이 페이지에 표시된 내용은 에서도 다운로드할 수 있습니다 link:NetApp-VMware-Getting-Started.pdf["PDF 형식"].
+ a| 
+.NetApp과 VMware: 더 나은 협력
+video::https://d3cy9zhslanhfa.cloudfront.net/media/D30CEDFE-5536-4927-A306FF175F472C95/58C10981-51CF-46FF-8585D031CD0682C2/B98AAC90-D97C-48C3-B96D8DB12CDED4A7.mp4[]
+|===
+
+
+== NetApp과 VMware의 솔루션에 대해 알아보십시오
+
+[cols="1a,1a"]
+|===
+
+
+ a| 
+* link:https://www.netapp.com/hybrid-cloud/vmware/["NetApp과 AMP, VMware: 더욱 유기적으로"]
+* link:https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_vmware_virtualization.html["ONTAP 9.8 VMware 개요를 위한 최신 기능"]
+* link:https://docs.netapp.com/ocsc-41/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-4F08234F-71AD-4441-9E54-3F2CD2914309.html["VMware vSphere용 SnapCenter 플러그인 활용"]
+* link:https://blog.netapp.com/it-architecture-nvme/fc["NetApp 및 NVMe로 VMware 성능 재정의"]
+* link:https://cloud.netapp.com/blog/ma-aws-blg-a-low-cost-performant-world-for-vmware-cloud["AWS 기반 VMware 클라우드를 위한 저비용 성능 세계"]
+* link:https://soundcloud.com/techontap_podcast/episode-291-introducing-vmware-tanzu["NetApp의 VMware Tanzu 소개"]
+
+ a| 
+* link:https://cloud.netapp.com/blog/cvo-blg-virtual-desktop-infrastructure-vdi-delivering-employee-workstations-on-demand["가상 데스크탑 인프라(VDI): 직원 워크스테이션을 온디맨드로 제공합니다"]
+* link:https://cloud.netapp.com/blog/aws-cvo-blg-vmware-on-aws-architecture-and-service-options["AWS 기반 VMware: 아키텍처 및 서비스 옵션"]
+* link:https://cloud.netapp.com/blog/programming-with-cloud-volumes-service-apis["NetApp Cloud Volumes Service API를 통한 프로그래밍으로 AWS 경험 최적화"]
+* link:https://cloud.netapp.com/blog/cvo-blg-vmware-kubernetes-running-k8s-on-vsphere-and-tanzu["Kubernetes: vSphere 및 Tanzu에서 K8s 실행"]
+
+
+|===
+
+
+== 가상화된 Data Fabric을 구축하세요
+
+
+
+=== 최신 VMware용 NetApp 솔루션을 검토해 보십시오
+
+[cols="1a,1a"]
+|===
+
+
+ a| 
+* link:https://docs.netapp.com/us-en/netapp-solutions/hybrid-cloud/vsphere_ontap_ontap_for_vsphere.html["ONTAP 기반의 VMware vSphere: NetApp 솔루션"]
+* link:https://www.netapp.com/pdf.html?item=/media/13555-tr4400.pdf["ONTAP를 사용하는 VMware vSphere 가상 볼륨"]
+* link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/pdfs/fullsite-sidebar/SnapCenter_Plug_in_for_VMware_vSphere_documentation.pdf["VMware vSphere용 SnapCenter 플러그인"]
+* link:https://www.netapp.com/pdf.html?item=/media/9203-nva1136designpdf.pdf["NetApp의 최신 데이터 보호, VMware vSphere 워크로드 설계 및 검증"]
+
+ a| 
+* link:https://www.netapp.com/pdf.html?item=/media/9222-nva-1145-design.pdf["VMware 및 AMP용 NetApp의 최신 데이터 보호 클라우드 연결 플래시 솔루션, SQL Server"]
+* link:https://blog.netapp.com/accelerate-your-k8s-journey["VMware Tanzu & amp; ONTAP를 통해 Kubernetes를 더 빠르게 전환하십시오"]
+* link:https://cloud.netapp.com/hubfs/Resources/Storage%20Heavy%20Workloads.pdf?hsCtaTracking=6a9c2700-5d83-45ac-babf-020616809aa8%7C2ba0f61a-c335-4eb7-9230-20d5ebfa7c36["AWS에서 VMware Cloud를 실행하는 데 드는 비용 절감"]
+
+
+|===
+
+
+=== 최신 VMware 솔루션의 비디오 데모를 살펴보십시오
+
+[cols="1a, 1a"]
+|===
+
+
+ a| 
+* link:https://live.insight.netapp.com/detail/videos/all-videos/video/6211763791001/best-practices-for-vmware-vsphere-and-netapp-ontap.mp4["VMware vSphere 및 NetApp ONTAP 모범 사례"]
+* link:https://tv.netapp.com/detail/video/6211763793001/your-vmware-environment---let-s-run-it-on-nvme-of-with-ontap.mp4["VMware 환경 - NVMe-oF with ONTAP에서 실행하겠습니다"]
+* link:https://tv.netapp.com/detail/video/6211763368001/vvols-disaster-recovery-with-ontap-tools-and-vmware-srm-8.3.mp4["ONTAP 도구 및 VMware SRM을 사용한 VVOL 재해 복구"]
+* link:https://live.insight.netapp.com/detail/video/6211809869001/provisioning-and-managing-flexgroup-datastores-with-ontap-tools.mp4["ONTAP 툴을 사용하여 FlexGroup 데이터 저장소를 프로비저닝하고 관리합니다"]
+
+ a| 
+* link:https://live.insight.netapp.com/detail/video/6211801712001/netapp-nfs-vaai-plugin-update.mp4["NetApp NFS VAAI 플러그인 업데이트"]
+* link:https://live.insight.netapp.com/detail/video/6211798188001/scale-out-virtual-desktops-with-netapp-ontap-flexgroup.mp4["NetApp ONTAP FlexGroup를 지원하는 스케일아웃 가상 데스크톱"]
+* link:https://tv.netapp.com/detail/video/6211767217001/vmware-backup-and-recovery-for-the-data-fabric.mp4["Data Fabric을 위한 VMware 백업 및 복구"]
+* link:https://live.insight.netapp.com/detail/videos/breakout/video/6211769167001/easier-data-protection-with-snapcenter-plug-in-for-vmware-vsphere.mp4["VMware vSphere용 SnapCenter 플러그인을 통한 간편한 데이터 보호"]
+
+
+|===
+
+
+=== VMware용 유연한 하이브리드 클라우드 및 현대화된 애플리케이션 인프라를 구축합니다
+
+
+
+==== 비디오
+
+[cols="1a, 1a"]
+|===
+
+
+ a| 
+* link:https://tv.netapp.com/detail/video/5763417895001/architecting-vmware-datastores-on-netapp-all-flash-fas.mp4["NetApp All Flash FAS를 기반으로 VMware 데이터 저장소 설계"]
+* link:https://live.insight.netapp.com/detail/video/6221363921001/let-s-automate---build-your-vmware-cloud-with-ontap.mp4["자동화해 봅시다. ONTAP을 사용하여 VMware 클라우드를 구축하십시오"]
+
+ a| 
+* link:https://tv.netapp.com/detail/video/6211807518001/a-low-cost-performant-world-for-vmware-cloud.mp4["AWS 기반 VMware 클라우드를 위한 저비용 성능 세계"]
+* link:https://live.insight.netapp.com/detail/videos/by-product/video/6211201051001/NetAppINSIGHT@gpjreg.com.mp4["VMware VM을 Google Cloud로 마이그레이션합니다"]
+
+
+|===
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.VMware Tanzu용 동적 영구 NetApp 스토리지 구축 1부
+video::ZtbXeOJKhrc[youtube, ] a| 
+.VMware Tanzu용 동적 영구 NetApp 스토리지 구축 2부
+video::FVRKjWH7AoE[youtube, ] a| 
+.Deploying Dynamic Persistent NetApp Storage for VMware Tanzu, 3을 참조하십시오
+video::Y-34SUtTTtU[youtube, ]
+|===
+
+
+==== 블로그
+
+* link:https://cloud.netapp.com/blog/vmware-cloud-costs-less-with-cvo-aws-blg["AWS 기반 VMware 클라우드: Fujitsu가 CVO를 사용하여 수백만 달러를 절약하는 방법"]
+
+
+
+
+== NetApp 및 VMware 전문가에게 문의하십시오
+
+* link:https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions["VMware 솔루션 토론 포럼에 참여하십시오"]
+* link:https://www.netapp.com/forms/sales-contact/["시작하려면 NetApp 글로벌 서비스 팀에 문의하십시오"]
+

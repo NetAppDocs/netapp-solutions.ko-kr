@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: ehc/gcp-native.html 
+keywords: NetApp Solutions, google cloud, gcp, gcve, enterprise, hybrid, cloud, native datastore, cvo, cvs 
+summary:  
+---
+= NetApp 기본 데이터 저장소 옵션 for GCP
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+

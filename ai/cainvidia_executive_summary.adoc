@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: ai/cainvidia_executive_summary.html 
+keywords: WP-7328, wp7328, 7328, Executive Summary, NVIDIA, Jarvis, 
+summary:  
+---
+= WP-7328: NVIDIA Jarvis를 사용하는 NetApp 대화형 AI
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Rick Huang, Sung-Han Lin, NetApp Davide Onfrio, NVIDIA
+
+NVIDIA DGX 시스템 제품군은 엔터프라이즈 AI용으로 특별 제작된 세계 최초의 통합 인공 지능(AI) 기반 시스템으로 구성되어 있습니다. NetApp AFF 스토리지 시스템은 탁월한 성능과 업계 최고 수준의 하이브리드 클라우드 데이터 관리 기능을 제공합니다. NetApp과 NVIDIA는 협력 관계를 맺고 엔터프라이즈급 성능, 안정성 및 지원을 제공하는 AI 및 머신 러닝(ML) 워크로드를 위한 턴키 솔루션인 NetApp ONTAP AI 참조 아키텍처를 구축했습니다.
+
+이 백서에서는 다양한 산업 분야의 다양한 사용 사례를 지원하는 대화 AI 시스템을 구축하는 고객에게 직접 지침을 제공합니다. NVIDIA Jarvis를 사용하는 시스템 구축에 대한 정보를 제공합니다. 테스트는 NVIDIA DGX Station 및 NetApp AFF A220 스토리지 시스템을 사용하여 수행되었습니다.
+
+이 솔루션의 대상 고객은 다음과 같은 그룹을 포함합니다.
+
+* 가상 소매 비서 등의 대화형 AI 사용 사례를 위한 AI 모델 및 소프트웨어 개발을 위한 솔루션을 설계하는 엔터프라이즈 설계자
+* 언어 모델링 개발 목표를 달성하기 위한 효율적인 방법을 찾고 있는 데이터 과학자
+* 고객 질문 및 대화 내용 등 텍스트 데이터의 유지 관리 및 처리를 담당하는 데이터 엔지니어
+* 대화형 AI 경험을 바꾸고 AI 이니셔티브를 통해 출시 시기를 앞당기고자 하는 경영진 및 IT 의사 결정자 및 비즈니스 리더
+
+
+link:cainvidia_solution_overview.html["다음: 솔루션 개요"]

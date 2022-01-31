@@ -1,0 +1,58 @@
+---
+section: data-analytics
+title: 최신 데이터 분석
+entries:
+- title: Confluent Kafka 모범 사례
+  type: solutions
+  entries:
+  - title: 소개
+    url: "/data-analytics/confluent-kafka-introduction.html"
+  - title: 솔루션 아키텍처 세부 정보
+    url: "/data-analytics/confluent-kafka-solution.html"
+  - title: 기술 개요
+    url: "/data-analytics/confluent-kafka-technology-overview.html"
+  - title: Confluent 검증
+    url: "/data-analytics/confluent-kafka-confluent-kafka-certification.html"
+  - title: 확장성을 갖춘 성능 테스트
+    url: "/data-analytics/confluent-kafka-performance-tests-with-scalability.html"
+  - title: Confluent S3 커넥터
+    url: "/data-analytics/confluent-kafka-kafka-s3-connector.html"
+  - title: Confluent 자체 재조정 클러스터
+    url: "/data-analytics/confluent-kafka-confluent-kafka-rebalance.html"
+  - title: 모범 사례 지침
+    url: "/data-analytics/confluent-kafka-best-practice-guidelines.html"
+  - title: 사이징
+    url: "/data-analytics/confluent-kafka-sizing.html"
+  - title: 결론
+    url: "/data-analytics/confluent-kafka-conclusion.html"
+- title: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop
+  type: solutions
+  entries:
+  - title: 솔루션 개요
+    url: "/data-analytics/hdcs-sh-solution-overview.html"
+  - title: NetApp에서 제공하는 빅데이터 아키텍처 관련 Data Fabric
+    url: "/data-analytics/hdcs-sh-data-fabric-powered-by-netapp-for-big-data-architecture.html"
+  - title: Hadoop 데이터 보호 및 NetApp
+    url: "/data-analytics/hdcs-sh-hadoop-data-protection-and-netapp.html"
+  - title: Hadoop 데이터 보호 활용 사례 개요
+    url: "/data-analytics/hdcs-sh-overview-of-hadoop-data-protection-use-cases.html"
+  - title: 활용 사례 1 - Hadoop 데이터 백업
+    url: "/data-analytics/hdcs-sh-use-case-1--backing-up-hadoop-data.html"
+  - title: 사용 사례 2 - 클라우드에서 사내까지 백업 및 재해 복구
+    url: "/data-analytics/hdcs-sh-use-case-2--backup-and-disaster-recovery-from-the-cloud-to-on-premises.html"
+  - title: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest 설정
+    url: "/data-analytics/hdcs-sh-use-case-3--enabling-devtest-on-existing-hadoop-data.html"
+  - title: 사용 사례 4 - 데이터 보호 및 멀티 클라우드 연결
+    url: "/data-analytics/hdcs-sh-use-case-4--data-protection-and-multicloud-connectivity.html"
+  - title: 사용 사례 5 - 분석 워크로드 가속화
+    url: "/data-analytics/hdcs-sh-use-case-5--accelerate-analytic-workloads.html"
+  - title: 결론
+    url: "/data-analytics/hdcs-sh-conclusion.html"
+- title: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
+  url: https://www.netapp.com/pdf.html?item=/media/58015-sb-4154.pdf
+- title: Splunk SmartStore가 포함된 NetApp StorageGRID
+  url: https://www.netapp.com/pdf.html?item=/media/20646-tr-4869.pdf
+- title: NetApp E-Series E5700 및 Splunk Enterprise
+  url: https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf
+- title: NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)
+  url: https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf

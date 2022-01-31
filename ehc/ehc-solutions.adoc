@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: ehc/ehc-solutions.html 
+keywords: NetApp Solutions, aws, amazon, vmc, vmware managed cloud, azure, avs, gcp, gcve, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr, backup, burst 
+summary:  
+---
+= 하이퍼스케일 솔루션 에서 VMware를 위한 NetApp 솔루션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp이 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 각 하이퍼스케일러에 VMware 환경을 제공하는 솔루션에 대해 자세히 알아보십시오.
+
+
+
+== VMC용 NetApp 솔루션
+
+다음 매트릭스에서는 각 하이퍼스케일러와 NetApp 스토리지 옵션 간의 솔루션 사용 사례를 정의합니다. 솔루션 세부 정보를 보려면 원하는 셀의 세부 정보를 클릭합니다.
+
+[role="tabbed-block"]
+====
+.AWS(VMC)
+--
+[cols="20,60"]
+|===
+| * 사용 사례 * | * FSx ONTAP * 
+
+
+| 클라우드로 백업 |  
+
+
+| 클라우드로 DR |  
+
+
+| 개발/테스트 |  
+
+
+| 클라우드에 최대 사용량 |  
+
+
+| 클라우드로 마이그레이션 |  
+|===
+--
+.Azure(AVS)
+--
+[cols="20,30,30"]
+|===
+| * 사용 사례 * | * ANF * | CVO * 
+
+
+| 클라우드로 백업 |  |  
+
+
+| 클라우드로 DR |  |  
+
+
+| 개발/테스트 |  |  
+
+
+| 클라우드에 최대 사용량 |  |  
+
+
+| 클라우드로 마이그레이션 |  |  
+|===
+--
+.Google(GCVE)
+--
+[cols="20,30,30"]
+|===
+| * 사용 사례 * | CVS * | CVO * 
+
+
+| 클라우드로 백업 |  |  
+
+
+| 클라우드로 DR |  |  
+
+
+| 개발/테스트 |  |  
+
+
+| 클라우드에 최대 사용량 |  |  
+
+
+| 클라우드로 마이그레이션 |  |  
+|===
+--
+====

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_multitenancy_configuration_prerequisites.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
+---
+= 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 필수 구성 요소
+
+* NetApp ONTAP 클러스터
+* Red Hat OpenShift 클러스터
+* 클러스터에 설치된 Trident
+* tridentctl 및 OC 도구가 설치되고 $PATH에 추가된 관리 워크스테이션
+* ONTAP에 대한 관리자 액세스
+* OpenShift 클러스터에 대한 클러스터 관리자 액세스
+* 클러스터가 ID 공급자와 통합됩니다
+* ID 공급자는 서로 다른 팀의 사용자를 효율적으로 구분하도록 구성되어 있습니다
+
+
+link:rh-os-n_use_case_multitenancy_cluster_admin_tasks.html["다음: 클러스터 관리자 작업."]

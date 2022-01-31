@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/confluent-kafka-solution.html 
+keywords: solution, architecture, details, hardware, software 
+summary: 이 섹션에서는 Confluent 인증에 사용되는 하드웨어 및 소프트웨어에 대해 다룹니다. 이 정보는 NetApp 스토리지를 사용하는 Kafka 구축에 적용할 수 있습니다. 
+---
+= 솔루션 아키텍처 세부 정보
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:confluent-kafka-introduction.html["이전: 소개."]
+
+이 섹션에서는 Confluent 검증에 사용된 하드웨어 및 소프트웨어에 대해 다룹니다. 이 정보는 NetApp 스토리지를 사용하는 Confluent Platform 구축에 적용할 수 있습니다. 다음 표에서는 테스트를 거친 솔루션 아키텍처 및 기본 구성 요소에 대해 설명합니다.
+
+|===
+| 솔루션 구성 요소 | 세부 정보 
+
+
+| Confluent Kafka 버전 6.2  a| 
+* 세 명의 주키퍼입니다
+* 브로커 서버 5대
+* 5개의 도구 서버
+* 하나의 Grafana
+* 제어 센터 1개
+
+
+
+
+| Linux(Ubuntu 18.04) | 모든 서버 
+
+
+| 계층형 스토리지를 위한 NetApp StorageGRID  a| 
+* StorageGRID 소프트웨어
+* SG1000(로드 밸런서) 1개
+* SGF6024 4개
+* 24 x 800 SSD 4개
+* S3 프로토콜
+* 4 x 100GbE(브로커와 StorageGRID 인스턴스 간 네트워크 연결)
+
+
+
+
+| 15 Fujitsu Primergy RX2540 서버 | 각 장착 사양: * CPU 2개, 물리적 코어 16개 * Intel Xeon * 256GB 물리적 메모리 * 100GbE 듀얼 포트 
+|===
+link:confluent-kafka-technology-overview.html["다음: 기술 개요"]

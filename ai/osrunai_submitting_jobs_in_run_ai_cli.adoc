@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_submitting_jobs_in_run_ai_cli.html 
+keywords:  
+summary:  
+---
+= 실행 중인 작업 제출: AI CLI
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+이 섹션에서는 Kubernetes 작업 실행에 사용할 수 있는 기본 Run:AI 명령에 대한 자세한 정보를 제공합니다. 워크로드 유형에 따라 3개 부분으로 나뉩니다. AI/ML/DL 워크로드는 다음과 같은 두 가지 일반 유형으로 나눌 수 있습니다.
+
+* * 무인 교육 세션 *. 이러한 유형의 워크로드를 사용하여 데이터 과학자는 자체 실행 워크로드를 준비하여 실행을 위해 보냅니다. 실행 중에 고객은 결과를 검토할 수 있습니다. 이러한 유형의 워크로드는 생산 또는 인물 개발에 사람의 개입이 필요 없는 단계에 있을 때 주로 사용됩니다.
+* * 대화형 빌드 세션 *. 이러한 유형의 워크로드를 사용하여 데이터 과학자는 Bash, Jupyter Notebook, remote PyCharm 또는 유사한 IDE를 사용한 대화형 세션을 열고 GPU 리소스에 직접 액세스합니다. 연결된 포트를 사용하여 대화형 워크로드를 실행하는 세 번째 시나리오가 포함되어 컨테이너 사용자에게 내부 포트를 제공합니다.
+
+
+
+
+== 무인 교육 워크로드
+
+프로젝트를 설정하고 GPU를 지정한 후 명령줄에서 다음 명령을 사용하여 모든 Kubernetes 워크로드를 실행할 수 있습니다.
+
+....
+$ runai project set team-a runai submit hyper1 -i gcr.io/run-ai-demo/quickstart -g 1
+....
+이 명령은 단일 GPU를 할당하여 팀 A의 무인 교육 작업을 시작합니다. 이 작업은 샘플 Docker 이미지 'GCR.IO/RUN-AI-DEMO/QuickStart'를 기반으로 합니다. 우리는 그 일을 하이퍼1이라고 명명했다. 그런 다음 다음 다음 명령을 실행하여 작업의 진행률을 모니터링할 수 있습니다.
+
+....
+$ runai list
+....
+다음 그림은 루나이 리스트 명령의 결과를 보여준다. 표시되는 일반적인 상태는 다음과 같습니다.
+
+* 'ContainerCreating' Docker 컨테이너를 클라우드 저장소에서 다운로드하고 있습니다.
+* '보류 중'. 작업이 예약될 때까지 대기 중입니다.
+* '러닝'입니다. 작업이 실행 중입니다.
+
+
+image:osrunai_image5.png["오류: 그래픽 이미지가 없습니다"]
+
+작업에 대한 추가 상태를 가져오려면 다음 명령을 실행합니다.
+
+....
+$ runai get hyper1
+....
+작업의 로그를 보려면 "runai logs <job-name>" 명령을 실행합니다.
+
+....
+$ runai logs hyper1
+....
+이 예에서는 각 단계에 대해 현재 교육 Epoch, ETA, 손실 함수 값, 정확도 및 경과 시간을 포함하여 실행 중인 DL 세션의 로그를 확인해야 합니다.
+
+의 Run:AI UI에서 클러스터 상태를 볼 수 있습니다 https://app.run.ai/["https://app.run.ai/"^]. 대시보드 > 개요 에서 GPU 사용률을 모니터링할 수 있습니다.
+
+이 워크로드를 중지하려면 다음 명령을 실행합니다.
+
+....
+$ runai delte hyper1
+....
+이 명령은 교육 워크로드를 중지합니다. 이 작업은 'runai list'를 다시 실행하여 확인할 수 있습니다. 자세한 내용은 을 참조하십시오 https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Launch-Unattended-Training-Workloads-/["무인 교육 워크로드 실행"^].
+
+
+
+== 대화형 빌드 워크로드
+
+프로젝트를 설정하고 GPU를 할당하면 명령줄에서 다음 명령을 사용하여 대화형 빌드 워크로드를 실행할 수 있습니다.
+
+....
+$ runai submit build1 -i python -g 1 --interactive --command sleep --args infinity
+....
+이 작업은 샘플 Docker 이미지 Python을 기반으로 합니다. 우리는 작업 구축1이라는 이름을 붙였습니다.
+
+
+NOTE: 인터액티브 플래그는 작업이 시작이나 끝이 없다는 뜻입니다 이 일을 마무리하는 것은 연구자의 책임입니다. 관리자는 시스템에 의해 종료된 후 대화형 작업에 대한 시간 제한을 정의할 수 있습니다.
+
+이 작업에는 '--g 1' 플래그가 GPU를 하나만 할당합니다. 명령어와 논리는 '--명령 슬립--args 무한대'입니다. 명령을 제공해야 합니다. 그렇지 않고 컨테이너가 시작되고 즉시 종료됩니다.
+
+다음 명령은 에 설명된 명령과 유사하게 작동합니다 <<Unattended Training Workloads>>:
+
+* 'runai list': 이름, 상태, 나이, 노드, 이미지, 작업을 위해 프로젝트, 사용자 및 GPU를 지원합니다.
+* runai get build1: 작업 build1에 추가 상태를 표시합니다.
+* 'runai delete build1': 대화형 워크로드 빌드 중지1. bash 셸을 컨테이너에 가져오려면 다음 명령을 사용합니다.
+
+
+....
+$ runai bash build1
+....
+그러면 컴퓨터에 직접 셸이 제공됩니다. 그런 다음 데이터 과학자는 컨테이너 내에서 모델을 개발 또는 미세 조정할 수 있습니다.
+
+의 Run:AI UI에서 클러스터 상태를 볼 수 있습니다 https://app.run.ai["https://app.run.ai"^]. 자세한 내용은 을 참조하십시오.
+
+
+
+== 연결된 포트를 사용하는 대화형 작업 부하
+
+대화형 빌드 워크로드의 확장으로 Run:AI CLI로 컨테이너를 시작할 때 컨테이너 사용자에게 내부 포트를 표시할 수 있습니다. 이 기능은 Jupyter Notebooks와 함께 작업하거나 다른 마이크로서비스에 연결하는 클라우드 환경에 유용합니다. https://kubernetes.io/docs/concepts/services-networking/ingress/["침투"^] Kubernetes 클러스터 외부에서 Kubernetes 서비스에 액세스할 수 있습니다. 어떤 인바운드 연결이 어떤 서비스에 연결할지 정의하는 규칙 모음을 만들어 액세스를 구성할 수 있습니다.
+
+클러스터의 서비스에 대한 외부 액세스를 보다 효율적으로 관리하기 위해 클러스터 관리자를 설치하는 것이 좋습니다 https://kubernetes.io/docs/concepts/services-networking/ingress/["침투"^] 및 로드 밸런서를 구성합니다.
+
+서비스 유형으로 수신을 사용하려면 다음 명령을 실행하여 워크로드를 제출할 때 메서드 유형과 포트를 설정합니다.
+
+....
+$ runai submit test-ingress -i jupyter/base-notebook -g 1 \
+  --interactive --service-type=ingress --port 8888 \
+  --args="--NotebookApp.base_url=test-ingress" --command=start-notebook.sh
+....
+컨테이너가 성공적으로 시작된 후 runai list를 실행하여 Jupyter Notebook에 액세스할 수 있는 Service URL(S)을 확인합니다. URL은 수신 엔드포인트, 작업 이름 및 포트로 구성됩니다. 예를 들어 를 참조하십시오 https://10.255.174.13/test-ingress-8888[].
+
+자세한 내용은 을 참조하십시오 https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Launch-an-Interactive-Build-Workload-with-Connected-Ports/["연결된 포트를 사용하여 대화형 빌드 워크로드 시작"^].
+
+link:osrunai_achieving_high_cluster_utilization.html["다음: 높은 클러스터 사용률 달성"]

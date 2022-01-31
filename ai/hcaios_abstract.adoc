@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: ai/hcaios_abstract.html 
+keywords: NetApp Abstract ML AI 
+summary:  
+---
+= 추상화
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+데이터의 폭발적인 증가와 머신 러닝(ML)과 인공 지능(AI)의 기하급수적인 성장으로 인해 고유한 개발 및 구현 과제와 함께 새로운 경제를 창조했습니다. 일반적으로 대량의 데이터는 GPU와 같은 고성능 AI 컴퓨팅 리소스가 효율적으로 액세스할 수 없는 저렴한 데이터 레이크에 저장됩니다. 이 보고서에서는 데이터 과학 전문가가 데이터 허브를 구현하고, 한 번의 클릭으로 위치와 관계없이 컴퓨팅 리소스 가까이에 데이터 세트 캐시를 생성할 수 있는 새로운 솔루션을 제공합니다. 따라서 AI 실무자는 새로운 데이터 세트 버전 허브를 통해 향상된 협업을 통해 고성능 모델 훈련을 더 쉽게 수행할 수 있습니다.
+
+link:hcaios_acknowledgments.html["다음은 감사의 말"]

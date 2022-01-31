@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_hardware_used_in_this_solution.html 
+keywords:  
+summary:  
+---
+= 이 솔루션에 사용된 하드웨어
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 솔루션은 ONTAP AI 참조 아키텍처 2개의 DGX-1 노드 및 1개의 AFF A800 스토리지 시스템을 사용하여 검증되었습니다. 을 참조하십시오 https://www.netapp.com/us/media/nva-1121-design.pdf["NVA-1121"^] 이 검증에 사용된 인프라에 대한 자세한 내용은 를 참조하십시오.
+
+다음 표에는 솔루션을 테스트하는 데 필요한 하드웨어 구성요소가 나와 있습니다.
+
+|===
+| 하드웨어 | 수량 
+
+
+| DGX-1 시스템 | 2 
+
+
+| AFF A800 | 1 
+
+
+| Nexus 3232C 스위치 | 2 
+|===
+link:osrunai_software_requirements.html["다음: 소프트웨어 요구 사항"].

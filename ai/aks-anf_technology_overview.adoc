@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_technology_overview.html 
+keywords: overview, technology, microsoft, azure, anf, dask, nvidia, rapids 
+summary: 이 페이지에서는 이 솔루션에 사용된 기술에 대해 간략하게 설명합니다. 
+---
+= 기술 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_introduction.html["이전: 소개."]
+
+
+
+== Microsoft 및 NetApp
+
+2019년 5월부터 Microsoft는 NetApp ONTAP 기술을 기반으로 엔터프라이즈 NFS 및 SMB 파일 서비스를 위한 Azure 네이티브 자사 포털 서비스를 제공해 왔습니다. 이러한 개발을 위해 Microsoft와 NetApp의 전략적 파트너십을 활용하고 세계적인 수준의 ONTAP 데이터 서비스를 Azure로 확장합니다.
+
+
+
+== Azure NetApp Files
+
+Azure NetApp Files 서비스는 엔터프라이즈급 고성능 용량제 파일 스토리지 서비스입니다. Azure NetApp Files은 모든 워크로드 유형을 지원하며 기본적으로 고가용성을 제공합니다. 서비스를 통해 서비스 및 성능 수준을 선택하고 스냅샷 복사본을 설정할 수 있습니다. Azure NetApp Files은 코드 변경 없이 데이터베이스, SAP, 고성능 컴퓨팅 애플리케이션 등 클라우드에서 가장 까다로운 엔터프라이즈 파일 워크로드를 마이그레이션 및 실행하기 위한 Azure 퍼스트 파티 서비스입니다.
+
+이 참조 아키텍처는 IT 조직이 다음과 같은 이점을 얻을 수 있도록 해 줍니다.
+
+* 설계 복잡성 제거
+* 컴퓨팅과 스토리지의 독립적인 확장 지원
+* 고객이 작은 규모로 시작한 후 원활하게 확장할 수 있도록 지원
+* 다양한 성능 및 비용 요소에 부합하는 폭넓은 스토리지 계층을 제공합니다
+
+
+
+
+== Dask 및 NVIDIA RAPIDS 개요
+
+Dask는 여러 시스템에서 Python 라이브러리를 확장하고 대용량 데이터의 처리 속도를 높이는 오픈 소스 병렬 컴퓨팅 도구입니다. Pandas, Numpy 및 scikit-learn과 같은 단일 스레드 기존 Python 라이브러리와 유사한 API를 제공합니다. 따라서 기본 Python 사용자는 클러스터 전체에서 리소스를 사용하기 위해 기존 코드의 많은 부분을 변경하지 않아도 됩니다.
+
+NVIDIA RAPIDS는 전체 GPU에서 엔드 투 엔드 ML 및 데이터 분석 워크플로우를 실행하도록 지원하는 오픈 소스 라이브러리 제품군입니다. DASK와 함께 사용하면 GPU 워크스테이션(스케일업)에서 다중 노드, 다중 GPU 클러스터(스케일아웃)까지 쉽게 확장할 수 있습니다.
+
+클러스터에서 Dask를 구축할 경우 Kubernetes를 리소스 오케스트레이션에 사용할 수 있습니다. 다음 그림과 같이 프로세스 요구 사항에 따라 작업자 노드를 확장하거나 축소할 수도 있습니다. 그러면 클러스터 리소스 소비를 최적화할 수 있습니다.
+
+image:aks-anf_image2.png["오류: 그래픽 이미지가 없습니다"]
+
+link:aks-anf_software_requirements.html["다음: 소프트웨어 요구 사항."]

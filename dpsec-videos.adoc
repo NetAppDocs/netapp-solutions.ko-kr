@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: dpsec-videos.html 
+summary: 데이터 보호 및 보안 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈 
+keywords: netapp, solutions, data protection, security, videos, demos 
+---
+= 데이터 보호 및 보안 비디오 및 데모
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터 보호 및 보안 솔루션의 특정 기능을 중점적으로 설명하는 비디오 및 데모 개요
+
+
+
+=== 데모/비디오

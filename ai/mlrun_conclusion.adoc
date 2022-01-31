@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ai/mlrun_conclusion.html 
+keywords: NetaApp, AI, ML, pipelines 
+summary:  
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+자체 AI/ML 파이프라인을 구축할 때는 아키텍처 구성 요소의 통합, 관리, 보안 및 접근성을 구성하는 것이 매우 어렵습니다. 개발자가 자신의 환경에 액세스하고 제어하도록 하는 것은 또 다른 도전 과제입니다.
+
+NetApp과 Iguazio는 이러한 기술을 관리형 서비스로 결합하여 기술 채택을 가속하고 새로운 AI/ML 애플리케이션의 출시 시기를 앞지였습니다.
+
+link:mlrun_where_to_find_additional_information.html["다음: 추가 정보를 찾을 위치"]

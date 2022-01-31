@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: ai/hcaios_conclusion.html 
+keywords: Conclusion, ML, DL 
+summary:  
+---
+= 결론
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp과 cnvrg.io는 파트너십을 통해 고객에게 ML 및 DL 소프트웨어 개발을 위한 완벽한 데이터 관리 솔루션을 제공합니다. ONTAP AI는 모든 규모의 운영에 고성능 컴퓨팅 및 스토리지를 제공하며 cnvrg.io 소프트웨어는 데이터 과학 워크플로우를 간소화하고 리소스 활용률을 향상합니다.
+
+link:hcaios_acknowledgments.html["다음은 감사의 말"]

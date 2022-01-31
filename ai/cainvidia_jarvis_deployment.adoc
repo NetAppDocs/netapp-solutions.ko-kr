@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: ai/cainvidia_jarvis_deployment.html 
+keywords: Jarvis, Deployment, NVIDIA, 
+summary:  
+---
+= Jarvis 배포
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+에 등록할 수 있습니다 https://developer.nvidia.com/nvidia-jarvis-early-access["Jarvis Early Access 프로그램"^] NGC(NVIDIA GPU Cloud)에서 Jarvis 컨테이너에 액세스 NVIDIA로부터 자격 증명을 받은 후 다음 단계를 사용하여 Jarvis를 배포할 수 있습니다.
+
+. NGC에 로그인합니다.
+. NGC를 통해 조직을 "ea-2-Jarvis"로 설정합니다.
+. Jarvis EA v0.2 자산 찾기: Jarvis 컨테이너는 '개인 레지스트리'>'조직 컨테이너'에 있습니다.
+. 자비스(Jarvis) 를 선택하고 모델 스크립트(Model Scripts) 로 이동한 다음 자비스 빠른 시작(Jarvis Quick Start) 을 클릭합니다
+. 모든 자산이 제대로 작동하는지 확인합니다.
+. PDF는 모델 스크립트 > Jarvis Documentation > File Browser에서 찾을 수 있습니다.
+
+
+link:cainvidia_customize_states_and_flows_for_retail_use_case.html["다음: 소매 사용 사례에 대한 상태 및 흐름 사용자 지정"]

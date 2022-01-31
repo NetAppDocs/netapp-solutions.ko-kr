@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_example_kubeflow_operations_and_tasks_overview.html 
+keywords: NetApp, Kubeflow, overview 
+summary:  
+---
+= Kubeflow 작업 및 작업 예
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 Kubeflow를 사용하여 수행할 수 있는 다양한 작업 및 작업의 예를 제공합니다.
+
+link:aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html["다음: 데이터 과학자 또는 개발자 사용을 위해 Jupyter Notebook Workspace를 프로비저닝합니다."]

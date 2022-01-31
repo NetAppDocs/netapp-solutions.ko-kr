@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: ai/hcaios_kubernetes_deployment.html 
+keywords: Kubernetes, Deployment, NVIDIA, DeepOps 
+summary:  
+---
+= Kubernetes 구축
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축하고 구성하려면 배포 점프 호스트에서 다음 작업을 수행하십시오.
+
+. 의 지침에 따라 NVIDIA DeepOps를 다운로드합니다 https://github.com/NVIDIA/deepops/blob/master/docs/getting-started.md["시작 페이지"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+. 의 지침에 따라 클러스터에 Kubernetes를 배포합니다 https://github.com/NVIDIA/deepops/blob/master/docs/kubernetes-cluster.md["Kubernetes 구축 가이드"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+
+
+
+NOTE: DeepOps Kubernetes 구축이 작동하려면 모든 Kubernetes 마스터 및 작업자 노드에 동일한 사용자가 있어야 합니다.
+
+배포가 실패하면 depops/config/group_vars/k8s-cluster.yml에서 kubctl_localhost의 값을 false로 변경하고 2단계를 반복합니다. kubeck_localhost의 값이 true인 경우에만 실행되는 Ansible 호스트에 kubbeck 바이너리 복사 작업은 알려진 메모리 사용 문제가 있는 Ansible 모듈 가져오기를 사용합니다. 이러한 메모리 사용 문제로 인해 작업이 실패할 수 있습니다. 메모리 문제로 인해 작업이 실패하면 나머지 배포 작업이 성공적으로 완료되지 않습니다.
+
+kubbctl_localhost의 값을 false로 변경한 후 배포가 성공적으로 완료되면 Kubernetes 마스터 노드에서 배포 점프 호스트로 kubbectl 바이너리를 수동으로 복사해야 합니다. 특정 마스터 노드에서 kudctl 명령을 직접 실행하여 kubctl 바이너리의 위치를 찾을 수 있습니다.
+
+link:hcaios_cnvrg.io_deployment.html["다음: cnvrg.io 배포"]

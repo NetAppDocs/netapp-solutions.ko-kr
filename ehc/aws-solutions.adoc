@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws-solutions.html 
+keywords: NetApp Solutions, amazon, vmc, vmware managed cloud, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr 
+summary:  
+---
+= Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp이 AWS에 제공하는 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 솔루션에 대해 자세히 알아보십시오.
+
+
+
+== VMC용 NetApp 솔루션
+
+[role="tabbed-block"]
+====
+.확장/버스트
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+.데이터 센터 유지 관리
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+.마이그레이션
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+.백업/복원
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+.재해 복구
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+.데이터 보호
+--
+TR>에서 해당 섹션을 가리킵니다
+
+--
+====

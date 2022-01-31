@@ -1,0 +1,66 @@
+= 
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+. 자격 증명을 구성합니다.
+. 자격 증명 형식을 만듭니다. ONTAP와 관련된 솔루션의 경우 자격 증명 유형을 사용자 이름 및 암호 항목과 일치하도록 구성해야 합니다.
++
+.. Administration → Credential Types로 이동한 후 Add를 클릭합니다.
+.. 이름과 설명을 입력합니다.
+.. 입력 구성에 다음 내용을 붙여 넣습니다.
++
+[source, cli]
+----
+fields:
+  - id: dst_cluster_username
+    type: string
+    label: Destination Cluster Username
+  - id: dst_cluster_password
+    type: string
+    label: Destination Cluster Password
+    secret: true
+  - id: src_cluster_username
+    type: string
+    label: Source Cluster Username
+  - id: src_cluster_password
+    type: string
+    label: Source Cluster Password
+    secret: true
+----
+.. Injector Configuration(주입기 구성)에 다음 내용을 붙여넣고 Save(저장)를 클릭합니다.
++
+[source, cli]
+----
+extra_vars:
+  dst_cluster_username: '{{ dst_cluster_username }}'
+  dst_cluster_password: '{{ dst_cluster_password }}'
+  src_cluster_username: '{{ src_cluster_username }}'
+  src_cluster_password: '{{ src_cluster_password }}'
+----
+
+
+. ONTAP에 대한 자격 증명을 생성합니다
++
+.. Resources → Credentials로 이동한 후 Add를 클릭합니다.
+.. ONTAP 자격 증명에 대한 이름과 조직 세부 정보를 입력합니다
+.. 이전 단계에서 만든 자격 증명 유형을 선택합니다.
+.. 유형 세부 정보 에서 소스 및 대상 클러스터에 대한 사용자 이름 및 암호를 입력합니다.
+.. 저장 을 클릭합니다
+
+
+. Oracle에 대한 자격 증명을 생성합니다
++
+.. Resources → Credentials로 이동한 후 Add를 클릭합니다.
+.. Oracle의 이름 및 조직 세부 정보를 입력합니다
+.. 시스템 자격 증명 유형을 선택합니다.
+.. 유형 세부 정보 에서 Oracle 호스트의 사용자 이름 및 암호를 입력합니다.
+.. 올바른 권한 에스컬레이션 방법을 선택하고 사용자 이름과 암호를 입력합니다.
+.. 저장 을 클릭합니다
+.. DR_Oracle 호스트에 대해 다른 자격 증명에 대해 필요한 경우 프로세스를 반복합니다.
+
+
+

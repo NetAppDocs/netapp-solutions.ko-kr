@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_libraries_for_data_processing_and_model_training.html 
+keywords: libraries, cuml, cudf, dask, transform, load, subsetting, transformation, encoding, rapids, estimators 
+summary: 이 페이지에는 이 작업을 만드는 데 사용된 라이브러리와 프레임워크가 나열되어 있습니다. 이러한 모든 구성 요소는 Azure의 역할 기반 액세스 및 보안 제어와 완벽하게 통합됩니다. 
+---
+= 데이터 처리 및 모델 교육을 위한 라이브러리
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_azure_netapp_files_performance_tiers.html["이전: Azure NetApp Files 성능 계층"]
+
+다음 표에서는 이 작업을 만드는 데 사용된 라이브러리와 프레임워크를 보여 줍니다. 이러한 모든 구성 요소는 Azure의 역할 기반 액세스 및 보안 제어와 완벽하게 통합됩니다.
+
+|===
+| 라이브러리/프레임워크 | 설명 
+
+
+| Dask cuML | GPU에서 작업할 ML의 경우 https://github.com/rapidsai/cuml/tree/main/python/cuml/dask["cuML 라이브러리"^] Dask를 사용하여 RAPIDS cuML 패키지에 대한 액세스를 제공합니다. RAPIDS cuML은 고성능 GPU 기반 구축을 통해 클러스터링, 차원 축소, 회귀 접근 방식을 비롯한 인기 있는 ML 알고리즘을 구현하여 CPU 기반 접근 방식에 비해 최대 100배 빠른 속도를 제공합니다. 
+
+
+| Dask cuDF | CuDF에는 데이터 하위 설정, 변환, 핫 인코딩 등 GPU 가속 추출, 변환, 로드(ETL)를 지원하는 다양한 함수가 포함되어 있습니다. RAPIDS 팀은 을 유지합니다 https://github.com/rapidsai/cudf/tree/main/python/dask_cudf["dask-cudf 라이브러리"^] 여기에는 Dask 및 cuDF를 사용하는 도우미 메서드가 포함됩니다. 
+
+
+| Scikit 학습 | Scikit-Learn은 견적기라고 하는 수십 가지의 기계 학습 알고리즘과 모델을 제공합니다. 각각 https://scikit-learn.org/stable/glossary.html#term-estimators["평가자"^] 를 사용하여 일부 데이터에 장착할 수 있습니다 방법. 
+|===
+비교를 위해 두 대의 노트북을 사용해 ML 파이프라인을 구축했으며, 하나는 기존의 Pandas scikit-learn 접근방식이고, 다른 하나는 RAPIDS 및 Dask를 사용한 분산 훈련입니다. 각 노트북을 개별적으로 테스트하여 시간과 규모의 측면에서 성능을 확인할 수 있습니다. RAPIDS 및 DASK를 사용한 분산 훈련의 이점을 설명하기 위해 각 노트북을 개별적으로 다룹니다.
+
+link:aks-anf_load_criteo_click_logs_day_15_in_pandas_and_train_a_scikit-learn_random_forest_model.html["다음: Pandas에서 Logs day 15를 클릭하고 좌골키트학습 무작위 포리스트 모델을 훈련합니다."]

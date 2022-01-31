@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_load_balancers.html 
+keywords: Advanced Configuration, Load Balancers, MetalLB 
+summary: 이 섹션에서는 NetApp 배포를 통해 Red Hat OpenShift를 사용자 지정하려는 사용자를 위한 로드 밸런싱 장치 옵션을 탐구하는 데 사용됩니다. 
+---
+= 로드 밸런싱 장치 옵션 알아보기: NetApp의 Red Hat OpenShift
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+대부분의 경우 Red Hat OpenShift는 경로를 통해 외부 세계에 애플리케이션을 제공합니다. 외부에서 연결할 수 있는 호스트 이름을 제공하여 서비스가 노출됩니다. 정의된 라우트와 서비스로 식별되는 엔드포인트는 OpenShift 라우터에서 외부 클라이언트에 명명된 연결을 제공하기 위해 사용될 수 있습니다.
+
+그러나 경우에 따라 적절한 서비스를 제공하기 위해 응용 프로그램에서 사용자 지정 로드 밸런싱 장치를 구축하고 구성해야 하는 경우도 있습니다. 한 가지 예로는 NetApp Astra Control Center가 있습니다. 이러한 요구 사항을 충족하기 위해 다양한 사용자 지정 로드 밸런서 옵션을 평가했습니다. 설치 및 구성에 대한 자세한 내용은 이 섹션을 참조하십시오.
+
+다음 페이지에서는 NetApp OpenShift에서 검증된 로드 밸런서 옵션에 대한 추가 정보를 제공합니다.
+
+* link:rh-os-n_LB_MetalLB.html["메탈리스"]
+* link:rh-os-n_LB_F5BigIP.html["F5 BIG-IP"]
+
+
+link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]

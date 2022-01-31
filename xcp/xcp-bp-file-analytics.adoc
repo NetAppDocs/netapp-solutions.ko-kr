@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: xcp/xcp-bp-file-analytics.html 
+keywords: file analytics, rest api, gui, nas, nfs, smb systemtl, postgres, dashboard, stats, xcp scan, match, filter 
+summary: 'NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 파일 시스템 검사를 실행하고 모든 NAS(NFS, SMB) 파일 시스템에 대한 그래프 및 보기와 같은 통계를 시각화하는 데 도움이 됩니다.' 
+---
+= 파일 분석
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:xcp-bp-migration-workflow-overview.html["이전: 마이그레이션 워크플로우."]
+
+NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 파일 시스템 검사를 실행하고 모든 NAS(NFS, SMB) 파일 시스템에 대한 그래프 및 보기와 같은 통계를 시각화하는 데 도움이 됩니다. 1.6에서 시작하는 xCP는 구성 및 systemctl 옵션을 사용하여 간단한 배포 단계를 통해 서비스로 실행할 수 있습니다. xCP 구성 옵션은 Postgres 및 웹 서버를 설치 및 구성하고 자격 증명을 수집하는 방법을 안내합니다. systemctl 옵션은 GUI의 REST API 통신을 위한 서비스로 xCP를 실행합니다.
+
+다음 그림에서는 xCP 파일 분석 흐름을 보여 줍니다.
+
+image:xcp-bp_image6.png["오류: 그래픽 이미지가 없습니다"]
+
+
+NOTE: xCP 파일 분석의 상위 수준 아키텍처, 통계 보기와 같은 GUI 기반 대시보드 보기, 파일 배포 보기 세부 정보에 대한 자세한 내용은 블로그 게시물 을 참조하십시오 https://blog.netapp.com/xcp-data-migration-software["NetApp XCP 1.6은 개방형 파일 분석 및 인프라 개선을 제공합니다"^].
+
+XCP 1.6에는 사용자 지정 그래프를 위한 GUI가 제한되어 있습니다. 필요한 그래프를 생성하려면 CLI를 사용하여 일치하는 필터로 'xCP' 스캔 명령을 실행할 수 있습니다. 다음 예를 참조하십시오.
+
+. xCP 스캔, -match 필터를 사용한 후 1년 이상 수정된 파일 목록을 생성합니다.
++
+....
+[root@ch-vm-cent7-2 linux]# ./xcp scan -match "modified > 1*year" -l -q 192.168.89.110:/ifs/data_for_analysis  > modified_morethan_year
+XCP 1.6P1; (c) 2020 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Wed Sep  9 13:19:35 2020
+ 
+xcp: WARNING: CPU count is only 1!
+ 
+Filtered: 1 did not match
+ 
+Xcp command : xcp scan -match modified > 1*year -l -q 192.168.89.110:/ifs/data_for_analysis
+5,055 scanned, 5,054 matched, 0 error
+Speed       : 1.10 MiB in (510 KiB/s), 110 KiB out (49.5 KiB/s)
+Total Time  : 2s.
+STATUS      : PASSED
+[root@ch-vm-cent7-2 linux]#
+[root@ch-vm-cent7-2 linux]# cat modified_morethan_year
+ rwxr-xr-x --- 7056 503        0     512  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/6/_SUCCESS
+ rwxr-xr-x --- 7056 503      270 8.50KiB  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/6/part-r-00000
+ rw-r--r-- --- 7056 503        0     512  7y58d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/6/SUCCESS.crc
+ rw-r--r-- --- 7056 503      270 8.50KiB  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/6/out_original
+ rw-r--r-- --- 7056 503      270 8.50KiB  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/6/out_sorted
+ rwxr-xr-x --- 7056 503        0     512  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/2/_SUCCESS
+ rwxr-xr-x --- 7056 503       90 8.50KiB  7y99d data_for_analysis/benchmarks/benchmarks/udf_TOBAGandTOTUPLE_7_benchmark.out/2/part-r-00000
+…
+< console output removed due o page space size >
+…
+....
+. 1년 이상 된 파일이 사용하는 공간을 찾습니다.
++
+....
+[root@ch-vm-cent7-2 linux]# ./xcp -du -match "modified > 1*year"  192.168.89.110:/ifs/data_for_analysis/
+XCP 1.6.1; (c) 2020 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Wed Sep  9 13:19:35 2020
+xcp: WARNING: CPU count is only 1!
+52.5KiB data_for_analysis/benchmarks/benchmarks/Macro_Scope_1_benchmark.out
+28.5KiB data_for_analysis/benchmarks/benchmarks/CollectedGroup_6_benchmark.out
+28.5KiB data_for_analysis/benchmarks/benchmarks/Foreach_11_benchmark.out
+ 153KiB data_for_analysis/benchmarks/benchmarks/SecondarySort_9_benchmark.out
+ 412KiB data_for_analysis/benchmarks/benchmarks/CoGroupFlatten_6_benchmark.out
+ 652KiB data_for_analysis/benchmarks/benchmarks/Iterator_1_benchmark.out
+ 652KiB data_for_analysis/benchmarks/benchmarks/LoaderDefaultDir_1_benchmark.out
+ 652KiB data_for_analysis/benchmarks/benchmarks/Order_4_benchmark.out
+28.5KiB data_for_analysis/benchmarks/benchmarks/MapPartialAgg_4_benchmark.out/2
+28.5KiB data_for_analysis/benchmarks/benchmarks/CastScalar_11_benchmark.out/2
+1.29MiB data_for_analysis/benchmarks/benchmarks/Order_18_benchmark.out
+ 652KiB data_for_analysis/benchmarks/benchmarks/FilterBoolean_5_benchmark.out
+20.5KiB data_for_analysis/benchmarks/benchmarks/Macro_DefinitionAndInline_5_benchmark.out/2
+ 628KiB data_for_analysis/benchmarks/benchmarks/Types_29_benchmark.out
+…
+< console output removed due o page space size >
+…
+3.18MiB data_for_analysis/benchmarks/benchmarks/hadoop10
+ 340KiB data_for_analysis/benchmarks/benchmarks/Split_5_benchmark.out
+5.90GiB data_for_analysis/benchmarks/benchmarks
+6.56GiB data_for_analysis/benchmarks
+6.56GiB data_for_analysis
+
+Filtered: 488 did not match
+
+Xcp command : xcp -du -match modified > 1*year 192.168.89.110:/ifs/data_for_analysis/
+Stats       : 5,055 scanned, 4,567 matched
+Speed       : 1.10 MiB in (1.36 MiB/s), 110 KiB out (135 KiB/s)
+Total Time  : 0s.
+STATUS      : PASSED
+[root@ch-vm-cent7-2 linux]#
+....
+. 1년 전에 수정된 데이터의 총 크기 및 그래픽 보기를 찾습니다.
++
+....
+[root@ch-vm-cent7-2 linux]# ./xcp -stats -match "modified > 1*year" -html  192.168.89.110:/ifs/data_for_analysis/ > modified_morethan_year_stats.html
+XCP 1.6.1; (c) 2020 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Wed Sep  9 13:19:35 2020
+
+xcp: WARNING: CPU count is only 1!
+
+Xcp command : xcp -stats -match modified > 1*year -html 192.168.89.110:/ifs/data_for_analysis/
+Stats       : 5,055 scanned, 4,567 matched
+Speed       : 1.10 MiB in (919 KiB/s), 110 KiB out (89.1 KiB/s)
+Total Time  : 1s.
+STATUS      : PASSED
+[root@ch-vm-cent7-2 linux]#
+....
+
+
+다음 보고서는 1년 전에 수정된 파일의 사용자 지정 예제 스캔입니다.
+
+image:xcp-bp_image7.png["오류: 그래픽 이미지가 없습니다"]
+
+link:xcp-bp-deployment-steps.html["다음: 배포 단계."]

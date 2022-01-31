@@ -1,0 +1,146 @@
+---
+section: containers
+title: 컨테이너
+entries:
+- title: NetApp의 Red Hat OpenShift
+  type: solutions
+  url: "/containers/rh-os-n_solution_overview.html"
+  entries:
+  - title: Red Hat OpenShift 개요
+    url: "/containers/rh-os-n_overview_openshift.html"
+    entries:
+    - title: 베어 메탈 기반 OpenShift
+      url: "/containers/rh-os-n_openshift_BM.html"
+    - title: Red Hat OpenStack Platform의 OpenShift
+      url: "/containers/rh-os-n_openshift_OSP.html"
+    - title: Red Hat Virtualization의 OpenShift
+      url: "/containers/rh-os-n_openshift_RHV.html"
+    - title: VMware vSphere의 OpenShift입니다
+      url: "/containers/rh-os-n_openshift_VMW.html"
+  - title: NetApp 스토리지 시스템 개요
+    url: "/containers/rh-os-n_overview_netapp.html"
+    entries:
+    - title: NetApp ONTAP를 참조하십시오
+      url: "/containers/rh-os-n_netapp_ontap.html"
+    - title: NetApp Element
+      url: "/containers/rh-os-n_netapp_element.html"
+  - title: NetApp 스토리지 통합 개요
+    url: "/containers/rh-os-n_overview_storint.html"
+    entries:
+    - title: NetApp Astra Control Center 개요
+      url: "/containers/rh-os-n_overview_astra.html"
+      entries:
+      - title: Red Hat OpenShift 클러스터를 등록합니다
+        url: "/containers/rh-os-n_astra_register.html"
+      - title: 보호할 응용 프로그램을 선택합니다
+        url: "/containers/rh-os-n_astra_applications.html"
+      - title: 애플리케이션 보호
+        url: "/containers/rh-os-n_astra_protect.html"
+    - title: NetApp Astra Trident 개요
+      url: "/containers/rh-os-n_overview_trident.html"
+      entries:
+      - title: NetApp ONTAP NFS 를 참조하십시오
+        url: "/containers/rh-os-n_trident_ontap_nfs.html"
+      - title: NetApp ONTAP iSCSI를 참조하십시오
+        url: "/containers/rh-os-n_trident_ontap_iscsi.html"
+      - title: NetApp Element iSCSI 를 참조하십시오
+        url: "/containers/rh-os-n_trident_element_iscsi.html"
+  - title: OpenShift를 위한 고급 구성 옵션
+    entries:
+    - title: 로드 밸런서 옵션 탐색
+      url: "/containers/rh-os-n_load_balancers.html"
+      entries:
+      - title: 메탈리스
+        url: "/containers/rh-os-n_LB_MetalLB.html"
+      - title: F5 BIG-IP
+        url: "/containers/rh-os-n_LB_F5BigIP.html"
+    - title: 개인 이미지 레지스트리 만들기
+      url: "/containers/rh-os-n_private_registry.html"
+  - title: 솔루션 검증 및 사용 사례
+    url: "/containers/rh-os-n_use_cases.html"
+    entries:
+    - title: 영구 스토리지로 Jenkins CI/CD 파이프라인을 구축합니다
+      url: "/containers/rh-os-n_use_case_pipeline.html"
+    - title: NetApp ONTAP를 사용하여 Red Hat OpenShift에서 멀티 테넌시를 구성합니다
+      entries:
+      - title: 개요
+        url: "/containers/rh-os-n_use_case_multitenancy_overview.html"
+      - title: 있습니다
+        url: "/containers/rh-os-n_use_case_multitenancy_architecture.html"
+      - title: 구성
+        url: "/containers/rh-os-n_use_case_multitenancy_configuration.html"
+        entries:
+        - title: 필수 구성 요소
+          url: "/containers/rh-os-n_use_case_multitenancy_configuration_prerequisites.html"
+        - title: 클러스터 관리자 작업
+          url: "/containers/rh-os-n_use_case_multitenancy_cluster_admin_tasks.html"
+        - title: 스토리지 관리자 작업
+          url: "/containers/rh-os-n_use_case_multitenancy_storage_admin_tasks.html"
+      - title: 검증
+        url: "/containers/rh-os-n_use_case_multitenancy_validation.html"
+      - title: 확장
+        url: "/containers/rh-os-n_use_case_multitenancy_scaling.html"
+    - title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+      entries:
+      - title: 개요
+        url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
+      - title: 구축
+        entries:
+        - title: 필수 구성 요소
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
+        - title: 운영자를 통해 구축
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
+      - title: 워크플로우
+        entries:
+        - title: VM을 생성합니다
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
+        - title: VM 실시간 마이그레이션
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
+        - title: VM 클로닝
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
+        - title: 스냅샷으로부터 VM을 생성하십시오
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
+    - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
+      entries:
+      - title: 개요
+        url: "/containers/rh-os-n_use_case_advanced_cluster_management_overview.html"
+      - title: 구축
+        entries:
+        - title: 필수 구성 요소
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html"
+        - title: 운영자를 통해 구축
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html"
+      - title: 피처
+        entries:
+        - title: 클러스터 라이프사이클 관리
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_cluster_lcm.html"
+        - title: 응용 프로그램 수명 주기 관리
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_application_lcm.html"
+        - title: 거버넌스 및 위험
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_governance_risk.html"
+        - title: 관찰 가능성
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_observability.html"
+        - title: 자원 작성
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_create_resources.html"
+  - title: 비디오/데모
+    url: "/containers/rh-os-n_videos_and_demos.html"
+  - title: 추가 정보
+    url: "/containers/rh-os-n_additional_information.html"
+- title: Google Anthos
+  entries:
+  - title: Anthos의 Bare Metal
+    url: "/containers/bmanthos_introduction.html"
+    type: solutions
+    entries:
+    - title: 솔루션 개요
+      url: "/containers/bmanthos_solution_overview.html"
+    - title: 솔루션 요구 사항
+      url: "/containers/bmanthos_solution_requirements.html"
+    - title: 구축 요약
+      url: "/containers/bmanthos_deployment_summary.html"
+    - title: 솔루션 검증
+      url: "/containers/bmanthos_solution_validation.html"
+    - title: 결론
+      url: "/containers/bmanthos_conclusion.html"
+    - title: 추가 정보를 찾을 수 있는 위치
+      url: "/containers/bmanthos_where_to_find_additional_information.html"

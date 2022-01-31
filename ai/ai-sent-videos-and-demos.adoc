@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-sent-videos-and-demos.html 
+keywords: video, demo, notebook 
+summary: 이 섹션에서는 Jupyter Notebooks와 이 솔루션에 유용한 기타 리소스를 소개합니다. 
+---
+= 비디오 및 데모
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-sent-validation-results.html["이전: 확인 결과."]
+
+감정 분석 파이프라인이 포함된 두 개의 노트북이 있습니다. https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/Support-Center-Model-Transfer-Learning-and-Fine-Tuning.ipynb["“Support-Center-Model-Transfer-Learning-and-fine-Tuning.ipynb”"] 및 link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/Support-Center-Sentiment-Analysis-Pipeline.ipynb["“지원 센터-정서-분석-파이프라인.iynb”"]. 이 노트북은 함께 지원 센터 데이터를 수집하고 사용자 데이터에 맞게 조정된 최첨단 딥 러닝 모델을 사용하여 각 문장에서 감정을 추출하는 파이프라인을 개발하는 방법을 보여줍니다.
+
+
+
+== 지원 센터 - 정서 분석 파이프라인. ipynb
+
+이 노트북에는 오디오 인제스트, 텍스트로 변환, 외부 대시보드에서 사용할 정서 추출용 추론 Riva 파이프라인이 포함되어 있습니다. 아직 완료되지 않은 경우 데이터 세트가 자동으로 다운로드되고 처리됩니다. 전자 필기장의 첫 번째 섹션은 오디오 파일을 텍스트로 변환하는 작업을 처리하는 텍스트 음성 변환 섹션입니다. 그 다음에는 각 텍스트 문장에 대한 감정을 추출하고 제안된 대시보드와 유사한 형식으로 결과를 표시하는 감정 분석 섹션이 이어집니다.
+
+
+NOTE: 이 노트북은 모델 훈련 및 미세 조정 전에 실행해야 합니다. MP3 데이터 세트를 다운로드하여 올바른 형식으로 변환해야 하기 때문입니다.
+
+image:ai-sent-image12.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== Support Center - 모델 교육 및 미세 조정. ipynb
+
+TAO 툴킷 가상 환경은 노트북을 실행하기 전에 설정해야 합니다(설치 지침은 명령 개요 의 TAO 툴킷 섹션 참조).
+
+이 노트북은 TAO 툴킷을 사용하여 고객 데이터에 대한 딥 러닝 모델을 미세 조정합니다. 이전 전자 필기장과 마찬가지로 이 섹션은 텍스트 음성 대 텍스트 및 감정 분석 구성 요소에 대한 두 섹션으로 구분됩니다. 각 섹션은 데이터 처리, 모델 교육 및 세부 조정, 결과 평가 및 모델 내보내기를 거치게 됩니다. 마지막으로, Riva에서 사용할 미세 조정된 모델을 모두 배포하기 위한 마지막 섹션이 있습니다.
+
+image:ai-sent-image13.png["오류: 그래픽 이미지가 없습니다"]
+
+link:ai-sent-conclusion.html["다음: 결론."]

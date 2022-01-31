@@ -1,0 +1,31 @@
+---
+section: ehc
+title: 엔터프라이즈 하이브리드 클라우드
+url: "/ehc/index.html"
+entries:
+- title: VMware - 퍼블릭 클라우드
+  entries:
+  - title: 개요
+    url: "/ehc/ehc-overview.html"
+  - title: 하이퍼스케일러 클라우드의 VMware Cloud
+    url: "/ehc/ehc-hyperscalers.html"
+  - title: 지원되는 구성
+    url: "/ehc/ehc-support-configs.html"
+  - title: 하이퍼스케일 구성의 VMware
+    url: "/ehc/ehc-config-vmware.html"
+  - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
+    url: "/ehc/ehc-datastore.html"
+  - title: 요약 및 결론
+    url: "/ehc/ehc-summary.html"
+- title: VMware 하이브리드 클라우드 사용 사례
+  entries:
+  - title: 사용 사례 개요
+    url: "/ehc/ehc-use-cases.html"
+- title: 하이퍼스케일러 클라우드의 NetApp
+  entries:
+  - title: AWS 기반 VMC를 위한 NetApp
+    url: "/ehc/aws-vmc.html"
+  - title: Azure에서 AVS를 위한 NetApp
+    url: "/ehc/azure-avs.html"
+  - title: Google Cloud 기반 GCVE를 위한 NetApp
+    url: "/ehc/gcp-gcve.html"

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: vdi-vds/hcvdivds_why_ontap.html 
+keywords: VDS, Virtual Desktop Service, ONTAP, FlexGroup, File System analytics, cloud tiering, global namespace 
+summary: 가상 데스크톱 서비스용 ONTAP 기능. 
+---
+= 가상 데스크톱 서비스용 ONTAP 기능
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+다음 ONTAP 기능을 사용하면 가상 데스크톱 서비스에 적합합니다.
+
+* * 스케일아웃 파일 시스템. * ONTAP FlexGroup 볼륨은 20PB 이상으로 확장할 수 있으며 단일 네임스페이스 내에서 4천억 개 이상의 파일을 포함할 수 있습니다. 클러스터는 최대 24개의 스토리지 노드를 포함할 수 있으며, 각 노드는 사용된 모델에 따라 유연하게 네트워크 인터페이스 카드 수를 지정할 수 있습니다.
++
+사용자의 가상 데스크톱, 홈 폴더, 사용자 프로필 컨테이너, 공유 데이터 등을 필요에 따라 확장할 수 있으며 파일 시스템 제한에 대한 우려 없이 확장할 수 있습니다.
+
+* * 파일 시스템 분석 * XCP 툴을 사용하여 공유 데이터에 대한 통찰력을 얻을 수 있습니다. ONTAP 9.8+ 및 ActiveIQ Unified Manager 를 사용하면 파일 메타데이터 정보를 쉽게 쿼리하고 검색하고 콜드 데이터를 식별할 수 있습니다.
+* * 클라우드 계층화. * 콜드 데이터를 클라우드의 오브젝트 저장소 또는 데이터 센터의 S3 호환 스토리지로 마이그레이션하고
+* * 파일 버전. * 사용자는 NetApp ONTAP 스냅샷 복사본으로 보호되는 파일을 복구할 수 있습니다. ONTAP 스냅샷 복사본은 변경된 블록만 기록하므로 매우 공간 효율적입니다.
+* * 글로벌 네임스페이스. * ONTAP FlexCache 기술을 사용하면 파일 스토리지를 원격 캐싱할 수 있으므로 ONTAP 스토리지 시스템이 포함된 여러 위치에서 공유 데이터를 보다 쉽게 관리할 수 있습니다.
+* * 시큐어 멀티 테넌시 지원. * 단일 물리적 스토리지 클러스터는 각각 고유한 볼륨, 스토리지 프로토콜, 논리적 네트워크 인터페이스, ID 및 인증 도메인, 관리 사용자 등을 갖춘 여러 가상 스토리지 어레이로 제공할 수 있습니다. 따라서 테스트, 개발, 운영 등과 같은 여러 사업부와 환경 간에 스토리지 어레이를 공유할 수 있습니다.
++
+성능을 보장하기 위해 적응형 QoS를 사용하여 사용된 공간 또는 할당된 공간에 따라 성능 수준을 설정하고 할당량을 사용하여 스토리지 용량을 제어할 수 있습니다.
+
+* * VMware 통합. * VMware vSphere용 ONTAP 툴은 데이터 저장소 프로비저닝, vSphere 호스트 모범 사례 구현 및 ONTAP 리소스 모니터링을 위한 vCenter 플러그인을 제공합니다.
++
+ONTAP는 SCSI/파일 작업을 스토리지 시스템으로 오프로드하기 위해 VAAI(vStorage APIs for Array Integration)를 지원합니다. ONTAP는 또한 블록 및 파일 프로토콜에 대해 VASA(vStorage APIs for Storage Awareness) 및 가상 볼륨을 지원합니다.
+
++
+VMware vSphere용 SnapCenter 플러그인을 사용하면 스토리지 시스템의 Snapshot 기능을 사용하여 가상 머신을 쉽게 백업 및 복원할 수 있습니다.
+
++
+ActiveIQ Unified Manager는 vSphere 환경에서 완벽한 스토리지 네트워크 가시성을 제공합니다. 관리자는 ONTAP에서 호스팅되는 가상 데스크톱 환경에서 발생할 수 있는 지연 시간 문제를 쉽게 식별할 수 있습니다.
+
+* * 보안 규정 준수. * ActiveIQ Unified Manager 를 사용하면 모든 정책 위반에 대한 알림을 통해 여러 ONTAP 시스템을 모니터링할 수 있습니다.
+* * 멀티 프로토콜 지원. * ONTAP는 블록(iSCSI, FC, FCoE 및 NVMe/FC), 파일(NFSv3, NFSv4.1, SMB2.x, SMB3.x) 및 오브젝트(S3) 스토리지 프로토콜
+* * 자동화 지원. * ONTAP는 VDS 관리 포털을 통해 작업을 자동화하는 REST API, Ansible 및 PowerShell 모듈을 제공합니다.
+
+
+link:hcvdivds_data_management.html["다음: 데이터 관리"]

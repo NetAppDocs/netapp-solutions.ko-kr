@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: hc-blogs.html 
+summary: 하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션 기능을 설명하는 블로그 시리즈 
+keywords: netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, vds, containers, kubernetes, blogs 
+---
+= 하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 블로그 를 참조하십시오
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./media/
+
+
+[role="lead"]
+하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션의 특정 기능을 강조하는 블로그의 개요
+
+* NetApp 및 VMware Cloud Foundation(VCF)
++
+** link:https://www.netapp.com/blog/netapp-vmware-cloud-foundation-getting-started["1부: 시작하기"]
+** link:https://www.netapp.com/blog/netapp-vmware-cloud-foundation-ontap-principal-storage["2부: VCF 및 ONTAP 주 저장소"]
+** link:https://www.netapp.com/blog/netapp-vmware-cloud-foundation-element-principal-storage["3부: VCF 및 Element Principal storage"]
+** link:https://www.netapp.com/blog/netapp-vmware-cloud-foundation-supplemental-storage["4부: VMware용 ONTAP 툴 및 보조 스토리지"]
+
+
+* link:https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments["클라우드 기반 VMware 구축을 위한 스토리지 최적화"]
+* link:https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution["NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오"]
+* link:https://netapp.io/2021/05/21/docker-rate-limit-issue/["Red Hat OpenShift에 NetApp Trident 설치 – Docker의 'toomanyrequest' 문제를 해결하는 방법!"]
+* link:https://blog.netapp.com/accelerate-your-k8s-journey["ONTAP와 함께 VMware Tanzu를 사용하여 Kubernetes 여정을 가속화하십시오"]
+

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
+---
+= 워크플로우: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+
+
+
+
+== VM 실시간 마이그레이션
+
+실시간 마이그레이션은 다운타임 없이 OpenShift 클러스터에서 한 노드에서 다른 노드로 VM 인스턴스를 마이그레이션하는 프로세스입니다. OpenShift 클러스터에서 라이브 마이그레이션을 사용하려면 공유 ReadWriteMany 액세스 모드를 사용하여 VM을 PVC에 바인딩해야 합니다. NFS 프로토콜에 사용하도록 설정된 NetApp ONTAP 클러스터의 SVM으로 구성된 Astra Trident 백엔드는 PVC에 대한 공유 ReadWriteMany 액세스를 지원합니다. 따라서 Trident가 NFS 지원 SVM에서 프로비저닝한 StorageClasses에서 PVC가 있는 VM을 다운타임 없이 마이그레이션할 수 있습니다.
+
+image::redhat_openshift_image55.jpg[VM 실시간 마이그레이션 아키텍처]
+
+공유된 ReadWriteMany 액세스를 사용하여 PVC에 바인딩된 VM을 생성하려면 다음을 수행합니다.
+
+. 워크로드 > 가상화 > 가상 시스템 으로 이동하고 생성 > 마법사 사용 을 클릭합니다.
+. 원하는 운영 체제를 선택하고 Next(다음) 를 클릭합니다. 선택한 OS에 이미 부팅 소스가 구성되어 있다고 가정하겠습니다.
+. 검토 및 생성 창에서 VM을 생성할 프로젝트를 선택하고 VM 세부 정보를 제공합니다. 선택한 OS에 적합한 PVC를 지정하여 부트 소스를 클론으로 선택하고 CD-ROM에서 부팅하십시오.
+. 가상 시스템 사용자 지정 을 클릭한 다음 저장소 를 클릭합니다.
+. rootdisk 옆에 있는 줄임표를 클릭하고 Trident를 사용하여 프로비저닝된 스토리지 클래스를 선택합니다. 고급 을 확장하고 액세스 모드로 공유 액세스(rwx) 를 선택합니다. 저장을 클릭합니다.
++
+image::redhat_openshift_image56.JPG[디스크 rwx에 액세스할 수 있도록 합니다]
+
+. 검토 및 확인 을 클릭한 다음 가상 시스템 생성 을 클릭합니다.
+
+
+OpenShift 클러스터의 다른 노드로 VM을 수동으로 마이그레이션하려면 다음 단계를 완료하십시오.
+
+. 워크로드 > 가상화 > 가상 시스템으로 이동합니다.
+. 마이그레이션할 VM의 경우 줄임표를 클릭한 다음 가상 시스템 마이그레이션 을 클릭합니다.
+. 메시지가 나타나면 마이그레이션 을 클릭하여 확인합니다.
+
+
+
+NOTE: devictionStrategy 가 LiveMigrate 로 설정된 경우 원래 노드를 유지 관리 모드로 전환하면 OpenShift 클러스터의 VM 인스턴스가 다른 노드로 자동 마이그레이션됩니다.
+
+link:rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html["다음으로, 워크플로우: VM 클로닝"]

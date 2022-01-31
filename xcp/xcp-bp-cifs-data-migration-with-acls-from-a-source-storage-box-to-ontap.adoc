@@ -1,0 +1,488 @@
+---
+sidebar: sidebar 
+permalink: xcp/xcp-bp-cifs-data-migration-with-acls-from-a-source-storage-box-to-ontap.html 
+keywords: cifs, ontap, migration, security information 
+summary: 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 정보가 포함된 CIFS 데이터를 마이그레이션하는 단계별 절차에 대해 설명합니다. 
+---
+= 소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:xcp-bp-data-migration-from-7-mode-to-ontap.html["이전: 7-Mode에서 ONTAP로 데이터 마이그레이션"]
+
+이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 정보가 포함된 CIFS 데이터를 마이그레이션하는 단계별 절차에 대해 설명합니다.
+
+. 대상 ONTAP 시스템이 정상인지 확인합니다.
++
+....
+C1_sti96-vsim-ucs540m_cluster::> cluster show
+Node                  Health  Eligibility
+--------------------- ------- ------------
+sti96-vsim-ucs540m    true    true
+sti96-vsim-ucs540n    true    true
+2 entries were displayed.
+C1_sti96-vsim-ucs540m_cluster::> node show
+Node      Health Eligibility Uptime        Model       Owner    Location
+--------- ------ ----------- ------------- ----------- -------- ---------------
+sti96-vsim-ucs540m
+          true   true        15 days 21:17 SIMBOX      ahammed  sti
+sti96-vsim-ucs540n
+          true   true        15 days 21:17 SIMBOX      ahammed  sti
+2 entries were displayed.
+cluster::>  storage failover show
+                              Takeover
+Node           Partner        Possible State Description
+-------------- -------------- -------- -------------------------------------
+sti96-vsim-ucs540m
+               sti96-vsim-    true     Connected to sti96-vsim-ucs540n
+               ucs540n
+sti96-vsim-ucs540n
+               sti96-vsim-    true     Connected to sti96-vsim-ucs540m
+               ucs540m
+2 entries were displayed.
+C1_sti96-vsim-ucs540m_cluster::>
+....
+. 대상 시스템에 하나 이상의 비루트 Aggregate가 있는지 확인합니다. Aggregate는 정상 상태입니다.
++
+....
+cluster::*> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+aggr0_sti96_vsim_ucs540o
+            7.58GB   373.3MB   95% online       1 sti96-vsim-      raid_dp,
+                                                  ucs540o          normal
+aggr0_sti96_vsim_ucs540p
+            7.58GB   373.3MB   95% online       1 sti96-vsim-      raid_dp,
+                                                  ucs540p          normal
+aggr_001   103.7GB   93.63GB   10% online       1 sti96-vsim-      raid_dp,
+                                                  ucs540p          normal
+sti96_vsim_ucs540o_aggr1
+           23.93GB   23.83GB    0% online       1 sti96-vsim-      raid_dp,
+                                                  ucs540o          normal
+sti96_vsim_ucs540p_aggr1
+           23.93GB   23.93GB    0% online       0 sti96-vsim-      raid_dp,
+                                                  ucs540p          normal
+5 entries were displayed.
+....
++
+
+NOTE: 데이터 집계가 없는 경우 'storage aggr create' 명령을 사용하여 새 데이터 애그리게이트를 생성합니다.
+
+. 타겟 클러스터 시스템에 SVM을 생성합니다.
++
+....
+cluster::*> vserver create -vserver vs1 -rootvolume root_vs1 -aggregate sti96_vsim_ucs540o_aggr1 -rootvolume-security-style mixed
+
+Verify that the SVM was successfully created.
+C2_sti96-vsim-ucs540o_cluster::*>  vserver show -vserver vs1
+                                    Vserver: vs1
+                               Vserver Type: data
+                            Vserver Subtype: default
+                               Vserver UUID: f8bc54be-d91b-11e9-b99c-005056a7e57e
+                                Root Volume: root_vs1
+                                  Aggregate: sti96_vsim_ucs540o_aggr1
+                                 NIS Domain: NSQA-RTP-NIS1
+                 Root Volume Security Style: mixed
+                                LDAP Client: esisconfig
+               Default Volume Language Code: C.UTF-8
+                            Snapshot Policy: default
+                              Data Services: data-nfs, data-cifs,
+                                             data-flexcache, data-iscsi
+                                    Comment: vs1
+                               Quota Policy: default
+                List of Aggregates Assigned: -
+ Limit on Maximum Number of Volumes allowed: unlimited
+                        Vserver Admin State: running
+                  Vserver Operational State: running
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: nfs, cifs, fcp, iscsi, ndmp
+                       Disallowed Protocols: -
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: false
+             Volume Delete Retention Period: 0
+                               IPspace Name: Default
+                         Foreground Process: -
+                   Is Msid Preserved for DR: false
+Force start required to start Destination in muliple IDP fan-out case: false
+                    Logical Space Reporting: false
+                  Logical Space Enforcement: false
+....
+. 대상 SVM에서 새 읽기-쓰기 데이터 볼륨을 생성합니다. 보안 스타일, 언어 설정 및 용량 요구 사항이 소스 볼륨과 일치하는지 확인합니다.
++
+....
+CLUSTER CLUSTER::> vol create -vserver vs1 -volume dest_vol -aggregate aggr_001 -size 150g type RW -state online -security-style ntfs
+....
+. 데이터 LIF를 생성하여 SMB 클라이언트 요청을 처리합니다.
++
+....
+CLUSTER::> network interface create -vserver vs1 -lif sti96-vsim-ucs540o_data1  -address 10.237.165.87 -netmask 255.255.240.0 -role data -data-protocol nfs,cifs -home-node sti96-vsim-ucs540o  -home-port e0d
+....
++
+LIF가 성공적으로 생성되었는지 확인합니다.
+
++
+....
+cluster::*>  network interface show -vserver vs1
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+vs1
+            sti96-vsim-ucs540o_data1
+                         up/up    10.237.165.87/20   sti96-vsim-ucs540o
+                                                                   e0d     true
+....
+. 필요한 경우 SVM으로 정적 경로를 생성합니다.
++
+....
+Network route create -vserver dest -destination 0.0.0.0/0 -gateway 10.237.160.1
+....
++
+라우트가 성공적으로 생성되었는지 확인합니다.
+
++
+....
+cluster::*>  network route show -vserver vs1
+Vserver             Destination     Gateway         Metric
+------------------- --------------- --------------- ------
+vs1
+                    0.0.0.0/0       10.237.160.1    20
+                    ::/0            fd20:8b1e:b255:9155::1
+                                                    20
+2 entries were displayed.
+....
+. SVM 네임스페이스에서 타겟 데이터 볼륨을 마운트합니다.
++
+....
+CLUSTER::> volume mount -vserver vs1 -volume dest_vol  -junction-path /dest_vol -active true
+....
++
+볼륨이 성공적으로 마운트되었는지 확인합니다.
+
++
+....
+cluster::*> volume show -vserver vs1  -fields junction-path
+vserver volume   junction-path
+------- -------- -------------
+vs1     dest_vol /dest_vol
+vs1     root_vs1 /
+2 entries were displayed.
+Note: You can also specify the volume mount options (junction path) with the volume create command.
+....
+. 타겟 SVM에서 CIFS 서비스를 시작합니다.
++
+....
+cluster::*> vserver cifs start -vserver vs1
+Warning: The admin status of the CIFS server for Vserver "vs1" is already "up".
+....
++
+서비스가 시작되고 실행 중인지 확인합니다.
+
++
+....
+cluster::*>
+Verify the service is started and running
+C2_sti96-vsim-ucs540o_cluster::*> cifs show
+            Server          Status    Domain/Workgroup Authentication
+Vserver     Name            Admin     Name             Style
+----------- --------------- --------- ---------------- --------------
+vs1         D60AB15C2AFC4D6 up        CTL              domain
+....
+. 기본 엑스포트 정책이 타겟 SVM에 적용되는지 확인합니다.
++
+....
+CLUSTER::> vserver export-policy show -vserver dest
+Vserver          Policy Name
+---------------  -------------------
+dest             default
+....
++
+필요한 경우 타겟 SVM을 위한 맞춤형 엑스포트 정책을 새로 생성합니다.
+
++
+....
+CLUSTER::> vserver export-policy create -vserver vs1 -policyname xcpexport
+....
+. CIFS 클라이언트에 대한 액세스를 허용하도록 엑스포트 정책 규칙을 수정합니다.
++
+....
+CLUSTER::> export-policy rule modify -vserver dest -ruleindex 1 -policyname xcpexportpolicy -clientmatch 0.0.0.0/0 -rorule any -rwrule any -anon 0
+....
++
+정책 규칙이 수정되었는지 확인합니다.
+
++
+....
+cluster::*> export-policy rule show -instance
+                                    Vserver: vs1
+                                Policy Name: default
+                                 Rule Index: 1
+                            Access Protocol: any
+List of Client Match Hostnames, IP Addresses, Netgroups, or Domains: 0.0.0.0/0
+                             RO Access Rule: any
+                             RW Access Rule: any
+User ID To Which Anonymous Users Are Mapped: 65534
+                   Superuser Security Types: any
+               Honor SetUID Bits in SETATTR: true
+                  Allow Creation of Devices: true
+                 NTFS Unix Security Options: fail
+         Vserver NTFS Unix Security Options: use_export_policy
+                      Change Ownership Mode: restricted
+              Vserver Change Ownership Mode: use_export_policy
+                                  Policy ID: 12884901889
+                                    Vserver: vs1
+                                Policy Name: default
+                                 Rule Index: 2
+                            Access Protocol: any
+List of Client Match Hostnames, IP Addresses, Netgroups, or Domains: 0:0:0:0:0:0:0:0/0
+                             RO Access Rule: any
+                             RW Access Rule: any
+User ID To Which Anonymous Users Are Mapped: 65534
+                   Superuser Security Types: none
+               Honor SetUID Bits in SETATTR: true
+                  Allow Creation of Devices: true
+                 NTFS Unix Security Options: fail
+         Vserver NTFS Unix Security Options: use_export_policy
+                      Change Ownership Mode: restricted
+              Vserver Change Ownership Mode: use_export_policy
+                                  Policy ID: 12884901889
+2 entries were displayed.
+....
+. 클라이언트가 볼륨에 액세스할 수 있는지 확인합니다.
++
+....
+cluster::*> export-policy check-access -vserver vs1 -volume dest_vol -client-ip 10.234.17.81 -authentication-method none -protocol cifs -access-type read-write
+                                         Policy    Policy       Rule
+Path                          Policy     Owner     Owner Type  Index Access
+----------------------------- ---------- --------- ---------- ------ ----------
+/                             default    root_vs1  volume          1 read
+/dest_vol                     default    dest_vol  volume          1 read-write
+2 entries were displayed.
+....
+. xCP가 설치된 Windows 클라이언트 시스템에 연결합니다. xCP 설치 경로로 이동합니다.
++
+....
+C:\WRSHDNT>dir c:\netapp\xcp
+dir c:\netapp\xcp
+ Volume in drive C has no label.
+ Volume Serial Number is 5C04-C0C7
+ Directory of c:\netapp\xcp
+09/18/2019  09:30 AM    <DIR>          .
+09/18/2019  09:30 AM    <DIR>          ..
+06/25/2019  06:27 AM               304 license
+09/18/2019  09:30 AM    <DIR>          Logs
+09/29/2019  08:45 PM        12,143,105 xcp.exe
+               2 File(s)     12,143,409 bytes
+               3 Dir(s)  29,219,549,184 bytes free
+....
+. xCP Windows 클라이언트 호스트 시스템에서 'xCP show' 명령을 실행하여 소스 노드 SMB 내보내기를 쿼리합니다.
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp show \\10.237.165.71
+c:\netapp\xcp\xcp show \\10.237.165.71
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+ Shares   Errors   Server
+      6        0            10.237.165.71
+== SMB Shares ==
+ Space   Space   Current
+ Free    Used    Connections Share Path                   Folder Path
+ 9.50GiB 4.57MiB 1           \\10.237.165.71\source_share C:\source_vol
+ 94.3MiB 716KiB  0           \\10.237.165.71\ROOTSHARE    C:\
+ 0       0       N/A         \\10.237.165.71\ipc$         N/A
+ 94.3MiB 716KiB  0           \\10.237.165.71\c$           C:\
+== Attributes of SMB Shares ==
+ Share                             Types                             Remark
+ source_share                      DISKTREE
+ test share                        DISKTREE
+ test_sh                           DISKTREE
+ ROOTSHARE                         DISKTREE             \"Share mapped to top of Vserver global namespace, created bydeux_init \"
+ ipc$                              PRINTQ,SPECIAL,IPC,DEVICE
+ c$                                SPECIAL
+== Permissions of SMB Shares ==
+ Share                             Entity                                         Type
+ source_share                      Everyone                                       Allow/Full Control
+ROOTSHARE                         Everyone                                       Allow/Full Control
+ ipc$                              Everyone                                       Allow/Full Control
+ c$                                Administrators                                 Allow/Full Control/
+....
+. 복사에 대한 도움말 명령을 실행합니다.
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp help copy
+c:\netapp\xcp\xcp help copy
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+usage: xcp copy [-h] [-v] [-parallel <n>] [-match <filter>] [-preserve-atime]
+                [-acl] [-fallback-user FALLBACK_USER]
+                [-fallback-group FALLBACK_GROUP] [-root]
+                source target
+positional arguments:
+  source
+  target
+optional arguments:
+  -h, --help            show this help message and exit
+  -v                    increase debug verbosity
+  -parallel <n>         number of concurrent processes (default: <cpu-count>)
+  -match <filter>       only process files and directories that match the
+                        filter (see `xcp help -match` for details)
+  -preserve-atime       restore last accessed date on source
+  -acl                  copy security information
+  -fallback-user FALLBACK_USER
+                        the name of the user on the target machine to receive
+                        the permissions of local (non-domain) source machine
+                        users (eg. domain\administrator)
+  -fallback-group FALLBACK_GROUP
+                        the name of the group on the target machine to receive
+                        the permissions of local (non-domain) source machine
+                        groups (eg. domain\administrators)
+  -root                 copy acl for root directorytxt
+....
+. 대상 ONTAP 시스템에서 fallback-user와 fallback-group 인수 경로 값으로 제공해야 하는 로컬 사용자 및 로컬 그룹 이름 목록을 가져옵니다.
++
+....
+cluster::*> local-user show
+  (vserver cifs users-and-groups local-user show)
+Vserver      User Name                   Full Name            Description
+------------ --------------------------- -------------------- -------------
+vs1          D60AB15C2AFC4D6\Administrator
+                                                              Built-in administrator account
+C2_sti96-vsim-ucs540o_cluster::*>  local-group show
+  (vserver cifs users-and-groups local-group show)
+Vserver        Group Name                       Description
+-------------- -------------------------------- ----------------------------
+vs1            BUILTIN\Administrators           Built-in Administrators group
+vs1            BUILTIN\Backup Operators         Backup Operators group
+vs1            BUILTIN\Guests                   Built-in Guests Group
+vs1            BUILTIN\Power Users              Restricted administrative privileges
+vs1            BUILTIN\Users                    All users
+5 entries were displayed
+....
+. 소스에서 ACL이 포함된 CIFS 데이터를 타겟으로 마이그레이션하려면 '-acl' 및 '-fallback-user/group' 옵션을 사용하여 'xCP copy' 명령을 실행합니다.
++
+'fallback-user/group' 옵션의 경우 Active Directory 또는 로컬 사용자/그룹에서 대상 시스템으로 찾을 수 있는 사용자 또는 그룹을 지정합니다.
+
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp copy -acl -fallback-user D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+c:\netapp\xcp\xcp copy -acl -fallback-user D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 8s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 13s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 18s
+ERROR failed to obtain fallback security principal "BUILTIN\Users". Please check if the principal with the name "BUILTIN\Users" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\Administrator". Please check if the principal with the name "D60AB15C2AFC4D6\Administrator" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "BUILTIN\Users". Please check if the principal with the name "BUILTIN\Users" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "BUILTIN\Users". Please check if the principal with the name "BUILTIN\Users" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "BUILTIN\Users". Please check if the principal with the name "BUILTIN\Users" exists on "D60AB15C2AFC4D6".
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 23s
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\Administrator". Please check if the principal with the name "D60AB15C2AFC4D6\Administrator" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\Administrator". Please check if the principal with the name "D60AB15C2AFC4D6\Administrator" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\Administrator". Please check if the principal with the name "D60AB15C2AFC4D6\Administrator" exists on "D60AB15C2AFC4D6".
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 28s
+753 scanned, 0 errors, 0 skipped, 249 copied, 24.0KiB (4.82KiB/s), 33s
+753 scanned, 0 errors, 0 skipped, 744 copied, 54.4KiB (6.07KiB/s), 38s
+753 scanned, 0 errors, 0 skipped, 746 copied, 54.5KiB (20/s), 43s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (1.23KiB/s), 44s
+C:\WRSHDNT>
+....
+. xCP copy로 인해 'fallback security principal을 가져오지 못했습니다'라는 오류 메시지가 나타나면 hosts 파일('C:\Windows\System32\drivers\etc\hosts')에 대상 상자를 추가합니다.
++
+NetApp 스토리지 대상 상자 항목에 대해 다음 형식을 사용합니다.
+
++
+....
+<data vserver data interface ip> 1 or more white spaces <cifs server name>
+....
++
+....
+cluster::*> cifs show
+            Server          Status    Domain/Workgroup Authentication
+Vserver     Name            Admin     Name             Style
+----------- --------------- --------- ---------------- --------------
+vs1         D60AB15C2AFC4D6 up        CTL              domain
+C2_sti96-vsim-ucs540o_cluster::*> network interface show
+            Logical    Status     Network            Current       Current Is
+Cluster
+            sti96-vsim-ucs540p_clus1
+                         up/up    192.168.148.136/24 sti96-vsim-ucs540p
+                                                                   e0a     true
+            sti96-vsim-ucs540p_clus2
+                         up/up    192.168.148.137/24 sti96-vsim-ucs540p
+                                                                   e0b     true
+vs1
+            sti96-vsim-ucs540o_data1
+                         up/up    10.237.165.87/20   sti96-vsim-ucs540o
+                                                                   e0d     true
+            sti96-vsim-ucs540o_data1_inet6
+                         up/up    fd20:8b1e:b255:9155::583/64
+                                                     sti96-vsim-ucs540o
+                                                                   e0d     true
+            sti96-vsim-ucs540o_data2
+                         up/up    10.237.165.88/20   sti96-vsim-ucs540o
+                                                                   e0e     true
+10.237.165.87  D60AB15C2AFC4D6  -> destination box entry to be added in hosts file.
+....
+. 호스트 파일에 대상 상자 항목을 추가한 후에도 "오류 FAILED FAILED FAILED FAILED FALLBACK SURITY"라는 오류 메시지가 계속 표시되면 대상 시스템에 사용자/그룹이 존재하지 않는 것입니다.
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp copy -acl -fallback-user D60AB15C2AFC4D6\unknown_user -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+c:\netapp\xcp\xcp copy -acl -fallback-user D60AB15C2AFC4D6\unknown_user -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\unknown_user". Please check if the principal with the name "D60AB15C2AFC4D6\unknown_user" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\unknown_user". Please check if the principal with the name "D60AB15C2AFC4D6\unknown_user" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\unknown_user". Please check if the principal with the name "D60AB15C2AFC4D6\unknown_user" exists on "D60AB15C2AFC4D6".
+ERROR failed to obtain fallback security principal "D60AB15C2AFC4D6\unknown_user". Please check if the principal with the name "D60AB15C2AFC4D6\unknown_user" exists on "D60AB15C2AFC4D6".
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 5s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 10s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 15s
+753 scanned, 0 errors, 0 skipped, 284 copied, 27.6KiB (5.54KiB/s), 20s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (2.44KiB/s), 22s
+C:\WRSHDNT>
+....
+. 루트 폴더를 사용하거나 사용하지 않고 ACL을 사용하여 CIFS 데이터를 마이그레이션하려면 "xCP 복제본"을 사용합니다.
++
+루트 폴더가 없으면 다음 명령을 실행합니다.
+
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp copy -acl -fallback-user  D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+c:\netapp\xcp\xcp copy -acl -fallback-user  D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 5s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 10s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 15s
+753 scanned, 0 errors, 0 skipped, 210 copied, 20.4KiB (4.08KiB/s), 20s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (2.38KiB/s), 22s
+C:\WRSHDNT>
+....
++
+루트 폴더에서 다음 명령을 실행합니다.
+
++
+....
+C:\WRSHDNT>c:\netapp\xcp\xcp copy -acl -root  -fallback-user  D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+c:\netapp\xcp\xcp copy -acl -root  -fallback-user  D60AB15C2AFC4D6\Administrator -fallback-group BUILTIN\Users  \\10.237.165.79\source_share \\10.237.165.89\dest_share
+XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 31 00:00:00 2029
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 5s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 10s
+753 scanned, 0 errors, 0 skipped, 0 copied, 0 (0/s), 15s
+753 scanned, 0 errors, 0 skipped, 243 copied, 23.6KiB (4.73KiB/s), 20s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (6.21KiB/s), 25s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 30s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 35s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 40s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 45s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 50s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 55s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 1m0s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (0/s), 1m5s
+753 scanned, 0 errors, 0 skipped, 752 copied, 54.7KiB (817/s), 1m8s
+C:\WRSHDNT>
+....
+
+
+link:xcp-bp-best-practice-guidelines-and-recommendations.html["다음: 모범 사례 지침 및 권장 사항"]

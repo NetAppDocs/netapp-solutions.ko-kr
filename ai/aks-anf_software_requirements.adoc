@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_software_requirements.html 
+keywords: software, requirements, aks, azure, kubernetes, service, rapids, trident, helm 
+summary: 이 페이지에는 이 솔루션에 필요한 소프트웨어 요구 사항이 나열되어 있습니다. 
+---
+= 소프트웨어 요구 사항
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_technology_overview.html["이전: 기술 개요"]
+
+다음 표에는 이 솔루션에 필요한 소프트웨어 요구 사항이 나열되어 있습니다.
+
+|===
+| 소프트웨어 | 버전 
+
+
+| Azure Kubernetes 서비스 | 1.18.14 
+
+
+| RAPIDS 및 Dask 컨테이너 이미지입니다 | 리포지토리: "rapidsai/rapidsai" 태그: 0.17-ca11.0-runtime-uubuntu18.04 
+
+
+| NetApp 트라이던트 | 20.01.1 
+
+
+| 헬름 | 3.0.0 
+|===
+link:aks-anf_cloud_resource_requirements.html["다음으로, 클라우드 리소스 요구사항을 살펴보겠습니다."]

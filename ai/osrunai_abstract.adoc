@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_abstract.html 
+keywords:  
+summary:  
+---
+= 추상화
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 기술 보고서에서는 Run:AI CLI 및 NetApp ONTAP AI의 시스템 대시보드를 사용하여 Kubernetes 클러스터 및 GPU 사용을 최적화할 수 있는 중소기업과 대형 데이터 과학/엔지니어링 팀을 보유한 고객을 위한 지침을 제공합니다. 또한 검증된 테스트 사례를 위한 Run:AI 플랫폼 설치 정보, 테스트 시나리오, 세부 명령도 포함되어 있습니다. Run:AI 오케스트레이션 솔루션과 NetApp AI Control Plane은 최적의 리소스 활용을 통해 개발자 생산성을 향상하여 혁신을 위한 시간을 단축합니다.
+
+link:osrunai_executive_summary.html["다음: 핵심 요약"]

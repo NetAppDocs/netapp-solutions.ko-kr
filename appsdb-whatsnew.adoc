@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: appsdb-whatsnew.html 
+summary: 비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 자료에 최신 내용이 추가되었습니다 
+keywords: netapp, solutions, business applications, enterprise database, what's new 
+---
+= 비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 솔루션의 새로운 기능
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./media/
+
+
+최신 비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 및 솔루션 자료 개요
+
+[cols="1,1"]
+|===
+
+
+2+| * 하이브리드 클라우드 데이터베이스 솔루션 *link:ent-apps-db/hybrid_dbops_snapcenter_usecases.html["SnapCenter를 사용한 Hybird 클라우드 데이터베이스 솔루션"^] 
+
+
+2+| * Oracle 데이터베이스 * 
+
+
+| link:https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf["FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c RAC 데이터베이스"^] | link:ent-apps-db/marketing_overview.html["NFS 기반 ONTAP용 Oracle 19c의 자동 구축"^] 
+
+
+2+| * SAP HANA * 
+
+
+| link:https://www.netapp.com/pdf.html?item=/media/12405-tr4614pdf.pdf["SAP HANA B&A, R with SnapCenter"^] | link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html["FC SAN 기반 SAP HANA"^] 
+
+
+2+| * Microsoft SQL Server * 
+
+
+| link:ent-apps-db/sql-srv-anf_overview.html["Azure NetApp Files 기반 SQL Server"^] | link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf["Microsoft SQL Server 기반 SAP 애플리케이션"^] 
+
+
+| link:https://www.netapp.com/pdf.html?item=/media/20030-tr-4866.pdf["가상화된 인프라용 SolidFire ESDS 기반 SQL Server"^] | link:https://www.esg-global.com/validation/esg-technical-validation-assuring-database-performance-and-availability-with-netapp-hci["SQL Server - NetApp HCI를 통한 데이터베이스 성능 보장"^] 
+|===

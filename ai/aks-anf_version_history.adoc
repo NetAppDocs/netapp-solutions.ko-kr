@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_version_history.html 
+keywords:  
+summary:  
+---
+= 버전 기록
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_where_to_find_additional_information.html["Previous(이전): 추가 정보를 찾을 위치."]
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2021년 8월 | 최초 릴리스. 
+|===

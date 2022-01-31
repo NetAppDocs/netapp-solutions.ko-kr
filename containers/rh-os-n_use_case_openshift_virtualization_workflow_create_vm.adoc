@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
+---
+= 워크플로우: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+
+
+
+
+== VM을 생성합니다
+
+VM은 운영 체제 및 데이터를 호스트하기 위해 볼륨이 필요한 상태 저장 배포입니다. CNV에서는 VM이 Pod로 실행되므로 Trident를 통해 NetApp ONTAP에서 호스팅되는 PVS를 통해 VM을 지원합니다. 이러한 볼륨은 디스크로 연결되며 VM의 부팅 소스를 비롯한 전체 파일 시스템을 저장합니다.
+
+image::redhat_openshift_image52.jpg[VM 아키텍처를 생성합니다]
+
+OpenShift 클러스터에서 가상 머신을 생성하려면 다음 단계를 수행하십시오.
+
+. 워크로드 > 가상화 > 가상 시스템 으로 이동하고 생성 > 마법사 사용 을 클릭합니다.
+. 원하는 운영 체제를 선택하고 Next(다음) 를 클릭합니다.
+. 선택한 운영 체제에 구성된 부팅 소스가 없는 경우 해당 소스를 구성해야 합니다. 부트 소스의 경우, URL에서 또는 레지스트리에서 OS 이미지를 가져올 것인지 선택하고 해당 세부 정보를 제공합니다. Advanced 를 확장하고 Trident-backed StorageClass 를 선택합니다. 다음 을 클릭합니다.
++
+image::redhat_openshift_image53.JPG[VM의 부팅 소스를 생성합니다]
+
+. 선택한 운영 체제에 이미 구성된 부팅 소스가 있는 경우 이전 단계를 건너뛸 수 있습니다.
+. 검토 및 생성 창에서 VM을 생성할 프로젝트를 선택하고 VM 세부 정보를 제공합니다. 선택한 OS에 적합한 PVC를 지정하여 부트 소스를 클론으로 선택하고 CD-ROM에서 부팅하십시오.
++
+image::redhat_openshift_image54.JPG[VM을 생성합니다]
+
+. 가상 머신을 사용자 지정하려면 가상 머신 사용자 지정 을 클릭하고 필요한 매개 변수를 수정합니다.
+. 가상 머신 생성을 클릭하여 가상 머신을 생성합니다. 그러면 백그라운드에서 해당 포드가 회전합니다.
+
+
+URL이나 레지스트리에서 템플릿이나 운영 체제에 대해 부트 소스를 구성하면 OpenShift-virtualization-OS-images' 프로젝트에서 PVC를 생성하고 KVM 게스트 이미지를 PVC로 다운로드합니다. 템플릿 PVC에 해당 OS에 대한 KVM 게스트 이미지를 수용할 수 있는 충분한 공간이 있는지 확인해야 합니다. 그런 다음 이러한 PVC는 프로젝트의 각 템플릿을 사용하여 생성될 때 가상 머신에 루트디스크로 복제되고 첨부됩니다.
+
+link:rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html["다음: 워크플로: VM 실시간 마이그레이션."]

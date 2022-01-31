@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: xcp/xcp-bp-customer-scenarios-overview.html 
+keywords:  
+summary:  
+---
+= 개요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:xcp-bp-performance-tuning.html["이전: 성능 조정."]
+
+이 섹션에서는 고객 시나리오 및 아키텍처에 대해 설명합니다.
+
+link:xcp-bp-data-lake-to-ontap-nfs.html["다음: ONTAP NFS로 데이터 레이크 전환"]

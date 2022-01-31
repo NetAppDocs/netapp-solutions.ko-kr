@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: ai/aks-anf_load_day_15_in_dask_and_train_a_dask_cuml_random_forest_model.html 
+keywords: dask, cuml, dataframe, criteo, click, logs, pandas, scikit, cudf 
+summary: 이 섹션에서는 Pandas에서 Criteo Click Logs day 15를 로드하고 좌골키트학습 무작위 포리스트 모델을 훈련하는 방법에 대해 설명합니다. 이 예에서는 Dask cuDF를 사용하여 DataFrame 로드를 수행하고 Dask cuML에서 임의의 포리스트 모델을 교육했습니다. 
+---
+= Dask에서 Day 15를 로드하고 Dask cuML 무작위 포리스트 모델을 교육합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aks-anf_load_criteo_click_logs_day_15_in_pandas_and_train_a_scikit-learn_random_forest_model.html["이전: Pandas에서 Logs day 15를 Load Critio 클릭하여 좌골 키트 교육 - Learn random forest model."]
+
+이전 섹션과 비슷한 방식으로, Pandas에서 Criteo Click Logs day 15 를 로드하고 좌골키트학습 무작위 포리스트 모델을 훈련합니다. 이 예에서는 Dask cuDF를 사용하여 DataFrame 로드를 수행하고 Dask cuML에서 임의의 포리스트 모델을 교육했습니다. 이 섹션에서는 교육 시간과 규모의 차이를 비교했습니다 link:aks-anf_training_time_comparison.html["“교육 시간 비교.”"]
+
+
+
+== criteo_dask_rf.ipynb입니다
+
+이 노트북은 다음 예와 같이 'numpy', 'cuml', 필요한 'dask' 라이브러리를 가져옵니다.
+
+....
+import cuml
+from dask.distributed import Client, progress, wait
+import dask_cudf
+import numpy as np
+import cudf
+from cuml.dask.ensemble import RandomForestClassifier as cumlDaskRF
+from cuml.dask.common import utils as dask_utils
+....
+Dask 클라이언트()를 시작합니다.
+
+....
+client = Client()
+....
+클러스터가 올바르게 구성된 경우 작업자 노드의 상태를 확인할 수 있습니다.
+
+....
+client
+workers = client.has_what().keys()
+n_workers = len(workers)
+n_streams = 8 # Performance optimization
+....
+AKS 클러스터에서 다음 상태가 표시됩니다.
+
+image:aks-anf_image12.png["오류: 그래픽 이미지가 없습니다"]
+
+DASK는 처리 코드를 즉시 실행하는 대신 실행 대신 실행 대신 대상 지정 DAG(Acyclic Graph)를 생성합니다. DAG에는 각 작업자가 실행해야 하는 일련의 작업과 상호 작용이 포함되어 있습니다. 이 레이아웃은 사용자가 Dask에서 한 가지 방식 또는 다른 방식으로 작업을 실행하도록 지시할 때까지 작업이 실행되지 않음을 의미합니다. Dask를 사용하면 다음과 같은 세 가지 주요 옵션을 사용할 수 있습니다.
+
+* * DataFrame의 컴퓨팅()을 호출합니다. * 이 호출은 모든 파티션을 처리한 다음 결과를 스케줄러에 반환하여 최종 집계 및 cuDF DataFrame으로 변환합니다. 이 옵션은 스케줄러 노드의 메모리가 부족하지 않는 한 적은 결과에만 사용해야 합니다.
+* * Call persist() on a DataFrame. * 이 호출은 그래프를 실행하지만 결과를 스케줄러 노드로 반환하는 대신 클러스터의 전체 노드를 메모리에 유지하여 사용자가 이러한 중간 결과를 다시 사용하지 않고도 파이프라인에서 재사용할 수 있도록 합니다.
+* * DataFrame의 Call head(). * cuDF와 마찬가지로 이 호출은 10개의 레코드를 스케줄러 노드로 다시 반환합니다. 이 옵션을 사용하면 DataFrame 에 원하는 출력 형식이 포함되어 있는지 또는 레코드 자체가 타당한지 여부를 처리 및 계산에 따라 빠르게 확인할 수 있습니다.
+
+
+따라서 사용자가 이러한 작업을 호출하지 않는 한 작업자는 스케줄러가 처리를 시작할 때까지 유휴 상태로 있습니다. 이러한 게으른 실행 패러다임은 Apache Spark와 같은 오늘날의 병렬적이고 분산된 컴퓨팅 프레임워크에서 흔히 볼 수 있습니다.
+
+다음 단락에서는 분산 GPU 가속 컴퓨팅에 Dask cuML을 사용하여 임의 포리스트 모델을 교육하고 모델 예측 정확도를 계산합니다.
+
+....
+Adsf
+# Random Forest building parameters
+n_streams = 8 # optimization
+max_depth = 10
+n_bins = 16
+n_trees = 10
+cuml_model = cumlDaskRF(max_depth=max_depth, n_estimators=n_trees, n_bins=n_bins, n_streams=n_streams, verbose=True, client=client)
+cuml_model.fit(gdf_sliced_small, Y)
+# Model prediction
+pred_df = cuml_model.predict(gdf_test)
+# calculate accuracy
+cu_score = cuml.metrics.accuracy_score( test_y, pred_df )
+....
+link:aks-anf_monitor_dask_using_native_task_streams_dashboard.html["다음: 기본 작업 스트림 대시보드를 사용하여 Dask를 모니터링합니다."]

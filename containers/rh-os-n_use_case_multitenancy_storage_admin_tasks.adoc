@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_multitenancy_storage_admin_tasks.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
+---
+= 구성: 스토리지 관리 작업
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+스토리지 관리자가 다음 리소스를 구성해야 합니다.
+
+. NetApp ONTAP 클러스터에 admin으로 로그인합니다.
+. Storage > Storage VMs 로 이동하고 Add 를 클릭합니다. 필요한 세부 정보를 제공하여 프로젝트-1과 프로젝트-2에 각각 필요한 SVM 2개를 생성합니다. SVM 및 리소스를 관리하는 vsadmin 계정도 생성합니다.
+
+
+image::redhat_openshift_image41.jpg[ONTAP에서 SVM 생성]
+
+. 스토리지 관리자로 Red Hat OpenShift 클러스터에 로그인합니다.
+. 프로젝트-1의 백엔드를 생성하여 프로젝트 전용 SVM에 매핑합니다. ONTAP 클러스터 관리자를 사용하는 대신 SVM의 vsadmin 계정을 사용하여 백엔드를 SVM에 연결하는 것이 좋습니다.
++
+[source, console]
+----
+cat << EOF | tridentctl -n trident create backend -f
+{
+    "version": 1,
+    "storageDriverName": "ontap-nas",
+    "backendName": "nfs_project_1",
+    "managementLIF": "172.21.224.210",
+    "dataLIF": "10.61.181.224",
+    "svm": "project-1-svm",
+    "username": "vsadmin",
+    "password": "NetApp123"
+}
+EOF
+----
+
+
+
+NOTE: 이 예에서는 ONTAP-NAS 드라이버를 사용하고 있습니다. 사용 사례에 따라 백엔드를 생성할 때 적절한 드라이버를 사용하십시오.
+
+
+NOTE: 트리덴트 프로젝트에 Trident가 설치되어 있다고 가정합니다.
+
+. 마찬가지로, project-2를 위한 Trident 백엔드를 생성한 다음 project-2 전용 SVM에 매핑합니다.
+. 그런 다음 스토리지 클래스를 생성합니다. storagePools 매개 변수를 설정하여 project-1용 스토리지 클래스를 생성하고 backend 전용 스토리지 풀을 project-1에 사용하도록 구성합니다.
++
+[source, console]
+----
+cat << EOF | oc create -f -
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: project-1-sc
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: ontap-nas
+  storagePools: "nfs_project_1:.*"
+EOF
+----
+. 마찬가지로, project-2에 대한 스토리지 클래스를 생성하고 백엔드에서 project-2에 대한 스토리지 풀을 사용하도록 구성합니다.
+. ResourceQuota를 생성하여 다른 프로젝트 전용 스토리지로부터 스토리지를 요청하는 Project-1의 리소스를 제한합니다.
++
+[source, console]
+----
+cat << EOF | oc create -f -
+kind: ResourceQuota
+apiVersion: v1
+metadata:
+  name: project-1-sc-rq
+  namespace: project-1
+spec:
+  hard:
+    project-2-sc.storageclass.storage.k8s.io/persistentvolumeclaims: 0
+EOF
+----
+. 마찬가지로, ResourceQuota를 생성하여 다른 프로젝트 전용 스토리지로부터 스토리지를 요청하는 Project-2의 리소스를 제한합니다.
+
+
+link:rh-os-n_use_case_multitenancy_validation.html["다음: 검증."]
