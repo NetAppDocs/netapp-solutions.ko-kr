@@ -5092,8 +5092,6 @@
   <block id="407c5c4d36c8f404212036765bd911ac" category="doc">AI 및 최신 데이터 분석 블로그</block>
   <block id="2aa8a49ee37d7496cf666062c18c3ad3" category="paragraph">AI 및 최신 데이터 분석 솔루션의 특정 기능을 소개하는 블로그를 소개합니다.</block>
   <block id="27f80f5fcc8cfd10fa4ffd9f6c3bc57e" category="section-title">인공 지능 블로그 시리즈</block>
-  <block id="262b50eaf28adc9b3a78eee7815e591b" category="inline-link-macro">AI 블로그: NetApp.com</block>
-  <block id="4a38fc10bfca86cdca121c2725dd5654" category="list-text"><block ref="4a38fc10bfca86cdca121c2725dd5654" category="inline-link-macro-rx"></block></block>
   <block id="750b570f7c6cacf7b9f43c1c7919ad96" category="inline-link-macro">AI 블로그: thePub</block>
   <block id="183754618306c7f8d7df04f981d234f0" category="list-text"><block ref="183754618306c7f8d7df04f981d234f0" category="inline-link-macro-rx"></block></block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
@@ -7380,9 +7378,6 @@
   <block id="70163cee23a15a309e4f1ec48b6928a8" category="cell">* NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치 * 가 포함된 NetApp ONTAP AI</block>
   <block id="d91f70a15d40fe5795af6ded9555e095" category="cell"><block ref="d91f70a15d40fe5795af6ded9555e095" category="inline-link-macro-rx"></block></block>
   <block id="8e9465b5d4318c8ef9039dfe684619d5" category="cell"><block ref="8e9465b5d4318c8ef9039dfe684619d5" category="inline-link-macro-rx"></block></block>
-  <block id="2d7bdfd6f5569b6403315db85da8b4d3" category="cell">NetApp과 * AI 오케스트레이션의 실행: AI *</block>
-  <block id="a573d92b77d430af7e424879baf78e94" category="inline-link-macro">핵심 요약</block>
-  <block id="e49c15d1800d8269c52f7d037ace494b" category="cell"><block ref="e49c15d1800d8269c52f7d037ace494b" category="inline-link-macro-rx"></block></block>
   <block id="0c70e09b2805fac4fb509aee9132fa97" category="cell">* NetApp DataOps 툴킷 *</block>
   <block id="9004ee13f10e4aa331cdbb0e05878d3f" category="inline-link-macro">GitHub에서 툴킷에 액세스하십시오</block>
   <block id="604c2d197444e12a03e7c1ba2830e768" category="cell"><block ref="604c2d197444e12a03e7c1ba2830e768" category="inline-link-macro-rx"></block></block>
@@ -9360,7 +9355,6 @@
   <block id="4c7a8c5b878fcdf733694f638b393b6b" category="sidebar">NVIDIA DGX A100 시스템 탑재 ONTAP AI 구축 가이드</block>
   <block id="74c684b866e5fcffcc9c5165a491d5b2" category="sidebar">NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치 설계 가이드를 지원하는 ONTAP AI</block>
   <block id="f8363659ae3ab117a0afa4163ca69fc7" category="sidebar">NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치 포함 ONTAP AI 구축 가이드 를 참조하십시오</block>
-  <block id="cc5c734c59f3ce23c9a86fd145bfb4ea" category="sidebar">NVIDA 포함 EF-Series AI</block>
   <block id="0c3efd7c1aae12456ab9935ae5fd15e0" category="sidebar">NVIDIA DGX A100 Systems 및 BeeGFS 지원 EF-Series AI</block>
   <block id="c70e778edabe427cd2db90132a56e456" category="sidebar">NVIDIA DGX A100 Systems 및 BeeGFS 설계를 지원하는 EF-Series AI</block>
   <block id="06aa576b3e3e95c5df800228d146af65" category="sidebar">NVIDIA DGX A100 Systems 및 BeeGFS 구축이 포함된 EF-Series AI</block>
@@ -9371,7 +9365,6 @@
   <block id="6a571fb799acb43b64f874729f838e2a" category="sidebar">데이터 파이프라인, 데이터 레이크 및 관리</block>
   <block id="c79bd5ac7ebc0eae5588b9ad529a380f" category="sidebar">자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크</block>
   <block id="fad62e8b886e655813cc4ce635152f62" category="sidebar">Trident 구축</block>
-  <block id="be443b15b920fdeff14efc2c6db69a7c" category="sidebar">MLRun 파이프라인</block>
   <block id="8ad188089680179dea816084001d7bf0" category="sidebar">AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동</block>
   <block id="ae270ffdc87820776fadfe121aa13143" category="sidebar">NetApp AI를 통한 감정 분석</block>
   <block id="f74720767a0bf20cfdb6bba5f215d795" category="sidebar">지원 센터 정서 분석 배포</block>
@@ -9491,4 +9484,57 @@
   <block id="8e2406d586d4192dc66b85722da1c3b9" category="sidebar">Splunk SmartStore가 포함된 NetApp StorageGRID</block>
   <block id="5e3dc34b61f6a21ffd6549ee40d4631b" category="sidebar">NetApp E-Series E5700 및 Splunk Enterprise</block>
   <block id="427d072a2c1690c6d9ece23bef05477b" category="sidebar">NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)</block>
+  <block id="c4c3630750312520bc4b93c16056bfd7" category="doc">NVIDIA 기반 NetApp EF-Series AI</block>
+  <block id="e6ee072aeeb0647d8c0cfe75e4cde51d" category="paragraph">NetApp과 NVIDIA의 EF-Series AI 통합 인프라 솔루션 개요</block>
+  <block id="f512fcc18626023378bfe28dce07116d" category="list-text"><block ref="f512fcc18626023378bfe28dce07116d" category="inline-link-macro-rx"></block></block>
+  <block id="ae02a3224f15623423f197426c44a26d" category="list-text"><block ref="ae02a3224f15623423f197426c44a26d" category="inline-link-macro-rx"></block></block>
+  <block id="8ce1a272bf4c47418ea6d69083f2df4f" category="inline-link-macro">BeeGFS 구축 가이드</block>
+  <block id="7991adac41b3f0e292dee61e87c39052" category="list-text"><block ref="7991adac41b3f0e292dee61e87c39052" category="inline-link-macro-rx"></block></block>
+  <block id="9d2ca817bb7dd69d6f7dc09932a53524" category="summary">NetApp 인공 지능 솔루션은 AI/ML 영역 전반에서 NetApp 스토리지의 기능을 보여주는 전략적 기술 솔루션 세트입니다.</block>
+  <block id="b54a1e289898cf21f63715dfe64025b7" category="doc">NetApp 인공 지능 솔루션</block>
+  <block id="2bbac71d034e7a7a1fca44c7500e187b" category="doc">NVIDIA를 통한 NetApp ONTAP AI</block>
+  <block id="4618b9225719de309c0b0f5aa4718c7b" category="paragraph">NetApp과 NVIDIA의 ONTAP AI 통합 인프라 솔루션 개요</block>
+  <block id="ab9d770eb05e7725141740f508566fce" category="section-title">NVIDIA DGX A100 시스템을 지원하는 NetApp ONTAP AI</block>
+  <block id="7c962be0dc8fdf28c1c4279fe5256a22" category="section-title">NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치가 포함된 NetApp ONTAP AI</block>
+  <block id="78463a384a5aa4fad5fa73e2f506ecfc" category="inline-link-macro">영어</block>
+  <block id="37ce0afb395b0346118a74c4f05f20a7" category="list-text"><block ref="3b277c3e8740f32e48fe9dd888ed34aa" category="inline-link-macro-rx"></block>&amp;f:@facet_soultion_mktg=[AI, 분석, 인공 지능]++[NetApp.com AI 블로그]</block>
+  <block id="706e736fcad235c710eab30a42b219b1" category="cell">NVIDIA DGX A100 Systems 및 BeeGFS * 가 포함된 EF-Series AI</block>
+  <block id="ec690c5998518cfa45b178a530da4125" category="cell">Edge-NetApp에서 Lenovo ThinkSystem * 으로 추론을 *</block>
+  <block id="b1d14722f1d9c668c677c2c7f22cfcc6" category="cell"><block ref="b1d14722f1d9c668c677c2c7f22cfcc6" category="inline-link-macro-rx"></block></block>
+  <block id="aa84da6cfda7179db9bbd5f34addb637" category="cell">* NetApp AI를 통한 감정 분석 *</block>
+  <block id="7a25f90f4eb7f4d051b5e2903cea9546" category="cell"><block ref="7a25f90f4eb7f4d051b5e2903cea9546" category="inline-link-macro-rx"></block></block>
+  <block id="f48991e4773d2a30dd01c029e22e3f32" category="cell">* 클릭 비율 예측 - Azure * 에서 분산된 교육</block>
+  <block id="2b48b8a77ebec6ee8be0f1146585b7c3" category="cell"><block ref="2b48b8a77ebec6ee8be0f1146585b7c3" category="inline-link-macro-rx"></block></block>
+  <block id="191ea533aa1478d35c965840430fbfe6" category="summary">NetApp의 최신 데이터 분석 솔루션은 AI 부문에서 NetApp 스토리지의 기능을 입증하는 일련의 전략적 기술 역량을 갖추고 있습니다.</block>
+  <block id="3f7d09efe0b4d4a65add41ac272194fd" category="doc">NetApp의 최신 데이터 분석 솔루션</block>
+  <block id="22169240c9a4c0ab61a4ed13c981c5ef" category="sidebar">AI 워크로드를 위한 통합 인프라</block>
+  <block id="8508ab1994a5679882beb6400778e8ba" category="sidebar">NVIDIA를 통한 EF-Series AI</block>
+  <block id="ec820f861118408d42b077dbf109f374" category="sidebar">NetApp E-Series 스토리지를 통한 IBM Spectrum Scale</block>
+  <block id="b63ada7ec650c01320cddeda05deb779" category="sidebar">Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론</block>
+  <block id="7e9b2db694c8b0a87a271e7085251d0e" category="sidebar">AI용 NetApp ONTAP 및 Lenovo ThinkSystem SR670</block>
+  <block id="e5c3eeefe82172631e21562a8d3672a5" category="sidebar">AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5</block>
+  <block id="2fa3e2a0ff5682666455eed0a7b1b569" category="sidebar">데이터 레이크 및 데이터 파이프라인</block>
+  <block id="6ac39037a7efa2708d15c0e0e20fb188" category="sidebar">자율 주행 워크로드를 위한 StorageGRID 데이터 레이크</block>
+  <block id="eeb4980c2a89f07abf1a0b927066b23c" category="sidebar">E-Series 및 BeeGFS for AI로 데이터 이동</block>
+  <block id="13f985aafb32ac9e387186e5a437f96e" category="sidebar">데이터 캐싱을 지원하는 하이브리드 클라우드 AI</block>
+  <block id="ac82c7a9ef13f3b604553ccfe1a5bd76" category="sidebar">마름 및 관리</block>
+  <block id="3cd04d0e6cf45786c9e94148f213b537" category="sidebar">AI 파이프라인 및 밤공간 관리를 위한 NetApp AI 컨트롤 플레인</block>
+  <block id="447e8e0102d91009c125adb678cd7fb5" category="sidebar">Iguazio를 사용한 MLRun 파이프라인</block>
+  <block id="71e6eb0dc5951ca93effe179d000f534" category="sidebar">감정 분석</block>
+  <block id="cfff43e76ea0e95d290a279bdb279a2e" category="sidebar">클릭률 예측 - Azure에서 제공되는 분산 교육</block>
+  <block id="29931fafbbc65eabe1029aee9a3a5a85" category="sidebar">차선 감지 - Azure에서 분산된 교육</block>
+  <block id="7656ac1f9ee1e1763f07a285578d922a" category="sidebar">NVIDIA Jarvis를 사용하는 대화형 AI</block>
+  <block id="8f0148532a5b5382ec4f005c8a96a4fa" category="sidebar">자율 주행</block>
+  <block id="f869ce5572b45e50fe014954c4248d60" category="sidebar">의료 - 진단 이미징</block>
+  <block id="951b9c6690c2a4c1228ada2a9980d5a8" category="sidebar">신용 카드 사기 감지</block>
+  <block id="f0b83f1f7d211bfb4e278dafd2d6b4fa" category="sidebar">NetApp 스토리지 솔루션을 사용한 Apache Spark 워크로드</block>
+  <block id="6bf79bc16e8a34cf5698aabd27cecef1" category="sidebar">최신 데이터 분석 솔루션 개요</block>
+  <block id="cd47dd01745339787e4c7300389401f2" category="sidebar">모범 사례</block>
+  <block id="1bd369d8fc8172d625ac41a1815aa09d" category="sidebar">Confluent Kafka 모범 사례</block>
+  <block id="3ed3645b4e41749082a0692a758a3132" category="sidebar">하이브리드 클라우드 솔루션 - Spark 및 Hadoop 사용 사례</block>
+  <block id="1d9032a854487a69392f628a954f5bd3" category="sidebar">추가 리소스</block>
+  <block id="db29b0a194f482562607bb5add9b8bff" category="sidebar">블로그:Apache Spark는 NetApp 데이터 분석 운동장에서 실행됩니다</block>
+  <block id="0795007b8521bf374f9ddd4eb68a4a2b" category="sidebar">블로그: Data Lake 및 HPC에서 ONTAP NFS로 XCP for Data Migration을 사용합니다</block>
+  <block id="17bd7356b9e1f77135ec466fc8bc0707" category="sidebar">NetApp TechComm TV: 빅데이터 분석 재생 목록</block>
+  <block id="9cb9fe27a24f987a1889d5fc1d5d139e" category="sidebar">BeeGFS 및 NetApp E-Series 구축 가이드</block>
 </blocks>

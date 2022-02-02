@@ -33,10 +33,10 @@ homepage:
   tiles:
   - title: AI 최신 데이터 분석
     links:
+    - title: 개요
+      url: ai/index.html
     - title: 새로운 기능
       url: aimda-whatsnew.html
-    - title: NetApp DataOps 툴킷
-      url: https://github.com/NetApp/netapp-data-science-toolkit
     - title: 비디오 및 데모
       url: aimda-videos.html
     - title: 블로그

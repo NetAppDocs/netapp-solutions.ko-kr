@@ -2,7 +2,7 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: NetApp Solutions are a set of strategic and technology capabilities that emphasize the NetApp portfolio of products and services to support our customers' most critical business needs. 
+lead: 'NetApp Solutions are a set of strategic and technology capabilities that emphasize the NetApp portfolio of products and services to support our customers" most critical business needs.' 
 summary: NetApp 솔루션은 고객의 가장 중요한 비즈니스 요구사항을 지원하기 위해 NetApp 제품 및 서비스 포트폴리오를 강조하는 전략적 및 기술 역량 집합입니다. 
 ---
 = NetApp 솔루션

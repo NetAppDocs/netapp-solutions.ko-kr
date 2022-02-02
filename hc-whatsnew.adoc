@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: hc-whatsnew.html 
 summary: 하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션 자료에 대한 최신 추가 정보 
-keywords: netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, vds, containers, kubernetes, what's new 
+keywords: 'netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, vds, containers, kubernetes, what"s new' 
 ---
 = 하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션의 새로운 기능
 :hardbreaks:

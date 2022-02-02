@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: dpsec-whatsnew.html 
 summary: BData Protection and Security 솔루션 자료에 최신 내용이 추가되었습니다 
-keywords: netapp, solutions, data protection, security, what's new 
+keywords: 'netapp, solutions, data protection, security, what"s new' 
 ---
 = 데이터 보호 및 보안 솔루션의 새로운 기능
 :hardbreaks:

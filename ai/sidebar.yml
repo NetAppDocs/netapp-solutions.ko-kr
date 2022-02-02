@@ -1,10 +1,12 @@
 ---
 section: ai
 title: 인공 지능
+url: "/ai/index.html"
 entries:
 - title: AI 통합 인프라
   entries:
   - title: NVIDIA와 함께 ONTAP AI
+    url: "/ai/ontap-ai-overview.html"
     entries:
     - title: NVIDIA DGX A100 시스템 설계 가이드를 지원하는 ONTAP AI
       url: https://www.netapp.com/pdf.html?item=/media/19432-nva-1151-design.pdf
@@ -15,14 +17,15 @@ entries:
     - title: NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치 포함 ONTAP AI 구축 가이드
         를 참조하십시오
       url: https://www.netapp.com/pdf.html?item=/media/21789-nva-1153-deploy.pdf
-  - title: NVIDA 포함 EF-Series AI
+  - title: NVIDIA를 통한 EF-Series AI
+    url: "/ai/ef-series-ai-overview.html"
     entries:
-    - title: NVIDIA DGX A100 Systems 및 BeeGFS 지원 EF-Series AI
-      url: https://www.netapp.com/us/media/tr-4755.pdf
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 설계를 지원하는 EF-Series AI
       url: https://www.netapp.com/pdf.html?item=/media/25445-nva-1156-design.pdf
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 구축이 포함된 EF-Series AI
       url: https://www.netapp.com/pdf.html?item=/media/25574-nva-1156-deploy.pdf
+    - title: BeeGFS 및 NetApp E-Series 구축 가이드
+      url: https://www.netapp.com/us/media/tr-4755.pdf
   - title: BeeGFS 및 NetApp E-Series 참조 아키텍처
     url: https://www.netapp.com/us/media/tr-4782.pdf
   - title: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
@@ -85,7 +88,7 @@ entries:
       url: "/ai/aicp_performance_testing.html"
     - title: 결론
       url: "/ai/aicp_conclusion.html"
-  - title: MLRun 파이프라인
+  - title: Iguazio를 사용한 MLRun 파이프라인
     type: solutions
     entries:
     - title: 소개

@@ -1,0 +1,61 @@
+---
+indexpage:
+  tiles:
+  - title: 시작하기
+    links:
+    - title: 새로운 기능
+      url: "/../aimda-whatsnew.html"
+    - title: 비디오 및 데모
+      url: "/../aimda-videos.html"
+    - title: 블로그
+      url: "/../aimda-blogs.html"
+  - title: AI 워크로드를 위한 통합 인프라
+    links:
+    - title: NVIDIA와 함께 ONTAP AI
+      url: ontap-ai-overview.html
+    - title: NVIDIA를 통한 EF-Series AI
+      url: ef-series-ai-overview.html
+    - title: NetApp E-Series 스토리지를 통한 IBM Spectrum Scale
+      url: https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf
+    - title: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론
+      url: ai-edge-introduction.html
+    - title: AI용 NetApp ONTAP 및 Lenovo ThinkSystem SR670
+      url: https://www.netapp.com/media/17115-tr-4810.pdf
+    - title: AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
+      url: https://www.netapp.com/pdf.html?item=/media/17215-tr4815.pdf
+  - title: 데이터 레이크 및 데이터 파이프라인
+    links:
+    - title: 자율 주행 워크로드를 위한 StorageGRID 데이터 레이크
+      url: http://www.netapp.com/us/media/tr-4851.pdf
+    - title: E-Series 및 BeeGFS for AI로 데이터 이동
+      url: https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf
+    - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동
+      url: https://www.netapp.com/media/17082-tr4732.pdf
+    - title: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI
+      url: hcaios_executive_summary.html
+  - title: 마름 및 관리
+    links:
+    - title: NetApp DataOps 툴킷
+      url: https://github.com/NetApp/netapp-dataops-toolkit
+    - title: AI 파이프라인 및 밤공간 관리를 위한 NetApp AI 컨트롤 플레인
+      url: aicp_introduction.html
+    - title: Iguazio를 사용한 MLRun 파이프라인
+      url: mlrun_introduction.html
+    - title: '실행 시 NetApp 오케스트레이션 솔루션: AI'
+      url: osrunai_solution_overview.html
+  - title: 사용 사례
+    links:
+    - title: 감정 분석
+      url: ai-sent-support-center-analytics.html
+    - title: 클릭률 예측 - Azure에서 제공되는 분산 교육
+      url: aks-anf_introduction.html
+    - title: 차선 감지 - Azure에서 분산된 교육
+      url: runai-ld_executive_summary.html
+    - title: NVIDIA Jarvis를 사용하는 대화형 AI
+      url: cainvidia_executive_summary.html
+    - title: 자율 주행
+      url: http://www.netapp.com/us/media/tr-4799-design.pdf
+    - title: 의료 - 진단 이미징
+      url: https://www.netapp.com/pdf.html?item=/media/7395-tr4811.pdf
+    - title: 신용 카드 사기 감지
+      url: https://www.netapp.com/pdf.html?item=/media/17205-tr4807pdf.pdf

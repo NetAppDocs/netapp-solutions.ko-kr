@@ -1,0 +1,29 @@
+---
+indexpage:
+  tiles:
+  - title: 시작하기
+    links:
+    - title: NetApp 스토리지 솔루션을 사용한 Apache Spark 워크로드
+      url: https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf
+    - title: 최신 데이터 분석 솔루션 개요
+      url: https://www.netapp.com/pdf.html?item=/media/58015-sb-4154.pdf
+  - title: 모범 사례
+    links:
+    - title: Confluent Kafka 모범 사례
+      url: confluent-kafka-introduction.html
+    - title: Splunk SmartStore가 포함된 NetApp StorageGRID
+      url: https://www.netapp.com/pdf.html?item=/media/20646-tr-4869.pdf
+    - title: NetApp E-Series E5700 및 Splunk Enterprise
+      url: https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf
+  - title: 사용 사례
+    links:
+    - title: 하이브리드 클라우드 솔루션 - Spark 및 Hadoop 사용 사례
+      url: hdcs-sh-solution-overview.html
+  - title: 추가 리소스
+    links:
+    - title: 블로그:Apache Spark는 NetApp 데이터 분석 운동장에서 실행됩니다
+      url: https://www.netapp.com/blog/apache-spark-data-analytics/
+    - title: '블로그: Data Lake 및 HPC에서 ONTAP NFS로 XCP for Data Migration을 사용합니다'
+      url: https://www.netapp.com/blog/data-migration-xcp/
+    - title: 'NetApp TechComm TV: 빅데이터 분석 재생 목록'
+      url: https://youtube.com/playlist?list=PLdXI3bZJEw7l8oFkYC_umsBaBX3hqK3Oq

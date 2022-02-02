@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: appsdb-whatsnew.html 
 summary: 비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 자료에 최신 내용이 추가되었습니다 
-keywords: netapp, solutions, business applications, enterprise database, what's new 
+keywords: 'netapp, solutions, business applications, enterprise database, what"s new' 
 ---
 = 비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 솔루션의 새로운 기능
 :hardbreaks:

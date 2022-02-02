@@ -1,6 +1,7 @@
 ---
 section: data-analytics
 title: 최신 데이터 분석
+url: "/data-analytics/index.html"
 entries:
 - title: Confluent Kafka 모범 사례
   type: solutions
