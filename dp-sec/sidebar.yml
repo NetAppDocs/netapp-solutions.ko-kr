@@ -14,7 +14,7 @@ entries:
     - title: 마이그레이션 워크플로우
       url: "/xcp/xcp-bp-migration-workflow-overview.html"
     - title: 파일 분석
-      url: "/xcp/xcp-bp-file-analytics.html"
+      url: /x"cp/xcp-bp-file-analytics.html
     - title: 배포 단계
       url: "/xcp/xcp-bp-deployment-steps.html"
     - title: 사이징 지침

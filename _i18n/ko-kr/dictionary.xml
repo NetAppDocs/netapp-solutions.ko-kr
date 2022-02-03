@@ -9390,7 +9390,6 @@
   <block id="7891972f4586e6ee183ea541991ebe9f" category="sidebar">NetApp E-Series 시스템을 사용하는 Quantum StorNext 구축 가이드 를 참조하십시오</block>
   <block id="6ff1dafebf930a9c5fef12bf43046987" category="sidebar">엔터프라이즈 애플리케이션 및 데이터베이스</block>
   <block id="e340bc103d02ce2b8e016eb60705029c" category="sidebar">SAP 및 SAP HANA</block>
-  <block id="eb1df2bd32ac3157117c264421853a5a" category="sidebar">UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS </block>
   <block id="54d2cdd3035ca1cdff5803c30f2ed2e1" category="sidebar">Oracle Database 구축</block>
   <block id="c880b35e02dbb5854452c86028138e2a" category="sidebar">NetApp ONTAP에 Oracle 데이터베이스 구축</block>
   <block id="699700175d80778f1738d906ee9540d5" category="sidebar">시작하기 및 요구 사항</block>
@@ -9532,9 +9531,14 @@
   <block id="cd47dd01745339787e4c7300389401f2" category="sidebar">모범 사례</block>
   <block id="1bd369d8fc8172d625ac41a1815aa09d" category="sidebar">Confluent Kafka 모범 사례</block>
   <block id="3ed3645b4e41749082a0692a758a3132" category="sidebar">하이브리드 클라우드 솔루션 - Spark 및 Hadoop 사용 사례</block>
-  <block id="1d9032a854487a69392f628a954f5bd3" category="sidebar">추가 리소스</block>
-  <block id="db29b0a194f482562607bb5add9b8bff" category="sidebar">블로그:Apache Spark는 NetApp 데이터 분석 운동장에서 실행됩니다</block>
   <block id="0795007b8521bf374f9ddd4eb68a4a2b" category="sidebar">블로그: Data Lake 및 HPC에서 ONTAP NFS로 XCP for Data Migration을 사용합니다</block>
-  <block id="17bd7356b9e1f77135ec466fc8bc0707" category="sidebar">NetApp TechComm TV: 빅데이터 분석 재생 목록</block>
   <block id="9cb9fe27a24f987a1889d5fc1d5d139e" category="sidebar">BeeGFS 및 NetApp E-Series 구축 가이드</block>
+  <block id="d064ecad73d9352507092f40af924057" category="cell">2022년 2월 2일</block>
+  <block id="c0598da0ea2338576f8d67854c56e3f6" category="cell">AI 및 최신 데이터 분석을 위한 콘텐츠를 더 효과적으로 구성하기 위한 랜딩 페이지를 생성했습니다</block>
+  <block id="84c45df200c907852c1e92875618b432" category="cell">2022년 1월 22일</block>
+  <block id="b385810d0a927b9d15a69218e3fb38c4" category="cell">AI 및 분석 워크플로우를 위해 E-Series 및 BeeGFS로 데이터 이동 추가</block>
+  <block id="89d5e6802ef5a3ae4296f49d4d6bc447" category="sidebar">추가 리소스</block>
+  <block id="8598954d073301b356199d49f5c02a69" category="sidebar">블로그:Apache Spark는 NetApp 데이터 분석 운동장에서 실행됩니다</block>
+  <block id="c254d48fc85fff80674335af647fc2d3" category="sidebar">NetApp TV: 빅데이터 분석 재생 목록</block>
+  <block id="0a2866cc3e2ba203c7e2e3ebeca395be" category="sidebar">UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS</block>
 </blocks>

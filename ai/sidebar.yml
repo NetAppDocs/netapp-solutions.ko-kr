@@ -118,7 +118,7 @@ entries:
     - title: 결론
       url: "/ai/mlrun_conclusion.html"
     - title: 추가 정보를 찾을 수 있는 위치
-      url: "/ai/mlrun_where_to_find_additional_information.html"
+      url: "/ai/mlrun_where_to_find_additional_information."
   - title: NetApp DataOps 툴킷
     url: https://github.com/NetApp/netapp-dataops-toolkit
   - title: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
