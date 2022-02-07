@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/bda-ai-where-to-find-additional-information.html 
+keywords: additional information, version history 
+summary:  
+---
+= 추가 정보를 찾을 수 있는 위치
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:bda-ai-mapr-fs-to-ontap-nfs.html["이전: MapR-FS에서 ONTAP NFS로"]
+
+이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
+
+* NetApp 데이터 이동 없는 분석 모듈 모범 사례
++
+https://www.netapp.com/us/media/tr-4382.pdf["https://www.netapp.com/us/media/tr-4382.pdf"^]
+
+* NetApp FlexGroup 볼륨 모범 사례 및 구현 가이드 를 참조하십시오
++
+https://www.netapp.com/us/media/tr-4571.pdf["https://www.netapp.com/us/media/tr-4571.pdf"^]
+
+* NetApp 제품 설명서
++
+https://www.netapp.com/us/documentation/index.aspx[]
+
+
+
+
+
+=== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 3.0 | 2022년 1월 | NetApp XCP를 사용하여 HDFS 및 MapR-FS에서 NFS로 데이터를 직접 이동합니다. 
+
+
+| 버전 2.0 | 2020년 1월 | xCP가 기본 Data Mover로 포함되어 있습니다. NFS 및 GPFS에 MapR-FS를 NFS 데이터 전송에 추가. 
+
+
+| 버전 1.0 | 2018년 11월 | 최초 릴리스. 
+|===

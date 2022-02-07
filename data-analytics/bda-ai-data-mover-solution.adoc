@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/bda-ai-data-mover-solution.html 
+keywords: data, mover, hdfs, mapr-fs, s3, spark 
+summary: 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 Hadoop distcp 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다. 
+---
+= Data Mover 솔루션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:bda-ai-customer-challenges.html["이전: 고객의 당면 과제."]
+
+빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 'Hadoop distcp' 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다.
+
+다음 다이어그램에서는 HDFS 스토리지를 사용하여 실행되는 Spark 클러스터에서 NetApp ONTAP NFS 볼륨으로 이동하는 일반적인 데이터 이동을 보여 줍니다. 이렇게 하면 NVIDIA에서 AI 작업을 처리할 수 있습니다.
+
+image:bda-ai-image3.png["오류: 그래픽 이미지가 없습니다"]
+
+Hadoop distcp 명령은 MapReduce 프로그램을 사용하여 데이터를 복사합니다. NIPAM은 데이터를 복사할 때 MapReduce와 함께 Hadoop 클러스터의 드라이버 역할을 합니다. NIPAM은 단일 내보내기를 위해 여러 네트워크 인터페이스에 로드를 분산할 수 있습니다. 이 프로세스는 HDFS 또는 HCFS에서 NFS로 데이터를 복사할 때 여러 네트워크 인터페이스에 데이터를 분산하여 네트워크 처리량을 극대화합니다.
+
+
+NOTE: NIPAM은 MapR에서 지원 또는 인증되지 않았습니다.
+
+link:bda-ai-data-mover-solution-for-ai.html["다음은 AI용 Data Mover 솔루션입니다."]

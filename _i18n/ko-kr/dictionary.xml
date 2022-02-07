@@ -9545,4 +9545,240 @@
   <block id="b17e2a7e5f42c90b40de5971850339ae" category="list-text">TR-4597: ONTAP용 VMware vSphere<block ref="5938ff9651f6c5e53544676ba8504afc" category="inline-link-rx"></block></block>
   <block id="c39148c472a0504dc9c52734b79f5125" category="sidebar">게스트 연결 스토리지가 있는 솔루션</block>
   <block id="511ff82335a683184e92371d0c9fe853" category="sidebar">기본 데이터 저장소가 있는 솔루션</block>
+  <block id="ae1992b408fce873deb0f11eb017ea19" category="summary">이 검증에서 4대의 서버를 NSD(Network Shared Disk) 서버로 사용하여 GPFS에 물리적 디스크를 제공했습니다. GPFS는 NSD 디스크 위에 생성되어 NFS 내보내기로 내보내므로 NFS 클라이언트가 아래 그림과 같이 액세스할 수 있습니다. XCP를 사용하여 GPFS로 내보낸 NFS의 데이터를 NetApp NFS 볼륨으로 복사했습니다.</block>
+  <block id="bc64aad447f072e96947f5d02f7e8134" category="doc">GPFS를 NetApp ONTAP NFS로</block>
+  <block id="823313a32a4a1131e0469fac26acbdac" category="inline-link-macro">이전: AI용 Data Mover 솔루션</block>
+  <block id="c4e4b7ebe157b09b7d1a0db25078dc45" category="paragraph"><block ref="c4e4b7ebe157b09b7d1a0db25078dc45" category="inline-link-macro-rx"></block></block>
+  <block id="9a1bdf4376c8448278cf38263e4da8c7" category="paragraph"><block ref="9a1bdf4376c8448278cf38263e4da8c7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="86339fb1bc11f77d6e48efc42d910f0f" category="section-title">GPFS 기본</block>
+  <block id="d859f99e3b66fbd7305cfd50ba2d4566" category="paragraph">GPFS에 사용되는 노드 유형은 다음과 같습니다.</block>
+  <block id="4ac5c1b5474a4920e2433b8f1610729f" category="list-text">* Admin node. * 관리 명령에서 노드 간 통신에 사용하는 노드 이름을 포함하는 선택적 필드를 지정합니다. 예를 들어, 관리자 노드 mastr-51.netapp.com` 가 클러스터의 다른 모든 노드에 네트워크 검사를 전달할 수 있습니다.</block>
+  <block id="6659be8d3c5ae97ae05588383a9efb5a" category="list-text">* 쿼럼 노드. * 쿼럼이 파생되는 노드 풀에 노드가 포함되어 있는지 여부를 확인합니다. 쿼럼 노드로 적어도 하나의 노드가 필요합니다.</block>
+  <block id="504f43a7f6382dae9e638f1c396a1779" category="list-text">* Manager Node. * 노드가 파일 시스템 관리자 및 토큰 관리자를 선택할 수 있는 노드 풀의 일부인지 여부를 나타냅니다. 둘 이상의 노드를 관리자 노드로 정의하는 것이 좋습니다. 관리자로 지정하는 노드 수는 워크로드와 GPFS 서버 라이센스 수에 따라 다릅니다. 대규모 병렬 작업을 실행 중인 경우 웹 애플리케이션을 지원하는 4노드 클러스터보다 더 많은 관리자 노드가 필요할 수 있습니다.</block>
+  <block id="48b637b1e31141b7e6faae1b7c6d8be2" category="list-text">* NSD 서버. * GPFS와 함께 사용할 각 물리적 디스크를 준비하는 서버입니다.</block>
+  <block id="8cd64755dc629d6061cef8f3bdddfe8f" category="list-text">* 프로토콜 노드. * NFS를 통해 모든 SSH(Secure Shell) 프로토콜을 통해 GPFS 데이터를 직접 공유하는 노드입니다. 이 노드에는 GPFS 서버 라이센스가 필요합니다.</block>
+  <block id="d1a65ffa2a3768b3a494baba34855023" category="section-title">GPFS, NFS 및 XCP의 운영 목록입니다</block>
+  <block id="089009e49dc3cafdc4329d07f11c5250" category="paragraph">이 섹션은 GPFS를 만들고 GPFS를 NFS 내보내기로 내보낸 후 XCP를 사용하여 데이터를 전송하는 작업 목록을 제공합니다.</block>
+  <block id="1d9da206467eb5273c4b522820cfddb2" category="section-title">GPFS 생성</block>
+  <block id="454f38a55393f7773c6e59f13eb6fef5" category="paragraph">GPFS를 만들려면 다음 단계를 완료하십시오.</block>
+  <block id="a69093440b15d387cf13aadb026e36a9" category="list-text">서버 중 하나에서 Linux 버전에 대한 스펙트럼 스케일 데이터 액세스를 다운로드하고 설치합니다.</block>
+  <block id="8a3d13c75e4dd8c8cffdf92d8e9dd956" category="list-text">모든 노드에 필수 구성 요소 패키지(예: Chef)를 설치하고 모든 노드에서 SELinux(Security-Enhanced Linux)를 비활성화합니다.</block>
+  <block id="9356dbe859ed4334d7e27c641d7dd594" category="list-text">설치 노드를 설정하고 클러스터 정의 파일에 관리 노드 및 GPFS 노드를 추가합니다.</block>
+  <block id="1bdc86658a65033989c8064812818633" category="list-text">관리자 노드, 쿼럼 노드, NSD 서버 및 GPFS 노드를 추가합니다.</block>
+  <block id="d55b679ec8a82b729ae03c882f27b80e" category="list-text">GUI, 관리 및 GPFS 노드를 추가하고, 필요한 경우 추가 GUI 서버를 추가합니다.</block>
+  <block id="f4e47c4647a3dafebf21a5f40cfa7f9c" category="list-text">다른 GPFS 노드를 추가하고 모든 노드 목록을 확인하십시오.</block>
+  <block id="303364b5437159140dc70a76a77e8aa8" category="list-text">클러스터 정의 파일의 모든 GPFS 노드에 설정할 클러스터 이름, 프로필, 원격 셸 바이너리, 원격 파일 복사본 바이너리 및 포트 범위를 지정합니다.</block>
+  <block id="30d14bbe638530772662c104a30d53d3" category="list-text">GPFS 구성 설정을 보고 추가 관리 노드를 추가합니다.</block>
+  <block id="d6daa755d449b0cec4c1c23153b9a0be" category="list-text">데이터 수집을 비활성화하고 데이터 패키지를 IBM 지원 센터에 업로드합니다.</block>
+  <block id="765ad728fb1bb9eb3c981693321a01ef" category="list-text">NTP를 활성화하고 설치 전에 구성을 미리 확인합니다.</block>
+  <block id="1deb66562b5d0f8ce755a102f2731d8d" category="list-text">NSD 디스크를 구성, 생성 및 확인합니다.</block>
+  <block id="f54668a02541c80dd54234689ef58ad4" category="list-text">GPFS를 생성합니다.</block>
+  <block id="048c1f8a018373ca436ef1a91fe6be57" category="list-text">GPFS를 마운트합니다.</block>
+  <block id="18a8260437fd56c8bdc1f994d860e490" category="list-text">GPFS에 필요한 권한을 확인하고 제공하십시오.</block>
+  <block id="a150a1930bbf429fc0204993b66d46cb" category="list-text">ddd 명령을 실행하여 GPFS 읽기 및 쓰기를 확인합니다.</block>
+  <block id="83cd36fb568894200fe5f9cf7f7e1193" category="section-title">GPFS를 NFS로 내보냅니다</block>
+  <block id="e2fc86fc4827b925f5cccecdcd51d6b1" category="paragraph">GPFS를 NFS로 내보내려면 다음 단계를 완료하십시오.</block>
+  <block id="af125b713cb0d82420980798e0276ea7" category="list-text">'/etc/exports' 파일을 통해 GPFS를 NFS로 내보냅니다.</block>
+  <block id="c953ca93794388b6266ed8529319d420" category="list-text">필요한 NFS 서버 패키지를 설치합니다.</block>
+  <block id="c0d11d4c7c65daa849ff313e229d632c" category="list-text">NFS 서비스를 시작합니다.</block>
+  <block id="873ad6aeda101f4e6c3a2cb8a46e84ad" category="list-text">GPFS에 파일을 나열하여 NFS 클라이언트를 검증합니다.</block>
+  <block id="f9b2649730ae4997f650bc4a2f8c1773" category="section-title">NFS 클라이언트를 구성합니다</block>
+  <block id="25be8238edbbbd8936c0385098957520" category="paragraph">NFS 클라이언트를 구성하려면 다음 단계를 수행하십시오.</block>
+  <block id="d11e3a3b633c68e9cc37f13adcdfd95a" category="list-text">'/etc/exports' 파일을 통해 GPFS를 NFS로 내보냅니다.</block>
+  <block id="64aef4f16c4a9f913379e9668323ed4f" category="list-text">NFS 클라이언트 서비스를 시작합니다.</block>
+  <block id="b7eb10685995437ddaa0df5b09b22fb8" category="list-text">NFS 클라이언트의 NFS 프로토콜을 통해 GPFS를 마운트합니다.</block>
+  <block id="bb8a91cbc28d52ebb4edab31956c7f58" category="list-text">NFS 마운트 폴더에서 GPFS 파일 목록을 검증합니다.</block>
+  <block id="690b19ed08f992a8a2d6e3e872641b2e" category="list-text">XCP를 사용하여 GPFS에서 내보낸 NFS에서 NetApp NFS로 데이터를 이동하십시오.</block>
+  <block id="f919d4d761d618912a13cac0895236af" category="list-text">NFS 클라이언트에서 GPFS 파일을 검증합니다.</block>
+  <block id="ae2b7fcf15ee142a2de2b3ba9573b414" category="inline-link-macro">다음: HDFS 및 MapR-FS에서 ONTAP NFS로.</block>
+  <block id="545d9ad8cb56e65641eb4e8083301a39" category="paragraph"><block ref="545d9ad8cb56e65641eb4e8083301a39" category="inline-link-macro-rx"></block></block>
+  <block id="0e0fdc9fc616f1d8648561d150679a8c" category="summary">이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 데이터를 이동하는 데 필요한 세부 단계를 제공합니다.</block>
+  <block id="2cf43976b964350d85af88e8c7c56bfc" category="doc">GPFS에서 NFS로 - 자세한 단계</block>
+  <block id="b523cc107fd56956277d38d32b34c938" category="inline-link-macro">이전: 비즈니스 혜택.</block>
+  <block id="c415260b3bf5ed05c37515a8e4e526f3" category="paragraph"><block ref="c415260b3bf5ed05c37515a8e4e526f3" category="inline-link-macro-rx"></block></block>
+  <block id="7f1260d8686ace0468fd1c74b243b7a1" category="section-title">GPFS 구성</block>
+  <block id="de00400b12b028274700d1385b53c26d" category="list-text">서버 중 하나에서 Linux용 Spectrum Scale 데이터 액세스를 다운로드하고 설치합니다.</block>
+  <block id="61a030f51cd790deb6f1374ae7e4d88f" category="list-text">모든 노드에 필수 구성 요소 패키지(셰프 및 커널 헤더 포함)를 설치합니다.</block>
+  <block id="cea532f5e6d51ac7b08d9f6d71886efe" category="list-text">모든 노드에서 SELinux를 해제합니다.</block>
+  <block id="e116db66dcd3a8a38d53716cdd97c179" category="list-text">설치 노드를 설정합니다.</block>
+  <block id="6021211d885ba9ec28a1dfcdb72b0542" category="list-text">클러스터 정의 파일에 관리 노드 및 GPFS 노드를 추가합니다.</block>
+  <block id="8b361b52f2d7d8ddca7c364e1826015d" category="list-text">관리자 노드 및 GPFS 노드를 추가합니다.</block>
+  <block id="d98e392ead2711bea231821e3cafe06e" category="list-text">쿼럼 노드와 GPFS 노드를 추가합니다.</block>
+  <block id="549101fb45a9a42ca05a3b680ea6dcdc" category="list-text">NSD 서버 및 GPFS 노드를 추가합니다.</block>
+  <block id="0150b7ec1d76a294c8fce802481a2e2d" category="list-text">GUI, 관리 및 GPFS 노드를 추가합니다.</block>
+  <block id="5076e582b15cea2e7319261b9eb2dc4e" category="list-text">다른 GUI 서버를 추가합니다.</block>
+  <block id="65d8f0643532859908a7e9616439572a" category="list-text">다른 GPFS 노드를 추가합니다.</block>
+  <block id="8c6e090e52befa2e95e6d658661749dc" category="list-text">모든 노드를 확인하고 나열합니다.</block>
+  <block id="6a21679cbbcb8a64de6016e8efb6b2ea" category="list-text">클러스터 정의 파일에 클러스터 이름을 지정합니다.</block>
+  <block id="0e890aabbc215ad4497b26965a0435ad" category="list-text">프로파일을 지정합니다.</block>
+  <block id="3296b6b95878e4a01015b9d97691cd23" category="list-text">GPFS에서 사용할 원격 셸 바이너리를 지정하고 '-r 인수'를 사용합니다.</block>
+  <block id="6b1edec7f7c05cc2bc9fb41ef76dc8c9" category="list-text">GPFS에서 사용할 원격 파일 복사 바이너리를 지정하고 '-rc 인수'를 사용하십시오.</block>
+  <block id="f35c3f5ce8fa5fca13e0eb96082b73fe" category="list-text">모든 GPFS 노드에 설정할 포트 범위를 지정하고, '-e argument'를 사용한다.</block>
+  <block id="84807c9c164a1fd83db3680e7b5a6587" category="list-text">GPFS 구성 설정을 봅니다.</block>
+  <block id="0addd886868e88c985dddc68658e5767" category="list-text">관리 노드를 추가합니다.</block>
+  <block id="d2e4082ff74b3d592d15b584ec3e64a9" category="list-text">NTP를 활성화합니다.</block>
+  <block id="bc5f73d061ad4090dd4180838b34fc5a" category="list-text">설치하기 전에 구성을 미리 확인합니다.</block>
+  <block id="7f2019dce6ead5054cb5c0d5ccac9d68" category="list-text">NSD 디스크를 구성합니다.</block>
+  <block id="bd625aeaf0eb9674912c4c51a421cdb6" category="list-text">NSD 디스크를 생성합니다.</block>
+  <block id="bfc7a92fefcdbb8be49ae2f09a04c609" category="list-text">NSD 디스크 상태를 확인합니다.</block>
+  <block id="abe092e554a73bb99bd2fd85086ffdce" category="list-text">GPFS에 필요한 권한을 확인하고 제공하십시오.</block>
+  <block id="737cdea6c4302200061636f408685896" category="list-text">ddd 명령을 실행하여 GPFS 읽기 및 쓰기를 확인합니다.</block>
+  <block id="978d4e591d532e5741bf55bbe09b8672" category="paragraph">GPFS를 NFS로 내보내려면 다음 단계를 완료하십시오.</block>
+  <block id="67ae9e67c637e0c39f8d92303b0a9c01" category="list-text">GPFS에 파일을 나열하여 NFS 클라이언트를 검증합니다.</block>
+  <block id="e90c8e55eda7dc2ebdbef5659a22a517" category="section-title">NFS 클라이언트를 구성합니다</block>
+  <block id="bc2bba568f2fe74e5616fa8f5953b1bf" category="list-text">NFS 클라이언트에 패키지를 설치합니다.</block>
+  <block id="7e4215ed068d7218ec28fe900e8feb16" category="list-text">NFS 마운트 폴더에서 GPFS 파일 목록을 검증합니다.</block>
+  <block id="77086f36ad335fd9c2cc6a63c1d21d84" category="list-text">XCP를 사용하여 GPFS로 내보낸 NFS에서 NetApp NFS로 데이터를 이동하십시오.</block>
+  <block id="96a4b9abe25ad94a1d4ab8e0d2237ef6" category="inline-link-macro">다음: MapR-FS에서 ONTAP NFS로</block>
+  <block id="742eb558b5f30d090f7c3ae58b2a554e" category="paragraph"><block ref="742eb558b5f30d090f7c3ae58b2a554e" category="inline-link-macro-rx"></block></block>
+  <block id="e0a1057b7f63b9621d22a28a118e4a79" category="summary">이 섹션에서는 이 솔루션의 비즈니스 이점에 대해 설명합니다.</block>
+  <block id="7f0cbc7391fd4e971628295e6bff035a" category="doc">비즈니스 이점</block>
+  <block id="aaff67cd4222a3be5071cf651cab3d48" category="inline-link-macro">이전: HDFS 및 MapR-FS에서 ONTAP NFS로.</block>
+  <block id="4e24fd6dd4cc9fa99c4dddfa8f40ee3e" category="paragraph"><block ref="4e24fd6dd4cc9fa99c4dddfa8f40ee3e" category="inline-link-macro-rx"></block></block>
+  <block id="239f77225835899839f2d1318d1cc1c4" category="paragraph">데이터를 빅데이터 분석에서 AI로 이동하면 다음과 같은 이점이 있습니다.</block>
+  <block id="c07548816e2d37db2db301172209009e" category="list-text">서로 다른 Hadoop 파일 시스템과 GPFS에서 데이터를 유니파이드 NFS 스토리지 시스템으로 추출하는 기능</block>
+  <block id="17480f22ec6a36806354b84f9824ff80" category="list-text">데이터 전송을 위한 Hadoop 통합 및 자동화 방식</block>
+  <block id="626dfcaeea53c1bdef78276b0f594dbf" category="list-text">Hadoop 파일 시스템에서 데이터를 이동하는 데 필요한 라이브러리 개발 비용 절감</block>
+  <block id="8576c8e67d6540e2f677340d38ec60e9" category="list-text">NIPAM을 사용하여 단일 데이터 소스에서 여러 네트워크 인터페이스의 총 처리량을 통해 최대 성능을 발휘합니다</block>
+  <block id="28338c61f9a9de656b504b14a75bb824" category="list-text">데이터 전송을 위한 예약 방식 및 온디맨드 방식</block>
+  <block id="3c70d03dd35337605475e972b74654c8" category="list-text">ONTAP 데이터 관리 소프트웨어를 사용하여 유니파이드 NFS 데이터에 대한 스토리지 효율성 및 엔터프라이즈 관리 기능을 제공합니다</block>
+  <block id="2b602714583b0c6daac65349c0e00e16" category="list-text">데이터 전송을 위한 Hadoop 방식을 사용하면 데이터 이동 비용이 전혀 들지 않습니다</block>
+  <block id="a3b97091403bff3b38419087acb1c19e" category="inline-link-macro">다음: GPFS에서 NFS로 - 세부 단계.</block>
+  <block id="5e982872ec65785f5d685290b9c40026" category="paragraph"><block ref="5e982872ec65785f5d685290b9c40026" category="inline-link-macro-rx"></block></block>
+  <block id="600c9e3e31c7cdf2c69044801b9ea998" category="summary">이 섹션에서는 NetApp XCP를 사용하여 MapR-FS 데이터를 ONTAP NFS로 이동하는 데 필요한 자세한 단계를 제공합니다.</block>
+  <block id="6a848946dc9169e87668bb9f057c56c2" category="doc">MapR-FS에서 ONTAP NFS로</block>
+  <block id="59b0eb4059face89ab060ea59984c8a7" category="inline-link-macro">이전: GPFS에서 NFS로 - 세부 단계.</block>
+  <block id="13f1dc977877024b0f36272f1af2b238" category="paragraph"><block ref="13f1dc977877024b0f36272f1af2b238" category="inline-link-macro-rx"></block></block>
+  <block id="3362be4f8dc0d043bec6bb8bf22a565b" category="list-text">각 MapR 노드에 대해 LUN 3개를 프로비저닝하고 모든 MapR 노드에 대한 LUN 소유권을 제공합니다.</block>
+  <block id="a74eeec8d29cc5a609b980af2aee2fb3" category="list-text">설치 중에 MapR-FS에 사용되는 MapR 클러스터 디스크에 새로 추가된 LUN을 선택합니다.</block>
+  <block id="f7dc1a091cd04b392f9a99c5390b9ce2" category="inline-link">MapR 6.1 문서</block>
+  <block id="24cb5309ea8c5a7c3244adf133110ecf" category="list-text">에 따라 MapR 클러스터를 설치합니다<block ref="a38d60fa0425a18b5925139ceca806ea" category="inline-link-rx"></block>.</block>
+  <block id="7549eec0595c1177d1a3b1a8c556ea8e" category="list-text">Hadoop Jar xxx와 같은 MapReduce 명령을 사용하여 기본 Hadoop 작업을 확인합니다.</block>
+  <block id="455177bd981566b3ae1e0084e3381b11" category="list-text">고객 데이터를 MapR-FS에 유지 예를 들어, Teragen을 사용하여 MapR-FS에서 약 테라바이트의 샘플 데이터를 생성했습니다.</block>
+  <block id="570bd2111387f5da50ad7d54e23e5fb2" category="list-text">MapR-FS를 NFS 내보내기로 구성합니다.</block>
+  <block id="4fe9587feb0e4de26dff3d33bbaf046e" category="list-text">모든 MapR 노드에서 nlockmgr 서비스를 사용하지 않도록 설정합니다.</block>
+  <block id="8c5d6c82648b5d5b2a4c82d33569b1c4" category="list-text">'/opt/mMapR/conf/exports' 파일의 모든 MapR 노드에 MapR-FS에서 특정 폴더를 내보냅니다. 하위 폴더를 내보낼 때 다른 권한이 있는 상위 폴더를 내보내지 마십시오.</block>
+  <block id="e78b84d9c1ff3b973293510503e86b95" category="list-text">MapR-FS NFS 서비스를 새로 고칩니다.</block>
+  <block id="341009af7864703863b08f0bd1df43b5" category="list-text">MapR 클러스터의 특정 서버 또는 서버 세트에 가상 IP 범위를 할당합니다. 그런 다음 MapR 클러스터는 NFS 데이터 액세스를 위해 특정 서버에 IP를 할당합니다. IP를 통해 고가용성을 구현할 수 있습니다. 즉, 특정 IP를 사용하는 서버 또는 네트워크에 장애가 발생할 경우 IP 범위의 다음 IP를 NFS 액세스에 사용할 수 있습니다.</block>
+  <block id="5165f49b44f610d03a79da336b53e8f2" category="admonition">모든 MapR 노드에서 NFS 액세스를 제공하려면 각 서버에 가상 IP 세트를 할당하고 NFS 데이터 액세스를 위해 각 MapR 노드의 리소스를 사용할 수 있습니다.</block>
+  <block id="fa6899b17d5e71a360316c355d34c8b3" category="paragraph"><block ref="fa6899b17d5e71a360316c355d34c8b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8cb6de965ede92bf8bb036bb8fea6eba" category="paragraph"><block ref="8cb6de965ede92bf8bb036bb8fea6eba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="031b138609c608ed553a74b2a1c439e1" category="paragraph"><block ref="031b138609c608ed553a74b2a1c439e1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97532f358124e4f3087e522bb35f2cb8" category="list-text">각 MapR 노드에 할당된 가상 IP를 확인하고 이를 NFS 데이터 액세스에 사용하십시오.</block>
+  <block id="d1ed36990409b90ebe749d4e8ddab8b7" category="list-text">NFS 작업을 확인하기 위해 할당된 가상 IP를 사용하여 NFS 내보내기 MapR-FS를 마운트합니다. 하지만 NetApp XCP를 사용하여 데이터를 전송하는 경우 이 단계가 필요하지 않습니다.</block>
+  <block id="6288e9b84b4573721ff701d3bdc55fed" category="list-text">MapR-FS NFS 게이트웨이에서 ONTAP NFS로 데이터를 전송하도록 NetApp XCP를 구성합니다.</block>
+  <block id="47bcc9815ee0b47ea9de7729c9c727f7" category="list-text">xCP에 대한 카탈로그 위치를 구성합니다.</block>
+  <block id="e125588061821db7957020ded3b976f0" category="list-text">라이센스 파일을 '/opt/netapp/xFiles/xCP/'에 복사합니다.</block>
+  <block id="76725a579a117275c078f16fdbe1fd04" category="list-text">xCP activate 명령을 사용하여 xCP를 활성화합니다.</block>
+  <block id="07f3313db35fd32ada5426648ae5817d" category="list-text">NFS 내보내기에 대한 소스를 확인합니다.</block>
+  <block id="7eefcefaba7483a2c7d6c71e934d0f28" category="list-text">여러 소스 IP 및 여러 대상 IP(ONTAP LIF)에서 여러 MapR 노드에서 XCP를 사용하여 데이터를 전송합니다.</block>
+  <block id="c2cb3a97c34a702522aba4d19b7a1d39" category="list-text">스토리지 컨트롤러의 로드 분산을 확인합니다.</block>
+  <block id="93a2605b6bf89fdb9970a6dbc77dee03" category="paragraph"><block ref="93a2605b6bf89fdb9970a6dbc77dee03" category="inline-link-macro-rx"></block></block>
+  <block id="b446e9930ab89aa25e7b422c4c23d83f" category="inline-link-macro">이전: MapR-FS에서 ONTAP NFS로</block>
+  <block id="185bcaf9470b338d9a2b58870d7bd2bd" category="paragraph"><block ref="185bcaf9470b338d9a2b58870d7bd2bd" category="inline-link-macro-rx"></block></block>
+  <block id="ca79886b03835c933143f8eb102ac932" category="list-text">NetApp 데이터 이동 없는 분석 모듈 모범 사례</block>
+  <block id="007fcd4e7f754577cf07e39ab5c8dc1d" category="inline-link"><block ref="007fcd4e7f754577cf07e39ab5c8dc1d" category="inline-link-rx"></block></block>
+  <block id="026671d583a546d6b62291e018f78bf7" category="paragraph"><block ref="026671d583a546d6b62291e018f78bf7" category="inline-link-rx"></block></block>
+  <block id="f5ac1e3c252855373c7f660dbd89699d" category="list-text">NetApp FlexGroup 볼륨 모범 사례 및 구현 가이드 를 참조하십시오</block>
+  <block id="baf8e9fa2301f45f9abf0b6e9dba3e17" category="inline-link"><block ref="baf8e9fa2301f45f9abf0b6e9dba3e17" category="inline-link-rx"></block></block>
+  <block id="f473bc55fb079f0338493530316efc6f" category="paragraph"><block ref="f473bc55fb079f0338493530316efc6f" category="inline-link-rx"></block></block>
+  <block id="c9617ae303d0bce89d13bebecca2ea1b" category="paragraph"><block ref="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link-rx"></block></block>
+  <block id="46b9839969e4bc429da9cc245c756450" category="cell">버전 3.0</block>
+  <block id="b9365bb9132d1eb8770275a763fc5d69" category="cell">2022년 1월</block>
+  <block id="e4005842db89b4abb778385f9a8a758f" category="cell">NetApp XCP를 사용하여 HDFS 및 MapR-FS에서 NFS로 데이터를 직접 이동합니다.</block>
+  <block id="d835981d77534f5f20446d4648ad7e5b" category="cell">2020년 1월</block>
+  <block id="637f51ce71f8f8cadc4b75dfda96d45c" category="cell">xCP가 기본 Data Mover로 포함되어 있습니다. NFS 및 GPFS에 MapR-FS를 NFS 데이터 전송에 추가.</block>
+  <block id="a10ba827ae758dee0e50d44366fd3d6d" category="cell">2018년 11월</block>
+  <block id="4b3608ccf8a7154699127b487cc49627" category="paragraph">이 문서에서는 인공 지능(AI) 워크플로우에 사용할 수 있도록 빅데이터 분석 및 고성능 컴퓨팅(HPC) 시스템에서 데이터를 이동하는 방법에 대해 설명합니다. AI는 일반적으로 NFS 내보내기를 통해 NFS 데이터를 처리합니다. 하지만 AI 데이터를 빅데이터 분석 및 고성능 컴퓨팅(HPC) 플랫폼에 저장할 수 있습니다. HDFS(Hadoop Distributed File System), Blob(Binary Large Object), S3 스토리지 또는 IBM GPFS(General Parallel File System)가 여기에 해당합니다. 이 문서에서는 Hadoop 네이티브 명령, NetApp In-Place Analytics Module(NIPAM), NetApp XCP를 사용하여 빅데이터 분석 플랫폼과 GPFS에서 NFS로 데이터를 이동하는 방법에 대해 설명합니다. 또한 이 문서에서는 빅데이터 및 HPC에서 AI로 데이터를 이동할 때의 비즈니스 이점에 대해 설명합니다.</block>
+  <block id="eea7b9fa88f883b7983320cb8dd802ac" category="summary">이 페이지에서는 AI 운영을 위한 빅데이터 분석의 데이터에 액세스하려고 할 때 고객이 직면할 수 있는 과제에 대해 설명합니다.</block>
+  <block id="d4612e7dc1347f1ccbfd5e470dda2295" category="doc">고객의 당면 과제</block>
+  <block id="14fd125cf7cc7e6f58e0a07d30ecda87" category="paragraph"><block ref="14fd125cf7cc7e6f58e0a07d30ecda87" category="inline-link-macro-rx"></block></block>
+  <block id="b794cc731a2a9499d064b08a32552e78" category="paragraph">AI 운영을 위한 빅데이터 분석에서 데이터에 액세스하려고 할 때 고객이 다음과 같은 과제에 직면할 수 있습니다.</block>
+  <block id="593806557377bd8506b6705484962785" category="list-text">고객 데이터가 데이터 레이크 저장소에 있습니다. 데이터 레이크는 정형, 비정형, 반정형, 로그, 머신 간 데이터 등 다양한 유형의 데이터를 포함할 수 있습니다. 이러한 모든 데이터 유형은 AI 시스템에서 처리해야 합니다.</block>
+  <block id="43d7d5ce8487763157eabcf01d1cf6ef" category="list-text">AI는 Hadoop 파일 시스템과 호환되지 않습니다. 일반적인 AI 아키텍처는 HDFS 및 HCFS 데이터에 직접 액세스할 수 없으며, 이 데이터는 AI에 대해 이해할 수 있는 파일 시스템(NFS)으로 이동되어야 합니다.</block>
+  <block id="e032c722c87677b6dfba13af108c61b8" category="list-text">데이터 레이크 데이터를 AI로 이동하는 작업에는 일반적으로 특수 프로세스가 필요합니다. 데이터 레이크의 데이터 양은 매우 클 수 있습니다. 고객은 AI 시스템으로 데이터를 이동할 수 있는 효율적이고 높은 처리량과 비용 효율적인 방법을 가지고 있어야 합니다.</block>
+  <block id="30bd7dc66c05e60d2ea66d09e568cb06" category="list-text">데이터를 동기화하는 중입니다. 고객이 빅데이터 플랫폼과 AI 간의 데이터를 동기화하려는 경우 AI를 통해 처리된 데이터를 분석 처리에 빅데이터와 함께 사용할 수 있습니다.</block>
+  <block id="02c553e123c56e4cba5728b7e83bb80b" category="inline-link-macro">다음: Data Mover 솔루션.</block>
+  <block id="205e8a4d3382497ff57947382c577faa" category="paragraph"><block ref="205e8a4d3382497ff57947382c577faa" category="inline-link-macro-rx"></block></block>
+  <block id="2ea9ecb649c5974bc03036a15d95f5bf" category="summary">AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처리해야 하는 고객의 요구사항을 기반으로 합니다. NetApp은 NIPAM을 사용하여 HDFS에서 NFS로 데이터를 이동합니다. 한 사용 사례에서 고객은 사내 NFS로 데이터를 이동해야 했고, 또 다른 고객은 클라우드의 GPU 클라우드 인스턴스에서 데이터를 처리하기 위해 Windows Azure Storage Blob에서 Cloud Volumes Service로 데이터를 이동해야 했습니다.</block>
+  <block id="7f10e017358079527e7045a68782eb14" category="doc">AI용 Data Mover 솔루션</block>
+  <block id="2337521acd1f46c410245430b841caa8" category="inline-link-macro">이전: Data Mover 솔루션</block>
+  <block id="ee202fa3d5706f12ab6d57e9cb4b4cba" category="paragraph"><block ref="ee202fa3d5706f12ab6d57e9cb4b4cba" category="inline-link-macro-rx"></block></block>
+  <block id="b6392eaf0ddf0463d633e69aaeeef3ce" category="paragraph">다음 다이어그램에서는 Data Mover 솔루션 세부 정보를 보여 줍니다.</block>
+  <block id="27f83ed51cc554467134084d77b0e050" category="paragraph"><block ref="27f83ed51cc554467134084d77b0e050" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e01b73324e59213b14e79f9d912546bc" category="paragraph">Data Mover 솔루션을 구축하려면 다음 단계가 필요합니다.</block>
+  <block id="03337d241355e58cdaa3df5a4bb980ef" category="list-text">ONTAP SAN은 HDFS를 제공하고, NAS는 NIPAM을 통해 NFS 볼륨을 운영 데이터 레이크 클러스터에 제공합니다.</block>
+  <block id="0fad6dd0225bf5a5e9c668c30ea5d38a" category="list-text">고객의 데이터는 HDFS 및 NFS에 있습니다. NFS 데이터는 빅데이터 분석 및 AI 운영에 사용되는 다른 애플리케이션의 운영 데이터일 수 있습니다.</block>
+  <block id="32477fa182341c04b6e8076232250f76" category="list-text">NetApp FlexClone 기술은 운영 NFS 볼륨의 클론을 생성하여 사내 AI 클러스터에 프로비저닝합니다.</block>
+  <block id="4e7e9a946510d25d1b28cc93a3723e69" category="list-text">HDFS SAN LUN의 데이터는 NIPAM 및 "Hadoop distcp" 명령을 사용하여 NFS 볼륨으로 복제됩니다. NIPAM은 여러 네트워크 인터페이스의 대역폭을 사용하여 데이터를 전송합니다. 이 프로세스는 더 많은 데이터를 전송할 수 있도록 데이터 복사 시간을 줄입니다.</block>
+  <block id="b0dd56fceeaba1e1db258d1b06d2572d" category="list-text">두 NFS 볼륨 모두 AI 운영을 위해 AI 클러스터에 프로비저닝됩니다.</block>
+  <block id="344c1652d7730f66d822b6ed5d07ff77" category="list-text">클라우드의 GPU로 사내 NFS 데이터를 처리하기 위해 NFS 볼륨은 NetApp SnapMirror 기술을 사용해 NPS(NetApp Private Storage)로 미러링되고 GPU를 위한 클라우드 서비스 공급자에 마운트됩니다.</block>
+  <block id="c590e653cde69438d43731b18edd533c" category="list-text">고객은 클라우드 서비스 공급자의 GPU에서 EC2/EMR, HDInsight 또는 DataProc 서비스의 데이터를 처리하려고 합니다. Hadoop Data Mover는 데이터를 Hadoop 서비스에서 NIPAM 및 'Hadoop distcp' 명령을 사용하여 Cloud Volumes Services로 이동합니다.</block>
+  <block id="8cae7d7989a25f83bf9df9952b16ed2b" category="list-text">Cloud Volumes Service 데이터는 NFS 프로토콜을 통해 AI에 프로비저닝됩니다.AI를 통해 처리되는 데이터는 NIPAM, SnapMirror 및 NPS를 통해 NVIDIA 클러스터와 함께 사내 위치에서 빅데이터 분석을 위한 데이터가 전송될 수 있습니다.</block>
+  <block id="980894bd0921c687decdf218e89107e2" category="paragraph">이 시나리오에서는 고객이 사내의 NetApp 스토리지 컨트롤러에서 AI 처리를 위해 필요한 원격 위치의 NAS 시스템에 대용량 파일 개수 데이터가 있습니다. 이 시나리오에서는 XCP 마이그레이션 도구를 사용하여 데이터를 더 빠른 속도로 마이그레이션하는 것이 좋습니다.</block>
+  <block id="002cfe6c68deff9c2fcb4fbb3820a5ff" category="paragraph">하이브리드 사용 사례 고객은 Cloud Sync를 사용하여 NFS, CIFS, S3 데이터의 사내 데이터를 클라우드로 마이그레이션할 수 있고, 그 반대로도 NVIDIA 클러스터의 GPU를 사용하여 AI를 처리할 수 있습니다. Cloud Sync와 XCP 마이그레이션 툴은 모두 NFS 데이터를 NetApp ONTAP NFS로 마이그레이션하는 데 사용됩니다.</block>
+  <block id="22033f5439b399254e73f6f3588b9b9e" category="inline-link-macro">다음: GPFS에서 NetApp ONTAP NFS로.</block>
+  <block id="f56cb05715de107bd001dd11a41b0cf6" category="paragraph"><block ref="f56cb05715de107bd001dd11a41b0cf6" category="inline-link-macro-rx"></block></block>
+  <block id="c877e65bbe37324c3309ace4aa7745d1" category="summary">빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 Hadoop distcp 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다.</block>
+  <block id="6d1963202b436934d6b74acc8232dc94" category="inline-link-macro">이전: 고객의 당면 과제.</block>
+  <block id="501ee0e125dd4449de2b29015fab6f3e" category="paragraph"><block ref="501ee0e125dd4449de2b29015fab6f3e" category="inline-link-macro-rx"></block></block>
+  <block id="013c5604f73da0e909c46aa5d3a670f3" category="paragraph">빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 'Hadoop distcp' 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다.</block>
+  <block id="9fabfa5fcba2e539b6d2c5eff5bb2116" category="paragraph">다음 다이어그램에서는 HDFS 스토리지를 사용하여 실행되는 Spark 클러스터에서 NetApp ONTAP NFS 볼륨으로 이동하는 일반적인 데이터 이동을 보여 줍니다. 이렇게 하면 NVIDIA에서 AI 작업을 처리할 수 있습니다.</block>
+  <block id="d824b1bb9493b5a6c5a2e74871468633" category="paragraph"><block ref="d824b1bb9493b5a6c5a2e74871468633" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da6616575a7b32d3eb2fa505007a9a4a" category="paragraph">Hadoop distcp 명령은 MapReduce 프로그램을 사용하여 데이터를 복사합니다. NIPAM은 데이터를 복사할 때 MapReduce와 함께 Hadoop 클러스터의 드라이버 역할을 합니다. NIPAM은 단일 내보내기를 위해 여러 네트워크 인터페이스에 로드를 분산할 수 있습니다. 이 프로세스는 HDFS 또는 HCFS에서 NFS로 데이터를 복사할 때 여러 네트워크 인터페이스에 데이터를 분산하여 네트워크 처리량을 극대화합니다.</block>
+  <block id="c2cad9f038dfeecd75697cb4bebe4c68" category="admonition">NIPAM은 MapR에서 지원 또는 인증되지 않았습니다.</block>
+  <block id="e68fb74f51fcafb391476c585b1e434d" category="inline-link-macro">다음은 AI용 Data Mover 솔루션입니다.</block>
+  <block id="1f4c259e626baca3c7947e6f3db323d4" category="paragraph"><block ref="1f4c259e626baca3c7947e6f3db323d4" category="inline-link-macro-rx"></block></block>
+  <block id="5e1ee998c60aed58b6080afc9d8903a3" category="summary">이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. 또한 빅데이터 및 HPC에서 AI로 데이터를 이동하면 얻을 수 있는 비즈니스 이점에 대해서도 설명합니다.</block>
+  <block id="82a406843faa25e62de32fd044584709" category="doc">TR-4732: 인공 지능에 대한 빅 데이터 분석 데이터</block>
+  <block id="bdd40c24689e02e4043333640734a44e" category="paragraph">이 문서에서는 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. AI는 NFS 엑스포트를 통해 NFS 데이터를 처리하는 한편, 고객은 HDFS, Blob 또는 S3 스토리지와 같은 빅데이터 분석 플랫폼과 GPFS와 같은 HPC 플랫폼에 AI 데이터를 저장할 수 있습니다. 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. 또한 빅데이터 및 HPC에서 AI로 데이터를 이동하면 얻을 수 있는 비즈니스 이점에 대해서도 설명합니다.</block>
+  <block id="9895310afc8a3755fef2e679c38f32f8" category="section-title">개념 및 구성 요소</block>
+  <block id="8ba5fcae463371ff85de74be48ced059" category="section-title">빅데이터 분석 스토리지</block>
+  <block id="b5b25f8714075ee7aa7cae37cabc6e77" category="paragraph">빅데이터 분석은 HDFS를 위한 주요 스토리지 제공업체입니다. 고객은 종종 Windows Azure Blob Storage, MapR-FS(MapR-FS) 및 S3 오브젝트 스토리지와 같은 HCFS(Hadoop 호환 파일 시스템)를 사용합니다.</block>
+  <block id="201dde15c75147909c8154fe3e727aed" category="section-title">일반 병렬 파일 시스템입니다</block>
+  <block id="432f31a1b9dc5a8ef1f048ea3f4f98c8" category="paragraph">IBM의 GPFS는 HDFS에 대한 대안을 제공하는 엔터프라이즈 파일 시스템입니다. GPFS는 애플리케이션에 블록 크기 및 복제 레이아웃을 결정할 수 있는 유연성을 제공하여 우수한 성능과 효율성을 제공합니다.</block>
+  <block id="2aff401779cc49866458a642f15c0181" category="inline-link">TR-4382: NetApp 데이터 이동 없는 분석 모듈.</block>
+  <block id="ae1165a7ed0006d2dae65ea849898810" category="paragraph">NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 참조하십시오<block ref="aedae5b2590b798973be1ab298f44ab7" category="inline-link-rx"></block></block>
+  <block id="0be6a753178a606f6e24a10fde5ec644" category="section-title">Hadoop 분산 복제본</block>
+  <block id="3cc73009b533164939781f9f6a4a1aa0" category="paragraph">Hadoop Distributed Copy(DistCp)는 대규모 클러스터 간 및 클러스터 내 대처 작업에 사용되는 분산 복사 툴입니다. 이 툴은 데이터 배포, 오류 처리 및 보고를 위해 MapReduce를 사용합니다. 파일 및 디렉토리 목록을 확장하고 소스 목록에서 데이터를 복사하기 위한 작업을 매핑하기 위해 파일 및 디렉토리 입력을 수행합니다. 아래 이미지는 HDFS 및 비 HDFS의 DistCp 작업을 보여 줍니다.</block>
+  <block id="1a76b3e0f1199267d461c961d30d07a5" category="paragraph"><block ref="1a76b3e0f1199267d461c961d30d07a5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8f54af1bdcb54a020503d81bc3b2114" category="paragraph">Hadoop DistCp는 추가 드라이버를 사용하지 않고 두 HDFS 시스템 간에 데이터를 이동합니다. NetApp은 비 HDFS 시스템용 드라이버를 제공합니다. NFS 대상의 경우 NIPAM은 데이터를 복사할 때 Hadoop DistCp가 NFS 대상과 통신하는 데 사용하는 데이터를 복사하는 드라이버를 제공합니다.</block>
+  <block id="05fc55cae9e8b2a7fb40e978e4971707" category="paragraph">NetApp Cloud Volumes Service는 최고의 성능을 제공하는 클라우드 네이티브 파일 서비스입니다. 고객은 이 서비스를 통해 신속하게 리소스를 가동하고 속도를 낮추며 NetApp 기능을 사용하여 생산성을 높이고 직원 다운타임을 줄임으로써 출시 기간을 단축할 수 있습니다. Cloud Volumes Service는 전체 데이터 센터 설치 공간을 줄이고 기본 퍼블릭 클라우드 스토리지를 덜 사용하기 때문에 재해 복구 및 클라우드 백업을 위한 최적의 대안이 됩니다.</block>
+  <block id="a12ce47d330a9ea070b4fd322ca5f890" category="paragraph">NetApp XCP는 NetApp 제품 간 및 NetApp 간 데이터 마이그레이션을 빠르고 안정적으로 수행할 수 있는 클라이언트 소프트웨어입니다. 이 툴은 대량의 비정형 NAS 데이터를 NAS 시스템에서 NetApp 스토리지 컨트롤러로 복사하도록 설계되었습니다. xCP 마이그레이션 툴은 데이터 마이그레이션, 파일 또는 디렉토리 목록, 공간 보고 등 여러 요청을 병렬로 처리할 수 있는 멀티코어 다중 채널 I/O 스트리밍 엔진을 사용합니다. 기본 NetApp 데이터 마이그레이션 툴입니다. XCP를 사용하여 Hadoop 클러스터 및 HPC에서 NetApp NFS 스토리지로 데이터를 복사할 수 있습니다. 아래 다이어그램에서는 XCP를 사용하여 Hadoop 및 HPC 클러스터에서 NetApp NFS 볼륨으로 데이터를 전송하는 방법을 보여 줍니다.</block>
+  <block id="cd7e68aa30250a331c260fee49ff230e" category="paragraph"><block ref="cd7e68aa30250a331c260fee49ff230e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1bce96270b79327e5daf4c0745d66023" category="paragraph">NetApp Cloud Sync는 사내 스토리지와 클라우드 스토리지 간에 NFS, S3 및 CIFS 데이터를 원활하고 안전하게 전송 및 동기화하는 하이브리드 데이터 복제 서비스형 소프트웨어입니다. 이 소프트웨어는 데이터 마이그레이션, 아카이빙, 협업, 분석 등에 사용됩니다. 데이터가 전송된 후 Cloud Sync는 소스와 대상 간의 데이터를 지속적으로 동기화합니다. 그런 다음 델타를 전송합니다. 또한 자체 네트워크, 클라우드 또는 사내 내의 데이터를 보호합니다. 이 소프트웨어는 비용 효율적인 솔루션을 제공하고 데이터 전송을 위한 모니터링 및 보고 기능을 제공하는 용량제 모델을 기반으로 합니다.</block>
+  <block id="cbba30a09e75669ecb5b3b2d83a25284" category="inline-link-macro">다음은 고객의 당면 과제입니다.</block>
+  <block id="63aa417c654afafebdbdfcaf7a13c8b6" category="paragraph"><block ref="63aa417c654afafebdbdfcaf7a13c8b6" category="inline-link-macro-rx"></block></block>
+  <block id="29fb90c4a1468e178582858240052f4c" category="summary">이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다.</block>
+  <block id="d233c10a88f93c454d0e84cd34840512" category="doc">HDFS 및 MapR-FS를 ONTAP NFS로 설정합니다</block>
+  <block id="9577f33e5dfe124ba394a5c90a123928" category="inline-link-macro">이전: GPFS에서 NetApp ONTAP NFS로,</block>
+  <block id="a503c5d00affd8b681837e8b44490492" category="paragraph"><block ref="a503c5d00affd8b681837e8b44490492" category="inline-link-macro-rx"></block></block>
+  <block id="9c02792070008c1748647d8bdbe24432" category="paragraph">이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다. xCP는 비동기 스레드 및 HDFS C API 호출을 사용하여 MapR-FS 및 HDFS에서 데이터를 통신 및 전송합니다. 아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.</block>
+  <block id="4581f9b32af32647aa31b2f9d57f6f1f" category="paragraph"><block ref="4581f9b32af32647aa31b2f9d57f6f1f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c11c71088d0987243547dd8fc322c2ad" category="section-title">고객이 HDFS 및 MapR-FS에서 NFS로 이동하는 이유는 무엇입니까?</block>
+  <block id="b075c8e6a9009d582333c59e237e3646" category="paragraph">Cloudera 및 Hortonworks와 같은 Hadoop 배포 대부분은 HDFS 및 MapR 배포판과 같은 자체 파일 시스템 MapR-FS를 사용하여 데이터를 저장합니다. HDFS 및 MapR-FS 데이터는 머신 러닝(ML) 및 딥 러닝(DL)에 활용할 수 있는 데이터 과학자에게 중요한 통찰력을 제공합니다. HDFS 및 MapR-FS의 데이터는 공유되지 않으며 다른 애플리케이션에서 사용할 수 없습니다. 고객은 공유 데이터, 특히 고객의 중요한 데이터가 여러 애플리케이션에서 사용되는 은행 부문에서 데이터를 찾고 있습니다. 최신 버전의 Hadoop(3.x 이상)은 NFS 데이터 소스를 지원하며, 타사 소프트웨어를 추가하지 않고도 이 소스에 액세스할 수 있습니다. 새로운 NetApp XCP 기능을 사용하면 데이터를 HDFS 및 MapR-FS에서 NetApp NFS로 직접 이동하여 여러 애플리케이션에 액세스할 수 있습니다</block>
+  <block id="fa2772759fe171754d3e04460b417464" category="paragraph">12개의 MapR 노드 및 4개의 NFS 서버를 통해 초기 성능 테스트를 위해 AWS(Amazon Web Services)에서 MapR-FS의 데이터를 NFS로 전송하기 위한 테스트가 완료되었습니다.</block>
+  <block id="6f6cb72d544962fa333e2e34ce64f719" category="cell">크기</block>
+  <block id="5d56dbd20d9ee1ab8a722ff12e331953" category="cell">vCPU</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">메모리</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">네트워크</block>
+  <block id="e83e5674ab295a6613b60f5e12d1bfe3" category="cell">NFS 서버</block>
+  <block id="6215b1525ff41917096b1eb923fe894f" category="cell">i3en.24xLarge</block>
+  <block id="26657d5ff9020d2abefe558796b99584" category="cell">96</block>
+  <block id="c45b008ff7fe72f83bb47cba575960c7" category="cell">488GiB</block>
+  <block id="9f8ce2ff912e3931e4fc14876f3097f2" category="cell">8x 7500 NVMe SSD</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
+  <block id="899f7b8a7c3e28d3161a77da8f1c8e33" category="cell">MapR 노드</block>
+  <block id="6ac0fbf236c6d341a7f2c6c92933f744" category="cell">I3en.12xLarge</block>
+  <block id="642e92efb79421734881b53e1e1b18b6" category="cell">48</block>
+  <block id="1aa80378346dacbf8ce58aaadcefc35e" category="cell">384GiB</block>
+  <block id="3ce58620106227953b9e12e2e0633095" category="cell">4x 7500 NVMe SSD</block>
+  <block id="c0c7c76d30bd3dcaefc96f40275bdc0a" category="cell">50</block>
+  <block id="03e4c674f628169124f81fb7b98f9c92" category="paragraph">초기 테스트에 따르면 20Gbps의 처리량을 확보했으며 일일 2PB의 데이터를 전송할 수 있었습니다.</block>
+  <block id="fce5332d471cfbe0baf7fa83eb2d427d" category="inline-link">TR-4863: NetApp XCP-Data Mover, 파일 마이그레이션 및 분석에 대한 모범 사례 지침 - 4863</block>
+  <block id="6371d61614d0beaedb75e85d2c297d8f" category="paragraph">HDFS를 NFS로 내보내지 않고 HDFS 데이터 마이그레이션에 대한 자세한 내용은 의 "배포 단계 - NAS" 섹션을 참조하십시오<block ref="6a602f6a965c96a94215a45f0077e771" category="inline-link-rx"></block>.</block>
+  <block id="aa722a0d50c9e3bfe81a7128f0e649d7" category="inline-link-macro">다음: 비즈니스 혜택.</block>
+  <block id="4e39bc17db35d21d84b6fb1e9786fdb5" category="paragraph"><block ref="4e39bc17db35d21d84b6fb1e9786fdb5" category="inline-link-macro-rx"></block></block>
+  <block id="4f25c5c9b33cc2f12b098bd8cc026222" category="sidebar">인공 지능에 빅 데이터 분석 데이터 활용</block>
+  <block id="713522228cb3164cc6e71ff6d49c3b13" category="sidebar">GPFS에서 NFS로 - 자세한 단계</block>
 </blocks>

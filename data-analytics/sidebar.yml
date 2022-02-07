@@ -3,6 +3,28 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
+- title: 인공 지능에 빅 데이터 분석 데이터 활용
+  entries:
+  - title: 소개
+    url: "/data-analytics/bda-ai-introduction.html"
+  - title: 고객의 당면 과제
+    url: "/data-analytics/bda-ai-customer-challenges.html"
+  - title: Data Mover 솔루션
+    url: "/data-analytics/bda-ai-data-mover-solution.html"
+  - title: AI용 Data Mover 솔루션
+    url: "/data-analytics/bda-ai-data-mover-solution-for-ai.html"
+  - title: GPFS를 NetApp ONTAP NFS로
+    url: "/data-analytics/bda-ai-gpfs-to-netapp-ontap-nfs.html"
+  - title: HDFS 및 MapR-FS를 ONTAP NFS로 설정합니다
+    url: "/data-analytics/bda-ai-hdfs-and-mapr-fs-to-ontap-nfs.html"
+  - title: 비즈니스 이점
+    url: "/data-analytics/bda-ai-business-benefits.html"
+  - title: GPFS에서 NFS로 - 자세한 단계
+    url: "/data-analytics/bda-ai-gpfs-to-nfs-detailed-steps.html"
+  - title: MapR-FS에서 ONTAP NFS로
+    url: "/data-analytics/bda-ai-mapr-fs-to-ontap-nfs.html"
+  - title: 추가 정보를 찾을 수 있는 위치
+    url: "/data-analytics/bda-ai-where-to-find-additional-information.html"
 - title: Confluent Kafka 모범 사례
   type: solutions
   entries:

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/bda-ai-hdfs-and-mapr-fs-to-ontap-nfs.html 
+keywords: hdfs, mapr-fs, nfs, ml, dl 
+summary: '이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다.' 
+---
+= HDFS 및 MapR-FS를 ONTAP NFS로 설정합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:bda-ai-gpfs-to-netapp-ontap-nfs.html["이전: GPFS에서 NetApp ONTAP NFS로,"]
+
+이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다. xCP는 비동기 스레드 및 HDFS C API 호출을 사용하여 MapR-FS 및 HDFS에서 데이터를 통신 및 전송합니다. 아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.
+
+image:bda-ai-image6.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+=== 고객이 HDFS 및 MapR-FS에서 NFS로 이동하는 이유는 무엇입니까?
+
+Cloudera 및 Hortonworks와 같은 Hadoop 배포 대부분은 HDFS 및 MapR 배포판과 같은 자체 파일 시스템 MapR-FS를 사용하여 데이터를 저장합니다. HDFS 및 MapR-FS 데이터는 머신 러닝(ML) 및 딥 러닝(DL)에 활용할 수 있는 데이터 과학자에게 중요한 통찰력을 제공합니다. HDFS 및 MapR-FS의 데이터는 공유되지 않으며 다른 애플리케이션에서 사용할 수 없습니다. 고객은 공유 데이터, 특히 고객의 중요한 데이터가 여러 애플리케이션에서 사용되는 은행 부문에서 데이터를 찾고 있습니다. 최신 버전의 Hadoop(3.x 이상)은 NFS 데이터 소스를 지원하며, 타사 소프트웨어를 추가하지 않고도 이 소스에 액세스할 수 있습니다. 새로운 NetApp XCP 기능을 사용하면 데이터를 HDFS 및 MapR-FS에서 NetApp NFS로 직접 이동하여 여러 애플리케이션에 액세스할 수 있습니다
+
+12개의 MapR 노드 및 4개의 NFS 서버를 통해 초기 성능 테스트를 위해 AWS(Amazon Web Services)에서 MapR-FS의 데이터를 NFS로 전송하기 위한 테스트가 완료되었습니다.
+
+|===
+|  | 수량 | 크기 | vCPU | 메모리 | 스토리지 | 네트워크 
+
+
+| NFS 서버 | 4 | i3en.24xLarge | 96 | 488GiB | 8x 7500 NVMe SSD | 100 
+
+
+| MapR 노드 | 12 | I3en.12xLarge | 48 | 384GiB | 4x 7500 NVMe SSD | 50 
+|===
+초기 테스트에 따르면 20Gbps의 처리량을 확보했으며 일일 2PB의 데이터를 전송할 수 있었습니다.
+
+HDFS를 NFS로 내보내지 않고 HDFS 데이터 마이그레이션에 대한 자세한 내용은 의 "배포 단계 - NAS" 섹션을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/xcp/xcp-bp-deployment-steps.html["TR-4863: NetApp XCP-Data Mover, 파일 마이그레이션 및 분석에 대한 모범 사례 지침 - 4863"^].
+
+link:bda-ai-business-benefits.html["다음: 비즈니스 혜택."]

@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/bda-ai-introduction.html 
+keywords: tr-4732, tr4732, 4732, introduction, concepts, components 
+summary: 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. 또한 빅데이터 및 HPC에서 AI로 데이터를 이동하면 얻을 수 있는 비즈니스 이점에 대해서도 설명합니다. 
+---
+= TR-4732: 인공 지능에 대한 빅 데이터 분석 데이터
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp의 Karthikeyan Nagalingam입니다
+
+이 문서에서는 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. AI는 NFS 엑스포트를 통해 NFS 데이터를 처리하는 한편, 고객은 HDFS, Blob 또는 S3 스토리지와 같은 빅데이터 분석 플랫폼과 GPFS와 같은 HPC 플랫폼에 AI 데이터를 저장할 수 있습니다. 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. 또한 빅데이터 및 HPC에서 AI로 데이터를 이동하면 얻을 수 있는 비즈니스 이점에 대해서도 설명합니다.
+
+
+
+== 개념 및 구성 요소
+
+
+
+=== 빅데이터 분석 스토리지
+
+빅데이터 분석은 HDFS를 위한 주요 스토리지 제공업체입니다. 고객은 종종 Windows Azure Blob Storage, MapR-FS(MapR-FS) 및 S3 오브젝트 스토리지와 같은 HCFS(Hadoop 호환 파일 시스템)를 사용합니다.
+
+
+
+=== 일반 병렬 파일 시스템입니다
+
+IBM의 GPFS는 HDFS에 대한 대안을 제공하는 엔터프라이즈 파일 시스템입니다. GPFS는 애플리케이션에 블록 크기 및 복제 레이아웃을 결정할 수 있는 유연성을 제공하여 우수한 성능과 효율성을 제공합니다.
+
+
+
+=== NetApp 데이터 이동 없는 분석 모듈
+
+NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 참조하십시오 https://www.netapp.com/us/media/tr-4382.pdf["TR-4382: NetApp 데이터 이동 없는 분석 모듈."^]
+
+
+
+=== Hadoop 분산 복제본
+
+Hadoop Distributed Copy(DistCp)는 대규모 클러스터 간 및 클러스터 내 대처 작업에 사용되는 분산 복사 툴입니다. 이 툴은 데이터 배포, 오류 처리 및 보고를 위해 MapReduce를 사용합니다. 파일 및 디렉토리 목록을 확장하고 소스 목록에서 데이터를 복사하기 위한 작업을 매핑하기 위해 파일 및 디렉토리 입력을 수행합니다. 아래 이미지는 HDFS 및 비 HDFS의 DistCp 작업을 보여 줍니다.
+
+image:bda-ai-image1.png["오류: 그래픽 이미지가 없습니다"]
+
+Hadoop DistCp는 추가 드라이버를 사용하지 않고 두 HDFS 시스템 간에 데이터를 이동합니다. NetApp은 비 HDFS 시스템용 드라이버를 제공합니다. NFS 대상의 경우 NIPAM은 데이터를 복사할 때 Hadoop DistCp가 NFS 대상과 통신하는 데 사용하는 데이터를 복사하는 드라이버를 제공합니다.
+
+
+
+== NetApp Cloud Volumes Service를 참조하십시오
+
+NetApp Cloud Volumes Service는 최고의 성능을 제공하는 클라우드 네이티브 파일 서비스입니다. 고객은 이 서비스를 통해 신속하게 리소스를 가동하고 속도를 낮추며 NetApp 기능을 사용하여 생산성을 높이고 직원 다운타임을 줄임으로써 출시 기간을 단축할 수 있습니다. Cloud Volumes Service는 전체 데이터 센터 설치 공간을 줄이고 기본 퍼블릭 클라우드 스토리지를 덜 사용하기 때문에 재해 복구 및 클라우드 백업을 위한 최적의 대안이 됩니다.
+
+
+
+== NetApp XCP
+
+NetApp XCP는 NetApp 제품 간 및 NetApp 간 데이터 마이그레이션을 빠르고 안정적으로 수행할 수 있는 클라이언트 소프트웨어입니다. 이 툴은 대량의 비정형 NAS 데이터를 NAS 시스템에서 NetApp 스토리지 컨트롤러로 복사하도록 설계되었습니다. xCP 마이그레이션 툴은 데이터 마이그레이션, 파일 또는 디렉토리 목록, 공간 보고 등 여러 요청을 병렬로 처리할 수 있는 멀티코어 다중 채널 I/O 스트리밍 엔진을 사용합니다. 기본 NetApp 데이터 마이그레이션 툴입니다. XCP를 사용하여 Hadoop 클러스터 및 HPC에서 NetApp NFS 스토리지로 데이터를 복사할 수 있습니다. 아래 다이어그램에서는 XCP를 사용하여 Hadoop 및 HPC 클러스터에서 NetApp NFS 볼륨으로 데이터를 전송하는 방법을 보여 줍니다.
+
+image:bda-ai-image2.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== NetApp Cloud Sync를 참조하십시오
+
+NetApp Cloud Sync는 사내 스토리지와 클라우드 스토리지 간에 NFS, S3 및 CIFS 데이터를 원활하고 안전하게 전송 및 동기화하는 하이브리드 데이터 복제 서비스형 소프트웨어입니다. 이 소프트웨어는 데이터 마이그레이션, 아카이빙, 협업, 분석 등에 사용됩니다. 데이터가 전송된 후 Cloud Sync는 소스와 대상 간의 데이터를 지속적으로 동기화합니다. 그런 다음 델타를 전송합니다. 또한 자체 네트워크, 클라우드 또는 사내 내의 데이터를 보호합니다. 이 소프트웨어는 비용 효율적인 솔루션을 제공하고 데이터 전송을 위한 모니터링 및 보고 기능을 제공하는 용량제 모델을 기반으로 합니다.
+
+link:bda-ai-customer-challenges.html["다음은 고객의 당면 과제입니다."]
