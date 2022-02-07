@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션</title>
+  <title>Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션" />
+  <meta property="og:title" content="Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/aws-solutions.html" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp/gcp-setup.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/netapp-solutions/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -19,7 +19,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="">
-  <meta name="keywords" content=" NetApp Solutions, amazon, vmc, vmware managed cloud, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr">
+  <meta name="keywords" content=" NetApp Solutions, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, config, configuration,">
   
   
 
@@ -281,13 +281,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/aws-solutions.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-solutions.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/aws-solutions.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/gcp/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/aws-solutions.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/gcp/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -3987,7 +3987,7 @@
           <a href="/ko-kr/netapp-solutions/">NetApp&nbsp;Solutions</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션
+          Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성
         </li>
       </ul>
     </div>
@@ -4010,26 +4010,18 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션</h1>
+  <h1 class="n-doc__component-detail-heading">Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 23:53:32 +0000">02/03/2022</time>
+    <time datetime="2022-02-07 19:04:00 +0000">02/07/2022</time>
     
   
 
 <span>기여자
-  <a target="_blank" href="https://github.com/kevin-hoke">
-    <img  class="avatar avatar-small"
-          alt="kevin-hoke"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/55808219?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
@@ -4039,64 +4031,100 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>NetApp이 AWS에 제공하는 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 솔루션에 대해 자세히 알아보십시오.</p>
+<p>온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.</p>
+</div>
+<div class="paragraph">
+<p>이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
+</td>
+<td class="content">
+게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#deploy">"GCVE 배포 및 구성"</a></p>
+</li>
+<li>
+<p><a href="#enable-access">"GCVE에 대한 개인 액세스를 활성화합니다"</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="vmc용-netapp-솔루션">VMC용 NetApp 솔루션</h2>
+<h2 id="gcve-배포-및-구성">GCVE 배포 및 구성</h2>
 <div class="sectionbody">
-<div class="exampleblock tabbed-block">
-<div class="content">
-<div class="openblock">
-<div class="title">확장/버스트</div>
-<div class="content">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p>GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.</p>
 </div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">데이터 센터 유지 관리</div>
-<div class="content">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p>“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.</p>
 </div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">마이그레이션</div>
-<div class="content">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p>전제 조건:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>VMware Engine Service Admin IAM 역할을 설정합니다</p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/occm/task_replicating_data.html">"VMware Engine API 액세스 및 노드 할당량을 설정합니다"</a></p>
+</li>
+<li>
+<p>CIDR 범위가 온-프레미스 또는 클라우드 서브넷과 겹치지 않도록 하십시오. CIDR 범위는 /27 이상이어야 합니다.</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="openblock">
-<div class="title">백업/복원</div>
-<div class="content">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p><span class="image"><img src="./../../media/gcve-deploy-1.png" alt=""></span></p>
 </div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">재해 복구</div>
-<div class="content">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p>참고: 프라이빗 클라우드를 생성하는 데 30분에서 2시간까지 걸릴 수 있습니다.</p>
 </div>
 </div>
 </div>
-<div class="openblock">
-<div class="title">데이터 보호</div>
-<div class="content">
+<div class="sect1">
+<h2 id="gcve에-대한-개인-액세스를-활성화합니다">GCVE에 대한 개인 액세스를 활성화합니다</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TR&gt;에서 해당 섹션을 가리킵니다</p>
+<p>프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.</p>
 </div>
+<div class="paragraph">
+<p>이렇게 하면 Cloud Volumes ONTAP 인스턴스가 실행 중인 VPC 네트워크가 GCVE 프라이빗 클라우드와 통신할 수 있습니다. 이렇게 하려면 를 따르십시오 <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart">"GCP 문서"</a>. 클라우드 볼륨 서비스의 경우 테넌트 호스트 프로젝트 간에 일회성 피어링을 수행하여 VMware 엔진과 Cloud Volumes Service 간에 연결을 설정합니다. 자세한 단계는 다음과 같습니다 .</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/gcve-access-1.png" alt=""></span></p>
 </div>
+<div class="paragraph">
+<p><a href="mailto:CloudOwner@gve.loca">CloudOwner@gve.loca</a> l 사용자를 사용하여 vCenter에 로그인합니다. 자격 증명을 액세스하려면 VMware Engine 포털로 이동하여 리소스 로 이동한 다음 적절한 프라이빗 클라우드를 선택합니다. 기본 정보 섹션에서 vCenter 로그인 정보(vCenter Server, HCX Manager) 또는 NSX-T 로그인 정보(NSX Manager)에 대한 보기 링크를 클릭합니다.</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/gcve-access-2.png" alt=""></span></p>
+</div>
+<div class="paragraph">
+<p>Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (<a href="https://10.0.16.6/)" class="bare">https://10.0.16.6/)</a> admin 사용자 이름을 <a href="mailto:CloudOwner@gve.loca">CloudOwner@gve.loca</a> l 로 사용하여 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.</p>
+</div>
+<div class="paragraph">
+<p>사내 네트워크에서 VMware Engine 프라이빗 클라우드로 연결하려면 클라우드 VPN 또는 Cloud Interconnect를 활용하여 적절한 연결을 설정하고 필요한 포트가 열려 있는지 확인합니다. 자세한 단계는 다음과 같습니다 <a href="https://ubuntu.com/server/docs/service-iscsi">"링크"</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/gcve-access-3.png" alt=""></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/gcve-access-4.png" alt=""></span></p>
 </div>
 </div>
 </div>
@@ -4110,8 +4138,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/aws-solutions.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/aws-solutions.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp/gcp-setup.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/gcp/gcp-setup.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
     </div>
     <div class="page-nav-container">

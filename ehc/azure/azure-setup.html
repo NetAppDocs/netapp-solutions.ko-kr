@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</title>
+  <title>Azure에서 가상화 환경을 구축하고 구성합니다</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성" />
+  <meta property="og:title" content="Azure에서 가상화 환경을 구축하고 구성합니다" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp-setup.html" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/azure/azure-setup.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/netapp-solutions/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -19,7 +19,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="">
-  <meta name="keywords" content=" NetApp Solutions, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, config, configuration,">
+  <meta name="keywords" content=" NetApp Solutions, microsoft azure, avs, azure, vmware managed cloud, enterprise, hybrid, cloud, cloud volumes ontap, cvo">
   
   
 
@@ -281,13 +281,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/azure/azure-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/azure/azure-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/gcp-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/azure/azure-setup.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -3987,7 +3987,7 @@
           <a href="/ko-kr/netapp-solutions/">NetApp&nbsp;Solutions</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성
+          Azure에서 가상화 환경을 구축하고 구성합니다
         </li>
       </ul>
     </div>
@@ -4010,14 +4010,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</h1>
+  <h1 class="n-doc__component-detail-heading">Azure에서 가상화 환경을 구축하고 구성합니다</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 23:53:32 +0000">02/03/2022</time>
+    <time datetime="2022-02-07 19:04:00 +0000">02/07/2022</time>
     
   
 
@@ -4030,11 +4030,11 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph lead">
-<p>온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.</p>
+<div class="paragraph">
+<p>온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</p>
 </div>
 <div class="paragraph">
-<p>이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
+<p>이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4043,7 +4043,7 @@
 <img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
 </td>
 <td class="content">
-게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.
+게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
 </td>
 </tr>
 </table>
@@ -4054,77 +4054,199 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#deploy">"GCVE 배포 및 구성"</a></p>
+<p><a href="#register">"리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"</a></p>
 </li>
 <li>
-<p><a href="#enable-access">"GCVE에 대한 개인 액세스를 활성화합니다"</a></p>
+<p><a href="#connect">"새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"</a></p>
+</li>
+<li>
+<p><a href="#validate">"네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="gcve-배포-및-구성">GCVE 배포 및 구성</h2>
+<h2 id="리소스-공급자를-등록하고-프라이빗-클라우드를-생성합니다">리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.</p>
+<p>Azure VMware 솔루션을 사용하려면 먼저 확인된 구독 내에 리소스 공급자를 등록해야 합니다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Azure 포털에 로그인합니다.</p>
+</li>
+<li>
+<p>Azure 포털 메뉴에서 모든 서비스를 선택합니다.</p>
+</li>
+<li>
+<p>모든 서비스 대화 상자에서 구독을 입력한 다음 구독 을 선택합니다.</p>
+</li>
+<li>
+<p>보려면 구독 목록에서 구독을 선택합니다.</p>
+</li>
+<li>
+<p>리소스 공급자 를 선택하고 검색에 Microsoft.AVS 를 입력합니다.</p>
+</li>
+<li>
+<p>리소스 공급자가 등록되지 않은 경우 등록 을 선택합니다.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/avs-register-create-pc-1.png" alt=""></span></p>
 </div>
 <div class="paragraph">
-<p>“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.</p>
+<p><span class="image"><img src="./../../media/avs-register-create-pc-2.png" alt=""></span></p>
+</div>
+</li>
+<li>
+<p>리소스 공급자를 등록한 후 Azure 포털을 사용하여 Azure VMware Solution 프라이빗 클라우드를 생성합니다.</p>
+</li>
+<li>
+<p>Azure 포털에 로그인합니다.</p>
+</li>
+<li>
+<p>새 리소스 만들기 를 선택합니다.</p>
+</li>
+<li>
+<p>Marketplace 검색 텍스트 상자에 Azure VMware Solution을 입력하고 결과에서 선택합니다.</p>
+</li>
+<li>
+<p>Azure VMware 솔루션 페이지에서 생성 을 선택합니다.</p>
+</li>
+<li>
+<p>기본 탭에서 필드에 값을 입력하고 검토 + 만들기를 선택합니다.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>전제 조건:</p>
+<p>참고:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>VMware Engine Service Admin IAM 역할을 설정합니다</p>
+<p>빠른 시작을 위해 계획 단계에서 필요한 정보를 수집합니다.</p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/occm/task_replicating_data.html">"VMware Engine API 액세스 및 노드 할당량을 설정합니다"</a></p>
+<p>기존 리소스 그룹을 선택하거나 프라이빗 클라우드에 대한 새 리소스 그룹을 생성합니다. 리소스 그룹은 Azure 리소스가 배포 및 관리되는 논리적 컨테이너입니다.</p>
 </li>
 <li>
-<p>CIDR 범위가 온-프레미스 또는 클라우드 서브넷과 겹치지 않도록 하십시오. CIDR 범위는 /27 이상이어야 합니다.</p>
+<p>CIDR 주소가 고유하며 다른 Azure 가상 네트워크 또는 온-프레미스 네트워크와 겹치지 않도록 하십시오. CIDR은 프라이빗 클라우드 관리 네트워크를 나타내며 vCenter Server 및 NSX-T Manager와 같은 클러스터 관리 서비스에 사용됩니다. /22 주소 공간을 사용하는 것이 좋습니다. 이 예에서는 10.21.0.0/22 가 사용됩니다.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./../media/gcve-deploy-1.png" alt=""></span></p>
+<p><span class="image"><img src="./../../media/avs-register-create-pc-3.png" alt=""></span></p>
 </div>
 <div class="paragraph">
-<p>참고: 프라이빗 클라우드를 생성하는 데 30분에서 2시간까지 걸릴 수 있습니다.</p>
+<p>프로비저닝 프로세스는 약 4~5시간이 소요됩니다. 프로세스가 완료된 후 Azure 포털에서 프라이빗 클라우드에 액세스하여 성공적으로 배포되었는지 확인합니다. 구축이 완료되면 성공 상태가 표시됩니다.</p>
+</div>
+<div class="paragraph">
+<p>Azure VMware 솔루션 프라이빗 클라우드에는 Azure 가상 네트워크가 필요합니다. Azure VMware 솔루션은 사내 vCenter를 지원하지 않으므로 기존 사내 환경과 통합하려면 추가 단계가 필요합니다. 또한 ExpressRoute 회로 및 가상 네트워크 게이트웨이를 설정해야 합니다. 클러스터 프로비저닝이 완료될 때까지 기다리는 동안 새 가상 네트워크를 생성하거나 기존 가상 네트워크를 사용하여 Azure VMware 솔루션에 연결합니다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/avs-register-create-pc-4.png" alt=""></span></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="gcve에-대한-개인-액세스를-활성화합니다">GCVE에 대한 개인 액세스를 활성화합니다</h2>
+<h2 id="새-또는-기존-expressroute-가상-네트워크-게이트웨이에-연결합니다">새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.</p>
+<p>새 Azure VNet(Virtual Network)을 생성하려면 Azure VNET Connect 탭을 선택합니다. 또는 가상 네트워크 생성 마법사를 사용하여 Azure 포털에서 수동으로 생성할 수도 있습니다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Azure VMware Solution 프라이빗 클라우드로 이동하고 관리 옵션 아래에서 접속 구성에 액세스합니다.</p>
+</li>
+<li>
+<p>Azure VNET Connect를 선택합니다.</p>
+</li>
+<li>
+<p>새 VNET를 생성하려면 Create New 옵션을 선택합니다.</p>
+<div class="paragraph">
+<p>이 기능을 사용하면 VNET를 Azure VMware Solution 프라이빗 클라우드에 연결할 수 있습니다. VNET는 Azure VMware Solution에서 ExpressRoute를 통해 생성된 프라이빗 클라우드에 필요한 구성 요소(예: 점프 박스, Azure NetApp Files와 같은 공유 서비스, 클라우드 볼륨 ONTAP)를 자동으로 생성하여 이 가상 네트워크의 워크로드 간 통신을 지원합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>참고: * VNET 주소 공간은 사설 클라우드 CIDR과 겹치지 않아야 합니다.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>이렇게 하면 Cloud Volumes ONTAP 인스턴스가 실행 중인 VPC 네트워크가 GCVE 프라이빗 클라우드와 통신할 수 있습니다. 이렇게 하려면 를 따르십시오 <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart">"GCP 문서"</a>. 클라우드 볼륨 서비스의 경우 테넌트 호스트 프로젝트 간에 일회성 피어링을 수행하여 VMware 엔진과 Cloud Volumes Service 간에 연결을 설정합니다. 자세한 단계는 다음과 같습니다 .</p>
+<p><span class="image"><img src="./../../media/azure-connect-gateway-1.png" alt=""></span></p>
+</div>
+</li>
+<li>
+<p>새 VNET에 대한 정보를 제공하거나 업데이트하고 OK(확인) 를 선택합니다.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./../media/gcve-access-1.png" alt=""></span></p>
+<p><span class="image"><img src="./../../media/azure-connect-gateway-2.png" alt=""></span></p>
 </div>
 <div class="paragraph">
-<p><a href="mailto:CloudOwner@gve.loca">CloudOwner@gve.loca</a> l 사용자를 사용하여 vCenter에 로그인합니다. 자격 증명을 액세스하려면 VMware Engine 포털로 이동하여 리소스 로 이동한 다음 적절한 프라이빗 클라우드를 선택합니다. 기본 정보 섹션에서 vCenter 로그인 정보(vCenter Server, HCX Manager) 또는 NSX-T 로그인 정보(NSX Manager)에 대한 보기 링크를 클릭합니다.</p>
+<p>제공된 주소 범위 및 게이트웨이 서브넷이 있는 VNET는 지정된 가입 및 리소스 그룹에 생성됩니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
+</td>
+<td class="content">
+VNET를 수동으로 생성하는 경우 해당 SKU와 ExpressRoute를 게이트웨이 유형으로 사용하여 가상 네트워크 게이트웨이를 생성합니다. 구축이 완료되면 인증 키를 사용하여 Azure VMware Solution 프라이빗 클라우드가 포함된 가상 네트워크 게이트웨이에 ExpressRoute 연결을 연결합니다. 자세한 내용은 을 참조하십시오 <a href="https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#create-a-vnet-manually">"Azure에서 VMware 프라이빗 클라우드에 대한 네트워킹을 구성합니다"</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="azure-vmware-solution-프라이빗-클라우드에-대한-네트워크-연결-및-액세스-검증">Azure VMware Solution 프라이빗 클라우드에 대한 네트워크 연결 및 액세스 검증</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Azure VMware 솔루션에서는 사내 VMware vCenter를 통해 프라이빗 클라우드를 관리할 수 없습니다. 대신, 점프 호스트는 Azure VMware Solution vCenter 인스턴스에 연결하는 데 필요합니다. 지정된 리소스 그룹에 점프 호스트를 생성하고 Azure VMware Solution vCenter에 로그인합니다. 이 점프 호스트는 연결을 위해 생성된 동일한 가상 네트워크의 Windows VM이고 vCenter 및 NSX Manager에 대한 액세스를 제공해야 합니다.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./../media/gcve-access-2.png" alt=""></span></p>
+<p><span class="image"><img src="./../../media/azure-validate-network-1.png" alt=""></span></p>
 </div>
 <div class="paragraph">
-<p>Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (<a href="https://10.0.16.6/)" class="bare">https://10.0.16.6/)</a> admin 사용자 이름을 <a href="mailto:CloudOwner@gve.loca">CloudOwner@gve.loca</a> l 로 사용하여 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.</p>
+<p>가상 시스템을 프로비저닝한 후에는 연결 옵션을 사용하여 RDP에 액세스합니다.</p>
 </div>
 <div class="paragraph">
-<p>사내 네트워크에서 VMware Engine 프라이빗 클라우드로 연결하려면 클라우드 VPN 또는 Cloud Interconnect를 활용하여 적절한 연결을 설정하고 필요한 포트가 열려 있는지 확인합니다. 자세한 단계는 다음과 같습니다 <a href="https://ubuntu.com/server/docs/service-iscsi">"링크"</a>.</p>
+<p><span class="image"><img src="./../../media/azure-validate-network-2.png" alt=""></span></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./../media/gcve-access-3.png" alt=""></span></p>
+<p>새로 생성된 이 점프 호스트 가상 머신에서 클라우드 관리자 사용자를 사용하여 vCenter에 로그인합니다. 자격 증명에 액세스하려면 Azure 포털로 이동하여 ID로 이동합니다(프라이빗 클라우드 내의 관리 옵션 아래). 프라이빗 클라우드 vCenter 및 NSX-T Manager의 URL 및 사용자 자격 증명은 여기에서 복사할 수 있습니다.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./../media/gcve-access-4.png" alt=""></span></p>
+<p><span class="image"><img src="./../../media/azure-validate-network-3.png" alt=""></span></p>
+</div>
+<div class="paragraph">
+<p>Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (<a href="https://10.21.0.2/)" class="bare">https://10.21.0.2/)</a> 관리자 사용자 이름을 * <a href="mailto:cloudadmin@vsphere.loca">cloudadmin@vsphere.loca</a> l * 로 사용하고 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
+</td>
+<td class="content">
+웹 클라이언트 URL은 프로비저닝된 각 SDDC에 따라 다릅니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/azure-validate-network-4.png" alt=""></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../../media/azure-validate-network-5.png" alt=""></span></p>
+</div>
+<div class="paragraph">
+<p>이제 Azure VMware Solution SDDC가 구축 및 구성되었습니다. ExpressRoute Global Reach를 활용하여 사내 환경을 Azure VMware 솔루션 프라이빗 클라우드에 연결합니다. 자세한 내용은 을 참조하십시오 <a href="https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud">"온프레미스 환경을 Azure VMware 솔루션에 대해 알아보십시오"</a>.</p>
 </div>
 </div>
 </div>
@@ -4138,8 +4260,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/gcp-setup.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/gcp-setup.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Azure에서 가상화 환경을 구축하고 구성합니다](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/azure/azure-setup.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/azure/azure-setup.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
     </div>
     <div class="page-nav-container">
