@@ -4091,7 +4091,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-07 20:12:00 +0000">02/07/2022</time>
+    <time datetime="2022-02-07 22:17:15 +0000">02/07/2022</time>
     
   
 
@@ -4119,9 +4119,6 @@
 <ol class="arabic">
 <li>
 <p>서버 중 하나에서 Linux용 Spectrum Scale 데이터 액세스를 다운로드하고 설치합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 Spectrum_Scale_Data_Access-5.0.3.1-x86_64-Linux-install_folder]# ls
@@ -4134,13 +4131,9 @@ manifest
 …</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>모든 노드에 필수 구성 요소 패키지(셰프 및 커널 헤더 포함)를 설치합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 5.0.3.1]# for i in 51 53 136 138 140  ; do ssh 10.63.150.$i "hostname; rpm -ivh  /gpfs_install/chef* "; done
@@ -4210,13 +4203,9 @@ kernel-headers-3.10.0-862.11.6.el7    ########################################
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>모든 노드에서 SELinux를 해제합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 5.0.3.1]# for i in 51 53 136 138 140  ; do ssh 10.63.150.$i "hostname; sudo setenforce 0"; done
@@ -4233,13 +4222,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 5.0.3.1]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>설치 노드를 설정합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale setup -s 10.63.150.51
@@ -4254,13 +4239,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>클러스터 정의 파일에 관리 노드 및 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add mastr-51 -a
@@ -4271,13 +4252,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>관리자 노드 및 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add mastr-53 -m
@@ -4286,13 +4263,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>쿼럼 노드와 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add workr-136 -q
@@ -4301,13 +4274,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NSD 서버 및 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add workr-138 -n
@@ -4318,13 +4287,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GUI, 관리 및 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add workr-136 -g
@@ -4336,13 +4301,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>다른 GUI 서버를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add mastr-53 -g
@@ -4350,13 +4311,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>다른 GPFS 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add workr-140
@@ -4364,13 +4321,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>모든 노드를 확인하고 나열합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node list
@@ -4402,13 +4355,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>클러스터 정의 파일에 클러스터 이름을 지정합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs -c mastr-51.netapp.com
@@ -4416,13 +4365,9 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>프로파일을 지정합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs -p default
@@ -4431,13 +4376,9 @@ setenforce: SELinux is disabled
 Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRandomIO], sequential I/O [gpfsProtocolDefaults], random I/O [gpfsProtocolRandomIO]</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS에서 사용할 원격 셸 바이너리를 지정하고 '-r 인수&#8217;를 사용합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs -r /usr/bin/ssh
@@ -4445,13 +4386,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS에서 사용할 원격 파일 복사 바이너리를 지정하고 '-rc 인수&#8217;를 사용하십시오.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs -rc /usr/bin/scp
@@ -4459,13 +4396,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>모든 GPFS 노드에 설정할 포트 범위를 지정하고, '-e argument&#8217;를 사용한다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs -e 60000-65000
@@ -4473,13 +4406,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS 구성 설정을 봅니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config gpfs --list
@@ -4492,13 +4421,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>관리 노드를 추가합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale node add 10.63.150.53 -a
@@ -4508,13 +4433,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>데이터 수집을 비활성화하고 데이터 패키지를 IBM 지원 센터에 업로드합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale callhome disable
@@ -4523,13 +4444,9 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NTP를 활성화합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale config ntp -e on
@@ -4573,13 +4490,9 @@ Sep 10 14:20:34 mastr-51.netapp.com ntpd[2965]: 0.0.0.0 c012 02 freq_set kernel 
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>설치하기 전에 구성을 미리 확인합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 installer]# ./spectrumscale install -pr
@@ -4610,13 +4523,9 @@ Sep 10 14:20:34 mastr-51.netapp.com ntpd[2965]: 0.0.0.0 c012 02 freq_set kernel 
 [root@mastr-51 installer]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NSD 디스크를 구성합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# cat disk.1st
@@ -4633,13 +4542,9 @@ usage=dataAndMetadata
 failureGroup=1</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NSD 디스크를 생성합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# mmcrnsd -F disk.1st -v no
@@ -4650,13 +4555,9 @@ mmcrnsd: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NSD 디스크 상태를 확인합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# mmlsnsd
@@ -4669,13 +4570,9 @@ mmcrnsd: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS를 생성합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# mmcrfs gpfs1 -F disk.1st -B 1M -T /gpfs1
@@ -4697,13 +4594,9 @@ mmcrfs: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS를 마운트합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# mmmount all -a
@@ -4711,13 +4604,9 @@ Tue Oct  8 18:05:34 UTC 2019: mmmount: Mounting file systems ...
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS에 필요한 권한을 확인하고 제공하십시오.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# mmlsdisk gpfs1
@@ -4736,13 +4625,9 @@ workr-138.netapp.com
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>ddd 명령을 실행하여 GPFS 읽기 및 쓰기를 확인합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 cluster-test]# dd if=/dev/zero of=/gpfs1/testfile bs=1024M count=5
@@ -4765,6 +4650,9 @@ total 5.0G
 [root@mastr-51 cluster-test]#</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -4777,9 +4665,6 @@ total 5.0G
 <ol class="arabic">
 <li>
 <p>'/etc/exports' 파일을 통해 GPFS를 NFS로 내보냅니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 gpfs1]# cat /etc/exports
@@ -4787,13 +4672,9 @@ total 5.0G
 [root@mastr-51 gpfs1]</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>필요한 NFS 서버 패키지를 설치합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 ~]# yum install rpcbind
@@ -4837,13 +4718,9 @@ Complete!
 [root@mastr-51 ~]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NFS 서비스를 시작합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 ~]# service nfs status
@@ -4875,13 +4752,9 @@ Nov 06 16:34:50 mastr-51.netapp.com systemd[1]: Started NFS server and services.
 [root@mastr-51 ~]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>GPFS에 파일을 나열하여 NFS 클라이언트를 검증합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@mastr-51 gpfs1]# df -Th
@@ -4918,6 +4791,9 @@ drwxr-xr-x   4 root root 4.0K Nov  5 20:35 ces
 [root@mastr-51 gpfs1]#</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -4930,9 +4806,6 @@ drwxr-xr-x   4 root root 4.0K Nov  5 20:35 ces
 <ol class="arabic">
 <li>
 <p>NFS 클라이언트에 패키지를 설치합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 ~]# yum install nfs-utils rpcbind
@@ -5018,13 +4891,9 @@ Complete!
 [root@hdp2 ~]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NFS 클라이언트 서비스를 시작합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 ~]# service rpcbind start
@@ -5032,13 +4901,9 @@ Redirecting to /bin/systemctl start rpcbind.service
  [root@hdp2 ~]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NFS 클라이언트의 NFS 프로토콜을 통해 GPFS를 마운트합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 ~]# mkdir /gpfstest
@@ -5057,13 +4922,9 @@ tmpfs                                  26G     0   26G   0% /run/user/0
 [root@hdp2 ~]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NFS 마운트 폴더에서 GPFS 파일 목록을 검증합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 ~]# cd /gpfstest/
@@ -5078,13 +4939,9 @@ drwxr-xr-x 2 root root       4096 Nov  5 15:04 ha
 [root@hdp2 gpfstest]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>XCP를 사용하여 GPFS로 내보낸 NFS에서 NetApp NFS로 데이터를 이동하십시오.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 linux]# ./xcp copy -parallel 20 10.63.150.51:/gpfs1 10.63.150.213:/nc_volume2/
@@ -5111,13 +4968,9 @@ Sending statistics...
 [root@hdp2 linux]#</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NFS 클라이언트에서 GPFS 파일을 검증합니다.</p>
-</li>
-</ol>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>[root@hdp2 mnt]# df -Th
@@ -5170,6 +5023,9 @@ drwxrwxrwx  21 root        root                4.0K Nov 11 12:14 .
 drwxrwxrwx   7 nobody      nobody              4.0K Nov 11 12:14 catalog
 [root@hdp2 mnt]#</pre>
 </div>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><a href="bda-ai-mapr-fs-to-ontap-nfs.html">"다음: MapR-FS에서 ONTAP NFS로"</a></p>
