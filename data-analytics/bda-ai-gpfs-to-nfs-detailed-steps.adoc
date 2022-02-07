@@ -21,8 +21,7 @@ link:bda-ai-business-benefits.html["이전: 비즈니스 혜택."]
 == GPFS 구성
 
 . 서버 중 하나에서 Linux용 Spectrum Scale 데이터 액세스를 다운로드하고 설치합니다.
-
-
++
 ....
 [root@mastr-51 Spectrum_Scale_Data_Access-5.0.3.1-x86_64-Linux-install_folder]# ls
 Spectrum_Scale_Data_Access-5.0.3.1-x86_64-Linux-install
@@ -34,8 +33,7 @@ manifest
 …
 ....
 . 모든 노드에 필수 구성 요소 패키지(셰프 및 커널 헤더 포함)를 설치합니다.
-
-
++
 ....
 [root@mastr-51 5.0.3.1]# for i in 51 53 136 138 140  ; do ssh 10.63.150.$i "hostname; rpm -ivh  /gpfs_install/chef* "; done
 mastr-51.netapp.com
@@ -104,8 +102,7 @@ kernel-headers-3.10.0-862.11.6.el7    ########################################
 [root@mastr-51 installer]#
 ....
 . 모든 노드에서 SELinux를 해제합니다.
-
-
++
 ....
 [root@mastr-51 5.0.3.1]# for i in 51 53 136 138 140  ; do ssh 10.63.150.$i "hostname; sudo setenforce 0"; done
 mastr-51.netapp.com
@@ -121,8 +118,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 5.0.3.1]#
 ....
 . 설치 노드를 설정합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale setup -s 10.63.150.51
 [ INFO  ] Installing prerequisites for install node
@@ -136,8 +132,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . 클러스터 정의 파일에 관리 노드 및 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add mastr-51 -a
 [ INFO  ] Adding node mastr-51.netapp.com as a GPFS node.
@@ -147,8 +142,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . 관리자 노드 및 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add mastr-53 -m
 [ INFO  ] Adding node mastr-53.netapp.com as a GPFS node.
@@ -156,8 +150,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . 쿼럼 노드와 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add workr-136 -q
 [ INFO  ] Adding node workr-136.netapp.com as a GPFS node.
@@ -165,8 +158,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . NSD 서버 및 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add workr-138 -n
 [ INFO  ] Adding node workr-138.netapp.com as a GPFS node.
@@ -176,8 +168,7 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . GUI, 관리 및 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add workr-136 -g
 [ INFO  ] Setting workr-136.netapp.com as a GUI server.
@@ -188,24 +179,21 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . 다른 GUI 서버를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add mastr-53 -g
 [ INFO  ] Setting mastr-53.netapp.com as a GUI server.
 [root@mastr-51 installer]#
 ....
 . 다른 GPFS 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add workr-140
 [ INFO  ] Adding node workr-140.netapp.com as a GPFS node.
 [root@mastr-51 installer]#
 ....
 . 모든 노드를 확인하고 나열합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node list
 [ INFO  ] List of nodes in current configuration:
@@ -236,16 +224,14 @@ setenforce: SELinux is disabled
 [root@mastr-51 installer]#
 ....
 . 클러스터 정의 파일에 클러스터 이름을 지정합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs -c mastr-51.netapp.com
 [ INFO  ] Setting GPFS cluster name to mastr-51.netapp.com
 [root@mastr-51 installer]#
 ....
 . 프로파일을 지정합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs -p default
 [ INFO  ] Setting GPFS profile to default
@@ -253,32 +239,28 @@ setenforce: SELinux is disabled
 Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRandomIO], sequential I/O [gpfsProtocolDefaults], random I/O [gpfsProtocolRandomIO]
 ....
 . GPFS에서 사용할 원격 셸 바이너리를 지정하고 '-r 인수'를 사용합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs -r /usr/bin/ssh
 [ INFO  ] Setting Remote shell command to /usr/bin/ssh
 [root@mastr-51 installer]#
 ....
 . GPFS에서 사용할 원격 파일 복사 바이너리를 지정하고 '-rc 인수'를 사용하십시오.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs -rc /usr/bin/scp
 [ INFO  ] Setting Remote file copy command to /usr/bin/scp
 [root@mastr-51 installer]#
 ....
 . 모든 GPFS 노드에 설정할 포트 범위를 지정하고, '-e argument'를 사용한다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs -e 60000-65000
 [ INFO  ] Setting GPFS Daemon communication port range to 60000-65000
 [root@mastr-51 installer]#
 ....
 . GPFS 구성 설정을 봅니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config gpfs --list
 [ INFO  ] Current settings are as follows:
@@ -290,8 +272,7 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#
 ....
 . 관리 노드를 추가합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale node add 10.63.150.53 -a
 [ INFO  ] Setting mastr-53.netapp.com as an admin node.
@@ -300,8 +281,7 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#
 ....
 . 데이터 수집을 비활성화하고 데이터 패키지를 IBM 지원 센터에 업로드합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale callhome disable
 [ INFO  ] Disabling the callhome.
@@ -309,8 +289,7 @@ Profiles options: default [gpfsProtocolDefaults], random I/O [gpfsProtocolsRando
 [root@mastr-51 installer]#
 ....
 . NTP를 활성화합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale config ntp -e on
 [root@mastr-51 installer]# ./spectrumscale config ntp -l
@@ -353,8 +332,7 @@ Sep 10 14:20:34 mastr-51.netapp.com ntpd[2965]: 0.0.0.0 c012 02 freq_set kernel 
 [root@mastr-51 installer]#
 ....
 . 설치하기 전에 구성을 미리 확인합니다.
-
-
++
 ....
 [root@mastr-51 installer]# ./spectrumscale install -pr
 [ INFO  ] Logging to file: /usr/lpp/mmfs/5.0.3.1/installer/logs/INSTALL-PRECHECK-10-09-2019_14:51:43.log
@@ -384,8 +362,7 @@ Sep 10 14:20:34 mastr-51.netapp.com ntpd[2965]: 0.0.0.0 c012 02 freq_set kernel 
 [root@mastr-51 installer]#
 ....
 . NSD 디스크를 구성합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# cat disk.1st
 %nsd: device=/dev/sdf
@@ -401,8 +378,7 @@ usage=dataAndMetadata
 failureGroup=1
 ....
 . NSD 디스크를 생성합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# mmcrnsd -F disk.1st -v no
 mmcrnsd: Processing disk sdf
@@ -412,8 +388,7 @@ mmcrnsd: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#
 ....
 . NSD 디스크 상태를 확인합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# mmlsnsd
 
@@ -425,8 +400,7 @@ mmcrnsd: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#
 ....
 . GPFS를 생성합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# mmcrfs gpfs1 -F disk.1st -B 1M -T /gpfs1
 
@@ -447,16 +421,14 @@ mmcrfs: Propagating the cluster configuration data to all
 [root@mastr-51 cluster-test]#
 ....
 . GPFS를 마운트합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# mmmount all -a
 Tue Oct  8 18:05:34 UTC 2019: mmmount: Mounting file systems ...
 [root@mastr-51 cluster-test]#
 ....
 . GPFS에 필요한 권한을 확인하고 제공하십시오.
-
-
++
 ....
 [root@mastr-51 cluster-test]# mmlsdisk gpfs1
 disk         driver   sector     failure holds    holds                            storage
@@ -474,8 +446,7 @@ workr-138.netapp.com
 [root@mastr-51 cluster-test]#
 ....
 . ddd 명령을 실행하여 GPFS 읽기 및 쓰기를 확인합니다.
-
-
++
 ....
 [root@mastr-51 cluster-test]# dd if=/dev/zero of=/gpfs1/testfile bs=1024M count=5
 5+0 records in
@@ -498,21 +469,21 @@ total 5.0G
 ....
 
 
+
+
 == GPFS를 NFS로 내보냅니다
 
 GPFS를 NFS로 내보내려면 다음 단계를 완료하십시오.
 
 . '/etc/exports' 파일을 통해 GPFS를 NFS로 내보냅니다.
-
-
++
 ....
 [root@mastr-51 gpfs1]# cat /etc/exports
 /gpfs1        *(rw,fsid=745)
 [root@mastr-51 gpfs1]
 ....
 . 필요한 NFS 서버 패키지를 설치합니다.
-
-
++
 ....
 [root@mastr-51 ~]# yum install rpcbind
 Loaded plugins: priorities, product-id, search-disabled-repos, subscription-manager
@@ -555,8 +526,7 @@ Complete!
 [root@mastr-51 ~]#
 ....
 . NFS 서비스를 시작합니다.
-
-
++
 ....
 [root@mastr-51 ~]# service nfs status
 Redirecting to /bin/systemctl status nfs.service
@@ -587,8 +557,7 @@ Nov 06 16:34:50 mastr-51.netapp.com systemd[1]: Started NFS server and services.
 [root@mastr-51 ~]#
 ....
 . GPFS에 파일을 나열하여 NFS 클라이언트를 검증합니다.
-
-
++
 ....
 [root@mastr-51 gpfs1]# df -Th
 Filesystem                                 Type      Size  Used Avail Use% Mounted on
@@ -625,13 +594,14 @@ drwxr-xr-x   4 root root 4.0K Nov  5 20:35 ces
 ....
 
 
+
+
 == NFS 클라이언트를 구성합니다
 
 NFS 클라이언트를 구성하려면 다음 단계를 수행하십시오.
 
 . NFS 클라이언트에 패키지를 설치합니다.
-
-
++
 ....
 [root@hdp2 ~]# yum install nfs-utils rpcbind
 Loaded plugins: product-id, search-disabled-repos, subscription-manager
@@ -716,16 +686,14 @@ Complete!
 [root@hdp2 ~]#
 ....
 . NFS 클라이언트 서비스를 시작합니다.
-
-
++
 ....
 [root@hdp2 ~]# service rpcbind start
 Redirecting to /bin/systemctl start rpcbind.service
  [root@hdp2 ~]#
 ....
 . NFS 클라이언트의 NFS 프로토콜을 통해 GPFS를 마운트합니다.
-
-
++
 ....
 [root@hdp2 ~]# mkdir /gpfstest
 [root@hdp2 ~]# mount 10.63.150.51:/gpfs1 /gpfstest
@@ -743,8 +711,7 @@ tmpfs                                  26G     0   26G   0% /run/user/0
 [root@hdp2 ~]#
 ....
 . NFS 마운트 폴더에서 GPFS 파일 목록을 검증합니다.
-
-
++
 ....
 [root@hdp2 ~]# cd /gpfstest/
 [root@hdp2 gpfstest]# ls
@@ -758,8 +725,7 @@ drwxr-xr-x 2 root root       4096 Nov  5 15:04 ha
 [root@hdp2 gpfstest]#
 ....
 . XCP를 사용하여 GPFS로 내보낸 NFS에서 NetApp NFS로 데이터를 이동하십시오.
-
-
++
 ....
 [root@hdp2 linux]# ./xcp copy -parallel 20 10.63.150.51:/gpfs1 10.63.150.213:/nc_volume2/
 XCP 1.4-17914d6; (c) 2019 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Tue Nov  5 12:39:36 2019
@@ -785,8 +751,7 @@ Sending statistics...
 [root@hdp2 linux]#
 ....
 . NFS 클라이언트에서 GPFS 파일을 검증합니다.
-
-
++
 ....
 [root@hdp2 mnt]# df -Th
 Filesystem                           Type      Size  Used Avail Use% Mounted on
@@ -838,4 +803,6 @@ drwxrwxrwx  21 root        root                4.0K Nov 11 12:14 .
 drwxrwxrwx   7 nobody      nobody              4.0K Nov 11 12:14 catalog
 [root@hdp2 mnt]#
 ....
+
+
 link:bda-ai-mapr-fs-to-ontap-nfs.html["다음: MapR-FS에서 ONTAP NFS로"]

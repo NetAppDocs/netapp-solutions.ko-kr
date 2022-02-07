@@ -24,10 +24,7 @@ link:bda-ai-gpfs-to-nfs-detailed-steps.html["이전: GPFS에서 NFS로 - 세부 
 . MapR-FS를 NFS 내보내기로 구성합니다.
 +
 .. 모든 MapR 노드에서 nlockmgr 서비스를 사용하지 않도록 설정합니다.
-
-
-
-
++
 ....
 root@workr-138: ~$ rpcinfo -p
    program vers proto   port  service
@@ -55,9 +52,8 @@ root@workr-138: ~$
 root@workr-138: ~$ rpcinfo -d 100021 3
 root@workr-138: ~$ rpcinfo -d 100021 4
 ....
-. '/opt/mMapR/conf/exports' 파일의 모든 MapR 노드에 MapR-FS에서 특정 폴더를 내보냅니다. 하위 폴더를 내보낼 때 다른 권한이 있는 상위 폴더를 내보내지 마십시오.
-
-
+.. '/opt/mMapR/conf/exports' 파일의 모든 MapR 노드에 MapR-FS에서 특정 폴더를 내보냅니다. 하위 폴더를 내보낼 때 다른 권한이 있는 상위 폴더를 내보내지 마십시오.
++
 ....
 [mapr@workr-138 ~]$ cat /opt/mapr/conf/exports
 # Sample Exports file
@@ -91,9 +87,10 @@ root@workr-138: ~$ rpcinfo -d 100021 4
 #only the alias will be visible/exposed to the nfs client not the mapr path, host options as before
 [mapr@workr-138 ~]$
 ....
+
+
 . MapR-FS NFS 서비스를 새로 고칩니다.
-
-
++
 ....
 root@workr-138: tmp$ maprcli nfsmgmt refreshexports
 ERROR (22) -  You do not have a ticket to communicate with 127.0.0.1:9998. Retry after obtaining a new ticket using maprlogin
@@ -104,20 +101,21 @@ MapR credentials of user 'mapr' for cluster 'my.cluster.com' are written to '/tm
 [mapr@workr-138 ~]$ maprcli nfsmgmt refreshexports
 ....
 . MapR 클러스터의 특정 서버 또는 서버 세트에 가상 IP 범위를 할당합니다. 그런 다음 MapR 클러스터는 NFS 데이터 액세스를 위해 특정 서버에 IP를 할당합니다. IP를 통해 고가용성을 구현할 수 있습니다. 즉, 특정 IP를 사용하는 서버 또는 네트워크에 장애가 발생할 경우 IP 범위의 다음 IP를 NFS 액세스에 사용할 수 있습니다.
-
-
++
 
 NOTE: 모든 MapR 노드에서 NFS 액세스를 제공하려면 각 서버에 가상 IP 세트를 할당하고 NFS 데이터 액세스를 위해 각 MapR 노드의 리소스를 사용할 수 있습니다.
 
++
 image:bda-ai-image7.png["오류: 그래픽 이미지가 없습니다"]
 
++
 image:bda-ai-image8.png["오류: 그래픽 이미지가 없습니다"]
 
++
 image:bda-ai-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 . 각 MapR 노드에 할당된 가상 IP를 확인하고 이를 NFS 데이터 액세스에 사용하십시오.
-
-
++
 ....
 root@workr-138: ~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -167,8 +165,7 @@ root@workr-138: ~$ ip a
 [root@workr-140 ~]#
 ....
 . NFS 작업을 확인하기 위해 할당된 가상 IP를 사용하여 NFS 내보내기 MapR-FS를 마운트합니다. 하지만 NetApp XCP를 사용하여 데이터를 전송하는 경우 이 단계가 필요하지 않습니다.
-
-
++
 ....
 root@workr-138: tmp$ mount -v -t nfs 10.63.150.92:/maprnfs3 /tmp/testmount/
 mount.nfs: timeout set for Thu Dec  5 15:31:32 2019
@@ -203,10 +200,7 @@ root@workr-138: tmp$
 . MapR-FS NFS 게이트웨이에서 ONTAP NFS로 데이터를 전송하도록 NetApp XCP를 구성합니다.
 +
 .. xCP에 대한 카탈로그 위치를 구성합니다.
-
-
-
-
++
 ....
 [root@hdp2 linux]# cat /opt/NetApp/xFiles/xcp/xcp.ini
 # Sample xcp config
@@ -214,9 +208,8 @@ root@workr-138: tmp$
 #catalog =  10.63.150.51:/gpfs1
 catalog =  10.63.150.213:/nc_volume1
 ....
-. 라이센스 파일을 '/opt/netapp/xFiles/xCP/'에 복사합니다.
-
-
+.. 라이센스 파일을 '/opt/netapp/xFiles/xCP/'에 복사합니다.
++
 ....
 root@workr-138: src$ cd /opt/NetApp/xFiles/xcp/
 root@workr-138: xcp$ ls -ltrha
@@ -229,10 +222,9 @@ drwxr-xr-x 2 root   root     59 Dec  5 19:04 .
 -rw-r--r-- 1 root   root   236K Dec 17 14:12 xcp.log
 root@workr-138: xcp$
 ....
-. xCP activate 명령을 사용하여 xCP를 활성화합니다.
-. NFS 내보내기에 대한 소스를 확인합니다.
-
-
+.. xCP activate 명령을 사용하여 xCP를 활성화합니다.
+.. NFS 내보내기에 대한 소스를 확인합니다.
++
 ....
 [root@hdp2 linux]# ./xcp show 10.63.150.92
 XCP 1.4-17914d6; (c) 2019 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Wed Feb  5 11:07:27 2020
@@ -253,9 +245,8 @@ drwxr-xr-x --- root root 2 2 10m51s 10.63.150.92:/maprnfs3
 1.77 KiB in (8.68 KiB/s), 3.16 KiB out (15.5 KiB/s), 0s.
 [root@hdp2 linux]#
 ....
-. 여러 소스 IP 및 여러 대상 IP(ONTAP LIF)에서 여러 MapR 노드에서 XCP를 사용하여 데이터를 전송합니다.
-
-
+.. 여러 소스 IP 및 여러 대상 IP(ONTAP LIF)에서 여러 MapR 노드에서 XCP를 사용하여 데이터를 전송합니다.
++
 ....
 root@workr-138: linux$ ./xcp_yatin copy --parallel 20 10.63.150.96,10.63.150.97:/maprnfs3/tg4 10.63.150.85,10.63.150.86:/datapipeline_dataset/tg4_dest
 XCP 1.6-dev; (c) 2019 NetApp, Inc.; Licensed to Karthikeyan Nagalingam [NetApp Inc] until Wed Feb  5 11:07:27 2020
@@ -289,9 +280,8 @@ xcp: mount '10.63.150.92:/maprnfs3/tg4_2': WARNING: This NFS server only support
  130 scanned, 128 giants, 62.9 GiB in (900 MiB/s), 63.0 GiB out (901 MiB/s), 1m11s
  130 scanned, 128 giants, 67.2 GiB in (876 MiB/s), 67.2 GiB out (877 MiB/s), 1m16s
 ....
-. 스토리지 컨트롤러의 로드 분산을 확인합니다.
-
-
+.. 스토리지 컨트롤러의 로드 분산을 확인합니다.
++
 ....
 Hadoop-AFF8080::*> statistics show-periodic -interval 2 -iterations 0 -summary true -object nic_common -counter rx_bytes|tx_bytes -node Hadoop-AFF8080-01 -instance e3b
 Hadoop-AFF8080: nic_common.e3b: 12/6/2019 15:55:04
@@ -325,4 +315,8 @@ Hadoop-AFF8080: nic_common.e9b: 12/6/2019 15:55:07
     905MB   4.86MB
     902MB   4.90MB
 ....
+
+
+
+
 link:bda-ai-where-to-find-additional-information.html["다음: 추가 정보를 찾을 위치."]
