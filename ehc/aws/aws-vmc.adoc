@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ehc/aws-vmc.html 
+permalink: ehc/aws/aws-vmc.html 
 keywords: NetApp Solutions, hyperscalers, amazon, vmc, vmware managed cloud, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr 
 summary:  
 ---
@@ -9,7 +9,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 [role="lead"]
@@ -36,8 +36,8 @@ NOTE: 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
-* link:aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
+* link:aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
+* link:aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
 
 
 
@@ -52,8 +52,8 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
-* link:aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
+* link:aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *

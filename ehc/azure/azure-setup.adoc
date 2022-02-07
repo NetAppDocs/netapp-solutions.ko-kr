@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ehc/azure-setup.html 
+permalink: ehc/azure/azure-setup.html 
 keywords: NetApp Solutions, microsoft azure, avs, azure, vmware managed cloud, enterprise, hybrid, cloud, cloud volumes ontap, cvo 
 summary:  
 ---
@@ -9,7 +9,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.

@@ -1,0 +1,17 @@
+---
+indexpage:
+  tiles:
+  - title: 시작하기
+    links:
+    - title: 가상화 환경을 구성합니다
+      url: "/aws-setup.html"
+    - title: 네이티브 데이터 저장소 옵션
+      url: https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/
+    - title: 게스트 연결 스토리지 옵션
+      url: "/aws-guest.html"
+  - title: 게스트 연결 스토리지가 있는 솔루션
+    url: 
+  - title: 기본 데이터 저장소가 있는 솔루션
+    url: 
+  - title: 추가 정보
+    url: 

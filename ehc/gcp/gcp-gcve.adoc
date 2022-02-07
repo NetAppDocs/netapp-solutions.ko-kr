@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ehc/gcp-gcve.html 
+permalink: ehc/gcp/gcp-gcve.html 
 keywords: NetApp Solutions, hyperscalers, google cloud, gcp, gcve, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr 
 summary:  
 ---
@@ -9,7 +9,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 [role="lead"]
@@ -36,8 +36,8 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+* link:gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
+* link:gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
 
 
 
@@ -52,8 +52,8 @@ Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합�
 
 * 게스트 연결 스토리지 *
 
-* link:gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *

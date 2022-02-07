@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ehc/azure-solutions.html 
+permalink: ehc/azure/azure-solutions.html 
 keywords: NetApp Solutions, microsoft azure, avs, vmware managed cloud, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr 
 summary:  
 ---
@@ -9,7 +9,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 [role="lead"]

@@ -22,18 +22,18 @@ summary:
 |  | * Azure AVS * | * AWS VMC * | * GCP GCVE * 
 
 
-| * CVO(Cloud Volumes ONTAP) * | link:azure-guest.html#cvo["게스트가 연결되었습니다"] | link:aws-guest.html#cvo["게스트가 연결되었습니다"] | link:gcp-guest.html#cvo["게스트가 연결되었습니다"] 
+| * CVO(Cloud Volumes ONTAP) * | link:azure/azure-guest.html#cvo["게스트가 연결되었습니다"] | link:aws/aws-guest.html#cvo["게스트가 연결되었습니다"] | link:gcp/gcp-guest.html#cvo["게스트가 연결되었습니다"] 
 
 
-| CVS(Cloud Volumes Service) * | - | - | link:gcp-guest.html#cvs["게스트가 연결되었습니다"]
+| CVS(Cloud Volumes Service) * | - | - | link:gcp/gcp-guest.html#cvs["게스트가 연결되었습니다"]
 link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["네이티브 데이터 저장소 ^1"^] 
 
 
-| * Azure NetApp Files(ANF) * | link:azure-guest.html#anf["게스트가 연결되었습니다"]
+| * Azure NetApp Files(ANF) * | link:azure/azure-guest.html#anf["게스트가 연결되었습니다"]
 link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["네이티브 데이터 저장소 ^1"^] | 해당 없음 | 해당 없음 
 
 
-| * FSx ONTAP * | 해당 없음 | link:aws-guest.html#fsx-ontap["게스트가 연결되었습니다"]
+| * FSx ONTAP * | 해당 없음 | link:aws/aws-guest.html#fsx-ontap["게스트가 연결되었습니다"]
 link:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["네이티브 데이터 저장소 ^1"^] | 해당 없음 
 |===
 
