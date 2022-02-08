@@ -24,8 +24,8 @@ entries:
 - title: 하이퍼스케일러 클라우드의 NetApp
   entries:
   - title: AWS 기반 VMC를 위한 NetApp
-    url: "/ehc/aws-vmc.html"
+    url: "/ehc/aws/aws-vmc.html"
   - title: Azure에서 AVS를 위한 NetApp
-    url: "/ehc/azure-avs.html"
+    url: "/ehc/azure/azure-avs.html"
   - title: Google Cloud 기반 GCVE를 위한 NetApp
-    url: "/ehc/gcp-gcve.html"
+    url: "/ehc/gcp/gcp-gcve.html"
