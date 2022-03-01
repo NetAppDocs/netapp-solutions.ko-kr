@@ -4091,7 +4091,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-15 23:28:15 +0000">02/15/2022</time>
+    <time datetime="2022-03-01 20:10:44 +0000">03/01/2022</time>
     
   
 
@@ -4133,7 +4133,7 @@
 <p>Astra Trident는 빠른 개발 주기를 제공하며, Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.</p>
 </div>
 <div class="paragraph">
-<p>Astra Trident의 최신 버전은 2021년 7월 21.07에 출시되었습니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 <a href="https://netapp-trident.readthedocs.io/en/stable-v21.07/support/requirements.html#supported-frontends-orchestrators">"여기"</a>.</p>
+<p>Astra Trident의 최신 버전은 2022년 1월 22.01입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 <a href="https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators">"여기"</a>.</p>
 </div>
 <div class="paragraph">
 <p>20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod에 대한 자동 복구를 포함한 추가 지원을 제공합니다.</p>
@@ -4152,25 +4152,25 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>설치 아카이브를 관리 워크스테이션에 다운로드하고 압축을 풉니다. Trident의 현재 버전은 21.07이며 다운로드할 수 있습니다 <a href="https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz">"여기"</a>.</p>
+<p>설치 아카이브를 관리 워크스테이션에 다운로드하고 압축을 풉니다. Trident의 현재 버전은 22.01이며 다운로드할 수 있습니다 <a href="https://github.com/NetApp/trident/releases/download/v22.01.0/trident-installer-22.01.0.tar.gz">"여기"</a>.</p>
 <div class="listingblock">
 <div class="content">
-<pre>[netapp-user@rhel7 ~]$ wget https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz
---2021-05-06 15:17:30--  https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz
+<pre>[netapp-user@rhel7 ~]$ wget https://github.com/NetApp/trident/releases/download/v22.01.0/trident-installer-22.01.0.tar.gz
+--2021-05-06 15:17:30--  https://github.com/NetApp/trident/releases/download/v22.01.0/trident-installer-22.01.0.tar.gz
 Resolving github.com (github.com)... 140.82.114.3
 Connecting to github.com (github.com)|140.82.114.3|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://github-releases.githubusercontent.com/77179634/a4fa9f00-a9f2-11eb-9053-98e8e573d4ae?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210506%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210506T191643Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=8a49a2a1e08c147d1ddd8149ce45a5714f9853fee19bb1c507989b9543eb3630&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=77179634&amp;response-content-disposition=attachment%3B%20filename%3Dtrident-installer-21.07.1.tar.gz&amp;response-content-type=application%2Foctet-stream [following]
---2021-05-06 15:17:30--  https://github-releases.githubusercontent.com/77179634/a4fa9f00-a9f2-11eb-9053-98e8e573d4ae?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210506%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210506T191643Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=8a49a2a1e08c147d1ddd8149ce45a5714f9853fee19bb1c507989b9543eb3630&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=77179634&amp;response-content-disposition=attachment%3B%20filename%3Dtrident-installer-21.07.1.tar.gz&amp;response-content-type=application%2Foctet-stream
+Location: https://github-releases.githubusercontent.com/77179634/a4fa9f00-a9f2-11eb-9053-98e8e573d4ae?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210506%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210506T191643Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=8a49a2a1e08c147d1ddd8149ce45a5714f9853fee19bb1c507989b9543eb3630&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=77179634&amp;response-content-disposition=attachment%3B%20filename%3Dtrident-installer-22.01.0.tar.gz&amp;response-content-type=application%2Foctet-stream [following]
+--2021-05-06 15:17:30--  https://github-releases.githubusercontent.com/77179634/a4fa9f00-a9f2-11eb-9053-98e8e573d4ae?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210506%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210506T191643Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=8a49a2a1e08c147d1ddd8149ce45a5714f9853fee19bb1c507989b9543eb3630&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=77179634&amp;response-content-disposition=attachment%3B%20filename%3Dtrident-installer-22.01.0.tar.gz&amp;response-content-type=application%2Foctet-stream
 Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.108.154, 185.199.109.154, 185.199.110.154, ...
 Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.108.154|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38349341 (37M) [application/octet-stream]
-Saving to: ‘trident-installer-21.07.1.tar.gz’
+Saving to: ‘trident-installer-22.01.0.tar.gz’
 
 100%[==================================================================================================================&gt;] 38,349,341  88.5MB/s   in 0.4s
 
-2021-05-06 15:17:30 (88.5 MB/s) - ‘trident-installer-21.07.1.tar.gz’ saved [38349341/38349341]</pre>
+2021-05-06 15:17:30 (88.5 MB/s) - ‘trident-installer-22.01.0.tar.gz’ saved [38349341/38349341]</pre>
 </div>
 </div>
 </li>
@@ -4178,7 +4178,7 @@ Saving to: ‘trident-installer-21.07.1.tar.gz’
 <p>다운로드한 번들에서 Trident 설치를 추출합니다.</p>
 <div class="listingblock">
 <div class="content">
-<pre>[netapp-user@rhel7 ~]$ tar -xzf trident-installer-21.07.1.tar.gz
+<pre>[netapp-user@rhel7 ~]$ tar -xzf trident-installer-22.01.0.tar.gz
 [netapp-user@rhel7 ~]$ cd trident-installer/
 [netapp-user@rhel7 trident-installer]$</pre>
 </div>
@@ -4205,7 +4205,7 @@ Saving to: ‘trident-installer-21.07.1.tar.gz’
 <p>Helm 명령을 실행하여 사용자 클러스터에 삼중덴트 네임스페이스를 생성하는 동안 Helm 디렉토리의 tarball에서 Trident 연산자를 설치합니다.</p>
 <div class="listingblock">
 <div class="content">
-<pre>[netapp-user@rhel7 trident-installer]$ helm install trident helm/trident-operator-21.07.1.tgz --create-namespace --namespace trident
+<pre>[netapp-user@rhel7 trident-installer]$ helm install trident helm/trident-operator-22.01.0.tgz --create-namespace --namespace trident
 NAME: trident
 LAST DEPLOYED: Fri May  7 12:54:25 2021
 NAMESPACE: trident
@@ -4246,7 +4246,7 @@ trident-operator-7c748d957-gr2gw   1/1     Running   0          36s
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 21.07.1          | 21.07.1          |
+| 22.01.0          | 22.01.0          |
 +----------------+----------------+</pre>
 </div>
 </div>
@@ -4400,11 +4400,11 @@ Status:
     Kubelet Dir:          /var/lib/kubelet
     Log Format:           text
     Silence Autosupport:  false
-    Trident Image:        netapp/trident:21.07.1
+    Trident Image:        netapp/trident:22.01.0
   Message:                Trident installed
   Namespace:              trident
   Status:                 Installed
-  Version:                v21.07.1
+  Version:                v22.01.0
 Events:
   Type    Reason      Age   From                        Message
   ----    ------      ----  ----                        -------
@@ -4429,7 +4429,7 @@ trident-operator-66f48895cc-lzczk   1/1     Running   0          2m39s
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 21.07.1          | 21.07.1          |
+| 22.01.0          | 22.01.0          |
 +----------------+----------------+</pre>
 </div>
 </div>
@@ -4441,9 +4441,62 @@ trident-operator-66f48895cc-lzczk   1/1     Running   0          2m39s
 <div class="sect1">
 <h2 id="스토리지에-대한-작업자-노드-준비">스토리지에 대한 작업자 노드 준비</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="nfs-를-참조하십시오">NFS 를 참조하십시오</h3>
 <div class="paragraph">
 <p>대부분의 Kubernetes 배포판에는 Red Hat OpenShift를 포함하여 기본적으로 설치된 NFS 백엔드를 마운트하는 패키지와 유틸리티가 함께 제공됩니다.</p>
 </div>
+<div class="paragraph">
+<p>그러나 NFSv3의 경우 클라이언트와 서버 간에 동시성을 협상하는 메커니즘이 없습니다. 따라서 서버에서 지원되는 값을 사용하여 수동으로 클라이언트 측 sunrpc 슬롯 테이블 항목의 최대 수를 동기화해야 서버의 창 크기를 줄일 필요 없이 NFS 연결에 대한 최상의 성능을 보장할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP의 경우 지원되는 최대 sunrpc 슬롯 테이블 항목 수는 128개입니다. 즉, ONTAP는 한 번에 128개의 동시 NFS 요청을 지원할 수 있습니다. 그러나 기본적으로 Red Hat CoreOS/Red Hat Enterprise Linux는 연결당 최대 65,536개의 sunrpc 슬롯 테이블 항목을 갖습니다. 이 값은 128로 설정해야 하며, OpenShift에서 Machine Config Operator(MCO)를 사용하여 설정할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift 작업자 노드에서 최대 sunrpc 슬롯 테이블 항목을 수정하려면 다음 단계를 완료하십시오.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OCP 웹 콘솔에 로그인하여 Compute(컴퓨팅) &gt; Machine Configs(장비 구성) 로 이동합니다. Create Machine Config 를 클릭합니다. YAML 파일을 복사하여 붙여넣은 다음 생성 을 클릭합니다.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  name: 98-worker-nfs-rpc-slot-tables
+  labels:
+    machineconfiguration.openshift.io/role: worker
+spec:
+  config:
+    ignition:
+      version: 3.2.0
+    storage:
+      files:
+        - contents:
+            source: data:text/plain;charset=utf-8;base64,b3B0aW9ucyBzdW5ycGMgdGNwX21heF9zbG90X3RhYmxlX2VudHJpZXM9MTI4Cg==
+          filesystem: root
+          mode: 420
+          path: /etc/modprobe.d/sunrpc.conf</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>MCO를 생성한 후에는 모든 작업자 노드에 구성을 적용하고 하나씩 재부팅해야 합니다. 전체 과정은 약 20-30분 정도 소요됩니다. 'OC Get MCP&#8217;를 사용하여 기계 설정이 적용되었는지 확인하고 작업자에 대한 기계 구성 풀이 업데이트되었는지 확인합니다.</p>
+<div class="listingblock">
+<div class="content">
+<pre>[netapp-user@rhel7 openshift-deploy]$ oc get mcp
+NAME     CONFIG                                    UPDATED   UPDATING   DEGRADED
+master   rendered-master-a520ae930e1d135e0dee7168   True      False      False
+worker   rendered-worker-de321b36eeba62df41feb7bc   True      False      False</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="iscsi">iSCSI</h3>
 <div class="paragraph">
 <p>iSCSI 프로토콜을 통해 블록 스토리지 볼륨을 매핑할 수 있도록 작업자 노드를 준비하려면 해당 기능을 지원하는 데 필요한 패키지를 설치해야 합니다.</p>
 </div>
@@ -4451,15 +4504,12 @@ trident-operator-66f48895cc-lzczk   1/1     Running   0          2m39s
 <p>Red Hat OpenShift에서는 MCO(Machine Config Operator)를 배포된 후 클러스터에 적용하여 처리됩니다.</p>
 </div>
 <div class="paragraph">
-<p>작업자 노드에서 스토리지 서비스를 실행하도록 구성하려면 다음 단계를 수행하십시오.</p>
+<p>작업자 노드가 iSCSI 서비스를 실행하도록 구성하려면 다음 단계를 수행하십시오.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>OCP 웹 콘솔에 로그인하여 Compute(컴퓨팅) &gt; Machine Configs(장비 구성) 로 이동합니다. Create Machine Config 를 클릭합니다. YAML 파일을 복사하여 붙여넣은 다음 생성 을 클릭합니다.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>다중 경로를 사용하지 않는 경우:</p>
 </div>
@@ -4517,8 +4567,7 @@ spec:
   osImageURL: ""</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>구성을 생성한 후 작업자 노드에 구성을 적용하고 다시 로드하는 데 약 20~30분이 걸립니다. 'OC Get MCP&#8217;를 사용하여 기계 설정이 적용되었는지 확인하고 작업자에 대한 기계 구성 풀이 업데이트되었는지 확인합니다. 작업자 노드에 로그인하여 iscsid 서비스가 실행 중인지 확인할 수도 있습니다(다중 경로를 사용하는 경우 multipathd 서비스가 실행 중인지 확인).</p>
 <div class="listingblock">
@@ -4555,9 +4604,6 @@ worker   rendered-worker-de321b36eeba62df41feb7bc   True      False      False
             └─918 /sbin/multipathd -d -s</pre>
 </div>
 </div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4569,6 +4615,10 @@ worker   rendered-worker-de321b36eeba62df41feb7bc   True      False      False
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
