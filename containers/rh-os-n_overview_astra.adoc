@@ -64,6 +64,10 @@ NOTE: Docker 설치는 20.10 이상의 Docker 버전이 있어야 하며, 팟맨
 
 == Astra Control Center를 설치합니다
 
+[role="tabbed-block"]
+====
+.OperatorHub 사용
+--
 . NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. tarball을 다운로드한 후 관리자 워크스테이션으로 전송합니다.
 +
 
@@ -73,27 +77,20 @@ NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십�
 +
 [listing]
 ----
-[netapp-user@rhel7 ~]$ tar -vxzf astra-control-center-21.08.65.tar.gz
-[netapp-user@rhel7 ~]$ cd astra-control-center-21.08.65
+[netapp-user@rhel7 ~]$ tar -vxzf astra-control-center-21.12.60.tar.gz
+[netapp-user@rhel7 ~]$ cd astra-control-center-21.12.60
 ----
-. 설치를 시작하기 전에 Astra Control Center 이미지를 이미지 레지스트리로 밀어 넣으십시오.
+. 설치를 시작하기 전에 Astra Control Center 이미지를 이미지 레지스트리로 밀어 넣으십시오. 이 단계에서는 Docker 또는 Podman을 선택하여 이러한 작업을 수행할 수 있습니다. 두 가지 모두에 대한 지침이 제공됩니다.
 +
-
-NOTE: Docker 또는 Podman에서 이 작업을 수행할 수 있습니다. 두 가지 모두에 대한 지침은 이 단계에서 제공합니다.
-
-
-
-[role="tabbed-block"]
-====
-.포더맨
---
-. 조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도'로 내보냅니다.
+=====
+.팟맨
+.. 조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도'로 내보냅니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
-. 레지스트리에 로그인합니다.
+.. 레지스트리에 로그인합니다.
 +
 [listing]
 ----
@@ -107,29 +104,33 @@ NOTE: kubadmin 사용자를 사용하여 개인 레지스트리에 로그인하�
 
 NOTE: 또는 서비스 계정을 만들고, 레지스트리 편집기 및/또는 레지스트리 뷰어 역할(푸시/풀 액세스 필요 여부에 따라)을 할당하고, 서비스 계정의 토큰을 사용하여 레지스트리에 로그인할 수 있습니다.
 
-. 쉘 스크립트 파일을 작성하고 다음 내용을 붙여 넣습니다.
+.. 쉘 스크립트 파일을 작성하고 다음 내용을 붙여 넣습니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ vi push-images-to-registry.sh
 
-for astraImageFile in $(ls images/*.tar); do
-   astraImage=$(podman load --input ${astraImageFile} | sed 's/Loaded image(s): //')
-   podman tag $astraImage $registry/$(echo $astraImage | sed 's/^[^\/]\+\///')
-   podman push $registry/$(echo $astraImage | sed 's/^[^\/]\+\///')
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(podman load --input ${astraImageFile} | sed 's/Loaded image(s): //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  podman tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  podman push ${REGISTRY}/${astraImage}
 done
 ----
 +
 
 NOTE: 레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 셸 스크립트를 편집하고 podman 푸시 명령 "podman push $registry/$(echo$astraImage|SED's/^\////')--tls-verify=false"를 사용하십시오.
 
-. 파일을 실행 파일로 만듭니다.
+.. 파일을 실행 파일로 만듭니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ chmod +x push-images-to-registry.sh
 ----
-. 쉘 스크립트를 실행합니다.
+.. 쉘 스크립트를 실행합니다.
 +
 [listing]
 ----
@@ -137,16 +138,17 @@ NOTE: 레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 �
 ----
 
 
---
+=====
++
+=====
 .Docker 를 참조하십시오
---
-. 조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도'로 내보냅니다.
+.. 조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도'로 내보냅니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
-. 레지스트리에 로그인합니다.
+.. 레지스트리에 로그인합니다.
 +
 [listing]
 ----
@@ -160,25 +162,29 @@ NOTE: kubadmin 사용자를 사용하여 개인 레지스트리에 로그인하�
 
 NOTE: 또는 서비스 계정을 만들고, 레지스트리 편집기 및/또는 레지스트리 뷰어 역할(푸시/풀 액세스 필요 여부에 따라)을 할당하고, 서비스 계정의 토큰을 사용하여 레지스트리에 로그인할 수 있습니다.
 
-. 쉘 스크립트 파일을 작성하고 다음 내용을 붙여 넣습니다.
+.. 쉘 스크립트 파일을 작성하고 다음 내용을 붙여 넣습니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ vi push-images-to-registry.sh
 
-for astraImageFile in $(ls images/*.tar); do
-   astraImage=$(docker load --input ${astraImageFile} | sed 's/Loaded image: //')
-   docker tag $astraImage $registry/$(echo $astraImage | sed 's/^[^\/]\+\///')
-   docker push $registry/$(echo $astraImage | sed 's/^[^\/]\+\///')
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(docker load --input ${astraImageFile} | sed 's/Loaded image: //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  docker tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  docker push ${REGISTRY}/${astraImage}
 done
 ----
-. 파일을 실행 파일로 만듭니다.
+.. 파일을 실행 파일로 만듭니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ chmod +x push-images-to-registry.sh
 ----
-. 쉘 스크립트를 실행합니다.
+.. 쉘 스크립트를 실행합니다.
 +
 [listing]
 ----
@@ -186,9 +192,10 @@ done
 ----
 
 
---
-====
-. 그런 다음 이미지 레지스트리 TLS 인증서를 OpenShift 노드에 업로드합니다. 이렇게 하려면 TLS 인증서를 사용하여 OpenShift-config 네임스페이스에 configmap을 만들고 이를 클러스터 이미지 구성에 패치하여 인증서를 신뢰할 수 있도록 합니다.
+=====
+
+
+. 공개적으로 신뢰할 수 없는 개인 이미지 레지스트리를 사용하는 경우 이미지 레지스트리 TLS 인증서를 OpenShift 노드에 업로드합니다. 이렇게 하려면 TLS 인증서를 사용하여 OpenShift-config 네임스페이스에 configmap을 만들고 이를 클러스터 이미지 구성에 패치하여 인증서를 신뢰할 수 있도록 합니다.
 +
 [listing]
 ----
@@ -200,150 +207,173 @@ done
 
 NOTE: 경로를 사용하여 수신 운영자의 기본 TLS 인증서가 있는 OpenShift 내부 레지스트리를 사용하는 경우 이전 단계를 따라 인증서를 경로 호스트 이름에 패치해야 합니다. 수신 운영자로부터 인증서를 추출하기 위해 'OC extract secret/router-ca--keys=tls.crt-n openshift-ingrator' 명령어를 사용할 수 있다.
 
-. Astra Control Center Operator 설치를 위한 Namespace 'NetApp-acc-operator'를 생성합니다.
+. Astra Control Center의 "NetApp-acc-operator" 네임스페이스를 생성합니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ oc create ns netapp-acc-operator
+
+namespace/netapp-acc-operator created
 ----
 . "NetApp-acc-operator" 네임스페이스에서 자격 증명을 사용하여 이미지 레지스트리에 로그인하기 위한 암호를 만듭니다.
 +
 [listing]
 ----
 [netapp-user@rhel7 ~]$ oc create secret docker-registry astra-registry-cred --docker-server=astra-registry.apps.ocp-vmw.cie.netapp.com --docker-username=ocp-user --docker-password=password -n netapp-acc-operator
-secret/astra-registry-cred created
-----
-. Astra Control Center의 모든 자료 집합인 Astra Control Center Operator CR "Astra_control_center_operator_deploy.YAML"을 편집합니다. 운영자 CR에서 "acc-operator-controller-manager"의 배포 정의를 찾아 이미지를 레지스트리에 푸시하는 동안 제공된 조직 이름과 함께 레지스트리의 FQDN을 입력합니다(이 예에서는 astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra`). 'Astra_image_registry'라는 텍스트를 바꾸고 'imagePullSecrets' 섹션에서 방금 만든 비밀의 이름을 입력합니다. 조작자의 기타 세부 사항을 확인하고 저장하고 닫습니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ vim astra_control_center_operator_deploy.yaml
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    control-plane: controller-manager
-  name: acc-operator-controller-manager
-  namespace: netapp-acc-operator
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      control-plane: controller-manager
-  template:
-    metadata:
-      labels:
-        control-plane: controller-manager
-    spec:
-      containers:
-      - args:
-        - --secure-listen-address=0.0.0.0:8443
-        - --upstream=http://127.0.0.1:8080/
-        - --logtostderr=true
-        - --v=10
-        image: ASTRA_IMAGE_REGISTRY/kube-rbac-proxy:v0.5.0
-        name: kube-rbac-proxy
-        ports:
-        - containerPort: 8443
-          name: https
-      - args:
-        - --health-probe-bind-address=:8081
-        - --metrics-bind-address=127.0.0.1:8080
-        - --leader-elect
-        command:
-        - /manager
-        env:
-        - name: ACCOP_LOG_LEVEL
-          value: "2"
-        image: astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra/acc-operator:21.08.7
-        imagePullPolicy: IfNotPresent
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8081
-          initialDelaySeconds: 15
-          periodSeconds: 20
-        name: manager
-        readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 8081
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        resources:
-          limits:
-            cpu: 300m
-            memory: 750Mi
-          requests:
-            cpu: 100m
-            memory: 75Mi
-        securityContext:
-          allowPrivilegeEscalation: false
-      imagePullSecrets: [name: astra-registry-cred]
-      securityContext:
-        runAsUser: 65532
-      terminationGracePeriodSeconds: 10
-----
-. 다음 명령어를 실행해 운용자를 생성한다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc create -f astra_control_center_operator_deploy.yaml
-----
-. 모든 Astra Control Center 리소스를 설치하기 위한 전용 네임스페이스를 만듭니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc create ns netapp-astra-cc
-namespace/netapp-astra-cc created
-----
-. 해당 네임스페이스에서 이미지 레지스트리에 액세스하기 위한 암호를 만듭니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc create secret docker-registry astra-registry-cred --docker-server=astra-registry.apps.ocp-vmw.cie.netapp.com --docker-username=ocp-user --docker-password=password -n netapp-astra-cc
 
 secret/astra-registry-cred created
 ----
-. Astra Control Center CRD 파일 "Astra_control_center_min YAML"을 편집하여 FQDN, 이미지 레지스트리 세부 정보, 관리자 이메일 주소 및 기타 세부 정보를 입력합니다.
+. 클러스터 관리자 권한으로 Red Hat OpenShift GUI 콘솔에 로그인합니다.
+. 원근 표시 드롭다운에서 관리자 를 선택합니다.
+. Operators > OperatorHub 로 이동하여 Astra 를 검색합니다.
 +
-[listing]
-----
-[netapp-user@rhel7 ~]$ vim astra_control_center_min.yaml
+image::redhat_openshift_image45.JPG[OpenShift Operator Hub를 참조하십시오]
 
-apiVersion: astra.netapp.io/v1
-kind: AstraControlCenter
-metadata:
-  name: astra
-spec:
-  accountName: "NetApp HCG Solutions"
-  astraVersion: "21.08.65"
-  astraAddress: "astra-control-center.cie.netapp.com"
-  autoSupport:
-    enrolled: true
-  email: "solutions_tme@netapp.com"
-  firstName: "NetApp HCG"
-  lastName: "Admin"
-  imageRegistry:
-    name: "astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra"     # use your registry
-    secret: "astra-registry-cred"             # comment out if not needed
-----
-. 이를 위해 생성된 네임스페이스에서 Astra Control Center CRD를 생성합니다.
+. 'NetApp-acc-operator' 타일을 선택하고 '설치'를 클릭합니다.
 +
-[listing]
+image::redhat_openshift_image123.jpg[ACC 운전자 타일]
+
+. Install Operator(사용자 설치) 화면에서 모든 기본 매개변수를 그대로 적용하고 Install(설치)을 클릭합니다.
++
+image::redhat_openshift_image124.jpg[ACC 운전자 세부 정보]
+
+. 작업자 설치가 완료될 때까지 기다립니다.
++
+image::redhat_openshift_image125.jpg[ACC 작업자가 설치를 기다립니다]
+
+. 운용자 설치가 성공하면 View Operator를 클릭합니다.
++
+image::redhat_openshift_image126.jpg[ACC 운전자 설치가 완료되었습니다]
+
+. 그런 다음 운용자의 Astra Control Center 타일에서 Create Instance를 클릭한다.
++
+image::redhat_openshift_image127.jpg[ACC 인스턴스 생성]
+
+. Create AstraControlCenter 양식 필드에 내용을 입력하고 Create를 클릭합니다.
++
+.. 필요한 경우 Astra Control Center 인스턴스 이름을 편집합니다.
+.. 선택적으로 자동 지원을 활성화하거나 비활성화합니다. 자동 지원 기능을 유지하는 것이 좋습니다.
+.. Astra Control Center의 FQDN을 입력합니다.
+.. Astra Control Center 버전을 입력합니다. 최신 버전이 기본적으로 표시됩니다.
+.. Astra Control Center의 계정 이름과 이름, 성, 이메일 주소 등의 관리자 세부 정보를 입력합니다.
+.. 볼륨 재확보 정책을 입력합니다. 기본값은 유지입니다.
+.. 이미지 레지스트리에서 이미지를 레지스트리로 푸시하는 동안 레지스트리 FQDN과 조직 이름을 입력합니다(이 예에서는 "astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra`).
+.. 인증이 필요한 레지스트리를 사용하는 경우 이미지 레지스트리 섹션에 암호 이름을 입력합니다.
+.. Astra Control Center 리소스 제한에 대한 확장 옵션을 구성합니다.
+.. 기본이 아닌 저장 클래스에 PVC를 배치하려면 보관 클래스 이름을 입력합니다.
+.. CRD 처리 기본 설정을 정의합니다.
++
+image::redhat_openshift_image128.jpg[ACC 인스턴스 생성]
+
++
+image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
+
+
+
+
+
+--
+.자동화 [Ansible]
+--
+21.12.60 Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 이에 대한 RHEL의 경우
+
+. Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
++
+[source, cli]
 ----
-[netapp-user@rhel7 ~]$ oc apply -f astra_control_center_min.yaml -n netapp-astra-cc
-astracontrolcenter.astra.netapp.io/astra created
+git clone https://github.com/NetApp-Automation/na_astra_control_suite.git
+----
+. NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. 타볼을 다운로드한 후 워크스테이션으로 전송합니다.
++
+
+NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://cloud.netapp.com/astra-register["Astra 등록 사이트입니다"^].
+
+. Astra Control Center가 설치될 OpenShift 클러스터에 대한 관리자 액세스 권한이 있는 kubecononfig 파일을 만들거나 얻습니다.
+. 디렉토리를 na_Astra_control_suite로 변경합니다.
++
+[source, cli]
+----
+cd na_astra_control_suite
+----
+. VAR/VAR.yml 파일을 편집하고 변수를 필수 정보로 채웁니다.
++
+[source, cli]
+----
+#Define whether or not to push the Astra Control Center images to your private registry [Allowed values: yes, no]
+push_images: yes
+
+#The directory hosting the Astra Control Center installer
+installer_directory: /home/admin/
+
+#Name of the Astra Control Center installer (Do not include the extension, just the name)
+astra_tar_ball_name: astra-control-center-21.12.60
+
+#The complete path to the kubeconfig file of the kubernetes/openshift cluster Astra Control Center needs to be installed to.
+hosting_ocp_kubeconfig_path: /home/admin/ocp-kubeconfig
+
+#Namespace in which Astra Control Center is to be installed
+astra_namespace: netapp-astra-cc
+
+#Astra Control Center Resources Scaler. Leave it blank if you want to accept the Default setting.
+astra_resources_scaler: Default
+
+#Storageclass to be used for Astra Control Center PVCs, it must be created before running the playbook [Leave it blank if you want the PVCs to use default storageclass]
+astra_trident_storageclass: basic
+
+#Reclaim Policy for Astra Control Center Persistent Volumes [Allowed values: Retain, Delete]
+storageclass_reclaim_policy: Retain
+
+#Private Registry Details
+astra_registry_name: "docker.io"
+
+#Whether the private registry requires credentials [Allowed values: yes, no]
+require_reg_creds: yes
+
+#If require_reg_creds is yes, then define the container image registry credentials
+#Usually, the registry namespace and usernames are same for individual users
+astra_registry_namespace: "registry-user"
+astra_registry_username: "registry-user"
+astra_registry_password: "password"
+
+#Kuberenets/OpenShift secret name for Astra Control Center
+#This name will be assigned to the K8s secret created by the playbook
+astra_registry_secret_name: "astra-registry-credentials"
+
+#Astra Control Center FQDN
+acc_fqdn_address: astra-control-center-ui.cie.netapp.com
+
+#Name of the Astra Control Center instance
+acc_account_name: ACC Account Name
+
+#Administrator details for Astra Control Center
+admin_email_address: admin@example.com
+admin_first_name: Admin
+admin_last_name: Admin
+----
+. Playbook을 실행하여 Astra Control Center를 구축합니다. 특정 구성에 대한 루트 권한이 Playbook에 필요합니다.
++
+따라서 Playbook을 실행하는 사용자가 root 이거나 암호 없는 sudo가 구성된 경우 아래 명령을 실행하여 플레이북을 실행합니다.
+
++
+[source, cli]
+----
+ansible-playbook playbook.yml
+----
++
+사용자에게 암호 기반 sudo 액세스가 구성된 경우 아래 명령을 실행하여 플레이북을 실행한 다음 sudo 암호를 입력합니다.
+
++
+[source, cli]
+----
+ansible-playbook playbook.yml -K
 ----
 
 
+--
+====
 
-NOTE: 이전 파일 Astra_control_center_min YAML은 Astra Control Center CRD의 최소 버전이다. PVC 생성을 위한 기본값 이외의 스토리지 클래스 정의 또는 메일 알림에 대한 SMTP 세부 정보 제공 등 더 많은 제어 권한을 가진 CRD를 생성하려면 "Astra_control_center.YAML" 파일을 편집하고 필요한 세부 정보를 입력한 후 CRD 생성에 사용합니다.
 
-
-
-=== 설치 확인
+=== 설치 후 단계
 
 . 설치가 완료되는 데 몇 분 정도 걸릴 수 있습니다. NetApp-Astra-cc 네임스페이스의 모든 Pod와 서비스가 실행 중인지 확인합니다.
 +
@@ -364,7 +394,7 @@ NOTE: 다음 메시지는 Astra Control Center가 성공적으로 설치되었�
 +
 [listing]
 ----
-{"level":"info","ts":1624054318.029971,"logger":"controllers.AstraControlCenter","msg":"Successfully Reconciled AstraControlCenter in [seconds]s","AstraControlCenter":"netapp-astra-cc/astra","ae.Version":"[21.08.65]"}
+{"level":"info","ts":1624054318.029971,"logger":"controllers.AstraControlCenter","msg":"Successfully Reconciled AstraControlCenter in [seconds]s","AstraControlCenter":"netapp-astra-cc/astra","ae.Version":"[21.12.60]"}
 ----
 . Astra Control Center에 로그인하기 위한 사용자 이름은 CRD 파일에 제공된 관리자의 이메일 주소이며 암호는 Astra Control Center UUID에 추가된 문자열 ACC- 입니다. 다음 명령을 실행합니다.
 +

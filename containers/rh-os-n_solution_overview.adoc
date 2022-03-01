@@ -76,7 +76,7 @@ NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 �
 
 Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://netapp-trident.readthedocs.io/en/stable-v21.07/index.html["여기"].
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
 
 
 
@@ -100,13 +100,13 @@ Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배�
 | NetApp Element | 스토리지 | 12.3 
 
 
-| NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 21.08.65 
+| NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 21.12.60 
 
 
-| NetApp Astra Trident | 스토리지 오케스트레이션 | 21.07.1 
+| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.01.0 
 
 
-| Red Hat OpenShift | 컨테이너 오케스트레이션 | 4.6 EUS, 4.7 
+| Red Hat OpenShift | 컨테이너 오케스트레이션 | 4.6 EUS, 4.7, 4.8 
 
 
 | Red Hat OpenStack 플랫폼 | 프라이빗 클라우드 인프라 | 16.1 
