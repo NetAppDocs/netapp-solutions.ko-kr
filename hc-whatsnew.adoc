@@ -44,23 +44,23 @@ keywords: 'netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, 
 2+| * 컨테이너 * 
 
 
-| link:rh-os-n_videos_clone_for_postmortem_and_restore.html["비디오: NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"] | link:rh-os-n_videos_data_protection_in_ci_cd_pipeline.html["비디오: Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호"] 
+| link:containers/rh-os-n_overview_astra.html["Ansible을 통해 Astra Control Center의 자동 설치"] | link:containers/rh-os-n_videos_clone_for_postmortem_and_restore.html["비디오: NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"] 
 
 
-| link:rh-os-n_videos_workload_migration_acc.html["비디오: Astra Control Center를 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift"] | link:containers/rh-os-n_overview_astra.html["Red Hat OpenShift 기반 NetApp Astra Control Center"] 
+| link:containers/rh-os-n_videos_data_protection_in_ci_cd_pipeline.html["비디오: Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호"] | link:containers/rh-os-n_videos_workload_migration_acc.html["비디오: Astra Control Center를 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift"] 
 
 
-| link:rh-os-n_videos_workload_migration_manual.html["비디오: NetApp의 Astra Trident 및 SnapMirror-Red Hat OpenShift를 사용하여 워크로드 마이그레이션"] | link:containers/rh-os-n_use_case_advanced_cluster_management_overview.html["NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리"] 
+| link:containers/rh-os-n_overview_astra.html["Red Hat OpenShift 기반 NetApp Astra Control Center"] | link:containers/rh-os-n_videos_workload_migration_manual.html["비디오: NetApp의 Astra Trident 및 SnapMirror-Red Hat OpenShift를 사용하여 워크로드 마이그레이션"] 
 
 
-| link:containers/rh-os-n_use_case_openshift_virtualization_overview.html["NetApp ONTAP 기반의 Red Hat OpenShift 가상화"] | link:rh-os-n_videos_openshift_virt_install.html["비디오: OpenShift 가상화 설치 - NetApp과 함께 Red Hat OpenShift"] 
+| link:containers/rh-os-n_use_case_advanced_cluster_management_overview.html["NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리"] | link:containers/rh-os-n_use_case_openshift_virtualization_overview.html["NetApp ONTAP 기반의 Red Hat OpenShift 가상화"] 
 
 
-| link:rh-os-n_videos_openshift_virt_vm_deploy.html["비디오: OpenShift 가상화를 통한 가상 머신 구축 - NetApp과 함께 Red Hat OpenShift"] | link:containers/rh-os-n_use_case_multitenancy_overview.html["NetApp ONTAP 기반 Red Hat OpenShift의 멀티 테넌시"] 
+| link:containers/rh-os-n_videos_openshift_virt_install.html["비디오: OpenShift 가상화 설치 - NetApp과 함께 Red Hat OpenShift"] | link:containers/rh-os-n_videos_openshift_virt_vm_deploy.html["비디오: OpenShift 가상화를 통한 가상 머신 구축 - NetApp과 함께 Red Hat OpenShift"] 
 
 
-| link:containers/rh-os-n_solution_overview.html["NetApp을 사용한 NVA-1160-Red Hat OpenShift"] | link:https://netapp.io/2021/05/21/docker-rate-limit-issue/["Red Hat OpenShift에 NetApp Trident 설치 – Docker의 'toomanyrequest' 문제를 해결하는 방법!"] 
+| link:containers/rh-os-n_use_case_multitenancy_overview.html["NetApp ONTAP 기반 Red Hat OpenShift의 멀티 테넌시"] | link:containers/rh-os-n_solution_overview.html["NetApp을 사용한 NVA-1160-Red Hat OpenShift"] 
 
 
-| link:https://www.netapp.com/pdf.html?item=/media/21072-wp-7337.pdf["NetApp의 Anthos Bare Metal"] |  
+| link:https://netapp.io/2021/05/21/docker-rate-limit-issue/["Red Hat OpenShift에 NetApp Trident 설치 – Docker의 'toomanyrequest' 문제를 해결하는 방법!"] | link:https://www.netapp.com/pdf.html?item=/media/21072-wp-7337.pdf["NetApp의 Anthos Bare Metal"] 
 |===

@@ -7370,7 +7370,6 @@
   <block id="e96910160219339e97abaf85c4323aaa" category="section-title">NetApp 및 VMware Tanzu 비디오 시리즈</block>
   <block id="c232cfc0ae9806d3ad6d34a51df58229" category="section-title">NetApp의 Red Hat OpenShift</block>
   <block id="796fae61e057ed3cc6ad68fe313088d7" category="inline-link-macro">비디오: Astra Control을 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift</block>
-  <block id="bbb36afc119fa1244c89e23e3f5599dc" category="list-text"><block ref="bbb36afc119fa1244c89e23e3f5599dc" category="inline-link-macro-rx"></block></block>
   <block id="8893b40d0413bdee0d28539b7201b89c" category="summary">AI 및 최신 데이터 분석 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
   <block id="d14e8dc770c2ede214d6db5eeb5d5167" category="doc">AI 및 최신 데이터 분석 비디오 및 데모</block>
   <block id="4696a661acac2c10910848bfebf30d2d" category="paragraph">AI 및 최신 데이터 분석 솔루션의 특정 기능을 소개하는 비디오 및 데모를 소개합니다.</block>
@@ -9789,7 +9788,6 @@
   <block id="3b489b9fd690a8cdf710454d0ccb5288" category="list-text">기본이 아닌 저장 클래스에 PVC를 배치하려면 보관 클래스 이름을 입력합니다.</block>
   <block id="6b9265a82fa5bd326052ec55e040a54a" category="list-text">CRD 처리 기본 설정을 정의합니다.</block>
   <block id="90aa5928482975bc6ff56f0eaf052451" category="open-title">자동화 [Ansible]</block>
-  <block id="3937de5e196f2d9062772804e96695b6" category="paragraph">21.12.60 Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 이에 대한<block ref="1988083261a6d1d93abe49ae6e6435ae" category="inline-link-rx"></block> RHEL의 경우</block>
   <block id="b8571b33af3335fed61ab0d7985d007f" category="list-text">Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.</block>
   <block id="5ed95667cae604c0ddee2dbf04f423fe" category="list-text">NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. 타볼을 다운로드한 후 워크스테이션으로 전송합니다.</block>
   <block id="6238d4091e12ffa6643c0dc68d72ceab" category="list-text">Astra Control Center가 설치될 OpenShift 클러스터에 대한 관리자 액세스 권한이 있는 kubecononfig 파일을 만들거나 얻습니다.</block>
@@ -9837,4 +9835,21 @@
   <block id="d656f81a685df3697a812158d0bd2f21" category="paragraph">NetApp Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오<block ref="845024b96ab150d9f628b33995c60669" category="inline-link-rx"></block>.</block>
   <block id="fcdf7b66cf4e59ce81d1400e4ca73b4b" category="list-text"><block ref="fcdf7b66cf4e59ce81d1400e4ca73b4b" category="inline-link-macro-rx"></block></block>
   <block id="ea1c9e7b76d8b7cc203b9f6a9633e241" category="list-text"><block ref="ea1c9e7b76d8b7cc203b9f6a9633e241" category="inline-link-macro-rx"></block></block>
+  <block id="4105298f144b4b0e636460eede523df0" category="inline-link-macro">Ansible을 통해 Astra Control Center의 자동 설치</block>
+  <block id="64295ddd382f7876d307bac08ad539fe" category="cell"><block ref="64295ddd382f7876d307bac08ad539fe" category="inline-link-macro-rx"></block></block>
+  <block id="bd6059cd679908cdb2d015167d51a3fe" category="cell"><block ref="bd6059cd679908cdb2d015167d51a3fe" category="inline-link-macro-rx"></block></block>
+  <block id="6dc07ae6ad84b77b5d06f9d3fff5b819" category="cell"><block ref="6dc07ae6ad84b77b5d06f9d3fff5b819" category="inline-link-macro-rx"></block></block>
+  <block id="e32276e1eed6ff0e76971afd985cea2d" category="cell"><block ref="e32276e1eed6ff0e76971afd985cea2d" category="inline-link-macro-rx"></block></block>
+  <block id="77697d49d0c6b79e2642435a36c8c1e0" category="cell"><block ref="77697d49d0c6b79e2642435a36c8c1e0" category="inline-link-macro-rx"></block></block>
+  <block id="60f031c992a9c99aa5413bddb0ecc644" category="cell"><block ref="60f031c992a9c99aa5413bddb0ecc644" category="inline-link-macro-rx"></block></block>
+  <block id="13a82ffd84cedcd28833f58d716b4c3c" category="cell"><block ref="13a82ffd84cedcd28833f58d716b4c3c" category="inline-link-macro-rx"></block></block>
+  <block id="6721f3769bff6250dbce3a06c2ae10ac" category="list-text"><block ref="6721f3769bff6250dbce3a06c2ae10ac" category="inline-link-macro-rx"></block></block>
+  <block id="74d542ee52cd8400c9b9307ed9a99c12" category="list-text">Astra DevOps 사용 사례:</block>
+  <block id="3da7df001d5e1f907d2527f52c6ccc00" category="inline-link-macro">NetApp Astra Control을 통해 Kubernetes CI/CD 파이프라인에 보호를 쉽게 통합합니다</block>
+  <block id="3f1cbb7eb907b7cb7f46877360d4a588" category="list-text"><block ref="3f1cbb7eb907b7cb7f46877360d4a588" category="inline-link-macro-rx"></block></block>
+  <block id="fa4bd1682f261cdd55edf3e8e7dbfef6" category="inline-link-macro">NetApp의 DevOps: Astra Control을 사용하여 사후 분석을 수행하고 애플리케이션을 복원합니다</block>
+  <block id="1188d1aaa4a5f54ec1dab3da3576377a" category="list-text"><block ref="1188d1aaa4a5f54ec1dab3da3576377a" category="inline-link-macro-rx"></block></block>
+  <block id="ce932b248d7f57bcada97c64dd7429a7" category="inline-link-macro">NetApp Astra Control Center: 어플리케이션 데이터 관리를 위한 간편한 버튼</block>
+  <block id="0d47bfb381dd96470ac538b5a112db04" category="list-text"><block ref="0d47bfb381dd96470ac538b5a112db04" category="inline-link-macro-rx"></block></block>
+  <block id="31dfd224530c16d63981c7742bfefc2b" category="list-text">Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 이에 대한<block ref="1988083261a6d1d93abe49ae6e6435ae" category="inline-link-rx"></block> RHEL의 경우</block>
 </blocks>

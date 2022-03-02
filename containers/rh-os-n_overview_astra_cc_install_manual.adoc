@@ -21,7 +21,7 @@ NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십�
 +
 [listing]
 ----
-[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
+[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
 .. 레지스트리에 로그인합니다.
 +
@@ -79,7 +79,7 @@ NOTE: 레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 �
 +
 [listing]
 ----
-[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
+[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
 .. 레지스트리에 로그인합니다.
 +

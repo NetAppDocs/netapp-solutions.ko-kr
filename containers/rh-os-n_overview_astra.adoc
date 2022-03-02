@@ -88,7 +88,7 @@ NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십�
 +
 [listing]
 ----
-[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
+[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
 .. 레지스트리에 로그인합니다.
 +
@@ -146,7 +146,7 @@ NOTE: 레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 �
 +
 [listing]
 ----
-[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
+[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra
 ----
 .. 레지스트리에 로그인합니다.
 +
@@ -275,8 +275,7 @@ image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
 --
 .자동화 [Ansible]
 --
-21.12.60 Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 이에 대한 RHEL의 경우
-
+. Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 이에 대한 RHEL의 경우
 . Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
 +
 [source, cli]
