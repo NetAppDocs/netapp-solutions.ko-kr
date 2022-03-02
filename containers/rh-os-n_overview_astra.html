@@ -4091,7 +4091,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-01 20:10:44 +0000">03/01/2022</time>
+    <time datetime="2022-03-02 20:12:44 +0000">03/02/2022</time>
     
   
 
@@ -4278,7 +4278,7 @@ Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 <
 <p>조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도&#8217;로 내보냅니다.</p>
 <div class="listingblock">
 <div class="content">
-<pre>[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra</pre>
+<pre>[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra</pre>
 </div>
 </div>
 </li>
@@ -4373,7 +4373,7 @@ done</pre>
 <p>조직/네임스페이스/프로젝트 이름을 사용하여 레지스트리 FQDN을 환경 변수 '궤도&#8217;로 내보냅니다.</p>
 <div class="listingblock">
 <div class="content">
-<pre>[netapp-user@rhel7 ~]$ export registry=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra</pre>
+<pre>[netapp-user@rhel7 ~]$ export REGISTRY=astra-registry.apps.ocp-vmw.cie.netapp.com/netapp-astra</pre>
 </div>
 </div>
 </li>
@@ -4601,11 +4601,11 @@ secret/astra-registry-cred created</pre>
 <div class="openblock">
 <div class="title">자동화 [Ansible]</div>
 <div class="content">
-<div class="paragraph">
-<p>21.12.60 Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 <a href="https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html">"여기"</a> Ubuntu 및 이에 대한 RHEL의 경우</p>
-</div>
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 <a href="https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html">"여기"</a> Ubuntu 및 이에 대한 RHEL의 경우</p>
+</li>
 <li>
 <p>Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.</p>
 <div class="listingblock">
