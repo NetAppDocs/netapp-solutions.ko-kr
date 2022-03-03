@@ -3980,7 +3980,6 @@
   <block id="132f2888eb2cfdeef2730212f50c53e3" category="doc">SnapCenter 요구 사항</block>
   <block id="e2a7d0854ef572e10255339732bb005d" category="inline-link-macro">이전: 솔루션 아키텍처.</block>
   <block id="b10927905ed5379ba0d73333abdbe06d" category="paragraph"><block ref="b10927905ed5379ba0d73333abdbe06d" category="inline-link-macro-rx"></block></block>
-  <block id="bc3a731533b339cd62ba7f7149313e3b" category="paragraph">이 솔루션은 현재 SnapCenter에서 지원하는 모든 데이터베이스를 지원하지만 Oracle 및 SQL Server 데이터베이스만 여기에 나와 있습니다. 이 솔루션은 베어 메탈 워크로드도 지원되지만 가상화된 데이터베이스 워크로드에서 검증을 받았습니다.</block>
   <block id="185b108b21dccef917f415be6026c91c" category="paragraph">ONTAP 스토리지 클러스터에서 DB 호스트에 제공된 DB 볼륨이 있는 운영 데이터베이스 서버가 사내에서 호스팅된다고 가정합니다. SnapCenter 소프트웨어는 데이터베이스 백업 및 클라우드 데이터 복제를 위해 사내에 설치됩니다. Ansible 컨트롤러를 사용할 것을 권장하지만, 퍼블릭 클라우드의 개발/테스트 인스턴스 또는 대기 DR 인스턴스와 동기화되는 데이터베이스 배포 자동화 또는 OS 커널 및 DB 구성에는 필요하지 않습니다.</block>
   <block id="47099d9ea153f8abfa5b6b70da253b3a" category="cell">* 사내 *</block>
   <block id="d36407241494bfc1e84614ad1b0dd6a4" category="cell">SnapCenter에서 지원하는 모든 데이터베이스 및 버전</block>
@@ -9852,4 +9851,5 @@
   <block id="ce932b248d7f57bcada97c64dd7429a7" category="inline-link-macro">NetApp Astra Control Center: 어플리케이션 데이터 관리를 위한 간편한 버튼</block>
   <block id="0d47bfb381dd96470ac538b5a112db04" category="list-text"><block ref="0d47bfb381dd96470ac538b5a112db04" category="inline-link-macro-rx"></block></block>
   <block id="31dfd224530c16d63981c7742bfefc2b" category="list-text">Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 이에 대한<block ref="1988083261a6d1d93abe49ae6e6435ae" category="inline-link-rx"></block> RHEL의 경우</block>
+  <block id="6546814199e52492fa0efe5fbff08d5a" category="paragraph">이 솔루션은 현재 SnapCenter에서 지원하는 모든 데이터베이스를 지원하지만 Oracle 및 SQL Server 데이터베이스만 여기에 나와 있습니다. 이 솔루션은 베어 메탈 워크로드도 지원되지만 가상화된 데이터베이스 워크로드에서 검증을 받았습니다.</block>
 </blocks>
