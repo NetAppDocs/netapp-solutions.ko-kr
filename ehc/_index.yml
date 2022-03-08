@@ -14,24 +14,24 @@ indexpage:
   - title: AWS 기반 NetApp(VMC)
     links:
     - title: 가상화 환경을 구성합니다
-      url: "/aws-setup.html"
+      url: "/aws/aws-setup.html"
     - title: 네이티브 데이터 저장소 옵션
       url: https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/
     - title: 게스트 연결 스토리지 옵션
-      url: "/aws-guest.html"
+      url: "/aws/aws-guest.html"
   - title: Azure 기반 NetApp(AVS)
     links:
     - title: 가상화 환경을 구성합니다
-      url: "/azure-setup.html"
+      url: "/azure/azure-setup.html"
     - title: 네이티브 데이터 저장소 옵션
       url: https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/
     - title: 게스트 연결 스토리지 옵션
-      url: "/azure-guest.html"
+      url: "/azure/azure-guest.html"
   - title: Google Cloud Platform의 NetApp(GCVE)
     links:
     - title: 가상화 환경을 구성합니다
-      url: "/gcp-setup.html"
+      url: "/gcp/gcp-setup.html"
     - title: 네이티브 데이터 저장소 옵션
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
     - title: 게스트 연결 스토리지 옵션
-      url: "/gcp-guest.html"
+      url: "/gcp/gcp-guest.html"

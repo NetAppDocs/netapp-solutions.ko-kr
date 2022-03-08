@@ -36,9 +36,9 @@ NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
-* link:azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
-* link:azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
+* link:/ehc/azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
+* link:/ehc/azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
+* link:/ehc/azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
 
 
 
@@ -53,8 +53,8 @@ Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
-* link:azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
+* link:/ehc/azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *

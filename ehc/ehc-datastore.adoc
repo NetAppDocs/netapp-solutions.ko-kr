@@ -23,8 +23,8 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
-* link:aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
@@ -43,8 +43,8 @@ Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
-* link:azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
+* link:/ehc/azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
@@ -63,8 +63,8 @@ Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합�
 
 * 게스트 연결 스토리지 *
 
-* link:gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:/ehc/gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *

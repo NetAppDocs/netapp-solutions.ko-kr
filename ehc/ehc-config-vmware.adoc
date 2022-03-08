@@ -35,8 +35,8 @@ NOTE: 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
-* link:aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
+* link:/ehc/aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
+* link:/ehc/aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
 
 
 
@@ -52,9 +52,9 @@ NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
-* link:azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
-* link:azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
+* link:/ehc/azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
+* link:/ehc/azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
+* link:/ehc/azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
 
 
 
@@ -70,6 +70,6 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+* link:/ehc/gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
+* link:/ehc/gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
 
