@@ -3469,9 +3469,9 @@
         하이퍼스케일러 클라우드의 VMware Cloud
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-support-configs.html">
         지원되는 구성
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware-intro.html">
         하이퍼스케일 구성의 VMware
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html">
         하이퍼스케일러 클라우드의 NetApp 스토리지
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-summary.html">
         요약 및 결론
@@ -3578,9 +3578,9 @@
         하이퍼스케일러 클라우드의 VMware Cloud
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-support-configs.html">
         지원되는 구성
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware-intro.html">
         하이퍼스케일 구성의 VMware
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html">
         하이퍼스케일러 클라우드의 NetApp 스토리지
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-summary.html">
         요약 및 결론
@@ -4072,7 +4072,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-08 19:47:23 +0000">03/08/2022</time>
+    <time datetime="2022-03-09 02:34:59 +0000">03/09/2022</time>
     
   
 
@@ -4135,53 +4135,8 @@
 <div class="paragraph">
 <p>온프레미스에서와 마찬가지로 클라우드 기반 가상화 환경을 계획하는 것은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</p>
 </div>
-<div class="exampleblock tabbed-block">
-<div class="content">
-<div class="openblock">
-<div class="title">Azure를 지원합니다</div>
-<div class="content">
-<div class="paragraph">
-<p>온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</p>
-</div>
-<div class="paragraph">
-<p>이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
-</td>
-<td class="content">
-게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="/ehc/azure/azure-setup.html#register">"리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"</a></p>
-</li>
-<li>
-<p><a href="/ehc/azure/azure-setup.html#connect">"새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"</a></p>
-</li>
-<li>
-<p><a href="/ehc/azure/azure-setup.html#validate">"네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">설치하고</div>
-<div class="content">
-<div class="paragraph">
-<p>사내 환경과 마찬가지로, AWS에서 VMware Cloud를 계획하는 것은 VM과 마이그레이션을 성공적으로 운영 환경에 구축하는 데 매우 중요합니다.</p>
-</div>
+<div class="sect2">
+<h3 id="aws-및-vmc">AWS 및 VMC</h3>
 <div class="paragraph">
 <p>이 섹션에서는 AWS SDDC에서 VMware Cloud를 설정 및 관리하고, NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
@@ -4203,21 +4158,50 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/ehc/aws/aws-setup.html#deploy">"VMware Cloud for AWS 구축 및 구성"</a></p>
+<p><a href="aws/aws-setup.html#deploy">"VMware Cloud for AWS 구축 및 구성"</a></p>
 </li>
 <li>
-<p><a href="/ehc/aws/aws-setup.html#connect">"VMware Cloud를 FSx ONTAP에 연결합니다"</a></p>
+<p><a href="aws/aws-setup.html#connect">"VMware Cloud를 FSx ONTAP에 연결합니다"</a></p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="openblock">
-<div class="title">Google 클라우드</div>
-<div class="content">
+<div class="sect2">
+<h3 id="azure-및-avs">Azure 및 AVS</h3>
 <div class="paragraph">
-<p>온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.</p>
+<p>이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
+</td>
+<td class="content">
+게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="azure/azure-setup.html#register">"리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"</a></p>
+</li>
+<li>
+<p><a href="azure/azure-setup.html#connect">"새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"</a></p>
+</li>
+<li>
+<p><a href="azure/azure-setup.html#validate">"네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gcp-및-gcve">GCP 및 GCVE</h3>
 <div class="paragraph">
 <p>이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
@@ -4239,15 +4223,12 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/ehc/gcp/gcp-setup.html#deploy">"GCVE 배포 및 구성"</a></p>
+<p><a href="gcp/gcp-setup.html#deploy">"GCVE 배포 및 구성"</a></p>
 </li>
 <li>
-<p><a href="/ehc/gcp/gcp-setup.html#enable-access">"GCVE에 대한 개인 액세스를 활성화합니다"</a></p>
+<p><a href="gcp/gcp-setup.html#enable-access">"GCVE에 대한 개인 액세스를 활성화합니다"</a></p>
 </li>
 </ul>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -4261,50 +4242,8 @@
 <div class="paragraph">
 <p>를 방문하십시오 <a href="ehc-support-configs.html">"지원되는 NetApp 스토리지 옵션"</a> 를 참조하십시오.</p>
 </div>
-<div class="exampleblock tabbed-block">
-<div class="content">
-<div class="openblock">
-<div class="title">Azure를 지원합니다</div>
-<div class="content">
-<div class="paragraph">
-<p>Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>게스트 연결 스토리지 *</p>
-</li>
-<li>
-<p><a href="/ehc/azure/azure-guest.html#anf">"게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"</a></p>
-</li>
-<li>
-<p><a href="/ehc/azure/azure-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
-</li>
-<li>
-<p>네이티브 데이터 저장소 *</p>
-</li>
-<li>
-<p><a href="https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/" target="_blank" rel="noopener">"Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"</a></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
-</td>
-<td class="content">
-1-현재 비공개 미리보기에 있습니다
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">설치하고</div>
-<div class="content">
+<div class="sect2">
+<h3 id="aws-및-vmc-2">AWS 및 VMC</h3>
 <div class="paragraph">
 <p>AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
@@ -4314,10 +4253,10 @@
 <p>게스트 연결 스토리지 *</p>
 </li>
 <li>
-<p><a href="/ehc/aws/aws-guest.html#fsx-ontap">"FSX ONTAP를 게스트 연결 스토리지로 사용합니다"</a></p>
+<p><a href="aws/aws-guest.html#fsx-ontap">"FSX ONTAP를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
-<p><a href="/ehc/aws/aws-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
+<p><a href="aws/aws-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
 <p>네이티브 데이터 저장소 *</p>
@@ -4340,10 +4279,45 @@
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="azure-및-avs-2">Azure 및 AVS</h3>
+<div class="paragraph">
+<p>Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
-<div class="openblock">
-<div class="title">Google 클라우드</div>
-<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>게스트 연결 스토리지 *</p>
+</li>
+<li>
+<p><a href="azure/azure-guest.html#anf">"게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"</a></p>
+</li>
+<li>
+<p><a href="azure/azure-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
+</li>
+<li>
+<p>네이티브 데이터 저장소 *</p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/" target="_blank" rel="noopener">"Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
+</td>
+<td class="content">
+1-현재 비공개 미리보기에 있습니다
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gco-및-gcve">GCO 및 GCVE</h3>
 <div class="paragraph">
 <p>Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
@@ -4353,10 +4327,10 @@
 <p>게스트 연결 스토리지 *</p>
 </li>
 <li>
-<p><a href="/ehc/gcp/gcp-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
+<p><a href="gcp/gcp-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
-<p><a href="/ehc/gcp/gcp-guest.html#cvs">"CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"</a></p>
+<p><a href="gcp/gcp-guest.html#cvs">"CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
 <p>네이티브 데이터 저장소 *</p>
@@ -4377,9 +4351,6 @@
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

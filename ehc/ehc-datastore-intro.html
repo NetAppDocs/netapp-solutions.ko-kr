@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>클라우드 공급자에서 가상화 환경 구성</title>
+  <title>퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="클라우드 공급자에서 가상화 환경 구성" />
+  <meta property="og:title" content="퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/netapp-solutions/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" NetApp Solutions, amazon, vmc, aws, microsoft azure, avs, azure, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, config, configuration"><!-- Icons -->
+  <meta name="keywords" content=" NetApp Solutions, amazon, vmc, aws, microsoft azure, avs, azure, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, cloud volumes ontap, cvo, datastore, fsx, fsx ontap"><!-- Icons -->
   <link rel="icon" href="/ko-kr/netapp-solutions/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -254,13 +254,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/ehc-config-vmware.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/netapp-solutions/ehc/ehc-datastore-intro.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/ehc-config-vmware.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/ehc/ehc-datastore-intro.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/ehc-config-vmware.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/ehc/ehc-datastore-intro.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -1321,8 +1321,10 @@
 
 
 
+
+
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/ehc/ehc-config-vmware.pdf" >
+  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/ehc/ehc-datastore-intro.pdf" >
     <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
     PDF of this page
   </a>
@@ -1330,8 +1332,6 @@
 
 </ul>
   
-
-
 
 
 
@@ -1648,8 +1648,10 @@
 
 
 
+
+
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/ehc/ehc-config-vmware.pdf" >
+  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/ehc/ehc-datastore-intro.pdf" >
     <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
     PDF of this page
   </a>
@@ -1657,8 +1659,6 @@
 
 </ul>
   
-
-
 
 
 
@@ -3469,9 +3469,9 @@
         하이퍼스케일러 클라우드의 VMware Cloud
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-support-configs.html">
         지원되는 구성
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware-intro.html">
         하이퍼스케일 구성의 VMware
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html">
         하이퍼스케일러 클라우드의 NetApp 스토리지
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-summary.html">
         요약 및 결론
@@ -3578,9 +3578,9 @@
         하이퍼스케일러 클라우드의 VMware Cloud
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-support-configs.html">
         지원되는 구성
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-config-vmware-intro.html">
         하이퍼스케일 구성의 VMware
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html">
         하이퍼스케일러 클라우드의 NetApp 스토리지
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/ehc/ehc-summary.html">
         요약 및 결론
@@ -4042,7 +4042,7 @@
           <a href="/ko-kr/netapp-solutions/">NetApp&nbsp;Solutions</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          클라우드 공급자에서 가상화 환경 구성
+          퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션
         </li>
       </ul>
     </div>
@@ -4065,26 +4065,18 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">클라우드 공급자에서 가상화 환경 구성</h1>
+  <h1 class="n-doc__component-detail-heading">퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-03-08 19:47:23 +0000">03/08/2022</time>
+    <time datetime="2022-03-09 02:34:59 +0000">03/09/2022</time>
     
   
 
 <span>기여자
-  <a target="_blank" href="https://github.com/kevin-hoke">
-    <img  class="avatar avatar-small"
-          alt="kevin-hoke"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/55808219?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
@@ -4094,34 +4086,33 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>지원되는 각 하이퍼 스케일러에서 가상화 환경을 구성하는 방법에 대한 자세한 내용은 여기 를 참조하십시오.</p>
+<p>세 가지 주요 하이퍼 스케일러의 스토리지로서의 NetApp 옵션에 대해 알아보십시오.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-스토리지를-위한-aws-지원">NetApp 스토리지를 위한 AWS 지원</h3>
 <div class="paragraph">
-<p>다음 옵션 중 하나를 선택하여 원하는 하이퍼스케일러의 섹션으로 이동합니다.</p>
+<p>AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#aws-config">"AVS(Amazon VMware Solution) 구성"</a></p>
+<p>게스트 연결 스토리지 *</p>
 </li>
 <li>
-<p><a href="#azure-config">"Azure VMware VMC(Managed Cloud) 구성"</a></p>
+<p><a href="aws/aws-guest.html#fsx-ontap">"FSX ONTAP를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
-<p><a href="#gcp-config">"GCVE(Google Cloud Virtualization Engine) 구성"</a></p>
+<p><a href="aws/aws-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
+</li>
+<li>
+<p>네이티브 데이터 저장소 *</p>
+</li>
+<li>
+<p><a href="https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/" target="_blank" rel="noopener">"FSX ONTAP를 기본 데이터 저장소 ^1로 사용합니다"</a></p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="aws용-vmc-구성">AWS용 VMC 구성</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>사내 환경과 마찬가지로, AWS에서 VMware Cloud를 계획하는 것은 VM과 마이그레이션을 성공적으로 운영 환경에 구축하는 데 매우 중요합니다.</p>
-</div>
-<div class="paragraph">
-<p>이 섹션에서는 AWS SDDC에서 VMware Cloud를 설정 및 관리하고, NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4130,34 +4121,35 @@
 <img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
 </td>
 <td class="content">
-게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC에 연결하는 유일한 지원 방법입니다.
+1-현재 비공개 미리보기에 있습니다
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="netapp-스토리지를-위한-azure-지원">NetApp 스토리지를 위한 Azure 지원</h3>
 <div class="paragraph">
-<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
+<p>Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/ehc/aws/aws-setup.html#deploy">"VMware Cloud for AWS 구축 및 구성"</a></p>
+<p>게스트 연결 스토리지 *</p>
 </li>
 <li>
-<p><a href="/ehc/aws/aws-setup.html#connect">"VMware Cloud를 FSx ONTAP에 연결합니다"</a></p>
+<p><a href="azure/azure-guest.html#anf">"게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"</a></p>
+</li>
+<li>
+<p><a href="azure/azure-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
+</li>
+<li>
+<p>네이티브 데이터 저장소 *</p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/" target="_blank" rel="noopener">"Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"</a></p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="azure용-avs-구성">Azure용 AVS 구성</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</p>
-</div>
-<div class="paragraph">
-<p>이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4166,37 +4158,35 @@
 <img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
 </td>
 <td class="content">
-게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
+1-현재 비공개 미리보기에 있습니다
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="netapp-스토리지에-대한-gcp-지원">NetApp 스토리지에 대한 GCP 지원</h3>
 <div class="paragraph">
-<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
+<p>Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/ehc/azure/azure-setup.html#register">"리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"</a></p>
+<p>게스트 연결 스토리지 *</p>
 </li>
 <li>
-<p><a href="/ehc/azure/azure-setup.html#connect">"새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"</a></p>
+<p><a href="gcp/gcp-guest.html#cvo">"CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"</a></p>
 </li>
 <li>
-<p><a href="/ehc/azure/azure-setup.html#validate">"네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"</a></p>
+<p><a href="gcp/gcp-guest.html#cvs">"CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"</a></p>
+</li>
+<li>
+<p>네이티브 데이터 저장소 *</p>
+</li>
+<li>
+<p><a href="https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/" target="_blank" rel="noopener">"CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다"</a></p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="google-cloud-platform용-gcve-구성">Google Cloud Platform용 GCVE 구성</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.</p>
-</div>
-<div class="paragraph">
-<p>이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4205,24 +4195,10 @@
 <img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
 </td>
 <td class="content">
-게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.
+1-현재 비공개 미리보기에 있습니다
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>설치 프로세스는 다음 단계로 나눌 수 있습니다.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="/ehc/gcp/gcp-setup.html#deploy">"GCVE 배포 및 구성"</a></p>
-</li>
-<li>
-<p><a href="/ehc/gcp/gcp-setup.html#enable-access">"GCVE에 대한 개인 액세스를 활성화합니다"</a></p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -4235,8 +4211,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[클라우드 공급자에서 가상화 환경 구성](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-config-vmware.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/ehc-config-vmware.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션](https://docs.netapp.com/ko-kr/netapp-solutions/ehc/ehc-datastore-intro.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/ehc/ehc-datastore-intro.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
     </div>
     <div class="page-nav-container">
