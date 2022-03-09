@@ -1,5 +1,19 @@
-= AWS(VMC)용 가상화 환경 구성
+---
+sidebar: sidebar 
+permalink: ehc/ehc-config-vmware-intro.html 
+keywords: NetApp Solutions, amazon, vmc, aws, microsoft azure, avs, azure, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, config, configuration 
+summary:  
+---
+= 클라우드 공급자에서 가상화 환경 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
+
+[role="lead"]
+지원되는 각 하이퍼 스케일러에서 가상화 환경을 구성하는 방법에 대한 자세한 내용은 여기 를 참조하십시오.
 
 
 
@@ -14,10 +28,6 @@ NOTE: 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC
 
 * link:aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
 * link:aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
-
-
-* link:aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
-* link:aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
 
 
 
@@ -36,11 +46,6 @@ NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP�
 * link:azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
 
 
-* link:azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
-* link:azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
-* link:azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
-
-
 
 
 === GCP용 가상화 환경 구성(GCVE)
@@ -54,8 +59,4 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 * link:gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
 * link:gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
-
-
-* link:gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
 

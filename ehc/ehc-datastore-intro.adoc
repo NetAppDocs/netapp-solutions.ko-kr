@@ -1,5 +1,19 @@
-= NetApp 스토리지를 위한 AWS 지원
+---
+sidebar: sidebar 
+permalink: ehc/ehc-datastore-intro.html 
+keywords: NetApp Solutions, amazon, vmc, aws, microsoft azure, avs, azure, google cloud, gcp, gcve, vmware managed cloud, enterprise, hybrid, cloud, cloud volumes ontap, cvo, datastore, fsx, fsx ontap 
+summary:  
+---
+= 퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
+
+[role="lead"]
+세 가지 주요 하이퍼 스케일러의 스토리지로서의 NetApp 옵션에 대해 알아보십시오.
 
 
 
@@ -11,10 +25,6 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * link:aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
 * link:aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-
-
-* link:aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
-* link:aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
@@ -37,10 +47,6 @@ Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 * link:azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
-* link:azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
-* link:azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-
-
 * 네이티브 데이터 저장소 *
 
 * link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"^]
@@ -59,10 +65,6 @@ Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합�
 
 * link:gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 * link:gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
-
-
-* link:gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *

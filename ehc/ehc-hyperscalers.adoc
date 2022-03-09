@@ -34,28 +34,9 @@ NOTE: 특정 하이퍼스케일러의 기능을 보려면 해당 하이퍼스케
 
 온프레미스에서와 마찬가지로 클라우드 기반 가상화 환경을 계획하는 것은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.
 
-[role="tabbed-block"]
-====
-.Azure를 지원합니다
---
-온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.
-
-이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
 
 
-NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
-
-설치 프로세스는 다음 단계로 나눌 수 있습니다.
-
-* link:/ehc/azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
-* link:/ehc/azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
-* link:/ehc/azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
-
-
---
-.설치하고
---
-사내 환경과 마찬가지로, AWS에서 VMware Cloud를 계획하는 것은 VM과 마이그레이션을 성공적으로 운영 환경에 구축하는 데 매우 중요합니다.
+=== AWS 및 VMC
 
 이 섹션에서는 AWS SDDC에서 VMware Cloud를 설정 및 관리하고, NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
 
@@ -64,14 +45,29 @@ NOTE: 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:/ehc/aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
-* link:/ehc/aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
+* link:aws/aws-setup.html#deploy["VMware Cloud for AWS 구축 및 구성"]
+* link:aws/aws-setup.html#connect["VMware Cloud를 FSx ONTAP에 연결합니다"]
 
 
---
-.Google 클라우드
---
-온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.
+
+
+=== Azure 및 AVS
+
+이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
+
+
+NOTE: 게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+* link:azure/azure-setup.html#register["리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다"]
+* link:azure/azure-setup.html#connect["새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다"]
+* link:azure/azure-setup.html#validate["네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다"]
+
+
+
+
+=== GCP 및 GCVE
 
 이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
 
@@ -80,12 +76,10 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:/ehc/gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:/ehc/gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+* link:gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
+* link:gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
 
 
---
-====
 
 
 == NetApp 스토리지 옵션
@@ -94,35 +88,16 @@ NetApp 스토리지는 3가지 주요 하이퍼 스케일러 내에서 상호 �
 
 를 방문하십시오 link:ehc-support-configs.html["지원되는 NetApp 스토리지 옵션"] 를 참조하십시오.
 
-[role="tabbed-block"]
-====
-.Azure를 지원합니다
---
-Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
-
-* 게스트 연결 스토리지 *
-
-* link:/ehc/azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
-* link:/ehc/azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
-* 네이티브 데이터 저장소 *
+=== AWS 및 VMC
 
-* link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"^]
-
-
-
-NOTE: 1-현재 비공개 미리보기에 있습니다
-
---
-.설치하고
---
 AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:/ehc/aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
-* link:/ehc/aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:aws/aws-guest.html#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
+* link:aws/aws-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
@@ -133,15 +108,36 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 NOTE: 1-현재 비공개 미리보기에 있습니다
 
---
-.Google 클라우드
---
+
+
+=== Azure 및 AVS
+
+Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
+
+* 게스트 연결 스토리지 *
+
+* link:azure/azure-guest.html#anf["게스트 연결 스토리지로서의 Azure NetApp Files(ANF)"]
+* link:azure/azure-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+
+
+* 네이티브 데이터 저장소 *
+
+* link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"^]
+
+
+
+NOTE: 1-현재 비공개 미리보기에 있습니다
+
+
+
+=== GCO 및 GCVE
+
 Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * 게스트 연결 스토리지 *
 
-* link:/ehc/gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:/ehc/gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
@@ -151,6 +147,3 @@ Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합�
 
 
 NOTE: 1-현재 비공개 미리보기에 있습니다
-
---
-====

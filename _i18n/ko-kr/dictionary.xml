@@ -4453,23 +4453,13 @@
   <block id="6ff716a75c3423262418c90aad971f10" category="paragraph"><block ref="6ff716a75c3423262418c90aad971f10" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6120544c737d67dd31f47d101fe21a84" category="doc">클라우드 공급자에서 가상화 환경 구성</block>
   <block id="f4f7adb7cbe18f2cdd82be75a52b0417" category="paragraph">지원되는 각 하이퍼 스케일러에서 가상화 환경을 구성하는 방법에 대한 자세한 내용은 여기 를 참조하십시오.</block>
-  <block id="5032d5a1ed8a62f591efaaf45204907f" category="paragraph">다음 옵션 중 하나를 선택하여 원하는 하이퍼스케일러의 섹션으로 이동합니다.</block>
-  <block id="00bdc2e43f70d995636d66a898fe5e40" category="inline-link-macro">AVS(Amazon VMware Solution) 구성</block>
-  <block id="0753e0a92e5826dd007d8fd27f5b31c9" category="list-text"><block ref="0753e0a92e5826dd007d8fd27f5b31c9" category="inline-link-macro-rx"></block></block>
-  <block id="c44ad7e3733396d542197ea02e4dd5b7" category="inline-link-macro">Azure VMware VMC(Managed Cloud) 구성</block>
-  <block id="91ef3d1a8fa3d61d3abb32b5f583d779" category="list-text"><block ref="91ef3d1a8fa3d61d3abb32b5f583d779" category="inline-link-macro-rx"></block></block>
-  <block id="5f80992ee008938a45a68b0f0ae94709" category="inline-link-macro">GCVE(Google Cloud Virtualization Engine) 구성</block>
-  <block id="a98da75fcd0e1711d652d1e209647651" category="list-text"><block ref="a98da75fcd0e1711d652d1e209647651" category="inline-link-macro-rx"></block></block>
-  <block id="8b9304861ce23a5778f658d1ba557184" category="section-title">AWS용 VMC 구성</block>
   <block id="e6719013bc5803c0da0d4bf78fc8c4a0" category="admonition">게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC에 연결하는 유일한 지원 방법입니다.</block>
-  <block id="2bdad04391749295f6c0f0f0f0d5df87" category="section-title">Azure용 AVS 구성</block>
   <block id="00ce356ad004b72efc4b99389b52af63" category="paragraph">온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</block>
   <block id="491aa8f554f95207a4b7d47f89777e13" category="paragraph">이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</block>
   <block id="cc887bc72eb6e7422bfa13437f902e54" category="admonition">게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.</block>
   <block id="3d24cd3e433bf1992e011c9f92c3fab6" category="inline-link-macro">리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다</block>
   <block id="a1123889b6465e93a2209c2a0ca667ef" category="inline-link-macro">새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다</block>
   <block id="ae1764c7cb70aed2d4548c424d7bf34a" category="inline-link-macro">네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다</block>
-  <block id="c8ecd368a187a4d847c04af93c7ca292" category="section-title">Google Cloud Platform용 GCVE 구성</block>
   <block id="9883d049f97d69a9f2326d61585d8fbe" category="paragraph">온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.</block>
   <block id="6ad49d2b544134f2192d1612a572bdd6" category="paragraph">이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</block>
   <block id="a74a86037d1564ce62843a1252f6ad37" category="admonition">게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.</block>
@@ -4630,7 +4620,6 @@
   <block id="7f08237a127b62af444f720f15216cee" category="list-text"><block ref="7f08237a127b62af444f720f15216cee" category="inline-link-macro-rx"></block></block>
   <block id="c774c23e9a97e08bfa096f1cbf18cc17" category="inline-link-macro">NetApp 스토리지 옵션</block>
   <block id="d3fc27ff58dc3a0d839a16af858e7999" category="list-text"><block ref="d3fc27ff58dc3a0d839a16af858e7999" category="inline-link-macro-rx"></block></block>
-  <block id="bb48bc786b7087ed5efe4969dda9fc85" category="section-title">Google Cloud에서 GCVE 구성</block>
   <block id="833413440fbbe13837d8b58256cfba65" category="paragraph">온프레미스에서와 마찬가지로 클라우드 기반 가상화 환경을 계획하는 것은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</block>
   <block id="6eb516b97eae0ab93b8d6aab35fbb764" category="section-title">GCVE용 NetApp 스토리지 옵션</block>
   <block id="50b53922d656bce75f35201b661fc378" category="paragraph">NetApp 스토리지는 GCP GCVE 내에서 추측으로 연결되거나 기본 데이터 저장소로 사용될 수 있습니다.</block>
@@ -4662,11 +4651,9 @@
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
   <block id="a7714bc43e9a27f2c98a38e6b6d7f3d8" category="doc">퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</block>
   <block id="8db50e5729f7a5d770aaceef947a2982" category="paragraph">세 가지 주요 하이퍼 스케일러의 스토리지로서의 NetApp 옵션에 대해 알아보십시오.</block>
-  <block id="30024089a3aab34e33b3a9766ff8c662" category="section-title">AWS용 NetApp 스토리지 옵션</block>
   <block id="60ce80493de8468bdfd597af1c219a9f" category="paragraph">AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="83c87929208a5770dfb09e33514193f4" category="inline-link-macro">FSX ONTAP를 기본 데이터 저장소 ^1로 사용합니다</block>
   <block id="ad476c4cac730935959743eb28c5ca66" category="list-text"><block ref="ad476c4cac730935959743eb28c5ca66" category="inline-link-macro-rx"></block></block>
-  <block id="a1010f9f8442cf9caff454cd5d3914ec" category="section-title">Azure용 NetApp 스토리지 옵션</block>
   <block id="98ba63f921be22bb183a43d868521ce1" category="inline-link-macro">Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다</block>
   <block id="c054a58e4fcd496e4fa5c1b0c16dfa69" category="list-text"><block ref="c054a58e4fcd496e4fa5c1b0c16dfa69" category="inline-link-macro-rx"></block></block>
   <block id="74eb4c6138d4b8cd8399b01966c5af28" category="section-title">GCP용 NetApp 스토리지 옵션</block>
@@ -4906,7 +4893,6 @@
   <block id="f21c97f5b239021bb3f13d148516abb4" category="paragraph">클라우드를 선택하시면 NetApp에서 나머지 작업을 해 드립니다!</block>
   <block id="c1304f98c6be845a236d7a27951ece4f" category="paragraph"><block ref="c1304f98c6be845a236d7a27951ece4f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca4ac823f3f130f3c78d6ac26ba9f46b" category="admonition">특정 하이퍼스케일러의 기능을 보려면 해당 하이퍼스케일러의 적절한 탭을 클릭하십시오.</block>
-  <block id="56ef2682280ac110060b881925a87b80" category="open-title">Google 클라우드</block>
   <block id="ff264305bf70750f504c04f48ab02038" category="paragraph">NetApp 스토리지는 3가지 주요 하이퍼 스케일러 내에서 상호 연결된 추측이나 기본 데이터 저장소로 활용할 수 있습니다.</block>
   <block id="76b7cf7d0f36f0986e2c7ef578303aab" category="doc">요약 및 결론: 엔터프라이즈 하이브리드 클라우드(EHC)에 NetApp을 선택해야 하는 이유</block>
   <block id="dd6f2ba05323a537582c1f232e8a2c60" category="paragraph">주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.</block>
@@ -9838,19 +9824,6 @@
   <block id="0d47bfb381dd96470ac538b5a112db04" category="list-text"><block ref="0d47bfb381dd96470ac538b5a112db04" category="inline-link-macro-rx"></block></block>
   <block id="31dfd224530c16d63981c7742bfefc2b" category="list-text">Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 이에 대한<block ref="1988083261a6d1d93abe49ae6e6435ae" category="inline-link-rx"></block> RHEL의 경우</block>
   <block id="6546814199e52492fa0efe5fbff08d5a" category="paragraph">이 솔루션은 현재 SnapCenter에서 지원하는 모든 데이터베이스를 지원하지만 Oracle 및 SQL Server 데이터베이스만 여기에 나와 있습니다. 이 솔루션은 베어 메탈 워크로드도 지원되지만 가상화된 데이터베이스 워크로드에서 검증을 받았습니다.</block>
-  <block id="59160d504631a251e5926b01db090df6" category="list-text"><block ref="59160d504631a251e5926b01db090df6" category="inline-link-macro-rx"></block></block>
-  <block id="c3fb6c512285793f521e9fb0410e5aa5" category="list-text"><block ref="c3fb6c512285793f521e9fb0410e5aa5" category="inline-link-macro-rx"></block></block>
-  <block id="ae00a19307ad44e440382c1d9c1f6cd7" category="list-text"><block ref="ae00a19307ad44e440382c1d9c1f6cd7" category="inline-link-macro-rx"></block></block>
-  <block id="82d0b462d2b4d55d77053e315a60f263" category="list-text"><block ref="82d0b462d2b4d55d77053e315a60f263" category="inline-link-macro-rx"></block></block>
-  <block id="89cae32dbda27de92fd2d7e1c3c45c1d" category="list-text"><block ref="89cae32dbda27de92fd2d7e1c3c45c1d" category="inline-link-macro-rx"></block></block>
-  <block id="a555d576cea8671e31e09de932713b61" category="list-text"><block ref="a555d576cea8671e31e09de932713b61" category="inline-link-macro-rx"></block></block>
-  <block id="612d785df7d11f9625a1f79a5b8f8af1" category="list-text"><block ref="612d785df7d11f9625a1f79a5b8f8af1" category="inline-link-macro-rx"></block></block>
-  <block id="05dcd56213d28ef21ec55cc6aa96bb67" category="list-text"><block ref="05dcd56213d28ef21ec55cc6aa96bb67" category="inline-link-macro-rx"></block></block>
-  <block id="ab696ace5bf4489b99b416fb687263bd" category="list-text"><block ref="ab696ace5bf4489b99b416fb687263bd" category="inline-link-macro-rx"></block></block>
-  <block id="7c62760c76aa0aa6b7ddd8ce1b7c8abb" category="list-text"><block ref="7c62760c76aa0aa6b7ddd8ce1b7c8abb" category="inline-link-macro-rx"></block></block>
-  <block id="c46606225af3d277c853ad3352175efc" category="list-text"><block ref="c46606225af3d277c853ad3352175efc" category="inline-link-macro-rx"></block></block>
-  <block id="6acdf59e57f6ecbf55b42c4abcdce33b" category="list-text"><block ref="6acdf59e57f6ecbf55b42c4abcdce33b" category="inline-link-macro-rx"></block></block>
-  <block id="7a7f08268bdf73da4ce6ea0d7dbfe9c0" category="list-text"><block ref="7a7f08268bdf73da4ce6ea0d7dbfe9c0" category="inline-link-macro-rx"></block></block>
   <block id="f2a59783d2b5c7be84fec0d6de7a5ae9" category="cell">2022년 3월 8일</block>
   <block id="eab6f1cc9736be0f5d62999f998bf36a" category="cell">새로운 비디오 데모 추가: Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오</block>
   <block id="5df42c63d444f6e9e40d96be8f17ac6f" category="cell">2022-03/01/05</block>
@@ -9858,4 +9831,48 @@
   <block id="a0eaa75e3e2b8c6220db02697d4acf1f" category="cell"><block ref="a0eaa75e3e2b8c6220db02697d4acf1f" category="inline-link-macro-rx"></block></block>
   <block id="d5ca81c242aff843ea151d778578cbfc" category="admonition">레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 셸 스크립트를 편집하고 podman 푸시 명령 "podman push $registry/$(echo$astraImage|SED's/^\////')--tls-verify=false"를 사용하십시오.</block>
   <block id="ec72a928f8eedfaa788b44b6935b50fe" category="doc">NetApp과 Red Hat OpenShift의 Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발 속도 향상</block>
+  <block id="335ef14df727dc9707e14629b77fcf30" category="doc">NetApp 스토리지를 위한 AWS 지원</block>
+  <block id="70b9c790cc4671aad4f8d8322d13161b" category="list-text"><block ref="70b9c790cc4671aad4f8d8322d13161b" category="inline-link-macro-rx"></block></block>
+  <block id="2b1b2978337fa95de5057d99307c01aa" category="list-text"><block ref="2b1b2978337fa95de5057d99307c01aa" category="inline-link-macro-rx"></block></block>
+  <block id="6a8abef867f53cd024908ab859c46238" category="list-text"><block ref="6a8abef867f53cd024908ab859c46238" category="inline-link-macro-rx"></block></block>
+  <block id="5fd057c554dfaf16f0d97e4defdb81fd" category="list-text"><block ref="5fd057c554dfaf16f0d97e4defdb81fd" category="inline-link-macro-rx"></block></block>
+  <block id="48a9e19e56cfc47077d0352f9d0f2693" category="section-title">NetApp 스토리지를 위한 Azure 지원</block>
+  <block id="79fab3fcc59adc540e33fa185069b7ce" category="list-text"><block ref="79fab3fcc59adc540e33fa185069b7ce" category="inline-link-macro-rx"></block></block>
+  <block id="85a5820e8da21c627876736be5d694b8" category="list-text"><block ref="85a5820e8da21c627876736be5d694b8" category="inline-link-macro-rx"></block></block>
+  <block id="de049193fe94b917d3e89452cdfee78d" category="list-text"><block ref="de049193fe94b917d3e89452cdfee78d" category="inline-link-macro-rx"></block></block>
+  <block id="5f68200d68deb8399b86dd57533f10a4" category="list-text"><block ref="5f68200d68deb8399b86dd57533f10a4" category="inline-link-macro-rx"></block></block>
+  <block id="5b7d2a7cd86311f868ed2f3d495a8f0f" category="section-title">NetApp 스토리지에 대한 GCP 지원</block>
+  <block id="3aa200e6ed258b413d3edac26b75184a" category="list-text"><block ref="3aa200e6ed258b413d3edac26b75184a" category="inline-link-macro-rx"></block></block>
+  <block id="236b2a8169de601ff6b72a6a78e1f572" category="list-text"><block ref="236b2a8169de601ff6b72a6a78e1f572" category="inline-link-macro-rx"></block></block>
+  <block id="b2b70627d90e90b2fcf0b37f68d18d32" category="list-text"><block ref="b2b70627d90e90b2fcf0b37f68d18d32" category="inline-link-macro-rx"></block></block>
+  <block id="74186fb00c70b9871392ea68443adfd5" category="list-text"><block ref="74186fb00c70b9871392ea68443adfd5" category="inline-link-macro-rx"></block></block>
+  <block id="6f1af1c4707c0ddb6d24c463fa4904f1" category="list-text">링크:#config [GCP에서 GCVE 구성</block>
+  <block id="b4360d9dcce9e932e3b5b09fdc524745" category="list-text"><block ref="b4360d9dcce9e932e3b5b09fdc524745" category="inline-link-macro-rx"></block></block>
+  <block id="fdab91853bf925f2256c6d39ec3f5351" category="section-title">GCP에서 GCVE 구성</block>
+  <block id="74a9966b070c1e73507b6ff0780e3733" category="list-text"><block ref="74a9966b070c1e73507b6ff0780e3733" category="inline-link-macro-rx"></block></block>
+  <block id="337bcf72d1e47b982df4965e1063ef67" category="list-text"><block ref="337bcf72d1e47b982df4965e1063ef67" category="inline-link-macro-rx"></block></block>
+  <block id="09e89069d02379fc56daa781d256d7b6" category="section-title">AWS(VMC)용 가상화 환경 구성</block>
+  <block id="3fb5798a9396698dabb0ac96950db53b" category="list-text"><block ref="3fb5798a9396698dabb0ac96950db53b" category="inline-link-macro-rx"></block></block>
+  <block id="046546ab63b0ca36de368801c6fd8a9e" category="list-text"><block ref="046546ab63b0ca36de368801c6fd8a9e" category="inline-link-macro-rx"></block></block>
+  <block id="5c7b11ed146406e84fe971b132517bcd" category="section-title">Azure용 가상화 환경 구성(AVS)</block>
+  <block id="0027e14144945de23e255b58586424e1" category="list-text"><block ref="0027e14144945de23e255b58586424e1" category="inline-link-macro-rx"></block></block>
+  <block id="c2dd14a3829d81f8d6ccd1a2a41e114b" category="list-text"><block ref="c2dd14a3829d81f8d6ccd1a2a41e114b" category="inline-link-macro-rx"></block></block>
+  <block id="d70f78589c41399658959afc073dfede" category="list-text"><block ref="d70f78589c41399658959afc073dfede" category="inline-link-macro-rx"></block></block>
+  <block id="7ec8289b14700d8be0d8f376eea6b8bf" category="section-title">GCP용 가상화 환경 구성(GCVE)</block>
+  <block id="9f7328009a38e32265481f8305d6aa75" category="list-text"><block ref="9f7328009a38e32265481f8305d6aa75" category="inline-link-macro-rx"></block></block>
+  <block id="5ee479af89822c5af943f78689918520" category="list-text"><block ref="5ee479af89822c5af943f78689918520" category="inline-link-macro-rx"></block></block>
+  <block id="9e98cd6f2c1243193cfc50a29bbe3bd4" category="list-text"><block ref="9e98cd6f2c1243193cfc50a29bbe3bd4" category="inline-link-macro-rx"></block></block>
+  <block id="553bafb094b811158ae732981f2dbb4e" category="list-text"><block ref="553bafb094b811158ae732981f2dbb4e" category="inline-link-macro-rx"></block></block>
+  <block id="44cf8e167821820f0ebe40745562219b" category="list-text"><block ref="44cf8e167821820f0ebe40745562219b" category="inline-link-macro-rx"></block></block>
+  <block id="27a2d4b0295d93eb20519fcf77df27f3" category="list-text"><block ref="27a2d4b0295d93eb20519fcf77df27f3" category="inline-link-macro-rx"></block></block>
+  <block id="07004cdc228cde7054ba825a728ee189" category="list-text"><block ref="07004cdc228cde7054ba825a728ee189" category="inline-link-macro-rx"></block></block>
+  <block id="202373c4c91793dc8fb54647ff8a2241" category="list-text"><block ref="202373c4c91793dc8fb54647ff8a2241" category="inline-link-macro-rx"></block></block>
+  <block id="9597c351929448a6eea4162c4f4a80db" category="list-text"><block ref="9597c351929448a6eea4162c4f4a80db" category="inline-link-macro-rx"></block></block>
+  <block id="22aae0cba6d6bb50053c5b84e36b16ad" category="list-text"><block ref="22aae0cba6d6bb50053c5b84e36b16ad" category="inline-link-macro-rx"></block></block>
+  <block id="f0969548cbf8208f26497f680b470705" category="list-text"><block ref="f0969548cbf8208f26497f680b470705" category="inline-link-macro-rx"></block></block>
+  <block id="3b141b6466b12e3acb21b96825ab3d1b" category="section-title">AWS 및 VMC</block>
+  <block id="f83f574b032c714479d3e32efdc3cbe3" category="section-title">Azure 및 AVS</block>
+  <block id="1789862d26aa4adb9f5c2737bbf6a1fc" category="section-title">GCP 및 GCVE</block>
+  <block id="28a7880d69d2603391bd4ae2a4de0d68" category="section-title">GCO 및 GCVE</block>
+  <block id="e8318a9e631a084c73ef782e37caec2d" category="list-text"><block ref="e8318a9e631a084c73ef782e37caec2d" category="inline-link-macro-rx"></block></block>
 </blocks>

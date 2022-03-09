@@ -91,9 +91,9 @@ entries:
   - title: 지원되는 구성
     url: "/ehc/ehc-support-configs.html"
   - title: 하이퍼스케일 구성의 VMware
-    url: "/ehc/ehc-config-vmware.html"
+    url: "/ehc/ehc-config-vmware-intro.html"
   - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
-    url: "/ehc/ehc-datastore.html"
+    url: "/ehc/ehc-datastore-intro.html"
   - title: 요약 및 결론
     url: "/ehc/ehc-summary.html"
 - title: VMware 하이브리드 클라우드 사용 사례

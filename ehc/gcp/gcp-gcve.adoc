@@ -17,17 +17,15 @@ NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Ending)에
 
 다음 옵션 중 하나를 선택하여 원하는 콘텐츠의 섹션으로 이동합니다.
 
-* link:#config["하이퍼스케일 구성의 VMware"]
-* link:#datastore["NetApp 스토리지 옵션"]
+* 링크:#config [GCP에서 GCVE 구성
+* link:#datastore["GCVE용 NetApp 스토리지 옵션"]
 
 
 
 
-== Google Cloud에서 GCVE 구성
+== GCP에서 GCVE 구성
 
 온프레미스에서와 마찬가지로 클라우드 기반 가상화 환경을 계획하는 것은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.
-
-온프레미스에서와 마찬가지로, VM 및 마이그레이션을 생성하기 위한 성공적인 프로덕션 준비 환경을 위해서는 Google Cloud VMware Engine(GCVE)을 계획하는 것이 매우 중요합니다.
 
 이 섹션에서는 GCVE를 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.
 
@@ -36,8 +34,8 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:/ehc/gcp/gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:/ehc/gcp/gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+* link:gcp-setup.html#deploy["GCVE 배포 및 구성"]
+* link:gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
 
 
 
@@ -52,8 +50,8 @@ Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합�
 
 * 게스트 연결 스토리지 *
 
-* link:/ehc/gcp/gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:/ehc/gcp/gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+* link:gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
 
 * 네이티브 데이터 저장소 *
