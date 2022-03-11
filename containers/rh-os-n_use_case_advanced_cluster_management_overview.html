@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/ko-kr/netapp-solutions/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/ko-kr/netapp-solutions/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/ko-kr/netapp-solutions/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/ko-kr/netapp-solutions/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/netapp-solutions/js/na-search.js'></script><script src='/ko-kr/netapp-solutions/js/na-pagenav.js'></script><link rel='stylesheet' href='/ko-kr/netapp-solutions/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/ko-kr/netapp-solutions/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/ko-kr/netapp-solutions/js/version-dropdown.js'></script>
-  <script src='/ko-kr/netapp-solutions/js/product-family.js'></script>
   <script src='/ko-kr/netapp-solutions/js/FileSaver.min.js'></script>
   <script src='/ko-kr/netapp-solutions/js/jszip-utils.min.js'></script>
   <script src='/ko-kr/netapp-solutions/js/jszip.min.js'></script>
@@ -144,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Kubernetes용 고급 클러스터 관리: NetApp의 Red Hat OpenShift](https://docs.netapp.com/ko-kr/netapp-solutions/containers/rh-os-n_use_case_advanced_cluster_management_overview.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/containers/rh-os-n_use_case_advanced_cluster_management_overview.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">이 페이지의 내용</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -4022,19 +4040,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">홈</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">설명서</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/ko-kr/netapp-solutions/">NetApp&nbsp;Solutions</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          Kubernetes용 고급 클러스터 관리: NetApp의 Red Hat OpenShift
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -4063,7 +4078,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 02:34:59 +0000">03/09/2022</time>
+    <time datetime="2022-03-11 19:18:49 +0000">03/11/2022</time>
     
   
 
@@ -4080,7 +4095,6 @@
 
 
 </p>
-
 
 <div class="paragraph">
 <p>개발 환경에서 운영 환경으로 컨테이너화된 애플리케이션으로 전환함에 따라 많은 조직에서는 해당 애플리케이션의 테스트 및 배포를 지원하기 위해 여러 Red Hat OpenShift 클러스터가 필요합니다. 이와 함께 조직은 일반적으로 OpenShift 클러스터에서 여러 애플리케이션 또는 워크로드를 호스팅합니다. 따라서 각 조직은 클러스터 세트를 관리해야 하며, OpenShift 관리자는 사내 데이터 센터와 퍼블릭 클라우드가 혼합된 다양한 환경에서 여러 클러스터를 관리하고 유지 관리해야 하는 추가적인 과제를 해결해야 합니다. 이러한 과제를 해결하기 위해 Red Hat은 Kubernetes용 Advanced Cluster Management를 도입했습니다.</p>
@@ -4123,25 +4137,6 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Kubernetes용 고급 클러스터 관리: NetApp의 Red Hat OpenShift](https://docs.netapp.com/ko-kr/netapp-solutions/containers/rh-os-n_use_case_advanced_cluster_management_overview.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/containers/rh-os-n_use_case_advanced_cluster_management_overview.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">이 페이지의 내용</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>

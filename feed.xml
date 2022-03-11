@@ -2,14 +2,14 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>netapp-solutions</title>
+    <title>netapp-solutions | NetApp Documentation</title>
     <atom:link href="https://docs.netapp.com/ko-kr/netapp-solutions/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://docs.netapp.com/ko-kr/netapp-solutions</link>
-    <description>The latest updates from NetApp Cloud Docs</description>
+    <description>The latest updates from NetApp Documentation</description>
     <language>ko-kr</language>
     <ttl>60</ttl>
-    <pubDate>Wed, 09 Mar 2022 02:44:46 +0000</pubDate>
-    <lastBuildDate>Wed, 09 Mar 2022 02:44:46 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2022 19:22:55 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2022 19:22:55 +0000</lastBuildDate>
     
   </channel>
 </rss>
