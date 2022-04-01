@@ -2990,6 +2990,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -4006,6 +4008,8 @@
         AWX/Ansible 타워 설치(AWX/Tower 기반 배포용)
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/automation/authentication_tokens.html">
         CVO 및 Connector 구축을 위한 사전 요구 사항을 수집합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/automation/cloud_volumes_terraform.html">
+        Terraform을 통한 Cloud Volumes Automation
       </a></li><li class=" "><a class="na-navbar-padding" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20<request_title>">
         요청 자동화
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/flexpod/">
@@ -4078,28 +4082,9 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-18 12:15:31 +0000">03/18/2022</time>
+    <time datetime="2022-04-01 19:46:47 +0000">04/01/2022</time>
     
   
-
-<span>기여자
-  <a target="_blank" href="https://github.com/kevin-hoke">
-    <img  class="avatar avatar-small"
-          alt="kevin-hoke"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/55808219?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" href="https://github.com/mboglesby">
-    <img  class="avatar avatar-small"
-          alt="mboglesby"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/44730324?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-</span>
 
 
 </p>
@@ -4117,7 +4102,7 @@
 <p>Kubernetes 클러스터 내의 컨테이너에 마운트할 NetApp 스토리지 시스템/플랫폼에 기존 볼륨이 있지만, 클러스터의 PVC와 연결되지 않은 경우 이러한 볼륨을 가져와야 합니다. Trident 볼륨 가져오기 기능을 사용하여 이러한 볼륨을 가져올 수 있습니다.</p>
 </div>
 <div class="paragraph">
-<p>다음 예제 명령은 섹션의 예에서 생성된 각 Trident 백엔드에 대해 동일한 볼륨("PB_FG_ALL"이라는 이름)을 두 번 가져오는 것을 보여 줍니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. 같은 볼륨을 이러한 방식으로 두 번 가져오면 섹션에 설명된 대로 여러 LIF에서 볼륨(기존 FlexGroup 볼륨)을 여러 번 마운트할 수 있습니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. PVC에 대한 자세한 내용은 를 참조하십시오 <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank" rel="noopener">"Kubernetes 공식 문서"</a>. 볼륨 가져오기 기능에 대한 자세한 내용은 를 참조하십시오.</p>
+<p>다음 예제 명령은 섹션의 예에서 생성된 각 Trident 백엔드에 대해 동일한 볼륨("PB_FG_ALL"이라는 이름)을 두 번 가져오는 것을 보여 줍니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. 같은 볼륨을 이러한 방식으로 두 번 가져오면 섹션에 설명된 대로 여러 LIF에서 볼륨(기존 FlexGroup 볼륨)을 여러 번 마운트할 수 있습니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. PVC에 대한 자세한 내용은 를 참조하십시오 <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank" rel="noopener">"Kubernetes 공식 문서"</a>. 볼륨 가져오기 기능에 대한 자세한 내용은 를 참조하십시오 <a href="https://netapp-trident.readthedocs.io/" target="_blank" rel="noopener">"Trident 문서"</a>.</p>
 </div>
 <div class="paragraph">
 <p>예제 PVC 규격 파일에는 'ReadOnlyMany&#8217;의 'accessModes' 값이 지정되어 있습니다. 'accessMode' 필드에 대한 자세한 내용은 를 참조하십시오 <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank" rel="noopener">"Kubernetes 공식 문서"</a>.</p>
@@ -4129,7 +4114,7 @@
 <img src="/us-en/netapp-solutions/images/note.svg" alt="참고">
 </td>
 <td class="content">
-다음 가져오기 명령에 지정된 백엔드 이름은 섹션의 예제에서 생성한 백엔드에 해당합니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. 다음 예제 PVC 정의 파일에 지정된 StorageClass 이름은 섹션의 예제에서 만든 StorageClasses에 해당합니다 , 1단계.
+다음 가져오기 명령에 지정된 백엔드 이름은 섹션의 예제에서 생성한 백엔드에 해당합니다 <a href="aicp_example_trident_backends_for_ontap_ai_deployments.html">"ONTAP AI 배포에 대한 Trident 백엔드 예"</a>, 1단계. 다음 예제 PVC 정의 파일에 지정된 StorageClass 이름은 섹션의 예제에서 만든 StorageClasses에 해당합니다 <a href="aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html">"ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예"</a>, 1단계.
 </td>
 </tr>
 </table>
