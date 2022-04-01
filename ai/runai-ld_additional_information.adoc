@@ -32,7 +32,7 @@ https://docs.run.ai/home/components/["https://docs.run.ai/home/components/"^]
 
 * AI 설치 설명서를 실행하십시오
 +
-https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai["https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai"^]
+https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai["https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai"^] https://docs.run.ai/Administrator/Researcher-Setup/cli-install/["https://docs.run.ai/Administrator/Researcher-Setup/cli-install/#runai-cli-installation"^]
 
 * 실행 중인 작업 제출: AI CLI
 +

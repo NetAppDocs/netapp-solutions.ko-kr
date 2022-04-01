@@ -57,7 +57,7 @@ Cloud Volumes ONTAP를 배포할 때 미리 정의된 패키지 또는 사용자
 
 핵심은 현재의 용량 및 성능 요구사항을 충족할 뿐만 아니라 향후 성장을 내다보는 구성을 계획하는 것입니다. 이는 일반적으로 용량 여유 공간 및 성능 여유 공간 이라고 합니다.
 
-자세한 내용을 보려면 에 대한 계획에 대한 문서를 참조하십시오 https://docs.netapp.com/us-en/occm/task_planning_your_config.html["설치하고"^],, 및.
+자세한 내용을 보려면 에 대한 계획에 대한 문서를 참조하십시오 https://docs.netapp.com/us-en/occm/task_planning_your_config.html["설치하고"^], https://docs.netapp.com/us-en/occm/task_planning_your_config_azure.html["Azure를 지원합니다"^], 및 https://docs.netapp.com/us-en/occm/task_planning_your_config_gcp.html["GCP"^].
 
 
 
@@ -67,6 +67,6 @@ Cloud Volumes ONTAP를 배포할 때 미리 정의된 패키지 또는 사용자
 
 DR 사용 사례 또는 개발 및 테스트를 위한 임시 스토리지 회전 시 갑작스러운 조널 또는 인프라 중단의 영향이 더 낮기 때문에 단일 노드가 일반적인 경우가 많습니다. 그러나 모든 운영 사용 사례에서 데이터가 단일 위치에만 있거나 데이터 세트에 더 많은 이중화 및 가용성이 필요할 경우 고가용성을 사용하는 것이 좋습니다.
 
-각 클라우드 버전의 고가용성 아키텍처에 대한 자세한 내용은 의 설명서를 참조하십시오 https://docs.netapp.com/us-en/occm/concept_ha.html["설치하고"^], 및.
+각 클라우드 버전의 고가용성 아키텍처에 대한 자세한 내용은 의 설명서를 참조하십시오 https://docs.netapp.com/us-en/occm/concept_ha.html["설치하고"^], https://docs.netapp.com/us-en/occm/concept_ha_azure.html["Azure를 지원합니다"^] 및 https://docs.netapp.com/us-en/occm/concept_ha_google_cloud.html["GCP"^].
 
 link:hybrid_dbops_snapcenter_getting_started.html["다음: 시작하기 개요"]

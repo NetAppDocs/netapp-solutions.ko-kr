@@ -16,5 +16,7 @@ entries:
   url: "/automation/setup_awx.html"
 - title: CVO 및 Connector 구축을 위한 사전 요구 사항을 수집합니다
   url: "/automation/authentication_tokens.html"
+- title: Terraform을 통한 Cloud Volumes Automation
+  url: "/automation/cloud_volumes_terraform.html"
 - title: 요청 자동화
   url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20<request_title>

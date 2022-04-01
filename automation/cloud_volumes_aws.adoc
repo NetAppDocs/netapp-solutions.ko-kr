@@ -1,0 +1,468 @@
+= 
+
+
+[role="tabbed-block"]
+====
+.CVO 단일 노드 구축
+--
+이 섹션에는 AWS(Amazon Web Services)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone <repo-name>
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_deploy/
+----
+. CLI에서 AWS 자격 증명을 구성합니다.
++
+[source, cli]
+----
+    aws configure
+----
++
+** AWS 액세스 키 ID [없음]: AccessKey
+** AWS 비밀 액세스 키 [없음]: secretkey
+** 기본 지역 이름 [없음]: us-west-2
+** 기본 출력 형식 [None]: json
+
+
+. VAR/AWS_cvo_single_node_deployment.tfvar의 변수 값을 업데이트합니다
++
+
+NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터를 배포할 수 있습니다.
+
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+    terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.aws_sn" -var-file="vars/aws_cvo_single_node_deployment.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.aws_sn" -var-file="vars/aws_cvo_single_node_deployment.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+커넥터
+
+CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * AWS_CONNECTOR_DEPLOY_BOOL * | 불입니다 | (필수) 커넥터 배포를 확인합니다. 
+
+
+| * AWS_connector_name * | 문자열 | (필수) Cloud Manager Connector의 이름입니다. 
+
+
+| * AWS_CONNETOR_REGION * | 문자열 | (필수) Cloud Manager Connector가 생성되는 지역 
+
+
+| * AWS_connector_key_name * | 문자열 | (필수) Connector 인스턴스에 사용할 키 쌍의 이름입니다. 
+
+
+| * AWS_CONNETOR_COMPANY * | 문자열 | (필수) 사용자의 회사 이름입니다. 
+
+
+| * AWS_connector_instance_type * | 문자열 | (필수) 인스턴스 유형(예: T3.xLarge). 최소 4개의 CPU와 16GB의 메모리가 필요합니다. 
+
+
+| * AWS_connector_subnet_id * | 문자열 | (필수) 인스턴스에 대한 서브넷의 ID입니다. 
+
+
+| * AWS_CONNETOR_SECURITY_GROUP_ID * | 문자열 | (필수) 인스턴스에 대한 보안 그룹의 ID를 ','로 구분하여 여러 보안 그룹을 제공할 수 있습니다. 
+
+
+| * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
+
+
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
+|===
+'단일 노드 인스턴스'
+
+단일 NetApp CVO 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * cvo_name * | 문자열 | (필수) Cloud Volumes ONTAP 작업 환경의 이름입니다. 
+
+
+| * cvo_region * | 문자열 | (필수) 작업 환경을 생성할 영역입니다. 
+
+
+| * cvo_subnet_id * | 문자열 | (필수) 작업 환경을 생성할 서브넷 ID입니다. 
+
+
+| * cvo_vpc_id * | 문자열 | (선택 사항) 작업 환경을 생성할 VPC ID입니다. 이 인수를 제공하지 않으면 제공된 서브넷 ID를 사용하여 VPC를 계산합니다. 
+
+
+| cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
+
+
+| * cvo_writing_speed_state * | 문자열 | (선택 사항) Cloud Volumes ONTAP에 대한 쓰기 속도 설정: ['정상','높음']. 기본값은 '정상'입니다. 
+|===
+--
+.CVO HA 구축
+--
+이 섹션에서는 AWS(Amazon Web Services)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone <repo-name>
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_deploy/
+----
+. CLI에서 AWS 자격 증명을 구성합니다.
++
+[source, cli]
+----
+    aws configure
+----
++
+** AWS 액세스 키 ID [없음]: AccessKey
+** AWS 비밀 액세스 키 [없음]: secretkey
+** 기본 지역 이름 [없음]: us-west-2
+** 기본 출력 형식 [None]: json
+
+
+. VAR/AWS_cvo_ha_deployment.tfvars의 변수 값을 업데이트합니다.
++
+
+NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터를 배포할 수 있습니다.
+
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+      terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.aws_ha" -var-file="vars/aws_cvo_ha_deployment.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.aws_ha" -var-file="vars/aws_cvo_ha_deployment.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+커넥터
+
+CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * AWS_CONNECTOR_DEPLOY_BOOL * | 불입니다 | (필수) 커넥터 배포를 확인합니다. 
+
+
+| * AWS_connector_name * | 문자열 | (필수) Cloud Manager Connector의 이름입니다. 
+
+
+| * AWS_CONNETOR_REGION * | 문자열 | (필수) Cloud Manager Connector가 생성되는 지역 
+
+
+| * AWS_connector_key_name * | 문자열 | (필수) Connector 인스턴스에 사용할 키 쌍의 이름입니다. 
+
+
+| * AWS_CONNETOR_COMPANY * | 문자열 | (필수) 사용자의 회사 이름입니다. 
+
+
+| * AWS_connector_instance_type * | 문자열 | (필수) 인스턴스 유형(예: T3.xLarge). 최소 4개의 CPU와 16GB의 메모리가 필요합니다. 
+
+
+| * AWS_connector_subnet_id * | 문자열 | (필수) 인스턴스에 대한 서브넷의 ID입니다. 
+
+
+| * AWS_CONNETOR_SECURITY_GROUP_ID * | 문자열 | (필수) 인스턴스에 대한 보안 그룹의 ID를 ','로 구분하여 여러 보안 그룹을 제공할 수 있습니다. 
+
+
+| * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
+
+
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
+|===
+하쌍
+
+HA 쌍의 NetApp CVO 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * cvo_is_ha * | 불입니다 | (선택 사항) 작업 환경이 HA 쌍인지 여부를 나타냅니다[true, false]. 기본값은 false 입니다. 
+
+
+| * cvo_name * | 문자열 | (필수) Cloud Volumes ONTAP 작업 환경의 이름입니다. 
+
+
+| * cvo_region * | 문자열 | (필수) 작업 환경을 생성할 영역입니다. 
+
+
+| * cvo_node1_subnet_id * | 문자열 | (필수) 첫 번째 노드가 생성될 서브넷 ID입니다. 
+
+
+| * cvo_node2_subnet_id * | 문자열 | (필수) 두 번째 노드가 생성될 서브넷 ID입니다. 
+
+
+| * cvo_vpc_id * | 문자열 | (선택 사항) 작업 환경을 생성할 VPC ID입니다. 이 인수를 제공하지 않으면 제공된 서브넷 ID를 사용하여 VPC를 계산합니다. 
+
+
+| cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
+
+
+| * cvo_failover_mode * | 문자열 | (선택 사항) HA의 경우 HA 쌍의 페일오버 모드 ['PrivateIP', 'FloatingIP']. 'PrivateIP'는 단일 가용성 구역이고 'FloatingIP'는 여러 가용성 영역을 위한 것입니다. 
+
+
+| * cvo_중재자_subnet_id * | 문자열 | (선택 사항) 중개자의 서브넷 ID인 HA의 경우. 
+
+
+| * cvo_중재자_key_pair_name * | 문자열 | (선택 사항) HA의 경우 중재자 인스턴스의 키 쌍 이름입니다. 
+
+
+| * cvo_cluster_floating_ip * | 문자열 | (선택 사항) HA FloatingIP의 경우 클러스터 관리 부동 IP 주소입니다. 
+
+
+| * cvo_data_floating_ip * | 문자열 | (선택 사항) HA FloatingIP의 경우 데이터 부동 IP 주소입니다. 
+
+
+| * cvo_data_floating_IP2 * | 문자열 | (선택 사항) HA FloatingIP의 경우 데이터 부동 IP 주소입니다. 
+
+
+| * cvo_svm_floating_ip * | 문자열 | (선택 사항) HA FloatingIP의 경우 SVM 관리 부동 IP 주소입니다. 
+
+
+| cvo_route_table_ids * | 목록 | (선택 사항) HA FloatingIP의 경우 부동 IP로 업데이트될 라우트 테이블 ID 목록입니다. 
+|===
+--
+.FSX 배포
+--
+이 섹션에서는 AWS(Amazon Web Services)에서 NetApp ONTAP FSx를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone <repo-name>
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_deploy/
+----
+. CLI에서 AWS 자격 증명을 구성합니다.
++
+[source, cli]
+----
+    aws configure
+----
++
+** AWS 액세스 키 ID [없음]: AccessKey
+** AWS 비밀 액세스 키 [없음]: secretkey
+** 기본 지역 이름 [없음]: us-west-2
+** 기본 출력 형식 [None](없음):
+
+
+. VAR/AWS_FSX_deployment.tfvars의 변수 값을 업데이트합니다
++
+
+NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터를 배포할 수 있습니다.
+
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+    terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.aws_fsx" -var-file="vars/aws_fsx_deployment.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.aws_fsx" -var-file="vars/aws_fsx_deployment.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+커넥터
+
+NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * AWS_CONNECTOR_DEPLOY_BOOL * | 불입니다 | (필수) 커넥터 배포를 확인합니다. 
+
+
+| * AWS_connector_name * | 문자열 | (필수) Cloud Manager Connector의 이름입니다. 
+
+
+| * AWS_CONNETOR_REGION * | 문자열 | (필수) Cloud Manager Connector가 생성되는 지역 
+
+
+| * AWS_connector_key_name * | 문자열 | (필수) Connector 인스턴스에 사용할 키 쌍의 이름입니다. 
+
+
+| * AWS_CONNETOR_COMPANY * | 문자열 | (필수) 사용자의 회사 이름입니다. 
+
+
+| * AWS_connector_instance_type * | 문자열 | (필수) 인스턴스 유형(예: T3.xLarge). 최소 4개의 CPU와 16GB의 메모리가 필요합니다. 
+
+
+| * AWS_connector_subnet_id * | 문자열 | (필수) 인스턴스에 대한 서브넷의 ID입니다. 
+
+
+| * AWS_CONNETOR_SECURITY_GROUP_ID * | 문자열 | (필수) 인스턴스에 대한 보안 그룹의 ID를 ','로 구분하여 여러 보안 그룹을 제공할 수 있습니다. 
+
+
+| * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
+
+
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
+|===
+FSx 인스턴스
+
+NetApp ONTAP FSx 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * FSX_NAME * | 문자열 | (필수) Cloud Volumes ONTAP 작업 환경의 이름입니다. 
+
+
+| * FSX_지역 * | 문자열 | (필수) 작업 환경을 생성할 영역입니다. 
+
+
+| * FSX_PRIMARY_SUBNET_ID * | 문자열 | (필수) 작업 환경을 생성할 기본 서브넷 ID입니다. 
+
+
+| * FSX_secondary_subnet_id * | 문자열 | (필수) 작업 환경을 생성할 보조 서브넷 ID입니다. 
+
+
+| * FSX_ACCOUNT_ID * | 문자열 | (필수) FSx 인스턴스가 연결될 NetApp 계정 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * FSX_workspace_id * | 문자열 | (필수) 작업 환경의 Cloud Manager 작업 공간의 ID입니다. 
+
+
+| * FSX_ADMIN_PASSWORD * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
+
+
+| * FSX_Throughput_Capacity * | 문자열 | (선택 사항) 처리량의 용량입니다. 
+
+
+| * FSX_STORAGE_capacity_size * | 문자열 | (선택 사항) 첫 번째 데이터 애그리게이트의 EBS 볼륨 크기입니다. GB의 경우 단위는 [100 또는 500]입니다. TB의 경우 장치는 [1,2,4,8,16]일 수 있습니다. 기본값은 '1'입니다. 
+
+
+| * FSX_STORAGE_capacity_size_unit * | 문자열 | (선택 사항) ['GB' 또는 'TB']. 기본값은 'TB'입니다. 
+
+
+| * FSX_cloudmanager_AWS_credential_name * | 문자열 | (필수) AWS 자격 증명 계정 이름의 이름입니다. 
+|===
+--
+====

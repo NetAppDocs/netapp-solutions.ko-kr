@@ -25,9 +25,9 @@ summary:
 +
 ** 실행: AI 제품 소개https://docs.run.ai/home/components/[]
 ** AI 설치 설명서를 실행하십시오https://docs.run.ai/Administrator/Cluster-Setup/Installing-Run-AI-on-an-on-premise-Kubernetes-Cluster/[]
-
+https://docs.run.ai/Administrator/Researcher-Setup/Installing-the-Run-AI-Command-Line-Interface/[]
 ** Run:AI CLI에서 작업 제출https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Launch-Unattended-Training-Workloads-/[]
-
+https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Start-and-Use-Interactive-Build-Workloads-/[]
 ** 실행 시 GPU 분할 할당: AI CLIhttps://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Using-GPU-Fractions/[]
 
 

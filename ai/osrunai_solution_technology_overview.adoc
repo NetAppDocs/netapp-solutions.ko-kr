@@ -40,7 +40,7 @@ image:osrunai_image2.png["오류: 그래픽 이미지가 없습니다"]
 
 == 소프트웨어 요구 사항
 
-이 솔루션은 Run:AI 운영자가 설치된 기본 Kubernetes 구축을 사용하여 검증되었습니다. Kubernetes는 를 사용하여 구축했습니다 https://github.com/NVIDIA/deepops["NVIDIA DeepOps"^] 구축 엔진: 즉시 프로덕션할 수 있는 환경에 필요한 모든 구성 요소를 배포합니다. DeepOps가 자동으로 배포됩니다 스토리지를 K8s 환경과 지속적으로 통합하고 기본 스토리지 클래스를 만들어 컨테이너가 AFF A800 스토리지 시스템에서 스토리지를 활용하도록 했습니다. ONTAP AI 기반 Kubernetes를 사용하는 Trident에 대한 자세한 내용은 를 참조하십시오.
+이 솔루션은 Run:AI 운영자가 설치된 기본 Kubernetes 구축을 사용하여 검증되었습니다. Kubernetes는 를 사용하여 구축했습니다 https://github.com/NVIDIA/deepops["NVIDIA DeepOps"^] 구축 엔진: 즉시 프로덕션할 수 있는 환경에 필요한 모든 구성 요소를 배포합니다. DeepOps가 자동으로 배포됩니다 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["NetApp 트라이던트"^] 스토리지를 K8s 환경과 지속적으로 통합하고 기본 스토리지 클래스를 만들어 컨테이너가 AFF A800 스토리지 시스템에서 스토리지를 활용하도록 했습니다. ONTAP AI 기반 Kubernetes를 사용하는 Trident에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/us/media/tr-4798.pdf["TR-4798"^].
 
 다음 표에는 테스트를 통해 솔루션을 구현하는 데 필요한 소프트웨어 구성요소가 나와 있습니다.
 

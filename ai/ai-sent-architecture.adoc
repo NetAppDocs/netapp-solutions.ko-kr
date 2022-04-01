@@ -30,7 +30,7 @@ NetApp DataOps Toolkit은 개발자, 데이터 과학자, DevOps 엔지니어 �
 
 다음 다이어그램에서는 솔루션 아키텍처를 보여 줍니다. 클라우드, 코어, 에지의 세 가지 주요 환경 범주가 있습니다. 각 범주는 지리적으로 분산될 수 있습니다. 예를 들어, 클라우드에는 여러 영역의 버킷에 오디오 파일이 있는 오브젝트 저장소가 포함되어 있는 반면, 코어에는 고속 네트워크 또는 NetApp Cloud Sync를 통해 연결된 데이터 센터가 포함될 수 있습니다. 에지 노드는 개별 상담원의 일상 업무 플랫폼을 나타내며, 대화형 대시보드 도구 및 마이크를 사용하여 감정을 시각화하고 고객과의 대화에서 오디오 데이터를 수집할 수 있습니다.
 
-GPU 가속 데이터 센터에서 기업은 NVIDIA를 사용할 수 있습니다 https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html["리바"^] 대화형 AI 애플리케이션을 구축하기 위한 프레임워크로, 이 애플리케이션은 에서 사용할 수 있습니다 TRANSFER L-Learning 기술을 사용하여 모델 마무리 및 재교육을 위한 연결 이러한 컴퓨팅 애플리케이션과 워크플로우가 에서 제공됩니다ONTAP이 제공하는 최고의 데이터 관리 기능을 활용할 수 있습니다. 이 툴킷은 기업 데이터 팀이 추적 가능성, 버전 관리, A/B 테스트를 위해 스냅샷 및 클론을 통해 관련 정형 및 비정형 데이터와 함께 모델을 신속하게 프로토타입화할 수 있도록 해 줍니다. 따라서 보안, 거버넌스, 및 규정 준수: 섹션을 참조하십시오 link:ai-sent-design-considerations.html#storage-design["스토리지 설계"] 를 참조하십시오.
+GPU 가속 데이터 센터에서 기업은 NVIDIA를 사용할 수 있습니다 https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html["리바"^] 대화형 AI 애플리케이션을 구축하기 위한 프레임워크로, 이 애플리케이션은 에서 사용할 수 있습니다 https://developer.nvidia.com/tao["Tao 툴킷"^] TRANSFER L-Learning 기술을 사용하여 모델 마무리 및 재교육을 위한 연결 이러한 컴퓨팅 애플리케이션과 워크플로우가 에서 제공됩니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^]ONTAP이 제공하는 최고의 데이터 관리 기능을 활용할 수 있습니다. 이 툴킷은 기업 데이터 팀이 추적 가능성, 버전 관리, A/B 테스트를 위해 스냅샷 및 클론을 통해 관련 정형 및 비정형 데이터와 함께 모델을 신속하게 프로토타입화할 수 있도록 해 줍니다. 따라서 보안, 거버넌스, 및 규정 준수: 섹션을 참조하십시오 link:ai-sent-design-considerations.html#storage-design["스토리지 설계"] 를 참조하십시오.
 
 이 솔루션은 오디오 파일 처리, NLP 모델 교육, 전송 학습 및 데이터 관리 세부 정보 단계를 보여 줍니다. 결과적으로 전체 파이프라인은 인적 지원 상담원의 대시보드에 실시간으로 표시되는 정서 요약을 생성합니다.
 

@@ -103,8 +103,8 @@ AWS의 VMware Cloud에서 3노드 SDDC 클러스터를 살펴보겠습니다.
 현재 NetApp 스토리지를 데이터 저장소로 제공하는 것은 모든 주요 하이퍼스케일러 클라우드에서 프라이빗 preview의 기능이 되고 있습니다. 자세한 내용은 다음 링크를 참조하십시오.
 
 link:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["FSX ONTAP는 AWS의 기본 데이터 저장소입니다"]
-
-
+link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 Azure용 네이티브 데이터 저장소로 사용합니다"]
+link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["CVS(Cloud Volumes Service)를 GCP용 기본 데이터 저장소로 사용합니다"]
 
 ====
 
@@ -151,8 +151,8 @@ NetApp 클라우드 스토리지는 다음과 같은 이점을 제공합니다.
 현재 NetApp 스토리지를 데이터 저장소로 제공하는 것은 모든 주요 하이퍼스케일러 클라우드에서 프라이빗 preview의 기능이 되고 있습니다. 자세한 내용은 다음 링크를 참조하십시오.
 
 link:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["FSX ONTAP는 AWS의 기본 데이터 저장소입니다"]
-
-
+link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 Azure용 네이티브 데이터 저장소로 사용합니다"]
+link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["CVS(Cloud Volumes Service)를 GCP용 기본 데이터 저장소로 사용합니다"]
 
 ====
 

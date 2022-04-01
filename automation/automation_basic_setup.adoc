@@ -22,4 +22,4 @@ keywords: netapp, solutions, automation, ansible, terraform
 
 Ansible은 에이전트가 없는 자동화 도구이므로 하나의 시스템(Ansible 제어 노드)에만 설치하면 됩니다. 제어 노드를 통해 추가 구성 없이 전체 원격 장비를 관리할 수 있습니다.
 
-Ansible을 설치하려는 OS 유형에 따라 다음 링크 중 하나를 클릭하여 제어 노드를 설정하는 자세한 단계를 확인하십시오. link:automation_rhel8_centos8_setup.adoc["RHEL8/CentOS8"^]. . 
+Ansible을 설치하려는 OS 유형에 따라 다음 링크 중 하나를 클릭하여 제어 노드를 설정하는 자세한 단계를 확인하십시오. link:automation_rhel8_centos8_setup.adoc["RHEL8/CentOS8"^]. link:automation_rhel7_centos7_setup.adoc["RHEL7/CentOS7"^]. link:automation_ubuntu_debian_setup.adoc["Ubuntu/Debian"^]

@@ -43,4 +43,4 @@ link:hybrid_dbops_snapcenter_prereq_cloud.html["이전: 퍼블릭 클라우드�
 
 자세한 내용을 보려면 다음 링크를 클릭하십시오.
 
-link:hybrid_dbops_snapcenter_getting_started_onprem.html["온프레미스"], 
+link:hybrid_dbops_snapcenter_getting_started_onprem.html["온프레미스"], link:hybrid_dbops_snapcenter_getting_started_aws.html["퍼블릭 클라우드 - AWS"]

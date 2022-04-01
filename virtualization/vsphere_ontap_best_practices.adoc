@@ -269,7 +269,7 @@ SLM은 특정 LUN에 경로를 알리는 노드를 제한합니다. NetApp 모�
 * 대상 인증을 위해 ESXi에서 CHAP(Challenge-Handshake Authentication Protocol)를 사용하는 경우 ONTAP에서 CLI('vserver iSCSI security create') 또는 System Manager(스토리지 > SVM > SVM 설정 > 프로토콜 > iSCSI에서 이니시에이터 보안 편집)를 사용하여 CHAP를 구성해야 합니다.
 * VMware vSphere용 ONTAP 툴을 사용하여 LUN 및 igroup을 생성하고 관리합니다. 이 플러그인은 서버의 WWPN을 자동으로 확인하여 적절한 igroup을 생성합니다. 또한 모범 사례에 따라 LUN을 구성하고 올바른 igroup에 매핑합니다.
 * RDM은 관리하기가 더 어려우며 앞에서 설명한 대로 제한된 경로도 사용할 수 있으므로 주의해서 사용해야 합니다. ONTAP LUN은 둘 다 지원합니다 https://kb.vmware.com/s/article/2009226["물리적 및 가상 호환성 모드"^] RDM
-* vSphere 7.0에서 NVMe/FC를 사용하는 방법에 대한 자세한 내용은 다음을 참조하십시오 https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_7.html["ONTAP NVMe/FC 호스트 구성 가이드"^] 및다음 그림에서는 vSphere 호스트에서 ONTAP LUN으로의 다중 경로 연결을 보여 줍니다.
+* vSphere 7.0에서 NVMe/FC를 사용하는 방법에 대한 자세한 내용은 다음을 참조하십시오 https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_7.html["ONTAP NVMe/FC 호스트 구성 가이드"^] 및 http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"^]다음 그림에서는 vSphere 호스트에서 ONTAP LUN으로의 다중 경로 연결을 보여 줍니다.
 
 
 image:vsphere_ontap_image2.png["오류: 그래픽 이미지가 없습니다"]

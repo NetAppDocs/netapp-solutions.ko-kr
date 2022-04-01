@@ -71,7 +71,7 @@ Kubeflow 파이프라인은 Kubeflow의 핵심 구성 요소입니다. Kubeflow 
 
 === Jupyter 노트북 서버
 
-Jupyter Notebook Server는 데이터 과학자가 실시간 코드와 설명이 포함된 Jupyter Notebooks라는 위키 형식의 문서를 만들 수 있는 오픈 소스 웹 애플리케이션입니다. Jupyter Notebooks는 AI 및 ML 프로젝트를 문서화, 저장, 공유하는 수단으로 AI 및 ML 커뮤니티에서 널리 사용되고 있습니다. Kubeflow는 Kubernetes에서 Jupyter Notebook Server의 프로비저닝 및 구축을 단순화합니다. Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 http://www.jupyter.org/["Jupyter 웹 사이트"^]. Kubeflow와 관련하여 Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오.
+Jupyter Notebook Server는 데이터 과학자가 실시간 코드와 설명이 포함된 Jupyter Notebooks라는 위키 형식의 문서를 만들 수 있는 오픈 소스 웹 애플리케이션입니다. Jupyter Notebooks는 AI 및 ML 프로젝트를 문서화, 저장, 공유하는 수단으로 AI 및 ML 커뮤니티에서 널리 사용되고 있습니다. Kubeflow는 Kubernetes에서 Jupyter Notebook Server의 프로비저닝 및 구축을 단순화합니다. Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 http://www.jupyter.org/["Jupyter 웹 사이트"^]. Kubeflow와 관련하여 Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 https://www.kubeflow.org/docs/components/jupyter/["Kubeflow 공식 문서"^].
 
 
 
