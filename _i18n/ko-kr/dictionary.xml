@@ -10157,4 +10157,92 @@
   <block id="7bd8d7a58d3957cf7697ceb3467bffae" category="cell">(필수) 작업 환경을 생성할 위치입니다.</block>
   <block id="a5ab436e757f5af2106d5ed5e5dd9df0" category="cell">(필수) Cloud Volumes ONTAP 시스템의 서브넷 이름입니다.</block>
   <block id="353190ef77d18ad13aeb6b4f0f3ddd66" category="paragraph">이 섹션에서는 Azure에서 CVO(Cloud Volumes ONTAP) HA(고가용성)를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.</block>
+  <block id="3adefdd7d79d9a7c848b2dd81fd4feff" category="paragraph">이 섹션에는 GCP(Google Cloud Platform)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.</block>
+  <block id="b05dddcb6f00ee8dba8395d241b9d24d" category="list-text">GCP 인증 키 JSON 파일을 디렉토리에 저장합니다.</block>
+  <block id="44b4381353a1686f5b81f73f018d336c" category="list-text">VAR/GCP_cvo_single_node_deployment.tfvar의 변수 값을 업데이트합니다</block>
+  <block id="2ac544064187c52d64d3eec81700dd42" category="admonition">변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥터를 배포할 수 있습니다.</block>
+  <block id="283162995c6eba560352663fa7cafbb3" category="paragraph">CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.</block>
+  <block id="c0b4a62bb4903159c66ef5fd828dbb35" category="cell">* GCP_CONNETOR_DEPLOY_BOOL *</block>
+  <block id="3448a02a5105e0eeb2a6243836814f36" category="cell">* GCP_connector_name *</block>
+  <block id="982137a628765a4ede6a620653ab8bf6" category="cell">* GCP_CONNETOR_PROJECT_ID *</block>
+  <block id="816194da363b92545a1114d46c4943f1" category="cell">(필수) 커넥터를 생성할 GCP project_id입니다.</block>
+  <block id="49a94de7b7e8762f961e471d657496eb" category="cell">* GCP_CONNETOR_ZONE *</block>
+  <block id="ff9633a62f1e60af63fc951afd6966bc" category="cell">(필수) Connector를 생성할 GCP 영역입니다.</block>
+  <block id="c667eb31817317b5455e6a8883f4664a" category="cell">* GCP_connector_company *</block>
+  <block id="9d1203849926481ebb6be1fb1d6ec3de" category="cell">* GCP_CONNETOR_SERVICE_ACCOUNT_EMAIL *</block>
+  <block id="d4a302e18b412231fe06e54e038aed80" category="cell">(필수) 커넥터 인스턴스에 대한 SERVICE_ACCOUNT의 전자 메일입니다. 이 서비스 계정은 커넥터가 Cloud Volume ONTAP를 생성할 수 있도록 하는 데 사용됩니다.</block>
+  <block id="0e3852268e0e5a3a486b8fcf6e3ae1c1" category="cell">* GCP_CONNETOR_SERVICE_ACCOUNT_PATH *</block>
+  <block id="f863e677d176e63d3642e53ae6b336b5" category="cell">(필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 Connector를 생성하는 데 사용됩니다.</block>
+  <block id="cfd7e4961aa34c5626712429d469ed18" category="cell">* GCP_CONNETOR_ACCOUNT_ID *</block>
+  <block id="231d57c65fc42941f6a520976dc80ec3" category="cell">(선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다<block ref="ed21e31bd71ab546f26978ff562b5c5d" category="inline-link-rx"></block>.</block>
+  <block id="9ea10c86ddbbfa93db9af98d0a38e7d7" category="paragraph">GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수</block>
+  <block id="9d8a021dcdac02b1cffc5ee14bc79241" category="cell">* GCP_cvo_name *</block>
+  <block id="bc023aad2be985e1a3252a959cb2c43b" category="cell">* GCP_cvo_project_id *</block>
+  <block id="c7a61709c9cf6aa90f854f8e30110412" category="cell">(필수) GCP 프로젝트의 ID입니다.</block>
+  <block id="6f74a6834cfd9c72b6694ae9ecb7f332" category="cell">* GCP_cvo_zone *</block>
+  <block id="dea2d3525e8ec98bbd9a7931a8ed9921" category="cell">(필수) 작업 환경을 생성할 영역의 영역입니다.</block>
+  <block id="2c09e34e29e9c5f65d5d8ac921fd8105" category="cell">* GCP_cvo_GCP_service_account *</block>
+  <block id="77853ddcc7178537c8d9c0301b71c991" category="cell">(필수) Google Cloud 스토리지로 콜드 데이터를 계층화할 수 있도록 GCP_SERVICE_ACCOUNT 이메일을 보냅니다.</block>
+  <block id="ffb5588c947a413a01016a81af9ddbc7" category="cell">* GCP_cvo_svm_password *</block>
+  <block id="9507c3b760db1c7e6c8d1674933449e4" category="cell">* GCP_cvo_workspace_id *</block>
+  <block id="4efb152d95f2b6b19ca1387a26e8f750" category="cell">(선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다<block ref="ed21e31bd71ab546f26978ff562b5c5d" category="inline-link-rx"></block>.</block>
+  <block id="7cbf1746ddada50a540811a75b633bfa" category="cell">* GCP_cvo_license_type *</block>
+  <block id="108ccbda23ae580baf5fb86c14613837" category="cell">(선택 사항) 사용할 라이센스 유형입니다. 단일 노드의 경우: ['capacity-paygo', 'GCP-cot-score-paygo', 'GCP-cot-standard-paygo', 'GCP-cot-premium-paygo', 'GCP-cot-premium-BYOL'], HA:['ha-capacity-paygo', 'GCP-ha-cot-cot-Explore-paygo', 'GCP-ha-cot-standard-paygo', 'GCP-ha-cot-premium-BYOL'] 기본값은 단일 노드의 경우 'capacity-paygo'이고 HA의 경우 'ha-capacity-pago'입니다.</block>
+  <block id="ec6c16de8b82f3fc6c55f03f1d9a0848" category="cell">* GCP_cvo_capacity_package_name *</block>
+  <block id="564565c1364213fe3ffcef055b61947b" category="cell">(선택 사항) 용량 패키지 이름: ['Essential', 'Professional', 'Freemium']. 기본값은 '필수'입니다.</block>
+  <block id="ac245610a2b7e434b78946f9ab069afe" category="paragraph">이 섹션에서는 GCP(Google Cloud Platform)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.</block>
+  <block id="00c7a940cc525046dc63cee112a8ef2d" category="list-text">VAR/GCP_cvo_ha_deployment.tfvars의 변수 값을 업데이트합니다.</block>
+  <block id="657426021b9624d6c24fae901c9998c1" category="paragraph">GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.</block>
+  <block id="2a20062f50c253ff821e16ab60e9bd71" category="cell">* GCP_cvo_is_ha *</block>
+  <block id="c7d1d567eb3eec5faac1c3efbf5c63d6" category="cell">* GCP_cvo_node1_zone *</block>
+  <block id="2cb70db8c1982b17ac705ceace5b64ae" category="cell">(선택 사항) 노드 1의 영역</block>
+  <block id="b231cdca0a533a8afcbf95810dcdd937" category="cell">* GCP_cvo_node2_zone *</block>
+  <block id="2aad8f424dde09a3fb42570367a156de" category="cell">(선택 사항) 노드 2의 영역</block>
+  <block id="7dd3bb55d8d71efcb06fc86bbb29993a" category="cell">* GCP_cvo_중재자_존 *</block>
+  <block id="767c5594dfa391fbb74bd9360557a0a8" category="cell">(선택 사항) 중재자를 위한 영역.</block>
+  <block id="4ecd0da4e352bb336bd4c5925e627fbb" category="cell">* GCP_cvo_vPC_id *</block>
+  <block id="0a49d29112682612dc74e881a68deed0" category="cell">(선택 사항) VPC의 이름입니다.</block>
+  <block id="eedae790807f6f5998c1d5b2eccfcf91" category="cell">* GCP_cvo_subnet_id *</block>
+  <block id="dbb13624053bb884443eb3a8a891a35e" category="cell">(선택 사항) Cloud Volumes ONTAP에 대한 서브넷의 이름입니다. 기본값은 'default'입니다.</block>
+  <block id="5fbbd2383d042b5ab01878b936e467ff" category="cell">* GCP_cvo_vpc0_node_and_data_connectivity *</block>
+  <block id="24239aec58a00d53d32147d2e71cca4d" category="cell">(선택 사항) 노드 및 데이터 연결에 필요한 NIC1용 VPC 경로입니다. 공유 VPC를 사용하는 경우 netwrok_project_id를 제공해야 합니다.</block>
+  <block id="b1dd5e2b134fc3db50406e05c7ae6c38" category="cell">* GCP_cvo_vpc1_cluster_connectivity *</block>
+  <block id="714e5d0cdfde4cbf4df83df266c672e7" category="cell">(선택 사항) 클러스터 연결에 필요한 NIC2용 VPC 경로입니다.</block>
+  <block id="f8d315b03e4b926495b923dfe4b49b23" category="cell">* GCP_cvo_vpc2_ha_connectivity *</block>
+  <block id="5c144c2c76f5d988024f4d7398060d71" category="cell">(선택 사항) NIC3용 VPC 경로, HA 연결에 필요</block>
+  <block id="1366961106ddc181e83c467cf5559a14" category="cell">* GCP_cvo_vpc3_data_replication *</block>
+  <block id="b4be5ce15bf4e51acd3167c47e79955f" category="cell">(선택 사항) 데이터 복제에 필요한 NIC4용 VPC 경로입니다.</block>
+  <block id="065308400ba1fac48f2ca62781d79dff" category="cell">* GCP_cvo_subnet0_node_and_data_connectivity *</block>
+  <block id="2a33bb449fd47fa1f379b60f3e1473ca" category="cell">(선택 사항) 노드 및 데이터 연결에 필요한 NIC1의 서브넷 경로입니다. 공유 VPC를 사용하는 경우 netwrok_project_id를 제공해야 합니다.</block>
+  <block id="da8a35439720c0bc705f001b954bd61e" category="cell">* GCP_cvo_subnet1_cluster_connectivity *</block>
+  <block id="01b515c3b8d74ae94df6572b47a3f06d" category="cell">(선택 사항) 클러스터 연결에 필요한 NIC2의 서브넷 경로입니다.</block>
+  <block id="7ea43f4ca8d2a868f20df11b9e0b39b2" category="cell">* GCP_cvo_subnet2_ha_connectivity *</block>
+  <block id="a35bd275122015b3834d13c0dc72b87f" category="cell">(선택 사항) HA 연결에 필요한 NIC3의 서브넷 경로입니다.</block>
+  <block id="16c5273854a933d221200af8f06d106a" category="cell">* GCP_cvo_subnet3_data_replication *</block>
+  <block id="b36fab455a4e11803791a090935906af" category="cell">(선택 사항) 데이터 복제에 필요한 NIC4의 서브넷 경로입니다.</block>
+  <block id="e69179170f564daf56d8694c1c5d35fe" category="cell">* GCP_cvo_GCP_volume_size *</block>
+  <block id="eb01714b284e762b9c44adfa5575690c" category="cell">(선택 사항) 첫 번째 데이터 애그리게이트의 GCP 볼륨 크기입니다. GB의 경우 단위는 [100 또는 500]입니다. TB의 경우 장치는 [1,2,4,8]일 수 있습니다. 기본값은 '1'입니다.</block>
+  <block id="4c767d9b6ddddf4abeaece5590c0b101" category="cell">* GCP_cvo_GCP_volume_size_unit *</block>
+  <block id="944ce323a5a1ffb09543fd409911cc88" category="open-title">CVS 볼륨</block>
+  <block id="ffcc65b297748299934a184d39035ae4" category="paragraph">이 섹션에는 GCP(Google Cloud Platform)에서 NetApp CVS(Cloud Volumes Services) 볼륨을 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.</block>
+  <block id="732c3eabba1449281a4fddb59dbddcac" category="paragraph">Terraform 문서:<block ref="35b7d5c9a11899e5d5e07079551e8cef" category="inline-link-rx"></block></block>
+  <block id="d203294ba4c28418657d90a7f8a7510d" category="list-text">VAR/GCP_CVs_volume.tfvars의 변수 값을 업데이트합니다.</block>
+  <block id="40686c9084c59387baf48000dd09e6ab" category="paragraph">CVS 볼륨</block>
+  <block id="3efdf9b0e7f4af483444f271367d6361" category="paragraph">NetApp GCP CVS 볼륨에 대한 Terraform 변수</block>
+  <block id="0ffdc0b2b4889601b216ab5087650d46" category="cell">* GCP_cvs_name *</block>
+  <block id="8ff48dd93ed73eb9adc26090e58ed80b" category="cell">(필수) NetApp CVS 볼륨의 이름입니다.</block>
+  <block id="b6759cef3cfc5890deb6a790f73c8b79" category="cell">* GCP_CV_PROJECT_ID *</block>
+  <block id="b0257576709acc899b5376a171c3cd98" category="cell">(필수) CVS 볼륨을 생성할 GCP 프로젝트_ID입니다.</block>
+  <block id="447b0e81ae249b907128b7ea83e045c5" category="cell">* GCP_CV_GCP_SERVICE_ACCOUNT_PATH *</block>
+  <block id="820ecb1b7a653c1e2dece0176d15eaed" category="cell">(필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 CVS 볼륨을 생성하는 데 사용됩니다.</block>
+  <block id="6cb8bdefdf91cd2d80f6d9849de25fb8" category="cell">* GCP_cvs_region *</block>
+  <block id="ec9461de174e3ad866c58b577c94034b" category="cell">(필수) CVS 볼륨을 생성할 GCP 영역</block>
+  <block id="fc944aa114b94de895d84f5375000c0b" category="cell">* GCP_cvs_network *</block>
+  <block id="23a1cb77eeeabfd36bbab18e5de9f0dc" category="cell">(필수) 볼륨의 네트워크 VPC</block>
+  <block id="31681a1878caf611cea11e159a4fc1aa" category="cell">* GCP_cvs_size *</block>
+  <block id="6f84d4d0c83121512056657a2dc0e808" category="cell">(필수) 볼륨 크기는 102400에서 102400까지입니다(GiB).</block>
+  <block id="5c1eb3efe4738cb21efadc992aeeef81" category="cell">* GCP_cvs_volume_path *</block>
+  <block id="bacdc6093d23e2f886b0cb0609418030" category="cell">(선택 사항) 볼륨의 볼륨 경로 이름입니다.</block>
+  <block id="0467ee670bdb8fff57da77368d6d5385" category="cell">* GCP_CV_PROTOCOL_TYPE *</block>
+  <block id="b91db1bd1a57ea4c9953036d82a63e95" category="cell">(필수) 볼륨의 PROTOCOL_TYPE. NFS의 경우 'NFSv3' 또는 'NFSv4'를 사용하고 SMB의 경우 'CIFS' 또는 'MB'를 사용합니다.</block>
 </blocks>

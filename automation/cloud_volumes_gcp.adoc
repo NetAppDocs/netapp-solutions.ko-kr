@@ -1,0 +1,392 @@
+= 
+
+
+[role="tabbed-block"]
+====
+.CVO 단일 노드 구축
+--
+이 섹션에는 GCP(Google Cloud Platform)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_automation/
+----
+. GCP 인증 키 JSON 파일을 디렉토리에 저장합니다.
+. VAR/GCP_cvo_single_node_deployment.tfvar의 변수 값을 업데이트합니다
++
+
+NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥터를 배포할 수 있습니다.
+
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+    terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.gco_single_node" -var-file="vars/gcp_cvo_single_node_deployment.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.gcp_single_node" -var-file="vars/gcp_cvo_single_node_deployment.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+커넥터
+
+CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * GCP_CONNETOR_DEPLOY_BOOL * | 불입니다 | (필수) 커넥터 배포를 확인합니다. 
+
+
+| * GCP_connector_name * | 문자열 | (필수) Cloud Manager Connector의 이름입니다. 
+
+
+| * GCP_CONNETOR_PROJECT_ID * | 문자열 | (필수) 커넥터를 생성할 GCP project_id입니다. 
+
+
+| * GCP_CONNETOR_ZONE * | 문자열 | (필수) Connector를 생성할 GCP 영역입니다. 
+
+
+| * GCP_connector_company * | 문자열 | (필수) 사용자의 회사 이름입니다. 
+
+
+| * GCP_CONNETOR_SERVICE_ACCOUNT_EMAIL * | 문자열 | (필수) 커넥터 인스턴스에 대한 SERVICE_ACCOUNT의 전자 메일입니다. 이 서비스 계정은 커넥터가 Cloud Volume ONTAP를 생성할 수 있도록 하는 데 사용됩니다. 
+
+
+| * GCP_CONNETOR_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 Connector를 생성하는 데 사용됩니다. 
+
+
+| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+|===
+'단일 노드 인스턴스'
+
+GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * GCP_cvo_name * | 문자열 | (필수) Cloud Volumes ONTAP 작업 환경의 이름입니다. 
+
+
+| * GCP_cvo_project_id * | 문자열 | (필수) GCP 프로젝트의 ID입니다. 
+
+
+| * GCP_cvo_zone * | 문자열 | (필수) 작업 환경을 생성할 영역의 영역입니다. 
+
+
+| * GCP_cvo_GCP_service_account * | 문자열 | (필수) Google Cloud 스토리지로 콜드 데이터를 계층화할 수 있도록 GCP_SERVICE_ACCOUNT 이메일을 보냅니다. 
+
+
+| * GCP_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
+
+
+| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * GCP_cvo_license_type * | 문자열 | (선택 사항) 사용할 라이센스 유형입니다. 단일 노드의 경우: ['capacity-paygo', 'GCP-cot-score-paygo', 'GCP-cot-standard-paygo', 'GCP-cot-premium-paygo', 'GCP-cot-premium-BYOL'], HA:['ha-capacity-paygo', 'GCP-ha-cot-cot-Explore-paygo', 'GCP-ha-cot-standard-paygo', 'GCP-ha-cot-premium-BYOL'] 기본값은 단일 노드의 경우 'capacity-paygo'이고 HA의 경우 'ha-capacity-pago'입니다. 
+
+
+| * GCP_cvo_capacity_package_name * | 문자열 | (선택 사항) 용량 패키지 이름: ['Essential', 'Professional', 'Freemium']. 기본값은 '필수'입니다. 
+|===
+--
+.CVO HA 구축
+--
+이 섹션에서는 GCP(Google Cloud Platform)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_automation/
+----
+. GCP 인증 키 JSON 파일을 디렉토리에 저장합니다.
+. VAR/GCP_cvo_ha_deployment.tfvars의 변수 값을 업데이트합니다.
++
+
+NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥터를 배포할 수 있습니다.
+
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+      terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.gcp_ha" -var-file="vars/gcp_cvo_ha_deployment.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.gcp_ha" -var-file="vars/gcp_cvo_ha_deployment.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+커넥터
+
+CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * GCP_CONNETOR_DEPLOY_BOOL * | 불입니다 | (필수) 커넥터 배포를 확인합니다. 
+
+
+| * GCP_connector_name * | 문자열 | (필수) Cloud Manager Connector의 이름입니다. 
+
+
+| * GCP_CONNETOR_PROJECT_ID * | 문자열 | (필수) 커넥터를 생성할 GCP project_id입니다. 
+
+
+| * GCP_CONNETOR_ZONE * | 문자열 | (필수) Connector를 생성할 GCP 영역입니다. 
+
+
+| * GCP_connector_company * | 문자열 | (필수) 사용자의 회사 이름입니다. 
+
+
+| * GCP_CONNETOR_SERVICE_ACCOUNT_EMAIL * | 문자열 | (필수) 커넥터 인스턴스에 대한 SERVICE_ACCOUNT의 전자 메일입니다. 이 서비스 계정은 커넥터가 Cloud Volume ONTAP를 생성할 수 있도록 하는 데 사용됩니다. 
+
+
+| * GCP_CONNETOR_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 Connector를 생성하는 데 사용됩니다. 
+
+
+| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+|===
+하쌍
+
+GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * GCP_cvo_is_ha * | 불입니다 | (선택 사항) 작업 환경이 HA 쌍인지 여부를 나타냅니다[true, false]. 기본값은 false 입니다. 
+
+
+| * GCP_cvo_name * | 문자열 | (필수) Cloud Volumes ONTAP 작업 환경의 이름입니다. 
+
+
+| * GCP_cvo_project_id * | 문자열 | (필수) GCP 프로젝트의 ID입니다. 
+
+
+| * GCP_cvo_zone * | 문자열 | (필수) 작업 환경을 생성할 영역의 영역입니다. 
+
+
+| * GCP_cvo_node1_zone * | 문자열 | (선택 사항) 노드 1의 영역 
+
+
+| * GCP_cvo_node2_zone * | 문자열 | (선택 사항) 노드 2의 영역 
+
+
+| * GCP_cvo_중재자_존 * | 문자열 | (선택 사항) 중재자를 위한 영역. 
+
+
+| * GCP_cvo_vPC_id * | 문자열 | (선택 사항) VPC의 이름입니다. 
+
+
+| * GCP_cvo_subnet_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP에 대한 서브넷의 이름입니다. 기본값은 'default'입니다. 
+
+
+| * GCP_cvo_vpc0_node_and_data_connectivity * | 문자열 | (선택 사항) 노드 및 데이터 연결에 필요한 NIC1용 VPC 경로입니다. 공유 VPC를 사용하는 경우 netwrok_project_id를 제공해야 합니다. 
+
+
+| * GCP_cvo_vpc1_cluster_connectivity * | 문자열 | (선택 사항) 클러스터 연결에 필요한 NIC2용 VPC 경로입니다. 
+
+
+| * GCP_cvo_vpc2_ha_connectivity * | 문자열 | (선택 사항) NIC3용 VPC 경로, HA 연결에 필요 
+
+
+| * GCP_cvo_vpc3_data_replication * | 문자열 | (선택 사항) 데이터 복제에 필요한 NIC4용 VPC 경로입니다. 
+
+
+| * GCP_cvo_subnet0_node_and_data_connectivity * | 문자열 | (선택 사항) 노드 및 데이터 연결에 필요한 NIC1의 서브넷 경로입니다. 공유 VPC를 사용하는 경우 netwrok_project_id를 제공해야 합니다. 
+
+
+| * GCP_cvo_subnet1_cluster_connectivity * | 문자열 | (선택 사항) 클러스터 연결에 필요한 NIC2의 서브넷 경로입니다. 
+
+
+| * GCP_cvo_subnet2_ha_connectivity * | 문자열 | (선택 사항) HA 연결에 필요한 NIC3의 서브넷 경로입니다. 
+
+
+| * GCP_cvo_subnet3_data_replication * | 문자열 | (선택 사항) 데이터 복제에 필요한 NIC4의 서브넷 경로입니다. 
+
+
+| * GCP_cvo_GCP_service_account * | 문자열 | (필수) Google Cloud 스토리지로 콜드 데이터를 계층화할 수 있도록 GCP_SERVICE_ACCOUNT 이메일을 보냅니다. 
+
+
+| * GCP_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
+
+
+| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
+
+
+| * GCP_cvo_license_type * | 문자열 | (선택 사항) 사용할 라이센스 유형입니다. 단일 노드의 경우: ['capacity-paygo', 'GCP-cot-score-paygo', 'GCP-cot-standard-paygo', 'GCP-cot-premium-paygo', 'GCP-cot-premium-BYOL'], HA:['ha-capacity-paygo', 'GCP-ha-cot-cot-Explore-paygo', 'GCP-ha-cot-standard-paygo', 'GCP-ha-cot-premium-BYOL'] 기본값은 단일 노드의 경우 'capacity-paygo'이고 HA의 경우 'ha-capacity-pago'입니다. 
+
+
+| * GCP_cvo_capacity_package_name * | 문자열 | (선택 사항) 용량 패키지 이름: ['Essential', 'Professional', 'Freemium']. 기본값은 '필수'입니다. 
+
+
+| * GCP_cvo_GCP_volume_size * | 문자열 | (선택 사항) 첫 번째 데이터 애그리게이트의 GCP 볼륨 크기입니다. GB의 경우 단위는 [100 또는 500]입니다. TB의 경우 장치는 [1,2,4,8]일 수 있습니다. 기본값은 '1'입니다. 
+
+
+| * GCP_cvo_GCP_volume_size_unit * | 문자열 | (선택 사항) ['GB' 또는 'TB']. 기본값은 'TB'입니다. 
+|===
+--
+.CVS 볼륨
+--
+이 섹션에는 GCP(Google Cloud Platform)에서 NetApp CVS(Cloud Volumes Services) 볼륨을 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
+
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/latest/docs[]
+
+템플릿을 실행하려면:
+
+. 리포지토리를 복제합니다.
++
+[source, cli]
+----
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+----
+. 원하는 폴더로 이동합니다
++
+[source, cli]
+----
+    cd na_cloud_volumes_automation/
+----
+. GCP 인증 키 JSON 파일을 디렉토리에 저장합니다.
+. VAR/GCP_CVs_volume.tfvars의 변수 값을 업데이트합니다.
+. Terraform 리포지토리를 초기화하여 모든 필수 구성 요소를 설치하고 배포를 준비합니다.
++
+[source, cli]
+----
+      terraform init
+----
+. Terraform validate 명령을 사용하여 Terraform 파일을 확인합니다.
++
+[source, cli]
+----
+    terraform validate
+----
+. 구축 과정에서 예상되는 모든 변경 사항을 미리 보려면 구성을 건식 실행하십시오.
++
+[source, cli]
+----
+    terraform plan -target="module.gcp_cvs_volume" -var-file="vars/gcp_cvs_volume.tfvars"
+----
+. 배포를 실행합니다
++
+[source, cli]
+----
+    terraform apply -target="module.gcp_cvs_volume" -var-file="vars/gcp_cvs_volume.tfvars"
+----
+
+
+를 눌러 배포를 삭제합니다
+
+[source, cli]
+----
+    terraform destroy
+----
+CVS 볼륨
+
+NetApp GCP CVS 볼륨에 대한 Terraform 변수
+
+|===
+
+
+| * 이름 * | * 유형 * | * 설명 * 
+
+
+| * GCP_cvs_name * | 문자열 | (필수) NetApp CVS 볼륨의 이름입니다. 
+
+
+| * GCP_CV_PROJECT_ID * | 문자열 | (필수) CVS 볼륨을 생성할 GCP 프로젝트_ID입니다. 
+
+
+| * GCP_CV_GCP_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 CVS 볼륨을 생성하는 데 사용됩니다. 
+
+
+| * GCP_cvs_region * | 문자열 | (필수) CVS 볼륨을 생성할 GCP 영역 
+
+
+| * GCP_cvs_network * | 문자열 | (필수) 볼륨의 네트워크 VPC 
+
+
+| * GCP_cvs_size * | 정수 | (필수) 볼륨 크기는 102400에서 102400까지입니다(GiB). 
+
+
+| * GCP_cvs_volume_path * | 문자열 | (선택 사항) 볼륨의 볼륨 경로 이름입니다. 
+
+
+| * GCP_CV_PROTOCOL_TYPE * | 문자열 | (필수) 볼륨의 PROTOCOL_TYPE. NFS의 경우 'NFSv3' 또는 'NFSv4'를 사용하고 SMB의 경우 'CIFS' 또는 'MB'를 사용합니다. 
+|===
+--
+====

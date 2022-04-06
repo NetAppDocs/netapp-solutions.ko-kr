@@ -15,13 +15,13 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone <repo-name>
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
 [source, cli]
 ----
-    cd na_cloud_volumes_deploy/
+    cd na_cloud_volumes_automation/
 ----
 . CLI에서 AWS 자격 증명을 구성합니다.
 +
@@ -155,13 +155,13 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone <repo-name>
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
 [source, cli]
 ----
-    cd na_cloud_volumes_deploy/
+    cd na_cloud_volumes_automation/
 ----
 . CLI에서 AWS 자격 증명을 구성합니다.
 +
@@ -322,13 +322,13 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone <repo-name>
+    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
 [source, cli]
 ----
-    cd na_cloud_volumes_deploy/
+    cd na_cloud_volumes_automation/
 ----
 . CLI에서 AWS 자격 증명을 구성합니다.
 +
