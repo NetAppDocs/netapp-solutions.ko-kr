@@ -1644,9 +1644,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/</loc>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/data-analytics/</loc>
       
-      <lastmod>2022-01-31T15:15:57+00:00</lastmod>
+      <lastmod>2022-02-02T18:03:27+00:00</lastmod>
       
     </url>
   
@@ -1679,14 +1679,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/ai/</loc>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/</loc>
       
-      <lastmod>2022-02-02T18:03:27+00:00</lastmod>
+      <lastmod>2022-01-31T15:15:57+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/data-analytics/</loc>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/ai/</loc>
       
       <lastmod>2022-02-02T18:03:27+00:00</lastmod>
       
@@ -2500,7 +2500,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions//search.html</loc>
       
-      <lastmod>2022-04-06T12:54:33+00:00</lastmod>
+      <lastmod>2022-04-07T17:14:39+00:00</lastmod>
       
     </url>
   
@@ -2661,14 +2661,14 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/vsphere_ontap_auto_file.html</loc>
       
-      <lastmod>2022-01-31T15:15:57+00:00</lastmod>
+      <lastmod>2022-04-07T17:13:40+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/vsphere_ontap_auto_file_nfs.html</loc>
       
-      <lastmod>2022-02-07T19:04:00+00:00</lastmod>
+      <lastmod>2022-04-07T17:13:40+00:00</lastmod>
       
     </url>
   
@@ -2682,7 +2682,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/vsphere_ontap_best_practices.html</loc>
       
-      <lastmod>2022-04-01T19:46:47+00:00</lastmod>
+      <lastmod>2022-04-07T17:13:40+00:00</lastmod>
       
     </url>
   
