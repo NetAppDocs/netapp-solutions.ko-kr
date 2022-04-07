@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: virtualization/scv_videos_deployment.html 
+keywords: video, demonstration, SnapCenter, Deployment 
+summary:  
+---
+= VMware vSphere용 NetApp SnapCenter 플러그인 - VMware 기반 구축
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+video::scv_deployment.mp4[]
+link:scv_videos_prerequisites.html["다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건"]

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: virtualization/scv_videos_sql_restore.html 
+keywords: video, demonstration, SnapCenter, Deployment 
+summary:  
+---
+= VMware vSphere용 NetApp SnapCenter 플러그인 - SQL Server 복원 워크플로우
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+video::scv_sql_restore.mp4[]
+link:scv_videos_restore_workflow.html["이전: 추가 정보: VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우."]
