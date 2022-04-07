@@ -67,31 +67,31 @@ permitted by applicable law.
 | TCP v4/V6 포트 번호 | 기능 
 
 
-| 8143 | REST API용 HTTPS 연결 
+| 8143 인바운드 | REST API용 HTTPS 연결 
 
 
-| 8043 | HTTPS 연결 
+| 8043 인바운드 | HTTPS 연결 
 
 
-| 9060 | https 연결을 통한 SOAP에 사용되는 HTTPS 연결 클라이언트가 ONTAP 도구 API 서버에 연결할 수 있도록 이 포트를 열어야 합니다. 
+| 9060 인바운드 | https 연결을 통한 SOAP에 사용되는 HTTPS 연결 클라이언트가 ONTAP 도구 API 서버에 연결할 수 있도록 이 포트를 열어야 합니다. 
 
 
-| 22 | SSH(기본적으로 비활성화됨) 
+| 22 인바운드 | SSH(기본적으로 비활성화됨) 
 
 
-| 9080 | HTTPS 연결 - VP 및 SRA - 루프백에서만 내부 연결 
+| 9080 인바운드 | HTTPS 연결 - VP 및 SRA - 루프백에서만 내부 연결 
 
 
-| 9083 | HTTPS 연결 - VP 및 SRA 
+| 9083 인바운드 | HTTPS 연결 - https 연결을 통한 SOAP에 사용되는 VP 및 SRA입니다 
 
 
-|  | https 연결을 통한 SOAP에 사용됩니다 
+| 1162 인바운드 | VP SNMP 트랩 패킷입니다 
 
 
-| 1162 | VP SNMP 트랩 패킷입니다 
+| 1527 내부만 해당 | Derby 데이터베이스 포트, 이 컴퓨터와 자체 사이에서만, 외부 연결은 허용되지 않음 -- 내부 연결만 
 
 
-| 1527)을 참조하십시오 | Derby 데이터베이스 포트, 이 컴퓨터와 자체 사이에서만, 외부 연결은 허용되지 않음 -- 내부 연결만 
+| 443 양방향 | ONTAP 클러스터에 연결하는 데 사용됩니다 
 |===
 * * CA(인증 기관) 서명 인증서 지원. * VMware vSphere용 ONTAP 툴은 CA 서명 인증서를 지원합니다. 자세한 내용은 다음을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider/Virtual_Storage_Console%3A_Implementing_CA_signed_certificates["KB 문서를 참조하십시오"^] 를 참조하십시오.
 * * 감사 로깅. * 지원 번들은 다운로드할 수 있으며 매우 자세히 설명되어 있습니다. ONTAP 도구는 모든 사용자 로그인 및 로그아웃 활동을 별도의 로그 파일에 기록합니다. VASA API 호출은 전용 VASA 감사 로그(로컬 CXF.log)에 기록됩니다.

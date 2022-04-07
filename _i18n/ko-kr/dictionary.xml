@@ -6237,22 +6237,12 @@
   <block id="0406f8902379502d1eba01f043c232b7" category="paragraph">다음 표에서는 열려 있는 포트의 세부 정보를 설명합니다.</block>
   <block id="69fc9fe9cbb7709e97a433352aecf77d" category="cell">TCP v4/V6 포트 번호</block>
   <block id="86408593c34af77fdd90df932f8b5261" category="cell">기능</block>
-  <block id="0c95054981de037de06e544a52eb3613" category="cell">8143</block>
   <block id="d16c4afdc5f340936b747baf91efc843" category="cell">REST API용 HTTPS 연결</block>
-  <block id="5bd529d5b07b647a8863cf71e98d651a" category="cell">8043</block>
   <block id="1f4deeb2f64336d4ff65ea3d2b4ffe2f" category="cell">HTTPS 연결</block>
-  <block id="cb4b69eb9bd10da82c15dca2f86a1385" category="cell">9060</block>
   <block id="5852f8019b572f4cdef5bab783fa799f" category="cell">https 연결을 통한 SOAP에 사용되는 HTTPS 연결 클라이언트가 ONTAP 도구 API 서버에 연결할 수 있도록 이 포트를 열어야 합니다.</block>
-  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
   <block id="f4e339608b243f9b57b78ffaf061b498" category="cell">SSH(기본적으로 비활성화됨)</block>
-  <block id="d82d678e9583c1f5f283ec56fbf1abb7" category="cell">9080</block>
   <block id="ef34781e03f49b5db5dd8fa267c4c41b" category="cell">HTTPS 연결 - VP 및 SRA - 루프백에서만 내부 연결</block>
-  <block id="a44ba9086b2b83ccf2baf7c678723449" category="cell">9083</block>
-  <block id="25a695aa0122683aad4828e2458bbba6" category="cell">HTTPS 연결 - VP 및 SRA</block>
-  <block id="4b8384754c8b30050bb36e840394189b" category="cell">https 연결을 통한 SOAP에 사용됩니다</block>
-  <block id="abea47ba24142ed16b7d8fbf2c740e0d" category="cell">1162</block>
   <block id="4a0724da5c6f4e4817663ae822550800" category="cell">VP SNMP 트랩 패킷입니다</block>
-  <block id="5cce8dede893813f879b873962fb669f" category="cell">1527)을 참조하십시오</block>
   <block id="60135f95267c6e0711bf5a2858dfff2f" category="cell">Derby 데이터베이스 포트, 이 컴퓨터와 자체 사이에서만, 외부 연결은 허용되지 않음 -- 내부 연결만</block>
   <block id="bf6184406d1e18fffc86ecf770fbb391" category="inline-link">KB 문서를 참조하십시오</block>
   <block id="fedac49792829de4ff38fcf7a3846faa" category="list-text">* CA(인증 기관) 서명 인증서 지원. * VMware vSphere용 ONTAP 툴은 CA 서명 인증서를 지원합니다. 자세한 내용은 다음을 참조하십시오<block ref="0903a062b2072644a9b744a7fece4216" category="inline-link-rx"></block> 를 참조하십시오.</block>
@@ -10246,4 +10236,15 @@
   <block id="b91db1bd1a57ea4c9953036d82a63e95" category="cell">(필수) 볼륨의 PROTOCOL_TYPE. NFS의 경우 'NFSv3' 또는 'NFSv4'를 사용하고 SMB의 경우 'CIFS' 또는 'MB'를 사용합니다.</block>
   <block id="8065bff4940ae8d7161f926b0df47ac4" category="inline-link">NetApp 상호 운용성 매트릭스 툴</block>
   <block id="1479ddf58c038ab7d220ff734c74deaf" category="list-text">의 NFS v4.1 상호 운용성 표 노트를 참조하십시오<block ref="8813559f5b95abb5411182be29200aff" category="inline-link-rx"></block> 지원을 위해 필요한 특정 ESXi 패치 수준</block>
+  <block id="087dbda5365ed88e00c8872c4c1e0bbd" category="cell">8143 인바운드</block>
+  <block id="02d2c75d8a2aa2467d06001b31c05362" category="cell">8043 인바운드</block>
+  <block id="b0fe0ecb8fb3ce74f7b3b8247ad8c57f" category="cell">9060 인바운드</block>
+  <block id="b73aff0593aa8a0babf12a5436046fa4" category="cell">22 인바운드</block>
+  <block id="76021536cddae3cb1fafb19e94fd4f7b" category="cell">9080 인바운드</block>
+  <block id="401895563aca0ffc4c817683f6dc198f" category="cell">9083 인바운드</block>
+  <block id="fe01ac95967cd8cb5f5b5669b685277a" category="cell">HTTPS 연결 - https 연결을 통한 SOAP에 사용되는 VP 및 SRA입니다</block>
+  <block id="0ebf2b61e02f96a8bb3cec797938ce85" category="cell">1162 인바운드</block>
+  <block id="15d6e89ffe56b79f00fc52375bd5df4e" category="cell">1527 내부만 해당</block>
+  <block id="44706a5e15cbefd4bd5f94f6009bddce" category="cell">443 양방향</block>
+  <block id="e4b8a8d8761aab7733e317b585d5d606" category="cell">ONTAP 클러스터에 연결하는 데 사용됩니다</block>
 </blocks>
