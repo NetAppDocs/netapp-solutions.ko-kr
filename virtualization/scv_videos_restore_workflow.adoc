@@ -13,3 +13,6 @@ summary:
 
 
 video::scv_restore_workflow.mp4[]
+link:scv_videos_backup_workflow.html["이전: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우."]
+
+link:scv_videos_sql_restore.html["다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - SQL 복구 워크플로우"]
