@@ -6,6 +6,7 @@ summary:
 ---
 = 기본 자원 할당 공정성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = WP-7328: NVIDIA Jarvis를 사용하는 NetApp 대화형 AI
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

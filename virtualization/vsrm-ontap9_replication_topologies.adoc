@@ -6,6 +6,7 @@ summary: ONTAP 9에서는 클러스터의 물리적 구성 요소가 클러스�
 ---
 = 복제 토폴로지
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

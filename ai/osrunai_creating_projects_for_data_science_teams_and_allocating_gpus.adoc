@@ -6,6 +6,7 @@ summary:
 ---
 = 데이터 과학 팀을 위한 프로젝트 생성 및 GPU 할당
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

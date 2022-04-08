@@ -6,6 +6,7 @@ summary: 이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합�
 ---
 = 기술 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

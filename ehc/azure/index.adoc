@@ -7,6 +7,7 @@ summary: NetApp 엔터프라이즈 하이브리드 클라우드 솔루션은 주
 ---
 = Azure/AVS용 NetApp 엔터프라이즈 하이브리드 클라우드 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

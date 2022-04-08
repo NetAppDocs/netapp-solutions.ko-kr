@@ -6,6 +6,7 @@ summary: 이 사용 사례는 클라우드 기반 분석 데이터를 사내 데
 ---
 = 사용 사례 2: 클라우드에서 사내로 백업 및 재해 복구
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

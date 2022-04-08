@@ -6,6 +6,7 @@ summary: '이 사용 사례는 우리가 수행한 가장 큰 재무 고객 개�
 ---
 = 데이터 레이크에서 ONTAP NFS로
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

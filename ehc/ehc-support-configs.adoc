@@ -6,6 +6,7 @@ summary:
 ---
 = 엔터프라이즈 하이브리드 클라우드(EHC)에 지원되는 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

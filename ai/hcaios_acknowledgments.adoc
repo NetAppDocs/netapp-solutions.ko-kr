@@ -6,6 +6,7 @@ summary:
 ---
 = 감사의 말
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

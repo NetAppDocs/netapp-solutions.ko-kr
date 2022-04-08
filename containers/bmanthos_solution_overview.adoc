@@ -6,6 +6,7 @@ summary: NetApp AFF는 짧은 지연 시간, 통합 데이터 보호, 멀티 프
 ---
 = 솔루션 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 작업 작업자는 사용 가능한 응용 프로그램 목록에서 �
 ---
 = EUC(End User Computing)/VDI(Virtual Desktop Infrastructure) 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

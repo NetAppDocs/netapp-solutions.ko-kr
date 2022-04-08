@@ -6,6 +6,7 @@ summary:
 ---
 = 버전 기록
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

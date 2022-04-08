@@ -6,6 +6,7 @@ summary: 이 솔루션은 특정 날짜를 기준으로 데이터를 복사해�
 ---
 = 특정 날짜 기반 스캔 및 데이터 복사
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

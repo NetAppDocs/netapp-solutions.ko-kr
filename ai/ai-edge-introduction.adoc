@@ -6,6 +6,7 @@ summary: '이 문서에서는 새로운 애플리케이션 시나리오를 충�
 ---
 = TR-4886: Edge-NetApp에서 Lenovo ThinkSystem - 솔루션 설계를 사용한 AI 추론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

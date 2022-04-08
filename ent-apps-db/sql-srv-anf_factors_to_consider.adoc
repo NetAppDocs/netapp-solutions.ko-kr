@@ -6,6 +6,7 @@ summary: 이 섹션에서는 클라우드에서 SQL Server와 함께 Azure NetAp
 ---
 = 고려해야 할 요소
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

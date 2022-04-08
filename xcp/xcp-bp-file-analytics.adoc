@@ -6,6 +6,7 @@ summary: 'NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 �
 ---
 = 파일 분석
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

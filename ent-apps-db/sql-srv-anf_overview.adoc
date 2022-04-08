@@ -6,6 +6,7 @@ summary: '이 문서에서는 Azure 가상 시스템을 활용하는 Azure NetAp
 ---
 = TR-4897: Azure NetApp Files 기반 SQL Server - 실제 배포 보기
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Kubernetes 클러스터에서 동기식 다중 노드 AI 및 ML 작업�
 ---
 = 동기식 분산 AI 워크로드 실행
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

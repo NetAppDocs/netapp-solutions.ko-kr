@@ -6,6 +6,7 @@ summary: 이 섹션에서는 NetApp XCP를 사용한 데이터 마이그레이�
 ---
 = 문제 해결
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

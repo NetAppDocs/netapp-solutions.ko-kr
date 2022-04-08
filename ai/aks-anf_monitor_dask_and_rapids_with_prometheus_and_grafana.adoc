@@ -6,6 +6,7 @@ summary: 모든 것이 배포된 후 새 데이터에 대한 추론을 실행합
 ---
 = Prometheus 및 Grafana로 Dask 및 RAPIDS를 모니터링합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

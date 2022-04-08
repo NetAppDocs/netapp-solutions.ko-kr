@@ -6,6 +6,7 @@ keywords: 'netapp, solutions, ai, data analytics, what"s new'
 ---
 = AI 및 최신 데이터 분석의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

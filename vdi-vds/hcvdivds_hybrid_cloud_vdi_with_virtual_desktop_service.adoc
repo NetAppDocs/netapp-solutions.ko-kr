@@ -6,6 +6,7 @@ summary: 'NetApp VDS(가상 데스크톱 서비스)는 주요 퍼블릭 클라�
 ---
 = TR-4861: 가상 데스크탑 서비스를 지원하는 하이브리드 클라우드 VDI
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

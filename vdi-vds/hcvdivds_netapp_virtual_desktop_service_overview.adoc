@@ -6,6 +6,7 @@ summary: NetApp은 Azure NetApp Files와의 신속한 통합을 포함하여 WVD
 ---
 = NetApp 가상 데스크톱 서비스 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

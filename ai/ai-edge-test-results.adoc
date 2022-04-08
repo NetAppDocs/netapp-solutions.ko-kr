@@ -6,6 +6,7 @@ summary: '제안된 아키텍처의 성능을 평가하기 위해 다수의 테�
 ---
 = 테스트 결과
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

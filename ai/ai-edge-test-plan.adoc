@@ -6,6 +6,7 @@ summary: 이 문서는 MLPerf Inference v0.7 코드, MLPerf Inference v1.1 코�
 ---
 = 테스트 계획
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

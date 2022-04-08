@@ -6,6 +6,7 @@ summary: 이 섹션의 명령은 CSV 형식으로 데이터를 덤프합니다. 
 ---
 = SMB/CIFS 공유에서 CSV 파일 생성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

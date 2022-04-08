@@ -6,6 +6,7 @@ summary: NetApp VDS를 사용하면 관리자가 작업을 다른 사용자에�
 ---
 = Login VSI를 사용한 단일 서버 로드 테스트
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

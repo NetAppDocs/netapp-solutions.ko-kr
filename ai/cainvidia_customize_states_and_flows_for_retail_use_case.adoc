@@ -6,6 +6,7 @@ summary:
 ---
 = 소매 사용 사례에 대한 상태 및 흐름을 사용자 지정합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

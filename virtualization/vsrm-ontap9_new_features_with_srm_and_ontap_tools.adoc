@@ -6,6 +6,7 @@ summary: 기존 가상 어플라이언스로 전환한 ONTAP 툴은 다양한 �
 ---
 = SRM 및 ONTAP 도구의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

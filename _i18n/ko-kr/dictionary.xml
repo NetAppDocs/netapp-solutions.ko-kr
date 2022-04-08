@@ -5807,8 +5807,6 @@
   <block id="25d85157bcfdbb601bbda056cd3a5bc6" category="list-text">HBA 드라이버가 설치되어 있는지 확인합니다. VMware 지원 HBA에는 드라이버가 기본적으로 배포되어 있으며 에서 볼 수 있어야 합니다 <block ref="57f7eb139c8bc258309d8e16d3df13fe" category="inline-link-macro-rx"></block>.</block>
   <block id="f1e09e8062c8a1cddb6f2f68289ea71b" category="doc">VMware 가상화를 위한 ONTAP의 새로운 기능</block>
   <block id="2e130352b486464834bcc7dda1ff2603" category="section-title">VMware 가상화</block>
-  <block id="e1ad6e34a69720808e091316ea5e105f" category="inline-link-macro">라인 = 21..38</block>
-  <block id="24988a51cebf36bd40a4e4df7f9199a1" category="paragraph"><block ref="24988a51cebf36bd40a4e4df7f9199a1" category="inline-link-macro-rx"></block></block>
   <block id="6fe85aae6e8fa231a1f417edfeef3759" category="doc">vSphere VMFS 데이터 저장소 - ONTAP를 사용하는 iSCSI 스토리지 백엔드</block>
   <block id="4f6f7882fc7b858bc0eb3e3a41991494" category="paragraph">이 섹션에서는 ONTAP iSCSI 스토리지를 사용하여 VMFS 데이터 저장소를 생성하는 방법에 대해 설명합니다.</block>
   <block id="383b1f30f341cb0eff11db96d70e9f50" category="list-text">vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술</block>
@@ -10284,4 +10282,24 @@
   <block id="db5a03b9e1de0d20dc54468940b207eb" category="paragraph"><block ref="db5a03b9e1de0d20dc54468940b207eb" category="inline-link-macro-rx"></block></block>
   <block id="5f01983db70d04ee21145e7d21902fb2" category="inline-link-macro">다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - SQL 복구 워크플로우</block>
   <block id="724a2f2542f99df4a44d9ad7cfb15363" category="paragraph"><block ref="724a2f2542f99df4a44d9ad7cfb15363" category="inline-link-macro-rx"></block></block>
+  <block id="b1d46fa388a75bf4a6fdf6431fd0f88f" category="paragraph">ONTAP 9.8의 VMware 통합 및 지원은 FlexGroup 데이터 저장소 지원을 비롯한 여러 가지 새로운 기능으로 인해 향상됩니다. ONTAP 9.8을 사용하면 FlexGroup 볼륨을 VMware NFS 데이터 저장소로 프로비저닝할 수 있으므로 전체 ONTAP 클러스터의 성능을 제공하는 확장 가능한 단일 데이터 저장소를 통해 데이터 저장소 관리를 간소화할 수 있습니다. 이러한 새로운 기능 중 다수는 VMware vSphere 9.8 릴리즈용 ONTAP 툴과 함께 제공됩니다.</block>
+  <block id="8d22b59ce6a3f5f55852f641fe32f634" category="paragraph">이는 다음과 같은 사항이 적용됨을 의미합니다.</block>
+  <block id="edf6089078ece0618b0cbf28aadbd430" category="list-text">검증된 성능 및 배치</block>
+  <block id="14ac1770aa6a961d17a35b60c5b87280" category="list-text">interop 한정자</block>
+  <block id="3bad7ef0dfae0592627755796b25462b" category="list-text">VAAI 복사 오프로드가 향상되어 작업을 신속하게 수행하고 백그라운드에서 완료합니다</block>
+  <block id="19793deb9a49d2f5172b773dfc0118c5" category="list-text">FlexGroup 프로비저닝, 크기 조정 및 삭제, 개별 VM에 대한 QoS 설정, VM에 대한 성능 메트릭(지연 시간, IOPS, 처리량)을 표시하는 등 가상 스토리지 콘솔이 지원됩니다</block>
+  <block id="662d7a9e954fd7ecea04797658a67fdf" category="list-text">NetApp SnapCenter 기본 스토리지 백업 및 복구 지원</block>
+  <block id="cd6f7ff91fc5499199c6664de0434694" category="list-text">최대 64TB VMFS LUN 지원 NetApp All-SAN 어레이에서 128TB LUN/300TB FlexVol 볼륨을 지원하므로 VMware vSphere 9.8 릴리즈용 ONTAP 툴에서 가상 스토리지 콘솔을 사용하여 최대 64TB VMFS 데이터 저장소를 프로비저닝할 수 있습니다.</block>
+  <block id="92ff10610f02d69d0210f44405b7168f" category="inline-link">SRM(사이트 복구 관리자)</block>
+  <block id="0ce4ec45a946257ae8143d2cc90fcaca" category="list-text">증가<block ref="c9af02025b1bf45281286240e0215380" category="inline-link-rx"></block> 확장: VMware vSphere 9.8 릴리즈용 ONTAP 툴의 스토리지 복제 어댑터는 최대 512개까지 지원되는 데이터 저장소 및 보호 그룹의 크기를 늘립니다.</block>
+  <block id="8e7ea82c671030c62dec6e5646ce0674" category="list-text">REST API를 사용한 VMware vSphere VVOL 파일 메트릭 VVOL 파일 메트릭에 대한 REST API 지원이 ONTAP 9.8에 추가되어 가상 스토리지 콘솔에서 대시보드 및 보고서에 VVOL에 대한 ONTAP 스토리지 성능 메트릭을 표시할 수 있습니다.</block>
+  <block id="410414402089bdca884f44be14088a59" category="inline-link">SRA(Storage Replication Adapter)</block>
+  <block id="63b956da14094cef99ccee71599fdd6d" category="list-text"><block ref="7e358b6730372bc2e637b94492dbbbf6" category="inline-link-rx"></block> SnapMirror Synchronous 지원</block>
+  <block id="6015fcf0a9cd608ed0e3aa71296f41d4" category="inline-link">VMware Tanzu입니다</block>
+  <block id="8196dcbf9586cd0081ca8c94d6eec4ad" category="list-text">에 대한 지원<block ref="d0daefdc677909f35162a0118f978227" category="inline-link-rx"></block> 스토리지</block>
+  <block id="ac66e55267029225d12d67c48e998acc" category="list-text">향상된 SAN VVOL 재조정 명령 및 스토리지 기능 프로필의 개선 기능을 비롯하여 VVOL에 대한 지원 개선 최신 VMware 가상화 지원에 대한 자세한 내용은 다음 리소스를 참조하십시오.</block>
+  <block id="da5bc71c64b621b3b18568cfd93032f4" category="inline-link">Tech OnTap 팟캐스트 에피소드 263: ONTAP에서의 가상화 – 2020년 가을</block>
+  <block id="e4c4075a8c06d40ae4b59e37bb084cef" category="list-text"><block ref="e4c4075a8c06d40ae4b59e37bb084cef" category="inline-link-rx"></block></block>
+  <block id="75f86438e5e6bca3e9341dd22299f5bb" category="inline-link">TR-4597: ONTAP가 설치된 VMware vSphere</block>
+  <block id="ef5bb91ba96e022044cd2c0d3c47544b" category="list-text"><block ref="ef5bb91ba96e022044cd2c0d3c47544b" category="inline-link-rx"></block></block>
 </blocks>

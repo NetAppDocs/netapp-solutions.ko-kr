@@ -6,6 +6,7 @@ summary: 이 섹션은 Astra Trident에서 제공하는 영구 저장소를 사�
 ---
 = 개인 이미지 레지스트리 만들기
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

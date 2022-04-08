@@ -6,6 +6,7 @@ keywords: prerequisites, aws, azure, gcp, cloud central, cloud volumes ontap
 ---
 = 퍼블릭 클라우드의 사전 요구사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: NetApp과 Google Cloud는 수년간 긴밀한 관계를 유지하고 �
 ---
 = WP-7337: 베어 메탈(Bare Metal)의 Anthos
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

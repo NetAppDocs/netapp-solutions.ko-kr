@@ -6,6 +6,7 @@ summary:
 ---
 = 할당량 초과 공정성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

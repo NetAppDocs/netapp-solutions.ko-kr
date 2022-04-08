@@ -6,6 +6,7 @@ summary: 이 사용 사례에서 고객은 DevTest와 보고 목적으로 동일
 ---
 = 사용 사례 3: 기존 Hadoop 데이터에 대해 DevTest 활성화
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

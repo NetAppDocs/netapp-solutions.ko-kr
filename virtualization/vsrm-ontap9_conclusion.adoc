@@ -6,6 +6,7 @@ summary: VMware vCenter Site Recovery Manager는 모든 가상화된 애플리�
 ---
 = 결론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

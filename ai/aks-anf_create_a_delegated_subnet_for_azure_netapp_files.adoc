@@ -6,6 +6,7 @@ summary: 이 페이지에서는 Azure NetApp Files에 대해 위임된 서브넷
 ---
 = Azure NetApp Files에 대해 위임된 서브넷을 생성합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

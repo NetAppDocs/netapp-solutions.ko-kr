@@ -6,6 +6,7 @@ summary: Jupyter Notebooks 및 Kubeflow 파이프라인 예제
 ---
 = 예제 전자 필기장 및 파이프라인
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

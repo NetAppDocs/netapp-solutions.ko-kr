@@ -6,6 +6,7 @@ summary:
 ---
 = 권장되는 ESXi 호스트 및 기타 ONTAP 설정
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

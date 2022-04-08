@@ -6,6 +6,7 @@ summary: 이 페이지에서는 AI 운영을 위한 빅데이터 분석의 데�
 ---
 = 고객의 당면 과제
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

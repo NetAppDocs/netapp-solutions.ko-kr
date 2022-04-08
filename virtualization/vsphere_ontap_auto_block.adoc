@@ -5,6 +5,7 @@ keywords: vSphere, datastore, VMFS, FC, NVMe/FC, iSER, iSCSI, FCoE,SAN, ONTAP to
 summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 iSCSI VMFS 데이터 저장소를 구축하는 단계를 제공합니다. 
 ---
 = ONTAP를 사용한 vSphere 기존 블록 스토리지 프로비저닝
+:allow-uri-read: 
 
 
 VMware vSphere는 ONTAP SAN 프로토콜이 지원되는 다음 VMFS 데이터 저장소 옵션을 지원합니다.

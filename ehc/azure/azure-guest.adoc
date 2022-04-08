@@ -5,6 +5,7 @@ keywords: NetApp Solutions, microsoft azure, avs, azure, vmware managed cloud, e
 summary:  
 ---
 = Azure용 NetApp 게스트 연결 스토리지 옵션
+:allow-uri-read: 
 
 
 [role="lead"]

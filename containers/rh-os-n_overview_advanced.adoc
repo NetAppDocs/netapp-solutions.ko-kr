@@ -6,6 +6,7 @@ summary: 이 섹션에서는 실제 사용자가 전용 이미지 레지스트�
 ---
 = 고급 구성 옵션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

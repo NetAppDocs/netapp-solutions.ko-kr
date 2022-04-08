@@ -6,6 +6,7 @@ summary: 이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자
 ---
 = 단계별 배포 절차
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 높은 클러스터 사용률 달성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

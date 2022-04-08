@@ -6,6 +6,7 @@ summary: Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 
 ---
 = ONTAP AI 배포에 대한 Trident 백엔드 예
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

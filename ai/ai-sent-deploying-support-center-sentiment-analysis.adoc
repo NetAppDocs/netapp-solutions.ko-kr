@@ -6,6 +6,7 @@ summary: 이 섹션에서는 이 솔루션을 배포하는 데 필요한 세부 
 ---
 = 지원 센터 정서 분석 배포
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

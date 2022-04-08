@@ -6,6 +6,7 @@ summary:
 ---
 = 타사 API에 이행 엔진으로 연결합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

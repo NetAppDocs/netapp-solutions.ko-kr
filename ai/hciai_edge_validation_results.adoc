@@ -6,6 +6,7 @@ summary:
 ---
 = 검증 결과
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

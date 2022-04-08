@@ -6,6 +6,7 @@ summary:
 ---
 = Jarvis, Cloud Sync 및 Nemo를 사용하여 가상 도우미를 빌드합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

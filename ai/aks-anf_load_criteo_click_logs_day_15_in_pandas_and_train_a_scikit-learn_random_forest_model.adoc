@@ -6,6 +6,7 @@ summary: 이 페이지에서는 Pandas 및 Dask DataFrames를 사용하여 Crite
 ---
 = Pandas에서 Logs day 15를 로드하여 좌골키트을 훈련합니다. 무작위 포리스트 모델을 학습하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

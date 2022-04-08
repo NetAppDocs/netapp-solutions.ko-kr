@@ -5,6 +5,7 @@ keywords: OpenShift, bare metal, IPI
 summary:  
 ---
 = 베어 메탈 기반 OpenShift
+:allow-uri-read: 
 
 
 베어 메탈 기반 OpenShift는 상용 서버에 OpenShift Container Platform을 자동으로 배포하는 기능을 제공합니다.

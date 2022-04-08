@@ -6,6 +6,7 @@ summary:
 ---
 = 사용 사례 개요 및 문제 설명
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

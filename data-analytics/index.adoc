@@ -7,6 +7,7 @@ summary: NetApp의 최신 데이터 분석 솔루션은 AI 부문에서 NetApp �
 ---
 = NetApp의 최신 데이터 분석 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

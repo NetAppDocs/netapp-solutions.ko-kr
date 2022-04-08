@@ -6,6 +6,7 @@ summary: Astra Control Center를 통해 CI/CD 파이프라인에서 데이터 �
 ---
 = Astra Control Center를 통한 CI/CD 파이프라인의 데이터 보호
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

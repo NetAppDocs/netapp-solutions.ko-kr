@@ -6,6 +6,7 @@ summary: 가상 데스크톱 서비스용 ONTAP 기능.
 ---
 = 가상 데스크톱 서비스용 ONTAP 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

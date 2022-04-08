@@ -6,6 +6,7 @@ summary:
 ---
 = TR-4841: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI 운영 체제
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

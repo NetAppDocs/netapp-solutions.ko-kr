@@ -6,6 +6,7 @@ summary: Hadoop DistCp는 대규모 클러스터 간 및 클러스터 간 복제
 ---
 = Hadoop 데이터 보호 및 NetApp
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: NetApp VDS는 필요한 코드베이스에 따라 사용 가능한 설�
 ---
 = 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

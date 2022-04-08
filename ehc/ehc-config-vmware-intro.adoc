@@ -6,6 +6,7 @@ summary:
 ---
 = 클라우드 공급자에서 가상화 환경 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

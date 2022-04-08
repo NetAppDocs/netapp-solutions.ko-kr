@@ -6,6 +6,7 @@ summary: 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Sto
 ---
 = Data Mover 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

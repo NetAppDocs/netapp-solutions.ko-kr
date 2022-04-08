@@ -6,6 +6,7 @@ summary:
 ---
 = Kubernetes 클러스터 구성 중
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 섹션에서는 특정 릴리즈의 ONTAP 및 vSphere에서 지원�
 ---
 = ONTAP 및 vSphere 릴리즈별 정보입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

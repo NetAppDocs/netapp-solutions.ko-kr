@@ -6,6 +6,7 @@ summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 
 ---
 = 사용 사례 4: 데이터 보호 및 멀티 클라우드 연결
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

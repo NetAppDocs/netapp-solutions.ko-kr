@@ -6,6 +6,7 @@ summary: 볼륨에 대해 원하는 서비스 수준을 사용하는 다른 용�
 ---
 = Azure NetApp Files 성능 계층
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

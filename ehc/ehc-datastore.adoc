@@ -1,4 +1,5 @@
 = NetApp 스토리지를 위한 AWS 지원
+:allow-uri-read: 
 
 
 

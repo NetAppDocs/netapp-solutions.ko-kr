@@ -6,6 +6,7 @@ summary: NetApp ONTAP는 2002년 현대적인 데이터 센터에 도입된 이�
 ---
 = TR-4900: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

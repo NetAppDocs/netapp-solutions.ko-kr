@@ -6,6 +6,7 @@ summary:
 ---
 = VMware vSphere용 NetApp SnapCenter 플러그인 - SQL Server 복원 워크플로우
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

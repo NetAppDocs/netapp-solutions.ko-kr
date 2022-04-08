@@ -6,6 +6,7 @@ summary: 이 페이지에는 분산형 또는 대규모 교육에서 Azure NetAp
 ---
 = 클릭률 예측 사용 사례 요약
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

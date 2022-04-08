@@ -6,6 +6,7 @@ summary: NetApp VDS는 ID 인증을 위해 Azure Active Directory를 사용하�
 ---
 = 사용자 관리
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

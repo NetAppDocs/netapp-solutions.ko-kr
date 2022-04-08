@@ -6,6 +6,7 @@ keywords: 'netapp, solutions, business applications, enterprise database, what"s
 ---
 = 비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 솔루션의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

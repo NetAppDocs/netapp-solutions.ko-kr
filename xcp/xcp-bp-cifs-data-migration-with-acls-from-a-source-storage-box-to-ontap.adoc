@@ -6,6 +6,7 @@ summary: 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 �
 ---
 = 소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

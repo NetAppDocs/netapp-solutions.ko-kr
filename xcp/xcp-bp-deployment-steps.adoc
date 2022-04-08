@@ -6,6 +6,7 @@ summary: 이 섹션에서는 NetApp XCP 데이터 전송을 위한 구축 단계
 ---
 = 배포 단계
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

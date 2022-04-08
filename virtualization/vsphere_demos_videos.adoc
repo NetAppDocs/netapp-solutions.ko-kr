@@ -6,6 +6,7 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 ---
 = 하이브리드 클라우드, 데스크톱 가상화, 컨테이너 비디오 및 데모
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

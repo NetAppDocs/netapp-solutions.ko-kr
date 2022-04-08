@@ -6,6 +6,7 @@ summary: 이 문서에서는 VMware vSphere용 ONTAP 툴의 제품 보안에 대
 ---
 = WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

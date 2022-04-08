@@ -6,6 +6,7 @@ summary: 이 보고서는 데이터 네임스페이스를 빠르게 클론 복�
 ---
 = TR-4798: NetApp AI Control Plane
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = ImageNet 데이터 세트 벤치마크 요약을 통한 ResNet-50
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

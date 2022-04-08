@@ -6,6 +6,7 @@ summary:
 ---
 = 퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

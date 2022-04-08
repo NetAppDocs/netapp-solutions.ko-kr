@@ -6,6 +6,7 @@ summary: NetApp은 단일 볼륨 또는 여러 볼륨에서 중복 파일을 찾
 ---
 = 중복 파일
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

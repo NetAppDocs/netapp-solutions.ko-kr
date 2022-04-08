@@ -5,6 +5,7 @@ keywords:
 summary:  
 ---
 = 
+:allow-uri-read: 
 
 
 =:hardwaturs::nofooter::icons:linkattrs::imagesdir:./../media/

@@ -6,6 +6,7 @@ summary: 'GPU는 일반적으로 반복적인 산술 계산을 수행하여 그�
 ---
 = GPU 고려 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

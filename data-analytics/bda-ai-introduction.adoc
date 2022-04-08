@@ -6,6 +6,7 @@ summary: 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 �
 ---
 = TR-4732: 인공 지능에 대한 빅 데이터 분석 데이터
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

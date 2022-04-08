@@ -6,6 +6,7 @@ summary:
 ---
 = 영구 볼륨 클레임을 정의합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

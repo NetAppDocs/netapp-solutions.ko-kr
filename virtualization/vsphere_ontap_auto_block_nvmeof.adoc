@@ -5,6 +5,7 @@ keywords: vSphere, datastore, VMFS, NVMeoF, ONTAP tools, zone, network interface
 summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저장소용 NetApp ONTAP NVMe/FC 스토리지를 구축하는 단계를 제공합니다. 
 ---
 = vSphere VMFS 데이터 저장소 - ONTAP가 포함된 NVMe/FC
+:allow-uri-read: 
 
 
 

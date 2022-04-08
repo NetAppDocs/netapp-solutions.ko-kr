@@ -6,6 +6,7 @@ summary:
 ---
 = 덜 까다로운 워크로드 또는 대화형 워크로드에 대한 부분 GPU 할당
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

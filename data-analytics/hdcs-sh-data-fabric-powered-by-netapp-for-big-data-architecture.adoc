@@ -6,6 +6,7 @@ summary: 'NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경�
 ---
 = NetApp에서 제공하는 빅데이터 아키텍처 관련 Data Fabric
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

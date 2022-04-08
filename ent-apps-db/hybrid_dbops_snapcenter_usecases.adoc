@@ -6,6 +6,7 @@ keywords: tr-4908, tr4908, 4908, hybrid cloud, database, snapcenter, gui
 ---
 = TR-4908: SnapCenter를 지원하는 하이브리드 클라우드 데이터베이스 솔루션 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

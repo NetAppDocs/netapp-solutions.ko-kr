@@ -6,6 +6,7 @@ summary:
 ---
 = OpenShift Virtualization을 통한 가상 시스템 배포: NetApp과 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

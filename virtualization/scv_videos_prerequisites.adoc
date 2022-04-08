@@ -6,6 +6,7 @@ summary:
 ---
 = VMware vSphere용 NetApp SnapCenter 플러그인 - 솔루션 전제 조건
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

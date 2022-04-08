@@ -6,6 +6,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에 Kubeflow를 구축하
 ---
 = Kubeflow 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

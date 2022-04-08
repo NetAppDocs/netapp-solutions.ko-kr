@@ -6,6 +6,7 @@ keywords: netapp, solutions, ai, data analytics, videos, demos
 ---
 = AI 및 최신 데이터 분석 비디오 및 데모
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

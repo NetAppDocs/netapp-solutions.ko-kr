@@ -6,6 +6,7 @@ summary: 다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 
 ---
 = 아키텍처 사이징 옵션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 페이지에는 이 작업을 만드는 데 사용된 라이브러�
 ---
 = 데이터 처리 및 모델 교육을 위한 라이브러리
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

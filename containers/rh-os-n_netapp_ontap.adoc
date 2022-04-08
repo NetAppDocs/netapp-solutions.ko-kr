@@ -6,6 +6,7 @@ summary: NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST
 ---
 = NetApp ONTAP를 참조하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

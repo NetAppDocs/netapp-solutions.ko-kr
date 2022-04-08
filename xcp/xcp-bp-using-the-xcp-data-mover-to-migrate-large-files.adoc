@@ -6,6 +6,7 @@ summary: '이 사용 사례는 TV 네트워크 고객을 기반으로 합니다.
 ---
 = xCP Data Mover를 사용하여 대용량 파일을 마이그레이션합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

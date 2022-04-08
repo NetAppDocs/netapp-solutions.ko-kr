@@ -6,6 +6,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에서 NetApp Trident를 
 ---
 = NetApp Trident 구축 및 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

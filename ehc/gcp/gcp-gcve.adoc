@@ -6,6 +6,7 @@ summary:
 ---
 = Google Cloud Platform GCVE를 위한 NetApp의 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

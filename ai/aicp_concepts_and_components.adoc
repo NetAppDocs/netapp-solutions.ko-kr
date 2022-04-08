@@ -6,6 +6,7 @@ summary: 이 페이지에는 컨테이너, Kubernetes, NetApp Trident 등에 대
 ---
 = 개념 및 구성 요소
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

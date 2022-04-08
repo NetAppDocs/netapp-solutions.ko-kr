@@ -6,6 +6,7 @@ summary: AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처�
 ---
 = AI용 Data Mover 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

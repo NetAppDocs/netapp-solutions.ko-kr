@@ -6,6 +6,7 @@ summary: 이 섹션에서는 NetApp XCP를 사용하여 MapR-FS 데이터를 ONT
 ---
 = MapR-FS에서 ONTAP NFS로
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

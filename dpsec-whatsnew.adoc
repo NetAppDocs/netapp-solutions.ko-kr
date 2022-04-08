@@ -6,6 +6,7 @@ keywords: 'netapp, solutions, data protection, security, what"s new'
 ---
 = 데이터 보호 및 보안 솔루션의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

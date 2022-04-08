@@ -6,6 +6,7 @@ summary:
 ---
 = NDE를 사용하여 NetApp HCI에 VMware 가상 인프라 구축(자동화된 구축)
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명�
 ---
 = 기술 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

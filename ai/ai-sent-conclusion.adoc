@@ -6,6 +6,7 @@ summary: 이 기술 보고서에서 제안된 솔루션은 이러한 탁월한 �
 ---
 = 결론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 NFS 데이터 저장
 ---
 = ONTAP를 사용한 vSphere 기존 파일 스토리지 용량 할당
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

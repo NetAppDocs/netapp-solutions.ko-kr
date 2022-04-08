@@ -6,6 +6,7 @@ summary: Kubeflow는 새로운 Jupyter Notebook 서버를 신속하게 프로비
 ---
 = 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

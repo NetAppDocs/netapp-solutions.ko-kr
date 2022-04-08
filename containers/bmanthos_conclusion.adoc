@@ -6,6 +6,7 @@ summary: NetApp의 Bare Metal Anthos는 배포된 인프라의 사용자 지정�
 ---
 = 결론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

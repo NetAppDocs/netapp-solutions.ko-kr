@@ -6,6 +6,7 @@ summary:
 ---
 = 작업 환경을 구성합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

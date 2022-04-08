@@ -6,6 +6,7 @@ summary: NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속�
 ---
 = 하드웨어 및 소프트웨어 요구 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

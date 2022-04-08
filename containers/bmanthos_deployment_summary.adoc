@@ -6,6 +6,7 @@ summary: '이 솔루션의 초기 검증을 위해 NetApp은 WWT(World Wide Tech
 ---
 = 구축 요약
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

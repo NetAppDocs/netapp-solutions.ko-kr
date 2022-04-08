@@ -6,6 +6,7 @@ summary:
 ---
 = Trident에서 프로비저닝한 PersistentVolume에 데이터 저장
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

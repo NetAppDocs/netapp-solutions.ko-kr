@@ -6,6 +6,7 @@ summary:
 ---
 = Astra Control Center를 사용한 워크로드 마이그레이션: NetApp의 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

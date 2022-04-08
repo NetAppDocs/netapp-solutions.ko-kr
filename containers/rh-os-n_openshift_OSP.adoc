@@ -6,6 +6,7 @@ summary: Red Hat OpenStack Platform은 안전하고 안정적인 프라이빗 Op
 ---
 = Red Hat OpenStack Platform의 OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

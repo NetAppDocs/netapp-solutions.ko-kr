@@ -6,6 +6,7 @@ keywords: netapp, solutions,automation, ansible, blogs
 ---
 = 솔루션 자동화 블로그
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

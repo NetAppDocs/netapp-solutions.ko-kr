@@ -6,6 +6,7 @@ summary: 이 섹션에서는 XCP 작업의 성능을 향상시키는 데 도움�
 ---
 = 성능 튜닝
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

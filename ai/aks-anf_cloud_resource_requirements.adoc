@@ -6,6 +6,7 @@ summary: 이 페이지에서는 Azure NetApp Files에 대한 클라우드 리소
 ---
 = 클라우드 리소스 요구사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

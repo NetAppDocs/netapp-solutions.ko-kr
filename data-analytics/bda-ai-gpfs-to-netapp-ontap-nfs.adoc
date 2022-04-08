@@ -6,6 +6,7 @@ summary: '이 검증에서 4대의 서버를 NSD(Network Shared Disk) 서버로 
 ---
 = GPFS를 NetApp ONTAP NFS로
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = ONTAP AI 배포
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

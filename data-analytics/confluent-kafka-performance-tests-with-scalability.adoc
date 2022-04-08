@@ -6,6 +6,7 @@ summary: NetApp은 NetApp StorageGRID 설정을 통해 생산 및 소비자 워�
 ---
 = 확장성을 갖춘 성능 테스트
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

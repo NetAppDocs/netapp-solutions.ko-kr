@@ -1,5 +1,6 @@
 = Oracle 설치를 검증합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

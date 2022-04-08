@@ -6,6 +6,7 @@ summary: 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 �
 ---
 = GPFS에서 NFS로 - 자세한 단계
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

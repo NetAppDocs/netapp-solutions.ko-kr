@@ -6,6 +6,7 @@ summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 사용�
 ---
 = 솔루션 요구 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

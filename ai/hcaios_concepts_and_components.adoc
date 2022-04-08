@@ -6,6 +6,7 @@ summary:
 ---
 = 개념 및 구성 요소
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

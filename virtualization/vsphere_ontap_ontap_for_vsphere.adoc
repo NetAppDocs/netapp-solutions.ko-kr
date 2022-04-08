@@ -6,6 +6,7 @@ summary: NetApp ONTAP 소프트웨어는 약 20년 동안 VMware vSphere 환경�
 ---
 = TR-4597: ONTAP용 VMware vSphere
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

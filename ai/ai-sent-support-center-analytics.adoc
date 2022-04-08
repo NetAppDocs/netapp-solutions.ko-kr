@@ -6,6 +6,7 @@ summary: 이 기술 보고서에서는 이전 학습 및 대화형 AI를 사용�
 ---
 = TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

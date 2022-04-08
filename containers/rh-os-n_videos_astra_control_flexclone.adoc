@@ -6,6 +6,7 @@ summary:
 ---
 = NetApp과 Red Hat OpenShift의 Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발 속도 향상
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

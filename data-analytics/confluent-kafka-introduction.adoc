@@ -6,6 +6,7 @@ summary: 이 문서에서는 NetApp 스토리지 컨트롤러에서 Kafka를 사
 ---
 = TR-4912: NetApp을 통해 Confluent Kafka 계층형 스토리지를 위한 모범 사례 지침
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

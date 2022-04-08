@@ -6,6 +6,7 @@ summary: 그래픽 워크스테이션은 일반적으로 제조, 의료, 에너�
 ---
 = 솔루션을 제공합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

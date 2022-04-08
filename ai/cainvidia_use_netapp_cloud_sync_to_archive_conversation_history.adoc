@@ -6,6 +6,7 @@ summary:
 ---
 = NetApp Cloud Sync를 사용하여 대화 내용 아카이빙
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 페이지에서는 ONTAP 및 VMware vSphere에서 사용할 수 있
 ---
 = ONTAP 및 vSphere 기반의 하이브리드 클라우드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

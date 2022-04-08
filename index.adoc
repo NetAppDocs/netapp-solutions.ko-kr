@@ -7,6 +7,7 @@ summary: NetApp 솔루션은 고객의 가장 중요한 비즈니스 요구사�
 ---
 = NetApp 솔루션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

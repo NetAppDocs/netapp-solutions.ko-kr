@@ -6,6 +6,7 @@ summary:
 ---
 = Nemo Training을 사용하여 Intent 모델을 확장합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

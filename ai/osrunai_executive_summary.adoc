@@ -6,6 +6,7 @@ summary:
 ---
 = TR-4858: 실행 시 NetApp 오케스트레이션 솔루션: AI
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

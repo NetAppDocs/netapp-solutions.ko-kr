@@ -6,6 +6,7 @@ summary: 이 문서에서는 Confluent Kafka 인증 테스트, 성능 결과, �
 ---
 = 결론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 사용 사례는 수백만 개의 소규모 사내 파일을 클라
 ---
 = xCP Data Mover를 사용하여 수백만 개의 작은 파일을 유연한 스토리지로 마이그레이션합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

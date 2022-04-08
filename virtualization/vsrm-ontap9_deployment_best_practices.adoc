@@ -6,6 +6,7 @@ summary: 'ONTAP를 사용하면 SVM(스토리지 가상 머신)이라는 개념�
 ---
 = 배포 모범 사례
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

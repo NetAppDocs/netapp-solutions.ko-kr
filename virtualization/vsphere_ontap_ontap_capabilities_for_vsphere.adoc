@@ -6,6 +6,7 @@ summary: 'ONTAP는 SAN 환경을 위한 iSCSI, FC(파이버 채널), FCoE(Fibre 
 ---
 = vSphere를 위한 ONTAP 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -5,6 +5,7 @@ keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenSh
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
 = NetApp ONTAP를 사용하여 Red Hat OpenShift Virtualization 배포
+:allow-uri-read: 
 
 
 OpenShift 가상화를 설치하려면 다음 단계를 완료하십시오.

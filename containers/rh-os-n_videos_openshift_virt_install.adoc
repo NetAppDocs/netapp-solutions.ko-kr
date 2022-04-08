@@ -6,6 +6,7 @@ summary:
 ---
 = OpenShift Virtualization 설치: NetApp과 함께 Red Hat OpenShift의 설치
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

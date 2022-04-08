@@ -6,6 +6,7 @@ summary: 이 섹션에서는 이 기술 보고서와 관련된 Jupyter 노트북
 ---
 = Jupyter 노트북을 참조하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

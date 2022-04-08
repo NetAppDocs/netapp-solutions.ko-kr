@@ -6,6 +6,7 @@ summary:
 ---
 = Azure AVS용 NetApp 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

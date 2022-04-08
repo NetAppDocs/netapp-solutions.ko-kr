@@ -6,6 +6,7 @@ summary: Astra Control Center를 사용하여 사후 분석 애플리케이션�
 ---
 = NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

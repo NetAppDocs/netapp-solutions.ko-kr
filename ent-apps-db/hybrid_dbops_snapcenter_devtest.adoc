@@ -6,6 +6,7 @@ keywords: hybrid cloud, database, solutions, dev/test, workflow
 ---
 = 개발/테스트 급증에 대비하여 클라우드로 전환하는 워크플로우
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

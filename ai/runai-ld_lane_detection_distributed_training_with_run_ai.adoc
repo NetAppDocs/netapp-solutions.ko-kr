@@ -6,6 +6,7 @@ summary: 이 섹션에서는 RUN AI Orchestrator를 사용하여 규모에 따�
 ---
 = 차선 감지 – AI를 통한 분산 훈련
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

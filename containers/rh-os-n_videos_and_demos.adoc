@@ -6,6 +6,7 @@ summary:
 ---
 = 비디오 및 데모: NetApp의 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

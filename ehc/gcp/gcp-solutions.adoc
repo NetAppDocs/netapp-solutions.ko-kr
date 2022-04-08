@@ -6,6 +6,7 @@ summary:
 ---
 = Google Cloud Virtualization Engine용 NetApp 솔루션(GCVE)
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Red Hat OpenShift Container Platform은 온프레미스 인프라와 �
 ---
 = OpenShift 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

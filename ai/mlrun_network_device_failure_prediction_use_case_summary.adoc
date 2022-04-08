@@ -6,6 +6,7 @@ summary:
 ---
 = 네트워크 장치 오류 예측 사용 사례 요약
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 실행: AI 워크로드 오케스트레이션에 AI 플랫폼 사용
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

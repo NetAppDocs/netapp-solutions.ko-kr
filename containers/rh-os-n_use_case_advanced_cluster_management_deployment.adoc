@@ -5,6 +5,7 @@ keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, ONTAP, Trident, Red Hat O
 summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
 ---
 = Kubernetes용 고급 클러스터 관리 구축
+:allow-uri-read: 
 
 
 OpenShift 클러스터에 Kubernetes용 Advanced Cluster Management를 설치하려면 다음 단계를 완료하십시오.

@@ -6,6 +6,7 @@ summary: 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 O
 ---
 = 7-Mode에서 ONTAP로 데이터 마이그레이션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

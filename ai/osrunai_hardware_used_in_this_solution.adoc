@@ -6,6 +6,7 @@ summary:
 ---
 = 이 솔루션에 사용된 하드웨어
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

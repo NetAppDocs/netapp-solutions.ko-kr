@@ -6,6 +6,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 ---
 = vSphere NFS 데이터 저장소 - 버전 3(ONTAP 포함
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

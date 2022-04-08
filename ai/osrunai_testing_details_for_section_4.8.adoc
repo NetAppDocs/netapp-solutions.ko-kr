@@ -6,6 +6,7 @@ summary:
 ---
 = 섹션 4.8의 테스트 세부 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

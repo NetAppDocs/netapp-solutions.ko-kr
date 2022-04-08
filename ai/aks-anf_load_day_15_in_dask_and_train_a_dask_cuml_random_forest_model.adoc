@@ -6,6 +6,7 @@ summary: 이 섹션에서는 Pandas에서 Criteo Click Logs day 15를 로드하�
 ---
 = Dask에서 Day 15를 로드하고 Dask cuML 무작위 포리스트 모델을 교육합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

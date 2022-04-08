@@ -6,6 +6,7 @@ summary: Kubernetes용 NetApp DataOps 툴킷은 스토리지 리소스와 Kubern
 ---
 = NetApp DataOps 툴킷을 사용하여 데이터 세트 및 모델 버전 관리
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

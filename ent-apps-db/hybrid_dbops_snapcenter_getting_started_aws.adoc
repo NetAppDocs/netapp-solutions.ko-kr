@@ -6,6 +6,7 @@ keywords: AWS, cloud volumes ontap, cloud manager, deploy
 ---
 = AWS 퍼블릭 클라우드 시작하기
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

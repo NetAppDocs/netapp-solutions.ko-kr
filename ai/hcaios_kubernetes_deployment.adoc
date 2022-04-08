@@ -6,6 +6,7 @@ summary:
 ---
 = Kubernetes 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: '이 참조 문서는 NetApp에서 검증한 바와 같이 여러 데�
 ---
 = NVA-1160: NetApp 기반의 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

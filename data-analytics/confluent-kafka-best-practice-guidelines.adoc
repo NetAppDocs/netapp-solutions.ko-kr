@@ -6,6 +6,7 @@ summary: 이 섹션에서는 이 인증에서 얻은 교훈을 설명합니다.
 ---
 = 모범 사례 지침
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

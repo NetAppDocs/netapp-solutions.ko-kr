@@ -6,6 +6,7 @@ summary: NetApp StorageGRID의 계층형 스토리지를 위해 Kafka와 Conflue
 ---
 = Confluent 검증
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

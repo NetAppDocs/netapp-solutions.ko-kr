@@ -6,6 +6,7 @@ summary: 이 섹션에서는 테스트된 구성, 네트워크 인프라, SE350 
 ---
 = 구성을 테스트합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

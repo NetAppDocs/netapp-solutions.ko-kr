@@ -6,6 +6,7 @@ summary:
 ---
 = GitHub에서 코드를 가져옵니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

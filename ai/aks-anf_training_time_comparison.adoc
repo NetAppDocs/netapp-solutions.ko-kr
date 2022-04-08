@@ -6,6 +6,7 @@ summary: 이 페이지에서는 기존 Pandas를 이용한 모델 교육 시간�
 ---
 = 교육 시간 비교
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

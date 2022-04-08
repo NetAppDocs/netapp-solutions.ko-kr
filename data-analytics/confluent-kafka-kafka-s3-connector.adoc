@@ -6,6 +6,7 @@ summary: 이 설정에서는 Kafka S3 싱크 커넥터를 사용하여 바로 Ka
 ---
 = Confluent S3 커넥터
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

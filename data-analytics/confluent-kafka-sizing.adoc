@@ -6,6 +6,7 @@ summary: 이 섹션에서는 Confluent 인증에 사용되는 하드웨어 및 �
 ---
 = 사이징
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

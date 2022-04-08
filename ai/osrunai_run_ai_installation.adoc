@@ -6,6 +6,7 @@ summary:
 ---
 = AI 설치 를 실행하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

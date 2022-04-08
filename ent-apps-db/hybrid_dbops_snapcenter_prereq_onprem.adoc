@@ -6,6 +6,7 @@ keywords: prerequisites, on prem, on premises, installation, security, automatio
 ---
 = 사전 요구 사항 온-프레미스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

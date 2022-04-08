@@ -6,6 +6,7 @@ summary:
 ---
 = 이 리포지터리 정보
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

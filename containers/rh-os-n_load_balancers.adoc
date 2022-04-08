@@ -6,6 +6,7 @@ summary: 이 섹션에서는 NetApp 배포를 통해 Red Hat OpenShift를 사용
 ---
 = 로드 밸런싱 장치 옵션 알아보기: NetApp의 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

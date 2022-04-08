@@ -6,6 +6,7 @@ summary: 가능하면 항상 ONTAP 툴을 사용하여 데이터 저장소와 �
 ---
 = 운영 모범 사례
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

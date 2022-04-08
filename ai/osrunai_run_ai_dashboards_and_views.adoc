@@ -6,6 +6,7 @@ summary:
 ---
 = 실행: AI 대시보드 및 뷰
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: H610C 또는 H615C를 사용하는 경우 라이센스를 재판매할 
 ---
 = NVIDIA 라이센싱
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

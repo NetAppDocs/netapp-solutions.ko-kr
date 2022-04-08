@@ -6,6 +6,7 @@ summary:
 ---
 = NetApp 기본 데이터 저장소 옵션 for GCP
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

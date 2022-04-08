@@ -6,6 +6,7 @@ summary: 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 �
 ---
 = 결론
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

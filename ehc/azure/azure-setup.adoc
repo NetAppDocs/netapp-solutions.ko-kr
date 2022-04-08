@@ -6,6 +6,7 @@ summary:
 ---
 = Azure에서 가상화 환경을 구축하고 구성합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

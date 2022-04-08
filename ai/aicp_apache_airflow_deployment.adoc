@@ -6,6 +6,7 @@ summary: 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축�
 ---
 = Apache Airflow Deployment
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 실행 중인 작업 제출: AI CLI
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

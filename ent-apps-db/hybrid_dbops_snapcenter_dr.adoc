@@ -6,6 +6,7 @@ keywords: 'netapp, solutions, database, SnapCenter, DR, "business continuity", "
 ---
 = 재해 복구 워크플로우
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 이 섹션에서는 AKS VNET를 Azure NetApp Files VNET와 피어로 �
 ---
 = 피어 AKS VNET 및 Azure NetApp Files VNET
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

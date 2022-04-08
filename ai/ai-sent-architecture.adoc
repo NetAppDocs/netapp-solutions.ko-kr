@@ -6,6 +6,7 @@ summary: 이 지원 센터 솔루션의 아키텍처는 NVIDIA의 사전 구축�
 ---
 = 있습니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

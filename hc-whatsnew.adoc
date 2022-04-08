@@ -6,6 +6,7 @@ keywords: 'netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, 
 ---
 = 하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = RHV 기반 Red Hat OpenShift Deployment: NetApp 기반 Red Hat OpenShift
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

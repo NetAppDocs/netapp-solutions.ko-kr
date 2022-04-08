@@ -6,6 +6,7 @@ keywords: netapp, awx, tower, ansible tower, solutions, automation, ansible
 ---
 = NetApp 솔루션 자동화
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

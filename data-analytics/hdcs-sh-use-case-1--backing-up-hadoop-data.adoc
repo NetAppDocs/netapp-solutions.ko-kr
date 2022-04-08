@@ -6,6 +6,7 @@ summary: 이 시나리오에서는 고객이 대규모 사내 Hadoop 저장소�
 ---
 = 사용 사례 1: Hadoop 데이터 백업
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
