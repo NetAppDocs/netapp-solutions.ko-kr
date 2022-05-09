@@ -10234,16 +10234,7 @@
   <block id="b91db1bd1a57ea4c9953036d82a63e95" category="cell">(필수) 볼륨의 PROTOCOL_TYPE. NFS의 경우 'NFSv3' 또는 'NFSv4'를 사용하고 SMB의 경우 'CIFS' 또는 'MB'를 사용합니다.</block>
   <block id="8065bff4940ae8d7161f926b0df47ac4" category="inline-link">NetApp 상호 운용성 매트릭스 툴</block>
   <block id="1479ddf58c038ab7d220ff734c74deaf" category="list-text">의 NFS v4.1 상호 운용성 표 노트를 참조하십시오<block ref="8813559f5b95abb5411182be29200aff" category="inline-link-rx"></block> 지원을 위해 필요한 특정 ESXi 패치 수준</block>
-  <block id="087dbda5365ed88e00c8872c4c1e0bbd" category="cell">8143 인바운드</block>
-  <block id="02d2c75d8a2aa2467d06001b31c05362" category="cell">8043 인바운드</block>
-  <block id="b0fe0ecb8fb3ce74f7b3b8247ad8c57f" category="cell">9060 인바운드</block>
-  <block id="b73aff0593aa8a0babf12a5436046fa4" category="cell">22 인바운드</block>
-  <block id="76021536cddae3cb1fafb19e94fd4f7b" category="cell">9080 인바운드</block>
-  <block id="401895563aca0ffc4c817683f6dc198f" category="cell">9083 인바운드</block>
   <block id="fe01ac95967cd8cb5f5b5669b685277a" category="cell">HTTPS 연결 - https 연결을 통한 SOAP에 사용되는 VP 및 SRA입니다</block>
-  <block id="0ebf2b61e02f96a8bb3cec797938ce85" category="cell">1162 인바운드</block>
-  <block id="15d6e89ffe56b79f00fc52375bd5df4e" category="cell">1527 내부만 해당</block>
-  <block id="44706a5e15cbefd4bd5f94f6009bddce" category="cell">443 양방향</block>
   <block id="e4b8a8d8761aab7733e317b585d5d606" category="cell">ONTAP 클러스터에 연결하는 데 사용됩니다</block>
   <block id="6f3666cf392f9aa79924b94f433b64ed" category="doc">VMware vSphere용 NetApp SnapCenter 플러그인 - VMware 기반 구축</block>
   <block id="a1dd31a3dca44eb1fe27b895521130ae" category="inline-link-macro">다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건</block>
@@ -10302,4 +10293,17 @@
   <block id="e4c4075a8c06d40ae4b59e37bb084cef" category="list-text"><block ref="e4c4075a8c06d40ae4b59e37bb084cef" category="inline-link-rx"></block></block>
   <block id="75f86438e5e6bca3e9341dd22299f5bb" category="inline-link">TR-4597: ONTAP가 설치된 VMware vSphere</block>
   <block id="ef5bb91ba96e022044cd2c0d3c47544b" category="list-text"><block ref="ef5bb91ba96e022044cd2c0d3c47544b" category="inline-link-rx"></block></block>
+  <block id="02674a4ef33e11c879283629996c8ff8" category="cell">방향</block>
+  <block id="0c95054981de037de06e544a52eb3613" category="cell">8143</block>
+  <block id="a8e6fe5b9e68f30a146cefebaa7edcc3" category="cell">인바운드</block>
+  <block id="5bd529d5b07b647a8863cf71e98d651a" category="cell">8043</block>
+  <block id="cb4b69eb9bd10da82c15dca2f86a1385" category="cell">9060</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="d82d678e9583c1f5f283ec56fbf1abb7" category="cell">9080</block>
+  <block id="a44ba9086b2b83ccf2baf7c678723449" category="cell">9083</block>
+  <block id="abea47ba24142ed16b7d8fbf2c740e0d" category="cell">1162</block>
+  <block id="5cce8dede893813f879b873962fb669f" category="cell">1527)을 참조하십시오</block>
+  <block id="91c15b8eb529bf2100c10383d1010a1e" category="cell">내부 전용</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="1ef2b5426b0824e93e33753fa87ddbf5" category="cell">양방향</block>
 </blocks>
