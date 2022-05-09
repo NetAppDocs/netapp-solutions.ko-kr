@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>WP-7337: 베어 메탈(Bare Metal)의 Anthos</title>
+  <title>Astra Trident 개요</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="WP-7337: 베어 메탈(Bare Metal)의 Anthos" />
+  <meta property="og:title" content="Astra Trident 개요" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/containers/bmanthos_introduction.html" />
-	<meta property="og:description" content="NetApp과 Google Cloud는 수년간 긴밀한 관계를 유지하고 있었으며, NetApp은 Cloud Volumes ONTAP과 Cloud Volumes Service를 통해 Google Cloud에 클라우드 데이터 서비스를 최초로 도입했습니다. 그런 다음 NetApp HCI ..." />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" />
+	<meta property="og:description" content="Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/netapp-solutions/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="NetApp과 Google Cloud는 수년간 긴밀한 관계를 유지하고 있었으며, NetApp은 Cloud Volumes ONTAP과 Cloud Volumes Service를 통해 Google Cloud에 클라우드 데이터 서비스를 최초로 도입했습니다. 그런 다음 NetApp HCI ...">
-  <meta name="keywords" content=" WP-7337, Google Cloud, Cloud Volumes ONTAP, Cloud Volume Service, hypervisor, Kubernetes"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.">
+  <meta name="keywords" content=" Trident, Astra Trident, Helm, Operator, iSCSI, NFS, DevOps"><!-- Icons -->
   <link rel="icon" href="/ko-kr/netapp-solutions/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[WP-7337: 베어 메탈(Bare Metal)의 Anthos](https://docs.netapp.com/ko-kr/netapp-solutions/containers/bmanthos_introduction.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/containers/bmanthos_introduction.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/issues/new?body=Page%3A%20[Astra Trident 개요](https://docs.netapp.com/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/netapp-solutions/blob/main/containers/devops_with_netapp/dwn_overview_trident.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/netapp-solutions/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/netapp-solutions/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -292,15 +292,15 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/netapp-solutions/containers/bmanthos_introduction.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/containers/bmanthos_introduction.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/containers/bmanthos_introduction.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/containers/bmanthos_introduction.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/netapp-solutions/containers/bmanthos_introduction.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                  <a href="https://docs.netapp.com/zh-tw/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -2123,6 +2123,133 @@
           
           <a target="_blank" 
             
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_Astra와_DevOps.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp Astra와 DevOps
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_스토리지_시스템_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp 스토리지 시스템 개요
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_스토리지_통합_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp 스토리지 통합 개요
+          </a>
+          
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/containers/devops_with_netapp/dwn_overview_trident.pdf" >
+    <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/사용_사례_검증.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            사용 사례 검증
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
               href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp의_Red_Hat_OpenShift.pdf" 
             
           >
@@ -2396,6 +2523,10 @@
 
 
 
+
+
+
+
           
         </li>
       </ul>
@@ -2405,7 +2536,12 @@
 
 
 
+          
+        </li>
+      </ul>
+    
 
+  
 
 
 
@@ -2456,15 +2592,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -2486,6 +2613,15 @@
 
 
 
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -2542,15 +2678,6 @@
           
 
 
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -2628,11 +2755,210 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/netapp-solutions/pdfs/sidebar/Google_Anthos.pdf" 
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp의_Anthos.pdf" 
             
           >
             <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
-            Google Anthos
+            NetApp의 Anthos
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/Anthos_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            Anthos 개요
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_스토리지_시스템_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp 스토리지 시스템 개요
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_스토리지_통합_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp 스토리지 통합 개요
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/NetApp_Astra_Trident_개요.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            NetApp Astra Trident 개요
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/Anthos를_위한_고급_구성_옵션.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            Anthos를 위한 고급 구성 옵션
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/로드_밸런서_옵션_탐색.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            로드 밸런서 옵션 탐색
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/netapp-solutions/pdfs/sidebar/아카이빙_솔루션.pdf" 
+            
+          >
+            <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
+            아카이빙 솔루션
           </a>
           
 
@@ -2662,15 +2988,6 @@
 
 
 
-
-
-          
-            <li class="active pdf-hide">
-  <a target="_blank" href="/ko-kr/netapp-solutions/pdfs/pages/containers/bmanthos_introduction.pdf" >
-    <img src="/ko-kr/netapp-solutions/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
 
 
           
@@ -3977,10 +4294,40 @@
         클라우드 기반 VMware 구축을 위한 스토리지 최적화
       </a></li><li class=" "><a class="na-navbar-padding" href="https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution">
         NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/index.html">
         <div class="na-navbar-padding"> 컨테이너</div>
       </a>
-      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/rh-os-n_solution_overview.html">
+      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_solution_overview.html">
+        <div class="na-navbar-padding"> NetApp Astra와 DevOps</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_devops.html">
+        DevOps 개요
+      </a></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_netapp.html">
+        <div class="na-navbar-padding"> NetApp 스토리지 시스템 개요</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_netapp_ontap.html">
+        NetApp ONTAP를 참조하십시오
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_storint.html">
+        <div class="na-navbar-padding"> NetApp 스토리지 통합 개요</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_astra.html">
+        NetApp Astra Control Center 개요
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html">
+        NetApp Astra Trident 개요
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_use_cases_overview.html">
+        <div class="na-navbar-padding"> 사용 사례 검증</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_use_case_integrated_data_protection.html">
+        NetApp Astra Control을 통해 CI/CD 파이프라인에 보호 기능을 통합합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_use_case_postmortem_with_restore.html">
+        Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 용이하게 합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_use_case_flexclone.html">
+        NetApp FlexClone으로 소프트웨어 개발 가속화
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_videos_and_demos.html">
+        비디오/데모
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_additional_information.html">
+        추가 정보
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/rh-os-n_solution_overview.html">
         <div class="na-navbar-padding"> NetApp의 Red Hat OpenShift</div>
       </a>
       <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/rh-os-n_overview_openshift.html">
@@ -4055,11 +4402,11 @@
         클러스터 관리자 작업
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_multitenancy_storage_admin_tasks.html">
         스토리지 관리자 작업
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_multitenancy_validation.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_multitenancy_validation.html">
         검증
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_multitenancy_scaling.html">
         확장
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NetApp ONTAP 기반의 Red Hat OpenShift 가상화</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_overview.html">
@@ -4071,7 +4418,7 @@
         필수 구성 요소
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_deployment.html">
         운영자를 통해 구축
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 워크플로우</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html">
@@ -4082,7 +4429,7 @@
         VM 클로닝
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html">
         스냅샷으로부터 VM을 생성하십시오
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_advanced_cluster_management_overview.html">
@@ -4094,7 +4441,7 @@
         필수 구성 요소
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html">
         운영자를 통해 구축
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 피처</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_use_case_advanced_cluster_management_features_cluster_lcm.html">
@@ -4111,23 +4458,68 @@
         비디오/데모
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/rh-os-n_additional_information.html">
         추가 정보
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> Google Anthos</div>
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_solution_overview.html">
+        <div class="na-navbar-padding"> NetApp의 Anthos</div>
       </a>
-      <ul><li class="subfolders  active "><a href="/ko-kr/netapp-solutions/containers/bmanthos_introduction.html">
+      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_overview_anthos.html">
+        <div class="na-navbar-padding"> Anthos 개요</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_anthos_VMW.html">
+        VMware 기반 Anthos 클러스터
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_anthos_BM.html">
+        Anthos의 Bare Metal
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_overview_netapp.html">
+        <div class="na-navbar-padding"> NetApp 스토리지 시스템 개요</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_netapp_ontap.html">
+        NetApp ONTAP를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_netapp_element.html">
+        NetApp Element
+      </a></li></ul></li><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_overview_storint.html">
+        <div class="na-navbar-padding"> NetApp 스토리지 통합 개요</div>
+      </a>
+      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_overview_trident.html">
+        <div class="na-navbar-padding"> NetApp Astra Trident 개요</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_trident_ontap_nfs.html">
+        NetApp ONTAP NFS 를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_trident_ontap_iscsi.html">
+        NetApp ONTAP iSCSI를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_trident_element_iscsi.html">
+        NetApp Element iSCSI 를 참조하십시오
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Anthos를 위한 고급 구성 옵션</div>
+      </a>
+      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_load_balancers.html">
+        <div class="na-navbar-padding"> 로드 밸런서 옵션 탐색</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_LB_F5BigIP.html">
+        F5 BIG-IP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_LB_SeeSaw.html">
+        시소
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_use_cases.html">
+        솔루션 검증 및 사용 사례
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_videos_and_demos.html">
+        비디오/데모
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/anthos-with-netapp/a-w-n_additional_information.html">
+        추가 정보
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 아카이빙 솔루션</div>
+      </a>
+      <ul><li class="subfolders "><a href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_introduction.html">
         <div class="na-navbar-padding"> Anthos의 Bare Metal</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_solution_overview.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_solution_overview.html">
         솔루션 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_solution_requirements.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_solution_requirements.html">
         솔루션 요구 사항
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_deployment_summary.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_deployment_summary.html">
         구축 요약
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_solution_validation.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_solution_validation.html">
         솔루션 검증
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_conclusion.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_conclusion.html">
         결론
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/bmanthos_where_to_find_additional_information.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/netapp-solutions/containers/baremetal-anthos/bmanthos_where_to_find_additional_information.html">
         추가 정보를 찾을 수 있는 위치
       </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 엔터프라이즈 애플리케이션 및 데이터베이스</div>
@@ -4368,34 +4760,46 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">WP-7337: 베어 메탈(Bare Metal)의 Anthos</h1>
+  <h1 class="n-doc__component-detail-heading">Astra Trident 개요</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:44:50 +0000">04/18/2022</time>
+    <time datetime="2022-05-09 20:30:58 +0000">05/09/2022</time>
     
   
 
 
 </p>
 
-<div class="paragraph">
-<p>NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다</p>
+<div class="paragraph normal">
+<p>Astra Trident는 컨테이너 및 Kubernetes 배포용 Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud, Rancher etc의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.</p>
 </div>
 <div class="paragraph">
-<p>NetApp과 Google Cloud는 수년간 긴밀한 관계를 유지하고 있었으며, NetApp은 Cloud Volumes ONTAP 및 Cloud Volumes Service를 통해 Google Cloud용 클라우드 데이터 서비스를 최초로 도입했습니다. 그런 다음 NetApp HCI 플랫폼을 검증하여 VMware vSphere에 구축된 하이퍼바이저 기반 하이브리드 멀티 클라우드 Kubernetes 솔루션인 Google Cloud Anthos On-Premises와 함께 사용할 수 있도록 했습니다. NetApp은 그런 다음 NetApp Trident, ONTAP 및 NFS 프로토콜을 위한 Anthos Ready 자격을 통과해 컨테이너에 동적 영구 스토리지를 제공했습니다.</p>
+<p>관리자는 특정 수준의 성능을 보장하는 압축, 특정 디스크 유형 또는 QoS 수준을 비롯한 고급 스토리지 기능을 지원하는 스토리지 시스템 모델과 프로젝트 요구사항에 따라 여러 스토리지 백엔드를 구성할 수 있습니다. 이러한 백엔드를 정의한 후, 개발자는 프로젝트의 이러한 백엔드를 사용하여 지속적인 PVC(Volume Claim)를 생성하고 필요에 따라 컨테이너에 영구 저장소를 연결할 수 있습니다.</p>
 </div>
 <div class="paragraph">
-<p>Anthos는 이제 고객 환경의 베어 메탈 서버에 직접 설치할 수 있으며, 이를 통해 고객은 하이퍼바이저가 없는 로컬 데이터 센터로 Google Cloud를 확장할 수 있는 추가 옵션을 추가할 수 있습니다. 또한 NetApp ONTAP 스토리지 운영 체제 및 NetApp Trident의 기능을 활용하여 컨테이너용 영구 스토리지를 통합하여 플랫폼의 기능을 확장할 수 있습니다.</p>
+<p><span class="image"><img src="./../../media/redhat_openshift_image2.png" alt="오류: 그래픽 이미지가 없습니다"></span></p>
 </div>
 <div class="paragraph">
-<p>이러한 결합을 통해 서버, 스토리지 및 네트워킹의 모든 잠재력을 Google Cloud가 제공하는 지원, 서비스 수준, 월별 청구 및 온디맨드 유연성과 결합하여 실현할 수 있습니다. 자체 하드웨어, 네트워크 및 스토리지를 사용하고 있기 때문에 애플리케이션 규모, 보안 및 네트워크 지연 시간을 직접 제어할 수 있을 뿐 아니라 베어 메탈에서 Anthos와 함께 관리 및 컨테이너화된 애플리케이션의 이점을 누릴 수 있습니다.</p>
+<p>Astra Trident는 빠른 개발 주기를 제공하며 Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.</p>
 </div>
 <div class="paragraph">
-<p><a href="bmanthos_solution_overview.html">"다음: 솔루션 개요"</a></p>
+<p>Astra Trident의 최신 버전은 2022년 1월 22.01입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 <a href="https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators">"여기"</a>.</p>
+</div>
+<div class="paragraph">
+<p>20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod의 자동 복구를 포함하여 추가 지원을 제공합니다.</p>
+</div>
+<div class="paragraph">
+<p>21.01 릴리즈를 통해 Trident Operator의 설치를 용이하게 하는 제어 차트를 사용할 수 있게 되었습니다.</p>
+</div>
+<div class="paragraph">
+<p>설명서를 참조하십시오 <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html" target="_blank" rel="noopener">"여기"</a> Astra Trident를 설치하고 사용하려면 다음을 수행합니다.</p>
+</div>
+<div class="paragraph">
+<p><a href="dwn_use_cases_overview.html">"다음: 사용 사례 검증: NetApp Astra를 사용한 DevOps"</a></p>
 </div>
 
     </article>
