@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: containers/anthos-with-netapp/a-w-n_videos_and_demos.html 
+keywords: video, demonstration, deployment 
+summary:  
+---
+= 비디오 및 데모: NetApp의 Anthos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+다음 비디오에서는 이 문서에 설명되어 있는 몇 가지 기능을 설명합니다.
+
+link:a-w-n_additional_information.html["다음: 추가 정보: NetApp의 Anthos"]

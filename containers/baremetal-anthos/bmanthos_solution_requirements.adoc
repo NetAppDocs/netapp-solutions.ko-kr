@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: containers/bmanthos_solution_requirements.html 
+permalink: containers/baremetal-anthos/bmanthos_solution_requirements.html 
 keywords: Hardware, software, compute, storage, requirements 
 summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 사용하면 사용 사례에 최적화된 컴퓨팅 플랫폼을 선택할 수 있습니다. 따라서 는 기존 인프라를 일치시키고 자본 지출을 줄일 수 있습니다. 
 ---
@@ -10,7 +10,7 @@ summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 
@@ -77,10 +77,10 @@ summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 사용�
 | NetApp ONTAP를 참조하십시오 | 스토리지 OS | 9.7P8 
 
 
-| NetApp 트라이던트 | 컨테이너 스토리지 관리 | 20.10 
+| NetApp Astra Trident | 컨테이너 스토리지 관리 | 20.10 
 |===
 
-NOTE: 이 멀티 OS 환경은 베어 메탈 솔루션에서 Anthos의 지원되는 OS 버전과의 상호 운용성을 보여줍니다. 우리는 고객이 구축을 위해 하나 또는 일부 운영 체제를 표준화할 것으로 예상하고 있습니다.
+NOTE: 이 멀티 OS 환경은 베어 메탈 솔루션의 Anthos의 지원되는 OS 버전과의 상호 운용성을 보여줍니다. 우리는 고객이 구축을 위해 하나 또는 일부 운영 체제를 표준화할 것으로 예상하고 있습니다.
 
 베어 메탈 하드웨어 및 소프트웨어 요구 사항에 대한 Anthos는 를 참조하십시오 https://cloud.google.com/anthos/gke/docs/bare-metal/concepts/hw-sw-storage["Anthos의 Bare Metal 문서"^] 페이지.
 

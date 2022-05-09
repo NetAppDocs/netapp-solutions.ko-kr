@@ -1,7 +1,39 @@
 ---
 section: containers
 title: 컨테이너
+url: "/containers/index.html"
 entries:
+- title: NetApp Astra와 DevOps
+  type: solutions
+  url: "/containers/devops_with_netapp/dwn_solution_overview.html"
+  entries:
+  - title: DevOps 개요
+    url: "/containers/devops_with_netapp/dwn_overview_devops.html"
+  - title: NetApp 스토리지 시스템 개요
+    url: "/containers/devops_with_netapp/dwn_overview_netapp.html"
+    entries:
+    - title: NetApp ONTAP를 참조하십시오
+      url: "/containers/devops_with_netapp/dwn_netapp_ontap.html"
+  - title: NetApp 스토리지 통합 개요
+    url: "/containers/devops_with_netapp/dwn_overview_storint.html"
+    entries:
+    - title: NetApp Astra Control Center 개요
+      url: "/containers/devops_with_netapp/dwn_overview_astra.html"
+    - title: NetApp Astra Trident 개요
+      url: "/containers/devops_with_netapp/dwn_overview_trident.html"
+  - title: 사용 사례 검증
+    url: "/containers/devops_with_netapp/dwn_use_cases_overview.html"
+    entries:
+    - title: NetApp Astra Control을 통해 CI/CD 파이프라인에 보호 기능을 통합합니다
+      url: "/containers/devops_with_netapp/dwn_use_case_integrated_data_protection.html"
+    - title: Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 용이하게 합니다
+      url: "/containers/devops_with_netapp/dwn_use_case_postmortem_with_restore.html"
+    - title: NetApp FlexClone으로 소프트웨어 개발 가속화
+      url: "/containers/devops_with_netapp/dwn_use_case_flexclone.html"
+  - title: 비디오/데모
+    url: "/containers/devops_with_netapp/dwn_videos_and_demos.html"
+  - title: 추가 정보
+    url: "/containers/devops_with_netapp/dwn_additional_information.html"
 - title: NetApp의 Red Hat OpenShift
   type: solutions
   url: "/containers/rh-os-n_solution_overview.html"
@@ -76,20 +108,20 @@ entries:
           url: "/containers/rh-os-n_use_case_multitenancy_cluster_admin_tasks.html"
         - title: 스토리지 관리자 작업
           url: "/containers/rh-os-n_use_case_multitenancy_storage_admin_tasks.html"
-      - title: 검증
-        url: "/containers/rh-os-n_use_case_multitenancy_validation.html"
-      - title: 확장
-        url: "/containers/rh-os-n_use_case_multitenancy_scaling.html"
-    - title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+        - title: 검증
+          url: "/containers/rh-os-n_use_case_multitenancy_validation.html"
+        - title: 확장
+          url: "/containers/rh-os-n_use_case_multitenancy_scaling.html"
+  - title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+    entries:
+    - title: 개요
+      url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
+    - title: 구축
       entries:
-      - title: 개요
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
-      - title: 구축
-        entries:
-        - title: 필수 구성 요소
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
-        - title: 운영자를 통해 구축
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
+      - title: 필수 구성 요소
+        url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
+      - title: 운영자를 통해 구축
+        url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
       - title: 워크플로우
         entries:
         - title: VM을 생성합니다
@@ -100,16 +132,16 @@ entries:
           url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
         - title: 스냅샷으로부터 VM을 생성하십시오
           url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
-    - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
+  - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
+    entries:
+    - title: 개요
+      url: "/containers/rh-os-n_use_case_advanced_cluster_management_overview.html"
+    - title: 구축
       entries:
-      - title: 개요
-        url: "/containers/rh-os-n_use_case_advanced_cluster_management_overview.html"
-      - title: 구축
-        entries:
-        - title: 필수 구성 요소
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html"
-        - title: 운영자를 통해 구축
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html"
+      - title: 필수 구성 요소
+        url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html"
+      - title: 운영자를 통해 구축
+        url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html"
       - title: 피처
         entries:
         - title: 클러스터 라이프사이클 관리
@@ -126,21 +158,66 @@ entries:
     url: "/containers/rh-os-n_videos_and_demos.html"
   - title: 추가 정보
     url: "/containers/rh-os-n_additional_information.html"
-- title: Google Anthos
+- title: NetApp의 Anthos
+  type: solutions
+  url: "/containers/anthos-with-netapp/a-w-n_solution_overview.html"
+  entries:
+  - title: Anthos 개요
+    url: "/containers/anthos-with-netapp/a-w-n_overview_anthos.html"
+    entries:
+    - title: VMware 기반 Anthos 클러스터
+      url: "/containers/anthos-with-netapp/a-w-n_anthos_VMW.html"
+    - title: Anthos의 Bare Metal
+      url: "/containers/anthos-with-netapp/a-w-n_anthos_BM.html"
+  - title: NetApp 스토리지 시스템 개요
+    url: "/containers/anthos-with-netapp/a-w-n_overview_netapp.html"
+    entries:
+    - title: NetApp ONTAP를 참조하십시오
+      url: "/containers/anthos-with-netapp/a-w-n_netapp_ontap.html"
+    - title: NetApp Element
+      url: "/containers/anthos-with-netapp/a-w-n_netapp_element.html"
+  - title: NetApp 스토리지 통합 개요
+    url: "/containers/anthos-with-netapp/a-w-n_overview_storint.html"
+    entries:
+    - title: NetApp Astra Trident 개요
+      url: "/containers/anthos-with-netapp/a-w-n_overview_trident.html"
+      entries:
+      - title: NetApp ONTAP NFS 를 참조하십시오
+        url: "/containers/anthos-with-netapp/a-w-n_trident_ontap_nfs.html"
+      - title: NetApp ONTAP iSCSI를 참조하십시오
+        url: "/containers/anthos-with-netapp/a-w-n_trident_ontap_iscsi.html"
+      - title: NetApp Element iSCSI 를 참조하십시오
+        url: "/containers/anthos-with-netapp/a-w-n_trident_element_iscsi.html"
+  - title: Anthos를 위한 고급 구성 옵션
+    entries:
+    - title: 로드 밸런서 옵션 탐색
+      url: "/containers/anthos-with-netapp/a-w-n_load_balancers.html"
+      entries:
+      - title: F5 BIG-IP
+        url: "/containers/anthos-with-netapp/a-w-n_LB_F5BigIP.html"
+      - title: 시소
+        url: "/containers/anthos-with-netapp/a-w-n_LB_SeeSaw.html"
+  - title: 솔루션 검증 및 사용 사례
+    url: "/containers/anthos-with-netapp/a-w-n_use_cases.html"
+  - title: 비디오/데모
+    url: "/containers/anthos-with-netapp/a-w-n_videos_and_demos.html"
+  - title: 추가 정보
+    url: "/containers/anthos-with-netapp/a-w-n_additional_information.html"
+- title: 아카이빙 솔루션
   entries:
   - title: Anthos의 Bare Metal
-    url: "/containers/bmanthos_introduction.html"
+    url: "/containers/baremetal-anthos/bmanthos_introduction.html"
     type: solutions
     entries:
     - title: 솔루션 개요
-      url: "/containers/bmanthos_solution_overview.html"
+      url: "/containers/baremetal-anthos/bmanthos_solution_overview.html"
     - title: 솔루션 요구 사항
-      url: "/containers/bmanthos_solution_requirements.html"
+      url: "/containers/baremetal-anthos/bmanthos_solution_requirements.html"
     - title: 구축 요약
-      url: "/containers/bmanthos_deployment_summary.html"
+      url: "/containers/baremetal-anthos/bmanthos_deployment_summary.html"
     - title: 솔루션 검증
-      url: "/containers/bmanthos_solution_validation.html"
+      url: "/containers/baremetal-anthos/bmanthos_solution_validation.html"
     - title: 결론
-      url: "/containers/bmanthos_conclusion.html"
+      url: "/containers/baremetal-anthos/bmanthos_conclusion.html"
     - title: 추가 정보를 찾을 수 있는 위치
-      url: "/containers/bmanthos_where_to_find_additional_information.html"
+      url: "/containers/baremetal-anthos/bmanthos_where_to_find_additional_information.html"

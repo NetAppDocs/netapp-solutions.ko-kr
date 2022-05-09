@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: containers/anthos-with-netapp/a-w-n_solution_overview.html 
+keywords: NVA-1165, Anthos, GKE, Netapp, Astra Trident 
+summary: 이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 바와 같이 여러 데이터 센터 환경에 구축된 Anthos with NetApp 솔루션의 배포 검증을 제공합니다. 
+---
+= NVA-1165: NetApp의 Anthos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+NetApp의 Alan Cowles와 Nikhil Kulkarni입니다
+
+이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션의 배포를 검증합니다.
+
+또한, 영구 스토리지 관리를 위한 Astra Trident 스토리지 오케스트레이터를 사용하여 NetApp 스토리지 시스템과의 스토리지 통합에 대해서도 자세히 설명합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
+
+
+
+== 사용 사례
+
+NetApp 솔루션의 Anthos는 다음과 같은 사용 사례를 통해 고객에게 탁월한 가치를 제공하도록 설계되었습니다.
+
+* Bare Metal의 제공된 'bmctl' 도구 또는 VMware vSphere의 'gkectl' 도구를 사용하여 배포된 Anthos 환경을 쉽게 배포 및 관리할 수 있습니다.
+* 엔터프라이즈 컨테이너 및 가상화된 워크로드의 힘을 합쳐 Anthos와 함께 vSphere 또는 베어 메탈에 가상으로 배포 https://cloud.google.com/anthos/clusters/docs/bare-metal/1.9/how-to/vm-workloads["쿠버바이러스"^].
+* Kubernetes용 오픈 소스 스토리지 오케스트레이터인 NetApp 스토리지와 Astra Trident와 함께 Anthos의 기능을 강조하는 실제 구성 및 사용 사례
+
+
+
+
+== 비즈니스 가치
+
+기업은 새로운 제품을 만들고, 릴리즈 주기를 단축하며, 새로운 기능을 빠르게 추가하기 위해 DevOps 사례를 점점 더 채택하고 있습니다. 컨테이너 및 마이크로서비스는 타고난 애자일 특성상 DevOps 사례를 지원하는 데 중요한 역할을 합니다. 그러나 엔터프라이즈 환경에서 운영 환경에서 DevOps를 수행하는 것은 그 자체로 문제가 되며 다음과 같은 기본 인프라에서 특정 요구사항을 부과합니다.
+
+* 스택의 모든 계층에서 고가용성 보장
+* 간편한 구축 절차
+* 무중단 운영 및 업그레이드
+* 마이크로서비스 민첩성을 유지하기 위한 API 기반 및 프로그래밍 가능한 인프라
+* 성능 보장이 포함된 멀티 테넌시
+* 가상화 워크로드 및 컨테이너화된 워크로드를 동시에 실행할 수 있습니다
+* 워크로드 요구사항에 따라 인프라를 독립적으로 확장할 수 있는 능력
+
+
+NetApp 솔루션의 Anthos는 이러한 당면 과제를 인정하며 고객이 선택한 데이터 센터 환경에서 Premise에 Anthos의 완전 자동화된 배포를 구현하여 각 문제를 해결하는 솔루션을 제시합니다.
+
+
+
+== 기술 개요
+
+NetApp 솔루션의 Anthos는 다음과 같은 주요 구성 요소로 이루어져 있습니다.
+
+
+
+=== Anthos의 사내
+
+Premise의 Anthos는 VMware vSphere 하이퍼바이저 또는 선택한 베어 메탈 인프라에 구축할 수 있는 완벽하게 지원되는 엔터프라이즈 Kubernetes 플랫폼입니다.
+
+Anthos에 대한 자세한 내용은 Anthos 웹 사이트를 참조하십시오 https://https://cloud.google.com/anthos/["여기"^].
+
+
+
+=== NetApp 스토리지 시스템을 나타냅니다
+
+NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
+
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
+
+
+
+=== NetApp 스토리지 통합
+
+Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.
+
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+
+
+
+== 고급 구성 옵션
+
+이 섹션에서는 전용 개인 이미지 레지스트리를 만들거나 사용자 지정 로드 밸런서 인스턴스를 배포하는 등 실제 사용자가 이 솔루션을 운영 환경에 배포할 때 수행해야 할 사용자 지정 작업에 대해 설명합니다.
+
+
+
+== 검증된 릴리즈에 대한 최신 지원 매트릭스
+
+|===
+
+
+| 제공합니다 | 목적 | 소프트웨어 버전 
+
+
+| NetApp ONTAP를 참조하십시오 | 스토리지 | 9.8, 9.9.1 
+
+
+| NetApp Element | 스토리지 | 12.3 
+
+
+| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.01.0 
+
+
+| VMware 기반 Anthos 클러스터 | 컨테이너 오케스트레이션 | 1.10 
+
+
+| Anthos의 Bare Metal | 컨테이너 오케스트레이션 | 1.10 
+
+
+| VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 6.7U3, 7.0U3 
+|===
+link:a-w-n_overview_anthos.html["Next:Anthos 개요:NetApp의 Anthos"]

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: containers/devops_with_netapp/dwn_overview_astra.html 
+keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
+summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 기술을 기반으로 하는 온프레미스 환경에 구축된 상태 저장 Kubernetes 작업 부하를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다. 
+---
+= NetApp Astra Control 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+:k8s_distribution_name: Kubernetes
+
+
+[role="normal"]
+NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
+
+image:redhat_openshift_image44.png["오류: 그래픽 이미지가 없습니다"]
+
+NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 사용하여 구축 및 구성된 Astra Trident 스토리지 오케스트레이터가 있는 {k8s_distribution_name} 클러스터에 설치할 수 있습니다.
+
+Astra Trident에 대한 자세한 내용은 을 참조하십시오 link:dwn_overview_trident.html["이 문서는 여기 에서 확인할 수 있습니다"^].
+
+클라우드 연결 환경에서 Astra Control Center는 Cloud Insights를 사용하여 고급 모니터링 및 원격 측정 기능을 제공합니다. Cloud Insights 연결이 없을 경우 제한된 모니터링 및 원격 측정(7일 메트릭)을 사용할 수 있으며 개방형 메트릭 엔드포인트를 통해 Kubernetes 기본 모니터링 툴(Prometheus 및 Grafana)으로 내보낼 수 있습니다.
+
+Astra Control Center는 NetApp AutoSupport 및 Active IQ 에코시스템에 완전히 통합되어 사용자를 지원하고, 문제 해결을 지원하며, 사용 통계를 표시합니다.
+
+Astra Control Center의 유료 버전 외에 90일 평가판 라이센스가 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
+
+Astra 포트폴리오에 대한 자세한 내용은 를 참조하십시오 link:https://cloud.netapp.com/astra["Astra 웹 사이트"^].
+
+Astra Control Center에 대한 자세한 설치 및 운영 가이드는 설명서를 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/index.html["여기"^].
+
+
+
+== Astra Control Center 자동화
+
+Astra Control Center에는 프로그래밍 방식의 액세스를 위한 완전한 기능의 REST API가 있습니다. 사용자는 프로그래밍 언어 또는 유틸리티를 사용하여 Astra Control REST API 끝점과 상호 작용할 수 있습니다. 이 API에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.netapp.com/us-en/astra-automation/index.html["여기"^].
+
+Astra Control REST API와 상호 작용하기 위해 미리 만들어진 소프트웨어 개발 툴킷을 원할 경우, NetApp에서 다운로드할 수 있는 Astra Control Python SDK 툴킷을 제공합니다 link:https://github.com/NetApp/netapp-astra-toolkits/["여기"^].
+
+프로그래밍이 현재 상황에 고유하지 않고 구성 관리 툴을 사용하려는 경우 NetApp이 게시하는 Ansible 플레이북을 클론 복제 및 실행할 수 있습니다 link:https://github.com/NetApp-Automation/na_astra_control_suite["여기"^].
+
+link:dwn_use_cases_overview.html["다음: 사용 사례 검증: NetApp Astra를 사용한 DevOps"]

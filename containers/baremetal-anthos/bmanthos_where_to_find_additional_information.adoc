@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: containers/bmanthos_where_to_find_additional_information.html 
+permalink: containers/baremetal-anthos/bmanthos_where_to_find_additional_information.html 
 keywords: information 
 summary:  
 ---
@@ -10,7 +10,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
@@ -19,7 +19,7 @@ summary:
 +
 https://docs.netapp.com/ontap-9/index.jsp["https://docs.netapp.com/ontap-9/index.jsp"^]
 
-* NetApp 트라이던트
+* NetApp Astra Trident
 +
 https://netapp-trident.readthedocs.io/en/stable-v20.10/["https://netapp-trident.readthedocs.io/en/stable-v20.10/"^]
 

@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: containers/devops_with_netapp/dwn_solution_overview.html 
+keywords: DevOps, Netapp, Astra Trident, Astra Control, Astra 
+summary: 이 기술 보고서에서는 컨테이너식 애플리케이션을 사용하여 NetApp에서 DevOps 사용 사례를 간편하고 효율적으로 활용하는 방법을 간략하게 설명합니다. 먼저, Astra 포트폴리오를 사용하여 NetApp 스토리지 시스템과 Kubernetes 플랫폼과의 통합에 대해 자세히 설명합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다. 
+---
+= TR-4919: NetApp Astra를 통한 DevOps
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+:k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud etc.
+
+
+NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
+
+
+
+== 사용 사례
+
+NetApp Astra 기반의 DevOps 솔루션은 다음과 같은 사용 사례를 통해 고객에게 뛰어난 가치를 제공하도록 설계되었습니다.
+
+* 지원되는 Kubernetes 배포 위에 구축된 애플리케이션 및 개발 환경을 손쉽게 구축 및 관리할 수 있습니다.
+* DevOps 워크플로우의 실제 사용 사례에 대한 논의 및 NetApp이 이러한 방법을 더욱 쉽게 채택 및 사용할 수 있도록 제공하는 툴 및 방법의 예
+* 애플리케이션 정합성이 보장된 스냅샷, 백업 및 클론을 사용하여 DevOps 경험을 향상하는 방법을 알아보십시오.
+
+
+
+
+== 비즈니스 가치
+
+기업은 새로운 제품을 만들고, 릴리즈 주기를 단축하며, 새로운 기능을 빠르게 추가하기 위해 DevOps 사례를 점점 더 채택하고 있습니다. 컨테이너 및 마이크로서비스는 타고난 애자일 특성상 DevOps 사례를 지원하는 데 중요한 역할을 합니다. 그러나 엔터프라이즈 환경에서 운영 환경에서 DevOps를 수행하는 것은 그 자체로 문제가 되며 다음과 같은 기본 인프라에서 특정 요구사항을 부과합니다.
+
+* 스택의 모든 계층에서 고가용성을 보장하므로 워크플로우가 중단되지 않습니다.
+* 최종 사용자를 위한 간편한 배포 및 관리 절차
+* 마이크로서비스 및 개발자 민첩성을 따라잡을 수 있는 API 기반 프로그래밍 가능 인프라
+* 워크로드 요구사항에 따라 인프라를 독립적으로 자동 확장할 수 있습니다.
+* DevOps 워크플로우에 대한 백업 영구 데이터 세트와 함께 애플리케이션을 보호하면 재구축이나 수동 데이터 복제에 의존하지 않고 시장 출시 기간을 단축할 수 있습니다.
+
+
+이러한 기능과 과제를 인식하는 이 기술 보고서는 다양한 NetApp 제품 포트폴리오를 사용하여 컨테이너화된 애플리케이션의 DevOps 사용 사례를 개선 및 단순화하는 프로세스를 개략적으로 설명합니다.
+
+
+
+== 기술 개요
+
+NetApp을 지원하는 DevOps 솔루션에는 다음과 같은 주요 구성 요소가 포함되어 있습니다.
+
+
+
+=== DevOps 사례
+
+DevOps 사례에서는 최종 사용자가 코드를 개발 중인 환경을 제어할 수 있도록 함으로써 개발 워크플로우를 개선하는 자동화되고 반복 가능하며 쉽게 관리할 수 있는 운영에 초점을 맞춥니다. 이 솔루션은 NetApp 기술이 이러한 운영에 가장 큰 도움이 될 수 있는 몇 가지 예와 사용 사례를 제공합니다.
+
+
+
+=== 컨테이너 오케스트레이션
+
+현재 수많은 컨테이너 오케스트레이션 플랫폼을 사용하고 있습니다. 이러한 플랫폼의 대부분은 Kubernetes를 기반으로 하지만 각각 장단점이 있습니다. 따라서 DevOps 워크플로우에 사용할 컨테이너 오케스트레이션 플랫폼을 선택할 때는 기능 세트와 통합을 이해하는 것이 중요합니다. NetApp Astra 제품군을 사용하여 전체 DevOps 사용 사례에 대해 다음 플랫폼을 지원합니다.
+
+* https://www.redhat.com/en/technologies/cloud-computing/openshift["Red Hat OpenShift"] 4.6.8+
+* https://rancher.com/["목장"] 2.5 이상
+* https://kubernetes.io/["쿠버네티스"] 1.20 이상
+* https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/index.html["VMware Tanzu Kubernetes Grid를 참조하십시오"] 1.4 이상
+* https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Integrated-Edition/index.html["VMware Tanzu Kubernetes Grid Integrated Edition을 참조하십시오"] 1.12.2 이상
+
+
+
+
+=== NetApp 스토리지 시스템을 나타냅니다
+
+NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
+
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
+
+
+
+=== NetApp 스토리지 통합
+
+NetApp Astra Control Center는 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 사내 환경에 구축된 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
+
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+
+Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
+
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+
+link:dwn_overview_devops.html["다음: DevOps 개요"]
