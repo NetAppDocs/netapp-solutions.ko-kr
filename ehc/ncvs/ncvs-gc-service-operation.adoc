@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: ehc/ncvs/ncvs-gc-service-operation.html 
+keywords: physical security, operations team, customer responsibilities, malicious sre protection, certifications, gdpr 
+summary: Cloud Volumes Service 팀은 Google Cloud에서 백엔드 서비스를 관리하고 여러 전략을 사용하여 플랫폼을 보호하고 원치 않는 액세스를 방지합니다. 
+---
+= 서비스 작업
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+link:ncvs-gc-other-nas-infrastructure-service-dependencies.html["이전: 기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)"]
+
+Cloud Volumes Service 팀은 Google Cloud에서 백엔드 서비스를 관리하고 여러 전략을 사용하여 플랫폼을 보호하고 원치 않는 액세스를 방지합니다.
+
+각 고객은 기본적으로 다른 고객으로부터 액세스 펜싱된 고유한 서브넷을 받게 되며, Cloud Volumes Service의 모든 테넌트는 전체 데이터 격리를 위한 고유한 네임스페이스와 VLAN을 갖게 됩니다. 사용자가 인증되면 SDE(Service Delivery Engine)는 해당 테넌트와 관련된 구성 데이터만 읽을 수 있습니다.
+
+
+
+== 물리적 보안
+
+적절한 사전 승인을 받은 경우, 현장 엔지니어와 NetApp 내부 현장 지원 엔지니어(FSE)만 물리적 작업을 위한 케이지 및 랙에 액세스할 수 있습니다. 스토리지 및 네트워크 관리는 허용되지 않습니다. 이러한 현장 리소스만 하드웨어 유지 관리 작업을 수행할 수 있습니다.
+
+현장 엔지니어의 경우 랙 ID 및 장치 위치(RU)가 포함된 SOW(Statement of Work)에 대한 티켓이 발행되고 기타 모든 세부 정보가 티켓에 포함됩니다. NetApp FSE의 경우 COLO를 통해 사이트 방문 티켓을 제기해야 하며 티켓에는 감사 목적을 위한 방문자의 세부 정보, 날짜 및 시간이 포함됩니다. FSE용 SOW는 내부적으로 NetApp에 전달됩니다.
+
+
+
+== 운영팀
+
+Cloud Volumes Service의 운영 팀은 운영 엔지니어링과 SRE(Site Reliability Engineer)로 구성되며, 클라우드 볼륨 서비스를 위한 NetApp 현장 지원 엔지니어 및 파트너는 하드웨어에 대해 구성됩니다. 모든 운영 팀 구성원은 Google Cloud에서 작업할 수 있도록 인증되었으며, 제기된 모든 티켓에 대해 자세한 작업 기록이 유지됩니다. 또한 엄격한 변경 관리 및 승인 프로세스를 통해 각 결정이 적절하게 검토되는지 확인할 수 있습니다.
+
+SRE 팀은 컨트롤 플레인을 관리하고 데이터가 UI 요청에서 백엔드 하드웨어 및 Cloud Volumes Service 소프트웨어로 라우팅되는 방식을 관리합니다. SRE 팀은 또한 볼륨 및 inode 최대값과 같은 시스템 리소스를 관리합니다. SRE는 고객 데이터와 상호 작용하거나 고객 데이터에 액세스할 수 없습니다. 또한 SRE는 백엔드 하드웨어에 대한 새 디스크 또는 메모리 교체 요청과 같은 RMA(Return Material Authorizations)와 함께 조정을 제공합니다.
+
+
+
+== 고객의 책임
+
+Cloud Volumes Service 고객은 조직의 Active Directory 및 사용자 역할 관리와 볼륨 및 데이터 작업을 관리합니다. 고객은 NetApp과 Google Cloud(관리자 및 뷰어)가 제공하는 두 가지 사전 정의된 역할을 사용하여 관리 역할을 수행하고 동일한 Google Cloud 프로젝트 내의 다른 최종 사용자에게 권한을 위임할 수 있습니다.
+
+관리자는 고객 프로젝트 내의 모든 VPC를 고객이 적절하다고 판단한 Cloud Volumes Service에 연결할 수 있습니다. 고객은 Google Cloud Marketplace 구독에 대한 액세스를 관리하고 데이터 평면에 액세스할 수 있는 VPC를 관리해야 합니다.
+
+
+
+== 악성 SRE 보호
+
+악성 SRE가 있거나 SRE 자격 증명이 손상된 경우 Cloud Volumes Service가 이를 어떻게 보호합니까?
+
+운영 환경에 대한 액세스는 제한된 수의 SRE 사용자만 가능합니다. 관리 권한은 소수의 숙련된 관리자에게만 더욱 제한됩니다. Cloud Volumes Service 운영 환경의 모든 작업이 기록되고 기준 또는 의심스러운 활동에 대한 모든 이상 사항은 SIEM(Security Information and Event Management) 위협 인텔리전스 플랫폼에서 탐지됩니다. 따라서 Cloud Volumes Service 백엔드에 너무 많은 손상이 발생하기 전에 악의적인 작업을 추적하고 완화할 수 있습니다.
+
+
+
+== 볼륨 수명 주기
+
+Cloud Volumes Service는 볼륨 내의 데이터가 아니라 서비스 내의 객체만 관리합니다. 볼륨에 액세스하는 클라이언트만 데이터, ACL, 파일 소유자 등을 관리할 수 있습니다. 이러한 볼륨의 데이터는 유휴 상태로 암호화되며 액세스는 Cloud Volumes Service 인스턴스 테넌트로 제한됩니다.
+
+Cloud Volumes Service의 볼륨 라이프사이클은 create-update-delete입니다. 볼륨은 볼륨이 삭제될 때까지 볼륨의 스냅샷 복사본을 유지하며, 검증된 Cloud Volumes Service 관리자만 Cloud Volumes Service의 볼륨을 삭제할 수 있습니다. 관리자가 볼륨 삭제를 요청하는 경우 삭제를 확인하려면 볼륨 이름을 추가로 입력해야 합니다. 볼륨이 삭제된 후에는 볼륨이 사라지고 복구할 수 없습니다.
+
+Cloud Volumes Service 계약이 종료된 경우 NetApp은 특정 기간 이후에 삭제할 볼륨을 표시합니다. 이 기간이 만료되기 전에 고객의 요청에 따라 볼륨을 복구할 수 있습니다.
+
+
+
+== 인증
+
+Cloud Volumes Services for Google Cloud는 현재 ISO/IEC 27001:2013 및 ISO/IEC 27018:2019 표준에 따라 인증되었습니다. 또한 이 서비스는 최근 SOC2 Type I Attestation 보고서를 받았습니다. 데이터 보안 및 개인 정보 보호에 대한 NetApp의 약속에 대한 자세한 내용은 을 참조하십시오 https://www.netapp.com/company/trust-center/compliance/["규정 준수: 데이터 보안 및 데이터 개인 정보 보호"^].
+
+
+
+== GDPR을 참조하십시오
+
+개인 정보 보호 및 GDPR 준수에 대한 NetApp의 약속은 당사의 다양한 규정으로 제공됩니다  https://www.netapp.com/how-to-buy/sales-terms-and-conditions%22%20/o%20%22SEO%20-%20Sales%20Terms%20and%20Conditions["고객 계약"^]있습니다 https://netapp.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCqPPgcufskl_71q-FelD4DHz5EMJVOkqqT0iiORT10DlfZnZeMpDrse5W6K9LEw6o*["고객 데이터 처리 부록"^]를 포함합니다  https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en["표준 계약 조항"^] 유럽 위원회에서 제공. 또한 NetApp은 개인 정보 보호 정책에 이러한 의무를 이행하며, 이는 기업 행동 강령에 명시된 핵심 가치를 기반으로 합니다.
+
+link:ncvs-gc-additional-information.html["다음: 추가 정보, 버전 기록 및 연락처 정보"]

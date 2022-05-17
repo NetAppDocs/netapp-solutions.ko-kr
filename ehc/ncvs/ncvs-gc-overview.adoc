@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: ehc/ncvs/ncvs-gc-overview.html 
+keywords: 4918, tr4918, overview, introduction, scope, audience, abbreviation, definition 
+summary: 특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp Cloud Volumes Service이 Google Cloud에 제공하는 보안 제품에 대한 개요입니다. 
+---
+= TR-4918: 보안 개요 - Google Cloud의 NetApp Cloud Volumes Service
+:allow-uri-read: 
+
+
+Oliver Krause, Justin Parisi, NetApp
+
+
+
+== 문서 범위
+
+특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp의 보안 제품에 대한 개요입니다 https://cloud.netapp.com/cloud-volumes-service-for-gcp["Cloud Volumes Service는 Google Cloud에서 제공합니다"^].
+
+
+
+== 대상
+
+이 문서의 대상 고객은 다음과 같은 역할을 포함하지만 이에 국한되지 않습니다.
+
+* 설명합니다
+* 스토리지 관리자
+* 스토리지 설계자
+* 현장 리소스
+* 비즈니스 의사 결정자
+
+
+이 기술 보고서의 내용에 대해 궁금한 점이 있으면 섹션을 참조하십시오 link:ncvs-gc-additional-information.html#contact-us["“문의하기”"]
+
+|===
+| 약어 | 정의 
+
+
+| CVS-SW | Cloud Volumes Service, 서비스 유형 CVS 
+
+
+| CVS - 성능 | 클라우드 볼륨 서비스, 서비스 유형 CVS - 성능 
+
+
+| PSA |  
+|===
+link:ncvs-gc-how-cloud-volumes-service-in-google-cloud-secures-your-data.html["다음: Google Cloud의 Cloud Volumes Service로 데이터를 보호하는 방법"]

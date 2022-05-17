@@ -29,3 +29,48 @@ entries:
     url: "/ehc/azure/azure-avs.html"
   - title: Google Cloud 기반 GCVE를 위한 NetApp
     url: "/ehc/gcp/gcp-gcve.html"
+- title: 보안 개요 - Google Cloud의 NetApp Cloud Volumes Service
+  type: solutions
+  entries:
+  - title: 개요
+    url: "/ehc/ncvs/ncvs-gc-overview.html"
+  - title: Google Cloud의 Cloud Volumes Service로 데이터를 보호하는 방법
+    url: "/ehc/ncvs/ncvs-gc-how-cloud-volumes-service-in-google-cloud-secures-your-data.html"
+  - title: 보안 고려 사항 및 공격 대상
+    url: "/ehc/ncvs/ncvs-gc-security-considerations-and-attack-surfaces.html"
+  - title: 있습니다
+    entries:
+    - title: 아키텍처 개요
+      url: "/ehc/ncvs/ncvs-gc-architecture_overview.html"
+    - title: Cloud Volumes Service 아키텍처
+      url: "/ehc/ncvs/ncvs-gc-cloud-volumes-service-architecture.html"
+    - title: 컨트롤 플레인 아키텍처
+      url: "/ehc/ncvs/ncvs-gc-control-plane-architecture.html"
+    - title: 데이터 플레인 아키텍처
+      url: "/ehc/ncvs/ncvs-gc-data-plane-architecture.html"
+    - title: 전송 중인 데이터 암호화
+      url: "/ehc/ncvs/ncvs-gc-data-encryption-in-transit.html"
+    - title: 유휴 데이터 암호화
+      url: "/ehc/ncvs/ncvs-gc-data-encryption-at-rest.html"
+    - title: 방화벽
+      url: "/ehc/ncvs/ncvs-gc-firewall.html"
+  - title: NAS 프로토콜
+    entries:
+    - title: NAS 프로토콜 개요
+      url: "/ehc/ncvs/ncvs-gc-nas-protocols_overview.html"
+    - title: NAS 프로토콜의 기본 사항
+      url: "/ehc/ncvs/ncvs-gc-basics-of-nas-protocols.html"
+    - title: NFS 를 참조하십시오
+      url: "/ehc/ncvs/ncvs-gc-nfs.html"
+    - title: 중소기업
+      url: "/ehc/ncvs/ncvs-gc-smb.html"
+    - title: 이중 프로토콜/멀티프로토콜
+      url: "/ehc/ncvs/ncvs-gc-dual-protocol-multiprotocol.html"
+    - title: Active Directory 연결을 생성할 때의 고려 사항
+      url: "/ehc/ncvs/ncvs-gc-considerations-creating-active-directory-connections.html"
+    - title: 기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)
+      url: "/ehc/ncvs/ncvs-gc-other-nas-infrastructure-service-dependencies.html"
+  - title: 서비스 작업
+    url: "/ehc/ncvs/ncvs-gc-service-operation.html"
+  - title: 추가 정보
+    url: "/ehc/ncvs/ncvs-gc-additional-information.html"

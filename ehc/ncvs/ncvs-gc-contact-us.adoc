@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: ncvs-gc-contact-us.html 
+keywords:  
+summary:  
+---
+= 문의하기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 기술 보고서를 개선할 방법을 알려주십시오.
+
+이메일: mailto:doccomments@netapp.com [doccomments@netapp.com^]로 연락해 주십시오. 제목 줄에 기술 보고서 4918 포함.
