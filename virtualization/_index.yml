@@ -13,7 +13,7 @@ indexpage:
       url: "/vsphere_ontap_ontap_for_vsphere.html"
   - title: 퍼블릭 클라우드의 VMware
     links:
-    - title: 엔터프라이즈 하이브리드 클라우드
+    - title: NetApp 하이브리드 멀티 클라우드 및 VMware
       url: "/../ehc/index.html"
     - title: AWS용 NetApp VMC
       url: "/../ehc/aws-vmc.html"
