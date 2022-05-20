@@ -3,35 +3,51 @@ indexpage:
   tiles:
   - title: 시작하기
     links:
-    - title: EHC 개요
+    - title: 개요
       url: "/ehc-overview.html"
-    - title: 하이퍼스케일러 클라우드의 NetApp
+    - title: 하이퍼스케일러 클라우드의 VMware용 NetApp 솔루션
       url: "/ehc-hyperscalers.html"
     - title: 지원되는 스토리지 옵션
       url: "/ehc-support-configs.html"
+    - title: 지원되는 솔루션
+      url: "/ehc-solutions.html"
     - title: 요약
       url: "/ehc-summary.html"
   - title: AWS 기반 NetApp(VMC)
     links:
     - title: 가상화 환경을 구성합니다
       url: "/aws/aws-setup.html"
-    - title: 네이티브 데이터 저장소 옵션
+    - title: 네이티브 데이터 저장소 - 개인 미리 보기
       url: https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/
-    - title: 게스트 연결 스토리지 옵션
-      url: "/aws/aws-guest.html"
+    - title: FSX ONTAP를 게스트 연결 스토리지로 사용합니다
+      url: "/aws/aws-guest.html#fsx-ontap"
+    - title: CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
+      url: "/aws/aws-guest.html#cvo"
+    - title: AWS 기반 VMC 솔루션
+      url: "/aws/aws-solutions.html"
   - title: Azure 기반 NetApp(AVS)
     links:
     - title: 가상화 환경을 구성합니다
       url: "/azure/azure-setup.html"
-    - title: 네이티브 데이터 저장소 옵션
+    - title: 네이티브 데이터 저장소 - 개인 미리 보기
       url: https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/
-    - title: 게스트 연결 스토리지 옵션
-      url: "/azure/azure-guest.html"
+    - title: 게스트 연결 스토리지로서의 Azure NetApp Files(ANF)
+      url: "/azure/azure-guest.html#anf"
+    - title: CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
+      url: "/azure/azure-guest.html#cvo"
+    - title: Azure에서 AVS용 솔루션
+      url: "/azure/azure-solutions.html"
   - title: Google Cloud Platform의 NetApp(GCVE)
     links:
     - title: 가상화 환경을 구성합니다
       url: "/gcp/gcp-setup.html"
-    - title: 네이티브 데이터 저장소 옵션
+    - title: 네이티브 데이터 저장소 - 개인 미리 보기
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
-    - title: 게스트 연결 스토리지 옵션
-      url: "/gcp/gcp-guest.html"
+    - title: CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
+      url: "/gcp/gcp-guest.html#cvo"
+    - title: CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다
+      url: "/gcp/gcp-guest.html#cvs"
+    - title: GCP의 GCVE용 솔루션
+      url: "/gcp/gcp-solutions.html"
+    - title: 보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service
+      url: "/ncvs/ncvs-gc-overview.html"

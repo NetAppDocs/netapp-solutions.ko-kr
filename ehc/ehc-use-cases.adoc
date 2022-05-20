@@ -4,7 +4,7 @@ permalink: ehc/ehc-use-cases.html
 keywords: NetApp Solutions, ehc, enterprise hybrid cloud, use case, hyperscalers, vmware 
 summary:  
 ---
-= 엔터프라이즈 하이브리드 클라우드(EHC)의 사용 사례
+= NetApp 하이브리드 멀티 클라우드 및 VMware의 사용 사례
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -28,6 +28,13 @@ summary:
 * 클라우드로 신속하게 마이그레이션,
 * 개발/테스트, 및
 * 클라우드 네이티브 기술을 활용하여 애플리케이션 현대화
+
+
+이 설명서 전체에서 VMware 활용 사례를 사용하여 클라우드 워크로드 참조를 자세히 설명합니다. 이러한 사용 사례는 다음과 같습니다.
+
+* 보호(재해 복구 및 백업/복원 모두 포함)
+* 마이그레이션
+* 확장
 
 
 

@@ -14,25 +14,37 @@ summary:
 
 
 [role="lead"]
-AWS는 다음과 같은 구성에서 게스트 연결 NetApp 스토리지를 지원합니다.
-
-* link:#fsx-ontap["FSX ONTAP를 게스트 연결 스토리지로 사용합니다"]
-* link:#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
+AWS는 네이티브 FSx 서비스(FSx ONTAP) 또는 Cloud Volumes ONTAP(CVO)를 사용하여 게스트로 연결된 NetApp 스토리지를 지원합니다.
 
 
 
+== FSX ONTAP
 
-== AWS에서 VMware Cloud를 사용하여 NetApp ONTAP용 Amazon FSx를 구성합니다
+NetApp ONTAP용 Amazon FSx는 NetApp의 인기 있는 ONTAP 파일 시스템을 기반으로 구축된 매우 안정적이고 확장 가능하며 고성능 및 다양한 기능을 갖춘 파일 스토리지를 제공하는 완전 관리형 서비스입니다. ONTAP용 FSX는 NetApp 파일 시스템의 친숙한 기능, 성능, 기능 및 API 작업을 완벽하게 관리되는 AWS 서비스의 민첩성, 확장성 및 간편성과 결합합니다.
 
+ONTAP용 FSX는 AWS 또는 사내에서 실행되는 Linux, Windows 및 macOS 컴퓨팅 인스턴스에서 광범위하게 액세스할 수 있는 다양한 기능을 갖춘 빠르고 유연한 공유 파일 스토리지를 제공합니다. ONTAP용 FSX는 밀리초 미만의 지연 시간으로 고성능 SSD(Solid State Drive) 스토리지를 제공합니다. ONTAP용 FSx를 사용하면 SSD 스토리지 비용을 절감하면서 작업 부하에 대한 SSD 수준의 성능을 달성할 수 있습니다. 단, 데이터의 일부만이 가능합니다.
+
+ONTAP용 FSx를 사용하면 버튼 클릭 한 번으로 파일을 스냅샷, 클론 생성 및 복제할 수 있으므로 데이터 관리가 더욱 쉬워집니다. 또한, ONTAP용 FSx는 데이터를 비용이 저렴하고 탄력적인 스토리지에 자동으로 계층화하므로 용량을 할당하거나 관리할 필요가 없습니다.
+
+또한 ONTAP용 FSX는 완벽하게 관리되는 백업과 지역 간 재해 복구를 지원하는 고가용성의 내구성 스토리지를 제공합니다. 데이터를 보다 쉽게 보호하고 보안을 유지할 수 있도록 ONTAP용 FSx는 널리 사용되는 데이터 보안 및 바이러스 백신 응용 프로그램을 지원합니다.
+
+
+
+=== FSX ONTAP를 게스트 연결 스토리지로 사용합니다
+
+====
+.AWS에서 VMware Cloud를 사용하여 NetApp ONTAP용 Amazon FSx를 구성합니다
+=====
 NetApp ONTAP용 Amazon FSx 파일 공유 및 LUN은 AWS의 VMware Cloud에서 VMware SDDC 환경 내에 생성된 VM에서 마운트할 수 있습니다. Linux 클라이언트에도 볼륨을 마운트하고 NFS 또는 SMB 프로토콜을 사용하여 Windows 클라이언트에 매핑할 수 있으며, iSCSI를 통해 마운트하면 Linux 또는 Windows 클라이언트에서 LUN에 블록 디바이스로 액세스할 수 있습니다. NetApp ONTAP 파일 시스템용 Amazon FSx는 다음 단계를 통해 빠르게 설정할 수 있습니다.
 
 
 NOTE: AWS 기반 NetApp ONTAP 및 VMware Cloud용 Amazon FSx는 더 나은 성능을 달성하고 가용성 영역 간의 데이터 전송 비용을 방지하려면 동일한 가용성 영역에 있어야 합니다.
 
-
-
-== ONTAP 볼륨용 Amazon FSx를 생성하고 마운트합니다
-
+=====
+====
+====
+.ONTAP 볼륨용 Amazon FSx를 생성하고 마운트합니다
+=====
 NetApp ONTAP 파일 시스템용 Amazon FSx를 생성하고 마운트하려면 다음 단계를 완료하십시오.
 
 . 를 엽니다 link:https://console.aws.amazon.com/fsx/["Amazon FSx 콘솔"] 파일 시스템 생성 마법사를 시작하려면 파일 시스템 생성 을 선택합니다.
@@ -92,10 +104,11 @@ image:aws-fsx-guest-10.png[""]
 
 image:aws-fsx-guest-11.png[""]
 
-
-
-=== Linux 클라이언트에 FSx ONTAP 볼륨을 마운트합니다
-
+=====
+====
+====
+.Linux 클라이언트에 FSx ONTAP 볼륨을 마운트합니다
+=====
 이전 단계에서 생성한 FSx ONTAP 볼륨을 마운트합니다. AWS SDDC의 VMC 내에 있는 Linux VM에서 다음 단계를 완료합니다.
 
 . 지정된 Linux 인스턴스에 연결합니다.
@@ -115,10 +128,12 @@ image:aws-fsx-guest-21.png[""]
 
 
 
-
-
-=== Microsoft Windows 클라이언트에 FSx ONTAP 볼륨을 연결합니다
-
+video::vmc_linux_vm_nfs.mp4[]
+=====
+====
+====
+.Microsoft Windows 클라이언트에 FSx ONTAP 볼륨을 연결합니다
+=====
 Amazon FSx 파일 시스템에서 파일 공유를 관리 및 매핑하려면 공유 폴더 GUI를 사용해야 합니다.
 
 . 시작 메뉴를 열고 관리자 권한으로 실행 을 사용하여 fsmgmt.msc 를 실행합니다. 이렇게 하면 공유 폴더 GUI 도구가 열립니다.
@@ -149,20 +164,23 @@ image:aws-fsx-guest-26.png[""]
 
 
 
-
-
-== NetApp ONTAP LUN용 FSx를 iSCSI를 사용하여 호스트에 연결합니다
-
+=====
+====
+====
+.NetApp ONTAP LUN용 FSx를 iSCSI를 사용하여 호스트에 연결합니다
+=====
+video::vmc_windows_vm_iscsi.mp4[]
 FSx의 iSCSI 트래픽은 이전 섹션에 제공된 경로를 통해 VMware Transit Connect/AWS Transit Gateway를 통과합니다. NetApp ONTAP용 Amazon FSx에서 LUN을 구성하려면 찾은 문서를 따르십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["여기"].
 
 Linux 클라이언트에서 iSCSI 데몬이 실행되고 있는지 확인합니다. LUN을 프로비저닝한 후 Ubuntu를 사용한 iSCSI 구성에 대한 자세한 지침을 참조하십시오(예:). link:https://ubuntu.com/server/docs/service-iscsi["여기"].
 
 이 문서에서는 iSCSI LUN을 Windows 호스트에 연결하는 방법을 설명합니다.
 
-
-
-=== NetApp ONTAP용 FSx에서 LUN 프로비저닝:
-
+=====
+====
+====
+.NetApp ONTAP용 FSx에서 LUN 프로비저닝:
+=====
 . ONTAP 파일 시스템용 FSx의 관리 포트를 사용하여 NetApp ONTAP CLI에 액세스합니다.
 . 사이징 출력에 표시된 대로 필요한 크기의 LUN을 생성합니다.
 +
@@ -258,10 +276,27 @@ image:aws-fsx-guest-32.png[""]
 
 
 
+=====
+====
 
 
-== AWS에 새로운 Cloud Volumes ONTAP 인스턴스 구축(직접 구현)
+== CVO(Cloud Volumes ONTAP)
 
+Cloud Volumes ONTAP, 즉 CVO는 NetApp의 ONTAP 스토리지 소프트웨어를 기반으로 하는 업계 최고의 클라우드 데이터 관리 솔루션으로, AWS(Amazon Web Services), Microsoft Azure 및 GCP(Google Cloud Platform)에서 기본적으로 제공됩니다.
+
+ONTAP의 소프트웨어 정의 버전이며 클라우드 네이티브 스토리지를 사용합니다. 따라서 클라우드와 사내에서 동일한 스토리지 소프트웨어를 사용할 수 있으므로 데이터를 관리하는 새로운 방법을 통해 IT 직원을 재교육할 필요가 없습니다.
+
+CVO를 사용하면 데이터를 에지에서 데이터 센터, 클라우드로 원활하게 이동하고 다시 가져올 수 있습니다. 또한 단일 창 관리 콘솔인 NetApp Cloud Manager를 사용하여 하이브리드 클라우드를 통합할 수 있습니다.
+
+설계상 CVO는 최고 성능과 고급 데이터 관리 기능을 제공하여 클라우드에서 가장 까다로운 애플리케이션도 충족합니다
+
+
+
+=== CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
+
+====
+.AWS에 새로운 Cloud Volumes ONTAP 인스턴스 구축(직접 구현)
+=====
 Cloud Volumes ONTAP 공유 및 LUN은 AWS SDDC 환경의 VMware 클라우드에서 생성된 VM에서 마운트할 수 있습니다. 또한 볼륨은 네이티브 AWS VM Linux Windows 클라이언트에 마운트할 수 있으며, Cloud Volumes ONTAP는 iSCSI, SMB 및 NFS 프로토콜을 지원하므로 iSCSI를 통해 마운트할 때 Linux 또는 Windows 클라이언트에서 LUN에 블록 디바이스로 액세스할 수 있습니다. Cloud Volumes ONTAP 볼륨은 몇 가지 간단한 단계를 통해 설정할 수 있습니다.
 
 재해 복구 또는 마이그레이션을 위해 사내 환경에서 클라우드로 볼륨을 복제하려면 사이트 간 VPN 또는 DirectConnect를 사용하여 AWS에 대한 네트워크 연결을 설정합니다. 사내의 데이터를 Cloud Volumes ONTAP로 복제하는 작업은 이 문서의 범위를 벗어납니다. 사내 시스템과 Cloud Volumes ONTAP 시스템 간에 데이터를 복제하려면 을 참조하십시오 link:https://docs.netapp.com/us-en/occm/task_replicating_data.html#setting-up-data-replication-between-systems["시스템 간 데이터 복제 설정"].
@@ -327,10 +362,11 @@ image:aws-cvo-guest-14.png[""]
 
 
 
-
-
-=== SMB 볼륨을 위한 추가 구성
-
+=====
+====
+====
+.SMB 볼륨을 위한 추가 구성
+=====
 . 작업 환경이 준비되면 CIFS 서버가 적절한 DNS 및 Active Directory 구성 매개 변수로 구성되어 있는지 확인합니다. 이 단계는 SMB 볼륨을 생성하기 전에 필요합니다.
 +
 image:aws-cvo-guest-20.png[""]
@@ -351,10 +387,11 @@ image:aws-cvo-guest-24.png[""]
 
 
 
-
-
-=== LUN을 호스트에 연결합니다
-
+=====
+====
+====
+.LUN을 호스트에 연결합니다
+=====
 Cloud Volumes ONTAP LUN을 호스트에 연결하려면 다음 단계를 수행하십시오.
 
 . Cloud Manager Canvas 페이지에서 Cloud Volumes ONTAP 작업 환경을 두 번 클릭하여 볼륨을 생성하고 관리합니다.
@@ -401,10 +438,11 @@ image:aws-cvo-guest-34.png[""]
 
 Linux 클라이언트에서 iSCSI 데몬이 실행되고 있는지 확인합니다. LUN을 프로비저닝한 후에는 Linux 배포용 iSCSI 구성에 대한 자세한 지침을 참조하십시오. 예를 들어 Ubuntu iSCSI 구성을 찾을 수 있습니다 link:https://ubuntu.com/server/docs/service-iscsi["여기"]. 확인하려면 셸에서 lsblk cmd 를 실행합니다.
 
-
-
-=== Linux 클라이언트에 Cloud Volumes ONTAP NFS 볼륨을 마운트합니다
-
+=====
+====
+====
+.Linux 클라이언트에 Cloud Volumes ONTAP NFS 볼륨을 마운트합니다
+=====
 AWS SDDC의 VMC 내에서 DIY(Cloud Volumes ONTAP) 파일 시스템을 VM에서 마운트하려면 다음 단계를 수행하십시오.
 
 . 지정된 Linux 인스턴스에 연결합니다.
@@ -419,3 +457,6 @@ AWS SDDC의 VMC 내에서 DIY(Cloud Volumes ONTAP) 파일 시스템을 VM에서 
 
 image:aws-cvo-guest-40.png[""]
 image:aws-cvo-guest-41.png[""]
+
+=====
+====

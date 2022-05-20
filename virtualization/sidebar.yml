@@ -81,7 +81,7 @@ entries:
       - title: NFS-v4.1
         url: "/virtualization/vsphere_ontap_auto_file_nfs41.html"
   - title: ONTAP for VMware vSphere의 새로운 기능
-    url: "/virtualization/vsphere_ontap_whats_new.html"
+    url: https://raw.githubusercontent.com/NetAppDocs/ontap-whatsnew/main/ontap98fo_vmware_virtualization.html
 - title: VMware - 퍼블릭 클라우드
   entries:
   - title: 개요
@@ -92,8 +92,22 @@ entries:
     url: "/ehc/ehc-support-configs.html"
   - title: 하이퍼스케일 구성의 VMware
     url: "/ehc/ehc-config-vmware-intro.html"
+    entries:
+    - title: AWS용 VMC를 구성합니다
+      url: "/ehc/aws/aws-setup.html"
+    - title: Azure용 AVS를 구성합니다
+      url: "/ehc/azure/azure-setup.html"
+    - title: GCP에 대한 GCVE를 구성합니다
+      url: "/ehc/gcp/gcp-setup.html"
   - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
     url: "/ehc/ehc-datastore-intro.html"
+    entries:
+    - title: VMC를 위한 게스트 연결 스토리지
+      url: "/ehc/aws/aws-guest.html"
+    - title: AVS용 게스트 연결 스토리지
+      url: "/ehc/azure/azure-guest.html"
+    - title: GCVE용 게스트 연결 저장소
+      url: "/ehc/gcp/gcp-guest.html"
   - title: 요약 및 결론
     url: "/ehc/ehc-summary.html"
 - title: VMware 하이브리드 클라우드 사용 사례

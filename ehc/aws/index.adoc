@@ -2,10 +2,10 @@
 layout: landing-page 
 sidebar: sidebar 
 permalink: ehc/aws/index.html 
-lead: NetApp Enterprise Hybrid Cloud Solutions are a set of strategic and technology capabilities that demonstrate the capabilities of NetApp storage in the major public cloud hyperscalers. 
-summary: NetApp 엔터프라이즈 하이브리드 클라우드 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다. 
+lead: NetApp Hybrid Multi-Cloud with VMware solutions are a set of strategic and technology capabilities that demonstrate the capabilities of NetApp storage in the major public cloud hyperscalers. 
+summary: NetApp Hybrid Multi-Cloud with VMware 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다. 
 ---
-= AWS/VMC를 위한 NetApp 엔터프라이즈 하이브리드 클라우드 솔루션
+= AWS/VMC를 위한 NetApp 하이브리드 멀티 클라우드 솔루션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

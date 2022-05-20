@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ehc/ehc-overview.html 
-keywords: NetApp Solutions, ehc, enterprise hybrid cloud, hyperscalers, vmware 
+keywords: NetApp Solutions, hybrid, multi-cloud, enterprise hybrid cloud, hyperscalers, vmware 
 summary:  
 ---
-= 엔터프라이즈 하이브리드 클라우드(EHC) 개요
+= NetApp 하이브리드 멀티 클라우드 및 VMware 개요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

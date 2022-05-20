@@ -4,7 +4,7 @@ permalink: ehc/ehc-support-configs.html
 keywords: NetApp Solutions, ehc, enterprise hybrid cloud, hyperscalers, vmware, supported config, config, configuration 
 summary:  
 ---
-= 엔터프라이즈 하이브리드 클라우드(EHC)에 지원되는 구성
+= NetApp 하이브리드 멀티 클라우드 및 VMware의 지원 구성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,26 +16,20 @@ summary:
 [role="lead"]
 주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.
 
-[cols="6, 3, 3, 3"]
+[cols="3, 3, 3"]
 |===
 
 
-|  | * Azure AVS * | * AWS VMC * | * GCP GCVE * 
+|  | * 게스트 연결됨 * | * 네이티브 데이터 저장소 * 
 
 
-| * CVO(Cloud Volumes ONTAP) * | link:azure/azure-guest.html#cvo["게스트가 연결되었습니다"] | link:aws/aws-guest.html#cvo["게스트가 연결되었습니다"] | link:gcp/gcp-guest.html#cvo["게스트가 연결되었습니다"] 
+| * AWS * | CVO FSx ONTAPlink:aws/aws-guest.html["세부 정보"] | FSX ONTAPlink:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["세부 정보 ^1"^] 
 
 
-| CVS(Cloud Volumes Service) * | - | - | link:gcp/gcp-guest.html#cvs["게스트가 연결되었습니다"]
-link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["네이티브 데이터 저장소 ^1"^] 
+| * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] | ANFlink:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["세부 정보 ^1"^] 
 
 
-| * Azure NetApp Files(ANF) * | link:azure/azure-guest.html#anf["게스트가 연결되었습니다"]
-link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["네이티브 데이터 저장소 ^1"^] | 해당 없음 | 해당 없음 
-
-
-| * FSx ONTAP * | 해당 없음 | link:aws/aws-guest.html#fsx-ontap["게스트가 연결되었습니다"]
-link:https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/["네이티브 데이터 저장소 ^1"^] | 해당 없음 
+| * GCP * | CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["세부 정보 ^1"^] 
 |===
 
 NOTE: 1-현재 비공개 미리보기에 있습니다

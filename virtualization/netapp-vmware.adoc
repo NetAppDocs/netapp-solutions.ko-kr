@@ -28,7 +28,7 @@ VMware 환경 혁신을 시작할 준비가 되었으면 최신 솔루션 개요
 NOTE: 이 페이지에 표시된 내용은 에서도 다운로드할 수 있습니다 link:NetApp-VMware-Getting-Started.pdf["PDF 형식"].
  a| 
 .NetApp과 VMware: 더 나은 협력
-video::https://d3cy9zhslanhfa.cloudfront.net/media/D30CEDFE-5536-4927-A306FF175F472C95/58C10981-51CF-46FF-8585D031CD0682C2/B98AAC90-D97C-48C3-B96D8DB12CDED4A7.mp4[]
+video::https://www.netapp.tv/details/29126[]
 |===
 
 
@@ -88,16 +88,12 @@ video::https://d3cy9zhslanhfa.cloudfront.net/media/D30CEDFE-5536-4927-A306FF175F
 
 
  a| 
-* link:https://live.insight.netapp.com/detail/videos/all-videos/video/6211763791001/best-practices-for-vmware-vsphere-and-netapp-ontap.mp4["VMware vSphere 및 NetApp ONTAP 모범 사례"]
+* link:https://www.netapp.tv/player/28200/stream?assetType=movies["VMware vSphere 및 NetApp ONTAP 모범 사례"]
 * link:https://tv.netapp.com/detail/video/6211763793001/your-vmware-environment---let-s-run-it-on-nvme-of-with-ontap.mp4["VMware 환경 - NVMe-oF with ONTAP에서 실행하겠습니다"]
-* link:https://tv.netapp.com/detail/video/6211763368001/vvols-disaster-recovery-with-ontap-tools-and-vmware-srm-8.3.mp4["ONTAP 도구 및 VMware SRM을 사용한 VVOL 재해 복구"]
-* link:https://live.insight.netapp.com/detail/video/6211809869001/provisioning-and-managing-flexgroup-datastores-with-ontap-tools.mp4["ONTAP 툴을 사용하여 FlexGroup 데이터 저장소를 프로비저닝하고 관리합니다"]
 
  a| 
-* link:https://live.insight.netapp.com/detail/video/6211801712001/netapp-nfs-vaai-plugin-update.mp4["NetApp NFS VAAI 플러그인 업데이트"]
-* link:https://live.insight.netapp.com/detail/video/6211798188001/scale-out-virtual-desktops-with-netapp-ontap-flexgroup.mp4["NetApp ONTAP FlexGroup를 지원하는 스케일아웃 가상 데스크톱"]
+* link:https://tv.netapp.com/detail/video/6211763368001/vvols-disaster-recovery-with-ontap-tools-and-vmware-srm-8.3.mp4["ONTAP 도구 및 VMware SRM을 사용한 VVOL 재해 복구"]
 * link:https://tv.netapp.com/detail/video/6211767217001/vmware-backup-and-recovery-for-the-data-fabric.mp4["Data Fabric을 위한 VMware 백업 및 복구"]
-* link:https://live.insight.netapp.com/detail/videos/breakout/video/6211769167001/easier-data-protection-with-snapcenter-plug-in-for-vmware-vsphere.mp4["VMware vSphere용 SnapCenter 플러그인을 통한 간편한 데이터 보호"]
 
 
 |===
@@ -115,11 +111,10 @@ video::https://d3cy9zhslanhfa.cloudfront.net/media/D30CEDFE-5536-4927-A306FF175F
 
  a| 
 * link:https://tv.netapp.com/detail/video/5763417895001/architecting-vmware-datastores-on-netapp-all-flash-fas.mp4["NetApp All Flash FAS를 기반으로 VMware 데이터 저장소 설계"]
-* link:https://live.insight.netapp.com/detail/video/6221363921001/let-s-automate---build-your-vmware-cloud-with-ontap.mp4["자동화해 봅시다. ONTAP을 사용하여 VMware 클라우드를 구축하십시오"]
+* link:https://tv.netapp.com/detail/video/6211807518001/a-low-cost-performant-world-for-vmware-cloud.mp4["AWS 기반 VMware 클라우드를 위한 저비용 성능 세계"]
 
  a| 
-* link:https://tv.netapp.com/detail/video/6211807518001/a-low-cost-performant-world-for-vmware-cloud.mp4["AWS 기반 VMware 클라우드를 위한 저비용 성능 세계"]
-* link:https://live.insight.netapp.com/detail/videos/by-product/video/6211201051001/NetAppINSIGHT@gpjreg.com.mp4["VMware VM을 Google Cloud로 마이그레이션합니다"]
+* link:https://www.netapp.tv/player/25379/stream?assetType=movies&playlist_id=141["VMware VM을 Google Cloud로 마이그레이션합니다"]
 
 
 |===

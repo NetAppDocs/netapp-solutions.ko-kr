@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: databases/hybrid_dbops_snapcenter_getting_started.html 
+summary: 이 섹션에서는 이전 섹션에서 설명한 사전 요구 사항을 충족하기 위해 완료해야 하는 작업을 요약합니다. 다음 섹션에서는 사내 및 퍼블릭 클라우드 운영에 모두 필요한 개략적인 작업 목록을 제공합니다. 자세한 프로세스와 절차는 관련 링크를 클릭하여 액세스할 수 있습니다. 
+keywords: introduction, workflow 
+---
+= 시작 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+link:hybrid_dbops_snapcenter_prereq_cloud.html["이전: 퍼블릭 클라우드의 사전 요구 사항"]
+
+이 섹션에서는 이전 섹션에서 설명한 사전 요구 사항을 충족하기 위해 완료해야 하는 작업을 요약합니다. 다음 섹션에서는 사내 및 퍼블릭 클라우드 운영에 모두 필요한 개략적인 작업 목록을 제공합니다. 자세한 프로세스와 절차는 관련 링크를 클릭하여 액세스할 수 있습니다.
+
+
+
+== 온프레미스
+
+* SnapCenter에서 데이터베이스 관리자 사용자를 설정합니다
+* SnapCenter 플러그인 설치 필수 구성 요소
+* SnapCenter 호스트 플러그인 설치
+* DB 리소스 검색
+* 스토리지 클러스터 피어링 및 DB 볼륨 복제를 설정합니다
+* SnapCenter에 CVO 데이터베이스 스토리지 SVM 추가
+* SnapCenter에서 데이터베이스 백업 정책을 설정합니다
+* 백업 정책을 구현하여 데이터베이스를 보호합니다
+* 백업을 검증합니다
+
+
+
+
+== 설치하고
+
+* 사전 항공편 확인
+* AWS에서 Cloud Manager 및 Cloud Volumes ONTAP를 구축하는 단계
+* 데이터베이스 워크로드를 위한 EC2 컴퓨팅 인스턴스 구축
+
+
+자세한 내용을 보려면 다음 링크를 클릭하십시오.
+
+link:hybrid_dbops_snapcenter_getting_started_onprem.html["온프레미스"], link:hybrid_dbops_snapcenter_getting_started_aws.html["퍼블릭 클라우드 - AWS"]

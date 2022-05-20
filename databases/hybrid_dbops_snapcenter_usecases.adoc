@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: databases/hybrid_dbops_snapcenter_usecases.html 
+summary: 이 솔루션은 NetApp 현장 및 고객에게 NetApp SnapCenter GUI 기반 툴과 퍼블릭 클라우드의 NetApp 스토리지 서비스 CVO를 사용하여 데이터베이스를 하이브리드 클라우드 환경으로 구성, 운영 및 마이그레이션하는 데 필요한 지침과 지침을 제공합니다. 
+keywords: tr-4908, tr4908, 4908, hybrid cloud, database, snapcenter, gui 
+---
+= TR-4908: SnapCenter를 지원하는 하이브리드 클라우드 데이터베이스 솔루션 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+NetApp의 Felix Melligan, Alan Cao
+
+이 솔루션은 NetApp 현장 및 고객에게 NetApp SnapCenter GUI 기반 툴과 퍼블릭 클라우드의 NetApp 스토리지 서비스 CVO를 사용하여 데이터베이스를 하이브리드 클라우드 환경으로 구성, 운영 및 마이그레이션하는 데 필요한 지침과 사용 사례를 제공합니다.
+
+* 하이브리드 클라우드에서 데이터베이스 개발/테스트 작업
+* 하이브리드 클라우드에서 데이터베이스 재해 복구
+
+
+오늘날 많은 엔터프라이즈 데이터베이스는 성능, 보안 및/또는 기타 이유로 여전히 프라이빗 기업 데이터 센터에 있습니다. 기업에서는 이 하이브리드 클라우드 데이터베이스 솔루션을 사용하여 기본 데이터베이스를 사이트에서 운영하는 동시에 개발/테스트 데이터베이스 운영뿐 아니라 재해 복구에 퍼블릭 클라우드를 사용하여 라이센스 및 운영 비용을 절감할 수 있습니다.
+
+Oracle, SQL Server, SAP HANA 등 많은 엔터프라이즈 데이터베이스 높은 라이센스 및 운영 비용 수행 많은 고객은 개발, 테스트, 운영 또는 재해 복구에 코어를 사용하는지에 관계없이 데이터베이스 환경의 컴퓨팅 코어 수를 기준으로 1회 라이센스 비용 및 연간 지원 비용을 지불합니다. 이러한 환경 중 대부분은 애플리케이션 라이프사이클 동안 완전히 활용하지 못할 수 있습니다.
+
+이 솔루션은 고객이 개발, 테스트 또는 재해 복구 전용 데이터베이스 환경을 클라우드로 이동하여 라이센스 대상 코어 수를 잠재적으로 줄일 수 있는 옵션을 제공합니다. 퍼블릭 클라우드의 확장, 이중화, 고가용성, 소비 기반 청구 모델을 활용하면 애플리케이션 사용성이나 가용성에 영향을 주지 않으면서 라이센스 및 운영 비용을 크게 절감할 수 있습니다.
+
+NetApp의 용량 기반 CVO 라이센스 모델은 잠재적인 데이터베이스 라이센스 비용 절감 외에도, 고객이 경쟁 스토리지 서비스에서 제공되지 않는 높은 수준의 데이터베이스 관리 효율성을 통해 GB당 스토리지 비용을 절감할 수 있도록 지원합니다. 다음 차트에는 퍼블릭 클라우드에서 사용 가능한 주요 스토리지 서비스의 스토리지 비용 비교가 나와 있습니다.
+
+image:cvo_cloud_cost_comparision.png["오류: 그래픽 이미지가 없습니다"]
+
+이 솔루션은 SnapCenter GUI 기반 소프트웨어 툴과 NetApp SnapMirror 기술을 사용하여 하이브리드 클라우드 데이터베이스 운영을 쉽게 설정, 구현, 운영할 수 있다는 것을 보여 줍니다.
+
+다음 비디오에서는 SnapCenter의 실제 작동 방법을 보여줍니다.
+
+* https://www.youtube.com/watch?v=-8GPzwjX9CM&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=35["SnapCenter를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 백업"^]
+* https://www.youtube.com/watch?v=v3udynwJlpI["SnapCenter - Oracle 데이터베이스용 AWS 클라우드에 개발/테스트 클론을 생성할 수 있습니다"^]
+
+
+이 문서의 그림에서는 CVO를 퍼블릭 클라우드의 타겟 스토리지 인스턴스로 보여 주지만, 이 솔루션은 AWS용 FSx ONTAP 스토리지 엔진의 새로운 릴리즈에서 완벽하게 검증되었습니다.
+
+솔루션 및 사용 사례를 직접 테스트하기 위해 https://labondemand.netapp.com/lod3/labtest/request?nodeid=68761&destination=lod3/testlabs[TL_AWS_004 HCoD:AWS-NW, SnapCenter(OnPrem)^]에서 NetApp Lab-On-Demand SL10680을 요청할 수 있습니다.
+
+link:hybrid_dbops_snapcenter_architecture.html["다음은 솔루션 아키텍처입니다."]

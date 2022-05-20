@@ -14,12 +14,13 @@ summary:
 
 
 [role="lead"]
-NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Ending)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등
+NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 다양한 기능을 제공합니다.
 
 다음 옵션 중 하나를 선택하여 원하는 콘텐츠의 섹션으로 이동합니다.
 
-* 링크:#config [GCP에서 GCVE 구성
+* link:#config["GCP에서 GCVE 구성"]
 * link:#datastore["GCVE용 NetApp 스토리지 옵션"]
+* link:#solutions["NetApp/VMware 클라우드 솔루션"]
 
 
 
@@ -35,9 +36,11 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-* link:gcp-setup.html#deploy["GCVE 배포 및 구성"]
-* link:gcp-setup.html#enable-access["GCVE에 대한 개인 액세스를 활성화합니다"]
+* GCVE 배포 및 구성
+* GCVE에 대한 개인 액세스를 활성화합니다
 
+
+자세한 내용을 확인하십시오 link:gcp-setup.html["GCVE에 대한 구성 단계"].
 
 
 
@@ -49,16 +52,27 @@ NetApp 스토리지는 GCP GCVE 내에서 추측으로 연결되거나 기본 �
 
 Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
-* 게스트 연결 스토리지 *
+* CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
+* CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다
+* CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1^로 사용합니다
 
-* link:gcp-guest.html#cvo["CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다"]
-* link:gcp-guest.html#cvs["CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다"]
 
+자세한 내용을 확인하십시오 link:gcp-guest.html["GCVE에 대한 게스트 연결 저장소 옵션"].
 
-* 네이티브 데이터 저장소 *
-
-* link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다"^]
-
+에 대해 자세히 알아보십시오 link:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다"^].
 
 
 NOTE: 1-현재 비공개 미리보기에 있습니다
+
+
+
+== 솔루션 사용 사례
+
+NetApp 및 VMware 클라우드 솔루션을 사용하면 많은 사용 사례를 Azure AVS에서 간단하게 구축할 수 있습니다. SE 사례는 VMware에서 정의한 각 클라우드 영역에 대해 정의됩니다.
+
+* 보호(재해 복구 및 백업/복원 모두 포함)
+* 확장
+* 마이그레이션
+
+
+link:gcp-solutions.html["Google Cloud GCVE용 NetApp 솔루션을 찾아보십시오"]

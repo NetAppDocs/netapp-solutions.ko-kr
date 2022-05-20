@@ -1,0 +1,82 @@
+---
+section: databases
+title: 엔터프라이즈 데이터베이스
+url: "/databases/index.html"
+entries:
+- title: Oracle 데이터베이스
+  entries:
+  - title: FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c RAC
+      데이터베이스
+    url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
+  - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
+    url: https://www.netapp.com/us/media/tr-4250.pdf
+  - title: Oracle Database 구축
+    entries:
+    - title: NetApp ONTAP에 Oracle 데이터베이스 구축
+      url: https://www.netapp.com/pdf.html?item=/media/8744-tr3633.pdf
+    - title: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
+      url: "/databases/marketing_overview.html"
+      entries:
+      - title: 시작하기 및 요구 사항
+        url: "/databases/getting_started_requirements.html"
+      - title: Oracle 19c AWX/Tower 구축 자동화
+        url: "/databases/awx_automation.html"
+      - title: 자동화된 Oracle 19c CLI 구축
+        url: "/databases/cli_automation.html"
+  - title: Oracle 데이터베이스 데이터 보호
+    entries:
+    - title: 자동화된 Oracle 데이터 보호
+      url: "/databases/db_protection_overview.html"
+      entries:
+      - title: 시작하기 및 요구 사항
+        url: "/databases/db_protection_getting_started.html"
+      - title: AWX/Tower를 위한 자동화된 Oracle 데이터 보호
+        url: "/databases/db_protection_awx_automation.html"
+  - title: Oracle Databases on NetApp EF-Series 를 참조하십시오
+    url: https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf
+- title: Microsoft SQL Server를 참조하십시오
+  entries:
+  - title: Azure NetApp Files 기반 SQL Server
+    url: "/databases/sql-srv-anf_overview.html"
+    entries:
+    - title: 고려해야 할 요소
+      url: "/databases/sql-srv-anf_factors_to_consider.html"
+    - title: 참조 디자인(실시간 고급 디자인)
+      url: "/databases/sql-srv-anf_reference_design_real-time_high-level_design.html"
+    - title: 결론
+      url: "/databases/sql-srv-anf_conclusion.html"
+    - title: 추가 정보를 찾을 수 있는 위치
+      url: "/databases/sql-srv-anf_where_to_find_additional_information.html"
+  - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
+    url: https://www.netapp.com/us/media/tr-4467.pdf
+  - title: Microsoft SQL Server 현대화
+    url: https://www.netapp.com/pdf.html?item=/media/15613-na-446.pdf
+  - title: Microsoft SQL Server with NetApp EF-Series 모범 사례 가이드 를 참조하십시오
+    url: https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf
+- title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
+  type: solutions
+  entries:
+  - title: 소개
+    url: "/databases/hybrid_dbops_snapcenter_usecases.html"
+  - title: 솔루션 아키텍처
+    url: "/databases/hybrid_dbops_snapcenter_architecture.html"
+  - title: 솔루션 요구 사항
+    url: "/databases/hybrid_dbops_snapcenter_requirements.html"
+  - title: 사전 요구 사항 구성
+    url: "/databases/hybrid_dbops_snapcenter_prerequisite.html"
+    entries:
+    - title: 사전 요구 사항 온-프레미스
+      url: "/databases/hybrid_dbops_snapcenter_prereq_onprem.html"
+    - title: 퍼블릭 클라우드의 사전 요구사항
+      url: "/databases/hybrid_dbops_snapcenter_prereq_cloud.html"
+  - title: 시작 개요
+    url: "/databases/hybrid_dbops_snapcenter_getting_started.html"
+    entries:
+    - title: 온-프레미스로 시작 중입니다
+      url: "/databases/hybrid_dbops_snapcenter_getting_started_onprem.html"
+    - title: AWS 퍼블릭 클라우드 시작하기
+      url: "/databases/hybrid_dbops_snapcenter_getting_started_aws.html"
+  - title: 개발/테스트 급증에 대비하여 클라우드로 전환하는 워크플로우
+    url: "/databases/hybrid_dbops_snapcenter_devtest.html"
+  - title: 재해 복구 워크플로우
+    url: "/databases/hybrid_dbops_snapcenter_dr.html"

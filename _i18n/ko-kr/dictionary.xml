@@ -13,7 +13,6 @@
   <block id="5382aaf8b3d2fdeb6717f9805b0dd511" category="cell">컨테이너</block>
   <block id="c65463900a520919b522c30b6256e475" category="cell">새로운 비디오 데모 추가: NetApp Astra Control을 활용하여 사후 분석 수행 및 NVA-1160에 애플리케이션 복원</block>
   <block id="f63616bb6a8255ed08089231c746f285" category="cell">2021년 12월 6일</block>
-  <block id="3f2c1d118f7bc861eb20da58f81a2d0d" category="cell">하이브리드 클라우드/가상화</block>
   <block id="040fc8ca9c1b1eb9d408c7ae5e202acb" category="cell">가상화 환경 및 게스트 연결 스토리지 옵션을 위한 EHC(Enterprise Hybrid Cloud) 컨텐츠 생성</block>
   <block id="16784caec2e047ddf59bd5a51bd35a73" category="cell">2021년 11월 15일</block>
   <block id="1c20ad7a11d1c2856906d55171b50126" category="cell">새 비디오 데모 추가: Astra Control을 사용하여 CI/CD 파이프라인에서 데이터 보호 NVA-1160에 추가</block>
@@ -112,12 +111,10 @@
   <block id="868f7f9e78f90bcf0597030ffefd449b" category="cell">새로운 솔루션: NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치(설계 및 구축)가 포함된 NetApp ONTAP AI</block>
   <block id="0663765430d1ca93138f13429aef7c37" category="cell">2020년 12월 22일</block>
   <block id="a4aae8f8849c453c6c67080c5d013301" category="cell">NetApp Solutions 저장소의 초기 릴리즈</block>
-  <block id="b0522aa84a7257c47dd4b765cf173db9" category="open-title">AI/데이터 분석</block>
   <block id="f27edcc7a209983dc37cbcdb0df49ce7" category="open-title">가상 데스크톱</block>
   <block id="6fb2815b4c371ee082a84cc14539d4cb" category="open-title">엔터프라이즈 애플리케이션</block>
   <block id="18a2eb3f7faf7c44e3062e78cbeff089" category="inline-link-macro">SAP 솔루션 저장소</block>
   <block id="412b2ee09f2fbaf8cddb69ee6fe43a2e" category="admonition">SAP 및 SAP HANA 업데이트에 대한 자세한 내용은 의 각 솔루션에 대해 나와 있는 "업데이트 기록" 콘텐츠를 참조하십시오 <block ref="c4ed54a973fb1aa472c2443732d93c13" category="inline-link-macro-rx"></block>.</block>
-  <block id="19751bc7a2f01e4ee4762945c90c0130" category="open-title">데이터 보호 및 AMP, 마이그레이션</block>
   <block id="408649df4ac74ae19e47eef7d060c5cb" category="open-title">솔루션 자동화</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="6f8b794f3246b0c1e1780bb4d4d5dc53" category="doc">결론</block>
@@ -2998,13 +2995,6 @@
   <block id="053bc62e92a61e44afd338bcb27c422f" category="section-title">소매 사용 사례 요약</block>
   <block id="8b6b761738b93e745ffa4f73dd233c08" category="paragraph">NVIDIA Jarvis를 사용하여 음성 또는 텍스트 입력을 수용하는 가상 소매 도우미를 구축하고 날씨, 관심 지점 및 재고 가격 관련 질문에 답변했습니다. 대화형 AI 시스템은 예를 들어, 사용자가 날씨 또는 관심 지점을 지정하지 않은 경우 후속 질문을 하여 대화 흐름을 기억할 수 있습니다. 또한 이 시스템은 "태국식 음식" 또는 "노트북 메모리"와 같은 복잡한 엔터티도 인식합니다. 그것은 “다음주 로스앤젤레스에서 비가 올까요?”와 같은 자연어 질문을 이해합니다. 소매 가상 비서의 데모는 에서 확인할 수 있습니다<block ref="0ba395e7fb59bace5ff35ab3c02ad737" category="inline-link-rx"></block>.</block>
   <block id="af8f881c5074e5e10cd7a34ccbaa9e57" category="paragraph"><block ref="af8f881c5074e5e10cd7a34ccbaa9e57" category="inline-link-macro-rx"></block></block>
-  <block id="61133eed21544af8c4988e345e562ce0" category="summary">데이터 보호 및 보안 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
-  <block id="80a9ba2a1f85a5cf26d01122fd696973" category="doc">데이터 보호 및 보안 비디오 및 데모</block>
-  <block id="ea233cf80b43de3a730e01b8e376a9bd" category="paragraph">데이터 보호 및 보안 솔루션의 특정 기능을 중점적으로 설명하는 비디오 및 데모 개요</block>
-  <block id="b9332d9812fee56d4f22fd8f245323a9" category="section-title">데모/비디오</block>
-  <block id="a712a0e553d0302aa27009e1ebc815ce" category="summary">엔터프라이즈 하이브리드 클라우드 솔루션에 대한 비디오 및 데모 시리즈</block>
-  <block id="a867425c6a29a742f3dc77c80f5adac8" category="doc">엔터프라이즈 하이브리드 클라우드 비디오 및 데모</block>
-  <block id="02ca4b8a1f54adf2c0d931bc5bdb61f3" category="paragraph">세 가지 주요 클라우드 공급자 모두를 대상으로 하는 엔터프라이즈 하이브리드 클라우드 솔루션의 특정 기능을 소개하는 다음 비디오와 데모를 확인하십시오.</block>
   <block id="c94d29f1f4f8ef37e9d27f30b7d7c67d" category="summary">SnapCenter 하이브리드 클라우드 데이터베이스 워크로드 환경을 준비하려면 이 섹션에 설명된 작업을 사내 에서 완료해야 합니다.</block>
   <block id="f6a196d9d3a941e76765e4a9395630c4" category="doc">사전 요구 사항 온-프레미스</block>
   <block id="eac55cbc45bfe6b98b8847b3952de7d3" category="inline-link-macro">이전: 사전 요구 사항 구성.</block>
@@ -3322,7 +3312,6 @@
   <block id="d6e504930da1d0732ea4162514a38e8e" category="list-text">Log Replication Playbook 템플릿을 클릭한 다음 최상위 옵션 집합에서 Schedules를 클릭합니다.</block>
   <block id="1c03188c731004905466903c2eb763c4" category="list-text">추가, 로그 복제에 대한 이름 스케줄 추가, 시간 시작 시 시작 날짜/시간 선택, 로컬 시간대 선택 및 실행 빈도 를 차례로 클릭합니다. 실행 빈도는 대개 SnapMirror 복제가 업데이트됩니다.</block>
   <block id="d23bfe090a9fd09613c7a6573f619c02" category="admonition">마지막 1시간 단위 업데이트까지 복구할 수 있도록 매 시간마다 업데이트되도록 로그 스케줄을 설정하는 것이 좋습니다.</block>
-  <block id="40640c0c34d4427f5d18b9ca476e3158" category="summary">이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다.</block>
   <block id="6551468cb4811e7add616eea103efea9" category="doc">단계별 배포 절차</block>
   <block id="261e91a1afdfe1123497b1b9ba5ab3e1" category="section-title">AWX/Tower Oracle 데이터 보호</block>
   <block id="32003b051ef9368756d1e9cd79796719" category="section-title">환경의 인벤토리, 그룹, 호스트 및 자격 증명을 생성합니다</block>
@@ -4239,46 +4228,19 @@
   <block id="23f5c9b4f57b3075f9890f1bc1896ebe" category="list-text">호스트 구성 세부 정보 탭의 Oracle 호스트 변수 필드에 수정된 호스트 변수를 복사하여 붙여 넣습니다.</block>
   <block id="4d4426a703dd8227727fef5758b680d8" category="list-text">ORACLE_config 태그만 사용하여 구축 작업 템플릿을 시작합니다.</block>
   <block id="0c138556fe4f10d4cdba4c61933afd91" category="doc">Google Cloud Virtualization Engine용 NetApp 솔루션(GCVE)</block>
-  <block id="dc740fd7aabd59b53cda21fc57a7c10c" category="paragraph">NetApp이 Google Cloud에 제공하는 솔루션에 대해 자세히 알아보십시오. 마이그레이션 워크플로우, 클라우드로의 확장/급증, 백업/복원, 재해 복구 등</block>
-  <block id="1d71c2a7928e8ff703779db43b80044f" category="section-title">GCVE용 솔루션</block>
-  <block id="5a2d7e3c6d0ab5aa27c06042f28c3198" category="open-title">확장/버스트</block>
-  <block id="ba32bd76ecebfdb42efa20b6de24b808" category="paragraph">TR&gt;에서 해당 섹션을 가리킵니다</block>
-  <block id="8553825f2c93feb7d32c670401e5f338" category="open-title">데이터 센터 유지 관리</block>
   <block id="10b5b21ed1ee90eca305b558caf7d03b" category="open-title">마이그레이션</block>
-  <block id="72b05a5f0a9b1e3f2eded42f0dbdd848" category="open-title">백업/복원</block>
-  <block id="e413eba49b15917b0c9dbf2620f3e66e" category="open-title">재해 복구</block>
   <block id="21a1e68164f738b8be1dae11d5a694b3" category="open-title">데이터 보호</block>
   <block id="29f8b77f5f7c79b566706e0d55c9de8b" category="doc">Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션</block>
-  <block id="c24b87c4afee5d42310b2dd6144617af" category="paragraph">NetApp이 AWS에 제공하는 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 솔루션에 대해 자세히 알아보십시오.</block>
-  <block id="37cbb75112a68116251619ab33efe24a" category="section-title">VMC용 NetApp 솔루션</block>
   <block id="7e0686a26bc7a91429819c2aeb7b414a" category="doc">Azure VMware 솔루션용 NetApp 솔루션(AVS)</block>
-  <block id="7e868c580794349e459e166e04a5abcd" category="paragraph">NetApp이 Azure에 제공하는 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 솔루션에 대해 자세히 알아보십시오.</block>
-  <block id="93d6c31a1f56cb2d2f25af1274c4abdd" category="section-title">AVS용 솔루션</block>
   <block id="44f55a60cc8f70d1e10efc62b75eeddc" category="doc">하이퍼스케일 솔루션 에서 VMware를 위한 NetApp 솔루션</block>
   <block id="b583dc49832a978014ef0d14fe7ef1ce" category="paragraph">NetApp이 마이그레이션 워크플로우, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 각 하이퍼스케일러에 VMware 환경을 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
-  <block id="2c3412ea249289d455415fc5974540d7" category="paragraph">다음 매트릭스에서는 각 하이퍼스케일러와 NetApp 스토리지 옵션 간의 솔루션 사용 사례를 정의합니다. 솔루션 세부 정보를 보려면 원하는 셀의 세부 정보를 클릭합니다.</block>
-  <block id="205549244e00d8fc3aed42cc242b6e66" category="open-title">AWS(VMC)</block>
-  <block id="7fb61d6790786c6584895ba13b1d7acf" category="cell">* 사용 사례 *</block>
-  <block id="23b14f1282da64a4a69cef795c672d69" category="cell">* FSx ONTAP *</block>
-  <block id="5e6a9c7508fcb882686fb57577c20564" category="cell">클라우드로 백업</block>
-  <block id="fca9cd52865f9c45b9c1c0810944323a" category="cell">클라우드로 DR</block>
-  <block id="1f7519825c9e66f611f1b8a2dfab6d98" category="cell">개발/테스트</block>
-  <block id="03a85053364f989565c431e1f3cb14b6" category="cell">클라우드에 최대 사용량</block>
-  <block id="520a0900399ea06bc457dd365ce39b56" category="cell">클라우드로 마이그레이션</block>
-  <block id="1d8b77813302d5fc10b4a01c9d1f71ba" category="open-title">Azure(AVS)</block>
-  <block id="f06436d87956805c42a72d20c6e0c6aa" category="cell">* ANF *</block>
-  <block id="a060ea40d8e1f38832adc8dab3110308" category="cell">CVO *</block>
-  <block id="7896a48b4cb2f9b6d3c3612c0b5a8886" category="open-title">Google(GCVE)</block>
-  <block id="cb56c4671d6ec2da0b5f3b248999cba7" category="cell">CVS *</block>
   <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="doc">AWS에서 가상화 환경을 구축하고 구성합니다</block>
   <block id="e647d88b9bd859d2c3e943c24b4fef00" category="paragraph">사내 환경과 마찬가지로, AWS에서 VMware Cloud를 계획하는 것은 VM과 마이그레이션을 성공적으로 운영 환경에 구축하는 데 매우 중요합니다.</block>
   <block id="162e9e1fd4657b8d9588a5ae8c8e6e66" category="paragraph">이 섹션에서는 AWS SDDC에서 VMware Cloud를 설정 및 관리하고, NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</block>
   <block id="35dcee3fd9faac08f48b3df2e8e0e63c" category="admonition">현재 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC에 연결하는 유일한 지원 방법입니다.</block>
   <block id="d6d7fade0a5d1cd7723c64125e595b08" category="paragraph">설치 프로세스는 다음 단계로 나눌 수 있습니다.</block>
   <block id="389544cc8199f2ddd936397695d0dbe9" category="inline-link-macro">VMware Cloud for AWS 구축 및 구성</block>
-  <block id="fc6ca296e478de217b1d91ca6a51669e" category="list-text"><block ref="fc6ca296e478de217b1d91ca6a51669e" category="inline-link-macro-rx"></block></block>
   <block id="b4f284d3b5bb40ee91901933b8f7ef5f" category="inline-link-macro">VMware Cloud를 FSx ONTAP에 연결합니다</block>
-  <block id="0e488e496c84968dd373c3acab443dd7" category="list-text"><block ref="0e488e496c84968dd373c3acab443dd7" category="inline-link-macro-rx"></block></block>
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link-macro">AWS 기반 VMware 클라우드</block>
   <block id="02b412692a538ee9dc2534f0f9c73dc1" category="paragraph"><block ref="560d5b2cd40977bd7b77b31d7088f657" category="inline-link-macro-rx"></block> AWS 에코시스템의 VMware 기반 워크로드에 클라우드 네이티브 경험을 제공합니다. 각 VMware SDDC(소프트웨어 정의 데이터 센터)는 VPC(Amazon Virtual Private Cloud)에서 실행되며 전체 VMware 스택(vCenter Server 포함), NSX-T 소프트웨어 정의 네트워킹, vSAN 소프트웨어 정의 스토리지, 워크로드에 컴퓨팅 및 스토리지 리소스를 제공하는 하나 이상의 ESXi 호스트를 제공합니다.</block>
   <block id="dc77b78f59a0c38a9a2e8927dc05e916" category="paragraph">이 섹션에서는 AWS에서 VMware Cloud를 설정 및 관리하고, 게스트 내 스토리지에서 AWS에서 NetApp ONTAP용 Amazon FSx 및/또는 Cloud Volumes ONTAP와 함께 사용하는 방법에 대해 설명합니다.</block>
@@ -4288,10 +4250,7 @@
   <block id="4ca1486cd3276884e41ad4b36080c10b" category="list-text">에 등록하십시오 <block ref="ab3390028f6599a1b73b747febbf672d" category="inline-link-macro-rx"></block>.</block>
   <block id="020e995219c3fad42714462fc9368253" category="inline-link-macro">내 VMware</block>
   <block id="4f87cd22b54abb602d4264ede77c75fd" category="list-text">에 등록하십시오 <block ref="6fb1d438d7363efa930c55af527a6c23" category="inline-link-macro-rx"></block> 계정.</block>
-  <block id="969c176eb8515e73c2df6805bd09d5de" category="list-text">VMware 클라우드에서 SDDC 프로비저닝</block>
-  <block id="28cefea59e6b78bfecc1439107469038" category="section-title">AWS 계정을 등록하십시오</block>
   <block id="252c0d3625c410f643362d13f1e35681" category="paragraph">이미 생성된 계정이 없는 경우 시작하려면 AWS 계정이 필요합니다. 이 절차의 여러 단계에 대해 새 계정 또는 기존 계정에 관리 권한이 필요합니다. 자세한 내용은 다음을 참조하십시오 <block ref="d01b332d778720bc2fe2a9a15e6ba01d" category="inline-link-macro-rx"></block> AWS 자격 증명에 대한 자세한 내용은</block>
-  <block id="ed463b922006aa54f2aceda63f25caed" category="section-title">내 VMware 계정을 등록합니다</block>
   <block id="e1ed167660991d514f55d806a323f3b5" category="paragraph">VMware의 클라우드 포트폴리오(AWS의 VMware Cloud 포함)에 액세스하려면 VMware 고객 계정 또는 My VMware 계정이 필요합니다. 아직 생성하지 않은 경우 VMware 계정을 생성합니다 <block ref="aefb6f511cceca70505b3e5bf76155fe" category="inline-link-macro-rx"></block>.</block>
   <block id="60fa505f14fb504e941cbc61b74d644a" category="section-title">VMware 클라우드에서 SDDC 프로비저닝</block>
   <block id="6d931b72d8efc3fd87b7fdd5127cbba7" category="paragraph">VMware 계정을 구성하고 적절한 사이징을 수행한 후에는 AWS에서 VMware Cloud 서비스를 사용하기 위한 확실한 다음 단계로 소프트웨어 정의 데이터 센터를 구축할 수 있습니다. SDDC를 생성하려면 호스팅할 AWS 영역을 선택하고 SDDC에 이름을 지정하고 SDDC에 포함할 ESXi 호스트 수를 지정합니다. 아직 AWS 계정이 없는 경우에도 단일 ESXi 호스트를 포함하는 시작 구성 SDDC를 생성할 수 있습니다.</block>
@@ -4353,9 +4312,7 @@
   <block id="a724b4fc4c5f79672a5c572466d5e001" category="doc">Azure용 NetApp 게스트 연결 스토리지 옵션</block>
   <block id="5f18b04dd7d7089a2177c4c930d8d57f" category="paragraph">Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="1ffaf40c19facb6829b48b667d1dcaa3" category="inline-link-macro">게스트 연결 스토리지로서의 Azure NetApp Files(ANF)</block>
-  <block id="ca0f2c52a62624ee3babda4927666866" category="list-text"><block ref="ca0f2c52a62624ee3babda4927666866" category="inline-link-macro-rx"></block></block>
   <block id="3017a9031d66c55b0258c102decfd1b9" category="inline-link-macro">CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="426cc154d20d2e0075b81fa214c4d27d" category="list-text"><block ref="426cc154d20d2e0075b81fa214c4d27d" category="inline-link-macro-rx"></block></block>
   <block id="f43b203ec7020e7ea0e408d9d67255fc" category="section-title">AVS(Azure VMware Solution)를 사용하여 Azure NetApp Files 구성</block>
   <block id="f9a184882060f3e5a8b6045e2a53107f" category="paragraph">Azure NetApp Files 공유는 Azure VMware SDDC 솔루션 환경에서 생성된 VM에서 마운트할 수 있습니다. Azure NetApp Files는 SMB 및 NFS 프로토콜을 지원하므로 Linux 클라이언트에 볼륨을 마운트하고 Windows 클라이언트에 매핑할 수도 있습니다. Azure NetApp Files 볼륨은 간단한 5단계를 통해 설정할 수 있습니다.</block>
   <block id="5bb6f16c69df9b9f54bddaaa5e32b415" category="paragraph">Azure NetApp Files 및 Azure VMware 솔루션은 동일한 Azure 지역에 있어야 합니다.</block>
@@ -4467,9 +4424,7 @@
   <block id="3e5cc29621d2619be0d7b1569da6909c" category="inline-link-macro">GCVE에 대한 개인 액세스를 활성화합니다</block>
   <block id="9eaed1d83e18be57bbead8a1f4bf4abe" category="doc">NetApp 기본 데이터 저장소 옵션 for GCP</block>
   <block id="ae295ef15cb155f8a1af7d255e34298d" category="doc">AWS를 위한 NetApp 게스트 연결 스토리지 옵션</block>
-  <block id="0d349db2638a92fd70bcc7d2f31663ab" category="paragraph">AWS는 다음과 같은 구성에서 게스트 연결 NetApp 스토리지를 지원합니다.</block>
   <block id="4a7272ea95323d5fef2e377b91b5f16d" category="inline-link-macro">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="ac68b9acaa4ad0b0a4dc57efbda279fc" category="list-text"><block ref="ac68b9acaa4ad0b0a4dc57efbda279fc" category="inline-link-macro-rx"></block></block>
   <block id="6e3fe132749fe21d23cf75f00317a6fe" category="section-title">AWS에서 VMware Cloud를 사용하여 NetApp ONTAP용 Amazon FSx를 구성합니다</block>
   <block id="5f19d821dc2e2e3a8e9418909df59733" category="paragraph">NetApp ONTAP용 Amazon FSx 파일 공유 및 LUN은 AWS의 VMware Cloud에서 VMware SDDC 환경 내에 생성된 VM에서 마운트할 수 있습니다. Linux 클라이언트에도 볼륨을 마운트하고 NFS 또는 SMB 프로토콜을 사용하여 Windows 클라이언트에 매핑할 수 있으며, iSCSI를 통해 마운트하면 Linux 또는 Windows 클라이언트에서 LUN에 블록 디바이스로 액세스할 수 있습니다. NetApp ONTAP 파일 시스템용 Amazon FSx는 다음 단계를 통해 빠르게 설정할 수 있습니다.</block>
   <block id="190b27040d3191ccf35bdb35221f0682" category="admonition">AWS 기반 NetApp ONTAP 및 VMware Cloud용 Amazon FSx는 더 나은 성능을 달성하고 가용성 영역 간의 데이터 전송 비용을 방지하려면 동일한 가용성 영역에 있어야 합니다.</block>
@@ -4614,7 +4569,6 @@
   <block id="2b9f5ac2397a7a0e82ca568de7f62512" category="paragraph"><block ref="c1b4b180fa34b46779c12a4e278fa487" category="inline-image-macro-rx" type="image"></block>
 <block ref="cf487bf9f5a361811181e443893feb53" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ade1814101b0113034e0f446307b3db3" category="doc">Google Cloud Platform GCVE를 위한 NetApp의 기능</block>
-  <block id="e8650e82200d7cca856f3795833c4382" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Ending)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등</block>
   <block id="addac5e706b2148d9c7b3bbe2d2fcdde" category="paragraph">다음 옵션 중 하나를 선택하여 원하는 콘텐츠의 섹션으로 이동합니다.</block>
   <block id="06262015df4851b380189212274a0e3e" category="inline-link-macro">하이퍼스케일 구성의 VMware</block>
   <block id="7f08237a127b62af444f720f15216cee" category="list-text"><block ref="7f08237a127b62af444f720f15216cee" category="inline-link-macro-rx"></block></block>
@@ -4626,38 +4580,21 @@
   <block id="94772ee4b241fe0706c3aaef6e3a4505" category="inline-link-macro">지원되는 NetApp 스토리지 옵션</block>
   <block id="67b586cdf9703ba67abe711415768cc0" category="paragraph">를 방문하십시오 <block ref="01a9bd21bfc714c8dec8aabc5b88eda7" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="8f08ff97ca555f50f0d05fdf950a0568" category="paragraph">Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
-  <block id="703133f070dbe0ec953855a2291e151a" category="paragraph">* 게스트 연결 스토리지 *</block>
   <block id="9bb210767ccb9c085c816c82f3b6b1cb" category="inline-link-macro">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
   <block id="94f644afad50386ab13d527e1056ce71" category="paragraph">* 네이티브 데이터 저장소 *</block>
   <block id="1234d67e696757e4666b0611f60b80d8" category="inline-link-macro">CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다</block>
-  <block id="a508a86f372584a11bee8d3d41e3afca" category="list-text"><block ref="a508a86f372584a11bee8d3d41e3afca" category="inline-link-macro-rx"></block></block>
   <block id="c567300e15e9f9b873771e56c72c938b" category="admonition">1-현재 비공개 미리보기에 있습니다</block>
   <block id="e3a2a8e4a74a67a9514c2aec5e4fac69" category="doc">Azure용 NetApp 기본 데이터 저장소 옵션</block>
   <block id="04999f88dfbb06dc4f6a71901a7e9b18" category="paragraph">리드&gt;</block>
   <block id="2a172299398c31c1e2cd726175d3a270" category="paragraph">content&gt;를 선택합니다</block>
-  <block id="99d04ce0dcd35b869d3c86120b76a443" category="summary">NetApp 엔터프라이즈 하이브리드 클라우드 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다.</block>
-  <block id="3cce9a9057a6d96d9ac2ddab52d477fe" category="doc">NetApp 엔터프라이즈 하이브리드 클라우드 솔루션</block>
-  <block id="5b2a691ebf81d334bb42112bb635d34d" category="doc">엔터프라이즈 하이브리드 클라우드(EHC)에 지원되는 구성</block>
   <block id="5e1c36a2c24e0aaf7844ec890c15e430" category="paragraph">주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.</block>
-  <block id="aa1f7516e656fcf88a02be4feaa432c5" category="cell">* Azure AVS *</block>
-  <block id="9acf96fea18557ec8c6d660d6503f3bf" category="cell">* AWS VMC *</block>
-  <block id="66fbf46ae142d95c688698893879b8af" category="cell">* GCP GCVE *</block>
-  <block id="990372eb325efff403b4117c31a055a8" category="cell">* CVO(Cloud Volumes ONTAP) *</block>
-  <block id="b7c8d0420d929de49959aae6ce8ba3e4" category="inline-link-macro">게스트가 연결되었습니다</block>
-  <block id="33cc6e358d22c6f19d9b7924dc3cdc6d" category="cell">CVS(Cloud Volumes Service) *</block>
-  <block id="336d5ebc5436534e61d16e63ddfca327" category="cell">-</block>
-  <block id="53ece9afd987905da70066422fba9879" category="inline-link-macro">네이티브 데이터 저장소 ^1</block>
-  <block id="df635045d1bc577d1f8f5b4da11409be" category="cell">* Azure NetApp Files(ANF) *</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
   <block id="a7714bc43e9a27f2c98a38e6b6d7f3d8" category="doc">퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</block>
   <block id="8db50e5729f7a5d770aaceef947a2982" category="paragraph">세 가지 주요 하이퍼 스케일러의 스토리지로서의 NetApp 옵션에 대해 알아보십시오.</block>
   <block id="60ce80493de8468bdfd597af1c219a9f" category="paragraph">AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="83c87929208a5770dfb09e33514193f4" category="inline-link-macro">FSX ONTAP를 기본 데이터 저장소 ^1로 사용합니다</block>
-  <block id="ad476c4cac730935959743eb28c5ca66" category="list-text"><block ref="ad476c4cac730935959743eb28c5ca66" category="inline-link-macro-rx"></block></block>
   <block id="98ba63f921be22bb183a43d868521ce1" category="inline-link-macro">Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다</block>
-  <block id="c054a58e4fcd496e4fa5c1b0c16dfa69" category="list-text"><block ref="c054a58e4fcd496e4fa5c1b0c16dfa69" category="inline-link-macro-rx"></block></block>
   <block id="74eb4c6138d4b8cd8399b01966c5af28" category="section-title">GCP용 NetApp 스토리지 옵션</block>
-  <block id="8811a4f5d0046113ac94b851ec1b1990" category="list-text"><block ref="8811a4f5d0046113ac94b851ec1b1990" category="inline-link-macro-rx"></block></block>
   <block id="4177c39712dda5976b0ba657b24af234" category="section-title">Google Cloud에 Cloud Volumes ONTAP 배포(직접 수행)</block>
   <block id="2839d8571363b149cc3fd9db82a7183d" category="paragraph">Cloud Volumes ONTAP 공유 및 LUN은 GCVE 프라이빗 클라우드 환경에서 생성된 VM에서 마운트할 수 있습니다. Cloud Volumes ONTAP는 iSCSI, SMB 및 NFS 프로토콜을 지원하기 때문에 iSCSI를 통해 마운트할 때 Linux 또는 Windows 클라이언트에서 볼륨을 Linux 클라이언트 및 Windows 클라이언트에 블록 디바이스로 마운트할 수 있습니다. Cloud Volumes ONTAP 볼륨은 몇 가지 간단한 단계를 통해 설정할 수 있습니다.</block>
   <block id="83f1904115d07e05de148ff5c69277db" category="paragraph">재해 복구 또는 마이그레이션을 위해 사내 환경에서 클라우드로 볼륨을 복제하려면 사이트 간 VPN 또는 Cloud Interconnect를 사용하여 Google Cloud에 대한 네트워크 연결을 설정합니다. 사내의 데이터를 Cloud Volumes ONTAP로 복제하는 작업은 이 문서의 범위를 벗어납니다. 사내 시스템과 Cloud Volumes ONTAP 시스템 간에 데이터를 복제하려면 을 참조하십시오 <block ref="17b5522e2d467cfa8e1eed2f77bb1eff" category="inline-link-macro-rx"></block>.</block>
@@ -4787,7 +4724,6 @@
   <block id="7cd95358048d9f5d18cf70f66126e1e7" category="paragraph">컴퓨터에 로그온할 때마다 연결하려면 로그인할 때 다시 연결 확인란을 선택합니다.</block>
   <block id="7968f043139de8ff0e5df4451c437426" category="list-text">마침 을 클릭합니다.</block>
   <block id="8902b5e2f0c169ccf7ad8b5c335531e5" category="paragraph"><block ref="8902b5e2f0c169ccf7ad8b5c335531e5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="104948b3593a97ed92fc801aaf126581" category="doc">엔터프라이즈 하이브리드 클라우드(EHC) 개요</block>
   <block id="415be703c228d9c6838b18850a1d9f31" category="paragraph">대부분의 IT 조직은 하이브리드 클라우드 우선 접근 방식을 따릅니다. 전환 단계에 있는 이들 조직은 고객이 현재 IT 환경을 평가한 다음 평가 및 검색 결과를 기반으로 워크로드를 클라우드로 마이그레이션하고 있습니다.</block>
   <block id="346972233965e89cf5b17c3907b35f86" category="paragraph">클라우드로 마이그레이션하는 고객의 요인에는 탄력성 및 버스트, 데이터 센터 이탈, 데이터 센터 통합, 수명 종료 시나리오, 인수 합병, 인수 합병 등 이 마이그레이션의 이유는 각 조직 및 각 비즈니스 우선순위에 따라 달라질 수 있습니다. 하이브리드 클라우드로 전환할 때 클라우드 구축과 탄력성의 잠재력을 최대한 활용하려면 클라우드에 적합한 스토리지를 선택하는 것이 매우 중요합니다.</block>
   <block id="0c4a16ed987359b14dc407a858d1a78e" category="section-title">퍼블릭 클라우드의 VMware 클라우드 옵션</block>
@@ -4862,8 +4798,6 @@
   <block id="cdac9a2e7f1dc52240712d4a191378e8" category="section-title">AVS용 NetApp 스토리지 옵션</block>
   <block id="a69a7b9e874f9f6e0703191e7825cc4f" category="paragraph">NetApp 스토리지는 Azure AVS에서 추측으로 연결되거나 기본 데이터 저장소로 사용될 수 있습니다.</block>
   <block id="cf3ac5a0dae3780b356e57c121b3eab0" category="doc">Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</block>
-  <block id="8514045c5551663f28246e665ca2f189" category="list-text"><block ref="8514045c5551663f28246e665ca2f189" category="inline-link-macro-rx"></block></block>
-  <block id="3cef16671ee166d12c5fd192fa419358" category="list-text"><block ref="3cef16671ee166d12c5fd192fa419358" category="inline-link-macro-rx"></block></block>
   <block id="fd558e50adcdcb0d667a4790f70f75a9" category="paragraph">GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.</block>
   <block id="fb33f758c28f8ef8d56e41f74b4c47ab" category="paragraph">“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.</block>
   <block id="63b31ca49de01854f780d1e1722cd1c1" category="paragraph">전제 조건:</block>
@@ -4894,7 +4828,6 @@
   <block id="c1304f98c6be845a236d7a27951ece4f" category="paragraph"><block ref="c1304f98c6be845a236d7a27951ece4f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca4ac823f3f130f3c78d6ac26ba9f46b" category="admonition">특정 하이퍼스케일러의 기능을 보려면 해당 하이퍼스케일러의 적절한 탭을 클릭하십시오.</block>
   <block id="ff264305bf70750f504c04f48ab02038" category="paragraph">NetApp 스토리지는 3가지 주요 하이퍼 스케일러 내에서 상호 연결된 추측이나 기본 데이터 저장소로 활용할 수 있습니다.</block>
-  <block id="76b7cf7d0f36f0986e2c7ef578303aab" category="doc">요약 및 결론: 엔터프라이즈 하이브리드 클라우드(EHC)에 NetApp을 선택해야 하는 이유</block>
   <block id="dd6f2ba05323a537582c1f232e8a2c60" category="paragraph">주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.</block>
   <block id="e7441dbfabeaebba75ddd1bf2bcf25e9" category="section-title">사용 사례 #1: 스토리지 최적화</block>
   <block id="b9a8c3d27aa6638e02992c8b76fea769" category="paragraph">RVtools 출력을 사용하여 사이징 작업을 수행할 때 마력(vCPU/vmem) 스케일이 스토리지와 평행하다는 것이 항상 명백합니다. 스토리지 공간에 필요한 드라이브의 크기가 마력을 훨씬 넘어서는 상황에 처하게 되는 경우가 많습니다.</block>
@@ -4913,9 +4846,6 @@
   <block id="cd51ff9774803e84c79e8ab19bb7ffd2" category="paragraph">어떤 사용 사례에서든 즐겨 사용하는 클라우드/하이퍼스케일러와 NetApp Cloud Volumes를 함께 사용하여 사내 및 멀티 클라우드 전체의 클라우드 이점, 일관된 인프라 및 운영을 빠르게 실현하고, 워크로드의 양방향 이동성을 제공하며, 엔터프라이즈급 용량과 성능을 실현할 수 있습니다.</block>
   <block id="2993778cba8ea9a69af4ff9dc7e18fb8" category="paragraph">스토리지를 연결하는 데 사용되는 것과 동일한 친숙한 프로세스와 절차입니다. 이는 새로운 이름으로 변경된 데이터의 위치일 뿐입니다. 도구와 프로세스는 그대로 유지되며 NetApp Cloud Volumes는 전체 구축을 최적화하는 데 도움이 됩니다.</block>
   <block id="bb01fec2870d3f698517f8471454637b" category="doc">Azure에서 가상화 환경을 구축하고 구성합니다</block>
-  <block id="c33cce5b25d7b62b8be123136ad64ae1" category="list-text"><block ref="c33cce5b25d7b62b8be123136ad64ae1" category="inline-link-macro-rx"></block></block>
-  <block id="d47c67e14996fb3c08deb5311a358578" category="list-text"><block ref="d47c67e14996fb3c08deb5311a358578" category="inline-link-macro-rx"></block></block>
-  <block id="5a8521e0e0ab0935654c959eba47d6a0" category="list-text"><block ref="5a8521e0e0ab0935654c959eba47d6a0" category="inline-link-macro-rx"></block></block>
   <block id="6a3b9d31df0a58cc23207c2af925ef0f" category="paragraph">Azure VMware 솔루션을 사용하려면 먼저 확인된 구독 내에 리소스 공급자를 등록해야 합니다.</block>
   <block id="58c59ab4d5d488609913efa7b1daaa31" category="list-text">Azure 포털에 로그인합니다.</block>
   <block id="5d704d400396fefbe3427ee665a0ec16" category="list-text">Azure 포털 메뉴에서 모든 서비스를 선택합니다.</block>
@@ -4962,7 +4892,6 @@
   <block id="87f65f698ac6bac1ada03193e1cdabb8" category="paragraph"><block ref="87f65f698ac6bac1ada03193e1cdabb8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ec3eeb836273dbc92b27ce718a90b212" category="inline-link-macro">온프레미스 환경을 Azure VMware 솔루션에 대해 알아보십시오</block>
   <block id="097529edf2feb9ed1237427eaa3b2599" category="paragraph">이제 Azure VMware Solution SDDC가 구축 및 구성되었습니다. ExpressRoute Global Reach를 활용하여 사내 환경을 Azure VMware 솔루션 프라이빗 클라우드에 연결합니다. 자세한 내용은 을 참조하십시오 <block ref="29749340a5d7bf5df1867a3f2d2723a1" category="inline-link-macro-rx"></block>.</block>
-  <block id="2195b6c1bba772f631332c732395b829" category="doc">엔터프라이즈 하이브리드 클라우드(EHC)의 사용 사례</block>
   <block id="5f1bd6ade489565bebba9a771b93fe70" category="paragraph">하이브리드 클라우드 또는 클라우드 우선 구축을 계획할 때 IT 조직에 중요한 사용 사례에 대한 개요입니다.</block>
   <block id="0812fc943ecbd9a54d88fb25729d0aa5" category="section-title">보편적인 사용 사례</block>
   <block id="f136615e6f2c1b330afb72bf4a45b4a4" category="paragraph">사용 사례는 다음과 같습니다.</block>
@@ -4980,34 +4909,16 @@
   <block id="0362604333fcf179ebf8b873f8f8c0ec" category="paragraph">다음 시나리오를 생각해 봅시다.</block>
   <block id="b401aa039e47ba98bfaca10532e40d08" category="paragraph">고객은 CPU와 메모리에 대해 5개의 호스트만 필요로 하지만 스토리지 요구 사항이 많으므로 스토리지 요구 사항을 충족하기 위해 12개의 호스트가 필요합니다. 이 요구사항은 스토리지를 증가하기만 하면 되는 추가 마력을 구매해야 하는 만큼 재무 규모를 넘어주는 결과를 제공합니다.</block>
   <block id="7c25e9d8a9748905f5d456e20a93b413" category="paragraph">클라우드 도입 및 마이그레이션을 계획할 때는 항상 최상의 접근 방식을 평가하고 총 투자 비용을 절감하는 가장 쉬운 방법을 찾는 것이 중요합니다. 모든 애플리케이션 마이그레이션의 가장 일반적이고 쉬운 방법은 가상 머신(VM) 또는 데이터 변환이 없는 재호스팅(리프트 및 변속이라고도 함)입니다. NetApp Cloud Volumes를 VMware SDDC(소프트웨어 정의 데이터 센터)와 함께 사용하는 동시에 vSAN을 보완하는 것은 쉬운 전환 옵션을 제공합니다.</block>
-  <block id="506b02d257f89febd090ded6564e8c4f" category="summary">NetApp 솔루션의 자동화 기능에 대한 최신 추가 사항</block>
-  <block id="3b1dbad34c6f708a2653d9c6ae15b15d" category="doc">솔루션 자동화의 새로운 기능</block>
-  <block id="a90193527119bcbd79a1084d94ec3914" category="paragraph">NetApp 솔루션을 위한 최신 자동화 기능에 대한 개요</block>
-  <block id="153fbde949ec10e69bae256a4114f480" category="cell">* 솔루션 자동화 시작하기 *</block>
   <block id="3d45b043c5518eca1e47fb4ba8a813da" category="inline-link-macro">RHEL/CentOS에서 CLI 배포를 위해 Ansible Control Node를 설정합니다</block>
-  <block id="0d4c9e63678641d4ae0e23bd36684722" category="cell"><block ref="0d4c9e63678641d4ae0e23bd36684722" category="inline-link-macro-rx"></block></block>
   <block id="2afb5cc3404c6c8162722fd41895c2de" category="inline-link-macro">Ubuntu/Debian에서 CLI 배포를 위해 Ansible Control Node를 설정합니다</block>
-  <block id="0f752948a660f9bbb5956c86d669a395" category="cell"><block ref="0f752948a660f9bbb5956c86d669a395" category="inline-link-macro-rx"></block></block>
   <block id="6b8c64be0bad88fb867c6576ac777b25" category="inline-link-macro">타워/AWX 배포용으로 Ansible 타워 또는 AWX를 설치합니다</block>
-  <block id="b8c65aa5893cb554f17ec9c5b653c9bc" category="cell"><block ref="b8c65aa5893cb554f17ec9c5b653c9bc" category="inline-link-macro-rx"></block></block>
-  <block id="e7760fa86ac312b359215e15113fde9b" category="cell">* 하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다 *</block>
   <block id="e9dcec3e531a3cec5ee733f23baab91d" category="inline-link-macro">NFS 기반 ONTAP용 Oracle 19c의 자동 구축</block>
-  <block id="e10944318a093524b44d6671144720e9" category="cell"><block ref="e10944318a093524b44d6671144720e9" category="inline-link-macro-rx"></block></block>
-  <block id="c6f59500cff9fc154e284a0b9b18bb83" category="summary">NetApp 솔루션의 자동화 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
-  <block id="cff1a9d42f081481f7d374df8bcbb26b" category="doc">솔루션 자동화 비디오 및 데모</block>
-  <block id="4e59e2d3d9f78c4e87a82b3cbcc7e1a3" category="paragraph">NetApp 솔루션의 자동화 기능에 대한 구체적인 기능을 소개하는 비디오 및 데모를 소개합니다.</block>
   <block id="9efcc0ad3c93b238cc0495e3c87b715f" category="inline-link-macro">Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화</block>
   <block id="9c4ada146a28af07eecc939b540c3541" category="list-text"><block ref="9c4ada146a28af07eecc939b540c3541" category="inline-link-macro-rx"></block></block>
-  <block id="548bebbdb3ac596c6116cbd05e474fe0" category="summary">모든 퍼블릭 클라우드 공급자를 위한 엔터프라이즈 하이브리드 클라우드 솔루션을 설명하는 블로그 시리즈</block>
-  <block id="b8136929c18b90d36d40eb475da80f06" category="doc">엔터프라이즈 하이브리드 클라우드 블로그</block>
-  <block id="27f22a085d12c1434c2027f4d64f9418" category="paragraph">세 가지 주요 클라우드 공급자 모두를 대상으로 하는 엔터프라이즈 하이브리드 클라우드 솔루션의 특정 기능을 소개하는 블로그를 소개합니다.</block>
   <block id="8d7efa937e97b1a8187ff8f122d9732a" category="inline-link-macro">클라우드 기반 VMware 구축을 위한 스토리지 최적화</block>
   <block id="5a6bd3a9e0048284caf2b5f521d90959" category="list-text"><block ref="5a6bd3a9e0048284caf2b5f521d90959" category="inline-link-macro-rx"></block></block>
   <block id="00d07ce14f227693b9dabba2f52b53a5" category="inline-link-macro">NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오</block>
   <block id="ac66988ead29ba5f4ed32ec3894527e7" category="list-text"><block ref="ac66988ead29ba5f4ed32ec3894527e7" category="inline-link-macro-rx"></block></block>
-  <block id="6a0ecfbed3f66ec0b5d8989880431ad7" category="summary">데이터 보호 및 보안 솔루션 기능을 설명하는 블로그 시리즈</block>
-  <block id="16be77be7dcecad552bca4efda1efcb1" category="doc">데이터 보호 및 보안 블로그</block>
-  <block id="fdaef51553bfad628d1d8ee4cd314d79" category="paragraph">데이터 보호 및 보안 솔루션의 특정 기능을 강조하는 블로그의 개요</block>
   <block id="dca91c3343cc0ad062506cdd14eb7d41" category="summary">하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션 자료에 대한 최신 추가 정보</block>
   <block id="120c02d2aa6cda1e3b75902fb4fc0b53" category="doc">하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션의 새로운 기능</block>
   <block id="07e257430bade6bc5bce1c2170c6fc0d" category="paragraph">최신 하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션 및 솔루션 자료 개요</block>
@@ -5051,10 +4962,6 @@
   <block id="43e5d9153d1fc4a35be5f57189605919" category="cell"><block ref="43e5d9153d1fc4a35be5f57189605919" category="inline-link-macro-rx"></block></block>
   <block id="da38226e07ff21f147182bb08be38f6f" category="inline-link-macro">NetApp의 Anthos Bare Metal</block>
   <block id="ac1da2af455fc001ba8b58af0e62d151" category="cell"><block ref="ac1da2af455fc001ba8b58af0e62d151" category="inline-link-macro-rx"></block></block>
-  <block id="7108e02acdfbc9a7cf66345731d3ec5e" category="summary">AI 및 최신 데이터 분석 솔루션 기능을 설명하는 블로그 시리즈</block>
-  <block id="407c5c4d36c8f404212036765bd911ac" category="doc">AI 및 최신 데이터 분석 블로그</block>
-  <block id="2aa8a49ee37d7496cf666062c18c3ad3" category="paragraph">AI 및 최신 데이터 분석 솔루션의 특정 기능을 소개하는 블로그를 소개합니다.</block>
-  <block id="27f80f5fcc8cfd10fa4ffd9f6c3bc57e" category="section-title">인공 지능 블로그 시리즈</block>
   <block id="750b570f7c6cacf7b9f43c1c7919ad96" category="inline-link-macro">AI 블로그: thePub</block>
   <block id="183754618306c7f8d7df04f981d234f0" category="list-text"><block ref="183754618306c7f8d7df04f981d234f0" category="inline-link-macro-rx"></block></block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
@@ -5073,33 +4980,8 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
   <block id="c8d20ce0b6bb23d912f3368f706d5794" category="summary">NetApp 솔루션은 고객의 가장 중요한 비즈니스 요구사항을 지원하기 위해 NetApp 제품 및 서비스 포트폴리오를 강조하는 전략적 및 기술 역량 집합입니다.</block>
   <block id="fcf140abed196b8eba71c45f21312bce" category="doc">NetApp 솔루션</block>
-  <block id="cb1501db8fac0fe0b1cc3b53200f0ab9" category="summary">비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 자료에 최신 내용이 추가되었습니다</block>
-  <block id="54998e7855609864b7a05e49355662b5" category="doc">비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 솔루션의 새로운 기능</block>
-  <block id="9de8e04d062d5eb8e2ff199783964174" category="paragraph">최신 비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 및 솔루션 자료 개요</block>
-  <block id="4878d0f06c45c7f565e6545cccf18c88" category="inline-link-macro">SnapCenter를 사용한 Hybird 클라우드 데이터베이스 솔루션</block>
-  <block id="a07f396f8180d71ad8372bd51f3800d7" category="cell">* 하이브리드 클라우드 데이터베이스 솔루션 *<block ref="642bb53d1747dfdf3e6f0ebcbb604cfe" category="inline-link-macro-rx"></block></block>
-  <block id="2dc95f2080ad2dba9a9207db808106e5" category="cell">* Oracle 데이터베이스 *</block>
   <block id="14c4dbb7c61081eee1c499c4cf138c96" category="inline-link-macro">FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c RAC 데이터베이스</block>
-  <block id="24743f8350683e7f1d7d5f6802de3aab" category="cell"><block ref="24743f8350683e7f1d7d5f6802de3aab" category="inline-link-macro-rx"></block></block>
-  <block id="dcad2dec3906d4a902bdfb0b7093ce21" category="cell"><block ref="dcad2dec3906d4a902bdfb0b7093ce21" category="inline-link-macro-rx"></block></block>
-  <block id="71e4dd221a9f0c3610e81f8ebab870ea" category="cell">* SAP HANA *</block>
-  <block id="c55aef4f96cafe48d6e5cf37af33721b" category="inline-link-macro">SAP HANA B&amp;A, R with SnapCenter</block>
-  <block id="59fbb2b8017dcaa261a32ed33941a3bd" category="cell"><block ref="41f97968c03372ffce726ec89c54fc9a" category="inline-link-macro-rx"></block></block>
-  <block id="ffbfe314fcb0f0531b18b666e3f70bcc" category="inline-link-macro">FC SAN 기반 SAP HANA</block>
-  <block id="8e7cb8af41001c3eeb84421bdf0bf30f" category="cell"><block ref="8e7cb8af41001c3eeb84421bdf0bf30f" category="inline-link-macro-rx"></block></block>
-  <block id="03bd539868199e3d2eb12809418e0815" category="cell">* Microsoft SQL Server *</block>
   <block id="760b7d532df381143dc946fd59bf0b62" category="inline-link-macro">Azure NetApp Files 기반 SQL Server</block>
-  <block id="5a6ed16cce1a08e1b3de84293a1c0a11" category="cell"><block ref="5a6ed16cce1a08e1b3de84293a1c0a11" category="inline-link-macro-rx"></block></block>
-  <block id="9b849a5e6a46a992279087781315f191" category="inline-link-macro">Microsoft SQL Server 기반 SAP 애플리케이션</block>
-  <block id="7dffec91055830f84efb7bc18ab4f86d" category="cell"><block ref="7dffec91055830f84efb7bc18ab4f86d" category="inline-link-macro-rx"></block></block>
-  <block id="77c484629c9e9b5aed6fa32ebb0e7229" category="inline-link-macro">가상화된 인프라용 SolidFire ESDS 기반 SQL Server</block>
-  <block id="cce65a4a66212b1b6a69449993338407" category="cell"><block ref="cce65a4a66212b1b6a69449993338407" category="inline-link-macro-rx"></block></block>
-  <block id="91be6e42fe122f20831dcd474322dc82" category="inline-link-macro">SQL Server - NetApp HCI를 통한 데이터베이스 성능 보장</block>
-  <block id="de2b8e7716b57342938375941b7e521a" category="cell"><block ref="de2b8e7716b57342938375941b7e521a" category="inline-link-macro-rx"></block></block>
-  <block id="f3c961b3fcb2ae7229add932837c205a" category="summary">비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
-  <block id="f7164629c6d69e9fc50c2435382e23c8" category="doc">비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 비디오 및 데모</block>
-  <block id="9c8f0f2cea03121d5372f653983bb29b" category="paragraph">비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션의 특정 기능을 중점적으로 설명하는 비디오 및 데모 개요</block>
-  <block id="a0d2b6fe9ab0a7e386c4c21f70331226" category="section-title">사례 연구</block>
   <block id="33be49f7ebc56eb7d336a201f7ac0df6" category="inline-link-macro">Azure NetApp Files 기반 SAP</block>
   <block id="626865aeb52c00e03e8f0df7695c5a5c" category="list-text"><block ref="626865aeb52c00e03e8f0df7695c5a5c" category="inline-link-macro-rx"></block></block>
   <block id="e131204502a58630f2f72937238604c8" category="section-title">비디오/데모</block>
@@ -5107,9 +4989,6 @@
   <block id="2c389096a43e749160e32214cb4a3b89" category="list-text"><block ref="2c389096a43e749160e32214cb4a3b89" category="inline-link-macro-rx"></block></block>
   <block id="2b1dd692c0da980c4ec2ad9fd523c47d" category="inline-link-macro">Azure NetApp Files의 SQL 고가용성 클러스터</block>
   <block id="99945a626f3fb01dbeac75f40a6c2c8e" category="list-text"><block ref="99945a626f3fb01dbeac75f40a6c2c8e" category="inline-link-macro-rx"></block></block>
-  <block id="bfd22ae6cd60e663ed70e43729a64b1a" category="summary">하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션 기능을 설명하는 블로그 시리즈</block>
-  <block id="0ffff76bcc7d5f89f6a352694b916dbd" category="doc">하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 블로그 를 참조하십시오</block>
-  <block id="0aef0d80b80eebee0590e019fffb3715" category="paragraph">하이브리드 클라우드, 데스크탑 가상화 및 컨테이너 솔루션의 특정 기능을 강조하는 블로그의 개요</block>
   <block id="95e5ff389c2796a171f904ad5b9322f6" category="list-text">NetApp 및 VMware Cloud Foundation(VCF)</block>
   <block id="81cd1d42ffdb75544144e24cf0f8dc54" category="inline-link-macro">1부: 시작하기</block>
   <block id="837bbffc16dc6e344470df1114a13c87" category="list-text"><block ref="837bbffc16dc6e344470df1114a13c87" category="inline-link-macro-rx"></block></block>
@@ -5472,30 +5351,18 @@
   <block id="f0d8a1b084d604c4db4319a2c5bbd522" category="list-text"><block ref="f0d8a1b084d604c4db4319a2c5bbd522" category="inline-link-macro-rx"></block></block>
   <block id="5ab6c918ee903c74a7d7c97b2432ebaf" category="section-title">최신 VMware 솔루션의 비디오 데모를 살펴보십시오</block>
   <block id="7128c22bfdae1fe8be75c9a9ee56eca9" category="inline-link-macro">VMware vSphere 및 NetApp ONTAP 모범 사례</block>
-  <block id="04e008204e728ef166ffc8c85db580ed" category="list-text"><block ref="04e008204e728ef166ffc8c85db580ed" category="inline-link-macro-rx"></block></block>
   <block id="d2fa143a4aaef3477f2edb0d92676341" category="inline-link-macro">VMware 환경 - NVMe-oF with ONTAP에서 실행하겠습니다</block>
   <block id="207681662de4971035cc8d5c9347c986" category="list-text"><block ref="207681662de4971035cc8d5c9347c986" category="inline-link-macro-rx"></block></block>
   <block id="e9c2b8b8a9962013c07f83742ca35f0e" category="inline-link-macro">ONTAP 도구 및 VMware SRM을 사용한 VVOL 재해 복구</block>
   <block id="8ca7386c3cb63b01ffc6387ba41427ae" category="list-text"><block ref="8ca7386c3cb63b01ffc6387ba41427ae" category="inline-link-macro-rx"></block></block>
-  <block id="f156fde75de09cf5f045522cf738b2c7" category="inline-link-macro">ONTAP 툴을 사용하여 FlexGroup 데이터 저장소를 프로비저닝하고 관리합니다</block>
-  <block id="c2a201ca982ecfefdcfec43a8df28397" category="list-text"><block ref="c2a201ca982ecfefdcfec43a8df28397" category="inline-link-macro-rx"></block></block>
-  <block id="977a548ba3853fdac6d708915a1b752a" category="inline-link-macro">NetApp NFS VAAI 플러그인 업데이트</block>
-  <block id="a8e3bfc2dc840604c0168dd5f89aacec" category="list-text"><block ref="a8e3bfc2dc840604c0168dd5f89aacec" category="inline-link-macro-rx"></block></block>
-  <block id="233398cd850d9903958583fd85621f6d" category="inline-link-macro">NetApp ONTAP FlexGroup를 지원하는 스케일아웃 가상 데스크톱</block>
-  <block id="6ef66ca131701cfdb70302d3099b7550" category="list-text"><block ref="6ef66ca131701cfdb70302d3099b7550" category="inline-link-macro-rx"></block></block>
   <block id="e308c2a1dacddb5bc6ffa093081111e4" category="inline-link-macro">Data Fabric을 위한 VMware 백업 및 복구</block>
   <block id="9934e59457fa5f31d39a58f1d55ac5d5" category="list-text"><block ref="9934e59457fa5f31d39a58f1d55ac5d5" category="inline-link-macro-rx"></block></block>
-  <block id="a81738572d94bce863615a7d94a84051" category="inline-link-macro">VMware vSphere용 SnapCenter 플러그인을 통한 간편한 데이터 보호</block>
-  <block id="f09e9fdda59d2e9d9172bd89b5dc9369" category="list-text"><block ref="f09e9fdda59d2e9d9172bd89b5dc9369" category="inline-link-macro-rx"></block></block>
   <block id="c10a86f3b9530baf3bed3b02aaaf873f" category="section-title">VMware용 유연한 하이브리드 클라우드 및 현대화된 애플리케이션 인프라를 구축합니다</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">비디오</block>
   <block id="f20368920280b50131814db2f83fda66" category="inline-link-macro">NetApp All Flash FAS를 기반으로 VMware 데이터 저장소 설계</block>
   <block id="8ff6498eeabd53b4271d75f543dc3bc4" category="list-text"><block ref="8ff6498eeabd53b4271d75f543dc3bc4" category="inline-link-macro-rx"></block></block>
-  <block id="841a1e2733baa662db1207d5075a798f" category="inline-link-macro">자동화해 봅시다. ONTAP을 사용하여 VMware 클라우드를 구축하십시오</block>
-  <block id="4d0f73eb280cb12c373e099d1c320690" category="list-text"><block ref="4d0f73eb280cb12c373e099d1c320690" category="inline-link-macro-rx"></block></block>
   <block id="f1c2408ffc6e67ac6b34eb8da2b3039c" category="list-text"><block ref="f1c2408ffc6e67ac6b34eb8da2b3039c" category="inline-link-macro-rx"></block></block>
   <block id="253d309203cf1f2c1bb57255bd0a5bdc" category="inline-link-macro">VMware VM을 Google Cloud로 마이그레이션합니다</block>
-  <block id="baa1898009cc7495f8c4e7732ce7433a" category="list-text"><block ref="baa1898009cc7495f8c4e7732ce7433a" category="inline-link-macro-rx"></block></block>
   <block id="7518aab5e189037f632ee46ea9e3cf07" category="video-title">VMware Tanzu용 동적 영구 NetApp 스토리지 구축 1부</block>
   <block id="f86bf601d6e42c44cf076ea1772ae13c" category="video-title">VMware Tanzu용 동적 영구 NetApp 스토리지 구축 2부</block>
   <block id="bf5c12d4eed319d2dc2b2b7279944f71" category="video-title">Deploying Dynamic Persistent NetApp Storage for VMware Tanzu, 3을 참조하십시오</block>
@@ -5554,13 +5421,10 @@
   <block id="c57f32bc5ce6f95f5f9bec8260ecdb08" category="inline-link-macro">ONTAP 툴을 사용하여 VMFS 데이터 저장소를 프로비저닝합니다</block>
   <block id="b3a5f140339b1ca0940c5875b2a76d0b" category="list-text"><block ref="89ebfed741bd060c10a4a1472581f4e2" category="inline-link-macro-rx"></block>.</block>
   <block id="fa7b524ea902bff51145e4279b653d84" category="summary">이 페이지에서는 비디오 및 자습서에 대한 소개 및 설명을 제공합니다.</block>
-  <block id="246bb366fee5c7eda4fcd280728ec465" category="doc">하이브리드 클라우드, 데스크톱 가상화, 컨테이너 비디오 및 데모</block>
-  <block id="d04d1afcb2d01179846658f678623306" category="paragraph">하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.</block>
   <block id="4267881eb271396086a3cc1387da9a3a" category="section-title">NetApp과 VMware Tanzu</block>
   <block id="2dd739333b022cfeccd93e19c8c39d83" category="paragraph">VMware Tanzu를 사용하면 vSphere 또는 VMware Cloud Foundation을 통해 Kubernetes 환경을 구축, 관리 및 관리할 수 있습니다. 고객은 VMware의 이 제품 포트폴리오를 통해 요구사항에 가장 적합한 VMware Tanzu 에디션을 선택하여 단일 제어 플레인에서 모든 관련 Kubernetes 클러스터를 관리할 수 있습니다.</block>
   <block id="f8d0723a562ed498a977795477b75cb0" category="inline-link">VMware Tanzu 개요</block>
   <block id="2d3e9ef8ae693e8ff80c4d6e70f0a876" category="paragraph">VMware Tanzu에 대한 자세한 내용은 를 참조하십시오<block ref="1951d4038519ab642a1c0f8898cecfe0" category="inline-link-rx"></block>. 이 리뷰에서는 VMware Tanzu에 대한 사용 사례, 추가 기능 및 기타 정보를 제공합니다.</block>
-  <block id="f90851c66bcfaa6ba091b34fe8a7428b" category="section-title">NetApp 및 VMware Tanzu 비디오 시리즈</block>
   <block id="31c49b154032d3d6039542b651e0f3d4" category="list-text"><block ref="31c49b154032d3d6039542b651e0f3d4" category="inline-link-rx"></block></block>
   <block id="fcf1189eaf4e4e32d27ee5174d63ae3c" category="list-text"><block ref="fcf1189eaf4e4e32d27ee5174d63ae3c" category="inline-link-rx"></block></block>
   <block id="5963b1ea39cb7cc8a0a4f5ce7c5ef816" category="list-text"><block ref="5963b1ea39cb7cc8a0a4f5ce7c5ef816" category="inline-link-rx"></block></block>
@@ -5805,8 +5669,6 @@
   <block id="52fa81ab62bea2599ed516f01925678d" category="inline-link-macro">LUN 생성 및 매핑</block>
   <block id="c8ecf540bebb63423545ecd3d02c6ca0" category="list-text"><block ref="a2b18e9ce335dd856363e6613d961c1a" category="inline-link-macro-rx"></block> VMware vSphere용 ONTAP 툴을 사용하는 경우 이 단계를 건너뛰십시오.</block>
   <block id="25d85157bcfdbb601bbda056cd3a5bc6" category="list-text">HBA 드라이버가 설치되어 있는지 확인합니다. VMware 지원 HBA에는 드라이버가 기본적으로 배포되어 있으며 에서 볼 수 있어야 합니다 <block ref="57f7eb139c8bc258309d8e16d3df13fe" category="inline-link-macro-rx"></block>.</block>
-  <block id="f1e09e8062c8a1cddb6f2f68289ea71b" category="doc">VMware 가상화를 위한 ONTAP의 새로운 기능</block>
-  <block id="2e130352b486464834bcc7dda1ff2603" category="section-title">VMware 가상화</block>
   <block id="6fe85aae6e8fa231a1f417edfeef3759" category="doc">vSphere VMFS 데이터 저장소 - ONTAP를 사용하는 iSCSI 스토리지 백엔드</block>
   <block id="4f6f7882fc7b858bc0eb3e3a41991494" category="paragraph">이 섹션에서는 ONTAP iSCSI 스토리지를 사용하여 VMFS 데이터 저장소를 생성하는 방법에 대해 설명합니다.</block>
   <block id="383b1f30f341cb0eff11db96d70e9f50" category="list-text">vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술</block>
@@ -6334,16 +6196,6 @@
   <block id="e9982e506e30915713c7485a2e77633b" category="section-title">Technology Towers 개요</block>
   <block id="d67372be0bd12a2ddbcf795ccfacc7de" category="cell">* 섹션 *</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 설명 *</block>
-  <block id="7324b08f5dfbdb08191404d3fdacfcbd" category="cell">AI 기반 솔루션의 컬렉션 솔루션은 [해군]#AI Converged Infrastructure#[네이비]#Data Pipelines, Data Lakes and Management#[네이비]#사용 사례# 중 하나로 하위 분류되어 있습니다</block>
-  <block id="f5f0336c80fe8cdd5a51752c1ce61ac3" category="cell">데이터 분석 솔루션의 수집(예 Splunk SmartStore, Apache Spark 등)</block>
-  <block id="e6d792539f0b0370e43d76a3e05a211a" category="cell">가상화 핵심 솔루션의 모음입니다. 솔루션은 [해군]#VMware Virtualization#[네이비]#데모 및 자습서#의 범주 중 하나로 하위 분류되어 있습니다</block>
-  <block id="b3f656e5589b8507fed35a5cde55c7ce" category="cell">최종 사용자 컴퓨팅 솔루션의 모음입니다. 솔루션은 [해군]#VDS(Virtual Desktop Service)#[네이비]#VMware Horizon#[네이비]#Citrix Virtual Apps and Desktops#[네이비]#Virtual Desktop Applications# 중 하나로 하위 분류되어 있습니다</block>
-  <block id="f4d9ebd0d9f8b0ed1329093e48c11221" category="cell">컨테이너 기반 솔루션의 모음입니다. 솔루션은 [해군]#Red Hat OpenShift#[해군]#Google Anthos# 중 하나로 하위 분류되어 있습니다</block>
-  <block id="861a3cbb41e90c0f7d83b50b7522b0bd" category="cell">비즈니스 애플리케이션</block>
-  <block id="c343bf84179077b4550742e0222d3349" category="cell">비즈니스 애플리케이션 솔루션의 모음입니다. 솔루션은 [해군]#SAP# 중 하나로 하위 분류되어 있습니다</block>
-  <block id="8a0b9e6043677d9587a3e02ced9a6dfd" category="cell">데이터베이스 솔루션 모음입니다. 솔루션은 [해군]#SAP HANA#[네이비]#Oracle#[네이비]#Microsoft SQL Server# 중 하나로 하위 분류되어 있습니다</block>
-  <block id="f8aacfa5c683858912c498f517c9b457" category="cell">데이터 액세스</block>
-  <block id="c14336a2319ce73616b0fa898a883fe0" category="cell">데이터 액세스 솔루션의 모음입니다. 솔루션은 [해군]#데이터 마이그레이션#[네이비]#데이터 보호#[네이비]#보안# 중 하나로 하위 분류되어 있습니다</block>
   <block id="d83d094e8e3ce7450bf099061814d148" category="cell">Red Hat Ansible을 사용한 솔루션 자동화 시작 개요</block>
   <block id="6174d88cc7c0409df3e035a5c9d089cb" category="section-title">Change Log(로그 변경)</block>
   <block id="a0067ab2420cbaebc335efc5c2433c45" category="inline-link-macro">변경 로그</block>
@@ -6810,7 +6662,6 @@
   <block id="7fd167e59284838d9e36c5c99e4d2943" category="paragraph"><block ref="7fd167e59284838d9e36c5c99e4d2943" category="inline-link-macro-rx"></block></block>
   <block id="d82dd9b3245382b365106db0568113e8" category="summary">NetApp 솔루션 자동화를 통해 고객은 수많은 일반 인프라 및 애플리케이션 작업의 구축, 구성, 실행을 자동화할 수 있습니다.</block>
   <block id="a123daaac5749e4d0965aca160f0adfd" category="doc">NetApp 솔루션 자동화</block>
-  <block id="8c4271e6faf2cea4cfc8e5b7108d8ee9" category="section-title">절차를 참조하십시오</block>
   <block id="d9a06854085afcd104157eb7f0b66c3a" category="summary">NetApp 솔루션 자동화는 구성 및 관리를 위해 RedHat Ansible을 활용합니다.</block>
   <block id="d1029167179320d8b6d70b11c3d01bd3" category="list-text">Ansible 제어 노드 요구사항:</block>
   <block id="9ced761647f5d80fe615526ffff63937" category="list-text">다음 패키지가 설치된 Ubuntu/Debian 시스템:</block>
@@ -6856,11 +6707,6 @@
   <block id="7eaf289636bc8d4f8b29b333a0f32dc2" category="inline-link-macro">Ubuntu/Debian</block>
   <block id="e10dea45c0463fb061f253f8deef6de6" category="paragraph">Ansible을 설치하려는 OS 유형에 따라 다음 링크 중 하나를 클릭하여 제어 노드를 설정하는 자세한 단계를 확인하십시오. <block ref="7dc121073254da4302fc5dcbe0722747" category="inline-link-macro-rx"></block>. <block ref="965292dac53abeffbcc140f60ed9445a" category="inline-link-macro-rx"></block>. <block ref="9c83d13c300fc83e32dbf47b4d277c36" category="inline-link-macro-rx"></block></block>
   <block id="90305bb6fba97091f683e8b82f9bf805" category="summary">NetApp 솔루션 자동화를 통해 고객은 많은 일반 인프라 및 애플리케이션 작업의 구축, 구성 및 실행을 자동화할 수 있습니다.</block>
-  <block id="544c3a861d86ce6658187399d91aaa44" category="paragraph">솔루션 검증 및 설계 목표 중 하나는 솔루션을 쉽게 사용할 수 있도록 만드는 것입니다. 따라서 NetApp 솔루션을 통해 제공되는 인프라 및/또는 애플리케이션의 구축과 구성을 자동화를 통해 간소화하는 것이 무엇보다 중요합니다. NetApp은 RedHat Ansible을 사용하여 자동화를 통해 솔루션 소비를 단순화하기 위해 노력하고 있습니다.</block>
-  <block id="9043d5bb11e7b216a7308f7a9761d9fd" category="paragraph">Ansible은 IT 팀이 애플리케이션 구축, 클라우드 프로비저닝, 구성 관리 및 기타 IT 요구사항을 자동화할 수 있도록 지원하는 오픈 소스 자동화 엔진입니다. Ansible은 에이전트가 없기 때문에 맞춤형 보안 인프라가 필요하지 않습니다. SSH를 통해 제어 시스템에서 원격으로 여러 시스템의 자동화를 관리할 수 있으므로 IT 팀은 지루하고 반복적인 IT 요구 사항을 자동화하고자 하는 강력한 솔루션을 구축할 수 있습니다.</block>
-  <block id="8d9887ce2700536b12e7847e2163026e" category="paragraph">NetApp 솔루션 자동화를 처음 사용하는 경우 다음 섹션을 사용하여 Ansible 컨트롤러를 설정할 수 있습니다.</block>
-  <block id="6061668c9cb1cddb071099d0e9da5444" category="paragraph">RedHat Ansible에 대한 자세한 내용은 설명서를 참조하십시오<block ref="228582a93333b3e21d695cbcfe7060d2" category="inline-link-rx"></block>.</block>
-  <block id="4d3d20acde2dac77a5502c201323aa01" category="doc">NetApp 솔루션 자동화</block>
   <block id="2aa17d37bd2483f97468ab7653396786" category="paragraph">이 섹션에서는 NetApp 자동화 솔루션을 사용하는 환경을 준비하기 위해 AWX/Ansible 타워에서 매개 변수를 구성하는 데 필요한 단계를 설명합니다.</block>
   <block id="0fb1db9928d7fc107d96c13f1918b639" category="list-text">Resources(리소스) → Inventory(인벤토리) → Add(추가) 로 이동하여 Add Inventory(재고 추가) 를 클릭합니다.</block>
   <block id="2623b8eb8fcaecc009c3b78cc6e7d391" category="list-text">이름 및 조직 세부 정보를 입력하고 저장 을 클릭합니다.</block>
@@ -7288,51 +7134,15 @@
   <block id="d64755ae2a4094876fbaf88a161ddec2" category="paragraph"><block ref="d64755ae2a4094876fbaf88a161ddec2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ab628831ed501803e9da2a64f12dd6e" category="inline-link-macro">다음: 관리 포털</block>
   <block id="20fcc4e371ed448b0d5ffee3f4aecb43" category="paragraph"><block ref="20fcc4e371ed448b0d5ffee3f4aecb43" category="inline-link-macro-rx"></block></block>
-  <block id="373f503ebd19225995680383c6e2d54a" category="summary">비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션 기능을 설명하는 블로그 시리즈</block>
-  <block id="e4f724bc105592da045b6dd008770bbf" category="doc">비즈니스 애플리케이션 및 엔터프라이즈 데이터베이스 블로그</block>
-  <block id="034233dab82dddd28f950b8d4198499e" category="paragraph">비즈니스 응용 프로그램 및 엔터프라이즈 데이터베이스 솔루션의 특정 기능을 강조하는 블로그의 개요</block>
-  <block id="8e90e89b52f60feebe2c0df72ca0f424" category="section-title">비즈니스 애플리케이션 블로그</block>
-  <block id="9149421bcec7ca7e29560cd7fc83c4d0" category="section-title">엔터프라이즈 데이터베이스 블로그</block>
   <block id="c4ff33edf6e94fb434fb59e4ad2c286b" category="inline-link-macro">SnapCenter 기반의 하이브리드 클라우드 데이터베이스 솔루션</block>
-  <block id="dcf8c21fbb1d22c97f20ace5649e8918" category="list-text"><block ref="dcf8c21fbb1d22c97f20ace5649e8918" category="inline-link-macro-rx"></block></block>
   <block id="fc25c016a8fb35a621842044a8d4f2e7" category="inline-link-macro">하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다</block>
-  <block id="59a4cf9e5720080358e0622f3c948571" category="list-text"><block ref="59a4cf9e5720080358e0622f3c948571" category="inline-link-macro-rx"></block></block>
-  <block id="ec9f29e2bd26bf4a641b2964f3e3cf52" category="summary">NetApp 솔루션의 자동화 기능을 설명하는 블로그 시리즈</block>
-  <block id="6d64ee49cfa68e79b6fc189f1f83eef9" category="doc">솔루션 자동화 블로그</block>
-  <block id="6380d01fb740985eb6892589e7579224" category="paragraph">NetApp 솔루션의 특정 자동화 기능을 강조하는 블로그 개요</block>
-  <block id="b4a5303e0fac342c604f2250a077e3be" category="summary">AI 및 최신 데이터 분석 솔루션 자료에 최신 내용이 추가되었습니다</block>
-  <block id="3d94edd87fc615dfe301c7233c56c6c3" category="doc">AI 및 최신 데이터 분석의 새로운 기능</block>
-  <block id="6c359c33f91503466661c814919afe18" category="paragraph">최신 AI 및 최신 데이터 분석 솔루션 및 솔루션 자료 개요</block>
-  <block id="b16e2e1566ba0fc14f6e0eb77d99cf93" category="cell">* NVIDIA DGX A100 Systems * 의 NetApp ONTAP AI</block>
   <block id="e7f098b026755d10f2c3f16d0ff0b1db" category="inline-link-macro">설계 가이드</block>
   <block id="1027b152cc3e8165ce099ede9548be95" category="cell"><block ref="1027b152cc3e8165ce099ede9548be95" category="inline-link-macro-rx"></block></block>
   <block id="dfb1e9c5f4c5835e6e1a4173130a49c9" category="inline-link-macro">구축 가이드</block>
   <block id="983044e3ba861493c43c08b9285c3125" category="cell"><block ref="983044e3ba861493c43c08b9285c3125" category="inline-link-macro-rx"></block></block>
-  <block id="70163cee23a15a309e4f1ec48b6928a8" category="cell">* NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치 * 가 포함된 NetApp ONTAP AI</block>
   <block id="d91f70a15d40fe5795af6ded9555e095" category="cell"><block ref="d91f70a15d40fe5795af6ded9555e095" category="inline-link-macro-rx"></block></block>
   <block id="8e9465b5d4318c8ef9039dfe684619d5" category="cell"><block ref="8e9465b5d4318c8ef9039dfe684619d5" category="inline-link-macro-rx"></block></block>
-  <block id="0c70e09b2805fac4fb509aee9132fa97" category="cell">* NetApp DataOps 툴킷 *</block>
-  <block id="9004ee13f10e4aa331cdbb0e05878d3f" category="inline-link-macro">GitHub에서 툴킷에 액세스하십시오</block>
-  <block id="604c2d197444e12a03e7c1ba2830e768" category="cell"><block ref="604c2d197444e12a03e7c1ba2830e768" category="inline-link-macro-rx"></block></block>
-  <block id="4810ca62a9687605d0a9c7471e75ec69" category="cell">* 데이터 분석 솔루션 개요 *</block>
-  <block id="7cc3c71ee2fdbff1fd2efbfcded89f90" category="inline-link-macro">서로 다른 분석 전략을 위한 다양한 솔루션</block>
-  <block id="478906eb475a111b93606dc484113cdc" category="cell"><block ref="478906eb475a111b93606dc484113cdc" category="inline-link-macro-rx"></block></block>
-  <block id="0f984f9309c692c61a7fc7cc418f3aaf" category="summary">BData Protection and Security 솔루션 자료에 최신 내용이 추가되었습니다</block>
-  <block id="d035e5417fa83f8b48e9410b914d70ed" category="doc">데이터 보호 및 보안 솔루션의 새로운 기능</block>
-  <block id="d6aa2099009bf5a43f1d5210308a91de" category="paragraph">최신 데이터 보호 및 보안 솔루션 및 솔루션 자료 개요</block>
-  <block id="1e1fe2d30ed5bb9c5276dddb65f4ce65" category="cell">* 보안 *</block>
-  <block id="44516140f9860119a65bb3fc45b9ff39" category="inline-link-macro">PCI-DSS용 NetApp HCI 검증 아키텍처</block>
-  <block id="5b03dcf0205060a9490f1d572aee619e" category="cell"><block ref="5b03dcf0205060a9490f1d572aee619e" category="inline-link-macro-rx"></block></block>
-  <block id="e59c383143e849c3183725256fd9a923" category="summary">하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
-  <block id="abcf24668eda72956736ac7e0d4363b2" category="doc">하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 비디오 및 데모</block>
-  <block id="45ab5f50e70c77a29d7191bf77c1ea15" category="paragraph">하이브리드 클라우드, 데스크톱 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.</block>
-  <block id="e96910160219339e97abaf85c4323aaa" category="section-title">NetApp 및 VMware Tanzu 비디오 시리즈</block>
   <block id="c232cfc0ae9806d3ad6d34a51df58229" category="section-title">NetApp의 Red Hat OpenShift</block>
-  <block id="796fae61e057ed3cc6ad68fe313088d7" category="inline-link-macro">비디오: Astra Control을 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift</block>
-  <block id="8893b40d0413bdee0d28539b7201b89c" category="summary">AI 및 최신 데이터 분석 솔루션 기능에 대해 설명하는 비디오 및 데모 시리즈</block>
-  <block id="d14e8dc770c2ede214d6db5eeb5d5167" category="doc">AI 및 최신 데이터 분석 비디오 및 데모</block>
-  <block id="4696a661acac2c10910848bfebf30d2d" category="paragraph">AI 및 최신 데이터 분석 솔루션의 특정 기능을 소개하는 비디오 및 데모를 소개합니다.</block>
-  <block id="bd86b07883a3c2983a874d3a11359cde" category="section-title">YouTube의 데모/비디오</block>
   <block id="145706f4acca44c289ff5ca8cc5b2b86" category="inline-link-macro">NetApp AI 솔루션</block>
   <block id="f4016f882c8544b575d00a8cb6a17809" category="list-text"><block ref="f4016f882c8544b575d00a8cb6a17809" category="inline-link-macro-rx"></block></block>
   <block id="895a85fc0a1a565ac547acc1bc9740f3" category="inline-link-macro">MLOps를 참조하십시오</block>
@@ -9194,8 +9004,6 @@
   <block id="e621a272d292cd32516db52fc07b5855" category="inline-link-macro">다음: ConfFluent 자체 재조정 클러스터.</block>
   <block id="56b9b2115a3169192950ec86c26f6add" category="paragraph"><block ref="56b9b2115a3169192950ec86c26f6add" category="inline-link-macro-rx"></block></block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="sidebar">시작하기</block>
-  <block id="d1c8b02a1da8ed066c640468ff055a12" category="sidebar">EHC 개요</block>
-  <block id="a4dc228188fdd73342ee66658a9afdff" category="sidebar">하이퍼스케일러 클라우드의 NetApp</block>
   <block id="624e816c7f229d54827ad7bc018eb8da" category="sidebar">지원되는 스토리지 옵션</block>
   <block id="40d267fad784266cb59c36d76573e7c6" category="sidebar">AWS 기반 NetApp(VMC)</block>
   <block id="e7060d0555f178d672a4197df38e1d39" category="sidebar">가상화 환경을 구성합니다</block>
@@ -9225,15 +9033,9 @@
   <block id="6f4bb0fa6fee4cf4ae1b8b1fc16e17cb" category="sidebar">레거시 NetApp HCI 솔루션</block>
   <block id="3523ec156cfc8217bb64d1273e5663fa" category="sidebar">NetApp 솔루션 정보</block>
   <block id="d648f2a68a54fd1b3329efc3cf24d29c" category="sidebar">법적 고지</block>
-  <block id="e799e148c709b216080d260919cc9b9f" category="sidebar">AI 최신 데이터 분석</block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">새로운 기능</block>
   <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">비디오 및 데모</block>
-  <block id="4fdba571bc9e0ee81ec6ad364abe8141" category="sidebar">엔터프라이즈 하이브리드 클라우드(EHC)</block>
   <block id="e673b6ab6c5649a4df8e874aaa9017b9" category="sidebar">지원되는 구성</block>
-  <block id="bee43f00a445d11a7c2f9ef81ad0c045" category="sidebar">하이퍼스케일러 클라우드의 VMware Cloud</block>
-  <block id="e281a59ee9a608bff3a3a795963fa1b4" category="sidebar">하이퍼스케일러 지정 콘텐츠</block>
-  <block id="70321856a2bf47570f50f25e43e23bdf" category="sidebar">가상화, 데스크톱 가상화 컨테이너</block>
-  <block id="25a72d771c3846ba4da8732220f7a588" category="sidebar">엔터프라이즈 애플리케이션 데이터베이스</block>
   <block id="0333ddced253ee1c6929eda5612dea92" category="sidebar">자동화 요청</block>
   <block id="bdca592f24222e5064192bb9e2f9af6e" category="sidebar">FlexPod - NetApp Cisco 솔루션</block>
   <block id="0da8a1ebf94a3a1e650dbfbd01c69dd9" category="sidebar">FlexPod 솔루션 기술 콘텐츠</block>
@@ -9279,8 +9081,6 @@
   <block id="6efd886c994d37b6577e22359be2310e" category="sidebar">NetApp E-Series 및 BeeGFS를 통해 AI 배포</block>
   <block id="3863e8a73e226ce0c0a6ad02b90ee75b" category="sidebar">NetApp E-Series 시스템을 사용한 Quantum StorNext 설계 가이드 를 참조하십시오</block>
   <block id="7891972f4586e6ee183ea541991ebe9f" category="sidebar">NetApp E-Series 시스템을 사용하는 Quantum StorNext 구축 가이드 를 참조하십시오</block>
-  <block id="6ff1dafebf930a9c5fef12bf43046987" category="sidebar">엔터프라이즈 애플리케이션 및 데이터베이스</block>
-  <block id="e340bc103d02ce2b8e016eb60705029c" category="sidebar">SAP 및 SAP HANA</block>
   <block id="54d2cdd3035ca1cdff5803c30f2ed2e1" category="sidebar">Oracle Database 구축</block>
   <block id="c880b35e02dbb5854452c86028138e2a" category="sidebar">NetApp ONTAP에 Oracle 데이터베이스 구축</block>
   <block id="699700175d80778f1738d906ee9540d5" category="sidebar">시작하기 및 요구 사항</block>
@@ -9303,10 +9103,6 @@
   <block id="2190ab0d2f6281b2f3a73e0fc8e1f560" category="sidebar">요약 및 결론</block>
   <block id="75fcfea0185575f935a7f5f149efd8ca" category="sidebar">VMware 하이브리드 클라우드 사용 사례</block>
   <block id="e251010eb0cac5793d760ab2e5f51473" category="sidebar">사용 사례 개요</block>
-  <block id="c2080fddb65ca5c27930e1b56e9001b9" category="sidebar">하이퍼스케일러 클라우드의 NetApp</block>
-  <block id="c894f2bd2f75b76c40354457f85448dd" category="sidebar">AWS 기반 VMC를 위한 NetApp</block>
-  <block id="7af96168c530ff4f25450ef6ed33bd95" category="sidebar">Azure에서 AVS를 위한 NetApp</block>
-  <block id="3c4ca3bb6cded64b5f69a6e81c8b6a65" category="sidebar">Google Cloud 기반 GCVE를 위한 NetApp</block>
   <block id="5d7b876a73a9025080fbf6dd921d1fdd" category="sidebar">데이터 마이그레이션 및 데이터 보호</block>
   <block id="68dfe5056c735db544868f482f9f1d6f" category="sidebar">NetApp XCP의 모범 사례 지침</block>
   <block id="c5071cdf8081474104ef1eee5ec6d784" category="sidebar">소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션</block>
@@ -9387,13 +9183,6 @@
   <block id="7c962be0dc8fdf28c1c4279fe5256a22" category="section-title">NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치가 포함된 NetApp ONTAP AI</block>
   <block id="78463a384a5aa4fad5fa73e2f506ecfc" category="inline-link-macro">영어</block>
   <block id="37ce0afb395b0346118a74c4f05f20a7" category="list-text"><block ref="3b277c3e8740f32e48fe9dd888ed34aa" category="inline-link-macro-rx"></block>&amp;f:@facet_soultion_mktg=[AI, 분석, 인공 지능]++[NetApp.com AI 블로그]</block>
-  <block id="706e736fcad235c710eab30a42b219b1" category="cell">NVIDIA DGX A100 Systems 및 BeeGFS * 가 포함된 EF-Series AI</block>
-  <block id="ec690c5998518cfa45b178a530da4125" category="cell">Edge-NetApp에서 Lenovo ThinkSystem * 으로 추론을 *</block>
-  <block id="b1d14722f1d9c668c677c2c7f22cfcc6" category="cell"><block ref="b1d14722f1d9c668c677c2c7f22cfcc6" category="inline-link-macro-rx"></block></block>
-  <block id="aa84da6cfda7179db9bbd5f34addb637" category="cell">* NetApp AI를 통한 감정 분석 *</block>
-  <block id="7a25f90f4eb7f4d051b5e2903cea9546" category="cell"><block ref="7a25f90f4eb7f4d051b5e2903cea9546" category="inline-link-macro-rx"></block></block>
-  <block id="f48991e4773d2a30dd01c029e22e3f32" category="cell">* 클릭 비율 예측 - Azure * 에서 분산된 교육</block>
-  <block id="2b48b8a77ebec6ee8be0f1146585b7c3" category="cell"><block ref="2b48b8a77ebec6ee8be0f1146585b7c3" category="inline-link-macro-rx"></block></block>
   <block id="191ea533aa1478d35c965840430fbfe6" category="summary">NetApp의 최신 데이터 분석 솔루션은 AI 부문에서 NetApp 스토리지의 기능을 입증하는 일련의 전략적 기술 역량을 갖추고 있습니다.</block>
   <block id="3f7d09efe0b4d4a65add41ac272194fd" category="doc">NetApp의 최신 데이터 분석 솔루션</block>
   <block id="22169240c9a4c0ab61a4ed13c981c5ef" category="sidebar">AI 워크로드를 위한 통합 인프라</block>
@@ -9431,23 +9220,9 @@
   <block id="8598954d073301b356199d49f5c02a69" category="sidebar">블로그:Apache Spark는 NetApp 데이터 분석 운동장에서 실행됩니다</block>
   <block id="c254d48fc85fff80674335af647fc2d3" category="sidebar">NetApp TV: 빅데이터 분석 재생 목록</block>
   <block id="0a2866cc3e2ba203c7e2e3ebeca395be" category="sidebar">UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS</block>
-  <block id="e858f513baeeed4d0c8f4edb6b0a7ce8" category="doc">Azure/AVS용 NetApp 엔터프라이즈 하이브리드 클라우드 솔루션</block>
-  <block id="63e6365ca9ee8eced75eccdd9a133b69" category="doc">GCP/GCVE를 위한 NetApp Enterprise Hybrid Cloud Solutions</block>
-  <block id="59eb8568bc4ce9e9a49ab2dd5bb08af1" category="doc">AWS/VMC를 위한 NetApp 엔터프라이즈 하이브리드 클라우드 솔루션</block>
-  <block id="13dcdfd7bce3161be8066f52b4d2247a" category="cell"><block ref="13dcdfd7bce3161be8066f52b4d2247a" category="inline-link-macro-rx"></block></block>
-  <block id="7e2e877818cdb57ef3a43f99102f9d38" category="cell"><block ref="7e2e877818cdb57ef3a43f99102f9d38" category="inline-link-macro-rx"></block></block>
-  <block id="5909792f4a0287d5b5f88ee6f430a28f" category="cell"><block ref="5909792f4a0287d5b5f88ee6f430a28f" category="inline-link-macro-rx"></block></block>
-  <block id="99643699503906f6a149e103359b31d5" category="cell"><block ref="d35550b71de9d445d0f21340762112d5" category="inline-link-macro-rx"></block>
-<block ref="457b0b4c4f040ecdb73aa5b03853579f" category="inline-link-macro-rx"></block></block>
-  <block id="7b1ff975fb6d48c12181b30da20dfab0" category="cell"><block ref="3c73250bfc490d47ce28b6cf808148ac" category="inline-link-macro-rx"></block>
-<block ref="0f2c04766507e4de89a1d44cbd408339" category="inline-link-macro-rx"></block></block>
-  <block id="2a32702602a143372d93bf2d2f395a36" category="cell"><block ref="14800306dfb8ba898026bf23b6a9cfc5" category="inline-link-macro-rx"></block>
-<block ref="ef1833f411035de243ce008622899fb9" category="inline-link-macro-rx"></block></block>
   <block id="4e36e97d23b00520e4b573859ee4cb26" category="list-text"><block ref="4e36e97d23b00520e4b573859ee4cb26" category="inline-link-macro-rx"></block></block>
   <block id="ccc4b678df8ad6453b7f71661f118ae1" category="inline-link"><block ref="ccc4b678df8ad6453b7f71661f118ae1" category="inline-link-rx"></block></block>
   <block id="b17e2a7e5f42c90b40de5971850339ae" category="list-text">TR-4597: ONTAP용 VMware vSphere<block ref="5938ff9651f6c5e53544676ba8504afc" category="inline-link-rx"></block></block>
-  <block id="c39148c472a0504dc9c52734b79f5125" category="sidebar">게스트 연결 스토리지가 있는 솔루션</block>
-  <block id="511ff82335a683184e92371d0c9fe853" category="sidebar">기본 데이터 저장소가 있는 솔루션</block>
   <block id="ae1992b408fce873deb0f11eb017ea19" category="summary">이 검증에서 4대의 서버를 NSD(Network Shared Disk) 서버로 사용하여 GPFS에 물리적 디스크를 제공했습니다. GPFS는 NSD 디스크 위에 생성되어 NFS 내보내기로 내보내므로 NFS 클라이언트가 아래 그림과 같이 액세스할 수 있습니다. XCP를 사용하여 GPFS로 내보낸 NFS의 데이터를 NetApp NFS 볼륨으로 복사했습니다.</block>
   <block id="bc64aad447f072e96947f5d02f7e8134" category="doc">GPFS를 NetApp ONTAP NFS로</block>
   <block id="823313a32a4a1131e0469fac26acbdac" category="inline-link-macro">이전: AI용 Data Mover 솔루션</block>
@@ -9774,7 +9549,6 @@
   <block id="77697d49d0c6b79e2642435a36c8c1e0" category="cell"><block ref="77697d49d0c6b79e2642435a36c8c1e0" category="inline-link-macro-rx"></block></block>
   <block id="60f031c992a9c99aa5413bddb0ecc644" category="cell"><block ref="60f031c992a9c99aa5413bddb0ecc644" category="inline-link-macro-rx"></block></block>
   <block id="13a82ffd84cedcd28833f58d716b4c3c" category="cell"><block ref="13a82ffd84cedcd28833f58d716b4c3c" category="inline-link-macro-rx"></block></block>
-  <block id="6721f3769bff6250dbce3a06c2ae10ac" category="list-text"><block ref="6721f3769bff6250dbce3a06c2ae10ac" category="inline-link-macro-rx"></block></block>
   <block id="74d542ee52cd8400c9b9307ed9a99c12" category="list-text">Astra DevOps 사용 사례:</block>
   <block id="3da7df001d5e1f907d2527f52c6ccc00" category="inline-link-macro">NetApp Astra Control을 통해 Kubernetes CI/CD 파이프라인에 보호를 쉽게 통합합니다</block>
   <block id="3f1cbb7eb907b7cb7f46877360d4a588" category="list-text"><block ref="3f1cbb7eb907b7cb7f46877360d4a588" category="inline-link-macro-rx"></block></block>
@@ -9791,49 +9565,12 @@
   <block id="a0eaa75e3e2b8c6220db02697d4acf1f" category="cell"><block ref="a0eaa75e3e2b8c6220db02697d4acf1f" category="inline-link-macro-rx"></block></block>
   <block id="d5ca81c242aff843ea151d778578cbfc" category="admonition">레지스트리에 신뢰할 수 없는 인증서를 사용하는 경우 셸 스크립트를 편집하고 podman 푸시 명령 "podman push $registry/$(echo$astraImage|SED's/^\////')--tls-verify=false"를 사용하십시오.</block>
   <block id="ec72a928f8eedfaa788b44b6935b50fe" category="doc">NetApp과 Red Hat OpenShift의 Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발 속도 향상</block>
-  <block id="335ef14df727dc9707e14629b77fcf30" category="doc">NetApp 스토리지를 위한 AWS 지원</block>
-  <block id="70b9c790cc4671aad4f8d8322d13161b" category="list-text"><block ref="70b9c790cc4671aad4f8d8322d13161b" category="inline-link-macro-rx"></block></block>
-  <block id="2b1b2978337fa95de5057d99307c01aa" category="list-text"><block ref="2b1b2978337fa95de5057d99307c01aa" category="inline-link-macro-rx"></block></block>
-  <block id="6a8abef867f53cd024908ab859c46238" category="list-text"><block ref="6a8abef867f53cd024908ab859c46238" category="inline-link-macro-rx"></block></block>
-  <block id="5fd057c554dfaf16f0d97e4defdb81fd" category="list-text"><block ref="5fd057c554dfaf16f0d97e4defdb81fd" category="inline-link-macro-rx"></block></block>
-  <block id="48a9e19e56cfc47077d0352f9d0f2693" category="section-title">NetApp 스토리지를 위한 Azure 지원</block>
-  <block id="79fab3fcc59adc540e33fa185069b7ce" category="list-text"><block ref="79fab3fcc59adc540e33fa185069b7ce" category="inline-link-macro-rx"></block></block>
-  <block id="85a5820e8da21c627876736be5d694b8" category="list-text"><block ref="85a5820e8da21c627876736be5d694b8" category="inline-link-macro-rx"></block></block>
-  <block id="de049193fe94b917d3e89452cdfee78d" category="list-text"><block ref="de049193fe94b917d3e89452cdfee78d" category="inline-link-macro-rx"></block></block>
-  <block id="5f68200d68deb8399b86dd57533f10a4" category="list-text"><block ref="5f68200d68deb8399b86dd57533f10a4" category="inline-link-macro-rx"></block></block>
-  <block id="5b7d2a7cd86311f868ed2f3d495a8f0f" category="section-title">NetApp 스토리지에 대한 GCP 지원</block>
-  <block id="3aa200e6ed258b413d3edac26b75184a" category="list-text"><block ref="3aa200e6ed258b413d3edac26b75184a" category="inline-link-macro-rx"></block></block>
-  <block id="236b2a8169de601ff6b72a6a78e1f572" category="list-text"><block ref="236b2a8169de601ff6b72a6a78e1f572" category="inline-link-macro-rx"></block></block>
-  <block id="b2b70627d90e90b2fcf0b37f68d18d32" category="list-text"><block ref="b2b70627d90e90b2fcf0b37f68d18d32" category="inline-link-macro-rx"></block></block>
-  <block id="74186fb00c70b9871392ea68443adfd5" category="list-text"><block ref="74186fb00c70b9871392ea68443adfd5" category="inline-link-macro-rx"></block></block>
-  <block id="6f1af1c4707c0ddb6d24c463fa4904f1" category="list-text">링크:#config [GCP에서 GCVE 구성</block>
   <block id="b4360d9dcce9e932e3b5b09fdc524745" category="list-text"><block ref="b4360d9dcce9e932e3b5b09fdc524745" category="inline-link-macro-rx"></block></block>
   <block id="fdab91853bf925f2256c6d39ec3f5351" category="section-title">GCP에서 GCVE 구성</block>
-  <block id="74a9966b070c1e73507b6ff0780e3733" category="list-text"><block ref="74a9966b070c1e73507b6ff0780e3733" category="inline-link-macro-rx"></block></block>
-  <block id="337bcf72d1e47b982df4965e1063ef67" category="list-text"><block ref="337bcf72d1e47b982df4965e1063ef67" category="inline-link-macro-rx"></block></block>
-  <block id="09e89069d02379fc56daa781d256d7b6" category="section-title">AWS(VMC)용 가상화 환경 구성</block>
-  <block id="3fb5798a9396698dabb0ac96950db53b" category="list-text"><block ref="3fb5798a9396698dabb0ac96950db53b" category="inline-link-macro-rx"></block></block>
-  <block id="046546ab63b0ca36de368801c6fd8a9e" category="list-text"><block ref="046546ab63b0ca36de368801c6fd8a9e" category="inline-link-macro-rx"></block></block>
-  <block id="5c7b11ed146406e84fe971b132517bcd" category="section-title">Azure용 가상화 환경 구성(AVS)</block>
-  <block id="0027e14144945de23e255b58586424e1" category="list-text"><block ref="0027e14144945de23e255b58586424e1" category="inline-link-macro-rx"></block></block>
-  <block id="c2dd14a3829d81f8d6ccd1a2a41e114b" category="list-text"><block ref="c2dd14a3829d81f8d6ccd1a2a41e114b" category="inline-link-macro-rx"></block></block>
-  <block id="d70f78589c41399658959afc073dfede" category="list-text"><block ref="d70f78589c41399658959afc073dfede" category="inline-link-macro-rx"></block></block>
-  <block id="7ec8289b14700d8be0d8f376eea6b8bf" category="section-title">GCP용 가상화 환경 구성(GCVE)</block>
-  <block id="9f7328009a38e32265481f8305d6aa75" category="list-text"><block ref="9f7328009a38e32265481f8305d6aa75" category="inline-link-macro-rx"></block></block>
-  <block id="5ee479af89822c5af943f78689918520" category="list-text"><block ref="5ee479af89822c5af943f78689918520" category="inline-link-macro-rx"></block></block>
   <block id="9e98cd6f2c1243193cfc50a29bbe3bd4" category="list-text"><block ref="9e98cd6f2c1243193cfc50a29bbe3bd4" category="inline-link-macro-rx"></block></block>
   <block id="553bafb094b811158ae732981f2dbb4e" category="list-text"><block ref="553bafb094b811158ae732981f2dbb4e" category="inline-link-macro-rx"></block></block>
-  <block id="44cf8e167821820f0ebe40745562219b" category="list-text"><block ref="44cf8e167821820f0ebe40745562219b" category="inline-link-macro-rx"></block></block>
-  <block id="27a2d4b0295d93eb20519fcf77df27f3" category="list-text"><block ref="27a2d4b0295d93eb20519fcf77df27f3" category="inline-link-macro-rx"></block></block>
-  <block id="07004cdc228cde7054ba825a728ee189" category="list-text"><block ref="07004cdc228cde7054ba825a728ee189" category="inline-link-macro-rx"></block></block>
   <block id="202373c4c91793dc8fb54647ff8a2241" category="list-text"><block ref="202373c4c91793dc8fb54647ff8a2241" category="inline-link-macro-rx"></block></block>
   <block id="9597c351929448a6eea4162c4f4a80db" category="list-text"><block ref="9597c351929448a6eea4162c4f4a80db" category="inline-link-macro-rx"></block></block>
-  <block id="22aae0cba6d6bb50053c5b84e36b16ad" category="list-text"><block ref="22aae0cba6d6bb50053c5b84e36b16ad" category="inline-link-macro-rx"></block></block>
-  <block id="f0969548cbf8208f26497f680b470705" category="list-text"><block ref="f0969548cbf8208f26497f680b470705" category="inline-link-macro-rx"></block></block>
-  <block id="3b141b6466b12e3acb21b96825ab3d1b" category="section-title">AWS 및 VMC</block>
-  <block id="f83f574b032c714479d3e32efdc3cbe3" category="section-title">Azure 및 AVS</block>
-  <block id="1789862d26aa4adb9f5c2737bbf6a1fc" category="section-title">GCP 및 GCVE</block>
-  <block id="28a7880d69d2603391bd4ae2a4de0d68" category="section-title">GCO 및 GCVE</block>
   <block id="e8318a9e631a084c73ef782e37caec2d" category="list-text"><block ref="e8318a9e631a084c73ef782e37caec2d" category="inline-link-macro-rx"></block></block>
   <block id="169210ceac9b94f0632cd1182961e949" category="open-title">CVO 단일 노드 구축</block>
   <block id="610db6bf34b03f7873afe01d4eec8e58" category="paragraph">이 섹션에는 AWS(Amazon Web Services)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.</block>
@@ -10229,7 +9966,6 @@
   <block id="7dcf4233280fcc0e80d2c5b8ce82af91" category="paragraph">NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다.</block>
   <block id="7dc8c97b0d6d3055290baa0eb36dbfa5" category="paragraph">VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, 복구 및 연결 작업과 VMware vCenter에서 직접 SnapCenter에 등록된 데이터 저장소에 대한 백업 및 마운트 작업을 수행할 수 있습니다.</block>
   <block id="00389b40803806e30e1877e1a0469e22" category="inline-link">VMware vSphere용 NetApp SnapCenter 플러그인 개요</block>
-  <block id="5ce132296185f31c058a15a7058d54cd" category="section-title">NetApp with NetApp SnapCenter 비디오 시리즈</block>
   <block id="47d7646bd1c6577d907ac316431ae609" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 구축</block>
   <block id="05799bad32c5bd80547efe4144fb57af" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건</block>
   <block id="11d13047d237d5bccdd941bafda45d9d" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우</block>
@@ -10249,36 +9985,10 @@
   <block id="3e23a542d0c1cb3dc87ca41f7ec8dc9c" category="doc">VMware vSphere용 NetApp SnapCenter 플러그인 - SQL Server 복원 워크플로우</block>
   <block id="d16efdedacbd64c8b85d50f0b58e4c60" category="inline-link-macro">이전: 추가 정보: VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우.</block>
   <block id="553f0bde4f032f393b8659c8440bae26" category="paragraph"><block ref="553f0bde4f032f393b8659c8440bae26" category="inline-link-macro-rx"></block></block>
-  <block id="fcc6a712ce7f5442bbd2f57648204a46" category="paragraph">NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오<block ref="1485382fd5c3efedbc25ff82295f89e4" category="inline-link-rx"></block>.</block>
-  <block id="ebca3256e23edeee49556abb20fe537e" category="list-text"><block ref="ebca3256e23edeee49556abb20fe537e" category="inline-link-rx"></block></block>
-  <block id="96149d985874eaadc77a44f7b997c9cf" category="list-text"><block ref="96149d985874eaadc77a44f7b997c9cf" category="inline-link-rx"></block></block>
-  <block id="4b71351519775d9a4db9b60f8a094d97" category="list-text"><block ref="4b71351519775d9a4db9b60f8a094d97" category="inline-link-rx"></block></block>
-  <block id="903203728b5609f7a556c985ba0a92ee" category="list-text"><block ref="903203728b5609f7a556c985ba0a92ee" category="inline-link-rx"></block></block>
-  <block id="d75f24c9815f4210904b7e0de1c3bcd0" category="list-text"><block ref="d75f24c9815f4210904b7e0de1c3bcd0" category="inline-link-rx"></block></block>
   <block id="eee0a010c96cd5f8a48024b64979138a" category="inline-link-macro">이전: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우.</block>
   <block id="db5a03b9e1de0d20dc54468940b207eb" category="paragraph"><block ref="db5a03b9e1de0d20dc54468940b207eb" category="inline-link-macro-rx"></block></block>
   <block id="5f01983db70d04ee21145e7d21902fb2" category="inline-link-macro">다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - SQL 복구 워크플로우</block>
   <block id="724a2f2542f99df4a44d9ad7cfb15363" category="paragraph"><block ref="724a2f2542f99df4a44d9ad7cfb15363" category="inline-link-macro-rx"></block></block>
-  <block id="b1d46fa388a75bf4a6fdf6431fd0f88f" category="paragraph">ONTAP 9.8의 VMware 통합 및 지원은 FlexGroup 데이터 저장소 지원을 비롯한 여러 가지 새로운 기능으로 인해 향상됩니다. ONTAP 9.8을 사용하면 FlexGroup 볼륨을 VMware NFS 데이터 저장소로 프로비저닝할 수 있으므로 전체 ONTAP 클러스터의 성능을 제공하는 확장 가능한 단일 데이터 저장소를 통해 데이터 저장소 관리를 간소화할 수 있습니다. 이러한 새로운 기능 중 다수는 VMware vSphere 9.8 릴리즈용 ONTAP 툴과 함께 제공됩니다.</block>
-  <block id="8d22b59ce6a3f5f55852f641fe32f634" category="paragraph">이는 다음과 같은 사항이 적용됨을 의미합니다.</block>
-  <block id="edf6089078ece0618b0cbf28aadbd430" category="list-text">검증된 성능 및 배치</block>
-  <block id="14ac1770aa6a961d17a35b60c5b87280" category="list-text">interop 한정자</block>
-  <block id="3bad7ef0dfae0592627755796b25462b" category="list-text">VAAI 복사 오프로드가 향상되어 작업을 신속하게 수행하고 백그라운드에서 완료합니다</block>
-  <block id="19793deb9a49d2f5172b773dfc0118c5" category="list-text">FlexGroup 프로비저닝, 크기 조정 및 삭제, 개별 VM에 대한 QoS 설정, VM에 대한 성능 메트릭(지연 시간, IOPS, 처리량)을 표시하는 등 가상 스토리지 콘솔이 지원됩니다</block>
-  <block id="662d7a9e954fd7ecea04797658a67fdf" category="list-text">NetApp SnapCenter 기본 스토리지 백업 및 복구 지원</block>
-  <block id="cd6f7ff91fc5499199c6664de0434694" category="list-text">최대 64TB VMFS LUN 지원 NetApp All-SAN 어레이에서 128TB LUN/300TB FlexVol 볼륨을 지원하므로 VMware vSphere 9.8 릴리즈용 ONTAP 툴에서 가상 스토리지 콘솔을 사용하여 최대 64TB VMFS 데이터 저장소를 프로비저닝할 수 있습니다.</block>
-  <block id="92ff10610f02d69d0210f44405b7168f" category="inline-link">SRM(사이트 복구 관리자)</block>
-  <block id="0ce4ec45a946257ae8143d2cc90fcaca" category="list-text">증가<block ref="c9af02025b1bf45281286240e0215380" category="inline-link-rx"></block> 확장: VMware vSphere 9.8 릴리즈용 ONTAP 툴의 스토리지 복제 어댑터는 최대 512개까지 지원되는 데이터 저장소 및 보호 그룹의 크기를 늘립니다.</block>
-  <block id="8e7ea82c671030c62dec6e5646ce0674" category="list-text">REST API를 사용한 VMware vSphere VVOL 파일 메트릭 VVOL 파일 메트릭에 대한 REST API 지원이 ONTAP 9.8에 추가되어 가상 스토리지 콘솔에서 대시보드 및 보고서에 VVOL에 대한 ONTAP 스토리지 성능 메트릭을 표시할 수 있습니다.</block>
-  <block id="410414402089bdca884f44be14088a59" category="inline-link">SRA(Storage Replication Adapter)</block>
-  <block id="63b956da14094cef99ccee71599fdd6d" category="list-text"><block ref="7e358b6730372bc2e637b94492dbbbf6" category="inline-link-rx"></block> SnapMirror Synchronous 지원</block>
-  <block id="6015fcf0a9cd608ed0e3aa71296f41d4" category="inline-link">VMware Tanzu입니다</block>
-  <block id="8196dcbf9586cd0081ca8c94d6eec4ad" category="list-text">에 대한 지원<block ref="d0daefdc677909f35162a0118f978227" category="inline-link-rx"></block> 스토리지</block>
-  <block id="ac66e55267029225d12d67c48e998acc" category="list-text">향상된 SAN VVOL 재조정 명령 및 스토리지 기능 프로필의 개선 기능을 비롯하여 VVOL에 대한 지원 개선 최신 VMware 가상화 지원에 대한 자세한 내용은 다음 리소스를 참조하십시오.</block>
-  <block id="da5bc71c64b621b3b18568cfd93032f4" category="inline-link">Tech OnTap 팟캐스트 에피소드 263: ONTAP에서의 가상화 – 2020년 가을</block>
-  <block id="e4c4075a8c06d40ae4b59e37bb084cef" category="list-text"><block ref="e4c4075a8c06d40ae4b59e37bb084cef" category="inline-link-rx"></block></block>
-  <block id="75f86438e5e6bca3e9341dd22299f5bb" category="inline-link">TR-4597: ONTAP가 설치된 VMware vSphere</block>
-  <block id="ef5bb91ba96e022044cd2c0d3c47544b" category="list-text"><block ref="ef5bb91ba96e022044cd2c0d3c47544b" category="inline-link-rx"></block></block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">방향</block>
   <block id="0c95054981de037de06e544a52eb3613" category="cell">8143</block>
   <block id="a8e6fe5b9e68f30a146cefebaa7edcc3" category="cell">인바운드</block>
@@ -11946,7 +11656,6 @@
   <block id="23cc5b51f575d3c458ac112689f7a2f1" category="cell">성공적인 DC 연결을 위해 암호화가 필요합니다. Cloud Volumes Service에서 기본적으로 비활성화되어 있습니다.</block>
   <block id="595451bb2138edcd7bd73c4e11f8890d" category="inline-link-macro">다음: 이중 프로토콜/멀티프로토콜</block>
   <block id="47b43136bb3740d6abdf3823c798bd7e" category="paragraph"><block ref="47b43136bb3740d6abdf3823c798bd7e" category="inline-link-macro-rx"></block></block>
-  <block id="3c22f403dc730d637a0fd61e97873829" category="sidebar">보안 개요 - Google Cloud의 NetApp Cloud Volumes Service</block>
   <block id="ebd8431a0b14e9588377860f5d21d80b" category="sidebar">아키텍처 개요</block>
   <block id="a20fe2a1eb3b2546487a96f1e639d4f3" category="sidebar">기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)</block>
   <block id="92e704fe041898cac086cd4a192a1815" category="cell">2022년 5월 20일</block>
@@ -11954,4 +11663,247 @@
   <block id="197d6fccbd337f46908b50e1ac3ece5d" category="sidebar">SuperPOD: NetApp 및 NVIDIA 솔루션</block>
   <block id="ed05ff1aa7ef3023c5dc2359de4e2d15" category="sidebar">NetApp 기반 BeeGFS(설계 가이드)</block>
   <block id="b877ddfe299c52df6f7a340fdcaa52eb" category="sidebar">NetApp 기반 BeeGFS(구축 가이드)</block>
+  <block id="e6bec38fe69985a0817e3c0b2b3a0c20" category="cell">* 콘텐츠 랜딩 페이지 *</block>
+  <block id="b1dc18184f115680e9fe3b64295c4678" category="cell">AI 기반 솔루션의 컬렉션 AI 랜딩 페이지는 콘텐츠 관련 "타일"으로 제공되는 인기 콘텐츠를 제공합니다.</block>
+  <block id="e68818392f0eda6e918ccb9e7537e282" category="inline-link-macro">AI 콘텐츠</block>
+  <block id="748eaad82fcc3f281aebd8c5467a4d91" category="cell"><block ref="748eaad82fcc3f281aebd8c5467a4d91" category="inline-link-macro-rx"></block></block>
+  <block id="53840db4921094507c6397fb6ee31d58" category="cell">최신 데이터 분석 솔루션의 컬렉션(예 Splunk SmartStore, Apache Spark 등)를 사용할 수 있습니다. 최신 데이터 분석 랜딩 페이지는 콘텐츠별 "타일"으로 제공되는 인기 있는 콘텐츠를 제공합니다.</block>
+  <block id="1b1956b226e3085af9e004e60ce183b4" category="inline-link-macro">최신 데이터 분석 콘텐츠</block>
+  <block id="16321f09e6ea361ef5515d5939fa73f1" category="cell"><block ref="16321f09e6ea361ef5515d5939fa73f1" category="inline-link-macro-rx"></block></block>
+  <block id="43d63079990be8e5ef1ecb6649af4bcd" category="cell">퍼블릭 클라우드의 VMware와 각 하이퍼스케일러의 NetApp 스토리지 옵션을 포함하여 하이브리드 클라우드 모델에서 NetApp을 정의합니다. EHC 소개 페이지는 콘텐츠별 "타일"에 나와 있는 인기 있는 콘텐츠를 제공합니다.</block>
+  <block id="75669f8f07817aa5ef4a2b24a8f0fea8" category="inline-link-macro">EHC 내용</block>
+  <block id="bbaa94237875b6674ca48f56a0037795" category="cell"><block ref="bbaa94237875b6674ca48f56a0037795" category="inline-link-macro-rx"></block></block>
+  <block id="87867e178542e6ed3cf6ea885807d4f1" category="cell">데스크톱 가상화를 포함한 가상화 핵심 솔루션의 모음입니다. 가상화 소개 페이지는 컨텐츠 관련 "타일"으로 제공되는 인기 컨텐츠를 제공합니다.</block>
+  <block id="5654a75155b39867a9f4372fcc292bab" category="inline-link-macro">가상화 콘텐츠</block>
+  <block id="82e9b7248dcd1a1ae85e7fa485bf1f4b" category="cell"><block ref="82e9b7248dcd1a1ae85e7fa485bf1f4b" category="inline-link-macro-rx"></block></block>
+  <block id="24a8e607718680e8d1dd293b9d736add" category="cell">컨테이너 기반 솔루션의 모음입니다. 가상화 소개 페이지는 컨텐츠 관련 "타일"으로 제공되는 인기 컨텐츠를 제공합니다.</block>
+  <block id="afb6dbef1b44c7f79b8883cae5cc3b30" category="inline-link-macro">컨테이너 콘텐츠</block>
+  <block id="d76e9a2c09fc047c91b6cb4c2f340644" category="cell"><block ref="d76e9a2c09fc047c91b6cb4c2f340644" category="inline-link-macro-rx"></block></block>
+  <block id="0cf49f958731e4b4c23d4b04f0802ba0" category="cell">비즈니스 애플리케이션 및 데이터베이스</block>
+  <block id="73c685140b2461529432f6e9628ef281" category="cell">비즈니스 애플리케이션 및 데이터베이스 솔루션의 모음입니다. SAP 및 SAP HANA 랜딩 페이지 o는 콘텐츠별 "타일"에 나와 있는 인기 있는 콘텐츠를 제공합니다. 이 섹션에서는 Oracle 및 SQL Server 데이터베이스 솔루션에 대해 설명합니다.</block>
+  <block id="ef0bea1a6ce6e68dd3ebae18ea2de71f" category="inline-link-macro">SAP 및 SAP HANA 콘텐츠</block>
+  <block id="589c17157183d6295af608cccff7c8da" category="cell"><block ref="589c17157183d6295af608cccff7c8da" category="inline-link-macro-rx"></block></block>
+  <block id="d7339a230985e723af5d49a6470f4fc8" category="cell">데이터 마이그레이션, 데이터 보호 및 데이터 보안 솔루션의 모음입니다.</block>
+  <block id="d3d4dd76fc599d6c513fa0434537bc08" category="summary">모든 NetApp 솔루션 콘텐츠에 대한 솔루션 기능을 설명하는 블로그 시리즈</block>
+  <block id="4d46b81ad5db47d845e86c95088ff47a" category="doc">NetApp 솔루션: 블로그</block>
+  <block id="a93daa19938c1852de52ce10350307a4" category="paragraph">많은 NetApp 솔루션의 특정 기능을 소개하는 블로그를 소개합니다.</block>
+  <block id="bf20a476dd72893f0f21a3d56a601784" category="open-title">인공 지능</block>
+  <block id="e6c9e9316fee7048645938d93d674056" category="list-text"><block ref="e6c9e9316fee7048645938d93d674056" category="inline-link-macro-rx"></block></block>
+  <block id="3e78754f8bb90f06073e18a2399d0b7f" category="list-text"><block ref="3e78754f8bb90f06073e18a2399d0b7f" category="inline-link-macro-rx"></block></block>
+  <block id="82b010fd4d40369f1139d43f8dd909ba" category="open-title">VMware를 사용한 하이브리드 멀티 클라우드</block>
+  <block id="821c35321bcc709868cdd0b7f31165ee" category="cell">2022-04-01/05</block>
+  <block id="8b55e517e14aa53afa343c32eba6bc12" category="cell">엔터프라이즈 하이브리드 클라우드 솔루션의 체계적인 콘텐츠: 각 하이퍼스케일러의 랜딩 페이지 및 사용 가능한 솔루션(사용 사례) 콘텐츠 포함</block>
+  <block id="b4ea7c36c784b6da08e2b44d82018c65" category="open-title">AWS/VMC</block>
+  <block id="b9b37266c1f6c6a5244f3fef48f644e1" category="list-text">VMware Cloud for AWS 구축 및 구성</block>
+  <block id="57669ed11798d25a8216675c3f0f6ecf" category="inline-link-macro">VMC에 대한 구성 단계</block>
+  <block id="fc835ae678d144f168b78fafb98286b2" category="paragraph">자세한 내용을 확인하십시오 <block ref="0bca421d9cd22e10e81bd0c987fad54b" category="inline-link-macro-rx"></block>.</block>
+  <block id="9e88bf7f3ee359d8f536975aa39ab6a5" category="open-title">Azure/AVS</block>
+  <block id="293193a848a4345d095f41ff490fd1a4" category="inline-link-macro">AVS의 구성 단계</block>
+  <block id="e2501a40b45cdc3295c28e82fc2ffa18" category="paragraph">자세한 내용을 확인하십시오 <block ref="29745c898e96ab7473e2b2c19fa34fbf" category="inline-link-macro-rx"></block>.</block>
+  <block id="7e7790ea083a371632d0764a881695f6" category="open-title">GCP/GCVE</block>
+  <block id="e44b11e9adb07a14c72f48599f700cd4" category="inline-link-macro">GCVE에 대한 구성 단계</block>
+  <block id="0969e77be69a346b123e1b2c625e25b0" category="paragraph">자세한 내용을 확인하십시오 <block ref="7ffa56a4f5c5cf9fb86200a4dd2e1a5d" category="inline-link-macro-rx"></block>.</block>
+  <block id="3996fc456f7fb8e9643bad43ea62cd11" category="list-text">FSX ONTAP를 기본 데이터 저장소 ^1^로 사용합니다</block>
+  <block id="52be4c6acc8cca3a598e3a651421de3d" category="inline-link-macro">VMC에 대한 게스트 연결 스토리지 옵션</block>
+  <block id="37f223a23d46bf8585529dd8d08bbcf7" category="paragraph">자세한 내용을 확인하십시오 <block ref="faae832115390401ac20af18b263017a" category="inline-link-macro-rx"></block>.</block>
+  <block id="3af4e413622f71852c903c8c285c17c1" category="paragraph">에 대해 자세히 알아보십시오 <block ref="ad476c4cac730935959743eb28c5ca66" category="inline-link-macro-rx"></block>.</block>
+  <block id="44ce1d8d9c5bbcf0eedde196ae5d5e31" category="list-text">Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1^로 사용</block>
+  <block id="a8e9a5787febc7740af29cd0bebf2e95" category="inline-link-macro">AVS용 게스트 연결 스토리지 옵션</block>
+  <block id="ead358b28ecc307f6e89deb846b9a227" category="paragraph">자세한 내용을 확인하십시오 <block ref="b477b575563628f6202758f8f4d6ef57" category="inline-link-macro-rx"></block>.</block>
+  <block id="875e7e40e7a6b211cb48faf456e54a83" category="paragraph">에 대해 자세히 알아보십시오 <block ref="c054a58e4fcd496e4fa5c1b0c16dfa69" category="inline-link-macro-rx"></block>.</block>
+  <block id="464b588a9c3ed4df78ea220f48faf1bb" category="list-text">CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1^로 사용합니다</block>
+  <block id="2da991b20a7647acbdd67154515723cf" category="inline-link-macro">GCVE에 대한 게스트 연결 저장소 옵션</block>
+  <block id="5d49b0ee57ad4b529c897b49789aa965" category="paragraph">자세한 내용을 확인하십시오 <block ref="39710aaf95ad3f60e444c45fa2d1a561" category="inline-link-macro-rx"></block>.</block>
+  <block id="9a1c3a40aef4ef7a29c07ec6176752dc" category="paragraph">에 대해 자세히 알아보십시오 <block ref="a508a86f372584a11bee8d3d41e3afca" category="inline-link-macro-rx"></block>.</block>
+  <block id="6c41e8ee0d4c73cd0adbd0d885181685" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware의 지원 구성</block>
+  <block id="685435b4b2388bd8f370b8fbb6ef6cc7" category="cell">* 게스트 연결됨 *</block>
+  <block id="8299249ba5f910704b6288ee7e271747" category="cell">* AWS *</block>
+  <block id="eb35b03ceb49f5f06a4570454e08c34c" category="cell">CVO FSx ONTAP<block ref="999b20d9470091fda2e66b2dde5b0af7" category="inline-link-macro-rx"></block></block>
+  <block id="45277e62e958e9bf8bc931edecd437e7" category="inline-link-macro">세부 정보 ^1</block>
+  <block id="bc9fd0ccb4bb380dfa68898a47068750" category="cell">FSX ONTAP<block ref="9cc89337b0f4d367b9afbc83b3861049" category="inline-link-macro-rx"></block></block>
+  <block id="1bdeba09294eb5abc383607bb93ff443" category="cell">* Azure *</block>
+  <block id="06a1c60be3b7274c063385eaa240863f" category="cell">CVO ANF<block ref="f44f46a20eba78aa72ad4f68a0486a31" category="inline-link-macro-rx"></block></block>
+  <block id="fa82d0731ea0dd7f68fabd80ed35d735" category="cell">ANF<block ref="2a1aa534f80ec525a104223ee6483173" category="inline-link-macro-rx"></block></block>
+  <block id="25bdffbd4ab087e994a0e54fe22ff6bd" category="cell">* GCP *</block>
+  <block id="96e48152153beabed038aa4e41f2abf8" category="cell">CVO CVS<block ref="a54d2eac225d57696bf863778373ea0b" category="inline-link-macro-rx"></block></block>
+  <block id="f665ac6b98bc15a4557ff1ed235a09fa" category="cell">CV<block ref="749be360288b143d7aff76573cdd9685" category="inline-link-macro-rx"></block></block>
+  <block id="15ce055d9a059e67d9ddb79a8c441848" category="example-title">기본 데이터 저장소로서의 Azure NetApp Files(ANF)</block>
+  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="example-title">1단계</block>
+  <block id="e31ad1284b7618a9c10777ed99b12e64" category="example-title">2단계</block>
+  <block id="a46eb72d67c0cbcbbdfcde010fbc0b03" category="paragraph">NetApp이 Azure에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
+  <block id="d8732ebfbd98db5a8cd9db59aa5b0637" category="paragraph">VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 정의합니다.</block>
+  <block id="2cb256015e8585083bd2350f010676fb" category="list-text">보호(재해 복구 및 백업/복원 모두 포함)</block>
+  <block id="3bc026b815790a05493fa56fc4b8d8bd" category="list-text">확장</block>
+  <block id="2c0a3f21d3cbc96381e4c2fe29329ec1" category="paragraph">다음 섹션에서 사용 가능한 솔루션을 찾아봅니다.</block>
+  <block id="97740c0c87b83b324e18993ba93f0617" category="open-title">보호</block>
+  <block id="e74fe990166c1a4bb77dde7f12823b5d" category="paragraph">곧 출시 예정!!</block>
+  <block id="3d98cfc43616995ea335b20aa9b10ef2" category="paragraph">Azure는 기본 Azure NetApp Files(ANF) 서비스 또는 CVO(Cloud Volumes ONTAP)를 통해 게스트 연결 NetApp 스토리지를 지원합니다.</block>
+  <block id="8f53b5241aa3284f9058318dcbc2504d" category="section-title">Azure NetApp Files(ANF)</block>
+  <block id="2295dc11d84df2756a1eaac36330b417" category="paragraph">Azure NetApp Files는 Azure에 엔터프라이즈급 데이터 관리 및 스토리지를 제공하므로 워크로드와 애플리케이션을 쉽게 관리할 수 있습니다. 워크로드를 클라우드로 마이그레이션하여 성능 저하 없이 실행할 수 있습니다.</block>
+  <block id="806f1ffa4d2e1d7ee40a30337658a5ef" category="paragraph">Azure NetApp Files가 장애를 제거하므로 모든 파일 기반 애플리케이션을 클라우드로 이동할 수 있습니다. 따라서 애플리케이션을 재설계할 필요가 없으며 애플리케이션용 영구 스토리지를 간편하게 확보할 수 있습니다.</block>
+  <block id="12eb3a27c6c1134f55e12f1349b87a91" category="paragraph">이 서비스는 Microsoft Azure Portal을 통해 제공되므로 사용자는 Microsoft 기업 계약의 일부로 완벽하게 관리되는 서비스를 이용할 수 있습니다. Microsoft에서 관리하는 세계 최고 수준의 지원을 통해 안심하고 사용할 수 있습니다. 단일 솔루션으로 멀티프로토콜 워크로드를 빠르고 쉽게 추가할 수 있습니다. 레거시 환경에서도 Windows 및 Linux 파일 기반 애플리케이션을 모두 구축하여 배포할 수 있습니다.</block>
+  <block id="7afda8c8e445dfa1015ae8245fa8026e" category="section-title">CVO(Cloud Volumes ONTAP)</block>
+  <block id="8560d03d6d9a5398acd72a06a8fddd12" category="paragraph">Cloud Volumes ONTAP, 즉 CVO는 NetApp의 ONTAP 스토리지 소프트웨어를 기반으로 하는 업계 최고의 클라우드 데이터 관리 솔루션으로, AWS(Amazon Web Services), Microsoft Azure 및 GCP(Google Cloud Platform)에서 기본적으로 제공됩니다.</block>
+  <block id="12f2a9cf238d1339eddfc43be9f107e1" category="paragraph">ONTAP의 소프트웨어 정의 버전이며 클라우드 네이티브 스토리지를 사용합니다. 따라서 클라우드와 사내에서 동일한 스토리지 소프트웨어를 사용할 수 있으므로 데이터를 관리하는 새로운 방법을 통해 IT 직원을 재교육할 필요가 없습니다.</block>
+  <block id="62c9becbf4c5643c0df4cbe868b09f0c" category="paragraph">CVO를 사용하면 데이터를 에지에서 데이터 센터, 클라우드로 원활하게 이동하고 다시 가져올 수 있습니다. 또한 단일 창 관리 콘솔인 NetApp Cloud Manager를 사용하여 하이브리드 클라우드를 통합할 수 있습니다.</block>
+  <block id="aafae379e910c7a153b831ce5122f5e8" category="paragraph">설계상 CVO는 최고 성능과 고급 데이터 관리 기능을 제공하여 클라우드에서 가장 까다로운 애플리케이션도 충족합니다</block>
+  <block id="0a9acbcedeb8b79d98c080f7a1b27f90" category="summary">NetApp Hybrid Multi-Cloud with VMware 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다.</block>
+  <block id="9e46ac24e9caed79a586cc94846bc147" category="doc">Azure/AVS용 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="6db49f93b02d752e6b80616d15759056" category="inline-link-macro">NetApp/VMware 클라우드 솔루션</block>
+  <block id="a088d0b353502e225826d0feb3041d57" category="list-text"><block ref="a088d0b353502e225826d0feb3041d57" category="inline-link-macro-rx"></block></block>
+  <block id="9e348c60eb79913385ed14a65efffff6" category="paragraph">자세한 내용을 확인하십시오 <block ref="be78464beb9b2a2b1696a7fe38c0e484" category="inline-link-macro-rx"></block>.</block>
+  <block id="6aaf01ee1fbdbdbf620af74ded86e81d" category="paragraph">자세한 내용을 확인하십시오 <block ref="c21bcdb7b1f85738a3211dff01d327ef" category="inline-link-macro-rx"></block>.</block>
+  <block id="cb9ab2dcef988aa0eaa2da1d789cfdb4" category="section-title">솔루션 사용 사례</block>
+  <block id="c9c270552e6f44a0219e4d2459cb4b90" category="paragraph">NetApp 및 VMware 클라우드 솔루션을 사용하면 많은 사용 사례를 Azure AVS에서 간단하게 구축할 수 있습니다. SE 사례는 VMware에서 정의한 각 클라우드 영역에 대해 정의됩니다.</block>
+  <block id="3fac70d2bc4023bd8c5bb8f7c93b16e8" category="list-text">보호(재해 복구 및 백업/복원 모두 포함)</block>
+  <block id="79e4e4c7346c156a268641272a85c01e" category="inline-link-macro">Azure AVS용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="6626f21cba60531fb6ab33c5b686fd03" category="paragraph"><block ref="6626f21cba60531fb6ab33c5b686fd03" category="inline-link-macro-rx"></block></block>
+  <block id="ef3abc0e33a9bba2f6844fc8bc6416c6" category="section-title">VMware 환경을 위한 NetApp 솔루션</block>
+  <block id="7c56979dc4b16fa4dd69a289608a432d" category="paragraph">NetApp은 하이브리드 클라우드 모델이든 "클라우드 우선" 모델이든 클라우드에서 워크로드를 관리하는 가장 일반적인 사용 사례를 지원하는 다양한 솔루션을 제공합니다.</block>
+  <block id="d3ef2bae3f82fd055da3c71b59653d9e" category="paragraph">또한 NetApp은 게스트(게스트 연결) 스토리지로서 프로비저닝되거나 각 하이퍼스케일러의 네이티브 데이터 저장소로 프로비저닝된 스토리지에 대한 솔루션을 제공합니다. 모든 솔루션은 클라우드 워크로드의 VMware 분류와 함께 분류됩니다. 이러한 분류에는 다음이 포함됩니다.</block>
+  <block id="14b428df74ec47d859b4b41c2a528f79" category="paragraph">각 하이퍼스케일러에서 사용할 수 있는 솔루션에 대한 자세한 내용은 다음을 참조하십시오.</block>
+  <block id="d7d90ddf3d849c680942374007293390" category="inline-link-macro">AWS/VMC용 솔루션</block>
+  <block id="3efe4c396a8490c63650f3271e66c5ab" category="list-text"><block ref="3efe4c396a8490c63650f3271e66c5ab" category="inline-link-macro-rx"></block></block>
+  <block id="902d95c8e7b033260ed791d46b121684" category="inline-link-macro">Azure/AVS용 솔루션</block>
+  <block id="a22d65ac7c37a480dfd6ea3cc467903d" category="list-text"><block ref="a22d65ac7c37a480dfd6ea3cc467903d" category="inline-link-macro-rx"></block></block>
+  <block id="739e02805dc104b2c68811e1ea86f2e5" category="inline-link-macro">GCP/GCVE용 솔루션</block>
+  <block id="72792598cb09eae6cc992790a3677b2d" category="list-text"><block ref="72792598cb09eae6cc992790a3677b2d" category="inline-link-macro-rx"></block></block>
+  <block id="4c27cd4763075e77fef142db7e967384" category="paragraph">NetApp이 AWS에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
+  <block id="6619dc0097706121ef2efa1294da110b" category="example-title">AWS 계정을 등록하십시오</block>
+  <block id="3f01bd52a695afbced7f2a43525ec966" category="example-title">내 VMware 계정을 등록합니다</block>
+  <block id="f52c436d16c8976963f940ce7dfbd3b0" category="paragraph">AWS는 네이티브 FSx 서비스(FSx ONTAP) 또는 Cloud Volumes ONTAP(CVO)를 사용하여 게스트로 연결된 NetApp 스토리지를 지원합니다.</block>
+  <block id="480bc55cb0b0c11472f598d17424afa2" category="section-title">FSX ONTAP</block>
+  <block id="6df37dbe4c736ce113cfd677b79431d8" category="paragraph">NetApp ONTAP용 Amazon FSx는 NetApp의 인기 있는 ONTAP 파일 시스템을 기반으로 구축된 매우 안정적이고 확장 가능하며 고성능 및 다양한 기능을 갖춘 파일 스토리지를 제공하는 완전 관리형 서비스입니다. ONTAP용 FSX는 NetApp 파일 시스템의 친숙한 기능, 성능, 기능 및 API 작업을 완벽하게 관리되는 AWS 서비스의 민첩성, 확장성 및 간편성과 결합합니다.</block>
+  <block id="f1afd8f76dc3ed417abd5daffa1d5a5f" category="paragraph">ONTAP용 FSX는 AWS 또는 사내에서 실행되는 Linux, Windows 및 macOS 컴퓨팅 인스턴스에서 광범위하게 액세스할 수 있는 다양한 기능을 갖춘 빠르고 유연한 공유 파일 스토리지를 제공합니다. ONTAP용 FSX는 밀리초 미만의 지연 시간으로 고성능 SSD(Solid State Drive) 스토리지를 제공합니다. ONTAP용 FSx를 사용하면 SSD 스토리지 비용을 절감하면서 작업 부하에 대한 SSD 수준의 성능을 달성할 수 있습니다. 단, 데이터의 일부만이 가능합니다.</block>
+  <block id="dd29cd696f931f8230a783a5d65ab8c4" category="paragraph">ONTAP용 FSx를 사용하면 버튼 클릭 한 번으로 파일을 스냅샷, 클론 생성 및 복제할 수 있으므로 데이터 관리가 더욱 쉬워집니다. 또한, ONTAP용 FSx는 데이터를 비용이 저렴하고 탄력적인 스토리지에 자동으로 계층화하므로 용량을 할당하거나 관리할 필요가 없습니다.</block>
+  <block id="697c147172074c2927997e2d7c472fc0" category="paragraph">또한 ONTAP용 FSX는 완벽하게 관리되는 백업과 지역 간 재해 복구를 지원하는 고가용성의 내구성 스토리지를 제공합니다. 데이터를 보다 쉽게 보호하고 보안을 유지할 수 있도록 ONTAP용 FSx는 널리 사용되는 데이터 보안 및 바이러스 백신 응용 프로그램을 지원합니다.</block>
+  <block id="461ab3a83d6c51e1cc25f42118f407bd" category="paragraph">자세한 내용을 확인하십시오 <block ref="f56028ac73883785be6a54941a0e4e64" category="inline-link-macro-rx"></block>.</block>
+  <block id="4f51975b36e54a460a05d93e148202d8" category="paragraph">자세한 내용을 확인하십시오 <block ref="cfba6c34c6cd33cf1694f8b48900db44" category="inline-link-macro-rx"></block>.</block>
+  <block id="3721bfebe60fa9888e0ea17bd294772d" category="paragraph">NetApp 및 VMware 클라우드 솔루션을 사용하면 많은 사용 사례를 AWS VMC에 쉽게 구축할 수 있습니다. 활용 사례는 VMware에서 정의한 각 클라우드 영역에 대해 정의됩니다.</block>
+  <block id="7c9a6204c3d04cd593127efe773bc82e" category="inline-link-macro">AWS VMC용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="e9923439d335946afaff146da3d107ff" category="paragraph"><block ref="e9923439d335946afaff146da3d107ff" category="inline-link-macro-rx"></block></block>
+  <block id="8d0d9bd2f38a28e941cd90a63a39eb8a" category="doc">게스트 연결 NetApp 스토리지를 통한 재해 복구를 위한 NetApp 솔루션</block>
+  <block id="61b3e6d83c470bf54334dc956dbc9ee4" category="paragraph">FSxO 및 CVO 모두에서 NetApp을 게스트 연결 스토리지로 사용한 재해 복구용 솔루션을 사용할 수 있습니다.</block>
+  <block id="b17ebc76cfd213d781cccb861a4e924f" category="paragraph">또한 이러한 솔루션은 다양한 NetApp 및 타사 소프트웨어 제품을 사용하여 문서화합니다. 다음 옵션을 사용하여 소프트웨어 제품 및 NetApp 스토리지 옵션을 기반으로 솔루션을 선택할 수 있습니다.</block>
+  <block id="9081abd0659e441b14055b23b31c347d" category="open-title">FSxO용 Veeam</block>
+  <block id="ade19beadb0ae5203b8057b40a752714" category="paragraph">FSxO용 Veeam이 있는 솔루션의 경우 &lt;content's go here's for the solution(s) with FSxO&gt;</block>
+  <block id="4ad99bccac6922d9724bd73794e2b5c4" category="open-title">CVO용 Veeam</block>
+  <block id="4c3dd331b0c803d969d8d48271a8955f" category="paragraph">Veeam for CVO의 솔루션으로 콘텐츠가 제공됩니다</block>
+  <block id="5565aeb39738b6742e801f56fd6878b6" category="open-title">FSxO용 HCX</block>
+  <block id="d6dfff84d77a63fcf19e6f6359ac71c5" category="paragraph">FSxO용 HCX&gt; 솔루션을 위해 &lt;content's go here's) for the solution(s) with FSxO&gt;</block>
+  <block id="711a160cd3b8c4ec32edd7ba5dfd5eca" category="open-title">CVO용 HCX</block>
+  <block id="4956cdf8fd57c365bb7636be6c086ca5" category="paragraph">CVO용 HCX&gt;와 함께 &lt;content's go here for the solution(s) for CVO&gt;</block>
+  <block id="a0e3b13b82c6cc2042ac9e057f0718b3" category="doc">AWS/VMC를 위한 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="7c0dae765c7854235808e7e373346d06" category="paragraph">NetApp이 GCP에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
+  <block id="962dbad648dc58421e7347adf727a05a" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 다양한 기능을 제공합니다.</block>
+  <block id="370e7d693bc429e40244684cac20b0cf" category="list-text"><block ref="370e7d693bc429e40244684cac20b0cf" category="inline-link-macro-rx"></block></block>
+  <block id="80d79003a84a32474624e54935709e67" category="paragraph">자세한 내용을 확인하십시오 <block ref="996ade122099ed78c4d5fea15d95f62c" category="inline-link-macro-rx"></block>.</block>
+  <block id="80b43a415019d937ea5c38446043549a" category="paragraph">자세한 내용을 확인하십시오 <block ref="8e20eef09273fc2519292ca4ed666573" category="inline-link-macro-rx"></block>.</block>
+  <block id="e67def868f3133574b28ffe738ad44c1" category="inline-link-macro">Google Cloud GCVE용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="5e7670e99ae7db80618f16965d677af6" category="paragraph"><block ref="5e7670e99ae7db80618f16965d677af6" category="inline-link-macro-rx"></block></block>
+  <block id="f0f52a47448cc3bc6237a09f83ad3e74" category="example-title">GCVE 배포 및 구성</block>
+  <block id="d3e4750ab9c5f45877b08b537cffe841" category="doc">GCP/GCVE를 위한 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="7973cdedf3e9a37ff146bc9fd29ff017" category="paragraph">GCP는 CVO(Cloud Volumes ONTAP) 또는 CVS(Cloud Volumes Service)를 통해 게스트 연결 NetApp 스토리지를 지원합니다.</block>
+  <block id="622f93ad4ff43627a425523c5e2538ad" category="section-title">CVS(Cloud Volumes Service)</block>
+  <block id="b5a9beef520c0dd1f8e978800f35268e" category="paragraph">CVS(Cloud Volumes Services)는 고급 클라우드 솔루션을 제공하는 완벽한 데이터 서비스 포트폴리오입니다. Cloud Volumes Services는 주요 클라우드 공급자를 위한 여러 파일 액세스 프로토콜(NFS 및 SMB 지원)을 지원합니다.</block>
+  <block id="82c8cb0896f20daa9ddbb9d49332f9b6" category="paragraph">그 밖의 이점 및 기능: Snapshot을 통한 데이터 보호 및 복원, 온프레미스 또는 클라우드의 데이터 대상을 복제, 동기화, 마이그레이션할 수 있는 특별한 기능, 전용 플래시 스토리지 시스템 레벨에서 일관된 고성능 제공</block>
+  <block id="e1281543b82ca0740b9a14ecaccdf005" category="doc">요약 및 결론: NetApp 하이브리드 멀티 클라우드를 VMware와 함께 사용해야 하는 이유</block>
+  <block id="1c2d371e7885541a1df267029c76cfaa" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware 개요</block>
+  <block id="abbe5e723ab5fce5f27612442575a63c" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware의 사용 사례</block>
+  <block id="443f43c84a8efb54c46feb5a61b1a9cc" category="paragraph">이 설명서 전체에서 VMware 활용 사례를 사용하여 클라우드 워크로드 참조를 자세히 설명합니다. 이러한 사용 사례는 다음과 같습니다.</block>
+  <block id="0eb3c79e84e2e7074d851c728663251c" category="doc">NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="0198315ccfb9d5c56e9c865f01bee365" category="paragraph">NetApp 및 VMware 클라우드 솔루션을 사용하면 대부분의 사용 사례를 하이퍼스케일러에서 간편하게 구축할 수 있습니다. VMware는 운영 클라우드 워크로드 사용 사례를 다음과 같이 정의합니다.</block>
+  <block id="e0525641cbca59e199eed50739c0c3b8" category="inline-link-macro">AWS/VMC용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="3a602723648efc3d9a864906b6ec2d9c" category="paragraph"><block ref="3a602723648efc3d9a864906b6ec2d9c" category="inline-link-macro-rx"></block></block>
+  <block id="d18a9fea9b4ca38bf7f042e32420e14e" category="inline-link-macro">Azure/AVS용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="bd6708bcf0c060976324512475c1a212" category="paragraph"><block ref="bd6708bcf0c060976324512475c1a212" category="inline-link-macro-rx"></block></block>
+  <block id="cac969404c87e9e141b320e34ee1ba4b" category="inline-link-macro">Google Cloud Platform (GCP)/GCVE용 NetApp 솔루션을 찾아보십시오</block>
+  <block id="7f86100566a3de37a45dc2bd4ea422a0" category="paragraph"><block ref="7f86100566a3de37a45dc2bd4ea422a0" category="inline-link-macro-rx"></block></block>
+  <block id="fc6a84d7647419d401d691cc6c004cc4" category="paragraph">보조 아이콘: permalink: database/db_protection_awx_automation.html keywords: Linux, RHEL Oracle19c, NFS, ONTAP 요약: 이 페이지에서는 NetApp ONTAP 스토리지 기반 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다. --</block>
+  <block id="c6cf4675ec6aec4e4edf9eac5122e022" category="paragraph">stdin&gt;에서 확인되지 않은 보호 지침 - 포함::::./_iinclude/db_protection_log_replication.adoc [ ]</block>
+  <block id="95adefbc130d345041c4487820a9ab16" category="summary">NetApp 엔터프라이즈 데이터베이스 솔루션은 주요 엔터프라이즈 데이터베이스에서 NetApp 스토리지의 기능을 시연하는 전략적 및 기술 기능 집합입니다.</block>
+  <block id="e890f04973d00c3664a44f4cc586bb5d" category="doc">NetApp 엔터프라이즈 데이터베이스 솔루션</block>
+  <block id="809247403bb2b3e7178b69b038356678" category="inline-link-macro">vSphere 데이터 저장소 및 프로토콜 기능: NFS</block>
+  <block id="ff7854cc2ae62511b4a52320f31aa005" category="paragraph"><block ref="ff7854cc2ae62511b4a52320f31aa005" category="inline-link-macro-rx"></block></block>
+  <block id="6309162dffb4a082a2a106613c448e9f" category="doc">하이브리드 클라우드, 가상화 및 컨테이너 비디오 및 데모</block>
+  <block id="ccf0b7773e492df3e851d36b689b69b1" category="paragraph">하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.</block>
+  <block id="ab5efb952cd51767fdde3f548f7d3f18" category="paragraph">NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 <block ref="39b49e6fd504a137658d6db31d129abd" category="inline-link-macro-rx"></block>.</block>
+  <block id="668ed010c67826eb36328daf61db1909" category="example-title">NetApp with VMware Tanzu 비디오</block>
+  <block id="0b59976821e81163a037c4ed7f21b209" category="paragraph"><block ref="0b59976821e81163a037c4ed7f21b209" category="inline-link-macro-rx"></block></block>
+  <block id="4bff68299377013f00a500a01c7a2f19" category="list-text"><block ref="4bff68299377013f00a500a01c7a2f19" category="inline-link-macro-rx"></block></block>
+  <block id="e5f4fe92e1832b16532011df56ee39a5" category="list-text"><block ref="c30f78a476776106411b5cd1ee097f4f" category="inline-link-macro-rx"></block></block>
+  <block id="380fbb2dc2a4b42876553664c398fb3f" category="paragraph">NetApp은 오늘날의 비즈니스 과제를 해결할 수 있는 솔루션을 제공할 때 다음과 같은 목표를 가진 솔루션을 제공합니다.</block>
+  <block id="008347e050bccf7e2812ae39dd816f41" category="list-text">검증된 구축 및 구성 단계 제공</block>
+  <block id="4ef594072d2fdf53ad9ca6af7fe16569" category="list-text">쉽게 사용할 수 있는 솔루션 제공</block>
+  <block id="3f68e576fe6e3e328b5feeea03707572" category="list-text">예측 가능한 결과를 제공하는 솔루션 구축은 고객 기업 전체에서 쉽게 반복되고 확장 가능합니다.</block>
+  <block id="928a4532882b0eb0208abcae9b7fd6f0" category="paragraph">이러한 목표를 달성하기 위해서는 우리의 솔루션을 통해 제공되는 인프라 및/또는 애플리케이션의 구축과 구성이 자동화를 통해 간소화되는 것이 무엇보다 중요합니다. NetApp은 자동화를 통해 솔루션 소비를 단순화하기 위해 노력하고 있습니다.</block>
+  <block id="d6d7e89b087a9e69ae7622847dc932e5" category="paragraph">NetApp 솔루션은 Red Hat Ansible, HashCorp Terraform 또는 Microsoft Powershell과 같은 오픈 소스 자동화 툴을 활용하여 애플리케이션 구축, 클라우드 프로비저닝, 구성 관리 및 기타 일반적인 IT 작업을 자동화할 수 있습니다. NetApp의 솔루션은 공개적으로 제공되는 자동화 아티팩트를 활용하는 동시에 NetApp에서 작성한 자동화를 제공하여 솔루션의 전체 구축을 단순화합니다.</block>
+  <block id="e532e5979d2ecc30b8177530683810e2" category="paragraph">자동화 기능을 사용할 수 있는 경우 솔루션 자료는 특정 자동화 툴을 통해 솔루션 또는 솔루션 단계를 자동화하는 프로세스를 사용자에게 안내합니다.</block>
+  <block id="aaac1ea7463ef799eaafc693b16b1f81" category="doc">NetApp 솔루션 자동화 시작하기</block>
+  <block id="66bd3dbe1f46a5715420e201e457ff65" category="paragraph">NetApp 솔루션 자동화는 NetApp 솔루션에서 활용하는 많은 공통 작업에 대한 단순성과 반복성을 제공합니다.</block>
+  <block id="bf7d92f5ef43a7e0ab10c8d11d28ef6e" category="paragraph">솔루션 자동화를 실행하기 전에 자동화를 실행하는 방법에 맞게 환경을 구성해야 합니다. 명령줄이나 AWX 또는 타워와 같은 도구를 통해 자동화를 실행할 수 있는 옵션이 있습니다.</block>
+  <block id="dcdcb9b7436ca5ceca042e84e9c3ccf5" category="paragraph">다음 섹션에서는 지정된 각 환경에 맞게 환경을 구성하는 데 필요한 단계를 설명합니다.</block>
+  <block id="60e34857d044a02ae86f645c2e97e40f" category="paragraph">stdin&gt;의 미해결 지시문 - 포함::containers/rh-os-n_overview_astra_cc_install_manual.adoc []</block>
+  <block id="2b0a99e34b337bd6d8ed27dd9482c9e6" category="paragraph">stdin&gt;에서 해결되지 않은 지침 - 포함:: containers/rh-os-n_overview_astra_cc_install_Ansible.adoc []</block>
+  <block id="245ab73d4b9beb43ff76c082e9bc77db" category="open-title">AI/데이터 분석</block>
+  <block id="1cafbd014dfeeb64eb943c92af6abe86" category="open-title">하이브리드 멀티 클라우드</block>
+  <block id="901b32f6abd15fbb3d43fbd044218a64" category="open-title">엔터프라이즈 애플리케이션 및 DB</block>
+  <block id="71fbb346a6b64c94052f0e171d5d3eed" category="open-title">데이터 보호 및 데이터 마이그레이션</block>
+  <block id="10b2aec15aae4d935355e27497e66c5f" category="summary">NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모 시리즈</block>
+  <block id="6354d74cd74c1d9f49224ac4e6209bab" category="doc">NetApp 솔루션: 비디오 및 데모</block>
+  <block id="60b5065968cf0f66d862a344124f6415" category="paragraph">NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소개합니다.</block>
+  <block id="ab440644113265a70e7e0bb7c44b2f63" category="paragraph">* 사례 연구 *</block>
+  <block id="25aa061b5bc79f1f85182fd8ca1f3165" category="inline-link-macro">VMware 비디오 컬렉션</block>
+  <block id="847fff0b97afdc8ceabb5c717634d413" category="list-text"><block ref="847fff0b97afdc8ceabb5c717634d413" category="inline-link-macro-rx"></block></block>
+  <block id="6b8847bb26c687aff3755cd309c49318" category="inline-link-macro">Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오</block>
+  <block id="204d792f06c32a352c6a2bab50edc884" category="list-text"><block ref="204d792f06c32a352c6a2bab50edc884" category="inline-link-macro-rx"></block></block>
+  <block id="5c0a0d6259b740ef046fce59145ef75c" category="list-text"><block ref="5c0a0d6259b740ef046fce59145ef75c" category="inline-link-macro-rx"></block></block>
+  <block id="d58d90722ff1d203cae3510d76dae738" category="inline-link-macro">Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호</block>
+  <block id="9c774469ec2a8f1726ced3c53a718435" category="list-text"><block ref="9c774469ec2a8f1726ced3c53a718435" category="inline-link-macro-rx"></block></block>
+  <block id="9ab414a5d38d00353db04e34b6c5214d" category="inline-link-macro">Astra Control을 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift</block>
+  <block id="5b496b0bdc4a9eca4eeeec4a21625dac" category="list-text"><block ref="5b496b0bdc4a9eca4eeeec4a21625dac" category="inline-link-macro-rx"></block></block>
+  <block id="eda7c1200ab08f725c863bfd563c3d31" category="inline-link-macro">NetApp과 함께 Astra Trident 및 SnapMirror-Red Hat OpenShift를 사용하여 워크로드 마이그레이션</block>
+  <block id="c3ddd010e97d096001492056c93aa883" category="list-text"><block ref="c3ddd010e97d096001492056c93aa883" category="inline-link-macro-rx"></block></block>
+  <block id="f572afcba8a95128ddd328e44a23a189" category="inline-link-macro">OpenShift 가상화 설치 - NetApp과 함께 Red Hat OpenShift의 조합</block>
+  <block id="1d7615053b7ca9824b9b85dc258c6643" category="list-text"><block ref="1d7615053b7ca9824b9b85dc258c6643" category="inline-link-macro-rx"></block></block>
+  <block id="c9e349766e4968ee277d240ff7b169e6" category="inline-link-macro">OpenShift 가상화를 통한 가상 머신 구축 - NetApp과 Red Hat OpenShift</block>
+  <block id="9840e6cb0c2ab37a0e662398a6b3ffef" category="list-text"><block ref="9840e6cb0c2ab37a0e662398a6b3ffef" category="inline-link-macro-rx"></block></block>
+  <block id="55418abe87135e6107123ca2c087964c" category="sidebar">하이퍼스케일러 클라우드의 VMware용 NetApp 솔루션</block>
+  <block id="195b49c0610d30d327f5440759b7b642" category="sidebar">지원되는 솔루션</block>
+  <block id="77abe5490624dabbaf53c9f3b9267e97" category="sidebar">네이티브 데이터 저장소 - 개인 미리 보기</block>
+  <block id="3ffbc70cc0bdd47bd7c4ed3cfa35be8a" category="sidebar">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
+  <block id="d4a26861760fe17cc2584cdd8453c938" category="sidebar">CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다</block>
+  <block id="5efd4fd33e2b8f8cc3fc45c42e47c9ad" category="sidebar">AWS 기반 VMC 솔루션</block>
+  <block id="b2f068db06c9b5b7c387193b8f186f81" category="sidebar">게스트 연결 스토리지로서의 Azure NetApp Files(ANF)</block>
+  <block id="c89fb832b55397ad57c36681741311d5" category="sidebar">Azure에서 AVS용 솔루션</block>
+  <block id="7db85076649ba213cd747c06b9b19df7" category="sidebar">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
+  <block id="726e6f4bd2e690d08ae0a185cbe1c9b8" category="sidebar">GCP의 GCVE용 솔루션</block>
+  <block id="06e1970c26d133efed67d51224ceff1c" category="sidebar">보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service</block>
+  <block id="860ab177fe05389a6d0ec0842bd1e818" category="sidebar">곧 제공 예정...</block>
+  <block id="c252fd6dfe5fa6dc4ba36515512a8070" category="sidebar">워크로드 보호 솔루션</block>
+  <block id="10b6eb5523fab1d4b99c4fdfb54bf176" category="sidebar">워크로드 솔루션 확장</block>
+  <block id="d761cb8e8504381eb60fe9aea1bcb3e7" category="sidebar">워크로드 마이그레이션 솔루션</block>
+  <block id="2e92adc6ace2b6d3c6626d5dc86f0956" category="sidebar">Azure VMware 솔루션용 Azure NetApp Files 데이터 저장소(Preview)</block>
+  <block id="2579e0b6258e495e90e159e678bd55a8" category="sidebar">AWS 기반 VMware 클라우드: 새로운 지역, 외부 스토리지 및 구매 옵션</block>
+  <block id="f74a2791289e2f0411e5ffbd3e5a1d68" category="sidebar">NetApp Cloud Volumes Service를 사용하는 Google Cloud VMware Engine</block>
+  <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">오라클</block>
+  <block id="51b19c4a2c13c8f8a69b0608959bdfca" category="sidebar">FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스</block>
+  <block id="a71f76c3256e4c206a4841d8eb0fed35" category="sidebar">SQL 서버</block>
+  <block id="81d59bad51a910734812cab3d20641b0" category="sidebar">하이브리드 클라우드 데이터베이스 솔루션</block>
+  <block id="934553b3e6b7dd417ef37d2b3213dd00" category="sidebar">SAP SAP HANA를 참조하십시오</block>
+  <block id="1f036821b23def9a55e4116bdbd60c1b" category="sidebar">변경 기록</block>
+  <block id="bb5dc731b06d417365e41cb2d0230213" category="sidebar">비디오 데모</block>
+  <block id="f9cffb4fda587c713c06e50699299f0f" category="sidebar">솔루션 랜딩 페이지</block>
+  <block id="bf8e2974cd692b57a29e42874b662b52" category="sidebar">엔터프라이즈 데이터베이스</block>
+  <block id="84145683557fc8692113a2a97c3ec239" category="sidebar">NetApp 하이브리드 멀티 클라우드 및 VMware</block>
+  <block id="10d42b4bab4fd3114da1e1eae0994d36" category="sidebar">SAP 및 SAP HHA</block>
+  <block id="d4a3e435684aa9918c9dd0bada78d4fb" category="sidebar">AWS용 VMC를 구성합니다</block>
+  <block id="883512106f2cef4187ee5f6b5a94c6f8" category="sidebar">Azure용 AVS를 구성합니다</block>
+  <block id="a271625e92b27bca4202ba79dab27301" category="sidebar">GCP에 대한 GCVE를 구성합니다</block>
+  <block id="76862b378878c90a8052499ae898932f" category="sidebar">VMC를 위한 게스트 연결 스토리지</block>
+  <block id="5703f41cd5551fad387ed46631532278" category="sidebar">AVS용 게스트 연결 스토리지</block>
+  <block id="1f9511a418cf9a352bacd19d937a5237" category="sidebar">GCVE용 게스트 연결 저장소</block>
+  <block id="a0e8297bc18713002f47301829625ea1" category="sidebar">NetApp for AWS/VMC</block>
+  <block id="d530fb3a1e80511b2d7787728700d3fa" category="sidebar">NetApp for Azure/AVS</block>
+  <block id="8d9d90a84ad6b34129f140e0b3e23326" category="sidebar">NetApp for GCP/GCVE</block>
 </blocks>

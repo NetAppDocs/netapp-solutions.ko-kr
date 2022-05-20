@@ -9,9 +9,19 @@ indexpage:
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
     - title: 게스트 연결 스토리지 옵션
       url: "/gcp-guest.html"
-  - title: 게스트 연결 스토리지가 있는 솔루션
-    url: 
-  - title: 기본 데이터 저장소가 있는 솔루션
-    url: 
+    - title: GCP/GCVE용 솔루션
+      url: "/gcp-solutions.html"
+  - title: 곧 제공 예정...
+    links:
+    - title: 워크로드 보호 솔루션
+      url: 
+    - title: 워크로드 솔루션 확장
+      url: 
+    - title: 워크로드 마이그레이션 솔루션
+      url: 
   - title: 추가 정보
-    url: 
+    links:
+    - title: NetApp Cloud Volumes Service를 사용하는 Google Cloud VMware Engine
+      url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
+    - title: 보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service
+      url: "/../ncvs/ncvs-gc-overview.html"

@@ -9,9 +9,17 @@ indexpage:
       url: https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/
     - title: 게스트 연결 스토리지 옵션
       url: "/azure-guest.html"
-  - title: 게스트 연결 스토리지가 있는 솔루션
-    url: 
-  - title: 기본 데이터 저장소가 있는 솔루션
-    url: 
+    - title: Azure/AVS용 솔루션
+      url: "/azure-solutions.html"
+  - title: 곧 제공 예정...
+    links:
+    - title: 워크로드 보호 솔루션
+      url: 
+    - title: 워크로드 솔루션 확장
+      url: 
+    - title: 워크로드 마이그레이션 솔루션
+      url: 
   - title: 추가 정보
-    url: 
+    links:
+    - title: Azure VMware 솔루션용 Azure NetApp Files 데이터 저장소(Preview)
+      url: https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/

@@ -1,0 +1,53 @@
+= 
+:allow-uri-read: 
+
+
+. Ansible 제어 노드 요구사항:
++
+.. 다음 패키지가 설치된 Ubuntu/Debian 시스템:
++
+... 3장
+... Pip3
+... Ansible(버전 2.10.0 이상)
+... 기트
+
+
+
+
+
+
+위 요구 사항이 설치되지 않은 새 Ubuntu/Debian 시스템이 있는 경우 다음 단계에 따라 해당 시스템을 Ansible 제어 노드로 설정합니다.
+
+. sh 파일을 만듭니다
++
+[source, cli]
+----
+vi setup.sh
+----
+. 파일에 아래 내용을 붙여 넣습니다
++
+[source, cli]
+----
+#!/bin/bash
+echo "Installing Python ------>"
+sudo apt-get -y install python3 >/dev/null
+echo "Installing Python Pip ------>"
+sudo apt-get -y install python3-pip >/dev/null
+echo "Installing Ansible ------>"
+python3 -W ignore -m pip --disable-pip-version-check install ansible >/dev/null
+echo "Installing git ------>"
+sudo apt-get -y install git >/dev/null
+----
+. 파일을 실행 파일로 만듭니다
++
+[source, cli]
+----
+chmod +x setup.sh
+----
+. 스크립트를 루트로 실행합니다.
++
+[source, cli]
+----
+./setup.sh
+----
+

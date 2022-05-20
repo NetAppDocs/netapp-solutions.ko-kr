@@ -12,12 +12,16 @@ sidebar:
   - title: NetApp 솔루션 설명서
     url: "/index.html"
   - section: ai
+  - section: containers
+  - section: data-access
+  - title: 엔터프라이즈 애플리케이션
+    entries:
+    - title: SAP SAP HANA를 참조하십시오
+      url: https://docs.netapp.com/us-en/netapp-solutions-sap/
+  - section: databases
   - section: data-analytics
   - section: ehc
   - section: virtualization
-  - section: containers
-  - section: ent-apps-db
-  - section: data-access
   - section: automation
   - title: FlexPod 솔루션
     url: https://docs.netapp.com/us-en/flexpod/
@@ -31,52 +35,40 @@ sidebar:
     url: "/reference_legal_notices.html"
 homepage:
   tiles:
-  - title: AI 최신 데이터 분석
+  - title: 소개
     links:
-    - title: 개요
+    - title: 이 리포지터리 정보
+      url: about.html
+    - title: 변경 기록
+      url: change-log-display.html
+    - title: 블로그
+      url: blogs.html
+    - title: 비디오 데모
+      url: videos.html
+    - title: 법적 고지
+      url: reference_legal_notices.html
+  - title: 솔루션 랜딩 페이지
+    links:
+    - title: 인공 지능
       url: ai/index.html
-    - title: 새로운 기능
-      url: aimda-whatsnew.html
-    - title: 비디오 및 데모
-      url: aimda-videos.html
-    - title: 블로그
-      url: aimda-blogs.html
-  - title: 엔터프라이즈 하이브리드 클라우드(EHC)
-    links:
-    - title: EHC 개요
-      url: ehc/ehc-overview.html
-    - title: 사용 사례
-      url: ehc/ehc-use-cases.html
-    - title: 지원되는 구성
-      url: ehc/ehc-support-configs.html
-    - title: 하이퍼스케일러 클라우드의 VMware Cloud
-      url: ehc/ehc-hyperscalers.html
-    - title: 하이퍼스케일러 지정 콘텐츠
+    - title: 컨테이너
+      url: containers/index.html
+    - title: 엔터프라이즈 데이터베이스
+      url: databases/index.html
+    - title: 최신 데이터 분석
+      url: data-analytics/index.html
+    - title: NetApp 하이브리드 멀티 클라우드 및 VMware
       url: ehc/index.html
-    - title: 블로그
-      url: ehc-blogs.html
-  - title: 가상화, 데스크톱 가상화 컨테이너
-    links:
-    - title: 새로운 기능
-      url: hc-whatsnew.html
-    - title: 비디오 및 데모
-      url: hc-videos.html
-    - title: 블로그
-      url: hc-blogs.html
-  - title: 엔터프라이즈 애플리케이션 데이터베이스
-    links:
-    - title: 새로운 기능
-      url: appsdb-whatsnew.html
-    - title: 비디오 및 데모
-      url: appsdb-videos.html
-    - title: 블로그
-      url: appsdb-blogs.html
+    - title: SAP 및 SAP HHA
+      url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
+    - title: 포함되었습니다
+      url: virtualization/index.html
   - title: 솔루션 자동화
     links:
-    - title: 새로운 기능
-      url: automation-whatsnew.html
-    - title: 비디오 및 데모
-      url: automation-videos.html
+    - title: 소개
+      url: automation/automation_introduction.html
+    - title: 시작하기
+      url: automation/getting-started.html
     - title: 자동화 요청
       url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20%3Crequest_title%3E
   - title: FlexPod - NetApp Cisco 솔루션
