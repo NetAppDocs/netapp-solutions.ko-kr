@@ -11949,4 +11949,9 @@
   <block id="3c22f403dc730d637a0fd61e97873829" category="sidebar">보안 개요 - Google Cloud의 NetApp Cloud Volumes Service</block>
   <block id="ebd8431a0b14e9588377860f5d21d80b" category="sidebar">아키텍처 개요</block>
   <block id="a20fe2a1eb3b2546487a96f1e639d4f3" category="sidebar">기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)</block>
+  <block id="92e704fe041898cac086cd4a192a1815" category="cell">2022년 5월 20일</block>
+  <block id="efae07e57b0f279c460d1361b379cf52" category="cell">SuperPOD를 위한 새로운 BeeGFS 설계 및 구축 가이드</block>
+  <block id="197d6fccbd337f46908b50e1ac3ece5d" category="sidebar">SuperPOD: NetApp 및 NVIDIA 솔루션</block>
+  <block id="ed05ff1aa7ef3023c5dc2359de4e2d15" category="sidebar">NetApp 기반 BeeGFS(설계 가이드)</block>
+  <block id="b877ddfe299c52df6f7a340fdcaa52eb" category="sidebar">NetApp 기반 BeeGFS(구축 가이드)</block>
 </blocks>
