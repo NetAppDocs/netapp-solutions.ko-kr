@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-protopia-technology-overview.html 
+keywords: protopia, netapp ontap, overview, dataops toolkit, nvidia triton inference server, pytorch 
+summary: 이 섹션에서는 이 솔루션을 완료하는 데 필요한 다양한 기술 구성 요소에 대해 간략하게 설명합니다. 
+---
+= 기술 개요
+:allow-uri-read: 
+
+
+link:ai-protopia-solution-areas.html["이전: 솔루션 영역."]
+
+
+
+== 프로토피아
+
+Protopia AI는 오늘날 시장에서 기밀 추론을 위한 방해되지 않는 소프트웨어 전용 솔루션을 제공합니다. Protopia 솔루션은 중요한 정보의 노출을 최소화하여 추론 서비스를 위한 탁월한 보호 기능을 제공합니다. AI는 현재 작업을 수행하는 데 꼭 필요한 데이터 레코드의 정보만 제공합니다. 대부분의 추론 작업에서는 모든 데이터 레코드에 있는 모든 정보를 사용하지 않습니다. AI가 이미지, 음성, 비디오 또는 구조화된 표 형식 데이터를 소비하고 있는지 여부와 관계없이 Protopia는 추론 서비스에 필요한 것만 제공합니다. 특허를 획득한 코어 기술은 수학적으로 선별된 소음을 사용하여 데이터를 변환하고 지정된 ML 서비스에서 필요하지 않은 정보를 제공합니다. 이 솔루션은 데이터를 마스킹하지 않고 선별된 랜덤 노이즈를 사용하여 데이터 표현을 변경합니다.
+
+프로토피아 솔루션은 모델의 기능과 관련하여 입력 기능 공간에 관련 정보를 계속 유지하는 경사 기반 퍼터버레이션 최대화 방법으로 표현을 변경하는 문제를 공식화합니다. 이 검색 프로세스는 ML 모델 교육을 마칠 때 미세 조정 통과로 실행됩니다. 통과가 자동으로 확률 분포 세트를 생성한 후 오버헤드가 낮은 데이터 변환은 이러한 분포의 노이즈 샘플을 데이터에 적용하고 추론을 위해 모델에 전달하기 전에 난독 처리 합니다.
+
+
+
+== NetApp ONTAP AI를 참조하십시오
+
+DGX A100 시스템과 NetApp 클라우드 연결형 스토리지 시스템에 기반한 NetApp ONTAP AI 참조 아키텍처는 NetApp과 NVIDIA가 개발 및 검증했습니다. 이 아키텍처는 IT 조직에 다음과 같은 이점을 제공하는 아키텍처를 제공합니다.
+
+* 설계 복잡성 제거
+* 컴퓨팅과 스토리지를 독립적으로 확장할 수 있습니다
+* 고객이 작은 규모로 시작한 후 원활하게 확장할 수 있도록 지원
+* 다양한 성능 및 비용 요소에 부합하는 폭넓은 스토리지 옵션을 제공합니다
+
+
+ONTAP AI는 DGX A100 시스템과 NetApp AFF A800 스토리지 시스템을 최첨단 네트워킹과 긴밀하게 통합합니다. ONTAP AI는 설계 복잡성과 추측을 제거함으로써 AI 배포를 단순화합니다. 고객은 작은 규모로 시작한 후 에지에서 코어 및 클라우드까지 포괄하여 데이터를 지능적으로 관리하면서 중단 없이 확장할 수 있습니다.
+
+다음 그림은 DGX A100 시스템과 ONTAP AI 솔루션 제품군의 다양한 변형을 보여줍니다. 최대 8개의 DGX A100 시스템에서 AFF A800 시스템 성능 검증 ONTAP 클러스터에 스토리지 컨트롤러 쌍을 추가하면 아키텍처를 여러 개의 랙으로 확장하여 선형 성능으로 많은 DGX A100 시스템과 페타바이트급 스토리지 용량을 지원할 수 있습니다. 이 접근 방식은 사용되는 DL 모델의 크기와 필요한 성능 메트릭을 기준으로 컴퓨팅 대 스토리지 비율을 독립적으로 변경할 수 있는 유연성을 제공합니다.
+
+image:ai-protopia-image2.png["오류: 그래픽 이미지가 없습니다"]
+
+ONTAP AI에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf["NVA-1153: NVIDIA DGX A100 시스템 및 Mellanox Spectrum 이더넷 스위치를 포함하는 NetApp ONTAP AI"^]
+
+
+
+== NetApp ONTAP를 참조하십시오
+
+NetApp의 최신 세대 스토리지 관리 소프트웨어인 ONTAP 9.11을 통해 기업은 인프라를 현대화하고 클라우드 지원 데이터 센터로 전환할 수 있습니다. ONTAP는 업계 최고 수준의 데이터 관리 기능을 활용하여 데이터가 상주하는 위치와 상관없이 단일 툴셋으로 데이터를 관리하고 보호할 수 있습니다. 필요에 따라 에지, 코어, 클라우드 등 어느 위치로도 데이터를 자유롭게 이동할 수 있습니다. ONTAP 9.11에는 데이터 관리를 단순화하고, 중요 데이터를 가속화하고, 보호하며, 하이브리드 클라우드 아키텍처 전반에 걸쳐 차세대 인프라 기능을 지원하는 다양한 기능이 포함되어 있습니다.
+
+
+
+== NetApp DataOps 툴킷
+
+NetApp DataOps Toolkit은 개발자, 데이터 과학자, DevOps 엔지니어 및 데이터 엔지니어가 새로운 데이터 볼륨의 거의 즉각적인 프로비저닝 또는 JupyterLab 작업 공간, 데이터 볼륨의 거의 즉각적인 클론 복제 또는 JupyterLab 작업 공간과 같은 다양한 데이터 관리 작업을 간단하게 수행할 수 있는 Python 라이브러리입니다. 추적 기능 또는 베이스라인 기능을 위해 데이터 볼륨의 스냅샷 또는 JupyterLab 작업 공간을 거의 즉각적으로 생성합니다. 이 Python 라이브러리는 명령행 유틸리티 또는 Python 프로그램이나 Jupyter 노트북으로 가져올 수 있는 기능의 라이브러리로 작동할 수 있습니다.
+
+
+
+== NVIDIA Triton Inference Server를 참조하십시오
+
+NVIDIA Triton Inference Server는 모델 구축 및 실행을 표준화하여 운영 환경에서 신속하고 확장 가능한 AI를 제공하는 오픈 소스 추론 제공 소프트웨어입니다. Triton Inference Server는 팀이 GPU 또는 CPU 기반 인프라의 모든 프레임워크에서 훈련된 AI 모델을 구축, 실행 및 확장할 수 있도록 지원하여 AI 추론을 간소화합니다. Triton Inference Server는 TensorFlow, NVIDIA TensorRT, PyTorch, MXNet, OpenVINO 등 Triton은 모든 주요 퍼블릭 클라우드 AI 및 Kubernetes 플랫폼에서 사용할 수 있는 오케스트레이션 및 확장을 위해 Kubernetes와 통합됩니다. 또한 많은 MLOps 소프트웨어 솔루션과 통합됩니다.
+
+
+
+== PyTorch
+
+https://pytorch.org/["PyTorch"^] 는 오픈 소스 ML 프레임워크입니다. GPU 및 CPU를 사용하는 딥 러닝용으로 최적화된 텐서 라이브러리입니다. PyTorch 패키지에는 여러 유용한 유틸리티 간에 효율적인 서너 직렬화를 위한 여러 유틸리티를 제공하는 다차원 Tensor용 데이터 구조가 포함되어 있습니다. 또한 컴퓨팅 기능이 있는 NVIDIA GPU에서 텐서 컴퓨팅을 실행할 수 있는 CUDA 상대가 있습니다. 이 검증에서는 OpenCV-Python(CV2) 라이브러리를 사용하여 모델을 검증하고 Python의 가장 직관적인 컴퓨터 비전 개념을 활용합니다.
+
+
+
+=== 데이터 관리를 단순화하십시오
+
+데이터 관리는 AI 애플리케이션에 적합한 리소스를 사용하고 AI/ML 데이터 세트를 교육할 수 있도록 엔터프라이즈 IT 운영 및 데이터 과학자에게 매우 중요합니다. NetApp 기술에 대한 다음 추가 정보는 이 검증의 범위에 포함되지 않지만, 배포에 따라 달라질 수 있습니다.
+
+ONTAP 데이터 관리 소프트웨어에는 운영을 간소화 및 단순화하고 총 운영 비용을 절감하는 다음과 같은 기능이 있습니다.
+
+* 인라인 데이터 컴팩션 및 확대된 중복제거: 데이터 컴팩션은 스토리지 블록 내부의 낭비되는 공간을 줄이고, 중복제거는 실제 용량을 상당히 늘려줍니다. 이는 로컬에 저장된 데이터와 클라우드로 계층화된 데이터에 적용됩니다.
+* 최소, 최대 및 적응형 서비스 품질(AQoS): 세부적인 서비스 품질(QoS) 제어로 고도의 공유 환경에서 중요 애플리케이션의 성능 수준을 유지할 수 있습니다.
+* NetApp FabricPool를 참조하십시오. AWS(Amazon Web Services), Azure, NetApp StorageGRID 스토리지 솔루션을 포함한 퍼블릭 클라우드 및 프라이빗 클라우드 스토리지에 콜드 데이터를 자동으로 계층화합니다. FabricPool에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598: FabricPool 모범 사례"^].
+
+
+
+
+=== 데이터 가속화 및 보호
+
+ONTAP는 탁월한 수준의 성능과 데이터 보호를 제공하며 다음과 같은 방법으로 이러한 기능을 확장합니다.
+
+* 성능 및 짧은 지연 시간: ONTAP는 가장 짧은 지연 시간으로 가장 높은 처리량을 제공합니다.
+* 데이터 보호: ONTAP는 모든 플랫폼에서 공통 관리를 지원하는 내장 데이터 보호 기능을 제공합니다.
+* NVE(NetApp 볼륨 암호화). ONTAP는 온보드 및 외부 키 관리를 모두 지원하는 기본 볼륨 레벨 암호화를 제공합니다.
+* 멀티테넌시 및 다단계 인증. ONTAP를 사용하면 인프라 리소스를 최고 수준의 보안으로 공유할 수 있습니다.
+
+
+
+
+=== 미래 지향형 인프라
+
+ONTAP은 다음과 같은 기능을 통해 끊임없이 변화하는 까다로운 비즈니스 요구사항을 충족할 수 있도록 지원합니다.
+
+* 원활한 확장 및 무중단 운영: ONTAP은 운영 중단 없이 기존 컨트롤러 및 스케일아웃 클러스터에 용량을 추가할 수 있도록 지원합니다. 고객은 고비용이 따르는 데이터 마이그레이션이나 운영 중단 없이 NVMe 및 32Gb FC와 같은 최신 기술로 업그레이드할 수 있습니다.
+* 클라우드 연결: ONTAP은 클라우드에 가장 많이 연결된 스토리지 관리 소프트웨어로, 모든 퍼블릭 클라우드에서 ONTAP Select(소프트웨어 정의 스토리지) 및 NetApp Cloud Volumes Service(클라우드 네이티브 인스턴스)에 대한 옵션을 제공합니다.
+* 새로운 애플리케이션과 통합: ONTAP은 기존 엔터프라이즈 앱을 지원하는 인프라와 동일한 인프라를 사용하여 자율주행 차량, 스마트 시티, Industry 4.0과 같은 차세대 플랫폼 및 애플리케이션을 위한 엔터프라이즈급 데이터 서비스를 제공합니다.
+
+
+
+
+== NetApp Astra Control
+
+NetApp Astra 제품군은 온프레미스 및 퍼블릭 클라우드에서 Kubernetes 애플리케이션을 위한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공하며, NetApp 스토리지 및 데이터 관리 기술을 기반으로 합니다. Kubernetes 애플리케이션을 쉽게 백업하고, 데이터를 다른 클러스터로 마이그레이션하고, 작업 중인 애플리케이션 클론을 즉시 생성할 수 있습니다. 퍼블릭 클라우드에서 실행 중인 Kubernetes 애플리케이션을 관리해야 하는 경우에는 의 문서를 참조하십시오 https://docs.netapp.com/us-en/astra-control-service/index.html["Astra 제어 서비스"^]. Astra Control Service는 GKE(Google Kubernetes Engine) 및 AKS(Azure Kubernetes Service)에서 Kubernetes 클러스터의 애플리케이션 인식 데이터 관리를 제공하는 NetApp 관리 서비스입니다.
+
+
+
+== NetApp Astra Trident
+
+아스트라 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["트라이던트"^] NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(ML 개발자, 데이터 과학자 등)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 고급 데이터 관리 기능을 활용할 수 있습니다.
+
+
+
+== NetApp Cloud Sync를 참조하십시오
+
+https://docs.netapp.com/us-en/occm/concept_cloud_sync.html["Cloud Sync"^] 는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, Amazon S3(Amazon Simple Storage Service), Amazon Elastic File System(Amazon EFS), Azure Blob, Google Cloud Storage 간에 파일을 전송해야 하는 경우 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync를 사용하면 파일을 필요한 곳으로 빠르고 안전하게 이동할 수 있습니다. 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 미리 정의된 일정에 따라 데이터를 지속적으로 동기화하여 추가된 부분만 이동하여 데이터 복제에 소비되는 시간과 비용을 최소화합니다. Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software-as-a-Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. AWS, Azure, Google Cloud Platform 또는 온프레미스에서 Cloud Sync 데이터 브로커를 구축할 수 있습니다.
+
+
+
+== NetApp 클라우드 데이터 감지
+
+강력한 AI 알고리즘을 기반으로  https://cloud.netapp.com/netapp-cloud-data-sense["NetApp 클라우드 데이터 감지"^] 전체 데이터 자산에 걸쳐 자동화된 제어 및 데이터 거버넌스를 제공합니다. 비용 절감 효과를 쉽게 파악하고 규정 준수 및 개인 정보 보호에 대한 우려 사항을 파악하며 최적화 기회를 찾을 수 있습니다. Cloud Data Sense 대시보드에서는 중복 데이터를 식별할 수 있는 통찰력을 제공하여 중복 데이터를 제거하고 개인, 개인 및 개인 정보가 아닌 중요 데이터를 매핑하며 중요한 데이터와 이상 상태에 대한 알림을 설정할 수 있습니다.
+
+link:ai-protopia-test-and-validation-plan.html["다음: 테스트 및 검증 계획."]

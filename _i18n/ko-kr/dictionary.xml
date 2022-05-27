@@ -11907,4 +11907,210 @@
   <block id="8d9d90a84ad6b34129f140e0b3e23326" category="sidebar">NetApp for GCP/GCVE</block>
   <block id="a3e92580de1a77cd25163bb63cd24a7d" category="inline-image-macro">링크 =<block ref="9b22e52230cfacf7992c01194e7a95d2" category="inline-link-rx"></block></block>
   <block id="f9da9dedda46425dea9fe2b0092e4b1a" category="paragraph"><block ref="f9da9dedda46425dea9fe2b0092e4b1a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46ded0be5f6c48090d38435b6dafa3e2" category="summary">이 섹션에서는 이 솔루션에서 검증된 세 가지 시나리오에 대해 간략하게 설명합니다.</block>
+  <block id="71446ef316489c70b5279867eb81a86b" category="doc">테스트 및 검증 계획</block>
+  <block id="8e593eca45d74047c3d169456d36d74a" category="paragraph"><block ref="8e593eca45d74047c3d169456d36d74a" category="inline-link-macro-rx"></block></block>
+  <block id="68cdc250e271cc43502e5f009d0ebec7" category="paragraph">이 솔루션 설계의 경우 다음 세 가지 시나리오를 검증했습니다.</block>
+  <block id="83c38d8dc6bc37fe6bb9691e75d0f881" category="list-text">Kubernetes용 NetApp DataOps Toolkit을 사용하여 조율된 JupyterLab 작업 공간 내의 프로토피아 난독 처리 기능을 사용하거나 사용하지 않는 추론 작업.</block>
+  <block id="da4ec54ac3b4b67b77d52ccf0ebaefc0" category="list-text">Kubernetes용 NetApp DataOps Toolkit을 사용하여 오케스트레이션된 데이터 볼륨을 사용하는 Kubernetes에서 프로토피아 난독 처리를 사용하거나 사용하지 않는 배치 추론 작업</block>
+  <block id="5526e24c695504cfa8b2187b0a3da212" category="list-text">Kubernetes용 NetApp DataOps 툴킷을 사용하여 조정된 NVIDIA Triton Inference Server 인스턴스를 사용한 추론 작업 네트워크를 통해 전송되는 모든 데이터가 난독 처리되어야 한다는 일반적인 요구 사항을 시뮬레이션하기 위해 Triton 추론 API를 호출하기 전에 이미지에 Protopia 난독 처리를 적용했습니다. 이 워크플로는 신뢰할 수 있는 영역 내에서 데이터를 수집하지만 추론을 위해 신뢰할 수 있는 영역 외부로 전달해야 하는 사용 사례에 적용됩니다. Protopia 난독 처리를 사용하지 않으면 중요한 데이터가 신뢰할 수 있는 영역을 벗어나지 않으면 이러한 유형의 워크플로를 구현할 수 없습니다.</block>
+  <block id="9a1eb36c3c2949c4b9618b70f9947341" category="paragraph"><block ref="9a1eb36c3c2949c4b9618b70f9947341" category="inline-link-macro-rx"></block></block>
+  <block id="91bc87f1c8c087219cec868bb9eec3e7" category="summary">이 검증에서는 일련의 원시 이미지를 사용하여 이미지 검색 사용 사례에 대한 추론을 수행했습니다. 그런 다음 추론 전에 Protopia 난독 처리를 추가하여 동일한 이미지 집합에서 동일한 추론 작업을 수행했습니다. 우리는 프로토피아 난독 처리 구성 요소에 대해 서로 다른 알파 값을 사용하여 작업을 반복했습니다.</block>
+  <block id="f63c4677c27e0489f346c0711720cc39" category="doc">추론 정확도 비교</block>
+  <block id="c06030c36071611ee2f3a9a21205eaf8" category="paragraph"><block ref="c06030c36071611ee2f3a9a21205eaf8" category="inline-link-macro-rx"></block></block>
+  <block id="0c71eb4e1fba60fba81db988197da57d" category="paragraph">이 검증에서는 일련의 원시 이미지를 사용하여 이미지 검색 사용 사례에 대한 추론을 수행했습니다. 그런 다음 추론 전에 Protopia 난독 처리를 추가하여 동일한 이미지 집합에서 동일한 추론 작업을 수행했습니다. 우리는 프로토피아 난독 처리 구성 요소에 대해 서로 다른 알파 값을 사용하여 작업을 반복했습니다. Protopia 난독 처리 컨텍스트에서 알파 값은 더 높은 난독 처리 수준을 나타내는 더 높은 알파 값으로 적용되는 난독 처리 양을 나타냅니다. 그런 다음 이 서로 다른 실행 간에 추론 정확도를 비교합니다.</block>
+  <block id="93d52a2c23957d4188c7b2ce8b2ae884" category="paragraph">다음 두 표에서는 사용 사례에 대한 자세한 내용과 결과에 대해 설명합니다.</block>
+  <block id="65a3419ae19e457df9db4c0e110b2538" category="paragraph">Protopia는 고객과 직접 협력하여 특정 사용 사례에 적합한 알파 값을 결정합니다.</block>
+  <block id="e558777bd1568637c97294a33389e930" category="cell">FaceBoXes(PyTorch) -</block>
+  <block id="20172a059ee71423ad0d94393e819e10" category="cell">FDDB 데이터 세트</block>
+  <block id="06a8fb4576a28a6488c929097c870fe1" category="cell">프로토피아 난독화</block>
+  <block id="002101f8725e5c78d9f30d87f3fa4c87" category="cell">알파</block>
+  <block id="d78f1fb7e69f7cddcf3e168f2663db20" category="cell">정확성</block>
+  <block id="646738dcd35eaf5c3f3c9bfdc6a90b78" category="cell">0.9337148153739079</block>
+  <block id="b14399cbaac6da4b5b733b483106383f" category="cell">0.05</block>
+  <block id="bcf8c22771ff8c7065180f5a6526d4a6" category="cell">0.902876627325002</block>
+  <block id="cb5ae17636e975f9bf71ddf5bc542075" category="cell">0.1</block>
+  <block id="1336b1cb08d93aa0a453c53e27efa594" category="cell">0.9024301009661478</block>
+  <block id="b1cb1b288bfae3850c74795f5691dc4e" category="cell">0.9081836283186224</block>
+  <block id="b9e8c964d5c5d3e7c815896cd6235239" category="cell">0.9073066107482036</block>
+  <block id="57489d9101ec373d9e2841292a5b3af9" category="cell">0.8847816568680239</block>
+  <block id="57eeec0a6974ecb4e9fcf68fab052f7b" category="cell">0.8</block>
+  <block id="8ab8d7756b82eb70d635bc66c1bc532b" category="cell">0.8841195749171925</block>
+  <block id="a894124cc6d5c5c71afe060d5dde0762" category="cell">0.9</block>
+  <block id="226cc0951c1f30973a4c71f0f567936a" category="cell">0.8455427675252052</block>
+  <block id="248a7444f08189bb31ba143eabebe4e5" category="cell">0.95</block>
+  <block id="0f39c006b0d74178bc826c1d567a79dc" category="inline-link-macro">다음: 난독 처리 속도.</block>
+  <block id="ca9c4b25b025c5564f5ffb65a712a47c" category="paragraph"><block ref="ca9c4b25b025c5564f5ffb65a712a47c" category="inline-link-macro-rx"></block></block>
+  <block id="a41206687a4ac62c15fc883554a75883" category="summary">이 섹션에서는 솔루션 설계 검증 환경에 대해 간략하게 설명합니다.</block>
+  <block id="172ddae93475d6ccf42e145bb593da46" category="inline-link-macro">이전: 테스트 및 검증 계획.</block>
+  <block id="9ea432ca0ec547aa219093f8f5f560cc" category="paragraph"><block ref="9ea432ca0ec547aa219093f8f5f560cc" category="inline-link-macro-rx"></block></block>
+  <block id="0d013965bb31fe1cc0ba44ef3b846d09" category="paragraph">다음 표에서는 솔루션 설계 검증 환경을 간략하게 보여 줍니다.</block>
+  <block id="32f014d18e1f60596057834de2864322" category="cell">1.21.6</block>
+  <block id="b0f69588db488e358ab3c85429ab6b3a" category="cell">NetApp Astra Trident CSI 드라이버</block>
+  <block id="297924c1d3fec9d97f9a1f3b49ee0709" category="cell">Kubernetes용 NetApp DataOps 툴킷</block>
+  <block id="70e2b24f7d348efe6b30b41469d5070c" category="cell">2.3.0</block>
+  <block id="2c5e74d45708e2fae638e03f88353b75" category="cell">NVIDIA Triton Inference Server를 참조하십시오</block>
+  <block id="099d96b4d8f70fb73f1d4661f98c337a" category="cell">21.11-3장</block>
+  <block id="53e01217bc7db361f46a1f8e0e601655" category="paragraph"><block ref="53e01217bc7db361f46a1f8e0e601655" category="inline-link-macro-rx"></block></block>
+  <block id="fcd8d375e90bbb5d8febe3b3eac09c2b" category="doc">추가 정보, 확인 및 버전 기록을 찾을 수 있는 위치</block>
+  <block id="86a4acc956f71e307a08f732dd442d3f" category="paragraph"><block ref="86a4acc956f71e307a08f732dd442d3f" category="inline-link-macro-rx"></block></block>
+  <block id="f85150beb9ce598095b212b1de60815f" category="list-text">NetApp ONTAP 데이터 관리 소프트웨어 - ONTAP 정보 라이브러리</block>
+  <block id="eb87ce8a565e070f3b8c09faa4e840c1" category="inline-link"><block ref="eb87ce8a565e070f3b8c09faa4e840c1" category="inline-link-rx"></block></block>
+  <block id="20a0f3ab42054c3aa4add8c8901b4aa9" category="paragraph"><block ref="20a0f3ab42054c3aa4add8c8901b4aa9" category="inline-link-rx"></block></block>
+  <block id="2cd8f6bd0ec1bbc37315b8bc134e16c5" category="list-text">컨테이너용 NetApp 영구 스토리지 - NetApp Astra Trident</block>
+  <block id="89f170193efdf8434f549c8e91adf860" category="list-text">토폴로지 AI - 기밀 추론</block>
+  <block id="62faa8d62bfb6098877b809cce925de5" category="inline-link"><block ref="62faa8d62bfb6098877b809cce925de5" category="inline-link-rx"></block></block>
+  <block id="45b79877f4c11139882c88df94d50fa6" category="paragraph"><block ref="45b79877f4c11139882c88df94d50fa6" category="inline-link-rx"></block></block>
+  <block id="2c54e28a12ce15452929a28550a30a96" category="inline-link"><block ref="2c54e28a12ce15452929a28550a30a96" category="inline-link-rx"></block></block>
+  <block id="bc5345c4517d46bdf8a87f10d404839f" category="paragraph"><block ref="bc5345c4517d46bdf8a87f10d404839f" category="inline-link-rx"></block></block>
+  <block id="fba4b133e329411c361e02e05efed0b9" category="list-text">NVIDIA Triton Inference Server 설명서</block>
+  <block id="cce40efbd4a717916ccbab694b676e9c" category="inline-link"><block ref="cce40efbd4a717916ccbab694b676e9c" category="inline-link-rx"></block></block>
+  <block id="170ba65f4e4807f3643de39afb3f2e16" category="paragraph"><block ref="170ba65f4e4807f3643de39afb3f2e16" category="inline-link-rx"></block></block>
+  <block id="ba1d5cc71378020998752955821460b2" category="list-text">PyTorch의 FaceBoxes</block>
+  <block id="ace8d80d2ede0fadf07325408b376b83" category="inline-link"><block ref="ace8d80d2ede0fadf07325408b376b83" category="inline-link-rx"></block></block>
+  <block id="a688d324b63c4f882d06673058aa2f61" category="paragraph"><block ref="a688d324b63c4f882d06673058aa2f61" category="inline-link-rx"></block></block>
+  <block id="121ef407a6a3c08ce9fa247e382d7637" category="list-text">Mark Cates, 수석 제품 관리자, NetApp</block>
+  <block id="fb345adb43ea24ffc891d20327bdca09" category="list-text">NetApp 기술 마케팅 엔지니어 Sufian Ahmad</block>
+  <block id="711ba3fec382e550526a6ab0f49bdf3a" category="list-text">Hadi Esmaeilzadeh, 최고 기술 책임자 및 Protopia AI 교수</block>
+  <block id="0844bd2427e754de1d07ca91d15284a5" category="cell">문서 버전 기록</block>
+  <block id="cd24a85c5cf2d1a7af0bade6066be0aa" category="summary">데이터는 사용되지 않는 상태, 전송 중 상태, 컴퓨팅 중 세 가지 상태로 존재합니다. AI 추론 서비스의 중요한 부분은 전체 프로세스 동안 위협으로부터 데이터를 보호하는 것이 되어야 합니다. 추론 도중에 데이터를 보호하는 것은 매우 중요합니다. 이 프로세스에서는 외부 고객과 추론 서비스를 제공하는 회사 모두에 대한 비공개 정보를 표시할 수 있기 때문입니다.</block>
+  <block id="fd8d4cefd4e31d8ce81b0b6c4cf90ae2" category="inline-link-macro">이전: 난독 처리 속도.</block>
+  <block id="12deb7181b69808aaa08117bd40978a3" category="paragraph"><block ref="12deb7181b69808aaa08117bd40978a3" category="inline-link-macro-rx"></block></block>
+  <block id="4282c9ab06938351529fcc9258e39d5a" category="paragraph">데이터는 세 가지 상태, 즉 유휴 상태, 전송 중 상태 및 계산 중에 있습니다. AI 추론 서비스의 중요한 부분은 전체 프로세스 동안 위협으로부터 데이터를 보호하는 것이 되어야 합니다. 추론 도중에 데이터를 보호하는 것은 매우 중요합니다. 이 프로세스에서는 외부 고객과 추론 서비스를 제공하는 회사 모두에 대한 비공개 정보를 표시할 수 있기 때문입니다. Protopia AI는 오늘날의 시장에서 기밀 AI 추론을 위한 비간섭 소프트웨어 전용 솔루션입니다. Protopia를 통해 AI는 현재 AI/ML 작업을 수행하는 데 필수적인 데이터 레코드에 변환된 정보만 제공합니다. 이 확률적 변환은 마스킹의 형태가 아니며 큐레이션 노이즈를 사용하여 데이터의 표현을 수학적으로 변경하는 것을 기반으로 합니다.</block>
+  <block id="945691f1b395ce7af4d5e818b4e62b9b" category="paragraph">ONTAP 기능을 갖춘 NetApp 스토리지 시스템은 로컬 SSD 스토리지와 동일하거나 더 우수한 성능을 제공하며 NetApp DataOps Toolkit과 함께 데이터 과학자, 데이터 엔지니어, AI/ML 개발자 및 비즈니스 또는 엔터프라이즈 IT 의사 결정자에게 다음과 같은 이점을 제공합니다.</block>
+  <block id="2d1d64cb5768a8ce2a6d6bda322d2ecd" category="list-text">재해 복구, 비즈니스 연속성 및 규정 요구사항을 충족하는 엔터프라이즈급 데이터 보호 및 데이터 거버넌스</block>
+  <block id="58b8e67477c25a96d3b430f4ee8d75cf" category="list-text">Jupyter 노트북에 있는 NetApp DataOps Toolkit에서 데이터 과학자 작업 공간의 Snapshot 복사본을 신속하게 만들어 백업 및 추적 기능을 제공합니다.</block>
+  <block id="57e858ddb0a3e1c340cfe4ba7d5c3a14" category="paragraph">NetApp 및 Protopia 솔루션은 엔터프라이즈급 AI 추론 구축에 이상적인 유연한 스케일아웃 아키텍처를 제공합니다. 이 솔루션은 사내 및 하이브리드 클라우드 구축 모두에서 책임 있는 AI 사례를 충족할 수 있는 기밀 AI 추론 요구사항을 충족하는 중요한 정보에 대해 데이터 보호를 지원합니다.</block>
+  <block id="6073423c521e84b849e3b84fa1cc380c" category="inline-link-macro">다음: 추가 정보, 확인 및 버전 기록을 찾을 위치.</block>
+  <block id="9eebc409a853e8c97008be61e4a0b83a" category="paragraph"><block ref="9eebc409a853e8c97008be61e4a0b83a" category="inline-link-macro-rx"></block></block>
+  <block id="6bee97571af49e4c38ff85a4abbbe0e9" category="summary">이 섹션에서는 검증을 완료하는 데 필요한 작업에 대해 설명합니다.</block>
+  <block id="c17e6835560e56c00184a993e1b0bfdb" category="paragraph"><block ref="c17e6835560e56c00184a993e1b0bfdb" category="inline-link-macro-rx"></block></block>
+  <block id="df06a8aa3d194f798e70c253c55d915c" category="paragraph">이 섹션에 설명된 작업을 실행하려면 다음 도구가 설치 및 구성되어 있는 Linux 또는 macOS 호스트에 대한 액세스 권한이 있어야 합니다.</block>
+  <block id="c0ffe26d3756a5c964ff9bc591e1fc16" category="list-text">Kubectl(기존 Kubernetes 클러스터에 액세스하도록 구성)</block>
+  <block id="e436fe7c4ecfcca0f0327b41471955df" category="list-text">설치 및 구성 지침을 찾을 수 있습니다<block ref="f6d4f9e359e394de0cb3015a4518672c" category="inline-link-rx"></block>.</block>
+  <block id="e3e34254666d96b8967227676b54e135" category="list-text">설치 지침을 찾을 수 있습니다<block ref="9535953c30e005e9672e48b24a3ac733" category="inline-link-rx"></block>.</block>
+  <block id="1a66086f406852b100e9d8f85d007b87" category="section-title">시나리오 1 – JupyterLab의 온디맨드 추론</block>
+  <block id="28876e2d40a33fcbc3630d7408b14046" category="list-text">AI/ML 추론 워크로드를 위한 Kubernetes 네임스페이스를 생성합니다.</block>
+  <block id="1464ad61957a8ed3db5f67edbc20cc41" category="list-text">NetApp DataOps 툴킷을 사용하여 추론을 수행할 데이터를 저장할 영구 볼륨을 프로비저닝합니다.</block>
+  <block id="da33a6119aa0b49526bd284e9a865ed5" category="list-text">NetApp DataOps Toolkit을 사용하여 새로운 JupyterLab 작업 공간을 생성합니다. '--mount-PVC' 옵션을 사용하여 이전 단계에서 생성한 영구 볼륨을 마운트합니다. 필요한 경우 '--nVidia-GPU' 옵션을 사용하여 NVIDIA GPU를 작업 공간에 할당합니다.</block>
+  <block id="810e88d69a6b7f454f24db3a25ba375a" category="paragraph">다음 예에서는 영구 볼륨 '추론 데이터'가 '/home/jovyan/data'의 JupyterLab 작업 영역 컨테이너에 마운트됩니다. Jupytter의 공식 컨테이너 이미지를 사용할 때 JupyterLab 웹 인터페이스 내의 최상위 디렉토리로 /home/jovyan이 표시됩니다.</block>
+  <block id="ecca64929aad192e0cdba66d89af6fc2" category="list-text">'jupyterlab 생성' 명령의 출력에 지정된 URL을 사용하여 JupyterLab 작업 영역에 액세스합니다. 데이터 디렉토리는 작업 공간에 마운트된 영구 볼륨을 나타냅니다.</block>
+  <block id="1f069f45990199d6afbe5926fb26f127" category="paragraph"><block ref="1f069f45990199d6afbe5926fb26f127" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b5989087fa6f30a7b2ad79b3b28f4f68" category="list-text">"ata" 디렉토리를 열고 추론을 수행할 파일을 업로드합니다. 파일이 데이터 디렉토리에 업로드되면 작업 공간에 마운트된 영구 볼륨에 자동으로 저장됩니다. 파일을 업로드하려면 다음 이미지와 같이 파일 업로드 아이콘을 클릭합니다.</block>
+  <block id="f6d07c27f458648455903cf09530655f" category="paragraph"><block ref="f6d07c27f458648455903cf09530655f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c6da42e23b9d4e193c2fb146b8189581" category="list-text">최상위 디렉토리로 돌아가서 새 전자 필기장을 만듭니다.</block>
+  <block id="59e51e40d73317a796f7d0b25d8fa003" category="paragraph"><block ref="59e51e40d73317a796f7d0b25d8fa003" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d6d5c0ae1c38484d2d4fd513ff80f90" category="list-text">노트북에 추론 코드를 추가합니다. 다음 예에서는 이미지 감지 사용 사례에 대한 추론 코드를 보여 줍니다.</block>
+  <block id="901ae9d6148669912b400c6d2647bfbf" category="paragraph"><block ref="901ae9d6148669912b400c6d2647bfbf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="45f10850488ed018cdad31f8ac9e8bab" category="paragraph"><block ref="45f10850488ed018cdad31f8ac9e8bab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="296d40736553e2033f5cf8817174bc7c" category="list-text">추론 코드에 Protopia 난독 처리를 추가합니다. Protopia는 고객과 직접 협력하여 사용 사례별 문서를 제공하며 이 기술 보고서의 범위를 벗어납니다. 다음 예제에서는 Protopia 난독 처리를 추가한 이미지 검색 사용 사례에 대한 추론 코드를 보여 줍니다.</block>
+  <block id="5a10342224477df560528e700989b536" category="paragraph"><block ref="5a10342224477df560528e700989b536" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="20f77c05fa583bdc62074b26870e07e7" category="paragraph"><block ref="20f77c05fa583bdc62074b26870e07e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9d5709eb5c3d3d4a700397ee447f9818" category="section-title">시나리오 2 – Kubernetes의 배치 추론</block>
+  <block id="77b69d61f1889c8321dce66f3c3e2e1a" category="list-text">추론을 수행할 데이터로 새 영구 볼륨을 채웁니다.</block>
+  <block id="8b6983cc7986c7b0553983d8ab669289" category="inline-link">NetApp DataOps 툴킷 S3 Data Mover 기능</block>
+  <block id="2933df0ebac7b47c349bd6bd7099fb90" category="paragraph">PVC로 데이터를 로드하는 방법은 여러 가지가 있습니다. 현재 데이터가 NetApp StorageGRID 또는 Amazon S3와 같은 S3 호환 오브젝트 스토리지 플랫폼에 저장되어 있는 경우 를 사용할 수 있습니다<block ref="5d1617256d53e0547b237f3cf3fda5b0" category="inline-link-rx"></block>. 또 하나의 간단한 방법은 JupyterLab 작업 공간을 만든 다음, 섹션 “의 3-5단계에 설명된 대로 JupyterLab 웹 인터페이스를 통해 파일을 업로드하는 것입니다<block ref="db54c391b2f7c3a38c2e40a69aa744e3" category="inline-xref-macro-rx"></block>.”</block>
+  <block id="a62147e18dbac7ad5eab17791c371ad4" category="list-text">배치 추론 작업을 위해 Kubernetes 작업을 생성합니다. 다음 예는 이미지 감지 사용 사례에 대한 배치 추론 작업을 보여줍니다. 이 작업은 이미지 세트의 각 이미지에서 추론을 수행하고 추론 정확도 메트릭을 stdout에 씁니다.</block>
+  <block id="a883fb9f7bda67c6fbcab6dfb8f091ce" category="list-text">추론 작업이 성공적으로 완료되었는지 확인합니다.</block>
+  <block id="590888c60942c47f5268c19f273109ee" category="list-text">추론 작업에 Protopia 난독 처리를 추가합니다. 이 기술 보고서의 범위를 벗어나는 Protopia에서 직접 Protopia 난독 처리를 추가하기 위한 사용 사례별 지침을 찾을 수 있습니다. 다음 예제는 알파 값 0.8을 사용하여 Protopia 난독 처리가 추가된 얼굴 인식 사용 사례에 대한 일괄 추론 작업을 보여 줍니다. 이 작업은 이미지 세트의 각 이미지에 대한 추론을 수행하기 전에 Protopia 난독 처리를 적용한 다음 추론 정확도 메트릭을 stdout에 기록합니다.</block>
+  <block id="7a1adb5cebbf78f3eddc08a64751149e" category="inline-link-macro">“추론 정확도 비교.”</block>
+  <block id="da2c9dc305dff324654e67571156b295" category="paragraph">알파 값 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 0.9 및 0.95. 에서 결과를 볼 수 있습니다 <block ref="af158494e4986d64d04037857fed2d1c" category="inline-link-macro-rx"></block></block>
+  <block id="76d6540fbdbbcd913fb6272a50d0e3f2" category="section-title">시나리오 3 – NVIDIA Triton Inference Server</block>
+  <block id="c470d7124546c64e8539c39ced806428" category="list-text">NetApp DataOps 툴킷을 사용하여 NVIDIA Triton Inference Server의 모델 저장소로 사용할 영구 볼륨을 프로비저닝합니다.</block>
+  <block id="1ddcb92ade31c8fbd370001f9b29a7d9" category="inline-link">형식</block>
+  <block id="97be18cb741b4fd763ebe22e034705fa" category="list-text">의 새 영구 볼륨에 모델을 저장합니다<block ref="bfcdc35d352d3deff6efdd3b8b2ac7ac" category="inline-link-rx"></block> 이 기능은 NVIDIA Triton Inference Server에서 인식됩니다.</block>
+  <block id="6c21d87641bab7a6c49bc29065185e4f" category="paragraph">PVC로 데이터를 로드하는 방법은 여러 가지가 있습니다. 간단한 방법은 “의 3-5단계에 설명된 대로 JupyterLab 작업 공간을 만든 다음 JupyterLab 웹 인터페이스를 통해 파일을 업로드하는 것입니다<block ref="db54c391b2f7c3a38c2e40a69aa744e3" category="inline-xref-macro-rx"></block>. ”</block>
+  <block id="fc35606f82a544f9c79f09561d7a234d" category="list-text">NetApp DataOps 툴킷을 사용하여 새 NVIDIA Triton Inference Server 인스턴스를 구축합니다.</block>
+  <block id="27a920b35a8f949700a98b22803c70fc" category="list-text">Triton 클라이언트 SDK를 사용하여 추론 작업을 수행합니다. 인용된 다음 Python 코드는 Triton Python 클라이언트 SDK를 사용하여 얼굴 감지 사용 사례에 대한 추론 작업을 수행합니다. 이 예에서는 Triton API를 호출하고 추론을 위해 이미지를 전달합니다. 그런 다음 Triton Inference Server가 요청을 수신하고 모델을 호출하고 추론 출력을 API 결과의 일부로 반환합니다.</block>
+  <block id="7b5e296090a5d063fdbd3ebb69fc6547" category="list-text">추론 코드에 Protopia 난독 처리를 추가합니다. Protopia에서 직접 Protopia 난독 처리를 추가하기 위한 사용 사례별 지침을 찾을 수 있지만 이 프로세스는 이 기술 보고서의 범위를 벗어납니다. 다음 예제에서는 앞의 5단계에서 표시되지만 Protopia 난독 처리를 추가한 것과 동일한 Python 코드를 보여 줍니다.</block>
+  <block id="c3069165ee6fb9d5dde8d8472d8b4602" category="paragraph">이 경우, Triton API로 전달되기 전에 Protopia 난독 처리 기능이 이미지에 적용됩니다. 따라서, 난독 처리된 이미지가 로컬 시스템에서 절대 빠져나가지는 않습니다. 난독 처리된 이미지만 네트워크를 통해 전달됩니다. 이 워크플로는 신뢰할 수 있는 영역 내에서 데이터를 수집한 다음 추론을 위해 신뢰할 수 있는 영역 외부로 전달해야 하는 사용 사례에 적용됩니다. Protopia 난독 처리를 사용하지 않으면 중요한 데이터가 신뢰할 수 있는 영역을 벗어나지 않으면 이러한 유형의 워크플로를 구현할 수 없습니다.</block>
+  <block id="38bb883cb543c747fc0f113099f5072d" category="inline-link-macro">다음: 추론 정확도 비교.</block>
+  <block id="1f2c820475fbde991c6219936a645aea" category="paragraph"><block ref="1f2c820475fbde991c6219936a645aea" category="inline-link-macro-rx"></block></block>
+  <block id="c46aabfbeb0af662ede62f7325853fa2" category="summary">디지털 이미지 프로세싱은 많은 이점을 제공하므로 많은 조직에서 시각적 표현과 관련된 데이터를 최대한 활용할 수 있습니다. 이 NetApp 및 Protopia 솔루션은 ML/DL 수명 주기 동안 AI/ML 데이터를 보호하고 민영화 할 수 있는 고유한 AI 추론 설계를 제공합니다. 고객은 이 모델을 통해 기밀 데이터에 대한 소유권을 유지하고, 개인 정보 보호와 관련된 문제를 완화하여 규모에 맞게 퍼블릭 또는 하이브리드 클라우드 구축 모델을 사용하거나, 에지에 AI 추론을 배포할 수 있습니다.</block>
+  <block id="b7aff368ab91b524750e403085893177" category="paragraph"><block ref="b7aff368ab91b524750e403085893177" category="inline-link-macro-rx"></block></block>
+  <block id="55ece983a5251583397e3db1cd3926ec" category="section-title">환경 인텔리전스</block>
+  <block id="d0f24bc92f5b7838f03e893b41066a90" category="paragraph">업계가 환경적 위험 영역에서 지리 공간 분석을 활용할 수 있는 방법은 여러 가지가 있습니다. 정부 및 공공사업 부서는 전염병 또는 산불과 같은 자연 재해 발생 시 공공 보건 및 기상 조건에 대한 실행 가능한 통찰력을 제공하여 일반에게 보다 나은 조언을 제공할 수 있습니다. 예를 들어, 영향을 받는 개인의 사생활을 침해하지 않고 공항 또는 병원과 같은 공공 장소에서 COVID-양성 환자를 식별하고 관련 당국과 인근 직원에게 필요한 안전 조치를 알릴 수 있습니다.</block>
+  <block id="4f9352e4f65872238d755155cd23edec" category="section-title">에지 장치 웨어러블</block>
+  <block id="315a1bbca88dbcbdc95471a0061c333f" category="paragraph">군대와 전쟁터에서 군인의 사생활을 보호하고 보호하면서 군인의 건강을 추적하고, 운전자의 행동을 모니터링하고, 군용 차량에 접근하는 안전 및 관련 위험에 대해 당국에게 경고하기 위해 엣지에서 AI 추론을 웨어러블 장치로 사용할 수 있습니다. 군대의 미래는 전투지 사물 인터넷(IoT)과 웨어러블 전투기용 사물 인터넷(IoMT)을 통해 첨단 기술로 나아가고 있습니다. 이 장비는 신속한 에지 컴퓨팅을 통해 군인들이 적들을 식별하고 전투에서 더 나은 성과를 달성할 수 있도록 지원합니다. 드론과 웨어러블 기어와 같은 에지 장치에서 수집된 시각적 데이터를 보호하고 보존하는 것은 해커와 적에게 항상 보안을 유지하는 데 매우 중요합니다.</block>
+  <block id="d6dded41a42f767150e641793fc0c929" category="section-title">비전투원 대피 작전</block>
+  <block id="c5b381de9b2a4ee73bcc524aa380d725" category="paragraph">비전투원 대피 작전(Neos)은 미 국방부가 미국 시민과 국적을 대피시키기 위해, 국방부 민간인 직원, 그리고 적절한 안전한 피난처로 목숨을 걸고 있는 지정된 사람(HN)과 제3국 국민(TCN)을 대피시키기 위해 실시합니다. 현재 행정적 통제는 대부분 수작업을 통해 선별검사 프로세스를 비우는 데 사용됩니다. 그러나 AI/ML 비디오 난독 처리 기술과 결합된 고도로 자동화된 AI/ML 도구를 사용하면 비우는 ID, 비우는 방법 추적 및 위협 선별의 정확성, 보안 및 속도를 개선할 수 있습니다.</block>
+  <block id="2d930616ec617ae047b7b7eaefb0822c" category="section-title">AI/ML 분석의 클라우드 마이그레이션</block>
+  <block id="073395e7b5fc53b602884ac0aaf757fb" category="inline-link">데이터 보호</block>
+  <block id="e8f037292ae13077891a982b214e0739" category="paragraph">엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다<block ref="9da3a9a08c9461b229d33f221e8caa37" category="inline-link-rx"></block> 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.</block>
+  <block id="c9f2e6462caf995f1d336ab4bb33a7c2" category="inline-link">TR-4886 Ai Inferencing at the Edge(가장자리 기준 TR-4886 AI 추론</block>
+  <block id="ae1b6ac445119145d739025d55fe616f" category="inline-link">인텔리전스와 개인 정보 보호 비교</block>
+  <block id="215649425fa669fb4825e25a6ace492e" category="paragraph">다른 업계에서의 에지 컴퓨팅 및 AI 추론의 추가 사용 사례는 를 참조하십시오<block ref="922342ea98ca297422c6dc441f974a04" category="inline-link-rx"></block> 그리고 NetApp AI 블로그,<block ref="bc130be57ffb0325128dc7274bbdbc64" category="inline-link-rx"></block>.</block>
+  <block id="5318c453b0f0b1d5351026eca9f9899d" category="paragraph"><block ref="5318c453b0f0b1d5351026eca9f9899d" category="inline-link-macro-rx"></block></block>
+  <block id="4c787c1632a0a940cb0b44706b1d24c6" category="summary">이 섹션에서는 이 솔루션을 완료하는 데 필요한 다양한 기술 구성 요소에 대해 간략하게 설명합니다.</block>
+  <block id="2c6beb1e15771dbe426409f9b5d4aaf9" category="inline-link-macro">이전: 솔루션 영역.</block>
+  <block id="8a26bc3756fc01f4b929845a326e9b9d" category="paragraph"><block ref="8a26bc3756fc01f4b929845a326e9b9d" category="inline-link-macro-rx"></block></block>
+  <block id="a6d48b22bcf266404bdb8c57102c14a4" category="section-title">프로토피아</block>
+  <block id="b2cbc1ff8afd6c872961a852572e1782" category="paragraph">Protopia AI는 오늘날 시장에서 기밀 추론을 위한 방해되지 않는 소프트웨어 전용 솔루션을 제공합니다. Protopia 솔루션은 중요한 정보의 노출을 최소화하여 추론 서비스를 위한 탁월한 보호 기능을 제공합니다. AI는 현재 작업을 수행하는 데 꼭 필요한 데이터 레코드의 정보만 제공합니다. 대부분의 추론 작업에서는 모든 데이터 레코드에 있는 모든 정보를 사용하지 않습니다. AI가 이미지, 음성, 비디오 또는 구조화된 표 형식 데이터를 소비하고 있는지 여부와 관계없이 Protopia는 추론 서비스에 필요한 것만 제공합니다. 특허를 획득한 코어 기술은 수학적으로 선별된 소음을 사용하여 데이터를 변환하고 지정된 ML 서비스에서 필요하지 않은 정보를 제공합니다. 이 솔루션은 데이터를 마스킹하지 않고 선별된 랜덤 노이즈를 사용하여 데이터 표현을 변경합니다.</block>
+  <block id="46ce082967eab6fe2e33798614d50861" category="paragraph">프로토피아 솔루션은 모델의 기능과 관련하여 입력 기능 공간에 관련 정보를 계속 유지하는 경사 기반 퍼터버레이션 최대화 방법으로 표현을 변경하는 문제를 공식화합니다. 이 검색 프로세스는 ML 모델 교육을 마칠 때 미세 조정 통과로 실행됩니다. 통과가 자동으로 확률 분포 세트를 생성한 후 오버헤드가 낮은 데이터 변환은 이러한 분포의 노이즈 샘플을 데이터에 적용하고 추론을 위해 모델에 전달하기 전에 난독 처리 합니다.</block>
+  <block id="4fb9892dc0183c3142a3629cecc3104a" category="paragraph">DGX A100 시스템과 NetApp 클라우드 연결형 스토리지 시스템에 기반한 NetApp ONTAP AI 참조 아키텍처는 NetApp과 NVIDIA가 개발 및 검증했습니다. 이 아키텍처는 IT 조직에 다음과 같은 이점을 제공하는 아키텍처를 제공합니다.</block>
+  <block id="988d7b305f79b990bbacdaed46f4b2bf" category="paragraph">ONTAP AI는 DGX A100 시스템과 NetApp AFF A800 스토리지 시스템을 최첨단 네트워킹과 긴밀하게 통합합니다. ONTAP AI는 설계 복잡성과 추측을 제거함으로써 AI 배포를 단순화합니다. 고객은 작은 규모로 시작한 후 에지에서 코어 및 클라우드까지 포괄하여 데이터를 지능적으로 관리하면서 중단 없이 확장할 수 있습니다.</block>
+  <block id="57e22b018aa5130ece9890cd6b45e779" category="paragraph">다음 그림은 DGX A100 시스템과 ONTAP AI 솔루션 제품군의 다양한 변형을 보여줍니다. 최대 8개의 DGX A100 시스템에서 AFF A800 시스템 성능 검증 ONTAP 클러스터에 스토리지 컨트롤러 쌍을 추가하면 아키텍처를 여러 개의 랙으로 확장하여 선형 성능으로 많은 DGX A100 시스템과 페타바이트급 스토리지 용량을 지원할 수 있습니다. 이 접근 방식은 사용되는 DL 모델의 크기와 필요한 성능 메트릭을 기준으로 컴퓨팅 대 스토리지 비율을 독립적으로 변경할 수 있는 유연성을 제공합니다.</block>
+  <block id="316a5094893ef1b058844a75c53aaf04" category="paragraph"><block ref="316a5094893ef1b058844a75c53aaf04" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ecc164061fb57b585c892f0faa6f4dcf" category="inline-link">NVA-1153: NVIDIA DGX A100 시스템 및 Mellanox Spectrum 이더넷 스위치를 포함하는 NetApp ONTAP AI</block>
+  <block id="3046083f382853b50c004323f2cda8f9" category="paragraph">ONTAP AI에 대한 자세한 내용은 를 참조하십시오<block ref="2c1616ab9baa55036487e7ef75b3821d" category="inline-link-rx"></block></block>
+  <block id="862dcadd0f2887701abaa60bf59d5aa5" category="paragraph">NetApp의 최신 세대 스토리지 관리 소프트웨어인 ONTAP 9.11을 통해 기업은 인프라를 현대화하고 클라우드 지원 데이터 센터로 전환할 수 있습니다. ONTAP는 업계 최고 수준의 데이터 관리 기능을 활용하여 데이터가 상주하는 위치와 상관없이 단일 툴셋으로 데이터를 관리하고 보호할 수 있습니다. 필요에 따라 에지, 코어, 클라우드 등 어느 위치로도 데이터를 자유롭게 이동할 수 있습니다. ONTAP 9.11에는 데이터 관리를 단순화하고, 중요 데이터를 가속화하고, 보호하며, 하이브리드 클라우드 아키텍처 전반에 걸쳐 차세대 인프라 기능을 지원하는 다양한 기능이 포함되어 있습니다.</block>
+  <block id="94c4b42bd5bfaa12f328387b161a1686" category="paragraph">NetApp DataOps Toolkit은 개발자, 데이터 과학자, DevOps 엔지니어 및 데이터 엔지니어가 새로운 데이터 볼륨의 거의 즉각적인 프로비저닝 또는 JupyterLab 작업 공간, 데이터 볼륨의 거의 즉각적인 클론 복제 또는 JupyterLab 작업 공간과 같은 다양한 데이터 관리 작업을 간단하게 수행할 수 있는 Python 라이브러리입니다. 추적 기능 또는 베이스라인 기능을 위해 데이터 볼륨의 스냅샷 또는 JupyterLab 작업 공간을 거의 즉각적으로 생성합니다. 이 Python 라이브러리는 명령행 유틸리티 또는 Python 프로그램이나 Jupyter 노트북으로 가져올 수 있는 기능의 라이브러리로 작동할 수 있습니다.</block>
+  <block id="dea84e2e635ce73ddc479a38d5616c98" category="paragraph">NVIDIA Triton Inference Server는 모델 구축 및 실행을 표준화하여 운영 환경에서 신속하고 확장 가능한 AI를 제공하는 오픈 소스 추론 제공 소프트웨어입니다. Triton Inference Server는 팀이 GPU 또는 CPU 기반 인프라의 모든 프레임워크에서 훈련된 AI 모델을 구축, 실행 및 확장할 수 있도록 지원하여 AI 추론을 간소화합니다. Triton Inference Server는 TensorFlow, NVIDIA TensorRT, PyTorch, MXNet, OpenVINO 등 Triton은 모든 주요 퍼블릭 클라우드 AI 및 Kubernetes 플랫폼에서 사용할 수 있는 오케스트레이션 및 확장을 위해 Kubernetes와 통합됩니다. 또한 많은 MLOps 소프트웨어 솔루션과 통합됩니다.</block>
+  <block id="95b88f180e9eb5678e0f9ebac2cbe643" category="section-title">PyTorch</block>
+  <block id="04f7f16178ab3e9bddfd0837b64d21a2" category="paragraph"><block ref="7b17fc2d2143dfdbd3bff6783f73e17c" category="inline-link-rx"></block> 는 오픈 소스 ML 프레임워크입니다. GPU 및 CPU를 사용하는 딥 러닝용으로 최적화된 텐서 라이브러리입니다. PyTorch 패키지에는 여러 유용한 유틸리티 간에 효율적인 서너 직렬화를 위한 여러 유틸리티를 제공하는 다차원 Tensor용 데이터 구조가 포함되어 있습니다. 또한 컴퓨팅 기능이 있는 NVIDIA GPU에서 텐서 컴퓨팅을 실행할 수 있는 CUDA 상대가 있습니다. 이 검증에서는 OpenCV-Python(CV2) 라이브러리를 사용하여 모델을 검증하고 Python의 가장 직관적인 컴퓨터 비전 개념을 활용합니다.</block>
+  <block id="47b2e74e56111387efd2ff8314d1154c" category="paragraph">데이터 관리는 AI 애플리케이션에 적합한 리소스를 사용하고 AI/ML 데이터 세트를 교육할 수 있도록 엔터프라이즈 IT 운영 및 데이터 과학자에게 매우 중요합니다. NetApp 기술에 대한 다음 추가 정보는 이 검증의 범위에 포함되지 않지만, 배포에 따라 달라질 수 있습니다.</block>
+  <block id="31c0318dee8b7049a328f752c457824f" category="paragraph">ONTAP 데이터 관리 소프트웨어에는 운영을 간소화 및 단순화하고 총 운영 비용을 절감하는 다음과 같은 기능이 있습니다.</block>
+  <block id="258ce6748736436345d3a4ade7bfcd47" category="list-text">인라인 데이터 컴팩션 및 확대된 중복제거: 데이터 컴팩션은 스토리지 블록 내부의 낭비되는 공간을 줄이고, 중복제거는 실제 용량을 상당히 늘려줍니다. 이는 로컬에 저장된 데이터와 클라우드로 계층화된 데이터에 적용됩니다.</block>
+  <block id="e0243dd3e4c9bff6b7a18cab1c1e37c8" category="list-text">최소, 최대 및 적응형 서비스 품질(AQoS): 세부적인 서비스 품질(QoS) 제어로 고도의 공유 환경에서 중요 애플리케이션의 성능 수준을 유지할 수 있습니다.</block>
+  <block id="c3528a5e48bbe189e76cf8d737aa5961" category="inline-link">TR-4598: FabricPool 모범 사례</block>
+  <block id="adc171e1d8b6a0bed3a98762139c9875" category="list-text">NetApp FabricPool를 참조하십시오. AWS(Amazon Web Services), Azure, NetApp StorageGRID 스토리지 솔루션을 포함한 퍼블릭 클라우드 및 프라이빗 클라우드 스토리지에 콜드 데이터를 자동으로 계층화합니다. FabricPool에 대한 자세한 내용은 를 참조하십시오<block ref="234c921b7066bc1bdd676ae1a510e5c5" category="inline-link-rx"></block>.</block>
+  <block id="d9cd75773d759d63134b34db3490eab3" category="paragraph">ONTAP는 탁월한 수준의 성능과 데이터 보호를 제공하며 다음과 같은 방법으로 이러한 기능을 확장합니다.</block>
+  <block id="cdea8196113c492688981e0a035baa29" category="list-text">성능 및 짧은 지연 시간: ONTAP는 가장 짧은 지연 시간으로 가장 높은 처리량을 제공합니다.</block>
+  <block id="fa126db4297464dd03b3ceef190df0d0" category="list-text">데이터 보호: ONTAP는 모든 플랫폼에서 공통 관리를 지원하는 내장 데이터 보호 기능을 제공합니다.</block>
+  <block id="892dd840b39835d7da795bbd29f99987" category="list-text">NVE(NetApp 볼륨 암호화). ONTAP는 온보드 및 외부 키 관리를 모두 지원하는 기본 볼륨 레벨 암호화를 제공합니다.</block>
+  <block id="1f17e94c6f48114ff29ad3267277420c" category="list-text">멀티테넌시 및 다단계 인증. ONTAP를 사용하면 인프라 리소스를 최고 수준의 보안으로 공유할 수 있습니다.</block>
+  <block id="836ed833c0dea3b588f04d16ca3f850d" category="paragraph">ONTAP은 다음과 같은 기능을 통해 끊임없이 변화하는 까다로운 비즈니스 요구사항을 충족할 수 있도록 지원합니다.</block>
+  <block id="b816bfff9511bcd88a9aa06fe0fd6389" category="list-text">원활한 확장 및 무중단 운영: ONTAP은 운영 중단 없이 기존 컨트롤러 및 스케일아웃 클러스터에 용량을 추가할 수 있도록 지원합니다. 고객은 고비용이 따르는 데이터 마이그레이션이나 운영 중단 없이 NVMe 및 32Gb FC와 같은 최신 기술로 업그레이드할 수 있습니다.</block>
+  <block id="74c384c0caae9c39b0e414cecc8c66ea" category="list-text">클라우드 연결: ONTAP은 클라우드에 가장 많이 연결된 스토리지 관리 소프트웨어로, 모든 퍼블릭 클라우드에서 ONTAP Select(소프트웨어 정의 스토리지) 및 NetApp Cloud Volumes Service(클라우드 네이티브 인스턴스)에 대한 옵션을 제공합니다.</block>
+  <block id="2a7e7bc180cc3d059089e02f091bac27" category="list-text">새로운 애플리케이션과 통합: ONTAP은 기존 엔터프라이즈 앱을 지원하는 인프라와 동일한 인프라를 사용하여 자율주행 차량, 스마트 시티, Industry 4.0과 같은 차세대 플랫폼 및 애플리케이션을 위한 엔터프라이즈급 데이터 서비스를 제공합니다.</block>
+  <block id="377c9a91b43c5423691b5ce75db91350" category="section-title">NetApp Astra Control</block>
+  <block id="35b46e301702b6fcb16192f9f4cf4533" category="inline-link">Astra 제어 서비스</block>
+  <block id="eb75cc706ac8cc6c0f4cb17f4fb073dd" category="paragraph">NetApp Astra 제품군은 온프레미스 및 퍼블릭 클라우드에서 Kubernetes 애플리케이션을 위한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공하며, NetApp 스토리지 및 데이터 관리 기술을 기반으로 합니다. Kubernetes 애플리케이션을 쉽게 백업하고, 데이터를 다른 클러스터로 마이그레이션하고, 작업 중인 애플리케이션 클론을 즉시 생성할 수 있습니다. 퍼블릭 클라우드에서 실행 중인 Kubernetes 애플리케이션을 관리해야 하는 경우에는 의 문서를 참조하십시오<block ref="6d442ad773e9d31651277931acd1583a" category="inline-link-rx"></block>. Astra Control Service는 GKE(Google Kubernetes Engine) 및 AKS(Azure Kubernetes Service)에서 Kubernetes 클러스터의 애플리케이션 인식 데이터 관리를 제공하는 NetApp 관리 서비스입니다.</block>
+  <block id="545b3003eeeed3a05db492712188eaa8" category="paragraph">아스트라<block ref="b792e70a7bbe82fe69049fd18abe3c18" category="inline-link-rx"></block> NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(ML 개발자, 데이터 과학자 등)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 고급 데이터 관리 기능을 활용할 수 있습니다.</block>
+  <block id="434636f83b39076d7f319707cddbd844" category="paragraph"><block ref="f0ec1a9d50acb3759e364a1cdfa9961d" category="inline-link-rx"></block> 는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, Amazon S3(Amazon Simple Storage Service), Amazon Elastic File System(Amazon EFS), Azure Blob, Google Cloud Storage 간에 파일을 전송해야 하는 경우 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync를 사용하면 파일을 필요한 곳으로 빠르고 안전하게 이동할 수 있습니다. 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 미리 정의된 일정에 따라 데이터를 지속적으로 동기화하여 추가된 부분만 이동하여 데이터 복제에 소비되는 시간과 비용을 최소화합니다. Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software-as-a-Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. AWS, Azure, Google Cloud Platform 또는 온프레미스에서 Cloud Sync 데이터 브로커를 구축할 수 있습니다.</block>
+  <block id="66b5cd4a3c9ce410ceb216447176b92c" category="section-title">NetApp 클라우드 데이터 감지</block>
+  <block id="37b37a18c5e4fe4e0985503adba1ee06" category="paragraph">강력한 AI 알고리즘을 기반으로 <block ref="41205542004b3a03df744ae454bd65c9" category="inline-link-rx"></block> 전체 데이터 자산에 걸쳐 자동화된 제어 및 데이터 거버넌스를 제공합니다. 비용 절감 효과를 쉽게 파악하고 규정 준수 및 개인 정보 보호에 대한 우려 사항을 파악하며 최적화 기회를 찾을 수 있습니다. Cloud Data Sense 대시보드에서는 중복 데이터를 식별할 수 있는 통찰력을 제공하여 중복 데이터를 제거하고 개인, 개인 및 개인 정보가 아닌 중요 데이터를 매핑하며 중요한 데이터와 이상 상태에 대한 알림을 설정할 수 있습니다.</block>
+  <block id="b391770315ecce50e9dae3b6506d3513" category="inline-link-macro">다음: 테스트 및 검증 계획.</block>
+  <block id="d063081c0d1c6aff0b7c690b473d4045" category="paragraph"><block ref="d063081c0d1c6aff0b7c690b473d4045" category="inline-link-macro-rx"></block></block>
+  <block id="fb0e25ed6b061ae8d5a55a94457e445e" category="summary">이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이미지에 5회 적용하고 난독 처리 단계가 매번 완료되는 데 걸리는 시간을 측정했습니다.</block>
+  <block id="9c6852dd5556b48ff70dd2583a5d3aa0" category="doc">난독화 속도</block>
+  <block id="237d31dab91fe077925e5102e132072f" category="inline-link-macro">이전: 추론 정확도 비교.</block>
+  <block id="6e3fd8b18c15e04e41fb57acfcafc5aa" category="paragraph"><block ref="6e3fd8b18c15e04e41fb57acfcafc5aa" category="inline-link-macro-rx"></block></block>
+  <block id="d6edf1cfcac22abc6c577706f85eb816" category="paragraph">이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이미지에 5회 적용하고 난독 처리 단계가 매번 완료되는 데 걸리는 시간을 측정했습니다. 난독 처리를 적용하기 위해 단일 NVIDIA V100 GPU에서 실행되는 PyTorch를 사용했고 실행 간에 GPU 캐시를 지웠습니다. 난독화 단계는 5회 실행에서 각각 5.47ms, 5.27ms, 4.54ms, 5.24ms, 4.84ms를 완료하는 데 각각 걸렸습니다. 평균 속도는 5.072ms였습니다.</block>
+  <block id="eee25724989c730f34a19e19a1db23b2" category="paragraph"><block ref="eee25724989c730f34a19e19a1db23b2" category="inline-link-macro-rx"></block></block>
+  <block id="6d01d0026564c98aa0d6274cd39c586a" category="summary">이 문서에서는 개인 정보 보호 유지 및 책임 있는 AI 솔루션 배포와 관련된 이미지 난독 처리를 사용하는 경우와 사용하지 않는 세 가지 시나리오에서 검증된 설계 솔루션에 대해 설명합니다.</block>
+  <block id="5a438ff2cdda37bd7827c08d5bd3df59" category="doc">TR-4928: AI 및 기밀 추론 지원 - NetApp AI 및 Protopia 이미지 변환</block>
+  <block id="0bbb7f0a0d464779fc0832c366f3a4e7" category="paragraph">사티아가라잔, 마이클 오글즈비야, NetApp 병훈 안, 제니퍼 와겐버그, 프로토피아</block>
+  <block id="c110f3156d66710a207ebd7135164ec1" category="paragraph">시각적 해석은 이미지 캡처와 이미지 처리의 등장과 함께 커뮤니케이션의 핵심 요소가 되었습니다. 디지털 이미지 처리의 인공 지능(AI)은 암 및 기타 질병 식별을 위한 의료 분야, 환경 위험 연구, 패턴 인식, 범죄 퇴치를 위한 비디오 처리 등을 위한 지리공간 시각적 분석 등 새로운 비즈니스 기회를 제공합니다. 그러나 이 기회에는 특별한 책임이 있습니다.</block>
+  <block id="0159205b6d54375adfabd56a2258fcb9" category="paragraph">AI에 대한 조직의 의사 결정이 내려질수록 데이터에 대한 개인 정보 보호, 보안, 법률, 윤리 및 규제 문제와 관련된 위험에 노출될 위험은 커집니다. 책임감 있는 AI를 통해 기업과 정부 조직이 대규모 기업에서 AI에 중요한 신뢰 및 거버넌스 구축을 지원할 수 있습니다. 이 문서에서는 Protopia 데이터 난독 처리 소프트웨어와 함께 NetApp 데이터 관리 기술을 사용하여 중요한 데이터를 민화하고 위험과 윤리적 문제를 줄임으로써 NetApp에서 검증한 AI 추론 솔루션에 대해 설명합니다.</block>
+  <block id="fade8b24490b0ba74a7ffa05d3f8631a" category="paragraph">소비자와 기업 모두 다양한 디지털 장치를 사용하여 매일 수백만 개의 이미지가 생성됩니다. 결과적으로 데이터가 폭발적으로 증가하고 컴퓨팅 작업 부하가 발생함에 따라 기업은 규모와 효율성을 위해 클라우드 컴퓨팅 플랫폼으로 전환하게 됩니다. 한편, 이미지 데이터에 포함된 민감한 정보에 대한 개인 정보 보호는 퍼블릭 클라우드로 이전될 때 발생합니다. 보안 및 개인 정보 보호 보장이 없기 때문에 이미지 처리 AI 시스템을 배포하는 데 주요 장애물이 되고 있습니다.</block>
+  <block id="e9ac7ec9dd27fe52477986ab1dccbcae" category="inline-link">삭제권</block>
+  <block id="49dca35d3e0662046425327194fd8965" category="inline-link">개인정보보호법</block>
+  <block id="f615b294f87bd53494e01691ab95c654" category="paragraph">또한 이 있습니다<block ref="ac9ac606204db63758cb1efd6e89e43e" category="inline-link-rx"></block> GDPR에 따라, 조직에서 모든 개인 데이터를 삭제하도록 요청할 수 있는 개인의 권리. 또한 도 있습니다<block ref="fd57f794f9c27951b4a5b543db96bdb6" category="inline-link-rx"></block>이것은 공정 정보 관리 코드를 설정합니다. 사진과 같은 디지털 이미지는 데이터를 수집, 처리 및 지우는 방법을 제어하는 GDPR의 개인 데이터를 구성할 수 있습니다. 그렇지 않으면 GDPR을 준수하지 않아 조직에 심각한 피해를 줄 수 있는 규정 준수 위반에 대한 무거운 벌금이 부과될 수 있습니다. 개인 정보 보호 원칙은 머신 러닝(ML) 및 딥 러닝(DL) 모델 예측의 공정성을 보장하고 개인 정보 보호 또는 규정 준수 위반과 관련된 위험을 줄이는 책임 있는 AI 구현의 근간입니다.</block>
+  <block id="d365f4ef3ed2b414236f81df850880a3" category="paragraph">이 문서에서는 개인 정보 보호 유지 및 책임 있는 AI 솔루션 배포와 관련된 이미지 난독 처리를 사용하는 경우와 사용하지 않는 세 가지 시나리오에서 검증된 설계 솔루션을 설명합니다.</block>
+  <block id="bd12a6b0ed0be7808c1e30b1e360bee6" category="list-text">* 시나리오 1. * Jupyter 노트북 내 필요 시 추론.</block>
+  <block id="bf93b5af78256f2e49d2c0351133b08d" category="list-text">* 시나리오 2. * Kubernetes의 배치 추론</block>
+  <block id="d5a10e810e1d293a064388e4980bde15" category="list-text">* 시나리오 3. * NVIDIA Triton 추론 서버</block>
+  <block id="870f1cf4b101c66b438e8dd024f24118" category="paragraph">이 솔루션에서는 FDDB(얼굴 인식 데이터 세트 및 벤치마크)를 사용합니다. FDDB는 페이스 보스의 구현을 위한 PyTorch 기계 학습 프레임워크와 함께, 구속되지 않은 얼굴 감지 문제를 연구하도록 설계된 얼굴 영역 데이터 세트입니다. 이 데이터 세트에는 다양한 해상도의 2845 이미지 세트에 있는 5171면에 대한 주석이 포함되어 있습니다. 또한 이 기술 보고서에서는 이 솔루션이 적용 가능한 상황에 대해 NetApp 고객 및 현장 엔지니어를 통해 수집된 일부 솔루션 영역 및 관련 사용 사례를 소개합니다.</block>
+  <block id="e28a169eb64ee1d32c878a26595922f0" category="paragraph">이 기술 보고서는 다음 대상자를 대상으로 합니다.</block>
+  <block id="167e9693dfa764051f26b64ec22356a9" category="list-text">책임 있는 AI를 설계 및 구축하고 공공 장소에서의 얼굴 이미지 처리와 관련된 데이터 보호 및 개인 정보 문제를 처리하고자 하는 비즈니스 리더 및 엔터프라이즈 설계자</block>
+  <block id="304e871b0b1ea55fe3e4f07ead7a7d42" category="list-text">개인 정보를 보호하고 유지하고자 하는 데이터 과학자, 데이터 엔지니어, AI/기계 학습(ML) 연구자 및 AI/ML 시스템 개발자.</block>
+  <block id="dcf26996b3ab9f385a95f72c1d0a0dce" category="list-text">GDPR, CCPA 또는 국방부(DoD) 및 정부 조직의 개인정보 보호법과 같은 규정 표준을 준수하는 AI/ML 모델 및 애플리케이션에 대한 데이터 난독 처리 솔루션을 설계하는 엔터프라이즈 설계자</block>
+  <block id="bb6887ed7c7b07cbb7bd3ec71f951e6f" category="list-text">중요한 정보를 보호하는 딥 러닝(DL) 및 AI/ML/DL 추론 모델을 효율적으로 구축하는 방법을 찾고 있는 데이터 과학자 및 AI 엔지니어</block>
+  <block id="69adf8f52a6229e7062bda4b2b9679fb" category="paragraph">이 솔루션은 GPU의 처리 성능과 기존 CPU를 함께 사용하여 대규모 데이터 세트에서 AI 워크로드를 실시간으로 일괄 처리하고 추론하도록 설계되었습니다. 이 검증에서는 책임 있는 AI 배포를 원하는 조직에 필요한 ML에 대한 개인 정보 보호 추론과 최적의 데이터 관리를 보여줍니다. 이 솔루션은 Jupyter Lab 및 CLI 인터페이스를 사용하여 코어 사내 NetApp ONTAP AI와 상호 연결된 에지 및 클라우드 컴퓨팅을 위한 단일 또는 다중 노드 Kubernetes 플랫폼, NetApp DataOps 툴킷, Protopia 난독화 소프트웨어에 적합한 아키텍처를 제공합니다. 다음 그림에서는 DataOps Toolkit 및 Protopia를 지원하는 NetApp 기반의 Data Fabric에 대한 논리적 아키텍처 개요를 보여 줍니다.</block>
+  <block id="950724ad73ee22fd3b76ae9570281f64" category="paragraph"><block ref="950724ad73ee22fd3b76ae9570281f64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7dfea85fd355e4966805c3504348aa8b" category="paragraph">Protopia 난독 처리 소프트웨어는 NetApp DataOps Toolkit에서 원활하게 실행되며 스토리지 서버를 떠나기 전에 데이터를 변환합니다.</block>
+  <block id="3d68457cd44385c7acbd55eeda70e8f8" category="inline-link-macro">다음: 솔루션 영역.</block>
+  <block id="55da59d3fe9630935dbd4fc25d52b939" category="paragraph"><block ref="55da59d3fe9630935dbd4fc25d52b939" category="inline-link-macro-rx"></block></block>
+  <block id="c94ba9961c97321b49a2f0af40a3c81b" category="sidebar">책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환</block>
 </blocks>

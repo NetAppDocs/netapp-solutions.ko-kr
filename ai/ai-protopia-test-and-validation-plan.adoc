@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ai/ai-protopia-test-and-validation-plan.html 
+keywords: validation scenarios, obfuscation, batch inferencing job 
+summary: 이 섹션에서는 이 솔루션에서 검증된 세 가지 시나리오에 대해 간략하게 설명합니다. 
+---
+= 테스트 및 검증 계획
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ai-protopia-technology-overview.html["이전: 기술 개요"]
+
+이 솔루션 설계의 경우 다음 세 가지 시나리오를 검증했습니다.
+
+* Kubernetes용 NetApp DataOps Toolkit을 사용하여 조율된 JupyterLab 작업 공간 내의 프로토피아 난독 처리 기능을 사용하거나 사용하지 않는 추론 작업.
+* Kubernetes용 NetApp DataOps Toolkit을 사용하여 오케스트레이션된 데이터 볼륨을 사용하는 Kubernetes에서 프로토피아 난독 처리를 사용하거나 사용하지 않는 배치 추론 작업
+* Kubernetes용 NetApp DataOps 툴킷을 사용하여 조정된 NVIDIA Triton Inference Server 인스턴스를 사용한 추론 작업 네트워크를 통해 전송되는 모든 데이터가 난독 처리되어야 한다는 일반적인 요구 사항을 시뮬레이션하기 위해 Triton 추론 API를 호출하기 전에 이미지에 Protopia 난독 처리를 적용했습니다. 이 워크플로는 신뢰할 수 있는 영역 내에서 데이터를 수집하지만 추론을 위해 신뢰할 수 있는 영역 외부로 전달해야 하는 사용 사례에 적용됩니다. Protopia 난독 처리를 사용하지 않으면 중요한 데이터가 신뢰할 수 있는 영역을 벗어나지 않으면 이러한 유형의 워크플로를 구현할 수 없습니다.
+
+
+link:ai-protopia-test-configuration.html["다음: 구성을 테스트합니다."]

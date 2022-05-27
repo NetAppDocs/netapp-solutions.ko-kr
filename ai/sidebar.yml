@@ -125,6 +125,29 @@ entries:
     url: https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf
 - title: 사용 사례
   entries:
+  - title: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
+    type: solutions
+    entries:
+    - title: 개요
+      url: "/ai/ai-protopia-overview.html"
+    - title: 솔루션 영역
+      url: "/ai/ai-protopia-solution-areas.html"
+    - title: 기술 개요
+      url: "/ai/ai-protopia-technology-overview.html"
+    - title: 테스트 및 검증 계획
+      url: "/ai/ai-protopia-test-and-validation-plan.html"
+    - title: 구성을 테스트합니다
+      url: "/ai/ai-protopia-test-configuration.html"
+    - title: 테스트 절차
+      url: "/ai/ai-protopia-test-procedure.html"
+    - title: 추론 정확도 비교
+      url: "/ai/ai-protopia-inferencing-accuracy-comparison.html"
+    - title: 난독화 속도
+      url: "/ai/ai-protopia-obfuscation-speed.html"
+    - title: 결론
+      url: "/ai/ai-protopia-conclusion.html"
+    - title: 추가 정보, 확인 및 버전 기록을 찾을 수 있는 위치
+      url: "/ai/ai-protopia-where-to-find-additional-information,-acknowledgements,-and-version-history.html"
   - title: NetApp AI를 통한 감정 분석
     type: solutions
     entries:
