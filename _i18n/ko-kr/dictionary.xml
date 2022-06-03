@@ -5431,7 +5431,6 @@
   <block id="0454c59b86dfb678c92c2c7480958d1c" category="paragraph">엔터프라이즈 Kubernetes 플랫폼인 Red Hat OpenShift를 사용하면 오픈 하이브리드 클라우드 전략으로 컨테이너 기반 애플리케이션을 실행할 수 있습니다. Red Hat OpenShift는 주요 퍼블릭 클라우드 또는 자가 관리 소프트웨어에서 클라우드 서비스로 사용할 수 있으며 컨테이너 기반 솔루션을 설계할 때 고객이 필요로 하는 유연성을 제공합니다.</block>
   <block id="2426b725f5be26f50931584ae804c2eb" category="inline-link">Red Hat OpenShift 개요</block>
   <block id="ad973740d0b3378d367abba8a74a610e" category="paragraph">Red Hat OpenShift에 대한 자세한 내용은 다음을 참조하십시오<block ref="dc6de73076240cafa99651f2d6acfef4" category="inline-link-rx"></block>. 제품 설명서 및 배포 옵션을 검토하여 Red Hat OpenShift에 대해 자세히 알아볼 수도 있습니다.</block>
-  <block id="282b81467c1dda139fb97c67a904cdcb" category="section-title">NetApp 및 Red Hat OpenShift 비디오</block>
   <block id="3699cb747ce71b2fed488fef61ad35be" category="inline-link">워크로드 마이그레이션 - NetApp의 Red Hat OpenShift</block>
   <block id="ade88b04ec62ed28eb857e48bc32cef5" category="list-text"><block ref="ade88b04ec62ed28eb857e48bc32cef5" category="inline-link-rx"></block></block>
   <block id="68d13ef3d87e892878a6e6cbb44d1f21" category="inline-link">RHV 기반 Red Hat OpenShift Deployment: NetApp 기반 Red Hat OpenShift</block>
@@ -9961,15 +9960,9 @@
   <block id="6f3666cf392f9aa79924b94f433b64ed" category="doc">VMware vSphere용 NetApp SnapCenter 플러그인 - VMware 기반 구축</block>
   <block id="a1dd31a3dca44eb1fe27b895521130ae" category="inline-link-macro">다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건</block>
   <block id="874d68c7d23e9e2e452ff6efaf757dee" category="paragraph"><block ref="874d68c7d23e9e2e452ff6efaf757dee" category="inline-link-macro-rx"></block></block>
-  <block id="7e5604b05604b8bee096192b96f1f0aa" category="section-title">VMware vSphere용 NetApp SnapCenter 및 SnapCenter 플러그인</block>
   <block id="7dcf4233280fcc0e80d2c5b8ce82af91" category="paragraph">NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다.</block>
   <block id="7dc8c97b0d6d3055290baa0eb36dbfa5" category="paragraph">VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, 복구 및 연결 작업과 VMware vCenter에서 직접 SnapCenter에 등록된 데이터 저장소에 대한 백업 및 마운트 작업을 수행할 수 있습니다.</block>
   <block id="00389b40803806e30e1877e1a0469e22" category="inline-link">VMware vSphere용 NetApp SnapCenter 플러그인 개요</block>
-  <block id="47d7646bd1c6577d907ac316431ae609" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 구축</block>
-  <block id="05799bad32c5bd80547efe4144fb57af" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건</block>
-  <block id="11d13047d237d5bccdd941bafda45d9d" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우</block>
-  <block id="16bbc152851c33a02fcac2fbf943ffee" category="inline-link">VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우</block>
-  <block id="305f1daa74a8ec01eaf0ce2c9a8ce355" category="inline-link">SnapCenter - SQL 복원 워크플로</block>
   <block id="10408567d24e2dd65731b1e2f0508a5d" category="doc">VMware vSphere용 NetApp SnapCenter 플러그인 - 솔루션 전제 조건</block>
   <block id="0a70bb0111bccb302f68cc327b0527f8" category="inline-link-macro">이전: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 구축</block>
   <block id="dc69c4899210bca949880d9753e92b35" category="paragraph"><block ref="dc69c4899210bca949880d9753e92b35" category="inline-link-macro-rx"></block></block>
@@ -11827,7 +11820,6 @@
   <block id="6309162dffb4a082a2a106613c448e9f" category="doc">하이브리드 클라우드, 가상화 및 컨테이너 비디오 및 데모</block>
   <block id="ccf0b7773e492df3e851d36b689b69b1" category="paragraph">하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.</block>
   <block id="ab5efb952cd51767fdde3f548f7d3f18" category="paragraph">NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 <block ref="39b49e6fd504a137658d6db31d129abd" category="inline-link-macro-rx"></block>.</block>
-  <block id="668ed010c67826eb36328daf61db1909" category="example-title">NetApp with VMware Tanzu 비디오</block>
   <block id="0b59976821e81163a037c4ed7f21b209" category="paragraph"><block ref="0b59976821e81163a037c4ed7f21b209" category="inline-link-macro-rx"></block></block>
   <block id="4bff68299377013f00a500a01c7a2f19" category="list-text"><block ref="4bff68299377013f00a500a01c7a2f19" category="inline-link-macro-rx"></block></block>
   <block id="e5f4fe92e1832b16532011df56ee39a5" category="list-text"><block ref="c30f78a476776106411b5cd1ee097f4f" category="inline-link-macro-rx"></block></block>
@@ -12113,4 +12105,6 @@
   <block id="3d68457cd44385c7acbd55eeda70e8f8" category="inline-link-macro">다음: 솔루션 영역.</block>
   <block id="55da59d3fe9630935dbd4fc25d52b939" category="paragraph"><block ref="55da59d3fe9630935dbd4fc25d52b939" category="inline-link-macro-rx"></block></block>
   <block id="c94ba9961c97321b49a2f0af40a3c81b" category="sidebar">책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환</block>
+  <block id="2ffe7358ce461fb4d630742ed966cf0b" category="example-title">VMware vSphere용 NetApp ONTAP 툴</block>
+  <block id="e78afc9f7bd61b3284539108287c91ca" category="example-title">NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud</block>
 </blocks>

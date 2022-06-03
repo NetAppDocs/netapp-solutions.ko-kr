@@ -15,62 +15,81 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 
 하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.
 
+.VMware vSphere용 NetApp ONTAP 툴
+====
 
+====
+video::otv_overview.mp4[]
+====
 
-== VMware vSphere용 NetApp SnapCenter 및 SnapCenter 플러그인
+====
+video::otv_iscsi_provision.mp4[]
+====
 
+====
+video::otv_nfs_provision.mp4[]
+====
+
+====
+.NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud
+====
+
+====
+video::vmc_windows_vm_iscsi.mp4[]
+====
+
+====
+video::vmc_linux_vm_nfs.mp4[]
+====
+
+====
+.VMware vSphere용 SnapCenter 플러그인
+====
 NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다.
 
 VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, 복구 및 연결 작업과 VMware vCenter에서 직접 SnapCenter에 등록된 데이터 저장소에 대한 백업 및 마운트 작업을 수행할 수 있습니다.
 
 NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/ocsc-42/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-29BABBA7-B15F-452F-B137-2E5B269084B9.html["VMware vSphere용 NetApp SnapCenter 플러그인 개요"].
 
-.VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
 ====
 video::scv_prereq_overview.mp4[]
 ====
-.VMware vSphere용 SnapCenter 플러그인 - 구축
+
 ====
 video::scv_deployment.mp4[]
 ====
-.VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
+
 ====
 video::scv_backup_workflow.mp4[]
 ====
-.VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
+
 ====
 video::scv_restore_workflow.mp4[]
 ====
-.SnapCenter - SQL 복원 워크플로
+
 ====
 video::scv_sql_restore.mp4[]
 ====
 
-
-== NetApp과 VMware Tanzu
-
+====
+.NetApp과 VMware Tanzu
+====
 VMware Tanzu를 사용하면 vSphere 또는 VMware Cloud Foundation을 통해 Kubernetes 환경을 구축, 관리 및 관리할 수 있습니다. 고객은 VMware의 이 제품 포트폴리오를 통해 요구사항에 가장 적합한 VMware Tanzu 에디션을 선택하여 단일 제어 플레인에서 모든 관련 Kubernetes 클러스터를 관리할 수 있습니다.
 
 VMware Tanzu에 대한 자세한 내용은 를 참조하십시오 https://tanzu.vmware.com/tanzu["VMware Tanzu 개요"^]. 이 리뷰에서는 VMware Tanzu에 대한 사용 사례, 추가 기능 및 기타 정보를 제공합니다.
 
-.NetApp with VMware Tanzu 비디오
-====
 * https://www.youtube.com/watch?v=ZtbXeOJKhrc["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법 1부"^]
 * https://www.youtube.com/watch?v=FVRKjWH7AoE["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 2부"^]
 * https://www.youtube.com/watch?v=Y-34SUtTTtU["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 3부"^]
 
 
 ====
-
-
-== NetApp 및 Red Hat OpenShift의 조합
-
+.NetApp 및 Red Hat OpenShift의 조합
+====
 엔터프라이즈 Kubernetes 플랫폼인 Red Hat OpenShift를 사용하면 오픈 하이브리드 클라우드 전략으로 컨테이너 기반 애플리케이션을 실행할 수 있습니다. Red Hat OpenShift는 주요 퍼블릭 클라우드 또는 자가 관리 소프트웨어에서 클라우드 서비스로 사용할 수 있으며 컨테이너 기반 솔루션을 설계할 때 고객이 필요로 하는 유연성을 제공합니다.
 
 Red Hat OpenShift에 대한 자세한 내용은 다음을 참조하십시오 https://www.redhat.com/en/technologies/cloud-computing/openshift["Red Hat OpenShift 개요"^]. 제품 설명서 및 배포 옵션을 검토하여 Red Hat OpenShift에 대해 자세히 알아볼 수도 있습니다.
 
-.NetApp 및 Red Hat OpenShift 비디오
-====
 * https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_videos_workload_migration_manual.html["워크로드 마이그레이션 - NetApp의 Red Hat OpenShift"^]
 * https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_videos_RHV_deployment.html["RHV 기반 Red Hat OpenShift Deployment: NetApp 기반 Red Hat OpenShift"^]
 
