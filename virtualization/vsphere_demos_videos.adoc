@@ -17,31 +17,29 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 
 .VMware vSphere용 NetApp ONTAP 툴
 ====
-
-====
+.VMware용 ONTAP 툴 - 개요
+=====
 video::otv_overview.mp4[]
-====
-
-====
+=====
+.ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당
+=====
 video::otv_iscsi_provision.mp4[]
-====
-
-====
+=====
+.ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당
+=====
 video::otv_nfs_provision.mp4[]
-====
-
+=====
 ====
 .NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud
 ====
-
-====
+.iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
+=====
 video::vmc_windows_vm_iscsi.mp4[]
-====
-
-====
+=====
+.NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
+=====
 video::vmc_linux_vm_nfs.mp4[]
-====
-
+=====
 ====
 .VMware vSphere용 SnapCenter 플러그인
 ====
@@ -51,26 +49,26 @@ VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, �
 
 NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/ocsc-42/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-29BABBA7-B15F-452F-B137-2E5B269084B9.html["VMware vSphere용 NetApp SnapCenter 플러그인 개요"].
 
-====
+.VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
+=====
 video::scv_prereq_overview.mp4[]
-====
-
-====
+=====
+.VMware vSphere용 SnapCenter 플러그인 - 구축
+=====
 video::scv_deployment.mp4[]
-====
-
-====
+=====
+.VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
+=====
 video::scv_backup_workflow.mp4[]
-====
-
-====
+=====
+.VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
+=====
 video::scv_restore_workflow.mp4[]
-====
-
-====
+=====
+.SnapCenter - SQL 복원 워크플로
+=====
 video::scv_sql_restore.mp4[]
-====
-
+=====
 ====
 .NetApp과 VMware Tanzu
 ====
