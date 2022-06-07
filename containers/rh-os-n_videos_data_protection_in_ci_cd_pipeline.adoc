@@ -13,5 +13,5 @@ summary: Astra Control Center를 통해 CI/CD 파이프라인에서 데이터 �
 :imagesdir: ./../media/
 
 
-video::rh-os-n_videos_data_protection_in_ci_cd_pipeline.mp4[]
+video::rh-os-n_videos_data_protection_in_ci_cd_pipeline.mp4[Data Protection in CI/CD pipeline with Astra Control Center]
 link:rh-os-n_additional_information.html["다음: 추가 정보: NetApp의 Red Hat OpenShift"]

@@ -60,10 +60,7 @@ Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 자세한 내용을 확인하십시오 link:azure-guest.html["AVS용 게스트 연결 스토리지 옵션"].
 
-에 대해 자세히 알아보십시오 link:https://azure.microsoft.com/en-us/updates/azure-netapp-files-datastores-for-azure-vmware-solution-is-coming-soon/["Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1로 사용합니다"^].
-
-
-NOTE: 1-현재 비공개 미리보기에 있습니다
+에 대해 자세히 알아보십시오 https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?branch=main&tabs=azure-portal["기본 데이터 저장소인 Azure NetApp Files(ANF) - 퍼블릭 미리 보기"].
 
 
 

@@ -13,5 +13,5 @@ summary:
 :imagesdir: ./../media/
 
 
-video::rh-os-n_videos_astra_control_flexclone_usecase.mp4[]
+video::rh-os-n_videos_astra_control_flexclone_usecase.mp4[Accelerate Software Development with Astra Control and NetApp FlexClone Technology - Red Hat OpenShift with NetApp]
 link:rh-os-n_additional_information.html["다음: 추가 정보: NetApp의 Red Hat OpenShift"]

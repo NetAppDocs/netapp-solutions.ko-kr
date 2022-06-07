@@ -21,5 +21,7 @@ indexpage:
       url: 
   - title: 추가 정보
     links:
+    - title: NFS 데이터 저장소에 대한 지역 지원
+      url: "/aws-regions.html"
     - title: 'AWS 기반 VMware 클라우드: 새로운 지역, 외부 스토리지 및 구매 옵션'
       url: https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/

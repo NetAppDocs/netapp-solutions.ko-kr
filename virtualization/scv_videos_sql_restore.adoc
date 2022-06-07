@@ -13,5 +13,5 @@ summary:
 :imagesdir: ./../media/
 
 
-video::scv_sql_restore.mp4[]
+video::scv_sql_restore.mp4[NetApp SnapCenter Plug-in for VMware vSphere - SQL Server Workflow]
 link:scv_videos_restore_workflow.html["이전: 추가 정보: VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우."]

@@ -29,6 +29,8 @@ entries:
       url: "/ehc/azure/azure-guest.html"
     - title: GCVE용 게스트 연결 저장소
       url: "/ehc/gcp/gcp-guest.html"
+    - title: NFS 데이터 저장소에 대한 지역 지원
+      url: "/ehc/ehc-regions.html"
   - title: 요약 및 결론
     url: "/ehc/ehc-summary.html"
 - title: VMware 하이브리드 클라우드 사용 사례
@@ -43,6 +45,9 @@ entries:
     url: "/ehc/gcp/gcp-solutions.html"
 - title: NetApp for AWS/VMC
   url: "/ehc/aws/index.html"
+  entries:
+  - title: NFS 데이터 저장소에 대한 지역 지원
+    url: "/ehc/aws/aws-regions.html"
 - title: NetApp for Azure/AVS
   url: "/ehc/azure/index.html"
 - title: NetApp for GCP/GCVE

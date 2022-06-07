@@ -124,11 +124,11 @@ image:netapp-vmware-6178d.png["링크 =\"https://www.netapp.tv/player/29126/stre
 
  a| 
 .VMware Tanzu용 동적 영구 NetApp 스토리지 구축 1부
-video::ZtbXeOJKhrc[youtube, ] a| 
+video::ZtbXeOJKhrc[youtube] a| 
 .VMware Tanzu용 동적 영구 NetApp 스토리지 구축 2부
-video::FVRKjWH7AoE[youtube, ] a| 
+video::FVRKjWH7AoE[youtube] a| 
 .Deploying Dynamic Persistent NetApp Storage for VMware Tanzu, 3을 참조하십시오
-video::Y-34SUtTTtU[youtube, ]
+video::Y-34SUtTTtU[youtube]
 |===
 
 

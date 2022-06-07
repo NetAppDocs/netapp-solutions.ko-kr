@@ -15,6 +15,8 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/20646-tr-4869.pdf
     - title: NetApp E-Series E5700 및 Splunk Enterprise
       url: https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf
+    - title: Splunk Enterprise 기반의 NetApp EF600
+      url: https://www.netapp.com/pdf.html?item=/media/72003-tr-4930.pdf
   - title: 사용 사례
     links:
     - title: 하이브리드 클라우드 솔루션 - Spark 및 Hadoop 사용 사례

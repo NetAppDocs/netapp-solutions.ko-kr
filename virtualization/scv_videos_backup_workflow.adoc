@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
-video::scv_backup_workflow.mp4[]
+video::scv_backup_workflow.mp4[NetApp SnapCenter Plug-in for VMware vSphere - Backup Workflow]
 link:scv_videos_prerequisites.html["이전: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건"]
 
 link:scv_videos_restore_workflow.html["다음: 추가 정보 - VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우."]
