@@ -11795,7 +11795,6 @@
   <block id="bd6708bcf0c060976324512475c1a212" category="paragraph"><block ref="bd6708bcf0c060976324512475c1a212" category="inline-link-macro-rx"></block></block>
   <block id="cac969404c87e9e141b320e34ee1ba4b" category="inline-link-macro">Google Cloud Platform (GCP)/GCVE용 NetApp 솔루션을 찾아보십시오</block>
   <block id="7f86100566a3de37a45dc2bd4ea422a0" category="paragraph"><block ref="7f86100566a3de37a45dc2bd4ea422a0" category="inline-link-macro-rx"></block></block>
-  <block id="fc6a84d7647419d401d691cc6c004cc4" category="paragraph">보조 아이콘: permalink: database/db_protection_awx_automation.html keywords: Linux, RHEL Oracle19c, NFS, ONTAP 요약: 이 페이지에서는 NetApp ONTAP 스토리지 기반 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다. --</block>
   <block id="c6cf4675ec6aec4e4edf9eac5122e022" category="paragraph">stdin&gt;에서 확인되지 않은 보호 지침 - 포함::::./_iinclude/db_protection_log_replication.adoc [ ]</block>
   <block id="95adefbc130d345041c4487820a9ab16" category="summary">NetApp 엔터프라이즈 데이터베이스 솔루션은 주요 엔터프라이즈 데이터베이스에서 NetApp 스토리지의 기능을 시연하는 전략적 및 기술 기능 집합입니다.</block>
   <block id="e890f04973d00c3664a44f4cc586bb5d" category="doc">NetApp 엔터프라이즈 데이터베이스 솔루션</block>
@@ -12254,4 +12253,5 @@
   <block id="1da3fb2408fde551ca108534afed1987" category="sidebar">Splunk Enterprise 기반의 NetApp EF600</block>
   <block id="419f5ca56c881443509bda0a14523c9c" category="cell">공개 미리 보기 공지/지원과 일치하도록 AVS 지역 지원이 업데이트되었습니다</block>
   <block id="cebbb8185facc297951873cd58ae2811" category="paragraph">마지막 업데이트: 2022년 6월 7일.</block>
+  <block id="40640c0c34d4427f5d18b9ca476e3158" category="summary">이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다.</block>
 </blocks>
