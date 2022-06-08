@@ -12011,7 +12011,6 @@
   <block id="c5b381de9b2a4ee73bcc524aa380d725" category="paragraph">비전투원 대피 작전(Neos)은 미 국방부가 미국 시민과 국적을 대피시키기 위해, 국방부 민간인 직원, 그리고 적절한 안전한 피난처로 목숨을 걸고 있는 지정된 사람(HN)과 제3국 국민(TCN)을 대피시키기 위해 실시합니다. 현재 행정적 통제는 대부분 수작업을 통해 선별검사 프로세스를 비우는 데 사용됩니다. 그러나 AI/ML 비디오 난독 처리 기술과 결합된 고도로 자동화된 AI/ML 도구를 사용하면 비우는 ID, 비우는 방법 추적 및 위협 선별의 정확성, 보안 및 속도를 개선할 수 있습니다.</block>
   <block id="2d930616ec617ae047b7b7eaefb0822c" category="section-title">AI/ML 분석의 클라우드 마이그레이션</block>
   <block id="073395e7b5fc53b602884ac0aaf757fb" category="inline-link">데이터 보호</block>
-  <block id="e8f037292ae13077891a982b214e0739" category="paragraph">엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다<block ref="9da3a9a08c9461b229d33f221e8caa37" category="inline-link-rx"></block> 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.</block>
   <block id="c9f2e6462caf995f1d336ab4bb33a7c2" category="inline-link">TR-4886 Ai Inferencing at the Edge(가장자리 기준 TR-4886 AI 추론</block>
   <block id="ae1b6ac445119145d739025d55fe616f" category="inline-link">인텔리전스와 개인 정보 보호 비교</block>
   <block id="215649425fa669fb4825e25a6ace492e" category="paragraph">다른 업계에서의 에지 컴퓨팅 및 AI 추론의 추가 사용 사례는 를 참조하십시오<block ref="922342ea98ca297422c6dc441f974a04" category="inline-link-rx"></block> 그리고 NetApp AI 블로그,<block ref="bc130be57ffb0325128dc7274bbdbc64" category="inline-link-rx"></block>.</block>
@@ -12254,4 +12253,7 @@
   <block id="419f5ca56c881443509bda0a14523c9c" category="cell">공개 미리 보기 공지/지원과 일치하도록 AVS 지역 지원이 업데이트되었습니다</block>
   <block id="cebbb8185facc297951873cd58ae2811" category="paragraph">마지막 업데이트: 2022년 6월 7일.</block>
   <block id="40640c0c34d4427f5d18b9ca476e3158" category="summary">이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다.</block>
+  <block id="19c95c19bd7c939577775cd0ecce3df1" category="section-title">의료 및 생의학 연구</block>
+  <block id="a047c61461aba5a84a0a221900c33984" category="paragraph">영상 처리는 컴퓨터 단층촬영(CT) 또는 자기공명영상(MRI)에서 얻은 3D 영상에서 외과적 계획을 위한 병리를 진단하는 데 사용됩니다. HIPAA 개인 정보 보호 규칙은 모든 개인 정보 및 사진과 같은 디지털 이미지에 대해 조직에서 데이터를 수집, 처리 및 지우는 방법을 규정합니다. HIPAA 세이프 하버 규정에 따라 데이터를 공유할 수 있는 자격을 갖추려면 전체 사진 이미지와 비교 이미지를 제거해야 합니다. 구조적 CT/MR 영상에서 개인의 얼굴 특징을 모호하게 하는 데 사용되는 식별 해제 또는 두개골 스트리핑 알고리즘과 같은 자동화 기술은 생물 의학 연구 기관의 데이터 공유 프로세스에서 필수적인 부분이 되었습니다.</block>
+  <block id="2c5c3872e94de8a36eac45213c5bf2e6" category="paragraph">엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다<block ref="9da3a9a08c9461b229d33f221e8caa37" category="inline-link-rx"></block> 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.</block>
 </blocks>
