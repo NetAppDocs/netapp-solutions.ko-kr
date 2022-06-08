@@ -4,7 +4,7 @@ permalink: ai/ai-protopia-overview.html
 keywords: tr4928, 4928, introduction, overview, inferencing, confidential 
 summary: 이 문서에서는 개인 정보 보호 유지 및 책임 있는 AI 솔루션 배포와 관련된 이미지 난독 처리를 사용하는 경우와 사용하지 않는 세 가지 시나리오에서 검증된 설계 솔루션에 대해 설명합니다. 
 ---
-= TR-4928: AI 및 기밀 추론 지원 - NetApp AI 및 Protopia 이미지 변환
+= TR-4928: AI 및 기밀 추론 지원 - NetApp AI 및 Protopia 이미지 및 데이터 변환
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
