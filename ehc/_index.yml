@@ -31,7 +31,7 @@ indexpage:
     links:
     - title: 가상화 환경을 구성합니다
       url: "/azure/azure-setup.html"
-    - title: 네이티브 데이터 저장소 - Oublic Preview
+    - title: 네이티브 데이터 저장소 - 퍼블릭 미리 보기
       url: https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?branch=main&tabs=azure-portal
     - title: 게스트 연결 스토리지로서의 Azure NetApp Files(ANF)
       url: "/azure/azure-guest.html#anf"

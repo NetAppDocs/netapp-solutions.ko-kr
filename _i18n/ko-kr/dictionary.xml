@@ -12246,7 +12246,6 @@
   <block id="aa19b96341556efbc0c3bf78b6c1945b" category="cell"><block ref="aa19b96341556efbc0c3bf78b6c1945b" category="inline-link-macro-rx"></block></block>
   <block id="844f1178f4ff7b95030ee50d8917da61" category="sidebar">NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="15b1cf33f2d910f9ab5e6fdaeb331bcc" category="sidebar">AWS에서 NFS 데이터 저장소에 대한 지역 지원</block>
-  <block id="959582dfe2512537cab4041983cbd24d" category="sidebar">네이티브 데이터 저장소 - Oublic Preview</block>
   <block id="81a6037600add9bb79d72eb49534ff94" category="sidebar">Azure에서 NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="1da3fb2408fde551ca108534afed1987" category="sidebar">Splunk Enterprise 기반의 NetApp EF600</block>
   <block id="419f5ca56c881443509bda0a14523c9c" category="cell">공개 미리 보기 공지/지원과 일치하도록 AVS 지역 지원이 업데이트되었습니다</block>
@@ -12256,4 +12255,5 @@
   <block id="a047c61461aba5a84a0a221900c33984" category="paragraph">영상 처리는 컴퓨터 단층촬영(CT) 또는 자기공명영상(MRI)에서 얻은 3D 영상에서 외과적 계획을 위한 병리를 진단하는 데 사용됩니다. HIPAA 개인 정보 보호 규칙은 모든 개인 정보 및 사진과 같은 디지털 이미지에 대해 조직에서 데이터를 수집, 처리 및 지우는 방법을 규정합니다. HIPAA 세이프 하버 규정에 따라 데이터를 공유할 수 있는 자격을 갖추려면 전체 사진 이미지와 비교 이미지를 제거해야 합니다. 구조적 CT/MR 영상에서 개인의 얼굴 특징을 모호하게 하는 데 사용되는 식별 해제 또는 두개골 스트리핑 알고리즘과 같은 자동화 기술은 생물 의학 연구 기관의 데이터 공유 프로세스에서 필수적인 부분이 되었습니다.</block>
   <block id="2c5c3872e94de8a36eac45213c5bf2e6" category="paragraph">엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다<block ref="9da3a9a08c9461b229d33f221e8caa37" category="inline-link-rx"></block> 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.</block>
   <block id="236e54165aafef697c2c82c667e05d36" category="doc">TR-4928: AI 및 기밀 추론 지원 - NetApp AI 및 Protopia 이미지 및 데이터 변환</block>
+  <block id="89c461295f17dbdb6e2da2dcb27d01b3" category="sidebar">네이티브 데이터 저장소 - 퍼블릭 미리 보기</block>
 </blocks>
