@@ -1233,7 +1233,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_astra.html</loc>
       
-      <lastmod>2022-05-09T20:30:58+00:00</lastmod>
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
       
     </url>
   
@@ -1261,7 +1261,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/devops_with_netapp/dwn_overview_trident.html</loc>
       
-      <lastmod>2022-05-09T20:30:58+00:00</lastmod>
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
       
     </url>
   
@@ -2204,20 +2204,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/ai/osrunai_.html</loc>
-      
-      <lastmod>2022-04-18T06:44:50+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/ai/osrunai__01.html</loc>
-      
-      <lastmod>2022-04-18T06:44:50+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/ai/osrunai_abstract.html</loc>
       
       <lastmod>2022-04-18T06:44:50+00:00</lastmod>
@@ -2514,7 +2500,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/rh-os-n_overview_astra.html</loc>
       
-      <lastmod>2022-04-18T06:44:50+00:00</lastmod>
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
       
     </url>
   
@@ -2899,7 +2885,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions//search.html</loc>
       
-      <lastmod>2022-06-17T13:54:54+00:00</lastmod>
+      <lastmod>2022-06-17T21:53:03+00:00</lastmod>
       
     </url>
   
@@ -3173,6 +3159,139 @@
       <loc>https://docs.netapp.com/ko-kr/netapp-solutions/virtualization/vsrm-ontap9_replication_topologies.html</loc>
       
       <lastmod>2022-04-18T06:44:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_additional_information.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_astra_applications.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_astra_protect.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_astra_register.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_netapp_ontap.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_astra.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_netapp.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_storint.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_tkg.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_tkgi.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_tkgs.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_trident.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_overview_vmware_tanzu.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_solution_overview.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_trident_ontap_iscsi.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_trident_ontap_nfs.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_videos_and_demos.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_videos_astra_control_center_tkg.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ko-kr/netapp-solutions/containers/tanzu_with_netapp/vtwn_videos_astra_trident_tkg.html</loc>
+      
+      <lastmod>2022-06-17T21:51:42+00:00</lastmod>
       
     </url>
   
