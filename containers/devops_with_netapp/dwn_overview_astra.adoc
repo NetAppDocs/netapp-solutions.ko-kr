@@ -27,7 +27,7 @@ Astra Trident에 대한 자세한 내용은 을 참조하십시오 link:dwn_over
 
 Astra Control Center는 NetApp AutoSupport 및 Active IQ 에코시스템에 완전히 통합되어 사용자를 지원하고, 문제 해결을 지원하며, 사용 통계를 표시합니다.
 
-Astra Control Center의 유료 버전 외에 90일 평가판 라이센스가 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
+Astra Control Center의 유료 버전 외에 90일 평가판 라이센스도 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
 
 Astra 포트폴리오에 대한 자세한 내용은 를 참조하십시오 link:https://cloud.netapp.com/astra["Astra 웹 사이트"^].
 

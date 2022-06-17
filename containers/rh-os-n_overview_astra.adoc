@@ -11,6 +11,7 @@ summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터
 :icons: font
 :linkattrs: 
 :imagesdir: ./../media/
+:k8s_usercluster_name: OpenShift
 
 
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
@@ -276,7 +277,7 @@ image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
 --
 .자동화 [Ansible]
 --
-. Astra Control Center를 구축하기 위해 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 설명된 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 이에 대한 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_rhel_centos_setup.html["링크"] RHEL의 경우
+. Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 다음 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 절차의 경우 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_rhel_centos_setup.html["여기"] RHEL의 경우
 . Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
 +
 [source, cli]
@@ -295,7 +296,7 @@ NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십�
 ----
 cd na_astra_control_suite
 ----
-. VAR/VAR.yml 파일을 편집하고 변수를 필수 정보로 채웁니다.
+. VAR/VAR.yml 파일을 편집하여 필요한 정보로 변수를 입력합니다.
 +
 [source, cli]
 ----
@@ -305,11 +306,16 @@ push_images: yes
 #The directory hosting the Astra Control Center installer
 installer_directory: /home/admin/
 
+#Specify the ingress type. Allowed values - "AccTraefik" or "Generic"
+#"AccTraefik" if you want the installer to create a LoadBalancer type service to access ACC, requires MetalLB or similar.
+#"Generic" if you want to create or configure ingress controller yourself, installer just creates a ClusterIP service for traefik.
+ingress_type: "AccTraefik"
+
 #Name of the Astra Control Center installer (Do not include the extension, just the name)
-astra_tar_ball_name: astra-control-center-21.12.60
+astra_tar_ball_name: astra-control-center-22.04.0
 
 #The complete path to the kubeconfig file of the kubernetes/openshift cluster Astra Control Center needs to be installed to.
-hosting_ocp_kubeconfig_path: /home/admin/ocp-kubeconfig
+hosting_k8s_cluster_kubeconfig_path: /home/admin/cluster-kubeconfig.yml
 
 #Namespace in which Astra Control Center is to be installed
 astra_namespace: netapp-astra-cc
@@ -340,7 +346,7 @@ astra_registry_password: "password"
 astra_registry_secret_name: "astra-registry-credentials"
 
 #Astra Control Center FQDN
-acc_fqdn_address: astra-control-center-ui.cie.netapp.com
+acc_fqdn_address: astra-control-center.cie.netapp.com
 
 #Name of the Astra Control Center instance
 acc_account_name: ACC Account Name
@@ -352,20 +358,20 @@ admin_last_name: Admin
 ----
 . Playbook을 실행하여 Astra Control Center를 구축합니다. 특정 구성에 대한 루트 권한이 Playbook에 필요합니다.
 +
-따라서 Playbook을 실행하는 사용자가 root 이거나 암호 없는 sudo가 구성된 경우 아래 명령을 실행하여 플레이북을 실행합니다.
+Playbook을 실행하는 사용자가 root 이거나 암호 없는 sudo가 구성된 경우 다음 명령을 실행하여 플레이북을 실행합니다.
 
 +
 [source, cli]
 ----
-ansible-playbook playbook.yml
+ansible-playbook install_acc_playbook.yml
 ----
 +
-사용자에게 암호 기반 sudo 액세스가 구성된 경우 아래 명령을 실행하여 플레이북을 실행한 다음 sudo 암호를 입력합니다.
+사용자에게 암호 기반 sudo 액세스가 구성된 경우 다음 명령을 실행하여 플레이북을 실행한 다음 sudo 암호를 입력합니다.
 
 +
 [source, cli]
 ----
-ansible-playbook playbook.yml -K
+ansible-playbook install_acc_playbook.yml -K
 ----
 
 

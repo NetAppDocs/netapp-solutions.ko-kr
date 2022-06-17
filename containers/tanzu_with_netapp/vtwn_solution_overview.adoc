@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: containers/tanzu_with_netapp/vtwn_solution_overview.html 
+keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Astra Trident, Astra Control, Astra 
+summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다.' 
+---
+= NVA-1166: NetApp을 사용하는 VMware Tanzu
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
+
+이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템과의 스토리지 통합 및 영구 스토리지를 위한 Astra Trident 스토리지 오케스트레이터와 해당 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 복제를 위한 Astra Control Center에 대해 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
+
+
+
+== 사용 사례
+
+NetApp 솔루션을 사용하는 VMware Tanzu는 다음과 같은 사용 사례를 통해 고객에게 뛰어난 가치를 제공하도록 설계되었습니다.
+
+* VMware vSphere에 구축되어 NetApp 스토리지 시스템과 통합된 VMware Tanzu Kubernetes Grid 제품을 손쉽게 구축 및 관리할 수 있습니다.
+* 엔터프라이즈 컨테이너 및 가상화 워크로드를 VMware Tanzu Kubernetes Grid 오퍼링과 함께 사용할 수 있습니다.
+* NetApp 스토리지 및 NetApp Astra 제품군과 함께 사용할 경우 VMware Tanzu의 기능을 강조하는 실제 구성 및 사용 사례를 소개합니다.
+* Astra Control Center를 사용하여 NetApp 스토리지 시스템에 데이터가 상주하는 VMware Tanzu Kubernetes Grid 클러스터에 구축된 컨테이너식 워크로드를 애플리케이션 정합성이 보장된 방식으로 보호 또는 마이그레이션할 수 있습니다.
+
+
+
+
+== 비즈니스 가치
+
+기업은 새로운 제품을 만들고, 릴리즈 주기를 단축하며, 새로운 기능을 빠르게 추가하기 위해 DevOps 사례를 점점 더 채택하고 있습니다. 컨테이너 및 마이크로서비스는 타고난 애자일 특성상 DevOps 사례를 지원하는 데 중요한 역할을 합니다. 그러나 엔터프라이즈 환경에서 운영 환경에서 DevOps를 수행하는 것은 그 자체로 문제가 되며 다음과 같은 기본 인프라에서 특정 요구사항을 부과합니다.
+
+* 스택의 모든 계층에서 고가용성 보장
+* 간편한 구축 절차
+* 무중단 운영 및 업그레이드
+* 마이크로서비스 민첩성을 유지하기 위한 API 기반 및 프로그래밍 가능한 인프라
+* 성능 보장이 포함된 멀티 테넌시
+* 가상화 워크로드 및 컨테이너화된 워크로드를 동시에 실행할 수 있습니다
+* 워크로드 요구사항에 따라 인프라를 독립적으로 확장할 수 있는 능력
+* 사내 데이터 센터와 클라우드에서 실행 중인 컨테이너를 포함하는 하이브리드 클라우드 모델에 구축할 수 있는 역량
+
+
+NetApp의 VMware Tanzu는 이러한 과제를 인정하며 고객이 선택한 하이브리드 클라우드 환경에 VMware Tanzu Kubernetes 오퍼링을 구현하여 각 문제를 해결하는 솔루션을 제공합니다.
+
+
+
+== 기술 개요
+
+NetApp 솔루션을 사용하는 VMware Tanzu는 다음과 같은 주요 구성요소로 이루어져 있습니다.
+
+
+
+=== VMware Tanzu Kubernetes 플랫폼
+
+VMware Tanzu는 NetApp의 솔루션 엔지니어링 팀이 연구소에서 검증한 다양한 솔루션을 제공합니다. 각 Tanzu 릴리즈는 NetApp 스토리지 포트폴리오와 성공적으로 통합되며, 각 스토리지 포트폴리오는 특정 인프라 요구를 충족하는 데 도움이 됩니다. 다음 글머리 기호 하이라이트는 이 문서에 설명된 Tanzu의 각 버전의 기능과 제공 사항을 설명합니다.
+
+VMware Tanzu Kubernetes Grid(TKG)
+
+* VMware vSphere 환경에 구축된 표준 업스트림 Kubernetes 환경
+* 이전 명칭 Essential PKS (Heptio 획득, 2019년 2월).
+* TKG는 vSphere 6.7U3 이상에서 지원하기 위해 별도의 관리 클러스터 인스턴스와 함께 구축됩니다.
+* TKG 구축은 AWS 또는 Azure와 함께 클라우드에도 구축할 수 있습니다.
+* Windows 또는 Linux 작업자 노드(Ubuntu/Photon)를 사용할 수 있습니다.
+* NSX-T, HA 프록시, AVI 네트워킹 또는 로드 밸런서를 컨트롤 플레인에 사용할 수 있습니다.
+* TKG는 애플리케이션/데이터 평면에 대해 MetalLB를 지원합니다.
+* vSphere CSI와 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다.
+
+
+VMware Tanzu Kubernetes Grid Service(TKGS)
+
+* VMware vSphere 환경에 구축된 표준 업스트림 Kubernetes 환경
+* 이전 명칭 Essential PKS (Heptio 획득, 2019년 2월).
+* TKGS는 vSphere 7.0U1 이상에만 감독자 클러스터 및 워크로드 클러스터와 함께 배포됩니다.
+* Windows 또는 Linux 작업자 노드(Ubuntu/Photon)를 사용할 수 있습니다.
+* NSX-T, HA 프록시, AVI 네트워킹 또는 로드 밸런서를 컨트롤 플레인에 사용할 수 있습니다.
+* TKGS는 애플리케이션/데이터 평면에 대해 MetalLB를 지원합니다.
+* vSphere CSI와 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다.
+* 는 vSphere Pod와 Tanzu를 지원하므로 Pod가 환경의 활성화된 ESXi 호스트에서 직접 실행될 수 있습니다.
+
+
+VMware Tanzu Kubernetes Grid Integrated(TKGI)
+
+* 이전 명칭 Enterprise PKS(Heptio 획득, 2019년 2월).
+* NSX-T, HA 프록시 또는 AVI를 사용할 수 있습니다. 또한 고유한 로드 밸런서를 제공할 수도 있습니다.
+* vSphere 6.7U3 이상, AWS, Azure 및 GCP에서 지원됩니다.
+* 마법사를 통해 설정을 하면 배포가 용이합니다.
+* Bosh에서 관리하는 제어된 불변 VM에서 Tanzu를 실행합니다.
+* vSphere CSI 및 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다(일부 조건이 적용됨).
+
+
+
+
+=== NetApp 스토리지 시스템을 나타냅니다
+
+NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
+
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
+
+
+
+=== NetApp 스토리지 통합
+
+NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되며, 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.
+
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+
+Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.
+
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+
+
+
+== 검증된 릴리즈에 대한 최신 지원 매트릭스
+
+|===
+
+
+| 제공합니다 | 목적 | 소프트웨어 버전 
+
+
+| NetApp ONTAP를 참조하십시오 | 스토리지 | 9.9.1 
+
+
+| NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 22.04 
+
+
+| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.04.0 
+
+
+| VMware Tanzu Kubernetes Grid를 참조하십시오 | 컨테이너 오케스트레이션 | 1.3.1 
+
+
+.2+| VMware Tanzu Kubernetes Grid Service .2+| 컨테이너 오케스트레이션 | 0.0.15 [vSphere 네임스페이스] 
+
+
+| 1.22.6 [Supervisor Cluster Kubernetes] 
+
+
+| VMware Tanzu Kubernetes Grid 통합 | 컨테이너 오케스트레이션 | 1.13.3 
+
+
+| VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 7.0U3 
+
+
+| VMware NSX-T 데이터 센터 | 네트워킹 및 보안 | 3.1.3 
+
+
+| VMware NSX 고급 로드 밸런서 | 로드 밸런서 | 20.1.3 
+|===
+link:vtwn_overview_vmware_tanzu.html["다음: VMware Tanzu 개요"]

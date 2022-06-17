@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: containers/tanzu_with_netapp/vtwn_videos_astra_control_center_tkg.html 
+keywords: video, demonstration, Astra Control, NetApp ONTAP, Astra Trident, Snapmirror, FlexClone 
+summary: 이 페이지에서는 Astra Control Center를 사용하여 VMware Tanzu에서 애플리케이션을 복제하는 방법을 보여 주는 비디오 데모로 이동합니다. 
+---
+= Astra Control Center를 사용하여 VMware Tanzu에서 애플리케이션을 복제합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+video::vtwn_videos_astra_control_center_tkg.mp4[Use Astra Control Center to Clone Applications in VMWare Tanzu - VMware Tanzu with NetApp]
+
+NOTE: 이 데모는 TKG 버전 1.3.1 및 Astra Control Center 버전 21.12를 사용한 기술 미리보기로 기록되었습니다. 지원되는 공식 버전은 Support Matrix를 참조하십시오.
+
+link:vtwn_additional_information.html["다음: 추가 정보: NetApp의 VMware Tanzu"]

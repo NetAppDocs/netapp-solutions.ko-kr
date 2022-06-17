@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: containers/tanzu_with_netapp/vtwn_overview_tkgs.html 
+keywords: VMware Tanzu, Tanzu, Tanzu Kubernetes Grid Service, vSphere with Tanzu, DevOps, Netapp, Astra Trident, Astra Control, Astra 
+summary: 'VMware Tanzu Kubernetes Grid Service(Tanzu 및 vSphere라고도 함)를 사용하면 vSphere에서 기본적으로 Tanzu Kubernetes 클러스터를 생성하고 작동할 수 있을 뿐만 아니라 ESXi 호스트에서 일부 소규모 워크로드를 직접 실행할 수 있습니다.' 
+---
+= TKGS(VMware Tanzu Kubernetes Grid Service) 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+VMware Tanzu Kubernetes Grid Service(Tanzu 및 vSphere라고도 함)를 사용하면 vSphere에서 기본적으로 Tanzu Kubernetes 클러스터를 생성하고 작동할 수 있을 뿐만 아니라 ESXi 호스트에서 일부 소규모 워크로드를 직접 실행할 수 있습니다. 이를 통해 vSphere를 하이퍼바이저 계층에서 기본적으로 컨테이너화된 워크로드를 실행하는 플랫폼으로 전환할 수 있습니다. Tanzu Kubernetes Grid Service는 작업 부하에 필요한 클러스터를 구축하고 운영하는 설정된 경우 vSphere에 감독자 클러스터를 구축합니다. vSphere 7과 기본적으로 통합되며 vCenter SSO, Content Library, vSphere 네트워킹, vSphere 스토리지, vSphere HA 및 DRS, vSphere 보안 등 안정적인 여러 vSphere 기능을 활용하여 Kubernetes를 더욱 원활하게 사용할 수 있습니다.
+
+vSphere with Tanzu는 컨테이너나 VM에서 애플리케이션 구성 요소를 실행할 수 있는 하이브리드 애플리케이션 환경을 위한 단일 플랫폼을 제공하므로 개발자, DevOps 엔지니어 및 vSphere 관리자에게 더 나은 가시성과 운영 용이성을 제공합니다. VMware TKGS는 vSphere 7 환경에서만 지원되며, ESXi 호스트에서 POD를 직접 실행할 수 있는 Tanzu Kubernetes 운영 포트폴리오에서 유일한 제품입니다.
+
+image::vtwn_image03.png[VMware Tanzu Kubernetes 서비스]
+
+Tanzu Kubernetes Grid Service에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html["여기"^].
+
+기능 세트, 네트워킹 등과 관련하여 많은 아키텍처 고려사항이 있습니다. 선택한 아키텍처에 따라 Tanzu Kubernetes Grid Service의 사전 요구사항과 구축 프로세스가 다릅니다. 사용자 환경에 Tanzu Kubernetes Grid Service를 구축 및 구성하려면 가이드를 따르십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-74EC2571-4352-4E15-838E-5F56C8C68D15.html["여기"^]. 또한 TKGS를 통해 구축된 Tanzu Kubernetes 클러스터 노드에 로그인하려면 이 절차에 따르십시오 https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-37DC1DF2-119B-4E9E-8CA6-C194F39DDEDA.html["링크"^].
+
+NetApp은 원하는 워크로드 요구사항을 충족하기 위해 작업자 노드의 구성을 선택하여 내결함성을 지원하기 위해 모든 운영 환경을 다중 마스터 구축에 구축할 것을 권장합니다. 따라서 사용량이 많은 워크로드에 권장되는 VM 클래스에는 최소 4개의 vCPU와 12GB RAM이 있습니다.
+
+Tanzu Kubernetes 클러스터를 네임스페이스로 생성할 때 소유자 또는 "편집" 권한이 있는 사용자는 사용자 계정을 사용하여 네임스페이스에서 직접 포드를 만들 수 있습니다. 소유자나 편집 권한이 있는 사용자에게 클러스터 관리자 역할이 할당되기 때문입니다. 그러나 모든 네임스페이스에서 배포, 데몬 집합, 상태 저장 집합 등을 만들 때는 필요한 권한이 있는 역할을 해당 서비스 계정에 할당해야 합니다. 이 작업은 구축 또는 데몬 세트가 서비스 계정을 사용하여 Pod를 구축하기 때문에 필요합니다.
+
+클러스터의 모든 서비스 계정에 클러스터 관리자 역할을 할당하려면 다음 ClusterRoleBinding 예제를 참조하십시오.
+
+[listing]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: all_sa_ca
+subjects:
+- kind: Group
+  name: system:serviceaccounts
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: psp:vmware-system-privileged
+  apiGroup: rbac.authorization.k8s.io
+----
+link:vtwn_overview_netapp.html["다음은 NetApp 스토리지 시스템 개요입니다."]

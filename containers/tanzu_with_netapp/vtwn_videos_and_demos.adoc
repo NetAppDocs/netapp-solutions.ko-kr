@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: containers/tanzu_with_netapp/vtwn_videos_and_demos.html 
+keywords: video, demonstration, deployment, VMware Tanzu with NetApp, NetApp, Tanzu 
+summary: 이 페이지에는 이 문서에 설명된 일부 기능을 시연하는 비디오 링크가 포함되어 있습니다. 
+---
+= 비디오 및 데모: NetApp의 VMware Tanzu
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.
+
+* link:vtwn_videos_astra_trident_tkg.html["Astra Trident를 사용하여 VMware Tanzu에서 영구 스토리지를 프로비저닝합니다"]
+* link:vtwn_videos_astra_control_center_tkg.html["Astra Control Center를 사용하여 VMware Tanzu에서 애플리케이션을 복제합니다"]
+
+
+link:vtwn_additional_information.html["다음: 추가 정보: NetApp의 VMware Tanzu"]

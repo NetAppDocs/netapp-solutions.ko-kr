@@ -9,7 +9,7 @@
 * 무중단 운영 및 업그레이드
 * 마이크로서비스 민첩성을 유지하기 위한 API 기반 및 프로그래밍 가능한 인프라
 * 성능 보장이 포함된 멀티 테넌시
-* 가상화 워크로드 및 컨테이너화된 워크로드를 동시에 실행할 수 있습니다
+* 컨테이너화된 가상화 워크로드를 동시에 실행할 수 있습니다
 * 워크로드 요구사항에 따라 인프라를 독립적으로 확장할 수 있는 능력
 
 
@@ -142,12 +142,12 @@ Astra Trident에 대한 자세한 내용은 을 참조하십시오 link:dwn_over
 
 Astra Control Center는 NetApp AutoSupport 및 Active IQ 에코시스템에 완전히 통합되어 사용자를 지원하고, 문제 해결을 지원하며, 사용 통계를 표시합니다.
 
-Astra Control Center의 유료 버전 외에 90일 평가판 라이센스가 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
+Astra Control Center의 유료 버전 외에 90일 평가판 라이센스도 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
 
 Astra 포트폴리오에 대한 자세한 내용은 를 참조하십시오 link:https://cloud.netapp.com/astra["Astra 웹 사이트"^].
 
 [role="normal"]
-Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
+Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 완전 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
 
 관리자는 특정 수준의 성능을 보장하는 압축, 특정 디스크 유형 또는 QoS 수준을 비롯한 고급 스토리지 기능을 지원하는 스토리지 시스템 모델과 프로젝트 요구사항에 따라 여러 스토리지 백엔드를 구성할 수 있습니다. 이러한 백엔드를 정의한 후, 개발자는 프로젝트의 이러한 백엔드를 사용하여 지속적인 PVC(Volume Claim)를 생성하고 필요에 따라 컨테이너에 영구 저장소를 연결할 수 있습니다.
 
@@ -155,7 +155,7 @@ image:redhat_openshift_image2.png["오류: 그래픽 이미지가 없습니다"]
 
 Astra Trident는 빠른 개발 주기를 제공하며 Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.
 
-Astra Trident의 최신 버전은 2022년 1월 22.01입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"].
+Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"].
 
 20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod의 자동 복구를 포함하여 추가 지원을 제공합니다.
 
