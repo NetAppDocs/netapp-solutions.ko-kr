@@ -11867,7 +11867,6 @@
   <block id="f9cffb4fda587c713c06e50699299f0f" category="sidebar">솔루션 랜딩 페이지</block>
   <block id="bf8e2974cd692b57a29e42874b662b52" category="sidebar">엔터프라이즈 데이터베이스</block>
   <block id="84145683557fc8692113a2a97c3ec239" category="sidebar">NetApp 하이브리드 멀티 클라우드 및 VMware</block>
-  <block id="10d42b4bab4fd3114da1e1eae0994d36" category="sidebar">SAP 및 SAP HHA</block>
   <block id="d4a3e435684aa9918c9dd0bada78d4fb" category="sidebar">AWS용 VMC를 구성합니다</block>
   <block id="883512106f2cef4187ee5f6b5a94c6f8" category="sidebar">Azure용 AVS를 구성합니다</block>
   <block id="a271625e92b27bca4202ba79dab27301" category="sidebar">GCP에 대한 GCVE를 구성합니다</block>
@@ -12260,4 +12259,5 @@
   <block id="36522cc6d4eb67d30ef19d321901fa6e" category="cell">2022년 6월 16일</block>
   <block id="e1ea84e227dd99913363ade155774bcf" category="cell">NetApp 설계 가이드를 통해 NVIDIA DGX SuperPOD 추가</block>
   <block id="1edbb6849585c57ecbf402c0706ecf2d" category="sidebar">NetApp을 포함한 NVIDIA DGX SuperPOD(설계 가이드)</block>
+  <block id="e340bc103d02ce2b8e016eb60705029c" category="sidebar">SAP 및 SAP HANA</block>
 </blocks>

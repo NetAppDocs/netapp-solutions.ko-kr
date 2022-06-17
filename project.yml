@@ -59,7 +59,7 @@ homepage:
       url: data-analytics/index.html
     - title: NetApp 하이브리드 멀티 클라우드 및 VMware
       url: ehc/index.html
-    - title: SAP 및 SAP HHA
+    - title: SAP 및 SAP HANA
       url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
     - title: 포함되었습니다
       url: virtualization/index.html
