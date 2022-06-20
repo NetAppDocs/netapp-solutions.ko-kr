@@ -12486,4 +12486,5 @@
   <block id="e5103defcbafcf380570238b4848f4a1" category="sidebar">VMware TKGS(Tanzu Kubernetes Grid Service) 개요</block>
   <block id="a2ec151aed88d77a34df663b329daf31" category="sidebar">VMware TKGI(Tanzu Kubernetes Grid Integrated Edition) 개요</block>
   <block id="e47703dd1fad3279269dda3b343b2272" category="sidebar">Tanzu Kubernetes 클러스터를 등록합니다</block>
+  <block id="2c62898c969bafefce0452ccf8459cb6" category="paragraph">마지막 업데이트: 2022년 6월 20일.</block>
 </blocks>
