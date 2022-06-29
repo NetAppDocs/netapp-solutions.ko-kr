@@ -15,9 +15,7 @@ summary: 이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 
 
 NetApp의 Alan Cowles와 Nikhil Kulkarni입니다
 
-이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션의 배포를 검증합니다.
-
-또한, 영구 스토리지 관리를 위한 Astra Trident 스토리지 오케스트레이터를 사용하여 NetApp 스토리지 시스템과의 스토리지 통합에 대해서도 자세히 설명합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
+이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션에 대한 배포 검증을 제공합니다. 또한, 영구 스토리지 관리를 위한 Astra Trident 스토리지 오케스트레이터를 사용하여 NetApp 스토리지 시스템과의 스토리지 통합에 대해 자세히 설명합니다. 마지막으로 여러 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
 
 
 
@@ -25,7 +23,7 @@ NetApp의 Alan Cowles와 Nikhil Kulkarni입니다
 
 NetApp 솔루션의 Anthos는 다음과 같은 사용 사례를 통해 고객에게 탁월한 가치를 제공하도록 설계되었습니다.
 
-* Bare Metal의 제공된 'bmctl' 도구 또는 VMware vSphere의 'gkectl' 도구를 사용하여 배포된 Anthos 환경을 쉽게 배포 및 관리할 수 있습니다.
+* VMware vSphere의 "gkectl" 툴 또는 베어 메탈에 제공된 "bmctl" 툴을 사용하여 배포된 Anthos 환경을 쉽게 배포 및 관리할 수 있습니다.
 * 엔터프라이즈 컨테이너 및 가상화된 워크로드의 힘을 합쳐 Anthos와 함께 vSphere 또는 베어 메탈에 가상으로 배포 https://cloud.google.com/anthos/clusters/docs/bare-metal/1.9/how-to/vm-workloads["쿠버바이러스"^].
 * Kubernetes용 오픈 소스 스토리지 오케스트레이터인 NetApp 스토리지와 Astra Trident와 함께 Anthos의 기능을 강조하는 실제 구성 및 사용 사례
 
@@ -41,11 +39,11 @@ NetApp 솔루션의 Anthos는 다음과 같은 사용 사례를 통해 고객에
 * 무중단 운영 및 업그레이드
 * 마이크로서비스 민첩성을 유지하기 위한 API 기반 및 프로그래밍 가능한 인프라
 * 성능 보장이 포함된 멀티 테넌시
-* 가상화 워크로드 및 컨테이너화된 워크로드를 동시에 실행할 수 있습니다
+* 컨테이너화된 가상화 워크로드를 동시에 실행할 수 있습니다
 * 워크로드 요구사항에 따라 인프라를 독립적으로 확장할 수 있는 능력
 
 
-NetApp 솔루션의 Anthos는 이러한 당면 과제를 인정하며 고객이 선택한 데이터 센터 환경에서 Premise에 Anthos의 완전 자동화된 배포를 구현하여 각 문제를 해결하는 솔루션을 제시합니다.
+NetApp 솔루션의 Anthos는 이러한 문제를 인식하고 고객이 선택한 데이터 센터 환경에서 온프레미스 Anthos의 완전 자동화된 배포를 구현하여 각 문제를 해결하는 솔루션을 제시합니다.
 
 
 
@@ -99,10 +97,10 @@ Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위�
 | NetApp Element | 스토리지 | 12.3 
 
 
-| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.01.0 
+| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.04.0 
 
 
-| VMware 기반 Anthos 클러스터 | 컨테이너 오케스트레이션 | 1.10 
+| VMware 기반 Anthos 클러스터 | 컨테이너 오케스트레이션 | 1.11 
 
 
 | Anthos의 Bare Metal | 컨테이너 오케스트레이션 | 1.10 
@@ -110,4 +108,4 @@ Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위�
 
 | VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 6.7U3, 7.0U3 
 |===
-link:a-w-n_overview_anthos.html["Next:Anthos 개요:NetApp의 Anthos"]
+link:a-w-n_overview_anthos.html["다음: Anthos 개요."]

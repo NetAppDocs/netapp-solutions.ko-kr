@@ -1,115 +1,80 @@
 ---
 sidebar: sidebar 
-permalink: containers/rh-os-n_LB_MetalLB.html 
+permalink: containers/anthos-with-netapp/a-w-n_LB_MetalLB.html 
 summary: 이 페이지에서는 MetalLB 로드 밸런서에 대한 설치 및 구성 지침을 자세히 설명합니다. 
-keywords: Red Hat OpenShift, Kubernetes, MetalLB, LoadBalancer, Astra, Astra Control Center 
+keywords: Anthos, Kubernetes, MetalLB, LoadBalancer, Astra, Astra Control Center 
 ---
-= MetalLB 로드 밸런서 설치: NetApp과 Red Hat OpenShift
+= MetalLB 로드 밸런서 설치
 :allow-uri-read: 
 
 
-이 페이지에는 MetalLB 로드 밸런서에 대한 설치 및 구성 지침이 나와 있습니다.
-
-MetalLB는 OpenShift 클러스터에 설치되는 자체 호스팅 네트워크 로드 밸런서로서, 클라우드 공급자에서 실행되지 않는 클러스터에서 유형 로드 밸런서의 OpenShift 서비스를 생성할 수 있습니다. 로드 밸런서 서비스를 지원하기 위해 함께 작동하는 MetalLB의 두 가지 주요 기능은 주소 할당과 외부 안내입니다.
-
-
-
-== MetalLB 구성 옵션
-
-MetalLB가 OpenShift 클러스터 외부의 로드 밸런서 서비스에 할당된 IP 주소를 알려 주면 두 가지 모드로 작동합니다.
-
-* * Layer 2 모드 * 이 모드에서는 OpenShift 클러스터의 한 노드가 서비스 소유권을 가져와 해당 IP에 대한 ARP 요청에 응답하여 OpenShift 클러스터 외부에서 해당 IP에 연결할 수 있도록 합니다. 노드만 IP를 광고하기 때문에 대역폭 병목 현상 및 느린 페일오버 제한이 있습니다. 자세한 내용은 설명서를 참조하십시오 link:https://metallb.universe.tf/concepts/layer2/["여기"].
-* * BGP mode. * 이 모드에서 OpenShift 클러스터의 모든 노드는 라우터와 BGP 피어링 세션을 설정하고 트래픽을 서비스 IP로 전달하기 위한 경로를 광고합니다. 이를 위해서는 MetalLB를 해당 네트워크의 라우터에 통합해야 합니다. BGP의 해싱 메커니즘으로 인해 서비스에 대한 IP-노드 매핑이 변경될 때 특정 제한이 있습니다. 자세한 내용은 설명서를 참조하십시오 link:https://metallb.universe.tf/concepts/bgp/["여기"].
-
-
-
-NOTE: 이 문서에서는 MetalLB를 Layer-2 모드로 구성합니다.
+이 페이지에는 MetalLB 관리 로드 밸런서에 대한 설치 및 구성 지침이 나와 있습니다.
 
 
 
 == MetalLB 로드 밸런서 설치
 
-. MetalLB 리소스를 다운로드합니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ wget https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml
-[netapp-user@rhel7 ~]$ wget https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
-----
-. 파일 Metallb.YAML을 편집하고 컨트롤러 배포 및 스피커 DemonSet에서 pec.template.spec.securityContext` 파일을 제거합니다.
-+
-삭제할 줄: *
+MetalLB 로드 밸런서는 VMware의 Anthos 클러스터와 완벽하게 통합되며 1.11 릴리즈부터 관리 및 사용자 클러스터 설정의 일부로 자동 배포가 수행됩니다. 각 '클러스터.YAML' 구성 파일에는 로드 밸런서 정보를 제공하기 위해 수정해야 하는 텍스트 블록이 있습니다. 지원되는 다른 로드 밸런서 솔루션과 같은 외부 리소스를 구축해야 하는 대신, Anthos 클러스터에서 자체 호스팅됩니다. 또한, 클라우드 공급자에서 실행되지 않는 클러스터에서 로드 밸런서 유형의 Kubernetes 서비스를 생성하여 주소를 자동으로 할당하는 IP 풀을 생성할 수도 있습니다.
 
-+
-[listing]
-----
-securityContext:
-  runAsNonRoot: true
-  runAsUser: 65534
-----
-. 'metallb-system' 네임스페이스를 만듭니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc create -f namespace.yaml
-namespace/metallb-system created
-----
-. MetalLB CR을 만듭니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc create -f metallb.yaml
-podsecuritypolicy.policy/controller created
-podsecuritypolicy.policy/speaker created
-serviceaccount/controller created
-serviceaccount/speaker created
-clusterrole.rbac.authorization.k8s.io/metallb-system:controller created
-clusterrole.rbac.authorization.k8s.io/metallb-system:speaker created
-role.rbac.authorization.k8s.io/config-watcher created
-role.rbac.authorization.k8s.io/pod-lister created
-role.rbac.authorization.k8s.io/controller created
-clusterrolebinding.rbac.authorization.k8s.io/metallb-system:controller created
-clusterrolebinding.rbac.authorization.k8s.io/metallb-system:speaker created
-rolebinding.rbac.authorization.k8s.io/config-watcher created
-rolebinding.rbac.authorization.k8s.io/pod-lister created
-rolebinding.rbac.authorization.k8s.io/controller created
-daemonset.apps/speaker created
-deployment.apps/controller created
-----
-. MetalLB 스피커를 구성하기 전에, 로드 밸런서가 작동하는 데 필요한 네트워킹 구성을 수행할 수 있도록 스피커 DemonSet Elevated 권한을 부여합니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ oc adm policy add-scc-to-user privileged -n metallb-system -z speaker
-clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "speaker"
-----
-. MetalLB는 metallb-system 네임스페이스에서 ConfigMap을 만들어 구성합니다.
-+
-[listing]
-----
-[netapp-user@rhel7 ~]$ vim metallb-config.yaml
 
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: metallb-system
-  name: config
-data:
-  config: |
-    address-pools:
-    - name: default
-      protocol: layer2
+
+== Anthos와의 통합
+
+Anthos admin의 MetalLB 로드 밸런서를 활성화할 때는 'admin-cluster.yAML' 파일에 있는 'loadbalancer:' 섹션에서 몇 줄을 수정해야 합니다. 수정해야만 하는 유일한 값은 'controlPlaneVIP:' 주소를 설정한 다음 'kind:'를 MetalLB로 설정하는 것입니다. 예제를 보려면 다음 코드 조각을 참조하십시오.
+
+[listing]
+----
+# (Required) Load balancer configuration
+loadBalancer:
+  # (Required) The VIPs to use for load balancing
+  vips:
+    # Used to connect to the Kubernetes API
+    controlPlaneVIP: "10.61.181.230"
+    # # (Optional) Used for admin cluster addons (needed for multi cluster features). Must
+    # # be the same across clusters
+    # addonsVIP: ""
+  # (Required) Which load balancer to use "F5BigIP" "Seesaw" "ManualLB" or "MetalLB".
+  # Uncomment the corresponding field below to provide the detailed spec
+  kind: MetalLB
+----
+Anthos 사용자 클러스터에 대한 MetalLB 로드 밸런서를 활성화할 때 업데이트해야 하는 각 "user-cluster.yAML" 파일에는 두 가지 영역이 있습니다. 먼저 ADMIN-cluster.YAML 파일과 비슷한 방식으로 controlPlaneVIP:, ressVIP:, Kind: 등의 값을 'loadbalancer:' 섹션의 값으로 수정해야 합니다. 예제를 보려면 다음 코드 조각을 참조하십시오.
+
+[listing]
+----
+loadBalancer:
+  # (Required) The VIPs to use for load balancing
+  vips:
+    # Used to connect to the Kubernetes API
+    controlPlaneVIP: "10.61.181.240"
+    # Shared by all services for ingress traffic
+    ingressVIP: "10.61.181.244"
+  # (Required) Which load balancer to use "F5BigIP" "Seesaw" "ManualLB" or "MetalLB".
+  # Uncomment the corresponding field below to provide the detailed spec
+  kind: MetalLB
+----
+
+NOTE: ingressVIP IP 주소는 나중에 구성에서 MetalLB 로드 밸런서에 할당된 IP 주소 풀 내에 있어야 합니다.
+
+그런 다음 metalLB: 하위 섹션으로 이동하여 -name: 변수에 풀 이름을 지정하여 addressPools: 섹션을 수정해야 합니다. 또한 MetalLB가 'address:' 변수에 범위를 제공하여 부하 분산 서비스의 서비스에 할당할 수 있는 IP 주소 풀을 만들어야 합니다.
+
+[listing]
+----
+# # (Required when using "MetalLB" kind in user clusters) Specify the MetalLB config
+ metalLB:
+ #   # (Required) A list of non-overlapping IP pools used by load balancer typed services.
+ #   # Must include ingressVIP of the cluster.
+    addressPools:
+ #   # (Required) Name of the address pool
+    - name: "default"
+ #     # (Required) The addresses that are part of this pool. Each address must be either
+ #     # in the CIDR form (1.2.3.0/24) or range form (1.2.3.1-1.2.3.5).
       addresses:
-      - 10.63.17.10-10.63.17.200
-
-[netapp-user@rhel7 ~]$ oc create -f metallb-config.yaml
-configmap/config created
+      - "10.61.181.244-10.61.181.249"
 ----
-. 이제 로드 밸런서 서비스가 생성되면 MetalLB는 서비스에 외부 IP를 할당하고 ARP 요청에 응답하여 IP 주소를 알립니다.
-+
 
-NOTE: BGP 모드에서 MetalLB를 구성하려면 위의 6단계를 건너뛰고 MetalLB 설명서의 절차를 따르십시오 link:https://metallb.universe.tf/concepts/bgp/["여기"].
+NOTE: 주소 풀은 예를 들어 특정 서브넷의 여러 주소로 제한하거나 전체 서브넷을 사용할 수 있는 경우 CIDR 표기법으로 제공할 수 있습니다.
+
+. 로드 밸런서 유형의 Kubernetes 서비스가 생성되면 MetalLB는 서비스에 외부 IP를 자동으로 할당하고 ARP 요청에 응답하여 IP 주소를 알립니다.
 
 
-
-link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]
+link:awn_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]

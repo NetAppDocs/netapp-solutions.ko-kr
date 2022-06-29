@@ -199,10 +199,10 @@ entries:
           url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_observability.html"
         - title: 자원 작성
           url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_create_resources.html"
-  - title: 비디오/데모
-    url: "/containers/rh-os-n_videos_and_demos.html"
-  - title: 추가 정보
-    url: "/containers/rh-os-n_additional_information.html"
+    - title: 비디오/데모
+      url: "/containers/rh-os-n_videos_and_demos.html"
+    - title: 추가 정보
+      url: "/containers/rh-os-n_additional_information.html"
 - title: NetApp의 VMware Tanzu
   type: solutions
   url: "/containers/tanzu_with_netapp/vtwn_solution_overview.html"

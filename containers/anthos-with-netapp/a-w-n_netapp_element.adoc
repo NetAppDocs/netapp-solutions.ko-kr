@@ -4,7 +4,7 @@ permalink: containers/anthos-with-netapp/a-w-n_netapp_element.html
 keywords: NetApp, Element, Solidfire, iSCSI 
 summary: NetApp Element 소프트웨어는 모듈식의 확장 가능한 성능을 제공하며, 각 스토리지 노드는 환경에 보장된 용량과 처리량을 제공합니다. NetApp Element 시스템은 단일 클러스터에서 4개 노드에서 100개 노드로 확장할 수 있으며 다양한 고급 스토리지 관리 기능을 제공합니다. 
 ---
-= NetApp Element: NetApp의 Anthos
+= NetApp Element
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -74,4 +74,4 @@ NetApp Element 소프트웨어 클러스터는 전반적인 스토리지 효율�
 
 NOTE: 요소는 자동화를 위해 설계되었습니다. 모든 스토리지 기능은 API를 통해 사용할 수 있습니다. 이러한 API는 UI에서 시스템을 제어하는 데 사용하는 유일한 방법입니다.
 
-link:a-w-n_overview_storint.html["다음: NetApp 스토리지 통합 개요: Anthos와 NetApp."]
+link:a-w-n_overview_storint.html["다음으로, NetApp 스토리지 통합 개요를 살펴보겠습니다."]

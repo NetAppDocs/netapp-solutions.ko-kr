@@ -34,6 +34,21 @@ entries:
         url: "/databases/db_protection_awx_automation.html"
   - title: Oracle Databases on NetApp EF-Series 를 참조하십시오
     url: https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf
+  - title: AWS EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축
+    type: solutions
+    entries:
+    - title: 사용 사례
+      url: "/databases/aws_ora_fsx_ec2_deploy_intro.html"
+    - title: 솔루션 아키텍처
+      url: "/databases/aws_ora_fsx_ec2_architecture.html"
+    - title: 고려해야 할 요소
+      url: "/databases/aws_ora_fsx_ec2_factors.html"
+    - title: 구현 절차
+      url: "/databases/aws_ora_fsx_ec2_procedures.html"
+    - title: 데이터베이스 관리
+      url: "/databases/aws_ora_fsx_ec2_mgmt.html"
+    - title: 데이터베이스 마이그레이션
+      url: "/databases/aws_ora_fsx_ec2_migration.html"
 - title: Microsoft SQL Server를 참조하십시오
   entries:
   - title: Azure NetApp Files 기반 SQL Server

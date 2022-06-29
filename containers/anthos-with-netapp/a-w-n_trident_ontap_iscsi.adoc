@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: containers/anthos-with-netapp/a-w-n_trident_ontap_iscsi.html 
-summary:  
+summary: NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 스토리지 시스템과의 통신을 지원하는 백엔드를 생성해야 합니다. 
 keywords: Trident, Astra Trident, ONTAP, AFF, FAS, iSCSI 
 ---
-= NetApp ONTAP iSCSI 구성: NetApp의 Anthos
+= NetApp ONTAP iSCSI 구성
 :allow-uri-read: 
 
 
@@ -14,8 +14,8 @@ NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 �
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ cp sample-input/backends-samples/ontap-san/backend-ontap-san.json ./
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ vi backend-ontap-san.json
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ cp sample-input/backends-samples/ontap-san/backend-ontap-san.json ./
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ vi backend-ontap-san.json
 ----
 . 이 파일에서 관리 LIF, dataLIF, svm, 사용자 이름 및 암호 값을 편집합니다.
 +
@@ -35,7 +35,7 @@ NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 �
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ ./tridentctl -n trident create backend -f backend-ontap-san.json
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ ./tridentctl -n trident create backend -f backend-ontap-san.json
 +------------------------+----------------+--------------------------------------+--------+---------+
 |          NAME          | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +------------------------+----------------+--------------------------------------+--------+---------+
@@ -46,8 +46,8 @@ NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 �
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ cp sample-input/storage-class-samples/storage-class-csi.yaml.templ ./storage-class-basic.yaml
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ vi storage-class-basic.yaml
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ cp sample-input/storage-class-samples/storage-class-csi.yaml.templ ./storage-class-basic.yaml
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ vi storage-class-basic.yaml
 ----
 . 이 파일에 대해 편집해야 하는 유일한 방법은 새로 생성된 백엔드에서 스토리지 드라이버의 이름으로 'backendType' 값을 정의하는 것입니다. 또한 이름 필드 값을 기록해 둡니다. 이 값은 나중에 참조해야 합니다.
 +
@@ -69,15 +69,15 @@ NOTE: 이 파일에 정의된 fschType이라는 선택적 필드가 있습니다
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ kubectl create -f storage-class-basic.yaml
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ kubectl create -f storage-class-basic.yaml
 storageclass.storage.k8s.io/basic-csi created
 ----
 . 스토리지 클래스를 생성한 후 첫 번째 영구 볼륨 클레임(PVC)을 생성해야 합니다. 샘플 입력에도 이 작업을 수행하는 데 사용할 수 있는 PVC-BASIC.YAML 파일이 있습니다.
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ cp sample-input/pvc-samples/pvc-basic.yaml ./
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ vi pvc-basic.yaml
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ cp sample-input/pvc-samples/pvc-basic.yaml ./
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ vi pvc-basic.yaml
 ----
 . 이 파일에 대해 편집해야 하는 유일한 내용은 'torageClassName' 필드가 방금 만든 필드와 일치한다는 것입니다. PVC 정의는 프로비저닝할 작업 부하에 따라 필요에 따라 추가로 사용자 정의할 수 있습니다.
 +
@@ -99,13 +99,13 @@ spec:
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ kubectl create -f pvc-basic.yaml
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ kubectl create -f pvc-basic.yaml
 persistentvolumeclaim/basic created
 
-[ubuntu@gke-admin-ws-2021-07-15 trident-installer]$ kubectl get pvc
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ kubectl get pvc
 NAME    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 basic   Bound    pvc-7ceac1ba-0189-43c7-8f98-094719f7956c   1Gi        RWO            basic-csi      3s
 ----
 
 
-link:a-w-n_overview_advanced.html["다음: 고급 구성 옵션: NetApp의 Anthos"]
+link:a-w-n_overview_advanced.html["다음: 고급 구성 옵션."]

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: databases/aws_ora_fsx_ec2_architecture.html 
+summary: 이 섹션에서는 맞춤형 Oracle RDS 및 FSx ONTAP 스토리지가 포함된 RDS Oracle 맞춤형 구축 솔루션 아키텍처를 보여 줍니다. 
+keywords: architecture, Oracle RDS, RDS, FSx ONTAP, FSx, AWS, Oracle, HA, DR 
+---
+= 솔루션 아키텍처
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+link:aws_ora_fsx_ec2_deploy_intro.html["이전: 소개."]
+
+다음 아키텍처 다이어그램은 FSx 스토리지 서비스가 있는 AWS EC2 인스턴스에 고가용성 Oracle 데이터베이스 구축을 보여 줍니다. 유사한 배포 체계이지만 다른 지역의 대기 구성을 재해 복구에 설정할 수 있습니다.
+
+환경 내에서 Oracle 컴퓨팅 인스턴스는 AWS EC2 인스턴스 콘솔을 통해 구축됩니다. 콘솔에서 여러 EC2 인스턴스 유형을 사용할 수 있습니다. RedHat Enterprise Linux 8과 함께 M5 Ami 이미지, 최대 10Gps 네트워크 대역폭과 같은 데이터베이스 중심 EC2 인스턴스 유형을 구축하는 것이 좋습니다.
+
+반면에 FSx 볼륨의 Oracle 데이터베이스 스토리지는 AWS FSx 콘솔 또는 CLI와 함께 구축됩니다. 이후에 Oracle 바이너리, 데이터 또는 로그 볼륨을 제공하고 EC2 인스턴스 Linux 호스트에 마운트합니다. 사용된 기본 스토리지 프로토콜에 따라 각 데이터 또는 로그 볼륨에 여러 개의 LUN이 할당될 수 있습니다.
+
+image:aws_ora_fsx_ec2_arch.PNG["오류: 그래픽 이미지가 없습니다"]
+
+FSx 스토리지 클러스터는 기본 스토리지 클러스터와 대기 스토리지 클러스터가 모두 두 개의 서로 다른 가용성 영역에 구축되도록 이중 중복성으로 설계되었습니다. 데이터베이스 볼륨은 모든 Oracle 바이너리, 데이터 및 로그 볼륨에 대해 사용자가 구성할 수 있는 간격으로 기본 FSx 클러스터에서 대기 FSx 클러스터로 복제됩니다.
+
+이 고가용성 Oracle 환경은 Ansible 컨트롤러 노드와 SnapCenter 백업 서버 및 UI 툴을 사용하여 관리됩니다. Ansible 플레이북 기반 툴킷을 사용하여 Oracle 설치, 구성, 복제를 자동화합니다. Oracle EC2 인스턴스 커널 운영 체제 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 실행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 자동화 설정을 쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 몇 가지 반복 수행할 수 있습니다.
+
+SnapCenter는 Oracle 데이터베이스 시점 복구 또는 필요한 경우 운영 또는 대기 영역에서 데이터베이스 클론 복제를 위한 워크플로우를 제공합니다. SnapCenter UI를 통해 Oracle 데이터베이스 백업 및 복제를 스탠바이 FSx 스토리지에 구성하여 RTO 또는 RPO 목표에 따라 고가용성 또는 재해 복구를 수행할 수 있습니다.
+
+이 솔루션은 Oracle RAC 및 Data Guard 구축에서 사용할 수 있는 기능과 유사한 기능을 제공하는 대체 프로세스를 제공합니다.
+
+link:aws_ora_fsx_ec2_factors.html["다음: 배포 절차."]

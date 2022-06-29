@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: containers/rh-os-n_overview_astra.html 
+permalink: containers/anthos-with-netapp/a-w-n_overview_astra.html 
 keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
 summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 기술을 기반으로 하는 온프레미스 환경에 구축된 상태 저장 Kubernetes 작업 부하를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다. 
 ---
@@ -10,7 +10,7 @@ summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
@@ -150,4 +150,4 @@ NOTE: NetApp Astra Control Center의 설치 또는 구성 관련 문제가 발�
 
 
 
-link:rh-os-n_astra_register.html["다음: Red Hat OpenShift Clusters: NetApp과 함께 Red Hat OpenShift를 등록하십시오."]
+link:rh-os-n_astra_register.html["다음: Red Hat OpenShift Cluster를 등록하십시오."]

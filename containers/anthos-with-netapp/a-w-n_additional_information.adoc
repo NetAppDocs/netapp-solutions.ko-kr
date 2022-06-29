@@ -4,7 +4,7 @@ permalink: containers/anthos-with-netapp/a-w-n_additional_information.html
 keywords:  
 summary:  
 ---
-= 추가 정보: NetApp의 Anthos
+= 추가 정보
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
