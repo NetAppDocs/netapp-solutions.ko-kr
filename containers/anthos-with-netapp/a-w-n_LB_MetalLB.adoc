@@ -77,4 +77,4 @@ NOTE: 주소 풀은 예를 들어 특정 서브넷의 여러 주소로 제한하
 . 로드 밸런서 유형의 Kubernetes 서비스가 생성되면 MetalLB는 서비스에 외부 IP를 자동으로 할당하고 ARP 요청에 응답하여 IP 주소를 알립니다.
 
 
-link:awn_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]
+link:a-w-n_LB_SeeSaw.html["다음: 시소 로드 밸런서 설치"]

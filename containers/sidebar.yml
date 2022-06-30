@@ -34,13 +34,16 @@ entries:
       - title: NetApp Element iSCSI 를 참조하십시오
         url: "/containers/anthos-with-netapp/a-w-n_trident_element_iscsi.html"
   - title: Anthos를 위한 고급 구성 옵션
+    url: "/containers/anthos-with-netapp/a-w-n_overview_advanced.html"
     entries:
     - title: 로드 밸런서 옵션 탐색
       url: "/containers/anthos-with-netapp/a-w-n_load_balancers.html"
       entries:
-      - title: F5 BIG-IP
+      - title: F5 BIG-IP 로드 밸런서 설치
         url: "/containers/anthos-with-netapp/a-w-n_LB_F5BigIP.html"
-      - title: 시소
+      - title: MetalLB 로드 밸런서 설치
+        url: "/containers/anthos-with-netapp/a-w-n_LB_MetalLB.html"
+      - title: 시소 부하 밸런서 설치
         url: "/containers/anthos-with-netapp/a-w-n_LB_SeeSaw.html"
   - title: 솔루션 검증 및 사용 사례
     url: "/containers/anthos-with-netapp/a-w-n_use_cases.html"

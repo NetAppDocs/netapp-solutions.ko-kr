@@ -20,7 +20,4 @@ NOTE: 이 섹션에서는 타사 로드 밸런서 사용 또는 맞춤형 컨테
 
 다음 페이지에서는 NetApp OpenShift에서 검증된 고급 구성 옵션에 대한 자세한 정보를 제공합니다.
 
-* link:rh-os-n_load_balancers.html["로드 밸런서 옵션 탐색"]
-
-
-link:a-w-n_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]
+link:a-w-n_load_balancers.html["다음: 로드 밸런서 옵션 탐색"]

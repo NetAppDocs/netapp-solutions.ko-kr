@@ -17,4 +17,4 @@ summary: 이 페이지에서 에 연결된 비디오는 이 문서에 설명되�
 
 link:a-w-n_videos_baremetal_install.html["비디오: 베어 메탈에 Anthos의 배포"]
 
-link:a-w-n_additional_information.html["다음: 추가 정보."]
+link:a-w-n_additional_information.html["다음: 추가 정보를 찾을 위치."]

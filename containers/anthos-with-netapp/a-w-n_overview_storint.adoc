@@ -53,7 +53,4 @@ NetApp Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포�
 
 다음 페이지는 NetApp 솔루션의 Anthos에서 애플리케이션 및 영구 스토리지 관리를 위해 검증된 NetApp 제품에 대한 추가 정보를 제공합니다.
 
-* link:a-w-n_overview_trident.html["NetApp Astra Trident"]
-
-
 link:a-w-n_overview_trident.html["다음: NetApp Astra Trident 개요"]

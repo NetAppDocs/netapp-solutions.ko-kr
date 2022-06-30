@@ -108,4 +108,4 @@ basic   Bound    pvc-7ceac1ba-0189-43c7-8f98-094719f7956c   1Gi        RWO      
 ----
 
 
-link:a-w-n_overview_advanced.html["다음: 고급 구성 옵션."]
+link:a-w-n_trident_element_iscsi.html["다음: NetApp Element iSCSI."]

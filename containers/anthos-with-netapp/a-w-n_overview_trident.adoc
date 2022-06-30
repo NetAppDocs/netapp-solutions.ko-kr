@@ -34,7 +34,7 @@ Astra Trident의 최신 버전인 22.04는 2022년 4월에 출시되었습니다
 Helm을 사용하여 배포된 사용자 클러스터에 Trident 설치를 자동화하고 영구 볼륨을 프로비저닝하려면 다음 단계를 완료하십시오.
 
 
-NOTE: Helm은 GKE-Admin 워크스테이션에 기본적으로 설치되지 않습니다. Ubuntu에서 작동하는 바이너리 형식으로 다음 웹 사이트에서 다운로드할 수 있습니다. https://helm.sh/docs/intro/install/["Helm 설치 페이지"]
+NOTE: Helm은 GKE-Admin 워크스테이션에 기본적으로 설치되지 않습니다. Ubuntu에서 작동하는 바이너리 형식으로 에서 다운로드할 수 있습니다 https://helm.sh/docs/intro/install/["Helm 설치 페이지"].
 
 . 먼저, Trident에 이 파일을 전달할 수 있는 옵션이 없기 때문에 사용자 클러스터의 "kubecononfig" 파일을 참조할 필요가 없도록 환경 변수로 설정합니다.
 +
@@ -290,9 +290,4 @@ trident-operator-66f48895cc-lzczk   1/1     Running   0          2m39s
 
 Astra Trident Operator 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Astra Trident의 설정 및 구성을 계속하려면 아래 링크를 따라가십시오.
 
-* link:a-w-n_trident_ontap_nfs.html["NetApp ONTAP NFS 를 참조하십시오"]
-* link:a-w-n_trident_ontap_iscsi.html["NetApp ONTAP iSCSI를 참조하십시오"]
-* link:a-w-n_trident_element_iscsi.html["NetApp Element iSCSI 를 참조하십시오"]
-
-
-link:a-w-n_use_cases.html["다음: 고급 구성 옵션."]
+link:a-w-n_trident_ontap_nfs.html["다음으로, NetApp ONTAP NFS를 살펴보겠습니다."]

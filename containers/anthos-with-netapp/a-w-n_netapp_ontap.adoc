@@ -73,4 +73,4 @@ NetApp Cloud Volumes ONTAP는 클라우드 구축 버전의 NetApp ONTAP로, Ama
 
 Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.netapp.com/us-en/occm/#discover-whats-new["여기"].
 
-link:a-w-n_overview_storint.html["다음: NetApp 스토리지 통합 개요: Anthos와 NetApp."]
+link:a-w-n_netapp_element.html["다음: NetApp Element."]
