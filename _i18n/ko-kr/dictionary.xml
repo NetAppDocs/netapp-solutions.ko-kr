@@ -13032,6 +13032,6 @@
   <block id="884a92818052da7764b1c5b7589bd458" category="paragraph"><block ref="884a92818052da7764b1c5b7589bd458" category="inline-link-macro-rx"></block></block>
   <block id="eec34a14279b64231b91793978a204da" category="paragraph"><block ref="eec34a14279b64231b91793978a204da" category="inline-link-macro-rx"></block></block>
   <block id="f6762efea56447c717fea204b2676851" category="list-text">Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 가상 머신을 구축할 VM_Datastore를 선택하고 Next를 클릭합니다.</block>
-  <block id="9c071149626a964576dd6f6dfc3b6ac6" category="paragraph"><block ref="9c071149626a964576dd6f6dfc3b6ac6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="da0289d58f35e36d18325d6e8038b226" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 작업자 노드 OS가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
+  <block id="ca2835359be5e4e2e79ed5b6fd777515" category="paragraph"><block ref="ca2835359be5e4e2e79ed5b6fd777515" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
