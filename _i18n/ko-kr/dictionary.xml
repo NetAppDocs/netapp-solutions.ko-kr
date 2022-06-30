@@ -10132,7 +10132,6 @@
   <block id="fff9995f30a825c5d3e5709e7b78117a" category="admonition">어플라이언스를 다운로드하려면 F5 키를 등록해야 합니다. 빅 IP Virtual Edition 로드 밸런서에 대한 30일 데모 라이센스를 제공합니다. 어플라이언스 배포에는 영구적인 10Gbps 라이센스를 사용하는 것이 좋습니다.</block>
   <block id="1a104d04970b6b80d8cf31f554404f4d" category="list-text">Infrastructure Resource Pool을 마우스 오른쪽 버튼으로 클릭하고 Deploy OVF Template을 선택합니다. 1단계에서 방금 다운로드한 OVA 파일을 선택할 수 있는 마법사가 시작됩니다. 다음 을 클릭합니다.</block>
   <block id="fdf7304b13d736c791bc745a330e7309" category="image-alt">Big-IP 어플라이언스 구축</block>
-  <block id="b0c5dd13efd4858e2056c5d88267c2fa" category="list-text">Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 이전에 생성한 VM_Datastore를 선택하고 Next를 클릭합니다.</block>
   <block id="fbd07b7802c1a124a9359b27b9f46968" category="list-text">마법사가 제공하는 다음 화면에서는 환경에서 사용할 가상 네트워크를 사용자 지정할 수 있습니다. External 필드에서 VM_Network 를 선택하고 Management 필드에서 Management_Network 를 선택합니다. Internal 및 HA는 F5 Big-IP 어플라이언스의 고급 구성에 사용되며 구성되지 않습니다. 이러한 매개 변수는 단독으로 사용하거나 비인프라 분산 포트 그룹에 연결하도록 구성할 수 있습니다. 다음 을 클릭합니다.</block>
   <block id="93353313944577e80d34c3d9491db6ce" category="list-text">어플라이언스의 요약 화면을 검토하고 모든 정보가 올바르면 마침을 클릭하여 배포를 시작합니다.</block>
   <block id="68b984a73f20c874fb80feeaa4621109" category="list-text">가상 어플라이언스가 구축된 후 마우스 오른쪽 버튼으로 클릭하고 전원을 켭니다. 관리 네트워크에서 DHCP 주소를 수신해야 합니다. 이 어플라이언스는 Linux 기반이며 VMware Tools가 배포되어 있으므로 vSphere Client에서 수신한 DHCP 주소를 볼 수 있습니다.</block>
@@ -12836,7 +12835,6 @@
   <block id="93e0638cb95146eb8773223a90aa6d86" category="list-text">다음 페이지에서는 Kubernetes에 구축된 Pod에 서비스를 매핑하는 데 사용되는 외부 네트워크를 구성할 수 있습니다. VM_Network 범위, 해당 서브넷 마스크 및 해당 범위의 부동 IP에서 고정 IP를 선택합니다. 인터페이스 1.2는 OVF 배포 마법사에서 External이라고 표시된 VMNIC에 매핑됩니다.</block>
   <block id="803c8b846cb5b5c6c8d5a2b0b07f4dba" category="inline-image-macro">BIG-IP 구성, 9부</block>
   <block id="9cd42351da162e75b1a0178bdd0ded20" category="inline-image-macro">BIG-IP 구성, 10부</block>
-  <block id="ca2835359be5e4e2e79ed5b6fd777515" category="paragraph"><block ref="ca2835359be5e4e2e79ed5b6fd777515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ad99125325ea694a08a4db92eabb18a1" category="inline-image-macro">BIG-IP 구성, 11부</block>
   <block id="d71ac8787685cb0f3b8f800520d684b1" category="paragraph"><block ref="d71ac8787685cb0f3b8f800520d684b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99a0344c261b0475e6caf01bb585530f" category="list-text">표시된 화면에는 현재 공통 파티션만 표시됩니다. 오른쪽에서 Create를 클릭하여 첫 번째 추가 파티션을 만들고 이름을 GKE-Admin 으로 지정합니다. 그런 다음 반복 을 클릭하고 파티션 이름을 사용자 클러스터 1 로 지정합니다. Repeat 버튼을 다시 클릭하여 다음 파티션 이름을 User-Cluster-2 로 지정합니다. 마지막으로 완료 를 클릭하여 마법사를 완료합니다. Partition list(파티션 목록) 화면이 모든 파티션을 나열한 상태로 돌아갑니다.</block>
@@ -12971,7 +12969,6 @@
   <block id="54132be89475e52a0550d90f4b162e74" category="paragraph"><block ref="54132be89475e52a0550d90f4b162e74" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a7f329dfec2100f6b17e76aecd655cac" category="paragraph"><block ref="a7f329dfec2100f6b17e76aecd655cac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ec1ad0944f93fe082ef02313cd33db47" category="paragraph"><block ref="ec1ad0944f93fe082ef02313cd33db47" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a4bcee5bad76b31cc176f808d63ca8af" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 OpenShift가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
   <block id="28eb5fe5f641c3ffa32f2488fa166a36" category="paragraph">이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션에 대한 배포 검증을 제공합니다. 또한, 영구 스토리지 관리를 위한 Astra Trident 스토리지 오케스트레이터를 사용하여 NetApp 스토리지 시스템과의 스토리지 통합에 대해 자세히 설명합니다. 마지막으로 여러 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.</block>
   <block id="0d3aabd1c9ad032e07b543d0aff99cb1" category="list-text">VMware vSphere의 "gkectl" 툴 또는 베어 메탈에 제공된 "bmctl" 툴을 사용하여 배포된 Anthos 환경을 쉽게 배포 및 관리할 수 있습니다.</block>
   <block id="ee1ef628edbfb6bb102163064fbd3d8e" category="paragraph">NetApp 솔루션의 Anthos는 이러한 문제를 인식하고 고객이 선택한 데이터 센터 환경에서 온프레미스 Anthos의 완전 자동화된 배포를 구현하여 각 문제를 해결하는 솔루션을 제시합니다.</block>
@@ -13034,4 +13031,7 @@
   <block id="d0ee5cd6f53ec708670800837b7502b7" category="inline-link-macro">다음으로, NetApp ONTAP iSCSI를 살펴보겠습니다.</block>
   <block id="884a92818052da7764b1c5b7589bd458" category="paragraph"><block ref="884a92818052da7764b1c5b7589bd458" category="inline-link-macro-rx"></block></block>
   <block id="eec34a14279b64231b91793978a204da" category="paragraph"><block ref="eec34a14279b64231b91793978a204da" category="inline-link-macro-rx"></block></block>
+  <block id="f6762efea56447c717fea204b2676851" category="list-text">Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 가상 머신을 구축할 VM_Datastore를 선택하고 Next를 클릭합니다.</block>
+  <block id="9c071149626a964576dd6f6dfc3b6ac6" category="paragraph"><block ref="9c071149626a964576dd6f6dfc3b6ac6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da0289d58f35e36d18325d6e8038b226" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 작업자 노드 OS가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
 </blocks>

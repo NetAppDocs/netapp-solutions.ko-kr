@@ -10,7 +10,7 @@ summary: Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../..media/
+:imagesdir: ./../../media/
 
 
 Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
@@ -79,7 +79,7 @@ To learn more about the release, try:
 +
 [listing]
 ----
-[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ oc get pods -n trident
+[ubuntu@gke-admin-ws-2022-05-03 trident-installer]$ kubectl get pods -n trident
 NAME                               READY   STATUS    RESTARTS   AGE
 trident-csi-5z45l                  1/2     Running   2          30s
 trident-csi-696b685cf8-htdb2       6/6     Running   0          30s

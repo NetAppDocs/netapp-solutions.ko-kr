@@ -54,7 +54,7 @@ NOTE: 어플라이언스를 다운로드하려면 F5 키를 등록해야 합니�
 +
 image:deploy-big_ip_1.PNG["Big-IP 어플라이언스 구축"]
 
-. Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 이전에 생성한 VM_Datastore를 선택하고 Next를 클릭합니다.
+. Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 가상 머신을 구축할 VM_Datastore를 선택하고 Next를 클릭합니다.
 . 마법사가 제공하는 다음 화면에서는 환경에서 사용할 가상 네트워크를 사용자 지정할 수 있습니다. External 필드에서 VM_Network 를 선택하고 Management 필드에서 Management_Network 를 선택합니다. Internal 및 HA는 F5 Big-IP 어플라이언스의 고급 구성에 사용되며 구성되지 않습니다. 이러한 매개 변수는 단독으로 사용하거나 비인프라 분산 포트 그룹에 연결하도록 구성할 수 있습니다. 다음 을 클릭합니다.
 +
 image:deploy-big_ip_2.PNG["Big_IP 어플라이언스 구축, 2부"]
@@ -87,7 +87,7 @@ image:big-IP_config_4.PNG["BIG-IP 구성, 4부"]
 
 . Configuration Change(구성 변경) 창이 닫히고 Setup Utility(설정 유틸리티)에 Resource Provisioning(리소스 프로비저닝) 메뉴가 표시됩니다. 이 창에는 현재 라이센스가 부여된 기능과 가상 어플라이언스 및 실행 중인 각 서비스에 대한 현재 리소스 할당이 나열됩니다.
 +
-image::big-IP_config_5.png[BIG-IP 구성]
+image::big-IP_config_5.PNG[BIG-IP 구성]
 
 . 왼쪽의 플랫폼 메뉴 옵션을 클릭하면 플랫폼을 추가로 수정할 수 있습니다. 수정 사항에는 DHCP로 구성된 관리 IP 주소 설정, 어플라이언스가 설치된 호스트 이름 및 표준 시간대 설정, SSH 액세스 가능성으로부터 어플라이언스 보안 등이 포함됩니다.
 +
@@ -111,7 +111,7 @@ image:big-IP_config_9.PNG["BIG-IP 구성, 9부"]
 
 . 다음 페이지에서는 환경에 여러 가상 어플라이언스를 구축하는 경우 내부 HA 네트워크를 구성할 수 있습니다. 계속하려면 자체 IP 주소 및 넷마스크 필드를 입력해야 하며, 인터페이스 1.3을 VLAN 인터페이스로 선택해야 합니다. VLAN 인터페이스는 OVF 템플릿 마법사에서 정의한 HA 네트워크에 매핑됩니다.
 +
-image:big-IP_config_10.png["BIG-IP 구성, 10부"]
+image:big-IP_config_10.PNG["BIG-IP 구성, 10부"]
 
 . 다음 페이지에서는 NTP 서버를 구성할 수 있습니다. 다음 을 클릭하여 DNS 설정을 계속합니다. DNS 서버 및 도메인 검색 목록은 이미 DHCP 서버에 의해 채워져야 합니다. Next(다음) 를 클릭하여 기본값을 적용하고 계속합니다.
 . 마법사의 나머지 부분에서는 다음을 클릭하여 고급 피어링 설정을 계속 진행합니다. 이 설정은 이 문서의 범위를 벗어납니다. 그런 다음 마침을 클릭하여 마법사를 종료합니다.
