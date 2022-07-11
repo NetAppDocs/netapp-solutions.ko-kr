@@ -36,7 +36,7 @@ NetApp은 NetApp 테스트를 기반으로 ONTAP에서 올바르게 동작하도
 | NET.TcpipHeapSize | vSphere 6.0 이상, 32로 설정. 다른 모든 NFS 구성은 30으로 설정합니다. 
 
 
-| net.TcpipHeapMax | vSphere 6.0 이상에서는 1536으로 설정합니다. 
+| net.TcpipHeapMax | 대부분의 vSphere 6.X 릴리즈에서는 512MB로 설정합니다. 6.5U3, 6.7U3 및 7.0 이상의 경우 1024MB로 설정합니다. 
 
 
 | NFS.MaxVolumes | vSphere 6.0 이상, 256으로 설정 다른 모든 NFS 구성은 64로 설정됩니다. 
