@@ -18,7 +18,7 @@ NetApp과 NVIDIA의 ONTAP AI 통합 인프라 솔루션 개요
 
 
 
-=== NVIDIA DGX A100 시스템을 지원하는 NetApp ONTAP AI
+== NVIDIA DGX A100 시스템을 지원하는 NetApp ONTAP AI
 
 * link:https://www.netapp.com/pdf.html?item=/media/19432-nva-1151-design.pdf["설계 가이드"]
 * link:https://www.netapp.com/pdf.html?item=/media/20708-nva-1151-deploy.pdf["구축 가이드"]
@@ -26,7 +26,7 @@ NetApp과 NVIDIA의 ONTAP AI 통합 인프라 솔루션 개요
 
 
 
-=== NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치가 포함된 NetApp ONTAP AI
+== NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치가 포함된 NetApp ONTAP AI
 
 * link:https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf["설계 가이드"]
 * link:https://www.netapp.com/pdf.html?item=/media/21789-nva-1153-deploy.pdf["구축 가이드"]

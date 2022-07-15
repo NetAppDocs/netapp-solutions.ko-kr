@@ -19,7 +19,7 @@ keywords: netapp, solutions, automation, ansible, terraform
 
 
 
-=== Ansible Control 노드 설정
+== Ansible Control 노드 설정
 
 Ansible은 에이전트가 없는 자동화 도구이므로 하나의 시스템(Ansible 제어 노드)에만 설치하면 됩니다. 제어 노드를 통해 추가 구성 없이 전체 원격 장비를 관리할 수 있습니다.
 

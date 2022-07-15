@@ -20,7 +20,7 @@ Cloud Manager 커넥터와 Cloud Volumes ONTAP를 설치하고 SnapMirror를 구
 
 
 
-=== Cloud Manager 및 Cloud Volumes ONTAP 구축 사전 요구 사항 체크리스트
+== Cloud Manager 및 Cloud Volumes ONTAP 구축 사전 요구 사항 체크리스트
 
 * NetApp Cloud Central 로그인
 * 웹 브라우저에서 여러 엔드포인트로 네트워크 액세스

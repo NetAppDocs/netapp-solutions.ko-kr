@@ -20,7 +20,7 @@ NVIDIA GPU를 탑재한 베어 메탈 노드를 포함하는 온프레미스 Kub
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
@@ -30,7 +30,7 @@ NVIDIA GPU를 탑재한 베어 메탈 노드를 포함하는 온프레미스 Kub
 
 
 
-=== NVIDIA DeepOps를 사용하여 Kubernetes 설치 및 구성
+== NVIDIA DeepOps를 사용하여 Kubernetes 설치 및 구성
 
 NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축하고 구성하려면 배포 점프 호스트에서 다음 작업을 수행하십시오.
 

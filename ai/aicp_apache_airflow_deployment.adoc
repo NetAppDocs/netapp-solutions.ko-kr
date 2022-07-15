@@ -20,7 +20,7 @@ NOTE: Kubernetes 이외의 플랫폼에 공기 흐름을 배포할 수 있습니
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
@@ -30,19 +30,19 @@ NOTE: Kubernetes 이외의 플랫폼에 공기 흐름을 배포할 수 있습니
 
 
 
-=== 제어 장치를 설치합니다
+== 제어 장치를 설치합니다
 
 Kubernetes의 유명 패키지 매니저인 Helm을 사용하여 공기 흐름을 구축합니다. 공기 흐름을 배치하기 전에 배포 점프 호스트에 Helm을 설치해야 합니다. 배포 점프 호스트에 Helm을 설치하려면 에 따르십시오 https://helm.sh/docs/intro/install/["설치 지침"^] 공식 Helm 문서.
 
 
 
-=== 기본 Kubernetes StorageClass를 설정합니다
+== 기본 Kubernetes StorageClass를 설정합니다
 
 공기 흐름을 구축하기 전에 Kubernetes 클러스터 내에서 기본 StorageClass를 지정해야 합니다. Airflow 배포 프로세스는 기본 StorageClass를 사용하여 새 영구 볼륨의 프로비저닝을 시도합니다. 기본 StorageClass로 지정된 StorageClass가 없으면 배포가 실패합니다. 클러스터 내에서 기본 StorageClass를 지정하려면 섹션에 설명된 지침을 따르십시오 link:aicp_kubeflow_deployment_overview.html["Kubeflow 구축"]. 클러스터 내에서 기본 StorageClass를 이미 지정한 경우에는 이 단계를 건너뛸 수 있습니다.
 
 
 
-=== Helm을 사용하여 공기 흐름을 전개하십시오
+== Helm을 사용하여 공기 흐름을 전개하십시오
 
 Helm을 사용하여 Kubernetes 클러스터에 공기 흐름을 배포하려면 배포 점프 호스트에서 다음 작업을 수행하십시오.
 

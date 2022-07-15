@@ -18,7 +18,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에 Kubeflow를 구축하
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
@@ -28,7 +28,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에 Kubeflow를 구축하
 
 
 
-=== 기본 Kubernetes StorageClass를 설정합니다
+== 기본 Kubernetes StorageClass를 설정합니다
 
 Kubeflow를 구현하기 전에 Kubernetes 클러스터 내에서 기본 StorageClass를 지정해야 합니다. Kubeflow 배포 프로세스에서는 기본 StorageClass를 사용하여 새 영구 볼륨의 프로비저닝을 시도합니다. 기본 StorageClass로 지정된 StorageClass가 없으면 배포가 실패합니다. 클러스터 내에서 기본 StorageClass를 지정하려면 배포 점프 호스트에서 다음 작업을 수행합니다. 클러스터 내에서 기본 StorageClass를 이미 지정한 경우에는 이 단계를 건너뛸 수 있습니다.
 
@@ -56,7 +56,7 @@ ontap-ai-flexvols-retain (default)   csi.trident.netapp.io   54s
 ....
 
 
-=== NVIDIA DeepOps를 사용하여 Kubeflow를 배포합니다
+== NVIDIA DeepOps를 사용하여 Kubeflow를 배포합니다
 
 NVIDIA DeepOps에서 제공하는 Kubeflow 구현 툴을 사용할 것을 권장합니다. DeepOps 구축 툴을 사용하여 Kubernetes 클러스터에 Kubeflow를 배포하려면 배포 점프 호스트에서 다음 작업을 수행합니다.
 

@@ -18,7 +18,7 @@ summary: Trident 작업의 예
 
 
 
-=== 기존 볼륨을 가져옵니다
+== 기존 볼륨을 가져옵니다
 
 Kubernetes 클러스터 내의 컨테이너에 마운트할 NetApp 스토리지 시스템/플랫폼에 기존 볼륨이 있지만, 클러스터의 PVC와 연결되지 않은 경우 이러한 볼륨을 가져와야 합니다. Trident 볼륨 가져오기 기능을 사용하여 이러한 볼륨을 가져올 수 있습니다.
 
@@ -78,7 +78,7 @@ pb-fg-all-iface2     Bound    default-pb-fg-all-iface2-85aee     10995116277760 
 ....
 
 
-=== 새 볼륨을 프로비저닝합니다
+== 새 볼륨을 프로비저닝합니다
 
 Trident를 사용하여 NetApp 스토리지 시스템 또는 플랫폼에서 새 볼륨을 프로비저닝할 수 있습니다. 다음 명령 예에서는 새 FlexVol 볼륨의 프로비저닝을 보여 줍니다. 이 예제에서는 섹션의 예제에서 만든 StorageClass 를 사용하여 볼륨을 프로비저닝합니다 link:aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html["ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예"], 2단계.
 

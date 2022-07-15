@@ -18,7 +18,7 @@ NetApp과 NVIDIA의 EF-Series AI 통합 인프라 솔루션 개요
 
 
 
-=== NVIDIA DGX A100 Systems 및 BeeGFS 지원 EF-Series AI
+== NVIDIA DGX A100 Systems 및 BeeGFS 지원 EF-Series AI
 
 * link:https://www.netapp.com/pdf.html?item=/media/25445-nva-1156-design.pdf["설계 가이드"]
 * link:https://www.netapp.com/pdf.html?item=/media/25574-nva-1156-deploy.pdf["구축 가이드"]
