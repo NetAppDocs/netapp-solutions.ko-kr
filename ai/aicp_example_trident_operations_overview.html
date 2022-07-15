@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/ko-kr/netapp-solutions/search.html"
           data-type="widget" 
-          data-placeholder="설명서 검색" 
-          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
-          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
-          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
-          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-placeholder="설명서 검색"
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음"
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오."
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?"
+          data-results-found="{hitCount}개의 결과를 찾음"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -5111,7 +5113,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:44:50 +0000">04/18/2022</time>
+    <time datetime="2022-07-15 19:07:42 +0000">07/15/2022</time>
     
   
 
@@ -5125,8 +5127,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="기존-볼륨을-가져옵니다">기존 볼륨을 가져옵니다</h3>
+<div class="sect1">
+<h2 id="기존-볼륨을-가져옵니다">기존 볼륨을 가져옵니다</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Kubernetes 클러스터 내의 컨테이너에 마운트할 NetApp 스토리지 시스템/플랫폼에 기존 볼륨이 있지만, 클러스터의 PVC와 연결되지 않은 경우 이러한 볼륨을 가져와야 합니다. Trident 볼륨 가져오기 기능을 사용하여 이러한 볼륨을 가져올 수 있습니다.</p>
 </div>
@@ -5198,8 +5201,10 @@ pb-fg-all-iface2     Bound    default-pb-fg-all-iface2-85aee     10995116277760 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="새-볼륨을-프로비저닝합니다">새 볼륨을 프로비저닝합니다</h3>
+</div>
+<div class="sect1">
+<h2 id="새-볼륨을-프로비저닝합니다">새 볼륨을 프로비저닝합니다</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Trident를 사용하여 NetApp 스토리지 시스템 또는 플랫폼에서 새 볼륨을 프로비저닝할 수 있습니다. 다음 명령 예에서는 새 FlexVol 볼륨의 프로비저닝을 보여 줍니다. 이 예제에서는 섹션의 예제에서 만든 StorageClass 를 사용하여 볼륨을 프로비저닝합니다 <a href="aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html">"ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예"</a>, 2단계.</p>
 </div>
@@ -5232,6 +5237,7 @@ tensorflow-results                Bound     default-tensorflow-results-2fd60   1
 </div>
 <div class="paragraph">
 <p><a href="aicp_example_high-performance_jobs_for_ontap_ai_deployments_overview.html">"다음: ONTAP AI 배포에 대한 고성능 작업 예 개요"</a></p>
+</div>
 </div>
 </div>
 
