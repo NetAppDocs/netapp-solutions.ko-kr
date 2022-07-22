@@ -57,7 +57,7 @@ homepage:
       url: databases/index.html
     - title: 최신 데이터 분석
       url: data-analytics/index.html
-    - title: NetApp 하이브리드 멀티 클라우드 및 VMware
+    - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
       url: ehc/index.html
     - title: SAP 및 SAP HANA
       url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html

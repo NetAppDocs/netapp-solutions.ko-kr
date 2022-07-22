@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ehc/ehc-summary.html 
-keywords: NetApp Solutions, hybrid, multi-cloud, enterprise hybrid cloud, hyperscalers, vmware 
+keywords: NetApp Solutions, hybrid, Multicloud, enterprise hybrid cloud, hyperscalers, vmware 
 summary:  
 ---
 = 요약 및 결론: NetApp 하이브리드 멀티 클라우드를 VMware와 함께 사용해야 하는 이유
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.
+주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes의 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.
 
 
 

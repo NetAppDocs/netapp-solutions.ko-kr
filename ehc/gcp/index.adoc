@@ -2,8 +2,8 @@
 layout: landing-page 
 sidebar: sidebar 
 permalink: ehc/gcp/index.html 
-lead: NetApp Hybrid Multi-Cloud with VMware solutions are a set of strategic and technology capabilities that demonstrate the capabilities of NetApp storage in the major public cloud hyperscalers. 
-summary: NetApp Hybrid Multi-Cloud with VMware 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다. 
+lead: NetApp Hybrid Multicloud with VMware solutions are a set of strategic and technology capabilities that demonstrate the capabilities of NetApp storage in the major public cloud hyperscalers. 
+summary: VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드는 주요 퍼블릭 클라우드 하이퍼스케일러에 있는 NetApp 스토리지의 기능을 시연하는 일련의 전략적 기술 기능입니다. 
 ---
 = GCP/GCVE를 위한 NetApp 하이브리드 멀티 클라우드 솔루션
 :hardbreaks:

@@ -4581,7 +4581,6 @@
   <block id="94f644afad50386ab13d527e1056ce71" category="paragraph">* 네이티브 데이터 저장소 *</block>
   <block id="1234d67e696757e4666b0611f60b80d8" category="inline-link-macro">CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다</block>
   <block id="c567300e15e9f9b873771e56c72c938b" category="admonition">1-현재 비공개 미리보기에 있습니다</block>
-  <block id="e3a2a8e4a74a67a9514c2aec5e4fac69" category="doc">Azure용 NetApp 기본 데이터 저장소 옵션</block>
   <block id="04999f88dfbb06dc4f6a71901a7e9b18" category="paragraph">리드&gt;</block>
   <block id="2a172299398c31c1e2cd726175d3a270" category="paragraph">content&gt;를 선택합니다</block>
   <block id="5e1c36a2c24e0aaf7844ec890c15e430" category="paragraph">주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.</block>
@@ -4779,7 +4778,6 @@
   <block id="c63dc0feeff939bc83ba1537a1e8ac9a" category="list-text">이 문서가 작성된 시점에서 게스트 내 저장소가 유일하게 사용 가능한 옵션이었습니다.</block>
   <block id="478a13ed02b948c9cfd89a6197062012" category="admonition">스토리지 계획 및 사이징과 필요한 호스트 수에 대해서는 NetApp 솔루션 설계자와 각각의 하이퍼스케일러 클라우드 설계자를 설득하십시오. Cloud Volumes ONTAP Sizer를 사용하여 스토리지 인스턴스 유형 또는 적절한 서비스 수준을 최적의 처리량으로 확정하기 전에 스토리지 성능 요구사항을 파악하는 것이 좋습니다.</block>
   <block id="c748546b5854ecb146d9caa41d781bdb" category="section-title">상세 아키텍처</block>
-  <block id="2b6a2372968d8ec2639d784ce8aee350" category="paragraph">개략적인 관점에서 볼 때 이 아키텍처(아래 그림에 표시)에서는 NetApp Cloud Volumes ONTAP, Cloud Volumes Service for Google Cloud 및 Azure NetApp Files를 추가 게스트 스토리지 옵션으로 사용하여 여러 클라우드 공급자 간에 하이브리드 멀티 클라우드 연결과 앱 이동성을 달성하는 방법을 설명합니다.</block>
   <block id="1a8ac44404b1e5888d83801ac116ff66" category="inline-image-macro">엔터프라이즈 하이브리드 클라우드 아키텍처</block>
   <block id="855b05f645c80247a3f11392cab187c2" category="paragraph"><block ref="855b05f645c80247a3f11392cab187c2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="63b9fbe67e7dd9b9f7623683244cb7f8" category="doc">Azure AVS용 NetApp 기능</block>
@@ -4818,7 +4816,6 @@
   <block id="c1304f98c6be845a236d7a27951ece4f" category="paragraph"><block ref="c1304f98c6be845a236d7a27951ece4f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca4ac823f3f130f3c78d6ac26ba9f46b" category="admonition">특정 하이퍼스케일러의 기능을 보려면 해당 하이퍼스케일러의 적절한 탭을 클릭하십시오.</block>
   <block id="ff264305bf70750f504c04f48ab02038" category="paragraph">NetApp 스토리지는 3가지 주요 하이퍼 스케일러 내에서 상호 연결된 추측이나 기본 데이터 저장소로 활용할 수 있습니다.</block>
-  <block id="dd6f2ba05323a537582c1f232e8a2c60" category="paragraph">주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.</block>
   <block id="e7441dbfabeaebba75ddd1bf2bcf25e9" category="section-title">사용 사례 #1: 스토리지 최적화</block>
   <block id="b9a8c3d27aa6638e02992c8b76fea769" category="paragraph">RVtools 출력을 사용하여 사이징 작업을 수행할 때 마력(vCPU/vmem) 스케일이 스토리지와 평행하다는 것이 항상 명백합니다. 스토리지 공간에 필요한 드라이브의 크기가 마력을 훨씬 넘어서는 상황에 처하게 되는 경우가 많습니다.</block>
   <block id="cb575e0b8e023ca0a1789ea03bdb86fd" category="paragraph">NetApp Cloud Volumes를 통합하면 간단한 마이그레이션 방식을 통해 vSphere 기반 클라우드 솔루션을 실현할 수 있습니다. 플랫폼 재구축 또는 IP 변경 없이 아키텍처 변경 없이 모든 작업을 수행할 수 있습니다. 또한 이러한 최적화를 통해 vSphere에서 호스트 수를 최소한으로 유지하면서 스토리지 설치 공간을 확장할 수 있으며, 스토리지 계층, 보안 또는 사용 가능한 파일은 변경되지 않습니다. 따라서 구축을 최적화하고 전체 TCO를 35~45% 절감할 수 있습니다. 또한 이러한 통합을 통해 스토리지를 따뜻한 스토리지에서 운영 수준의 성능으로 몇 초 이내에 확장할 수 있습니다.</block>
@@ -4893,7 +4890,6 @@
   <block id="2116d89ca4be9d5a23f758068a2225b2" category="list-text">클라우드 네이티브 기술을 활용하여 애플리케이션 현대화</block>
   <block id="bc262005b263505cc0464e05c4324687" category="section-title">IT의 여정</block>
   <block id="cfdb9aabb4aedf8cad2e330ba5a516a3" category="paragraph">대부분의 조직은 혁신과 현대화를 향한 여정을 진행 중입니다. 이 프로세스의 일환으로 기업들은 기존 VMware 투자를 활용하는 동시에 클라우드의 이점을 활용하고 마이그레이션 프로세스를 최대한 원활하게 만드는 방법을 모색하고 있습니다. 이 접근 방식은 데이터가 이미 클라우드에 있기 때문에 현대화에 대한 노력을 매우 쉽게 할 수 있습니다.</block>
-  <block id="9576824e6ccc9e436057f6d3bcd644d2" category="paragraph">이 시나리오에 대한 가장 쉬운 답은 각 하이퍼스케일러의 VMware 오퍼링입니다. NetApp ® Cloud Volumes와 마찬가지로 VMware는 사내 VMware 환경을 클라우드로 이동 또는 확장하는 방법을 제공하므로 클라우드에서 워크로드를 기본적으로 실행하면서 기존 온프레미스 자산, 기술 및 툴을 유지할 수 있습니다. 따라서 서비스 중단이나 IP 변경이 필요하지 않고 IT 팀이 기존 기술과 툴을 사용하여 사내에서 작업하는 방식을 운영할 수 있으므로 위험이 감소합니다. 따라서 클라우드 마이그레이션 속도가 향상되고 하이브리드 멀티 클라우드 아키텍처로의 전환이 더욱 원활해질 수 있습니다.</block>
   <block id="ca0a16f344ac7703cf785163a8f07f5d" category="section-title">기본 스토리지 옵션의 중요성 이해</block>
   <block id="46da638bac867fb225c11e1d8504da00" category="paragraph">어떤 클라우드에서든 VMware는 모든 고객에게 고유한 하이브리드 기능을 제공하지만, 제한된 기본 스토리지 옵션으로 스토리지 집약적인 워크로드를 사용하는 조직에는 유용성이 제한됩니다. 스토리지는 호스트에 직접 연결되므로 스토리지를 확장하는 유일한 방법은 호스트를 추가하는 것입니다. 이렇게 하면 스토리지 집약적인 워크로드의 비용이 35-40% 이상 증가할 수 있습니다. 이러한 워크로드는 추가 마력이 아닌 추가 스토리지만 필요합니다. 하지만 이는 추가 호스트에 대한 비용을 지불하는 것을 의미합니다.</block>
   <block id="0362604333fcf179ebf8b873f8f8c0ec" category="paragraph">다음 시나리오를 생각해 봅시다.</block>
@@ -11566,7 +11562,6 @@
   <block id="bf20a476dd72893f0f21a3d56a601784" category="open-title">인공 지능</block>
   <block id="e6c9e9316fee7048645938d93d674056" category="list-text"><block ref="e6c9e9316fee7048645938d93d674056" category="inline-link-macro-rx"></block></block>
   <block id="3e78754f8bb90f06073e18a2399d0b7f" category="list-text"><block ref="3e78754f8bb90f06073e18a2399d0b7f" category="inline-link-macro-rx"></block></block>
-  <block id="82b010fd4d40369f1139d43f8dd909ba" category="open-title">VMware를 사용한 하이브리드 멀티 클라우드</block>
   <block id="821c35321bcc709868cdd0b7f31165ee" category="cell">2022-04-01/05</block>
   <block id="8b55e517e14aa53afa343c32eba6bc12" category="cell">엔터프라이즈 하이브리드 클라우드 솔루션의 체계적인 콘텐츠: 각 하이퍼스케일러의 랜딩 페이지 및 사용 가능한 솔루션(사용 사례) 콘텐츠 포함</block>
   <block id="b4ea7c36c784b6da08e2b44d82018c65" category="open-title">AWS/VMC</block>
@@ -11589,18 +11584,13 @@
   <block id="2da991b20a7647acbdd67154515723cf" category="inline-link-macro">GCVE에 대한 게스트 연결 저장소 옵션</block>
   <block id="5d49b0ee57ad4b529c897b49789aa965" category="paragraph">자세한 내용을 확인하십시오 <block ref="39710aaf95ad3f60e444c45fa2d1a561" category="inline-link-macro-rx"></block>.</block>
   <block id="9a1c3a40aef4ef7a29c07ec6176752dc" category="paragraph">에 대해 자세히 알아보십시오 <block ref="a508a86f372584a11bee8d3d41e3afca" category="inline-link-macro-rx"></block>.</block>
-  <block id="6c41e8ee0d4c73cd0adbd0d885181685" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware의 지원 구성</block>
   <block id="685435b4b2388bd8f370b8fbb6ef6cc7" category="cell">* 게스트 연결됨 *</block>
   <block id="8299249ba5f910704b6288ee7e271747" category="cell">* AWS *</block>
   <block id="eb35b03ceb49f5f06a4570454e08c34c" category="cell">CVO FSx ONTAP<block ref="999b20d9470091fda2e66b2dde5b0af7" category="inline-link-macro-rx"></block></block>
-  <block id="45277e62e958e9bf8bc931edecd437e7" category="inline-link-macro">세부 정보 ^1</block>
   <block id="1bdeba09294eb5abc383607bb93ff443" category="cell">* Azure *</block>
   <block id="06a1c60be3b7274c063385eaa240863f" category="cell">CVO ANF<block ref="f44f46a20eba78aa72ad4f68a0486a31" category="inline-link-macro-rx"></block></block>
   <block id="25bdffbd4ab087e994a0e54fe22ff6bd" category="cell">* GCP *</block>
   <block id="96e48152153beabed038aa4e41f2abf8" category="cell">CVO CVS<block ref="a54d2eac225d57696bf863778373ea0b" category="inline-link-macro-rx"></block></block>
-  <block id="15ce055d9a059e67d9ddb79a8c441848" category="example-title">기본 데이터 저장소로서의 Azure NetApp Files(ANF)</block>
-  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="example-title">1단계</block>
-  <block id="e31ad1284b7618a9c10777ed99b12e64" category="example-title">2단계</block>
   <block id="a46eb72d67c0cbcbbdfcde010fbc0b03" category="paragraph">NetApp이 Azure에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
   <block id="d8732ebfbd98db5a8cd9db59aa5b0637" category="paragraph">VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 정의합니다.</block>
   <block id="2cb256015e8585083bd2350f010676fb" category="list-text">보호(재해 복구 및 백업/복원 모두 포함)</block>
@@ -11618,8 +11608,6 @@
   <block id="12f2a9cf238d1339eddfc43be9f107e1" category="paragraph">ONTAP의 소프트웨어 정의 버전이며 클라우드 네이티브 스토리지를 사용합니다. 따라서 클라우드와 사내에서 동일한 스토리지 소프트웨어를 사용할 수 있으므로 데이터를 관리하는 새로운 방법을 통해 IT 직원을 재교육할 필요가 없습니다.</block>
   <block id="62c9becbf4c5643c0df4cbe868b09f0c" category="paragraph">CVO를 사용하면 데이터를 에지에서 데이터 센터, 클라우드로 원활하게 이동하고 다시 가져올 수 있습니다. 또한 단일 창 관리 콘솔인 NetApp Cloud Manager를 사용하여 하이브리드 클라우드를 통합할 수 있습니다.</block>
   <block id="aafae379e910c7a153b831ce5122f5e8" category="paragraph">설계상 CVO는 최고 성능과 고급 데이터 관리 기능을 제공하여 클라우드에서 가장 까다로운 애플리케이션도 충족합니다</block>
-  <block id="0a9acbcedeb8b79d98c080f7a1b27f90" category="summary">NetApp Hybrid Multi-Cloud with VMware 솔루션은 주요 퍼블릭 클라우드 하이퍼스케일러에 대한 NetApp 스토리지의 기능을 시연하는 전략적 기술 기능 집합입니다.</block>
-  <block id="9e46ac24e9caed79a586cc94846bc147" category="doc">Azure/AVS용 NetApp 하이브리드 멀티 클라우드 솔루션</block>
   <block id="6db49f93b02d752e6b80616d15759056" category="inline-link-macro">NetApp/VMware 클라우드 솔루션</block>
   <block id="a088d0b353502e225826d0feb3041d57" category="list-text"><block ref="a088d0b353502e225826d0feb3041d57" category="inline-link-macro-rx"></block></block>
   <block id="9e348c60eb79913385ed14a65efffff6" category="paragraph">자세한 내용을 확인하십시오 <block ref="be78464beb9b2a2b1696a7fe38c0e484" category="inline-link-macro-rx"></block>.</block>
@@ -11664,7 +11652,6 @@
   <block id="d6dfff84d77a63fcf19e6f6359ac71c5" category="paragraph">FSxO용 HCX&gt; 솔루션을 위해 &lt;content's go here's) for the solution(s) with FSxO&gt;</block>
   <block id="711a160cd3b8c4ec32edd7ba5dfd5eca" category="open-title">CVO용 HCX</block>
   <block id="4956cdf8fd57c365bb7636be6c086ca5" category="paragraph">CVO용 HCX&gt;와 함께 &lt;content's go here for the solution(s) for CVO&gt;</block>
-  <block id="a0e3b13b82c6cc2042ac9e057f0718b3" category="doc">AWS/VMC를 위한 NetApp 하이브리드 멀티 클라우드 솔루션</block>
   <block id="7c0dae765c7854235808e7e373346d06" category="paragraph">NetApp이 GCP에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
   <block id="962dbad648dc58421e7347adf727a05a" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 다양한 기능을 제공합니다.</block>
   <block id="370e7d693bc429e40244684cac20b0cf" category="list-text"><block ref="370e7d693bc429e40244684cac20b0cf" category="inline-link-macro-rx"></block></block>
@@ -11673,16 +11660,11 @@
   <block id="e67def868f3133574b28ffe738ad44c1" category="inline-link-macro">Google Cloud GCVE용 NetApp 솔루션을 찾아보십시오</block>
   <block id="5e7670e99ae7db80618f16965d677af6" category="paragraph"><block ref="5e7670e99ae7db80618f16965d677af6" category="inline-link-macro-rx"></block></block>
   <block id="f0f52a47448cc3bc6237a09f83ad3e74" category="example-title">GCVE 배포 및 구성</block>
-  <block id="d3e4750ab9c5f45877b08b537cffe841" category="doc">GCP/GCVE를 위한 NetApp 하이브리드 멀티 클라우드 솔루션</block>
   <block id="7973cdedf3e9a37ff146bc9fd29ff017" category="paragraph">GCP는 CVO(Cloud Volumes ONTAP) 또는 CVS(Cloud Volumes Service)를 통해 게스트 연결 NetApp 스토리지를 지원합니다.</block>
   <block id="622f93ad4ff43627a425523c5e2538ad" category="section-title">CVS(Cloud Volumes Service)</block>
   <block id="b5a9beef520c0dd1f8e978800f35268e" category="paragraph">CVS(Cloud Volumes Services)는 고급 클라우드 솔루션을 제공하는 완벽한 데이터 서비스 포트폴리오입니다. Cloud Volumes Services는 주요 클라우드 공급자를 위한 여러 파일 액세스 프로토콜(NFS 및 SMB 지원)을 지원합니다.</block>
   <block id="82c8cb0896f20daa9ddbb9d49332f9b6" category="paragraph">그 밖의 이점 및 기능: Snapshot을 통한 데이터 보호 및 복원, 온프레미스 또는 클라우드의 데이터 대상을 복제, 동기화, 마이그레이션할 수 있는 특별한 기능, 전용 플래시 스토리지 시스템 레벨에서 일관된 고성능 제공</block>
-  <block id="e1281543b82ca0740b9a14ecaccdf005" category="doc">요약 및 결론: NetApp 하이브리드 멀티 클라우드를 VMware와 함께 사용해야 하는 이유</block>
-  <block id="1c2d371e7885541a1df267029c76cfaa" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware 개요</block>
-  <block id="abbe5e723ab5fce5f27612442575a63c" category="doc">NetApp 하이브리드 멀티 클라우드 및 VMware의 사용 사례</block>
   <block id="443f43c84a8efb54c46feb5a61b1a9cc" category="paragraph">이 설명서 전체에서 VMware 활용 사례를 사용하여 클라우드 워크로드 참조를 자세히 설명합니다. 이러한 사용 사례는 다음과 같습니다.</block>
-  <block id="0eb3c79e84e2e7074d851c728663251c" category="doc">NetApp 하이브리드 멀티 클라우드 솔루션</block>
   <block id="0198315ccfb9d5c56e9c865f01bee365" category="paragraph">NetApp 및 VMware 클라우드 솔루션을 사용하면 대부분의 사용 사례를 하이퍼스케일러에서 간편하게 구축할 수 있습니다. VMware는 운영 클라우드 워크로드 사용 사례를 다음과 같이 정의합니다.</block>
   <block id="e0525641cbca59e199eed50739c0c3b8" category="inline-link-macro">AWS/VMC용 NetApp 솔루션을 찾아보십시오</block>
   <block id="3a602723648efc3d9a864906b6ec2d9c" category="paragraph"><block ref="3a602723648efc3d9a864906b6ec2d9c" category="inline-link-macro-rx"></block></block>
@@ -11714,7 +11696,6 @@
   <block id="60e34857d044a02ae86f645c2e97e40f" category="paragraph">stdin&gt;의 미해결 지시문 - 포함::containers/rh-os-n_overview_astra_cc_install_manual.adoc []</block>
   <block id="2b0a99e34b337bd6d8ed27dd9482c9e6" category="paragraph">stdin&gt;에서 해결되지 않은 지침 - 포함:: containers/rh-os-n_overview_astra_cc_install_Ansible.adoc []</block>
   <block id="245ab73d4b9beb43ff76c082e9bc77db" category="open-title">AI/데이터 분석</block>
-  <block id="1cafbd014dfeeb64eb943c92af6abe86" category="open-title">하이브리드 멀티 클라우드</block>
   <block id="901b32f6abd15fbb3d43fbd044218a64" category="open-title">엔터프라이즈 애플리케이션 및 DB</block>
   <block id="71fbb346a6b64c94052f0e171d5d3eed" category="open-title">데이터 보호 및 데이터 마이그레이션</block>
   <block id="10b2aec15aae4d935355e27497e66c5f" category="summary">NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모 시리즈</block>
@@ -11740,18 +11721,11 @@
   <block id="195b49c0610d30d327f5440759b7b642" category="sidebar">지원되는 솔루션</block>
   <block id="77abe5490624dabbaf53c9f3b9267e97" category="sidebar">네이티브 데이터 저장소 - 개인 미리 보기</block>
   <block id="3ffbc70cc0bdd47bd7c4ed3cfa35be8a" category="sidebar">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="d4a26861760fe17cc2584cdd8453c938" category="sidebar">CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="5efd4fd33e2b8f8cc3fc45c42e47c9ad" category="sidebar">AWS 기반 VMC 솔루션</block>
-  <block id="b2f068db06c9b5b7c387193b8f186f81" category="sidebar">게스트 연결 스토리지로서의 Azure NetApp Files(ANF)</block>
-  <block id="c89fb832b55397ad57c36681741311d5" category="sidebar">Azure에서 AVS용 솔루션</block>
-  <block id="7db85076649ba213cd747c06b9b19df7" category="sidebar">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="726e6f4bd2e690d08ae0a185cbe1c9b8" category="sidebar">GCP의 GCVE용 솔루션</block>
   <block id="06e1970c26d133efed67d51224ceff1c" category="sidebar">보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service</block>
   <block id="860ab177fe05389a6d0ec0842bd1e818" category="sidebar">곧 제공 예정...</block>
   <block id="c252fd6dfe5fa6dc4ba36515512a8070" category="sidebar">워크로드 보호 솔루션</block>
   <block id="10b6eb5523fab1d4b99c4fdfb54bf176" category="sidebar">워크로드 솔루션 확장</block>
   <block id="d761cb8e8504381eb60fe9aea1bcb3e7" category="sidebar">워크로드 마이그레이션 솔루션</block>
-  <block id="2e92adc6ace2b6d3c6626d5dc86f0956" category="sidebar">Azure VMware 솔루션용 Azure NetApp Files 데이터 저장소(Preview)</block>
   <block id="2579e0b6258e495e90e159e678bd55a8" category="sidebar">AWS 기반 VMware 클라우드: 새로운 지역, 외부 스토리지 및 구매 옵션</block>
   <block id="f74a2791289e2f0411e5ffbd3e5a1d68" category="sidebar">NetApp Cloud Volumes Service를 사용하는 Google Cloud VMware Engine</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">오라클</block>
@@ -11995,7 +11969,6 @@
   <block id="e19e98a669ae21f94ffd1659998fd072" category="cell">데이터 분석</block>
   <block id="c32698794f1279b1f46bacea38a72264" category="cell">Splunk Enterprise 솔루션을 사용하는 NetApp EF600에 대한 링크가 추가되었습니다</block>
   <block id="32e9989956756ffe28b84c0dab24eb03" category="cell">2022년 6월 2일</block>
-  <block id="0b43df9ff160cb2c9548bd63154567b2" category="cell">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드에 대한 NFS 데이터 저장소의 지역 가용성 목록 추가</block>
   <block id="8a1f080112c926ae23e4830edeb5a006" category="doc">지역 가용성 – VMC용 NFS 데이터 저장소</block>
   <block id="baf0abcbe7330fc1773b4f99d557c0d8" category="paragraph">AWS, VMC 및 FSx ONTAP에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
   <block id="fafae8ad861b26a9aa5e51d268709c44" category="admonition">NFS 데이터 저장소는 두 서비스(VMC 및 FSx ONTAP)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
@@ -12028,13 +12001,10 @@
   <block id="78c8c0f60d4851b109cbd33284f812ca" category="cell">아시아 태평양(뭄바이)</block>
   <block id="82f98bf67698e189fc9d846325345bbd" category="cell">아시아 태평양(자카르타)</block>
   <block id="1b15cf1d695d130132edd42a701b41a1" category="cell">아시아 태평양(홍콩)</block>
-  <block id="b97954ffc3fa3b13ddcb52960bee9e63" category="paragraph">AWS 보도 자료(출시 예정)에서 기본 데이터 저장소 공용 미리 보기로 FSx ONTAP에 대해 자세히 알아보십시오.</block>
   <block id="69d00fef4f252c9c61d1eb67822e4739" category="paragraph">참고: 현재 데이터 저장소로서의 NetApp 스토리지를 AWS/VMC 및 Azure/AVS의 공개 미리 보기와 GCP/GSVE의 프라이빗 미리 보기로 사용할 수 있습니다. 자세한 내용은 다음 링크를 참조하십시오.</block>
   <block id="945d681ba5697605547912e83e6eae6f" category="paragraph">FSx ONTAP용 AWS 보도 자료 곧 기본 데이터 저장소로 제공될 예정입니다!</block>
   <block id="07535da6f60738e67762673b24566f6d" category="paragraph"><block ref="11492821d8f3e04dd83f75af4417e9ff" category="inline-link-macro-rx"></block>
 <block ref="7fb3f61cbe4dcbff12c3d3e4fb2e9565" category="inline-link-macro-rx"></block></block>
-  <block id="70e1c3fa5abc9d74ffd37f31095cb582" category="inline-link">기본 데이터 저장소인 Azure NetApp Files(ANF) - 퍼블릭 미리 보기</block>
-  <block id="4f42c91455ab5d2e48ca9d0cddae309b" category="paragraph">에 대해 자세히 알아보십시오<block ref="beb0eaf63948bebac5d4502bcc7c6d44" category="inline-link-rx"></block>.</block>
   <block id="b5406986e96922718431fbc820878678" category="doc">지역 가용성 - ANF용 NFS 데이터 저장소</block>
   <block id="6167e2ab0cfead32a7f67ecd3956d0af" category="paragraph">Azure, AVS 및 ANF에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
   <block id="9cd0e5d5083359436f8e8a366b9d6e07" category="admonition">NFS 데이터 저장소는 AVS 및 ANF(두 서비스)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
@@ -12087,11 +12057,7 @@
   <block id="44053e7cac0157f96a236a7c58eabd9c" category="paragraph">AWS, Azure 및 Google Cloud Platform(GCP)에서 글로벌 지역 의 NFS 데이터 저장소 지원에 대해 자세히 알아보십시오.</block>
   <block id="3b041c1182ede15a52a683344c9512e0" category="section-title">AWS 지역 가용성</block>
   <block id="c5fde59b3560ee1ea5aeeebaf94bdf39" category="section-title">Azure 지역 가용성</block>
-  <block id="01b10ddf84d4110fc0520775ff631ef8" category="cell">FSX ONTAP 보도 자료 출시 예정!</block>
-  <block id="f20451cb770adf31c660861d40b47b78" category="cell">ANF<block ref="7e9a47d5c556ad32fd161817650dbcdf" category="inline-link-macro-rx"></block></block>
   <block id="7ddf4642a2bfdc9a45847e5d375a1ddb" category="inline-link-macro">세부 정보 ^2</block>
-  <block id="d036ead8f905f32b8838b717a144a245" category="cell">CV<block ref="875d98cadb59bd52c1aaefd625efa251" category="inline-link-macro-rx"></block></block>
-  <block id="1bd79cc02d1aa01cfd21e3df07dc0c3a" category="paragraph">참고: 1 - 현재 공개 미리 보기 2 - 현재 비공개 미리 보기에서</block>
   <block id="614b6facb5b0ee7a2c90a7ea9bb6712b" category="doc">지역 가용성 – Google Cloud Platform(GCP)용 NFS 데이터 저장소</block>
   <block id="b2a0098aa06aaf37daca9ef6f8835134" category="paragraph">GCP, GCVE 및 CVS에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
   <block id="3c02e2bdd532ccfef3c9e12384907826" category="admonition">NFS 데이터 저장소는 두 서비스(GCVE 및 CVS 성능)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
@@ -12133,10 +12099,6 @@
   <block id="dda356c5eb605117520d535671d82d71" category="cell">자카르타(아시아-수르테스토2)</block>
   <block id="0c139834414e337fd03f824c0aaa638f" category="cell">뭄바이(아시아 - 남단1)</block>
   <block id="b11df59ba05c25c3a8734d54b7501ae7" category="cell">델리(아시아 - 남쪽 2)</block>
-  <block id="80cc9056f17716f814fdad3257466b25" category="cell">VMware를 사용한 하이브리드 멀티 클라우드</block>
-  <block id="857d6b14847b85cbda714161c9fb47bf" category="cell">퍼블릭 클라우드의 VMware와 각 하이퍼스케일러의 NetApp 스토리지 옵션을 포함하여 하이브리드 멀티 클라우드 모델에서 NetApp을 정의합니다. 하이브리드 멀티 클라우드 랜딩 페이지는 콘텐츠별 "타일"으로 제공되는 인기 있는 콘텐츠를 제공합니다.</block>
-  <block id="48d11e9d7dd7aca3e1306b51cfb7182a" category="inline-link-macro">VMware 컨텐츠를 사용한 하이브리드 멀티 클라우드</block>
-  <block id="aa19b96341556efbc0c3bf78b6c1945b" category="cell"><block ref="aa19b96341556efbc0c3bf78b6c1945b" category="inline-link-macro-rx"></block></block>
   <block id="844f1178f4ff7b95030ee50d8917da61" category="sidebar">NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="15b1cf33f2d910f9ab5e6fdaeb331bcc" category="sidebar">AWS에서 NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="81a6037600add9bb79d72eb49534ff94" category="sidebar">Azure에서 NFS 데이터 저장소에 대한 지역 지원</block>
@@ -12148,7 +12110,6 @@
   <block id="a047c61461aba5a84a0a221900c33984" category="paragraph">영상 처리는 컴퓨터 단층촬영(CT) 또는 자기공명영상(MRI)에서 얻은 3D 영상에서 외과적 계획을 위한 병리를 진단하는 데 사용됩니다. HIPAA 개인 정보 보호 규칙은 모든 개인 정보 및 사진과 같은 디지털 이미지에 대해 조직에서 데이터를 수집, 처리 및 지우는 방법을 규정합니다. HIPAA 세이프 하버 규정에 따라 데이터를 공유할 수 있는 자격을 갖추려면 전체 사진 이미지와 비교 이미지를 제거해야 합니다. 구조적 CT/MR 영상에서 개인의 얼굴 특징을 모호하게 하는 데 사용되는 식별 해제 또는 두개골 스트리핑 알고리즘과 같은 자동화 기술은 생물 의학 연구 기관의 데이터 공유 프로세스에서 필수적인 부분이 되었습니다.</block>
   <block id="2c5c3872e94de8a36eac45213c5bf2e6" category="paragraph">엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다<block ref="9da3a9a08c9461b229d33f221e8caa37" category="inline-link-rx"></block> 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.</block>
   <block id="236e54165aafef697c2c82c667e05d36" category="doc">TR-4928: AI 및 기밀 추론 지원 - NetApp AI 및 Protopia 이미지 및 데이터 변환</block>
-  <block id="89c461295f17dbdb6e2da2dcb27d01b3" category="sidebar">네이티브 데이터 저장소 - 퍼블릭 미리 보기</block>
   <block id="5b8a88d59edea26637f628caefd05974" category="list-text">Kubernetes 작업 클러스터가 이미 있으며, Trident에서 지원하는 Kubernetes 버전을 실행 중입니다. 지원되는 버전 목록은 를 참조하십시오<block ref="77881c904b113f84b0f08c355b95174f" category="inline-link-rx"></block>.</block>
   <block id="b81146e6af95bf6e22cf57459890216f" category="inline-link">백엔드</block>
   <block id="f652904c3bfb48fb25a0a75f485f0ff6" category="inline-link">StorageClaes를 참조하십시오</block>
@@ -13034,4 +12995,461 @@
   <block id="da0289d58f35e36d18325d6e8038b226" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 작업자 노드 OS가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
   <block id="ca2835359be5e4e2e79ed5b6fd777515" category="paragraph"><block ref="ca2835359be5e4e2e79ed5b6fd777515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="447797b692cf448a7c7d97a3cb4a0b3e" category="cell">대부분의 vSphere 6.X 릴리즈에서는 512MB로 설정합니다. 6.5U3, 6.7U3 및 7.0 이상의 경우 1024MB로 설정합니다.</block>
+  <block id="98a209af6bc652363afa031bd7d07cf1" category="admonition">VMC용 FSxN이 현재 IA(초기 가용성)에 있습니다. 자세한 내용은 NetApp 세일즈 담당자에게 문의하십시오.</block>
+  <block id="14e9535e6f965278f245a3dff2ef2cb3" category="admonition">AVS의 기본 데이터 저장소로서 1-ANF가 현재 Public Preview에 있습니다. 자세한 내용을 확인하십시오<block ref="5b3a31b4442bd8ea3aebfc18fe8411e5" category="inline-link-rx"></block>.</block>
+  <block id="43f154001e329eb4cb13b7745ba16dac" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드에 지원되는 구성</block>
+  <block id="e7b07b53a772f4842ba8d6291d7092bc" category="cell">FSX ONTAP 정보 곧 제공!^1^</block>
+  <block id="9b5e2f812e05038b9b432b2e47e60e83" category="cell">ANF<block ref="982de57bbd4b4909ca13b7582da5a7cb" category="inline-link-macro-rx"></block></block>
+  <block id="1d2f8b078a75242901e868e7bd66ab6b" category="inline-link-macro">세부 정보 ^3</block>
+  <block id="ef1c4ae5f356b44ca460e3aaf7bf2a32" category="cell">CV<block ref="3317ea58799e6c9da952335ff4000296" category="inline-link-macro-rx"></block></block>
+  <block id="6830947ed88b541bd76da4fcd40e36de" category="paragraph">참고: 1 - 현재 초기 가용성(IA)에 있음 2 - 현재 공개 미리 보기 3에 있음 - 현재 비공개 미리 보기에 있음</block>
+  <block id="9daaf09aeccc99c61fe453295253eae0" category="doc">요약 및 결론: NetApp 하이브리드 멀티 클라우드를 VMware와 함께 사용해야 하는 이유</block>
+  <block id="0c17a5e22f572303947d9e14cd98db39" category="paragraph">주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes의 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.</block>
+  <block id="17c56e542773e2aafc2645d0e9f0d8ec" category="summary">VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드는 주요 퍼블릭 클라우드 하이퍼스케일러에 있는 NetApp 스토리지의 기능을 시연하는 일련의 전략적 기술 기능입니다.</block>
+  <block id="eee9b49313d921d448286765fe05bd22" category="doc">AWS/VMC용 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="27dafc6e4e2e3563b0434812fa3fee7c" category="section-title">GCP 지역 가용성</block>
+  <block id="68c6fcf9f9393805f0529c36994a9266" category="paragraph">GCP가 공개 가용성에 진입할 때 GCP 지역 가용성이 릴리스됩니다.</block>
+  <block id="b632c27ff82cfe142baffd346253a21b" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드의 사용 사례</block>
+  <block id="0257f1ddf73d49021a7feba150b7ea8b" category="paragraph">이 시나리오에 대한 가장 쉬운 답은 각 하이퍼스케일러의 VMware 오퍼링입니다. NetApp ® Cloud Volumes와 마찬가지로 VMware는 사내 VMware 환경을 클라우드로 이동 또는 확장하는 방법을 제공하므로 클라우드에서 워크로드를 기본적으로 실행하면서 기존 온프레미스 자산, 기술 및 툴을 유지할 수 있습니다. 따라서 서비스 중단이나 IP 변경이 필요하지 않고 IT 팀이 기존 기술과 툴을 사용하여 사내에서 작업하는 방식을 운영할 수 있으므로 위험이 감소합니다. 따라서 클라우드 마이그레이션을 가속화하고 하이브리드 멀티 클라우드 아키텍처로의 전환이 한층 원활해질 수 있습니다.</block>
+  <block id="03600a63dc7f2e298d8612aef1fdf46c" category="inline-link-macro">ANF 및 Jetstream을 사용한 재해 복구(기본 데이터 저장소)</block>
+  <block id="bfc6a5fbfaab611e46293767acf3c458" category="list-text"><block ref="bfc6a5fbfaab611e46293767acf3c458" category="inline-link-macro-rx"></block></block>
+  <block id="eb6c2b16f0098f0bc3c0f880f42e0f70" category="inline-link-macro">ANF 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
+  <block id="704578940b42b49730b76820cc879b1a" category="list-text"><block ref="704578940b42b49730b76820cc879b1a" category="inline-link-macro-rx"></block></block>
+  <block id="33a1a24f2edf4ad9358baef7fb3c9cdf" category="doc">ANF 및 Jetstream을 통한 재해 복구</block>
+  <block id="14f4fb472fe43e084476c5d8329b15f8" category="paragraph">클라우드로 재해 복구는 사이트 운영 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. VMware VAIO 프레임워크를 사용하여 온프레미스 VMware 워크로드를 Azure Blob 스토리지에 복제하고 복구하여 데이터 손실과 제로급 RTO를 최소화하거나 최소화할 수 있습니다.</block>
+  <block id="b614fc13a076bceeca03cda9c4b1fdce" category="paragraph">Jetstream DR을 사용하면 사내에서 AVS로, 특히 Azure NetApp Files로 복제된 워크로드를 원활하게 복구할 수 있습니다. DR 사이트에서 최소한의 리소스와 비용 효율적인 클라우드 스토리지를 사용하여 비용 효율적으로 재해 복구를 수행할 수 있습니다. Jetstream DR은 Azure Blob Storage를 통해 ANF 데이터 저장소에 대한 복구를 자동화합니다. Jetstream DR은 네트워크 매핑에 따라 독립적인 VM 또는 관련 VM 그룹을 복구 사이트 인프라로 복구하고 랜섬웨어 보호를 위한 시점 복구를 제공합니다.</block>
+  <block id="29d141d1797b070195b4a3a5af842d35" category="paragraph">이 문서에서는 Jetstream DR 운영 원리 및 주요 구성 요소에 대해 설명합니다.</block>
+  <block id="0b3b3c3ee7cf95d87f597441efd5f743" category="example-title">솔루션 구축 개요</block>
+  <block id="1dff5e9fa7f5c212df3e98d343d6a771" category="list-text">사내 데이터 센터에 Jetstream DR 소프트웨어를 설치합니다.</block>
+  <block id="7b87ce74b3d0f7e81fef7a7994f9c8ed" category="list-text">Azure Marketplace(ZIP)에서 Jetstream DR 소프트웨어 번들을 다운로드하고 지정된 클러스터에 Jetstream DR MSA(OVA)를 배포합니다.</block>
+  <block id="56c27e9a114a51f4863d0fef4cab3eba" category="list-text">I/O 필터 패키지를 사용하여 클러스터를 구성합니다(Jetstream VIB 설치).</block>
+  <block id="43de8924da88a34109307d6aac84811a" category="list-text">DR AVS 클러스터와 동일한 영역에서 Azure Blob(Azure Storage Account)를 프로비저닝합니다.</block>
+  <block id="2cee29b70a6ea4765a6365e4d71775c7" category="list-text">DRVA 어플라이언스를 구축하고 복제 로그 볼륨(기존 데이터 저장소 또는 공유 iSCSI 스토리지의 VMDK)을 할당합니다.</block>
+  <block id="9c6ca12d0f999d69d715e02482665e5d" category="list-text">보호된 도메인(관련 VM 그룹)을 생성하고 DRVA 및 Azure Blob Storage/ANF를 할당합니다.</block>
+  <block id="04fd46fc4d0422c8562609b47b636797" category="list-text">보호를 시작합니다.</block>
+  <block id="8391f9ad7383911e1b8e67d8dfd23ffb" category="list-text">Azure VMware Solution 프라이빗 클라우드에 Jetstream DR 소프트웨어를 설치합니다.</block>
+  <block id="81aaea44e289ce199fea205f7d0b8cd9" category="list-text">실행 명령을 사용하여 Jetstream DR을 설치 및 구성합니다.</block>
+  <block id="ef261b549f401ed8d66b72f8310d7376" category="list-text">동일한 Azure Blob 컨테이너를 추가하고 Scan Domains 옵션을 사용하여 도메인을 검색합니다.</block>
+  <block id="3c22f96e96fb514aec06cc03a6d35958" category="list-text">필요한 DRVA 어플라이언스를 배포합니다.</block>
+  <block id="a8930e0df42395d789466e0695d11ce7" category="list-text">사용 가능한 vSAN 또는 ANF 데이터 저장소를 사용하여 복제 로그 볼륨을 생성합니다.</block>
+  <block id="087316b53a71d576c6dfeda2385ef108" category="list-text">보호된 도메인을 가져오고 RockVA(복구 VA)를 구성하여 VM 배치에 ANF 데이터 저장소를 사용합니다.</block>
+  <block id="f47df812f6139d9d12dc179df9e7da57" category="list-text">적절한 페일오버 옵션을 선택하고 제로급 RTO 도메인 또는 VM에 대한 연속 재수화를 시작합니다.</block>
+  <block id="eb50fc931b0aff72e9034088a04a260b" category="list-text">재해 이벤트 중에 지정된 AVS DR 사이트에서 Azure NetApp Files 데이터 저장소로 장애 조치를 트리거합니다.</block>
+  <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="inline-link">Azure 마켓플레이스 를 참조하십시오</block>
+  <block id="f314a6aa5faf9dfffba2cdac4d4dd420" category="list-text">보호된 사이트를 복구한 후 보호된 사이트에 대한 페일백을 호출합니다. 시작하기 전에 이 지침에 따라 사전 요구 사항이 충족되는지 확인합니다<block ref="600591f3feccd7454d660dd4d2972306" category="inline-link-rx"></block> 또한 Jetstream Software에서 제공하는 BWT(대역폭 테스트 도구)를 실행하여 Jetstream DR 소프트웨어와 함께 사용할 경우 Azure Blob 스토리지의 잠재적 성능과 해당 복제 대역폭을 평가합니다. 연결을 포함한 사전 요구 사항이 준비된 후에는 에서 Jetstream DR for AVS를 설정하고 구독하십시오<block ref="e842a0f9c9000f3898fd5cb9408b8b3e" category="inline-link-rx"></block>. 소프트웨어 번들을 다운로드한 후 위에 설명된 설치 프로세스를 진행합니다.</block>
+  <block id="01543f177a0cc07917f4dc3510b8649e" category="paragraph">많은 수의 VM(예: 100+)에 대한 보호를 계획하고 시작할 때는 Jetstream DR Automation Toolkit의 CPT(Capacity Planning Tool)를 사용하십시오. RTO 및 복구 그룹 기본 설정과 함께 보호할 VM 목록을 제공한 다음 CPT를 실행합니다.</block>
+  <block id="ddfb9ed8decef8b3db76f88d682c7f1e" category="paragraph">CPT는 다음과 같은 기능을 수행합니다.</block>
+  <block id="ab5991781a05bc72668a8bf941d7a4a5" category="list-text">RTO에 따라 VM을 보호 도메인에 결합합니다.</block>
+  <block id="b3229123cf8dd56b28f1a8e13f79ddde" category="list-text">최적의 DRVA 수 및 해당 리소스 정의</block>
+  <block id="2c3b2c6c87689b15c4cd3ea75cb40ef8" category="list-text">필요한 복제 대역폭을 추정하는 중입니다.</block>
+  <block id="88d06f884976bb7a1ce66e51624c0196" category="list-text">복제 로그 볼륨 특성(용량, 대역폭 등) 식별</block>
+  <block id="60a85cb526817dd0f1172dcdacc94700" category="list-text">필요한 오브젝트 스토리지 용량을 예측하는 등</block>
+  <block id="ea56b8a01683ebc544ddabe2f0fcf571" category="admonition">규정된 도메인의 수와 컨텐츠는 평균 IOPS, 총 용량, 우선 순위(페일오버 순서를 정의하는 경우), RTO 등과 같은 다양한 VM 특성에 따라 달라집니다.</block>
+  <block id="fc321ed0fcff278e628765c7a327d1c0" category="section-title">온프레미스 데이터 센터에 Jetstream DR을 설치합니다</block>
+  <block id="87674fd676f223da1c84cd30ba47e2d2" category="paragraph">Jetstream DR 소프트웨어는 Jetstream DR Management Server Virtual Appliance(MSA), DR 가상 어플라이언스(DRVA) 및 호스트 구성 요소(I/O 필터 패키지)의 세 가지 주요 구성 요소로 구성됩니다. MSA는 컴퓨팅 클러스터에 호스트 구성 요소를 설치 및 구성한 다음 Jetstream DR 소프트웨어를 관리하는 데 사용됩니다. 다음 목록에는 설치 프로세스에 대한 자세한 설명이 나와 있습니다.</block>
+  <block id="44a5c8a42b561b0a83b98c7dffe66dc4" category="list-text">필수 구성 요소를 확인하십시오.</block>
+  <block id="6035c664a9aaf8fa1c40e58c8beaab92" category="list-text">리소스 및 구성 권장 사항에 대해 용량 계획 툴을 실행합니다(선택 사항이지만 개념 증명 평가에는 권장됨).</block>
+  <block id="ccc2ab66d8941e0dddf26ed50f55ba4c" category="list-text">Jetstream DR MSA를 지정된 클러스터의 vSphere 호스트에 구축합니다.</block>
+  <block id="efdd725636035b733a89826db0da74f4" category="list-text">브라우저에서 DNS 이름을 사용하여 MSA를 실행합니다.</block>
+  <block id="39602c8241f165da483e3678f5d62871" category="list-text">MSA에 vCenter Server를 등록합니다. 설치를 수행하려면 다음 세부 단계를 완료하십시오.</block>
+  <block id="f6a1019b86d486190fed5e4a0c122f59" category="list-text">Jetstream DR MSA를 구축하고 vCenter Server를 등록한 후에는 vSphere Web Client를 사용하여 Jetstream DR 플러그인에 액세스합니다. 이 작업은 데이터 센터 &gt; 구성 &gt; Jetstream DR로 이동하여 수행할 수 있습니다.</block>
+  <block id="623c8f2c05001c7eeecb0781c049f16b" category="paragraph"><block ref="623c8f2c05001c7eeecb0781c049f16b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5b9a2e255ce372cd80d886148efdd00" category="list-text">Jetstream DR 인터페이스에서 적절한 클러스터를 선택합니다.</block>
+  <block id="699c846ab66a56017e37da99f6ea7320" category="paragraph"><block ref="699c846ab66a56017e37da99f6ea7320" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3d18d2901e95370132a2545c2f511db3" category="list-text">I/O 필터 패키지를 사용하여 클러스터를 구성합니다.</block>
+  <block id="34896ae2be725a2f3d42bd7b4b7888fd" category="paragraph"><block ref="34896ae2be725a2f3d42bd7b4b7888fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0598abb730b378c25cbbc28507342260" category="list-text">복구 사이트에 있는 Azure Blob Storage를 추가합니다.</block>
+  <block id="76ef667a7a95f046d391e54cea1b9142" category="list-text">Appliances(어플라이언스) 탭에서 DR Virtual Appliance(DRVA)를 구축합니다.</block>
+  <block id="ba445d98067e8161fa165b8f25ad294d" category="admonition">DRVA는 CPT에 의해 자동으로 생성될 수 있지만 POC 평가에서는 DR 주기를 수동으로 구성 및 실행하는 것이 좋습니다(시작 보호 &gt; 장애 조치 &gt; 장애 복구).</block>
+  <block id="60de8eac7ca6ad5f7321abf5b462b65d" category="paragraph">Jetstream DRVA는 데이터 복제 프로세스의 주요 기능을 용이하게 하는 가상 어플라이언스입니다. 보호되는 클러스터에는 DRVA가 하나 이상 포함되어야 하며, 일반적으로 호스트당 DRVA가 하나씩 구성됩니다. 각 DRVA는 여러 개의 보호된 도메인을 관리할 수 있습니다.</block>
+  <block id="f55f11c27893cdacff776d302a9b9d07" category="paragraph"><block ref="f55f11c27893cdacff776d302a9b9d07" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ece649567fdf82717852e0f8662d070" category="paragraph">이 예에서는 80개의 가상 머신에 대해 4개의 DRVA가 생성되었습니다.</block>
+  <block id="cf5c65945851f67013f23b2d83d4a346" category="list-text">사용 가능한 데이터 저장소 또는 독립 공유 iSCSI 스토리지 풀에서 VMDK를 사용하여 각 DRVA에 대한 복제 로그 볼륨을 생성합니다.</block>
+  <block id="9ad06750519e0664bc1ec852cc5e07b6" category="list-text">보호 도메인 탭에서 Azure Blob 저장소 사이트, DRVA 인스턴스 및 복제 로그에 대한 정보를 사용하여 필요한 수의 보호된 도메인을 만듭니다. 보호 도메인은 함께 보호되고 장애 조치/장애 복구 작업에 우선 순위가 할당된 클러스터 내의 특정 VM 또는 VM 집합을 정의합니다.</block>
+  <block id="fae4ab5e0fd81c7cdb44eba33dbe42fc" category="paragraph"><block ref="fae4ab5e0fd81c7cdb44eba33dbe42fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e68391e0d2ed07243f438a1d725a243a" category="list-text">보호할 VM을 선택하고 보호된 도메인의 VM 보호를 시작합니다. 그러면 지정된 Blob 저장소에 대한 데이터 복제가 시작됩니다.</block>
+  <block id="24e5f5b0186cca0606b176380e3ee45c" category="admonition">보호 도메인의 모든 VM에 동일한 보호 모드가 사용되는지 확인합니다.</block>
+  <block id="9870cb575efa482fab7fa9aa1fdf16ac" category="admonition">VMDK(Write-Back) 모드에서는 더 높은 성능을 제공할 수 있습니다.</block>
+  <block id="895d59858a04439859a33d3288706702" category="paragraph"><block ref="895d59858a04439859a33d3288706702" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0e6ea2b1c670425ac09f1aadbc26e266" category="paragraph">복제 로그 볼륨이 고성능 스토리지에 배치되었는지 확인합니다.</block>
+  <block id="3237de27ecac8fd3a072d337514991eb" category="admonition">페일오버 실행 도서를 구성하여 VM(복구 그룹)을 그룹화하고 부팅 순서 시퀀스를 설정하고 IP 구성과 함께 CPU/메모리 설정을 수정할 수 있습니다.</block>
+  <block id="840c65296e1af99a67123dd9459e5548" category="section-title">실행 명령을 사용하여 Azure VMware 솔루션 프라이빗 클라우드에 AVS용 Jetstream DR을 설치합니다</block>
+  <block id="d2441f955b3d04e99be7845bb7af68a6" category="paragraph">복구 사이트(AVS)의 모범 사례는 3노드 파일럿 라이트 클러스터를 미리 생성하는 것입니다. 이렇게 하면 다음 항목을 포함하여 복구 사이트 인프라를 사전 구성할 수 있습니다.</block>
+  <block id="dab895f226673c73578b4c45dead73c0" category="list-text">대상 네트워킹 세그먼트, 방화벽, DHCP 및 DNS 등의 서비스 등</block>
+  <block id="188d8743a82411348e186c7118e92c9a" category="list-text">AVS용 Jetstream DR 설치</block>
+  <block id="fd3bf57ff38b27ccbf66886b71a34f76" category="list-text">ANF 볼륨을 데이터 저장소로 구성하고, moreJetStream DR은 미션 크리티컬 도메인에 대해 제로급 RTO 모드를 지원합니다. 이러한 도메인의 경우 대상 스토리지가 사전 설치되어 있어야 합니다. ANF는 이 경우 권장되는 스토리지 유형입니다.</block>
+  <block id="89aa12cc0cd4846ef86fbe8dfd78d8bc" category="admonition">세그먼트 생성을 포함한 네트워크 구성은 AVS 클러스터에서 사내 요구 사항과 일치하도록 구성해야 합니다.</block>
+  <block id="d50efdb8ff06cd2518521c1d4f68a67a" category="paragraph">SLA 및 RTO 요구 사항에 따라 지속적인 페일오버 또는 일반(표준) 페일오버 모드를 사용할 수 있습니다. 제로급 RTO의 경우 복구 사이트에서 연속 재수화를 시작해야 합니다.</block>
+  <block id="7c1dc76f383d9b6253a273d35f636909" category="paragraph">Azure VMware 솔루션 프라이빗 클라우드에 AVS용 Jetstream DR을 설치하려면 다음 단계를 수행하십시오.</block>
+  <block id="7f0bec83fc0010707471d9d3b84fd45b" category="list-text">Azure 포털에서 Azure VMware 솔루션으로 이동하여 프라이빗 클라우드를 선택한 다음 명령 실행 &gt; 패키지 &gt; JSDR.Configuration을 선택합니다.</block>
+  <block id="6e37d4d4f3c60de2fb2e2e218753f9ea" category="admonition">Azure VMware 솔루션의 기본 CloudAdmin 사용자는 AVS용 Jetstream DR을 설치할 권한이 없습니다. Azure VMware 솔루션을 사용하면 Jetstream DR용 Azure VMware 솔루션 실행 명령을 호출하여 Jetstream DR을 간단하고 자동으로 설치할 수 있습니다.</block>
+  <block id="832830e8d1c5e28f4e206c65a067fbfc" category="paragraph">다음 스크린샷은 DHCP 기반 IP 주소를 사용한 설치를 보여 줍니다.</block>
+  <block id="1ca67a15b29b11c686a17480c2ecde9c" category="paragraph"><block ref="1ca67a15b29b11c686a17480c2ecde9c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23fac09aaa7dcea6eb534251f50feae2" category="list-text">AVS 설치를 위한 Jetstream DR이 완료되면 브라우저를 새로 고칩니다. Jetstream DR UI에 액세스하려면 SDDC 데이터 센터 &gt; 구성 &gt; Jetstream DR로 이동하십시오.</block>
+  <block id="58517d8d2fa977f39ca2b76c09c43dc4" category="paragraph"><block ref="58517d8d2fa977f39ca2b76c09c43dc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="50bf7f298e2ed24c67b98b8d5c4e6dbe" category="list-text">Jetstream DR 인터페이스에서 온프레미스 클러스터를 저장소 사이트로 보호하는 데 사용된 Azure Blob 저장소 계정을 추가한 다음 도메인 검사 옵션을 실행합니다.</block>
+  <block id="1e976589dd0f1f098c13f4564f91813c" category="paragraph"><block ref="1e976589dd0f1f098c13f4564f91813c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b4e7f9056aa9f52fd1bff1e2837a4e84" category="list-text">보호된 도메인을 가져온 후 DRVA 어플라이언스를 구축합니다. 이 예에서는 Jetstream DR UI를 사용하여 복구 사이트에서 수동으로 연속 재수화를 시작합니다.</block>
+  <block id="7aa502331a6314a8d66df611c4538f75" category="admonition">CPT 생성 계획을 사용하여 이러한 단계를 자동화할 수도 있습니다.</block>
+  <block id="bf4fdf975fae154bdca78e36bd7edbe3" category="list-text">보호된 도메인을 가져오고 VM 배치에 ANF 데이터 저장소를 사용하도록 복구 VA를 구성합니다.</block>
+  <block id="0a4fc536683686b518331dd2531934b5" category="paragraph"><block ref="0a4fc536683686b518331dd2531934b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="827098a514e7d7fc1579120ec370bfd9" category="admonition">선택한 세그먼트에서 DHCP가 활성화되어 있고 사용 가능한 IP가 충분한지 확인합니다. 도메인이 복구되는 동안 동적 IP가 일시적으로 사용됩니다. 복구 중인 각 VM(연속 재수화 포함)에는 개별 동적 IP가 필요합니다. 복구가 완료되면 IP가 해제되고 다시 사용할 수 있습니다.</block>
+  <block id="10e011fef535dced7a4095544de7266d" category="list-text">적절한 페일오버 옵션(무중단 페일오버 또는 페일오버)을 선택합니다. 이 예에서는 연속 재수화(연속 페일오버)가 선택됩니다.</block>
+  <block id="adac1a1b7a65bae37b6bd9cbd66b248a" category="paragraph"><block ref="adac1a1b7a65bae37b6bd9cbd66b248a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f6a68077ca82bffe5f08d96bdcd36e18" category="section-title">페일오버/페일백 수행</block>
+  <block id="61a6473493a7f05f03d606cdfeb234d6" category="list-text">사내 환경의 보호 클러스터에서 재해가 발생한 후(부분 장애 또는 전체 장애) 페일오버를 트리거합니다.</block>
+  <block id="3a09da9a187f9208fcd685b78b772764" category="admonition">CPT를 사용하여 Azure Blob Storage에서 AVS 클러스터 복구 사이트로 VM을 복구하는 페일오버 계획을 실행할 수 있습니다.</block>
+  <block id="f66e570f82bdb271d0adb30435ad5b2b" category="admonition">AVS에서 보호된 VM이 시작될 때 장애 조치(연속 또는 표준 재수화) 후 보호가 자동으로 재개되고 Jetstream DR은 Azure Blob Storage의 해당/원래 컨테이너로 데이터를 계속 복제합니다.</block>
+  <block id="d27309d11731255db072c47f9675d22f" category="paragraph"><block ref="d27309d11731255db072c47f9675d22f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef4a8f8fdcb45687697d39da1e99dc36" category="paragraph"><block ref="ef4a8f8fdcb45687697d39da1e99dc36" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bf84d29276236d6a8b8e75f1a2c8f115" category="paragraph">작업 표시줄에 장애 조치 작업의 진행률이 표시됩니다.</block>
+  <block id="8430656d9f62a51ed63ade1e47ad34f7" category="list-text">작업이 완료되면 복구된 VM에 액세스하고 비즈니스가 정상적으로 계속됩니다.</block>
+  <block id="f89c6dfb9ae23126d1e04570e23dcda9" category="paragraph"><block ref="f89c6dfb9ae23126d1e04570e23dcda9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c8214eaedd2bb37ba1d1b018bf4aa63" category="paragraph">운영 사이트가 다시 가동된 후 페일백을 수행할 수 있습니다. VM 보호가 재개되고 데이터 일관성을 확인해야 합니다.</block>
+  <block id="2743b11e431e1c7f8504d917d4ffc4d6" category="list-text">사내 환경을 복원합니다. 재해 발생 유형에 따라 보호 클러스터의 구성을 복원 및/또는 확인해야 할 수도 있습니다. 필요한 경우 Jetstream DR 소프트웨어를 재설치해야 할 수 있습니다.</block>
+  <block id="232732afcd0f951efbcfaea123f0a632" category="admonition">참고: 자동화 툴킷에 제공된 RECOVERY_UTILITY_Prepare_failback" 스크립트를 사용하여 오래된 VM, 도메인 정보 등의 원래 보호 사이트를 정리할 수 있습니다.</block>
+  <block id="6d52b59b59572c39053e3858b37fcc57" category="list-text">복원된 온프레미스 환경에 액세스하고 Jetstream DR UI로 이동한 다음 적절한 보호 도메인을 선택합니다. 보호 사이트가 페일백될 준비가 되면 UI에서 페일백 옵션을 선택합니다.</block>
+  <block id="7350f3b9fc85111b45034212957d9d98" category="paragraph"><block ref="7350f3b9fc85111b45034212957d9d98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc01d2feed0849423b6b5676888f97" category="admonition">CPT에서 생성한 페일백 계획을 사용하여 VM과 해당 데이터를 오브젝트 저장소에서 원래 VMware 환경으로 되돌릴 수도 있습니다.</block>
+  <block id="36e8c86c253ad3dad15eaab2f5de961c" category="admonition">복구 사이트에서 VM을 일시 중지하고 보호 사이트에서 다시 시작한 후 최대 지연 시간을 지정합니다. 여기에는 대체 작동 VM 중지 후 복제 완료, 복구 사이트를 정리하기 위한 시간, 보호 사이트에서 VM을 다시 만드는 시간이 포함됩니다. NetApp이 권장하는 값은 10분입니다.</block>
+  <block id="c53daff4bd6065c0627bf739410f7e88" category="paragraph">페일백 프로세스를 완료한 다음 VM 보호 및 데이터 정합성 재개를 확인합니다.</block>
+  <block id="ddd33ab61759ca3d4dcfcd934ab83b04" category="section-title">Ransomeware 복구</block>
+  <block id="459d2a2d25c4ad6db53b9e0b367f3d4c" category="paragraph">랜섬웨어에서 복구하는 것은 매우 힘든 작업이 될 수 있습니다. 특히, IT 조직이 안전한 반환 지점을 결정하고 결정된 후에는 복구된 워크로드가 재발생하는 공격으로부터 보호하는 방법(휴면 맬웨어로부터 또는 취약한 응용 프로그램을 통해)을 확인하기 어려울 수 있습니다.</block>
+  <block id="414dfaa4bcffbd76b7f5ed891cdf1535" category="paragraph">Azure NetApp Files 데이터 저장소와 함께 AVS용 Jetstream DR을 사용하면 조직에서 사용 가능한 시점으로부터 복구할 수 있으므로 필요에 따라 분리된 기능적 네트워크로 워크로드를 복구할 수 있습니다. 복구 기능을 사용하면 애플리케이션이 기능을 수행하고 서로 통신하면서 남북의 트래픽에 노출되지 않도록 함으로써 보안 팀이 법의학 및 기타 필요한 조치를 수행할 수 있는 안전한 장소를 제공할 수 있습니다.</block>
+  <block id="a20215628470de7f6faa691cc18c4971" category="paragraph"><block ref="a20215628470de7f6faa691cc18c4971" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f95900d5509fa4de2d1c7e9489f4dc6" category="summary">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Azure에서 실행되는 NetApp Cloud Volumes ONTAP에 복제할 수 있습니다.</block>
+  <block id="ecd3e45c724d0f1fe7838d14c01b0f98" category="doc">AVS용 CVO 및 Jetstream을 사용한 재해 복구(게스트 연결 스토리지)</block>
+  <block id="48b47eaa686f297ed741f5cb81de709d" category="paragraph">저자: Ravi BCB, Niyaz Mohamed, NetApp</block>
+  <block id="be93173f941fd10be0e9fddb606bd940" category="paragraph">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Azure에서 실행되는 NetApp Cloud Volumes ONTAP에 복제할 수 있습니다. 여기에는 애플리케이션 데이터가 포함됩니다. 하지만 실제 VM 자체는 어떻습니까? 재해 복구는 가상 머신, VMDK, 애플리케이션 데이터 등을 비롯한 모든 종속 구성 요소를 포함해야 합니다. 이를 위해 Jetstream과 함께 SnapMirror를 사용하면 VM VMDK에 vSAN 스토리지를 사용하는 동시에 사내에서 Cloud Volumes ONTAP로 복제된 워크로드를 원활하게 복구할 수 있습니다.</block>
+  <block id="b25b60af8de6f7256f832e93e5651972" category="paragraph">이 문서에서는 NetApp SnapMirror, Jetstream 및 AVS(Azure VMware Solution)를 사용하여 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.</block>
+  <block id="8f0e380cfb4a39395f72ab50e67ea50e" category="paragraph"><block ref="8f0e380cfb4a39395f72ab50e67ea50e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="72916c3a8dffc193957f3809a8b4acbf" category="paragraph">이 문서에서는 애플리케이션 데이터(게스트 연결)를 위한 게스트 내 스토리지에 초점을 두고 사내 환경에서 애플리케이션 정합성 보장 백업을 위해 SnapCenter를 사용하고 있다고 가정합니다.</block>
+  <block id="d2e057fdab62f3ae766c18c66acc57fd" category="admonition">이 문서는 타사 백업 또는 복구 솔루션에 적용됩니다. 환경에 사용된 솔루션에 따라 Best Practice를 따라 조직 SLA를 충족하는 백업 정책을 생성합니다.</block>
+  <block id="380a8e9be36984cc009caa1b7aaadc5d" category="paragraph">온프레미스 환경과 Azure 가상 네트워크 간의 연결을 위해 고속 경로 글로벌 도달 범위 또는 VPN 게이트웨이가 있는 가상 WAN을 사용합니다. 세그먼트는 사내 VLAN 설계를 기반으로 생성해야 합니다.</block>
+  <block id="057412b2bc7b34ca7066f70b80b69510" category="admonition">온프레미스 데이터 센터를 Azure에 연결하는 여러 가지 옵션이 있어 이 문서의 특정 워크플로 개요를 볼 수 없습니다. Azure 설명서를 참조하여 적절한 Azure-사내와 Azure 간 연결 방법을 확인하십시오.</block>
+  <block id="ecc1cadbbbb0ef1d84ddc861f4497661" category="section-title">DR 솔루션 구축</block>
+  <block id="5497ec7c1fdee07126ed64bf9fed5d87" category="section-title">솔루션 구축 개요</block>
+  <block id="8eaa61639db3e085f8c7eb12151b3736" category="list-text">필요한 RPO 요구 사항에 따라 SnapCenter를 사용하여 애플리케이션 데이터를 백업했는지 확인합니다.</block>
+  <block id="a04938b02e6c8ce6c9dbb34eac7d6a0a" category="list-text">적절한 서브스크립션 및 가상 네트워크 내에서 Cloud Manager를 사용하여 올바른 인스턴스 크기로 Cloud Volumes ONTAP를 프로비저닝합니다.</block>
+  <block id="15a6eec061b4c7d026aa504c05f01405" category="list-text">관련 애플리케이션 볼륨에 대해 SnapMirror를 구성합니다.</block>
+  <block id="3d1e7fac653a4e240c35721f0e3902da" category="list-text">예약된 작업 후 SnapMirror 업데이트를 트리거하도록 SnapCenter의 백업 정책을 업데이트합니다.</block>
+  <block id="2a690d204d02bcc25768246a5c2082bb" category="list-text">Jetstream DR 소프트웨어를 사내 데이터 센터에 설치하고 가상 시스템을 보호합니다.</block>
+  <block id="060b718b1c12d4bed763206429b5c467" category="list-text">재해 이벤트 중에 Cloud Manager를 사용하여 SnapMirror 관계를 중단시키고 지정된 AVS DR 사이트의 Azure NetApp Files 또는 vSAN 데이터스토어로 가상 시스템의 페일오버를 트리거합니다.</block>
+  <block id="16193a2e612115bbf00cb18e7a9ec1aa" category="list-text">애플리케이션 VM에 대한 iSCSI LUN 및 NFS 마운트를 다시 연결합니다.</block>
+  <block id="d274e9c5c862dd28666a25176c344293" category="list-text">운영 사이트가 복구된 후 SnapMirror를 다시 동기화하여 보호 사이트에 대한 페일백을 호출합니다.</block>
+  <block id="c99b24a6817b7fd3c4d8687fc4bb35df" category="section-title">배포 세부 정보</block>
+  <block id="eb5301ce7e383557ea1c2ecc5d8df8a4" category="example-title">Azure에서 CVO를 구성하고 볼륨을 CVO로 복제합니다</block>
+  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="inline-link">링크</block>
+  <block id="ebcd981f8224ab4325994da29465cf8c" category="paragraph">첫 번째 단계는 Azure에서 Cloud Volumes ONTAP를 구성하는 것입니다 <block ref="4e2a8d8afd7d7aca598f792d5d04f9c7" category="inline-link-rx"></block>)를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.</block>
+  <block id="30200baf346b021de0310f8f8307fd8e" category="paragraph"><block ref="30200baf346b021de0310f8f8307fd8e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b453212f1c9ff723da2989dbb439d57e" category="example-title">AVS 호스트 및 CVO 데이터 액세스를 구성합니다</block>
+  <block id="46fdc14ede3dd0a84faa31cf1cde9624" category="paragraph">SDDC를 구축할 때 고려해야 할 두 가지 중요한 요소는 Azure VMware 솔루션에서 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간을 결정하는 것입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.</block>
+  <block id="938f299f0522c6e7bea183a8ea437225" category="paragraph">AVS 클러스터의 구축 결정은 주로 RPO/RTO 요구 사항을 기반으로 합니다. Azure VMware 솔루션을 사용하면 SDDC를 테스트 또는 실제 재해 이벤트에 대비하여 적시에 프로비저닝할 수 있습니다. SDDC를 적시에 구축하면 재해 발생 시 ESXi 호스트 비용을 절감할 수 있습니다. 그러나 이러한 구축 형태는 SDDC를 프로비저닝하는 동안 RTO에 몇 시간 정도 영향을 줍니다.</block>
+  <block id="595875340c961d4ff4461ee8fe8a3ce3" category="paragraph">가장 일반적인 구축 옵션은 SDDC를 상시 작동, 파일럿 라이트 모드로 실행하는 것입니다. 이 옵션은 항상 사용 가능한 호스트 세 개로 구성된 작은 공간을 제공하며 시뮬레이션 활동 및 규정 준수 검사를 위한 실행 기준을 제공하여 복구 작업 속도를 높이고 운영 사이트와 DR 사이트 간의 운영 드리프트가 발생하지 않도록 합니다. 실제 DR 이벤트를 처리하는 데 필요한 경우 파일럿 라이트 클러스터를 원하는 레벨로 신속하게 확장할 수 있습니다.</block>
+  <block id="2f5ab77fee006682ed15a6dbfb54c2a0" category="paragraph">AVS SDDC를 구성하려면(온디맨드 또는 파일럿 라이트 모드여야 함) 을 참조하십시오<block ref="86c283cfb3c0f32634050918a847eb2d" category="inline-link-rx"></block>. 사전 요구 사항으로, 연결이 설정된 후 AVS 호스트에 상주하는 게스트 VM이 Cloud Volumes ONTAP의 데이터를 사용할 수 있는지 확인합니다.</block>
+  <block id="f63f01c08cfc3f386ad47993e097e207" category="paragraph">Cloud Volumes ONTAP 및 AVS를 올바르게 구성한 후에는 VAIO 메커니즘을 사용하고 Cloud Volumes ONTAP에 애플리케이션 볼륨 복사본을 위한 SnapMirror를 활용하여 Jetstream을 구성하여 온프레미스 워크로드를 AVS(게스트 내 스토리지가 있는 응용 프로그램 VMDK 및 VM이 있는 VM)로 자동으로 복구합니다.</block>
+  <block id="9f9a4d5afd3892f2b17ecc3ed2ad2630" category="example-title">사내 데이터 센터에 Jetstream DR을 설치합니다</block>
+  <block id="68027d729e644485691d1aa185f22dad" category="paragraph">Jetstream DR 소프트웨어는 Jetstream DR Management Server Virtual Appliance(MSA), DR 가상 어플라이언스(DRVA) 및 호스트 구성 요소(I/O 필터 패키지)의 세 가지 주요 구성 요소로 구성됩니다. MSA는 컴퓨팅 클러스터에 호스트 구성 요소를 설치 및 구성한 다음 Jetstream DR 소프트웨어를 관리하는 데 사용됩니다. 설치 프로세스는 다음과 같습니다.</block>
+  <block id="2e5f490166b4cbb95848c72a3f3296cd" category="list-text">필수 구성 요소를 확인하십시오.</block>
+  <block id="01eb617ea64b2e2237c95fa866dc6c99" category="list-text">리소스 및 구성 권장 사항에 대해 용량 계획 툴을 실행합니다.</block>
+  <block id="91d290eafae733f57fe1874a21a706be" category="list-text">Jetstream DR MSA를 지정된 클러스터의 각 vSphere 호스트에 구축합니다.</block>
+  <block id="130231ab3f0401b0c0e0f66fadd45d5d" category="list-text">MSA에 vCenter Server를 등록합니다.</block>
+  <block id="6f621d6c94ab64b27eea06de601902d1" category="list-text">Jetstream DR MSA를 구축하고 vCenter Server를 등록한 후 vSphere Web Client를 사용하여 Jetstream DR 플러그인으로 이동합니다. 이 작업은 데이터 센터 &gt; 구성 &gt; Jetstream DR로 이동하여 수행할 수 있습니다.</block>
+  <block id="874efc870db36a204a974a32ac47c11e" category="paragraph"><block ref="874efc870db36a204a974a32ac47c11e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9aad471e9824a9ef2c43fae648b07613" category="list-text">Jetstream DR 인터페이스에서 다음 작업을 완료합니다.</block>
+  <block id="7ab4f3b382b4ad9e82615cacd27d739c" category="paragraph"><block ref="7ab4f3b382b4ad9e82615cacd27d739c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cc59cbc4a86e6676ff3d70ba71ba6c0c" category="list-text">복구 사이트에 있는 Azure Blob 저장소를 추가합니다.</block>
+  <block id="c86146f54b5d798bebf8802ac8b9fcde" category="paragraph"><block ref="c86146f54b5d798bebf8802ac8b9fcde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d0f0f8f33fcbb5e022f9d64bbbed63" category="list-text">Appliances 탭에서 필요한 수의 DR 가상 어플라이언스(DRVA)를 구축합니다.</block>
+  <block id="f609ba6f20a39912fd585d05df8bc4de" category="admonition">용량 계획 툴을 사용하여 필요한 DRVA의 수를 추정합니다.</block>
+  <block id="4c16a641767d4c33c410687e7b6613ef" category="paragraph"><block ref="4c16a641767d4c33c410687e7b6613ef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a6b84958a757d2c38048bdf788c590f" category="paragraph"><block ref="1a6b84958a757d2c38048bdf788c590f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b7fbe3ea0d16e8cdd943c71406ee9095" category="list-text">사용 가능한 데이터 저장소 또는 독립 공유 iSCSI 스토리지 풀에서 VMDK를 사용하여 각 DRVA에 대한 복제 로그 볼륨을 생성합니다.</block>
+  <block id="376f9301b1fb23692806f601a501bc1d" category="paragraph"><block ref="376f9301b1fb23692806f601a501bc1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3603870d5d8cd5f384cf0b1258a4276a" category="list-text">보호 도메인 탭에서 Azure Blob 저장소 사이트, DRVA 인스턴스 및 복제 로그에 대한 정보를 사용하여 필요한 수의 보호된 도메인을 만듭니다. 보호 도메인은 함께 보호되고 장애 조치/장애 복구 작업에 우선 순위 순서를 할당하는 클러스터 내의 특정 VM 또는 애플리케이션 VM 세트를 정의합니다.</block>
+  <block id="fc72030b6d0a9889fccd2facfedc6b0e" category="paragraph"><block ref="fc72030b6d0a9889fccd2facfedc6b0e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09795e4b943747b98cfc63dfc54275c3" category="paragraph"><block ref="09795e4b943747b98cfc63dfc54275c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eb05314ca50bac72a0b13f171a2b6912" category="list-text">보호할 VM을 선택하고 종속성을 기반으로 VM을 애플리케이션 그룹으로 그룹화합니다. 애플리케이션 정의를 사용하면 VM 세트를 부팅 순서, 부팅 지연 및 복구 시 실행할 수 있는 선택적 애플리케이션 검증을 포함하는 논리 그룹으로 그룹화할 수 있습니다.</block>
+  <block id="818cadd78e726fcca2ca69a99c22df63" category="admonition">보호 도메인의 모든 VM에 동일한 보호 모드가 사용되는지 확인합니다.</block>
+  <block id="8cc32e4f2682b9a5731a285459a5d9c5" category="admonition">VMDK(Write-Back) 모드는 더 높은 성능을 제공합니다.</block>
+  <block id="639f5dd27b8ff76608b346f78c673b4c" category="paragraph"><block ref="639f5dd27b8ff76608b346f78c673b4c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c916465a580d8d569bd369e8e7f6d609" category="list-text">복제 로그 볼륨이 고성능 스토리지에 배치되었는지 확인합니다.</block>
+  <block id="1fc3826d710244fdb6c4a09d89f98d5f" category="paragraph"><block ref="1fc3826d710244fdb6c4a09d89f98d5f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b5038dd04f28442b45e40cc394920ed6" category="list-text">작업을 완료한 후 보호 도메인에 대한 보호 시작 을 클릭합니다. 그러면 선택한 VM에 대한 데이터 복제가 지정된 Blob 저장소로 시작됩니다.</block>
+  <block id="5ed7580bd1e6ae0cef691df5ee3b54a2" category="paragraph"><block ref="5ed7580bd1e6ae0cef691df5ee3b54a2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e860406ba63567c5eccf30055287b47" category="list-text">복제가 완료되면 VM 보호 상태가 복구 가능으로 표시됩니다.</block>
+  <block id="c873c8c59414399f210af5ec22a764d8" category="paragraph"><block ref="c873c8c59414399f210af5ec22a764d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a918d27a636eddf2d16b9e8544402c44" category="admonition">페일오버 런북은 VM(복구 그룹이라고 함)을 그룹화하고 부팅 순서 시퀀스를 설정하고 IP 구성과 함께 CPU/메모리 설정을 수정하도록 구성할 수 있습니다.</block>
+  <block id="90ee2ee79e46dfb341705824bdba5b5a" category="list-text">설정 을 클릭한 다음 Runbook 구성 링크를 클릭하여 Runbook 그룹을 구성합니다.</block>
+  <block id="92471f4927394b88148206ffbdc25dbd" category="paragraph"><block ref="92471f4927394b88148206ffbdc25dbd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c352449075dfd7c55f51cc486cc2541" category="list-text">새 Runbook 그룹을 생성하려면 Create Group 버튼을 클릭합니다.</block>
+  <block id="e2fbd552cab46f747bc672bf2e1b0fe9" category="admonition">필요한 경우 화면 아래쪽에 사용자 지정 사전 스크립트 및 사후 스크립트를 적용하여 Runbook 그룹의 작업 전후에 자동으로 실행합니다. Runbook 스크립트가 관리 서버에 있는지 확인합니다.</block>
+  <block id="27601285770e6db675411c9282459b87" category="paragraph"><block ref="27601285770e6db675411c9282459b87" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f26b7048f93345b3726eb88bd506893a" category="list-text">필요에 따라 VM 설정을 편집합니다. 부팅 순서, 부팅 지연(초 단위로 지정), CPU 수 및 할당할 메모리 양을 포함하여 VM을 복구하기 위한 매개 변수를 지정합니다. 위쪽 또는 아래쪽 화살표를 클릭하여 VM의 부팅 순서를 변경합니다. MAC를 유지하기 위한 옵션도 제공됩니다.</block>
+  <block id="ff0274a4eb386ebd23581a082f3b5b5b" category="paragraph"><block ref="ff0274a4eb386ebd23581a082f3b5b5b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c2cb19a0ef20564c20014e97d134168" category="list-text">정적 IP 주소는 그룹의 개별 VM에 대해 수동으로 구성할 수 있습니다. VM의 NIC View 링크를 클릭하여 IP 주소 설정을 수동으로 구성합니다.</block>
+  <block id="f26795dd104c3568722b09bce335c904" category="paragraph"><block ref="f26795dd104c3568722b09bce335c904" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a85bcb54a31960de00ecac27985d3f3a" category="list-text">구성 버튼을 클릭하여 해당 VM에 대한 NIC 설정을 저장합니다.</block>
+  <block id="d6431b9ceb7168220978cc8a6f804dc2" category="paragraph"><block ref="d6431b9ceb7168220978cc8a6f804dc2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c295c7835a978c48c9f8253edc92e6ab" category="paragraph"><block ref="c295c7835a978c48c9f8253edc92e6ab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="423aff401e73269c665789c2a91cd2ba" category="paragraph">이제 페일오버 및 페일백 Runbook의 상태가 모두 Configured로 표시됩니다. 페일오버 및 페일백 Runbook 그룹은 동일한 초기 VM 및 설정 그룹을 사용하여 쌍으로 생성됩니다. 필요한 경우 각 Runbook 그룹의 세부 정보 링크를 클릭하고 설정을 변경하여 Runbook 그룹의 설정을 개별적으로 사용자 지정할 수 있습니다.</block>
+  <block id="8868e7fa41b895d0441f3c000558500e" category="example-title">프라이빗 클라우드에 AVS용 Jetstream DR을 설치합니다</block>
+  <block id="ca2d476f98a102308a1ca46e0314f094" category="paragraph">복구 사이트(AVS)의 모범 사례는 3노드 파일럿 라이트 클러스터를 미리 생성하는 것입니다. 이를 통해 다음을 포함하여 복구 사이트 인프라를 사전 구성할 수 있습니다.</block>
+  <block id="03bd3d186e1fc83d47907ac1797d8eaf" category="list-text">대상 네트워킹 세그먼트, 방화벽, DHCP 및 DNS 등의 서비스 등</block>
+  <block id="543c0ee14bc42e7f38251e99ace0ea62" category="list-text">데이터 저장소 등을 사용하여 ANF 볼륨 구성</block>
+  <block id="1e09668d117c7996e6a76a4aa2e44013" category="paragraph">Jetstream DR은 미션 크리티컬 도메인에 대해 제로급 RTO 모드를 지원합니다. 이러한 도메인의 경우 대상 스토리지가 사전 설치되어 있어야 합니다. ANF는 이 경우 권장되는 스토리지 유형입니다.</block>
+  <block id="d9a7d19a656972791042b00bc2a308fa" category="admonition">SLA 및 RTO 요구 사항에 따라 연속 페일오버 또는 일반(표준) 페일오버 모드를 사용할 수 있습니다. 제로급 RTO의 경우 복구 사이트에서 연속 재수화를 시작해야 합니다.</block>
+  <block id="4b2287bada3112a86338f8d33bb7f745" category="list-text">Azure VMware 솔루션 프라이빗 클라우드에 AVS용 Jetstream DR을 설치하려면 실행 명령을 사용하십시오. Azure 포털에서 Azure VMware 솔루션으로 이동하고 프라이빗 클라우드를 선택한 다음 명령 실행 &gt; 패키지 &gt; JSDR.Configuration을 선택합니다.</block>
+  <block id="f36d2f16d7b758d071070007e41f1dc3" category="admonition">Azure VMware 솔루션의 기본 CloudAdmin 사용자는 AVS용 Jetstream DR을 설치할 권한이 없습니다. Azure VMware 솔루션을 사용하면 Jetstream DR용 Azure VMware 솔루션 실행 명령을 호출하여 Jetstream DR을 간단하고 자동으로 설치할 수 있습니다.</block>
+  <block id="d5c094ac3602dc70c812b6f203db3080" category="paragraph"><block ref="d5c094ac3602dc70c812b6f203db3080" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1059f69ded45aab3e16676f7655ce33e" category="paragraph"><block ref="1059f69ded45aab3e16676f7655ce33e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f56ba70e80cd5a9d7e833ae9c2a8d00b" category="list-text">온-프레미스 클러스터를 저장소 사이트로 보호하는 데 사용된 Azure Blob 저장소 계정을 추가한 다음 도메인 검사 옵션을 실행합니다.</block>
+  <block id="d46ac425273c7af91c98f03afab4d05d" category="list-text">나타나는 팝업 대화 상자에서 가져올 보호된 도메인을 선택한 다음 해당 가져오기 링크를 클릭합니다.</block>
+  <block id="8f6ce8893e72ca9a99ea54a38aa9123c" category="paragraph"><block ref="8f6ce8893e72ca9a99ea54a38aa9123c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="258e652acbaceeb040a052eb56f710ff" category="list-text">복구를 위해 도메인을 가져옵니다. 보호 도메인 탭으로 이동하여 원하는 도메인이 선택되었는지 확인하거나 보호 도메인 선택 메뉴에서 원하는 도메인을 선택합니다. 보호된 도메인에 있는 복구 가능한 VM 목록이 표시됩니다.</block>
+  <block id="44f0914b6b6c354b3ed0d0f5c88f5f40" category="paragraph"><block ref="44f0914b6b6c354b3ed0d0f5c88f5f40" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab8894857a9c27d55e00ceb59f0a0a9d" category="list-text">보호된 도메인을 가져온 후 DRVA 어플라이언스를 구축합니다.</block>
+  <block id="a594598fd21c66eb364972e1018fc5b1" category="admonition">CPT 생성 계획을 사용하여 이러한 단계를 자동화할 수도 있습니다.</block>
+  <block id="5dbd13899d13d449aaa288efb68bc4e7" category="list-text">보호된 도메인을 가져오고 VM 배치에 ANF 데이터 저장소를 사용하도록 복구 VA를 구성합니다.</block>
+  <block id="30c90d4c81b9e156fa124f63997bd267" category="paragraph"><block ref="30c90d4c81b9e156fa124f63997bd267" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="27ece16fa591c8a94d158b6371824318" category="admonition">선택한 세그먼트에서 DHCP가 활성화되어 있고 사용 가능한 IP가 충분한지 확인합니다. 도메인이 복구되는 동안 동적 IP가 일시적으로 사용됩니다. 복구 중인 각 VM(연속 재수화 포함)에는 개별 동적 IP가 필요합니다. 복구가 완료되면 IP가 해제되고 다시 사용할 수 있습니다.</block>
+  <block id="221af48bbe7986080d7f1ef43b7cc9af" category="admonition">연속 페일오버 모드와 페일오버 모드는 구성이 수행될 때 다르지만, 두 페일오버 모드는 동일한 단계를 사용하여 구성됩니다. 장애 조치 단계는 재해 이벤트에 따라 함께 구성 및 수행됩니다. 지속적인 페일오버는 언제든지 구성할 수 있으며, 이후 정상적인 시스템 작동 중에 백그라운드에서 실행될 수 있습니다. 재해 이벤트가 발생한 후 지속적인 페일오버가 완료되어 보호된 VM의 소유권을 복구 사이트로 즉시 전송합니다(제로급 RTO).</block>
+  <block id="12d3f891efb3e0286e3d610d87fa763c" category="paragraph"><block ref="12d3f891efb3e0286e3d610d87fa763c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fad47d76ebfb2068cc150f23d3abc231" category="paragraph">지속적인 장애 조치 프로세스가 시작되고 UI에서 진행 상태를 모니터링할 수 있습니다. 현재 단계 섹션에서 파란색 아이콘을 클릭하면 페일오버 프로세스의 현재 단계에 대한 세부 정보를 보여주는 팝업 창이 표시됩니다.</block>
+  <block id="07216bb55061288a2fa29cda954742e3" category="example-title">페일오버 및 페일백</block>
+  <block id="3dd9279db501526060882c484e7fa2eb" category="list-text">사내 환경의 보호된 클러스터에서 재해가 발생한 후(일부 또는 전체 장애) 해당 애플리케이션 볼륨에 대한 SnapMirror 관계를 끊은 후 Jetstream을 사용하여 VM에 대한 페일오버를 트리거할 수 있습니다.</block>
+  <block id="4e26d6c9cc7404940d6c72a71775d261" category="paragraph"><block ref="4e26d6c9cc7404940d6c72a71775d261" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7c749826108cc466667dcaeb67965a7" category="paragraph"><block ref="f7c749826108cc466667dcaeb67965a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="253d2b2bed504833d82e064634bbf83e" category="admonition">이 단계는 복구 프로세스를 용이하게 하기 위해 쉽게 자동화할 수 있습니다.</block>
+  <block id="9824ceea6f74aa9d72ed2bd7473b9362" category="list-text">AVS SDDC(대상 측)에서 Jetstream UI에 액세스하고 페일오버 옵션을 트리거하여 페일오버를 완료합니다. 작업 표시줄에 장애 조치 작업의 진행률이 표시됩니다.</block>
+  <block id="b39966f9c6438e5d60c1de37dfa3ed05" category="paragraph">페일오버를 완료할 때 나타나는 대화 상자에서 페일오버 작업을 계획대로 지정하거나 강제 작업으로 가정할 수 있습니다.</block>
+  <block id="684bb098f20646b3f18e10bc17e2d3c4" category="paragraph"><block ref="684bb098f20646b3f18e10bc17e2d3c4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="562cb54fd49a347cfb889e6021e0be34" category="paragraph"><block ref="562cb54fd49a347cfb889e6021e0be34" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="979b519fc9d5e27e5d114696ce4b1366" category="paragraph">강제 대체 작동 에서는 운영 사이트에 더 이상 액세스할 수 없으며 보호 도메인의 소유권이 복구 사이트에 의해 직접 가정되어야 한다고 가정합니다.</block>
+  <block id="cfb2ac66b6e4f6580c9c1fb2cf3b42a5" category="paragraph"><block ref="cfb2ac66b6e4f6580c9c1fb2cf3b42a5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9be51d726dd7c6ae76c2545a91f36d11" category="paragraph"><block ref="9be51d726dd7c6ae76c2545a91f36d11" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fce15eac6afaa8615d7a00cc4972808" category="list-text">연속 페일오버가 완료되면 작업 완료를 확인하는 메시지가 나타납니다. 작업이 완료되면 복구된 VM에 액세스하여 iSCSI 또는 NFS 세션을 구성합니다.</block>
+  <block id="53839296d302ef4a3faf8220562c1ce4" category="admonition">페일오버 모드가 페일오버에서 실행 중으로 변경되고 VM 상태는 복구 가능합니다. 이제 보호 도메인의 모든 VM이 페일오버 Runbook 설정에 지정된 상태의 복구 사이트에서 실행됩니다.</block>
+  <block id="50ff3dc4ca6f3eb140f2099f2b480b83" category="admonition">장애 조치 구성 및 인프라를 확인하기 위해 Jetstream DR을 테스트 모드(장애 조치 테스트 옵션)로 작동하여 가상 시스템 및 해당 데이터가 개체 저장소에서 테스트 복구 환경으로 복구되는 것을 관찰할 수 있습니다. 테스트 모드에서 페일오버 절차를 실행하면 실제 페일오버 프로세스와 비슷합니다.</block>
+  <block id="a6687fcac4b89ac042d0bf01e0eed2c7" category="paragraph"><block ref="a6687fcac4b89ac042d0bf01e0eed2c7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf3e40ce09f6fe770361fe49d398cad9" category="list-text">가상 머신이 복구된 후 게스트 내 스토리지에 스토리지 재해 복구를 사용합니다. 이 프로세스를 시연하기 위해 이 예에서는 SQL Server가 사용됩니다.</block>
+  <block id="e5007f72fe428769908e4b66a64b1ace" category="list-text">AVS SDDC에서 복구된 SnapCenter VM에 로그인하고 DR 모드를 활성화합니다.</block>
+  <block id="8bc57e8e0debd3b1f0e1c01431ceb73b" category="list-text">browserN을 사용하여 SnapCenter UI에 액세스합니다.</block>
+  <block id="b29ffa42af1df2e35cdf88be1740bdf8" category="paragraph"><block ref="b29ffa42af1df2e35cdf88be1740bdf8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="392d143fa78a9868b2d56197de458a8d" category="list-text">설정 페이지에서 설정 &gt; 글로벌 설정 &gt; 재해 복구 로 이동합니다.</block>
+  <block id="f4060a5dfc75e427eab8fc559b5c3873" category="list-text">재해 복구 활성화 를 선택합니다.</block>
+  <block id="79bee17b4293b619c241ae80aef8ef62" category="list-text">적용 을 클릭합니다.</block>
+  <block id="24049296b222c98c12a36098c1928b9f" category="paragraph"><block ref="24049296b222c98c12a36098c1928b9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f31c54b6a166b6ab176f034d0f52e291" category="list-text">모니터 &gt; 작업 을 클릭하여 DR 작업이 활성화되었는지 확인합니다.</block>
+  <block id="a194386b24136c162d5de560f2c4b3c9" category="admonition">스토리지 재해 복구에 NetApp SnapCenter 4.6 이상을 사용해야 합니다. 이전 버전의 경우 SnapMirror를 사용하여 복제된 애플리케이션 정합성 보장 스냅샷을 사용해야 하며, 재해 복구 사이트에서 이전 백업을 복구해야 하는 경우 수동 복구를 실행해야 합니다.</block>
+  <block id="a1e59d581c6cda40186a3488aa35c0b5" category="list-text">SnapMirror 관계가 끊어져 있는지 확인합니다.</block>
+  <block id="ab99ab9f50b0f74bd7b676fbb522f5e8" category="paragraph"><block ref="ab99ab9f50b0f74bd7b676fbb522f5e8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5fabb74faf982c31918e4a241092e386" category="list-text">Cloud Volumes ONTAP의 LUN을 동일한 드라이브 문자로 복구된 SQL 게스트 VM에 연결합니다.</block>
+  <block id="faedf38240e42a0e3f085f6acdc22aec" category="paragraph"><block ref="faedf38240e42a0e3f085f6acdc22aec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="458585a8fad71bd63549d32afd2c2f69" category="list-text">iSCSI 초기자를 열고, 이전에 연결이 끊긴 세션을 지우고, 복제된 Cloud Volumes ONTAP 볼륨에 대한 다중 경로와 함께 새 대상을 추가합니다.</block>
+  <block id="5d06816a9331ccf1bde11d80e2438672" category="paragraph"><block ref="5d06816a9331ccf1bde11d80e2438672" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2483b40da799327d80d5aa5c4683efee" category="list-text">DR 이전에 사용한 드라이브 문자와 동일한 드라이브 문자를 사용하여 모든 디스크가 연결되어 있는지 확인합니다.</block>
+  <block id="75c3e1de048df1f08f612bb44462afd4" category="paragraph"><block ref="75c3e1de048df1f08f612bb44462afd4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6048d3c947f6b9163f72586701cec853" category="list-text">MSSQL 서버 서비스를 다시 시작합니다.</block>
+  <block id="9f8472ea6d004535fc1659d1e6863867" category="paragraph"><block ref="9f8472ea6d004535fc1659d1e6863867" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="632dc72bd4eb731f74582d644a0f4b3c" category="list-text">SQL 리소스가 다시 온라인 상태인지 확인합니다.</block>
+  <block id="9d19926e46fa4cd818065a2726bcf42d" category="paragraph"><block ref="9d19926e46fa4cd818065a2726bcf42d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="01fb98a09bb6b1d922a6275724f31823" category="admonition">NFS의 경우 mount 명령을 사용하여 볼륨을 연결하고 '/etc/fstab' 항목을 업데이트합니다.</block>
+  <block id="8145668f843709bddb7b6c8b3f3abbfb" category="paragraph">이 시점에서는 작업을 실행하고 정상적으로 비즈니스를 계속할 수 있습니다.</block>
+  <block id="8020518363652d35b23a9585c780e480" category="admonition">NSX-T 엔드에서는 페일오버 시나리오를 시뮬레이션하기 위해 별도의 전용 Tier-1 게이트웨이를 생성할 수 있습니다. 이렇게 하면 모든 워크로드가 서로 통신할 수 있지만, 트래픽이 환경 내외부로 라우팅될 수는 없으므로 교차 오염의 위험 없이 모든 분류, 억제 또는 강화 작업을 수행할 수 있습니다. 이 작업은 이 문서의 범위를 벗어나지만 격리 시뮬레이션을 위해 쉽게 수행할 수 있습니다.</block>
+  <block id="7d7b7ba342280685358aeb9937ce1118" category="paragraph">운영 사이트가 다시 가동된 후 페일백을 수행할 수 있습니다. Jetstream에 의해 VM 보호가 재개되고 SnapMirror 관계가 역전되어야 합니다.</block>
+  <block id="5a24d57462c6d674800fbb2a7e0c59ce" category="list-text">사내 환경을 복원합니다. 재해 발생 유형에 따라 보호 클러스터의 구성을 복원 및/또는 확인해야 할 수도 있습니다. 필요한 경우 Jetstream DR 소프트웨어를 재설치해야 할 수 있습니다.</block>
+  <block id="5cf6cc1cdb0715aca121fb45bdc4f42e" category="admonition">CPT에서 생성한 페일백 계획을 사용하여 VM과 해당 데이터를 오브젝트 저장소에서 원래 VMware 환경으로 되돌릴 수도 있습니다.</block>
+  <block id="130f86be5d695ec045cce675d14637b8" category="paragraph"><block ref="130f86be5d695ec045cce675d14637b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="504e0be50ebedab76e2a7714a22354d3" category="admonition">복구 사이트에서 VM을 일시 중지하고 보호 사이트에서 다시 시작한 후 최대 지연 시간을 지정합니다. 이 프로세스를 완료하는 데 필요한 시간은 장애 조치 VM을 중지한 후 복제 완료, 복구 사이트를 청소하는 데 필요한 시간, 보호 사이트에서 VM을 다시 만드는 데 필요한 시간 등을 포함합니다. 10분을 권장합니다.</block>
+  <block id="41f8873d7ef0fd0767f8ed6d7798fe87" category="paragraph"><block ref="41f8873d7ef0fd0767f8ed6d7798fe87" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5752ed9acb85541568eca0327a24e09f" category="list-text">페일백 프로세스를 완료한 다음 VM 보호 및 데이터 정합성 재개를 확인합니다.</block>
+  <block id="f872505992d08e75adcaa8a9adbc0d18" category="paragraph"><block ref="f872505992d08e75adcaa8a9adbc0d18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="684bcaaa7dda535165cb0b8f8e76a5ea" category="list-text">VM이 복구된 후 호스트에서 보조 스토리지를 분리하고 운영 스토리지에 접속합니다.</block>
+  <block id="79f47ff1cd40017f1ef0eb31e7397d75" category="paragraph"><block ref="79f47ff1cd40017f1ef0eb31e7397d75" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18f7dd50970b99e8a3cdeab8c42567b0" category="paragraph"><block ref="18f7dd50970b99e8a3cdeab8c42567b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f0269cfb1a6f24731b2bb3a15b436b2" category="list-text">SQL 리소스가 다시 온라인 상태인지 확인합니다.</block>
+  <block id="bb9592df1a1b3d7ea469affe88be679f" category="paragraph"><block ref="bb9592df1a1b3d7ea469affe88be679f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f41823ca0d78e787fda8ba7b1c398a29" category="admonition">운영 스토리지로 페일백하려면 역방향 재동기화 작업을 수행하여 페일오버 전과 관계 방향이 동일한지 확인합니다.</block>
+  <block id="6decfeed5d1c375e40e96552e631df25" category="admonition">역재동기화 작업 후 운영 스토리지와 보조 스토리지의 역할을 유지하려면 역방향 재동기화 작업을 다시 수행하십시오.</block>
+  <block id="2087f49e4433786c996468974c61ae4a" category="paragraph">이 프로세스는 Oracle과 같은 다른 애플리케이션, 유사한 데이터베이스 유형 및 게스트 연결 스토리지를 사용하는 다른 애플리케이션에 적용됩니다.</block>
+  <block id="33b4e9a3c1a928dbdf5273b34d899e61" category="paragraph">항상 그렇듯이 중요한 워크로드를 운영 환경으로 포팅하기 전에 해당 워크로드를 복구하는 단계를 테스트하십시오.</block>
+  <block id="4932435adc5992fde32a04e44fd251b8" category="section-title">이 솔루션의 이점</block>
+  <block id="3a02a011f551429a5ec8b46a00017abd" category="list-text">SnapMirror의 효율적이고 복원력이 뛰어난 복제를 사용합니다.</block>
+  <block id="74915666b8d10f77a73b526e91724cc8" category="list-text">ONTAP 스냅샷 보존을 사용하여 사용 가능한 모든 시점 복구</block>
+  <block id="a3704e4802422c6765dd406472307ba1" category="list-text">스토리지, 컴퓨팅, 네트워크 및 애플리케이션 검증 단계에서 수백 또는 수천 개의 VM을 복구하는 데 필요한 모든 단계에서 완전한 자동화가 가능합니다.</block>
+  <block id="c0e8bb909ee76b5f9683012fd9418729" category="list-text">SnapCenter는 복제된 볼륨을 변경하지 않는 클론 생성 메커니즘을 사용합니다.</block>
+  <block id="d92ea079cd9d83d3d60c1269804b766c" category="list-text">이렇게 하면 볼륨 및 스냅숏에 대한 데이터 손상 위험이 방지됩니다.</block>
+  <block id="843b8877e30b7587ad87b95cd115df4a" category="list-text">DR 테스트 워크플로우 중에 복제 중단 방지</block>
+  <block id="a29a4a29d457d4322f1f22ed58f9b06a" category="list-text">개발/테스트, 보안 테스트, 패치 및 업그레이드 테스트, 수정 테스트 등 DR 이외의 워크플로우에 DR 데이터를 활용합니다.</block>
+  <block id="e04e963feedf7f0157e360dc2be6d7b3" category="list-text">CPU 및 RAM 최적화를 통해 보다 작은 컴퓨팅 클러스터로 복구할 수 있으므로 클라우드 비용을 절감할 수 있습니다.</block>
+  <block id="bd3260deba05f8c5831890f164f83733" category="doc">ANF 데이터 저장소 솔루션 개요</block>
+  <block id="626c4c46c0b0900648e0b954a96c4399" category="paragraph">성공적인 모든 조직은 혁신과 현대화의 길을 따라 있습니다. 이 프로세스의 일환으로, 기업은 일반적으로 기존 VMware 투자를 활용하는 동시에 클라우드의 이점을 활용하고 마이그레이션, 버스트, 확장 및 재해 복구 프로세스를 최대한 원활하게 만드는 방법을 모색합니다. 클라우드로 마이그레이션하는 고객은 탄력성 및 폭발적 문제, 데이터 센터 이탈, 데이터 센터 통합, 수명 종료 시나리오, 인수 합병 등을 평가해야 합니다. 각 조직에서 채택한 접근 방식은 각 비즈니스 우선순위에 따라 다를 수 있습니다. 클라우드 기반 운영을 선택할 때 적절한 성능과 최소 장애 요인을 갖춘 저렴한 모델을 선택하는 것이 중요한 목표입니다. 적합한 플랫폼을 선택할 뿐만 아니라, 스토리지 및 워크플로우 오케스트레이션은 클라우드의 강력한 기능과 탄력성을 최대한 활용하는 데 특히 중요합니다.</block>
+  <block id="bcc2a83e573fb5cbbcd097908c609fa6" category="paragraph">Azure VMware 솔루션은 고객에게 고유한 하이브리드 기능을 제공하지만, 제한된 기본 스토리지 옵션으로 스토리지 집약적인 워크로드를 사용하는 조직의 유용성이 제한됩니다. 스토리지가 호스트에 직접 연결되어 있으므로 스토리지를 확장하는 유일한 방법은 호스트를 추가하는 것입니다. 이렇게 하면 스토리지 집약적인 워크로드에서 비용이 35-40% 이상 증가할 수 있습니다. 이러한 워크로드는 추가 처리 능력이 아니라 추가 스토리지를 필요로 합니다. 즉, 추가 호스트에 대한 비용을 지불해야 합니다.</block>
+  <block id="abc79d01b4318a1c67504eb7714e360f" category="paragraph">다음 시나리오를 고려해 보겠습니다. 고객은 마력(vCPU/vmem)을 위해 6개의 호스트를 필요로 하지만 스토리지에 대한 요구 사항도 상당히 있습니다. 평가를 기준으로 볼 때 스토리지 요구사항을 충족하기 위해 12개의 호스트가 필요합니다. 이렇게 하면 실제로 필요한 모든 것이 더 많은 스토리지일 때 마력을 추가로 구입해야 하기 때문에 전체 TCO가 증가합니다. 마이그레이션, 재해 복구, 사용 급증, 개발/테스트, 등.</block>
+  <block id="f6faa113f88d1f8c4795fe189493d34f" category="paragraph">Azure VMware 솔루션의 또 다른 일반적인 사용 사례는 DR(재해 복구)입니다. 대부분의 조직은 재해 복구 전략이 없거나 DR을 위한 고스트 데이터 센터의 실행을 정당화하는 데 어려움을 겪을 수 있습니다. 관리자는 파일럿 라이트 클러스터 또는 온디맨드 클러스터를 통해 설치 공간이 필요 없는 DR 옵션을 탐색할 수 있습니다. 그런 다음 호스트를 추가하지 않고 스토리지를 확장할 수 있으므로 매력적인 옵션이 될 수 있습니다.</block>
+  <block id="feb87b8a766262f1649eb73f664b5237" category="paragraph">요약하자면, 사용 사례는 다음 두 가지 방법으로 분류할 수 있습니다.</block>
+  <block id="113270f68f35ffcbf2a57597bd22e665" category="list-text">ANF 데이터 저장소를 사용하여 스토리지 용량을 확장합니다</block>
+  <block id="a46f3b69652b37f2becc5ad8def389fe" category="list-text">소프트웨어 정의 데이터 센터(SDDC) 간의 사내 또는 Azure 지역 내에서 비용 최적화된 복구 워크플로를 위해 ANF 데이터 저장소를 재해 복구 타겟으로 사용합니다. 이 가이드에서는 Azure NetApp Files를 사용하여 데이터 저장소에 최적화된 스토리지(현재 공개 미리 보기)를 제공하는 방법에 대해 설명합니다. Azure VMware 솔루션에서 동급 최고의 데이터 보호 및 DR 기능을 제공하므로 vSAN 스토리지에서 스토리지 용량을 오프로드할 수 있습니다.</block>
+  <block id="301964836d84fb491fca23f51f902cd0" category="admonition">Azure NetApp Files 데이터 저장소 기능은 현재 공개 미리 보기에 있습니다. 자세한 내용은 해당 지역의 NetApp 또는 Microsoft 솔루션 설계자에게 문의하십시오.</block>
+  <block id="9d5486edf9a5ddec98d7f7509d50101c" category="section-title">Azure의 VMware 클라우드 옵션</block>
+  <block id="809dd7fcec8077467eab0222ea68e259" category="paragraph">Azure VMware 솔루션(AVS)은 Microsoft Azure 퍼블릭 클라우드 내에서 완벽하게 작동하는 VMware SDDC를 제공하는 하이브리드 클라우드 서비스입니다. AVS는 Microsoft에서 완벽하게 관리 및 지원하고 Azure 인프라를 사용하는 VMware에서 검증한 최초의 솔루션입니다. 따라서 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN 및 네트워킹 및 보안을 위한 NSX를 얻는 동시에 Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설 및 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접할 수 있는 이점을 누릴 수 있습니다. Azure VMware 솔루션 SDDC와 Azure NetApp Files를 함께 사용하면 네트워크 지연 시간을 최소화하면서 최상의 성능을 얻을 수 있습니다.</block>
+  <block id="8718654ef588a85b2a2e46a7727fa16d" category="paragraph">사용된 클라우드에 관계없이 VMware SDDC를 구축할 때 초기 클러스터에 포함되는 구성 요소는 다음과 같습니다.</block>
+  <block id="b6955e4f04d87bd186e8f355b710c814" category="list-text">관리를 위해 vCenter Server 어플라이언스를 사용하여 컴퓨팅 가상화를 위한 VMware ESXi 호스트</block>
+  <block id="c865d5c3f7aef0fea827cecdf6da386c" category="list-text">VMware vSAN 하이퍼 컨버지드 스토리지는 각 ESXi 호스트의 물리적 스토리지 자산을 통합합니다.</block>
+  <block id="4d53c4a03b478ccb8f5a4a2cde37db71" category="list-text">관리를 위해 NSX Manager 클러스터를 사용하여 가상 네트워킹 및 보안을 위한 VMware NSX</block>
+  <block id="94d43b2c8702afe74d26d3a9052e59b4" category="paragraph">All-Cloud와 하이브리드 클라우드 중 무엇을 목표로 하고 있든 Azure NetApp Files는 애플리케이션 계층과 함께 애플리케이션 워크로드를 구축하고 관리하는 탁월한 옵션을 제공하는 한편 데이터 요구사항을 애플리케이션 계층으로 원활하게 충족하여 TCO를 줄여줍니다. 어떤 사용 사례에서든 Azure NetApp Files와 함께 Azure VMware 솔루션을 선택하면 클라우드의 이점, 일관된 인프라, 온프레미스 및 멀티 클라우드 전반의 운영, 워크로드의 양방향 이동성, 엔터프라이즈급 용량 및 성능을 빠르게 실현할 수 있습니다. 스토리지를 연결하는 데 사용되는 것과 동일한 친숙한 프로세스 및 절차입니다. 이는 새로운 이름과 함께 변경된 데이터의 위치일 뿐입니다. 도구 및 프로세스는 모두 동일하며 Azure NetApp Files는 전체 배포를 최적화하는 데 도움이 됩니다.</block>
+  <block id="7017a5961c414dfbe07b539da73560fb" category="list-text">이제 AVS SDDC에서 Azure NetApp Files를 데이터 저장소로 사용할 수 있습니다.</block>
+  <block id="1997ea39c8d744bf66dd1b36df20eca0" category="list-text">애플리케이션 응답 시간을 단축하고 가용성을 높여 필요할 때 언제 어디서나 액세스 워크로드 데이터를 제공합니다.</block>
+  <block id="d229778544c20c94bc3a4e634983743a" category="list-text">간단하고 즉각적인 크기 조정 기능을 통해 vSAN 스토리지의 전반적인 복잡성을 단순화합니다.</block>
+  <block id="220eb8ba4e87069e79226f808999d319" category="list-text">동적 재구성 기능을 사용하여 미션 크리티컬 워크로드의 성능 보장</block>
+  <block id="de55b3d8d98ed7c720c8410fbbce524e" category="list-text">Azure VMware 솔루션 클라우드가 그 목적이라면 Azure NetApp Files는 최적의 구축을 위한 최적의 스토리지 솔루션입니다.</block>
+  <block id="a13de136306e099dce523fd8db3f037c" category="list-text">Azure VMware 솔루션 설명서</block>
+  <block id="2f2e78e0c7d7ff0caf67f34519d3f5e5" category="inline-link"><block ref="2f2e78e0c7d7ff0caf67f34519d3f5e5" category="inline-link-rx"></block></block>
+  <block id="5e65b51c08430d6fa3dc13275b00da9d" category="paragraph"><block ref="5e65b51c08430d6fa3dc13275b00da9d" category="inline-link-rx"></block></block>
+  <block id="6c32a3d0f1a665987b98dde5a0f96d7d" category="list-text">Azure NetApp Files 설명서</block>
+  <block id="ac236475735595f1237223b0184c5cca" category="inline-link"><block ref="ac236475735595f1237223b0184c5cca" category="inline-link-rx"></block></block>
+  <block id="742cb4a55dadc1d5ca8efd2956575138" category="paragraph"><block ref="742cb4a55dadc1d5ca8efd2956575138" category="inline-link-rx"></block></block>
+  <block id="973a8d8f52abe676185faad3e1273042" category="list-text">Azure NetApp Files를 Azure VMware 솔루션과 통합합니다</block>
+  <block id="5921bbfb65432acfa6b5c79e0d9087a5" category="inline-link"><block ref="5921bbfb65432acfa6b5c79e0d9087a5" category="inline-link-rx"></block></block>
+  <block id="58d361413adbffbc6e6237546e3c4118" category="paragraph"><block ref="58d361413adbffbc6e6237546e3c4118" category="inline-link-rx"></block></block>
+  <block id="c9b304a75d091c3c7fd00a12963d8b52" category="doc">Azure의 네이티브 NFS 데이터 저장소 옵션</block>
+  <block id="8d60f49fa5ec93fd2bea5e083359bdc1" category="paragraph">NFS 데이터 저장소 지원은 vSphere의 스토리지 기능을 크게 확장해 주는 사내 구축 환경의 ESXi 버전 3에서 도입되었습니다.</block>
+  <block id="1aaea72f240547a6a057b9a88a27144b" category="paragraph">vSphere on NFS는 강력한 성능과 안정성을 제공하기 때문에 사내 가상화 구축에 널리 채택되는 옵션입니다. 사내 데이터 센터에 NAS(Network-Attached Storage)가 많이 있는 경우 Azure NetApp 파일 데이터 저장소와 Azure에 Azure VMware 솔루션 SDDC를 구축하여 용량 및 성능 문제를 해결하는 것이 좋습니다.</block>
+  <block id="19fb9916968211db983d13bffe0cc6af" category="inline-link">99.99%</block>
+  <block id="ad25c186e2eeaa2ec5fa0b9d3fa4b8c7" category="paragraph">Azure NetApp Files는 업계 최고의 고가용성 NetApp ONTAP 데이터 관리 소프트웨어를 기반으로 구축되었습니다. Microsoft Azure 서비스는 기본, 메인스트림, 전문 등 세 가지 범주로 분류됩니다. Azure NetApp Files는 특수 범주에 속하며 이미 여러 지역에 배포된 하드웨어를 통해 지원됩니다. Azure NetApp Files에는 고가용성(HA)이 내장되어 있어 대부분의 운영 중단으로부터 데이터를 보호하고 업계 최고 수준의 SLA를 제공합니다<block ref="404362048587970f5f15a4d9376a71ea" category="inline-link-rx"></block> 가동 시간.</block>
+  <block id="1b69b6091c2756a0aac2b81e4a880f93" category="paragraph">Azure NetApp Files 데이터 저장소 기능을 도입하기 전에 성능 및 스토리지 집약적인 워크로드를 호스팅하려는 고객을 위한 스케일아웃 작업에 컴퓨팅 및 스토리지를 모두 확장해야 했습니다.</block>
+  <block id="09d432ffd44a3af2e2524362730628cf" category="paragraph">다음 문제를 명심하십시오.</block>
+  <block id="79786892120b18078ded972068ce7cab" category="list-text">SDDC 클러스터에서는 불균형 클러스터 구성을 사용하지 않는 것이 좋습니다. 따라서 스토리지 확장이란 호스트를 더 추가하는 것을 의미하며, 이는 더 많은 TCO를 의미합니다.</block>
+  <block id="4d7a269595fa13e9d4bb48449c996a41" category="list-text">하나의 vSAN 환경만 가능합니다. 따라서 모든 스토리지 트래픽이 운영 워크로드와 직접 경쟁합니다.</block>
+  <block id="99407e1fc016dc5a4f17896a330e66b0" category="list-text">애플리케이션 요구사항, 성능, 비용을 맞추기 위해 여러 성능 계층을 제공하는 옵션은 없습니다.</block>
+  <block id="f5188d9f655a6ac9c3d0dccb20d81997" category="list-text">클러스터 호스트 위에 구축된 vSAN의 스토리지 용량 제한에 쉽게 도달할 수 있습니다. Azure NetApp Files와 같은 Azure 네이티브 PaaS(Platform-as-a-Service) 오퍼링을 데이터 저장소로 통합하여 고객은 스토리지를 독립적으로 확장하고 필요에 따라 SDDC 클러스터에만 컴퓨팅 노드를 추가할 수 있습니다. 이 기능을 통해 위에서 설명한 과제를 극복할 수 있습니다.</block>
+  <block id="0e3ed020480eaa03d85ccab093939832" category="paragraph">또한 Azure NetApp Files를 사용하면 여러 데이터 저장소를 배포할 수 있습니다. 이 데이터 저장소는 가상 머신을 적절한 데이터 저장소에 배치하고 워크로드 성능 요구 사항을 충족하는 데 필요한 서비스 수준을 할당하여 온-프레미스 구축 모델을 모방하는 데 도움이 됩니다. 멀티 프로토콜 지원의 고유한 기능을 통해 게스트 스토리지는 SQL 및 Oracle과 같은 데이터베이스 워크로드를 위한 추가 옵션일 뿐만 아니라 네이티브 NFS 데이터 저장소 기능을 사용하여 나머지 VMDK를 저장합니다. 이와 별도로 네이티브 스냅샷 기능을 사용하여 신속한 백업 및 세분화된 복원을 수행할 수 있습니다.</block>
+  <block id="cf1c082028930ec1827badc0e64627c6" category="admonition">스토리지의 계획 및 사이징, 필요한 호스트 수를 결정하려면 Azure 및 NetApp 솔루션 설계자와 접촉하십시오. 테스트, POC 및 운영 구축을 위한 데이터 저장소 레이아웃을 최종적으로 완료하기 전에 스토리지 성능 요구사항을 파악하는 것이 좋습니다.</block>
+  <block id="4dbb477112f9a64eac4cca3a61697319" category="paragraph">개략적으로 보면, 이 아키텍처는 온프레미스 환경과 Azure에서 하이브리드 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다. 또한 Azure NetApp Files를 네이티브 NFS 데이터 저장소로 사용하거나 Azure VMware 솔루션에서 호스팅되는 게스트 가상 머신을 위한 게스트 내 스토리지 옵션으로 사용하는 방법에 대해서도 설명합니다.</block>
+  <block id="1622404dda50f5803c9577efc058ec11" category="paragraph"><block ref="1622404dda50f5803c9577efc058ec11" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b3488e5e13ca2586de3bcc01700bd61b" category="paragraph">마이그레이션 또는 재해 복구의 가장 중요한 측면은 타겟 환경에 적합한 크기를 결정하는 것입니다. 온프레미스에서 Azure VMware 솔루션으로 이동하는 데 필요한 노드 수를 이해하는 것이 매우 중요합니다.</block>
+  <block id="b39d58eedf7db669f2a65fd75198d49e" category="paragraph">크기를 조정하려면 RVTools(권장) 또는 Live Optics 또는 Azure Migrate 등의 다른 도구를 사용하여 온프레미스 환경의 기록 데이터를 사용합니다. RVTools는 vCPU, vmem, vDisk 및 전원이 켜져 있거나 꺼진 VM을 비롯한 모든 필수 정보를 캡처하여 타겟 환경의 특성을 파악하는 데 이상적인 툴입니다.</block>
+  <block id="9b45f8f524f59dcb44852dc933d31d60" category="paragraph">RVtools를 실행하려면 다음 단계를 완료하십시오.</block>
+  <block id="b9b14f9a77af6302e167ec8031bac435" category="list-text">RVTools를 다운로드하여 설치합니다.</block>
+  <block id="a379941a0582174b350ce316b1e64b36" category="list-text">RVTools를 실행하고 필요한 정보를 입력하여 온-프레미스 vCenter Server에 연결한 다음 Login을 누릅니다.</block>
+  <block id="7d0ff8053a5012b379d5e45f7d80bd81" category="list-text">재고를 Excel 스프레드시트로 내보냅니다.</block>
+  <block id="ad7235861abcfd585f9793a320142cb9" category="list-text">스프레드시트를 편집하고 vInfo 탭에서 적합한 대상이 아닌 VM을 제거합니다. 이 접근 방식은 필요한 수의 호스트를 사용하여 Azure VMware SDDC 클러스터의 크기를 올바르게 지정하는 데 사용할 수 있는 스토리지 요구 사항에 대한 명확한 출력을 제공합니다.</block>
+  <block id="66a03e4bdc70563bcc83f39fd18f2993" category="admonition">게스트 내 스토리지와 함께 사용되는 게스트 VM은 별도로 계산되어야 합니다. 그러나 Azure NetApp Files는 추가 스토리지 용량을 쉽게 처리할 수 있으므로 전체 TCO를 낮게 유지할 수 있습니다.</block>
+  <block id="ee7f083efd1984641bff3ff302c447a9" category="section-title">Azure VMware 솔루션 구축 및 구성</block>
+  <block id="95220678e12ace3a65339c08bb6019e5" category="paragraph">온프레미스와 마찬가지로 Azure VMware 솔루션을 계획하는 것은 가상 머신 생성 및 마이그레이션을 위한 성공적인 프로덕션 준비 환경에 매우 중요합니다.</block>
+  <block id="1b3379256eb1cb0d26126368cc62ab52" category="paragraph">이 섹션에서는 게스트 내 스토리지를 포함하는 데이터 저장소로서 Azure NetApp Files와 함께 사용할 AVS를 설정하고 관리하는 방법에 대해 설명합니다.</block>
+  <block id="449e01682ffd6d9e79c75acf22fa249b" category="list-text">리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다.</block>
+  <block id="17d7be5e1d44a11ff74be89af34822c9" category="list-text">새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다.</block>
+  <block id="28325f137394bcd829a01024c035cb5e" category="list-text">네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다. 이를 참조하십시오 <block ref="c494c3efc2923b26ad63800ea1f5c612" category="inline-link-macro-rx"></block> Azure VMware SDDC 솔루션 구축 프로세스에 대한 단계별 안내를 제공합니다.</block>
+  <block id="b2666a13d31389019b43a9085ffd2fe8" category="section-title">Azure VMware 솔루션으로 Azure NetApp Files를 구성합니다</block>
+  <block id="dbfbac0b1aee2557c747f90a52c200ed" category="paragraph">Azure NetApp Files 간의 새로운 통합을 통해 Azure VMware 솔루션 리소스 공급자 API/CLI를 통해 Azure NetApp Files 볼륨을 포함하는 NFS 데이터 저장소를 생성하고 프라이빗 클라우드에서 원하는 클러스터에 데이터 저장소를 마운트할 수 있습니다. VM 및 애플리케이션 VMDK를 구축하는 것 외에도 Azure NetApp 파일 볼륨은 Azure VMware Solution SDDC 환경에서 생성된 VM에서 마운트할 수 있습니다. Azure NetApp Files는 SMB(서버 메시지 블록) 및 NFS(네트워크 파일 시스템) 프로토콜을 지원하기 때문에 Linux 클라이언트에 볼륨을 마운트하고 Windows 클라이언트에 매핑할 수 있습니다.</block>
+  <block id="3fcf61e60f3486b366489a2db86e92c0" category="admonition">최적의 성능을 위해 Azure NetApp Files를 프라이빗 클라우드와 동일한 가용성 영역에 구축하십시오. Express Route Fastpath가 포함된 코로케이션을 통해 최소한의 네트워크 지연 시간으로 최고의 성능을 제공합니다.</block>
+  <block id="2a499560ec410b1e1caeb95f6021ac1e" category="admonition">이 기능은 현재 공개 미리보기에 있습니다.</block>
+  <block id="7042805ebe69bccc6ab09f9518f94556" category="paragraph">Azure NetApp File 볼륨을 Azure VMware Solution 프라이빗 클라우드의 VMware 데이터 저장소로 연결하려면 다음 사전 요구 사항이 충족되어야 합니다.</block>
+  <block id="49588f95c73f4a9df95958ba5e856d0c" category="list-text">az 로그인을 사용하고 구독이 Microsoft.AVS 네임스페이스의 CloudSanExperience 기능에 등록되어 있는지 확인합니다.</block>
+  <block id="c0e46e4183896be214bad3fd077b5834" category="list-text">등록되지 않은 경우 등록한다.</block>
+  <block id="8fb14eb63139db9a1c626865766368e4" category="admonition">등록을 완료하는 데 약 15분 정도 걸릴 수 있습니다.</block>
+  <block id="91bc7290f2d4745c25033c52b73c0662" category="list-text">등록 상태를 확인하려면 다음 명령을 실행합니다.</block>
+  <block id="bd00d81bc80103cfbf6f24470f9de4fa" category="list-text">등록이 15분 이상 중간 상태로 고착된 경우 등록을 취소한 다음 플래그를 다시 등록하십시오.</block>
+  <block id="30d4986a1e28c78ed243b8fe94ebe5be" category="list-text">구독이 Microsoft.AVS 네임스페이스의 AnfDatastoreExperience 기능에 등록되어 있는지 확인합니다.</block>
+  <block id="10b9b69a3124f921ee9a3a8271028b78" category="list-text">VMware 확장 프로그램이 설치되어 있는지 확인합니다.</block>
+  <block id="329e9fb0e53008fcf269d03c5476847d" category="list-text">내선이 이미 설치되어 있는 경우 버전이 3.0.0인지 확인합니다. 이전 버전이 설치된 경우 확장을 업데이트하십시오.</block>
+  <block id="f5e4a463688cab0acae8d53e64bd5e36" category="list-text">확장자가 아직 설치되지 않은 경우 설치하십시오.</block>
+  <block id="11d2eb5b9d070e139a779747ce885490" category="list-text">Azure Portal에 로그인하고 Azure NetApp Files에 액세스합니다. az provider register"--namespace Microsoft.NetApp –wait 명령을 사용하여 Azure NetApp Files 서비스에 대한 액세스를 확인하고 Azure NetApp Files 리소스 공급자를 등록합니다. 등록 후 NetApp 계정을 만드십시오. 이를 참조하십시오<block ref="2c2f4008511e047aaaf92ad514e98ec9" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="09e7af76fc12c4b14e8fbca51314b508" category="paragraph"><block ref="09e7af76fc12c4b14e8fbca51314b508" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="187927c7525fb36ec9428b4d84fe0aff" category="list-text">NetApp 계정을 생성한 후 필요한 서비스 수준 및 크기의 용량 풀을 설정합니다. 자세한 내용은 이를 참조하십시오<block ref="0a52e91c67ac030fc237a7b13d0404c6" category="inline-link-rx"></block>.</block>
+  <block id="c7d6fd5f235d0c8a960facf04a79e4a7" category="paragraph"><block ref="c7d6fd5f235d0c8a960facf04a79e4a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c573a9eace62b9790820458dd59448b0" category="list-text">Azure NetApp Files에서 데이터 저장소에 대해 NFSv3이 지원됩니다.</block>
+  <block id="62dfd4c1cc43e59ef3c56bb615d3b182" category="list-text">최적의 성능을 위해 Premium 또는 Ultra 계층을 사용합니다.</block>
+  <block id="0d55d5c3a7459f59fd437a2311322791" category="list-text">Azure NetApp Files에 대해 위임된 서브넷을 구성하고 볼륨을 생성할 때 이 서브넷을 지정합니다. 위임된 서브넷을 생성하는 자세한 단계는 이것을 참조하십시오<block ref="e84891bed408b1977d062f4ccc1816aa" category="inline-link-rx"></block>.</block>
+  <block id="36fc58c2c3fa32ac586d5628570e9499" category="list-text">용량 풀 블레이드 아래에 있는 볼륨 블레이드를 사용하여 데이터 저장소에 대한 NFS 볼륨을 추가합니다.</block>
+  <block id="2832d137c1714a9759f87412fb05253e" category="paragraph"><block ref="2832d137c1714a9759f87412fb05253e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47e7f43ca3ba65dbd1b1edbe26db8cc4" category="paragraph">크기 또는 할당량별 Azure NetApp Files 볼륨 성능에 대한 자세한 내용은 을 참조하십시오<block ref="bcd13cd67f856c9e615d78327e957b9c" category="inline-link-rx"></block>.</block>
+  <block id="372d7a6604390fe9757888aff0a92970" category="example-title">Azure NetApp Files 데이터 저장소를 프라이빗 클라우드에 추가합니다</block>
+  <block id="0f9e7cabe2f81455810e96baca91c6a7" category="paragraph">Azure NetApp Files 데이터 저장소를 프라이빗 클라우드에 추가하려면 다음 단계를 수행하십시오.</block>
+  <block id="b1248573ef968f7d6fc7eaa453fa4d45" category="list-text">필요한 기능을 등록한 후 적절한 명령을 실행하여 NFS 데이터 저장소를 Azure VMware Solution 프라이빗 클라우드 클러스터에 연결합니다.</block>
+  <block id="567531ac8390e0378f43db080cbeec2b" category="list-text">Azure VMware Solution 프라이빗 클라우드 클러스터에서 기존 ANF 볼륨을 사용하여 데이터 저장소를 생성합니다.</block>
+  <block id="ed491060b6ac47e89ad70eecda183065" category="paragraph">c:\Users\niyaz&gt;VMware 데이터 저장소 목록 -- resource-group anfavsval2--cluster cluster cluster cluster -1--private-cloud ANFDataClus [{"diskPoolVolume":null, "id":"/Subscriptions/0efa2dffb-917c-bourceGroup" vav-vav "AVS Microsoft.NetApp/netAppAccounts/anfdatastoreacct/capacityPools/anfrecods/volumes/ANFRecoDS001"" vev-vav-vav-vav-vev-vav-vav-vav "AVS" AVS" AVS" vav "AVS/recev-vav-vav-vav-vav-vav-vav-vav-vav-vav-av-av-av-av-av "AVS" AVS" AVS" AVS".2" ev-av-av-av-vev-av-av-vev-vav "AVS" vav-av-av- {"diskPoolVolume":null, "id":"/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/anfavsourceGroup/anfavource2/providers/microsoft.AVS/privateClouds/ae4recorivae17002 "Microsoft.NetApp/netAppAccounts/anfdatastoreacct/capacityPools/anfrecodsu/volumes/anfrecodsU002" AVS" AVaeAVaeae4aeaeaea.va.va.va.va.2" va.vaeae4a.va.va.va.va.va.va.va.va.vaea.va.va.va.veaea.vea.vaea.va.vea.va.va.va.va.vea.vea.va.vea.vea.vea.va.vea.va.vea.vea.vea</block>
+  <block id="d1903b7932291ae49bf265e5af7a75f4" category="list-text">필요한 접속이 구성된 후에는 볼륨이 데이터 저장소로 마운트됩니다.</block>
+  <block id="b9eb0553d93e0e4bbee4142fec9403f9" category="paragraph"><block ref="b9eb0553d93e0e4bbee4142fec9403f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="078f601da77f62e8c7e097d5744f9b1b" category="section-title">사이징 및 성능 최적화</block>
+  <block id="2954ff66e26b577154cf218d077ff1a9" category="paragraph">Azure NetApp Files는 Standard(테라바이트당 16MBps), Premium(테라바이트당 64MBps), Ultra(테라바이트당 128MBps)의 세 가지 서비스 수준을 지원합니다. 데이터베이스 워크로드의 성능을 최적화하려면 적절한 볼륨 크기를 프로비저닝하는 것이 중요합니다. Azure NetApp Files에서는 다음 요소를 기준으로 볼륨 성능과 처리량 한도를 결정합니다.</block>
+  <block id="a5d62ae512b963e1f05e839467577f19" category="paragraph"><block ref="a5d62ae512b963e1f05e839467577f19" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ce18fddaa7dc898334afc4ab63a163b" category="list-text">최적의 성능을 위해 데이터 저장소 볼륨에 Premium 또는 Ultra 계층을 사용합니다.</block>
+  <block id="f681df268b9e05fa5155bbf1f38d672f" category="list-text">게스트 VM에 대한 파일 공유 요구 사항은 Standard 또는 Premium 계층 볼륨을 사용합니다.</block>
+  <block id="1261ba8eeb83d9d138ff9e9a37214a7e" category="section-title">성능 고려 사항</block>
+  <block id="f4479400cc63a0bc54ea3a609d8d89aa" category="paragraph">NFS 버전 3에서는 ESXi 호스트와 단일 스토리지 타겟 간의 접속에 대해 하나의 활성 파이프만 있다는 점을 이해하는 것이 중요합니다. 즉, 페일오버에 대체 연결을 사용할 수 있지만 단일 데이터 저장소 및 기본 스토리지의 대역폭은 단일 연결이 제공할 수 있는 범위로 제한됩니다.</block>
+  <block id="f4c57c87dfa0d5843279b51c6e10d0a6" category="paragraph">Azure NetApp Files 볼륨에서 사용 가능한 대역폭을 더 많이 활용하려면 ESXi 호스트에 스토리지 타겟에 대한 여러 개의 접속이 있어야 합니다. 이 문제를 해결하려면 각 데이터 저장소에서 ESXi 호스트와 스토리지 간의 개별 연결을 사용하여 여러 데이터 저장소를 구성할 수 있습니다.</block>
+  <block id="bde357669435115ce8fac67e3a3a5786" category="paragraph">더 높은 대역폭을 얻으려면 여러 ANF 볼륨을 사용하여 여러 데이터 저장소를 생성한 후 VMDK를 생성하고 VMDK 간에 논리적 볼륨을 스트라이핑하는 것이 좋습니다.</block>
+  <block id="c01a936a44f773bc3d0a636cb655c28c" category="list-text">Azure VMware 솔루션에서는 기본적으로 8개의 NFS 데이터 저장소를 허용합니다. 이 문제는 지원 요청을 통해 증가할 수 있습니다.</block>
+  <block id="cd58e3b202d882202a16834028640630" category="list-text">더 높은 대역폭과 낮은 지연 시간을 위해 ER fastpath와 Ultra SKU를 함께 활용합니다. 추가 정보</block>
+  <block id="6ef5173b6cc36d0f4efabbafeeee7443" category="list-text">Azure NetApp Files의 "기본" 네트워크 기능을 사용하면 Azure VMware 솔루션을 연결하는 데 ExpressRoute 회로 및 ExpressRoute 게이트웨이의 대역폭이 사용됩니다.</block>
+  <block id="0a8e9b67042320d1a2f3f6155fc3e096" category="list-text">"표준" 네트워크 기능이 있는 Azure NetApp Files 볼륨(현재 공개 미리 보기)의 경우 ExpressRoute FastPath가 지원됩니다. FastPath가 활성화되면 네트워크 트래픽이 Azure NetApp Files 볼륨으로 직접 전송되어 더 높은 대역폭과 낮은 대기 시간을 제공하는 게이트웨이를 우회합니다.</block>
+  <block id="1b75d86136a5cde892b315650fd5ea43" category="section-title">성능 최적화</block>
+  <block id="213debd5ccd87a89487239a8460a0f0e" category="paragraph">NFS 데이터 저장소당 권장되는 가상 머신 수는 주관적이지만, 많은 요소가 각 데이터 저장소에 배치할 수 있는 최적의 VM 수를 결정합니다. 대부분의 관리자가 용량만 고려하지만 VMDK에 전송되는 동시 I/O의 양은 전체 성능을 위한 가장 중요한 요소 중 하나입니다. ESXi 호스트에는 데이터 저장소 리소스에 대해 경쟁하는 가상 시스템 간의 공정성을 보장하기 위한 여러 메커니즘이 있습니다. 그러나 성능을 제어하는 가장 쉬운 방법은 각 데이터 저장소에 배치할 가상 머신 수를 조절하는 것입니다. 동시 가상 머신 I/O 패턴이 너무 많은 트래픽을 데이터 저장소로 전송하는 경우 디스크 대기열이 채워지며 지연 시간이 길어집니다.</block>
+  <block id="f9fd5bbf2764cc5b16e9eeeb8b57ee91" category="section-title">볼륨 및 데이터 저장소 사이징</block>
+  <block id="01ab7b17836cfa3916b003d7febafe43" category="paragraph">데이터 저장소를 위해 Azure NetApp Files에서 볼륨을 생성하는 경우 가장 좋은 방법은 필요한 것보다 더 큰 볼륨을 생성하는 것입니다. 최대 볼륨 크기는 100TB까지 가능하지만 작은 데이터 저장소 용량으로 시작하여 필요에 따라 늘리는 것이 좋습니다. 데이터 저장소를 적절하게 사이징하면 데이터 저장소에 너무 많은 가상 머신을 실수로 배치하는 것을 방지하고 리소스 경합 가능성을 줄일 수 있습니다. 가상 머신에 추가 용량이 필요한 경우 데이터 저장소 및 VMDK 크기를 쉽게 늘릴 수 있으므로 필요한 것보다 큰 데이터 저장소를 생성할 필요가 없습니다. 최적의 성능을 위해 크기를 늘리는 대신 데이터 저장소의 수를 늘리는 것이 좋습니다.</block>
+  <block id="fad725216d945a6443f15949ae73b316" category="cell">기억해야 할 사항</block>
+  <block id="28c7e0cc515aa1271633669cf0e579ad" category="list-text">ANF NFS 데이터 저장소의 적절한 크기는 4TB에서 8TB입니다.</block>
+  <block id="90f9dde25089c324af635a76b75a7509" category="list-text">15-20개의 VM을 단일 데이터 저장소에 배치합니다. VM 요구 사항에 따라 VM을 35-40 까지 늘릴 수 있습니다.</block>
+  <block id="3236c97f9f8c9cb7fcbc35b9ff162ab3" category="list-text">최상의 성능과 관리 효율성을 얻으려면 게스트가 데이터베이스와 같은 높은 I/O 애플리케이션을 위해 관리하는 NFS/SMB 파일 시스템과 같은 게스트 소유 파일 시스템을 고려하십시오.</block>
+  <block id="0d3f5dc8a647758ee9ad71d0af34e75e" category="section-title">데이터 저장소의 크기를 증가시킵니다</block>
+  <block id="9ae97248366686f76c6f9f6ac9b8d073" category="paragraph">SDDC에 대한 볼륨 재구성 및 동적 서비스 수준 변경은 전혀 투명합니다. Azure NetApp Files에서 이러한 기능은 지속적인 성능, 용량 및 비용 최적화를 제공합니다. Azure Portal에서 또는 CLI를 사용하여 볼륨의 크기를 조정하여 NFS 데이터 저장소의 크기를 늘립니다. 작업을 완료한 후 vCenter를 액세스하고 데이터 저장소 탭으로 이동하여 해당 데이터 저장소를 마우스 오른쪽 버튼으로 클릭하고 용량 정보 새로 고침 을 선택합니다. 이 접근 방식을 사용하면 데이터 저장소 용량을 늘리고 다운타임 없이 데이터 저장소의 성능을 동적으로 높일 수 있습니다. 또한 이 프로세스는 애플리케이션에 전혀 영향을 미치지 않습니다.</block>
+  <block id="264b475cf0374b319edf3b094fe25874" category="list-text">볼륨에 대한 재구성 및 동적 서비스 수준 기능을 사용하면 안정적인 워크로드 크기를 조정하여 비용을 최적화하고 오버 프로비저닝을 방지할 수 있습니다.</block>
+  <block id="c38ea7c6c5e1aef9a1df0cebd81737d9" category="list-text">공용 미리 보기 중에는 VAAI가 설정되어 있지 않습니다.</block>
+  <block id="35084d885dea7b061e6894c1cf3036d9" category="section-title">워크로드</block>
+  <block id="f7458ac9343d5418ff038f156d9b29fc" category="paragraph">가장 일반적인 사용 사례 중 하나는 마이그레이션입니다. VMware HCX 또는 vMotion을 사용하여 사내 VM으로 이동합니다. 또는 Riverfadow를 사용하여 VM을 Azure NetApp Files 데이터 저장소로 마이그레이션할 수 있습니다.</block>
+  <block id="36e402ac6b1a4b9a31bd376a7f89c68e" category="paragraph">VM을 백업하고 신속하게 복구하는 것은 ANF 데이터 저장소의 뛰어난 장점 중 하나입니다. Snapshot 복사본을 사용하여 성능에 영향을 주지 않고 VM 또는 데이터 저장소의 빠른 복사본을 만든 다음, 재해 복구를 위해 지역 간 복제를 사용하여 Azure 스토리지 또는 2차 지역으로 장기 데이터 보호를 위해 전송합니다. 이러한 접근 방식은 변경된 정보만 저장하여 스토리지 공간과 네트워크 대역폭을 최소화합니다.</block>
+  <block id="2bd24edc1157f2ea366bbf67e980b57e" category="paragraph">일반 보호를 위해 Azure NetApp Files 스냅샷 복사본을 사용하고, 애플리케이션 툴을 사용하여 SQL Server 또는 게스트 VM에 상주하는 Oracle과 같은 트랜잭션 데이터를 보호합니다. 이러한 스냅샷 복사본은 VMware(정합성 보장) 스냅샷과 다르며 장기 보호에 적합합니다.</block>
+  <block id="c69157396b1ac0cb910d839c99a0a9e3" category="admonition">ANF 데이터 저장소를 사용하면 새 볼륨으로 복원 옵션을 사용하여 전체 데이터 저장소 볼륨을 복제할 수 있으며, 복구된 볼륨을 AVS SDDC 내의 호스트에 다른 데이터 저장소로 마운트할 수 있습니다. 데이터 저장소가 마운트된 후에는 해당 데이터 저장소 내의 VM을 개별적으로 클론 복제된 VM처럼 등록, 재구성 및 사용자 지정할 수 있습니다.</block>
+  <block id="92b97805e00b695b9f8aeddf2cc8828d" category="example-title">가상 머신용 클라우드 백업</block>
+  <block id="3b0ec96ab43930bb5b0f274d7a4733bd" category="paragraph">가상 머신용 Cloud Backup은 vCenter에서 vSphere 웹 클라이언트 GUI를 제공하여 백업 정책을 통해 Azure VMware 솔루션 가상 머신 및 Azure NetApp Files 데이터 저장소를 보호합니다. 이러한 정책은 스케줄, 보존 및 기타 기능을 정의할 수 있습니다. Cloud Backup for Virtual Machine 기능은 Run 명령을 사용하여 구축할 수 있습니다.</block>
+  <block id="ad15ef62ee17e83e2a2c4de5cfc0a7e0" category="paragraph">설정 및 보호 정책은 다음 단계를 수행하여 설치할 수 있습니다.</block>
+  <block id="68efc774d1525ecfc4ad132a4f363c10" category="list-text">실행 명령을 사용하여 Azure VMware Solution 프라이빗 클라우드에 가상 머신용 Cloud Backup을 설치합니다.</block>
+  <block id="3a1d9263efa0039dd46c2e2d0dfc2dec" category="list-text">클라우드 구독 자격 증명(클라이언트 및 기밀 값)을 추가한 다음 보호할 리소스가 포함된 클라우드 구독 계정(NetApp 계정 및 관련 리소스 그룹)을 추가합니다.</block>
+  <block id="60d5826756f013d28eadac75aec57698" category="list-text">리소스 그룹 백업에 대한 보존, 빈도 및 기타 설정을 관리하는 백업 정책을 하나 이상 생성합니다.</block>
+  <block id="6ad3833cba216d2fe6639be4726ad69e" category="list-text">컨테이너를 생성하여 백업 정책으로 보호해야 하는 하나 이상의 리소스를 추가합니다.</block>
+  <block id="f0c88a652a15d9fedafa82483a1959b4" category="list-text">장애가 발생할 경우 전체 VM 또는 특정 개별 VMDK를 동일한 위치로 복구합니다.</block>
+  <block id="52c902402ab9b60471632cf95f1940b6" category="admonition">Azure NetApp Files 스냅샷 기술을 사용하면 백업 및 복원 속도가 매우 빨라집니다.</block>
+  <block id="08042ba10c942968c10ed6576a20c1e6" category="paragraph"><block ref="08042ba10c942968c10ed6576a20c1e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3a1d923fd4fc5d2bc1c7e9ac58f59ef" category="example-title">Azure NetApp Files, Jetstream DR 및 Azure VMware 솔루션을 사용한 재해 복구</block>
+  <block id="93460124cbffe590c9cee7667d85d1da" category="paragraph">클라우드로 재해 복구는 사이트 운영 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. VMware VAIO 프레임워크를 사용하여 온프레미스 VMware 워크로드를 Azure Blob 스토리지에 복제하고 복구하여 데이터 손실과 제로급 RTO를 최소화하거나 최소화할 수 있습니다. Jetstream DR을 사용하면 사내에서 AVS로, 특히 Azure NetApp Files로 복제된 워크로드를 원활하게 복구할 수 있습니다. DR 사이트에서 최소한의 리소스와 비용 효율적인 클라우드 스토리지를 사용하여 비용 효율적으로 재해 복구를 수행할 수 있습니다. Jetstream DR은 Azure Blob Storage를 통해 ANF 데이터 저장소에 대한 복구를 자동화합니다. Jetstream DR은 네트워크 매핑에 따라 독립적인 VM 또는 관련 VM 그룹을 복구 사이트 인프라로 복구하고 랜섬웨어 보호를 위한 시점 복구를 제공합니다.</block>
+  <block id="8b8adea1567023f8a36745e1e256b41e" category="inline-link-macro">ANF, Jetstream 및 AVS를 사용한 DR 솔루션</block>
+  <block id="adeb8aee914844a07a855dd7b8fe7ffc" category="paragraph"><block ref="d016a1e57ae2464bcf00474caa126151" category="inline-link-macro-rx"></block>.</block>
+  <block id="7a328b7e18172ee10e60d198b9fc26f7" category="doc">Azure/AVS용 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="12709db6944c7fef6c2f181c42bd4741" category="doc">GCP/GCVE를 위한 NetApp 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="fcee9cbc5f0c4f0ed62751d0d5f181ef" category="doc">VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드</block>
+  <block id="980ba21a8b1f775a9fae0552d8594171" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드 개요</block>
+  <block id="6e74d566879067f078b210f01e393989" category="paragraph">개략적인 관점에서 볼 때 이 아키텍처(아래 그림에 표시)에서는 NetApp Cloud Volumes ONTAP, Cloud Volumes Service for Google Cloud 및 Azure NetApp Files를 추가 게스트 스토리지 옵션으로 사용하여 여러 클라우드 공급자 간에 하이브리드 멀티 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다.</block>
+  <block id="3fe4ff67f6902f4d03e2aff729e6ca40" category="cell">2022년 7월 21일</block>
+  <block id="c1cb2a6b83f79bd02d9023a9dc25d399" category="cell">AVS용 CVO 및 Jetstream을 사용한 DR 솔루션 추가(게스트 연결 스토리지)</block>
+  <block id="ac0f5de8cc00db2cb13da85ebd7e8780" category="cell">2022년 6월 10일</block>
+  <block id="e92ea8797c2bfc161566c53da6321114" category="cell">AVS 및 ANF 기본 데이터 저장소 개요 및 Jetstream을 통한 DR 추가</block>
+  <block id="b481ba8b3ad7fbb6a9786c9907a7c1ba" category="cell">VMware 지원 NetApp 하이브리드 멀티 클라우드를 위한 NFS 데이터 저장소의 지역 가용성 목록 추가</block>
+  <block id="27f04e57a2bba90c65656f5f47785def" category="open-title">VMware를 사용하는 하이브리드 멀티 클라우드</block>
+  <block id="24fef7dbaeab186ae1ddf8a1fa31ef68" category="cell">퍼블릭 클라우드의 VMware와 각 하이퍼스케일러의 NetApp 스토리지 옵션을 포함하는 하이브리드 멀티 클라우드 모델로 NetApp을 정의합니다. 하이브리드 멀티 클라우드 랜딩 페이지는 콘텐츠별 '타일'에 나와 있는 인기 있는 콘텐츠를 제공합니다.</block>
+  <block id="91ef1e01c1592f4e80d47d11c68ddf5c" category="inline-link-macro">VMware 콘텐츠가 포함된 하이브리드 멀티 클라우드</block>
+  <block id="356bcf8558d9911b876554df23345496" category="cell"><block ref="356bcf8558d9911b876554df23345496" category="inline-link-macro-rx"></block></block>
+  <block id="9c155d9143dcac03a6b69afd6ec499b0" category="open-title">하이브리드 멀티 클라우드</block>
+  <block id="749354a37dc4552d3c41bbf24ba08598" category="sidebar">VMC를 위한 VMware로 NetApp 하이브리드 멀티 클라우드 실행</block>
+  <block id="045ec2e9b9dff589c32c257549300273" category="sidebar">CVO를 게스트 연결 스토리지로 사용</block>
+  <block id="ff106355f094608231dc8d7116a273e1" category="sidebar">VMC용 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="0ab50f8c17f87a8eecee4603b22f16c8" category="sidebar">AVS용 VMware를 사용하는 NetApp 하이브리드 멀티 클라우드</block>
+  <block id="c9657265669087dd28072f1b2ec9f781" category="sidebar">기본 데이터 저장소로서의 ANF: 개요</block>
+  <block id="5ab938ef85bdfd3c94e8c4c5f1cfa448" category="sidebar">게스트 연결 스토리지로서의 ANF</block>
+  <block id="5ab22899d20e83b71d3c1cbbedea208e" category="sidebar">AVS용 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="9fe80f9f1edda788e503795e34b7eb80" category="sidebar">GCVE를 위한 VMware의 NetApp 하이브리드 멀티 클라우드</block>
+  <block id="f0476be9310e3a4606daded5c91d346f" category="sidebar">CVS를 게스트 연결 스토리지로</block>
+  <block id="e809dfa83f36389270c46ad868461471" category="sidebar">GCVE용 하이브리드 멀티 클라우드 솔루션</block>
+  <block id="d4cc78732ab0fdcd767ab42a015d34e0" category="sidebar">보안 개요 - Google Cloud의 NetApp CVS</block>
+  <block id="b09117fe6d53441cff9cb2acd579690c" category="sidebar">네이티브 데이터 저장소 개요</block>
+  <block id="dfebc4faa06edbacaea5e509fc2537ae" category="sidebar">네이티브 NFS 데이터 저장소 옵션</block>
+  <block id="b2299b17275cb6ba71114e61d9bbae4e" category="sidebar">곧 제공 예정...</block>
+  <block id="1c8437c7b3bb8efbbf09a2ef80992b65" category="sidebar">네이티브 데이터 저장소 - 퍼블릭 미리 보기(Microsoft)</block>
+  <block id="538d26f438b9f54f2e02fe3eff3093f8" category="sidebar">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드</block>
+  <block id="c060e8edf543838031150fc8f1a63b72" category="sidebar">AVS용 네이티브 데이터 저장소</block>
+  <block id="b8aef6e50d3ed85ad8f7568c45050629" category="sidebar">워크로드 보호</block>
+  <block id="c90d3565dac770d258e528bf1d0f0354" category="sidebar">Jetstream을 통한 재해 복구(기본 데이터 저장소)</block>
+  <block id="497820483e8c674ccb7cd2e35d2d61b3" category="sidebar">CVO 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
 </blocks>
