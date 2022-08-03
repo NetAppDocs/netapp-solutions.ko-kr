@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/stgr-splunkss-flexible-storagegrid-features-for-splunk-smartstore.html 
+keywords: ILM policies, Grid Manager, performance, Load Balancer, endpoint configuration 
+summary: 'StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 구축하여 확장하는 데 이르기까지, 환경의 변화에 빠르게 대처해야 하며 Splunk를 중단하지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.' 
+---
+= Splunk SmartStore를 위한 유연한 StorageGRID 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:stgr-splunkss-solution-overview.html["이전: 솔루션 개요"]
+
+StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 구축하여 확장하는 데 이르기까지, 환경의 변화에 빠르게 대처해야 하며 Splunk를 중단하지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.
+
+
+
+== Grid Manager를 통한 간편한 관리
+
+Grid Manager는 브라우저 기반의 그래픽 인터페이스로, 다음 이미지와 같이 전 세계적으로 분산된 단일 창에서 StorageGRID 시스템을 구성, 관리 및 모니터링할 수 있습니다.
+
+image:stgr-splunkss-image3.png["오류: 그래픽 이미지가 없습니다"]
+
+Grid Manager 인터페이스를 사용하여 다음 작업을 수행합니다.
+
+* 이미지, 비디오, 레코드 등 전 세계에 분산된 페타바이트 규모의 오브젝트 저장소를 관리합니다.
+* 그리드 노드 및 서비스를 모니터링하여 개체 가용성을 보장합니다.
+* ILM(정보 수명 주기 관리) 규칙을 사용하여 시간이 지남에 따라 오브젝트 데이터의 배치를 관리합니다. 이러한 규칙은 수집된 개체의 데이터, 데이터가 손실되지 않도록 보호하는 방법, 오브젝트 데이터가 저장되는 위치 및 기간에 대해 적용됩니다.
+* 시스템 내의 트랜잭션, 성능 및 운영을 모니터링합니다.
+
+
+
+
+== Splunk용 NetApp StorageGRID 애플리케이션
+
+Splunk용 NetApp StorageGRID 앱은 Splunk Enterprise용 애플리케이션입니다. 이 앱은 Splunk용 NetApp StorageGRID 애드온과 함께 작동합니다. 이 제품은 StorageGRID 상태, 계정 사용 정보, 보안 감사 세부 정보, 리소스 사용 및 모니터링 등에 대한 가시성을 제공합니다.
+
+다음 그림은 Splunk용 StorageGRID 앱을 보여줍니다.
+
+image:stgr-splunkss-image4.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== ILM 정책
+
+StorageGRID은 오브젝트의 여러 복사본을 유지하고 2+1, 4+2(및 기타 여러 복사본)와 같은 EC(삭제 코딩) 스키마를 사용하여 특정 성능 및 데이터 보호 요구사항에 따라 오브젝트를 저장하는 등의 유연한 데이터 관리 정책을 제공합니다. 시간에 따라 워크로드와 요구사항이 달라지날수록 ILM 정책도 시간에 따라 바뀌어야 합니다. ILM 정책을 수정하는 것은 핵심 기능이므로 StorageGRID 고객은 끊임없이 변화하는 환경에 빠르고 쉽게 적응할 수 있습니다.
+
+
+
+== 성능
+
+StorageGRID는 VM이나 SG5712, SG5760, SG6060, SGF6024와 같이 특별히 제작된 어플라이언스, 베어 메탈 또는 특수 용도의 어플라이언스에 사용할 수 있는 노드를 추가하여 성능을 확장합니다. 테스트에서는 SG6060 어플라이언스를 사용하는 최소 크기의 3노드 그리드로 SmartStore의 주요 성능 요구사항을 초과했습니다. 고객이 추가 인덱서로 Splunk 인프라를 확장함에 따라 더 많은 스토리지 노드를 추가하여 성능과 용량을 높일 수 있습니다.
+
+
+
+== 로드 밸런서 및 엔드포인트 구성
+
+StorageGRID의 관리 노드는 StorageGRID 시스템을 보고, 구성하고, 관리할 수 있는 그리드 관리자 UI(사용자 인터페이스) 및 REST API 엔드포인트와 시스템 작업을 추적할 수 있는 감사 로그를 제공합니다. Splunk SmartStore 원격 스토리지에 가용성이 높은 S3 엔드포인트를 제공하기 위해 StorageGRID 로드 밸런서가 구축되었으며, 이 밸런서는 관리 노드와 게이트웨이 노드에서 서비스로 실행됩니다. 또한 로드 밸런서는 로컬 트래픽을 관리하고 GSLB(Global Server Load Balancing)에 연결하여 재해 복구를 지원합니다.
+
+엔드포인트 구성을 더욱 개선하기 위해 StorageGRID는 관리 노드에 내장된 트래픽 분류 정책을 제공하고, 워크로드 트래픽을 모니터링하고, 워크로드에 다양한 QoS(서비스 품질) 제한을 적용할 수 있도록 지원합니다. 트래픽 분류 정책은 게이트웨이 노드 및 관리 노드에 대한 StorageGRID 부하 분산 서비스의 끝점에 적용됩니다. 이러한 정책은 트래픽 제한 및 모니터링을 지원할 수 있습니다.
+
+link:stgr-splunkss-splunk-architecture.html["다음으로, Splunk 아키텍처:"]

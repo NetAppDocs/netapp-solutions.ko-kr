@@ -8451,7 +8451,6 @@
   <block id="2ec930774314e7709987603c82825f4b" category="paragraph">StorageGRID는 VM, 베어 메탈 또는 특수 제작된 어플라이언스 등 스토리지 노드를 추가하여 성능을 확장합니다 <block ref="585d6d5337b82c3c73a6c04b53fcdd23" category="inline-link-macro-rx"></block>. 이 테스트에서는 SGF6024 어플라이언스를 사용하는 최소 크기의 3노드 그리드로 Apache Kafka의 주요 성능 요구사항을 초과했습니다. 고객이 추가 브로커로 Kafka 클러스터를 확장함에 따라 스토리지 노드를 추가하여 성능과 용량을 확장할 수 있습니다.</block>
   <block id="3eee81ca69cbbee2bec24db63e4dea0d" category="section-title">부하 분산 장치 및 엔드포인트 구성</block>
   <block id="5b42fd120a40ecd7cc8ac5cdedde8ceb" category="paragraph">StorageGRID의 관리 노드는 StorageGRID 시스템을 보고, 구성하고, 관리할 수 있는 그리드 관리자 UI(사용자 인터페이스) 및 REST API 엔드포인트와 시스템 작업을 추적할 수 있는 감사 로그를 제공합니다. Confluent Kafka 계층형 스토리지에 가용성이 높은 S3 엔드포인트를 제공하기 위해 관리 노드와 게이트웨이 노드에서 서비스로 실행되는 StorageGRID 로드 밸런서를 구현했습니다. 또한 로드 밸런서는 로컬 트래픽을 관리하고 GSLB(Global Server Load Balancing)에 연결하여 재해 복구를 지원합니다.</block>
-  <block id="ebe4bf9f44a65ad044fdede621409388" category="paragraph">엔드포인트 구성을 더욱 개선하기 위해 StorageGRID는 관리 노드에 내장된 트래픽 분류 정책을 제공하고, 워크로드 트래픽을 모니터링하고, 워크로드에 다양한 QoS(서비스 품질) 제한을 적용할 수 있도록 지원합니다. 트래픽 분류 정책은 게이트웨이 노드 및 관리 노드에 대한 StorageGRID 부하 분산 서비스의 끝점에 적용됩니다. 이러한 정책은 트래픽 제한 및 모니터링을 지원할 수 있습니다.</block>
   <block id="dca5165744ce2dbf5825f022349ee941" category="section-title">StorageGRID의 트래픽 분류</block>
   <block id="588db6e460515c5268204303c93a770b" category="paragraph">StorageGRID에는 QoS 기능이 내장되어 있습니다. 트래픽 분류 정책은 클라이언트 애플리케이션에서 들어오는 다양한 유형의 S3 트래픽을 모니터링하는 데 도움이 될 수 있습니다. 그런 다음 정책을 생성하여 적용하여 In/Out 대역폭, 읽기/쓰기 동시 요청 수 또는 읽기/쓰기 요청 속도에 따라 이 트래픽에 제한을 적용할 수 있습니다.</block>
   <block id="bb2bd99338b18762ef6953ad2cbfafc7" category="section-title">아파치 카프카</block>
@@ -12261,7 +12260,6 @@
   <block id="b63d5ee355078976e86c94b5c978788e" category="paragraph">NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되며, 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.</block>
   <block id="e764fe6b8f8825a307a87cedbef45678" category="cell">22.04</block>
   <block id="63355c54bd7e8ff73915da41610ec6f7" category="cell">22.04.0</block>
-  <block id="54acb57afb70110fb7f8e1de35e176b4" category="cell">1.3.1</block>
   <block id="22053fd2d26d3a313aea03b09e9a776c" category="cell">VMware Tanzu Kubernetes Grid Service</block>
   <block id="c99c6e88d4de8db879b1b5ec64d1f7ed" category="cell">0.0.15 [vSphere 네임스페이스]</block>
   <block id="8eb1302ead60c09b6d757b2b7ab84040" category="cell">1.22.6 [Supervisor Cluster Kubernetes]</block>
@@ -13452,4 +13450,337 @@
   <block id="b8aef6e50d3ed85ad8f7568c45050629" category="sidebar">워크로드 보호</block>
   <block id="c90d3565dac770d258e528bf1d0f0354" category="sidebar">Jetstream을 통한 재해 복구(기본 데이터 저장소)</block>
   <block id="497820483e8c674ccb7cd2e35d2d61b3" category="sidebar">CVO 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
+  <block id="fdcb85733d1a2ba6bfb7a8ba947efd6d" category="paragraph">vSphere 및 Tanzu(vSphere Pod)</block>
+  <block id="c77e6b248ec0adc44384f6336fa4a966" category="list-text">vSphere 기본 포드는 완벽한 격리를 위해 사전 지정된 가상 하드웨어와 함께 씬 광자 기반 계층에서 실행됩니다.</block>
+  <block id="3dd0287f26179660762f136eacfabb73" category="list-text">NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 기능을 추가로 지원할 수 있습니다.</block>
+  <block id="53f2b5f5c06efa27ad0bcad5156e7170" category="list-text">TKGS와 같은 가상 Supervisor 클러스터를 사용하고 ESXi 노드에서 직접 Pod를 실행하는 vSphere 7.0U1 이상에서 구축 및 관리</block>
+  <block id="bda03c816727fd53e15712cdb73795b2" category="list-text">vSphere 관리자가 vSphere를 완벽하게 통합하고 최고의 가시성과 제어 기능을 제공합니다.</block>
+  <block id="131afa56e2eb221420188e64332a6a7e" category="list-text">최고 수준의 보안을 위한 격리된 crx 기반 포드.</block>
+  <block id="67a05356c1a5b95953959967caf83acc" category="list-text">영구 스토리지에 대한 vSphere CSI만 지원하고 타사 스토리지 오케스트레이터는 지원되지 않습니다.</block>
+  <block id="a3e69dd4d9f892aab0dcbf0a5dd246e2" category="cell">1.4 이상</block>
+  <block id="f78d920d9d248820ddf7a3acdd9a34c0" category="doc">Tanzu가 포함된 VMware vSphere 개요</block>
+  <block id="890263ac9ed806fc2ad4e8ded7b148ce" category="paragraph">vSphere Pod라고도 하는 Tanzu를 지원하는 VMware vSphere를 사용하면 베어 메탈 Kubernetes 환경에서 VMware vSphere 환경의 ESXi 하이퍼바이저 노드를 작업자 노드로 사용할 수 있습니다.</block>
+  <block id="bac31e763c1b2955be0a10de0a4d8012" category="image-alt">Kubernetes를 포함한 VMware vSphere</block>
+  <block id="c2e55cf1007600b25e0708bfe26a41f3" category="paragraph">Tanzu 환경을 사용하는 VMware vSphere는 기본 TKGS 클러스터와 마찬가지로 워크로드 관리 아래에서 사용할 수 있습니다.</block>
+  <block id="6ce239d17953480f1d42476092b07270" category="paragraph">가상화된 Supervisor Cluster는 Kubernetes에 대한 고가용성 제어 플레인을 제공하기 위해 생성되고, 사용자를 위한 리소스 격리를 보장하기 위해 각 애플리케이션에 대한 개별 네임스페이스는 생성됩니다.</block>
+  <block id="9ff6aa8ffa487db2f0aebe3967972d77" category="image-alt">Supervisor Cluster(감독자 클러스터</block>
+  <block id="34c71a47cbfeda14847af84cef64b054" category="paragraph">Tanzu가 설치된 VMware vSphere가 활성화된 경우 각 ESXi 호스트에는 Spherelet 애플리케이션이 설치 및 구성되어 각 노드가 Kubernetes 구축 시 작업자 역할을 하고 각 노드에 구축된 Pod를 관리할 수 있습니다.</block>
+  <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="image-alt">네임스페이스</block>
+  <block id="2524066cdd842f3246c3cc93e6a6a375" category="paragraph">현재 Tanzu 및 vSphere Pod를 사용하는 VMware vSphere는 로컬 vSphere CSI 드라이버만 지원합니다. 이를 위해 관리자는 vSphere Client에서 vSphere 데이터 저장소로 사용할 수 있는 스토리지 타겟을 선택하고 컨테이너화된 애플리케이션에 대한 영구 볼륨을 생성할 때 이러한 스토리지 정책을 사용하도록 합니다.</block>
+  <block id="c3b3ca8068590dc06adb9dc27ac27523" category="admonition">현재 NetApp Astra Trident CSI 드라이버는 외부 ONTAP 및 Element 스토리지 어레이에 직접 연결할 수 있도록 지원하지 않지만, NetApp의 스토리지 시스템은 vSphere 환경의 운영 스토리지를 지원하는 데 사용되는 경우가 많으며 이러한 방식으로 NetApp의 고급 데이터 관리 및 스토리지 효율성 툴을 활용할 수 있습니다.</block>
+  <block id="22e7543595b40ad24276e99cd5b1c198" category="paragraph">Tanzu가 설치된 VMware vSphere에 대한 자세한 내용은 설명서를 참조하십시오 <block ref="0cdaad1423fdb034ad0ee788d57a7a82" category="inline-link-macro-rx"></block>.</block>
+  <block id="516a32af5ad38dd3b9ca9c156da39add" category="inline-link-macro">VMware vSphere 및 Tanzu(vSphere Pod)</block>
+  <block id="a6726486b20bc2510c7d0b189955e69c" category="list-text"><block ref="a6726486b20bc2510c7d0b189955e69c" category="inline-link-macro-rx"></block></block>
+  <block id="9fa345c6a2f967ec80e8b940a9d2a1c3" category="summary">고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용할 수 있다는 것을 알게 되므로 당연히 계속해서 증가하는 데이터를 인덱싱하기를 원합니다. 데이터의 양이 증가할수록 서비스를 제공하는 데 필요한 컴퓨팅 및 스토리지 인프라도 증가합니다.</block>
+  <block id="f9a3e09b74e61e83c0352f2953dcdc87" category="doc">지능형 계층화 및 비용 절감</block>
+  <block id="7bcf31269131a9e7ab4d163f239fc4e5" category="inline-link-macro">이전: 이 솔루션의 이점</block>
+  <block id="b27eab207fc06febce259cb1c08777a3" category="paragraph"><block ref="b27eab207fc06febce259cb1c08777a3" category="inline-link-macro-rx"></block></block>
+  <block id="e09913e41f1a0082ec190482abfeff57" category="paragraph">고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용할 수 있다는 것을 알게 되므로 당연히 계속해서 증가하는 데이터를 인덱싱하기를 원합니다. 데이터의 양이 증가할수록 서비스를 제공하는 데 필요한 컴퓨팅 및 스토리지 인프라도 증가합니다. 오래된 데이터를 자주 참조하지 않기 때문에 동일한 양의 컴퓨팅 리소스를 커밋하고 값비싼 기본 스토리지를 사용하는 것은 점점 비효율적입니다. 고객은 규모에 맞게 운영하는 데 필요한 데이터를 보다 비용 효율적인 계층으로 이동하여 사용 빈도가 높은 데이터를 위한 컴퓨팅과 운영 스토리지를 확보함으로써 이점을 누릴 수 있습니다.</block>
+  <block id="f7300ec91634b8cd535c45fd11ee503f" category="paragraph">StorageGRID를 포함한 Splunk SmartStore는 확장 가능하고 성능 기준에 부합하는 비용 효율적인 솔루션을 제공합니다. SmartStore는 데이터를 인식하기 때문에 데이터 액세스 패턴을 자동으로 평가하여 실시간 분석(핫 데이터)을 위해 액세스해야 하는 데이터와 저렴한 장기 스토리지(웜 데이터)에 상주해야 하는 데이터를 결정합니다. SmartStore는 업계 표준인 AWS S3 API를 동적으로 지능적으로 사용하여 StorageGRID에서 제공하는 S3 스토리지에 데이터를 배치합니다. StorageGRID의 유연한 스케일아웃 아키텍처를 사용하면 웜 데이터 계층을 필요에 따라 비용 효율적으로 확장할 수 있습니다. StorageGRID의 노드 기반 아키텍처는 성능 및 비용 요구사항을 최적의 상태로 충족합니다.</block>
+  <block id="d75fb5ef86bb0625c22c38dd2229c627" category="paragraph">다음 그림은 Splunk 및 StorageGRID 계층화를 보여줍니다.</block>
+  <block id="821f09f0a5870b1dd3ee40e65f17b546" category="paragraph"><block ref="821f09f0a5870b1dd3ee40e65f17b546" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6821c40fa59a17fa0f78dbb9e556be5" category="paragraph">업계 최고 수준의 Splunk SmartStore와 NetApp StorageGRID를 결합하여 전체 스택 솔루션을 통해 분리 아키텍처의 이점을 제공합니다.</block>
+  <block id="32c614a5724d73faf7f06f754330bbac" category="paragraph"><block ref="32c614a5724d73faf7f06f754330bbac" category="inline-link-macro-rx"></block></block>
+  <block id="f362fde28c17f629ded4d965d576f423" category="summary">Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 고객 조직 전반에서 Splunk를 사용할 때 성능이 크게 향상되었습니다. 따라서 더 많은 데이터 소스를 추가해야 할 뿐만 아니라 데이터를 더 오래 보관해야 하므로 Splunk 인프라가 강조됩니다.</block>
+  <block id="3613797d0f4ca076e9cb8ba4c75e87e6" category="inline-link-macro">이전: 단일 사이트 SmartStore 성능.</block>
+  <block id="5fdd4eaa62513aac277472bf713d1bee" category="paragraph"><block ref="5fdd4eaa62513aac277472bf713d1bee" category="inline-link-macro-rx"></block></block>
+  <block id="25c2a1fd1c8874a3e0526920fe7f440d" category="paragraph">Splunk SmartStore와 NetApp StorageGRID의 결합을 통해 조직은 확장 가능한 아키텍처를 제공하여 SmartStore 및 StorageGRID 오브젝트 스토리지를 통해 수집 성능을 높이고 여러 지리적 지역에서 Splunk 환경을 위한 확장성을 향상할 수 있습니다.</block>
+  <block id="fbf1f1e6f0848252d39ef48e7e18146f" category="list-text">NetApp StorageGRID 문서 리소스</block>
+  <block id="68d4d5362a15088f2ac3fa494c971af5" category="inline-link"><block ref="68d4d5362a15088f2ac3fa494c971af5" category="inline-link-rx"></block></block>
+  <block id="580c43c30953ec671dd4a70120e1b513" category="paragraph"><block ref="580c43c30953ec671dd4a70120e1b513" category="inline-link-rx"></block></block>
+  <block id="2e85fc867cab94d246e0bf6043b361cd" category="paragraph"><block ref="2e85fc867cab94d246e0bf6043b361cd" category="inline-link-rx"></block></block>
+  <block id="e145cc414457b4a232fb0b63ce9f44ab" category="list-text">Splunk Enterprise 문서</block>
+  <block id="f710d46c12a05abcfde056d779cb608c" category="inline-link"><block ref="f710d46c12a05abcfde056d779cb608c" category="inline-link-rx"></block></block>
+  <block id="2ab8bf37a62983163c96b3c2f9a275d4" category="paragraph"><block ref="2ab8bf37a62983163c96b3c2f9a275d4" category="inline-link-rx"></block></block>
+  <block id="14c366ebe94ed0bdf5d5eecad5a08411" category="list-text">Splunk Enterprise는 SmartStore를 기반으로 합니다</block>
+  <block id="98bda64923adc1da4a0e009dd52832a4" category="inline-link"><block ref="98bda64923adc1da4a0e009dd52832a4" category="inline-link-rx"></block></block>
+  <block id="86d261d18a8cb6ce8f95f58af41452e5" category="paragraph"><block ref="86d261d18a8cb6ce8f95f58af41452e5" category="inline-link-rx"></block></block>
+  <block id="b437e6537685614b8004334bad18e424" category="list-text">Splunk Enterprise Distributed Deployment Manual을 참조하십시오</block>
+  <block id="048c67f334d3e1bbcb765e563d076b7d" category="inline-link"><block ref="048c67f334d3e1bbcb765e563d076b7d" category="inline-link-rx"></block></block>
+  <block id="0a25fd44eb7af79f8d9bb0e91d7dfec3" category="paragraph"><block ref="0a25fd44eb7af79f8d9bb0e91d7dfec3" category="inline-link-rx"></block></block>
+  <block id="d043516086780b04d9c8b38186019be3" category="list-text">Splunk Enterprise 인덱서 및 인덱서 클러스터 관리</block>
+  <block id="87fbe590fc8f855078f14ba53325eb46" category="inline-link"><block ref="87fbe590fc8f855078f14ba53325eb46" category="inline-link-rx"></block></block>
+  <block id="d0438efbc1a0dbee965023150ccf9334" category="paragraph"><block ref="d0438efbc1a0dbee965023150ccf9334" category="inline-link-rx"></block></block>
+  <block id="e4c2e8edac362acab7123654b9e73432" category="cell">1.0</block>
+  <block id="d1cdbd3c8324f3afbc5b420ce471feff" category="cell">2022년 7월</block>
+  <block id="881214767967db331c99550277ceb793" category="summary">이 페이지에서는 주요 정의, Splunk 분산 구축, Splunk SmartStore, 데이터 흐름, 하드웨어 및 소프트웨어 요구사항, 단일 및 다중 사이트 요구사항 등</block>
+  <block id="1e6ade59f7284c0bca28eaeeeeed0a30" category="doc">Splunk 아키텍처</block>
+  <block id="aa91789a439fe45bd8d608e61ca9da8c" category="inline-link-macro">이전: Splunk SmartStore를 위한 유연한 StorageGRID 기능</block>
+  <block id="263af6ab01a543147e86a15ed7794682" category="paragraph"><block ref="263af6ab01a543147e86a15ed7794682" category="inline-link-macro-rx"></block></block>
+  <block id="a8449bda57f23b9282f766113987bdf2" category="section-title">키 정의</block>
+  <block id="56eee8e9cc278d0a414a6d5697a4675f" category="paragraph">다음 두 표에는 Splunk 구축 시 사용되는 Splunk 및 NetApp 구성요소가 나와 있습니다.</block>
+  <block id="5078bea36734bcaa4a0c1e3a0e6e4606" category="paragraph">이 표에는 분산형 Splunk Enterprise 구성을 위한 Splunk 하드웨어 구성요소가 나와 있습니다.</block>
+  <block id="5e536c35aec296fa99efa02703d1eb07" category="cell">Splunk 구성 요소</block>
+  <block id="84f200201a8fe699d8d701c940bade8e" category="cell">인덱서</block>
+  <block id="a5aa1df4c3c47c407c84c66303cf0ece" category="cell">Splunk Enterprise 데이터를 위한 저장소입니다</block>
+  <block id="872c8a2437dfbfa5be0882eabc86bcd3" category="cell">범용 포워더</block>
+  <block id="66d25b75f626d8f6c535a4b4d25c9906" category="cell">데이터를 수집하여 인덱서에 데이터를 전달하는 역할을 합니다</block>
+  <block id="c91b59f2eae5ebf309d600609f87a36f" category="cell">검색 헤드</block>
+  <block id="5873147385b9bd833ffd9a046374c97b" category="cell">인덱서의 데이터를 검색하는 데 사용되는 사용자 프런트 엔드</block>
+  <block id="a6230a0628a31d41191b4ef7800745ed" category="cell">클러스터 마스터</block>
+  <block id="e4ae9d4eb2313305a17cde160f405a17" category="cell">인덱서와 검색 헤드의 Splunk 설치를 관리합니다</block>
+  <block id="805ac84d9852820feaf2e2b643a07efb" category="cell">모니터링 콘솔</block>
+  <block id="5cf5006c1d7fdc954614a4e4185a2c62" category="cell">전체 구축 환경에서 사용되는 중앙 집중식 모니터링 툴입니다</block>
+  <block id="fdccec582408614d1e2f7428910b1c8f" category="cell">라이선스 마스터</block>
+  <block id="7c3b9b8892864eb6fa5cb2a32b85cc93" category="cell">라이센스 마스터는 Splunk Enterprise 라이센스를 처리합니다</block>
+  <block id="06262b5ad14fe5851defa5b0b70c86c6" category="cell">배포 서버</block>
+  <block id="ebe1fa5d8a359a6db13876ab1142fa50" category="cell">구성을 업데이트하고 애플리케이션을 처리 구성 요소에 배포합니다</block>
+  <block id="4fabea287d13a082b71f046f9d8be91d" category="cell">스토리지 구성 요소</block>
+  <block id="b1edd0b37872fd00feb3bb2738987b41" category="cell">핫 계층 데이터를 관리하는 데 사용되는 All-Flash 스토리지입니다. 로컬 스토리지라고도 합니다.</block>
+  <block id="518d90155e7eb8bf96c6b7852ba519a6" category="cell">계층 데이터를 관리하는 데 사용되는 S3 오브젝트 스토리지 SmartStore에서 핫 계층과 웜 계층 간에 데이터를 이동하는 데 사용됩니다. 원격 스토리지라고도 합니다.</block>
+  <block id="310a27e25811a8eca9b6e5edd921a267" category="paragraph">이 표에는 Splunk 스토리지 아키텍처의 구성요소가 나와 있습니다.</block>
+  <block id="40f14800d20c9cecbec85dbb2cf35592" category="cell">책임 구성 요소</block>
+  <block id="a5847d984bf6ac525e00b95b93be4e94" category="cell">스마트 스토어</block>
+  <block id="6b64d740ca8627e515d54827d95bc7cb" category="cell">인덱서에 로컬 스토리지의 데이터를 오브젝트 스토리지로 계층화할 수 있는 기능을 제공합니다.</block>
+  <block id="2f9304fe9b427489507405bef9a0bb9f" category="cell">더 효율적인 데이터 센터</block>
+  <block id="4194726ee334e1085d93e002837b73f0" category="cell">핫</block>
+  <block id="cc42c7d2fb33f9ccc06f2e23486a9b0e" category="cell">유니버설 포워더(Universal Forwarders)가 새로 작성된 데이터를 배치하는 착륙장. 스토리지는 쓰기 가능하며 데이터는 검색 가능합니다. 이 데이터 계층은 일반적으로 SSD 또는 고속 HDD로 구성됩니다.</block>
+  <block id="f156996831cd546988bf05451ede7b02" category="cell">캐시 관리자</block>
+  <block id="52520fc1f4cef574661d086d8efcb1f8" category="cell">인덱싱된 데이터의 로컬 캐시를 관리하고, 검색 시 원격 스토리지에서 웜 데이터를 가져오고, 캐시에서 가장 자주 사용되지 않는 데이터를 제거됩니다.</block>
+  <block id="18297117d3d251afceed9ecbe797c849" category="cell">따뜻합니다</block>
+  <block id="810be2ef6ffed5e543f948bf5984d544" category="cell">데이터는 버킷에 논리적으로 롤링되며, 핫 계층에서 먼저 웜 계층으로 이름이 변경됩니다. 이 계층 내의 데이터는 보호되며 핫 계층과 마찬가지로 대용량 SSD 또는 HDD로 구성될 수 있습니다. 공통 데이터 보호 솔루션을 사용하면 증분 백업과 전체 백업이 모두 지원됩니다.</block>
+  <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
+  <block id="7cf9c58117f9052c5d5a43b3add7f6a4" category="section-title">Splunk 분산 배포</block>
+  <block id="11c2b5859cb0c1d37b40f8df716542e2" category="paragraph">많은 시스템에서 데이터가 생성되는 대규모 환경을 지원하려면 대용량 데이터를 처리해야 합니다. 많은 사용자가 데이터를 검색해야 하는 경우 Splunk Enterprise 인스턴스를 여러 시스템에 배포하여 배포를 확장할 수 있습니다. 이를 분산 배포라고 합니다.</block>
+  <block id="113f0bd975880424e2c87874233b2afb" category="paragraph">일반적인 분산 구축에서 각 Splunk Enterprise 인스턴스는 특화된 작업을 수행하며 주요 처리 기능에 해당하는 세 가지 처리 계층 중 하나에 상주합니다.</block>
+  <block id="ac31b29e5bbd68654aeb200e66227fb8" category="paragraph">다음 표에는 Splunk Enterprise 처리 계층이 나와 있습니다.</block>
+  <block id="9483f17a69bd0b52dbc44f9106718634" category="cell">계층</block>
+  <block id="7d38267cdf833b2983d3487954ebf88e" category="cell">데이터 입력</block>
+  <block id="2d361d5fe6d74b7550e0aa35d94342ec" category="cell">운송주선인</block>
+  <block id="b2eebf5023a2a2ba3b35711069723656" category="cell">전달자는 데이터를 소비한 다음 데이터를 인덱서 그룹으로 전달합니다.</block>
+  <block id="521d4edc7c22d5f63bc5912ff2afa61a" category="cell">인덱싱</block>
+  <block id="65265b43bef75c5bacc53c21e38eb8fc" category="cell">인덱서는 일반적으로 전달자 그룹에서 받는 들어오는 데이터를 인덱싱합니다. 인덱서를 사용하면 데이터가 이벤트로 변환되고 이벤트가 인덱스에 저장됩니다. 인덱서도 검색 헤드에서 검색 요청에 대한 응답으로 인덱싱된 데이터를 검색합니다.</block>
+  <block id="ff5b0dc94726e93d5db5cf7922183f2b" category="cell">검색 관리</block>
+  <block id="d4c174b1ebc77694020097497547d218" category="cell">검색 헤드는 검색을 위한 중앙 리소스 역할을 합니다. 클러스터의 검색 헤드는 상호 교환이 가능하며 검색 헤드 클러스터의 모든 구성원으로부터 동일한 검색, 대시보드, 지식 개체 등에 액세스할 수 있습니다.</block>
+  <block id="86f51d8f8fa8928e0f6ddba31139676e" category="paragraph">다음 표에는 분산 Splunk Enterprise 환경에서 사용되는 주요 구성요소가 나와 있습니다.</block>
+  <block id="dee8af298acfc4c4bcb9fda657125917" category="cell">책임</block>
+  <block id="3b656ff8459bec2d80d19d367bd71d19" category="cell">인덱스 클러스터 마스터입니다</block>
+  <block id="407a3e34682f31b649e8cbd865fdf50c" category="cell">인덱서 클러스터의 활동 및 업데이트를 조정합니다</block>
+  <block id="dad2f7ca532f008e8192d418406da758" category="cell">인덱스 관리</block>
+  <block id="85ba71585b2b8c323c8eb899fa033227" category="cell">인덱스 클러스터</block>
+  <block id="f13c7b75bef35de7c42cc0569f76e366" category="cell">데이터를 서로 복제하도록 구성된 Splunk Enterprise 인덱서의 그룹입니다</block>
+  <block id="f8b32f50f478eb80dca360b13aa78e92" category="cell">검색 헤드 배포자</block>
+  <block id="9f45bd6fe25c3f5597af0f46bfdb20db" category="cell">클러스터 마스터에 대한 배포 및 업데이트를 처리합니다</block>
+  <block id="bc2eef462c1a0c8b778b607c304ba877" category="cell">검색 헤드 관리</block>
+  <block id="58f4a17edb05ffec840bf2b176bf6eca" category="cell">검색 헤드 클러스터</block>
+  <block id="70f36c7a653c3724df8921edce177b22" category="cell">검색을 위한 중앙 리소스 역할을 하는 검색 헤드 그룹입니다</block>
+  <block id="2ddcaa7e88a6ad9c095422ca4e601d85" category="cell">부하 분산 장치</block>
+  <block id="fe613dab61d63209235cf49513b00d8a" category="cell">클러스터 구성 요소에서 사용되어 클러스터 구성 요소 간에 로드를 분산하기 위해 검색 헤드, 인덱서 및 S3 대상을 통해 증가하는 수요를 처리합니다.</block>
+  <block id="184f98cf6a6dd19d0815179e63be4298" category="cell">클러스터링된 구성 요소에 대한 로드 관리</block>
+  <block id="e32d50596edede1bfe3978d8b7b5c5ac" category="paragraph">Splunk Enterprise 분산 구축의 다음과 같은 이점을 알아보십시오.</block>
+  <block id="9431943c093a5cc181eccd505ca50f4c" category="list-text">다양한 데이터 소스 또는 분산된 데이터 소스에 액세스</block>
+  <block id="e825b2fa62f5af51541982cc503c8825" category="list-text">규모와 복잡성에 관계없이 기업의 데이터 요구사항을 처리할 수 있는 기능을 제공합니다</block>
+  <block id="c63fa16ec4ed3d9b3803c2d1e1548fe6" category="list-text">데이터 복제 및 다중 사이트 구축을 통해 고가용성을 실현하고 재해 복구를 보장합니다</block>
+  <block id="fb289ff7f529e1f2477823c61e7d9c8f" category="section-title">Splunk SmartStore를 참조하십시오</block>
+  <block id="e2475a05ae25f0e8f31932cc309db3f1" category="paragraph">SmartStore는 Amazon S3와 같은 원격 오브젝트 저장소에서 인덱싱된 데이터를 저장할 수 있는 인덱서 기능입니다. 배포의 데이터 볼륨이 증가하면 일반적으로 스토리지 수요가 컴퓨팅 리소스에 대한 수요보다 앞입니다. SmartStore를 사용하면 개별 리소스를 확장하여 인덱서 스토리지를 관리하고 컴퓨팅 리소스를 비용 효율적으로 관리할 수 있습니다.</block>
+  <block id="4b253fe4960ecb87fdd7a6c05a125003" category="paragraph">SmartStore는 원격 스토리지 계층과 캐시 관리자를 도입했습니다. 이러한 기능을 통해 데이터는 인덱서 또는 원격 스토리지 계층에 로컬로 상주할 수 있습니다. 캐시 관리자는 인덱서와 인덱서에 구성된 원격 스토리지 계층 간의 데이터 이동을 관리합니다.</block>
+  <block id="98941a2e255442c92447b445a4a6bc6e" category="paragraph">SmartStore를 사용하면 인덱서 스토리지 공간을 최소한으로 줄이고 I/O에 최적화된 컴퓨팅 리소스를 선택할 수 있습니다. 대부분의 데이터는 원격 스토리지에 있습니다. 인덱서를 사용하면 핫 버킷, 활성 또는 최근 검색에 사용되는 웜 버킷 복제본, 버킷 메타데이터 등 최소한의 데이터가 포함된 로컬 캐시를 유지할 수 있습니다.</block>
+  <block id="2d153b33a50f3343c2aeb68789ee8e26" category="section-title">Splunk SmartStore 데이터 흐름</block>
+  <block id="3306b50d7dd22a0698c2245e7cd06bee" category="paragraph">다양한 소스에서 들어오는 데이터가 인덱서에 도달하면 데이터가 인덱싱되어 핫 버킷에 로컬로 저장됩니다. 인덱서는 또한 핫 버킷 데이터를 타겟 인덱서에 복제합니다. 지금까지 데이터 흐름은 비 SmartStore 인덱스의 데이터 흐름과 동일합니다.</block>
+  <block id="ad1e15c21ba7587e1631977abe48ab09" category="paragraph">핫 버킷이 웜(Warm)으로 롤링되면 데이터 흐름은 분기됩니다. 소스 인덱서를 사용하면 웜 버킷이 원격 객체 저장소(원격 스토리지 계층)에 복제되는 동시에 기존 복제본이 캐시에 남아 있게 됩니다. 이는 검색이 최근에 인덱싱된 데이터에 걸쳐 실행되는 경향이 있기 때문입니다. 그러나 원격 저장소가 여러 로컬 복제본을 유지 관리하지 않고 고가용성을 제공하므로 타겟 인덱서는 복제본을 삭제합니다. 이제 버켓의 마스터 카피가 원격 저장소에 상주합니다.</block>
+  <block id="3d39641a906c56e9e12b0f019f23bc1d" category="paragraph">다음 이미지는 Splunk SmartStore 데이터 흐름을 보여줍니다.</block>
+  <block id="9fb3b10aa394792f93ac799606bd8ed5" category="paragraph"><block ref="9fb3b10aa394792f93ac799606bd8ed5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fa16046e839496393e84b6a20e9604e" category="paragraph">인덱서의 캐시 관리자는 SmartStore 데이터 흐름의 핵심입니다. 검색 요청을 처리하는 데 필요한 경우 원격 저장소에서 버킷 복사본을 가져옵니다. 또한 검색에 참여할 가능성이 시간이 지남에 따라 줄어들기 때문에 캐시에서 버킷 복사본이 오래되거나 적게 검색됩니다.</block>
+  <block id="715f39bb7952ceb84a6bd1bb44c1ac4d" category="paragraph">캐시 관리자의 작업은 사용 가능한 캐시의 사용을 최적화하는 동시에 검색에 필요한 버킷에 즉시 액세스할 수 있도록 하는 것입니다.</block>
+  <block id="4b2ba4c21a026c9139cf1484818f31c0" category="paragraph">아래 표에는 솔루션을 구현하는 데 필요한 소프트웨어 구성요소가 나와 있습니다. 솔루션 구현에 사용되는 소프트웨어 구성요소는 고객 요구사항에 따라 다를 수 있습니다.</block>
+  <block id="aa76f43f5e0552119cc8d5313c67296e" category="cell">제품군</block>
+  <block id="df644ae155e79abf54175bd15d75f363" category="cell">제품 이름</block>
+  <block id="892b5a336dfe285f2d5c04ccd3d6c465" category="cell">제품 버전</block>
+  <block id="1b3e6de2b0fe97c3177ea5a4ad142554" category="cell">StorageGRID 오브젝트 스토리지</block>
+  <block id="36552b079970ffb2dd1314115af76c4b" category="cell">11.6</block>
+  <block id="66985170e641a7e20698bfec3c1d889f" category="cell">CentOS 7.x</block>
+  <block id="5dba46907e72d7502229329d2aafd8a2" category="cell">Splunk Enterprise</block>
+  <block id="9d8d169ace12276d008f0d0b88b61261" category="cell">Splunk Enterprise 및 SmartStore</block>
+  <block id="75809dde56e3fe2c2fb740f1b55807ac" category="cell">8.0.3</block>
+  <block id="3192356dc19e9b4ec43ba340bad657ee" category="section-title">단일 및 다중 사이트 요구 사항</block>
+  <block id="98b8bd4f9670277f1f0e59a574019582" category="paragraph">데이터가 많은 시스템에서 발생하며 많은 사용자가 데이터를 검색해야 하는 엔터프라이즈 Splunk 환경(중간 규모 및 대규모 구축)에서는 단일 및 여러 사이트에 Splunk Enterprise 인스턴스를 배포하여 배포를 확장할 수 있습니다.</block>
+  <block id="22e1b76cf9acbfd35603b013eefcb079" category="paragraph">다음 표에는 분산 Splunk Enterprise 환경에서 사용되는 구성요소가 나와 있습니다.</block>
+  <block id="1fbd0b2f11fe7779db6380b6d09478df" category="cell">서로 데이터를 복제하도록 구성된 Splunk Enterprise 인덱서의 그룹입니다</block>
+  <block id="4e21e57c1860bf98fe3d0af8068f827d" category="cell">부하 분산 장치</block>
+  <block id="03d7fbb295d0abb68bf4d3ce22d6d448" category="cell">클러스터링된 구성 요소에 대한 로드 관리</block>
+  <block id="a0ebc1066e0250b1b42f1a66ae974836" category="paragraph">이 그림은 단일 사이트 분산 배포의 예를 보여 줍니다.</block>
+  <block id="733ecc3327823660187d1d7d76df7079" category="paragraph"><block ref="733ecc3327823660187d1d7d76df7079" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf99a89b389bc74dc1a403695b28d6cd" category="paragraph">이 그림은 다중 사이트 분산 구축의 예를 보여 줍니다.</block>
+  <block id="d10d5e57a05119c14c599013d15d6553" category="paragraph"><block ref="d10d5e57a05119c14c599013d15d6553" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80d955d16c5178cc40e347dfe675a443" category="paragraph">다음 표에는 솔루션을 구현하는 데 필요한 최소 하드웨어 구성 요소 수가 나와 있습니다. 특정 솔루션 구현에 사용되는 하드웨어 구성요소는 고객 요구사항에 따라 다를 수 있습니다.</block>
+  <block id="40b955882ffd3093985177c3721cfed2" category="admonition">단일 사이트 또는 여러 사이트에 Splunk SmartStore 및 StorageGRID를 구축했는지와 관계없이 모든 시스템은 단일 창에서 StorageGRID 그리드 관리자에서 관리됩니다. 자세한 내용은 "Grid Manager를 사용한 간단한 관리" 섹션을 참조하십시오.</block>
+  <block id="1605af3a62fa950fe8374a69086fdc94" category="paragraph">이 표에는 단일 사이트에 사용되는 하드웨어가 나열되어 있습니다.</block>
+  <block id="380dbc8d9d2c8a17f6ebb0b2c62d3e85" category="cell">디스크</block>
+  <block id="b3e1f4c67ee07a73dcdaff1cf34f2640" category="cell">사용 가능한 용량</block>
+  <block id="3b0649c72650c313a357338dcdfb64ec" category="cell">참고</block>
+  <block id="1c594a38f9aafa3a439c25bc55815b40" category="cell">StorageGRID SG1000</block>
+  <block id="b179d20c2d3e6e91708b69931e8fcf32" category="cell">관리 노드 및 로드 밸런서</block>
+  <block id="48f09b085e666c51e35dbe89367de826" category="cell">StorageGRID SG6060</block>
+  <block id="ab570142c34522356bdf33666f6532a3" category="cell">X48, 8TB(NL-SAS HDD)</block>
+  <block id="1792805a48a4da5ef5a78aa014da1f84" category="cell">1PB</block>
+  <block id="ecefe4d01bf4079d1e2833e9a7de2db7" category="cell">원격 스토리지</block>
+  <block id="9327a762e04913fc832ee2b182848716" category="paragraph">이 표에는 사이트별 다중 사이트 구성에 사용되는 하드웨어가 나와 있습니다.</block>
+  <block id="41cac74c281e47bb6feb1ef8db664ce4" category="cell">관리 노드 및 로드 밸런서</block>
+  <block id="aadc7d80b20e9c743c2920297937f9fd" category="section-title">NetApp StorageGRID 로드 밸런서: SG1000</block>
+  <block id="b3f51763a6ba0ae7fe6d83095cb24299" category="paragraph">오브젝트 스토리지에는 클라우드 스토리지 네임스페이스를 제공하는 로드 밸런서가 필요합니다. StorageGRID는 F5 및 Citrix와 같은 주요 공급업체의 타사 로드 밸런싱 장치를 지원하지만 많은 고객이 단순성, 복원력 및 고성능을 위해 엔터프라이즈급 StorageGRID 밸런서를 선택합니다. StorageGRID 로드 밸런서는 VM, 컨테이너 또는 특수 제작된 어플라이언스로 사용할 수 있습니다.</block>
+  <block id="01f9bf7333b91ead20b7d1ac12ba4bca" category="paragraph">StorageGRID SG1000은 S3 데이터 경로 연결을 위한 고가용성(HA) 그룹 및 지능형 로드 밸런싱을 손쉽게 사용합니다. 다른 온프레미스 오브젝트 스토리지 시스템은 맞춤형 로드 밸런서를 제공하지 않습니다.</block>
+  <block id="2f1a2bc20d9d0cddf636827860bdeb21" category="paragraph">SG1000 어플라이언스는 다음과 같은 기능을 제공합니다.</block>
+  <block id="fee5222c1281869dd7c4e3e4b7225065" category="list-text">로드 밸런서와 선택적으로 StorageGRID 시스템에 대한 관리 노드가 작동합니다</block>
+  <block id="7ea5a035cfe0609861da7628e7dedc64" category="list-text">노드 배포 및 구성을 간소화하는 StorageGRID 어플라이언스 설치 프로그램</block>
+  <block id="224d05cfece712836874ae47446c6d1b" category="list-text">S3 엔드포인트 및 SSL의 간편한 구성</block>
+  <block id="59bf11863992b10be7d53c81c21a0220" category="list-text">전용 대역폭(타사 로드 밸런싱 장치를 다른 애플리케이션과 공유하는 대신)</block>
+  <block id="1436fddc15afc971733cc42610be3718" category="list-text">최대 4 x 100Gbps 통합 이더넷 대역폭</block>
+  <block id="4ff66456ad21f2aa88ad918b2a19287d" category="paragraph">다음 이미지는 SG1000 게이트웨이 서비스 어플라이언스를 나타냅니다.</block>
+  <block id="3e44556364ce6907a44a9fb5c09eab69" category="paragraph"><block ref="3e44556364ce6907a44a9fb5c09eab69" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c69ff1785c16ab7db216e04b62e5ef4f" category="section-title">SG6060</block>
+  <block id="40b11d9d6e72b8f3d6f6cd150ea6d5b3" category="paragraph">StorageGRID SG6060 어플라이언스에는 2개의 스토리지 컨트롤러와 60개의 드라이브를 포함하는 컴퓨팅 컨트롤러(SG6060) 및 스토리지 컨트롤러 쉘프(E-Series E2860)가 포함되어 있습니다. 본 제품은 다음과 같은 기능을 제공합니다.</block>
+  <block id="5d61368716b8937ccfa3ae30bdeb3add" category="list-text">단일 네임스페이스에서 최대 400PB까지 확장 가능</block>
+  <block id="b08da7d555d413c82fa9476b78a3d1b4" category="list-text">최대 4배의 25Gbps 애그리게이트 이더넷 대역폭</block>
+  <block id="3b384482ee0276a75964f52aab736cac" category="list-text">노드 배포 및 구성을 간소화하는 StorageGRID 어플라이언스 설치 프로그램이 포함되어 있습니다.</block>
+  <block id="3d6b68fb6989ac04a76612b7d50b5046" category="list-text">각 SG6060 어플라이언스는 총 180개 드라이브에 대해 하나 또는 두 개의 추가 확장 쉘프를 가질 수 있습니다.</block>
+  <block id="470503fbecc72cbe91b61c6e9b999cbe" category="list-text">스토리지 컨트롤러 페일오버를 지원하기 위한 2개의 E-Series E2800 컨트롤러(이중 구성)</block>
+  <block id="920a659800fa3289516e73f0b8d0cd70" category="list-text">60개의 3.5인치 드라이브(SSD 2개, NL-SAS 드라이브 58개)를 보관하는 5개의 드로어 드라이브 쉘프</block>
+  <block id="d60b006794c926c67e95ce7f49fffbed" category="paragraph">다음 이미지는 SG6060 어플라이언스를 나타냅니다.</block>
+  <block id="8d3bb0a39a1d477f7f0b8789769c96c5" category="paragraph"><block ref="8d3bb0a39a1d477f7f0b8789769c96c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad24897680a673883f3a8e9467ea3271" category="section-title">Splunk 설계</block>
+  <block id="c2d7b4acc3efe890969906f2a0be4bea" category="paragraph">다음 표에는 단일 사이트를 위한 Splunk 구성이 나와 있습니다.</block>
+  <block id="95dd022b7af0f9fcfb9ed21236830169" category="cell">코어</block>
+  <block id="5132d0e71971db5ca9827d470220eae9" category="cell">16개 코어</block>
+  <block id="f4e3903ba78addf6fadac4a2d7285203" category="cell">32GB RAM</block>
+  <block id="3988099dd7392a8b60a290ca560ac95d" category="cell">CentOS 8.1</block>
+  <block id="aa7f73db0dcc93a83403f1afb650efdd" category="cell">사용자 데이터를 관리합니다</block>
+  <block id="86e7f660faa5812369ca3195a6ab944a" category="cell">사용자 프런트 엔드에서 인덱서의 데이터를 검색합니다</block>
+  <block id="e14f0b3b9201c717d9cae1db6969fb64" category="cell">검색 헤드 클러스터에 대한 업데이트를 처리합니다</block>
+  <block id="0ac993c5a472613a0cd368ccfefd6009" category="cell">Splunk 설치 및 인덱싱을 관리합니다</block>
+  <block id="a91966f90c29f7d9420d2fd902f4aac2" category="cell">모니터링 콘솔 및 라이센스 마스터</block>
+  <block id="0cb149f6f77c10496cf7645357f9fd17" category="cell">전체 Splunk 구축을 중앙 집중식으로 모니터링하고 Splunk 라이센스를 관리합니다</block>
+  <block id="9bc779a08fe3e6d54c4355c4ee8c4a95" category="paragraph">다음 표에서는 다중 사이트 구성을 위한 Splunk 구성에 대해 설명합니다.</block>
+  <block id="9605b47d211de50422182b81685da619" category="paragraph">이 표에는 다중 사이트 구성(사이트 A)을 위한 Splunk 구성이 나와 있습니다.</block>
+  <block id="d9de1b6846e3235226dba66773043a15" category="cell">데이터를 수집하여 인덱서에 데이터를 전달하는 역할을 합니다.</block>
+  <block id="76132c1712ff61ff02378720304f6529" category="cell">전체 Splunk 구축을 중앙 집중식으로 모니터링하고 Splunk 라이센스를 관리합니다.</block>
+  <block id="2d3db4a7f27e8f892b40be60e8c003b4" category="paragraph">이 표에는 다중 사이트 구성(사이트 B)을 위한 Splunk 구성이 나와 있습니다.</block>
+  <block id="b9006101b0f69e04590f5276d5cab52a" category="inline-link-macro">다음: 단일 사이트 SmartStore 성능.</block>
+  <block id="f7c6952971373a408f0b926fb7202e6f" category="paragraph"><block ref="f7c6952971373a408f0b926fb7202e6f" category="inline-link-macro-rx"></block></block>
+  <block id="722462e25c63551f73985fc89f6a2139" category="summary">이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.</block>
+  <block id="0dd05c4d24d98f033770c01356b3ce26" category="paragraph"><block ref="0dd05c4d24d98f033770c01356b3ce26" category="inline-link-macro-rx"></block></block>
+  <block id="bf89e1232480b95d07f648df24c3695b" category="list-text">* 성능. * Splunk SmartStore와 NetApp StorageGRID를 함께 사용하면 오브젝트 스토리지를 사용하여 핫 버킷과 웜 버킷 간에 데이터를 빠르게 마이그레이션할 수 있습니다. StorageGRID은 대규모 오브젝트 워크로드를 위한 빠른 성능을 제공하여 마이그레이션 프로세스를 강력하게 지원합니다.</block>
+  <block id="e0be1ad556d6601e63eb8f1b6208c55e" category="list-text">* 멀티 사이트 지원 * StorageGRID 분산 아키텍처를 사용하면 Splunk SmartStore에서 단일 글로벌 네임스페이스를 통해 단일 및 여러 사이트에 걸쳐 구축을 확장할 수 있습니다. 단일 글로벌 네임스페이스를 통해 데이터가 어디에 있든 모든 사이트에서 데이터에 액세스할 수 있습니다.</block>
+  <block id="9efd709ebdaac869f02b49e17fe9e92b" category="list-text">* 확장성 향상 * 컴퓨팅 리소스와 별개로 스토리지 리소스를 확장하여 Splunk 환경의 변화하는 요구 사항과 수요를 충족함으로써 TCO를 개선합니다.</block>
+  <block id="52fb1ca9da3811c1cb86cd4347f98a64" category="list-text">* 용량 * 단일 네임스페이스를 560PB 이상으로 확장하여 StorageGRID를 통해 Splunk 구축 시 빠르게 증가하는 볼륨을 충족합니다.</block>
+  <block id="ff501c8a6a8c7b1ee7a3c656b6f4055a" category="list-text">데이터 가용성 * 데이터 가용성, 성능, 지리적 분산, 보존, 보호, 변화하는 데이터의 비즈니스 가치에 맞춰 동적으로 조정할 수 있는 메타데이터 기반 정책을 통해 스토리지 비용을 절감합니다.</block>
+  <block id="bf1b0e32d877d343f0b3bc9ba43cb688" category="inline-link">Splunk에서 제공하는 지침</block>
+  <block id="29c3e2f956fc4b206ef3c7bbbb3730b0" category="paragraph">로컬(핫)과 원격(웜) 스토리지 간의 버킷 복사본 전송을 처리하는 인덱서의 구성 요소인 SmartStore 캐시를 사용하여 성능을 높입니다. 이 솔루션을 위한 Splunk 사이징은 을 기반으로 합니다<block ref="d615ab802f29a9ee4a18e420480d049f" category="inline-link-rx"></block>. 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.</block>
+  <block id="a013f15cce9510e1b717f058d9322b0f" category="inline-link-macro">다음 단계: 지능형 계층화 및 비용 절감.</block>
+  <block id="1dd4851efea44091fc608ccfa49a8da6" category="paragraph"><block ref="1dd4851efea44091fc608ccfa49a8da6" category="inline-link-macro-rx"></block></block>
+  <block id="c7ebb883721f7d9264fd6ef2ae03fc71" category="summary">이 기술 보고서에서는 NetApp이 Splunk SmartStore 솔루션에 제공하는 이점을 간략하게 설명하고, 사용자 환경에서 Splunk SmartStore를 설계 및 사이징하기 위한 프레임워크를 소개합니다. 따라서 탁월한 TCO를 제공하는 단순하고 확장 가능하며 복원력이 뛰어난 솔루션이 탄생했습니다.</block>
+  <block id="766d1a96c4f198ecfe92484b980e9b31" category="doc">TR-4869: Splunk SmartStore를 지원하는 NetApp StorageGRID</block>
+  <block id="2dafc6e921d43527cceb2ba642abf973" category="paragraph">카르티키안 나가링감, 바비 오먼스, 조셉 칸다틸파람빌</block>
+  <block id="648e525fafbee4c7b749ab8740beb0d3" category="paragraph">Splunk Enterprise는 업계 최고의 SIEM(Security Information and Event Management) 솔루션으로 보안, IT 및 DevOps 팀 전체에서 결과를 이끌어낼 수 있습니다. 데이터는 기하급수적으로 계속 증가하기 때문에 이러한 대규모 리소스를 활용할 수 있는 기업에게는 큰 기회가 됩니다. Splunk Enterprise는 광범위한 사용 사례에서 계속해서 채택되고 있습니다. 사용 사례가 증가함에 따라 Splunk Enterprise가 베스트 및 처리하는 데이터의 양도 증가하고 있습니다. Splunk Enterprise의 기존 아키텍처는 분산 스케일아웃 설계로 뛰어난 데이터 액세스 및 가용성을 제공합니다. 하지만 이 아키텍처를 사용하는 기업은 빠르게 증가하는 데이터 볼륨을 충족하기 위해 확장하는 데 따른 비용 증가에 직면해 있습니다.</block>
+  <block id="6a7254f4c4c618a79510973c24f6b258" category="paragraph">NetApp StorageGRID가 포함된 Splunk SmartStore는 컴퓨팅과 스토리지가 분리 가능한 새로운 구축 모델을 제공함으로써 이러한 문제를 해결합니다. 또한, 이 솔루션은 고객이 단일 및 다중 사이트 간에 확장할 수 있도록 지원하는 동시에 컴퓨팅 및 스토리지를 독립적으로 확장하고 비용 효율적인 클라우드 기반 S3 오브젝트 스토리지에 지능형 계층화를 추가하여 비용을 절감하여 Splunk Enterprise 환경에 탁월한 확장성과 탄력성을 제공합니다.</block>
+  <block id="f8ff71716eed4ad221efc3e0d60beaf6" category="paragraph">이 솔루션은 검색 성능을 유지하면서 로컬 스토리지의 데이터 양을 최적화하므로 필요에 따라 컴퓨팅 및 스토리지를 확장할 수 있습니다. SmartStore는 데이터 액세스 패턴을 자동으로 평가하여 실시간 분석을 위해 액세스해야 하는 데이터와 저렴한 S3 오브젝트 스토리지에 상주해야 하는 데이터를 결정합니다.</block>
+  <block id="5c56ae45ba2fb5c42451dffdb2e64b55" category="paragraph">이 기술 보고서에서는 NetApp이 Splunk SmartStore 솔루션에 제공하는 이점을 간략하게 설명하고, 사용자 환경에서 Splunk SmartStore를 설계 및 사이징하기 위한 프레임워크를 소개합니다. 따라서 탁월한 TCO를 제공하는 단순하고 확장 가능하며 복원력이 뛰어난 솔루션이 탄생했습니다. StorageGRID는 확장 가능하고 비용 효율적인 S3 프로토콜/API 기반 오브젝트 스토리지(원격 스토리지라고도 함)를 제공하므로 조직에서는 Splunk 솔루션을 더 낮은 비용으로 확장하는 동시에 복원력을 높일 수 있습니다.</block>
+  <block id="9841b81741e6066deac80b48e24f10fd" category="admonition">Splunk SmartStore는 오브젝트 스토리지를 원격 저장소 또는 원격 스토리지 계층으로 의미합니다.</block>
+  <block id="4c1ead791cca9ec5a7b94356255ce5ef" category="section-title">NetApp StorageGRID 정보</block>
+  <block id="57f13ae6637bd7ac5af4d0b1c4342cf7" category="paragraph">NetApp StorageGRID는 대규모 아카이브, 미디어 저장소 및 웹 데이터 저장소를 위한 소프트웨어 정의 오브젝트 스토리지 솔루션입니다. StorageGRID과 함께 NetApp은 20년 간의 경험을 활용하여 업계 최고의 혁신 및 데이터 관리 솔루션을 제공하면서, 조직이 사내 및 퍼블릭, 프라이빗 또는 하이브리드 클라우드 구현 모두에서 정보의 가치를 관리하고 최대화할 수 있도록 지원합니다.</block>
+  <block id="6281e52aec6aad8556d89bbf44d95436" category="paragraph">StorageGRID는 비정형 데이터를 대규모로 저장할 수 있는 안전하고 내구성 있는 스토리지를 제공합니다. 메타데이터 중심의 통합 라이프사이클 관리 정책은 라이프사이클 전반에서 데이터 위치를 최적화합니다. 콘텐츠가 적절한 위치에 적시에 적절한 스토리지 계층에 배치되어 비용을 절감합니다. 단일 네임스페이스를 사용하면 StorageGRID 스토리지의 지리적 위치에 관계없이 단일 호출을 통해 데이터에 액세스할 수 있습니다. 고객은 데이터 센터와 클라우드 인프라 간에 여러 StorageGRID 인스턴스를 구축하고 관리할 수 있습니다.</block>
+  <block id="d0a72d49cbe69b32b6e889db2e1429c9" category="paragraph">StorageGRID 시스템은 전세계적으로 분산된 중복 노드로 구성되며, 기존 및 차세대 클라이언트 애플리케이션과 모두 통합될 수 있습니다.</block>
+  <block id="5680b078511221b1538af544a52a477e" category="paragraph"><block ref="5680b078511221b1538af544a52a477e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4077a77339f68c64c1e50f20961e468f" category="paragraph">IDC MarketScape가 최근 보고서, IDC MarketScape: Worldwide Object-based Storage 2019 Vendor Assessment 에서 NetApp을 리더로 선정했습니다. 가장 까다로운 업계에서 20년 가까이 운영 및 배포 작업을 진행 중인 StorageGRID는 비정형 데이터 부문에서 인정받는 선두 기업입니다.</block>
+  <block id="a2146cca70b8afc5500f690b84357813" category="paragraph">StorageGRID를 사용하면 다음과 같은 이점을 얻을 수 있습니다.</block>
+  <block id="0d29e2d2977160f50fc59018cd24d6ee" category="list-text">수백 페타바이트로 손쉽게 확장 가능한 단일 네임스페이스를 통해 여러 StorageGRID 인스턴스를 구축하여 데이터 센터와 클라우드 사이의 모든 위치에서 데이터에 액세스합니다.</block>
+  <block id="770d656b5273d26168b61ba6ede38cfd" category="list-text">인프라 전반에서 유연하게 구축하고 중앙 집중식으로 관리</block>
+  <block id="5926e6b363cbfe237a46219c7f92fe02" category="list-text">계층적 EC(삭제 코딩)를 활용하여 내구성이 15%에 달하는 최고 수준의 내구성을 제공합니다.</block>
+  <block id="77a48d0beb74ba75ef47c32ed1115a01" category="list-text">Amazon S3 Glacier 및 Azure Blob에 대한 검증된 통합으로 더 많은 하이브리드 멀티 클라우드 기능을 지원합니다.</block>
+  <block id="ffa0a5ca524779112b69eb9e53aacf31" category="list-text">전용 API 또는 공급업체에 종속되지 않고 조작 방지 데이터 보존을 통해 규정 준수 의무를 충족하고 규정 준수를 촉진합니다.</block>
+  <block id="6e9d67cdb6f2e5564ae28e0389bcc679" category="inline-link">NetApp StorageGRID 홈 페이지</block>
+  <block id="206008935f811359069d9b35cb5c874e" category="paragraph">StorageGRID를 통해 가장 복잡한 비정형 데이터 관리 문제를 해결하는 방법에 대한 자세한 내용은 를 참조하십시오<block ref="56ef38793a035acc851dabaa0c795287" category="inline-link-rx"></block>.</block>
+  <block id="04bfb82e5f80fda36ff56ad540caaa63" category="section-title">Splunk Enterprise 정보</block>
+  <block id="a643f0cfa3f1b40b8f79f3609f0aa84f" category="paragraph">Splunk Enterprise는 데이터를 다른 업무 스토리지로 전환할 수 있는 플랫폼입니다. 로그 파일, 웹 사이트, 장치, 센서, 애플리케이션 등과 같은 다양한 소스에서 생성되는 데이터가 Splunk Indexers에 의해 전송 및 구문 분석되므로 데이터를 통해 풍부한 통찰력을 얻을 수 있습니다. 또한 데이터 유출을 식별하고, 고객 및 제품 동향을 파악하고, 인프라를 최적화할 기회를 찾거나, 다양한 사용 사례에서 실질적인 통찰력을 얻을 수 있습니다.</block>
+  <block id="6118f726dd6c9b9e82e01638e958e5c8" category="section-title">Splunk SmartStore 정보</block>
+  <block id="9ce6098334cce9db7edb3314ee645a2e" category="paragraph">Splunk SmartStore는 Splunk 아키텍처의 이점을 확장하는 동시에 비용 효율적으로 확장할 수 있는 기능을 단순화합니다. 컴퓨팅 리소스와 스토리지 리소스를 분리함으로써 인덱서 노드가 I/O에 최적화되고, 데이터 서브셋만 캐시로 저장되기 때문에 스토리지 요구사항이 크게 줄어듭니다. 이러한 리소스 중 하나만 필요한 경우에는 추가 컴퓨팅 또는 스토리지를 추가할 필요가 없습니다. 따라서 상당한 비용을 절감할 수 있습니다. 또한 비용 효율적이고 확장 가능한 S3 기반 오브젝트 스토리지를 사용하여 환경을 더욱 단순화하고 비용을 절감하며 더 방대한 데이터 세트를 유지할 수 있습니다.</block>
+  <block id="fde880b7e5def5ccc70e3e98ba15b442" category="paragraph">Splunk SmartStore는 다음과 같이 조직에 중요한 가치를 제공합니다.</block>
+  <block id="16fc7d5921f88ca7b8070e1913a6fb74" category="list-text">웜 데이터를 비용 최적화된 S3 오브젝트 스토리지로 이동하여 스토리지 비용 절감</block>
+  <block id="9ce78e75b3ecebf85fe0d43f2cf80505" category="list-text">스토리지와 컴퓨팅을 분리하여 원활한 확장</block>
+  <block id="1dd6f3d1f3ac2a43dc2e69386b1b15ca" category="list-text">복원력을 갖춘 클라우드 네이티브 스토리지를 활용하여 비즈니스 연속성을 단순화합니다</block>
+  <block id="8db09dd9a1d2508a1e11189bfe47d246" category="inline-link-macro">다음: 이 솔루션의 이점</block>
+  <block id="0032cf08702e09af53bf601b3f83e323" category="paragraph"><block ref="0032cf08702e09af53bf601b3f83e323" category="inline-link-macro-rx"></block></block>
+  <block id="95ae2f11a98975eca88411c818226d25" category="paragraph">엔드포인트 구성을 더욱 개선하기 위해 StorageGRID는 관리 노드에 내장된 트래픽 분류 정책을 제공하고, 워크로드 트래픽을 모니터링하고, 워크로드에 다양한 QoS(서비스 품질) 제한을 적용할 수 있도록 지원합니다. 트래픽 분류 정책은 게이트웨이 노드 및 관리 노드에 대한 StorageGRID 부하 분산 서비스의 끝점에 적용됩니다. 이러한 정책은 트래픽 셰이핑 및 모니터링을 지원할 수 있습니다.</block>
+  <block id="7d68f597b217695f6702ae71ae4eb455" category="summary">StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 구축하여 확장하는 데 이르기까지, 환경의 변화에 빠르게 대처해야 하며 Splunk를 중단하지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.</block>
+  <block id="0fc3cf31004e01f169ca3af4ef687576" category="doc">Splunk SmartStore를 위한 유연한 StorageGRID 기능</block>
+  <block id="0a0da304981bebd25b6bd55cb6151bf0" category="paragraph"><block ref="0a0da304981bebd25b6bd55cb6151bf0" category="inline-link-macro-rx"></block></block>
+  <block id="5b552d68210e15d5ed4e4d186264b453" category="paragraph">Grid Manager는 브라우저 기반의 그래픽 인터페이스로, 다음 이미지와 같이 전 세계적으로 분산된 단일 창에서 StorageGRID 시스템을 구성, 관리 및 모니터링할 수 있습니다.</block>
+  <block id="9c4d5c64a1fc501b7fb5d68cb8048ddc" category="paragraph"><block ref="9c4d5c64a1fc501b7fb5d68cb8048ddc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52d198c85ec187eb3bbff17442a01baa" category="paragraph">Grid Manager 인터페이스를 사용하여 다음 작업을 수행합니다.</block>
+  <block id="356e4420bfe7b6226984261d66ec9e0b" category="section-title">Splunk용 NetApp StorageGRID 애플리케이션</block>
+  <block id="d4503ceebebf47c506c3003f760662a2" category="paragraph">Splunk용 NetApp StorageGRID 앱은 Splunk Enterprise용 애플리케이션입니다. 이 앱은 Splunk용 NetApp StorageGRID 애드온과 함께 작동합니다. 이 제품은 StorageGRID 상태, 계정 사용 정보, 보안 감사 세부 정보, 리소스 사용 및 모니터링 등에 대한 가시성을 제공합니다.</block>
+  <block id="c7b8ad57a7270e26eba0ed9da1fa0b6c" category="paragraph">다음 그림은 Splunk용 StorageGRID 앱을 보여줍니다.</block>
+  <block id="7c39625522ddbadc65ea87056e2d32c9" category="paragraph"><block ref="7c39625522ddbadc65ea87056e2d32c9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a7e07b036910adce42ba90efc47f818e" category="section-title">ILM 정책</block>
+  <block id="fce13f2ee25ffdd1859d6a17a94b0e73" category="paragraph">StorageGRID은 오브젝트의 여러 복사본을 유지하고 2+1, 4+2(및 기타 여러 복사본)와 같은 EC(삭제 코딩) 스키마를 사용하여 특정 성능 및 데이터 보호 요구사항에 따라 오브젝트를 저장하는 등의 유연한 데이터 관리 정책을 제공합니다. 시간에 따라 워크로드와 요구사항이 달라지날수록 ILM 정책도 시간에 따라 바뀌어야 합니다. ILM 정책을 수정하는 것은 핵심 기능이므로 StorageGRID 고객은 끊임없이 변화하는 환경에 빠르고 쉽게 적응할 수 있습니다.</block>
+  <block id="3f7d13681fac5c1ca00c53ae2a27efaa" category="paragraph">StorageGRID는 VM이나 SG5712, SG5760, SG6060, SGF6024와 같이 특별히 제작된 어플라이언스, 베어 메탈 또는 특수 용도의 어플라이언스에 사용할 수 있는 노드를 추가하여 성능을 확장합니다. 테스트에서는 SG6060 어플라이언스를 사용하는 최소 크기의 3노드 그리드로 SmartStore의 주요 성능 요구사항을 초과했습니다. 고객이 추가 인덱서로 Splunk 인프라를 확장함에 따라 더 많은 스토리지 노드를 추가하여 성능과 용량을 높일 수 있습니다.</block>
+  <block id="8a0453356d4720c8c5a67e5e2a16b419" category="section-title">로드 밸런서 및 엔드포인트 구성</block>
+  <block id="08de46c3a8d44cfa799d969abfa407eb" category="paragraph">StorageGRID의 관리 노드는 StorageGRID 시스템을 보고, 구성하고, 관리할 수 있는 그리드 관리자 UI(사용자 인터페이스) 및 REST API 엔드포인트와 시스템 작업을 추적할 수 있는 감사 로그를 제공합니다. Splunk SmartStore 원격 스토리지에 가용성이 높은 S3 엔드포인트를 제공하기 위해 StorageGRID 로드 밸런서가 구축되었으며, 이 밸런서는 관리 노드와 게이트웨이 노드에서 서비스로 실행됩니다. 또한 로드 밸런서는 로컬 트래픽을 관리하고 GSLB(Global Server Load Balancing)에 연결하여 재해 복구를 지원합니다.</block>
+  <block id="d2134190f6b031237d4b1523c86c29a2" category="paragraph">엔드포인트 구성을 더욱 개선하기 위해 StorageGRID는 관리 노드에 내장된 트래픽 분류 정책을 제공하고, 워크로드 트래픽을 모니터링하고, 워크로드에 다양한 QoS(서비스 품질) 제한을 적용할 수 있도록 지원합니다. 트래픽 분류 정책은 게이트웨이 노드 및 관리 노드에 대한 StorageGRID 부하 분산 서비스의 끝점에 적용됩니다. 이러한 정책은 트래픽 제한 및 모니터링을 지원할 수 있습니다.</block>
+  <block id="923a187b8784c27278acc68df21738b8" category="inline-link-macro">다음으로, Splunk 아키텍처:</block>
+  <block id="ec27327edf763f5474f1428dfcc067b1" category="paragraph"><block ref="ec27327edf763f5474f1428dfcc067b1" category="inline-link-macro-rx"></block></block>
+  <block id="b27064a5ca31ea524411e6ce281c8f0c" category="paragraph">NetApp은 뛰어난 TCO를 제공하는 동시에 성능과 복원력을 극대화하는 Splunk SmartStore를 위한 간단하고 확장 가능한 솔루션을 지원합니다.</block>
+  <block id="39e4c49e9af8047395aa4031e5c5f3a9" category="summary">이 페이지에서는 NetApp StorageGRID, Splunk Enterprise, Splunk SmartStore를 비롯하여 이 솔루션을 완료하는 데 사용되는 구성요소를 설명합니다.</block>
+  <block id="0f641483b3a1a8cfcb4b0ad971a2d016" category="inline-link-macro">이전: 지능형 계층화 및 비용 절감.</block>
+  <block id="b1320bfc03a3d1edb16e0f717149a713" category="paragraph"><block ref="b1320bfc03a3d1edb16e0f717149a713" category="inline-link-macro-rx"></block></block>
+  <block id="5ab9d0d9b506bd4b5bf294baccd4ef0a" category="paragraph">NetApp StorageGRID는 비용 효율적인 고성능 오브젝트 스토리지 플랫폼입니다. 분산된 노드 기반 그리드 아키텍처를 사용하여 정책 중심의 지능형 글로벌 데이터 관리를 제공합니다. 정교한 데이터 관리 기능과 결합된 유비쿼터스 글로벌 오브젝트 네임스페이스를 통해 페타바이트 단위의 비정형 데이터와 수십억 개의 오브젝트 관리를 간소화합니다. 단일 호출 개체 액세스는 사이트 간에 확장되고 고가용성 아키텍처를 단순화하는 동시에 사이트 또는 인프라 중단과 관계없이 지속적인 개체 액세스를 보장합니다.</block>
+  <block id="d67c579ad5ceca0ec4f8fe6a86f203cf" category="paragraph">멀티 테넌시를 사용하면 여러 클라우드와 엔터프라이즈의 비정형 데이터 애플리케이션을 동일한 그리드 내에서 안전하게 서비스할 수 있으므로 StorageGRID의 ROI 및 사용 사례가 증가합니다. 여러 지역에서 내구성, 보호, 성능, 인접성을 최적화하여 메타데이터 기반 오브젝트 라이프사이클 정책에 따라 여러 서비스 레벨을 생성할 수 있습니다. 사용자는 정책을 조정하고 요구 사항이 변경됨에 따라 데이터 환경을 중단 없이 재조정할 수 있습니다.</block>
+  <block id="0d2b0fb2b312d872db772396e149b541" category="paragraph">SmartStore는 StorageGRID를 원격 스토리지 계층으로 활용하고 고객이 지리적으로 분산된 여러 사이트를 구축하여 단일 오브젝트 네임스페이스로 제공되는 강력한 가용성과 내구성을 확보할 수 있도록 지원합니다. 이를 통해 Splunk SmartStore는 StorageGRID의 고성능, 고밀도 용량을 활용할 수 있으며, 단일 URL을 사용하여 여러 물리적 사이트에서 수백 개의 노드로 확장할 수 있습니다. 또한 단일 URL을 통해 스토리지 확장, 업그레이드 및 수리를 단일 사이트 외부에서도 무중단으로 수행할 수 있습니다. StorageGRID의 고유한 데이터 관리 정책 엔진은 최적의 성능 및 내구성 수준을 제공하며 데이터 지역성 요구사항을 준수합니다.</block>
+  <block id="f9ed96cf2d028d3cfa9c658c6ec5ae72" category="paragraph">Splunk는 머신 생성 데이터의 수집 및 분석을 선도하는 기업으로, 운영 분석 기능을 통해 IT를 간소화 및 현대화하도록 지원합니다. 또한 비즈니스 분석, 보안, IoT 사용 사례로 확장됩니다. 스토리지는 성공적인 Splunk 소프트웨어 구축을 위한 중요한 지원 요소입니다.</block>
+  <block id="1812fb837f2c63812e909b4457b0fa17" category="paragraph">시스템에서 생성되는 데이터는 가장 빠르게 증가하는 빅 데이터 유형입니다. 이 형식은 예측할 수 없으며 많은 소스에서 가져온 것으로, 대개 높은 속도와 큰 볼륨에서 사용됩니다. 이러한 워크로드 특성을 디지털 배기가라고 합니다. Splunk SmartStore를 사용하면 이러한 데이터를 쉽게 파악할 수 있으며 가장 비용 효율적인 스토리지 계층에 핫 데이터와 웜 데이터를 최적의 위치에 배치할 수 있는 스마트 데이터 계층화를 제공합니다.</block>
+  <block id="bd069a1be23f237559be08ae79727806" category="paragraph">Splunk SmartStore는 StorageGRID와 같은 오브젝트 스토리지(원격 스토리지 또는 원격 스토리지 계층이라고도 함)를 사용하여 S3 프로토콜을 사용하여 웜 데이터를 저장하는 인덱서 기능입니다.</block>
+  <block id="9e5e9e455aa469c6579c4cde82cf69fc" category="paragraph">배포의 데이터 볼륨이 증가하면 일반적으로 컴퓨터 리소스에 대한 스토리지 요구가 보다 커집니다. SmartStore를 사용하면 컴퓨팅과 스토리지를 별도로 확장하여 인덱서 스토리지와 컴퓨팅 리소스를 비용 효율적으로 관리할 수 있습니다.</block>
+  <block id="1ab3873a2fa155a27933ac3e2b4ae709" category="paragraph">SmartStore는 S3 프로토콜 및 캐시 관리자를 사용하여 원격 스토리지 계층을 도입했습니다. 이러한 기능을 통해 데이터는 인덱서 또는 원격 스토리지에 로컬로 상주할 수 있습니다. 인덱서에 상주하는 캐시 관리자는 인덱서와 원격 스토리지 계층 간의 데이터 이동을 관리합니다. 버킷 메타데이터와 함께 버킷(핫 및 웜)에 데이터가 저장됩니다.</block>
+  <block id="85a6e51e1b2fd3e4be531f269e108f39" category="paragraph">SmartStore를 사용하면 대부분의 데이터가 원격 스토리지 계층에 상주하므로 인덱서 스토리지 공간을 최소한으로 줄이고 I/O에 최적화된 컴퓨팅 리소스를 선택할 수 있습니다. 인덱서를 사용하면 로컬 캐시가 유지되므로 요청되고 예측된 결과를 반환하는 데 필요한 최소한의 데이터가 표시됩니다. 로컬 캐시에는 핫 버킷, 활성 또는 최근 검색에 사용되는 웜 버킷의 복사본 및 버킷 메타데이터가 포함됩니다.</block>
+  <block id="8cc78103debf2dcfe53620b96565dad4" category="paragraph">고객은 Splunk SmartStore와 StorageGRID를 함께 사용하여 고성능 및 비용 효율적인 원격 스토리지를 통해 환경을 증분 확장하는 동시에 전체 솔루션에 높은 수준의 탄력성을 제공할 수 있습니다. 따라서 고객은 더 많은 인덱서와 데이터 보존 변경, 운영 중단 없이 수집 속도를 향상하든 관계없이 언제든지 특정 시간에 모든 구성요소(핫 스토리지 및/또는 웜 S3 스토리지)를 추가할 수 있습니다.</block>
+  <block id="5cb48860c8dadcd442724a4122e031bd" category="inline-link-macro">그 다음: Splunk SmartStore를 위한 유연한 StorageGRID 기능</block>
+  <block id="9a206b91ebbd6c75f73fba261d1eed1c" category="paragraph"><block ref="9a206b91ebbd6c75f73fba261d1eed1c" category="inline-link-macro-rx"></block></block>
+  <block id="5273463fa2459ed38da1af200de6f150" category="summary">이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. Splunk SmartStore는 성능 검증에서 StorageGRID 오브젝트 스토리지인 원격 스토리지로 웜 데이터를 이동합니다.</block>
+  <block id="b646ed758d0eaa12ba9fab12788f9ad4" category="doc">단일 사이트 SmartStore 성능</block>
+  <block id="47251bcda6f5d3ff81fc5968fa702aad" category="inline-link-macro">이전: Splunk 아키텍처.</block>
+  <block id="10da3263ceac590ab423073945a99eac" category="paragraph"><block ref="10da3263ceac590ab423073945a99eac" category="inline-link-macro-rx"></block></block>
+  <block id="b72db8dc34d5e01f398d66c9de42c11f" category="paragraph">이 섹션에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. Splunk SmartStore는 웜 데이터를 원격 스토리지로 이동합니다. 이 경우 성능 검증을 위한 StorageGRID 오브젝트 스토리지가 사용됩니다.</block>
+  <block id="1d01dcffdd1257afb01e4194d766d2f9" category="paragraph"><block ref="1d01dcffdd1257afb01e4194d766d2f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32b74ac1eb4eb0530a3f976e96e3120d" category="paragraph">NetApp은 핫/캐시 스토리지에 EF600을 사용하고 원격 스토리지에 StorageGRID 6060을 사용했습니다. 성능 검증을 위해 다음 아키텍처를 사용했습니다. 당사는 2개의 검색 헤드, 4개의 무거운 전달자를 사용하여 데이터를 인덱서에 전달했으며, 7개의 Splunk Event Generator(Eventgens)를 사용하여 실시간 데이터를 생성하고 18개의 인덱서(indexers)를 사용하여 데이터를 저장했습니다.</block>
+  <block id="a2fd19ff7e04cf04d5d99320b979cd00" category="paragraph"><block ref="a2fd19ff7e04cf04d5d99320b979cd00" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="45940e86de61b51821b0ec7959b3d551" category="paragraph">이 표에는 SmartStorage 성능 검증에 사용된 하드웨어가 나열되어 있습니다.</block>
+  <block id="2fda610cb12c654fe037d4130498d5ae" category="cell">중량지 전달자</block>
+  <block id="6d53d218eec402993fef5394aef9acdf" category="cell">16개 코어</block>
+  <block id="d3dd61dd737f0e824caf9d717bc1a59d" category="cell">SLED 15 SP2</block>
+  <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
+  <block id="21dd53b3176e5a03137d603514a60ece" category="cell">사용자 프런트 엔드에서 인덱서의 데이터를 검색합니다</block>
+  <block id="c247e74124395bc7279d790ac384786e" category="section-title">SmartStore 원격 저장소 성능 검증</block>
+  <block id="30cf0ca744869370aafb6cfecdd7b4c6" category="paragraph">이 성능 검증에서 10일 동안 모든 인덱서의 로컬 스토리지에 SmartStore 캐시를 구성했습니다. Splunk 클러스터 관리자에서 'axDataSize=auto'(750MB 버킷 크기)를 활성화하고 모든 인덱서에 변경 사항을 푸시했습니다. 업로드 성능을 측정하기 위해 매일 10TB를 10일 동안 수집하여 모든 핫 버킷을 동시에 웜(warm)으로 롤오버한 후 SmartStore 모니터링 콘솔 대시보드에서 인스턴스당 최대 처리량과 평균 처리량을 캡처했습니다.</block>
+  <block id="4fc95542b54fee8da424a2e0ab281aeb" category="paragraph">이 이미지는 하루 만에 수집된 데이터를 보여 줍니다.</block>
+  <block id="c1b0c9568cd6b9bf236fb9566021d8a4" category="paragraph"><block ref="c1b0c9568cd6b9bf236fb9566021d8a4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b72140907b2e824ba4a35a2f01bac4e6" category="paragraph">클러스터 마스터에서 다음 명령을 실행했습니다. 인덱스 이름은 eventgen-test입니다. 그런 다음 SmartStore 모니터링 콘솔 대시보드를 통해 인스턴스당 최대 및 평균 업로드 처리량과 배포 전체를 캡처했습니다.</block>
+  <block id="94a0389fcc3ce42eea7a3f351f5d39b5" category="admonition">클러스터 마스터는 모든 인덱서에 암호 없는 인증을 가집니다(RTP-idx0001… RTP-idx0018).</block>
+  <block id="d27688c7ebc58e3f620120997e317180" category="paragraph">다운로드 성능을 측정하기 위해 다음 명령을 사용하여 evict CLI를 두 번 실행하여 캐시에서 모든 데이터를 퇴거했습니다.</block>
+  <block id="4faf8abcf7e17175784cdc9d58df1608" category="admonition">클러스터 마스터에서 다음 명령을 실행하여 StorageGRID의 원격 스토어에서 10일 이상의 데이터를 검색헤드에서 검색했습니다. 그런 다음 SmartStore 모니터링 콘솔 대시보드를 통해 인스턴스당 최대 및 평균 업로드 처리량 및 전체 배포를 캡처했습니다.</block>
+  <block id="995931f06acb79ea5ac83df17d692a1d" category="paragraph">인덱서 구성이 SmartStore 클러스터 마스터에서 푸시되었습니다. 클러스터 마스터는 인덱서에 대해 다음과 같은 구성을 가지고 있습니다.</block>
+  <block id="514109dd07ed0bb93081e9e36291b879" category="paragraph">성능 매트릭스를 수집하기 위해 검색 헤드에서 다음 검색 쿼리를 실행했습니다.</block>
+  <block id="39b8fe84a2982bcbeb6d733343e0678d" category="paragraph"><block ref="39b8fe84a2982bcbeb6d733343e0678d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67e03c2395d7a876b5160fefc76f9bb9" category="paragraph">클러스터 마스터에서 성능 정보를 수집했습니다. 최고 성능은 61.34GBps였습니다.</block>
+  <block id="0feb590fe449a8a847517a38f1e0415f" category="paragraph"><block ref="0feb590fe449a8a847517a38f1e0415f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2850e7edd48f5666ab4f82242ddb37d2" category="paragraph">평균 성능은 약 29GBps였습니다.</block>
+  <block id="2a1437158884c9696a6d4cac546972b1" category="paragraph"><block ref="2a1437158884c9696a6d4cac546972b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="283456e93c96a11ef44a18693dd6c886" category="section-title">StorageGRID 성능</block>
+  <block id="f5451e9a153b2f625ec0bc944af01be5" category="inline-link">이벤트</block>
+  <block id="764a1901ab00adf1e8e26712bf39c23a" category="paragraph">SmartStore 성능은 대량의 데이터에서 특정 패턴 및 문자열을 검색하는 것을 기반으로 합니다. 이 검증에서 이벤트는 를 사용하여 생성됩니다<block ref="6cec2d19baf7e588a52847e567dab457" category="inline-link-rx"></block> 검색을 통해 특정 Splunk 인덱스(eventgen-test)에서 요청이 대부분의 쿼리에 대한 StorageGRID로 전송됩니다. 다음 이미지는 쿼리 데이터의 적중 횟수와 실패 횟수를 보여 줍니다. 적중 데이터는 로컬 디스크에서 가져온 데이터이고 누락된 데이터는 StorageGRID 컨트롤러에서 가져온 것입니다.</block>
+  <block id="3b8a6855a0eb4beaf2c787f34a2428d7" category="admonition">녹색은 적중 데이터를 표시하고 주황색은 누락된 데이터를 표시합니다.</block>
+  <block id="0bf13ffd9c4e3655384eea9760fdd547" category="paragraph"><block ref="0bf13ffd9c4e3655384eea9760fdd547" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e6fa8244cc2900d6f36b3144c7e748ac" category="paragraph">StorageGRID에서 검색을 위해 쿼리를 실행하면 StorageGRID에서 S3 검색 속도에 대한 시간이 다음 이미지에 표시됩니다.</block>
+  <block id="5e789be14498e5bac09395d944ced093" category="paragraph"><block ref="5e789be14498e5bac09395d944ced093" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5e3fd399eb98a5a8fae1dc144ff614f3" category="section-title">StorageGRID 하드웨어 사용</block>
+  <block id="8e8a6c088425467c00be94a9d15d015b" category="paragraph">StorageGRID 인스턴스에는 로드 밸런서 1개와 StorageGRID 컨트롤러 3개가 있습니다. 3개 컨트롤러 모두의 CPU 활용률은 75%에서 100%입니다.</block>
+  <block id="5c78f5ad926b76e88a749362fb6e3412" category="paragraph"><block ref="5c78f5ad926b76e88a749362fb6e3412" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="140097f96ea2b213b6f37f9d71009a5e" category="section-title">NetApp 스토리지 컨트롤러가 포함된 SmartStore - 고객이 누리는 이점</block>
+  <block id="7f18772207b4ab40d0e7574fc68b95b6" category="list-text">* 컴퓨팅과 스토리지를 분리 * Splunk SmartStore는 컴퓨팅과 스토리지를 분리하여 독립적으로 확장할 수 있도록 지원합니다.</block>
+  <block id="4e1a3208fe0742415bc087d082943293" category="list-text">* 필요 시 데이터. * SmartStore는 필요에 따라 컴퓨팅에 가까운 데이터를 제공하며 컴퓨팅 및 스토리지의 탄력성과 비용 효율성을 통해 규모에 따라 데이터를 더 오래 보존할 수 있도록 지원합니다.</block>
+  <block id="f3295a31a8b7a9b5d76cb1a1e7f67f28" category="list-text">* AWS S3 API 호환 * SmartStore는 AWS S3 API를 사용하여 복원 스토리지와 통신합니다. 이 저장소는 AWS S3 및 StorageGRID와 같은 S3 API 호환 오브젝트 저장소입니다.</block>
+  <block id="4fda7aba03882818928ff7bc3a03f0e5" category="list-text">* 스토리지 요구사항 및 비용 절감 * SmartStore를 사용하면 오래된 데이터의 스토리지 요구사항을 줄일 수 있습니다(웜/콜드). NetApp 스토리지는 데이터 보호 기능을 제공하고 장애 및 고가용성을 지원하기 때문에 단일 데이터 복사본만 필요합니다.</block>
+  <block id="c27703d92f7f2316dfa63670f02dd6b6" category="list-text">* 하드웨어 장애. * SmartStore 배포에서 노드 장애가 발생해도 데이터에 액세스할 수 없으며 하드웨어 장애 또는 데이터 불균형으로 인해 인덱서를 훨씬 더 빠르게 복구할 수 있습니다.</block>
+  <block id="ed20f2e9df3c744293f044d87722ce0f" category="list-text">애플리케이션 및 데이터 인식 캐시:</block>
+  <block id="f57d44dedead861d1eef7e912b9cbd86" category="list-text">추가/제거 인덱서와 설정-분해 클러스터를 필요에 따라 사용할 수 있습니다.</block>
+  <block id="98613866f09e0e2416018bef4be916d3" category="list-text">스토리지 계층이 더 이상 하드웨어에 종속되지 않습니다.</block>
+  <block id="a2a5916477583887c69c752ae6366750" category="paragraph"><block ref="a2a5916477583887c69c752ae6366750" category="inline-link-macro-rx"></block></block>
 </blocks>

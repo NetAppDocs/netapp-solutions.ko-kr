@@ -37,7 +37,11 @@ Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포
 +
 [listing]
 ----
-[netapp-user@rhel7]$ export KUBECONFIG=~/ocp-install/auth/kubeconfig
+<<<<<<< HEAD
+[netapp-user@rhel7]$ export KUBECONFIG=~/tanzu-install/auth/kubeconfig
+=======
+[netapp-user@rhel7]$ export KUBECONFIG=~/Tanzu-install/auth/kubeconfig
+>>>>>>> eba1007b77b1ef6011dadd158f1df991acc5299f
 ----
 . NetApp Astra Trident Helm 저장소를 추가합니다.
 +

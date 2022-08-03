@@ -93,6 +93,16 @@ VMware Tanzu Kubernetes Grid Integrated(TKGI)
 * vSphere CSI 및 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다(일부 조건이 적용됨).
 
 
+vSphere 및 Tanzu(vSphere Pod)
+
+* vSphere 기본 포드는 완벽한 격리를 위해 사전 지정된 가상 하드웨어와 함께 씬 광자 기반 계층에서 실행됩니다.
+* NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 기능을 추가로 지원할 수 있습니다.
+* TKGS와 같은 가상 Supervisor 클러스터를 사용하고 ESXi 노드에서 직접 Pod를 실행하는 vSphere 7.0U1 이상에서 구축 및 관리
+* vSphere 관리자가 vSphere를 완벽하게 통합하고 최고의 가시성과 제어 기능을 제공합니다.
+* 최고 수준의 보안을 위한 격리된 crx 기반 포드.
+* 영구 스토리지에 대한 vSphere CSI만 지원하고 타사 스토리지 오케스트레이터는 지원되지 않습니다.
+
+
 
 
 === NetApp 스토리지 시스템을 나타냅니다
@@ -132,7 +142,7 @@ Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를
 | NetApp Astra Trident | 스토리지 오케스트레이션 | 22.04.0 
 
 
-| VMware Tanzu Kubernetes Grid를 참조하십시오 | 컨테이너 오케스트레이션 | 1.3.1 
+| VMware Tanzu Kubernetes Grid를 참조하십시오 | 컨테이너 오케스트레이션 | 1.4 이상 
 
 
 .2+| VMware Tanzu Kubernetes Grid Service .2+| 컨테이너 오케스트레이션 | 0.0.15 [vSphere 네임스페이스] 
