@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws/aws-guest-dr-solution-overview.html 
+keywords: tr4931, 4931, disaster recovery, vmc, vmware cloud, aws, amazon web services, guest connect 
+summary: '조직에서는 중대한 운영 중단이 발생할 경우 비즈니스 크리티컬 애플리케이션을 신속하게 복구할 수 있도록 검증된 DR(재해 복구) 환경과 계획을 반드시 수립해야 합니다. 이 솔루션은 사내 및 AWS 기반의 VMware Cloud 모두에서 VMware 및 NetApp 기술을 중심으로 DR 사용 사례를 시연하는 데 초점을 맞춥니다.' 
+---
+= TR-4931: Amazon Web Services 및 Guest Connect에서 VMware Cloud를 사용한 재해 복구
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+크리스 리노, 조시 파웰, 수레시 토프티
+
+조직에서는 중대한 운영 중단이 발생할 경우 비즈니스 크리티컬 애플리케이션을 신속하게 복구할 수 있도록 검증된 DR(재해 복구) 환경과 계획을 반드시 수립해야 합니다. 이 솔루션은 사내 및 AWS 기반의 VMware Cloud 모두에서 VMware 및 NetApp 기술을 중심으로 DR 사용 사례를 시연하는 데 초점을 맞춥니다.
+
+NetApp은 오랫동안 VMware와 통합해왔습니다. 수만 명의 고객이 가상화 환경의 스토리지 파트너로 NetApp을 선택했다는 것이 증명되었습니다. 이러한 통합은 클라우드의 게스트 연결 옵션 및 최근 NFS 데이터 저장소와의 통합에서도 계속됩니다. 이 솔루션은 일반적으로 게스트 연결 스토리지라고 하는 사용 사례에 중점을 둡니다.
+
+게스트 연결 스토리지에서 게스트 VMDK는 VMware 프로비저닝된 데이터 저장소에 구축되고 애플리케이션 데이터는 iSCSI 또는 NFS에 보관되며 VM에 직접 매핑됩니다. 다음 그림과 같이 Oracle 및 MS SQL 애플리케이션을 사용하여 DR 시나리오를 보여 줍니다.
+
+image:dr-vmc-aws-image1.png["오류: 그래픽 이미지가 없습니다"]
+
+link:aws-guest-dr-technology.html["다음: 기술."]

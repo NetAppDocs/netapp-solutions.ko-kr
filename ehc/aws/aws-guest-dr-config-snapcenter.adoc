@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws/aws-guest-dr-config-snapcenter.html 
+keywords: Windows SnapCenter Server, storage controllers, hosts, policies, resource groups, 
+summary: 이 솔루션은 NetApp SnapCenter를 사용하여 SQL Server 및 Oracle 데이터베이스의 애플리케이션 정합성이 보장되는 백업을 수행합니다. Veeam Backup & Replication을 사용하여 가상 머신의 VMDK를 백업하면 사내 및 클라우드 기반 데이터 센터를 위한 포괄적인 재해 복구 솔루션을 제공할 수 있습니다. 
+---
+= 온-프레미스에서 Windows SnapCenter 서버를 배포하고 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+link:aws-guest-dr-config-snapmirror.html["이전: SnapMirror 관계 및 보존 일정을 구성합니다."]
+
+
+
+== Windows SnapCenter Server를 사내에 배포합니다
+
+이 솔루션은 NetApp SnapCenter를 사용하여 SQL Server 및 Oracle 데이터베이스의 애플리케이션 정합성이 보장되는 백업을 수행합니다. Veeam Backup & Replication을 사용하여 가상 머신의 VMDK를 백업하면 사내 및 클라우드 기반 데이터 센터를 위한 포괄적인 재해 복구 솔루션을 제공할 수 있습니다.
+
+SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 https://docs.netapp.com/us-en/snapcenter/install/install_workflow.html["NetApp 문서 센터"^].
+
+SnapCenter 소프트웨어는 에서 얻을 수 있습니다 https://mysupport.netapp.com["이 링크"^].
+
+설치가 완료되면 _\https://Virtual_Cluster_IP_or_FQDN:8146_ 를 사용하여 웹 브라우저에서 SnapCenter 콘솔에 액세스할 수 있습니다.
+
+콘솔에 로그인한 후 백업 SQL Server 및 Oracle 데이터베이스에 대해 SnapCenter를 구성해야 합니다. 이렇게 하려면 다음과 같은 높은 수준의 단계를 완료하십시오.
+
+. 애플리케이션 데이터를 호스팅하는 볼륨이 포함된 스토리지 컨트롤러를 추가합니다.
+. SnapCenter를 사용하여 백업할 호스트 시스템을 추가합니다.
+. 백업 매개 변수 및 스케줄을 지정하는 정책을 구성합니다.
+. 백업할 리소스와 백업에 사용되는 정책이 포함된 리소스 그룹을 구성합니다.
+
+
+
+
+== SnapCenter에 스토리지 컨트롤러를 추가합니다
+
+SnapCenter에 스토리지 컨트롤러를 추가하려면 다음 단계를 수행하십시오.
+
+. 왼쪽 메뉴에서 스토리지 시스템 을 선택한 다음 새로 만들기 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.
++
+image:dr-vmc-aws-image18.png["오류: 그래픽 이미지가 없습니다"]
+
+. 스토리지 시스템 추가 대화 상자에서 로컬 온-프레미스 ONTAP 클러스터의 관리 IP 주소와 사용자 이름 및 암호를 추가합니다. 그런 다음 제출 을 클릭하여 스토리지 시스템 검색을 시작합니다.
++
+image:dr-vmc-aws-image19.png["오류: 그래픽 이미지가 없습니다"]
+
+. 이 과정을 반복하여 FSx ONTAP 시스템을 SnapCenter에 추가합니다. 이 경우 Add Storage System 창의 아래쪽에 있는 More Options 를 선택하고 Secondary 의 확인란을 클릭하여 FSx 시스템을 SnapMirror 복사본 또는 기본 백업 스냅샷으로 업데이트된 보조 스토리지 시스템으로 지정합니다.
++
+image:dr-vmc-aws-image20.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+SnapCenter에 스토리지 시스템을 추가하는 방법에 대한 자세한 내용은 에서 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/install/task_add_storage_systems.html["이 링크"^].
+
+
+
+== SnapCenter에 호스트를 추가합니다
+
+다음 단계는 SnapCenter에 호스트 애플리케이션 서버를 추가하는 것입니다. 이 프로세스는 SQL Server와 Oracle에서 모두 비슷합니다.
+
+. 왼쪽 메뉴에서 호스트 를 선택한 다음 추가 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.
+. 호스트 추가 창에서 호스트 유형, 호스트 이름 및 호스트 시스템 자격 증명을 추가합니다. 플러그인 유형을 선택합니다. SQL Server의 경우 Microsoft Windows 및 Microsoft SQL Server 플러그인을 선택합니다.
++
+image:dr-vmc-aws-image21.png["오류: 그래픽 이미지가 없습니다"]
+
+. Oracle의 경우 호스트 추가 대화 상자에서 필수 필드를 입력하고 Oracle Database 플러그인의 확인란을 선택합니다. 그런 다음 제출 을 클릭하여 검색 프로세스를 시작하고 호스트를 SnapCenter에 추가합니다.
++
+image:dr-vmc-aws-image22.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+== SnapCenter 정책을 생성합니다
+
+정책은 백업 작업에 대해 따라야 할 특정 규칙을 설정합니다. 여기에는 백업 일정, 복제 유형 및 SnapCenter에서 트랜잭션 로그 백업 및 잘라내기를 처리하는 방식이 포함되며 이에 국한되지 않습니다.
+
+SnapCenter 웹 클라이언트의 설정 섹션에서 정책에 액세스할 수 있습니다.
+
+image:dr-vmc-aws-image23.png["오류: 그래픽 이미지가 없습니다"]
+
+SQL Server 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
+
+Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_create_backup_policies_for_oracle_database.html["SnapCenter 설명서"^].
+
+* 참고: *
+
+* 정책 생성 마법사를 진행하는 동안 복제 섹션을 특별히 기록해 둡니다. 이 섹션에서는 백업 프로세스 중에 사용할 보조 SnapMirror 복사본의 유형을 설명합니다.
+* “로컬 스냅샷 복사본을 생성한 후 SnapMirror 업데이트” 설정은 동일한 클러스터에 상주하는 두 스토리지 가상 시스템 사이에 SnapMirror 관계가 존재하는 경우 SnapMirror 관계를 업데이트하는 것을 의미합니다.
+* “로컬 스냅샷 복사본을 만든 후 SnapVault 업데이트” 설정은 두 개의 개별 클러스터와 온-프레미스 ONTAP 시스템과 Cloud Volumes ONTAP 또는 FSxN 사이에 존재하는 SnapMirror 관계를 업데이트하는 데 사용됩니다.
+
+
+다음 이미지는 이전 옵션과 백업 정책 마법사에서 이러한 옵션이 표시되는 방식을 보여 줍니다.
+
+image:dr-vmc-aws-image24.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== SnapCenter 리소스 그룹을 생성합니다
+
+리소스 그룹을 사용하면 백업에 포함할 데이터베이스 리소스와 해당 리소스에 대해 수행한 정책을 선택할 수 있습니다.
+
+. 왼쪽 메뉴의 리소스 섹션으로 이동합니다.
+. 창 위쪽에서 작업할 리소스 유형(이 경우 Microsoft SQL Server)을 선택한 다음 새 리소스 그룹을 클릭합니다.
+
+
+image:dr-vmc-aws-image25.png["오류: 그래픽 이미지가 없습니다"]
+
+SnapCenter 설명서는 SQL Server 및 Oracle 데이터베이스 모두에 대한 리소스 그룹을 생성하는 단계별 세부 정보를 제공합니다.
+
+SQL 리소스 백업의 경우 에 따릅니다 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_back_up_sql_resources.html["이 링크"^].
+
+Oracle 리소스 백업에 대해서는 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_back_up_oracle_resources.html["이 링크"^].
+
+link:aws-guest-dr-config-veeam.html["다음으로 Veeam Backup Server를 구축 및 구성합니다."]

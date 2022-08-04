@@ -59,7 +59,7 @@ NetApp 솔루션을 사용하는 VMware Tanzu는 다음과 같은 주요 구성�
 
 VMware Tanzu는 NetApp의 솔루션 엔지니어링 팀이 연구소에서 검증한 다양한 솔루션을 제공합니다. 각 Tanzu 릴리즈는 NetApp 스토리지 포트폴리오와 성공적으로 통합되며, 각 스토리지 포트폴리오는 특정 인프라 요구를 충족하는 데 도움이 됩니다. 다음 글머리 기호 하이라이트는 이 문서에 설명된 Tanzu의 각 버전의 기능과 제공 사항을 설명합니다.
 
-VMware Tanzu Kubernetes Grid(TKG)
+* VMware Tanzu Kubernetes Grid(TKG) *
 
 * VMware vSphere 환경에 구축된 표준 업스트림 Kubernetes 환경
 * 이전 명칭 Essential PKS (Heptio 획득, 2019년 2월).
@@ -71,7 +71,7 @@ VMware Tanzu Kubernetes Grid(TKG)
 * vSphere CSI와 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다.
 
 
-VMware Tanzu Kubernetes Grid Service(TKGS)
+* VMware Tanzu Kubernetes Grid Service(TKGS) *
 
 * VMware vSphere 환경에 구축된 표준 업스트림 Kubernetes 환경
 * 이전 명칭 Essential PKS (Heptio 획득, 2019년 2월).
@@ -83,7 +83,7 @@ VMware Tanzu Kubernetes Grid Service(TKGS)
 * 는 vSphere Pod와 Tanzu를 지원하므로 Pod가 환경의 활성화된 ESXi 호스트에서 직접 실행될 수 있습니다.
 
 
-VMware Tanzu Kubernetes Grid Integrated(TKGI)
+* VMware Tanzu Kubernetes Grid Integrated(TKGI) *
 
 * 이전 명칭 Enterprise PKS(Heptio 획득, 2019년 2월).
 * NSX-T, HA 프록시 또는 AVI를 사용할 수 있습니다. 또한 고유한 로드 밸런서를 제공할 수도 있습니다.
@@ -93,14 +93,14 @@ VMware Tanzu Kubernetes Grid Integrated(TKGI)
 * vSphere CSI 및 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다(일부 조건이 적용됨).
 
 
-vSphere 및 Tanzu(vSphere Pod)
+* vSphere 및 Tanzu(vSphere Pod) *
 
-* vSphere 기본 포드는 완벽한 격리를 위해 사전 지정된 가상 하드웨어와 함께 씬 광자 기반 계층에서 실행됩니다.
-* NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 기능을 추가로 지원할 수 있습니다.
-* TKGS와 같은 가상 Supervisor 클러스터를 사용하고 ESXi 노드에서 직접 Pod를 실행하는 vSphere 7.0U1 이상에서 구축 및 관리
-* vSphere 관리자가 vSphere를 완벽하게 통합하고 최고의 가시성과 제어 기능을 제공합니다.
-* 최고 수준의 보안을 위한 격리된 crx 기반 포드.
-* 영구 스토리지에 대한 vSphere CSI만 지원하고 타사 스토리지 오케스트레이터는 지원되지 않습니다.
+* vSphere 기본 포드는 가상 하드웨어가 규정된 가상 계층으로 구성된 가상 광자 기반 계층에서 실행되어 완벽한 격리를 제공합니다.
+* NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 추가 기능을 지원할 수 있습니다.
+* TKGS와 같은 가상 Supervisor 클러스터를 사용하여 vSphere 7.0U1 이상에서 구축 및 관리 ESXi 노드에서 직접 Pod를 실행합니다.
+* vSphere 관리를 통해 완벽하게 통합된 최고의 가시성과 제어 기능을 제공합니다.
+* 최고 수준의 보안을 제공하는 격리된 crX 기반 포드.
+* 영구 스토리지에 대한 vSphere CSI만 지원합니다. 타사 스토리지 오케스트레이터는 지원되지 않습니다.
 
 
 
@@ -119,7 +119,7 @@ NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 �
 
 자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 
-Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.
+Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다.
 
 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
 

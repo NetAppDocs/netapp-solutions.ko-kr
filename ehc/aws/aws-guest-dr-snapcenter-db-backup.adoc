@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws/aws-guest-dr-snapcenter-db-backup.html 
+keywords: SnapCenter backup, restore process, Swagger, authorization token, NFS, CIFS, file share, XCOPY utility 
+summary: SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다. 
+---
+= 재해 복구를 위한 SnapCenter 데이터베이스 백업
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+link:aws-guest-dr-cloud-backup-config.html["이전: 클라우드 백업 툴 및 구성"]
+
+SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다. 이 단계에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["이 링크"^].
+
+
+
+== SnapCenter 백업 사전 요구 사항
+
+SnapCenter 백업에 필요한 사전 요구 사항은 다음과 같습니다.
+
+* 백업된 데이터베이스 및 구성 파일을 찾기 위해 사내 ONTAP 시스템에서 생성된 볼륨 및 SMB 공유입니다.
+* 사내 ONTAP 시스템과 AWS 계정의 FSx 또는 CVO 간 SnapMirror 관계 이 관계는 백업된 SnapCenter 데이터베이스 및 구성 파일이 포함된 스냅샷을 전송하는 데 사용됩니다.
+* EC2 인스턴스 또는 VMware Cloud SDDC의 VM에 클라우드 계정에 설치된 Windows Server
+* VMware 클라우드의 Windows EC2 인스턴스 또는 VM에 설치된 SnapCenter
+
+
+
+
+== SnapCenter 백업 및 복원 프로세스 요약
+
+* 백업 db 및 config 파일을 호스팅하기 위해 사내 ONTAP 시스템에 볼륨을 생성합니다.
+* 온프레미스와 FSx/CVO 간에 SnapMirror 관계를 설정합니다.
+* SMB 공유를 마운트합니다.
+* API 작업을 수행하기 위한 Swagger 인증 토큰을 검색합니다.
+* DB 복구 프로세스를 시작합니다.
+* xcopy 유틸리티를 사용하여 db 및 config 파일 로컬 디렉토리를 SMB 공유에 복사합니다.
+* FSx에서 ONTAP 볼륨의 클론을 생성합니다(사내에서 SnapMirror를 통해 복사됨).
+* FSx에서 EC2/VMware Cloud로 SMB 공유를 마운트합니다.
+* SMB 공유에서 로컬 디렉토리로 복구 디렉토리를 복사합니다.
+* Swagger에서 SQL Server 복원 프로세스를 실행합니다.
+
+
+
+
+== SnapCenter 데이터베이스 및 구성을 백업합니다
+
+SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["이 링크"^].
+
+
+
+=== Swagger에 로그인하고 인증 토큰을 얻습니다
+
+Swagger 페이지로 이동한 후 인증 토큰을 검색하여 데이터베이스 복원 프로세스를 시작해야 합니다.
+
+. https://<SnapCenter 서버 IP >:8146/swagger/_에서 SnapCenter Swagger API 웹 페이지에 액세스합니다.
++
+image:dr-vmc-aws-image40.png["오류: 그래픽 이미지가 없습니다"]
+
+. 인증 섹션을 확장하고 시험 사용 을 클릭합니다.
++
+image:dr-vmc-aws-image41.png["오류: 그래픽 이미지가 없습니다"]
+
+. UserOperationContext 영역에서 SnapCenter 자격 증명 및 역할을 입력하고 실행 을 클릭합니다.
++
+image:dr-vmc-aws-image42.png["오류: 그래픽 이미지가 없습니다"]
+
+. 아래의 응답 본문에서 토큰을 볼 수 있습니다. 백업 프로세스를 실행할 때 인증을 위해 토큰 텍스트를 복사합니다.
++
+image:dr-vmc-aws-image43.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+=== SnapCenter 데이터베이스 백업을 수행합니다
+
+그런 다음 Swagger 페이지의 Disaster Recovery 영역으로 이동하여 SnapCenter 백업 프로세스를 시작합니다.
+
+. 재해 복구 영역을 클릭하여 확장합니다.
++
+image:dr-vmc-aws-image44.png["오류: 그래픽 이미지가 없습니다"]
+
+. '/4.6/disasterrecovery/server/backup' 섹션을 확장하고 try it을 클릭합니다.
++
+image:dr-vmc-aws-image45.png["오류: 그래픽 이미지가 없습니다"]
+
+. SmDRBackupRequest 섹션에서 올바른 로컬 대상 경로를 추가하고 Execute 를 선택하여 SnapCenter 데이터베이스 및 구성의 백업을 시작합니다.
++
+
+NOTE: 백업 프로세스에서는 NFS 또는 CIFS 파일 공유에 직접 백업할 수 없습니다.
+
++
+image:dr-vmc-aws-image46.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+
+=== SnapCenter에서 백업 작업을 모니터링합니다
+
+데이터베이스 복원 프로세스를 시작할 때 SnapCenter에 로그인하여 로그 파일을 검토합니다. 모니터 섹션에서 SnapCenter 서버 재해 복구 백업의 세부 정보를 볼 수 있습니다.
+
+image:dr-vmc-aws-image47.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+=== XCOPY 유틸리티를 사용하여 SMB 공유에 데이터베이스 백업 파일을 복사합니다
+
+그런 다음 SnapCenter 서버의 로컬 드라이브에서 데이터를 SnapMirror로 복제하는 데 사용되는 CIFS 공유로 AWS의 FSx 인스턴스에 있는 보조 위치로 백업을 이동해야 합니다. 파일 권한을 유지하는 특정 옵션과 함께 xcopy를 사용합니다.
+
+관리자 권한으로 명령 프롬프트를 엽니다. 명령 프롬프트에서 다음 명령을 입력합니다.
+
+....
+xcopy  <Source_Path>  \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K
+xcopy c:\SC_Backups\SnapCenter_DR \\10.61.181.185\snapcenter_dr /O /X /E /H /K
+....
+link:aws-guest-dr-failover.html["다음: 페일오버."]

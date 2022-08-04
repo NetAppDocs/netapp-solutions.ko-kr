@@ -16,7 +16,7 @@ indexpage:
   - title: NetApp의 Red Hat OpenShift
     links:
     - title: 솔루션 개요
-      url: rh-os-n_solutions_overview.html
+      url: rh-os-n_solution_overview.html
     - title: Red Hat OpenShift 개요
       url: rh-os-n_overview_openshift.html
     - title: NetApp 스토리지 통합

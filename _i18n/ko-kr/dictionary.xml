@@ -9,11 +9,9 @@
   <block id="b96941ac46daa357b1782f017746a57b" category="cell">* 변경에 대한 설명 *</block>
   <block id="7d131526ee2a04107bbc50d52a29a7d7" category="cell">2021년 12월 21일</block>
   <block id="0db377921f4ce762c62526131097968f" category="cell">일반</block>
-  <block id="ceba75f5c6f0a0eed497aaa1cc4f30ad" category="cell">가상화 및 엔터프라이즈 하이브리드 클라우드에 대한 콘텐츠를 보다 효율적으로 구성하기 위한 랜딩 페이지를 만들었습니다</block>
   <block id="5382aaf8b3d2fdeb6717f9805b0dd511" category="cell">컨테이너</block>
   <block id="c65463900a520919b522c30b6256e475" category="cell">새로운 비디오 데모 추가: NetApp Astra Control을 활용하여 사후 분석 수행 및 NVA-1160에 애플리케이션 복원</block>
   <block id="f63616bb6a8255ed08089231c746f285" category="cell">2021년 12월 6일</block>
-  <block id="040fc8ca9c1b1eb9d408c7ae5e202acb" category="cell">가상화 환경 및 게스트 연결 스토리지 옵션을 위한 EHC(Enterprise Hybrid Cloud) 컨텐츠 생성</block>
   <block id="16784caec2e047ddf59bd5a51bd35a73" category="cell">2021년 11월 15일</block>
   <block id="1c20ad7a11d1c2856906d55171b50126" category="cell">새 비디오 데모 추가: Astra Control을 사용하여 CI/CD 파이프라인에서 데이터 보호 NVA-1160에 추가</block>
   <block id="b0ac6120dada9135114784db22a59940" category="cell">최신 데이터 분석</block>
@@ -26,7 +24,6 @@
   <block id="4549cdf15178a5f0535be7f0f86cdb4d" category="cell">엔터프라이즈 데이터베이스</block>
   <block id="63c0320f73b5f4e528bbe1488acc5103" category="cell">Oracle 데이터베이스용 자동화된 데이터 보호</block>
   <block id="815425a7766095190649a3f9ecbc1828" category="cell">2021년 10월 26일</block>
-  <block id="7a81532ad3c2274f22bc7665e02f162f" category="cell">NetApp 솔루션 타일에 엔터프라이즈 애플리케이션 및 데이터베이스용 블로그 섹션이 추가되었습니다. 엔터프라이즈 데이터베이스 블로그에 두 개의 블로그를 추가했습니다.</block>
   <block id="8493c4f1797303a6de2524a60adcf058" category="cell">2021년 10월 18일</block>
   <block id="ade15f89ccc27958a743a992cea8c574" category="cell">TR-4908 - SnapCenter를 사용한 하이브리드 클라우드 데이터베이스 솔루션</block>
   <block id="622eda32248f1c4d1fc31dd78ec74c4a" category="cell">2021년 10월 14일</block>
@@ -11562,7 +11559,6 @@
   <block id="e6c9e9316fee7048645938d93d674056" category="list-text"><block ref="e6c9e9316fee7048645938d93d674056" category="inline-link-macro-rx"></block></block>
   <block id="3e78754f8bb90f06073e18a2399d0b7f" category="list-text"><block ref="3e78754f8bb90f06073e18a2399d0b7f" category="inline-link-macro-rx"></block></block>
   <block id="821c35321bcc709868cdd0b7f31165ee" category="cell">2022-04-01/05</block>
-  <block id="8b55e517e14aa53afa343c32eba6bc12" category="cell">엔터프라이즈 하이브리드 클라우드 솔루션의 체계적인 콘텐츠: 각 하이퍼스케일러의 랜딩 페이지 및 사용 가능한 솔루션(사용 사례) 콘텐츠 포함</block>
   <block id="b4ea7c36c784b6da08e2b44d82018c65" category="open-title">AWS/VMC</block>
   <block id="b9b37266c1f6c6a5244f3fef48f644e1" category="list-text">VMware Cloud for AWS 구축 및 구성</block>
   <block id="57669ed11798d25a8216675c3f0f6ecf" category="inline-link-macro">VMC에 대한 구성 단계</block>
@@ -12250,7 +12246,6 @@
   <block id="27077307fac1683851c72a97ba11c62e" category="list-text">TKGS는 vSphere 7.0U1 이상에만 감독자 클러스터 및 워크로드 클러스터와 함께 배포됩니다.</block>
   <block id="3ee27cde76894c76ad60736ecbca78da" category="list-text">TKGS는 애플리케이션/데이터 평면에 대해 MetalLB를 지원합니다.</block>
   <block id="443c9bd7eeb4bc3d39f67cc555b4aab2" category="list-text">는 vSphere Pod와 Tanzu를 지원하므로 Pod가 환경의 활성화된 ESXi 호스트에서 직접 실행될 수 있습니다.</block>
-  <block id="ee195ce9ae2ef58590118a13425fce2a" category="paragraph">VMware Tanzu Kubernetes Grid Integrated(TKGI)</block>
   <block id="f4ef19f9ee886fa602632ef3f35019ad" category="list-text">이전 명칭 Enterprise PKS(Heptio 획득, 2019년 2월).</block>
   <block id="28789df26df63aa440b3aded601e67a6" category="list-text">NSX-T, HA 프록시 또는 AVI를 사용할 수 있습니다. 또한 고유한 로드 밸런서를 제공할 수도 있습니다.</block>
   <block id="2b681f710a75cd56332534e50fe625ff" category="list-text">vSphere 6.7U3 이상, AWS, Azure 및 GCP에서 지원됩니다.</block>
@@ -13450,25 +13445,12 @@
   <block id="b8aef6e50d3ed85ad8f7568c45050629" category="sidebar">워크로드 보호</block>
   <block id="c90d3565dac770d258e528bf1d0f0354" category="sidebar">Jetstream을 통한 재해 복구(기본 데이터 저장소)</block>
   <block id="497820483e8c674ccb7cd2e35d2d61b3" category="sidebar">CVO 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
-  <block id="fdcb85733d1a2ba6bfb7a8ba947efd6d" category="paragraph">vSphere 및 Tanzu(vSphere Pod)</block>
-  <block id="c77e6b248ec0adc44384f6336fa4a966" category="list-text">vSphere 기본 포드는 완벽한 격리를 위해 사전 지정된 가상 하드웨어와 함께 씬 광자 기반 계층에서 실행됩니다.</block>
-  <block id="3dd0287f26179660762f136eacfabb73" category="list-text">NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 기능을 추가로 지원할 수 있습니다.</block>
-  <block id="53f2b5f5c06efa27ad0bcad5156e7170" category="list-text">TKGS와 같은 가상 Supervisor 클러스터를 사용하고 ESXi 노드에서 직접 Pod를 실행하는 vSphere 7.0U1 이상에서 구축 및 관리</block>
-  <block id="bda03c816727fd53e15712cdb73795b2" category="list-text">vSphere 관리자가 vSphere를 완벽하게 통합하고 최고의 가시성과 제어 기능을 제공합니다.</block>
-  <block id="131afa56e2eb221420188e64332a6a7e" category="list-text">최고 수준의 보안을 위한 격리된 crx 기반 포드.</block>
-  <block id="67a05356c1a5b95953959967caf83acc" category="list-text">영구 스토리지에 대한 vSphere CSI만 지원하고 타사 스토리지 오케스트레이터는 지원되지 않습니다.</block>
   <block id="a3e69dd4d9f892aab0dcbf0a5dd246e2" category="cell">1.4 이상</block>
   <block id="f78d920d9d248820ddf7a3acdd9a34c0" category="doc">Tanzu가 포함된 VMware vSphere 개요</block>
-  <block id="890263ac9ed806fc2ad4e8ded7b148ce" category="paragraph">vSphere Pod라고도 하는 Tanzu를 지원하는 VMware vSphere를 사용하면 베어 메탈 Kubernetes 환경에서 VMware vSphere 환경의 ESXi 하이퍼바이저 노드를 작업자 노드로 사용할 수 있습니다.</block>
   <block id="bac31e763c1b2955be0a10de0a4d8012" category="image-alt">Kubernetes를 포함한 VMware vSphere</block>
   <block id="c2e55cf1007600b25e0708bfe26a41f3" category="paragraph">Tanzu 환경을 사용하는 VMware vSphere는 기본 TKGS 클러스터와 마찬가지로 워크로드 관리 아래에서 사용할 수 있습니다.</block>
-  <block id="6ce239d17953480f1d42476092b07270" category="paragraph">가상화된 Supervisor Cluster는 Kubernetes에 대한 고가용성 제어 플레인을 제공하기 위해 생성되고, 사용자를 위한 리소스 격리를 보장하기 위해 각 애플리케이션에 대한 개별 네임스페이스는 생성됩니다.</block>
   <block id="9ff6aa8ffa487db2f0aebe3967972d77" category="image-alt">Supervisor Cluster(감독자 클러스터</block>
-  <block id="34c71a47cbfeda14847af84cef64b054" category="paragraph">Tanzu가 설치된 VMware vSphere가 활성화된 경우 각 ESXi 호스트에는 Spherelet 애플리케이션이 설치 및 구성되어 각 노드가 Kubernetes 구축 시 작업자 역할을 하고 각 노드에 구축된 Pod를 관리할 수 있습니다.</block>
   <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="image-alt">네임스페이스</block>
-  <block id="2524066cdd842f3246c3cc93e6a6a375" category="paragraph">현재 Tanzu 및 vSphere Pod를 사용하는 VMware vSphere는 로컬 vSphere CSI 드라이버만 지원합니다. 이를 위해 관리자는 vSphere Client에서 vSphere 데이터 저장소로 사용할 수 있는 스토리지 타겟을 선택하고 컨테이너화된 애플리케이션에 대한 영구 볼륨을 생성할 때 이러한 스토리지 정책을 사용하도록 합니다.</block>
-  <block id="c3b3ca8068590dc06adb9dc27ac27523" category="admonition">현재 NetApp Astra Trident CSI 드라이버는 외부 ONTAP 및 Element 스토리지 어레이에 직접 연결할 수 있도록 지원하지 않지만, NetApp의 스토리지 시스템은 vSphere 환경의 운영 스토리지를 지원하는 데 사용되는 경우가 많으며 이러한 방식으로 NetApp의 고급 데이터 관리 및 스토리지 효율성 툴을 활용할 수 있습니다.</block>
-  <block id="22e7543595b40ad24276e99cd5b1c198" category="paragraph">Tanzu가 설치된 VMware vSphere에 대한 자세한 내용은 설명서를 참조하십시오 <block ref="0cdaad1423fdb034ad0ee788d57a7a82" category="inline-link-macro-rx"></block>.</block>
   <block id="516a32af5ad38dd3b9ca9c156da39add" category="inline-link-macro">VMware vSphere 및 Tanzu(vSphere Pod)</block>
   <block id="a6726486b20bc2510c7d0b189955e69c" category="list-text"><block ref="a6726486b20bc2510c7d0b189955e69c" category="inline-link-macro-rx"></block></block>
   <block id="9fa345c6a2f967ec80e8b940a9d2a1c3" category="summary">고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용할 수 있다는 것을 알게 되므로 당연히 계속해서 증가하는 데이터를 인덱싱하기를 원합니다. 데이터의 양이 증가할수록 서비스를 제공하는 데 필요한 컴퓨팅 및 스토리지 인프라도 증가합니다.</block>
@@ -13783,4 +13765,828 @@
   <block id="f57d44dedead861d1eef7e912b9cbd86" category="list-text">추가/제거 인덱서와 설정-분해 클러스터를 필요에 따라 사용할 수 있습니다.</block>
   <block id="98613866f09e0e2416018bef4be916d3" category="list-text">스토리지 계층이 더 이상 하드웨어에 종속되지 않습니다.</block>
   <block id="a2a5916477583887c69c752ae6366750" category="paragraph"><block ref="a2a5916477583887c69c752ae6366750" category="inline-link-macro-rx"></block></block>
+  <block id="f0fa38f675f888f14af946299f91a36a" category="summary">VMware vSphere는 데이터 센터와 모든 주요 클라우드 공급업체에 가상화 인프라스트럭처를 제공합니다. 이 에코시스템은 위치에 관계없이 가상화된 컴퓨팅을 일관되게 유지하는 재해 복구 시나리오에 이상적입니다. 이 솔루션은 데이터 센터 위치와 AWS의 VMware 클라우드 모두에서 VMware 가상화 컴퓨팅 리소스를 사용합니다.</block>
+  <block id="8f4f77be3a78158ba041d9ce408b20a8" category="inline-link-macro">이전: 스토리지.</block>
+  <block id="79078ccfbe7b79914950973c8f291f9e" category="paragraph"><block ref="79078ccfbe7b79914950973c8f291f9e" category="inline-link-macro-rx"></block></block>
+  <block id="c0b7ac0f313be4f2bef55fc6cf3a1947" category="paragraph">이 솔루션은 VMware vSphere v7.0U3을 실행하는 HPE ProLiant DL360 Gen 10 서버를 사용합니다. 우리는 6개의 컴퓨팅 인스턴스를 구축하여 SQL Server 및 Oracle 서버에 적절한 리소스를 제공했습니다.</block>
+  <block id="ff1600196b624f9503bddaca0ce10f5d" category="paragraph">SQL Server 2019를 실행하는 10개의 Windows Server 2019 VM을 다양한 데이터베이스 크기로, Oracle 19c를 실행하는 10개의 Oracle Linux 8.5 VM을 다시 구축했습니다.</block>
+  <block id="20f748e1f003c63ad3c63122e1629424" category="paragraph">VMware Cloud on AWS에 SDDC를 구축하고, 두 개의 호스트를 사용하여 운영 사이트에서 복구된 가상 머신을 실행할 수 있는 적절한 리소스를 제공했습니다.</block>
+  <block id="a84e981cfea0f9fca307649d4e7bd364" category="paragraph"><block ref="a84e981cfea0f9fca307649d4e7bd364" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a26850b95a08973f7a45e0c70938ec3" category="inline-link-macro">다음: 클라우드 백업 툴:</block>
+  <block id="a27f0d9efe75d9db50922edd4845db4e" category="paragraph"><block ref="a27f0d9efe75d9db50922edd4845db4e" category="inline-link-macro-rx"></block></block>
+  <block id="6f10db05e58b527be630ad143ec566a5" category="summary">이 문서에 제공된 사용 사례는 NetApp과 VMware의 통합을 강조하는 검증된 재해 복구 기술에 초점을 맞춥니다. NetApp ONTAP 스토리지 시스템은 검증된 데이터 미러링 기술을 제공하므로 조직이 주요 클라우드 공급자와 함께 상주하면서 사내 및 ONTAP 기술을 아우르는 재해 복구 솔루션을 설계할 수 있습니다.</block>
+  <block id="51d4bff01ab321f6f95abb6cea2de283" category="inline-link-macro">이전: 페일백.</block>
+  <block id="21797135ccbd717c2241df602fca161f" category="paragraph"><block ref="21797135ccbd717c2241df602fca161f" category="inline-link-macro-rx"></block></block>
+  <block id="86082b0bfc7279f0a1feebe1de23f618" category="paragraph">AWS 기반 ONTAP용 FSX는 SnapCenter 및 SyncMirror와 원활하게 통합되어 애플리케이션 데이터를 클라우드로 복제할 수 있는 솔루션 중 하나입니다. Veeam 백업 및 복제는 NetApp ONTAP 스토리지 시스템과 긴밀하게 통합되며 vSphere 기본 스토리지에 대한 페일오버를 제공할 수 있는 또 다른 잘 알려진 기술입니다.</block>
+  <block id="81127e42ddbedbb1cad03bf70d694aa9" category="paragraph">이 솔루션은 SQL Server 및 Oracle 애플리케이션 데이터를 호스팅하는 ONTAP 시스템의 게스트 연결 스토리지를 사용하는 재해 복구 솔루션을 제공합니다. SnapCenter with SnapMirror를 사용하면 ONTAP 시스템에서 애플리케이션 볼륨을 보호하고 클라우드에 있는 FSx 또는 CVO로 복제할 수 있는 관리가 쉬운 솔루션을 제공할 수 있습니다. SnapCenter는 모든 애플리케이션 데이터를 AWS의 VMware 클라우드로 페일오버하는 DR 지원 솔루션입니다.</block>
+  <block id="66e5d5ad5173b295e6b59ee5152216d0" category="list-text">솔루션 설명서 링크</block>
+  <block id="4f6300de9742001d9f7a797da5d53a27" category="paragraph"><block ref="4f6300de9742001d9f7a797da5d53a27" category="inline-link-rx"></block></block>
+  <block id="6590e8ec3c5ce0748f55250c70ec048c" category="paragraph"><block ref="6590e8ec3c5ce0748f55250c70ec048c" category="inline-link-rx"></block></block>
+  <block id="5107fa36c5533c3f29e69e61805f36b8" category="summary">ONTAP용 FSx에서 온-프레미스 ONTAP 스토리지 시스템으로 애플리케이션 데이터 볼륨을 미러링하도록 SnapCenter를 구성할 수 있습니다. 마찬가지로, Veeam을 구성하여 스케일아웃 백업 저장소를 사용하여 Amazon S3에 백업 복사본을 복제함으로써 사내 데이터 센터에 상주하는 Veeam 백업 서버에 액세스할 수 있습니다.</block>
+  <block id="13beb2f0eaf69c6f624638d4a20e586a" category="inline-link-macro">이전: Oracle 애플리케이션 데이터를 복구합니다.</block>
+  <block id="65f366124d8619b3b2509389ba11270b" category="paragraph"><block ref="65f366124d8619b3b2509389ba11270b" category="inline-link-macro-rx"></block></block>
+  <block id="314695da56c7e601cdf6cfc3227858d9" category="paragraph">이 솔루션에 설명된 페일오버 프로세스가 성공적으로 완료되면 SnapCenter 및 Veeam이 AWS에서 백업 기능을 재개합니다. 이제 ONTAP용 FSx는 원래 사내 데이터 센터와 SnapMirror 관계가 없는 기본 스토리지로 지정됩니다. 정상적인 기능을 사내에서 다시 시작한 후 이 설명서에 나와 있는 것과 동일한 프로세스를 사용하여 데이터를 사내 ONTAP 스토리지 시스템에 다시 미러링할 수 있습니다.</block>
+  <block id="44ee07074aaf6f8c932889c7158c9906" category="paragraph">또한 이 설명서에 나와 있는 것처럼 SnapCenter를 구성하여 ONTAP용 FSx에서 온프레미스에 있는 ONTAP 스토리지 시스템으로 애플리케이션 데이터 볼륨을 미러링할 수 있습니다. 마찬가지로, Veeam을 구성하여 스케일아웃 백업 저장소를 사용하여 Amazon S3에 백업 복사본을 복제함으로써 사내 데이터 센터에 상주하는 Veeam 백업 서버에 액세스할 수 있습니다.</block>
+  <block id="fd41e9ec1db4527e12ae403974c6c63c" category="paragraph">페일백은 이 문서의 범위를 벗어나지만 장애 복구는 여기에 설명된 세부 프로세스와 거의 차이가 없습니다.</block>
+  <block id="16ff449fdfe0e57af3f3221201f162bf" category="paragraph"><block ref="16ff449fdfe0e57af3f3221201f162bf" category="inline-link-macro-rx"></block></block>
+  <block id="00bc0c8d105da74004eb0e1e838f9a41" category="summary">이 섹션에서는 이 솔루션을 지원하는 다양한 기술적 구성 요소에 대해 간략하게 설명합니다.</block>
+  <block id="17285e5542af444fb3ce7ea9561663f7" category="paragraph"><block ref="17285e5542af444fb3ce7ea9561663f7" category="inline-link-macro-rx"></block></block>
+  <block id="cd39f47230bb959e72acb3eb9e5be469" category="paragraph">이 솔루션에는 NetApp, VMware, AWS(Amazon Web Services), Veeam의 혁신적인 기술이 포함되어 있습니다.</block>
+  <block id="ded9cd19cde727f824d72e3ad8ef7662" category="section-title">VMware 클라우드 기반</block>
+  <block id="66c9de10f8f96cbfebae805c8a5d0c23" category="paragraph">VMware Cloud Foundation 플랫폼은 관리자가 이기종 환경에서 논리적 인프라를 프로비저닝할 수 있도록 여러 제품 오퍼링을 통합합니다. 이러한 인프라(도메인)는 프라이빗 클라우드와 퍼블릭 클라우드 전반에서 일관된 운영을 제공합니다. Cloud Foundation 소프트웨어와 함께 제공되는 BOM은 사전 검증된 구성 요소와 검증된 구성 요소를 식별하여 고객의 위험을 줄이고 구축을 용이하게 합니다.</block>
+  <block id="6fa493c0540d656a06e5bc7de182aa5d" category="paragraph">Cloud Foundation BOM의 구성 요소는 다음과 같습니다.</block>
+  <block id="ea712de8051099e742f7b2832804bbe4" category="list-text">클라우드 빌더</block>
+  <block id="719175eb8771501a012c6d964c29be69" category="list-text">SDDC 관리자</block>
+  <block id="beb9456af324db48fa76084e755d8d0b" category="list-text">VMware vCenter Server 어플라이언스</block>
+  <block id="f7eea647714641318ee86fedbbed4691" category="list-text">VMware ESXi</block>
+  <block id="4ef3d5ade4e00a1767e0cb9da8f6a895" category="list-text">VMware NSX</block>
+  <block id="8b1198108d735d15d15ede582012a434" category="list-text">자동화 표준화</block>
+  <block id="ea7e7011cc6c20fceefe3f63a6f66b73" category="list-text">Suite Lifecycle Manager vRealize</block>
+  <block id="7b0dffec85c977f50577ae9e44323ccc" category="list-text">로그 통찰력 vRealize</block>
+  <block id="9170490ac213e0fff83de34c7e91bcae" category="inline-link">VMware Cloud Foundation 설명서</block>
+  <block id="d48b3b75cdd9d69e243c551b712f75e8" category="paragraph">VMware Cloud Foundation에 대한 자세한 내용은 을 참조하십시오<block ref="c470e518572535c6a48639b6f7d6e5a7" category="inline-link-rx"></block>.</block>
+  <block id="776e392281968fc227c904b7efb2c82d" category="paragraph">VMware vSphere는 물리적 리소스를 고객의 워크로드 및 애플리케이션 요구 사항을 충족하는 데 사용할 수 있는 컴퓨팅, 네트워크 및 스토리지 풀로 전환하는 가상화 플랫폼입니다. VMware vSphere의 주요 구성 요소는 다음과 같습니다.</block>
+  <block id="ef424b79c70de97da1b97dc4f12fadee" category="list-text">* ESXi. * 이 VMware 하이퍼바이저는 컴퓨팅 프로세서, 메모리, 네트워크 및 기타 리소스를 추상화하여 가상 머신 및 컨테이너 워크로드에 사용할 수 있도록 합니다.</block>
+  <block id="b061e8a5ed8a3a3c319736ff70d51a55" category="list-text">* vCenter. * VMware vCenter는 가상 인프라의 일부로 컴퓨팅 리소스, 네트워킹 및 스토리지와 상호 작용할 수 있는 중앙 관리 환경을 제공합니다.</block>
+  <block id="d42d5a3f8818d925febb1ccce5b5ea10" category="paragraph">고객은 NetApp ONTAP와 함께 강력한 제품 통합, 강력한 지원, 강력한 기능 및 스토리지 효율성을 제공하여 강력한 하이브리드 멀티 클라우드를 구축함으로써 vSphere 환경의 잠재력을 완벽하게 실현할 수 있습니다.</block>
+  <block id="841d75538dc45858ed53ac16358cc7ad" category="paragraph">VMware vSphere에 대한 자세한 내용은 을 참조하십시오<block ref="e516b39e5a9a3597e0dc419e086e5395" category="inline-link-rx"></block>.</block>
+  <block id="95d57daea7acbc2a7bbae6ded68ee952" category="paragraph">VMware와 함께 제공되는 NetApp 솔루션에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오<block ref="3137e9e57f0cd434b880b626db7b2f62" category="inline-link-rx"></block>.</block>
+  <block id="3c7164d9420b263a215271d6db617f2b" category="paragraph">일반적으로 네트워크 하이퍼바이저라고 하는 VMware NSX는 소프트웨어 정의 모델을 사용하여 가상화된 워크로드를 연결합니다. VMware NSX는 온프레미스 및 AWS 기반의 VMware Cloud에서 어디에나 존재하며, 이 곳에서 고객 애플리케이션 및 워크로드를 위한 네트워크 가상화 및 보안을 강화합니다.</block>
+  <block id="0b044c7db1e40b4d475fb5b8e225f65e" category="paragraph">VMware NSX에 대한 자세한 내용은 를 참조하십시오<block ref="24474a71eda89537e8233714a7d94cc5" category="inline-link-rx"></block>.</block>
+  <block id="1299e00bdf464c0bee14fc2f6aab0f37" category="paragraph">NetApp ONTAP 소프트웨어는 약 20년 동안 VMware vSphere 환경을 위한 최고의 스토리지 솔루션으로, 혁신적인 기능을 지속적으로 추가하여 관리를 단순화하는 동시에 비용을 절감했습니다. ONTAP와 vSphere를 함께 사용하면 호스트 하드웨어 및 VMware 소프트웨어 비용을 절감할 수 있습니다. 또한 기본 스토리지 효율성을 활용하면서도 일관된 고성능을 통해 저렴한 비용으로 데이터를 보호할 수 있습니다.</block>
+  <block id="00f8f930135e2662dd01e1e4fc65ec48" category="paragraph">NetApp ONTAP에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오<block ref="2fb3b932a008429024fefba27ce7f6c0" category="inline-link-rx"></block>.</block>
+  <block id="cc1cc96c6bd7a597d867c658bca3b7d2" category="section-title">VMware용 NetApp ONTAP 툴</block>
+  <block id="f19b4defe5bd521861bd47f062cab40e" category="paragraph">VMware용 ONTAP 툴은 여러 플러그인을 NetApp 스토리지 시스템을 사용하는 VMware 환경에서 가상 머신의 라이프사이클을 완벽하게 관리하는 단일 가상 어플라이언스에 결합했습니다. VMware용 ONTAP 툴은 다음과 같습니다.</block>
+  <block id="dd167aeb5a59f14930ce90d7b32a1310" category="list-text">* VSC(가상 스토리지 콘솔) * 는 NetApp 스토리지를 사용하여 VM 및 데이터 저장소에 대한 포괄적인 관리 작업을 수행합니다.</block>
+  <block id="caba40f1f4e68f7405c7405bbdf4067a" category="list-text">* ONTAP용 VASA Provider. * VMware 가상 볼륨(VVol) 및 NetApp 스토리지를 통해 SPBM(스토리지 정책 기반 관리)을 지원합니다.</block>
+  <block id="52d97a7fde4d2984a3335c87380d5ab4" category="list-text">* SRA(Storage Replication Adapter) *. VMware SRM(Site Recovery Manager)과 함께 사용할 경우 장애가 발생할 경우 vCenter 데이터 저장소와 가상 머신을 복구합니다.</block>
+  <block id="829e52698f21d046badfc12c5846a723" category="paragraph">VMware용 ONTAP 툴을 사용하면 외부 스토리지를 관리할 뿐만 아니라 VVOL 및 VMware 사이트 복구 관리자도 통합할 수 있습니다. 따라서 vCenter 환경에서 NetApp 스토리지를 훨씬 쉽게 구축하고 운영할 수 있습니다.</block>
+  <block id="88d6ca70545898ecc8709b701555225b" category="paragraph">VMware용 NetApp ONTAP 툴에 대한 자세한 내용은 다음 사이트를 참조하십시오<block ref="c1c4ef8e79ad3b0cab24049eb01885be" category="inline-link-rx"></block>.</block>
+  <block id="805c9517e95d3e9efc4b46738ab825fc" category="section-title">NetApp SnapCenter를 참조하십시오</block>
+  <block id="de29da4940709c9f9b03e3d597dcb7cd" category="paragraph">NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다. SnapCenter는 스토리지 시스템의 활동 감독 및 규제 범주에는 영향을 받지 않으면서 이러한 작업을 애플리케이션 소유자에게 오프로드하여 백업, 복원 및 클론 라이프사이클 관리를 단순화합니다. SnapCenter는 스토리지 기반 데이터 관리를 활용하여 성능 및 가용성을 높이는 동시에 테스트 및 개발 시간을 단축합니다.</block>
+  <block id="a1f54fde77874bbd5be133ca3970d7e8" category="paragraph">VMware vSphere용 SnapCenter 플러그인은 VM(가상 머신), 데이터 저장소 및 VMDK(가상 머신 디스크)에 대해 충돌 시에도 정합성이 보장되고 VM 정합성이 보장되는 백업 및 복원 작업을 지원합니다. 또한 SnapCenter 애플리케이션별 플러그인을 지원하여 가상화된 데이터베이스 및 파일 시스템에 대한 애플리케이션 정합성이 보장되는 백업 및 복구 작업을 보호합니다.</block>
+  <block id="f655858b5e82a216de5b6aea071de457" category="paragraph">NetApp SnapCenter에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오<block ref="aa600981aea381f09908ce10e8269417" category="inline-link-rx"></block>.</block>
+  <block id="98c2040e71eaa6795dfe7287a8c6ad93" category="section-title">타사 데이터 보호</block>
+  <block id="e57a6afe06cc9918c88e10a2227b3330" category="section-title">Veeam 백업 및 복제</block>
+  <block id="a03670ab805efda6af1029d0cc6ed56e" category="paragraph">Veeam Backup &amp; Replication은 클라우드, 가상 및 물리적 워크로드를 위한 백업, 복구 및 데이터 관리 솔루션입니다. Veeam Backup &amp; Replication은 NetApp Snapshot 기술과의 전문적인 통합으로 vSphere 환경을 더욱 보호합니다.</block>
+  <block id="a174e33a347bdf86d254ef6b64ebb844" category="paragraph">Veeam Backup &amp; Replication에 대한 자세한 내용은 을 참조하십시오<block ref="ff5498b1e93a9fbc10c4f9b6c05db801" category="inline-link-rx"></block>.</block>
+  <block id="e1d618f208de1e0652f995ea9ef70c8a" category="section-title">AWS ID 및 액세스 관리</block>
+  <block id="72e3b385ab9dce0490acd4320d69b190" category="paragraph">AWS 환경에는 컴퓨팅, 스토리지, 데이터베이스, 네트워크, 분석, 데이터 관리 등 및 기타 다양한 기능을 통해 비즈니스 과제를 해결할 수 있습니다. 기업은 이러한 제품, 서비스 및 리소스에 액세스할 수 있는 권한이 있는 사용자를 정의할 수 있어야 합니다. 사용자가 설정을 조작, 변경 또는 추가할 수 있는 조건을 결정하는 것도 마찬가지로 중요합니다.</block>
+  <block id="e0371101cd60437f116ae662823d656b" category="paragraph">AWS AIM(Identity and Access Management)은 AWS 서비스 및 제품에 대한 액세스를 관리할 수 있는 안전한 제어 환경을 제공합니다. 적절하게 구성된 사용자, 액세스 키 및 사용 권한을 통해 AWS 및 Amazon FSx에서 VMware Cloud를 구축할 수 있습니다.</block>
+  <block id="f97bd254f4560b300dffc1c8320c079a" category="paragraph">AIM에 대한 자세한 내용은 을 참조하십시오<block ref="51dd129a9a709f0af102f91347214719" category="inline-link-rx"></block>.</block>
+  <block id="f93a7ad035f2ab23b92d7f904c204a67" category="paragraph">VMware Cloud on AWS는 기본 AWS 서비스에 최적화된 액세스를 통해 VMware의 엔터프라이즈급 SDDC 소프트웨어를 AWS 클라우드에 제공합니다. VMware Cloud Foundation을 기반으로 하는 VMware Cloud on AWS는 VMware의 컴퓨팅, 스토리지 및 네트워크 가상화 제품(VMware vSphere, VMware vSAN 및 VMware NSX)과 유연하고 탄력적인 전용 AWS 인프라에서 실행되도록 최적화된 VMware vCenter Server 관리를 통합합니다.</block>
+  <block id="21b9508ecf23f768b8172f58ec935a32" category="paragraph">AWS 기반 VMware Cloud에 대한 자세한 내용은 를 참조하십시오<block ref="2fb3b932a008429024fefba27ce7f6c0" category="inline-link-rx"></block>.</block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="section-title">NetApp ONTAP용 Amazon FSx</block>
+  <block id="5588d719a2e52cc2437eac404a5afac6" category="paragraph">NetApp ONTAP용 Amazon FSx는 모든 기능을 갖추고 있으며 완벽하게 관리되는 ONTAP 시스템으로, 기본 AWS 서비스로 제공됩니다. NetApp ONTAP을 기반으로 구축된 이 제품은 친숙한 기능을 제공하는 동시에 완전 관리형 클라우드 서비스의 단순성을 제공합니다.</block>
+  <block id="4f706209d760c6b9c796b171e747ba84" category="paragraph">ONTAP용 Amazon FSx는 퍼블릭 클라우드 또는 온프레미스의 VMware를 비롯한 다양한 컴퓨팅 유형에 대한 멀티 프로토콜 지원을 제공합니다. 현재 게스트 연결 사용 사례 및 기술 미리 보기의 NFS 데이터 저장소에 사용할 수 있는 Amazon FSx for ONTAP를 사용하면 기업은 사내 환경과 클라우드에서 익숙한 기능을 활용할 수 있습니다.</block>
+  <block id="97461b19a572ee6589bfdc8bb87cf344" category="paragraph">NetApp ONTAP용 Amazon FSx에 대한 자세한 내용은 를 참조하십시오<block ref="8010f27a5d53263c1742228bc262a2e3" category="inline-link-rx"></block>.</block>
+  <block id="0dbffa8c34f4c70ffcf70e7c62e825d2" category="inline-link-macro">다음: 개요 - AWS 게스트 연결 스토리지 재해 복구</block>
+  <block id="ddf6a677331bc11c71c4c650d9714819" category="paragraph"><block ref="ddf6a677331bc11c71c4c650d9714819" category="inline-link-macro-rx"></block></block>
+  <block id="dbb8d0d695451679058a6cf394b8ed8d" category="summary">이 페이지에서는 사내 사이트를 작동 불가능하게 만드는 재해가 발생할 경우 AWS의 VMware Cloud Services에서 SQL Server를 복구하는 방법에 대한 지침을 제공합니다.</block>
+  <block id="b7dd764025f54c4b3bccf4f05424bf77" category="doc">SQL Server 응용 프로그램 데이터를 복원합니다</block>
+  <block id="7bbf9145358179b68dd6b4f9d4160e52" category="inline-link-macro">이전: Veeam 전체 복원으로 애플리케이션 VM을 복구합니다.</block>
+  <block id="30e64e0abb389fe92625d57ee1618730" category="paragraph"><block ref="30e64e0abb389fe92625d57ee1618730" category="inline-link-macro-rx"></block></block>
+  <block id="95f316bb0a092035f960a46cc12705d3" category="paragraph">다음 프로세스에서는 사내 사이트가 작동 불능 상태가 되는 재해가 발생할 경우 AWS의 VMware Cloud Services에서 SQL Server를 복구하는 방법에 대한 지침을 제공합니다.</block>
+  <block id="eb7b93b4aadbfaf4b78c0c4bfe125171" category="paragraph">복구 단계를 계속 진행하려면 다음 필수 구성 요소가 완료된 것으로 가정합니다.</block>
+  <block id="aca50891060f7ebe7be1192b4a8b78ad" category="list-text">Veeam Full Restore를 사용하여 Windows Server VM을 VMware Cloud SDDC로 복구했습니다.</block>
+  <block id="9731e8839876f65368eab4ef1eecdc20" category="inline-link-macro">SnapCenter 백업 및 복원 프로세스 요약</block>
+  <block id="fe51b70218e2191f0338d4bcb01eb4a7" category="list-text">보조 SnapCenter 서버가 설정되었고 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 복원 및 구성이 완료되었습니다 <block ref="f1b6dca3014749c436758b70cc0d8f7f" category="inline-link-macro-rx"></block></block>
+  <block id="742b917c4cb338be151ae4426478443e" category="paragraph">SQL Server 응용 프로그램 데이터 복구 프로세스의 요약은 다음과 같습니다.</block>
+  <block id="a31d188395f20e5b5a14b28baefebe9b" category="list-text">복원 프로세스를 준비하기 위해 VM을 구성합니다.</block>
+  <block id="047402d030346824ce98ac377cb74077" category="list-text">iSCSI 액세스를 위해 FSx를 설정합니다.</block>
+  <block id="d2ae4568d015c4e145ae9e3d6d81aef2" category="list-text">iSCSI 액세스를 위해 Windows VM을 설정합니다.</block>
+  <block id="94548a316bbb8f5ac34675d06c6be03d" category="list-text">SQL Server 데이터베이스를 연결하여 온라인으로 전환합니다.</block>
+  <block id="5da58c16e5aab065a20b34736cc2f092" category="list-text">SnapCenter와 SnapCenter SQL Server 플러그인 간의 통신을 확인합니다.</block>
+  <block id="565a76f57020cb4db728d0a24384a0d9" category="section-title">VM: SQL Server VM에 대한 사후 복원 구성</block>
+  <block id="eface2367b3de31eee3102f62de9295d" category="paragraph">VM 복원이 완료된 후 SnapCenter 내에서 호스트 VM을 재검색할 수 있도록 네트워킹 및 기타 항목을 구성해야 합니다.</block>
+  <block id="0a64ec0b8b14816ed47650a0096fd3b3" category="list-text">관리 및 iSCSI 또는 NFS에 새 IP 주소를 할당합니다.</block>
+  <block id="8ceacb8e6c12d270f190550e317ed5be" category="list-text">Windows 도메인에 호스트를 연결합니다.</block>
+  <block id="612dbb7fb61a87afcf471d797448e487" category="list-text">DNS 또는 SnapCenter 서버의 호스트 파일에 호스트 이름을 추가합니다.</block>
+  <block id="21b91bc158a5a6579966133ece84f927" category="admonition">SnapCenter 플러그인이 현재 도메인과 다른 도메인 자격 증명을 사용하여 배포된 경우 SQL Server VM의 Windows용 플러그인 서비스에 대한 로그온 계정을 변경해야 합니다. 로그온 계정을 변경한 후 SnapCenter SMCore, Windows용 플러그인 및 SQL Server 서비스용 플러그인을 다시 시작합니다.</block>
+  <block id="0634c3a099feec2a74ff9c0751719ed6" category="admonition">SnapCenter에서 복원된 VM을 자동으로 다시 검색하려면 FQDN이 SnapCenter 온-프레미스에 원래 추가된 VM과 동일해야 합니다.</block>
+  <block id="0d4bede73841f93a92c80d25b0194d1e" category="section-title">SQL Server 복구를 위한 FSx 스토리지를 구성합니다</block>
+  <block id="1a87030fb5d5a31f7bcfdfa68ade9691" category="paragraph">SQL Server VM의 재해 복구 복원 프로세스를 수행하려면 FSx 클러스터에서 기존 SnapMirror 관계를 중단하고 볼륨에 대한 액세스를 부여해야 합니다. 이렇게 하려면 다음 단계를 완료하십시오.</block>
+  <block id="4c9e09e4807ffb0a4456b29e6f9a4281" category="list-text">SQL Server 데이터베이스 및 로그 볼륨에 대한 기존 SnapMirror 관계를 해제하려면 FSx CLI에서 다음 명령을 실행합니다.</block>
+  <block id="3d20282913974593577c784c3192e510" category="list-text">SQL Server Windows VM의 iSCSI IQN이 포함된 이니시에이터 그룹을 생성하여 LUN에 대한 액세스 권한 부여:</block>
+  <block id="d287a88d877191e5695e6e46cde801a3" category="list-text">마지막으로 LUN을 방금 생성한 이니시에이터 그룹에 매핑합니다.</block>
+  <block id="e47557c42d0af2df20a15a19f84795ee" category="list-text">경로 이름을 찾으려면 'lun show' 명령을 실행합니다.</block>
+  <block id="c38f08ac05515c2b594fc836b22181e0" category="section-title">iSCSI 액세스를 위해 Windows VM을 설정하고 파일 시스템을 검색합니다</block>
+  <block id="39eb9c3b6c8eb2106dcb06edfdbb6f65" category="list-text">SQL Server VM에서 iSCSI 네트워크 어댑터를 설정하여 FSx 인스턴스의 iSCSI 타겟 인터페이스에 대한 연결로 설정된 VMware 포트 그룹에서 통신합니다.</block>
+  <block id="cf8c6b6b8c54ec784d05b5f092751a4d" category="list-text">iSCSI 초기자 등록 정보 유틸리티를 열고 검색, 즐겨찾기 대상 및 대상 탭에서 이전 연결 설정을 지웁니다.</block>
+  <block id="1a2e1a79fa495e5f511838af9609be4f" category="list-text">FSx 인스턴스/클러스터에서 iSCSI 논리 인터페이스에 액세스하기 위한 IP 주소를 찾습니다. AWS 콘솔의 Amazon FSx &gt; ONTAP &gt; Storage Virtual Machines에서 찾을 수 있습니다.</block>
+  <block id="d9401c99c6ddc6dbcd6070c357088cf5" category="paragraph"><block ref="d9401c99c6ddc6dbcd6070c357088cf5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ba5037ceee608981a7684c3277ceca73" category="list-text">검색 탭에서 포털 검색 을 클릭하고 FSx iSCSI 대상의 IP 주소를 입력합니다.</block>
+  <block id="49ba75dd04ab3da15488d6e271466575" category="paragraph"><block ref="49ba75dd04ab3da15488d6e271466575" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cd6bd08689af39f12a04ce95acbaa7df" category="paragraph"><block ref="cd6bd08689af39f12a04ce95acbaa7df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="193f314b02dfe15e71a9ec5d16f5ce73" category="list-text">대상 탭에서 연결을 클릭하고 구성에 적합한 경우 다중 경로 사용을 선택한 다음 확인을 클릭하여 대상에 연결합니다.</block>
+  <block id="8625607d58104640aa3cc3a687356560" category="paragraph"><block ref="8625607d58104640aa3cc3a687356560" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="907488914aeab882127886e6028b0ea0" category="list-text">컴퓨터 관리 유틸리티를 열고 디스크를 온라인 상태로 전환합니다. 이전에 사용했던 것과 동일한 드라이브 문자가 유지되는지 확인합니다.</block>
+  <block id="885afbf2d17d52ec64abfd147535488e" category="paragraph"><block ref="885afbf2d17d52ec64abfd147535488e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4bc8ec032118740c31355c3345d62bf4" category="section-title">SQL Server 데이터베이스를 연결합니다</block>
+  <block id="7f423619ca14c77f6b9db6f7bda8de76" category="list-text">SQL Server VM에서 Microsoft SQL Server Management Studio를 열고 연결 을 선택하여 데이터베이스에 연결하는 프로세스를 시작합니다.</block>
+  <block id="fd43b9851dc24c4889086cdc9afd2a3a" category="paragraph"><block ref="fd43b9851dc24c4889086cdc9afd2a3a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e8bff2998bccc1ca5a6d707233af02c9" category="list-text">추가 를 클릭하고 SQL Server 기본 데이터베이스 파일이 들어 있는 폴더로 이동한 다음 해당 파일을 선택하고 확인 을 클릭합니다.</block>
+  <block id="f700bbcedcee0092e600d8527c84b19f" category="paragraph"><block ref="f700bbcedcee0092e600d8527c84b19f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a827dff2feb3c6226fcac7b4b80a3cc8" category="list-text">트랜잭션 로그가 별도의 드라이브에 있는 경우 트랜잭션 로그가 포함된 폴더를 선택합니다.</block>
+  <block id="f42947d249de7e97db085085f542e3c4" category="list-text">완료되면 확인 을 클릭하여 데이터베이스를 연결합니다.</block>
+  <block id="74242a349c592d71e13c317715f21c6f" category="paragraph"><block ref="74242a349c592d71e13c317715f21c6f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3f8fd7fd0d8b19f4ee350fa3bfaca1ca" category="section-title">SQL Server 플러그인과 SnapCenter 통신을 확인합니다</block>
+  <block id="b6c6326ece2d2042cc822762ac90932a" category="paragraph">SnapCenter 데이터베이스가 이전 상태로 복원되면 SQL Server 호스트가 자동으로 다시 검색됩니다. 이 작업이 올바르게 작동하려면 다음 필수 조건을 염두에 두십시오.</block>
+  <block id="db44d05563a2083dddeaf5a8c08c36b8" category="list-text">SnapCenter를 재해 복구 모드로 전환해야 합니다. 이 작업은 Swagger API 또는 재해 복구의 글로벌 설정을 통해 수행할 수 있습니다.</block>
+  <block id="f77564f6296c2b86366fa8c55cde3b3d" category="list-text">SQL Server의 FQDN은 온-프레미스 데이터 센터에서 실행 중인 인스턴스와 동일해야 합니다.</block>
+  <block id="7effb9a6b0bfb89f35e1496a0b8ee21c" category="list-text">원래 SnapMirror 관계가 끊어야 합니다.</block>
+  <block id="25c898cf2666acc247fd6eda6262658f" category="list-text">데이터베이스가 포함된 LUN은 SQL Server 인스턴스 및 연결된 데이터베이스에 마운트되어야 합니다.</block>
+  <block id="9c7568e40b946736fc8b8e0b79f35603" category="paragraph">SnapCenter가 재해 복구 모드에 있는지 확인하려면 SnapCenter 웹 클라이언트 내에서 설정 으로 이동합니다. 글로벌 설정 탭으로 이동한 다음 재해 복구 를 클릭합니다. 재해 복구 활성화 확인란이 활성화되어 있는지 확인합니다.</block>
+  <block id="fa26a16fa4868aed3c0c634a2d7a27a5" category="paragraph"><block ref="fa26a16fa4868aed3c0c634a2d7a27a5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac552d8af985ceec32b9e00351fceb21" category="inline-link-macro">다음: Oracle 애플리케이션 데이터를 복구합니다.</block>
+  <block id="2336e82227e4c2c70cba31e9739461f6" category="paragraph"><block ref="2336e82227e4c2c70cba31e9739461f6" category="inline-link-macro-rx"></block></block>
+  <block id="e0f657c81af097a5cedd6eb78794f8c0" category="summary">이 섹션에서는 백업 저장소 생성, S3 오브젝트 스토리지에서 백업 가져오기, Veeam으로 VMware Cloud로 전체 복원을 사용하여 애플리케이션 VM을 복원하는 방법에 대해 설명합니다.</block>
+  <block id="9ba3ddc84b2f59fd2a102309365db81a" category="doc">Veeam 전체 복원으로 애플리케이션 VM을 복원합니다</block>
+  <block id="209909ee59629c28af05841060f40940" category="inline-link-macro">이전: 페일오버.</block>
+  <block id="d432bfe7344eb0aac3d2e907c7f7a015" category="paragraph"><block ref="d432bfe7344eb0aac3d2e907c7f7a015" category="inline-link-macro-rx"></block></block>
+  <block id="36dc3b29e336105b87846d5917f36466" category="section-title">백업 리포지토리를 생성하고 S3에서 백업을 가져옵니다</block>
+  <block id="bfa510d8cc1cb8902740f538c9871cd5" category="paragraph">2차 Veeam 서버에서 S3 스토리지의 백업을 가져오고 SQL Server 및 Oracle VM을 VMware Cloud 클러스터로 복원합니다.</block>
+  <block id="e2f3927605d5be5f9e2924c7578d06ab" category="paragraph">사내 스케일아웃 백업 리포지토리에 속하는 S3 오브젝트에서 백업을 가져오려면 다음 단계를 완료합니다.</block>
+  <block id="04e06ef7f33197a158ddc19d53c0d1a5" category="list-text">백업 리포지토리 로 이동하고 상단 메뉴에서 리포지토리 추가 를 클릭하여 백업 리포지토리 추가 마법사를 시작합니다. 마법사의 첫 번째 페이지에서 백업 저장소 유형으로 오브젝트 스토리지 를 선택합니다.</block>
+  <block id="6206d8a7c31f00a44ec41ebae87e8b6b" category="paragraph"><block ref="6206d8a7c31f00a44ec41ebae87e8b6b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d4fcfafe3d4baedadc9910b99baf527a" category="list-text">오브젝트 스토리지 유형으로 Amazon S3를 선택합니다.</block>
+  <block id="293aed632d96ade5bfef832bcdc2cd1e" category="paragraph"><block ref="293aed632d96ade5bfef832bcdc2cd1e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="698ebee929c01fad4c318876313789ab" category="list-text">Amazon Cloud Storage Services 목록에서 Amazon S3를 선택합니다.</block>
+  <block id="12cfad41ab613d7744d12d07d4a556d4" category="paragraph"><block ref="12cfad41ab613d7744d12d07d4a556d4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2639f2cf7409eb24ed59c46794f26c33" category="list-text">드롭다운 목록에서 미리 입력한 자격 증명을 선택하거나 클라우드 스토리지 리소스에 액세스하기 위한 새 자격 증명을 추가합니다. 다음을 클릭하여 계속합니다.</block>
+  <block id="ca271cf67d4c973e828e31689285727f" category="paragraph"><block ref="ca271cf67d4c973e828e31689285727f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d158a2a4f2b2c9b52c009bfbd87668a" category="list-text">버킷 페이지에서 데이터 센터, 버킷, 폴더 및 원하는 옵션을 입력합니다. 적용 을 클릭합니다.</block>
+  <block id="cf2158b0a3f58d891bcbc6031fde92d4" category="paragraph"><block ref="cf2158b0a3f58d891bcbc6031fde92d4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5adae514074dc7c746819968e035e2a0" category="list-text">마지막으로 마침 을 선택하여 프로세스를 완료하고 리포지토리를 추가합니다.</block>
+  <block id="076951b7756435f95654310ef960f866" category="section-title">S3 오브젝트 스토리지에서 백업을 가져옵니다</block>
+  <block id="397f99a04387aed7bca366a20084083f" category="paragraph">이전 섹션에 추가된 S3 리포지토리에서 백업을 가져오려면 다음 단계를 완료합니다.</block>
+  <block id="6add4097706ff1ee04793b80b99c3980" category="list-text">S3 백업 리포지토리에서 백업 가져오기 를 선택하여 백업 가져오기 마법사를 시작합니다.</block>
+  <block id="d2e0dedfd0a67b45116f5c02f41dfad6" category="paragraph"><block ref="d2e0dedfd0a67b45116f5c02f41dfad6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f08dd57757030d81cfcdd38f9c443e05" category="list-text">가져오기에 대한 데이터베이스 레코드가 생성된 후 요약 화면에서 다음 을 선택한 다음 마침 을 선택하여 가져오기 프로세스를 시작합니다.</block>
+  <block id="dee3665bb9cd000955be1a118818554f" category="paragraph"><block ref="dee3665bb9cd000955be1a118818554f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4afd5477c1ce1473a255dee8ce524184" category="list-text">가져오기가 완료되면 VM을 VMware Cloud 클러스터로 복구할 수 있습니다.</block>
+  <block id="8f2cd7b75623b2421c1eaadd379ca431" category="paragraph"><block ref="8f2cd7b75623b2421c1eaadd379ca431" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="73fee194f5e4e8ac33d750244fe7ebd5" category="section-title">Veeam을 사용하여 애플리케이션 VM을 VMware Cloud로 완벽하게 복구합니다</block>
+  <block id="ec223385ec31537dfd3adc4f3f97735d" category="paragraph">SQL 및 Oracle 가상 머신을 AWS 워크로드 도메인/클러스터의 VMware Cloud로 복구하려면 다음 단계를 수행하십시오.</block>
+  <block id="9085bbecf522e8f0cf0f7d5480dd7cd9" category="list-text">Veeam Home 페이지에서 가져온 백업이 포함된 객체 스토리지를 선택하고 복구할 VM을 선택한 다음 마우스 오른쪽 버튼을 클릭하고 Restore Entire VM을 선택합니다.</block>
+  <block id="5320e29249c22b00240fc3df301d60a6" category="paragraph"><block ref="5320e29249c22b00240fc3df301d60a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d53e507da99665f0cd76090f0c8b932" category="list-text">전체 VM 복원 마법사의 첫 페이지에서 원하는 경우 백업할 VM을 수정하고 다음을 선택합니다.</block>
+  <block id="118ea730c6c794b12c6da0062216053b" category="paragraph"><block ref="118ea730c6c794b12c6da0062216053b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="93e4b62efeb3d091b37047e066e45da4" category="list-text">복원 모드 페이지에서 새 위치로 복원 또는 다른 설정으로 복원 을 선택합니다.</block>
+  <block id="53ddd9505ead460715da91ab5ae479ae" category="paragraph"><block ref="53ddd9505ead460715da91ab5ae479ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="faca70e3cfbddf72933acf5dcbedf4ff" category="list-text">호스트 페이지에서 VM을 복구할 타겟 ESXi 호스트 또는 클러스터를 선택합니다.</block>
+  <block id="5c468616bb48a8d3a72e2b3f20932126" category="paragraph"><block ref="5c468616bb48a8d3a72e2b3f20932126" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1ee5d8dddaf8720bc49f23dc8e19f11b" category="list-text">Datastores 페이지에서 구성 파일과 하드 디스크 모두에 대한 타겟 데이터 저장소 위치를 선택합니다.</block>
+  <block id="ae5ebb3a87f25b2bf09c963a4029e53a" category="paragraph"><block ref="ae5ebb3a87f25b2bf09c963a4029e53a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="48d9c25678124f335015d969c2c7645f" category="list-text">네트워크 페이지에서 VM의 원래 네트워크를 새 대상 위치의 네트워크에 매핑합니다.</block>
+  <block id="b33233fb74ffe76bde21729b21fde02d" category="paragraph"><block ref="b33233fb74ffe76bde21729b21fde02d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b3d7fc3c9f85e5663d3361a9e999487c" category="paragraph"><block ref="b3d7fc3c9f85e5663d3361a9e999487c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="511bf18240f9f57b5658a22974a640f0" category="list-text">복원된 VM에서 맬웨어를 검사할지 여부를 선택하고 요약 페이지를 검토한 다음 마침 을 클릭하여 복원을 시작합니다.</block>
+  <block id="1b8b952cdfec78ac88ff5b14b7024322" category="inline-link-macro">다음: SQL Server 응용 프로그램 데이터를 복원합니다.</block>
+  <block id="e621b92d5ccb6ccf61c39c424a996f76" category="paragraph"><block ref="e621b92d5ccb6ccf61c39c424a996f76" category="inline-link-macro-rx"></block></block>
+  <block id="0e966aefc6e57da3e61d08eb83f8f9b7" category="summary">SnapCenter는 장기간 아카이브 및 보존을 위해 운영 스토리지 시스템(운영 &gt; 미러) 및 보조 스토리지 시스템(운영 &gt; 소산) 내의 SnapMirror 관계를 업데이트할 수 있습니다. 이렇게 하려면 SnapMirror를 사용하여 대상 볼륨과 소스 볼륨 간의 데이터 복제 관계를 설정하고 초기화해야 합니다.</block>
+  <block id="860d1fc24372044f6c88f15cea6b9155" category="doc">SnapMirror 관계 및 보존 일정을 구성합니다</block>
+  <block id="360ddb5fe080c946279788a942ac37b6" category="inline-link-macro">이전: 개요 - 재해 복구.</block>
+  <block id="83937df3fbf3123078393505637cca77" category="paragraph"><block ref="83937df3fbf3123078393505637cca77" category="inline-link-macro-rx"></block></block>
+  <block id="1888797bfba812a31bad2548f183ffe6" category="paragraph">소스 및 타겟 ONTAP 시스템은 Amazon VPC 피어링, 전송 게이트웨이, AWS Direct Connect 또는 AWS VPN을 사용하여 피어링된 네트워크에 있어야 합니다.</block>
+  <block id="aa318628cbf2869d724b704d547dc8f4" category="paragraph">온프레미스 ONTAP 시스템과 FSx ONTAP 간에 SnapMirror 관계를 설정하려면 다음 단계가 필요합니다.</block>
+  <block id="b11d0fe280c0d21da5bfb10f2c917a4c" category="list-text">소스 및 대상 인터클러스터 논리 인터페이스를 기록합니다.</block>
+  <block id="c1f7c7cab441a6a4e4734a38c21558e4" category="list-text">ONTAP와 FSx 간에 클러스터 피어링을 설정합니다.</block>
+  <block id="946a34381332c04b3d9156fab7dd7456" category="list-text">SVM 피어링 관계를 설정합니다.</block>
+  <block id="f56439725f96d1fc20e4c160b7480caa" category="list-text">스냅샷 보존 정책을 생성합니다.</block>
+  <block id="5b691d913deac41a0bcbd20dc8f927b9" category="list-text">FSx에서 대상 볼륨을 생성합니다.</block>
+  <block id="418bb52c754bc09e712f395430960fe0" category="list-text">소스 볼륨과 타겟 볼륨 간의 SnapMirror 관계를 생성합니다.</block>
+  <block id="ac2c502535c77fe40da904453fa5ebdf" category="list-text">SnapMirror 관계 초기화</block>
+  <block id="fbfcc1aa520560c558b69fb448e3e601" category="inline-link">ONTAP용 FSX – ONTAP 사용 설명서</block>
+  <block id="7ffc7a254a972aeb4df657be8d41c5a2" category="paragraph">을 참조하십시오<block ref="67cdb2cad717abb12c965d934ae13809" category="inline-link-rx"></block> FSx를 사용하여 SnapMirror 관계를 만드는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="cc9e567b33c3e82ac1b18f4780ca5f42" category="section-title">소스 및 대상 클러스터간 논리 인터페이스를 기록합니다</block>
+  <block id="44c719fef7654c0f1aecbd77f14b9ab7" category="paragraph">사내에 상주하는 소스 ONTAP 시스템의 경우 System Manager 또는 CLI에서 클러스터 간 LIF 정보를 검색할 수 있습니다.</block>
+  <block id="d3983f090ac28583ca4499e720c4cc25" category="list-text">ONTAP System Manager에서 네트워크 개요 페이지로 이동하여 FSx가 설치된 AWS VPC와 통신하도록 구성된 Type:Intercluster의 IP 주소를 검색합니다.</block>
+  <block id="de45ac288e78c12d34318717ae7cacd8" category="paragraph"><block ref="de45ac288e78c12d34318717ae7cacd8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94cf5d813faccf347c0faaab27941922" category="list-text">FSx의 Intercluster IP 주소를 검색하려면 CLI에 로그인하여 다음 명령을 실행합니다.</block>
+  <block id="244c638485f1bcb26a0e966bd289e4a9" category="paragraph"><block ref="244c638485f1bcb26a0e966bd289e4a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ce2dabb10080d128fabb2edc80a417a" category="section-title">ONTAP와 FSx 간에 클러스터 피어링을 설정합니다</block>
+  <block id="84c8209b0c6f3e5e18c66f9f45cf5358" category="paragraph">ONTAP 클러스터 간에 클러스터 피어링을 설정하려면 시작 ONTAP 클러스터에 입력된 고유한 암호가 다른 피어 클러스터에서 확인되어야 합니다.</block>
+  <block id="085f57325580b1a203343baf39c910d1" category="list-text">'cluster peer create' 명령을 사용하여 대상 FSx 클러스터에서 피어링을 설정합니다. 메시지가 표시되면 소스 클러스터에서 나중에 사용되는 고유한 암호를 입력하여 생성 프로세스를 마칩니다.</block>
+  <block id="475947ec353590c018e5b0d813538a84" category="list-text">소스 클러스터에서 ONTAP System Manager 또는 CLI를 사용하여 클러스터 피어 관계를 설정할 수 있습니다. ONTAP 시스템 관리자에서 보호 &gt; 개요 로 이동하고 피어 클러스터 를 선택합니다.</block>
+  <block id="692ee36299ec8b049d7462a75dd1463a" category="paragraph"><block ref="692ee36299ec8b049d7462a75dd1463a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1aa5f33eeccc2dab1c1b6aba564ec238" category="list-text">피어 클러스터 대화 상자에서 필요한 정보를 입력합니다.</block>
+  <block id="28b3f47a49c9a2fb506879e23a7b1723" category="list-text">대상 FSx 클러스터에서 피어 클러스터 관계를 설정하는 데 사용된 암호를 입력합니다.</block>
+  <block id="157bacc8ed48f5dc430560300ef9f5a5" category="list-text">암호화된 관계를 설정하려면 Yes를 선택합니다.</block>
+  <block id="70c324b6369e6cb6f4a8df99ac8b4b7e" category="list-text">대상 FSx 클러스터의 인터클러스터 LIF IP 주소를 입력합니다.</block>
+  <block id="c9af913b694e4e4dcce39b7e3a2eabd2" category="list-text">클러스터 피어링 시작 을 클릭하여 프로세스를 마칩니다.</block>
+  <block id="409a2deb1ca3f5fe6ad3f90977529965" category="paragraph"><block ref="409a2deb1ca3f5fe6ad3f90977529965" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2b39da3667dd0f4cab32a9027eeadf60" category="list-text">다음 명령을 사용하여 FSx 클러스터에서 클러스터 피어 관계의 상태를 확인합니다.</block>
+  <block id="25ca322582650fd7d3732bea77176905" category="paragraph"><block ref="25ca322582650fd7d3732bea77176905" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fdf4cefe90737a4248cd083c1a1d2e36" category="section-title">SVM 피어링 관계를 설정합니다</block>
+  <block id="4f194687804b9dff8219b58d47dc2a69" category="paragraph">다음 단계는 SnapMirror 관계에 있는 볼륨을 포함하는 소스 스토리지 가상 시스템과 타겟 스토리지 가상 시스템 간에 SVM 관계를 설정하는 것입니다.</block>
+  <block id="9bd0b716a7c6f7821d01f58d3576978d" category="list-text">소스 FSx 클러스터에서 CLI에서 다음 명령을 사용하여 SVM 피어 관계를 생성합니다.</block>
+  <block id="1a82405201cf3be5b0f3f96ffb551406" category="list-text">소스 ONTAP 클러스터에서 ONTAP System Manager 또는 CLI와 피어링 관계를 수락합니다.</block>
+  <block id="dd0f7f7da0626cbd138836fd072f65de" category="list-text">ONTAP 시스템 관리자에서 보호 &gt; 개요 로 이동하고 스토리지 VM 피어 아래에서 피어 스토리지 VM 을 선택합니다.</block>
+  <block id="486b508476b1f8dff9a5314ac26e36e9" category="paragraph"><block ref="486b508476b1f8dff9a5314ac26e36e9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b0c3d15e3f1c8ecebfa725f753f98e7" category="list-text">피어 스토리지 VM 대화 상자에서 필수 필드를 입력합니다.</block>
+  <block id="b980118a5ade1402e409e2354f286c60" category="list-text">소스 스토리지 VM입니다</block>
+  <block id="2cb119a467d09216231bdf2ff83bfb5f" category="list-text">타겟 클러스터</block>
+  <block id="1d1fa3ffdce0bd1d4a0faf3d15fb94f6" category="list-text">대상 스토리지 VM입니다</block>
+  <block id="22a926c9631a59bce535d179c6f1f5ae" category="paragraph"><block ref="22a926c9631a59bce535d179c6f1f5ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52fee5b72c266bcf84963c260c8cf2ed" category="list-text">피어 스토리지 VM 을 클릭하여 SVM 피어링 프로세스를 완료합니다.</block>
+  <block id="332a29af91768111608bcb6bf43107e7" category="section-title">스냅샷 보존 정책을 생성합니다</block>
+  <block id="b2659ce2591907c1c9269d82e68d8109" category="paragraph">SnapCenter는 운영 스토리지 시스템에서 스냅샷 복사본으로 존재하는 백업의 보존 일정을 관리합니다. SnapCenter에서 정책을 생성할 때 설정됩니다. SnapCenter는 보조 스토리지 시스템에 보존되는 백업에 대한 보존 정책을 관리하지 않습니다. 이러한 정책은 보조 FSx 클러스터에서 생성되고 소스 볼륨과 SnapMirror 관계에 있는 대상 볼륨에 연결된 SnapMirror 정책을 통해 별도로 관리됩니다.</block>
+  <block id="1d64d8f27569c9f8182a6c536add0069" category="paragraph">SnapCenter 정책을 생성할 때 SnapCenter 백업을 수행할 때 생성되는 각 스냅샷의 SnapMirror 레이블에 추가되는 2차 정책 레이블을 지정할 수 있습니다.</block>
+  <block id="b3ca63efc1d304947f75061071da604c" category="admonition">보조 스토리지에서 이러한 레이블은 스냅샷 보존을 적용하기 위해 대상 볼륨과 관련된 정책 규칙과 일치합니다.</block>
+  <block id="422f63101989fe9b50c840c82bb5fe9f" category="paragraph">다음 예제는 SQL Server 데이터베이스 및 로그 볼륨의 일일 백업에 사용되는 정책의 일부로 생성된 모든 스냅샷에 존재하는 SnapMirror 레이블을 보여줍니다.</block>
+  <block id="5f70d8aa597c91ed28f7be347e2fac0a" category="paragraph"><block ref="5f70d8aa597c91ed28f7be347e2fac0a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5c9b73d439aa92ef011ebf02237c888" category="inline-link">SnapCenter 설명서</block>
+  <block id="2d0828fbc32c49aad5149bd71dd05ddf" category="paragraph">SQL Server 데이터베이스에 대한 SnapCenter 정책을 만드는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="7f14e0044cbde8b494ce0e026c2561cf" category="inline-link-rx"></block>.</block>
+  <block id="f508c027fda31d58c4677043e1a3eaa8" category="paragraph">우선 유지할 스냅샷 복사본 수를 결정하는 규칙을 사용하여 SnapMirror 정책을 생성해야 합니다.</block>
+  <block id="bb66348f31a358d5d6f969b7ab6ee82c" category="list-text">FSx 클러스터에서 SnapMirror 정책을 생성합니다.</block>
+  <block id="e8d5c5ace79f3b8be2db75ba7135e0a8" category="list-text">SnapCenter 정책에 지정된 2차 정책 레이블과 일치하는 SnapMirror 레이블을 사용하여 정책에 규칙을 추가합니다.</block>
+  <block id="5a3507b9cf4dd4a569d2ffe314e6b7eb" category="paragraph">다음 스크립트는 정책에 추가할 수 있는 규칙의 예를 제공합니다.</block>
+  <block id="762402f82600698541f18b3a2f4ac8f4" category="admonition">각 SnapMirror 레이블과 유지할 스냅샷 수(보존 기간)에 대한 추가 규칙을 생성합니다.</block>
+  <block id="2f061612da9689d76bf56673168e2297" category="section-title">대상 볼륨을 생성합니다</block>
+  <block id="3c09a07bfb806c844317f3b57d93a884" category="paragraph">소스 볼륨에서 스냅샷 복사본을 받을 FSx에 대상 볼륨을 생성하려면 FSx ONTAP에서 다음 명령을 실행합니다.</block>
+  <block id="9a9f4d5cf2f4ccad396091e224e45c7e" category="section-title">소스 볼륨과 타겟 볼륨 간의 SnapMirror 관계를 생성합니다</block>
+  <block id="dfceac14afc666c56290006c22ba8a0a" category="paragraph">소스 볼륨과 타겟 볼륨 간에 SnapMirror 관계를 생성하려면 FSx ONTAP에서 다음 명령을 실행합니다.</block>
+  <block id="e3a7ebd416df655cee455d58e86e8477" category="section-title">SnapMirror 관계 초기화</block>
+  <block id="a457a30bf4ecea53998aa344bee4329a" category="paragraph">SnapMirror 관계를 초기화합니다. 이 프로세스에서는 소스 볼륨에서 생성된 새 스냅샷을 시작하여 타겟 볼륨에 복사합니다.</block>
+  <block id="2cd2d537da5641f8e4fc5712872944c4" category="paragraph">볼륨을 생성하려면 FSx ONTAP에서 다음 명령을 실행합니다.</block>
+  <block id="948f07a3c53f8cc30c8eb897744af650" category="inline-link-macro">다음: 온-프레미스에서 Windows SnapCenter 서버를 배포하고 구성합니다.</block>
+  <block id="5a5deee784955d0d113db50ac6fd1ff9" category="paragraph"><block ref="5a5deee784955d0d113db50ac6fd1ff9" category="inline-link-macro-rx"></block></block>
+  <block id="dcbabf28828ef9b03cf9856a74eedf64" category="summary">이 솔루션에서 SnapCenter는 SQL Server 및 Oracle 애플리케이션 데이터에 대해 애플리케이션 정합성이 보장되는 스냅샷을 제공합니다. 이 구성은 SnapMirror 기술과 함께 사내 AFF와 FSx ONTAP 클러스터 간에 고속 데이터 복제를 제공합니다. 또한 Veeam Backup &amp; Replication은 가상 머신에 백업 및 복원 기능을 제공합니다.</block>
+  <block id="328e5ea10d04d0f35280bfe84b39da6b" category="doc">개요 - 재해 복구</block>
+  <block id="a10724b77d9c3109bbcc0f7df368bdb8" category="inline-link-macro">이전: 클라우드 백업 툴:</block>
+  <block id="833bfaf1314934c2a8394c6aabe8d029" category="paragraph"><block ref="833bfaf1314934c2a8394c6aabe8d029" category="inline-link-macro-rx"></block></block>
+  <block id="a7b22ebf343cad0f97e90df47a7d7f0c" category="paragraph">이 섹션에서는 백업 및 복원을 위한 SnapCenter, SnapMirror 및 Veeam의 구성에 대해 살펴봅니다.</block>
+  <block id="66b3c7123c5d46e3d176f20cb0ede484" category="paragraph">다음 섹션에서는 보조 사이트에서 페일오버를 완료하는 데 필요한 구성 및 단계에 대해 설명합니다.</block>
+  <block id="5116c1f2347e89091dc3e347f10044cd" category="list-text">SnapMirror 및 보존 일정(2차 스토리지)을 구성합니다.</block>
+  <block id="b33c39866fb3627a46e2d343e5fcdb1a" category="list-text">온-프레미스에서 Windows SnapCenter 서버를 배포하고 구성합니다.</block>
+  <block id="19b8a1279f2c5edddc3517f410809f6e" category="list-text">Veeam Backup &amp; Replication 서버를 사내에서 구축 및 구성합니다.</block>
+  <block id="1f47ae0d9959e320c4881bfc78321782" category="list-text">클라우드 백업 툴, SnapCenter, Veeam을 구축 및 구성합니다.</block>
+  <block id="f870a44f8c00df7ab88c2a456191b2d5" category="list-text">재해 복구를 위한 SnapCenter 데이터베이스 백업</block>
+  <block id="78d975adec34fa3bfc80106cdb52e0a6" category="list-text">보조 사이트에서 SnapCenter 데이터베이스 복원</block>
+  <block id="cb2f0c0adaf6407a0f786a8731344356" category="list-text">Veeam Backup &amp; Replication을 사용하여 애플리케이션 가상 머신을 복구합니다.</block>
+  <block id="730e5aaae90a8085a8a3b38b75bb0cf0" category="list-text">SQL Server 응용 프로그램 데이터를 복원합니다.</block>
+  <block id="e2cc8ff40b8051e9b9d646e7f8eb1305" category="list-text">Oracle 애플리케이션 데이터를 복구합니다.</block>
+  <block id="fe12952cd9681aca52a1c425ada5f92a" category="inline-link-macro">다음: SnapMirror 관계 및 보존 일정을 구성합니다.</block>
+  <block id="1d144993c01e34550b175b2724c797b9" category="paragraph"><block ref="1d144993c01e34550b175b2724c797b9" category="inline-link-macro-rx"></block></block>
+  <block id="498fdd311192093265ba745435fc1476" category="doc">Veeam Backup Server를 구축 및 구성합니다</block>
+  <block id="03e52c1a705a3818e1e78e42968f422f" category="inline-link-macro">이전: 온-프레미스에서 Windows SnapCenter 서버를 배포하고 구성합니다.</block>
+  <block id="af9a988ea9bd35534b52465e06e50872" category="paragraph"><block ref="af9a988ea9bd35534b52465e06e50872" category="inline-link-macro-rx"></block></block>
+  <block id="48e37aaf43e2a1010e9e267340ce923e" category="inline-link">Veeam Help Center 기술 문서</block>
+  <block id="9e67d6bed8c55a98c2cfe02531c07393" category="paragraph">Veeam 백업 및 복제 소프트웨어는 Veeam 스케일 아웃 백업 저장소(SOBR)를 사용하여 애플리케이션 가상 머신을 백업하고 백업 복사본을 Amazon S3 버킷에 아카이빙하는 데 사용됩니다. Veeam을 이 솔루션의 Windows 서버에 구축했습니다. Veeam 구축에 대한 자세한 지침은 를 참조하십시오<block ref="43bd82bcfa6fc650951eb1c3021cf923" category="inline-link-rx"></block>.</block>
+  <block id="a2af8a9311b9c3a74f6418a81bb700d2" category="section-title">Veeam 스케일아웃 백업 저장소를 구성합니다</block>
+  <block id="b61099b9ef1858547775741cc632226a" category="paragraph">소프트웨어를 배포하고 라이센스를 받은 후에는 백업 작업을 위한 타겟 스토리지로 SOBR(스케일 아웃 백업 저장소)을 생성할 수 있습니다. 재해 복구를 위해 VM 데이터를 오프 사이트로 백업하는 데에도 S3 버킷을 포함해야 합니다.</block>
+  <block id="b2fe763ad14c7947f74a8693fa06bf2b" category="paragraph">시작하기 전에 다음 필수 구성 요소를 참조하십시오.</block>
+  <block id="e787194bd6ef5154135951b4ab7f0317" category="list-text">백업을 위한 타겟 스토리지로 사내 ONTAP 시스템에 SMB 파일 공유를 생성합니다.</block>
+  <block id="1c2ed63d64d034cdd6fe30f769495f52" category="list-text">SOBR에 포함할 Amazon S3 버킷을 생성합니다. 오프사이트 백업을 위한 저장소입니다.</block>
+  <block id="e349d3884df12b302e0d564f4cf3dec4" category="section-title">Veeam에 ONTAP 스토리지를 추가합니다</block>
+  <block id="3f71ccdf6fe8797ee5930ef4b5a0eaf1" category="paragraph">먼저, Veeam에서 ONTAP 스토리지 클러스터와 관련 SMB/NFS 파일 시스템을 스토리지 인프라로 추가합니다.</block>
+  <block id="dc14600d8d3627181cbe1757142b1c03" category="list-text">Veeam 콘솔을 열고 로그인합니다. Storage Infrastructure로 이동한 다음 Add Storage를 선택합니다.</block>
+  <block id="a55b866e82b1226d8874e7d53e6e50a9" category="paragraph"><block ref="a55b866e82b1226d8874e7d53e6e50a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5bb1dc14738b469545970cd32668931f" category="list-text">스토리지 추가 마법사에서 NetApp을 스토리지 공급업체로 선택한 다음 Data ONTAP를 선택합니다.</block>
+  <block id="391d2bf94e1387196a435da4f4f0af41" category="list-text">관리 IP 주소를 입력하고 NAS Filer 상자를 선택합니다. 다음 을 클릭합니다.</block>
+  <block id="a8485af4e188b4009412f68ce18de31a" category="paragraph"><block ref="a8485af4e188b4009412f68ce18de31a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fab62b3f01af99a63f513f81f07f4c93" category="list-text">자격 증명을 추가하여 ONTAP 클러스터에 액세스합니다.</block>
+  <block id="5e9ee6438a10072376c31e6014cef8c3" category="paragraph"><block ref="5e9ee6438a10072376c31e6014cef8c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f55d6a23cbf126acc9c5ca42a97be0fc" category="list-text">NAS Filer 페이지에서 검사할 프로토콜을 선택하고 Next 를 선택합니다.</block>
+  <block id="596ee09f3551be34368ba19aa36584cd" category="paragraph"><block ref="596ee09f3551be34368ba19aa36584cd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="674fb2409a1f0a9e628bebcb470960cf" category="list-text">마법사의 적용 및 요약 페이지를 완료하고 마침 을 클릭하여 스토리지 검색 프로세스를 시작합니다. 검사가 완료되면 ONTAP 클러스터가 NAS 파일러와 함께 사용 가능한 리소스로 추가됩니다.</block>
+  <block id="dc2bb995c316bc90c4d3a169bbb877d5" category="paragraph"><block ref="dc2bb995c316bc90c4d3a169bbb877d5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f9b12801eaee10c32275f4ee61916aa" category="list-text">새로 검색된 NAS 공유를 사용하여 백업 리포지토리를 생성합니다. Backup Infrastructure에서 Backup Repositories를 선택하고 Add Repository 메뉴 항목을 클릭합니다.</block>
+  <block id="621999df528dc938edd5a395cf0df8f3" category="paragraph"><block ref="621999df528dc938edd5a395cf0df8f3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="afc15a9e4c0cbbfa567d40414a9725a1" category="inline-link">Veeam 문서를 참조하십시오</block>
+  <block id="218b99cee35d61ca3e9cb2d068673d9a" category="list-text">새 백업 저장소 마법사의 모든 단계를 수행하여 리포지토리를 생성합니다. Veeam Backup Repositories 생성에 대한 자세한 내용은 를 참조하십시오<block ref="3932357efba07e37ed76091ad3c0260c" category="inline-link-rx"></block>.</block>
+  <block id="b56272bcb8aa2b6cb2998d01ed46d1f8" category="paragraph"><block ref="b56272bcb8aa2b6cb2998d01ed46d1f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6fdf6cc44242ceed0927b180d30e5e75" category="section-title">Amazon S3 버킷을 백업 저장소로 추가합니다</block>
+  <block id="8c5c80325137d0f76fbe191272748ba6" category="paragraph">다음 단계는 Amazon S3 스토리지를 백업 저장소로 추가하는 것입니다.</block>
+  <block id="6a1ed885510bb28a64f66f0870fbaa39" category="list-text">Backup Infrastructure &gt; Backup Repositories 로 이동합니다. 리포지토리 추가 를 클릭합니다.</block>
+  <block id="bf510a56b5d84298de7541e645b836b7" category="paragraph"><block ref="bf510a56b5d84298de7541e645b836b7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="021391ea3955cab71330e7a32f03333f" category="list-text">백업 저장소 추가 마법사에서 오브젝트 스토리지 를 선택한 다음 Amazon S3를 선택합니다. 그러면 New Object Storage Repository 마법사가 시작됩니다.</block>
+  <block id="c1f1ad1062498b5eeb9d31293b71343c" category="paragraph"><block ref="c1f1ad1062498b5eeb9d31293b71343c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3a3eb593a619e4becab9e45b8f46652" category="list-text">오브젝트 스토리지 저장소의 이름을 입력하고 Next를 클릭합니다.</block>
+  <block id="97f3c4606f2c2ebb0ffadd0616b76446" category="list-text">다음 섹션에서 자격 증명을 입력합니다. AWS 액세스 키와 비밀 키가 필요합니다.</block>
+  <block id="e561e4c61aaefae45d0344b4ce87f23b" category="paragraph"><block ref="e561e4c61aaefae45d0344b4ce87f23b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="157669cd4d5a68c9ab9f3537a9e0ea33" category="list-text">Amazon 구성이 로드되면 데이터 센터, 버킷 및 폴더를 선택하고 적용 을 클릭합니다. 마지막으로 마침을 클릭하여 마법사를 닫습니다.</block>
+  <block id="2e9f45d4556ef13d4724b6f93eea5fd3" category="section-title">스케일아웃 백업 저장소를 생성합니다</block>
+  <block id="7d8f14e05d872984577255cdeb1f14ec" category="paragraph">이제 Veeam에 스토리지 저장소를 추가했으므로 재해 복구를 위해 SOBR을 생성하여 백업 복사본을 외부 Amazon S3 오브젝트 스토리지에 자동으로 계층화할 수 있습니다.</block>
+  <block id="328e03460d532c3507b2a6ba6ce53438" category="list-text">백업 인프라 에서 스케일 아웃 리포지토리 를 선택한 다음 스케일 아웃 리포지토리 추가 메뉴 항목을 클릭합니다.</block>
+  <block id="3ffac3b915968cb75860eac6dcb2255b" category="paragraph"><block ref="3ffac3b915968cb75860eac6dcb2255b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="582671a9090106ace80b09bb160558c6" category="list-text">새 스케일 아웃 백업 리포지토리에서 SOBR의 이름을 제공하고 다음을 클릭합니다.</block>
+  <block id="8f7df3cc6ed6758328582e4972dcb532" category="list-text">성능 계층의 경우 로컬 ONTAP 클러스터에 상주하는 SMB 공유가 포함된 백업 저장소를 선택합니다.</block>
+  <block id="2c4b66b86991d603fc9db639a47179f8" category="paragraph"><block ref="2c4b66b86991d603fc9db639a47179f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7362749638566881b7b5f8fe545c64e8" category="list-text">배치 정책의 경우 데이터 인접성 또는 요구 사항에 따른 성능 을 선택합니다. 다음을 선택합니다.</block>
+  <block id="2d1b39bdffbca5df6978176960bb0148" category="list-text">용량 계층의 경우 Amazon S3 오브젝트 스토리지로 SOBR을 확장합니다. 재해 복구를 위해, 2차 백업을 적시에 제공할 수 있도록 백업이 생성되는 즉시 Copy Backups to Object Storage 를 선택합니다.</block>
+  <block id="3a54badf400b7e061484dbadf3a19b19" category="paragraph"><block ref="3a54badf400b7e061484dbadf3a19b19" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="248e4221544eda567f1dd23b587cec68" category="list-text">마지막으로 적용 및 마침 을 선택하여 SOBR 생성을 마칩니다.</block>
+  <block id="97f8173a9f8ac774dbbb04ad209a46ee" category="section-title">스케일아웃 백업 저장소 작업을 생성합니다</block>
+  <block id="d7b3c8996a5cc044c6c1221d000a9d9b" category="inline-link">Veeam Help Center 기술 문서</block>
+  <block id="2b6483678eaaf63094c195aa8a37e401" category="paragraph">Veeam을 구성하는 마지막 단계는 새로 생성한 SOBR을 백업 대상으로 사용하여 백업 작업을 생성하는 것입니다. 백업 작업 생성은 스토리지 관리자의 일반적인 일부이며 여기서는 자세한 단계를 다루지 않습니다. Veeam에서 백업 작업 생성에 대한 자세한 내용은 를 참조하십시오<block ref="1e2565ba3e6473b62b1909934037e810" category="inline-link-rx"></block>.</block>
+  <block id="96c057bdd5cedc63af881ba8f5f0d83e" category="inline-link-macro">다음: 클라우드 백업 툴 및 구성</block>
+  <block id="f0f92dbca171662600d5268c0b80413e" category="paragraph"><block ref="f0f92dbca171662600d5268c0b80413e" category="inline-link-macro-rx"></block></block>
+  <block id="3bd61e230841633b4a28f6d2f882d50e" category="summary">조직에서는 중대한 운영 중단이 발생할 경우 비즈니스 크리티컬 애플리케이션을 신속하게 복구할 수 있도록 검증된 DR(재해 복구) 환경과 계획을 반드시 수립해야 합니다. 이 솔루션은 사내 및 AWS 기반의 VMware Cloud 모두에서 VMware 및 NetApp 기술을 중심으로 DR 사용 사례를 시연하는 데 초점을 맞춥니다.</block>
+  <block id="1ae55e7a3caf44baf5721cdf304e676d" category="doc">TR-4931: Amazon Web Services 및 Guest Connect에서 VMware Cloud를 사용한 재해 복구</block>
+  <block id="381bbc4506952a13e5852abcc5d4bc04" category="paragraph">크리스 리노, 조시 파웰, 수레시 토프티</block>
+  <block id="5f3d0127b9424be374b1c1474deb2684" category="paragraph">NetApp은 오랫동안 VMware와 통합해왔습니다. 수만 명의 고객이 가상화 환경의 스토리지 파트너로 NetApp을 선택했다는 것이 증명되었습니다. 이러한 통합은 클라우드의 게스트 연결 옵션 및 최근 NFS 데이터 저장소와의 통합에서도 계속됩니다. 이 솔루션은 일반적으로 게스트 연결 스토리지라고 하는 사용 사례에 중점을 둡니다.</block>
+  <block id="1134d985d8893464bee3d37e02a36402" category="paragraph">게스트 연결 스토리지에서 게스트 VMDK는 VMware 프로비저닝된 데이터 저장소에 구축되고 애플리케이션 데이터는 iSCSI 또는 NFS에 보관되며 VM에 직접 매핑됩니다. 다음 그림과 같이 Oracle 및 MS SQL 애플리케이션을 사용하여 DR 시나리오를 보여 줍니다.</block>
+  <block id="50dd1256f4cf87b2fa70e300ade578e4" category="paragraph"><block ref="50dd1256f4cf87b2fa70e300ade578e4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a907713e32899446933262bbd7c1122a" category="inline-link-macro">다음: 기술.</block>
+  <block id="2827f55e372e708d833c2a8c83fe6694" category="paragraph"><block ref="2827f55e372e708d833c2a8c83fe6694" category="inline-link-macro-rx"></block></block>
+  <block id="a9a05fe4fa63215c3d368883b85e9312" category="summary">이 솔루션은 NetApp SnapCenter를 사용하여 SQL Server 및 Oracle 데이터베이스의 애플리케이션 정합성이 보장되는 백업을 수행합니다. Veeam Backup &amp; Replication을 사용하여 가상 머신의 VMDK를 백업하면 사내 및 클라우드 기반 데이터 센터를 위한 포괄적인 재해 복구 솔루션을 제공할 수 있습니다.</block>
+  <block id="7236883d93928f76f56ba8cc9207fd1d" category="doc">온-프레미스에서 Windows SnapCenter 서버를 배포하고 구성합니다</block>
+  <block id="3d7a12fff3cc6da7ac90e2b678df9a6d" category="inline-link-macro">이전: SnapMirror 관계 및 보존 일정을 구성합니다.</block>
+  <block id="66e717068b83380baa91398f54762e48" category="paragraph"><block ref="66e717068b83380baa91398f54762e48" category="inline-link-macro-rx"></block></block>
+  <block id="d312952f462ee1dc88347d6060c708da" category="section-title">Windows SnapCenter Server를 사내에 배포합니다</block>
+  <block id="989d04f01dc04fe21c2b542b83a45a6b" category="inline-link">NetApp 문서 센터</block>
+  <block id="5d15da138c85d083e6e6409b418b8411" category="paragraph">SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다<block ref="c18608d8aa7f8cbafcf1d09b2fb01df0" category="inline-link-rx"></block>.</block>
+  <block id="e6220e7462e6d815945c93dcd734235f" category="paragraph">SnapCenter 소프트웨어는 에서 얻을 수 있습니다<block ref="6c76039d71cd5c9473efac721f24ac89" category="inline-link-rx"></block>.</block>
+  <block id="d2476cc18d417aa498cc7c32f99e980b" category="paragraph">설치가 완료되면 _\https://Virtual_Cluster_IP_or_FQDN:8146_ 를 사용하여 웹 브라우저에서 SnapCenter 콘솔에 액세스할 수 있습니다.</block>
+  <block id="1f401ab3619c5a15b94e9a9bf81a22a1" category="paragraph">콘솔에 로그인한 후 백업 SQL Server 및 Oracle 데이터베이스에 대해 SnapCenter를 구성해야 합니다. 이렇게 하려면 다음과 같은 높은 수준의 단계를 완료하십시오.</block>
+  <block id="b1fe0ab355339d4bab00965722b2a5d6" category="list-text">애플리케이션 데이터를 호스팅하는 볼륨이 포함된 스토리지 컨트롤러를 추가합니다.</block>
+  <block id="9a1910a51150562df5c8e4bf407e600d" category="list-text">SnapCenter를 사용하여 백업할 호스트 시스템을 추가합니다.</block>
+  <block id="b0b41a6e8279fcecf22857b2bd333616" category="list-text">백업 매개 변수 및 스케줄을 지정하는 정책을 구성합니다.</block>
+  <block id="fff94c054571fe6be35fdf9b3c9e5c5f" category="list-text">백업할 리소스와 백업에 사용되는 정책이 포함된 리소스 그룹을 구성합니다.</block>
+  <block id="63b96bb46045042b50fd68d9b5a0f0ba" category="section-title">SnapCenter에 스토리지 컨트롤러를 추가합니다</block>
+  <block id="8956d4de491225a4e6515ba0ad92fb30" category="paragraph">SnapCenter에 스토리지 컨트롤러를 추가하려면 다음 단계를 수행하십시오.</block>
+  <block id="2ba7db7e99ccd03f69c81ce1f25330e6" category="list-text">왼쪽 메뉴에서 스토리지 시스템 을 선택한 다음 새로 만들기 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.</block>
+  <block id="f1d609f44050cd3b443f66e474c3b93c" category="paragraph"><block ref="f1d609f44050cd3b443f66e474c3b93c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="48806d1941dc50dadf8bcd5d590511ab" category="list-text">스토리지 시스템 추가 대화 상자에서 로컬 온-프레미스 ONTAP 클러스터의 관리 IP 주소와 사용자 이름 및 암호를 추가합니다. 그런 다음 제출 을 클릭하여 스토리지 시스템 검색을 시작합니다.</block>
+  <block id="7b7a93dac3e0141a111190c64a54a220" category="paragraph"><block ref="7b7a93dac3e0141a111190c64a54a220" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dc7b9fe54780f87aa8bdf884b95187c5" category="list-text">이 과정을 반복하여 FSx ONTAP 시스템을 SnapCenter에 추가합니다. 이 경우 Add Storage System 창의 아래쪽에 있는 More Options 를 선택하고 Secondary 의 확인란을 클릭하여 FSx 시스템을 SnapMirror 복사본 또는 기본 백업 스냅샷으로 업데이트된 보조 스토리지 시스템으로 지정합니다.</block>
+  <block id="4a8fedebba8d5bd8e357863942b66b79" category="paragraph"><block ref="4a8fedebba8d5bd8e357863942b66b79" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="62104d735113c9c7e8a23cd031ca2004" category="paragraph">SnapCenter에 스토리지 시스템을 추가하는 방법에 대한 자세한 내용은 에서 설명서를 참조하십시오<block ref="05f72e618af68eda439c6d688692dcd6" category="inline-link-rx"></block>.</block>
+  <block id="c81dcfed07648c407976127bb0bdbed2" category="section-title">SnapCenter에 호스트를 추가합니다</block>
+  <block id="e796a589329333070ad568f533b21931" category="paragraph">다음 단계는 SnapCenter에 호스트 애플리케이션 서버를 추가하는 것입니다. 이 프로세스는 SQL Server와 Oracle에서 모두 비슷합니다.</block>
+  <block id="6718a4b38f7a3df604d1fd6079decaae" category="list-text">왼쪽 메뉴에서 호스트 를 선택한 다음 추가 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.</block>
+  <block id="4106a2178f1f526d51c57cb723e0f3ef" category="list-text">호스트 추가 창에서 호스트 유형, 호스트 이름 및 호스트 시스템 자격 증명을 추가합니다. 플러그인 유형을 선택합니다. SQL Server의 경우 Microsoft Windows 및 Microsoft SQL Server 플러그인을 선택합니다.</block>
+  <block id="3eae7017924ae8e187a046e62f5c334e" category="paragraph"><block ref="3eae7017924ae8e187a046e62f5c334e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fdb2b840f37deff5210ef9f13e554fd5" category="list-text">Oracle의 경우 호스트 추가 대화 상자에서 필수 필드를 입력하고 Oracle Database 플러그인의 확인란을 선택합니다. 그런 다음 제출 을 클릭하여 검색 프로세스를 시작하고 호스트를 SnapCenter에 추가합니다.</block>
+  <block id="6430fb639e6454a8e47d23925ec8f583" category="paragraph"><block ref="6430fb639e6454a8e47d23925ec8f583" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7da39703d1c501afafc02c06d1c31788" category="section-title">SnapCenter 정책을 생성합니다</block>
+  <block id="fa5cc6d015db1929ddc02765f2003a33" category="paragraph">정책은 백업 작업에 대해 따라야 할 특정 규칙을 설정합니다. 여기에는 백업 일정, 복제 유형 및 SnapCenter에서 트랜잭션 로그 백업 및 잘라내기를 처리하는 방식이 포함되며 이에 국한되지 않습니다.</block>
+  <block id="817a33901829b57a630a499c24b4daf2" category="paragraph">SnapCenter 웹 클라이언트의 설정 섹션에서 정책에 액세스할 수 있습니다.</block>
+  <block id="6ddda0770a816978059cd0702e0223d0" category="paragraph"><block ref="6ddda0770a816978059cd0702e0223d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9d91360f1fd4ad1abf6c445ec8ff103" category="paragraph">SQL Server 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오<block ref="7f14e0044cbde8b494ce0e026c2561cf" category="inline-link-rx"></block>.</block>
+  <block id="f079afadb233d404e335685a7b58c70e" category="paragraph">Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오<block ref="be1c60aeb8bf91be9c4096428152eedc" category="inline-link-rx"></block>.</block>
+  <block id="5847f474084786fc8a16763856c1b0da" category="list-text">정책 생성 마법사를 진행하는 동안 복제 섹션을 특별히 기록해 둡니다. 이 섹션에서는 백업 프로세스 중에 사용할 보조 SnapMirror 복사본의 유형을 설명합니다.</block>
+  <block id="fc3c693a9b60faa4913d47e755b4cf34" category="list-text">“로컬 스냅샷 복사본을 생성한 후 SnapMirror 업데이트” 설정은 동일한 클러스터에 상주하는 두 스토리지 가상 시스템 사이에 SnapMirror 관계가 존재하는 경우 SnapMirror 관계를 업데이트하는 것을 의미합니다.</block>
+  <block id="77bf66c8cee4cd2482095210be78e13a" category="list-text">“로컬 스냅샷 복사본을 만든 후 SnapVault 업데이트” 설정은 두 개의 개별 클러스터와 온-프레미스 ONTAP 시스템과 Cloud Volumes ONTAP 또는 FSxN 사이에 존재하는 SnapMirror 관계를 업데이트하는 데 사용됩니다.</block>
+  <block id="824aec6074385910e619ac91969c68a3" category="paragraph">다음 이미지는 이전 옵션과 백업 정책 마법사에서 이러한 옵션이 표시되는 방식을 보여 줍니다.</block>
+  <block id="89bace67b9ee8f5a253e88d282ceb63d" category="paragraph"><block ref="89bace67b9ee8f5a253e88d282ceb63d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e6bd8190e5c79ad5d86289d596dd8c16" category="section-title">SnapCenter 리소스 그룹을 생성합니다</block>
+  <block id="2f15c296209e980cccf829b7e5c1bbca" category="paragraph">리소스 그룹을 사용하면 백업에 포함할 데이터베이스 리소스와 해당 리소스에 대해 수행한 정책을 선택할 수 있습니다.</block>
+  <block id="e96fdebed13bd03c9e88f6cff2b7ed67" category="list-text">왼쪽 메뉴의 리소스 섹션으로 이동합니다.</block>
+  <block id="8b5265ba89102ff3a5fd8b504ba85140" category="list-text">창 위쪽에서 작업할 리소스 유형(이 경우 Microsoft SQL Server)을 선택한 다음 새 리소스 그룹을 클릭합니다.</block>
+  <block id="695c07b026f6602eff292288473cdc42" category="paragraph"><block ref="695c07b026f6602eff292288473cdc42" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bad635c8aa26c147bd68eb7b700cabbe" category="paragraph">SnapCenter 설명서는 SQL Server 및 Oracle 데이터베이스 모두에 대한 리소스 그룹을 생성하는 단계별 세부 정보를 제공합니다.</block>
+  <block id="6f9886092f343d1ecc5b676f4ca381c7" category="paragraph">SQL 리소스 백업의 경우 에 따릅니다<block ref="d0500a8d119256a2ca6775a9357c88fa" category="inline-link-rx"></block>.</block>
+  <block id="ffbeca6b667809b446c63465c7ff671f" category="paragraph">Oracle 리소스 백업에 대해서는 을 참조하십시오<block ref="c6b13e1956473c7b22893d8b12c1b8be" category="inline-link-rx"></block>.</block>
+  <block id="04569309e47440d70946c3617a8e5a23" category="inline-link-macro">다음으로 Veeam Backup Server를 구축 및 구성합니다.</block>
+  <block id="48b16df26a6334b9ce1e7880758b602e" category="paragraph"><block ref="48b16df26a6334b9ce1e7880758b602e" category="inline-link-macro-rx"></block></block>
+  <block id="601c3055944b06a3d06d7da4128af752" category="summary">애플리케이션 VM 및 데이터베이스 볼륨을 AWS에서 실행되는 VMware Cloud Volume 서비스로 페일오버하려면 SnapCenter Server와 Veeam Backup and Replication Server의 실행 중인 인스턴스를 설치하고 구성해야 했습니다. 페일오버가 완료된 후 사내 데이터 센터에 대한 페일백이 계획 및 실행될 때까지 이러한 툴을 정상 백업 작업을 재개하도록 구성해야 합니다.</block>
+  <block id="f93f90f32b570b5fbcc3458fb93a6ab2" category="doc">클라우드 백업 툴</block>
+  <block id="24ddba74ed115351032e6594c90d2642" category="inline-link-macro">이전: 컴퓨팅.</block>
+  <block id="3603db28d1cf593b88992a615d107cfe" category="paragraph"><block ref="3603db28d1cf593b88992a615d107cfe" category="inline-link-macro-rx"></block></block>
+  <block id="4f31ced8146865d2c2823db3f623bf36" category="section-title">백업 툴 구축</block>
+  <block id="4dad49c9583060929c06d355e24a683a" category="paragraph">SnapCenter 서버 및 Veeam Backup &amp; Replication Server를 VMware Cloud SDDC에 설치하거나 VPC에 상주하는 EC2 인스턴스에 설치할 수 있으며, VMware 클라우드 환경에 네트워크를 연결할 수 있습니다.</block>
+  <block id="f709ed2f05802131924f53cb483d0216" category="section-title">SnapCenter 서버</block>
+  <block id="257b2c5a413bf4e187ebd89c8a363827" category="inline-link-macro">NetApp 문서화 센터</block>
+  <block id="2bd8e8f9848a7635d56bcd86b9ad4c8f" category="paragraph">SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 상주하는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 <block ref="a00f6e57d5c269a935cd1b0491cebb83" category="inline-link-macro-rx"></block>.</block>
+  <block id="d099bc9c6d34500d99c2caac0e6df36c" category="paragraph">SnapCenter 소프트웨어는 에서 찾을 수 있습니다<block ref="6c76039d71cd5c9473efac721f24ac89" category="inline-link-rx"></block>.</block>
+  <block id="a337411ca3b98bfea601813c4e4e1496" category="section-title">Veeam 백업 및 복제 서버</block>
+  <block id="5a8e524620f781b94c018014370aad68" category="paragraph">Veeam Backup &amp; Replication 서버를 AWS의 VMware Cloud 또는 EC2 인스턴스에 설치할 수 있습니다. 자세한 구현 지침은 를 참조하십시오<block ref="1e2565ba3e6473b62b1909934037e810" category="inline-link-rx"></block>.</block>
+  <block id="af7bd34681425c09ae0ef24381972fb5" category="section-title">백업 툴 및 구성</block>
+  <block id="82634d63ab3a3344fb59974c50487bac" category="paragraph">설치 후 SnapCenter 및 Veeam Backup &amp; Replication이 AWS의 VMware Cloud에 데이터를 복원하는 데 필요한 작업을 수행하도록 구성되어 있어야 합니다.</block>
+  <block id="4b152f4bba0a5ca6345daa47736e4622" category="section-title">SnapCenter 구성</block>
+  <block id="411fce4d2b732a8bfda73c4f04da246c" category="paragraph">FSx ONTAP에 미러링된 응용 프로그램 데이터를 복원하려면 먼저 온-프레미스 SnapCenter 데이터베이스의 전체 복원을 수행해야 합니다. 이 프로세스가 완료되면 VM과의 통신이 다시 설정되고 FSx ONTAP를 기본 스토리지로 사용하여 응용 프로그램 백업을 다시 시작할 수 있습니다.</block>
+  <block id="d307f68836099290d00bdc9341ec2be7" category="inline-link-macro">보조 Windows SnapCenter 서버를 배포합니다</block>
+  <block id="520d23cd5df8582645ee42124b69ccae" category="paragraph">AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 <block ref="a29fcfa081b59708af69951be417dc25" category="inline-link-macro-rx"></block>.</block>
+  <block id="ece637c7b3273cee69b5cf7c97e8c24d" category="section-title">Veeam 백업 및 복제 구성</block>
+  <block id="50d8cb6b9ada9f3e6328cb534ed5773f" category="paragraph">Amazon S3 스토리지에 백업된 가상 머신을 복구하려면 Veeam Server를 Windows 서버에 설치하고 원래 백업 저장소가 포함된 VMware Cloud, FSx ONTAP 및 S3 버킷과 통신하도록 구성해야 합니다. 또한 VM이 복구된 후 새 백업을 수행하려면 FSx ONTAP에 새 백업 리포지토리가 구성되어 있어야 합니다.</block>
+  <block id="845690e8aecca4f756b60cbd6c80c7f9" category="inline-link-macro">2차 Veeam Backup &amp; amp; Replication Server를 구축합니다</block>
+  <block id="82a8a7d9b8f053ce73af1c1b5b8694ff" category="paragraph">애플리케이션 VM의 장애 조치를 완료하는 데 필요한 전체 단계 목록은 섹션을 참조하십시오 <block ref="83d03cb08c05a76f36dedd6b85344746" category="inline-link-macro-rx"></block>.</block>
+  <block id="c9982862ac9702da4769cbcd91d1c9b9" category="inline-link-macro">다음: 개요 - 재해 복구.</block>
+  <block id="7412fb70772a3400208993b8ade440f1" category="paragraph"><block ref="7412fb70772a3400208993b8ade440f1" category="inline-link-macro-rx"></block></block>
+  <block id="db4ff15d9c0c503103508af3dd860139" category="summary">NetApp AFF A-Series 시스템은 클라우드에서 다양한 엔터프라이즈 시나리오를 지원하는 유연한 데이터 관리 옵션을 갖춘 고성능 스토리지 인프라를 제공합니다. 이 솔루션에서는 ONTAP AFF A300을 기본 사내 스토리지 시스템으로 사용했습니다.</block>
+  <block id="7ed19ca7554c09b8290d807dea1afabf" category="inline-link-macro">이전: 네트워킹.</block>
+  <block id="41ad8c418dc4578a7875b98147993a0b" category="paragraph"><block ref="41ad8c418dc4578a7875b98147993a0b" category="inline-link-macro-rx"></block></block>
+  <block id="6e5148fc476ca76eb8c330524bc1064d" category="paragraph">이 솔루션에서 NetApp ONTAP를 VMware 및 SnapCenter용 ONTAP 툴과 함께 사용하여 VMware vSphere와 긴밀하게 통합된 포괄적인 관리 및 애플리케이션 백업 기능을 제공했습니다.</block>
+  <block id="e64f2bbe0643eeea77fa30ad5e4bdbe4" category="paragraph">가상 머신 및 VMDK 파일을 호스팅하는 VMware 데이터 저장소에는 ONTAP 스토리지를 사용했습니다. VMware는 연결된 데이터 저장소에 대해 여러 스토리지 프로토콜을 지원하며, 이 솔루션에서는 ESXi 호스트의 데이터 저장소에 NFS 볼륨을 사용했습니다. 그러나 ONTAP 스토리지 시스템은 VMware에서 지원하는 모든 프로토콜을 지원합니다.</block>
+  <block id="ba1139b1becb929a6ba79e930297c5b7" category="paragraph">다음 그림은 VMware 스토리지 옵션을 보여 줍니다.</block>
+  <block id="6869f0a16b26f7047d40a5a9c5a0ccd4" category="paragraph"><block ref="6869f0a16b26f7047d40a5a9c5a0ccd4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aed995b63d54f1d314ad87fc5d16b69d" category="paragraph">ONTAP 볼륨은 애플리케이션 VM을 위한 iSCSI 및 NFS 게스트 연결 스토리지 모두에 사용되었습니다. 애플리케이션 데이터에 다음 스토리지 프로토콜을 사용했습니다.</block>
+  <block id="c787b4233027288b06ace5dad3c0e461" category="list-text">게스트가 연결된 Oracle 데이터베이스 파일용 NFS 볼륨입니다.</block>
+  <block id="6a13696c6a6b506058d391582e402c83" category="list-text">게스트 연결 Microsoft SQL Server 데이터베이스 및 트랜잭션 로그용 iSCSI LUN</block>
+  <block id="6504ffb2b49026508f8d68a73a0893a1" category="cell">데이터베이스 유형입니다</block>
+  <block id="9b8bdf7379e889d83ab24e782c87d2ac" category="cell">스토리지 프로토콜</block>
+  <block id="0fc2cb6a177a3a14f31bd4810e09fa97" category="cell">볼륨 설명입니다</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="cell">Windows Server 2019</block>
+  <block id="e40ceeaead715c564e85bdc9b183e491" category="cell">SQL Server 2019</block>
+  <block id="458648f675593beefe031e7b7ba9fcdd" category="cell">데이터베이스 파일</block>
+  <block id="81fae4ea40cc442afa43dab4cc001004" category="cell">로그 파일</block>
+  <block id="ed47cdd7d93d911c4e94fc2801456784" category="cell">Oracle Linux 8.5</block>
+  <block id="e13e1c4f4700229b02ee474e7dda4ea2" category="cell">Oracle 19c</block>
+  <block id="4659ac5526bf8dff13f1ec371e79b766" category="cell">Oracle 바이너리</block>
+  <block id="f0a16b1024d40f006a15728ebd0e0f12" category="cell">Oracle 데이터</block>
+  <block id="1d9c31e9be3c01076e13f0f4fa1c15ae" category="cell">Oracle 복구 파일</block>
+  <block id="26f11a15ba5f458b3d86d9ecc01b56f3" category="paragraph">또한 Primary Veeam 백업 저장소에도 ONTAP 스토리지를 사용하고 SnapCenter 데이터베이스 백업의 백업 타겟에도 스토리지를 사용했습니다.</block>
+  <block id="e8d719041d7958d85248e29684218330" category="list-text">Veeam 백업 리포지토리를 위한 SMB 공유입니다.</block>
+  <block id="6005cf3be81f9c1a1908df0afb543b7d" category="list-text">SMB 공유는 SnapCenter 데이터베이스 백업의 타겟입니다.</block>
+  <block id="6872c2b6282a1ff41523f7b84a51d4da" category="section-title">클라우드 스토리지</block>
+  <block id="72cd2806db1eac2f04ef89c81542dd54" category="paragraph">이 솔루션에는 페일오버 프로세스의 일부로 복원되는 가상 머신을 호스팅하기 위한 AWS 기반 VMware Cloud가 포함되어 있습니다. 이 쓰기 작업을 통해 VMware는 VM 및 VMDK를 호스팅하는 데이터 저장소에 대해 vSAN 스토리지를 지원합니다.</block>
+  <block id="501c11094fdd604514f321bced51fe82" category="paragraph">ONTAP용 FSX는 SnapCenter 및 SyncMirror를 사용하여 미러링되는 애플리케이션 데이터의 보조 스토리지로 사용됩니다. 페일오버 프로세스의 일환으로 ONTAP 클러스터용 FSx는 운영 스토리지로 변환되고 데이터베이스 애플리케이션은 FSx 스토리지 클러스터에서 실행되는 일반 기능을 재개할 수 있습니다.</block>
+  <block id="2872e9fbf25a6695761c355a5170f21f" category="section-title">NetApp ONTAP용 Amazon FSx 설정</block>
+  <block id="81d8366c2ec35340f9822e490b614b41" category="paragraph">Cloud Manager를 사용하여 NetApp ONTAP용 AWS FSx를 배포하려면 의 지침을 따르십시오<block ref="f938a02d8e5f1cc6cb4c026bb367a9b5" category="inline-link-rx"></block>.</block>
+  <block id="e48c9f83aba7e50a34062296356c11da" category="paragraph">FSx ONTAP를 배포한 후 온-프레미스 ONTAP 인스턴스를 FSx ONTAP로 끌어서 놓아 볼륨의 복제 설정을 시작합니다.</block>
+  <block id="bfeecfa1e5aafaba3386ba09221608e3" category="paragraph">다음 그림은 FSx ONTAP 환경을 보여 줍니다.</block>
+  <block id="f0eabf6ad2404299416504a68c18c70b" category="paragraph"><block ref="f0eabf6ad2404299416504a68c18c70b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46fabc81c23066d3f0ef74556fc23d0d" category="section-title">네트워크 인터페이스가 생성되었습니다</block>
+  <block id="cf36149275607710e0655ce5a52d4745" category="paragraph">NetApp ONTAP용 FSX에는 iSCSI, NFS, SMB 및 클러스터 간 네트워크에 사용할 수 있도록 미리 구성되고 준비된 네트워크 인터페이스가 있습니다.</block>
+  <block id="a23141775a4b1f964c8a4c1335d366c7" category="section-title">VM 데이터 저장소 스토리지</block>
+  <block id="60d2a0c028f1fc1db964ff9d52cfe139" category="paragraph">VMware Cloud SDDC에는 vsandatastore와 workloaddatastore라는 두 개의 VSAN 데이터 저장소가 있습니다. 클라우드 관리자 자격 증명에 대한 액세스가 제한된 관리 VM을 호스팅하기 위해 "vsandastore"를 사용했습니다. 워크로드의 경우 워크로드 데이터 저장소를 사용했습니다.</block>
+  <block id="f7c8c05b18f61934cb7900cc690cd5e1" category="inline-link-macro">다음: 컴퓨팅.</block>
+  <block id="9990fc571687c39c15e45c10baecb1cc" category="paragraph"><block ref="9990fc571687c39c15e45c10baecb1cc" category="inline-link-macro-rx"></block></block>
+  <block id="d4fab32948320ef14f4b14bb30559cd4" category="summary">이 솔루션을 사용하려면 NetApp SyncMirror 작업을 수행하기 위해 사내 ONTAP 클러스터에서 NetApp ONTAP 인터커넥트 클러스터 네트워크 주소용 AWS FSx와 성공적으로 통신해야 합니다. 또한 Veeam 백업 서버가 AWS S3 버킷에 액세스할 수 있어야 합니다. 인터넷 전송을 사용하는 대신 기존 VPN 또는 Direct Connect 링크를 S3 버킷에 대한 전용 링크로 사용할 수 있습니다.</block>
+  <block id="ff32f70407319ca0f4e41853c83a4246" category="inline-link-macro">이전: 요구 사항.</block>
+  <block id="6cb52cdc54c40c00b151db3cc6131d25" category="paragraph"><block ref="6cb52cdc54c40c00b151db3cc6131d25" category="inline-link-macro-rx"></block></block>
+  <block id="c850af3ffbdd92ab67281dbdfeaf4e52" category="paragraph">ONTAP는 SAN 환경을 위한 iSCSI, FC(파이버 채널), FCoE(Fibre Channel over Ethernet) 또는 NVMe/FC(Non-Volatile Memory Express over Fibre Channel)를 비롯하여 가상화에 사용되는 모든 주요 스토리지 프로토콜을 지원합니다. ONTAP는 게스트 연결을 위해 NFS(v3 및 v4.1) 및 SMB 또는 S3를 지원합니다. 환경에 가장 적합한 프로토콜을 자유롭게 선택할 수 있으며, 필요에 따라 단일 시스템에서 프로토콜을 결합할 수 있습니다. 예를 들어, 몇 개의 iSCSI LUN 또는 게스트 공유로 NFS 데이터 저장소의 일반 사용을 늘릴 수 있습니다.</block>
+  <block id="dc8286bc14e4eca04d5c8c3d3745e742" category="paragraph">이 솔루션은 게스트 VMDK의 경우 사내 데이터 저장소에 NFS 데이터 저장소를, 게스트 애플리케이션 데이터의 경우 iSCSI와 NFS를 모두 활용합니다.</block>
+  <block id="89cf31d317f3100637041ccf296c3421" category="section-title">클라이언트 네트워크</block>
+  <block id="d6c8c82593995a45499a762d317c04ec" category="paragraph">VMkernel 네트워크 포트 및 소프트웨어 정의 네트워킹은 ESXi 호스트에 대한 연결을 제공하므로 VMware 환경 외부의 요소와 통신할 수 있습니다. 접속은 사용되는 VMkernel 인터페이스 유형에 따라 달라집니다.</block>
+  <block id="774cca28a02c25118dc9668598f65663" category="paragraph">이 솔루션에서는 다음과 같은 VMkernel 인터페이스가 구성되었습니다.</block>
+  <block id="fe4dbcab9b910577e5035e97ac068dae" category="list-text">관리</block>
+  <block id="31ce31cccd4aecd29ff8b40dd37b8305" category="section-title">스토리지 네트워크가 프로비저닝되었습니다</block>
+  <block id="a09cf1d6ddb872a8c1ee517538a9373d" category="paragraph">LIF(논리 인터페이스)는 클러스터의 노드에 대한 네트워크 액세스 지점을 나타냅니다. 이렇게 하면 클라이언트가 액세스하는 데이터가 저장된 스토리지 가상 시스템과 통신할 수 있습니다. 클러스터가 네트워크를 통해 통신을 주고받는 포트에 LIF를 구성할 수 있습니다.</block>
+  <block id="b976c5d6eaa4fa1f606cff663f77835f" category="paragraph">이 솔루션에서 LIF는 다음과 같은 스토리지 프로토콜에 대해 구성됩니다.</block>
+  <block id="cfba851bf46ae36ca092575bba6c7289" category="section-title">클라우드 연결 옵션</block>
+  <block id="466c519a74055fba20814454ab577c83" category="paragraph">고객은 사내 환경을 클라우드 리소스에 연결할 때 VPN 또는 Direct Connect 토폴로지 구축을 비롯한 다양한 옵션을 사용할 수 있습니다.</block>
+  <block id="ce24b5f233dc29fc3614b2c7d961948b" category="section-title">VPN(가상 사설망)</block>
+  <block id="55e6887f1e4e535089db85cbcae36acd" category="paragraph">VPN(가상 사설망)은 인터넷 기반 또는 사설 MPLS 네트워크를 통해 안전한 IPSec 터널을 만드는 데 주로 사용됩니다. VPN은 설치가 쉽지만 안정성(인터넷 기반) 및 속도가 부족합니다. 종료 지점은 AWS VPC 또는 VMware Cloud SDDC에서 종료할 수 있습니다. 이 재해 복구 솔루션을 위해 사내 네트워크에서 NetApp ONTAP용 AWS FSx에 대한 연결을 만들었습니다. NetApp ONTAP용 FSx가 연결되어 있는 AWS VPC(가상 프라이빗 게이트웨이 또는 전송 게이트웨이)에서 종료할 수 있습니다.</block>
+  <block id="365e9311cae767fae52a5cdba7003f9a" category="paragraph">VPN 설정은 경로 기반 또는 정책 기반일 수 있습니다. 라우팅 기반 설정을 사용하면 끝점이 자동으로 라우트를 교환하며, 셋업은 새로 생성된 서브넷으로 가는 경로를 학습한다. 정책 기반 설정을 사용하면 로컬 및 원격 서브넷을 정의해야 하며, 새 서브넷이 추가되고 IPSec 터널에서 통신할 수 있게 되면 경로를 업데이트해야 합니다.</block>
+  <block id="fb932a9cb1f7aff6a88af2645c80731e" category="admonition">IPSec VPN 터널이 기본 게이트웨이에 생성되지 않은 경우 원격 네트워크 라우트는 로컬 VPN 터널 끝점을 통해 라우팅 테이블에서 정의해야 합니다.</block>
+  <block id="2dc9d6f2c2810edb190acfe717c84a68" category="paragraph">다음 그림에서는 일반적인 VPN 연결 옵션을 보여 줍니다.</block>
+  <block id="d90d767da5b6da33c2785b3d3120c23f" category="paragraph"><block ref="d90d767da5b6da33c2785b3d3120c23f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac1fc9354c56b77f7143d2b6a7d185ad" category="section-title">직접 연결</block>
+  <block id="4aa5340761d0794e8da7cfa5ead94eb3" category="paragraph">Direct Connect는 AWS 네트워크에 대한 전용 링크를 제공합니다. 전용 연결은 1Gbps, 10Gbps 또는 100Gbps 이더넷 포트를 사용하여 AWS에 대한 링크를 생성합니다. AWS Direct Connect 파트너는 자신과 AWS 간의 사전 설정된 네트워크 링크를 사용하여 호스팅된 연결을 제공하며, 50Mbps~10GBps까지 이용할 수 있습니다. 기본적으로 트래픽은 암호화되지 않습니다. 그러나 MACsec 또는 IPsec을 사용하여 트래픽을 보호하는 옵션을 사용할 수 있습니다. MACsec는 레이어 2 암호화를 제공하고 IPsec은 레이어 3 암호화를 제공합니다. MACsec은 통신 중인 장치를 은폐하여 보안을 강화합니다.</block>
+  <block id="f41e1aa529328c6c391ee2bbb3e7b35f" category="paragraph">고객은 라우터 장비를 AWS Direct Connect 위치에 두어야 합니다. 이를 설정하기 위해 AWS APN(Partner Network)과 협력할 수 있습니다. 해당 라우터와 AWS 라우터 간에 물리적 연결이 이루어집니다. VPC에서 NetApp ONTAP용 FSx에 대한 액세스를 활성화하려면 전용 가상 인터페이스 또는 Direct Connect에서 VPC로 전송 가상 인터페이스가 있어야 합니다. 프라이빗 가상 인터페이스를 사용하는 경우 Direct Connect to VPC 연결 확장성이 제한됩니다.</block>
+  <block id="aac639f893699a86dc44236deb8c2ff8" category="paragraph">다음 그림은 Direct Connect 인터페이스 옵션을 보여 줍니다.</block>
+  <block id="65d0f01c0d2abb5df490f85de1a3c7f5" category="paragraph"><block ref="65d0f01c0d2abb5df490f85de1a3c7f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a547cd01b7307bbc41da8aed4983dc1" category="section-title">전송 게이트웨이</block>
+  <block id="5789b6855d128c642555ffa55396a65c" category="inline-link">AWS Direct Connect 설명서</block>
+  <block id="3ae6c7e3aea4c72d9bf07244d7b959e6" category="paragraph">전송 게이트웨이는 지역 내 Direct Connect-to-VPC 연결의 확장성을 높일 수 있는 지역 수준 구조입니다. 교차 지역 연결이 필요한 경우 이동 게이트웨이를 피어링해야 합니다. 자세한 내용은 를 참조하십시오<block ref="9f2a100b6fab526146ca277977e4ef3a" category="inline-link-rx"></block>.</block>
+  <block id="ac8979d211e20b50e94073d31f2e8d44" category="section-title">클라우드 네트워크 고려 사항</block>
+  <block id="02c5109954e68b54548d5ef777afaf76" category="paragraph">클라우드에서 기본 네트워크 인프라는 클라우드 서비스 공급자가 관리하는 반면, 고객은 AWS에서 VPC 네트워크, 서브넷, 라우팅 테이블 등을 관리해야 합니다. 또한 컴퓨팅 엣지에서 NSX 네트워크 세그먼트를 관리해야 합니다. SDDC는 외부 VPC 및 Transit Connect에 대한 경로를 그룹화합니다.</block>
+  <block id="ee94a9a0de351e37a54ce1fec2961c62" category="paragraph">Multi-AZ 가용성을 지원하는 NetApp ONTAP용 FSx가 VMware Cloud에 연결된 VPC에 배포되면 iSCSI 트래픽에서 필요한 라우트 테이블 업데이트를 수신하여 통신을 가능하게 합니다. 기본적으로 Multi-AZ 구축을 위해 연결된 VPC에서 VMware Cloud에서 FSx ONTAP NFS/SMB 서브넷으로 연결되는 라우트는 없습니다. 이 경로를 정의하기 위해 VMware에서 관리하는 전송 게이트웨이인 VMware Cloud SDDC 그룹을 사용하여 같은 지역의 VMware Cloud SDDC와 외부 VPC 및 기타 전송 게이트웨이 간에 통신을 허용했습니다.</block>
+  <block id="7ee08649d3bd024352f28df7dabbb32f" category="admonition">전송 게이트웨이 사용과 관련된 데이터 전송 비용이 있습니다. 특정 지역의 비용 세부 정보는 를 참조하십시오<block ref="b6f8eb4f405293cd9bb0c07a2ec1b299" category="inline-link-rx"></block>.</block>
+  <block id="68010b6bb26779cadbf96e9d04dad537" category="paragraph">VMware Cloud SDDC는 단일 데이터 센터를 갖는 것과 같은 단일 가용성 영역에 구축할 수 있습니다. 또한, 확장 클러스터 옵션을 사용할 수 있습니다. 이는 가용성 영역 장애 시 가용성을 높이고 다운타임을 줄일 수 있는 NetApp MetroCluster 솔루션과 유사합니다.</block>
+  <block id="0d5aa9b9832dc4c044a656ccdd139dcf" category="paragraph">데이터 전송 비용을 최소화하려면 VMware Cloud SDDC 및 AWS 인스턴스 또는 서비스를 동일한 가용성 영역에 유지해야 합니다. AWS는 가용성 영역에 부하를 분산하기 위해 계정별 AZ 주문 목록을 제공하므로 이름이 아닌 가용성 영역 ID와 일치시키는 것이 좋습니다. 예를 들어 계정(US-East-1a)은 AZ ID 1을 가리키지만 다른 계정(US-East-1c)은 AZ ID 1을 가리킬 수 있습니다. 가용성 영역 ID는 여러 가지 방법으로 검색할 수 있습니다. 다음 예에서는 VPC 서브넷에서 AZ ID를 검색했습니다.</block>
+  <block id="64c06e81643d1c8b6eba37a5343885ec" category="paragraph"><block ref="64c06e81643d1c8b6eba37a5343885ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="70cd8bfb8fd7a4082087201414ab2fe4" category="inline-link">VMware 설명서</block>
+  <block id="8920393d6c2c8771eef99f947100b883" category="paragraph">VMware Cloud SDDC에서 네트워킹은 NSX를 통해 관리되며, 남북의 트래픽 업링크 포트를 처리하는 에지 게이트웨이(Tier-0 라우터)는 AWS VPC에 연결됩니다. 컴퓨팅 게이트웨이와 관리 게이트웨이(Tier-1 라우터)는 동서 트래픽을 처리합니다. 에지의 업링크 포트가 많이 사용되는 경우 트래픽 그룹을 생성하여 특정 호스트 IP 또는 서브넷과 연결할 수 있습니다. 트래픽 그룹을 생성하면 트래픽을 분리하기 위해 추가 에지 노드가 생성됩니다. 를 확인하십시오<block ref="616556354bfd279ba90d5c2485799af5" category="inline-link-rx"></block> 다중 에지 설정을 사용하는 데 필요한 최소 vSphere 호스트 수</block>
+  <block id="e064913c9382e82051f900b9564779d5" category="paragraph">VMware Cloud SDDC를 프로비저닝할 경우 VMkernel 포트가 이미 구성되어 사용할 수 있습니다. VMware는 이러한 포트를 관리하며 업데이트할 필요가 없습니다.</block>
+  <block id="edbc8b71394d65a981746a0ed9072b51" category="paragraph">다음 그림에서는 호스트 VMkernel 정보의 예를 보여 줍니다.</block>
+  <block id="24d3a9af73ac14dc11a2d9a4745a77b0" category="paragraph"><block ref="24d3a9af73ac14dc11a2d9a4745a77b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1315738b589a4d2de3fd82a05b2d4e19" category="section-title">프로비저닝된 스토리지 네트워크(iSCSI, NFS)</block>
+  <block id="1a6b4ca0fa5ca04588d2e2eac3bf0444" category="paragraph">VM 게스트 스토리지 네트워크의 경우 일반적으로 포트 그룹을 생성합니다. NSX를 사용하면 vCenter에서 포트 그룹으로 사용되는 세그먼트를 생성합니다. 스토리지 네트워크는 라우팅 가능한 서브넷에 있기 때문에 별도의 네트워크 세그먼트를 생성하지 않아도 기본 NIC를 사용하여 LUN에 액세스하거나 NFS 엑스포트를 마운트할 수 있습니다. 스토리지 트래픽을 분리하려면 추가 세그먼트를 생성하고 규칙을 정의하고 해당 세그먼트에서 MTU 크기를 제어할 수 있습니다. 내결함성을 제공하려면 스토리지 네트워크 전용으로 두 개 이상의 세그먼트를 사용하는 것이 좋습니다. 앞서 언급했듯이 업링크 대역폭이 문제가 되면 트래픽 그룹을 생성하고 IP 접두사와 게이트웨이를 할당하여 소스 기반 라우팅을 수행할 수 있습니다.</block>
+  <block id="87e62e5f6f235efbfc557b0177d0e112" category="paragraph">DR SDDC의 세그먼트를 소스 환경과 일치시켜 페일오버 중에 네트워크 세그먼트를 매핑할 수 없도록 하는 것이 좋습니다.</block>
+  <block id="9175bb34d0aede26315b313b9432bcbb" category="section-title">보안 그룹</block>
+  <block id="7c9ffa8d590736372f008da84037edaa" category="paragraph">다양한 보안 옵션을 통해 AWS VPC 및 VMware Cloud SDDC 네트워크에 대한 보안 통신을 제공합니다. VMware Cloud SDDC 네트워크 내에서 NSX 추적 흐름을 사용하여 사용된 규칙을 포함한 경로를 식별할 수 있습니다. 그런 다음 VPC 네트워크에서 네트워크 분석기를 사용하여 흐름 중에 사용되는 경로 테이블, 보안 그룹 및 네트워크 액세스 제어 목록을 포함한 경로를 식별할 수 있습니다.</block>
+  <block id="f0189a4ff749c5c27de97acfedfd34a4" category="inline-link-macro">다음: 스토리지.</block>
+  <block id="0954838e1155c6ef12e31889d794d282" category="paragraph"><block ref="0954838e1155c6ef12e31889d794d282" category="inline-link-macro-rx"></block></block>
+  <block id="6286099da8387eb95435405583d109bc" category="summary">이 섹션에서는 사용자가 NetApp 및 VMware와 함께 사용할 온프레미스 및 클라우드 환경을 확인, 구성 및 검증하도록 지원하는 지침을 제공합니다. 특히, 이 솔루션은 ONTAP AFF 온-프레미스 및 VMware 클라우드 및 클라우드용 AWS FSx ONTAP와 함께 VMware 게스트 연결 사용 사례에 중점을 둡니다. 이 솔루션은 재해 복구 시나리오에서 Oracle과 MS SQL이라는 두 개의 애플리케이션을 사용하여 입증되었습니다.</block>
+  <block id="bd6d688efed13ace07c5656a3de04479" category="doc">개요 - AWS 게스트 연결 스토리지 재해 복구</block>
+  <block id="ba74e3cc32e486ba0bd5d4f211b2137e" category="inline-link-macro">이전: 기술.</block>
+  <block id="5fda5f7e250abe0e6e14d69ab7b5f7ce" category="paragraph"><block ref="5fda5f7e250abe0e6e14d69ab7b5f7ce" category="inline-link-macro-rx"></block></block>
+  <block id="67b5a180b1adfc09bd2752e51613fea5" category="paragraph">이 섹션에서는 사용자가 NetApp 및 VMware와 함께 사용할 온프레미스 및 클라우드 환경을 확인, 구성 및 검증하도록 지원하는 지침을 제공합니다. 특히, 이 솔루션은 ONTAP AFF 온-프레미스 및 VMware 클라우드 및 클라우드용 AWS FSx ONTAP와 함께 VMware 게스트 연결 사용 사례에 중점을 둡니다. 이 솔루션은 재해 복구 시나리오에서 Oracle과 MS SQL의 두 가지 애플리케이션으로 입증되었습니다.</block>
+  <block id="4fb9c0d0f9fb191ed966c5fddc5a8bd0" category="inline-link-macro">다음: 요구 사항.</block>
+  <block id="4833504a692a0243e9930c0c7a5f34f3" category="paragraph"><block ref="4833504a692a0243e9930c0c7a5f34f3" category="inline-link-macro-rx"></block></block>
+  <block id="d48ec23d0c00af2c45aa4b1c24b412d8" category="summary">운영 사내 데이터 센터에서 재해가 발생할 경우 당사의 시나리오에서는 AWS의 VMware Cloud를 사용하여 Amazon Web Services 인프라에 있는 2차 사이트로 페일오버합니다. 가상 시스템과 사내 ONTAP 클러스터에 더 이상 액세스할 수 없다고 가정합니다. 또한, SnapCenter 및 Veeam 가상 머신을 더 이상 액세스할 수 없으며 2차 사이트에서 다시 구축해야 합니다.</block>
+  <block id="7388404ef116c3ff812bfd290b094d9e" category="doc">페일오버</block>
+  <block id="61d4b0c4318b37aea8a87c0dd9f3dc9f" category="inline-link-macro">이전: 재해 복구를 위한 SnapCenter 데이터베이스 백업</block>
+  <block id="677615f9fabfc19231764bb023e573ac" category="paragraph"><block ref="677615f9fabfc19231764bb023e573ac" category="inline-link-macro-rx"></block></block>
+  <block id="03c450647cafbb7294b1d6fef9f2476f" category="section-title">운영 사이트에서 재해가 발생합니다</block>
+  <block id="ff36edd2e7e49fd0a40827688d2f4d8c" category="paragraph">이 섹션에서는 클라우드 환경으로의 인프라 페일오버에 대해 다루며 다음 주제를 다룹니다.</block>
+  <block id="9555d80191893a5b671187e1a859f379" category="list-text">SnapCenter 데이터베이스 복원 새 SnapCenter 서버가 설정된 후, 보조 FSx 스토리지가 기본 스토리지 장치가 될 수 있도록 MySQL 데이터베이스 및 구성 파일을 복원하고 데이터베이스를 재해 복구 모드로 전환합니다.</block>
+  <block id="2f2ee1d320a4d17fae8f4228f0a0c17a" category="list-text">Veeam Backup &amp; Replication을 사용하여 애플리케이션 가상 머신을 복구합니다. VM 백업이 포함된 S3 스토리지를 연결하고 백업을 가져온 다음 AWS의 VMware Cloud로 복원합니다.</block>
+  <block id="8509dc3cb04f91e9c6eb62971df36219" category="list-text">SnapCenter를 사용하여 SQL Server 응용 프로그램 데이터를 복원합니다.</block>
+  <block id="81e920a3cfad3020139d281a7be1093a" category="list-text">SnapCenter를 사용하여 Oracle 애플리케이션 데이터를 복구합니다.</block>
+  <block id="7c3080588178d0f5908a96d9e20be883" category="section-title">SnapCenter 데이터베이스 복원 프로세스</block>
+  <block id="86c580a0ed766eb38c0ef43f08d425e5" category="paragraph">SnapCenter는 MySQL 데이터베이스 및 구성 파일의 백업 및 복원을 허용하여 재해 복구 시나리오를 지원합니다. 이를 통해 관리자는 사내 데이터 센터에서 SnapCenter 데이터베이스의 정기적인 백업을 유지하고 나중에 해당 데이터베이스를 보조 SnapCenter 데이터베이스로 복원할 수 있습니다.</block>
+  <block id="ee1f8cb839e16951e7004e4047603101" category="paragraph">원격 SnapCenter 서버에서 SnapCenter 백업 파일에 액세스하려면 다음 단계를 수행하십시오.</block>
+  <block id="0b5c65b05530328f42d8b65f68657302" category="list-text">FSx 클러스터에서 SnapMirror 관계를 중단하여 볼륨을 읽기/쓰기로 만듭니다.</block>
+  <block id="dbfff075901e62d26ef1f316380d01f7" category="list-text">필요한 경우 CIFS 서버를 생성하고 복제된 볼륨의 연결 경로를 가리키는 CIFS 공유를 생성합니다.</block>
+  <block id="26b0d9d510f38125c4de3a7b68569b29" category="list-text">xcopy를 사용하여 보조 SnapCenter 시스템의 로컬 디렉토리에 백업 파일을 복사합니다.</block>
+  <block id="fa0138f778767381d2b0af9bdabad76e" category="list-text">SnapCenter v4.6을 설치합니다.</block>
+  <block id="736c8557bca1ad901b82efb5e946a527" category="list-text">SnapCenter 서버의 FQDN이 원래 서버와 동일한지 확인합니다. 이 작업은 DB 복원이 성공하려면 필요합니다.</block>
+  <block id="6f77488ce3ed6db6422cddaa1e4cbf8f" category="paragraph">복원 프로세스를 시작하려면 다음 단계를 수행하십시오.</block>
+  <block id="7220866a3d1d3ba6c1aef39d02d64b1f" category="list-text">보조 SnapCenter 서버의 Swagger API 웹 페이지로 이동하고 이전 지침에 따라 인증 토큰을 얻습니다.</block>
+  <block id="a5214e49691510795c98aad40874caa1" category="list-text">Swagger 페이지의 Disaster Recovery 섹션으로 이동하여 "/4.6/disasterrecovery/server/restore"를 선택하고 Try It Out을 클릭합니다.</block>
+  <block id="3c235173c5db1037212eff5e3a152a26" category="paragraph"><block ref="3c235173c5db1037212eff5e3a152a26" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d76d7bbb789675126fd1e9a0bf929635" category="list-text">인증 토큰을 붙여 넣고 SmDRResterRequest 섹션에서 백업 이름과 보조 SnapCenter 서버의 로컬 디렉터리를 붙여 넣습니다.</block>
+  <block id="34938ae261d31ae76af2e4369a2c8b0a" category="paragraph"><block ref="34938ae261d31ae76af2e4369a2c8b0a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4579e653c0e46ed15c466f496b60b0f3" category="list-text">실행 버튼을 선택하여 복원 프로세스를 시작합니다.</block>
+  <block id="fcbb767c97ce18f6b82f09bf8ea9c993" category="list-text">SnapCenter에서 모니터 섹션으로 이동하여 복구 작업의 진행률을 확인합니다.</block>
+  <block id="8fa0520efd67da15041467d3126133a7" category="paragraph"><block ref="8fa0520efd67da15041467d3126133a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d67615193bee26cd99be6b7ea889f065" category="paragraph"><block ref="d67615193bee26cd99be6b7ea889f065" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49b4fb23e31b4cd2d12434ce03b24134" category="list-text">보조 스토리지에서 SQL Server 복원을 사용하려면 SnapCenter 데이터베이스를 재해 복구 모드로 전환해야 합니다. 이 작업은 별도의 작업으로 수행되며 Swagger API 웹 페이지에서 시작됩니다.</block>
+  <block id="35afa1a915c7752e139ef7b0362596a6" category="list-text">Disaster Recovery(재해 복구) 섹션으로 이동하여 '/4.6/Disasterrecovery/storage(4.6/Disasterrecovery/storage)'를 클릭합니다.</block>
+  <block id="7633ff4043449878afbd5ca925faa5b1" category="list-text">사용자 인증 토큰을 붙여 넣습니다.</block>
+  <block id="5fb3d7404a8cc43eb5e120b4e22fe16d" category="list-text">SmSetDisasterRecoverySettingsRequest 섹션에서 EnableDisasterRecover 를 true 로 변경합니다.</block>
+  <block id="e7470af265e05d2efa8863c259541c2b" category="list-text">실행 을 클릭하여 SQL Server에 대한 재해 복구 모드를 활성화합니다.</block>
+  <block id="8579e283f02173e29df7090294128589" category="paragraph"><block ref="8579e283f02173e29df7090294128589" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bc4a08ff9e7fd1ec468bc55c7ba9df45" category="admonition">추가 절차에 대한 설명을 참조하십시오.</block>
+  <block id="b9311113ecb06041538924d9639bafc1" category="inline-link-macro">다음으로, Veeam 전체 복원으로 애플리케이션 VM을 복구합니다.</block>
+  <block id="8635dd190a6f61897de1e2eb207c7652" category="paragraph"><block ref="8635dd190a6f61897de1e2eb207c7652" category="inline-link-macro-rx"></block></block>
+  <block id="5b13229945c45439c072dc9c270e8177" category="inline-link-macro">AWS에서 VMC를 사용한 재해 복구(게스트 연결)</block>
+  <block id="866b55fdae1463f1934c300853ecefe2" category="list-text"><block ref="866b55fdae1463f1934c300853ecefe2" category="inline-link-macro-rx"></block></block>
+  <block id="38631d978812c49b6f395a78becd9750" category="summary">다음 프로세스에서는 사내 사이트가 작동 불가능한 재해 발생 시 AWS의 VMware Cloud Services에서 Oracle 애플리케이션 데이터를 복구하는 방법에 대한 지침을 제공합니다.</block>
+  <block id="c8ae03dc8bb68d2ad3e63a9126f795e6" category="doc">Oracle 애플리케이션 데이터를 복구합니다</block>
+  <block id="c7a930aff0dd8193ecc3a38c2d9a371d" category="inline-link-macro">이전: SQL Server 응용 프로그램 데이터를 복원합니다.</block>
+  <block id="e40fdf42c21d6e40d226e3b5a90bc4ef" category="paragraph"><block ref="e40fdf42c21d6e40d226e3b5a90bc4ef" category="inline-link-macro-rx"></block></block>
+  <block id="18ed07dc9f8533a3a2cf047292765486" category="paragraph">복구 단계를 계속하려면 다음 필수 구성 요소를 완료하십시오.</block>
+  <block id="d55274d1968c306eb025dc5e6eca42b4" category="list-text">Veeam Full Restore를 사용하여 Oracle Linux 서버 VM을 VMware Cloud SDDC로 복구했습니다.</block>
+  <block id="66d808fa42d45f6883d1a223ee26eb0c" category="list-text">보조 SnapCenter 서버가 설정되었으며 이 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 및 구성 파일이 복원되었습니다 <block ref="f1b6dca3014749c436758b70cc0d8f7f" category="inline-link-macro-rx"></block></block>
+  <block id="caef7bd3d487edb186bf341b0adc30b1" category="paragraph">Oracle 애플리케이션 데이터 복구 프로세스에 대한 요약은 다음과 같습니다.</block>
+  <block id="29c4961753eeca3f62f44929cef14596" category="list-text">NFS 액세스를 위해 Linux VM을 설정합니다.</block>
+  <block id="9ac9aad46e04d5b7e945a910a4891254" category="paragraph">Oracle Server 페일오버 프로세스에 대한 요약은 다음과 같습니다.</block>
+  <block id="ec814bbda48d97c524314b06efb7141f" category="list-text">Veeam을 사용하여 Oracle VM을 VMware Cloud로 복구합니다.</block>
+  <block id="df4b8ca1cdf4b811d6101ef538ad49e9" category="list-text">복원 프로세스 준비 시 VM 정리:</block>
+  <block id="2e94a71ef57d0ea06f47eb45db876d80" category="list-text">필요에 따라 IP 주소를 변경합니다.</block>
+  <block id="14c41550c7e1b5d99af11b08676b8755" category="list-text">원래 시스템과 동일한 FQDN을 사용하여 시스템을 DNS에 추가합니다.</block>
+  <block id="4a28466ad060d08ba5b2a153a23ac091" category="list-text">NFS 액세스를 위해 FSx를 설정합니다.</block>
+  <block id="843b7cc6c2b90cbd987628919de718f9" category="list-text">Oracle Linux Server에서 NFS 볼륨을 마운트합니다.</block>
+  <block id="b723df724fefe9f2021e7bb7bd8a57d0" category="section-title">Oracle 복원을 위해 FSx 구성 - SnapMirror 관계를 끊습니다</block>
+  <block id="ab26994a6aef07f6a796a6109f921a28" category="paragraph">FSxN 인스턴스에서 호스팅되는 보조 스토리지 볼륨을 Oracle 서버에서 액세스할 수 있도록 하려면 먼저 기존 SnapMirror 관계를 해제해야 합니다.</block>
+  <block id="d80c0676712ecc3e8d717347b9a0113a" category="list-text">FSx CLI에 로그인한 후 다음 명령을 실행하여 올바른 이름으로 필터링된 볼륨을 확인합니다.</block>
+  <block id="c534b90634ff37c01e77b058859f2a29" category="paragraph"><block ref="c534b90634ff37c01e77b058859f2a29" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="771b4d8e9d4a9f112068c45d013c2940" category="list-text">다음 명령을 실행하여 기존 SnapMirror 관계를 중단하십시오.</block>
+  <block id="60c89c7c11b1e5d09c8f7d6fcf1b4255" category="paragraph"><block ref="60c89c7c11b1e5d09c8f7d6fcf1b4255" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a4480a103abe04e17eca64a771420a8" category="list-text">Amazon FSx 웹 클라이언트에서 junction-path를 업데이트합니다.</block>
+  <block id="a3848e78db2c915e6ec7913bc0779a86" category="paragraph"><block ref="a3848e78db2c915e6ec7913bc0779a86" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="467332d89a649add4b0efb09dd2386c5" category="list-text">접합 경로 이름을 추가하고 업데이트 를 클릭합니다. Oracle 서버에서 NFS 볼륨을 마운트할 때 이 연결 경로를 지정합니다.</block>
+  <block id="7a522c1cba5b4c9df88cb71a944d5efd" category="paragraph"><block ref="7a522c1cba5b4c9df88cb71a944d5efd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="974ee05a635ebfcae6d6f6aa6f5da0b9" category="section-title">Oracle Server에서 NFS 볼륨을 마운트합니다</block>
+  <block id="f3677efe1cf868a895b6634743ae53cd" category="paragraph">Cloud Manager에서 Oracle 데이터베이스 파일 및 로그가 포함된 NFS 볼륨을 마운트하기 위한 올바른 NFS LIF IP 주소를 사용하여 마운트 명령을 얻을 수 있습니다.</block>
+  <block id="5ecb7cb864e3f6e77b9ae7264115942e" category="list-text">Cloud Manager에서 FSx 클러스터의 볼륨 목록에 액세스합니다.</block>
+  <block id="dc33973d3bef150b7e3be67c8acbde9a" category="paragraph"><block ref="dc33973d3bef150b7e3be67c8acbde9a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf957a98bd60352ec8312937f87b49dc" category="list-text">작업 메뉴에서 마운트 명령을 선택하여 Oracle Linux 서버에서 사용할 마운트 명령을 보고 복사합니다.</block>
+  <block id="42ae5bd08cec138b52386d868d92bcfe" category="paragraph"><block ref="42ae5bd08cec138b52386d868d92bcfe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8026151c7c8dc5002a8652cdd0ac0610" category="paragraph"><block ref="8026151c7c8dc5002a8652cdd0ac0610" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91d32453a4c3b285d62be2bc5eb3d24c" category="list-text">Oracle Linux Server에 NFS 파일 시스템을 마운트합니다. NFS 공유를 마운트하는 디렉토리가 Oracle Linux 호스트에 이미 있습니다.</block>
+  <block id="3f7f1270061c2e231f722bfd466cec0d" category="list-text">Oracle Linux 서버에서 mount 명령을 사용하여 NFS 볼륨을 마운트합니다.</block>
+  <block id="5cafad6c0970ad9fd32dd43eb98a7d6f" category="paragraph">Oracle 데이터베이스와 연결된 각 볼륨에 대해 이 단계를 반복합니다.</block>
+  <block id="264225a103d86a5e552aebab3ee7dd3f" category="admonition">재부팅 시 NFS 마운트를 영구적으로 만들려면 '/etc/fstab' 파일을 편집하여 마운트 명령을 포함합니다.</block>
+  <block id="2095b7305d1da91dff871c600b482eb9" category="list-text">Oracle 서버를 재부팅합니다. Oracle 데이터베이스는 정상적으로 시작되어 사용할 수 있어야 합니다.</block>
+  <block id="bb96f62f9a394da806d9b88672d1243b" category="inline-link-macro">다음: 페일백</block>
+  <block id="16f1ce464b9ffb6cc3870d9699d3436a" category="paragraph"><block ref="16f1ce464b9ffb6cc3870d9699d3436a" category="inline-link-macro-rx"></block></block>
+  <block id="0246d68c622ba3400248129bb5c01a08" category="summary">SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다.</block>
+  <block id="997d17d93cccb6709985c79ccc870db0" category="doc">재해 복구를 위한 SnapCenter 데이터베이스 백업</block>
+  <block id="00f8fab8d8bc9ef0cf8aa19508cfcdd1" category="inline-link-macro">이전: 클라우드 백업 툴 및 구성</block>
+  <block id="2b9ff113437f4081213eff5e4f9a124f" category="paragraph"><block ref="2b9ff113437f4081213eff5e4f9a124f" category="inline-link-macro-rx"></block></block>
+  <block id="9cb03f5cfb57a7f655c8a28ca64ae0d1" category="paragraph">SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다. 이 단계에 대한 자세한 내용은 을 참조하십시오<block ref="85e9a4a54f289ebdfa6c4169fb097d15" category="inline-link-rx"></block>.</block>
+  <block id="46137d274838eaef40c110eac160dabc" category="section-title">SnapCenter 백업 사전 요구 사항</block>
+  <block id="2fe071c4476effcd542a95a182832104" category="paragraph">SnapCenter 백업에 필요한 사전 요구 사항은 다음과 같습니다.</block>
+  <block id="be2b68df1cb3db2a8f1393a8c89a5c30" category="list-text">백업된 데이터베이스 및 구성 파일을 찾기 위해 사내 ONTAP 시스템에서 생성된 볼륨 및 SMB 공유입니다.</block>
+  <block id="1a9ee88991730f920252a1445a467c77" category="list-text">사내 ONTAP 시스템과 AWS 계정의 FSx 또는 CVO 간 SnapMirror 관계 이 관계는 백업된 SnapCenter 데이터베이스 및 구성 파일이 포함된 스냅샷을 전송하는 데 사용됩니다.</block>
+  <block id="3c0e70fa217603c0388de21f978923f3" category="list-text">EC2 인스턴스 또는 VMware Cloud SDDC의 VM에 클라우드 계정에 설치된 Windows Server</block>
+  <block id="328228524f87469e005c8944ad925402" category="list-text">VMware 클라우드의 Windows EC2 인스턴스 또는 VM에 설치된 SnapCenter</block>
+  <block id="0038f6b75b40b9c37893544119ad7ca4" category="section-title">SnapCenter 백업 및 복원 프로세스 요약</block>
+  <block id="f4644dc8d01e527218cd1fc0daa6af40" category="list-text">백업 db 및 config 파일을 호스팅하기 위해 사내 ONTAP 시스템에 볼륨을 생성합니다.</block>
+  <block id="c4232930a0fc8d0f9a5e1a16db36a816" category="list-text">온프레미스와 FSx/CVO 간에 SnapMirror 관계를 설정합니다.</block>
+  <block id="3e1461fe483fb58c7a6642074cb71d8d" category="list-text">SMB 공유를 마운트합니다.</block>
+  <block id="dd5b017c2cafc1394e2d7ab7081652e3" category="list-text">API 작업을 수행하기 위한 Swagger 인증 토큰을 검색합니다.</block>
+  <block id="51263d7f64b29b2b3bd6730068e64a27" category="list-text">DB 복구 프로세스를 시작합니다.</block>
+  <block id="23011a36184705e18919c3e5560fd514" category="list-text">xcopy 유틸리티를 사용하여 db 및 config 파일 로컬 디렉토리를 SMB 공유에 복사합니다.</block>
+  <block id="b84dd176bda6a6d30c5cb8901a8bf5b1" category="list-text">FSx에서 ONTAP 볼륨의 클론을 생성합니다(사내에서 SnapMirror를 통해 복사됨).</block>
+  <block id="1a3f92b9c5623f19d294ef2907d98cc8" category="list-text">FSx에서 EC2/VMware Cloud로 SMB 공유를 마운트합니다.</block>
+  <block id="87d37b3dfd2b98df04243247ebff4325" category="list-text">SMB 공유에서 로컬 디렉토리로 복구 디렉토리를 복사합니다.</block>
+  <block id="fd516b8b37d528453c538c9022d6d9db" category="list-text">Swagger에서 SQL Server 복원 프로세스를 실행합니다.</block>
+  <block id="63c6890e4065bde44f84394d274e05db" category="section-title">SnapCenter 데이터베이스 및 구성을 백업합니다</block>
+  <block id="493aa18049179f21c66cc95e36c19670" category="paragraph">SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오<block ref="2a9068db8cebf7672f374b2eb0a0c5ec" category="inline-link-rx"></block>.</block>
+  <block id="911dd02ad9a62d89e83d996753811c7b" category="section-title">Swagger에 로그인하고 인증 토큰을 얻습니다</block>
+  <block id="820336a66e164f408946dd8235833c07" category="paragraph">Swagger 페이지로 이동한 후 인증 토큰을 검색하여 데이터베이스 복원 프로세스를 시작해야 합니다.</block>
+  <block id="99899958b071bcb677dc5a5b24f1b2a3" category="list-text">https://&lt;SnapCenter 서버 IP &gt;:8146/swagger/_에서 SnapCenter Swagger API 웹 페이지에 액세스합니다.</block>
+  <block id="20f069ff72fb03614b867af722c7c40b" category="paragraph"><block ref="20f069ff72fb03614b867af722c7c40b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5ad3b9c1075f899242a74f969cbb12fa" category="list-text">인증 섹션을 확장하고 시험 사용 을 클릭합니다.</block>
+  <block id="5ffa75198edfa553c162f3b9945a23a0" category="paragraph"><block ref="5ffa75198edfa553c162f3b9945a23a0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41402cfc6490d3bf582b8a14ff8bfcbe" category="list-text">UserOperationContext 영역에서 SnapCenter 자격 증명 및 역할을 입력하고 실행 을 클릭합니다.</block>
+  <block id="2e1aa1ca38ffa5e45db5da3276238eac" category="paragraph"><block ref="2e1aa1ca38ffa5e45db5da3276238eac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18e649ac855810eb5b8a774b3fab5f5c" category="list-text">아래의 응답 본문에서 토큰을 볼 수 있습니다. 백업 프로세스를 실행할 때 인증을 위해 토큰 텍스트를 복사합니다.</block>
+  <block id="32d5d8e51cafb2b4d387df356fe41955" category="paragraph"><block ref="32d5d8e51cafb2b4d387df356fe41955" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9a1a34831e3e917e934e09eb9402b4d6" category="section-title">SnapCenter 데이터베이스 백업을 수행합니다</block>
+  <block id="3d8b8b9e239f00e8fbddb0437a5c5659" category="paragraph">그런 다음 Swagger 페이지의 Disaster Recovery 영역으로 이동하여 SnapCenter 백업 프로세스를 시작합니다.</block>
+  <block id="5fd8196e8aa6d444acf7a65f639a6085" category="list-text">재해 복구 영역을 클릭하여 확장합니다.</block>
+  <block id="7ec34046162f53040f7ca7c8a78c4b17" category="paragraph"><block ref="7ec34046162f53040f7ca7c8a78c4b17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="14245d6803dae3fc2cab0fe1fd18565e" category="list-text">'/4.6/disasterrecovery/server/backup' 섹션을 확장하고 try it을 클릭합니다.</block>
+  <block id="b5f8e4e588ebd761591d02cb02f2a5dd" category="paragraph"><block ref="b5f8e4e588ebd761591d02cb02f2a5dd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aad454707845382aef2a040acc30177a" category="list-text">SmDRBackupRequest 섹션에서 올바른 로컬 대상 경로를 추가하고 Execute 를 선택하여 SnapCenter 데이터베이스 및 구성의 백업을 시작합니다.</block>
+  <block id="949b4a3f3887b0d48d721acc506fb82e" category="admonition">백업 프로세스에서는 NFS 또는 CIFS 파일 공유에 직접 백업할 수 없습니다.</block>
+  <block id="ef97a1ec7f6c4c7d84f053938ce48398" category="paragraph"><block ref="ef97a1ec7f6c4c7d84f053938ce48398" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5f638b2ae24161dbfa69705afbf177bd" category="section-title">SnapCenter에서 백업 작업을 모니터링합니다</block>
+  <block id="03322e4ba2c5a628edfa27eb5a52741b" category="paragraph">데이터베이스 복원 프로세스를 시작할 때 SnapCenter에 로그인하여 로그 파일을 검토합니다. 모니터 섹션에서 SnapCenter 서버 재해 복구 백업의 세부 정보를 볼 수 있습니다.</block>
+  <block id="82c39eed34769992987a93ed6b12a97f" category="paragraph"><block ref="82c39eed34769992987a93ed6b12a97f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac753614a3d47f00caddc06fd2dc281f" category="section-title">XCOPY 유틸리티를 사용하여 SMB 공유에 데이터베이스 백업 파일을 복사합니다</block>
+  <block id="d2a0be1c4b7f47c09b612fb78a28adee" category="paragraph">그런 다음 SnapCenter 서버의 로컬 드라이브에서 데이터를 SnapMirror로 복제하는 데 사용되는 CIFS 공유로 AWS의 FSx 인스턴스에 있는 보조 위치로 백업을 이동해야 합니다. 파일 권한을 유지하는 특정 옵션과 함께 xcopy를 사용합니다.</block>
+  <block id="fa13c8e8caa807a78a4301f1cfa0ec2f" category="paragraph">관리자 권한으로 명령 프롬프트를 엽니다. 명령 프롬프트에서 다음 명령을 입력합니다.</block>
+  <block id="08406acdf6d36b81a16d981083bd61de" category="inline-link-macro">다음: 페일오버.</block>
+  <block id="2daad47844905a5928be287ef012b28b" category="paragraph"><block ref="2daad47844905a5928be287ef012b28b" category="inline-link-macro-rx"></block></block>
+  <block id="08ddcd0bf8d31f8f97bdfac3b92a0ddc" category="summary">이 섹션에서는 온-프레미스 리소스, VMware Cloud 및 Amazon FSx ONTAP에 액세스하고 구성하는 데 필요한 요구 사항에 대해 자세히 설명합니다.</block>
+  <block id="4ac2001bd2356ce23ce0a94b16caa22b" category="inline-link-macro">이전: 개요 - AWS 게스트 연결 스토리지 재해 복구</block>
+  <block id="ab8f4b9431e4c3bdb9ec80b1c80277cd" category="paragraph"><block ref="ab8f4b9431e4c3bdb9ec80b1c80277cd" category="inline-link-macro-rx"></block></block>
+  <block id="0b55c8177ba39a322f35975c0c3bd3ba" category="section-title">기술 및 지식</block>
+  <block id="b1adf7ef88c9564fb1f6c97bf42dca5c" category="paragraph">Cloud Volumes Service for AWS에 액세스하려면 다음 기술 및 정보가 필요합니다.</block>
+  <block id="7b83d82f99126fdb6efaa234f31683f5" category="list-text">VMware 및 ONTAP 사내 환경에 대한 액세스 및 지식</block>
+  <block id="39a8abb00c1f9d982e3a29b4baec67f2" category="list-text">VMware Cloud 및 AWS에 대한 지식 및 액세스</block>
+  <block id="eaad72d3a50e4be3e11d36792eb96d62" category="list-text">AWS 및 Amazon FSx ONTAP에 대한 액세스 및 지식</block>
+  <block id="25e65b652ca97821fa49aa9571b2b54a" category="list-text">SDDC 및 AWS 리소스에 대한 지식</block>
+  <block id="18334368a9f4fce73ca297bdd4be123a" category="list-text">온프레미스 리소스와 클라우드 리소스 간의 네트워크 연결에 대한 지식</block>
+  <block id="f917b7afd251e67bbdf50fa466a9918e" category="list-text">재해 복구 시나리오에 대한 작업 지식</block>
+  <block id="77d0638c77df28bd77c058b3da580702" category="list-text">VMware에 구축된 애플리케이션에 대한 작업 지식</block>
+  <block id="9ef15415f400d1d1a7b2c4d3e8879124" category="section-title">관리</block>
+  <block id="99be46c7a7d783d36552f0f11df8cd5e" category="paragraph">온프레미스 또는 클라우드에서 리소스와 상호 작용하든, 사용자와 관리자는 자신의 권한에 따라 필요할 때 필요한 리소스를 프로비저닝할 수 있는 기능과 권한을 가지고 있어야 합니다. 성공적인 하이브리드 클라우드 구축을 위해서는 ONTAP, VMware를 비롯한 온프레미스 시스템과 VMware 클라우드 및 AWS를 포함한 클라우드 리소스에 대한 역할 및 사용 권한의 상호 작용이 무엇보다 중요합니다.</block>
+  <block id="e5d4baff0167d033367d67396f5608f6" category="paragraph">VMware 및 ONTAP On-Premises와 VMware Cloud on AWS 및 FSx ONTAP를 사용하여 DR 솔루션을 구성하려면 다음 관리 작업이 필요합니다.</block>
+  <block id="e6833d473d476a99c7ec8095a5bfe8df" category="list-text">다음을 프로비저닝할 수 있는 역할 및 계정:</block>
+  <block id="297c8005623a7f22aad3d141e82fabb5" category="list-text">ONTAP 스토리지 리소스</block>
+  <block id="864d5ea26def3831e53731dc58671672" category="list-text">VMware VM, 데이터 저장소 등</block>
+  <block id="61b883742c54e0000affbbf61cecb00a" category="list-text">AWS VPC 및 보안 그룹</block>
+  <block id="cae667335742a0f5e8a41bb0caa73e4c" category="list-text">사내 VMware 환경 및 ONTAP 프로비저닝</block>
+  <block id="7098bf260c6533f1ebf70f5b9bb041b0" category="list-text">VMware 클라우드 환경</block>
+  <block id="eca5f84e846df7323fccde83f4ff44d5" category="list-text">ONTAP 파일 시스템용 FSx에 대한 Amazon</block>
+  <block id="29b34be64d30233d5ed6d4f314db7483" category="list-text">사내 환경과 AWS 간의 연결</block>
+  <block id="c89c49a63ff46b95a3a1930093133477" category="list-text">AWS VPC 연결</block>
+  <block id="9301a9f205ba883a750d8c90b33c2bbc" category="paragraph">VMware 가상 환경에는 다음 그림과 같이 ESXi 호스트, VMware vCenter Server, NSX 네트워킹 및 기타 구성 요소의 라이센스가 포함됩니다. 모든 구성 요소는 서로 다른 방식으로 라이센스가 부여되므로 기본 구성 요소가 사용 가능한 라이센스 용량을 어떻게 소비하는지 이해하는 것이 중요합니다.</block>
+  <block id="9c65f29920ac7957f45dfe13a60758e6" category="inline-image-macro">오류: 그래픽 이미지 누락, 100,100</block>
+  <block id="b8df4dc893ee7ea1ce82ddb16ccd3b81" category="paragraph"><block ref="b8df4dc893ee7ea1ce82ddb16ccd3b81" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="42094e9e4a0f05012b8d6753300a1657" category="section-title">ESXi 호스트</block>
+  <block id="1d50ac197ef032b2bc2e46d8e2e64598" category="paragraph">VMware 환경의 컴퓨팅 호스트는 ESXi와 함께 구축됩니다. 다양한 용량 계층에서 vSphere로 라이센스를 부여하면 가상 머신은 각 호스트의 물리적 CPU와 해당 기능을 활용할 수 있습니다.</block>
+  <block id="43e02e05b2879c1406a010bf6a28f8f7" category="section-title">VMware vCenter를 참조하십시오</block>
+  <block id="05f79f8867c02153173be8abc21ae61a" category="paragraph">ESXi 호스트 및 스토리지 관리는 vCenter Server를 사용하는 VMware 관리자가 사용할 수 있는 다양한 기능 중 하나입니다. VMware vCenter 7.0부터 VMware vCenter의 세 가지 에디션을 사용할 수 있습니다.</block>
+  <block id="f958b6a3f3407168711a82d395fb4ac7" category="list-text">vCenter Server Essentials 를 참조하십시오</block>
+  <block id="a0301fdeb61b558341af142a9f2dd3aa" category="list-text">vCenter Server Foundation을 참조하십시오</block>
+  <block id="62a846eee92143dee42cae576208c443" category="list-text">vCenter Server Standard를 참조하십시오</block>
+  <block id="e44df2b6e256fb033bf0234d942a29f3" category="paragraph">VMware NSX는 관리자에게 고급 기능을 활성화하는 데 필요한 유연성을 제공합니다. 기능은 라이센스가 부여된 NSX-T Edition 버전에 따라 활성화됩니다.</block>
+  <block id="9e8b160226c9fe22a910c782ce5076e2" category="list-text">전문가입니다</block>
+  <block id="9b6545e4cea9b4ad4979d41bb9170e2b" category="list-text">고급</block>
+  <block id="1330271d87fae19afa4e7be5cd94b9f8" category="list-text">원격 사무소/지사</block>
+  <block id="88793829da8796f676eaebd57e42009d" category="paragraph">NetApp ONTAP 라이센싱은 관리자가 NetApp 스토리지 내의 다양한 기능에 액세스하는 방법을 나타냅니다. 라이센스는 하나 이상의 소프트웨어 사용 권한의 기록입니다. 라이센스 코드라고도 하는 라이센스 키를 설치하면 스토리지 시스템에서 특정 기능 또는 서비스를 사용할 수 있습니다. 예를 들어, ONTAP는 모든 주요 업계 표준 클라이언트 프로토콜(NFS, SMB, FC, FCoE, iSCSI, NVMe/FC) 라이센스를 통해 제공됩니다.</block>
+  <block id="90a29bf269cfe6c256d42b29776d14dd" category="paragraph">Data ONTAP 기능 라이센스는 여러 기능 또는 단일 기능을 포함하는 패키지로 발급됩니다. 패키지에는 라이센스 키가 필요하며, 키를 설치하면 패키지의 모든 기능에 액세스할 수 있습니다.</block>
+  <block id="e4b843c32b9db50414c1dfbad0c4d1c0" category="paragraph">라이센스 유형은 다음과 같습니다.</block>
+  <block id="0f00a6a817b378adf16de8d25fbf24fa" category="list-text">* 노드 잠김 라이센스. * 노드 잠김 라이센스를 설치하면 노드에 라이센스가 부여된 기능이 부여됩니다. 클러스터에 라이센스가 부여된 기능을 사용하려면 해당 기능에 대해 하나 이상의 노드에 라이센스가 있어야 합니다.</block>
+  <block id="52db1a3edfedfc7015c35209e22f04c2" category="list-text">* 마스터/사이트 라이센스. * 마스터 또는 사이트 라이센스는 특정 시스템 일련 번호에 연결되지 않습니다. 사이트 라이센스를 설치하면 클러스터의 모든 노드에 라이센스가 부여된 기능이 부여됩니다.</block>
+  <block id="b2aa6f86c442a3ce1bedb4a83498fcc6" category="list-text">* 데모/임시 사용권. * 데모 또는 임시 사용권은 일정 시간이 지나면 만료됩니다. 이 라이센스를 사용하면 사용 권한을 구입하지 않고도 특정 소프트웨어 기능을 사용할 수 있습니다.</block>
+  <block id="c6009ee65fbe56a5eed91a0a06f3a1b5" category="list-text">* 용량 라이센스(ONTAP Select 및 FabricPool에만 해당). * ONTAP Select 인스턴스는 사용자가 관리하려는 데이터 양에 따라 라이센스가 부여됩니다. ONTAP 9.4부터 FabricPool를 사용하려면 타사 스토리지 계층(예: AWS)과 함께 용량 라이센스를 사용해야 합니다.</block>
+  <block id="13b92bafad23a87622890420ed0b860b" category="paragraph">SnapCenter에서는 데이터 보호 작업을 위해 여러 개의 라이센스가 필요합니다. 설치하는 SnapCenter 라이센스 유형은 스토리지 환경과 사용하려는 기능에 따라 다릅니다. SnapCenter Standard 라이센스는 애플리케이션, 데이터베이스, 파일 시스템 및 가상 머신을 보호합니다. SnapCenter에 스토리지 시스템을 추가하기 전에 하나 이상의 SnapCenter 라이센스를 설치해야 합니다.</block>
+  <block id="c2aa46e5e57aae7e4f4c969c417f1238" category="paragraph">애플리케이션, 데이터베이스, 파일 시스템 및 가상 머신을 보호하려면 FAS 또는 AFF 스토리지 시스템에 표준 컨트롤러 기반 라이센스가 설치되어 있거나 ONTAP Select 및 Cloud Volumes ONTAP 플랫폼에 표준 용량 기반 라이센스가 설치되어 있어야 합니다.</block>
+  <block id="14c2700881a435ad41069af9e8ee6f85" category="paragraph">이 솔루션에 대한 다음 SnapCenter 백업 사전 요구 사항을 참조하십시오.</block>
+  <block id="96b3493b2e1844322d28e845c314e10b" category="list-text">백업된 데이터베이스 및 구성 파일을 찾기 위해 사내 ONTAP 시스템에서 생성된 볼륨 및 SMB 공유입니다.</block>
+  <block id="f39931d0fa94c8e0cb577222f77fb09d" category="list-text">사내 ONTAP 시스템과 AWS 계정의 FSx 또는 CVO 간 SnapMirror 관계 백업된 SnapCenter 데이터베이스 및 구성 파일이 포함된 스냅샷을 전송하는 데 사용됩니다.</block>
+  <block id="d2727816fa1087ddac7dff69e35c5536" category="section-title">MS SQL</block>
+  <block id="f9e005542c2e103eede9db2dfe82bdc7" category="paragraph">이 솔루션 검증의 일부로 MS SQL을 사용하여 재해 복구를 시연합니다.</block>
+  <block id="ed94f710e6ae715e2f17c5670d6bf092" category="paragraph">MS SQL 및 NetApp ONTAP의 모범 사례에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오<block ref="1ed6e40008e985821d1338a60f7ccab3" category="inline-link-rx"></block>.</block>
+  <block id="877ee5bcf7f0335c93ce9f231f44f195" category="paragraph">이 솔루션 검증의 일환으로, NetApp은 Oracle을 사용하여 재해 복구를 시연합니다. Oracle 및 NetApp ONTAP 모범 사례에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오<block ref="3b13b5361a3a7b7e48b79b29a907e9fc" category="inline-link-rx"></block>.</block>
+  <block id="05241239c2e205951eabc51d0b39de96" category="section-title">Veeam을 선택합니다</block>
+  <block id="cf575d98d37c3423857f91c318d883e7" category="paragraph">이 솔루션 검증의 일부로 Veeam을 사용하여 재해 복구를 시연합니다. Veeam 및 NetApp ONTAP의 모범 사례에 대한 자세한 내용은 를 참조하십시오<block ref="69659c9961c1e42b0f8742562f24fdfa" category="inline-link-rx"></block>.</block>
+  <block id="59288c543af9b26fa84b24054d3be8dc" category="paragraph">다음 작업을 수행할 수 있어야 합니다.</block>
+  <block id="f35a1ddfb2f9b2cac114bd32ce5bbbab" category="list-text">도메인 서비스 배포 및 구성</block>
+  <block id="71877c1e84cfa72072c46494d86a8ee7" category="list-text">특정 VPC에 애플리케이션 요구 사항당 FSx ONTAP를 구축합니다.</block>
+  <block id="9135a2c6ac5c27bd10c50337c5a89f26" category="list-text">FSx ONTAP의 트래픽을 허용하도록 AWS 컴퓨팅 게이트웨이에서 VMware 클라우드를 구성합니다.</block>
+  <block id="8a401f5d4b33a44bd1812ff7ead2248d" category="list-text">AWS 서브넷의 VMware Cloud와 FSx ONTAP 서비스가 구축된 AWS VPC 서브넷 간의 통신을 허용하도록 AWS 보안 그룹을 구성합니다.</block>
+  <block id="2e31cdf7daad1ca06d6642765fa13252" category="section-title">VMware 클라우드</block>
+  <block id="f7f38aee276941a8501ab3a4788fb838" category="list-text">AWS SDDC에서 VMware Cloud를 구성합니다.</block>
+  <block id="08aa379cc2bcb108397d323bd5732f6c" category="section-title">Cloud Manager 계정 검증</block>
+  <block id="17d24c2f3d504e509ec34ba87bfea6a5" category="paragraph">NetApp Cloud Manager로 리소스를 구축할 수 있어야 합니다. 다음 작업을 완료할 수 있는지 확인합니다.</block>
+  <block id="2ee5d6132c6433861745857e6af68778" category="inline-link">Cloud Central에 가입하십시오</block>
+  <block id="604e59aa26a0b211909e4b9590685eb1" category="list-text"><block ref="35c2f2ba3f068c3df62b94b779d38cce" category="inline-link-rx"></block> 아직 없는 경우</block>
+  <block id="e7ef0ccc08f963a97d6ab9c3aabc5081" category="inline-link">Cloud Manager에 로그인합니다</block>
+  <block id="5ec677c5c014e60203e82de8cbed20e4" category="list-text"><block ref="77549d8461eff5ea7726f72f7e171b7c" category="inline-link-rx"></block>.</block>
+  <block id="78e80a35b7d01f404398eea432dd9654" category="inline-link">작업 영역 및 사용자를 설정합니다</block>
+  <block id="6693afd5aef7c87168fb40b34d61e795" category="list-text"><block ref="491866e862424f2a10f9441373484bc0" category="inline-link-rx"></block>.</block>
+  <block id="e7a9cd1dc4bf0c230d0684e18369d70d" category="inline-link">커넥터를 작성합니다</block>
+  <block id="821d88deb5e031a9587e5a8e00abe556" category="list-text"><block ref="b3797d3b448c35004d47db91b5cf65cf" category="inline-link-rx"></block>.</block>
+  <block id="4c0f2b07e3034da6a2b901197cec7210" category="paragraph">AWS 계정이 있는 후에는 다음 작업을 수행할 수 있어야 합니다.</block>
+  <block id="7d8207e3bfa061fd6c5b1389d79e23e4" category="list-text">NetApp ONTAP 파일 시스템에 Amazon FSx를 프로비저닝할 수 있는 IAM 관리 사용자를 생성합니다.</block>
+  <block id="7984cdcb84b94f3ec5af3c2aa0bc9f9c" category="section-title">구성 사전 요구 사항</block>
+  <block id="799b279302dc2106f49a0c61994a42a1" category="paragraph">고객이 사용하는 다양한 토폴로지를 고려할 때 이 섹션에서는 사내에서 클라우드 리소스로의 통신을 지원하는 데 필요한 포트를 중점적으로 다룹니다.</block>
+  <block id="dee55c33a91e43d371aa8eab0ee8968e" category="section-title">필수 포트 및 방화벽 고려 사항</block>
+  <block id="34e0f9db6d0a94f20e464420fb481570" category="paragraph">다음 표에는 인프라 전체에서 사용해야 하는 포트가 설명되어 있습니다.</block>
+  <block id="28c5fdd36289c2258f08118f41c54729" category="paragraph">Veeam Backup &amp; Replication 소프트웨어에 필요한 포트의 전체 목록을 보려면 다음 단계를 따르십시오<block ref="2a9b4a1873abbc6819ad7073e9ebc1a5" category="inline-link-rx"></block>.</block>
+  <block id="2a975bb27423e33e6c65cb2e2b14db28" category="paragraph">SnapCenter의 포트 요구 사항에 대한 보다 포괄적인 목록은 을 참조하십시오<block ref="4939c26301b3a22bfb3c0a6725311b88" category="inline-link-rx"></block>.</block>
+  <block id="8a042a39d5b3b0e7e0554c5af7abd76b" category="paragraph">다음 표에는 Microsoft Windows Server에 대한 Veeam 포트 요구사항이 나와 있습니다.</block>
+  <block id="5da618e8e4b89c66fe86e32cdafde142" category="cell">보낸 사람</block>
+  <block id="e12167aa0a7698e6ebc92b4ce3909b53" category="cell">를 선택합니다</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">포트</block>
+  <block id="f4c6f851b00d5518bf888815de279aba" category="cell">참고</block>
+  <block id="52045ab804b1b913874ef04c2c3a2f69" category="cell">백업 서버</block>
+  <block id="de6900dd0f213be9d369252ce490a1df" category="cell">Microsoft Windows 서버</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="67f7fb873eaf29526a11a9b7ac33bfac" category="cell">445</block>
+  <block id="3f8c4ba1591441de01c30814d6be96cb" category="cell">Veeam Backup &amp; Replication 구성 요소를 구축하는 데 필요한 포트입니다.</block>
+  <block id="a34fcb59deecb10582ae58c505df58ba" category="cell">백업 프록시</block>
+  <block id="fa3060edb66e6ff4507886f9912e1ab9" category="cell">6160</block>
+  <block id="a615435ab6eb1aac4a4b4c4ebe2a89e9" category="cell">Veeam Installer Service에서 사용되는 기본 포트입니다.</block>
+  <block id="480ddf908a09bb49e2eb46b2293d83e0" category="cell">백업 저장소</block>
+  <block id="84c456c47f1859be98a88fa53ffca994" category="cell">2500에서 3500까지</block>
+  <block id="1622c3ddec12802a4bc6cbb96c7b1b49" category="cell">데이터 전송 채널 및 로그 파일 수집에 사용되는 기본 포트 범위</block>
+  <block id="a31f402016255891ea5a6010567d0c28" category="cell">서버를 마운트합니다</block>
+  <block id="6aaba9a124857622930ca4e50f5afed2" category="cell">6162</block>
+  <block id="f36e2d75f4071e4e994fdbc77c14ddb0" category="cell">Veeam Data Mover에서 사용되는 기본 포트입니다.</block>
+  <block id="510f315f3436af1e5ec4cb22dd263070" category="admonition">작업에서 사용하는 모든 TCP 연결에 대해 이 범위의 포트 하나가 할당됩니다.</block>
+  <block id="655a5fe10451fb66645cbcdec5034698" category="paragraph">다음 표에는 Linux Server의 Veeam 포트 요구사항이 나와 있습니다.</block>
+  <block id="b5d9f1a9fbf0fb75f6765f140eb5774f" category="cell">Linux 서버</block>
+  <block id="28c991d1c426febedd1596fd29a3f864" category="cell">콘솔에서 대상 Linux 호스트로 제어 채널로 사용되는 포트입니다.</block>
+  <block id="a4fda10bbaa8015596c2c1c1dd6f1a36" category="paragraph">다음 표에는 Veeam Backup Server 포트 요구사항이 나와 있습니다.</block>
+  <block id="4197adf45342f775880cf0b40b2bebe4" category="cell">HTTPS, TCP</block>
+  <block id="ff48f6174c8c54c3faa04ebcf25b720d" category="cell">vCenter Server에 연결하는 데 사용되는 기본 포트입니다. 콘솔에서 대상 Linux 호스트로 제어 채널로 사용되는 포트입니다.</block>
+  <block id="dad95acf5318650271f0853ca3c36a1a" category="cell">Veeam Backup &amp; Replication 구성 데이터베이스를 호스팅하는 Microsoft SQL Server</block>
+  <block id="8fb5f8be2aa9d6c64a04e3ab9f63feee" category="cell">1443</block>
+  <block id="dc0848552680aa2839c317b54853b6c8" category="cell">Veeam Backup &amp; Replication 구성 데이터베이스가 구축된 Microsoft SQL Server와의 통신에 사용되는 포트입니다(Microsoft SQL Server 기본 인스턴스를 사용하는 경우).</block>
+  <block id="1cdaa0286d1e5b2da16bb4a4d56030e5" category="cell">모든 백업 서버의 이름 확인이 있는 DNS 서버</block>
+  <block id="8643c8e2107ba86c47371e037059c4b7" category="cell">3389</block>
+  <block id="2914ea759530f85f84d8d97088f4c0fb" category="cell">DNS 서버와 통신하는 데 사용되는 포트입니다</block>
+  <block id="462cb0982d9c6d8b64cd1a92197cad0e" category="admonition">vCloud Director를 사용하는 경우 기본 vCenter Server에서 포트 443을 열어야 합니다.</block>
+  <block id="5fd55c0224ae845943b259eaa37fa9de" category="paragraph">다음 표에는 Veeam Backup Proxy 포트 요구 사항이 나와 있습니다.</block>
+  <block id="e564618b1a0f9a0e5b043f63d43fc065" category="cell">6210</block>
+  <block id="06c6eec6c18e0d75ea5c6853a2397d90" category="cell">SMB 파일 공유 백업 중에 VSS 스냅샷을 생성하기 위해 Veeam Backup VSS Integration Service에서 사용하는 기본 포트입니다.</block>
+  <block id="dd46e35ec3bd7632e2b6924b4ace5592" category="cell">vCenter 설정에서 사용자 지정할 수 있는 기본 VMware 웹 서비스 포트입니다.</block>
+  <block id="67f0bc6c760260e8ecb1e44fc5337bd6" category="paragraph">다음 표에는 SnapCenter 포트 요구 사항이 나와 있습니다.</block>
+  <block id="bd9f125b279a19f0d5b7f09c7d793d35" category="cell">포트 유형</block>
+  <block id="d7ca8612b857419959ee2c089e5be08c" category="cell">SnapCenter 관리 포트</block>
+  <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
+  <block id="202ed3792e2cfa7318b12ead83763c37" category="cell">8146</block>
+  <block id="a1a3a7ab0e2e0b654e17bb8a2e57e9e5" category="cell">이 포트는 SnapCenter 클라이언트(SnapCenter 사용자)와 SnapCenter 서버 간의 통신에 사용됩니다. 플러그인 호스트에서 SnapCenter 서버로의 통신에도 사용됩니다.</block>
+  <block id="18622e175ff22b2375f9cbc2314b3285" category="cell">SnapCenter SMCore 통신 포트입니다</block>
+  <block id="bb68b5529560433e58ff13eb45622724" category="cell">이 포트는 SnapCenter 서버와 SnapCenter 플러그인이 설치된 호스트 간의 통신에 사용됩니다.</block>
+  <block id="f79093a340ccf8139d6e585381acc44c" category="cell">Windows 플러그인 호스트, 설치</block>
+  <block id="a1639b6147c7f85402852464ce33b9ae" category="cell">135, 445</block>
+  <block id="4b790f3dbcd2d867091d8fbf3b63026f" category="cell">이러한 포트는 SnapCenter 서버와 플러그인이 설치되는 호스트 간의 통신에 사용됩니다. 설치 후 포트를 닫을 수 있습니다. 또한 Windows Instrumentation Services는 열려 있어야 하는 49152 ~ 65535 포트를 검색합니다.</block>
+  <block id="da8fa0760683502b8b15e2d8f992b780" category="cell">Linux 플러그인 호스트, 설치</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH를 클릭합니다</block>
+  <block id="e541d805fe886aded7cfb18984fba335" category="cell">이러한 포트는 SnapCenter 서버와 플러그인이 설치되는 호스트 간의 통신에 사용됩니다. 이 포트는 SnapCenter에서 플러그인 패키지 바이너리를 Linux 플러그인 호스트에 복사하는 데 사용됩니다.</block>
+  <block id="8ffa3ad47599004a1c67f905da7456c0" category="cell">Windows/Linux용 SnapCenter 플러그인 패키지</block>
+  <block id="0c0cfd9478c6551fbfe74a7acb6fc037" category="cell">8145</block>
+  <block id="9b52abdc2eaa620c3f1c7588679b8764" category="cell">이 포트는 SnapCenter 플러그인이 설치된 SMCore와 호스트 간의 통신에 사용됩니다.</block>
+  <block id="7c1239972879fe0b69b4bb6d5c9a743e" category="cell">VMware vSphere vCenter Server 포트입니다</block>
+  <block id="4047860556fa008e56adfadd36f5b7af" category="cell">이 포트는 VMware vSphere용 SnapCenter 플러그인과 vCenter Server 간의 통신에 사용됩니다.</block>
+  <block id="87db2cdf992c6481194f67a3c24f2d31" category="cell">VMware vSphere 포트용 SnapCenter 플러그인</block>
+  <block id="edf0320adc8658b25ca26be5351b6c4a" category="cell">8144</block>
+  <block id="397d2ce87a0d127486b8fa20c5f3cdb9" category="cell">이 포트는 vCenter vSphere 웹 클라이언트 및 SnapCenter 서버로부터 통신하는 데 사용됩니다.</block>
+  <block id="7b13ffe0dead97a7b1b92efe1210176c" category="inline-link-macro">다음: 네트워킹.</block>
+  <block id="61e505a14b25f4c12e70abfdf48d011e" category="paragraph"><block ref="61e505a14b25f4c12e70abfdf48d011e" category="inline-link-macro-rx"></block></block>
+  <block id="f201deaeba7cc565253f52d974008543" category="summary">애플리케이션 VM 및 데이터베이스 볼륨을 AWS에서 실행되는 VMware Cloud Volume 서비스로 페일오버하려면 SnapCenter Server와 Veeam Backup and Replication Server의 실행 중인 인스턴스를 설치 및 구성해야 합니다. 페일오버가 완료된 후 사내 데이터 센터에 대한 페일백이 계획 및 실행될 때까지 정상적인 백업 작업을 재개하도록 이러한 툴을 구성해야 합니다.</block>
+  <block id="ee51a40e9d2538b4e33b441d66869c24" category="doc">클라우드 백업 툴 및 구성</block>
+  <block id="b6becc0c2163c969315f0ac3b11baed0" category="inline-link-macro">이전: Veeam Backup Server를 구축 및 구성합니다.</block>
+  <block id="4e504a95cd8b7ced0797ad268f8b019f" category="paragraph"><block ref="4e504a95cd8b7ced0797ad268f8b019f" category="inline-link-macro-rx"></block></block>
+  <block id="a514f4da2fec40b52d89613d7b3854fa" category="section-title">보조 Windows SnapCenter 서버를 배포합니다</block>
+  <block id="dba3e8475ef38dcd147447c5730c2f7c" category="paragraph">SnapCenter 서버는 VMware 클라우드 SDDC에 구축하거나 VMware 클라우드 환경에 대한 네트워크 연결을 통해 VPC에 상주하는 EC2 인스턴스에 설치됩니다.</block>
+  <block id="1a297f32b70010f208d00a4f58855fec" category="paragraph">SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다<block ref="92e6fa322f689d7da93690560d0b41bd" category="inline-link-rx"></block>.</block>
+  <block id="4adffd967d9bbc0f71287e67a568e0ae" category="paragraph">SnapCenter 소프트웨어는 에서 찾을 수 있습니다<block ref="6c76039d71cd5c9473efac721f24ac89" category="inline-link-rx"></block>.</block>
+  <block id="224efa116a105cfd586d82f09e7cd1fe" category="section-title">보조 Windows SnapCenter 서버를 구성합니다</block>
+  <block id="9ec64430f94c7b2f3824857182b8ff9d" category="paragraph">FSx ONTAP에 미러링된 애플리케이션 데이터를 복구하려면 먼저 온-프레미스 SnapCenter 데이터베이스의 전체 복원을 수행해야 합니다. 이 프로세스가 완료되면 VM과의 통신이 다시 설정되고 FSx ONTAP를 기본 스토리지로 사용하여 응용 프로그램 백업을 다시 시작할 수 있습니다.</block>
+  <block id="b502974234450ceabf2344f2a3e45f7a" category="paragraph">이를 위해서는 SnapCenter 서버에서 다음 항목을 완료해야 합니다.</block>
+  <block id="13d56fa22f861d817f01e34bd0dff18d" category="list-text">원래 온-프레미스 SnapCenter 서버와 동일하게 컴퓨터 이름을 구성합니다.</block>
+  <block id="87da734902f9a20ba518a732df6228fc" category="list-text">VMware 클라우드 및 FSx ONTAP 인스턴스와 통신하도록 네트워킹을 구성합니다.</block>
+  <block id="7f2fdcaa4d368c36731db2bdf5eb79a9" category="list-text">SnapCenter 데이터베이스를 복원하는 절차를 완료합니다.</block>
+  <block id="b9f6e6c037c51c372d51f5f4254d76cc" category="list-text">SnapCenter가 재해 복구 모드에 있는지 확인하여 이제 FSx가 백업용 기본 스토리지인지 확인합니다.</block>
+  <block id="b8864a7697abc4d58d337a7803f7ca8e" category="list-text">복구된 가상 머신과 통신이 다시 설정되었는지 확인합니다.</block>
+  <block id="6b9d280aee667ad2407fdb311dc034cb" category="inline-link-macro">SnapCenter 데이터베이스 복원 프로세스</block>
+  <block id="4757e8da6d3b5465a3ae91d8390db6d9" category="paragraph">이러한 단계를 완료하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="fe5a34b461345b6f910f9d5fd86fde40" category="inline-link-macro-rx"></block>.</block>
+  <block id="5a52004c163c11c725ba4255d9cd4f1d" category="section-title">Secondary Veeam Backup &amp; Replication 서버를 구축합니다</block>
+  <block id="b827704a3bb22b3992173e0581a1c28b" category="paragraph">Veeam Backup &amp; Replication 서버를 AWS의 VMware Cloud 또는 EC2 인스턴스에 설치할 수 있습니다. 자세한 구현 지침은 를 참조하십시오<block ref="1e2565ba3e6473b62b1909934037e810" category="inline-link-rx"></block>.</block>
+  <block id="830053d7de8e0cabf2b3e7b8342b0252" category="section-title">Secondary Veeam Backup &amp; Replication 서버를 구성합니다</block>
+  <block id="e271ecc9b2a2050b58d0914d62a2325b" category="paragraph">Amazon S3 스토리지에 백업된 가상 머신의 복구를 수행하려면 Veeam Server를 Windows 서버에 설치하고 원래 백업 저장소가 포함된 VMware Cloud, FSx ONTAP 및 S3 버킷과 통신하도록 구성해야 합니다. 또한 VM이 복구된 후 새 백업을 수행하려면 FSx ONTAP에 새 백업 리포지토리가 구성되어 있어야 합니다.</block>
+  <block id="d569da58bc917eb906ada72f76bf1030" category="paragraph">이 프로세스를 수행하려면 다음 항목을 완료해야 합니다.</block>
+  <block id="6443544e723bdb5a8e0b2e300ce4e821" category="list-text">네트워킹을 구성하여 원래 백업 저장소가 포함된 VMware Cloud, FSx ONTAP 및 S3 버킷과 통신합니다.</block>
+  <block id="d19ea991ccb7ded9582c07fa062fb3b4" category="list-text">FSx ONTAP에서 SMB 공유를 새 백업 리포지토리로 구성합니다.</block>
+  <block id="adf79b820407599132e907adb994746d" category="list-text">사내에서 스케일아웃 백업 저장소의 일부로 사용된 원래 S3 버킷을 마운트합니다.</block>
+  <block id="a706ef66660617fcf4a5aeb2e6f6d76b" category="list-text">VM을 복구한 후 SQL 및 Oracle VM을 보호하기 위한 새로운 백업 작업을 설정합니다.</block>
+  <block id="28850f35c95cf12d5e28a35c2fdd8e5d" category="inline-link-macro">Veeam Full Restore로 애플리케이션 VM을 복구합니다</block>
+  <block id="5ad23c05d5054f7daf749b3a328903be" category="paragraph">Veeam을 사용하여 VM을 복원하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="145e19bb138e7c87e2d24d78a1c11e93" category="inline-link-macro-rx"></block>.</block>
+  <block id="93ead3cb3c2017275b0194803e3c09fa" category="inline-link-macro">다음: 재해 복구를 위한 SnapCenter 데이터베이스 백업</block>
+  <block id="1ee709831e8e6709b30b545d15d7125e" category="paragraph"><block ref="1ee709831e8e6709b30b545d15d7125e" category="inline-link-macro-rx"></block></block>
+  <block id="f377bdd54f0f567b139a5913567466f1" category="paragraph">* VMware Tanzu Kubernetes Grid(TKG) *</block>
+  <block id="7a3368d887604b1812f8f796b668f0e7" category="paragraph">* VMware Tanzu Kubernetes Grid Service(TKGS) *</block>
+  <block id="8da30835717bc9e00a9ea2b89d75d943" category="paragraph">* VMware Tanzu Kubernetes Grid Integrated(TKGI) *</block>
+  <block id="22bd1c4adfe1c3f7d3dc00763a7a8d40" category="paragraph">* vSphere 및 Tanzu(vSphere Pod) *</block>
+  <block id="4f50bac068dbe84c04d257f75bb42142" category="list-text">vSphere 기본 포드는 가상 하드웨어가 규정된 가상 계층으로 구성된 가상 광자 기반 계층에서 실행되어 완벽한 격리를 제공합니다.</block>
+  <block id="c8cefb07aba3cc260670993281c9bef5" category="list-text">NSX-T가 필요하지만 Harbour 이미지 레지스트리와 같은 추가 기능을 지원할 수 있습니다.</block>
+  <block id="b603aa094817eb0510887a841cc71df8" category="list-text">TKGS와 같은 가상 Supervisor 클러스터를 사용하여 vSphere 7.0U1 이상에서 구축 및 관리 ESXi 노드에서 직접 Pod를 실행합니다.</block>
+  <block id="cf3b96589f75768a855cebe2679e5b8b" category="list-text">vSphere 관리를 통해 완벽하게 통합된 최고의 가시성과 제어 기능을 제공합니다.</block>
+  <block id="3b050b735b1eb713cc1b3816851e3060" category="list-text">최고 수준의 보안을 제공하는 격리된 crX 기반 포드.</block>
+  <block id="e7004adb0d2f74954305a1023249e642" category="list-text">영구 스토리지에 대한 vSphere CSI만 지원합니다. 타사 스토리지 오케스트레이터는 지원되지 않습니다.</block>
+  <block id="90534ff553f8895d609b7e0cec5e7977" category="paragraph">Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다.</block>
+  <block id="25e19f6e213533d24e711ce5e6738fa9" category="paragraph">vSphere Pod라고도 하는 Tanzu를 지원하는 VMware vSphere를 사용하면 베어 메탈 Kubernetes 환경에서 VMware vSphere 환경의 ESXi 하이퍼바이저 노드를 작업자 노드로 사용할 수 있습니다.</block>
+  <block id="c2556907e1f90b93c9c43e198113de8b" category="paragraph">가상화된 Supervisor Cluster는 Kubernetes를 위한 고가용성 제어 플레인을 제공하기 위해 생성되고, 사용자를 위한 리소스 격리를 보장하기 위해 각 애플리케이션에 대해 개별 네임스페이스는 생성됩니다.</block>
+  <block id="9e2885b693a2045e931fda4aeb8bf28f" category="paragraph">Tanzu가 설치된 VMware vSphere가 활성화된 경우 각 ESXi 호스트에는 Spherelet 애플리케이션이 설치 및 구성되어 있습니다. 이를 통해 각 노드가 Kubernetes 구축 시 작업자 역할을 수행하고 각 노드에 구축된 Pod를 관리할 수 있습니다.</block>
+  <block id="c44d7c5351501c027261c0480a658d6d" category="paragraph">현재 Tanzu 및 vSphere Pod를 사용하는 VMware vSphere는 로컬 vSphere CSI 드라이버만 지원합니다. 이 작업은 vSphere Client에서 관리자가 vSphere 데이터 저장소로 사용할 수 있는 스토리지 타겟 중에서 선택할 스토리지 정책을 생성하도록 하는 방식으로 수행할 수 있습니다. 이러한 정책은 컨테이너화된 애플리케이션을 위한 영구 볼륨을 생성하는 데 사용됩니다.</block>
+  <block id="fe41e8fdcbc9d8447c9077fbd167fe8d" category="admonition">현재 NetApp Astra Trident CSI 드라이버는 외부 ONTAP 및 Element 스토리지 어레이에 직접 연결할 수 있도록 지원하지만, 이러한 NetApp 스토리지 시스템은 vSphere 환경의 기본 스토리지를 지원하는 데 주로 사용됩니다. 또한 NetApp 고급 데이터 관리 및 스토리지 효율성 툴을 이러한 방식으로 사용할 수 있습니다.</block>
+  <block id="70aaffec040bcf9e5cf77c0ccabb8f11" category="paragraph">Tanzu를 사용하는 VMware vSphere에 대한 자세한 내용은 설명서를 참조하십시오 <block ref="0cdaad1423fdb034ad0ee788d57a7a82" category="inline-link-macro-rx"></block>.</block>
+  <block id="5e86473217a757f4702d326176983651" category="cell">2022년 7월 28일</block>
+  <block id="e325d40f0256e06aa0a0f1c795ea68ee" category="cell">SnapCenter와 Veeam으로 AWS/VMC(게스트 연결 스토리지)용 DR 솔루션 추가</block>
+  <block id="af2a34190d0729a3b5a2ed9d50d9e399" category="cell">VMware 솔루션을 사용하는 하이브리드 멀티 클라우드의 체계적인 콘텐츠: 각 하이퍼스케일러의 랜딩 페이지 및 사용 가능한 솔루션(사용 사례) 콘텐츠 포함</block>
+  <block id="9c00744e128712d7626e5c00edcfeaa1" category="cell">VMware를 통해 가상화 및 하이브리드 멀티 클라우드를 위한 콘텐츠를 효율적으로 구성하기 위한 랜딩 페이지를 만들었습니다</block>
+  <block id="5424d7e641fa7962888e16022445e1ae" category="cell">가상화 환경 및 게스트 연결 스토리지 옵션을 위한 VMware 콘텐츠를 포함하는 하이브리드 멀티 클라우드 생성</block>
+  <block id="e307db07b3975fef922a80d07455ee5e" category="cell">데이터베이스</block>
+  <block id="6c6fb0f7e5fe3a7242028f22d2792fca" category="cell">NetApp 솔루션 타일에 엔터프라이즈 애플리케이션 및 데이터베이스용 블로그 섹션이 추가되었습니다. 데이터베이스 블로그에 두 개의 블로그를 추가했습니다.</block>
+  <block id="146074e51d1a075fad5fd016dea017cc" category="sidebar">솔루션 개요</block>
+  <block id="8d69f930e73398b81d052ad873efa8ab" category="sidebar">AWS 게스트 연결 스토리지 재해 복구</block>
+  <block id="645a84975202e30700b572b49a5ee29d" category="sidebar">재해 복구</block>
 </blocks>

@@ -11,10 +11,12 @@ indexpage:
       url: "/aws-guest.html"
     - title: AWS/VMC용 솔루션
       url: "/aws-solutions.html"
+  - title: 워크로드 보호 솔루션
+    links:
+    - title: AWS에서 VMC를 사용한 재해 복구(게스트 연결)
+      url: "/aws-guest-dr-solution-overview.html"
   - title: 곧 제공 예정...
     links:
-    - title: 워크로드 보호 솔루션
-      url: 
     - title: 워크로드 솔루션 확장
       url: 
     - title: 워크로드 마이그레이션 솔루션
