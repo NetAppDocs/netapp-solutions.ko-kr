@@ -60,7 +60,7 @@ VMware 및 ONTAP On-Premises와 VMware Cloud on AWS 및 FSx ONTAP를 사용하�
 
 VMware 가상 환경에는 다음 그림과 같이 ESXi 호스트, VMware vCenter Server, NSX 네트워킹 및 기타 구성 요소의 라이센스가 포함됩니다. 모든 구성 요소는 서로 다른 방식으로 라이센스가 부여되므로 기본 구성 요소가 사용 가능한 라이센스 용량을 어떻게 소비하는지 이해하는 것이 중요합니다.
 
-image:dr-vmc-aws-image2.png["오류: 그래픽 이미지 누락, 100,100"]
+image:dr-vmc-aws-image2.png["오류: 그래픽 이미지가 없습니다"]
 
 
 

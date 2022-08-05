@@ -14414,8 +14414,6 @@
   <block id="29b34be64d30233d5ed6d4f314db7483" category="list-text">사내 환경과 AWS 간의 연결</block>
   <block id="c89c49a63ff46b95a3a1930093133477" category="list-text">AWS VPC 연결</block>
   <block id="9301a9f205ba883a750d8c90b33c2bbc" category="paragraph">VMware 가상 환경에는 다음 그림과 같이 ESXi 호스트, VMware vCenter Server, NSX 네트워킹 및 기타 구성 요소의 라이센스가 포함됩니다. 모든 구성 요소는 서로 다른 방식으로 라이센스가 부여되므로 기본 구성 요소가 사용 가능한 라이센스 용량을 어떻게 소비하는지 이해하는 것이 중요합니다.</block>
-  <block id="9c65f29920ac7957f45dfe13a60758e6" category="inline-image-macro">오류: 그래픽 이미지 누락, 100,100</block>
-  <block id="b8df4dc893ee7ea1ce82ddb16ccd3b81" category="paragraph"><block ref="b8df4dc893ee7ea1ce82ddb16ccd3b81" category="inline-image-macro-rx" type="image"></block></block>
   <block id="42094e9e4a0f05012b8d6753300a1657" category="section-title">ESXi 호스트</block>
   <block id="1d50ac197ef032b2bc2e46d8e2e64598" category="paragraph">VMware 환경의 컴퓨팅 호스트는 ESXi와 함께 구축됩니다. 다양한 용량 계층에서 vSphere로 라이센스를 부여하면 가상 머신은 각 호스트의 물리적 CPU와 해당 기능을 활용할 수 있습니다.</block>
   <block id="43e02e05b2879c1406a010bf6a28f8f7" category="section-title">VMware vCenter를 참조하십시오</block>
@@ -14589,4 +14587,5 @@
   <block id="146074e51d1a075fad5fd016dea017cc" category="sidebar">솔루션 개요</block>
   <block id="8d69f930e73398b81d052ad873efa8ab" category="sidebar">AWS 게스트 연결 스토리지 재해 복구</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="sidebar">재해 복구</block>
+  <block id="c99ec32d06b1f19699d82b1b34a80ca0" category="paragraph"><block ref="c99ec32d06b1f19699d82b1b34a80ca0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
