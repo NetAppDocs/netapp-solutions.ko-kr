@@ -3,25 +3,6 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
-- title: Splunk SmartStore가 포함된 NetApp StorageGRID
-  type: solutions
-  entries:
-  - title: 소개
-    url: "/data-analytics/stgr-splunkss-introduction.html"
-  - title: 이 솔루션의 이점
-    url: "/data-analytics/stgr-splunkss-benefits-of-this-solution.html"
-  - title: 지능형 계층화 및 비용 절감
-    url: "/data-analytics/stgr-splunkss-intelligent-tiering-and-cost-savings.html"
-  - title: 솔루션 개요
-    url: "/data-analytics/stgr-splunkss-solution-overview.html"
-  - title: Splunk SmartStore를 위한 유연한 StorageGRID 기능
-    url: "/data-analytics/stgr-splunkss-flexible-storagegrid-features-for-splunk-smartstore.html"
-  - title: Splunk 아키텍처
-    url: "/data-analytics/stgr-splunkss-splunk-architecture.html"
-  - title: 단일 사이트 SmartStore 성능
-    url: "/data-analytics/stgr-splunkss-single-site-smartstore-performance.html"
-  - title: 결론
-    url: "/data-analytics/stgr-splunkss-conclusion.html"
 - title: 인공 지능에 빅 데이터 분석 데이터 활용
   type: solutions
   entries:

@@ -9,8 +9,6 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/58015-sb-4154.pdf
   - title: 모범 사례
     links:
-    - title: Splunk SmartStore가 포함된 NetApp StorageGRID
-      url: "/stgr-splunkss-introduction.html"
     - title: Confluent Kafka 모범 사례
       url: confluent-kafka-introduction.html
     - title: NetApp E-Series E5700 및 Splunk Enterprise
