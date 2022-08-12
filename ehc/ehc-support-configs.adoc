@@ -19,7 +19,7 @@ summary:
 |===
 
 
-|  | * 게스트 연결됨 * | * 네이티브 데이터 저장소 * 
+|  | * 게스트 연결됨 * | * 보조 NFS 데이터 저장소 * 
 
 
 | * AWS * | CVO FSx ONTAPlink:aws/aws-guest.html["세부 정보"] | FSX ONTAP 정보 곧 제공!^1^ 

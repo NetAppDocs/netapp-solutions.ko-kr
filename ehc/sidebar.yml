@@ -25,7 +25,7 @@ entries:
     entries:
     - title: VMC를 위한 게스트 연결 스토리지
       url: "/ehc/aws/aws-guest.html"
-    - title: AVS용 네이티브 데이터 저장소
+    - title: AVS용 보조 NFS 데이터 저장소입니다
       url: "/ehc/azure/azure-native-overview.html"
     - title: AVS용 게스트 연결 스토리지
       url: "/ehc/azure/azure-guest.html"
@@ -104,10 +104,10 @@ entries:
   entries:
   - title: 워크로드 보호
     entries:
-    - title: Jetstream을 통한 재해 복구(기본 데이터 저장소)
+    - title: ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)
       url: "/ehc/azure/azure-native-dr-jetstream.html"
-    - title: CVO 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)
-      url: "/ehc/azure/azure-guest-dr-jetstream.html"
+    - title: ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구
+      url: "/ehc/azure/azure-guest-dr-cvo.html"
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/azure/azure-regions.html"
 - title: NetApp for GCP/GCVE

@@ -4416,7 +4416,6 @@
   <block id="a74a86037d1564ce62843a1252f6ad37" category="admonition">게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services를 GCVE에 연결하는 유일한 지원 방법입니다.</block>
   <block id="11a31c6d83a723b3ea9c348c22e86238" category="inline-link-macro">GCVE 배포 및 구성</block>
   <block id="3e5cc29621d2619be0d7b1569da6909c" category="inline-link-macro">GCVE에 대한 개인 액세스를 활성화합니다</block>
-  <block id="9eaed1d83e18be57bbead8a1f4bf4abe" category="doc">NetApp 기본 데이터 저장소 옵션 for GCP</block>
   <block id="ae295ef15cb155f8a1af7d255e34298d" category="doc">AWS를 위한 NetApp 게스트 연결 스토리지 옵션</block>
   <block id="4a7272ea95323d5fef2e377b91b5f16d" category="inline-link-macro">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
   <block id="6e3fe132749fe21d23cf75f00317a6fe" category="section-title">AWS에서 VMware Cloud를 사용하여 NetApp ONTAP용 Amazon FSx를 구성합니다</block>
@@ -4570,13 +4569,10 @@
   <block id="d3fc27ff58dc3a0d839a16af858e7999" category="list-text"><block ref="d3fc27ff58dc3a0d839a16af858e7999" category="inline-link-macro-rx"></block></block>
   <block id="833413440fbbe13837d8b58256cfba65" category="paragraph">온프레미스에서와 마찬가지로 클라우드 기반 가상화 환경을 계획하는 것은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</block>
   <block id="6eb516b97eae0ab93b8d6aab35fbb764" category="section-title">GCVE용 NetApp 스토리지 옵션</block>
-  <block id="50b53922d656bce75f35201b661fc378" category="paragraph">NetApp 스토리지는 GCP GCVE 내에서 추측으로 연결되거나 기본 데이터 저장소로 사용될 수 있습니다.</block>
   <block id="94772ee4b241fe0706c3aaef6e3a4505" category="inline-link-macro">지원되는 NetApp 스토리지 옵션</block>
   <block id="67b586cdf9703ba67abe711415768cc0" category="paragraph">를 방문하십시오 <block ref="01a9bd21bfc714c8dec8aabc5b88eda7" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="8f08ff97ca555f50f0d05fdf950a0568" category="paragraph">Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="9bb210767ccb9c085c816c82f3b6b1cb" category="inline-link-macro">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="94f644afad50386ab13d527e1056ce71" category="paragraph">* 네이티브 데이터 저장소 *</block>
-  <block id="1234d67e696757e4666b0611f60b80d8" category="inline-link-macro">CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1로 사용합니다</block>
   <block id="c567300e15e9f9b873771e56c72c938b" category="admonition">1-현재 비공개 미리보기에 있습니다</block>
   <block id="04999f88dfbb06dc4f6a71901a7e9b18" category="paragraph">리드&gt;</block>
   <block id="2a172299398c31c1e2cd726175d3a270" category="paragraph">content&gt;를 선택합니다</block>
@@ -4750,8 +4746,6 @@
   <block id="df6b502d4d7283ef27d3821b69836c2d" category="list-text">RAID 1 = 유효 여유 공간 = 11.7TB(사용 가능한 물리적 용량/2)</block>
   <block id="921c660c11d4880048f3ef723f079e17" category="list-text">RAID 5 = 유효 여유 공간 = 17.5TB(사용 가능한 물리적 용량/1.33)</block>
   <block id="e3bdc3102c3de4f73860c229550bc6f4" category="paragraph">따라서 NetApp Cloud Volumes를 게스트 연결 스토리지로 사용하면 스토리지를 확장하고 TCO를 최적화하는 동시에 성능 및 데이터 보호 요구사항을 충족할 수 있습니다.</block>
-  <block id="0e8dc2a599bea7faae9351c694a4f162" category="inline-link-macro">Azure NetApp Files(ANF)를 Azure용 네이티브 데이터 저장소로 사용합니다</block>
-  <block id="3e6b003f71badaeb92ae26f7ed351a37" category="inline-link-macro">CVS(Cloud Volumes Service)를 GCP용 기본 데이터 저장소로 사용합니다</block>
   <block id="571c0d425ce03c2532e7d9f34ca87cb1" category="section-title">기억해야 할 사항</block>
   <block id="8e6eaed3852a3b311ab6ed1b8b6fc239" category="list-text">하이브리드 스토리지 모델에서는 Tier 1 또는 높은 우선 순위의 워크로드를 vSAN 데이터 저장소에 배치하여 호스트 자체의 일부이고 근접하기 때문에 특정 지연 시간 요구 사항을 처리합니다. 트랜잭션 지연 시간이 허용되는 워크로드 VM에 대해 게스트 내 메커니즘을 사용합니다.</block>
   <block id="43ff7a71a2ea2fc47a29d410cd1e4944" category="list-text">NetApp SnapMirror ® 기술을 사용하여 온프레미스 ONTAP 시스템에서 Cloud Volumes ONTAP 또는 NetApp ONTAP용 Amazon FSx로 워크로드 데이터를 복제하여 블록 레벨 메커니즘을 사용하여 손쉽게 마이그레이션할 수 있습니다. Azure NetApp Files 및 Cloud Volumes Services에는 적용되지 않습니다. 데이터를 Azure NetApp Files 또는 Cloud Volumes Services로 마이그레이션하려면 사용되는 파일 프로토콜에 따라 NetApp XCP, Cloud Sync, rysnc 또는 robocopy를 사용하십시오.</block>
@@ -4778,10 +4772,8 @@
   <block id="1a8ac44404b1e5888d83801ac116ff66" category="inline-image-macro">엔터프라이즈 하이브리드 클라우드 아키텍처</block>
   <block id="855b05f645c80247a3f11392cab187c2" category="paragraph"><block ref="855b05f645c80247a3f11392cab187c2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="63b9fbe67e7dd9b9f7623683244cb7f8" category="doc">Azure AVS용 NetApp 기능</block>
-  <block id="ea7f7b3af23a2abea8816902269875f9" category="paragraph">NetApp이 AVS(Azure VMware Solution)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 기본 데이터 저장소로 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/급증할 수 있습니다.</block>
   <block id="1f0a2077c33b91b3daaaea05c7fadc07" category="section-title">Azure에서 AVS 구성</block>
   <block id="cdac9a2e7f1dc52240712d4a191378e8" category="section-title">AVS용 NetApp 스토리지 옵션</block>
-  <block id="a69a7b9e874f9f6e0703191e7825cc4f" category="paragraph">NetApp 스토리지는 Azure AVS에서 추측으로 연결되거나 기본 데이터 저장소로 사용될 수 있습니다.</block>
   <block id="cf3ac5a0dae3780b356e57c121b3eab0" category="doc">Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성</block>
   <block id="fd558e50adcdcb0d667a4790f70f75a9" category="paragraph">GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.</block>
   <block id="fb33f758c28f8ef8d56e41f74b4c47ab" category="paragraph">“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.</block>
@@ -4802,17 +4794,12 @@
   <block id="3a9cff0eb1abb119c1c264dbfff216f6" category="paragraph">사내 네트워크에서 VMware Engine 프라이빗 클라우드로 연결하려면 클라우드 VPN 또는 Cloud Interconnect를 활용하여 적절한 연결을 설정하고 필요한 포트가 열려 있는지 확인합니다. 자세한 단계는 다음과 같습니다 <block ref="6fe8ac83365e22e24c5c8eb9edc2d548" category="inline-link-macro-rx"></block>.</block>
   <block id="b433f901707e7fd0f6d64371dfca4af9" category="paragraph"><block ref="b433f901707e7fd0f6d64371dfca4af9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="989afab9e0dfcc6d523ddb1d23145834" category="paragraph"><block ref="989afab9e0dfcc6d523ddb1d23145834" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b23824e61fecb77e1ae6d9f739a9fb83" category="doc">AWS용 NetApp 기본 데이터 저장소 옵션</block>
   <block id="ba756c1a2b93ad97a639914aae828a16" category="doc">AWS VMC를 위한 NetApp 솔루션</block>
-  <block id="c31fafd8fe5f702d3722404547cc8cb5" category="paragraph">NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 기본 데이터 저장소로 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/급증할 수 있습니다.</block>
   <block id="8658ccb747e94ac624861f5761a34716" category="section-title">AWS에서 VMC 구성</block>
   <block id="e9f84da32eb512bd768458a738ed8aa6" category="section-title">VMC용 NetApp 스토리지 옵션</block>
-  <block id="cd5a564d709538be5df5e7167600498d" category="paragraph">AWS VMC에서 NetApp 스토리지를 추측으로 연결 또는 기본 데이터 저장소로 활용할 수 있습니다.</block>
-  <block id="ee5c3b650204d422e3d3e7bd725ec032" category="paragraph">NetApp이 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소로 NetApp의 3가지 운영 하이퍼스케일러에 제공하는 기능에 대해 자세히 알아보십시오. 마이그레이션 워크플로우, 백업/복원, 재해 복구 등 확대/버스팅이 확장됩니다.</block>
   <block id="f21c97f5b239021bb3f13d148516abb4" category="paragraph">클라우드를 선택하시면 NetApp에서 나머지 작업을 해 드립니다!</block>
   <block id="c1304f98c6be845a236d7a27951ece4f" category="paragraph"><block ref="c1304f98c6be845a236d7a27951ece4f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca4ac823f3f130f3c78d6ac26ba9f46b" category="admonition">특정 하이퍼스케일러의 기능을 보려면 해당 하이퍼스케일러의 적절한 탭을 클릭하십시오.</block>
-  <block id="ff264305bf70750f504c04f48ab02038" category="paragraph">NetApp 스토리지는 3가지 주요 하이퍼 스케일러 내에서 상호 연결된 추측이나 기본 데이터 저장소로 활용할 수 있습니다.</block>
   <block id="e7441dbfabeaebba75ddd1bf2bcf25e9" category="section-title">사용 사례 #1: 스토리지 최적화</block>
   <block id="b9a8c3d27aa6638e02992c8b76fea769" category="paragraph">RVtools 출력을 사용하여 사이징 작업을 수행할 때 마력(vCPU/vmem) 스케일이 스토리지와 평행하다는 것이 항상 명백합니다. 스토리지 공간에 필요한 드라이브의 크기가 마력을 훨씬 넘어서는 상황에 처하게 되는 경우가 많습니다.</block>
   <block id="cb575e0b8e023ca0a1789ea03bdb86fd" category="paragraph">NetApp Cloud Volumes를 통합하면 간단한 마이그레이션 방식을 통해 vSphere 기반 클라우드 솔루션을 실현할 수 있습니다. 플랫폼 재구축 또는 IP 변경 없이 아키텍처 변경 없이 모든 작업을 수행할 수 있습니다. 또한 이러한 최적화를 통해 vSphere에서 호스트 수를 최소한으로 유지하면서 스토리지 설치 공간을 확장할 수 있으며, 스토리지 계층, 보안 또는 사용 가능한 파일은 변경되지 않습니다. 따라서 구축을 최적화하고 전체 TCO를 35~45% 절감할 수 있습니다. 또한 이러한 통합을 통해 스토리지를 따뜻한 스토리지에서 운영 수준의 성능으로 몇 초 이내에 확장할 수 있습니다.</block>
@@ -4884,11 +4871,8 @@
   <block id="20b1c73b5938d2d878aa1d96fee7f1b2" category="list-text">VMware 사이트 확장,</block>
   <block id="5fe13b2b805496310dbaa281d7325877" category="list-text">클라우드로 신속하게 마이그레이션,</block>
   <block id="b278a6d011d590bb350b9cb81c21a732" category="list-text">개발/테스트, 및</block>
-  <block id="2116d89ca4be9d5a23f758068a2225b2" category="list-text">클라우드 네이티브 기술을 활용하여 애플리케이션 현대화</block>
   <block id="bc262005b263505cc0464e05c4324687" category="section-title">IT의 여정</block>
   <block id="cfdb9aabb4aedf8cad2e330ba5a516a3" category="paragraph">대부분의 조직은 혁신과 현대화를 향한 여정을 진행 중입니다. 이 프로세스의 일환으로 기업들은 기존 VMware 투자를 활용하는 동시에 클라우드의 이점을 활용하고 마이그레이션 프로세스를 최대한 원활하게 만드는 방법을 모색하고 있습니다. 이 접근 방식은 데이터가 이미 클라우드에 있기 때문에 현대화에 대한 노력을 매우 쉽게 할 수 있습니다.</block>
-  <block id="ca0a16f344ac7703cf785163a8f07f5d" category="section-title">기본 스토리지 옵션의 중요성 이해</block>
-  <block id="46da638bac867fb225c11e1d8504da00" category="paragraph">어떤 클라우드에서든 VMware는 모든 고객에게 고유한 하이브리드 기능을 제공하지만, 제한된 기본 스토리지 옵션으로 스토리지 집약적인 워크로드를 사용하는 조직에는 유용성이 제한됩니다. 스토리지는 호스트에 직접 연결되므로 스토리지를 확장하는 유일한 방법은 호스트를 추가하는 것입니다. 이렇게 하면 스토리지 집약적인 워크로드의 비용이 35-40% 이상 증가할 수 있습니다. 이러한 워크로드는 추가 마력이 아닌 추가 스토리지만 필요합니다. 하지만 이는 추가 호스트에 대한 비용을 지불하는 것을 의미합니다.</block>
   <block id="0362604333fcf179ebf8b873f8f8c0ec" category="paragraph">다음 시나리오를 생각해 봅시다.</block>
   <block id="b401aa039e47ba98bfaca10532e40d08" category="paragraph">고객은 CPU와 메모리에 대해 5개의 호스트만 필요로 하지만 스토리지 요구 사항이 많으므로 스토리지 요구 사항을 충족하기 위해 12개의 호스트가 필요합니다. 이 요구사항은 스토리지를 증가하기만 하면 되는 추가 마력을 구매해야 하는 만큼 재무 규모를 넘어주는 결과를 제공합니다.</block>
   <block id="7c25e9d8a9748905f5d456e20a93b413" category="paragraph">클라우드 도입 및 마이그레이션을 계획할 때는 항상 최상의 접근 방식을 평가하고 총 투자 비용을 절감하는 가장 쉬운 방법을 찾는 것이 중요합니다. 모든 애플리케이션 마이그레이션의 가장 일반적이고 쉬운 방법은 가상 머신(VM) 또는 데이터 변환이 없는 재호스팅(리프트 및 변속이라고도 함)입니다. NetApp Cloud Volumes를 VMware SDDC(소프트웨어 정의 데이터 센터)와 함께 사용하는 동시에 vSAN을 보완하는 것은 쉬운 전환 옵션을 제공합니다.</block>
@@ -5966,47 +5950,29 @@
   <block id="ad971da24ec0a38449ebf31e4e2c9332" category="list-text">QoS(최대/최소 IOPS)는 개별 VM 또는 해당 시점에 데이터 저장소의 모든 VM에 설정할 수 있습니다. 모든 VM에서 QoS를 설정하면 별도의 VM별 설정이 대체됩니다. 설정은 향후 새 VM이나 마이그레이션된 VM으로 확장되지 않습니다. 새 VM에 QoS를 설정하거나 데이터 저장소의 모든 VM에 QoS를 다시 적용하십시오.</block>
   <block id="3c9d41390700cbdfb2c273f00df0d6fd" category="list-text">SnapCenter Plug-in for VMware vSphere 릴리즈 4.4는 운영 스토리지 시스템의 FlexGroup 데이터 저장소에 있는 VM의 백업 및 복구를 지원합니다. FlexGroup를 보조 시스템에 복제하기 위해 SnapMirror를 수동으로 사용할 수 있지만 SCV 4.4는 보조 복사본을 관리하지 않습니다.</block>
   <block id="0416d04b345b434b120840c30ddaf0a1" category="paragraph">NetApp은 NetApp 테스트를 기반으로 ONTAP에서 올바르게 동작하도록 ESXi 호스트 다중 경로와 HBA 시간 초과 설정 세트를 개발했습니다. 이러한 설정은 VMware vSphere용 ONTAP 툴을 사용하여 쉽게 설정할 수 있습니다. 요약 대시보드의 호스트 시스템 윈도우에서 설정 편집 을 클릭하거나 vCenter에서 호스트를 마우스 오른쪽 버튼으로 클릭한 다음 ONTAP 도구 &gt; 권장 값 설정 으로 이동합니다. 다음은 9.8 릴리즈의 현재 권장되는 호스트 설정입니다.</block>
-  <block id="dec4361376291bf7e7976c204f3a6cc8" category="cell">호스트 설정</block>
-  <block id="024c7088f8cb994f40e5d60b87c10cbb" category="cell">NetApp이 권장하는 가치</block>
-  <block id="af4c57809e604bab0cdf9a5ac5766ac8" category="cell">* ESXi 고급 구성 *</block>
   <block id="73663d0d00956f0632e4ae75d811d53f" category="cell">VMFS3. HardwareAcceleratedLocking</block>
-  <block id="2eabcf9ece81cd6f8095d869d0ecfdb5" category="cell">설정된 상태로 둡니다(VMware 기본값은 1).</block>
   <block id="1b50110aedae4d8d2043a4eb9beb20af" category="cell">VMFS3.EnableBlockDelete 를 참조하십시오</block>
-  <block id="0fef419d5842ff81bf9c9046c637822c" category="inline-link-macro">2007427)을 참조하십시오</block>
-  <block id="f812302694bd63641124f6012aebac60" category="cell">설정된 상태로 둡니다(VMware 기본값은 0이지만 VMFS6에는 필요하지 않음). 자세한 내용은 VMware KB 문서 를 참조하십시오 <block ref="25cd71618ac903bfc347baf53ab838b7" category="inline-link-macro-rx"></block>.</block>
   <block id="571cc1d48c6d1ff3cf7e3a54cb035753" category="cell">* NFS 설정 *</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">NET.TcpipHeapSize</block>
-  <block id="abcf68baf479cae32e490eb770477d84" category="cell">vSphere 6.0 이상, 32로 설정. 다른 모든 NFS 구성은 30으로 설정합니다.</block>
   <block id="504e96cc79e7efe30a8271cea152d9d1" category="cell">net.TcpipHeapMax</block>
   <block id="5f1e7b6431061565550e292d05c73588" category="cell">NFS.MaxVolumes</block>
-  <block id="d75533d93e425c0e677c7115b33e8152" category="cell">vSphere 6.0 이상, 256으로 설정 다른 모든 NFS 구성은 64로 설정됩니다.</block>
   <block id="3058676a1cf088aa4a73312ac36f2a58" category="cell">NFS41.MaxVolumes</block>
   <block id="62c07f94c64184ee5d530e4c0917093f" category="cell">vSphere 6.0 이상, 256으로 설정</block>
-  <block id="6f4edfb9f3990d73482442c70e5fc2a0" category="cell">NFS.MaxQueueDepth입니다</block>
-  <block id="0e61218c55cae3476207bca2c2f35ca7" category="cell">vSphere 6.0 이상으로, 128로 설정합니다.</block>
   <block id="18e1fb6924459470760771b20ab0c379" category="cell">NFS.HeartbeatMaxFailures 를 참조하십시오</block>
-  <block id="8a14ec18b6563675357f1050563de774" category="cell">모든 NFS 구성에 대해 10으로 설정합니다.</block>
   <block id="1aa26eb281359ba3b9a9a4b83a09ed46" category="cell">NFS.HeartbeatFrequency 를 선택합니다</block>
-  <block id="072f9680861841ae9a13008a99667a75" category="cell">모든 NFS 구성에 대해 12로 설정합니다.</block>
   <block id="eb4182715f8cde98563dc59ea36461d3" category="cell">NFS.HeartbeatTimeout</block>
   <block id="45aa5481fa55802a29a96aefd2f5dab1" category="cell">모든 NFS 구성에 대해 5로 설정합니다.</block>
   <block id="54a08b15243d9078d3b5a47f8242da6f" category="cell">SunRPC.MaxConnPerIP입니다</block>
   <block id="9a9ccbecb3f315797ff8e709d85a0e18" category="cell">vSphere 7.0 이상, 128로 설정</block>
   <block id="c0b3fd5512c2093847f753f398290f30" category="cell">* FC/FCoE 설정 *</block>
   <block id="2e556ad678160413b32dcca55c7d1f5f" category="cell">경로 선택 정책</block>
-  <block id="1e304108bae216d7b24d43f9bc868298" category="cell">ALUA를 사용하는 FC 경로를 사용할 때 RR(라운드 로빈)으로 설정합니다. 다른 모든 설정에 대해 고정으로 설정합니다. 이 값을 RR로 설정하면 모든 활성/최적화 경로에서 로드 밸런싱을 제공하는 데 도움이 됩니다. 고정 값은 이전 비 ALUA 구성에 대한 값이며 프록시 I/O를 방지하는 데 도움이 됩니다 다시 말해, 7-Mode에서 Data ONTAP를 실행하는 환경에서 I/O가 고가용성(HA) 쌍의 다른 노드로 이동하는 것을 돕니다.</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize 를 참조하십시오</block>
-  <block id="acaf935911b20ef844daea256f8181b1" category="cell">모든 설정에 대해 32로 설정합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold를 참조하십시오</block>
-  <block id="ab1224ed1cd7c63073af652a3bd92a35" category="cell">모든 설정에 대해 8로 설정합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Emulex FC HBA 시간 초과</block>
   <block id="b4dbfc2d52627e923cbb563a31ff756d" category="cell">기본값을 사용합니다.</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">QLogic FC HBA 시간 초과</block>
   <block id="19b5aaf3e2cb86809996ca63a2a416b0" category="cell">iSCSI 설정 *</block>
-  <block id="d7e64409eb99602fc3b57a9f0b9287d6" category="cell">모든 iSCSI 경로에 대해 RR(라운드 로빈)으로 설정합니다. 이 값을 RR로 설정하면 모든 활성/최적화 경로에서 로드 밸런싱을 제공하는 데 도움이 됩니다.</block>
   <block id="fb55ee99c04280ac638757869929785d" category="paragraph">ONTAP 툴은 ONTAP FlexVol 볼륨 및 LUN을 생성할 때 특정 기본 설정도 지정합니다.</block>
-  <block id="b97847dc22c9e1f02417ab38785b34e6" category="cell">ONTAP 도구</block>
-  <block id="c003231c67265f34100a284092c0cf1f" category="cell">기본 설정</block>
   <block id="5938fe448c8661febcef3f4e779e3adb" category="cell">스냅숏 예비 공간(-percent-snapshot-space)</block>
   <block id="cfcd208495d565ef66e7dff9f98764da" category="cell">0</block>
   <block id="7218aec62575561a6de1cae8d5658390" category="cell">분할 예약(-fractional-reserve)</block>
@@ -8986,7 +8952,6 @@
   <block id="624e816c7f229d54827ad7bc018eb8da" category="sidebar">지원되는 스토리지 옵션</block>
   <block id="40d267fad784266cb59c36d76573e7c6" category="sidebar">AWS 기반 NetApp(VMC)</block>
   <block id="e7060d0555f178d672a4197df38e1d39" category="sidebar">가상화 환경을 구성합니다</block>
-  <block id="96e706be9b4668c0923788c6a8905fef" category="sidebar">네이티브 데이터 저장소 옵션</block>
   <block id="2408eed8aca98d53134097e8990c8225" category="sidebar">게스트 연결 스토리지 옵션</block>
   <block id="a64cd881ec955d17faa5e396a891e1e6" category="sidebar">Azure 기반 NetApp(AVS)</block>
   <block id="d1b0ccc0fc426266cf228929d5424ce4" category="sidebar">Google Cloud Platform의 NetApp(GCVE)</block>
@@ -11569,16 +11534,12 @@
   <block id="7e7790ea083a371632d0764a881695f6" category="open-title">GCP/GCVE</block>
   <block id="e44b11e9adb07a14c72f48599f700cd4" category="inline-link-macro">GCVE에 대한 구성 단계</block>
   <block id="0969e77be69a346b123e1b2c625e25b0" category="paragraph">자세한 내용을 확인하십시오 <block ref="7ffa56a4f5c5cf9fb86200a4dd2e1a5d" category="inline-link-macro-rx"></block>.</block>
-  <block id="3996fc456f7fb8e9643bad43ea62cd11" category="list-text">FSX ONTAP를 기본 데이터 저장소 ^1^로 사용합니다</block>
   <block id="52be4c6acc8cca3a598e3a651421de3d" category="inline-link-macro">VMC에 대한 게스트 연결 스토리지 옵션</block>
   <block id="37f223a23d46bf8585529dd8d08bbcf7" category="paragraph">자세한 내용을 확인하십시오 <block ref="faae832115390401ac20af18b263017a" category="inline-link-macro-rx"></block>.</block>
-  <block id="44ce1d8d9c5bbcf0eedde196ae5d5e31" category="list-text">Azure NetApp Files(ANF)를 기본 데이터 저장소 ^1^로 사용</block>
   <block id="a8e9a5787febc7740af29cd0bebf2e95" category="inline-link-macro">AVS용 게스트 연결 스토리지 옵션</block>
   <block id="ead358b28ecc307f6e89deb846b9a227" category="paragraph">자세한 내용을 확인하십시오 <block ref="b477b575563628f6202758f8f4d6ef57" category="inline-link-macro-rx"></block>.</block>
-  <block id="464b588a9c3ed4df78ea220f48faf1bb" category="list-text">CVS(Cloud Volumes Service)를 네이티브 데이터 저장소 ^1^로 사용합니다</block>
   <block id="2da991b20a7647acbdd67154515723cf" category="inline-link-macro">GCVE에 대한 게스트 연결 저장소 옵션</block>
   <block id="5d49b0ee57ad4b529c897b49789aa965" category="paragraph">자세한 내용을 확인하십시오 <block ref="39710aaf95ad3f60e444c45fa2d1a561" category="inline-link-macro-rx"></block>.</block>
-  <block id="9a1c3a40aef4ef7a29c07ec6176752dc" category="paragraph">에 대해 자세히 알아보십시오 <block ref="a508a86f372584a11bee8d3d41e3afca" category="inline-link-macro-rx"></block>.</block>
   <block id="685435b4b2388bd8f370b8fbb6ef6cc7" category="cell">* 게스트 연결됨 *</block>
   <block id="8299249ba5f910704b6288ee7e271747" category="cell">* AWS *</block>
   <block id="eb35b03ceb49f5f06a4570454e08c34c" category="cell">CVO FSx ONTAP<block ref="999b20d9470091fda2e66b2dde5b0af7" category="inline-link-macro-rx"></block></block>
@@ -11614,7 +11575,6 @@
   <block id="6626f21cba60531fb6ab33c5b686fd03" category="paragraph"><block ref="6626f21cba60531fb6ab33c5b686fd03" category="inline-link-macro-rx"></block></block>
   <block id="ef3abc0e33a9bba2f6844fc8bc6416c6" category="section-title">VMware 환경을 위한 NetApp 솔루션</block>
   <block id="7c56979dc4b16fa4dd69a289608a432d" category="paragraph">NetApp은 하이브리드 클라우드 모델이든 "클라우드 우선" 모델이든 클라우드에서 워크로드를 관리하는 가장 일반적인 사용 사례를 지원하는 다양한 솔루션을 제공합니다.</block>
-  <block id="d3ef2bae3f82fd055da3c71b59653d9e" category="paragraph">또한 NetApp은 게스트(게스트 연결) 스토리지로서 프로비저닝되거나 각 하이퍼스케일러의 네이티브 데이터 저장소로 프로비저닝된 스토리지에 대한 솔루션을 제공합니다. 모든 솔루션은 클라우드 워크로드의 VMware 분류와 함께 분류됩니다. 이러한 분류에는 다음이 포함됩니다.</block>
   <block id="14b428df74ec47d859b4b41c2a528f79" category="paragraph">각 하이퍼스케일러에서 사용할 수 있는 솔루션에 대한 자세한 내용은 다음을 참조하십시오.</block>
   <block id="d7d90ddf3d849c680942374007293390" category="inline-link-macro">AWS/VMC용 솔루션</block>
   <block id="3efe4c396a8490c63650f3271e66c5ab" category="list-text"><block ref="3efe4c396a8490c63650f3271e66c5ab" category="inline-link-macro-rx"></block></block>
@@ -11648,7 +11608,6 @@
   <block id="711a160cd3b8c4ec32edd7ba5dfd5eca" category="open-title">CVO용 HCX</block>
   <block id="4956cdf8fd57c365bb7636be6c086ca5" category="paragraph">CVO용 HCX&gt;와 함께 &lt;content's go here for the solution(s) for CVO&gt;</block>
   <block id="7c0dae765c7854235808e7e373346d06" category="paragraph">NetApp이 GCP에 제공하는 솔루션에 대해 자세히 알아보십시오.</block>
-  <block id="962dbad648dc58421e7347adf727a05a" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 네이티브 데이터 저장소를 워크플로우 마이그레이션, 클라우드로의 확장/버스팅, 백업/복원, 재해 복구 등 다양한 기능을 제공합니다.</block>
   <block id="370e7d693bc429e40244684cac20b0cf" category="list-text"><block ref="370e7d693bc429e40244684cac20b0cf" category="inline-link-macro-rx"></block></block>
   <block id="80d79003a84a32474624e54935709e67" category="paragraph">자세한 내용을 확인하십시오 <block ref="996ade122099ed78c4d5fea15d95f62c" category="inline-link-macro-rx"></block>.</block>
   <block id="80b43a415019d937ea5c38446043549a" category="paragraph">자세한 내용을 확인하십시오 <block ref="8e20eef09273fc2519292ca4ed666573" category="inline-link-macro-rx"></block>.</block>
@@ -11714,7 +11673,6 @@
   <block id="9840e6cb0c2ab37a0e662398a6b3ffef" category="list-text"><block ref="9840e6cb0c2ab37a0e662398a6b3ffef" category="inline-link-macro-rx"></block></block>
   <block id="55418abe87135e6107123ca2c087964c" category="sidebar">하이퍼스케일러 클라우드의 VMware용 NetApp 솔루션</block>
   <block id="195b49c0610d30d327f5440759b7b642" category="sidebar">지원되는 솔루션</block>
-  <block id="77abe5490624dabbaf53c9f3b9267e97" category="sidebar">네이티브 데이터 저장소 - 개인 미리 보기</block>
   <block id="3ffbc70cc0bdd47bd7c4ed3cfa35be8a" category="sidebar">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
   <block id="06e1970c26d133efed67d51224ceff1c" category="sidebar">보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service</block>
   <block id="860ab177fe05389a6d0ec0842bd1e818" category="sidebar">곧 제공 예정...</block>
@@ -11997,9 +11955,6 @@
   <block id="82f98bf67698e189fc9d846325345bbd" category="cell">아시아 태평양(자카르타)</block>
   <block id="1b15cf1d695d130132edd42a701b41a1" category="cell">아시아 태평양(홍콩)</block>
   <block id="69d00fef4f252c9c61d1eb67822e4739" category="paragraph">참고: 현재 데이터 저장소로서의 NetApp 스토리지를 AWS/VMC 및 Azure/AVS의 공개 미리 보기와 GCP/GSVE의 프라이빗 미리 보기로 사용할 수 있습니다. 자세한 내용은 다음 링크를 참조하십시오.</block>
-  <block id="945d681ba5697605547912e83e6eae6f" category="paragraph">FSx ONTAP용 AWS 보도 자료 곧 기본 데이터 저장소로 제공될 예정입니다!</block>
-  <block id="07535da6f60738e67762673b24566f6d" category="paragraph"><block ref="11492821d8f3e04dd83f75af4417e9ff" category="inline-link-macro-rx"></block>
-<block ref="7fb3f61cbe4dcbff12c3d3e4fb2e9565" category="inline-link-macro-rx"></block></block>
   <block id="b5406986e96922718431fbc820878678" category="doc">지역 가용성 - ANF용 NFS 데이터 저장소</block>
   <block id="6167e2ab0cfead32a7f67ecd3956d0af" category="paragraph">Azure, AVS 및 ANF에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
   <block id="9cd0e5d5083359436f8e8a366b9d6e07" category="admonition">NFS 데이터 저장소는 AVS 및 ANF(두 서비스)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
@@ -12987,9 +12942,7 @@
   <block id="f6762efea56447c717fea204b2676851" category="list-text">Next(다음) 를 클릭하여 각 단계를 계속 진행하고 Storage selection(저장 선택) 화면이 나타날 때까지 표시된 각 화면의 기본값을 그대로 적용합니다. 가상 머신을 구축할 VM_Datastore를 선택하고 Next를 클릭합니다.</block>
   <block id="da0289d58f35e36d18325d6e8038b226" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 작업자 노드 OS가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
   <block id="ca2835359be5e4e2e79ed5b6fd777515" category="paragraph"><block ref="ca2835359be5e4e2e79ed5b6fd777515" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="447797b692cf448a7c7d97a3cb4a0b3e" category="cell">대부분의 vSphere 6.X 릴리즈에서는 512MB로 설정합니다. 6.5U3, 6.7U3 및 7.0 이상의 경우 1024MB로 설정합니다.</block>
   <block id="98a209af6bc652363afa031bd7d07cf1" category="admonition">VMC용 FSxN이 현재 IA(초기 가용성)에 있습니다. 자세한 내용은 NetApp 세일즈 담당자에게 문의하십시오.</block>
-  <block id="14e9535e6f965278f245a3dff2ef2cb3" category="admonition">AVS의 기본 데이터 저장소로서 1-ANF가 현재 Public Preview에 있습니다. 자세한 내용을 확인하십시오<block ref="5b3a31b4442bd8ea3aebfc18fe8411e5" category="inline-link-rx"></block>.</block>
   <block id="43f154001e329eb4cb13b7745ba16dac" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드에 지원되는 구성</block>
   <block id="e7b07b53a772f4842ba8d6291d7092bc" category="cell">FSX ONTAP 정보 곧 제공!^1^</block>
   <block id="9b5e2f812e05038b9b432b2e47e60e83" category="cell">ANF<block ref="982de57bbd4b4909ca13b7582da5a7cb" category="inline-link-macro-rx"></block></block>
@@ -13004,10 +12957,6 @@
   <block id="68c6fcf9f9393805f0529c36994a9266" category="paragraph">GCP가 공개 가용성에 진입할 때 GCP 지역 가용성이 릴리스됩니다.</block>
   <block id="b632c27ff82cfe142baffd346253a21b" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드의 사용 사례</block>
   <block id="0257f1ddf73d49021a7feba150b7ea8b" category="paragraph">이 시나리오에 대한 가장 쉬운 답은 각 하이퍼스케일러의 VMware 오퍼링입니다. NetApp ® Cloud Volumes와 마찬가지로 VMware는 사내 VMware 환경을 클라우드로 이동 또는 확장하는 방법을 제공하므로 클라우드에서 워크로드를 기본적으로 실행하면서 기존 온프레미스 자산, 기술 및 툴을 유지할 수 있습니다. 따라서 서비스 중단이나 IP 변경이 필요하지 않고 IT 팀이 기존 기술과 툴을 사용하여 사내에서 작업하는 방식을 운영할 수 있으므로 위험이 감소합니다. 따라서 클라우드 마이그레이션을 가속화하고 하이브리드 멀티 클라우드 아키텍처로의 전환이 한층 원활해질 수 있습니다.</block>
-  <block id="03600a63dc7f2e298d8612aef1fdf46c" category="inline-link-macro">ANF 및 Jetstream을 사용한 재해 복구(기본 데이터 저장소)</block>
-  <block id="bfc6a5fbfaab611e46293767acf3c458" category="list-text"><block ref="bfc6a5fbfaab611e46293767acf3c458" category="inline-link-macro-rx"></block></block>
-  <block id="eb6c2b16f0098f0bc3c0f880f42e0f70" category="inline-link-macro">ANF 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
-  <block id="704578940b42b49730b76820cc879b1a" category="list-text"><block ref="704578940b42b49730b76820cc879b1a" category="inline-link-macro-rx"></block></block>
   <block id="33a1a24f2edf4ad9358baef7fb3c9cdf" category="doc">ANF 및 Jetstream을 통한 재해 복구</block>
   <block id="14f4fb472fe43e084476c5d8329b15f8" category="paragraph">클라우드로 재해 복구는 사이트 운영 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. VMware VAIO 프레임워크를 사용하여 온프레미스 VMware 워크로드를 Azure Blob 스토리지에 복제하고 복구하여 데이터 손실과 제로급 RTO를 최소화하거나 최소화할 수 있습니다.</block>
   <block id="b614fc13a076bceeca03cda9c4b1fdce" category="paragraph">Jetstream DR을 사용하면 사내에서 AVS로, 특히 Azure NetApp Files로 복제된 워크로드를 원활하게 복구할 수 있습니다. DR 사이트에서 최소한의 리소스와 비용 효율적인 클라우드 스토리지를 사용하여 비용 효율적으로 재해 복구를 수행할 수 있습니다. Jetstream DR은 Azure Blob Storage를 통해 ANF 데이터 저장소에 대한 복구를 자동화합니다. Jetstream DR은 네트워크 매핑에 따라 독립적인 VM 또는 관련 VM 그룹을 복구 사이트 인프라로 복구하고 랜섬웨어 보호를 위한 시점 복구를 제공합니다.</block>
@@ -13111,7 +13060,6 @@
   <block id="414dfaa4bcffbd76b7f5ed891cdf1535" category="paragraph">Azure NetApp Files 데이터 저장소와 함께 AVS용 Jetstream DR을 사용하면 조직에서 사용 가능한 시점으로부터 복구할 수 있으므로 필요에 따라 분리된 기능적 네트워크로 워크로드를 복구할 수 있습니다. 복구 기능을 사용하면 애플리케이션이 기능을 수행하고 서로 통신하면서 남북의 트래픽에 노출되지 않도록 함으로써 보안 팀이 법의학 및 기타 필요한 조치를 수행할 수 있는 안전한 장소를 제공할 수 있습니다.</block>
   <block id="a20215628470de7f6faa691cc18c4971" category="paragraph"><block ref="a20215628470de7f6faa691cc18c4971" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8f95900d5509fa4de2d1c7e9489f4dc6" category="summary">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Azure에서 실행되는 NetApp Cloud Volumes ONTAP에 복제할 수 있습니다.</block>
-  <block id="ecd3e45c724d0f1fe7838d14c01b0f98" category="doc">AVS용 CVO 및 Jetstream을 사용한 재해 복구(게스트 연결 스토리지)</block>
   <block id="48b47eaa686f297ed741f5cb81de709d" category="paragraph">저자: Ravi BCB, Niyaz Mohamed, NetApp</block>
   <block id="be93173f941fd10be0e9fddb606bd940" category="paragraph">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Azure에서 실행되는 NetApp Cloud Volumes ONTAP에 복제할 수 있습니다. 여기에는 애플리케이션 데이터가 포함됩니다. 하지만 실제 VM 자체는 어떻습니까? 재해 복구는 가상 머신, VMDK, 애플리케이션 데이터 등을 비롯한 모든 종속 구성 요소를 포함해야 합니다. 이를 위해 Jetstream과 함께 SnapMirror를 사용하면 VM VMDK에 vSAN 스토리지를 사용하는 동시에 사내에서 Cloud Volumes ONTAP로 복제된 워크로드를 원활하게 복구할 수 있습니다.</block>
   <block id="b25b60af8de6f7256f832e93e5651972" category="paragraph">이 문서에서는 NetApp SnapMirror, Jetstream 및 AVS(Azure VMware Solution)를 사용하여 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.</block>
@@ -13306,7 +13254,6 @@
   <block id="973a8d8f52abe676185faad3e1273042" category="list-text">Azure NetApp Files를 Azure VMware 솔루션과 통합합니다</block>
   <block id="5921bbfb65432acfa6b5c79e0d9087a5" category="inline-link"><block ref="5921bbfb65432acfa6b5c79e0d9087a5" category="inline-link-rx"></block></block>
   <block id="58d361413adbffbc6e6237546e3c4118" category="paragraph"><block ref="58d361413adbffbc6e6237546e3c4118" category="inline-link-rx"></block></block>
-  <block id="c9b304a75d091c3c7fd00a12963d8b52" category="doc">Azure의 네이티브 NFS 데이터 저장소 옵션</block>
   <block id="8d60f49fa5ec93fd2bea5e083359bdc1" category="paragraph">NFS 데이터 저장소 지원은 vSphere의 스토리지 기능을 크게 확장해 주는 사내 구축 환경의 ESXi 버전 3에서 도입되었습니다.</block>
   <block id="1aaea72f240547a6a057b9a88a27144b" category="paragraph">vSphere on NFS는 강력한 성능과 안정성을 제공하기 때문에 사내 가상화 구축에 널리 채택되는 옵션입니다. 사내 데이터 센터에 NAS(Network-Attached Storage)가 많이 있는 경우 Azure NetApp 파일 데이터 저장소와 Azure에 Azure VMware 솔루션 SDDC를 구축하여 용량 및 성능 문제를 해결하는 것이 좋습니다.</block>
   <block id="19fb9916968211db983d13bffe0cc6af" category="inline-link">99.99%</block>
@@ -13317,9 +13264,7 @@
   <block id="4d7a269595fa13e9d4bb48449c996a41" category="list-text">하나의 vSAN 환경만 가능합니다. 따라서 모든 스토리지 트래픽이 운영 워크로드와 직접 경쟁합니다.</block>
   <block id="99407e1fc016dc5a4f17896a330e66b0" category="list-text">애플리케이션 요구사항, 성능, 비용을 맞추기 위해 여러 성능 계층을 제공하는 옵션은 없습니다.</block>
   <block id="f5188d9f655a6ac9c3d0dccb20d81997" category="list-text">클러스터 호스트 위에 구축된 vSAN의 스토리지 용량 제한에 쉽게 도달할 수 있습니다. Azure NetApp Files와 같은 Azure 네이티브 PaaS(Platform-as-a-Service) 오퍼링을 데이터 저장소로 통합하여 고객은 스토리지를 독립적으로 확장하고 필요에 따라 SDDC 클러스터에만 컴퓨팅 노드를 추가할 수 있습니다. 이 기능을 통해 위에서 설명한 과제를 극복할 수 있습니다.</block>
-  <block id="0e3ed020480eaa03d85ccab093939832" category="paragraph">또한 Azure NetApp Files를 사용하면 여러 데이터 저장소를 배포할 수 있습니다. 이 데이터 저장소는 가상 머신을 적절한 데이터 저장소에 배치하고 워크로드 성능 요구 사항을 충족하는 데 필요한 서비스 수준을 할당하여 온-프레미스 구축 모델을 모방하는 데 도움이 됩니다. 멀티 프로토콜 지원의 고유한 기능을 통해 게스트 스토리지는 SQL 및 Oracle과 같은 데이터베이스 워크로드를 위한 추가 옵션일 뿐만 아니라 네이티브 NFS 데이터 저장소 기능을 사용하여 나머지 VMDK를 저장합니다. 이와 별도로 네이티브 스냅샷 기능을 사용하여 신속한 백업 및 세분화된 복원을 수행할 수 있습니다.</block>
   <block id="cf1c082028930ec1827badc0e64627c6" category="admonition">스토리지의 계획 및 사이징, 필요한 호스트 수를 결정하려면 Azure 및 NetApp 솔루션 설계자와 접촉하십시오. 테스트, POC 및 운영 구축을 위한 데이터 저장소 레이아웃을 최종적으로 완료하기 전에 스토리지 성능 요구사항을 파악하는 것이 좋습니다.</block>
-  <block id="4dbb477112f9a64eac4cca3a61697319" category="paragraph">개략적으로 보면, 이 아키텍처는 온프레미스 환경과 Azure에서 하이브리드 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다. 또한 Azure NetApp Files를 네이티브 NFS 데이터 저장소로 사용하거나 Azure VMware 솔루션에서 호스팅되는 게스트 가상 머신을 위한 게스트 내 스토리지 옵션으로 사용하는 방법에 대해서도 설명합니다.</block>
   <block id="1622404dda50f5803c9577efc058ec11" category="paragraph"><block ref="1622404dda50f5803c9577efc058ec11" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b3488e5e13ca2586de3bcc01700bd61b" category="paragraph">마이그레이션 또는 재해 복구의 가장 중요한 측면은 타겟 환경에 적합한 크기를 결정하는 것입니다. 온프레미스에서 Azure VMware 솔루션으로 이동하는 데 필요한 노드 수를 이해하는 것이 매우 중요합니다.</block>
   <block id="b39d58eedf7db669f2a65fd75198d49e" category="paragraph">크기를 조정하려면 RVTools(권장) 또는 Live Optics 또는 Azure Migrate 등의 다른 도구를 사용하여 온프레미스 환경의 기록 데이터를 사용합니다. RVTools는 vCPU, vmem, vDisk 및 전원이 켜져 있거나 꺼진 VM을 비롯한 모든 필수 정보를 캡처하여 타겟 환경의 특성을 파악하는 데 이상적인 툴입니다.</block>
@@ -13429,22 +13374,15 @@
   <block id="045ec2e9b9dff589c32c257549300273" category="sidebar">CVO를 게스트 연결 스토리지로 사용</block>
   <block id="ff106355f094608231dc8d7116a273e1" category="sidebar">VMC용 하이브리드 멀티 클라우드 솔루션</block>
   <block id="0ab50f8c17f87a8eecee4603b22f16c8" category="sidebar">AVS용 VMware를 사용하는 NetApp 하이브리드 멀티 클라우드</block>
-  <block id="c9657265669087dd28072f1b2ec9f781" category="sidebar">기본 데이터 저장소로서의 ANF: 개요</block>
   <block id="5ab938ef85bdfd3c94e8c4c5f1cfa448" category="sidebar">게스트 연결 스토리지로서의 ANF</block>
   <block id="5ab22899d20e83b71d3c1cbbedea208e" category="sidebar">AVS용 하이브리드 멀티 클라우드 솔루션</block>
   <block id="9fe80f9f1edda788e503795e34b7eb80" category="sidebar">GCVE를 위한 VMware의 NetApp 하이브리드 멀티 클라우드</block>
   <block id="f0476be9310e3a4606daded5c91d346f" category="sidebar">CVS를 게스트 연결 스토리지로</block>
   <block id="e809dfa83f36389270c46ad868461471" category="sidebar">GCVE용 하이브리드 멀티 클라우드 솔루션</block>
   <block id="d4cc78732ab0fdcd767ab42a015d34e0" category="sidebar">보안 개요 - Google Cloud의 NetApp CVS</block>
-  <block id="b09117fe6d53441cff9cb2acd579690c" category="sidebar">네이티브 데이터 저장소 개요</block>
-  <block id="dfebc4faa06edbacaea5e509fc2537ae" category="sidebar">네이티브 NFS 데이터 저장소 옵션</block>
   <block id="b2299b17275cb6ba71114e61d9bbae4e" category="sidebar">곧 제공 예정...</block>
-  <block id="1c8437c7b3bb8efbbf09a2ef80992b65" category="sidebar">네이티브 데이터 저장소 - 퍼블릭 미리 보기(Microsoft)</block>
   <block id="538d26f438b9f54f2e02fe3eff3093f8" category="sidebar">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드</block>
-  <block id="c060e8edf543838031150fc8f1a63b72" category="sidebar">AVS용 네이티브 데이터 저장소</block>
   <block id="b8aef6e50d3ed85ad8f7568c45050629" category="sidebar">워크로드 보호</block>
-  <block id="c90d3565dac770d258e528bf1d0f0354" category="sidebar">Jetstream을 통한 재해 복구(기본 데이터 저장소)</block>
-  <block id="497820483e8c674ccb7cd2e35d2d61b3" category="sidebar">CVO 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)</block>
   <block id="a3e69dd4d9f892aab0dcbf0a5dd246e2" category="cell">1.4 이상</block>
   <block id="f78d920d9d248820ddf7a3acdd9a34c0" category="doc">Tanzu가 포함된 VMware vSphere 개요</block>
   <block id="bac31e763c1b2955be0a10de0a4d8012" category="image-alt">Kubernetes를 포함한 VMware vSphere</block>
@@ -14588,4 +14526,73 @@
   <block id="8d69f930e73398b81d052ad873efa8ab" category="sidebar">AWS 게스트 연결 스토리지 재해 복구</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="sidebar">재해 복구</block>
   <block id="c99ec32d06b1f19699d82b1b34a80ca0" category="paragraph"><block ref="c99ec32d06b1f19699d82b1b34a80ca0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a64bd0f4353943cf0431a27a532b499c" category="list-text">FSX ONTAP는 보충 NFS 데이터 저장소 ^1^로 사용됩니다</block>
+  <block id="119d7589ae9a38050e960d08d321b275" category="list-text">Azure NetApp Files(ANF)를 보조 NFS 데이터 저장소 ^1^로 추가</block>
+  <block id="0f9904cf8a560b1c4309e4cf7750b7b9" category="admonition">AVS용 보조 NFS 데이터 저장소로서 1-ANF가 현재 Public Preview에 있습니다. 자세한 내용을 확인하십시오<block ref="5b3a31b4442bd8ea3aebfc18fe8411e5" category="inline-link-rx"></block>.</block>
+  <block id="efe20646a1138596f4f7b7f387cae230" category="list-text">Cloud Volumes Service(CVS)를 보조 NFS 데이터 저장소 ^1^으로 사용</block>
+  <block id="e7e05ca1857ad4b0e930d0672e7657c4" category="inline-link-macro">CVS(Cloud Volumes Service)를 보조 NFS 데이터 저장소로 사용 ^1</block>
+  <block id="8bde1a7decedb03d4e5ae4c5b6c9f5d3" category="paragraph">에 대해 자세히 알아보십시오 <block ref="d54e964e36cd6cf7ab87b4b420d12109" category="inline-link-macro-rx"></block>.</block>
+  <block id="58098d451cf2728b0542acd542f9000b" category="cell">* 보조 NFS 데이터 저장소 *</block>
+  <block id="51b0e38e5ec7edbe37b6672987ce5f2e" category="paragraph">NetApp이 게스트 연결 스토리지 장치로 NetApp에서 제공하는 3가지 운영 하이퍼스케일러 또는 보조 NFS 데이터 저장소를 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/버스팅 하는 기능에 대해 자세히 알아보십시오.</block>
+  <block id="ccb4d111a650d51ca9a8feb2542610be" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 각각 연결된 추측이나 보조 NFS 데이터 저장소로 활용할 수 있습니다.</block>
+  <block id="01afbab420d0d768779dcb574cd1ba34" category="doc">NetApp의 AWS용 NFS 데이터 저장소 옵션 보완</block>
+  <block id="d22e98327d29984cdf19ebfeeb53bd99" category="paragraph">NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 보충 NFS 데이터 저장소에서 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확대/급증할 수 있습니다.</block>
+  <block id="e3dea11e8144be98f637687e2a2cf316" category="paragraph">AWS VMC에서 NetApp 스토리지를 guess connected 또는 보완 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
+  <block id="206616b83a19162051802c3823da0f7c" category="paragraph">또한 NetApp은 게스트 내(게스트 연결) 스토리지로서 프로비저닝되거나 각 하이퍼스케일러에서 보조 NFS 데이터 저장소로 제공하는 솔루션을 제공합니다. 모든 솔루션은 클라우드 워크로드의 VMware 분류와 함께 분류됩니다. 이러한 분류에는 다음이 포함됩니다.</block>
+  <block id="04e248dee456b1f3910d53450d745125" category="list-text">클라우드 보완 기술을 활용하여 앱 현대화</block>
+  <block id="77d50dd2ce4e2531e14f13434a560e7d" category="section-title">보충 NFS 스토리지 옵션의 중요성 이해</block>
+  <block id="de8529127f85189767876e4d9a97427c" category="paragraph">클라우드에 구축된 VMware는 모든 고객에게 고유한 하이브리드 기능을 제공하지만, 제한된 보조 NFS 스토리지 옵션으로 스토리지 집약적인 워크로드를 사용하는 조직에는 유용성이 제한됩니다. 스토리지는 호스트에 직접 연결되므로 스토리지를 확장하는 유일한 방법은 호스트를 추가하는 것입니다. 이렇게 하면 스토리지 집약적인 워크로드의 비용이 35-40% 이상 증가할 수 있습니다. 이러한 워크로드는 추가 마력이 아닌 추가 스토리지만 필요합니다. 하지만 이는 추가 호스트에 대한 비용을 지불하는 것을 의미합니다.</block>
+  <block id="af68f7a1e7ca322318bf949baba2129e" category="inline-link-macro">ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)</block>
+  <block id="73c807da78ef06fdb99e2307b5d8cb57" category="list-text"><block ref="73c807da78ef06fdb99e2307b5d8cb57" category="inline-link-macro-rx"></block></block>
+  <block id="f93c390413608eaad8cc43b29f8073d0" category="inline-link-macro">ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구</block>
+  <block id="233b8f979ad627e56656fbdd647fdc2b" category="list-text"><block ref="233b8f979ad627e56656fbdd647fdc2b" category="inline-link-macro-rx"></block></block>
+  <block id="5f2df3110b7088a1c8d1659ffb728f46" category="doc">CVO 및 AVS(게스트 연결 스토리지)를 통한 재해 복구</block>
+  <block id="9a130cd816dc8be85c4f198310f16e4c" category="paragraph">NetApp이 AVS(Azure VMware Solution)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 보충 NFS 데이터 저장소에서 마이그레이션 워크플로우에 전환, 클라우드로 확장/버스팅, 백업/복원, 재해 복구까지 지원합니다.</block>
+  <block id="465fe02ad52f12cc5844200de029e385" category="paragraph">NetApp 스토리지는 Azure AVS에서 guess Connected 또는 보충 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
+  <block id="827f15aa97cbfccd71eb2ba3ac7d4eac" category="doc">Azure의 보조 NFS 데이터 저장소 옵션</block>
+  <block id="d6e093aa5c1e7500fe79b8732c410c91" category="paragraph">또한 Azure NetApp Files를 사용하면 여러 데이터 저장소를 배포할 수 있습니다. 이 데이터 저장소는 가상 머신을 적절한 데이터 저장소에 배치하고 워크로드 성능 요구 사항을 충족하는 데 필요한 서비스 수준을 할당하여 온-프레미스 구축 모델을 모방하는 데 도움이 됩니다. 멀티 프로토콜 지원의 고유한 기능을 통해 게스트 스토리지는 SQL 및 Oracle과 같은 데이터베이스 워크로드를 위한 추가 옵션일 뿐만 아니라 보충 NFS 데이터 저장소 기능을 사용하여 나머지 VMDK를 저장합니다. 이와 별도로 네이티브 스냅샷 기능을 사용하여 신속한 백업 및 세분화된 복원을 수행할 수 있습니다.</block>
+  <block id="402936a0724fed1eeed39a4791eae422" category="paragraph">개략적으로 보면, 이 아키텍처는 온프레미스 환경과 Azure에서 하이브리드 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다. 또한 Azure NetApp Files를 보조 NFS 데이터 저장소로 사용하거나 Azure VMware 솔루션에서 호스팅되는 게스트 가상 머신을 위한 게스트 내 스토리지 옵션으로 사용하는 방법에 대해서도 설명합니다.</block>
+  <block id="66433e0e715221ebed495642af8005b7" category="doc">NetApp의 GCP용 보조 NFS 데이터 저장소 옵션</block>
+  <block id="ce2d3ab910808452912b4cae1adc8bd7" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 또는 NFS 데이터 저장소를 보완하여 워크플로우를 마이그레이션하고, 클라우드로 확장/버스팅, 백업/복원, 재해 복구를 수행합니다.</block>
+  <block id="275ed895f3f409270670131f7369b1ac" category="paragraph">NetApp 스토리지는 GCP GCVE 내에서 guess Connected 또는 보충 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
+  <block id="dc8880c1e35edd32ee0e3a62b82cc69f" category="paragraph">추가 NFS 데이터 저장소로서 FSx ONTAP용 AWS 보도 자료 출시 예정!</block>
+  <block id="344a1d4b76a1f2aebec92972d8809fb9" category="inline-link-macro">Azure용 보조 NFS 데이터 저장소인 ANF(Azure NetApp Files)입니다</block>
+  <block id="e7bc10db9b0b44db3d43b19ef5f93f3e" category="inline-link-macro">CVS(Cloud Volumes Service)를 GCP용 보조 NFS 데이터 저장소로 사용합니다</block>
+  <block id="f90222afbf457daf7b0ccad3451907ef" category="paragraph"><block ref="258e319c15b416a52aa3c811d7635489" category="inline-link-macro-rx"></block>
+<block ref="dbea9878fd4f6cf74860bb456637c3e2" category="inline-link-macro-rx"></block></block>
+  <block id="50b333c4d09239bffeb68b079c85994d" category="inline-link-macro">Azure용 보조 NFS 데이터 저장소로서 Azure NetApp Files(ANF</block>
+  <block id="b645884517c84cef76c33fd1223a77b8" category="inline-link-macro">CVS(Cloud Volumes Service)를 GCP용 보조 NFS 데이터 저장소로 사용합니다</block>
+  <block id="ce0992cb9d73e6a183b2b79e1cf57442" category="paragraph"><block ref="a15e077225e1c63b1977f56a70fae69c" category="inline-link-macro-rx"></block>
+<block ref="f4a57bacfd4fb9ea09ece261926e87de" category="inline-link-macro-rx"></block></block>
+  <block id="55b61b011b735ba396a8dbd7e3f95f20" category="cell">2022년 8월 5일</block>
+  <block id="f521ff62d61b22e5b86c9e3801eca511" category="cell">"권장 ESXi 및 ONTAP 설정에 대한 재부팅 필요 정보 추가</block>
+  <block id="678582eb0cbbe0e063e618d230b63223" category="cell">* 호스트 설정 *</block>
+  <block id="dfe49b73bd7e747701b49f9ed21ea2d6" category="cell">* NetApp 권장 가치 *</block>
+  <block id="edceae57d92287f4f6200f94d3259cd0" category="cell">* 재부팅 필요 *</block>
+  <block id="dc3a6955a23583876d020db0f6b80d4d" category="cell">* ESXi 고급 구성 *</block>
+  <block id="5fffea5cb752d304de420a5efa158e13" category="cell">설정된 상태로 유지(VMware 기본값은 1)</block>
+  <block id="5d1b81f1885499e392018ebd7124ad37" category="inline-link-macro">VMware KB 2007427</block>
+  <block id="36478566e3585eb8ea863e941dcb967a" category="cell">설정된 상태로 둡니다(VMware 기본값은 0이지만 VMFS6에는 필요하지 않음). 자세한 내용은 을 참조하십시오 <block ref="68c2cf0ecb6a1c6abaf6e56c035d5866" category="inline-link-macro-rx"></block></block>
+  <block id="875f6b98e20edfecb56f9013d00987f6" category="cell">vSphere 6.0 이상, 32로 설정. 다른 모든 NFS 구성은 30으로 설정합니다</block>
+  <block id="a8af33a99dd728969fd947da27a2f69f" category="cell">대부분의 vSphere 6.X 릴리즈에서는 512MB로 설정합니다. 6.5U3, 6.7U3 및 7.0 이상의 경우 1024MB로 설정합니다.</block>
+  <block id="e787d5b0d643685421632a1af3914963" category="cell">vSphere 6.0 이상으로, 다른 모든 NFS 구성을 256으로 설정하고 64로 설정합니다.</block>
+  <block id="e18600af98c17fae10fdba0dc89979ed" category="cell">NFS.MaxQueueDepth^1^</block>
+  <block id="be7707fa525d0124489c9fe3072f78de" category="cell">vSphere 6.0 이상으로, 128로 설정합니다</block>
+  <block id="138989cbe5dd3a4997662e0f65c17878" category="cell">모든 NFS 구성에 대해 10으로 설정합니다</block>
+  <block id="7ea6e8664542e3beb1aea10425efb4db" category="cell">모든 NFS 구성에 대해 12로 설정합니다</block>
+  <block id="fb62337a3ef32f4701b639339a4ceb33" category="cell">ALUA를 사용하는 FC 경로를 사용할 때 RR(라운드 로빈)으로 설정합니다. 다른 모든 설정에 대해 고정으로 설정합니다. 이 값을 RR로 설정하면 모든 활성/최적화 경로에서 로드 밸런싱을 제공하는 데 도움이 됩니다. 고정 값은 이전 비 ALUA 구성에 대한 값이며 프록시 I/O를 방지하는 데 도움이 됩니다 다시 말해, 7-Mode에서 Data ONTAP를 실행하는 환경에서 I/O가 고가용성(HA) 쌍의 다른 노드로 이동하는 것을 돕니다</block>
+  <block id="0e82e1f81de2159b0e9bee0b7be00dc9" category="cell">모든 설정에 대해 32로 설정합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.</block>
+  <block id="bdd8c1d08eabb5e1923ed8f0c4b10ba4" category="cell">모든 설정에 대해 8로 설정합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.</block>
+  <block id="2aa077454308383f1e82025427cd7362" category="cell">모든 iSCSI 경로에 대해 RR(라운드 로빈)으로 설정합니다. 이 값을 RR로 설정하면 모든 활성/최적화 경로에서 로드 밸런싱을 제공하는 데 도움이 됩니다.</block>
+  <block id="0340eb1bcbfc6cd3c62b8a878d8d643b" category="cell">모든 설정에 대해 32로 설정합니다. 이 값을 설정하면 I/O 오류가 방지됩니다</block>
+  <block id="891c10448731ad57490b9a932dabfff8" category="inline-link-macro">VMware KB 86331</block>
+  <block id="2c572e3c397fe100b075a09359c9cc23" category="admonition">1-NFS 고급 구성 옵션 MaxQueueDepth는 VMware vSphere ESXi 7.0.1 및 VMware vSphere ESXi 7.0.2를 사용할 때 의도한 대로 작동하지 않을 수 있습니다. 참조하십시오 <block ref="861055760f3cd527823fd34a49459992" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="3f7502a5f109d7a73706aba1c0741a4b" category="cell">* ONTAP 도구 *</block>
+  <block id="485577e97e8efcd504fc8e8b13e613f1" category="cell">* 기본 설정 *</block>
+  <block id="f639f9fbf0a0ec97e697dc20f2dec14f" category="sidebar">보충 NFS 데이터 저장소 옵션</block>
+  <block id="015a03470e91621621a76f7a4e3dc56e" category="sidebar">보조 NFS 데이터 저장소로서의 ANF: 개요</block>
+  <block id="8be166a6a918ed4074f79487db89b538" category="sidebar">보충 NFS 데이터 저장소 - Private Preview</block>
+  <block id="5a9500ea180d9aa487f8a027550c1888" category="sidebar">보충 NFS 데이터 저장소 개요</block>
+  <block id="5cc354638211ca59bc561a960afa71f9" category="sidebar">보조 NFS 데이터 저장소 - Public Preview(Microsoft)</block>
+  <block id="95fd29d87d2c7d3100a5198bc7067e95" category="sidebar">AVS용 보조 NFS 데이터 저장소입니다</block>
 </blocks>

@@ -5,9 +5,9 @@ indexpage:
     links:
     - title: 가상화 환경을 구성합니다
       url: "/azure-setup.html"
-    - title: 네이티브 데이터 저장소 개요
+    - title: 보충 NFS 데이터 저장소 개요
       url: "/azure-native-overview.html"
-    - title: 네이티브 NFS 데이터 저장소 옵션
+    - title: 보충 NFS 데이터 저장소 옵션
       url: "/azure-native-nfs-datastore-option.html"
     - title: 게스트 연결 스토리지 옵션
       url: "/azure-guest.html"
@@ -15,10 +15,10 @@ indexpage:
       url: "/azure-solutions.html"
   - title: 워크로드 보호 솔루션
     links:
-    - title: ANF 및 Jetstream을 사용한 재해 복구(기본 데이터 저장소)
+    - title: ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)
       url: "/azure-native-dr-jetstream.html"
-    - title: ANF 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)
-      url: "/azure-guest-dr-jetstream.html"
+    - title: ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구
+      url: "/azure-guest-dr-cvo.html"
   - title: 곧 제공 예정...
     links:
     - title: 워크로드 솔루션 확장
@@ -29,5 +29,5 @@ indexpage:
     links:
     - title: NFS 데이터 저장소에 대한 지역 지원
       url: "/azure-regions.html"
-    - title: 네이티브 데이터 저장소 - 퍼블릭 미리 보기(Microsoft)
+    - title: 보조 NFS 데이터 저장소 - Public Preview(Microsoft)
       url: https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?branch=main&tabs=azure-portal

@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치 또는 기본 데이터 저장소로 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/급증할 수 있습니다.
+NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 보충 NFS 데이터 저장소에서 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확대/급증할 수 있습니다.
 
 다음 옵션 중 하나를 선택하여 원하는 콘텐츠의 섹션으로 이동합니다.
 
@@ -46,7 +46,7 @@ NOTE: 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC
 
 == VMC용 NetApp 스토리지 옵션
 
-AWS VMC에서 NetApp 스토리지를 추측으로 연결 또는 기본 데이터 저장소로 활용할 수 있습니다.
+AWS VMC에서 NetApp 스토리지를 guess connected 또는 보완 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.
 
 를 방문하십시오 link:ehc-support-configs.html["지원되는 NetApp 스토리지 옵션"] 를 참조하십시오.
 
@@ -54,7 +54,7 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * FSX ONTAP를 게스트 연결 스토리지로 사용합니다
 * CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
-* FSX ONTAP를 기본 데이터 저장소 ^1^로 사용합니다
+* FSX ONTAP는 보충 NFS 데이터 저장소 ^1^로 사용됩니다
 
 
 자세한 내용을 확인하십시오 link:aws-guest.html["VMC에 대한 게스트 연결 스토리지 옵션"].

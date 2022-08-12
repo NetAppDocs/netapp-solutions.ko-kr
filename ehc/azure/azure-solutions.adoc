@@ -29,8 +29,8 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 ====
 .보호
 --
-* link:azure-native-dr-jetstream.html["ANF 및 Jetstream을 사용한 재해 복구(기본 데이터 저장소)"]
-* link:azure-guest-dr-jetstream.html["ANF 및 Jetstream을 통한 재해 복구(게스트 연결 스토리지)"]
+* link:azure-native-dr-jetstream.html["ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)"]
+* link:azure-guest-dr-cvo.html["ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구"]
 
 
 --
