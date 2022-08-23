@@ -11,10 +11,12 @@ indexpage:
       url: "/gcp-guest.html"
     - title: GCP/GCVE용 솔루션
       url: "/gcp-solutions.html"
+  - title: 워크로드 보호 솔루션
+    links:
+    - title: SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구
+      url: "/gcp-app-dr-sc-cvo-veeam.html"
   - title: 곧 제공 예정...
     links:
-    - title: 워크로드 보호 솔루션
-      url: 
     - title: 워크로드 솔루션 확장
       url: 
     - title: 워크로드 마이그레이션 솔루션

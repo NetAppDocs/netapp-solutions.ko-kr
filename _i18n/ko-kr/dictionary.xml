@@ -11922,9 +11922,6 @@
   <block id="e19e98a669ae21f94ffd1659998fd072" category="cell">데이터 분석</block>
   <block id="c32698794f1279b1f46bacea38a72264" category="cell">Splunk Enterprise 솔루션을 사용하는 NetApp EF600에 대한 링크가 추가되었습니다</block>
   <block id="32e9989956756ffe28b84c0dab24eb03" category="cell">2022년 6월 2일</block>
-  <block id="8a1f080112c926ae23e4830edeb5a006" category="doc">지역 가용성 – VMC용 NFS 데이터 저장소</block>
-  <block id="baf0abcbe7330fc1773b4f99d557c0d8" category="paragraph">AWS, VMC 및 FSx ONTAP에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
-  <block id="fafae8ad861b26a9aa5e51d268709c44" category="admonition">NFS 데이터 저장소는 두 서비스(VMC 및 FSx ONTAP)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
   <block id="9ceed07936bb73f756027dc20e7869e5" category="open-title">미주</block>
   <block id="a58c228b4723aee54800749a595ee3d1" category="cell">* AWS 지역 *</block>
   <block id="0ea8853bd99df0275ce197d81b4acdf3" category="cell">* VMC 가용성 *</block>
@@ -11955,106 +11952,14 @@
   <block id="82f98bf67698e189fc9d846325345bbd" category="cell">아시아 태평양(자카르타)</block>
   <block id="1b15cf1d695d130132edd42a701b41a1" category="cell">아시아 태평양(홍콩)</block>
   <block id="69d00fef4f252c9c61d1eb67822e4739" category="paragraph">참고: 현재 데이터 저장소로서의 NetApp 스토리지를 AWS/VMC 및 Azure/AVS의 공개 미리 보기와 GCP/GSVE의 프라이빗 미리 보기로 사용할 수 있습니다. 자세한 내용은 다음 링크를 참조하십시오.</block>
-  <block id="b5406986e96922718431fbc820878678" category="doc">지역 가용성 - ANF용 NFS 데이터 저장소</block>
-  <block id="6167e2ab0cfead32a7f67ecd3956d0af" category="paragraph">Azure, AVS 및 ANF에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
-  <block id="9cd0e5d5083359436f8e8a366b9d6e07" category="admonition">NFS 데이터 저장소는 AVS 및 ANF(두 서비스)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
-  <block id="c19712347170b6f5b6c21e3933bad06a" category="cell">* Azure 지역 *</block>
-  <block id="b13bd36be65d1a4cc6a1d3238f0d886c" category="cell">* AVS 가용성 *</block>
-  <block id="592c84f7b1ca646f29fd2c1579b67e74" category="cell">* ANF 가용성 *</block>
-  <block id="2e168141b8f719cbd37e6beec663b599" category="cell">미국 중부</block>
-  <block id="3c110de67497eb3f8d4c100e43101c81" category="cell">미국 동부</block>
-  <block id="7c61981f0be77fb7e4061ba5395ff02b" category="cell">동서 2</block>
-  <block id="e306e59ae933d5705ad58b576840cfb7" category="cell">미국 중북부</block>
-  <block id="00a0c4ce62672ec36639c314d0d8e114" category="cell">미국 중남부</block>
-  <block id="e74523dfd57d69116c6dc03759fe0a7b" category="cell">미국 서부</block>
-  <block id="f3397c566fedcaa2f63145169ba345fc" category="cell">미국 서부</block>
-  <block id="897c7ab20958ea1f9b99f708e50d39ec" category="cell">웨스트 US2</block>
-  <block id="844883a22b85186c5e121485db77126a" category="cell">웨스트 US3</block>
-  <block id="a886977ae6e369a8fce60dfbd419dad4" category="cell">GA: H1-2023</block>
-  <block id="1d0f99876d748759fce5e852f79fca96" category="cell">캐나다 중부</block>
-  <block id="ea7c65fe418bef9cfe86be4944b30bcb" category="cell">캐나다 동부</block>
-  <block id="47b9af39407829080e9cfeee3607c39c" category="cell">브라질 남부</block>
-  <block id="2ff9bd252c739a31cd751fa812f234ac" category="cell">브라질 남동부</block>
-  <block id="641404205a597db4c1fb7fea8c09e071" category="cell">GA: Q2-2022</block>
-  <block id="d0fe0e3b6520479f718b98f0d471b7d0" category="cell">북유럽</block>
-  <block id="8fb2033d01e3efa2825282a13f86c14e" category="cell">서유럽</block>
-  <block id="bea1bd3d23555c539dab5f3f5426184c" category="cell">프랑스 중부</block>
-  <block id="e43a7f2cdea7d32ec2a39ac3429f6b21" category="cell">프랑스 남쪽</block>
-  <block id="0d8073e13dfde2dcffb2c3b6e5f50629" category="cell">GA: H2-2022</block>
-  <block id="85c1bd2190b5e1105a9c4e7e6a224a96" category="cell">독일 북쪽</block>
-  <block id="1dab3491cdeeb2a6d567b21ee3063ae4" category="cell">독일 웨스트 센트럴</block>
-  <block id="e57064b31b815fd4c1124aa7f2cc1fd4" category="cell">노르웨이 동부</block>
-  <block id="701aed79a8f72461c70162cfd6ac8544" category="cell">노르웨이 서부</block>
-  <block id="7def8b46a24f875959130a855cd80918" category="cell">스웨덴 중부</block>
-  <block id="d52dc74125f51ad544437a11bcdb8bfb" category="cell">스웨덴 남부</block>
-  <block id="524a897e665c757be360f9ceaca6b0a5" category="cell">스위스 북부</block>
-  <block id="3ad0925d13c15ab401a20623d6d8333e" category="cell">스위스 서부</block>
-  <block id="c3df68295f64f3615edf298954d8c4bb" category="cell">UAE 중부</block>
-  <block id="3fd959e127f55d5a9b1ab4b5866b3a38" category="cell">UAE 북부</block>
-  <block id="390a1a81c9b43f7d364b54144161673d" category="cell">영국 남부</block>
-  <block id="23d58738c27b56ae980ce7b45716f6a5" category="cell">영국 서부</block>
-  <block id="cee3f0213dd8b7eb15d7b31824e01754" category="cell">호주 동부</block>
-  <block id="c2701212de431ec66277aeb9ec636184" category="cell">호주 남동부</block>
-  <block id="15f610ab33df0eb0a149ad3c5f949846" category="cell">호주 중부</block>
-  <block id="12fd3aa0a9f080663613364badb43e93" category="cell">일본 동부</block>
-  <block id="33e5ad3a780212ee47f127965a2dda72" category="cell">일본 서부</block>
-  <block id="f74e1c0c8ee8410fa5bfe03676347257" category="cell">동아시아</block>
-  <block id="ef005ab2b7187e0e4953a0abfdacad42" category="cell">동남 아시아</block>
-  <block id="910918c80516a55b4ba940f0b485cea1" category="cell">중부 인도</block>
-  <block id="94356c86d2cc2acaa45fa5461b92b14c" category="cell">인도 남부</block>
-  <block id="6da3164e9884fb44e54fda035450cfaa" category="cell">대한민국 중앙입니다</block>
-  <block id="c414f71a38fff061d3e63f9086b31b25" category="doc">AWS/VMC, Azure/AVS 및 GCP/GCVE의 NFS 데이터 저장소에 대한 지역 가용성</block>
-  <block id="44053e7cac0157f96a236a7c58eabd9c" category="paragraph">AWS, Azure 및 Google Cloud Platform(GCP)에서 글로벌 지역 의 NFS 데이터 저장소 지원에 대해 자세히 알아보십시오.</block>
   <block id="3b041c1182ede15a52a683344c9512e0" category="section-title">AWS 지역 가용성</block>
   <block id="c5fde59b3560ee1ea5aeeebaf94bdf39" category="section-title">Azure 지역 가용성</block>
   <block id="7ddf4642a2bfdc9a45847e5d375a1ddb" category="inline-link-macro">세부 정보 ^2</block>
-  <block id="614b6facb5b0ee7a2c90a7ea9bb6712b" category="doc">지역 가용성 – Google Cloud Platform(GCP)용 NFS 데이터 저장소</block>
-  <block id="b2a0098aa06aaf37daca9ef6f8835134" category="paragraph">GCP, GCVE 및 CVS에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.</block>
-  <block id="3c02e2bdd532ccfef3c9e12384907826" category="admonition">NFS 데이터 저장소는 두 서비스(GCVE 및 CVS 성능)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.</block>
-  <block id="efc2e0661aa6e96988ee86d704527276" category="cell">* GCP 지역 *</block>
-  <block id="bbf41599abd85b921861ea2c3eef67fa" category="cell">* GCVE 가용성 *</block>
-  <block id="b4db651cfe76a1fae1664e5051f895b9" category="cell">* CVS 성능 가용성 *</block>
-  <block id="17f6e66cf3fb6f9905f4088260bfed37" category="cell">* CVS SW 가용성 *</block>
-  <block id="21c3fc0715529988e60da2ee38cec63e" category="cell">솔트레이크시티(Us-west3)</block>
-  <block id="336d5ebc5436534e61d16e63ddfca327" category="cell">-</block>
-  <block id="f8bbaa5745bae9e5c4725e1a2722f0de" category="cell">토론토(Northamerica-northeast2)</block>
-  <block id="0c7a0c17e353c79cc16b9062b9d31dfc" category="cell">라스베이거스(Us-west4)</block>
-  <block id="25e197b2f9ffc79e1876a2f706f46b0e" category="cell">사우스캐롤라이나(us-east1)</block>
-  <block id="2052e43b188df85090686103a6a52762" category="cell">오리건(Us-west1)</block>
-  <block id="a1fca79277c7d459668e506111748638" category="cell">N 버지니아(us-east4)</block>
-  <block id="a17d6ccbe6d0519c97158370feb9283c" category="cell">아이오와(us-central1)</block>
-  <block id="8ed24d515b9a8b2ba3ed2c7da5b67faf" category="cell">로스앤젤레스(us-west2)</block>
-  <block id="807d99e70625a82135068ebd5998e2d0" category="cell">상파울루(사우스메리카 - 에스타1)</block>
-  <block id="e8c846d9a169164fa3193b435dd1e28f" category="cell">몬트리올(Northamerica-northeast1)</block>
-  <block id="dcbe8ad0293bd53296a9d2ec0f030d10" category="cell">산티아고(사우스메리카 - 웨스투트어)</block>
-  <block id="1d1558ef81dfc080a76262d3c9438791" category="cell">콜럼버스(us-east5)</block>
-  <block id="eb4cae07e62b958e999eaa4c0d9b254b" category="cell">바르샤바(유럽-중중심2)</block>
-  <block id="ee6aa83959e3f58512941ddac31f3e1d" category="cell">벨기에(유럽 - west1)</block>
-  <block id="701bce8757f2de852cdb9d08a957a89e" category="cell">취리히(유럽 - west6)</block>
-  <block id="b574e304fe482d18f27bd8388b68c22e" category="cell">프랑크푸르트(유럽-west3)</block>
-  <block id="0d1d4cd0c228e21fe0fdb8977dd2a3de" category="cell">런던(유럽 - west2)</block>
-  <block id="2301f193aee49e580538733d5cb1cb00" category="cell">네덜란드(유럽 - west4)</block>
-  <block id="78ad115073f3f67ccd44f37c81b79232" category="cell">핀란드(유럽 - 북부1)</block>
-  <block id="4b14bbd178377e932c7e97664c276be7" category="cell">밀라노(유럽 - west8)</block>
-  <block id="82e8338c73d6540f48f2e0cc8d035511" category="cell">마드리드(유럽 - 남서쪽1)</block>
-  <block id="1a1145c860165dcd96b82eb7d32cd59f" category="cell">파리(유럽 - west9)</block>
-  <block id="db0e73b770380833512b8634966555ca" category="cell">시드니(호주 - 수테스토1)</block>
-  <block id="68fb6cfeb81e52feef062b88d7037b7e" category="cell">멜번(호주 - 수테스토2)</block>
-  <block id="8d710f96d65842fe61d82f7aabf59b22" category="cell">도쿄(아시아 - 북테스토1)</block>
-  <block id="8fad364045fd9559f9d607660429bd1a" category="cell">오사카(아시아 - 북단2)</block>
-  <block id="7d50360483536fae05a6ac5560fbdd9a" category="cell">서울(아시아-북단3)</block>
-  <block id="f62a8cef90761561b2550d45dc3b051e" category="cell">대만(아시아-east1)</block>
-  <block id="a1954c2ba02d8ecaddd3a2936e99e0d0" category="cell">홍콩(아시아 - east2)</block>
-  <block id="5cf4316e4b10dcfefd9921548ab501f1" category="cell">싱가포르(아시아-수스테아스타1)</block>
-  <block id="dda356c5eb605117520d535671d82d71" category="cell">자카르타(아시아-수르테스토2)</block>
-  <block id="0c139834414e337fd03f824c0aaa638f" category="cell">뭄바이(아시아 - 남단1)</block>
-  <block id="b11df59ba05c25c3a8734d54b7501ae7" category="cell">델리(아시아 - 남쪽 2)</block>
   <block id="844f1178f4ff7b95030ee50d8917da61" category="sidebar">NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="15b1cf33f2d910f9ab5e6fdaeb331bcc" category="sidebar">AWS에서 NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="81a6037600add9bb79d72eb49534ff94" category="sidebar">Azure에서 NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="1da3fb2408fde551ca108534afed1987" category="sidebar">Splunk Enterprise 기반의 NetApp EF600</block>
   <block id="419f5ca56c881443509bda0a14523c9c" category="cell">공개 미리 보기 공지/지원과 일치하도록 AVS 지역 지원이 업데이트되었습니다</block>
-  <block id="cebbb8185facc297951873cd58ae2811" category="paragraph">마지막 업데이트: 2022년 6월 7일.</block>
   <block id="40640c0c34d4427f5d18b9ca476e3158" category="summary">이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자동화된 데이터 보호에 대해 설명합니다.</block>
   <block id="19c95c19bd7c939577775cd0ecce3df1" category="section-title">의료 및 생의학 연구</block>
   <block id="a047c61461aba5a84a0a221900c33984" category="paragraph">영상 처리는 컴퓨터 단층촬영(CT) 또는 자기공명영상(MRI)에서 얻은 3D 영상에서 외과적 계획을 위한 병리를 진단하는 데 사용됩니다. HIPAA 개인 정보 보호 규칙은 모든 개인 정보 및 사진과 같은 디지털 이미지에 대해 조직에서 데이터를 수집, 처리 및 지우는 방법을 규정합니다. HIPAA 세이프 하버 규정에 따라 데이터를 공유할 수 있는 자격을 갖추려면 전체 사진 이미지와 비교 이미지를 제거해야 합니다. 구조적 CT/MR 영상에서 개인의 얼굴 특징을 모호하게 하는 데 사용되는 식별 해제 또는 두개골 스트리핑 알고리즘과 같은 자동화 기술은 생물 의학 연구 기관의 데이터 공유 프로세스에서 필수적인 부분이 되었습니다.</block>
@@ -12298,7 +12203,6 @@
   <block id="e5103defcbafcf380570238b4848f4a1" category="sidebar">VMware TKGS(Tanzu Kubernetes Grid Service) 개요</block>
   <block id="a2ec151aed88d77a34df663b329daf31" category="sidebar">VMware TKGI(Tanzu Kubernetes Grid Integrated Edition) 개요</block>
   <block id="e47703dd1fad3279269dda3b343b2272" category="sidebar">Tanzu Kubernetes 클러스터를 등록합니다</block>
-  <block id="2c62898c969bafefce0452ccf8459cb6" category="paragraph">마지막 업데이트: 2022년 6월 20일.</block>
   <block id="84f09994e75c5ede8e07c6ab4070faae" category="summary">이 섹션에서는 Swingbench 시뮬레이션 OLTP 워크로드의 성능 검증 및 벤치마크 결과에 대해 자세히 설명합니다.</block>
   <block id="d9a4da5bae7f5f09fa9c3850a052c626" category="doc">성능 검증 및 벤치마크 결과</block>
   <block id="b944009da5cbc8c34fbaa084f3b1d385" category="inline-link-macro">이전: Oracle 데이터베이스 관리.</block>
@@ -14595,4 +14499,53 @@
   <block id="e7e97f343a76aab098fd05b8953ee1a5" category="list-text">Azure NetApp Files 데이터 저장소를 Azure VMware 솔루션 호스트에 연결(Preview)</block>
   <block id="1838681ebe885a1a1e886cdf7e263065" category="inline-link"><block ref="1838681ebe885a1a1e886cdf7e263065" category="inline-link-rx"></block></block>
   <block id="2361f6fabb02c6060c638b5f1780cda2" category="paragraph"><block ref="2361f6fabb02c6060c638b5f1780cda2" category="inline-link-rx"></block></block>
+  <block id="bcd4c93e63ff96ec357bc67c62874e0c" category="cell">2022년 8월 23일</block>
+  <block id="10daf0bb04814721080056526de2b200" category="cell">모든 보조 NFS 데이터 저장소 옵션의 최신 지역 가용성을 업데이트했습니다</block>
+  <block id="33dbe47aee6de0474ba86a31d130da7c" category="cell">"권장 ESXi 및 ONTAP 설정에 대한 재부팅 필요 정보가 추가되었습니다</block>
+  <block id="9e779086e93810f8495caf5b07f578cd" category="paragraph">Azure/AVS에서 보조 NFS 데이터 저장소의 가용성은 Microsoft에서 정의합니다. 먼저 AVS와 ANF를 특정 지역에서 모두 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 ANF 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.</block>
+  <block id="8ff7e1fad21e60bbdef17593aae83ff6" category="list-text">AVS 및 ANF의 가용성을 확인하십시오 <block ref="757f75bead0b939967621d226ba54faa" category="inline-link-macro-rx"></block>.</block>
+  <block id="2f53a51554f6e0b66622228f3db68361" category="list-text">ANF 보조 NFS 데이터 저장소의 가용성을 확인합니다 <block ref="02ba6bc5fe71be0f7426aedd427de443" category="inline-link-macro-rx"></block>.</block>
+  <block id="926f20c82f92e797825f3ddf31c8d15b" category="paragraph">GCP/GCVE에서 보조 NFS 데이터 저장소의 가용성은 Google에서 정의합니다. 먼저 특정 지역에서 GCVE 및 CVS를 모두 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 CVS 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.</block>
+  <block id="0970f21d33cd70a68d82d99f1d6abd42" category="list-text">GCVE 및 CVS의 가용성을 확인합니다 <block ref="007e08d33d89c24a1316c16966bb4055" category="inline-link-macro-rx"></block>.</block>
+  <block id="52d36923e6e7f21dede2a88e87bd5528" category="list-text">CVS 보조 NFS 데이터 저장소의 가용성을 확인합니다 <block ref="007e08d33d89c24a1316c16966bb4055" category="inline-link-macro-rx"></block>.</block>
+  <block id="46c2094fdbb2fbdc301a330fb7419074" category="paragraph">AWS/VMC에서 보조 NFS 데이터 저장소를 사용할 수 있는 가용성은 Amazon에서 정의합니다. 먼저, VMC와 FSxN을 모두 지정된 지역에서 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 FSxN 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.</block>
+  <block id="de54e36625e385487e1439a76f1cd888" category="list-text">VMC의 가용성을 확인합니다 <block ref="faf92213cf4b20619002c82be58d43a0" category="inline-link-macro-rx"></block>.</block>
+  <block id="a4733e713406133b92f58f977aef720b" category="list-text">아마존의 가격 책정 가이드에서는 FSxN(FSx ONTAP)을 사용할 수 있는 위치에 대한 정보를 제공합니다. 해당 정보를 찾을 수 있습니다 <block ref="d3f36798b026a566c0fbacff08326428" category="inline-link-macro-rx"></block>.</block>
+  <block id="c10e413ea65850b7369ee5ae6f60b460" category="list-text">VMC에 대한 FSxN 보조 NFS 데이터 저장소의 가용성이 곧 제공될 예정입니다.</block>
+  <block id="a1838a4ac0f386c517d82fae26f2372e" category="paragraph">정보가 아직 릴리즈되는 동안 다음 차트는 VMC, FSxN 및 FSxN에 대한 현재 지원을 보조 NFS 데이터 저장소로 식별합니다.</block>
+  <block id="97be15a34c6b82b6177132129dd0b293" category="doc">지역 가용성 – VMC용 보조 NFS 데이터 저장소</block>
+  <block id="0b6b52ed7135814c4a167640dee306f2" category="doc">지역 가용성 – Google Cloud Platform(GCP)용 보조 NFS 데이터 저장소</block>
+  <block id="e78040a1599894c3db7423e479a1f7d1" category="summary">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Google Cloud에서 실행 중인 NetApp Cloud Volumes ONTAP로 복제할 수 있습니다.</block>
+  <block id="58997b61f0fc8812c9977a9dd3d181c5" category="doc">SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구</block>
+  <block id="0fa916b50826c2fab3e504331d6b8ad1" category="paragraph">저자: NetApp Suesh Thoppay</block>
+  <block id="366fe59477118cc36e7ef7936cc04771" category="paragraph">클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Google Cloud에서 실행 중인 NetApp Cloud Volumes ONTAP로 복제할 수 있습니다. 여기에는 애플리케이션 데이터가 포함됩니다. 하지만 실제 VM 자체는 어떻습니까? 재해 복구는 가상 머신, VMDK, 애플리케이션 데이터 등을 비롯한 모든 종속 구성 요소를 포함해야 합니다. 이를 위해 Veeam과 함께 SnapMirror를 사용하여 VM VMDK에 vSAN 스토리지를 사용하면서 사내에서 Cloud Volumes ONTAP로 복제된 워크로드를 원활하게 복구할 수 있습니다.</block>
+  <block id="93fb0db9f34ab708d4c3e5d233e4d97f" category="paragraph">이 문서에서는 NetApp SnapMirror, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.</block>
+  <block id="669129cbcdc854bf23fe7e672be9c44c" category="paragraph"><block ref="669129cbcdc854bf23fe7e672be9c44c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c611c3f34a5f506ad20f441b78810981" category="paragraph">온프레미스 환경과 Google Cloud 네트워크 간의 연결을 위해 전용 상호 연결 또는 Cloud VPN과 같은 연결 옵션을 사용합니다. 세그먼트는 사내 VLAN 설계를 기반으로 생성해야 합니다.</block>
+  <block id="b62c675a3e45635be4cc5a65dde4c55c" category="admonition">온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에는 여러 가지가 있으며, 이로 인해 NetApp에서 이 문서의 특정 워크플로우를 개괄적으로 설명하지 못하게 됩니다. 적절한 온프레미스-Google 연결 방법은 Google Cloud 설명서를 참조하십시오.</block>
+  <block id="5e345ef39956138694764fce9921e498" category="list-text">Veeam 소프트웨어를 설치하고 Google Cloud VMware Engine 인스턴스에 가상 머신 복제를 시작합니다.</block>
+  <block id="7c6d17fe855de9f3821d0cead78f4d26" category="list-text">재해 발생 시 Cloud Manager를 사용하여 SnapMirror 관계를 맺고 Veeam으로 가상 시스템의 페일오버를 트리거하십시오.</block>
+  <block id="e36e9213012a15c95ec5048a09f751b0" category="list-text">애플리케이션을 온라인으로 전환합니다.</block>
+  <block id="820f3ffde5403dbc2ca3d17b511f569e" category="example-title">Google Cloud에서 CVO를 구성하고 볼륨을 CVO로 복제합니다</block>
+  <block id="6765d7341fa9566a047031c62d2040b8" category="inline-link">CVO</block>
+  <block id="14cdb7188d3a5edcc69cb9fe2ebf708b" category="paragraph">첫 번째 단계는 Google Cloud에서 Cloud Volumes ONTAP를 구성하는 것입니다 <block ref="21dbe7906aa79142ad8a44237d3d84a5" category="inline-link-rx"></block>)를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.</block>
+  <block id="1b6eb09708583df3feb79dd7e7b9ed2a" category="paragraph"><block ref="1b6eb09708583df3feb79dd7e7b9ed2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b67ee8de7f0f6f1b68e41ce4be6b4a0b" category="inline-link">SnapCenter를 사용하여 복제를 설정합니다</block>
+  <block id="8064e6b40ef12da2c44763dcfe735ae8" category="paragraph">SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오<block ref="68793c30d3c5e8a024de6c79bc478fe1" category="inline-link-rx"></block></block>
+  <block id="5a101eac27a34cdc3b06c105760d0cee" category="example-title">GCVE 호스트 및 CVO 데이터 액세스를 구성합니다</block>
+  <block id="1fe9f40218e52161bc5e31e2cd383a0b" category="paragraph">SDDC를 배포할 때 고려해야 할 두 가지 중요한 요소는 GCVE 솔루션의 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간 입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.</block>
+  <block id="4f7b492a9eedf950f4dbd01357b22979" category="paragraph">모든 VPC 및 GCVE에 Cloud Volumes ONTAP를 구축할 수 있습니다. VM이 iSCSI LUN에 접속하려면 해당 VPC에 대한 전용 연결이 있어야 합니다.</block>
+  <block id="727eadb1fcad984cfa778a04f2181408" category="paragraph">GCVE SDDC를 구성하려면 를 참조하십시오<block ref="06e1fa19855b73b0e800850663f265a2" category="inline-link-rx"></block>. 사전 요구 사항으로, 연결이 설정된 후 GCVE 호스트에 상주하는 게스트 VM이 Cloud Volumes ONTAP의 데이터를 사용할 수 있는지 확인합니다.</block>
+  <block id="fb75a211e033fa96e7f692258221c1da" category="paragraph">Cloud Volumes ONTAP 및 GCVE가 올바르게 구성된 후에는 Veeam 복제 기능을 사용하고 Cloud Volumes ONTAP에 애플리케이션 볼륨 복사본에 SnapMirror를 활용하여 사내 워크로드(게스트 내 스토리지가 있는 애플리케이션 VMDK 및 VM이 있는 VM)를 GCVE로 자동 복구하도록 Veeam 구성을 시작하십시오.</block>
+  <block id="87e3cc18e14b0d78c8c46e3ed343fca7" category="example-title">Veeam 구성 요소를 설치합니다</block>
+  <block id="d3e88eae8ca9184db5c410eb9e65e305" category="inline-link">설치 절차는 Veeam 설명서를 참조하십시오</block>
+  <block id="72cbd2d687e8a182563fd621f7f40933" category="paragraph">Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.<block ref="eef747fc43e330e288cf8f23e85fb9af" category="inline-link-rx"></block></block>
+  <block id="60fec867397af265e1e757d06135859e" category="example-title">Veeam으로 VM 복제를 설정합니다</block>
+  <block id="d81c3dfdfda7fb8581660b5d218c6a3a" category="inline-link">vSphere VM 복제 작업을 설정합니다</block>
+  <block id="6a67b79523a52a3a2b4e485485456565" category="paragraph">사내 vCenter와 GCVE vCenter를 모두 Veeam에 등록해야 합니다.<block ref="9af60ccd7c779b77ba6ce43ae96a95f6" category="inline-link-rx"></block> 마법사의 게스트 처리 단계에서 애플리케이션 인식 백업 및 복구를 위해 SnapCenter를 활용할 예정이므로 애플리케이션 처리 비활성화 를 선택합니다.</block>
+  <block id="34510608302d692ff6f3936359703d26" category="example-title">Microsoft SQL Server VM의 페일오버</block>
+  <block id="ce137de4140fd114a7fb3fcb057328fa" category="list-text">Veeam Replication을 사용하면 DR 사이트에서 VM IP 주소를 변경할 수 있습니다.</block>
+  <block id="dee7570423fb41bfa5f00fd539ed91da" category="doc">지역 가용성 – ANF용 보조 NFS 데이터 저장소</block>
+  <block id="9e289e2a1ce460725108e7241e19b575" category="doc">AWS, Azure 및 GCP에서 보조 NFS 데이터 저장소를 위한 지역 가용성</block>
+  <block id="3ce209dcd58ed0c7d8cf39f37f2b1557" category="paragraph">AWS, Azure 및 Google Cloud Platform(GCP)에서 NFS 데이터 저장소를 추가로 지원하는 글로벌 지역에 대해 자세히 알아보십시오.</block>
 </blocks>
