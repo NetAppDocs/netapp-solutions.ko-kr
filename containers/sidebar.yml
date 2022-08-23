@@ -160,52 +160,52 @@ entries:
           url: "/containers/rh-os-n_use_case_multitenancy_validation.html"
         - title: 확장
           url: "/containers/rh-os-n_use_case_multitenancy_scaling.html"
-  - title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
-    - title: 구축
+    - title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
       entries:
-      - title: 필수 구성 요소
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
-      - title: 운영자를 통해 구축
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
-      - title: 워크플로우
+      - title: 개요
+        url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
+      - title: 구축
         entries:
-        - title: VM을 생성합니다
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
-        - title: VM 실시간 마이그레이션
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
-        - title: VM 클로닝
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
-        - title: 스냅샷으로부터 VM을 생성하십시오
-          url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
-  - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_advanced_cluster_management_overview.html"
-    - title: 구축
+        - title: 필수 구성 요소
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
+        - title: 운영자를 통해 구축
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
+        - title: 워크플로우
+          entries:
+          - title: VM을 생성합니다
+            url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
+          - title: VM 실시간 마이그레이션
+            url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
+          - title: VM 클로닝
+            url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
+          - title: 스냅샷으로부터 VM을 생성하십시오
+            url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
+    - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
       entries:
-      - title: 필수 구성 요소
-        url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html"
-      - title: 운영자를 통해 구축
-        url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html"
-      - title: 피처
+      - title: 개요
+        url: "/containers/rh-os-n_use_case_advanced_cluster_management_overview.html"
+      - title: 구축
         entries:
-        - title: 클러스터 라이프사이클 관리
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_cluster_lcm.html"
-        - title: 응용 프로그램 수명 주기 관리
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_application_lcm.html"
-        - title: 거버넌스 및 위험
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_governance_risk.html"
-        - title: 관찰 가능성
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_observability.html"
-        - title: 자원 작성
-          url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_create_resources.html"
-    - title: 비디오/데모
-      url: "/containers/rh-os-n_videos_and_demos.html"
-    - title: 추가 정보
-      url: "/containers/rh-os-n_additional_information.html"
+        - title: 필수 구성 요소
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html"
+        - title: 운영자를 통해 구축
+          url: "/containers/rh-os-n_use_case_advanced_cluster_management_deployment.html"
+        - title: 피처
+          entries:
+          - title: 클러스터 라이프사이클 관리
+            url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_cluster_lcm.html"
+          - title: 응용 프로그램 수명 주기 관리
+            url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_application_lcm.html"
+          - title: 거버넌스 및 위험
+            url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_governance_risk.html"
+          - title: 관찰 가능성
+            url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_observability.html"
+          - title: 자원 작성
+            url: "/containers/rh-os-n_use_case_advanced_cluster_management_features_create_resources.html"
+  - title: 비디오/데모
+    url: "/containers/rh-os-n_videos_and_demos.html"
+  - title: 추가 정보
+    url: "/containers/rh-os-n_additional_information.html"
 - title: NetApp의 VMware Tanzu
   type: solutions
   url: "/containers/tanzu_with_netapp/vtwn_solution_overview.html"

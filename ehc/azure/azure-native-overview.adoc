@@ -85,8 +85,8 @@ https://docs.microsoft.com/en-us/azure/azure-vmware/["https://docs.microsoft.com
 +
 https://docs.microsoft.com/en-us/azure/azure-netapp-files/["https://docs.microsoft.com/en-us/azure/azure-netapp-files/"^]
 
-* Azure NetApp Files를 Azure VMware 솔루션과 통합합니다
+* Azure NetApp Files 데이터 저장소를 Azure VMware 솔루션 호스트에 연결(Preview)
 +
-https://docs.microsoft.com/en-us/azure/azure-vmware/netapp-files-with-azure-vmware-solution["https://docs.microsoft.com/en-us/azure/azure-vmware/netapp-files-with-azure-vmware-solution"^]
+https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal/["https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal/"^]
 
 
