@@ -29,7 +29,8 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 ====
 .보호
 --
-곧 출시 예정!!
+* link:gcp-app-dr-sc-cvo-veeam.html["SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구"]
+
 
 --
 .마이그레이션

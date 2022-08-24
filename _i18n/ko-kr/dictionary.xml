@@ -14466,7 +14466,6 @@
   <block id="ce0992cb9d73e6a183b2b79e1cf57442" category="paragraph"><block ref="a15e077225e1c63b1977f56a70fae69c" category="inline-link-macro-rx"></block>
 <block ref="f4a57bacfd4fb9ea09ece261926e87de" category="inline-link-macro-rx"></block></block>
   <block id="55b61b011b735ba396a8dbd7e3f95f20" category="cell">2022년 8월 5일</block>
-  <block id="f521ff62d61b22e5b86c9e3801eca511" category="cell">"권장 ESXi 및 ONTAP 설정에 대한 재부팅 필요 정보 추가</block>
   <block id="678582eb0cbbe0e063e618d230b63223" category="cell">* 호스트 설정 *</block>
   <block id="dfe49b73bd7e747701b49f9ed21ea2d6" category="cell">* NetApp 권장 가치 *</block>
   <block id="edceae57d92287f4f6200f94d3259cd0" category="cell">* 재부팅 필요 *</block>
@@ -14548,4 +14547,6 @@
   <block id="dee7570423fb41bfa5f00fd539ed91da" category="doc">지역 가용성 – ANF용 보조 NFS 데이터 저장소</block>
   <block id="9e289e2a1ce460725108e7241e19b575" category="doc">AWS, Azure 및 GCP에서 보조 NFS 데이터 저장소를 위한 지역 가용성</block>
   <block id="3ce209dcd58ed0c7d8cf39f37f2b1557" category="paragraph">AWS, Azure 및 Google Cloud Platform(GCP)에서 NFS 데이터 저장소를 추가로 지원하는 글로벌 지역에 대해 자세히 알아보십시오.</block>
+  <block id="f22705ef66107a528d4982aa8fdd463d" category="list-text"><block ref="f22705ef66107a528d4982aa8fdd463d" category="inline-link-macro-rx"></block></block>
+  <block id="e9063f3c3631446cbaeef19e7965f491" category="sidebar">SnapCenter, CVO, Veeam 복제를 통한 애플리케이션 재해 복구</block>
 </blocks>

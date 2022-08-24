@@ -58,6 +58,6 @@ indexpage:
     - title: CVS를 게스트 연결 스토리지로
       url: "/gcp/gcp-guest.html#cvs"
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
-      url: "/gcp/gcp-solutions.html\\"
+      url: "/gcp/gcp-solutions.html"
     - title: 보안 개요 - Google Cloud의 NetApp CVS
       url: "/ncvs/ncvs-gc-overview.html"
