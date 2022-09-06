@@ -4952,8 +4952,6 @@
   <block id="33be49f7ebc56eb7d336a201f7ac0df6" category="inline-link-macro">Azure NetApp Files 기반 SAP</block>
   <block id="626865aeb52c00e03e8f0df7695c5a5c" category="list-text"><block ref="626865aeb52c00e03e8f0df7695c5a5c" category="inline-link-macro-rx"></block></block>
   <block id="e131204502a58630f2f72937238604c8" category="section-title">비디오/데모</block>
-  <block id="e9194e819cadddfb8f6c5e69d11e366b" category="inline-link-macro">Oracle 데이터베이스용 NetApp 솔루션</block>
-  <block id="2c389096a43e749160e32214cb4a3b89" category="list-text"><block ref="2c389096a43e749160e32214cb4a3b89" category="inline-link-macro-rx"></block></block>
   <block id="2b1dd692c0da980c4ec2ad9fd523c47d" category="inline-link-macro">Azure NetApp Files의 SQL 고가용성 클러스터</block>
   <block id="99945a626f3fb01dbeac75f40a6c2c8e" category="list-text"><block ref="99945a626f3fb01dbeac75f40a6c2c8e" category="inline-link-macro-rx"></block></block>
   <block id="95e5ff389c2796a171f904ad5b9322f6" category="list-text">NetApp 및 VMware Cloud Foundation(VCF)</block>
@@ -6145,7 +6143,6 @@
   <block id="d83d094e8e3ce7450bf099061814d148" category="cell">Red Hat Ansible을 사용한 솔루션 자동화 시작 개요</block>
   <block id="6174d88cc7c0409df3e035a5c9d089cb" category="section-title">Change Log(로그 변경)</block>
   <block id="a0067ab2420cbaebc335efc5c2433c45" category="inline-link-macro">변경 로그</block>
-  <block id="1144ef243d0744e29b8bb83edad3cd0d" category="paragraph">리포지토리의 모든 주요 변경 사항(새로운 솔루션, 주요 업데이트, 새로운 비디오/데모 등)은 에서 추적됩니다 <block ref="95485865b5d32e0932da8207f23060b5" category="inline-link-macro-rx"></block>.</block>
   <block id="bea4c2c8eb82d05891ddd71584881b56" category="section-title">피드백</block>
   <block id="fb6b632cdd61e02434568081cbbf0fae" category="paragraph">을(를) 사용하십시오 <block ref="a5f81f398e43efd62a061a201309bfa7" category="inline-link-macro-rx"></block> 콘텐츠의 변경을 요청하거나 콘텐츠에 대한 피드백을 제공합니다. 귀하의 피드백이 적절하게 처리되도록 최대한 구체적으로 적어 주십시오.</block>
   <block id="89185de94c95d958df7a1d1f328c5d3d" category="summary">마이그레이션은 마이그레이션 계획 및 완료를 위해 따라야 할 단계가 다릅니다. NetApp XCP를 사용하여 타사 NAS 스토리지나 직접 연결된 NAS 내보낸 스토리지에서 데이터를 마이그레이션하려면 이 섹션에 제공된 마이그레이션 지침을 따르십시오.</block>
@@ -14549,4 +14546,126 @@
   <block id="3ce209dcd58ed0c7d8cf39f37f2b1557" category="paragraph">AWS, Azure 및 Google Cloud Platform(GCP)에서 NFS 데이터 저장소를 추가로 지원하는 글로벌 지역에 대해 자세히 알아보십시오.</block>
   <block id="f22705ef66107a528d4982aa8fdd463d" category="list-text"><block ref="f22705ef66107a528d4982aa8fdd463d" category="inline-link-macro-rx"></block></block>
   <block id="e9063f3c3631446cbaeef19e7965f491" category="sidebar">SnapCenter, CVO, Veeam 복제를 통한 애플리케이션 재해 복구</block>
+  <block id="d15aa19396a83c3c15a1fb8ba83efda1" category="cell">2022년 8월 25일</block>
+  <block id="56991209ac6bc77f76e9e1828103cdfc" category="cell">블로그 추가 - Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오</block>
+  <block id="f37741764b2517136f3747b14ec803a0" category="cell">새로운 솔루션: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise</block>
+  <block id="9f65880e605551f01ff1d2c03d3fa4c6" category="cell">2022년 6월 29일</block>
+  <block id="304bc05c6debf3075c4f25dcffcf50bd" category="cell">WP-7357 추가: EC2/FSx Best Practices에 Oracle Database 구축</block>
+  <block id="69e8c6aef5e50150d499e7fa39f846ed" category="summary">NVIDIA AI Enterprise는 모든 조직이 AI를 성공적으로 활용할 수 있도록 최적화된 엔드 투 엔드 클라우드 네이티브 AI 및 데이터 분석 소프트웨어 제품군입니다.</block>
+  <block id="68cdb7bf3dabd26e338e1ba72b549c69" category="doc">NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise</block>
+  <block id="61cb0c1b4a32d4815eb2a785c0c84cb8" category="paragraph">IT 설계자 및 관리자의 경우 AI 툴링은 복잡하고 익숙하지 않을 수 있습니다. 또한 많은 AI 플랫폼은 엔터프라이즈급이 아닙니다. NetApp과 VMware이 지원하는 NVIDIA AI Enterprise는 간소화된 엔터프라이즈급 AI 아키텍처를 제공하도록 제작되었습니다.</block>
+  <block id="65590ec18b850984cfb8bbe6ba35fe7d" category="paragraph">NVIDIA AI Enterprise는 NVIDIA 인증 시스템과 함께 VMware vSphere에서 실행하도록 NVIDIA에서 최적화, 인증 및 지원하는 엔드 투 엔드 클라우드 네이티브 AI 및 데이터 분석 소프트웨어 제품군입니다. 이 소프트웨어를 사용하면 최신 하이브리드 클라우드 환경에서 AI 워크로드를 쉽고 빠르게 구축, 관리, 확장할 수 있습니다. NetApp 및 VMware를 기반으로 하는 NVIDIA AI Enterprise는 단순하고 친숙한 패키지로 엔터프라이즈급 AI 워크로드 및 데이터 관리를 제공합니다.</block>
+  <block id="24c4078c95e6e2df55bd1d251c11f4aa" category="paragraph"><block ref="24c4078c95e6e2df55bd1d251c11f4aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7d92209f7d0eac282a9a26e642c20a91" category="inline-link-macro">다음: 기술 개요.</block>
+  <block id="51624dfcafe192d37d40a363ccfa4260" category="paragraph"><block ref="51624dfcafe192d37d40a363ccfa4260" category="inline-link-macro-rx"></block></block>
+  <block id="f0de4adaf6568678921cef0d0e69b81f" category="summary">NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 기술 개요</block>
+  <block id="bdab293b91374abd32d30076de9d29b9" category="paragraph"><block ref="bdab293b91374abd32d30076de9d29b9" category="inline-link-macro-rx"></block></block>
+  <block id="51ab86189ca8b1d1a08ac2970d39f90c" category="section-title">NVIDIA AI 엔터프라이즈</block>
+  <block id="0719941ec04c59670033b3b1f0e3c239" category="paragraph">NVIDIA AI Enterprise는 NVIDIA 인증 시스템과 함께 VMware vSphere에서 실행하도록 NVIDIA에서 최적화, 인증 및 지원하는 엔드 투 엔드 클라우드 네이티브 AI 및 데이터 분석 소프트웨어 제품군입니다. 이 소프트웨어를 사용하면 최신 하이브리드 클라우드 환경에서 AI 워크로드를 쉽고 빠르게 구축, 관리, 확장할 수 있습니다.</block>
+  <block id="cbd4c44d2b7fc45943b834d2a03f2a63" category="paragraph">NVIDIA NGC는 AI 전문가가 AI 솔루션을 개발할 수 있도록 GPU 최적화 소프트웨어 카탈로그를 호스팅합니다. 또한 모델 훈련을 위한 NVIDIA Base Command, 모델을 배포 및 모니터링하는 NVIDIA Fleet Command, 독점 AI 소프트웨어에 안전하게 액세스하고 관리하기 위한 NGC 프라이빗 레지스트리 등 다양한 AI 서비스에 대한 액세스를 제공합니다. 또한, NVIDIA AI 엔터프라이즈 고객은 NGC 포털을 통해 지원을 요청할 수 있습니다.</block>
+  <block id="7ee50a783ac86f99c7b7db29b77e7a2a" category="paragraph">VMware vSphere는 데이터 센터를 CPU, 스토리지 및 네트워킹 리소스를 포함하는 집계된 컴퓨팅 인프라로 변환하는 VMware의 가상화 플랫폼입니다. vSphere는 이러한 인프라스트럭처를 통합 운영 환경으로 관리하고 관리자에게 해당 환경에 참여하는 데이터 센터를 관리할 수 있는 툴을 제공합니다.</block>
+  <block id="a8b821c11b6c83cd7165137d4f68a45b" category="paragraph">vSphere의 두 가지 핵심 구성 요소는 ESXi와 vCenter Server입니다. ESXi는 관리자가 가상 머신 및 가상 어플라이언스를 생성 및 실행하는 가상화 플랫폼입니다. vCenter Server는 관리자가 네트워크 및 풀 호스트 리소스에 연결된 여러 호스트를 관리하는 서비스입니다.</block>
+  <block id="f45c2aa2e74e3412ee9883eb28b7549e" category="paragraph">NetApp의 최신 세대 스토리지 관리 소프트웨어인 ONTAP 9는 기업이 인프라를 현대화하고 클라우드 지원 데이터 센터로 전환할 수 있도록 지원합니다. ONTAP는 업계 최고 수준의 데이터 관리 기능을 활용하여 데이터가 상주하는 위치와 상관없이 단일 툴셋으로 데이터를 관리하고 보호할 수 있습니다. 필요에 따라 에지, 코어, 클라우드 등 어느 위치로도 데이터를 자유롭게 이동할 수 있습니다. ONTAP 9에는 데이터 관리를 단순화하고, 중요 데이터를 더 빨리 처리하고, 보호하며, 하이브리드 클라우드 아키텍처 전체에서 차세대 인프라 기능을 지원하는 다양한 기능이 포함되어 있습니다.</block>
+  <block id="7cc4f632835e2377fd90f38601a3e0eb" category="paragraph">NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원하는 개발/교육 작업 공간 및 추론 서버의 관리를 단순화하는 Python 기반 툴입니다. 주요 기능은 다음과 같습니다.</block>
+  <block id="f9e55f3095ff79acd2c7f6315222ba4a" category="list-text">고성능 스케일아웃 NetApp 스토리지를 기반으로 하는 새로운 고용량 JupyterLab 작업 공간을 빠르게 프로비저닝합니다.</block>
+  <block id="a9e4b1a2cc4b445907d2b986ab2f3515" category="list-text">엔터프라이즈급 NetApp 스토리지를 통해 지원되는 새로운 NVIDIA Triton Inference Server 인스턴스를 빠르게 프로비저닝합니다.</block>
+  <block id="23b97f551923a166ae2d3223b0ed84cc" category="list-text">실험 또는 신속한 반복을 위해 고용량 JupyterLab 작업 공간을 거의 동시에 복제합니다.</block>
+  <block id="27c7d5bdafd6a9d64ad337b08e104c87" category="list-text">백업 및/또는 추적 가능성/베이스라인 기능을 위해 고용량 JupyterLab 작업 공간의 스냅샷을 거의 동시에 저장합니다.</block>
+  <block id="86f28dd8fdffc90314bf94c94e1b3c1c" category="list-text">대용량 고성능 데이터 볼륨을 거의 동시에 프로비저닝, 복제 및 스냅샷으로 제공합니다.</block>
+  <block id="263db194560bc66bd5de27c72f9b7923" category="paragraph"><block ref="263db194560bc66bd5de27c72f9b7923" category="inline-link-macro-rx"></block></block>
+  <block id="d8299632c247aca8f771d7368ee36f9d" category="summary">NetApp 및 VMware-Architecture를 지원하는 NVIDIA AI Enterprise</block>
+  <block id="9ca68ac69c80fa519c5ead343d865ce4" category="inline-link-macro">이전: 기술 개요.</block>
+  <block id="ab7d7704700b22bf8dd4ce26b09e2562" category="paragraph"><block ref="ab7d7704700b22bf8dd4ce26b09e2562" category="inline-link-macro-rx"></block></block>
+  <block id="37810ec69b6e321b4b377d835e7d84ac" category="paragraph">이 솔루션은 NetApp, VMware 및 NVIDIA 인증 시스템을 갖춘, 그 우수성이 입증된 친숙한 아키텍처를 기반으로 구축되었습니다. 자세한 내용은 다음 표를 참조하십시오.</block>
+  <block id="95a502ec0ddaf3352c2540e3e9f65a1b" category="cell">AI 및 데이터 분석 소프트웨어</block>
+  <block id="61da586210da33a8abab150a7d7d0972" category="inline-link-macro">VMware용 NVIDIA AI Enterprise</block>
+  <block id="7865e440c1b499e7942ca9b659d737d6" category="cell"><block ref="7865e440c1b499e7942ca9b659d737d6" category="inline-link-macro-rx"></block></block>
+  <block id="102995a1cdd2c719d7d0aa4d888fa019" category="cell">가상화 플랫폼</block>
+  <block id="4ce5f3794d6e351daaaaa4f211e419ee" category="cell"><block ref="4ce5f3794d6e351daaaaa4f211e419ee" category="inline-link-macro-rx"></block></block>
+  <block id="8cf5fbd26a1d5d924600d38015860908" category="cell">컴퓨팅 플랫폼</block>
+  <block id="aee87e9fe5cc4cf9193cd27c74a0a6e7" category="inline-link-macro">NVIDIA 인증 시스템</block>
+  <block id="b3cdb2e0e953c1639ad63fe06b8c7a37" category="cell"><block ref="b3cdb2e0e953c1639ad63fe06b8c7a37" category="inline-link-macro-rx"></block></block>
+  <block id="ddca712fc3b0dad3d85e423eb97d58ea" category="cell">데이터 관리 플랫폼</block>
+  <block id="1c317db419d669c4b6473c6d462e881e" category="cell"><block ref="1c317db419d669c4b6473c6d462e881e" category="inline-link-macro-rx"></block></block>
+  <block id="121c96ce43abda774fe95c1ccde1603e" category="paragraph"><block ref="121c96ce43abda774fe95c1ccde1603e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23a5db9f9241f7132df83ceacee13eb5" category="inline-link-macro">다음: 초기 설정.</block>
+  <block id="65ee66895a5d90d6bde80ce787a7e3b7" category="paragraph"><block ref="65ee66895a5d90d6bde80ce787a7e3b7" category="inline-link-macro-rx"></block></block>
+  <block id="922b9696b39b06f6a4d313569231a446" category="summary">NVIDIA AI Enterprise with NetApp and VMware - Where to Find Additional Information(NetApp 및 VMware - 추가 정보를 찾을 수 있는 위치)</block>
+  <block id="77b8a01d0d63ff78898858cf688363c3" category="inline-link-macro">이전: 사용 사례 예 - TensorFlow 교육 작업</block>
+  <block id="14b2e29c23cc5c2fbf0ecfe2c97d9919" category="paragraph"><block ref="14b2e29c23cc5c2fbf0ecfe2c97d9919" category="inline-link-macro-rx"></block></block>
+  <block id="913e298a14c5b49185ced898ccea22bd" category="list-text">NVIDIA AI Enterprise 및 VMware</block>
+  <block id="5fad8e8f46a27398d761d66b0cb3f138" category="paragraph"><block ref="b79ccae54733d96b388303db61e85c7c" category="inline-link-rx"></block>]</block>
+  <block id="c85cb3eda6d429393778efbed7420a50" category="list-text">Bobby Oommen, 선임 NetApp 선임 관리자</block>
+  <block id="c4321e9f60724f09a097b4d8b79c6e7b" category="list-text">Ramesh Isaac, NetApp 시스템 관리자</block>
+  <block id="cf4995eac87d7ce5351e1043fe85683c" category="list-text">Ronney Daniel, NetApp 기술 마케팅 엔지니어</block>
+  <block id="ffdaf4e44bdc58181aaa1fb09d821794" category="summary">NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA NGC 소프트웨어 활용</block>
+  <block id="a99b0f81ba7eb4c3316c034815d10d6f" category="doc">NVIDIA NGC 소프트웨어를 활용합니다</block>
+  <block id="c9af43d59068b9518707160eb6b96225" category="inline-link-macro">이전: 초기 설정.</block>
+  <block id="594eb3d3a076d44ee9951aa997704c5a" category="paragraph"><block ref="594eb3d3a076d44ee9951aa997704c5a" category="inline-link-macro-rx"></block></block>
+  <block id="4161955dbf0998e264bc502f3cedc932" category="paragraph">이 섹션에서는 NVIDIA AI 엔터프라이즈 환경에서 NVIDIA NGC 엔터프라이즈 소프트웨어를 활용하기 위해 수행해야 하는 작업에 대해 설명합니다.</block>
+  <block id="cdc25880ca2e070e7e8937596a923a72" category="inline-link-macro">다음: 설정.</block>
+  <block id="990700dce54370c3a1bca7246dfa67a2" category="paragraph"><block ref="990700dce54370c3a1bca7246dfa67a2" category="inline-link-macro-rx"></block></block>
+  <block id="d6b1f830356956d1f4b73438f8604232" category="summary">NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA NGC 소프트웨어 활용 - 설정</block>
+  <block id="d0dad2e446397223579c27c4071bd112" category="inline-link-macro">이전: NVIDIA NGC 소프트웨어를 활용합니다.</block>
+  <block id="149dec50621ec3639bea5fc28effa6cf" category="paragraph"><block ref="149dec50621ec3639bea5fc28effa6cf" category="inline-link-macro-rx"></block></block>
+  <block id="7bb37c1d3fb64e908e6704f53b5fe4a8" category="paragraph">이 섹션에서는 NVIDIA AI Enterprise 환경에서 NVIDIA NGC 엔터프라이즈 소프트웨어를 활용하기 위해 수행해야 하는 초기 설정 작업에 대해 설명합니다.</block>
+  <block id="6641666d7bc2748bab0ac80cdec3a2a3" category="inline-link-macro">초기 설정</block>
+  <block id="512338e48541699ec73dae999f67080a" category="paragraph">이 섹션에 요약된 단계를 수행하기 전에 에 나와 있는 지침에 따라 NVIDIA AI Entprise 호스트 소프트웨어를 이미 구축했다고 가정합니다 <block ref="a8e4d2617194ed990c0124f2cc8aee91" category="inline-link-macro-rx"></block> 페이지.</block>
+  <block id="c23799b3650257af14b8af5acb107354" category="section-title">vGPU를 사용하여 Ubuntu 게스트 VM을 생성합니다</block>
+  <block id="0271f6ade1f60c92c6548f0e5c440e4e" category="inline-link-macro">NVIDIA AI Enterprise 구축 가이드 를 참조하십시오</block>
+  <block id="1d7d5c692ef1d70e3217e93bb16af99e" category="paragraph">먼저 vGPU를 사용하여 Ubuntu 20.04 게스트 VM을 만들어야 합니다. vGPU를 사용하여 Ubuntu 20.04 게스트 VM을 생성하려면 의 지침 개요를 따르십시오 <block ref="f5168fb76d8813fb2707289c4637d2ea" category="inline-link-macro-rx"></block>.</block>
+  <block id="70c95294a49e1475adbde86d8eae754e" category="section-title">NVIDIA 게스트 소프트웨어를 다운로드하고 설치합니다</block>
+  <block id="6148d2809a69d7225df7c6dcc1b5f94f" category="inline-link-macro">NVIDIA AI Enterprise 빠른 시작 가이드 를 참조하십시오</block>
+  <block id="8f3d19df984dedd40b9998136343e036" category="paragraph">그런 다음 이전 단계에서 생성한 게스트 VM 내에 필요한 NVIDIA 게스트 소프트웨어를 설치해야 합니다. 게스트 VM 내에서 필요한 NVIDIA 게스트 소프트웨어를 다운로드하여 설치하려면 의 섹션 5.1-5.4에 설명된 지침을 따르십시오 <block ref="d00914f6db2027b3a594dc7a64e68b3c" category="inline-link-macro-rx"></block>.</block>
+  <block id="15186686bd7e9c36683658388b6865b0" category="admonition">섹션 5.4에 설명된 검증 작업을 수행할 때, 가이드를 작성한 후 CUDA 컨테이너 이미지가 업데이트되었으므로 다른 CUDA 컨테이너 이미지 버전 태그를 사용해야 할 수 있습니다. 검증을 위해 'NVIDIA/CUDA:11.0.3-BASE-uubu20.04'를 사용했습니다.</block>
+  <block id="f43e7f8a79b8984748fff81eeb0f8c5f" category="section-title">AI/분석 프레임워크 컨테이너 다운로드</block>
+  <block id="12a93794571377dc80b4be8c2f22349c" category="paragraph">그런 다음, 게스트 VM 내에서 사용할 수 있도록 NVIDIA NGC에서 필요한 AI 또는 분석 프레임워크 컨테이너 이미지를 다운로드해야 합니다. 게스트 VM 내에서 프레임워크 컨테이너를 다운로드하려면 에 설명된 지침을 따르십시오 <block ref="26bd3715eff2817a0154bee58d883e27" category="inline-link-macro-rx"></block>.</block>
+  <block id="5a8b2b886d790892b5beca474e789276" category="section-title">NetApp DataOps 툴킷을 설치하고 구성합니다</block>
+  <block id="a225239f36328db667324928281cd834" category="paragraph">그런 다음 게스트 VM 내에 기존 환경을 위한 NetApp DataOps 툴킷을 설치해야 합니다. NetApp DataOps 툴킷은 게스트 VM 내의 터미널에서 ONTAP 시스템의 스케일아웃 데이터 볼륨을 직접 관리하는 데 사용할 수 있습니다. 게스트 VM에 NetApp DataOps 툴킷을 설치하려면 다음 작업을 수행하십시오.</block>
+  <block id="e0288a23fbe1bfdb5f5b06d39e315992" category="list-text">PIP를 설치합니다.</block>
+  <block id="bb5f723fd408b79a93de1e726de66dd1" category="list-text">게스트 VM 터미널에서 로그아웃한 후 다시 로그인합니다.</block>
+  <block id="c456f18c285a54b87c3bc96f0ee32ebb" category="list-text">NetApp DataOps 툴킷을 구성합니다. 이 단계를 완료하려면 ONTAP 시스템에 대한 API 액세스 세부 정보가 필요합니다. 스토리지 관리자로부터 이러한 정보를 얻어야 할 수 있습니다.</block>
+  <block id="defe5f6be79f86b85d956d3e53c7ac4d" category="section-title">게스트 VM 템플릿을 생성합니다</block>
+  <block id="d5d979be97f5a76cf2676ef5a9c7f071" category="paragraph">마지막으로, 게스트 VM을 기반으로 VM 템플릿을 생성해야 합니다. 이 템플릿을 사용하여 NVIDIA NGC 소프트웨어를 사용하기 위한 게스트 VM을 빠르게 생성할 수 있습니다.</block>
+  <block id="fec1fe0b41ba3927cfb9ac7c0507a1f5" category="paragraph">게스트 VM을 기반으로 VM 템플릿을 생성하려면 VMware vSphere에 로그인하고 게스트 VM 이름을 마우스 오른쪽 단추로 클릭한 다음 '클론'을 선택하고 '템플릿으로 클론 복제...'를 선택한 다음 마법사를 따릅니다.</block>
+  <block id="05e042a4870614727b5012704b95e5ec" category="paragraph"><block ref="05e042a4870614727b5012704b95e5ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ad90a409faffb6ba8eef6ec1658543c" category="inline-link-macro">다음: 사용 사례 예 - TensorFlow 교육 작업</block>
+  <block id="2dbc93dcf9e19b9e4c3cdac9786d0d7d" category="paragraph"><block ref="2dbc93dcf9e19b9e4c3cdac9786d0d7d" category="inline-link-macro-rx"></block></block>
+  <block id="e4f8ad54c095217d5da72f9ba2ad87d4" category="summary">NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA NGC 소프트웨어 활용 - 사용 사례 - TensorFlow 교육 작업</block>
+  <block id="b26247c1865d93ea590ef10d1150c2ae" category="doc">사용 사례 - TensorFlow 교육 작업 예</block>
+  <block id="9e4efb6787f44fcab6b00e2afd36fcee" category="inline-link-macro">이전: 설정.</block>
+  <block id="fd157334647c1bdd933147dbf284f59e" category="paragraph"><block ref="fd157334647c1bdd933147dbf284f59e" category="inline-link-macro-rx"></block></block>
+  <block id="ff35b7c65e31b6103dee61bd8d89ee4f" category="paragraph">이 섹션에서는 NVIDIA AI Enterprise 환경 내에서 TensorFlow 교육 작업을 실행하기 위해 수행해야 하는 작업에 대해 설명합니다.</block>
+  <block id="cd33d31cec93ae54705bbc90e8ffbc09" category="paragraph">이 섹션에 설명된 단계를 수행하기 전에 에 설명된 지침에 따라 게스트 VM 템플릿을 이미 생성했다고 가정합니다 <block ref="8c165f1fe6ca595dd726d3af3dcdf541" category="inline-link-macro-rx"></block> 페이지.</block>
+  <block id="c8281ef65e7f967dfd74821eada0aed1" category="section-title">템플릿에서 게스트 VM을 생성합니다</block>
+  <block id="8f195db6a3d092a2d990de535475fb82" category="paragraph">먼저 이전 섹션에서 생성한 템플릿에서 새 게스트 VM을 생성해야 합니다. 템플릿에서 새 게스트 VM을 생성하려면 VMware vSphere에 로그인하고 템플릿 이름을 마우스 오른쪽 단추로 클릭한 다음 '이 템플릿에서 새 VM...'을 선택하고 마법사를 따릅니다.</block>
+  <block id="9739d298a43441a49ece0169468d720e" category="paragraph"><block ref="9739d298a43441a49ece0169468d720e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="229fea3a8aa56b262dc3dbb996d81052" category="section-title">데이터 볼륨 생성 및 마운트</block>
+  <block id="bbdc3bf8e16f6c828df2941c605e4ef3" category="paragraph">그런 다음, 교육 데이터 세트를 저장할 새 데이터 볼륨을 생성해야 합니다. NetApp DataOps 툴킷을 사용하여 새 데이터 볼륨을 빠르게 생성할 수 있습니다. 다음 예제 명령은 용량이 2TB인 'imagenet'이라는 이름의 볼륨을 생성하는 방법을 보여 줍니다.</block>
+  <block id="bed0c39c2a853526e026bbd1d13b0a29" category="paragraph">데이터 볼륨을 데이터로 채우기 전에 게스트 VM 내에 마운트해야 합니다. NetApp DataOps 툴킷을 사용하여 데이터 볼륨을 빠르게 마운트할 수 있습니다. 다음 예제 명령은 이전 단계에서 생성한 볼륨의 모팅을 보여 줍니다.</block>
+  <block id="3418ebfa9c3ff38c1bfcd27521d4e641" category="section-title">데이터 볼륨을 채웁니다</block>
+  <block id="ec123d1ef57b0ab158b8c891c6b936da" category="paragraph">새 볼륨을 프로비저닝하고 마운트한 후에는 소스 위치에서 교육 데이터 세트를 가져와서 새 볼륨에 배치할 수 있습니다. 일반적으로 이 작업은 S3 또는 Hadoop 데이터 레이크에서 데이터를 가져오는 작업을 수반하며, 경우에 따라 데이터 엔지니어의 도움을 받게 됩니다.</block>
+  <block id="d3e84e47f561be23742b30b8c3dd7d10" category="section-title">TensorFlow 교육 작업을 실행합니다</block>
+  <block id="f6a0596efc5c96edbcbffd2d19e48f41" category="paragraph">이제 TensorFlow 교육 작업을 실행할 준비가 되었습니다. TensorFlow 교육 작업을 실행하려면 다음 작업을 수행하십시오.</block>
+  <block id="83c4072e784e0048974a7fbaef9e7567" category="list-text">NVIDIA NGC 엔터프라이즈 TensorFlow 컨테이너 이미지를 가져옵니다.</block>
+  <block id="26857c717c90aa9ca7c999304a47e6ad" category="list-text">NVIDIA NGC 엔터프라이즈 TensorFlow 컨테이너의 인스턴스를 시작합니다. '-v' 옵션을 사용하여 데이터 볼륨을 컨테이너에 연결합니다.</block>
+  <block id="c8dc137f2972d72ed031b7e9000c2b58" category="list-text">컨테이너 내에서 TensorFlow 교육 프로그램을 실행합니다. 다음 예제 명령은 컨테이너 이미지에 포함된 ResNet-50 훈련 프로그램의 예를 보여 줍니다.</block>
+  <block id="5a71d5119829b5c78d377ad1aa8a90a8" category="inline-link-macro">다음: 추가 정보를 찾을 위치.</block>
+  <block id="d5ca60148a0675b3abb83565cbf886d7" category="paragraph"><block ref="d5ca60148a0675b3abb83565cbf886d7" category="inline-link-macro-rx"></block></block>
+  <block id="54d7050762b4d8c4af04f27ce33f1f9b" category="summary">NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 초기 설정</block>
+  <block id="232b44c6dbb39fe55ed3d2ae7953c0ce" category="paragraph"><block ref="232b44c6dbb39fe55ed3d2ae7953c0ce" category="inline-link-macro-rx"></block></block>
+  <block id="cb8b0bf52601ee3b7c48b31850f1a45a" category="paragraph">이 섹션에서는 NetApp 및 VMware에서 NVIDIA AI Enterprise를 활용하기 위해 수행해야 하는 초기 설정 작업에 대해 설명합니다.</block>
+  <block id="5600e01753ba1c962c6d52ee6f0bdc72" category="inline-link-macro">NVIDIA AI 엔터프라이즈 제품 지원 매트릭스</block>
+  <block id="b46df8af05863c37f3cd1fd611e5d2d9" category="inline-link-macro">NetApp 및 VMware 솔루션 설명서</block>
+  <block id="bf44a799ea99e6a60d34e10561a03e4e" category="paragraph">이 섹션에 요약된 단계를 수행하기 전에 이미 VMware vSphere 및 NetApp ONTAP를 구축했다고 가정합니다. 을 참조하십시오 <block ref="7fc42871bfcfe7310a97a725dca473d8" category="inline-link-macro-rx"></block> 지원되는 vSphere 버전에 대한 자세한 내용은 를 참조하십시오. 을 참조하십시오 <block ref="627bf2e2dbf74de3f0be812563fb3ec4" category="inline-link-macro-rx"></block> NetApp ONTAP와 함께 VMware vSphere를 구축하는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="a067b320746c7952a2b152f5a3af42b4" category="section-title">NVIDIA AI Enterprise Host Software를 설치합니다</block>
+  <block id="ee9d732a57ce821e52e753e2b4bd4a84" category="paragraph">NVIDIA AI Entraprise 호스트 소프트웨어를 설치하려면 의 섹션 1-4에 설명된 지침을 따르십시오 <block ref="d00914f6db2027b3a594dc7a64e68b3c" category="inline-link-macro-rx"></block>.</block>
+  <block id="cd110cdaa9b8e3838ddcbc34234a5317" category="inline-link-macro">다음: NVIDIA NGC 소프트웨어를 활용합니다.</block>
+  <block id="4a2f52c7b89633749f7644b851cb7bc6" category="paragraph"><block ref="4a2f52c7b89633749f7644b851cb7bc6" category="inline-link-macro-rx"></block></block>
+  <block id="befb671d4726ae8f3ef8dab781033dcc" category="inline-link-macro">스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론</block>
+  <block id="d2ce8fdd8bfb2af37dfb8bca676d5b20" category="list-text"><block ref="d2ce8fdd8bfb2af37dfb8bca676d5b20" category="inline-link-macro-rx"></block></block>
+  <block id="9e2a9bc8a2f8e27bba893554318c300a" category="paragraph">리포지토리의 모든 주요 변경 사항(새로운 솔루션, 주요 업데이트, 새로운 비디오/데모 등)은 에서 추적됩니다 <block ref="62716531525ec9f2f5022745ce51b3a4" category="inline-link-macro-rx"></block>.</block>
+  <block id="aeb79a141f3c3f603cee05dfa64277aa" category="inline-link-macro">Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오</block>
+  <block id="a35641294527bf47526671d78d910a7e" category="list-text"><block ref="a35641294527bf47526671d78d910a7e" category="inline-link-macro-rx"></block></block>
+  <block id="958dc0e3d1fcb4de4e8d506927ac81d3" category="sidebar">EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축</block>
 </blocks>

@@ -37,6 +37,8 @@ indexpage:
     links:
     - title: NetApp DataOps 툴킷
       url: https://github.com/NetApp/netapp-dataops-toolkit
+    - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
+      url: nvaie_introduction.html
     - title: AI 파이프라인 및 밤공간 관리를 위한 NetApp AI 컨트롤 플레인
       url: aicp_introduction.html
     - title: Iguazio를 사용한 MLRun 파이프라인

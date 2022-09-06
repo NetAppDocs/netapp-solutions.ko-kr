@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: ai/nvaie_initial_setup.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVAIE, VMware 
+summary: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 초기 설정 
+---
+= 초기 설정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:nvaie_architecture.html["이전: 아키텍처."]
+
+이 섹션에서는 NetApp 및 VMware에서 NVIDIA AI Enterprise를 활용하기 위해 수행해야 하는 초기 설정 작업에 대해 설명합니다.
+
+
+
+== 필수 구성 요소
+
+이 섹션에 요약된 단계를 수행하기 전에 이미 VMware vSphere 및 NetApp ONTAP를 구축했다고 가정합니다. 을 참조하십시오 link:https://docs.nvidia.com/ai-enterprise/latest/product-support-matrix/index.html["NVIDIA AI 엔터프라이즈 제품 지원 매트릭스"] 지원되는 vSphere 버전에 대한 자세한 내용은 를 참조하십시오. 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/netapp-vmware.html["NetApp 및 VMware 솔루션 설명서"] NetApp ONTAP와 함께 VMware vSphere를 구축하는 방법에 대한 자세한 내용은 를 참조하십시오.
+
+
+
+== NVIDIA AI Enterprise Host Software를 설치합니다
+
+NVIDIA AI Entraprise 호스트 소프트웨어를 설치하려면 의 섹션 1-4에 설명된 지침을 따르십시오 link:https://docs.nvidia.com/ai-enterprise/latest/quick-start-guide/index.html["NVIDIA AI Enterprise 빠른 시작 가이드 를 참조하십시오"].
+
+link:nvaie_ngc.html["다음: NVIDIA NGC 소프트웨어를 활용합니다."]
