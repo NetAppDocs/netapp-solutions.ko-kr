@@ -14668,4 +14668,7 @@
   <block id="aeb79a141f3c3f603cee05dfa64277aa" category="inline-link-macro">Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오</block>
   <block id="a35641294527bf47526671d78d910a7e" category="list-text"><block ref="a35641294527bf47526671d78d910a7e" category="inline-link-macro-rx"></block></block>
   <block id="958dc0e3d1fcb4de4e8d506927ac81d3" category="sidebar">EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축</block>
+  <block id="4d6f369fd362693ff1e7c02749ce60d9" category="example-title">구내 Jetstream DR을 설치하는 방법</block>
+  <block id="91a827791bf5a23c98b3d5c7a69fe4ac" category="example-title">프라이빗 클라우드에 AVS용 Jetstream DR을 설치하는 방법</block>
+  <block id="60e3a8b4e353d775c34a7d4d16b3d797" category="example-title">페일오버/페일백 수행 방법</block>
 </blocks>
