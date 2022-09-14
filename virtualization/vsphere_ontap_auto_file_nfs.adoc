@@ -29,7 +29,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 
 ONTAP NAS 스토리지를 사용하여 NFS 버전 3 데이터 저장소를 생성합니다.
 
-자동 프로비저닝의 경우 다음 스크립트 중 하나를 사용합니다. <<PowerShell>>, <<Ansible>>, 또는 <<Terraform>>.
+자동 프로비저닝의 경우 다음 스크립트 중 하나를 사용합니다. , , 또는 .
 
 
 

@@ -24,13 +24,10 @@ AWS는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 
 * FSX ONTAP를 게스트 연결 스토리지로 사용합니다
 * CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
-* FSX ONTAP는 보충 NFS 데이터 저장소 ^1^로 사용됩니다
+* FSX ONTAP는 보조 NFS 데이터 저장소입니다
 
 
-자세한 내용을 확인하십시오 link:aws/aws-guest.html["VMC에 대한 게스트 연결 스토리지 옵션"].
-
-
-NOTE: VMC용 FSxN이 현재 IA(초기 가용성)에 있습니다. 자세한 내용은 NetApp 세일즈 담당자에게 문의하십시오.
+자세한 내용을 확인하십시오 link:aws/aws-guest.html["VMC에 대한 게스트 연결 스토리지 옵션"]. 자세한 내용을 확인하십시오 link:aws/aws-native-nfs-datastore-option.html["VMC에 대한 보조 NFS 데이터 저장소 옵션"].
 
 --
 .Azure/AVS
@@ -42,7 +39,7 @@ Azure는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.
 * Azure NetApp Files(ANF)를 보조 NFS 데이터 저장소 ^1^로 추가
 
 
-자세한 내용을 확인하십시오 link:azure/azure-guest.html["AVS용 게스트 연결 스토리지 옵션"].
+자세한 내용을 확인하십시오 link:azure/azure-guest.html["AVS용 게스트 연결 스토리지 옵션"]. 자세한 내용을 확인하십시오 link:azure/azure-native-nfs-datastore-option.html["AVS용 보조 NFS 데이터 저장소 옵션"].
 
 
 NOTE: AVS용 보조 NFS 데이터 저장소로서 1-ANF가 현재 Public Preview에 있습니다. 자세한 내용을 확인하십시오 https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?branch=main&tabs=azure-portal["여기"].

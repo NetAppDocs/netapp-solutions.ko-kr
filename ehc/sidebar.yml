@@ -23,6 +23,8 @@ entries:
   - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
     url: "/ehc/ehc-datastore-intro.html"
     entries:
+    - title: VMC용 보조 NFS 데이터 저장소입니다
+      url: "/ehc/aws/aws-native-overview.html"
     - title: VMC를 위한 게스트 연결 스토리지
       url: "/ehc/aws/aws-guest.html"
     - title: AVS용 보조 NFS 데이터 저장소입니다

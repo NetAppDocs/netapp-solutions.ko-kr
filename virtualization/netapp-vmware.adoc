@@ -74,7 +74,7 @@ image:netapp-vmware-6178d.png["링크 =\"https://www.netapp.tv/player/29126/stre
 
  a| 
 * link:https://www.netapp.com/pdf.html?item=/media/9222-nva-1145-design.pdf["VMware 및 AMP용 NetApp의 최신 데이터 보호 클라우드 연결 플래시 솔루션, SQL Server"]
-* link:https://blog.netapp.com/accelerate-your-k8s-journey["VMware Tanzu & amp; ONTAP를 통해 Kubernetes를 더 빠르게 전환하십시오"]
+* link:https://blog.netapp.com/accelerate-your-k8s-journey["VMware Tanzu  amp; ONTAP를 통해 Kubernetes를 더 빠르게 전환하십시오"]
 * link:https://cloud.netapp.com/hubfs/Resources/Storage%20Heavy%20Workloads.pdf?hsCtaTracking=6a9c2700-5d83-45ac-babf-020616809aa8%7C2ba0f61a-c335-4eb7-9230-20d5ebfa7c36["AWS에서 VMware Cloud를 실행하는 데 드는 비용 절감"]
 
 

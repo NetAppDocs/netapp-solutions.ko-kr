@@ -21,6 +21,8 @@ indexpage:
       url: "/aws/index.html"
     - title: 가상화 환경을 구성합니다
       url: "/aws/aws-setup.html"
+    - title: '보충 NFS 데이터 저장소로서의 FSX ONTAP: 개요'
+      url: "/aws/aws-native-overview.html"
     - title: FSX ONTAP를 게스트 연결 스토리지로 사용합니다
       url: "/aws/aws-guest.html#fsx-ontap"
     - title: CVO를 게스트 연결 스토리지로 사용

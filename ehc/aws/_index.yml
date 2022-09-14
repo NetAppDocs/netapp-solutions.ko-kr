@@ -5,8 +5,10 @@ indexpage:
     links:
     - title: 가상화 환경을 구성합니다
       url: "/aws-setup.html"
-    - title: 보충 NFS 데이터 저장소 옵션
-      url: https://blogs.vmware.com/cloud/2021/12/01/vmware-cloud-on-aws-going-big-reinvent2021/
+    - title: '보충 NFS 데이터 저장소: 개요'
+      url: "/aws-native-overview.html"
+    - title: '보충 NFS 데이터 저장소: 옵션'
+      url: "/aws-native-nfs-datastore-option.html"
     - title: 게스트 연결 스토리지 옵션
       url: "/aws-guest.html"
     - title: AWS/VMC용 솔루션

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws/aws-native-overview.html 
+keywords:  
+summary:  
+---
+= TR-4938: AWS에서 VMware Cloud를 사용하여 ONTAP용 Amazon FSx를 NFS 데이터 저장소로 마운트합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+Niyaz Mohamed, NetApp
+
+
+
+== 소개
+
+성공적인 모든 조직은 혁신과 현대화의 길을 따라 있습니다. 이 프로세스의 일환으로, 기업은 일반적으로 기존 VMware 투자를 사용하여 클라우드의 이점을 활용하고 가능한 한 원활하게 프로세스에 대한 재해 복구를 마이그레이션, 버스트, 확장 및 제공하는 방법을 모색합니다. 클라우드로 마이그레이션하는 고객은 탄력성 및 폭발적 사용 사례, 데이터 센터 종료, 데이터 센터 통합, 수명 종료 시나리오, 인수 합병 인수 합병 등
+
+대부분의 고객은 VMware Cloud on AWS를 통해 고유한 하이브리드 기능을 제공할 수 있기 때문에 이 옵션을 선호하지만, 제한된 기본 스토리지 옵션으로 인해 스토리지 집약적인 워크로드를 사용하는 조직에는 유용성이 제한되었습니다. 스토리지가 호스트에 직접 연결되어 있으므로 스토리지를 확장하는 유일한 방법은 호스트를 추가하는 것입니다. 이렇게 하면 스토리지 집약적인 워크로드에서 비용이 35-40% 이상 증가할 수 있습니다. 이러한 워크로드는 추가 성능이 아닌 추가 스토리지 및 분리된 성능을 필요로 하며, 이는 추가 호스트에 대한 비용을 지불한다는 것을 의미합니다. 이 부분에서 가 사용됩니다 https://aws.amazon.com/about-aws/whats-new/2022/08/announcing-vmware-cloud-aws-integration-amazon-fsx-netapp-ontap/["최신 통합"^] ONTAP용 FSx는 AWS 기반의 VMware Cloud를 통해 스토리지 및 성능 집약적인 워크로드에 매우 유용합니다.
+
+다음과 같은 시나리오를 생각해 보겠습니다. 고객은 마력(vCPU/vmem)을 위해 8개의 호스트를 필요로 하지만 스토리지에 대한 요구 사항도 상당히 있습니다. 평가를 기준으로 이 고객은 스토리지 요구사항을 충족하기 위해 16개의 호스트를 필요로 합니다. 이렇게 하면 실제로 필요한 모든 것이 더 많은 스토리지일 때 마력을 추가로 구입해야 하기 때문에 전체 TCO가 증가합니다. 마이그레이션, 재해 복구, 사용 급증, 개발/테스트, 등.
+
+이 문서에서는 ONTAP용 FSx를 AWS의 VMware Cloud용 NFS 데이터 저장소로 프로비저닝하고 연결하는 데 필요한 단계를 안내합니다.
+
+
+
+== 연결 옵션
+
+이 섹션에서는 고속 접속 아키텍처와 추가 호스트 추가 없이 SDDC 클러스터의 스토리지를 확장하는 솔루션을 구축하는 데 필요한 단계에 대해 설명합니다.
+
+NetApp ONTAP용 Amazon FSx는 널리 사용되는 NetApp ONTAP 파일 시스템에 구축된 매우 안정적이고 확장 가능하며 고성능의 풍부한 기능 파일 스토리지를 제공하는 완전 관리형 서비스입니다. Amazon FSx for NetApp ONTAP(Multi-AZ)는 가용성 영역 수준 장애 발생 시 NAS 트래픽에 페일오버 기능을 지원하는 부동 IP 주소를 사용합니다. 이 IP 주소는 VPC CIDR 주소 공간 외부에 있으므로 ENI를 통해 SDDC로 라우팅할 수 없습니다. 따라서 VMware Transit Connect를 사용하여 NAS 인터페이스의 부동 IP 주소에 연결해야 합니다.
+
+image:fsx-nfs-image1.png["오류: 그래픽 이미지가 없습니다"]
+
+고급 배포 단계는 다음과 같습니다.
+
+. 새로 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다.
+. SDDC 그룹을 만듭니다.
+. VMware Transit Connect 및 TGW 접속 장치를 생성합니다.
+. 라우팅(AWS VPC 및 SDDC) 및 보안 그룹을 구성합니다.
+. NFS 볼륨을 SDDC 클러스터에 데이터 저장소로 연결합니다.
+
+
+ONTAP용 FSx를 NFS 데이터 저장소로 프로비저닝하고 연결하려면 먼저 클라우드 SDDC 환경에서 VMware를 설정하거나 기존 SDDC를 v1.20 이상으로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-3D741363-F66A-4CF9-80EA-AA2866D1834E.html["AWS 기반 VMware Cloud 시작하기"^].
+
+
+NOTE: ONTAP용 FSX는 현재 확장 클러스터에서 지원되지 않습니다.
+
+
+
+== 결론
+
+이 문서에서는 AWS에서 VMware 클라우드를 사용하여 ONTAP용 Amazon FSx를 구성하는 데 필요한 단계를 설명합니다. ONTAP용 Amazon FSx는 파일 서비스와 함께 애플리케이션 워크로드를 배포 및 관리하는 탁월한 옵션을 제공하는 동시에 애플리케이션 계층에 대한 데이터 요구 사항을 원활하게 만들어 TCO를 절감합니다. 어떤 사용 사례에서든 AWS 기반 VMware Cloud와 Amazon FSx for ONTAP를 함께 사용하여 클라우드의 이점, 일관된 인프라, 그리고 사내 스토리지에서 AWS로 이르는 운영, 워크로드의 양방향 이동성, 엔터프라이즈급 용량 및 성능을 빠르게 실현할 수 있습니다. 스토리지 연결에 사용되는 것과 동일한 친숙한 프로세스 및 절차입니다. 이는 새로운 이름과 함께 변경된 데이터의 위치일 뿐입니다. 도구와 프로세스는 모두 동일하며 ONTAP용 Amazon FSx는 전체 구축을 최적화하는 데 도움이 됩니다.
+
+이 프로세스에 대해 자세히 알아보려면 자세한 단계별 안내 비디오를 참조하십시오.
+
+video::FSx for ONTAP Datastore mount - Detailed Walkthrough.mp4[Mount Amazon FSx for ONTAP Volumes on VMC SDDC]

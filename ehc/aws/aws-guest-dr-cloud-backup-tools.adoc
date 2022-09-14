@@ -57,6 +57,6 @@ AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹�
 
 Amazon S3 스토리지에 백업된 가상 머신을 복구하려면 Veeam Server를 Windows 서버에 설치하고 원래 백업 저장소가 포함된 VMware Cloud, FSx ONTAP 및 S3 버킷과 통신하도록 구성해야 합니다. 또한 VM이 복구된 후 새 백업을 수행하려면 FSx ONTAP에 새 백업 리포지토리가 구성되어 있어야 합니다.
 
-애플리케이션 VM의 장애 조치를 완료하는 데 필요한 전체 단계 목록은 섹션을 참조하십시오 link:aws-guest-dr-cloud-backup-config.html#deploy-secondary-veeam-backup-&-replication-server["2차 Veeam Backup & amp; Replication Server를 구축합니다"].
+애플리케이션 VM의 장애 조치를 완료하는 데 필요한 전체 단계 목록은 섹션을 참조하십시오 link:aws-guest-dr-cloud-backup-config.html#deploy-secondary-veeam-backup-&-replication-server["2차 Veeam Backup  amp; Replication Server를 구축합니다"].
 
 link:aws-guest-dr-snapcenter-overview.html["다음: 개요 - 재해 복구."]
