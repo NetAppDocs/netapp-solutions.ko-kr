@@ -14844,4 +14844,10 @@
   <block id="cd9738c68373595541959c8e55ede29e" category="sidebar">보충 NFS 데이터 저장소: 옵션</block>
   <block id="00ec4042cd11b865f5a96645c8f6abca" category="sidebar">보충 NFS 데이터 저장소로서의 FSX ONTAP: 개요</block>
   <block id="74fed8860f1d0399cb4c6a16b2510cd1" category="sidebar">VMC용 보조 NFS 데이터 저장소입니다</block>
+  <block id="d251fcb24842564580e4c994b283538e" category="cell">FSxN/VMC 및 ANF/AVS용 TCO 계산기 및 시뮬레이터에 대한 링크가 추가되었습니다</block>
+  <block id="8625e1de7be14c39b1d14dc03d822497" category="sidebar">도구</block>
+  <block id="e5365f39437feb49b24eddfa73253c24" category="sidebar">ONTAP+ VMC TCO 계산기에 대한 FSX</block>
+  <block id="4856ec39dcc21fb53484ef230701e66b" category="sidebar">ONTAP + VMC 시뮬레이터의 FSX</block>
+  <block id="67c988a2e4a11132f6866cf0aff95568" category="sidebar">ANF + AVS TCO 계산기</block>
+  <block id="faeff2a13624e3552e026ffcba1c35dc" category="sidebar">ANF + AVS 시뮬레이터</block>
 </blocks>

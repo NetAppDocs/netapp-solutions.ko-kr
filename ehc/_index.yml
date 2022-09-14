@@ -63,3 +63,13 @@ indexpage:
       url: "/gcp/gcp-solutions.html"
     - title: 보안 개요 - Google Cloud의 NetApp CVS
       url: "/ncvs/ncvs-gc-overview.html"
+  - title: 도구
+    links:
+    - title: ONTAP+ VMC TCO 계산기에 대한 FSX
+      url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
+    - title: ONTAP + VMC 시뮬레이터의 FSX
+      url: https://netapp-automation.github.io/FSx-VMC-Simulator
+    - title: ANF + AVS TCO 계산기
+      url: https://aka.ms/anfcalc
+    - title: ANF + AVS 시뮬레이터
+      url: https://netapp-automation.github.io/ANF-AVS-Simulator

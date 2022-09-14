@@ -25,6 +25,12 @@ indexpage:
       url: 
     - title: 워크로드 마이그레이션 솔루션
       url: 
+  - title: 도구
+    links:
+    - title: ANF + AVS TCO 계산기
+      url: https://aka.ms/anfcalc
+    - title: ANF + AVS 시뮬레이터
+      url: https://netapp-automation.github.io/ANF-AVS-Simulator
   - title: 추가 정보
     links:
     - title: NFS 데이터 저장소에 대한 지역 지원
