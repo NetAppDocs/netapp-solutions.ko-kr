@@ -4231,7 +4231,6 @@
   <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="doc">AWS에서 가상화 환경을 구축하고 구성합니다</block>
   <block id="e647d88b9bd859d2c3e943c24b4fef00" category="paragraph">사내 환경과 마찬가지로, AWS에서 VMware Cloud를 계획하는 것은 VM과 마이그레이션을 성공적으로 운영 환경에 구축하는 데 매우 중요합니다.</block>
   <block id="162e9e1fd4657b8d9588a5ae8c8e6e66" category="paragraph">이 섹션에서는 AWS SDDC에서 VMware Cloud를 설정 및 관리하고, NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</block>
-  <block id="35dcee3fd9faac08f48b3df2e8e0e63c" category="admonition">현재 게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC에 연결하는 유일한 지원 방법입니다.</block>
   <block id="d6d7fade0a5d1cd7723c64125e595b08" category="paragraph">설치 프로세스는 다음 단계로 나눌 수 있습니다.</block>
   <block id="389544cc8199f2ddd936397695d0dbe9" category="inline-link-macro">VMware Cloud for AWS 구축 및 구성</block>
   <block id="b4f284d3b5bb40ee91901933b8f7ef5f" category="inline-link-macro">VMware Cloud를 FSx ONTAP에 연결합니다</block>
@@ -4404,10 +4403,8 @@
   <block id="6ff716a75c3423262418c90aad971f10" category="paragraph"><block ref="6ff716a75c3423262418c90aad971f10" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6120544c737d67dd31f47d101fe21a84" category="doc">클라우드 공급자에서 가상화 환경 구성</block>
   <block id="f4f7adb7cbe18f2cdd82be75a52b0417" category="paragraph">지원되는 각 하이퍼 스케일러에서 가상화 환경을 구성하는 방법에 대한 자세한 내용은 여기 를 참조하십시오.</block>
-  <block id="e6719013bc5803c0da0d4bf78fc8c4a0" category="admonition">게스트 내 스토리지는 FSx ONTAP 및 Cloud Volumes ONTAP를 AWS VMC에 연결하는 유일한 지원 방법입니다.</block>
   <block id="00ce356ad004b72efc4b99389b52af63" category="paragraph">온프레미스와 마찬가지로 Azure VMware 솔루션 계획은 VM 및 마이그레이션을 생성할 수 있는 성공적인 프로덕션 준비 환경에 매우 중요합니다.</block>
   <block id="491aa8f554f95207a4b7d47f89777e13" category="paragraph">이 섹션에서는 Azure VMware 솔루션을 설정 및 관리하고 NetApp 스토리지를 연결하는 데 사용할 수 있는 옵션과 함께 사용하는 방법을 설명합니다.</block>
-  <block id="cc887bc72eb6e7422bfa13437f902e54" category="admonition">게스트 내 스토리지는 Azure NetApp Files 및 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.</block>
   <block id="3d24cd3e433bf1992e011c9f92c3fab6" category="inline-link-macro">리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다</block>
   <block id="a1123889b6465e93a2209c2a0ca667ef" category="inline-link-macro">새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다</block>
   <block id="ae1764c7cb70aed2d4548c424d7bf34a" category="inline-link-macro">네트워크 연결을 확인하고 프라이빗 클라우드에 액세스합니다</block>
@@ -4574,8 +4571,6 @@
   <block id="8f08ff97ca555f50f0d05fdf950a0568" category="paragraph">Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="9bb210767ccb9c085c816c82f3b6b1cb" category="inline-link-macro">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
   <block id="c567300e15e9f9b873771e56c72c938b" category="admonition">1-현재 비공개 미리보기에 있습니다</block>
-  <block id="04999f88dfbb06dc4f6a71901a7e9b18" category="paragraph">리드&gt;</block>
-  <block id="2a172299398c31c1e2cd726175d3a270" category="paragraph">content&gt;를 선택합니다</block>
   <block id="5e1c36a2c24e0aaf7844ec890c15e430" category="paragraph">주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
   <block id="a7714bc43e9a27f2c98a38e6b6d7f3d8" category="doc">퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</block>
@@ -4766,7 +4761,6 @@
   <block id="caf9b805c37cab661d4e3a26b7f71109" category="list-text">효율적인 증분 블록 전송 기반 지역 재해 복구 및 여러 지역에 걸쳐 통합된 백업 블록 레벨을 제공하여 RPO 및 RTO가 향상됩니다.</block>
   <block id="658fb5ef00749e8af5a974f612adea9b" category="section-title">가정</block>
   <block id="a9e63f2a8549d717b777806268a0c0cb" category="list-text">SnapMirror 기술 또는 기타 관련 데이터 마이그레이션 메커니즘이 사용됩니다. 온프레미스에서 하이퍼스케일러 클라우드에 이르기까지 다양한 연결 옵션이 있습니다. 적절한 경로를 사용하고 관련 네트워킹 팀과 협력하십시오.</block>
-  <block id="c63dc0feeff939bc83ba1537a1e8ac9a" category="list-text">이 문서가 작성된 시점에서 게스트 내 저장소가 유일하게 사용 가능한 옵션이었습니다.</block>
   <block id="478a13ed02b948c9cfd89a6197062012" category="admonition">스토리지 계획 및 사이징과 필요한 호스트 수에 대해서는 NetApp 솔루션 설계자와 각각의 하이퍼스케일러 클라우드 설계자를 설득하십시오. Cloud Volumes ONTAP Sizer를 사용하여 스토리지 인스턴스 유형 또는 적절한 서비스 수준을 최적의 처리량으로 확정하기 전에 스토리지 성능 요구사항을 파악하는 것이 좋습니다.</block>
   <block id="c748546b5854ecb146d9caa41d781bdb" category="section-title">상세 아키텍처</block>
   <block id="1a8ac44404b1e5888d83801ac116ff66" category="inline-image-macro">엔터프라이즈 하이브리드 클라우드 아키텍처</block>
@@ -11944,7 +11938,6 @@
   <block id="78c8c0f60d4851b109cbd33284f812ca" category="cell">아시아 태평양(뭄바이)</block>
   <block id="82f98bf67698e189fc9d846325345bbd" category="cell">아시아 태평양(자카르타)</block>
   <block id="1b15cf1d695d130132edd42a701b41a1" category="cell">아시아 태평양(홍콩)</block>
-  <block id="69d00fef4f252c9c61d1eb67822e4739" category="paragraph">참고: 현재 데이터 저장소로서의 NetApp 스토리지를 AWS/VMC 및 Azure/AVS의 공개 미리 보기와 GCP/GSVE의 프라이빗 미리 보기로 사용할 수 있습니다. 자세한 내용은 다음 링크를 참조하십시오.</block>
   <block id="3b041c1182ede15a52a683344c9512e0" category="section-title">AWS 지역 가용성</block>
   <block id="c5fde59b3560ee1ea5aeeebaf94bdf39" category="section-title">Azure 지역 가용성</block>
   <block id="7ddf4642a2bfdc9a45847e5d375a1ddb" category="inline-link-macro">세부 정보 ^2</block>
@@ -14426,7 +14419,6 @@
   <block id="58098d451cf2728b0542acd542f9000b" category="cell">* 보조 NFS 데이터 저장소 *</block>
   <block id="51b0e38e5ec7edbe37b6672987ce5f2e" category="paragraph">NetApp이 게스트 연결 스토리지 장치로 NetApp에서 제공하는 3가지 운영 하이퍼스케일러 또는 보조 NFS 데이터 저장소를 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/버스팅 하는 기능에 대해 자세히 알아보십시오.</block>
   <block id="ccb4d111a650d51ca9a8feb2542610be" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 각각 연결된 추측이나 보조 NFS 데이터 저장소로 활용할 수 있습니다.</block>
-  <block id="01afbab420d0d768779dcb574cd1ba34" category="doc">NetApp의 AWS용 NFS 데이터 저장소 옵션 보완</block>
   <block id="d22e98327d29984cdf19ebfeeb53bd99" category="paragraph">NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 보충 NFS 데이터 저장소에서 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확대/급증할 수 있습니다.</block>
   <block id="e3dea11e8144be98f637687e2a2cf316" category="paragraph">AWS VMC에서 NetApp 스토리지를 guess connected 또는 보완 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
   <block id="206616b83a19162051802c3823da0f7c" category="paragraph">또한 NetApp은 게스트 내(게스트 연결) 스토리지로서 프로비저닝되거나 각 하이퍼스케일러에서 보조 NFS 데이터 저장소로 제공하는 솔루션을 제공합니다. 모든 솔루션은 클라우드 워크로드의 VMware 분류와 함께 분류됩니다. 이러한 분류에는 다음이 포함됩니다.</block>
@@ -14446,15 +14438,6 @@
   <block id="66433e0e715221ebed495642af8005b7" category="doc">NetApp의 GCP용 보조 NFS 데이터 저장소 옵션</block>
   <block id="ce2d3ab910808452912b4cae1adc8bd7" category="paragraph">NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 또는 NFS 데이터 저장소를 보완하여 워크플로우를 마이그레이션하고, 클라우드로 확장/버스팅, 백업/복원, 재해 복구를 수행합니다.</block>
   <block id="275ed895f3f409270670131f7369b1ac" category="paragraph">NetApp 스토리지는 GCP GCVE 내에서 guess Connected 또는 보충 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
-  <block id="dc8880c1e35edd32ee0e3a62b82cc69f" category="paragraph">추가 NFS 데이터 저장소로서 FSx ONTAP용 AWS 보도 자료 출시 예정!</block>
-  <block id="344a1d4b76a1f2aebec92972d8809fb9" category="inline-link-macro">Azure용 보조 NFS 데이터 저장소인 ANF(Azure NetApp Files)입니다</block>
-  <block id="e7bc10db9b0b44db3d43b19ef5f93f3e" category="inline-link-macro">CVS(Cloud Volumes Service)를 GCP용 보조 NFS 데이터 저장소로 사용합니다</block>
-  <block id="f90222afbf457daf7b0ccad3451907ef" category="paragraph"><block ref="258e319c15b416a52aa3c811d7635489" category="inline-link-macro-rx"></block>
-<block ref="dbea9878fd4f6cf74860bb456637c3e2" category="inline-link-macro-rx"></block></block>
-  <block id="50b333c4d09239bffeb68b079c85994d" category="inline-link-macro">Azure용 보조 NFS 데이터 저장소로서 Azure NetApp Files(ANF</block>
-  <block id="b645884517c84cef76c33fd1223a77b8" category="inline-link-macro">CVS(Cloud Volumes Service)를 GCP용 보조 NFS 데이터 저장소로 사용합니다</block>
-  <block id="ce0992cb9d73e6a183b2b79e1cf57442" category="paragraph"><block ref="a15e077225e1c63b1977f56a70fae69c" category="inline-link-macro-rx"></block>
-<block ref="f4a57bacfd4fb9ea09ece261926e87de" category="inline-link-macro-rx"></block></block>
   <block id="55b61b011b735ba396a8dbd7e3f95f20" category="cell">2022년 8월 5일</block>
   <block id="678582eb0cbbe0e063e618d230b63223" category="cell">* 호스트 설정 *</block>
   <block id="dfe49b73bd7e747701b49f9ed21ea2d6" category="cell">* NetApp 권장 가치 *</block>
@@ -14699,8 +14682,6 @@
   <block id="b96e49fe229de5c473c616c913f822c8" category="inline-link">VMware Cloud에서 SDDC 그룹 구성</block>
   <block id="ff5a4226923e95cf43bd31559660d1c8" category="paragraph">먼저 SDDC가 있는 지역과 가용성 영역에 VPC를 추가로 구축한 다음, NetApp ONTAP용 Amazon FSx를 새 VPC에 구축합니다.<block ref="5be76f2b0a93cb7fee056cbead96da1a" category="inline-link-rx"></block> 콘솔은 ONTAP용 FSx를 구축할 새로 지정된 VPC에 연결하는 데 필요한 네트워킹 구성 옵션을 활성화합니다.</block>
   <block id="61a4d8e132eda51933073e665a4eac93" category="admonition">AWS SDDC 기반 VMware Cloud와 동일한 가용성 영역에 ONTAP용 FSx를 구축합니다.</block>
-  <block id="c4ec48c1576835cbdfbc85bf48c37458" category="admonition">연결된 VPC에는 ONTAP용 FSx를 배포할 수 없습니다. 대신 새로 지정된 VPC에 구축한 다음 SDDC 그룹을 통해 VPC를 vTGW(VMware Managed Transit Gateway)에 연결해야 합니다.</block>
-  <block id="8b2b6a2b0c6347c7cf4881fa94ff328c" category="example-title">1단계: 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다</block>
   <block id="55304a7521acfdd7143fb9cdb66a6344" category="paragraph">NetApp ONTAP 파일 시스템용 Amazon FSx를 생성하고 마운트하려면 다음 단계를 완료하십시오.</block>
   <block id="1a8a81e4c4d14a95fc47e07b614950b5" category="list-text">https://console.aws.amazon.com/fsx/` 에서 Amazon FSx 콘솔을 열고 * 파일 시스템 생성 * 을 선택하여 * 파일 시스템 생성 * 마법사를 시작합니다.</block>
   <block id="ffd72149dd51740fcd4d150cabc5561f" category="list-text">파일 시스템 유형 선택 페이지에서 * ONTAP * 용 Amazon FSx 를 선택한 후 * 다음 * 을 클릭합니다. 파일 시스템 생성 * 페이지가 나타납니다.</block>
@@ -14709,26 +14690,17 @@
   <block id="35eb19b4c782b6a9c50e35b42f8c1f8c" category="paragraph"><block ref="35eb19b4c782b6a9c50e35b42f8c1f8c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5f47a2dd0d360703b1b45075c63cff1b" category="paragraph"><block ref="5f47a2dd0d360703b1b45075c63cff1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="11dd82404551d7373785e4fcbc9b1005" category="list-text">VPC(Virtual Private Cloud)용 * 네트워킹 * 섹션에서 경로 테이블과 함께 적절한 VPC 및 기본 서브넷을 선택합니다. 이 경우 드롭다운 메뉴에서 Demo-FSxforONTAP-VPC를 선택합니다.</block>
-  <block id="3a91ef6d341f7feb589ffa2f150f80ba" category="admonition">연결된 VPC가 아니라 새로 지정된 VPC를 사용해야 합니다.</block>
-  <block id="911dafc9e7d3c507d3dbb17c21a386f0" category="admonition">기본적으로 ONTAP용 FSx는 파일 시스템의 기본 엔드포인트 IP 주소 범위로 '198.19.0.0/16'을 사용합니다. 엔드포인트 IP 주소 범위가 AWS 인프라스트럭처의 VMC와 충돌하지 않는지 확인합니다. 확실하지 않은 경우 충돌하지 않는 겹치지 않는 범위를 사용하십시오.</block>
   <block id="a9bc1797cfb722fb8dbfec3b16f44cb9" category="paragraph"><block ref="a9bc1797cfb722fb8dbfec3b16f44cb9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6a560e434862aec182aa626e0de6ca3a" category="list-text">암호화 키의 * 보안 및 암호화 * 섹션에서 저장된 파일 시스템의 데이터를 보호하는 AWS KMS(Key Management Service) 암호화 키를 선택합니다. 파일 시스템 관리 암호 * 의 경우 fsxadmin 사용자의 보안 암호를 입력합니다.</block>
   <block id="9626f8b41e6908a3873b72869026a9da" category="paragraph"><block ref="9626f8b41e6908a3873b72869026a9da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="75f7834ca5cbd9bf6c7a2b2e5073b427" category="list-text">기본 스토리지 가상 시스템 구성 * 섹션에서 SVM의 이름을 지정합니다.</block>
   <block id="7c32cf52ace07fb1672e72defde4ac61" category="admonition">GA 시점에는 4개의 NFS 데이터 저장소가 지원됩니다.</block>
   <block id="5c732cc058a6b6d4676b55223bf85f5f" category="paragraph"><block ref="5c732cc058a6b6d4676b55223bf85f5f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="44c5201fadfc030efe3fd16ed3022c92" category="list-text">기본 볼륨 구성 * 섹션에서 데이터 저장소에 필요한 볼륨 이름과 크기를 지정하고 * 다음 * 을 클릭합니다. NFSv3 볼륨이어야 합니다. 스토리지 효율성 * 을 사용하려면 * Enabled * 를 선택하여 ONTAP 스토리지 효율성 기능(압축, 중복제거, 컴팩션)을 켜십시오. 생성 후 셸을 사용하여 다음과 같이 볼륨 매개 변수를 수정합니다.</block>
   <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">설정</block>
-  <block id="fa7884ef15fbc3cc79b1e91df5e1e92b" category="cell">없음(씬 프로비저닝됨), 기본 설정은 없음입니다</block>
-  <block id="f1e0735081bab920eff76b08a4600c76" category="cell">fractional_reserve</block>
   <block id="9f1ef07877f9d85a82bd500f408b4814" category="cell">0%</block>
-  <block id="99c0f62171e34b4ab6a79265f038e3af" category="cell">snap_reserve</block>
-  <block id="7c68df7d17c446f99304ee1dc1498bfc" category="cell">자동 크기 조정</block>
-  <block id="521c36a31c2762741cf0f8890cbe05e3" category="cell">켜짐</block>
   <block id="a85c04491cb5bbcb534dc50b65b97530" category="cell">자동 삭제</block>
   <block id="4ec86a7059e3d1002a06c51cbec9ad47" category="cell">Volume/OLDEST_FIRST(볼륨/가장 오래된</block>
   <block id="5987147997d274c5292cab0b0006bef1" category="cell">볼륨 계층화 정책</block>
-  <block id="6d576caa9862f6db0177dfaff7abb095" category="cell">스냅샷만</block>
   <block id="902c737cbaa1a86889c41fec210c805f" category="cell">먼저 시도하십시오</block>
   <block id="f4c25546f220bb5d07f94244c9303967" category="cell">자동 확장</block>
   <block id="4c0abf2d4c54820b8d33061abaf30759" category="cell">스냅샷 정책</block>
@@ -14738,7 +14710,6 @@
   <block id="a7f848b3fa508f3850a768505d8de438" category="list-text">Create File System * 을 클릭합니다.</block>
   <block id="8c63e014bdbc571ce93e6b93d628d4e2" category="paragraph"><block ref="8c63e014bdbc571ce93e6b93d628d4e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef936ea5a977520b22368e3dbad83818" category="paragraph"><block ref="ef936ea5a977520b22368e3dbad83818" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dff4e0db2baaf9b532639c87e6f21358" category="admonition">이전 단계를 반복하여 용량 및 성능 요구 사항에 따라 더 많은 파일 시스템과 데이터 저장소 볼륨을 생성합니다.</block>
   <block id="f36688b56a320d6a48574b6092329e26" category="paragraph">ONTAP용 Amazon FSx 성능에 대한 자세한 내용은 를 참조하십시오<block ref="45a884cbefaf34ae6fd7defa1c6be8c3" category="inline-link-rx"></block>.</block>
   <block id="6d3e0252631c98651b062c2fc85ad936" category="example-title">2단계: SDDC 그룹 만들기</block>
   <block id="82fd9df68bd32ff1e24a66dc98b1e237" category="paragraph">파일 시스템 및 SVM을 생성한 후 VMware Console을 사용하여 SDDC 그룹을 생성하고 VMware Transit Connect를 구성합니다. 이렇게 하려면 다음 단계를 완료하고 VMware Cloud Console과 AWS 콘솔 간에 이동해야 합니다.</block>
@@ -14782,12 +14753,10 @@
   <block id="85f3b67e1c98b7869b12f779e5f02b51" category="paragraph"><block ref="85f3b67e1c98b7869b12f779e5f02b51" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fb26d090b870823ae62ed28050e3aa89" category="list-text">Edit route * 패널에서 * Add route * 를 클릭하고 * Transit Gateway * 와 관련 TGW ID 를 선택하여 SDDC 인프라스트럭처의 CIDR을 입력합니다. 변경 내용 저장 * 을 클릭합니다.</block>
   <block id="99388849296a3bbf649a9a953c7ce7d5" category="paragraph"><block ref="99388849296a3bbf649a9a953c7ce7d5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d433188774adddf995ce33d10ee0ca94" category="list-text">관련 VPC의 보안 그룹이 SDDC 그룹 CIDR에 대한 올바른 인바운드 규칙으로 업데이트되었는지 확인합니다.</block>
   <block id="74b3770eecc791f1748634fe7f30e559" category="paragraph"><block ref="74b3770eecc791f1748634fe7f30e559" category="inline-image-macro-rx" type="image"></block></block>
   <block id="358c085fce4b273ef954f6147feeb2c8" category="admonition">인바운드 규칙을 SDDC 인프라스트럭처의 CIDR 블록으로 업데이트합니다.</block>
   <block id="268ce11e03f9defefab0c436b3818aab" category="admonition">연결 문제를 방지하기 위해 VPC(ONTAP용 FSx가 있는 경우) 경로 테이블이 업데이트되었는지 확인합니다.</block>
   <block id="a3debdddc4080cea8851b37aee79d278" category="admonition">NFS 트래픽을 허용하도록 보안 그룹을 업데이트합니다.</block>
-  <block id="35dbeeba79faa529971ba0172049af1e" category="paragraph">이 단계는 적절한 SDDC에 대한 연결을 준비하는 마지막 단계입니다. 파일 시스템이 구성되고 경로가 추가되고 보안 그룹이 업데이트되면 데이터 저장소를 마운트할 때입니다.</block>
   <block id="492fa7be92a68b15ae3479a6542a7774" category="example-title">6단계: NFS 볼륨을 SDDC 클러스터에 데이터 저장소로 연결합니다</block>
   <block id="e91ba866f25c52426b4d551f9fa981ef" category="paragraph">파일 시스템이 프로비저닝되고 접속이 완료되면 VMware Cloud Console에 액세스하여 NFS 데이터 저장소를 마운트합니다.</block>
   <block id="3c4c5dd0c54ac8e289c4fb955dfe019e" category="list-text">VMC 콘솔에서 SDDC의 * Storage * 탭을 엽니다.</block>
@@ -14801,14 +14770,10 @@
   <block id="30880d4531deb5f77cf22e65ed7f3bc8" category="paragraph"><block ref="30880d4531deb5f77cf22e65ed7f3bc8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff56eef7a458cc9250ee84cb0b8b3752" category="cell">FSX ONTAP<block ref="b9210f6aa16b7e370d59e02bd5b54f88" category="inline-link-macro-rx"></block></block>
   <block id="b2859c129ed9d2683658aaef48d31759" category="doc">솔루션 이름&gt;</block>
-  <block id="f20955932fa33c04e4cd89de38d4934c" category="paragraph">이 솔루션은 &lt;원하는 결과 얻기&gt;를 위해 &lt;해야 할 일&gt;에 대해 설명합니다.</block>
   <block id="4845fee41e2c9edce3bd46094fdb57a2" category="paragraph">작성자:&lt;이름&gt;, &lt;제목&gt;, &lt;회사&gt;</block>
-  <block id="011e0817f776887982954afc5afe573c" category="paragraph">이 솔루션은 * &lt;사용 사례 1&gt; * &lt;사용 사례 2&gt;에 사용할 수 있습니다. . . * &lt;사용 사례 n&gt;</block>
   <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="section-title">대상</block>
   <block id="46c04e63acdf5955295f68d8a963bfbd" category="paragraph">이 솔루션은 &lt;GOAL&gt;에 관심이 있는 &lt;ROLE&gt;을(를) 위한 것입니다.</block>
   <block id="1d00e7dce692e8dc3f6877f035e3a616" category="paragraph">또는</block>
-  <block id="c1fd32112cf2ad32478da608c869839a" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 &lt;역할&gt;,</block>
-  <block id="64badcba180675bbde26ff68bdfa2480" category="list-text">역할&gt;의 경우 &lt;Goal&gt;에 관심이 있는 사용자.</block>
   <block id="b98cf6de800fd94a50eaa1fff8bfd974" category="section-title">솔루션 테스트/검증 환경</block>
   <block id="aca7234abb238eb8646973440eb294d3" category="paragraph">이 솔루션의 테스트/검증은 최종 배포 환경과 일치하거나 일치하지 않을 수 있는 랩에서 수행되었습니다. 자세한 내용은 다음 섹션을 참조하십시오.</block>
   <block id="bb46e30937334302b789ae4644fdc412" category="image-alt">솔루션 아키텍처 다이어그램</block>
@@ -14850,4 +14815,37 @@
   <block id="4856ec39dcc21fb53484ef230701e66b" category="sidebar">ONTAP + VMC 시뮬레이터의 FSX</block>
   <block id="67c988a2e4a11132f6866cf0aff95568" category="sidebar">ANF + AVS TCO 계산기</block>
   <block id="faeff2a13624e3552e026ffcba1c35dc" category="sidebar">ANF + AVS 시뮬레이터</block>
+  <block id="71b51633ceea83cdf1136196fce39901" category="admonition">게스트 내 스토리지는 Cloud Volumes ONTAP을 AWS VMC에 연결하는 유일한 지원 방법입니다.</block>
+  <block id="9761d5208d76a88ba5a08152c4431c2f" category="admonition">게스트 내 스토리지는 Cloud Volumes ONTAP를 Azure VMware 솔루션에 연결하는 유일한 지원 방법입니다.</block>
+  <block id="bb19e956b854f8e209f51237a29feb31" category="admonition">현재 CVO(Cloud Volumes ONTAP)를 AWS VMC에 연결하는 유일한 방법은 게스트 내 스토리지 뿐입니다.</block>
+  <block id="714163a53d8c9c62964e7d6931c1c9ec" category="admonition">연결된 VPC에는 ONTAP용 FSx를 배포할 수 없습니다. 대신 새로 지정된 VPC에 구축한 다음 SDDC 그룹을 통해 VPC를 vTGW(VMware Managed Transit Gateway)에 연결해야 합니다.</block>
+  <block id="d7641cecb55db2651063f3be07278b31" category="example-title">1단계: 새로 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다</block>
+  <block id="4e0c93d8fb3b7cedc4f8d92d8d692e85" category="admonition">데이터 저장소 크기는 고객마다 조금씩 다릅니다. NFS 데이터 저장소당 권장되는 가상 머신 수는 주관적이지만, 많은 요소가 각 데이터 저장소에 배치할 수 있는 최적의 VM 수를 결정합니다. 대부분의 관리자가 용량만 고려하지만 VMDK에 전송되는 동시 I/O의 양은 전체 성능을 위한 가장 중요한 요소 중 하나입니다. 온프레미스에서 성능 통계를 사용하여 데이터 저장소 볼륨을 적절하게 사이징합니다.</block>
+  <block id="2f0865bd1a50874390d074524829bfc4" category="admonition">연결된 VPC가 아닌 새 지정 VPC를 사용해야 합니다.</block>
+  <block id="55431364d6f307d0c1adb83c07425d6c" category="admonition">기본적으로 ONTAP용 FSx는 파일 시스템의 기본 엔드포인트 IP 주소 범위로 198.19.0.0/16 을 사용합니다. 엔드포인트 IP 주소 범위가 AWS SDDC, 관련 VPC 서브넷 및 사내 인프라에서 VMC와 충돌하지 않는지 확인합니다. 확실하지 않은 경우 충돌하지 않는 겹치지 않는 범위를 사용하십시오.</block>
+  <block id="505582b625e19e5637e0557ad61b581e" category="list-text">기본 볼륨 구성 * 섹션에서 데이터 저장소에 필요한 볼륨 이름과 크기를 지정하고 * 다음 * 을 클릭합니다. NFSv3 볼륨이어야 합니다. 스토리지 효율성 * 을 사용하려면 * Enabled * 를 선택하여 ONTAP 스토리지 효율성 기능(압축, 중복제거, 컴팩션)을 켜십시오. 생성 후 셸을 사용하여 *_volume modify_ * 를 사용하여 다음과 같이 볼륨 매개 변수를 수정합니다.</block>
+  <block id="9fdea1f4f5c62c2485312ab231c865ee" category="cell">볼륨 보장(공간 보장 스타일)</block>
+  <block id="bd03fce695997bf49af026bcb349a578" category="cell">없음(씬 프로비저닝됨) – 기본적으로 설정됩니다</block>
+  <block id="9399f3b9e96901f84ac3bd68deec8850" category="cell">fractional_reserve(분할 예약)</block>
+  <block id="6b3edd41659df403c04fb39ee40b0b0a" category="cell">0% – 기본적으로 설정됩니다</block>
+  <block id="dfa2ec9e60d8028b01d021f862fb77da" category="cell">snap_reserve(percent-snapshot-space)</block>
+  <block id="80c2511d74ccaf27c63f1b6c3aafb2dc" category="cell">자동 크기 조정(자동 크기 조정 모드)</block>
+  <block id="535a7e7f6a8dd82fa6603e44982e0525" category="cell">Enabled(사용) – 기본적으로 설정됩니다</block>
+  <block id="df370ff95c6787552e774c17a2878b11" category="cell">스냅샷 전용 – 기본적으로 설정됩니다</block>
+  <block id="f072855ce664b2c9dd19371c8f451e72" category="paragraph">다음 SSH 명령을 사용하여 볼륨을 생성하고 수정합니다.</block>
+  <block id="82bf57f964fd07a578454495c4ae3a34" category="paragraph">* 셸에서 새 데이터 저장소 볼륨을 생성하려면 * 명령을 사용합니다</block>
+  <block id="3fe80d288dea7b9265abdfe33f302a9a" category="paragraph">* 참고: * 쉘을 통해 생성된 볼륨이 AWS 콘솔에 표시되려면 몇 분 정도 걸립니다.</block>
+  <block id="34b5a79399461f15942cc2bbb68ddb58" category="paragraph">* 기본적으로 설정되지 않은 볼륨 매개 변수를 수정하는 명령입니다. *</block>
+  <block id="8f2384de60fd85d0b57b92b82a7b1835" category="admonition">초기 마이그레이션 시나리오 중에 기본 스냅샷 정책으로 인해 데이터 저장소 용량 꽉 참 문제가 발생할 수 있습니다. 이 문제를 해결하려면 필요에 맞게 스냅샷 정책을 수정하십시오.</block>
+  <block id="a19c957e90534613b36e90008ac1736c" category="admonition">이전 단계를 반복하여 용량 및 성능 요구 사항에 따라 더 많은 스토리지 가상 머신 또는 파일 시스템과 데이터 저장소 볼륨을 생성합니다.</block>
+  <block id="5659fbd7d9a7a1963d1f57717f874bcb" category="list-text">다음 단계는 관련 VPC의 보안 그룹이 SDDC 그룹 CIDR에 대한 올바른 인바운드 규칙으로 업데이트되었는지 확인하는 것입니다.</block>
+  <block id="381318b231b70d3c81a3bb05e8912be3" category="paragraph">이 단계는 적절한 SDDC에 대한 연결을 준비하는 마지막 단계입니다. 파일 시스템이 구성되고 경로가 추가되고 보안 그룹이 업데이트되면 데이터 저장소를 마운트할 때입니다.</block>
+  <block id="36c48411397a73fcbe7ccac93862641b" category="admonition">이 문서가 작성된 시점에서 게스트 내 저장소가 유일하게 사용 가능한 옵션이었습니다. 보충 NFS 데이터 저장소 지원이 제공되면 추가 설명서를 사용할 수 있습니다 <block ref="2feee9d08b57f121d415095bba26ae78" category="inline-link-macro-rx"></block>.</block>
+  <block id="e60de72a8067fd05498b03b24d9f93e7" category="paragraph">이 솔루션은 다음과 같은 사용 사례를 해결합니다.</block>
+  <block id="50f68cc3bee11411ba8ee639a7ed59d7" category="list-text">사용 사례 1&gt;</block>
+  <block id="ceb4b740f63ab18a13c415efd220844c" category="list-text">사용 사례 2&gt;. . .</block>
+  <block id="bfbe592724efe7b70f86b50a78741381" category="list-text">사용 사례 n&gt;</block>
+  <block id="732f94f3061dc1751b3c7e3ea8566239" category="paragraph">이 솔루션은 다음을 위한 것입니다.</block>
+  <block id="dab739113e8cfebbcfcfaea1515c0bcf" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 사용자,</block>
+  <block id="7367185552beb127edfea2f14982e67f" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 사용자.</block>
 </blocks>

@@ -23,7 +23,7 @@ NOTE: AWS SDDC 기반 VMware Cloud와 동일한 가용성 영역에 ONTAP용 FSx
 
 NOTE: 연결된 VPC에는 ONTAP용 FSx를 배포할 수 없습니다. 대신 새로 지정된 VPC에 구축한 다음 SDDC 그룹을 통해 VPC를 vTGW(VMware Managed Transit Gateway)에 연결해야 합니다.
 
-.1단계: 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다
+.1단계: 새로 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다
 ====
 NetApp ONTAP 파일 시스템용 Amazon FSx를 생성하고 마운트하려면 다음 단계를 완료하십시오.
 
@@ -39,14 +39,18 @@ image:fsx-nfs-image3.png["오류: 그래픽 이미지가 없습니다"]
 +
 image:fsx-nfs-image4.png["오류: 그래픽 이미지가 없습니다"]
 
++
+
+NOTE: 데이터 저장소 크기는 고객마다 조금씩 다릅니다. NFS 데이터 저장소당 권장되는 가상 머신 수는 주관적이지만, 많은 요소가 각 데이터 저장소에 배치할 수 있는 최적의 VM 수를 결정합니다. 대부분의 관리자가 용량만 고려하지만 VMDK에 전송되는 동시 I/O의 양은 전체 성능을 위한 가장 중요한 요소 중 하나입니다. 온프레미스에서 성능 통계를 사용하여 데이터 저장소 볼륨을 적절하게 사이징합니다.
+
 . VPC(Virtual Private Cloud)용 * 네트워킹 * 섹션에서 경로 테이블과 함께 적절한 VPC 및 기본 서브넷을 선택합니다. 이 경우 드롭다운 메뉴에서 Demo-FSxforONTAP-VPC를 선택합니다.
 +
 
-NOTE: 연결된 VPC가 아니라 새로 지정된 VPC를 사용해야 합니다.
+NOTE: 연결된 VPC가 아닌 새 지정 VPC를 사용해야 합니다.
 
 +
 
-NOTE: 기본적으로 ONTAP용 FSx는 파일 시스템의 기본 엔드포인트 IP 주소 범위로 '198.19.0.0/16'을 사용합니다. 엔드포인트 IP 주소 범위가 AWS 인프라스트럭처의 VMC와 충돌하지 않는지 확인합니다. 확실하지 않은 경우 충돌하지 않는 겹치지 않는 범위를 사용하십시오.
+NOTE: 기본적으로 ONTAP용 FSx는 파일 시스템의 기본 엔드포인트 IP 주소 범위로 198.19.0.0/16 을 사용합니다. 엔드포인트 IP 주소 범위가 AWS SDDC, 관련 VPC 서브넷 및 사내 인프라에서 VMC와 충돌하지 않는지 확인합니다. 확실하지 않은 경우 충돌하지 않는 겹치지 않는 범위를 사용하십시오.
 
 +
 image:fsx-nfs-image5.png["오류: 그래픽 이미지가 없습니다"]
@@ -63,31 +67,31 @@ NOTE: GA 시점에는 4개의 NFS 데이터 저장소가 지원됩니다.
 +
 image:fsx-nfs-image7.png["오류: 그래픽 이미지가 없습니다"]
 
-. 기본 볼륨 구성 * 섹션에서 데이터 저장소에 필요한 볼륨 이름과 크기를 지정하고 * 다음 * 을 클릭합니다. NFSv3 볼륨이어야 합니다. 스토리지 효율성 * 을 사용하려면 * Enabled * 를 선택하여 ONTAP 스토리지 효율성 기능(압축, 중복제거, 컴팩션)을 켜십시오. 생성 후 셸을 사용하여 다음과 같이 볼륨 매개 변수를 수정합니다.
+. 기본 볼륨 구성 * 섹션에서 데이터 저장소에 필요한 볼륨 이름과 크기를 지정하고 * 다음 * 을 클릭합니다. NFSv3 볼륨이어야 합니다. 스토리지 효율성 * 을 사용하려면 * Enabled * 를 선택하여 ONTAP 스토리지 효율성 기능(압축, 중복제거, 컴팩션)을 켜십시오. 생성 후 셸을 사용하여 *_volume modify_ * 를 사용하여 다음과 같이 볼륨 매개 변수를 수정합니다.
 +
 |===
 | 설정 | 구성 
 
 
-| 볼륨 보장 | 없음(씬 프로비저닝됨), 기본 설정은 없음입니다 
+| 볼륨 보장(공간 보장 스타일) | 없음(씬 프로비저닝됨) – 기본적으로 설정됩니다 
 
 
-| fractional_reserve | 0% 
+| fractional_reserve(분할 예약) | 0% – 기본적으로 설정됩니다 
 
 
-| snap_reserve | 0% 
+| snap_reserve(percent-snapshot-space) | 0% 
 
 
-| 자동 크기 조정 | 켜짐 
+| 자동 크기 조정(자동 크기 조정 모드) | grow_shrink 
 
 
-| 스토리지 효율성 | 활성화됨 
+| 스토리지 효율성 | Enabled(사용) – 기본적으로 설정됩니다 
 
 
 | 자동 삭제 | Volume/OLDEST_FIRST(볼륨/가장 오래된 
 
 
-| 볼륨 계층화 정책 | 스냅샷만 
+| 볼륨 계층화 정책 | 스냅샷 전용 – 기본적으로 설정됩니다 
 
 
 | 먼저 시도하십시오 | 자동 확장 
@@ -96,10 +100,34 @@ image:fsx-nfs-image7.png["오류: 그래픽 이미지가 없습니다"]
 | 스냅샷 정책 | 없음 
 |===
 +
+다음 SSH 명령을 사용하여 볼륨을 생성하고 수정합니다.
+
++
+* 셸에서 새 데이터 저장소 볼륨을 생성하려면 * 명령을 사용합니다
+
++
+ volume create -vserver FSxONTAPDatastoreSVM -volume DemoDS002 -aggregate aggr1 -size 1024GB -state online -tiering-policy snapshot-only -percent-snapshot-space 0 -autosize-mode grow -snapshot-policy none -junction-path /DemoDS002
++
+* 참고: * 쉘을 통해 생성된 볼륨이 AWS 콘솔에 표시되려면 몇 분 정도 걸립니다.
+
++
+* 기본적으로 설정되지 않은 볼륨 매개 변수를 수정하는 명령입니다. *
+
++
+....
+volume modify -vserver FSxONTAPDatastoreSVM -volume DemoDS002 -fractional-reserve 0
+volume modify -vserver FSxONTAPDatastoreSVM -volume DemoDS002 -space-mgmt-try-first vol_grow
+volume modify -vserver FSxONTAPDatastoreSVM -volume DemoDS002 -autosize-mode grow
+....
++
 image:fsx-nfs-image8.png["오류: 그래픽 이미지가 없습니다"]
 
 +
 image:fsx-nfs-image9.png["오류: 그래픽 이미지가 없습니다"]
+
++
+
+NOTE: 초기 마이그레이션 시나리오 중에 기본 스냅샷 정책으로 인해 데이터 저장소 용량 꽉 참 문제가 발생할 수 있습니다. 이 문제를 해결하려면 필요에 맞게 스냅샷 정책을 수정하십시오.
 
 . 파일 시스템 생성 * 페이지에 표시된 파일 시스템 구성을 검토합니다.
 . Create File System * 을 클릭합니다.
@@ -111,7 +139,7 @@ image:fsx-nfs-image11.png["오류: 그래픽 이미지가 없습니다"]
 
 +
 
-NOTE: 이전 단계를 반복하여 용량 및 성능 요구 사항에 따라 더 많은 파일 시스템과 데이터 저장소 볼륨을 생성합니다.
+NOTE: 이전 단계를 반복하여 용량 및 성능 요구 사항에 따라 더 많은 스토리지 가상 머신 또는 파일 시스템과 데이터 저장소 볼륨을 생성합니다.
 
 
 
@@ -212,13 +240,10 @@ image:fsx-nfs-image23.png["오류: 그래픽 이미지가 없습니다"]
 +
 image:fsx-nfs-image24.png["오류: 그래픽 이미지가 없습니다"]
 
-. 관련 VPC의 보안 그룹이 SDDC 그룹 CIDR에 대한 올바른 인바운드 규칙으로 업데이트되었는지 확인합니다.
+. 다음 단계는 관련 VPC의 보안 그룹이 SDDC 그룹 CIDR에 대한 올바른 인바운드 규칙으로 업데이트되었는지 확인하는 것입니다.
+. 인바운드 규칙을 SDDC 인프라스트럭처의 CIDR 블록으로 업데이트합니다.
 +
 image:fsx-nfs-image25.png["오류: 그래픽 이미지가 없습니다"]
-
-+
-
-NOTE: 인바운드 규칙을 SDDC 인프라스트럭처의 CIDR 블록으로 업데이트합니다.
 
 +
 
