@@ -6,14 +6,8 @@ entries:
   url: "/automation/automation_introduction.html"
 - title: NetApp 솔루션 자동화 및 Ansible 시작하기
   url: https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible/
-- title: Ansible 제어 노드 설정(CLI 기반 구축용)
-  entries:
-  - title: RHEL/CentOS 시스템의 경우
-    url: "/automation/automation_rhel_centos_setup.html"
-  - title: Ubuntu/Debian 시스템의 경우
-    url: "/automation/automation_ubuntu_debian_setup.html"
-- title: AWX/Ansible 타워 설치(AWX/Tower 기반 배포용)
-  url: "/automation/setup_awx.html"
+- title: 자동화 환경 설정
+  url: "/automation/getting-started.html"
 - title: CVO 및 Connector 구축을 위한 사전 요구 사항을 수집합니다
   url: "/automation/authentication_tokens.html"
 - title: Terraform을 통한 Cloud Volumes Automation

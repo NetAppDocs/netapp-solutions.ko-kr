@@ -6599,7 +6599,6 @@
   <block id="7fd167e59284838d9e36c5c99e4d2943" category="paragraph"><block ref="7fd167e59284838d9e36c5c99e4d2943" category="inline-link-macro-rx"></block></block>
   <block id="d82dd9b3245382b365106db0568113e8" category="summary">NetApp 솔루션 자동화를 통해 고객은 수많은 일반 인프라 및 애플리케이션 작업의 구축, 구성, 실행을 자동화할 수 있습니다.</block>
   <block id="a123daaac5749e4d0965aca160f0adfd" category="doc">NetApp 솔루션 자동화</block>
-  <block id="d9a06854085afcd104157eb7f0b66c3a" category="summary">NetApp 솔루션 자동화는 구성 및 관리를 위해 RedHat Ansible을 활용합니다.</block>
   <block id="d1029167179320d8b6d70b11c3d01bd3" category="list-text">Ansible 제어 노드 요구사항:</block>
   <block id="9ced761647f5d80fe615526ffff63937" category="list-text">다음 패키지가 설치된 Ubuntu/Debian 시스템:</block>
   <block id="ca60b3698dd3d27a5f91e4dc0a1a2546" category="list-text">3장</block>
@@ -6637,12 +6636,6 @@
   <block id="61fbc2f21db84f17551fda6893429d16" category="list-text">RHEL-8의 경우(아래 명령을 루트로 실행)</block>
   <block id="77cd42f765e6b40764459a64a979f90c" category="list-text">RHEL-7의 경우(아래 명령을 루트로 실행)</block>
   <block id="d78228187c1a83d3bb4d8e97cd657807" category="paragraph">자동화를 통해 NetApp 솔루션의 소비가 단순화됩니다.</block>
-  <block id="88b11dbb43daa1023e1e0eac175e0e04" category="section-title">Ansible Control 노드 설정</block>
-  <block id="cc720ba6fbd83dd2b0c222e5b1d4419c" category="paragraph">Ansible은 에이전트가 없는 자동화 도구이므로 하나의 시스템(Ansible 제어 노드)에만 설치하면 됩니다. 제어 노드를 통해 추가 구성 없이 전체 원격 장비를 관리할 수 있습니다.</block>
-  <block id="1fd37248272971c6b09693c66e545794" category="inline-link-macro">RHEL8/CentOS8</block>
-  <block id="62cb08c48fa7398e2b2fbf365a240e90" category="inline-link-macro">RHEL7/CentOS7</block>
-  <block id="7eaf289636bc8d4f8b29b333a0f32dc2" category="inline-link-macro">Ubuntu/Debian</block>
-  <block id="e10dea45c0463fb061f253f8deef6de6" category="paragraph">Ansible을 설치하려는 OS 유형에 따라 다음 링크 중 하나를 클릭하여 제어 노드를 설정하는 자세한 단계를 확인하십시오. <block ref="7dc121073254da4302fc5dcbe0722747" category="inline-link-macro-rx"></block>. <block ref="965292dac53abeffbcc140f60ed9445a" category="inline-link-macro-rx"></block>. <block ref="9c83d13c300fc83e32dbf47b4d277c36" category="inline-link-macro-rx"></block></block>
   <block id="90305bb6fba97091f683e8b82f9bf805" category="summary">NetApp 솔루션 자동화를 통해 고객은 많은 일반 인프라 및 애플리케이션 작업의 구축, 구성 및 실행을 자동화할 수 있습니다.</block>
   <block id="2aa17d37bd2483f97468ab7653396786" category="paragraph">이 섹션에서는 NetApp 자동화 솔루션을 사용하는 환경을 준비하기 위해 AWX/Ansible 타워에서 매개 변수를 구성하는 데 필요한 단계를 설명합니다.</block>
   <block id="0fb1db9928d7fc107d96c13f1918b639" category="list-text">Resources(리소스) → Inventory(인벤토리) → Add(추가) 로 이동하여 Add Inventory(재고 추가) 를 클릭합니다.</block>
@@ -9066,10 +9059,6 @@
   <block id="e2a1b52ebd707739003f77464bbcaa80" category="sidebar">FlexPod 데스크톱 가상화 솔루션</block>
   <block id="9d0be07780aeb437025d4b3420d12540" category="sidebar">NetApp XCP 데이터 마이그레이션</block>
   <block id="645198fb2e03205a7f761aeaff8ef26f" category="sidebar">NetApp 솔루션 자동화 및 Ansible 시작하기</block>
-  <block id="8619770bb94b4ac2d3ef4a8639dac91f" category="sidebar">Ansible 제어 노드 설정(CLI 기반 구축용)</block>
-  <block id="47ac29a4a2e3c3e4581e035d792ee4ac" category="sidebar">RHEL/CentOS 시스템의 경우</block>
-  <block id="d74c216bc36310fb7cb045522918e606" category="sidebar">Ubuntu/Debian 시스템의 경우</block>
-  <block id="073616205ad0e6bcb86754e5a151281a" category="sidebar">AWX/Ansible 타워 설치(AWX/Tower 기반 배포용)</block>
   <block id="22d04ecae9fae88d0b8d4548a46a545b" category="sidebar">요청 자동화</block>
   <block id="cdc53c90644739ab9cb455ad8b663d7b" category="sidebar">Red Hat OpenShift 개요</block>
   <block id="82ebdc178ed6bd9adb7b66c2edfb70d0" category="sidebar">NetApp 스토리지 시스템 개요</block>
@@ -14848,4 +14837,5 @@
   <block id="732f94f3061dc1751b3c7e3ea8566239" category="paragraph">이 솔루션은 다음을 위한 것입니다.</block>
   <block id="dab739113e8cfebbcfcfaea1515c0bcf" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 사용자,</block>
   <block id="7367185552beb127edfea2f14982e67f" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 사용자.</block>
+  <block id="44db359cccfc9a14e67b800f405a2078" category="sidebar">자동화 환경 설정</block>
 </blocks>

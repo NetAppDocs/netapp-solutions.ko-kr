@@ -21,9 +21,8 @@ NetApp 솔루션 자동화는 NetApp 솔루션에서 활용하는 많은 공통 
 
 다음 섹션에서는 지정된 각 환경에 맞게 환경을 구성하는 데 필요한 단계를 설명합니다.
 
-====
 .RHEL/CentOS에서 CLI 배포를 위해 Ansible Control Node를 설정합니다
-=====
+====
 . Ansible 제어 노드 요구사항:
 +
 .. 다음 패키지가 설치된 RHEL/CentOS 시스템:
@@ -90,11 +89,9 @@ chmod +x setup.sh
 ----
 
 
-=====
-====
 ====
 .Ubuntu/Debian에서 CLI 배포를 위해 Ansible Control Node를 설정합니다
-=====
+====
 . Ansible 제어 노드 요구사항:
 +
 .. 다음 패키지가 설치된 Ubuntu/Debian 시스템:
@@ -145,11 +142,9 @@ chmod +x setup.sh
 ----
 
 
-=====
-====
 ====
 .타워/AWX 배포용으로 Ansible 타워 또는 AWX를 설치합니다
-=====
+====
 이 섹션에서는 NetApp 자동화 솔루션을 사용하는 환경을 준비하기 위해 AWX/Ansible 타워에서 매개 변수를 구성하는 데 필요한 단계를 설명합니다.
 
 . 인벤토리를 구성합니다.
@@ -236,5 +231,4 @@ vsadmin_password: '{{ vsadmin_password }}'
 
 
 
-=====
 ====
