@@ -1,0 +1,356 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/apache-spark-testing-results.html 
+keywords: terasort, teravalidate, teragen, benchmarking, e-series, storagegrid, hadoop, financial sentiment analysis, distributed training, Horovod performance 
+summary: TeraGen 벤치마킹 툴에서 TeraSort 및 TeraValidate 스크립트를 사용하여 E5760, E5724 및 AFF-A800 구성을 사용하여 Spark 성능 검증을 측정했습니다. 또한 세 가지 주요 사용 사례를 테스트했습니다. Spark NLP 파이프라인 및 TensorFlow 분산 교육, Horovod 분산 교육, DeepFM으로 Keras for CTR Prediction을 사용한 다중 작업자 딥 러닝. 
+---
+= 테스트 결과
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html["이전: 주요 AI, ML 및 DL 사용 사례 및 아키텍처"]
+
+TeraGen 벤치마킹 툴에서 TeraSort 및 TeraValidate 스크립트를 사용하여 E5760, E5724 및 AFF-A800 구성을 사용하여 Spark 성능 검증을 측정했습니다. 또한, Spark NLP 파이프라인 및 TensorFlow 배포 교육, Horovod 분산 교육, DeepFM을 통한 CTR 예측에 Keras를 사용한 다중 작업자 딥 러닝 등 3가지 주요 사용 사례를 테스트했습니다.
+
+E-Series와 StorageGRID 검증 모두에 Hadoop 복제 계수 2를 사용했습니다. AFF 검증에서는 하나의 데이터 소스만 사용했습니다.
+
+다음 표에는 Spark 성능 검증을 위한 하드웨어 구성이 나와 있습니다.
+
+|===
+| 유형 | Hadoop 작업자 노드 | 드라이브 유형입니다 | 노드당 드라이브 수 | 스토리지 컨트롤러 
+
+
+| SG6060 | 4 | SAS를 참조하십시오 | 12 | 단일 고가용성(HA) 쌍 
+
+
+| E5760에서 | 4 | SAS를 참조하십시오 | 60 | 단일 HA 쌍 
+
+
+| E5724)를 참조하십시오 | 4 | SAS를 참조하십시오 | 24 | 단일 HA 쌍 
+
+
+| AFF800 | 4 | SSD를 지원합니다 | 6 | 단일 HA 쌍 
+|===
+다음 표에는 소프트웨어 요구 사항이 나와 있습니다.
+
+|===
+| 소프트웨어 | 버전 
+
+
+| RHEL을 참조하십시오 | 7.9 
+
+
+| OpenJDK 런타임 환경 | 1.8.0 
+
+
+| OpenJDK 64비트 서버 VM | 25.302 
+
+
+| 기트 | 2.24.1 
+
+
+| GCC/G++ | 11.2.1 
+
+
+| 스파크 | 3.2.1 
+
+
+| 피스파크 | 3.1.2 
+
+
+| 스파르크LP | 3.4.2 
+
+
+| TensorFlow를 참조하십시오 | 2.9.0 
+
+
+| Keras | 2.9.0 
+
+
+| 호로브 | 0.24.3 
+|===
+
+
+== 재무 정서 분석
+
+발표했습니다 https://docs.netapp.com/us-en/netapp-solutions/ai/ai-sent-support-center-analytics.html["TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석"^]즉, 포괄적인 대화형 AI 파이프라인은 를 사용하여 구축되었습니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^], AFF 스토리지 및 NVIDIA DGX 시스템. 파이프라인은 DataOps 툴킷을 활용하여 배치 오디오 신호 처리, 자동 음성 인식(ASR), 전송 학습 및 정서 분석을 수행합니다. https://developer.nvidia.com/riva["NVIDIA Riva SDK를 참조하십시오"^], 및 https://developer.nvidia.com/tao["Tao 프레임워크"^]. 정서 분석 활용 사례를 금융 서비스 산업으로 확대하면서 스파르크LP 워크플로를 구축하고, 명명된 엔터티 인식 등의 다양한 NLP 작업을 위한 BERT 모델을 3개 로드했으며, NASDAQ 상위 10개 기업의 분기별 수익 통화에 대해 문장 수준의 감정을 얻었습니다.
+
+다음 스크립트의 entiment_analysis_spark. py는 다음 표와 같이 FinBERT 모델을 사용하여 HDFS에서 전사체를 처리하고 양의, 중성적이고, 부정적인 정서 수를 산출합니다.
+
+....
+-bash-4.2$ time ~/anaconda3/bin/spark-submit
+--packages com.johnsnowlabs.nlp:spark-nlp_2.12:3.4.3
+--master yarn
+--executor-memory 5g
+--executor-cores 1
+--num-executors 160
+--conf spark.driver.extraJavaOptions="-Xss10m -XX:MaxPermSize=1024M"
+--conf spark.executor.extraJavaOptions="-Xss10m -XX:MaxPermSize=512M"
+/sparkusecase/tr-4570-nlp/sentiment_analysis_spark.py hdfs:///data1/Transcripts/
+> ./sentiment_analysis_hdfs.log 2>&1
+real13m14.300s
+user557m11.319s
+sys4m47.676s
+....
+다음 표에는 2016년부터 2020년까지 NASDAQ 상위 10대 기업에 대한 순익금 및 문장 수준의 정서 분석이 나와 있습니다.
+
+|===
+| 정서 수와 백분율 | 10개 회사 모두 | AAPL | AMD | AMZN | CSCO | GOOGL | 아이NTC | MSFT | NVDA 
+
+
+| 양수입니다 | 7447 | 1567 | 743 | 290 | 682를 참조하십시오 | 826 | 824 | 904 | 417 
+
+
+| 중립 카운트 | 64067 | 6856)을 참조하십시오 | 7596 | 5086 | 6650 | 5914 | 6099 | 5715)를 참조하십시오 | 6189 
+
+
+| 음의 카운트 | 1787 | 253 | 213 | 84 | 189 | 97 | 282 | 202 | 89 
+
+
+| 분류되지 않은 카운트 | 196 | 0 | 0 | 76 | 0 | 0 | 0 | 1 | 0 
+
+
+| (총 카운트) | 73497 | 8676)을 참조하십시오 | 8552 | 5536 | 7521 | 6837 | 7205 | 6822 | 6695)를 참조하십시오 
+|===
+백분율의 경우 CEO와 CFO가 말하는 대부분의 문장이 사실에 근거해 중립적인 감정을 가지고 있습니다. 수익 통화 중에 분석가들은 긍정적이거나 부정적인 감정을 전달할 수 있는 질문을 합니다. 이에 따라 내당일 또는 다음 날 주가가 음성이나 양성으로 어떻게 영향을 미치는지를 정량적으로 조사할 필요가 있다.
+
+다음 표에는 NASDAQ 상위 10대 기업에 대한 문장 수준의 감정 분석이 백분율로 나와 있습니다.
+
+|===
+| 정서 백분율 | 10개 회사 모두 | AAPL | AMD | AMZN | CSCO | GOOGL | 아이NTC | MSFT | NVDA 
+
+
+| 긍정적  a| 
+10.13%
+| 18.06% | 8.69% | 5.24% | 9.07% | 12.08% | 11.44% | 13.25% | 6.23% 
+
+
+| 중립 | 87.17% | 79.02% | 88.82% | 91.87% | 88.42% | 86.50% | 84.65% | 83.77% | 92.44% 
+
+
+| 네거티브 | 2.43% | 2.92% | 2.49% | 1.52% | 2.51% | 1.42% | 3.91% | 2.96% | 1.33% 
+
+
+| 분류되지 않았습니다 | 0.27% | 0% | 0% | 1.37% | 0% | 0% | 0% | 0.01% | 0% 
+|===
+워크플로우 런타임 측면에서 HDFS의 로컬 모드에서 분산 환경으로 4.78배, NFS를 활용하여 0.14% 향상되었습니다.
+
+....
+-bash-4.2$ time ~/anaconda3/bin/spark-submit
+--packages com.johnsnowlabs.nlp:spark-nlp_2.12:3.4.3
+--master yarn
+--executor-memory 5g
+--executor-cores 1
+--num-executors 160
+--conf spark.driver.extraJavaOptions="-Xss10m -XX:MaxPermSize=1024M"
+--conf spark.executor.extraJavaOptions="-Xss10m -XX:MaxPermSize=512M"
+/sparkusecase/tr-4570-nlp/sentiment_analysis_spark.py file:///sparkdemo/sparknlp/Transcripts/
+> ./sentiment_analysis_nfs.log 2>&1
+real13m13.149s
+user537m50.148s
+sys4m46.173s
+....
+다음 그림에서 볼 수 있듯이 데이터 및 모델 병렬 처리를 통해 데이터 처리 및 분산 TensorFlow 모델 추론 속도가 향상되었습니다. NFS의 데이터 위치는 워크플로우 병목 현상이 사전 교육 모델을 다운로드하는 것이기 때문에 런타임 성능이 약간 향상되었습니다. 전사체 데이터 세트 크기를 늘릴 경우 NFS의 장점은 더욱 명확합니다.
+
+image:apache-spark-image11.png["SPARK NLP 정서 분석 종단간 워크플로 런타임."]
+
+
+
+== Horovod 성과를 통한 분산 훈련
+
+다음 명령을 실행하면 코어 1개가 포함된 160개의 실행자가 있는 단일 마스터 노드를 사용하여 Spark 클러스터에서 런타임 정보와 로그 파일이 생성되었습니다. 메모리 부족 오류가 발생하지 않도록 executor 메모리가 5GB로 제한되었습니다. 섹션을 참조하십시오 link:apache-spark-python-scripts-for-each-major-use-case.html["“주요 활용 사례별로 Python 스크립트”"] 'keras_spark_horovod_rossmann_estimator.py'의 데이터 처리, 모델 훈련 및 모델 정확도 계산에 대한 자세한 내용
+
+....
+(base) [root@n138 horovod]# time spark-submit
+--master local
+--executor-memory 5g
+--executor-cores 1
+--num-executors 160
+/sparkusecase/horovod/keras_spark_horovod_rossmann_estimator.py
+--epochs 10
+--data-dir file:///sparkusecase/horovod
+--local-submission-csv /tmp/submission_0.csv
+--local-checkpoint-file /tmp/checkpoint/
+> /tmp/keras_spark_horovod_rossmann_estimator_local. log 2>&1
+....
+10번의 교육 Epoch를 사용한 결과 런타임은 다음과 같습니다.
+
+....
+real43m34.608s
+user12m22.057s
+sys2m30.127s
+....
+입력 데이터를 처리하고, DNN 모델을 교육하고, 정확도를 계산하고, 예측 결과를 위한 TensorFlow 체크포인트와 CSV 파일을 생성하는 데 43분 이상이 걸렸습니다. 교육 Epoch의 수를 10개로 제한했습니다. 실제로 만족스러운 모델 정확도를 보장하기 위해 대개 100으로 설정되어 있습니다. 일반적으로 교육 시간은 Epoch 수에 비례하여 확장됩니다.
+
+다음으로 클러스터에서 사용할 수 있는 4개의 작업자 노드를 사용하고 HDFS에서 데이터와 함께 'YARN' 모드로 동일한 스크립트를 실행했습니다.
+
+....
+(base) [root@n138 horovod]# time spark-submit
+--master yarn
+--executor-memory 5g
+--executor-cores 1 --num-executors 160 /sparkusecase/horovod/keras_spark_horovod_rossmann_estimator.py
+--epochs 10
+--data-dir hdfs:///user/hdfs/tr-4570/experiments/horovod
+--local-submission-csv /tmp/submission_1.csv
+--local-checkpoint-file /tmp/checkpoint/
+> /tmp/keras_spark_horovod_rossmann_estimator_yarn.log 2>&1
+....
+결과 런타임은 다음과 같이 개선되었습니다.
+
+....
+real8m13.728s
+user7m48.421s
+sys1m26.063s
+....
+Spark의 Horovod 모델과 데이터 병렬화를 통해 10번의 교육 Epoch로 "원사"와 "로컬" 모드의 실행 속도가 5.29배 빨라졌습니다. 이 그림은 다음 그림과 같이 전설적인 HDFS와 Local로 표시됩니다. 기본 TensorFlow DNN 모델 교육은 GPU를 사용하여 더 가속화될 수 있습니다. NetApp은 이 테스트를 수행하고 결과를 향후 기술 보고서에 게시할 계획입니다.
+
+다음 테스트에서는 NFS에 상주하는 입력 데이터와 HDFS를 비교하여 실행 시간을 비교했습니다. AFF A800의 NFS 볼륨은 Spark 클러스터의 5개 노드(마스터 1개, 작업자 4명)에 걸쳐 '/Spkdemo/horovod'에 마운트되었습니다. NFS 마운트를 가리키는 '--data-dir' 매개 변수를 사용하여 이전 테스트와 비슷한 명령을 실행했습니다.
+
+....
+(base) [root@n138 horovod]# time spark-submit
+--master yarn
+--executor-memory 5g
+--executor-cores 1
+--num-executors 160
+/sparkusecase/horovod/keras_spark_horovod_rossmann_estimator.py
+--epochs 10
+--data-dir file:///sparkdemo/horovod
+--local-submission-csv /tmp/submission_2.csv
+--local-checkpoint-file /tmp/checkpoint/
+> /tmp/keras_spark_horovod_rossmann_estimator_nfs.log 2>&1
+....
+NFS의 결과 런타임은 다음과 같습니다.
+
+....
+real 5m46.229s
+user 5m35.693s
+sys  1m5.615s
+....
+다음 그림과 같이 속도가 1.43배 더 향상되었습니다. 따라서 고객은 클러스터에 연결된 NetApp All-Flash 스토리지를 통해 Horovod Spark 워크플로우에서 빠른 데이터 전송 및 배포의 이점을 누리고 단일 노드에서 실행되는 것에 비해 7.55배 더 빠른 속도를 달성할 수 있습니다.
+
+image:apache-spark-image12.png["Horovod Spark 워크플로 런타임."]
+
+
+
+== CTR 예측 성능을 위한 딥 러닝 모델
+
+CTR을 최대화하도록 설계된 추천 시스템의 경우 낮은 순서에서 높은 순서로 수학적으로 계산할 수 있는 사용자 행동 뒤에 정교한 기능 상호 작용을 학습해야 합니다. 낮은 순서의 기능과 높은 순서의 기능 상호 작용은 둘 중 하나를 편향하지 않고 우수한 딥 러닝 모델에 똑같이 중요합니다. 인수 기계 기반 신경 네트워크인 DeepFM(Deep Factorization Machine)은 새로운 신경망 아키텍처에서 기능 학습을 위한 권장 사항과 딥 러닝을 위한 인수 기계(factorization Machine)를 결합합니다.
+
+기존의 공장 인수 기계는 쌍 단위 기능 상호 작용을 기능 간의 잠재적 벡터의 내부 제품으로 모델링하고 이론적으로 높은 순서 정보를 캡처할 수 있지만, 실제로 머신 러닝 실무자는 높은 계산 및 스토리지 복잡성으로 인해 일반적으로 2차 기능 상호 작용만 사용합니다. Google과 같은 딥 뉴럴 네트워크 변형 https://arxiv.org/abs/1606.07792["와이드  앰프, 딥 모델"^] 반면, 선형 와이드 모델과 딥 모델을 결합하여 하이브리드 네트워크 구조에서 정교한 기능 상호 작용을 학습합니다.
+
+이 Wide & Deep Model에는 기본 와이드 모델과 딥 모델에 대한 두 가지 입력이 있으며, 그 중 후자는 여전히 전문적인 피처 엔지니어링을 필요로 하므로 다른 영역에 대해 일반화할 수 없는 기술을 렌더링합니다. 광각 및 딥 모델과 달리, DeepFM은 넓은 부분과 깊은 부분이 동일한 입력 및 포함 벡터를 공유하기 때문에 기능 엔지니어링 없이 RAW 기능으로 효율적으로 교육을 받을 수 있습니다.
+
+먼저 Criteo '기차.txt'(11GB) 파일을 NFS 마운트에 저장된 CTR_트레인.csv라는 CSV 파일로 처리했습니다. /spclassification_criteo_spark.py라는 섹션을 사용하여 /spkdemo/TR-4570-data로 처리했습니다 link:apache-spark-python-scripts-for-each-major-use-case.html["“각 주요 활용 사례에 대한 Python 스크립트”"] 이 스크립트에서 함수 "process_input_file"은 여러 문자열 메소드를 수행하여 탭을 제거하고 구분 기호로 ",", 줄 바꿈으로 "\n""를 삽입합니다. 코드 블록이 주석으로 표시되도록 원래 기차 .txt만 처리하면 됩니다.
+
+다음 DL 모델 테스트를 위해 입력 파일로 CTR_트레인.csv를 사용했습니다. 후속 테스트 실행에서 입력 CSV 파일은 "'레이블'', 정수 밀도 기능 "['I1', 'I2', 'i3',…, 'I13']" 필드가 포함된 스키마가 있는 Spark DataFrame으로 읽혀졌습니다. 그리고 스파스 피처 "['C1','C2','C3',...,'C26']". 다음 'park-submit' 명령은 입력 CSV에서 수행하고 교차 검증을 위해 20% 분할로 DeepFM 모델을 교육하고 10번의 교육 Epoch 후에 최적의 모델을 선택하여 테스트 세트의 예측 정확도를 계산합니다.
+
+....
+(base) [root@n138 ~]# time spark-submit --master yarn --executor-memory 5g --executor-cores 1 --num-executors 160 /sparkusecase/DeepCTR/examples/run_classification_criteo_spark.py --data-dir file:///sparkdemo/tr-4570-data > /tmp/run_classification_criteo_spark_local.log 2>&1
+....
+데이터 파일 'CTR_트레인.csv'가 11GB를 초과하므로 오류를 방지하려면 데이터 세트 크기보다 충분한 spark.driver.maxResultSize를 설정해야 합니다.
+
+....
+ spark = SparkSession.builder \
+    .master("yarn") \
+    .appName("deep_ctr_classification") \
+    .config("spark.jars.packages", "io.github.ravwojdyla:spark-schema-utils_2.12:0.1.0") \
+    .config("spark.executor.cores", "1") \
+    .config('spark.executor.memory', '5gb') \
+    .config('spark.executor.memoryOverhead', '1500') \
+    .config('spark.driver.memoryOverhead', '1500') \
+    .config("spark.sql.shuffle.partitions", "480") \
+    .config("spark.sql.execution.arrow.enabled", "true") \
+    .config("spark.driver.maxResultSize", "50gb") \
+    .getOrCreate()
+....
+위 'parkSession.builder' 설정에서도 활성화했다 https://arrow.apache.org/["Apache 화살표"^]이는 Df. toPandas() 메소드를 사용하여 Spark DataFrame을 Pandas DataFrame으로 변환합니다.
+
+....
+22/06/17 15:56:21 INFO scheduler.DAGScheduler: Job 2 finished: toPandas at /sparkusecase/DeepCTR/examples/run_classification_criteo_spark.py:96, took 627.126487 s
+Obtained Spark DF and transformed to Pandas DF using Arrow.
+....
+무작위 분할 후, 교육 데이터 세트에 36M 행이 넘고 테스트 세트에 9M 샘플이 있습니다.
+
+....
+Training dataset size =  36672493
+Testing dataset size =  9168124
+....
+이 기술 보고서는 GPU를 사용하지 않고 CPU 테스트에 집중되므로 적절한 컴파일러 플래그를 사용하여 TensorFlow를 구축하는 것이 중요합니다. 이 단계는 GPU 가속 라이브러리를 호출하지 않고 TensorFlow의 AVX(Advanced Vector Extensions) 및 AVX2 명령을 최대한 활용합니다. 이러한 기능은 벡터화된 추가, 피드 포워드 내부의 행렬 다중화 또는 역전파 DNN 교육과 같은 선형 대수 계산에 맞게 설계되었습니다. 256비트 부동 소수점(FP) 레지스터를 사용하는 AVX2에서 사용할 수 있는 FMA(Fused Multiply Add) 명령은 정수 코드 및 데이터 형식에 적합하며 최대 2배의 속도를 제공합니다. FP 코드 및 데이터 유형의 경우 AVX2는 AVX에 비해 8% 빠른 속도를 제공합니다.
+
+....
+2022-06-18 07:19:20.101478: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+....
+소스에서 TensorFlow를 빌드하려면 사용을 권장합니다 https://bazel.build/["Bazel"^]. 우리는 현재 환경에 대해 셸 프롬프트에서 다음 명령을 실행하여 df, df-plugins, Bazel을 설치합니다.
+
+....
+yum install dnf
+dnf install 'dnf-command(copr)'
+dnf copr enable vbatts/bazel
+dnf install bazel5
+....
+빌드 프로세스 중에 C++ 17 기능을 사용하려면 GCC 5 이상을 활성화해야 합니다. 이 기능은 RHEL에서 SCL(Software Collections Library)과 함께 제공합니다. 다음 명령은 RHEL 7.9 클러스터에 devt툴셋 및 GCC 11.2.1을 설치합니다.
+
+....
+subscription-manager repos --enable rhel-server-rhscl-7-rpms
+yum install devtoolset-11-toolchain
+yum install devtoolset-11-gcc-c++
+yum update
+scl enable devtoolset-11 bash
+. /opt/rh/devtoolset-11/enable
+....
+마지막 두 명령은 /opt/rh/dev툴셋 -11/root/usr/bin/gcc(GCC 11.2.1)를 사용하는 dev툴셋 -11을 활성화합니다. 또한 git 버전이 1.8.3 이상인지 확인하십시오(RHEL 7.9와 함께 제공됨). 이를 참조하십시오 https://travis.media/how-to-upgrade-git-on-rhel7-and-centos7/["기사"^] git를 2.24.1로 업데이트하는 경우.
+
+최신 TensorFlow 마스터 저장소 를 이미 복제했다고 가정합니다. 그런 다음 "작업 공간" 파일을 사용하여 "작업 공간" 디렉토리를 만들어 AVX, AVX2 및 FMA를 사용하여 소스에서 TensorFlow를 구축합니다. '설정' 파일을 실행하고 올바른 Python 바이너리 위치를 지정합니다. https://developer.nvidia.com/cuda-toolkit["CUDA"^] GPU를 사용하지 않았기 때문에 테스트에 사용할 수 없습니다. 설정에 따라 '.bazelrc' 파일이 생성됩니다. 또한 파일을 편집하고 "build--define=no_hdfs_support=false"를 설정하여 HDFS 지원을 활성화했습니다. 절의 '.bazelrc'를 참조하십시오 link:apache-spark-python-scripts-for-each-major-use-case.html["“주요 활용 사례별로 Python 스크립트,”"] 설정 및 플래그의 전체 목록을 표시합니다.
+
+....
+./configure
+bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both -k //tensorflow/tools/pip_package:build_pip_package
+....
+올바른 플래그를 사용하여 TensorFlow를 빌드한 후 다음 스크립트를 실행하여 Critio Display Ads 데이터 세트를 처리하고 DeepFM 모델을 교육하고 예측 점수의 Receiver Operating Characteristic Curve(ROC AUC) 아래에 있는 영역을 계산합니다.
+
+....
+(base) [root@n138 examples]# ~/anaconda3/bin/spark-submit
+--master yarn
+--executor-memory 15g
+--executor-cores 1
+--num-executors 160
+/sparkusecase/DeepCTR/examples/run_classification_criteo_spark.py
+--data-dir file:///sparkdemo/tr-4570-data
+> . /run_classification_criteo_spark_nfs.log 2>&1
+....
+10번의 교육 Epoch 후에 테스트 데이터 세트에 AUC 점수를 얻었습니다.
+
+....
+Epoch 1/10
+125/125 - 7s - loss: 0.4976 - binary_crossentropy: 0.4974 - val_loss: 0.4629 - val_binary_crossentropy: 0.4624
+Epoch 2/10
+125/125 - 1s - loss: 0.3281 - binary_crossentropy: 0.3271 - val_loss: 0.5146 - val_binary_crossentropy: 0.5130
+Epoch 3/10
+125/125 - 1s - loss: 0.1948 - binary_crossentropy: 0.1928 - val_loss: 0.6166 - val_binary_crossentropy: 0.6144
+Epoch 4/10
+125/125 - 1s - loss: 0.1408 - binary_crossentropy: 0.1383 - val_loss: 0.7261 - val_binary_crossentropy: 0.7235
+Epoch 5/10
+125/125 - 1s - loss: 0.1129 - binary_crossentropy: 0.1102 - val_loss: 0.7961 - val_binary_crossentropy: 0.7934
+Epoch 6/10
+125/125 - 1s - loss: 0.0949 - binary_crossentropy: 0.0921 - val_loss: 0.9502 - val_binary_crossentropy: 0.9474
+Epoch 7/10
+125/125 - 1s - loss: 0.0778 - binary_crossentropy: 0.0750 - val_loss: 1.1329 - val_binary_crossentropy: 1.1301
+Epoch 8/10
+125/125 - 1s - loss: 0.0651 - binary_crossentropy: 0.0622 - val_loss: 1.3794 - val_binary_crossentropy: 1.3766
+Epoch 9/10
+125/125 - 1s - loss: 0.0555 - binary_crossentropy: 0.0527 - val_loss: 1.6115 - val_binary_crossentropy: 1.6087
+Epoch 10/10
+125/125 - 1s - loss: 0.0470 - binary_crossentropy: 0.0442 - val_loss: 1.6768 - val_binary_crossentropy: 1.6740
+test AUC 0.6337
+....
+이전 사용 사례와 비슷한 방식으로 Spark 워크플로우 런타임을 다른 위치에 있는 데이터와 비교했습니다. 다음 그림은 Spark 워크플로 런타임에 대한 딥 러닝 CTR 예측을 비교한 것입니다.
+
+image:apache-spark-image13.png["Spark 워크플로 런타임에 대한 딥 러닝 CTR 예측 비교"]
+
+link:apache-spark-hybrid-cloud-solution.html["다음: 하이브리드 클라우드 솔루션"]

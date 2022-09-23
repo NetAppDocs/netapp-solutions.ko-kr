@@ -3,6 +3,31 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
+- title: Apache Spark용 NetApp 스토리지 솔루션
+  type: solutions
+  entries:
+  - title: 솔루션 개요
+    url: "/data-analytics/apache-spark-solution-overview.html"
+  - title: 대상
+    url: "/data-analytics/apache-spark-target-audience.html"
+  - title: 솔루션 기술
+    url: "/data-analytics/apache-spark-solution-technology.html"
+  - title: NetApp Spark 솔루션 개요
+    url: "/data-analytics/apache-spark-netapp-spark-solutions-overview.html"
+  - title: 사용 사례 요약
+    url: "/data-analytics/apache-spark-use-cases-summary.html"
+  - title: 주요 AI, ML 및 DL 사용 사례 및 아키텍처
+    url: "/data-analytics/apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html"
+  - title: 테스트 결과
+    url: "/data-analytics/apache-spark-testing-results.html"
+  - title: 하이브리드 클라우드 솔루션
+    url: "/data-analytics/apache-spark-hybrid-cloud-solution.html"
+  - title: 주요 활용 사례별로 Python 스크립트
+    url: "/data-analytics/apache-spark-python-scripts-for-each-major-use-case.html"
+  - title: 결론
+    url: "/data-analytics/apache-spark-conclusion.html"
+  - title: 추가 정보를 찾을 수 있는 위치
+    url: "/data-analytics/apache-spark-where-to-find-additional-information.html"
 - title: 인공 지능에 빅 데이터 분석 데이터 활용
   type: solutions
   entries:

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/apache-spark-target-audience.html 
+keywords: audience, data scientist, engineer, devops, cloud administrator, architect 
+summary: 이 섹션에서는 이 솔루션의 내용에 관심이 있는 사용자를 설명합니다. 
+---
+= 대상
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:apache-spark-solution-overview.html["이전: 솔루션 개요"]
+
+분석 및 데이터 과학의 세계는 IT와 비즈니스의 여러 분야를 아우릅니다.
+
+* 데이터 과학자는 자신이 선택한 도구와 라이브러리를 사용할 수 있는 유연성이 필요합니다.
+* 데이터 엔지니어는 데이터 흐름과 데이터 위치를 알아야 합니다.
+* DevOps 엔지니어는 새로운 AI 및 ML 애플리케이션을 CI 및 CD 파이프라인에 통합하는 툴을 필요로 합니다.
+* 클라우드 관리자와 설계자는 하이브리드 클라우드 리소스를 설정하고 관리할 수 있어야 합니다.
+* 비즈니스 사용자는 분석, AI, ML 및 DL 애플리케이션에 액세스해야 합니다.
+
+
+이 기술 보고서에서는 NetApp AFF, E-Series, StorageGRID, NFS 직접 액세스, Apache Spark가 어떤 식으로 Horovod와 Keras는 이러한 각 역할이 비즈니스에 가치를 제공하는 데 도움을 줍니다.
+
+link:apache-spark-solution-technology.html["다음은 솔루션 기술입니다."]

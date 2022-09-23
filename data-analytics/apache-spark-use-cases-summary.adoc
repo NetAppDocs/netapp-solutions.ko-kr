@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/apache-spark-use-cases-summary.html 
+keywords: streaming data, machine learning, deep learning, interactive analysis, recommender system, natural language processing, 
+summary: 이 페이지에서는 이 솔루션을 사용할 수 있는 다양한 영역에 대해 설명합니다. 
+---
+= 사용 사례 요약
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:apache-spark-netapp-spark-solutions-overview.html["이전: NetApp Spark 솔루션 개요"]
+
+
+
+== 스트리밍 데이터
+
+Apache Spark는 스트리밍 추출, 변환 및 로드(ETL) 프로세스, 데이터 보강, 이벤트 감지 트리거 및 복잡한 세션 분석에 사용되는 스트리밍 데이터를 처리할 수 있습니다.
+
+* * Streaming ETL. * 데이터가 데이터 저장소로 푸시되기 전에 지속적으로 정리 및 집계됩니다. Netflix는 Kafka 및 Spark 스트리밍을 사용하여 다양한 데이터 소스에서 매일 수십억 개의 이벤트를 처리할 수 있는 실시간 온라인 영화 추천 및 데이터 모니터링 솔루션을 구축합니다. 그러나 일괄 처리를 위한 기존 ETL은 다르게 처리됩니다. 이 데이터를 먼저 읽은 다음 데이터베이스에 쓰기 전에 데이터베이스 형식으로 변환됩니다.
+* * 데이터 보강. * Spark 스트리밍은 라이브 데이터를 정적 데이터로 보강하여 보다 실시간 데이터 분석을 가능하게 합니다. 예를 들어, 온라인 광고주는 고객 행동에 대한 정보를 바탕으로 맞춤화된 맞춤형 광고를 제공할 수 있습니다.
+* * 이벤트 감지 트리거 * 스파크 스트리밍을 사용하면 잠재적으로 심각한 문제를 나타낼 수 있는 비정상적인 동작을 신속하게 감지하고 대응할 수 있습니다. 예를 들어, 금융 기관은 사기 거래를 탐지 및 중지하는 트리거를 사용하며 병원에서는 환자의 바이탈 사인에 감지된 위험한 건강 변화를 감지하기 위해 트리거를 사용합니다.
+* * 복잡한 세션 분석. * Spark 스트리밍은 웹 사이트나 응용 프로그램에 로그인한 후 사용자 활동과 같은 이벤트를 수집하여 그룹화하고 분석합니다. 예를 들어 Netflix는 이 기능을 사용하여 실시간 영화 권장 사항을 제공합니다.
+
+
+스트리밍 데이터 구성, Confluent Kafka 검증 및 성능 테스트에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/data-analytics/confluent-kafka-introduction.html["TR-4912: NetApp을 통해 Confluent Kafka 계층형 스토리지를 위한 모범 사례 지침"^].
+
+
+
+== 머신 러닝
+
+Spark 통합 프레임워크는 MLlib(Machine Learning Library)를 사용하여 데이터 세트에서 반복되는 쿼리를 실행할 수 있도록 도와줍니다. MLlib는 예측 인텔리전스, 마케팅 목적으로 고객 세분화, 감정 분석과 같은 일반적인 빅 데이터 기능의 클러스터링, 분류 및 차원 감소 등의 영역에서 사용됩니다. MLlib는 네트워크 보안에 사용되어 데이터 패킷의 실시간 검사를 수행하여 악의적인 활동의 징후를 파악합니다. 이 솔루션은 보안 제공업체가 새로운 위협에 대해 학습하고 해커보다 앞서나가는 동시에 클라이언트를 실시간으로 보호할 수 있도록 도와줍니다.
+
+
+
+== 딥 러닝
+
+TensorFlow는 업계 전반에 걸쳐 사용되는 인기 있는 딥 러닝 프레임워크입니다. TensorFlow는 CPU 또는 GPU 클러스터에 대한 분산 교육을 지원합니다. 이렇게 분산된 교육을 통해 사용자는 많은 양의 데이터에서도 딥 레이어가 많이 포함된 상태로 데이터를 실행할 수 있습니다.
+
+얼마 전까지만 해도 TensorFlow에 Apache Spark를 사용하려면 PySpark에서 TensorFlow에 필요한 ETL을 수행한 다음 중간 스토리지에 데이터를 써야 했습니다. 그런 다음 실제 훈련 프로세스를 위해 TensorFlow 클러스터에 데이터를 로드합니다. 이 워크플로우에서는 사용자가 ETL용 클러스터와 TensorFlow의 분산 교육용으로 각각 하나씩, 두 개의 서로 다른 클러스터를 유지해야 했습니다. 여러 클러스터를 실행하고 유지하는 일은 일반적으로 지루하고 시간이 오래 걸립니다.
+
+이전 Spark 버전의 DataFrames 및 RDD는 랜덤 액세스가 제한되었기 때문에 딥 러닝에 적합하지 않았습니다. 프로젝트 수소가 포함된 Spark 3.0에서는 딥 러닝 프레임워크에 대한 기본 지원이 추가됩니다. 이 접근 방식을 사용하면 Spark 클러스터에서 MapReduce를 기반으로 하지 않는 일정을 수행할 수 있습니다.
+
+
+
+== 대화형 분석
+
+Apache Spark는 SQL, R, Python 등 Spark 이외의 개발 언어를 사용하여 샘플링하지 않고 탐색 쿼리를 수행할 수 있을 만큼 빠릅니다. Spark는 시각화 도구를 사용하여 복잡한 데이터를 처리하고 대화형으로 시각화합니다. Spark with 구조화된 스트리밍은 웹 분석의 라이브 데이터에 대한 대화형 쿼리를 수행하여 웹 방문자의 현재 세션에 대해 대화형 쿼리를 실행할 수 있도록 합니다.
+
+
+
+== 추천 시스템
+
+기업과 소비자가 온라인 쇼핑, 온라인 엔터테인먼트 및 기타 다양한 산업의 급격한 변화에 대응함에 따라, 지난 몇 년 동안 추천 시스템은 우리의 삶에 엄청난 변화를 가져왔습니다. 실제로 이러한 시스템은 생산 과정에서 AI의 가장 확실한 성공 사례 중 하나입니다. 많은 실제 사용 사례에서 추천 시스템은 NLP 백엔드와 상호 작용 AI 또는 챗봇과 결합되어 관련 정보를 얻고 유용한 추론을 생성합니다.
+
+오늘날, 많은 소매업체들은 온라인 구매 및 매장에서 픽업, 큐브사이드 픽업, 셀프 체크아웃, 스캔 및 이동 등 새로운 비즈니스 모델을 채택하고 있습니다. COVID-19가 범세계적으로 확산되고 있는 가운데, 이러한 모델은 더욱 안전하고 편리한 쇼핑을 통해 뚜렷하게 부각되고 있습니다. AI는 소비자 행동의 영향을 받는 디지털 트렌드에 있어 매우 중요합니다. 고객의 증가하는 요구사항을 충족하고, 고객 경험을 보강하고, 운영 효율성을 개선하고, 수익을 증대하기 위해 NetApp은 엔터프라이즈 고객과 기업이 머신 러닝 및 딥 러닝 알고리즘을 사용하여 더 빠르고 정확한 추천 시스템을 설계할 수 있도록 지원합니다.
+
+협업 필터링, 콘텐츠 기반 시스템, 딥 러닝 추천 모델(DLRM), 하이브리드 기술 등 권장 사항을 제공하는 데 사용되는 몇 가지 기술이 있습니다. 고객은 이전에 PySpark를 사용하여 권장 시스템 생성을 위한 협업 필터링을 구현했습니다. Spark MLlib는 DLRM이 등장하기 전에 엔터프라이즈 사이에서 매우 널리 사용되는 알고리즘인 협업 필터링을 위해 교류 최소 사각형(ALS)을 구현합니다.
+
+
+
+== 자연어 처리
+
+자연어 처리(NLP)로 가능해진 대화형 AI는 컴퓨터가 인간과 통신할 수 있도록 지원하는 AI의 지점입니다. NLP는 스마트 비서 및 챗봇에서 Google 검색 및 예측 텍스트에 이르기까지 모든 업계 수직 및 다양한 사용 사례에서 널리 사용되고 있습니다. 에 따르면 https://www.forbes.com/sites/forbestechcouncil/2021/05/07/nice-chatbot-ing-with-you/?sh=7011eff571f4["Gartner"^] 2022년까지 70%의 사용자가 매일 대화형 AI 플랫폼과 상호 작용할 것으로 예측 인간과 기계 사이의 고품질 대화를 위해서는 신속하고 지능적이며 자연스러운 대화가 이루어져야 합니다.
+
+고객은 NLP 및 ASR(자동 음성 인식) 모델을 처리하고 교육하기 위해 대량의 데이터가 필요합니다. 또한 에지, 코어, 클라우드 전반에서 데이터를 이동해야 하며, 인류와 자연적 통신을 위해 수 밀리초 내에 추론을 수행할 수 있는 기능이 필요합니다. NetApp AI 및 Apache Spark는 컴퓨팅, 스토리지, 데이터 처리, 모델 교육, 미세 조정, 있습니다.
+
+정서 분석은 NLP에서 텍스트에서 긍정적, 부정적 또는 중립적 감정을 추출하는 연구 분야입니다. 고객 의견 분석에는 지원 센터 직원의 성과 파악부터 적절한 자동 챗봇 응답 제공에 이르기까지 다양한 활용 사례가 있습니다. 또한 분기별 수익 통화 시 기업 담당자와 대상 간의 상호 작용을 기반으로 회사의 주가를 예측하기도 했습니다. 또한, 감정 분석을 사용하여 브랜드가 제공하는 제품, 서비스 또는 지원에 대한 고객의 관점을 결정할 수 있습니다.
+
+을 사용했습니다 https://www.johnsnowlabs.com/spark-nlp/["스파크 NLP"^] 라이브러리 시작 https://www.johnsnowlabs.com/["John Snow Labs를 참조하십시오"^] 를 포함하여 Transformers(BERT) 모델의 사전 교육 파이프라인 및 양방향 인코더 표현을 로드합니다 https://nlp.johnsnowlabs.com/2021/11/11/classifierdl_bertwiki_finance_sentiment_pipeline_en.html["금융 뉴스 정서"^] 및 https://nlp.johnsnowlabs.com/2021/11/03/bert_sequence_classifier_finbert_en.html["핀베르트"^]즉, 토큰화, 명명된 엔터티 인식, 모델 교육, 피팅 및 정서 분석을 대규모로 수행합니다. Spark NLP는 BERT, Albert, Electra, XLNet, DistillBERT 등의 최첨단 변압기(transformer)를 제공하는 유일한 오픈 소스 NLP 라이브러리입니다. Roberta, DeBERTa, XLM-Roberta, Longrofer, Elmo, Universal 문장 인코더, Google T5, MarianMT 및 GPT2. 이 라이브러리는 Python 및 R 뿐만 아니라 Apache Spark를 기본적으로 확장하여 JVM 에코시스템(Java, Scala, Kotlin)에서도 사용할 수 있습니다.
+
+link:apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html["다음: 주요 AI, ML 및 DL 사용 사례 및 아키텍처"]

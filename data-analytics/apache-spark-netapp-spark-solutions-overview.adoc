@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/apache-spark-netapp-spark-solutions-overview.html 
+keywords: fas, aff, e-series, cloud volumes ontap, nfs, direct access, snapmirror, paas, 
+summary: 'NetApp은 FAS/AFF, E-Series, Cloud Volumes ONTAP의 3가지 스토리지 포트폴리오를 보유하고 있습니다. Apache Spark를 지원하는 Hadoop 솔루션을 위한 ONTAP 스토리지 시스템을 통해 AFF 및 E-Series를 검증했습니다. NetApp이 제공하는 Data Fabric은 데이터 액세스, 제어, 보호 및 보안을 위해 데이터 관리 서비스와 애플리케이션(구성 요소)을 통합합니다.' 
+---
+= NetApp Spark 솔루션 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:apache-spark-solution-technology.html["이전: 솔루션 기술."]
+
+NetApp은 FAS/AFF, E-Series, Cloud Volumes ONTAP의 3가지 스토리지 포트폴리오를 보유하고 있습니다. Apache Spark를 지원하는 Hadoop 솔루션을 위한 ONTAP 스토리지 시스템을 통해 AFF 및 E-Series를 검증했습니다. NetApp 기반의 Data Fabric은 아래 그림과 같이 데이터 액세스, 제어, 보호 및 보안을 위한 데이터 관리 서비스와 애플리케이션(구성 요소)을 통합합니다.
+
+image:apache-spark-image4.png["Data Fabric은 데이터 관리 서비스 및 애플리케이션을 제공합니다."]
+
+위 그림의 구성 요소는 다음과 같습니다.
+
+* * NetApp NFS 직접 액세스 * 는 추가 소프트웨어 또는 드라이버 요구사항 없이 최신 Hadoop 및 Spark 클러스터를 NetApp NFS 볼륨에 직접 액세스할 수 있도록 지원합니다.
+* * NetApp Cloud Volumes ONTAP 및 클라우드 볼륨 서비스. * Microsoft Azure 클라우드 서비스의 AWS(Amazon Web Services) 또는 ANF(Azure NetApp Files)에서 실행되는 ONTAP를 기반으로 하는 소프트웨어 정의 연결형 스토리지.
+* * NetApp SnapMirror 기술. * 사내 및 ONTAP 클라우드 또는 NPS 인스턴스 간에 데이터 보호 기능을 제공합니다.
+* * 클라우드 서비스 공급자 * 이러한 공급자에는 AWS, Microsoft Azure, Google Cloud 및 IBM Cloud가 포함됩니다.
+* * PaaS. * AWS의 EMR(Amazon Elastic MapReduce) 및 Databricks와 같은 클라우드 기반 분석 서비스와 Microsoft Azure HDInsight 및 Azure Databricks
+
+
+다음 그림은 NetApp 스토리지를 포함한 Spark 솔루션을 보여 줍니다.
+
+image:apache-spark-image5.png["NetApp 스토리지로 솔루션 스파크"]
+
+ONTAP Spark 솔루션은 NetApp NFS 직접 액세스 프로토콜을 사용하여 기존 운영 데이터에 대한 액세스를 통해 데이터 이동 없이 분석 및 AI, ML 및 DL 워크플로우를 지원합니다. Hadoop 노드에 사용 가능한 운영 데이터를 내보내 데이터 이동 없이 분석 및 AI, ML, DL 작업을 수행합니다. Hadoop 노드에서 처리하는 데이터에 NetApp NFS 직접 액세스 또는 사용하지 않고 액세스할 수 있습니다. 독립 실행형 또는 'YARN' 클러스터 관리자를 사용하여 Spark에서 ' 을 사용하여 NFS 볼륨을 구성할 수 있습니다<file:///<target_volume>`[]. 서로 다른 데이터 세트를 사용하여 세 가지 사용 사례를 검증했습니다. 이러한 검증에 대한 자세한 내용은 "테스트 결과" 섹션에 나와 있습니다. (Xref)
+
+다음 그림은 NetApp Apache Spark/Hadoop 스토리지 포지셔닝을 보여줍니다.
+
+image:apache-spark-image7.png["NetApp Apache Spark/Hadoop 스토리지 포지셔닝"]
+
+E-Series Spark 솔루션, AFF/FAS ONTAP Spark 솔루션 및 StorageGRID Spark 솔루션의 고유한 기능을 식별하고 자세한 검증 및 테스트를 수행했습니다. 관찰 결과에 따라, NetApp은 E-Series 솔루션을 그린필드 설치 및 새로운 확장 가능한 구축에 사용하고, 기존 NFS 데이터를 사용하는 데이터 이동 없는 분석, AI, ML, DL 워크로드, 오브젝트 스토리지가 필요할 경우 StorageGRID for AI, ML, DL 및 최신 데이터 분석을 지원하는 AFF/FAS 솔루션을 권장합니다.
+
+image:apache-spark-image9.png["Spark에 권장되는 NetApp 솔루션:"]
+
+데이터 레이크는 분석, AI, ML 및 DL 작업에 사용할 수 있는 기본 형식의 대규모 데이터 세트를 위한 스토리지 리포지토리입니다. E-Series, AFF/FAS, StorageGRID SG6060 Spark 솔루션을 위한 데이터 레이크 저장소를 구축했습니다. E-Series 시스템은 HDFS에 Hadoop Spark 클러스터에 액세스할 수 있는 반면, 기존 운영 데이터는 NFS 직접 액세스 프로토콜을 통해 Hadoop 클러스터에 액세스할 수 있습니다. 오브젝트 스토리지에 상주하는 데이터 세트의 경우 NetApp StorageGRID를 통해 S3 및 S3a의 안전한 액세스를 제공합니다.
+
+link:apache-spark-use-cases-summary.html["다음: 사용 사례 요약"]
