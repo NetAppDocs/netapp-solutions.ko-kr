@@ -14776,20 +14776,14 @@
   <block id="192dcc5c64e1f37fd6c9e50a1b157443" category="cell">버전&gt;</block>
   <block id="94f04537971d7a4a561c607ec55952a2" category="section-title">추가 참고 사항</block>
   <block id="5f8c710bd804698095dac1f01702f2dc" category="list-text">참고 1</block>
-  <block id="3a697521ac395d79264329b00ecf9acf" category="list-text">참고 2. . .</block>
   <block id="b5be88cc2b21098a0407835f4cf72ead" category="list-text">참고 n</block>
   <block id="dd1d4adbfe73c3cd87fc248a003b05a0" category="section-title">솔루션 구축</block>
   <block id="335680aa8906e185cbdaebb23568afb0" category="example-title">단계 1:&amp;lt; 설명 단계 이름 &amp;GT;</block>
   <block id="8368bea2982e0341bdf3dd2e21ae59ba" category="list-text">과제 1</block>
-  <block id="955510780217edc4ecbe3d752ffcd412" category="list-text">과제 2. . .</block>
   <block id="246b81c0be9905296fd43f043d65acf9" category="list-text">작업 n</block>
   <block id="dc84800e606f171d76211870801056d9" category="example-title">단계 2:&amp;lt; 설명 단계 이름 &amp;GT;</block>
-  <block id="8e7ff5bda4042337ac0fd64ba1bbb327" category="paragraph">. . .</block>
   <block id="1361b538eba6bc2813d883fde1eaa379" category="example-title">단계 n:&amp;lt; 설명 단계 이름 &amp;GT;</block>
   <block id="b57b7771f6b9c2ff769c133b18814390" category="section-title">기타 구축 옵션</block>
-  <block id="fd577a8bfd88959b13dfc6803c7ef6ce" category="list-text">옵션 1</block>
-  <block id="8d3ec9955cc42b7ce1ee31797f23b032" category="list-text">옵션 2. . .</block>
-  <block id="70d557167ee21aca4f056555e77313c2" category="list-text">옵션 n</block>
   <block id="43437c4ac7246d8571bf69d647faab0e" category="inline-link-macro">문서에 대한 설명입니다</block>
   <block id="0da1d1196a3aec2a948937502374b5bb" category="list-text"><block ref="0da1d1196a3aec2a948937502374b5bb" category="inline-link-macro-rx"></block></block>
   <block id="71214e9c5af2e86babf8e62565a8dda2" category="inline-link-macro">다른 문서에 대한 설명입니다</block>
@@ -14832,7 +14826,6 @@
   <block id="36c48411397a73fcbe7ccac93862641b" category="admonition">이 문서가 작성된 시점에서 게스트 내 저장소가 유일하게 사용 가능한 옵션이었습니다. 보충 NFS 데이터 저장소 지원이 제공되면 추가 설명서를 사용할 수 있습니다 <block ref="2feee9d08b57f121d415095bba26ae78" category="inline-link-macro-rx"></block>.</block>
   <block id="e60de72a8067fd05498b03b24d9f93e7" category="paragraph">이 솔루션은 다음과 같은 사용 사례를 해결합니다.</block>
   <block id="50f68cc3bee11411ba8ee639a7ed59d7" category="list-text">사용 사례 1&gt;</block>
-  <block id="ceb4b740f63ab18a13c415efd220844c" category="list-text">사용 사례 2&gt;. . .</block>
   <block id="bfbe592724efe7b70f86b50a78741381" category="list-text">사용 사례 n&gt;</block>
   <block id="732f94f3061dc1751b3c7e3ea8566239" category="paragraph">이 솔루션은 다음을 위한 것입니다.</block>
   <block id="dab739113e8cfebbcfcfaea1515c0bcf" category="list-text">역할&gt;, &lt;목표&gt;에 관심이 있는 사용자,</block>
@@ -15303,4 +15296,21 @@
   <block id="6e9120b39f924b2eed528e3bcdd009ac" category="paragraph">세 번째 스크립트는 run_classification_criteo_spark.py입니다.</block>
   <block id="be0ba1bf6a99c201834567c4d58fc40e" category="paragraph"><block ref="be0ba1bf6a99c201834567c4d58fc40e" category="inline-link-macro-rx"></block></block>
   <block id="2ce0710320aace7b17c3af20eaac2918" category="sidebar">사용 사례 요약</block>
+  <block id="7a28dc06a92c8c13aba4217cc065d556" category="list-text">사용 사례 2&gt;...</block>
+  <block id="e71faea04999fd95e327c2ae1b14b591" category="list-text">참고 2...</block>
+  <block id="39a42e9bc59c02bbbf3ed4eb16b1cca4" category="paragraph">이 솔루션의 배포를 완료할 수 있습니다.</block>
+  <block id="7300ce5706dee36f69c820d38d478b65" category="list-text">스크린샷과 함께 제공되는 자세한 지침을 수동으로 따릅니다.</block>
+  <block id="8412750c53dfad13bb8a2baccb69df63" category="list-text">실행할 단계를 보여 주는 비디오와 함께 수동으로 또는 를 수행합니다</block>
+  <block id="ec325ca23fb4f2a557b0efcf8667bf31" category="list-text">자동화 섹션에 제공된 지침을 자동으로 따릅니다.</block>
+  <block id="d22702677ec3ab6384e6dae329022796" category="open-title">자세한 지침</block>
+  <block id="233777e8b1ab8b0114d7518acdbd2377" category="list-text">과제 2...</block>
+  <block id="2f43b42fd833d1e77420a8dae7419000" category="paragraph">...</block>
+  <block id="a0c7049fba5354f8f1711e379e6f4201" category="open-title">비디오 연습</block>
+  <block id="c6388aefff17f19b12b255766fe6b6fe" category="paragraph">여기에 비디오 세부 정보 포함&gt;</block>
+  <block id="f674169036173cc4a9f01e223c275c8d" category="open-title">자동화된 배포</block>
+  <block id="b9e9e9354502c35dc60d3744fb1506e6" category="paragraph">여기에 자동화된 단계/프로세스/비디오 포함&gt;</block>
+  <block id="bbc8a731eb9387bfdc71e5f35721af4c" category="example-title">lt; 옵션 1 및 GT 설명;</block>
+  <block id="e83c35e6afea2838c146155292120e3a" category="paragraph">여기에 옵션의 세부 정보를 입력하십시오&gt;</block>
+  <block id="a8ec4bf9dc004e6dc4ec8c7c8cb307a3" category="example-title">lt; 옵션 2 및 GT 설명;</block>
+  <block id="13e60333560bb11c5611ca7faa0dff3b" category="example-title">lt; 옵션 설명 n&amp;gt;</block>
 </blocks>
