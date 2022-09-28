@@ -15313,4 +15313,8 @@
   <block id="e83c35e6afea2838c146155292120e3a" category="paragraph">여기에 옵션의 세부 정보를 입력하십시오&gt;</block>
   <block id="a8ec4bf9dc004e6dc4ec8c7c8cb307a3" category="example-title">lt; 옵션 2 및 GT 설명;</block>
   <block id="13e60333560bb11c5611ca7faa0dff3b" category="example-title">lt; 옵션 설명 n&amp;gt;</block>
+  <block id="955b9fb8bb717f45a2531f62ebef906d" category="doc">NVA-1151-design:NVIDIA DGX A100 Systems Design Guide를 사용한 NetApp ONTAP AI</block>
+  <block id="329ecbed66c88e6c0c049d051ad6aa9a" category="paragraph">David Arnette 및 Sung-Han Lin, NetApp</block>
+  <block id="d940dfad6ae514d8235749f5f5bf92ed" category="paragraph">NVA-1151-design은 NetApp AFF A800 스토리지 시스템, NVIDIA DGX A100 시스템 및 NVIDIA Mellanox 네트워크 스위치를 사용하는 머신 러닝 및 인공 지능 워크로드를 위한 NetApp 검증 아키텍처를 설명합니다. 또한 구현된 아키텍처의 벤치마크 테스트 결과도 포함되어 있습니다.</block>
+  <block id="20821bbf55dddb9fb677efca1bfcf4d1" category="paragraph"><block ref="20821bbf55dddb9fb677efca1bfcf4d1" category="inline-link-rx"></block></block>
 </blocks>
