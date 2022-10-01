@@ -4875,7 +4875,6 @@
   <block id="6b8c64be0bad88fb867c6576ac777b25" category="inline-link-macro">타워/AWX 배포용으로 Ansible 타워 또는 AWX를 설치합니다</block>
   <block id="e9dcec3e531a3cec5ee733f23baab91d" category="inline-link-macro">NFS 기반 ONTAP용 Oracle 19c의 자동 구축</block>
   <block id="9efcc0ad3c93b238cc0495e3c87b715f" category="inline-link-macro">Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화</block>
-  <block id="9c4ada146a28af07eecc939b540c3541" category="list-text"><block ref="9c4ada146a28af07eecc939b540c3541" category="inline-link-macro-rx"></block></block>
   <block id="8d7efa937e97b1a8187ff8f122d9732a" category="inline-link-macro">클라우드 기반 VMware 구축을 위한 스토리지 최적화</block>
   <block id="5a6bd3a9e0048284caf2b5f521d90959" category="list-text"><block ref="5a6bd3a9e0048284caf2b5f521d90959" category="inline-link-macro-rx"></block></block>
   <block id="00d07ce14f227693b9dabba2f52b53a5" category="inline-link-macro">NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오</block>
@@ -4944,10 +4943,8 @@
   <block id="14c4dbb7c61081eee1c499c4cf138c96" category="inline-link-macro">FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c RAC 데이터베이스</block>
   <block id="760b7d532df381143dc946fd59bf0b62" category="inline-link-macro">Azure NetApp Files 기반 SQL Server</block>
   <block id="33be49f7ebc56eb7d336a201f7ac0df6" category="inline-link-macro">Azure NetApp Files 기반 SAP</block>
-  <block id="626865aeb52c00e03e8f0df7695c5a5c" category="list-text"><block ref="626865aeb52c00e03e8f0df7695c5a5c" category="inline-link-macro-rx"></block></block>
   <block id="e131204502a58630f2f72937238604c8" category="section-title">비디오/데모</block>
   <block id="2b1dd692c0da980c4ec2ad9fd523c47d" category="inline-link-macro">Azure NetApp Files의 SQL 고가용성 클러스터</block>
-  <block id="99945a626f3fb01dbeac75f40a6c2c8e" category="list-text"><block ref="99945a626f3fb01dbeac75f40a6c2c8e" category="inline-link-macro-rx"></block></block>
   <block id="95e5ff389c2796a171f904ad5b9322f6" category="list-text">NetApp 및 VMware Cloud Foundation(VCF)</block>
   <block id="81cd1d42ffdb75544144e24cf0f8dc54" category="inline-link-macro">1부: 시작하기</block>
   <block id="837bbffc16dc6e344470df1114a13c87" category="list-text"><block ref="837bbffc16dc6e344470df1114a13c87" category="inline-link-macro-rx"></block></block>
@@ -7074,9 +7071,7 @@
   <block id="8e9465b5d4318c8ef9039dfe684619d5" category="cell"><block ref="8e9465b5d4318c8ef9039dfe684619d5" category="inline-link-macro-rx"></block></block>
   <block id="c232cfc0ae9806d3ad6d34a51df58229" category="section-title">NetApp의 Red Hat OpenShift</block>
   <block id="145706f4acca44c289ff5ca8cc5b2b86" category="inline-link-macro">NetApp AI 솔루션</block>
-  <block id="f4016f882c8544b575d00a8cb6a17809" category="list-text"><block ref="f4016f882c8544b575d00a8cb6a17809" category="inline-link-macro-rx"></block></block>
   <block id="895a85fc0a1a565ac547acc1bc9740f3" category="inline-link-macro">MLOps를 참조하십시오</block>
-  <block id="7cd0e3a75573824e7933841074476cbe" category="list-text"><block ref="7cd0e3a75573824e7933841074476cbe" category="inline-link-macro-rx"></block></block>
   <block id="9480fd8950471a46e6b29b165ba7ae41" category="summary">NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 기술을 기반으로 하는 온프레미스 환경에 구축된 상태 저장 Kubernetes 작업 부하를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다.</block>
   <block id="3d210170d7f07fe3c907e8ac619f003a" category="doc">NetApp Astra Control Center 개요</block>
   <block id="9b0d9ae1197ded2c7d52147e5056475d" category="paragraph">NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.</block>
@@ -11634,19 +11629,6 @@
   <block id="ab440644113265a70e7e0bb7c44b2f63" category="paragraph">* 사례 연구 *</block>
   <block id="25aa061b5bc79f1f85182fd8ca1f3165" category="inline-link-macro">VMware 비디오 컬렉션</block>
   <block id="847fff0b97afdc8ceabb5c717634d413" category="list-text"><block ref="847fff0b97afdc8ceabb5c717634d413" category="inline-link-macro-rx"></block></block>
-  <block id="6b8847bb26c687aff3755cd309c49318" category="inline-link-macro">Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오</block>
-  <block id="204d792f06c32a352c6a2bab50edc884" category="list-text"><block ref="204d792f06c32a352c6a2bab50edc884" category="inline-link-macro-rx"></block></block>
-  <block id="5c0a0d6259b740ef046fce59145ef75c" category="list-text"><block ref="5c0a0d6259b740ef046fce59145ef75c" category="inline-link-macro-rx"></block></block>
-  <block id="d58d90722ff1d203cae3510d76dae738" category="inline-link-macro">Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호</block>
-  <block id="9c774469ec2a8f1726ced3c53a718435" category="list-text"><block ref="9c774469ec2a8f1726ced3c53a718435" category="inline-link-macro-rx"></block></block>
-  <block id="9ab414a5d38d00353db04e34b6c5214d" category="inline-link-macro">Astra Control을 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift</block>
-  <block id="5b496b0bdc4a9eca4eeeec4a21625dac" category="list-text"><block ref="5b496b0bdc4a9eca4eeeec4a21625dac" category="inline-link-macro-rx"></block></block>
-  <block id="eda7c1200ab08f725c863bfd563c3d31" category="inline-link-macro">NetApp과 함께 Astra Trident 및 SnapMirror-Red Hat OpenShift를 사용하여 워크로드 마이그레이션</block>
-  <block id="c3ddd010e97d096001492056c93aa883" category="list-text"><block ref="c3ddd010e97d096001492056c93aa883" category="inline-link-macro-rx"></block></block>
-  <block id="f572afcba8a95128ddd328e44a23a189" category="inline-link-macro">OpenShift 가상화 설치 - NetApp과 함께 Red Hat OpenShift의 조합</block>
-  <block id="1d7615053b7ca9824b9b85dc258c6643" category="list-text"><block ref="1d7615053b7ca9824b9b85dc258c6643" category="inline-link-macro-rx"></block></block>
-  <block id="c9e349766e4968ee277d240ff7b169e6" category="inline-link-macro">OpenShift 가상화를 통한 가상 머신 구축 - NetApp과 Red Hat OpenShift</block>
-  <block id="9840e6cb0c2ab37a0e662398a6b3ffef" category="list-text"><block ref="9840e6cb0c2ab37a0e662398a6b3ffef" category="inline-link-macro-rx"></block></block>
   <block id="55418abe87135e6107123ca2c087964c" category="sidebar">하이퍼스케일러 클라우드의 VMware용 NetApp 솔루션</block>
   <block id="195b49c0610d30d327f5440759b7b642" category="sidebar">지원되는 솔루션</block>
   <block id="3ffbc70cc0bdd47bd7c4ed3cfa35be8a" category="sidebar">FSX ONTAP를 게스트 연결 스토리지로 사용합니다</block>
@@ -14625,7 +14607,6 @@
   <block id="cd110cdaa9b8e3838ddcbc34234a5317" category="inline-link-macro">다음: NVIDIA NGC 소프트웨어를 활용합니다.</block>
   <block id="4a2f52c7b89633749f7644b851cb7bc6" category="paragraph"><block ref="4a2f52c7b89633749f7644b851cb7bc6" category="inline-link-macro-rx"></block></block>
   <block id="befb671d4726ae8f3ef8dab781033dcc" category="inline-link-macro">스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론</block>
-  <block id="d2ce8fdd8bfb2af37dfb8bca676d5b20" category="list-text"><block ref="d2ce8fdd8bfb2af37dfb8bca676d5b20" category="inline-link-macro-rx"></block></block>
   <block id="9e2a9bc8a2f8e27bba893554318c300a" category="paragraph">리포지토리의 모든 주요 변경 사항(새로운 솔루션, 주요 업데이트, 새로운 비디오/데모 등)은 에서 추적됩니다 <block ref="62716531525ec9f2f5022745ce51b3a4" category="inline-link-macro-rx"></block>.</block>
   <block id="aeb79a141f3c3f603cee05dfa64277aa" category="inline-link-macro">Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오</block>
   <block id="a35641294527bf47526671d78d910a7e" category="list-text"><block ref="a35641294527bf47526671d78d910a7e" category="inline-link-macro-rx"></block></block>
@@ -15632,4 +15613,21 @@
   <block id="33efddb311b6c85bba97e5349040815f" category="sidebar">워크로드 마이그레이션 솔루션</block>
   <block id="e946411f5b47d53428345ae0e0e5f5fd" category="sidebar">워크로드를 마이그레이션 중입니다</block>
   <block id="22945ba986f07dffbdafb6711d87ec03" category="sidebar">VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션</block>
+  <block id="747616909dea0c52e547cd52a7d5a12c" category="example-title">인공 지능(AI) 및 최신 데이터 분석</block>
+  <block id="b0d7b47f43a6efe75ff49bfd5e21f6fd" category="list-text"><block ref="b0d7b47f43a6efe75ff49bfd5e21f6fd" category="inline-link-macro-rx"></block></block>
+  <block id="90e97692c42b1eb0ec22c639049d78a1" category="list-text"><block ref="90e97692c42b1eb0ec22c639049d78a1" category="inline-link-macro-rx"></block></block>
+  <block id="6ff1dafebf930a9c5fef12bf43046987" category="example-title">엔터프라이즈 애플리케이션 및 데이터베이스</block>
+  <block id="98e44b407e40d6f57f90877a1960efae" category="list-text"><block ref="98e44b407e40d6f57f90877a1960efae" category="inline-link-macro-rx"></block></block>
+  <block id="e2cd0f8dc5281c13263991c6973df405" category="list-text"><block ref="e2cd0f8dc5281c13263991c6973df405" category="inline-link-macro-rx"></block></block>
+  <block id="bf49d74794280c8a3a207a97d6447db7" category="list-text"><block ref="bf49d74794280c8a3a207a97d6447db7" category="inline-link-macro-rx"></block></block>
+  <block id="4efd965058c15f138d2c4d43454c3012" category="list-text"><block ref="4efd965058c15f138d2c4d43454c3012" category="inline-link-macro-rx"></block></block>
+  <block id="5bfc3700f5feddf9397449627edbbdb9" category="example-title">컨테이너/Kubernetes</block>
+  <block id="665b01682714e51e25b232a31a06b70e" category="inline-link-macro">NetApp 및 Google Anthos 비디오</block>
+  <block id="810afd9a3a1d12fd9dd41977c9ed1781" category="list-text"><block ref="810afd9a3a1d12fd9dd41977c9ed1781" category="inline-link-macro-rx"></block></block>
+  <block id="668ed010c67826eb36328daf61db1909" category="inline-link-macro">NetApp with VMware Tanzu 비디오</block>
+  <block id="f05d310ffaf62c6645cbc528c52f46e1" category="list-text"><block ref="f05d310ffaf62c6645cbc528c52f46e1" category="inline-link-macro-rx"></block></block>
+  <block id="19ec96fa965825479da361c5626b34f0" category="inline-link-macro">NetApp for DevOps 비디오</block>
+  <block id="f1afd91555fd6fb162a6343cf91fdc05" category="list-text"><block ref="f1afd91555fd6fb162a6343cf91fdc05" category="inline-link-macro-rx"></block></block>
+  <block id="70fc473134508f4cbdb235049ab72bc6" category="inline-link-macro">NetApp 및 Red Hat OpenShift 비디오</block>
+  <block id="f86f2e66a68f28ad563c787ff0145ba4" category="list-text"><block ref="f86f2e66a68f28ad563c787ff0145ba4" category="inline-link-macro-rx"></block></block>
 </blocks>

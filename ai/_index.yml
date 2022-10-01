@@ -6,7 +6,7 @@ indexpage:
     - title: 새로운 기능
       url: "/../aimda-whatsnew.html"
     - title: 비디오 및 데모
-      url: "/../aimda-videos.html"
+      url: "/../videos.html#ai"
     - title: 블로그
       url: "/../aimda-blogs.html"
   - title: AI 워크로드를 위한 통합 인프라

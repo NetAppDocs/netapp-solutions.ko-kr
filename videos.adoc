@@ -17,30 +17,31 @@ keywords: netapp, solutions, videos, demos
 [role="lead"]
 NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소개합니다.
 
-[role="tabbed-block"]
+[[ai]]
+.인공 지능(AI) 및 최신 데이터 분석
 ====
-.인공 지능
---
-* link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7nSrRhuolRPYqvSlGLuTOAO["NetApp AI 솔루션"]
-* link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7n1sWK-QGq4QMI1VBJS-ZZW["MLOps를 참조하십시오"]
+* link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7nSrRhuolRPYqvSlGLuTOAO["NetApp AI 솔루션"^]
+* link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7n1sWK-QGq4QMI1VBJS-ZZW["MLOps를 참조하십시오"^]
 
 
---
-.엔터프라이즈 데이터베이스
---
-* link:https://tv.netapp.com/detail/video/1670591628570468424/deploy-sql-server-always-on-failover-cluster-over-smb-with-azure-netapp-files["Azure NetApp Files의 SQL 고가용성 클러스터"]
-* link:https://www.youtube.com/watch?v=krzMWjrrMb0["스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론"]
-* link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"]
+====
+[[db]]
+.엔터프라이즈 애플리케이션 및 데이터베이스
+====
+* link:https://tv.netapp.com/detail/video/1670591628570468424/deploy-sql-server-always-on-failover-cluster-over-smb-with-azure-netapp-files["Azure NetApp Files의 SQL 고가용성 클러스터"^]
+* link:https://www.youtube.com/watch?v=krzMWjrrMb0["스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론"^]
+* link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"^]
 
 
 * 사례 연구 *
 
-* link:https://customers.netapp.com/en/sap-azure-netapp-files-case-study["Azure NetApp Files 기반 SAP"]
+* link:https://customers.netapp.com/en/sap-azure-netapp-files-case-study["Azure NetApp Files 기반 SAP"^]
 
 
---
+====
+[[hmc]]
 .하이브리드 멀티 클라우드(HMC)
---
+====
 [underline]# * AWS/VMC * #에 대한 동영상
 
 [cols="5a, 5a, 5a"]
@@ -93,29 +94,28 @@ video::Migration_HCX_AVS_ANF_VMotion.mp4[] a|
 video::Migration_HCX_AVS_ANF_Bulk.mp4[] a| 
 
 |===
---
+====
+[[virtualization]]
 .포함되었습니다
---
+====
 * link:virtualization/vsphere_demos_videos.html["VMware 비디오 컬렉션"]
 
 
---
-.컨테이너
---
-* link:containers/rh-os-n_videos_astra_control_flexclone.html["Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오"]
-* link:containers/rh-os-n_videos_clone_for_postmortem_and_restore.html["NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"]
-* link:containers/rh-os-n_videos_data_protection_in_ci_cd_pipeline.html["Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호"]
-* link:containers/rh-os-n_videos_workload_migration_acc.html["Astra Control을 사용한 워크로드 마이그레이션 - NetApp의 Red Hat OpenShift"]
-* link:containers/rh-os-n_videos_workload_migration_manual.html["NetApp과 함께 Astra Trident 및 SnapMirror-Red Hat OpenShift를 사용하여 워크로드 마이그레이션"]
-* link:containers/rh-os-n_videos_openshift_virt_install.html["OpenShift 가상화 설치 - NetApp과 함께 Red Hat OpenShift의 조합"]
-* link:containers/rh-os-n_videos_openshift_virt_vm_deploy.html["OpenShift 가상화를 통한 가상 머신 구축 - NetApp과 Red Hat OpenShift"]
+====
+[[containers]]
+.컨테이너/Kubernetes
+====
+* link:containers/anthos-with-netapp/a-w-n_videos_and_demos.html["NetApp 및 Google Anthos 비디오"]
+* link:containers/tanzu_with_netapp/vtwn_videos_and_demos.html["NetApp with VMware Tanzu 비디오"]
+* link:containers/devops_with_netapp/dwn_videos_and_demos.html["NetApp for DevOps 비디오"]
+* link:containers/rh-os-n_videos_and_demos.html["NetApp 및 Red Hat OpenShift 비디오"]
 
 
---
+====
+[[automation]]
 .솔루션 자동화
---
-* link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"]
+====
+* link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"^]
 
 
---
 ====
