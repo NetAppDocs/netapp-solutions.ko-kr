@@ -39,6 +39,61 @@ NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소
 
 
 --
+.하이브리드 멀티 클라우드(HMC)
+--
+[underline]# * AWS/VMC * #에 대한 동영상
+
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
+video::vmc_windows_vm_iscsi.mp4[] a| 
+.NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
+video::vmc_linux_vm_nfs.mp4[] a| 
+.NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
+video::FSxN-NFS-Datastore-on-VMC.mp4[]
+
+
+ a| 
+.NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
+video::FSxN-NFS-Datastore-on-VMC-TCO-calculator.mp4[] a| 
+.VMC를 위한 VMware HCX 구축 및 구성 설정
+video::VMC_HCX_Setup.mp4[] a| 
+.VMC 및 FSxN에 대한 VMware HCX와 vMotion 데모
+video::Migration_HCX_VMC_FSxN_VMotion.mp4[]
+
+
+ a| 
+.VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모
+video::Migration_HCX_VMC_FSxN_cold_migration.mp4[] a| 
+ a| 
+
+|===
+[underline]# * Azure/AVS * 용 동영상 #
+
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
+video::ANF-NFS-datastore-on-AVS.mp4[] a| 
+.Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
+video::AVS-guest-connect-DR-use-case.mp4[] a| 
+.VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모
+video::Migration_HCX_AVS_ANF_ColdMigration.mp4[]
+
+
+ a| 
+.VMware HCX와 함께 AVS 및 ANF용 vMotion 데모
+video::Migration_HCX_AVS_ANF_VMotion.mp4[] a| 
+.VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모
+video::Migration_HCX_AVS_ANF_Bulk.mp4[] a| 
+
+|===
+--
 .포함되었습니다
 --
 * link:virtualization/vsphere_demos_videos.html["VMware 비디오 컬렉션"]

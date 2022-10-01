@@ -36,7 +36,8 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 --
 .마이그레이션
 --
-곧 출시 예정!!
+* link:azure-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]
+
 
 --
 .확장

@@ -19,11 +19,13 @@ indexpage:
       url: "/azure-native-dr-jetstream.html"
     - title: ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구
       url: "/azure-guest-dr-cvo.html"
+  - title: 워크로드 마이그레이션 솔루션
+    links:
+    - title: VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다
+      url: "/azure-migrate-vmware-hcx.html"
   - title: 곧 제공 예정...
     links:
     - title: 워크로드 솔루션 확장
-      url: 
-    - title: 워크로드 마이그레이션 솔루션
       url: 
   - title: 도구
     links:
