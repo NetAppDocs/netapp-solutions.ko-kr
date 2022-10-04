@@ -15630,4 +15630,156 @@
   <block id="f1afd91555fd6fb162a6343cf91fdc05" category="list-text"><block ref="f1afd91555fd6fb162a6343cf91fdc05" category="inline-link-macro-rx"></block></block>
   <block id="70fc473134508f4cbdb235049ab72bc6" category="inline-link-macro">NetApp 및 Red Hat OpenShift 비디오</block>
   <block id="f86f2e66a68f28ad563c787ff0145ba4" category="list-text"><block ref="f86f2e66a68f28ad563c787ff0145ba4" category="inline-link-macro-rx"></block></block>
+  <block id="c9fee86e220b694a9ca26cb5d3943276" category="summary">이 문서에서는 계층형 스토리지 벤치마킹 키트를 사용하여 NetApp ONTAP에 대해 Confluent 플랫폼의 성능 벤치마크를 설명합니다.</block>
+  <block id="5514e652e396365ccb56f1b2b5371569" category="doc">TR-4941: NetApp ONTAP 스토리지 컨트롤러에 대해 잘 알고 있습니다</block>
+  <block id="1e0e02def11263577d232ee8ce69c727" category="paragraph">Karthikeyan Nagalingam, Joe Scott, NetApp Rankesh Kumar, Confluent</block>
+  <block id="f79dab50e0f9664c4b4d604319a8cbbe" category="paragraph">Confluent Platform의 확장성과 탄력성을 크게 확보하려면 IT에서 워크로드를 매우 빠르게 확장하고 균형을 맞출 수 있어야 합니다. 계층형 스토리지를 사용하면 운영 부담을 줄여 대량의 데이터를 유창한 관리 방식으로 저장할 수 있습니다. 기본 개념은 데이터 스토리지와 데이터 처리를 분리하여 각각을 독립적으로 쉽게 확장할 수 있도록 하는 것입니다.</block>
+  <block id="44f523cee834fac14fc6966d940c5e92" category="paragraph">업계 최고의 혁신 기술을 갖춘 NetApp ONTAP 데이터 관리 소프트웨어는 데이터가 어디에 있든 다양한 이점을 유창하게 제공합니다.</block>
+  <block id="ff221b4a7c17defefb1a32cf9136086d" category="inline-link-macro">다음: 해결책.</block>
+  <block id="700a1e72f5247529520dfae6b0d991e3" category="paragraph"><block ref="700a1e72f5247529520dfae6b0d991e3" category="inline-link-macro-rx"></block></block>
+  <block id="b7d338a537a3a1d0186080c4c4ba47eb" category="summary">이 페이지에서는 이 솔루션에 사용된 기술에 대해 설명합니다.</block>
+  <block id="1ac2a5604ed02bc66c4d6241b534d13b" category="inline-link-macro">이전: 해결책.</block>
+  <block id="9ec2e79862a05fa25e8c20aa973e0d4b" category="paragraph"><block ref="9ec2e79862a05fa25e8c20aa973e0d4b" category="inline-link-macro-rx"></block></block>
+  <block id="7f1512274139985d5f21a72e13808522" category="section-title">NetApp ONTAP 스토리지 컨트롤러</block>
+  <block id="b691cb82ce5ecb3d94f82b73ef3c2219" category="paragraph">NetApp ONTAP는 고성능 엔터프라이즈급 스토리지 운영 체제입니다.</block>
+  <block id="f8b80927eb906c831742041c4c139be1" category="paragraph">NetApp ONTAP 9.8은 Amazon S3(Simple Storage Service) API를 지원합니다. ONTAP은 AWS(Amazon Web Services) S3 API 작업의 서브셋을 지원하며 클라우드 공급자(AWS, Azure 및 GCP) 및 온프레미스 전반에서 데이터를 ONTAP 기반 시스템에서 오브젝트로 나타낼 수 있습니다.</block>
+  <block id="9496ba5a97ab04d734dc449f86646ffe" category="paragraph">NetApp StorageGRID 소프트웨어는 오브젝트 스토리지를 위한 NetApp의 대표적인 솔루션입니다. ONTAP은 오브젝트 데이터를 위해 NetApp에서 제공하는 Data Fabric을 확장하고 NetApp 제품 포트폴리오의 가치를 높여 에지에서 수집 및 사전 처리 지점을 제공함으로써 StorageGRID를 보완합니다.</block>
+  <block id="d6e8f345bdd21d285f35171c2da8cd3a" category="paragraph">S3 버킷에 대한 액세스는 인증된 사용자 및 클라이언트 애플리케이션을 통해 제공됩니다. 다음 다이어그램에서는 S3 버킷에 액세스하는 애플리케이션을 보여 줍니다.</block>
+  <block id="a38dfb3b286ff4854c6f5d67ebc15e13" category="inline-image-macro">이 그래픽은 S3 버킷에 액세스하는 애플리케이션을 보여 줍니다.</block>
+  <block id="6090835a60a6e1de5e0c995ca8c5e5f8" category="paragraph"><block ref="6090835a60a6e1de5e0c995ca8c5e5f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5088428c842a8d5e45f2e6597af4138" category="section-title">주요 사용 사례</block>
+  <block id="5c2f4a513e63ae351e5dc0b7412a43c2" category="paragraph">S3 API를 지원하는 주된 목적은 ONTAP에서 오브젝트 액세스를 제공하는 것입니다. ONTAP 유니파이드 스토리지 아키텍처는 이제 파일(NFS 및 SMB), 블록(FC 및 iSCSI), 오브젝트(S3)를 지원합니다.</block>
+  <block id="1af2e65957e458000d1181bb9eba2517" category="section-title">네이티브 S3 애플리케이션</block>
+  <block id="c0889d6b193afe7d0069e3d99bc5f310" category="paragraph">점점 더 많은 애플리케이션에서 S3를 사용하여 오브젝트 액세스에 ONTAP 지원을 활용할 수 있습니다. 고용량 아카이브 워크로드에 적합하지만 네이티브 S3 애플리케이션에서 고성능을 필요로 하는 것은 다음과 같습니다.</block>
+  <block id="a768caa988605a2846599cf7e2d0c26a" category="list-text">분석</block>
+  <block id="9d0996a44c6d51cf223e833dceecb286" category="list-text">인공 지능</block>
+  <block id="1669cbc398e4228e7e05d6b2e030cbe7" category="list-text">엣지-코어 수집</block>
+  <block id="bd1a4166acf45c62946d7592a64ad52d" category="paragraph">고객은 이제 ONTAP System Manager와 같은 익숙한 관리 효율 툴을 사용하여 ONTAP의 개발 및 운영에 필요한 고성능 오브젝트 스토리지를 신속하게 프로비저닝할 수 있습니다. 또한 ONTAP 스토리지 효율성 및 보안을 활용할 수 있습니다.</block>
+  <block id="50472ac5cace1b7798b3f92db5c3049e" category="section-title">FabricPool 엔드포인트</block>
+  <block id="5050f2389b47df5462550d8e11451e9d" category="paragraph">ONTAP 9.8부터 FabricPool는 ONTAP의 버킷 계층화를 지원하므로 ONTAP에서 ONTAP로 계층화할 수 있습니다. 이 옵션은 기존 FAS 인프라를 오브젝트 저장소 엔드포인트로 용도 변경하고자 하는 고객에게 적합합니다.</block>
+  <block id="10beb552e5ed01d5c890a260a1d6af16" category="paragraph">FabricPool는 다음 두 가지 방법으로 ONTAP에 대한 계층화를 지원합니다.</block>
+  <block id="1e53159984d41f5ea848cdf412430a06" category="list-text">* 로컬 클러스터 계층화. * 비활성 데이터는 클러스터 LIF를 사용하여 로컬 클러스터에 있는 버킷으로 계층화합니다.</block>
+  <block id="08be0ca0511f2294cbbaf9d92327996b" category="list-text">* 원격 클러스터 계층화. * 비활성 데이터는 FabricPool 클라이언트의 IC LIF와 ONTAP 오브젝트 저장소의 데이터 LIF를 사용하여 기존 FabricPool 클라우드 계층과 비슷한 방식으로 원격 클러스터에 있는 버킷으로 계층화합니다.</block>
+  <block id="bda29d8d2c5de29e5ec15858a0f72c79" category="paragraph">ONTAP S3는 추가 하드웨어 및 관리 없이 기존 클러스터에서 S3 기능을 원하는 경우에 적합합니다. 300TB 이상의 배포를 위해 NetApp StorageGRID 소프트웨어는 계속해서 오브젝트 스토리지를 위한 주력 NetApp 솔루션으로 부상하고 있습니다. ONTAP 또는 StorageGRID를 클라우드 계층으로 사용할 때는 FabricPool 라이센스가 필요하지 않습니다.</block>
+  <block id="5a7adb78ef640711a870d82123f00775" category="section-title">Confluent 계층형 스토리지를 위한 NetApp ONTAP</block>
+  <block id="9a5bc88300f877a695de175398887e0e" category="paragraph">모든 데이터 센터는 비즈니스 크리티컬 애플리케이션을 계속 실행하고 중요한 데이터를 안전하게 사용할 수 있어야 합니다. 새로운 NetApp AFF A900 시스템은 ONTAP 엔터프라이즈 에디션 소프트웨어와 복원력이 뛰어난 설계를 기반으로 합니다. NetApp의 새로운 초고속 NVMe 스토리지 시스템은 미션 크리티컬 운영의 중단을 제거하고, 성능 조정을 최소화하고, 랜섬웨어 공격으로부터 데이터를 보호합니다.</block>
+  <block id="42dfa85904e1fd1b7fb41d4278c38047" category="paragraph">초기 구축부터 Confluent 클러스터의 확장까지, 귀사의 환경에서는 비즈니스 크리티컬 애플리케이션의 중단 없는 변화에 빠르게 적응해야 합니다. ONTAP 엔터프라이즈 데이터 관리, 서비스 품질(QoS) 및 성능 을 통해 고객 환경을 계획 및 조정할 수 있습니다.</block>
+  <block id="36509bd95b243830a012c72c8a2d5844" category="paragraph">NetApp ONTAP와 Confluent Tiered Storage를 함께 사용하면 ONTAP를 스케일아웃 스토리지 대상으로 활용하여 Apache Kafka 클러스터의 관리를 단순화하고 컴퓨팅 및 스토리지 리소스를 Confluent로 독립적으로 확장할 수 있습니다.</block>
+  <block id="e09818a7d7d98185cdb0309cf3aca8f5" category="paragraph">ONTAP S3 서버는 ONTAP의 성숙한 스케일아웃 스토리지 기능을 기반으로 구축되었습니다. ONTAP 클러스터는 S3 버킷을 확장하여 ONTAP 클러스터에 새로 추가된 노드를 사용함으로써 원활하게 확장할 수 있습니다.</block>
+  <block id="1ccfe00aee80492f09968d6b208801d5" category="section-title">ONTAP 시스템 관리자를 사용하여 간단하게 관리할 수 있습니다</block>
+  <block id="4fdad8328864e9de2db5338bb25291fc" category="paragraph">ONTAP System Manager는 브라우저 기반의 그래픽 인터페이스로, 단일 창에서 전 세계에 분산된 위치에서 ONTAP 스토리지 컨트롤러를 구성, 관리, 모니터링할 수 있습니다.</block>
+  <block id="c99eb67a4e6cbe9ba119a72c95161fab" category="inline-image-macro">이 그림은 ONTAP System Manager 작업 공간을 보여줍니다.</block>
+  <block id="45e8e67e3e5407c5dc518dd00eb8249b" category="paragraph"><block ref="45e8e67e3e5407c5dc518dd00eb8249b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="783157c9c38b4e88d7eefffe21cd97d3" category="paragraph">System Manager 및 ONTAP CLI를 사용하여 ONTAP S3를 구성 및 관리할 수 있습니다. System Manager를 사용하여 S3를 활성화하고 버킷을 생성할 때 ONTAP은 단순한 구성에 대한 모범 사례 기본값을 제공합니다. CLI에서 S3 서버 및 버킷을 구성할 경우에도 원하는 경우 System Manager로 관리하거나 그 반대로 구성할 수 있습니다.</block>
+  <block id="d1623a9fec2de2642847391236e62e9b" category="paragraph">System Manager를 사용하여 S3 버킷을 생성하는 경우, ONTAP은 시스템에서 가장 가용성이 높은 기본 성능 서비스 수준을 구성합니다. 예를 들어 AFF 시스템에서 기본 설정은 Extreme입니다. 성능 서비스 수준은 사전 정의된 적응형 QoS 정책 그룹입니다. 기본 서비스 수준 대신 사용자 지정 QoS 정책 그룹 또는 정책 그룹을 지정할 수 있습니다.</block>
+  <block id="bbcb9e2700fba39c3b7b7fd438155100" category="paragraph">사전 정의된 적응형 QoS 정책 그룹은 다음과 같습니다.</block>
+  <block id="f1ec0b0c482a42bad395f01e7f2b6c1d" category="list-text">* Extreme. * 가장 짧은 지연 시간과 최고의 성능이 필요한 애플리케이션에 사용됩니다.</block>
+  <block id="06e90efc82fff7e3090ba9ff1a3bd2a3" category="list-text">성능. * 적절한 성능 요구사항과 지연 시간이 필요한 애플리케이션에 사용됩니다.</block>
+  <block id="7aa0f5702784b1be0a3c5ed9e6f3df8e" category="list-text">* 값. * 처리량과 용량이 지연 시간보다 더 중요한 애플리케이션에 사용됩니다.</block>
+  <block id="113d20f8cc4d864cdfea1b0f611cbb0a" category="list-text">* 사용자 정의. * 사용자 정의 QoS 정책을 지정하거나 QoS 정책을 지정하지 않습니다.</block>
+  <block id="42cc32e2c7857ba980019c70438e92ed" category="paragraph">계층화에 * 사용을 선택하면 성능 서비스 수준이 선택되지 않으며 시스템은 계층형 데이터에 대해 최적의 성능을 갖춘 저비용 미디어를 선택합니다.</block>
+  <block id="5cc287af927b81043d030fc6a1ece879" category="paragraph">ONTAP는 가장 적합한 디스크가 있는 로컬 계층에서 이 버킷을 프로비저닝하려고 시도하여 선택한 서비스 수준을 충족시킵니다. 그러나 버킷에 포함할 디스크를 지정해야 하는 경우 로컬 계층(애그리게이트)을 지정하여 CLI에서 S3 오브젝트 스토리지를 구성하는 것이 좋습니다. CLI에서 S3 서버를 구성할 경우에도 원할 경우 System Manager로 관리할 수 있습니다.</block>
+  <block id="74869eb3dfe4756dab5491da2a3de2ad" category="paragraph">버킷에 사용할 애그리게이트를 지정할 수 있는 기능은 CLI를 통해서만 지정할 수 있습니다.</block>
+  <block id="0c0e3a803cf68a8772ebf58a68b20124" category="paragraph">Confluent Platform은 지속적인 실시간 스트림으로 데이터에 쉽게 액세스, 저장 및 관리할 수 있는 포괄적인 데이터 스트리밍 플랫폼입니다. Apache Kafka를 처음 개발한 Confluent는 Kafka 관리 또는 모니터링의 부담을 덜면서 엔터프라이즈급 기능을 통해 Kafka의 이점을 확장해 줍니다. 현재 Fortune 100대 기업 중 80% 이상이 데이터 스트리밍 기술을 사용하고 있으며 대부분 Confluent를 사용하고 있습니다.</block>
+  <block id="d3c11d67f567698de4c90210b84c554d" category="paragraph">Confluent Platform을 사용하면 데이터가 다른 시스템 간에 어떻게 전송 또는 통합되는지 등의 기본 메커니즘을 걱정하지 않고 데이터에서 비즈니스 가치를 창출하는 방법에 집중할 수 있습니다. 특히 Confluent Platform은 데이터 소스를 Kafka에 연결하고 스트리밍 애플리케이션을 구축하며 Kafka 인프라의 보안, 모니터링 및 관리를 간소화합니다. 현재 Confluent Platform은 금융 서비스, 옴니채널 소매, 자율 자동차, 사기 탐지, 마이크로서비스, IoT 등 다양한 산업 전반의 다양한 사용 사례에 사용됩니다.</block>
+  <block id="870b2318ccfd123ac0f7e9ef1396d49d" category="paragraph">다음 그림에서는 Confluent 플랫폼의 구성 요소를 보여 줍니다.</block>
+  <block id="9d880468cb22c04bd894fc612814dbab" category="inline-image-macro">이 그래픽은 Confluent 플랫폼의 구성 요소를 보여 줍니다.</block>
+  <block id="f64c3e5205853c0df35b5f05dcb208a1" category="paragraph"><block ref="f64c3e5205853c0df35b5f05dcb208a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="05fafb4336e843d4634bd9ac122177c8" category="section-title">Confluent 이벤트 스트리밍 기술 개요</block>
+  <block id="51be25b0145a0beca811de24a62b5cb4" category="inline-link">카프카</block>
+  <block id="0139d991fe55319f2e19e039da969fcf" category="paragraph">Confluent Platform의 핵심은 입니다<block ref="66a1a9ec54e6ef0a1c109ad94b972ac9" category="inline-link-rx"></block>가장 인기 있는 오픈 소스 분산 스트리밍 플랫폼입니다. Kafka의 주요 기능은 다음과 같습니다.</block>
+  <block id="82ff0b3d0476bb8ca2283ff06c017658" category="section-title">Confluent 플랫폼 엔터프라이즈 기능 개요</block>
+  <block id="ed2c640e88db15d474de830703c8783b" category="list-text">* Confluent Control Center. * Kafka 관리 및 모니터링을 위한 UI 기반 시스템. Kafka Connect를 쉽게 관리하고 다른 시스템에 대한 연결을 생성, 편집 및 관리할 수 있습니다.</block>
+  <block id="d63f46631d40c1c76b1a1a46445584aa" category="list-text">* Kafka 연결 커넥터 * 커넥터는 Kafka Connect API를 사용하여 Kafka를 데이터베이스, 키 값 저장소, 검색 인덱스 및 파일 시스템 등의 다른 시스템에 연결합니다. Confluorent Hub에는 가장 널리 사용되는 데이터 소스 및 싱크에 대한 다운로드 가능한 커넥터가 있습니다. 여기에는 Confluorent Platform이 포함된 이러한 커넥터의 전체 테스트 및 지원 버전이 포함됩니다. 자세한 내용은 을 참조하십시오<block ref="2f0cdf69523bef6b3b17324f38f83353" category="inline-link-rx"></block>.</block>
+  <block id="9103a2961d6b4c593517d3d641763e5c" category="list-text">* 자체 밸런싱 클러스터 * 는 자동화된 로드 밸런싱, 장애 감지 및 자동 복구를 제공합니다. 또한 수동 조정 없이 필요에 따라 브로커를 추가하거나 해체할 수 있도록 지원합니다.</block>
+  <block id="c1712fa040f6accce664a82ba6d58b94" category="list-text">* Confluorent auto data balancer. * 브로커 수, 파티션 크기, 파티션 수 및 클러스터 내의 리더 수에 대한 클러스터를 모니터링합니다. 균형 조정을 통해 트래픽을 재조정함으로써 운영 워크로드에 미치는 영향을 최소화하면서 클러스터 전체에서 짝수 워크로드를 생성할 수 있습니다.</block>
+  <block id="0265b0b07689b6439fc600eec3164763" category="inline-link-macro">다음: Confluent Performance validation.</block>
+  <block id="7d58203770f3360011c58049bd5dc048" category="paragraph"><block ref="7d58203770f3360011c58049bd5dc048" category="inline-link-macro-rx"></block></block>
+  <block id="dbb940c31f0b7d7563745993661f70d4" category="summary">AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 농작물 사용 워크로드 중 5개 또는 8개의 브로커 노드로 계층형 스토리지 테스트를 수행했습니다. 테스트에 따르면 AFF A900 리소스 활용률이 100%에 이를 때까지 브로커 노드의 수에 따라 완료 시간과 성능 결과가 확장되었습니다. ONTAP 스토리지 컨트롤러를 설치하려면 최소 하나의 HA 쌍이 필요했습니다.</block>
+  <block id="91e1cb9730965860cb465802520e6a45" category="doc">농작물 사용 워크로드 생성기를 사용한 성능 테스트</block>
+  <block id="3daa014912cbb3dddcdeae426aea8652" category="inline-link-macro">이전: Confluent Performance validation.</block>
+  <block id="262b5107278b398d0de9b7ef6b52e5d0" category="paragraph"><block ref="262b5107278b398d0de9b7ef6b52e5d0" category="inline-link-macro-rx"></block></block>
+  <block id="b15c40872cdd0b1e0a152907f2194e69" category="paragraph">S3 검색 작업에 대한 성능은 Confluent 브로커 노드의 수에 따라 선형으로 향상되었습니다. ONTAP 스토리지 컨트롤러는 단일 배포에서 최대 12개의 HA 쌍을 지원합니다.</block>
+  <block id="ec043d5e2714e1035038cbeb1aa3cba8" category="paragraph">다음 그래프에는 브로커 노드 5개 또는 8개가 결합된 S3 계층화 트래픽이 나와 있습니다. AFF A900 단일 HA Pair 성능을 극대화했습니다.</block>
+  <block id="ffff2891cfdd07445c4e1e5261739c68" category="inline-image-macro">이 데이터 그래프는 5개 또는 8개의 브로커 노드와 결합된 S3 계층화 트래픽을 보여 줍니다.</block>
+  <block id="388c51cbcac77b72c2e68dc334f9cf73" category="paragraph"><block ref="388c51cbcac77b72c2e68dc334f9cf73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1efe906cedfd00618bda4d39b41a52fd" category="paragraph">다음 그래프는 약 31.74GBps의 Kafka 처리량을 보여 줍니다.</block>
+  <block id="e7aff80741661a5eb60f57649077f9c5" category="inline-image-macro">이 데이터 그래프는 약 31.74GBps의 Kafka 처리량을 보여 줍니다.</block>
+  <block id="1dc39288e0903ff9947d26bba4d46cef" category="paragraph"><block ref="1dc39288e0903ff9947d26bba4d46cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bc6821411dfc3b7f483da21b37082dfc" category="paragraph">또한 ONTAP 스토리지 컨트롤러 'perfstat' 보고서에서 유사한 처리량도 관찰되었습니다.</block>
+  <block id="12521f8f565efeb65b076c8966841804" category="inline-link-macro">다음은 성능 모범 사례 지침입니다.</block>
+  <block id="4d8306a1e68c76874ac5d8c93a819977" category="paragraph"><block ref="4d8306a1e68c76874ac5d8c93a819977" category="inline-link-macro-rx"></block></block>
+  <block id="4ea8220421596c898f8150bfebdf4ccb" category="summary">이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent에서 31.74GBps의 계층화 처리량에 도달했습니다.</block>
+  <block id="f86bb9f7d3cb6d2f8473494c8bd135ec" category="inline-link-macro">이전: 성능 모범 사례 지침.</block>
+  <block id="65b905a56baa366aa274945ca5b7cad4" category="paragraph"><block ref="65b905a56baa366aa274945ca5b7cad4" category="inline-link-macro-rx"></block></block>
+  <block id="93a10982e8e304323ad8af9a9387d775" category="paragraph">이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러에 유창한 confluent에서 31.74GBps의 계층화 처리량에 도달했습니다.</block>
+  <block id="0f2f674cce6910ae97ee7ecc7bd9de18" category="list-text">Confluent란 무엇입니까?</block>
+  <block id="e6deab0ab2821160c056af4c7766624c" category="inline-link"><block ref="e6deab0ab2821160c056af4c7766624c" category="inline-link-rx"></block></block>
+  <block id="ce3026317a00b57c81627bd64a1b3311" category="paragraph"><block ref="ce3026317a00b57c81627bd64a1b3311" category="inline-link-rx"></block></block>
+  <block id="58a229be829dc9196abdaff6a4a26864" category="list-text">S3 in ONTAP 모범 사례</block>
+  <block id="f47b79954bb4ad3165d7f99db02fe933" category="inline-link"><block ref="f47b79954bb4ad3165d7f99db02fe933" category="inline-link-rx"></block></block>
+  <block id="e98b34b649783312d3b317c7441a20a5" category="paragraph"><block ref="e98b34b649783312d3b317c7441a20a5" category="inline-link-rx"></block></block>
+  <block id="3075344c29b864c90ae1411c1db26e87" category="list-text">S3 오브젝트 스토리지 관리</block>
+  <block id="cdc54c0262b6c0a6146ee416a9ca2113" category="inline-link"><block ref="cdc54c0262b6c0a6146ee416a9ca2113" category="inline-link-rx"></block></block>
+  <block id="8a93310a8dd4b405a8711f82adeb3c23" category="paragraph"><block ref="8a93310a8dd4b405a8711f82adeb3c23" category="inline-link-rx"></block></block>
+  <block id="1b70ac0a972fddf1e1a33e6ed9df49c7" category="cell">2022년 9월</block>
+  <block id="331c0d2ba7a09b3ae7f6fac4652625da" category="summary">이 페이지에서는 이 솔루션의 성능을 개선하기 위한 모범 사례를 설명합니다.</block>
+  <block id="69cefd131c612b28f058caddd20f5cac" category="doc">성능 모범 사례 지침</block>
+  <block id="25075404ed18180817b5ff523b98b3ea" category="inline-link-macro">이전: 생산물을 사용한 성능 테스트 - 워크로드 생성기 사용</block>
+  <block id="78f6cc0a5eeea34ea4a6b6d750751008" category="paragraph"><block ref="78f6cc0a5eeea34ea4a6b6d750751008" category="inline-link-macro-rx"></block></block>
+  <block id="21414169b395738292b2ac2fd8ca50a9" category="list-text">ONTAP의 경우 가능하면 GET SIZE &gt;= 1MB 를 사용합니다.</block>
+  <block id="ce2e9b8aaceb2d2993c90188d874af95" category="list-text">브로커 노드의 erver.properties` 에서 num.network.threads` 및 num.io.threads를 증가시키면 계층화 작업이 S3 계층으로 증가하게 됩니다. 이러한 결과는 num.network.threads` 및 num.io.threads가 32로 설정된 것입니다.</block>
+  <block id="1a48e01d01924d18e32943982eb6d924" category="list-text">S3 버킷은 구성원 애그리게이트당 8개의 구성요소를 목표로 해야 합니다.</block>
+  <block id="b5a9dc3c7ec54467d103e00eaa0efb21" category="list-text">S3 트래픽을 구동하는 이더넷 링크는 스토리지와 클라이언트 모두에서 가능하면 MTU 9k 를 사용해야 합니다.</block>
+  <block id="9a2dcec18734a6b09898eef44edd5f9a" category="paragraph"><block ref="9a2dcec18734a6b09898eef44edd5f9a" category="inline-link-macro-rx"></block></block>
+  <block id="614eb548d72efbb3690b5c131745db1b" category="summary">이 페이지에서는 이 솔루션의 매개 변수 내에서 Confluent의 성능 검증을 설명합니다.</block>
+  <block id="28052d386826afbb88768d0629570b19" category="doc">Confluent 성능 검증</block>
+  <block id="e0c5d30e7d8ab807973bb9e8800f9f30" category="paragraph"><block ref="e0c5d30e7d8ab807973bb9e8800f9f30" category="inline-link-macro-rx"></block></block>
+  <block id="3ec7b1ca1aaf25c9bbca707f1ca8e466" category="paragraph">NetApp ONTAP의 계층형 스토리지를 위한 Confluent Platform을 사용하여 검증을 수행했습니다. NetApp과 Confluent 팀은 이 검증을 함께 수행하여 IT에 필요한 테스트 사례를 실행했습니다.</block>
+  <block id="1f567e45477749710cbc14cf6b10afc4" category="section-title">Confluent 설정</block>
+  <block id="99b45ae42dbbf816c910ba27197525dc" category="paragraph">설치를 위해 256GB RAM과 16개의 CPU를 갖춘 3대의 zookeepers, 5개의 브로커, 5대의 테스트 서버를 사용했습니다. NetApp 스토리지의 경우 ONTAP와 AFF A900 HA 쌍을 사용했습니다. 스토리지와 브로커는 100GbE 연결을 통해 연결되었습니다.</block>
+  <block id="77727c2ca2ac5beb0de2853929b43367" category="paragraph">다음 그림에서는 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다.</block>
+  <block id="57e8d3257fec5774d2e8d38588771a69" category="inline-image-macro">이 그래픽은 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다.</block>
+  <block id="e1265b0a6795e57b3d1df5094ecde2bb" category="paragraph"><block ref="e1265b0a6795e57b3d1df5094ecde2bb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d9b75f4efe285b9777255f14c81323b" category="paragraph">도구 서버는 Confluent 노드로 이벤트를 보내거나 받는 응용 프로그램 클라이언트로 작동합니다.</block>
+  <block id="1068af448bd05a968329fd2341036bfb" category="paragraph">다음과 같은 테스트 매개 변수를 사용했습니다.</block>
+  <block id="3bfb3f2755d25ed45d39dad8b3ed3008" category="paragraph">검증을 위해 HTTP 프로토콜과 함께 ONTAP를 사용했지만 HTTPS도 작동했습니다. 액세스 키와 비밀 키는 confluent.tier.s3.cred.file.path 매개 변수에 제공된 파일 이름에 저장됩니다.</block>
+  <block id="86d7ae5e1e87e4958b4fafcbca603956" category="section-title">NetApp 스토리지 컨트롤러 – ONTAP</block>
+  <block id="b915ce35d395a0d68a794b87705f95fa" category="paragraph">검증을 위해 ONTAP에서 단일 HA 쌍 구성을 구성했습니다.</block>
+  <block id="b9d2b35b3cfffa153fd4ed3401cb9dd9" category="inline-image-macro">이 그래픽은 환경이 검증을 위한 단일 HA 쌍으로 구성된 방식을 보여 줍니다.</block>
+  <block id="0ccd17060e15591b9c8588dc7d974ecd" category="paragraph"><block ref="0ccd17060e15591b9c8588dc7d974ecd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7069b530e46a91698a16159b7d083019" category="section-title">확인 결과</block>
+  <block id="3af1efc909fae49a716fe2d22ba24290" category="paragraph">검증을 위해 다음 5가지 테스트 사례를 완료했습니다. 첫 번째 두 테스트는 기능 테스트이고 나머지 세 가지는 성능 테스트입니다.</block>
+  <block id="09da8339466c8b6111e4f310f1b78cb5" category="paragraph">이 테스트는 API 호출을 사용하여 계층형 스토리지에 사용되는 객체 저장소에서 GET, PUT 및 DELETE 등의 기본 작업을 수행합니다.</block>
+  <block id="622ce818e2b8228cee071a827a43e1b2" category="paragraph">이 테스트에서는 오브젝트 스토리지의 엔드 투 엔드 기능을 검사합니다. 토픽을 생성하고, 새로 생성된 토픽에 대한 이벤트 스트림을 생성하고, 브로커가 세그먼트를 오브젝트 스토리지에 아카이브하고, 이벤트 스트림을 소비하며, 소비된 스트림이 생성된 스트림과 일치하는지 확인합니다. 객체 저장소 결함 주입 여부와 관계없이 이 테스트를 수행했습니다. ONTAP의 노드 중 하나에서 서비스 관리자 서비스를 중지하고 엔드 투 엔드 기능이 오브젝트 스토리지에서 작동하는지 확인하여 노드 장애를 시뮬레이션했습니다.</block>
+  <block id="2712a580ff4c3586c7ba3534b78aad18" category="section-title">생산 - 워크로드 생성기 사용</block>
+  <block id="0c22172129c2d0d58a5685fa1094fca0" category="paragraph">이 테스트에서는 세그먼트 아카이브를 통해 오브젝트 저장소에서 쓰기 워크로드를 간접적으로 생성합니다. 소비자 그룹이 세그먼트를 가져올 때 객체 스토리지에서 읽기 워크로드(세그먼트 읽기)가 생성되었습니다. 이 워크로드는 TOCC 스크립트에 의해 생성되었습니다. 이 테스트에서는 오브젝트 저장소에서 병렬 스레드의 읽기 및 쓰기 성능을 확인했습니다. 계층화 기능 정확도 테스트에서 보았듯이, 객체 저장소 결함 주입을 사용하여 테스트했으며 포함하지 않았습니다.</block>
+  <block id="2a7273e52c0214e6f0b27bf1e870960e" category="section-title">보존 워크로드 생성기</block>
+  <block id="48771387cb6a84889bc1db951598f78c" category="paragraph">이 테스트에서는 무거운 주제 보존 워크로드에서 오브젝트 스토리지의 삭제 성능을 검사했습니다. 보존 워크로드는 테스트 주제와 동시에 많은 메시지를 생성하는 TOCC 스크립트를 사용하여 생성되었습니다. 테스트 주제는 공격적인 크기 기반 및 시간 기반 보존 설정으로 구성되었으며, 이로 인해 이벤트 스트림이 개체 저장소에서 지속적으로 제거됩니다. 그런 다음 세그먼트가 아카이브되었습니다. 이로 인해 오브젝트 저장소 삭제 작업의 브로커링 및 컬렉션에 의해 오브젝트 스토리지가 많이 삭제되었습니다.</block>
+  <block id="047fb529cf71ef63efe04d4185302684" category="paragraph">검증 세부 정보는 를 참조하십시오<block ref="86830f666762f920df1dddf1c71e6509" category="inline-link-rx"></block> 웹 사이트.</block>
+  <block id="0e20876ceb73ae36999db9f6c412bdc5" category="inline-link-macro">다음: 생산 방식의 성능 테스트 - 워크로드 생성기 소비</block>
+  <block id="ab82cfabb720bf1d31365b6ce33825f9" category="paragraph"><block ref="ab82cfabb720bf1d31365b6ce33825f9" category="inline-link-macro-rx"></block></block>
+  <block id="b0c400a1c1ac5de2cbdc877645b349a0" category="summary">이 섹션에서는 계층형 스토리지를 위한 NetApp ONTAP를 사용하여 Confluent Platform 배포에서 성능을 검증하는 데 사용되는 하드웨어 및 소프트웨어에 대해 설명합니다. 다음 표에서는 솔루션 아키텍처와 기본 구성 요소에 대해 설명합니다.</block>
+  <block id="8bfa311863541e343a5f46427c473c16" category="paragraph"><block ref="8bfa311863541e343a5f46427c473c16" category="inline-link-macro-rx"></block></block>
+  <block id="5197b1c9433e86b5ed33786625f77786" category="paragraph">ONTAP 기반 Confluent 및 NetApp AFF A900 스토리지 컨트롤러는 데이터 스트림을 위해 설계된 분산 시스템입니다. 두 가지 모두 수평적으로 확장 가능하고 내결함성이 있으며 부하 상태에서 뛰어난 성능을 제공합니다. 데이터 공간을 최소화하는 데이터 축소 기술로 분산된 데이터 스트리밍 및 스트림 처리에서 서로 보완하여 스토리지 비용을 절감합니다. AFF A900 스토리지 컨트롤러는 뛰어난 성능을 제공하는 동시에 컴퓨팅과 데이터 스토리지 리소스를 분리할 수 있도록 합니다. 따라서 시스템 관리가 단순화되고 리소스를 독립적으로 확장할 수 있습니다.</block>
+  <block id="8ebef54f33ae0fdc7c4dcb83539b6eac" category="inline-image-macro">솔루션 개요를 보여 주는 이미지입니다.</block>
+  <block id="52dff9f6353660d69eddc1e9fdee4a83" category="paragraph"><block ref="52dff9f6353660d69eddc1e9fdee4a83" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7a785978a6b38bb45ae8786c30a1781e" category="cell">플랫폼 구성 요소</block>
+  <block id="c704d8c873b1a8d5d0243075656aa1f5" category="cell">환경 구성</block>
+  <block id="f75094292f4afb812bc29237348d9948" category="cell">Confluent 플랫폼 버전 6.2</block>
+  <block id="5cc4fd015c7740c575d319eefacbce83" category="list-text">주키프 3개</block>
+  <block id="8f6a506566bd03a47cafb69561bafe0f" category="list-text">브로커 서버 8대</block>
+  <block id="aa76981d988c82fc8b387682968887e6" category="list-text">도구 서버 5대</block>
+  <block id="b56d58a9a181bae1fa65f36407ea002c" category="list-text">Grafana 1개</block>
+  <block id="4af3adf9207f6f8d2d6d9edda08f0638" category="list-text">제어 센터 1개</block>
+  <block id="29c331c65dbb1c85faa29881b295fbfc" category="cell">모든 노드의 운영 체제</block>
+  <block id="de4d788671df5cf79fda01236d8fc9a6" category="cell">웜 버킷용 NetApp ONTAP</block>
+  <block id="37e0c77638b1388d83b997c8dffdb6d3" category="list-text">AFF A900 고가용성(HA) 쌍 1개</block>
+  <block id="2e1c9b5ce764f890af0aebf38f1a500a" category="list-text">100GbE</block>
+  <block id="983e16c42b860c2511053f17d60918c8" category="list-text">CPU 2개, 총 물리적 코어 16개</block>
+  <block id="ce4750dd79017960eed95bd3b2677eb4" category="list-text">인텔 제온</block>
+  <block id="01dcc4e221fc9ff7472c5102b082eaf4" category="list-text">256GB 물리적 메모리</block>
+  <block id="433304c312dd41f05955324749c0a47f" category="list-text">100GbE 이중 포트</block>
+  <block id="39bc57d27d632df4261bc60caf39a90c" category="paragraph"><block ref="39bc57d27d632df4261bc60caf39a90c" category="inline-link-macro-rx"></block></block>
+  <block id="b98ea9630b58bea0f022799ecefe4062" category="sidebar">NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka</block>
 </blocks>

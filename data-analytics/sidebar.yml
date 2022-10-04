@@ -3,6 +3,23 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
+- title: NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka
+  type: solutions
+  entries:
+  - title: 개요
+    url: "/data-analytics/kafka-sc-overview.html"
+  - title: 해결 방법
+    url: "/data-analytics/kafka-sc-solution.html"
+  - title: 기술 개요
+    url: "/data-analytics/kafka-sc-technology-overview.html"
+  - title: Confluent 성능 검증
+    url: "/data-analytics/kafka-sc-confluent-performance-validation.html"
+  - title: 농작물 사용 워크로드 생성기를 사용한 성능 테스트
+    url: "/data-analytics/kafka-sc-performance-tests-with-produce-consume-workload-generator.html"
+  - title: 성능 모범 사례 지침
+    url: "/data-analytics/kafka-sc-performance-best-practice-guidelines.html"
+  - title: 결론
+    url: "/data-analytics/kafka-sc-conclusion.html"
 - title: Apache Spark용 NetApp 스토리지 솔루션
   type: solutions
   entries:

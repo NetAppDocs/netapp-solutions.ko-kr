@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-sc-solution.html 
+keywords: solution architecture, confluent platform, linux, Fujitsu primergy, intel xenon 
+summary: 이 섹션에서는 계층형 스토리지를 위한 NetApp ONTAP를 사용하여 Confluent Platform 배포에서 성능을 검증하는 데 사용되는 하드웨어 및 소프트웨어에 대해 설명합니다. 다음 표에서는 솔루션 아키텍처와 기본 구성 요소에 대해 설명합니다. 
+---
+= 해결 방법
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-sc-overview.html["이전: 개요."]
+
+ONTAP 기반 Confluent 및 NetApp AFF A900 스토리지 컨트롤러는 데이터 스트림을 위해 설계된 분산 시스템입니다. 두 가지 모두 수평적으로 확장 가능하고 내결함성이 있으며 부하 상태에서 뛰어난 성능을 제공합니다. 데이터 공간을 최소화하는 데이터 축소 기술로 분산된 데이터 스트리밍 및 스트림 처리에서 서로 보완하여 스토리지 비용을 절감합니다. AFF A900 스토리지 컨트롤러는 뛰어난 성능을 제공하는 동시에 컴퓨팅과 데이터 스토리지 리소스를 분리할 수 있도록 합니다. 따라서 시스템 관리가 단순화되고 리소스를 독립적으로 확장할 수 있습니다.
+
+image:kafka-sc-image3.png["솔루션 개요를 보여 주는 이미지입니다."]
+
+
+
+== 솔루션 아키텍처 세부 정보
+
+이 섹션에서는 계층형 스토리지를 위한 NetApp ONTAP를 사용하여 Confluent Platform 배포에서 성능을 검증하는 데 사용되는 하드웨어 및 소프트웨어에 대해 설명합니다. 다음 표에서는 솔루션 아키텍처와 기본 구성 요소에 대해 설명합니다.
+
+|===
+| 플랫폼 구성 요소 | 환경 구성 
+
+
+| Confluent 플랫폼 버전 6.2  a| 
+* 주키프 3개
+* 브로커 서버 8대
+* 도구 서버 5대
+* Grafana 1개
+* 제어 센터 1개
+
+
+
+
+| 모든 노드의 운영 체제 | Linux(Ubuntu 18.04) 
+
+
+| 웜 버킷용 NetApp ONTAP  a| 
+* AFF A900 고가용성(HA) 쌍 1개
+* 24 x 800 SSD 4개
+* S3 프로토콜
+* 100GbE
+
+
+
+
+| 15 Fujitsu Primergy RX2540 서버  a| 
+* CPU 2개, 총 물리적 코어 16개
+* 인텔 제온
+* 256GB 물리적 메모리
+* 100GbE 이중 포트
+
+
+|===
+link:kafka-sc-technology-overview.html["다음: 기술 개요"]

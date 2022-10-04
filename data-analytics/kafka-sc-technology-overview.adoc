@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-sc-technology-overview.html 
+keywords: ONTAP, storage controller, primary use cases, Native s3 applications, fabricpool endpoints, System Manager, event streaming, enterprise 
+summary: 이 페이지에서는 이 솔루션에 사용된 기술에 대해 설명합니다. 
+---
+= 기술 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-sc-solution.html["이전: 해결책."]
+
+이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명합니다.
+
+
+
+== NetApp ONTAP 스토리지 컨트롤러
+
+NetApp ONTAP는 고성능 엔터프라이즈급 스토리지 운영 체제입니다.
+
+NetApp ONTAP 9.8은 Amazon S3(Simple Storage Service) API를 지원합니다. ONTAP은 AWS(Amazon Web Services) S3 API 작업의 서브셋을 지원하며 클라우드 공급자(AWS, Azure 및 GCP) 및 온프레미스 전반에서 데이터를 ONTAP 기반 시스템에서 오브젝트로 나타낼 수 있습니다.
+
+NetApp StorageGRID 소프트웨어는 오브젝트 스토리지를 위한 NetApp의 대표적인 솔루션입니다. ONTAP은 오브젝트 데이터를 위해 NetApp에서 제공하는 Data Fabric을 확장하고 NetApp 제품 포트폴리오의 가치를 높여 에지에서 수집 및 사전 처리 지점을 제공함으로써 StorageGRID를 보완합니다.
+
+S3 버킷에 대한 액세스는 인증된 사용자 및 클라이언트 애플리케이션을 통해 제공됩니다. 다음 다이어그램에서는 S3 버킷에 액세스하는 애플리케이션을 보여 줍니다.
+
+image:kafka-sc-image4.png["이 그래픽은 S3 버킷에 액세스하는 애플리케이션을 보여 줍니다."]
+
+
+
+== 주요 사용 사례
+
+S3 API를 지원하는 주된 목적은 ONTAP에서 오브젝트 액세스를 제공하는 것입니다. ONTAP 유니파이드 스토리지 아키텍처는 이제 파일(NFS 및 SMB), 블록(FC 및 iSCSI), 오브젝트(S3)를 지원합니다.
+
+
+
+== 네이티브 S3 애플리케이션
+
+점점 더 많은 애플리케이션에서 S3를 사용하여 오브젝트 액세스에 ONTAP 지원을 활용할 수 있습니다. 고용량 아카이브 워크로드에 적합하지만 네이티브 S3 애플리케이션에서 고성능을 필요로 하는 것은 다음과 같습니다.
+
+* 분석
+* 인공 지능
+* 엣지-코어 수집
+* 머신 러닝
+
+
+고객은 이제 ONTAP System Manager와 같은 익숙한 관리 효율 툴을 사용하여 ONTAP의 개발 및 운영에 필요한 고성능 오브젝트 스토리지를 신속하게 프로비저닝할 수 있습니다. 또한 ONTAP 스토리지 효율성 및 보안을 활용할 수 있습니다.
+
+
+
+== FabricPool 엔드포인트
+
+ONTAP 9.8부터 FabricPool는 ONTAP의 버킷 계층화를 지원하므로 ONTAP에서 ONTAP로 계층화할 수 있습니다. 이 옵션은 기존 FAS 인프라를 오브젝트 저장소 엔드포인트로 용도 변경하고자 하는 고객에게 적합합니다.
+
+FabricPool는 다음 두 가지 방법으로 ONTAP에 대한 계층화를 지원합니다.
+
+* * 로컬 클러스터 계층화. * 비활성 데이터는 클러스터 LIF를 사용하여 로컬 클러스터에 있는 버킷으로 계층화합니다.
+* * 원격 클러스터 계층화. * 비활성 데이터는 FabricPool 클라이언트의 IC LIF와 ONTAP 오브젝트 저장소의 데이터 LIF를 사용하여 기존 FabricPool 클라우드 계층과 비슷한 방식으로 원격 클러스터에 있는 버킷으로 계층화합니다.
+
+
+ONTAP S3는 추가 하드웨어 및 관리 없이 기존 클러스터에서 S3 기능을 원하는 경우에 적합합니다. 300TB 이상의 배포를 위해 NetApp StorageGRID 소프트웨어는 계속해서 오브젝트 스토리지를 위한 주력 NetApp 솔루션으로 부상하고 있습니다. ONTAP 또는 StorageGRID를 클라우드 계층으로 사용할 때는 FabricPool 라이센스가 필요하지 않습니다.
+
+
+
+=== Confluent 계층형 스토리지를 위한 NetApp ONTAP
+
+모든 데이터 센터는 비즈니스 크리티컬 애플리케이션을 계속 실행하고 중요한 데이터를 안전하게 사용할 수 있어야 합니다. 새로운 NetApp AFF A900 시스템은 ONTAP 엔터프라이즈 에디션 소프트웨어와 복원력이 뛰어난 설계를 기반으로 합니다. NetApp의 새로운 초고속 NVMe 스토리지 시스템은 미션 크리티컬 운영의 중단을 제거하고, 성능 조정을 최소화하고, 랜섬웨어 공격으로부터 데이터를 보호합니다.
+
+초기 구축부터 Confluent 클러스터의 확장까지, 귀사의 환경에서는 비즈니스 크리티컬 애플리케이션의 중단 없는 변화에 빠르게 적응해야 합니다. ONTAP 엔터프라이즈 데이터 관리, 서비스 품질(QoS) 및 성능 을 통해 고객 환경을 계획 및 조정할 수 있습니다.
+
+NetApp ONTAP와 Confluent Tiered Storage를 함께 사용하면 ONTAP를 스케일아웃 스토리지 대상으로 활용하여 Apache Kafka 클러스터의 관리를 단순화하고 컴퓨팅 및 스토리지 리소스를 Confluent로 독립적으로 확장할 수 있습니다.
+
+ONTAP S3 서버는 ONTAP의 성숙한 스케일아웃 스토리지 기능을 기반으로 구축되었습니다. ONTAP 클러스터는 S3 버킷을 확장하여 ONTAP 클러스터에 새로 추가된 노드를 사용함으로써 원활하게 확장할 수 있습니다.
+
+
+
+=== ONTAP 시스템 관리자를 사용하여 간단하게 관리할 수 있습니다
+
+ONTAP System Manager는 브라우저 기반의 그래픽 인터페이스로, 단일 창에서 전 세계에 분산된 위치에서 ONTAP 스토리지 컨트롤러를 구성, 관리, 모니터링할 수 있습니다.
+
+image:kafka-sc-image5.png["이 그림은 ONTAP System Manager 작업 공간을 보여줍니다."]
+
+System Manager 및 ONTAP CLI를 사용하여 ONTAP S3를 구성 및 관리할 수 있습니다. System Manager를 사용하여 S3를 활성화하고 버킷을 생성할 때 ONTAP은 단순한 구성에 대한 모범 사례 기본값을 제공합니다. CLI에서 S3 서버 및 버킷을 구성할 경우에도 원하는 경우 System Manager로 관리하거나 그 반대로 구성할 수 있습니다.
+
+System Manager를 사용하여 S3 버킷을 생성하는 경우, ONTAP은 시스템에서 가장 가용성이 높은 기본 성능 서비스 수준을 구성합니다. 예를 들어 AFF 시스템에서 기본 설정은 Extreme입니다. 성능 서비스 수준은 사전 정의된 적응형 QoS 정책 그룹입니다. 기본 서비스 수준 대신 사용자 지정 QoS 정책 그룹 또는 정책 그룹을 지정할 수 있습니다.
+
+사전 정의된 적응형 QoS 정책 그룹은 다음과 같습니다.
+
+* * Extreme. * 가장 짧은 지연 시간과 최고의 성능이 필요한 애플리케이션에 사용됩니다.
+* 성능. * 적절한 성능 요구사항과 지연 시간이 필요한 애플리케이션에 사용됩니다.
+* * 값. * 처리량과 용량이 지연 시간보다 더 중요한 애플리케이션에 사용됩니다.
+* * 사용자 정의. * 사용자 정의 QoS 정책을 지정하거나 QoS 정책을 지정하지 않습니다.
+
+
+계층화에 * 사용을 선택하면 성능 서비스 수준이 선택되지 않으며 시스템은 계층형 데이터에 대해 최적의 성능을 갖춘 저비용 미디어를 선택합니다.
+
+ONTAP는 가장 적합한 디스크가 있는 로컬 계층에서 이 버킷을 프로비저닝하려고 시도하여 선택한 서비스 수준을 충족시킵니다. 그러나 버킷에 포함할 디스크를 지정해야 하는 경우 로컬 계층(애그리게이트)을 지정하여 CLI에서 S3 오브젝트 스토리지를 구성하는 것이 좋습니다. CLI에서 S3 서버를 구성할 경우에도 원할 경우 System Manager로 관리할 수 있습니다.
+
+버킷에 사용할 애그리게이트를 지정할 수 있는 기능은 CLI를 통해서만 지정할 수 있습니다.
+
+
+
+== 유창하게
+
+Confluent Platform은 지속적인 실시간 스트림으로 데이터에 쉽게 액세스, 저장 및 관리할 수 있는 포괄적인 데이터 스트리밍 플랫폼입니다. Apache Kafka를 처음 개발한 Confluent는 Kafka 관리 또는 모니터링의 부담을 덜면서 엔터프라이즈급 기능을 통해 Kafka의 이점을 확장해 줍니다. 현재 Fortune 100대 기업 중 80% 이상이 데이터 스트리밍 기술을 사용하고 있으며 대부분 Confluent를 사용하고 있습니다.
+
+
+
+=== 왜 Confluent인가?
+
+Confluorent는 기록 데이터와 실시간 데이터를 단일 중앙 데이터 소스에 통합하여 완전히 새로운 범주의 최신 이벤트 기반 애플리케이션을 쉽게 구축하고, 범용 데이터 파이프라인을 구축하며, 완전한 확장성, 성능, 안정성으로 강력한 새 사용 사례를 활용할 수 있도록 지원합니다.
+
+
+
+=== Contfluent는 어떤 용도로 사용됩니까?
+
+Confluent Platform을 사용하면 데이터가 다른 시스템 간에 어떻게 전송 또는 통합되는지 등의 기본 메커니즘을 걱정하지 않고 데이터에서 비즈니스 가치를 창출하는 방법에 집중할 수 있습니다. 특히 Confluent Platform은 데이터 소스를 Kafka에 연결하고 스트리밍 애플리케이션을 구축하며 Kafka 인프라의 보안, 모니터링 및 관리를 간소화합니다. 현재 Confluent Platform은 금융 서비스, 옴니채널 소매, 자율 자동차, 사기 탐지, 마이크로서비스, IoT 등 다양한 산업 전반의 다양한 사용 사례에 사용됩니다.
+
+다음 그림에서는 Confluent 플랫폼의 구성 요소를 보여 줍니다.
+
+image:kafka-sc-image6.png["이 그래픽은 Confluent 플랫폼의 구성 요소를 보여 줍니다."]
+
+
+
+=== Confluent 이벤트 스트리밍 기술 개요
+
+Confluent Platform의 핵심은 입니다 https://kafka.apache.org/["카프카"^]가장 인기 있는 오픈 소스 분산 스트리밍 플랫폼입니다. Kafka의 주요 기능은 다음과 같습니다.
+
+* 레코드 스트림을 게시하고 구독합니다.
+* 내결함성이 있는 방식으로 레코드 스트림을 저장합니다.
+* 레코드 스트림을 처리합니다.
+
+
+즉시 사용할 수 있는 Confluorent Platform에는 스키마 레지스트리, REST 프록시, 총 100개 이상의 사전 구축된 Kafka 커넥터 및 ksqlDB도 포함되어 있습니다.
+
+
+
+=== Confluent 플랫폼 엔터프라이즈 기능 개요
+
+* * Confluent Control Center. * Kafka 관리 및 모니터링을 위한 UI 기반 시스템. Kafka Connect를 쉽게 관리하고 다른 시스템에 대한 연결을 생성, 편집 및 관리할 수 있습니다.
+* Kubernetes를 위한 * Contfluent. * Kubernetes를 위한 Confluent는 Kubernetes 운영자입니다. Kubernetes 운영자는 특정 플랫폼 애플리케이션에 대한 고유한 기능과 요구 사항을 제공하여 Kubernetes의 오케스트레이션 기능을 확장합니다. Confluent Platform의 경우, Kubernetes에서 Kafka의 구축 프로세스를 크게 간소화하고 일반적인 인프라 라이프사이클 작업을 자동화할 수 있습니다.
+* * Kafka 연결 커넥터 * 커넥터는 Kafka Connect API를 사용하여 Kafka를 데이터베이스, 키 값 저장소, 검색 인덱스 및 파일 시스템 등의 다른 시스템에 연결합니다. Confluorent Hub에는 가장 널리 사용되는 데이터 소스 및 싱크에 대한 다운로드 가능한 커넥터가 있습니다. 여기에는 Confluorent Platform이 포함된 이러한 커넥터의 전체 테스트 및 지원 버전이 포함됩니다. 자세한 내용은 을 참조하십시오 https://docs.confluent.io/home/connect/userguide.html["여기"^].
+* * 자체 밸런싱 클러스터 * 는 자동화된 로드 밸런싱, 장애 감지 및 자동 복구를 제공합니다. 또한 수동 조정 없이 필요에 따라 브로커를 추가하거나 해체할 수 있도록 지원합니다.
+* * 연결 클러스터. * 직접 클러스터를 연결하고 링크 브리지를 통해 클러스터 간에 주제를 미러링합니다. 클러스터 링크를 사용하면 멀티 데이터 센터, 멀티 클러스터, 하이브리드 클라우드 구축을 간편하게 설정할 수 있습니다.
+* * Confluorent auto data balancer. * 브로커 수, 파티션 크기, 파티션 수 및 클러스터 내의 리더 수에 대한 클러스터를 모니터링합니다. 균형 조정을 통해 트래픽을 재조정함으로써 운영 워크로드에 미치는 영향을 최소화하면서 클러스터 전체에서 짝수 워크로드를 생성할 수 있습니다.
+* * Confluent Replicator. * 여러 데이터 센터에서 여러 Kafka 클러스터를 훨씬 쉽게 유지 관리할 수 있습니다.
+* * 계층형 스토리지. * 즐겨 사용하는 클라우드 공급자를 사용하여 대량의 Kafka 데이터를 저장할 수 있는 옵션을 제공하므로 운영 부담과 비용이 줄어듭니다. 계층형 스토리지를 사용하면 비용 효율적인 오브젝트 스토리지에 데이터를 보관하고 더 많은 컴퓨팅 리소스가 필요할 때만 브로커를 확장할 수 있습니다.
+* * Confluent JMS 클라이언트. * Confluent Platform에는 Kafka용 JMS 호환 클라이언트가 포함되어 있습니다. 이 Kafka 클라이언트는 Kafka 브로커를 백엔드로 사용하여 JMS 1.1 표준 API를 구현합니다. JMS를 사용하는 레거시 애플리케이션이 있고 기존 JMS 메시지 브로커를 Kafka로 교체하려는 경우 유용합니다.
+* * Confluent MQTT proxy. * 중간에 MQTT 브로커가 없어도 MQTT 장치 및 게이트웨이에서 Kafka에 직접 데이터를 게시할 수 있는 방법을 제공합니다.
+* * Confluent 보안 플러그인 * Confluent 보안 플러그인은 다양한 Confluent 플랫폼 도구 및 제품에 보안 기능을 추가하는 데 사용됩니다. 현재 Confluent REST 프록시에 사용할 수 있는 플러그인이 있어 수신 요청을 인증하고 인증된 보안 주체를 Kafka에 요청에 전파할 수 있습니다. 이렇게 하면 Confluent REST 프록시 클라이언트가 Kafka 브로커의 멀티테넌트 보안 기능을 활용할 수 있습니다.
+
+
+link:kafka-sc-confluent-performance-validation.html["다음: Confluent Performance validation."]

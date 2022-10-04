@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-sc-confluent-performance-validation.html 
+keywords: setup, verification results, Object store, correctness test, Tiering functionality, Tier fetch benchmark, Produce-consume, workload generator, Retention 
+summary: 이 페이지에서는 이 솔루션의 매개 변수 내에서 Confluent의 성능 검증을 설명합니다. 
+---
+= Confluent 성능 검증
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-sc-technology-overview.html["이전: 기술 개요"]
+
+NetApp ONTAP의 계층형 스토리지를 위한 Confluent Platform을 사용하여 검증을 수행했습니다. NetApp과 Confluent 팀은 이 검증을 함께 수행하여 IT에 필요한 테스트 사례를 실행했습니다.
+
+
+
+== Confluent 설정
+
+설치를 위해 256GB RAM과 16개의 CPU를 갖춘 3대의 zookeepers, 5개의 브로커, 5대의 테스트 서버를 사용했습니다. NetApp 스토리지의 경우 ONTAP와 AFF A900 HA 쌍을 사용했습니다. 스토리지와 브로커는 100GbE 연결을 통해 연결되었습니다.
+
+다음 그림에서는 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다.
+
+image:kafka-sc-image7.png["이 그래픽은 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다."]
+
+도구 서버는 Confluent 노드로 이벤트를 보내거나 받는 응용 프로그램 클라이언트로 작동합니다.
+
+
+
+== Confluent 계층형 스토리지 구성
+
+다음과 같은 테스트 매개 변수를 사용했습니다.
+
+....
+confluent.tier.fetcher.num.threads=80
+confluent.tier.archiver.num.threads=80
+confluent.tier.enable=true
+confluent.tier.feature=true
+confluent.tier.backend=S3
+confluent.tier.s3.bucket=kafkabucket1-1
+confluent.tier.s3.region=us-east-1
+confluent.tier.s3.cred.file.path=/data/kafka/.ssh/credentials
+confluent.tier.s3.aws.endpoint.override=http://wle-mendocino-07-08/
+confluent.tier.s3.force.path.style.access=true
+bootstrap.server=192.168.150.172:9092,192.168.150.120:9092,192.168.150.164:9092,192.168.150.198:9092,192.168.150.109:9092,192.168.150.165:9092,192.168.150.119:9092,192.168.150.133:9092debug=truejmx.port=7203
+num.partitions=80num.records=200000000#object PUT size - 512MB and fetch 100MB - netappsegment.bytes=536870912max.partition.fetch.bytes=1048576000#GET size is max.partition.fetch.bytes/num.partitionslength.key.value=2048trogdor.agent.nodes=node0,node1,node2,node3,node4trogdor.coordinator.hostname.port=192.168.150.155:8889num.producers=20num.head.consumers=20
+num.tail.consumers=1test.binary.task.max.heap.size=32Gtest.binary.task.timeout.sec=3600producer.timeout.sec=3600consumer.timeout.sec=3600
+....
+검증을 위해 HTTP 프로토콜과 함께 ONTAP를 사용했지만 HTTPS도 작동했습니다. 액세스 키와 비밀 키는 confluent.tier.s3.cred.file.path 매개 변수에 제공된 파일 이름에 저장됩니다.
+
+
+
+== NetApp 스토리지 컨트롤러 – ONTAP
+
+검증을 위해 ONTAP에서 단일 HA 쌍 구성을 구성했습니다.
+
+image:kafka-sc-image8.png["이 그래픽은 환경이 검증을 위한 단일 HA 쌍으로 구성된 방식을 보여 줍니다."]
+
+
+
+== 확인 결과
+
+검증을 위해 다음 5가지 테스트 사례를 완료했습니다. 첫 번째 두 테스트는 기능 테스트이고 나머지 세 가지는 성능 테스트입니다.
+
+
+
+=== 객체 저장소 정확도 테스트
+
+이 테스트는 API 호출을 사용하여 계층형 스토리지에 사용되는 객체 저장소에서 GET, PUT 및 DELETE 등의 기본 작업을 수행합니다.
+
+
+
+=== 계층화 기능 정확도 테스트
+
+이 테스트에서는 오브젝트 스토리지의 엔드 투 엔드 기능을 검사합니다. 토픽을 생성하고, 새로 생성된 토픽에 대한 이벤트 스트림을 생성하고, 브로커가 세그먼트를 오브젝트 스토리지에 아카이브하고, 이벤트 스트림을 소비하며, 소비된 스트림이 생성된 스트림과 일치하는지 확인합니다. 객체 저장소 결함 주입 여부와 관계없이 이 테스트를 수행했습니다. ONTAP의 노드 중 하나에서 서비스 관리자 서비스를 중지하고 엔드 투 엔드 기능이 오브젝트 스토리지에서 작동하는지 확인하여 노드 장애를 시뮬레이션했습니다.
+
+
+
+=== 계층 가져오기 벤치마크
+
+이 테스트에서는 계층형 오브젝트 스토리지의 읽기 성능을 검증하고 벤치마크에 의해 생성된 세그먼트에서 과부하된 읽기 요청 범위를 검사했습니다. 이 벤치마크에서 Confluent는 계층 가져오기 요청을 처리하기 위해 사용자 지정 클라이언트를 개발했습니다.
+
+
+
+=== 생산 - 워크로드 생성기 사용
+
+이 테스트에서는 세그먼트 아카이브를 통해 오브젝트 저장소에서 쓰기 워크로드를 간접적으로 생성합니다. 소비자 그룹이 세그먼트를 가져올 때 객체 스토리지에서 읽기 워크로드(세그먼트 읽기)가 생성되었습니다. 이 워크로드는 TOCC 스크립트에 의해 생성되었습니다. 이 테스트에서는 오브젝트 저장소에서 병렬 스레드의 읽기 및 쓰기 성능을 확인했습니다. 계층화 기능 정확도 테스트에서 보았듯이, 객체 저장소 결함 주입을 사용하여 테스트했으며 포함하지 않았습니다.
+
+
+
+=== 보존 워크로드 생성기
+
+이 테스트에서는 무거운 주제 보존 워크로드에서 오브젝트 스토리지의 삭제 성능을 검사했습니다. 보존 워크로드는 테스트 주제와 동시에 많은 메시지를 생성하는 TOCC 스크립트를 사용하여 생성되었습니다. 테스트 주제는 공격적인 크기 기반 및 시간 기반 보존 설정으로 구성되었으며, 이로 인해 이벤트 스트림이 개체 저장소에서 지속적으로 제거됩니다. 그런 다음 세그먼트가 아카이브되었습니다. 이로 인해 오브젝트 저장소 삭제 작업의 브로커링 및 컬렉션에 의해 오브젝트 스토리지가 많이 삭제되었습니다.
+
+검증 세부 정보는 를 참조하십시오 https://docs.confluent.io/platform/current/kafka/tiered-storage.html["유창하게"^] 웹 사이트.
+
+link:kafka-sc-performance-tests-with-produce-consume-workload-generator.html["다음: 생산 방식의 성능 테스트 - 워크로드 생성기 소비"]
