@@ -15760,7 +15760,6 @@
   <block id="0e20876ceb73ae36999db9f6c412bdc5" category="inline-link-macro">다음: 생산 방식의 성능 테스트 - 워크로드 생성기 소비</block>
   <block id="ab82cfabb720bf1d31365b6ce33825f9" category="paragraph"><block ref="ab82cfabb720bf1d31365b6ce33825f9" category="inline-link-macro-rx"></block></block>
   <block id="b0c400a1c1ac5de2cbdc877645b349a0" category="summary">이 섹션에서는 계층형 스토리지를 위한 NetApp ONTAP를 사용하여 Confluent Platform 배포에서 성능을 검증하는 데 사용되는 하드웨어 및 소프트웨어에 대해 설명합니다. 다음 표에서는 솔루션 아키텍처와 기본 구성 요소에 대해 설명합니다.</block>
-  <block id="8bfa311863541e343a5f46427c473c16" category="paragraph"><block ref="8bfa311863541e343a5f46427c473c16" category="inline-link-macro-rx"></block></block>
   <block id="5197b1c9433e86b5ed33786625f77786" category="paragraph">ONTAP 기반 Confluent 및 NetApp AFF A900 스토리지 컨트롤러는 데이터 스트림을 위해 설계된 분산 시스템입니다. 두 가지 모두 수평적으로 확장 가능하고 내결함성이 있으며 부하 상태에서 뛰어난 성능을 제공합니다. 데이터 공간을 최소화하는 데이터 축소 기술로 분산된 데이터 스트리밍 및 스트림 처리에서 서로 보완하여 스토리지 비용을 절감합니다. AFF A900 스토리지 컨트롤러는 뛰어난 성능을 제공하는 동시에 컴퓨팅과 데이터 스토리지 리소스를 분리할 수 있도록 합니다. 따라서 시스템 관리가 단순화되고 리소스를 독립적으로 확장할 수 있습니다.</block>
   <block id="8ebef54f33ae0fdc7c4dcb83539b6eac" category="inline-image-macro">솔루션 개요를 보여 주는 이미지입니다.</block>
   <block id="52dff9f6353660d69eddc1e9fdee4a83" category="paragraph"><block ref="52dff9f6353660d69eddc1e9fdee4a83" category="inline-image-macro-rx" type="image"></block></block>
@@ -15782,4 +15781,5 @@
   <block id="433304c312dd41f05955324749c0a47f" category="list-text">100GbE 이중 포트</block>
   <block id="39bc57d27d632df4261bc60caf39a90c" category="paragraph"><block ref="39bc57d27d632df4261bc60caf39a90c" category="inline-link-macro-rx"></block></block>
   <block id="b98ea9630b58bea0f022799ecefe4062" category="sidebar">NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka</block>
+  <block id="875353af43abce06e81496931b9482ef" category="paragraph"><block ref="875353af43abce06e81496931b9482ef" category="inline-link-macro-rx"></block></block>
 </blocks>

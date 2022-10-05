@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/kafka-sc-overview.html 
-keywords: tr4941, 4941, introduction, 
+permalink: data-analytics/kafka-ontap-overview.html 
+keywords: tr4941, 4941, introduction 
 summary: 이 문서에서는 계층형 스토리지 벤치마킹 키트를 사용하여 NetApp ONTAP에 대해 Confluent 플랫폼의 성능 벤치마크를 설명합니다. 
 ---
 = TR-4941: NetApp ONTAP 스토리지 컨트롤러에 대해 잘 알고 있습니다
