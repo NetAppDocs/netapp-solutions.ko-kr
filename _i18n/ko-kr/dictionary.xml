@@ -15782,4 +15782,5 @@
   <block id="39bc57d27d632df4261bc60caf39a90c" category="paragraph"><block ref="39bc57d27d632df4261bc60caf39a90c" category="inline-link-macro-rx"></block></block>
   <block id="b98ea9630b58bea0f022799ecefe4062" category="sidebar">NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka</block>
   <block id="875353af43abce06e81496931b9482ef" category="paragraph"><block ref="875353af43abce06e81496931b9482ef" category="inline-link-macro-rx"></block></block>
+  <block id="93d153de96abb104b1cf0b56dddc7dfc" category="sidebar">VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다</block>
 </blocks>

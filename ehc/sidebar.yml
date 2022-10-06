@@ -116,7 +116,7 @@ entries:
       url: "/ehc/azure/azure-guest-dr-cvo.html"
   - title: 워크로드를 마이그레이션 중입니다
     entries:
-    - title: VMware HCX를 사용하여 워크로드를 FSxN 데이터 저장소로 마이그레이션합니다
+    - title: VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다
       url: "/ehc/azure/azure-migrate-vmware-hcx.html"
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/azure/azure-regions.html"
