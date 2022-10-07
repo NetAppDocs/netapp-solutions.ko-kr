@@ -37,7 +37,7 @@ image:vsphere_ontap_image4.png["오류: 그래픽 이미지가 없습니다"]
 
 VM이 데이터 저장소에서 삭제될 때 공간을 다른 용도로 재확보할 수 있습니다. NFS 데이터 저장소를 사용할 경우 VM이 삭제될 때 공간이 즉시 재확보됩니다. 물론 이 방법은 볼륨이 씬 프로비저닝될 때만 의미가 있습니다. 즉, 볼륨 보장이 없음으로 설정됩니다. 하지만 VM 게스트 OS 내에서 파일이 삭제되면 NFS 데이터 저장소에서 공간이 자동으로 재확보되지 않습니다. LUN 기반 VMFS 데이터 저장소의 경우 ESXi 및 게스트 OS에서 VAAI UNMAP 프리미티브를 스토리지에 발급하여(씬 프로비저닝을 사용하는 경우 다시) 공간을 재확보할 수 있습니다. 릴리스에 따라 이 지원은 수동 또는 자동입니다.
 
-vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조) https://kb.vmware.com/s/article/2057513["2057513"^] 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조) https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.storage.doc/GUID-B40D1420-26FD-4318-8A72-FA29C9A395C2.html["저장 공간 재확보"^] vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다.
+vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조) https://kb.vmware.com/s/article/2057513["2057513"^] 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조) https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.storage.doc/GUID-B40D1420-26FD-4318-8A72-FA29C9A395C2.html["저장 공간 재확보"^] vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다. VMFS 데이터 저장소로 사용할 LUN을 프로비저닝할 때 LUN에서 공간 할당 옵션을 수동으로 설정해야 합니다. VMware vSphere용 ONTAP 툴을 사용하는 경우 LUN은 공간 반환을 지원하도록 자동으로 구성되며 추가 작업이 필요하지 않습니다. 을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider/Devices_backing_volume_do_not_support_UNMAP["여기"^] 자세한 내용은 기술 자료 문서를 참조하십시오.
 
 
 
