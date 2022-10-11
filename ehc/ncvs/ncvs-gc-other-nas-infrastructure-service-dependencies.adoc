@@ -219,7 +219,7 @@ Cloud Volumes Service 인스턴스에서 LDAP가 활성화되면 기본적으로
 | Netgroup-by-host 검색 범위입니다 | Netgroup-by-host DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service에 대해 현재 호스트별 넷그룹이 지원되지 않습니다. | 하위 트리 | 아니요 
 
 
-| 클라이언트 세션 보안 | LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. Cloud Volumes Service에서 LDAP 서명을 지원하지만 봉인은 현재 지원되지 않습니다. | 없음 | 아니요 
+| 클라이언트 세션 보안 | LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. LDAP 서명은 Active Directory에서 요청하는 경우 CVS - 성능에서 지원됩니다. CVS-SW는 LDAP 서명을 지원하지 않습니다. 두 서비스 유형 모두에서 봉인은 현재 지원되지 않습니다. | 없음 | 아니요 
 
 
 | LDAP 조회 추적 | 여러 LDAP 서버를 사용하는 경우 조회 추적을 통해 첫 번째 서버에서 항목을 찾을 수 없을 때 클라이언트가 목록의 다른 LDAP 서버를 참조할 수 있습니다. 현재 Cloud Volumes Service에서는 지원되지 않습니다. | 거짓 | 아니요 

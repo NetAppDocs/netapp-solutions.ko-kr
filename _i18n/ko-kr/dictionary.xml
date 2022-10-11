@@ -10662,7 +10662,6 @@
   <block id="0b5200ff3b38841dd95a404d7e6ff385" category="cell">Netgroup-by-host 검색 범위입니다</block>
   <block id="4ce621e884478e7fc52e17ed91eed525" category="cell">Netgroup-by-host DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service에 대해 현재 호스트별 넷그룹이 지원되지 않습니다.</block>
   <block id="19a0fc26f19842a9f7bc78040d0c381c" category="cell">클라이언트 세션 보안</block>
-  <block id="f418eef9b6631e20135e14fc69c0bb8a" category="cell">LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. Cloud Volumes Service에서 LDAP 서명을 지원하지만 봉인은 현재 지원되지 않습니다.</block>
   <block id="16ed23b379774b2be1797f8efa0fe9a5" category="cell">LDAP 조회 추적</block>
   <block id="a408a02f7b8e36f4913d8dc2debb2b95" category="cell">여러 LDAP 서버를 사용하는 경우 조회 추적을 통해 첫 번째 서버에서 항목을 찾을 수 없을 때 클라이언트가 목록의 다른 LDAP 서버를 참조할 수 있습니다. 현재 Cloud Volumes Service에서는 지원되지 않습니다.</block>
   <block id="5f362229a019eb903f4b21e28b15a1f5" category="cell">그룹 구성원 필터</block>
@@ -15784,4 +15783,5 @@
   <block id="9e925e9341b490bfd3b4c4ca3b0c1ef2" category="inline-link">여기</block>
   <block id="953fa9bc59561d97ed62ce854465ba35" category="paragraph">vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조)<block ref="1d61bd4e8925f7d5aac61e083b728439" category="inline-link-rx"></block> 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조)<block ref="a9ae15a1c91a14939aefb313015202e6" category="inline-link-rx"></block> vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다. VMFS 데이터 저장소로 사용할 LUN을 프로비저닝할 때 LUN에서 공간 할당 옵션을 수동으로 설정해야 합니다. VMware vSphere용 ONTAP 툴을 사용하는 경우 LUN은 공간 반환을 지원하도록 자동으로 구성되며 추가 작업이 필요하지 않습니다. 을 참조하십시오<block ref="fca823934ad533ca13947daa01d8e441" category="inline-link-rx"></block> 자세한 내용은 기술 자료 문서를 참조하십시오.</block>
   <block id="a436da0007911ed6531e093688e82535" category="paragraph">공유 VPC를 사용하는 경우 NFS Kerberos 및/또는 를 사용하여 전송 중 암호화 <block ref="639817e82862065dd236f0597e0b07ea" category="inline-link-macro-rx"></block> 트레이스에서 얻은 정보의 대부분을 가릴 수 있습니다. 그러나 일부 트래픽은 과 같은 일반 텍스트로 계속 전송됩니다 <block ref="c2e2f225386e22bd13a8b4b174f478da" category="inline-link-macro-rx"></block> 및 <block ref="86c1c13023c15e9d9a6317a0b69e7ce3" category="inline-link-macro-rx"></block>. 다음 그림에서는 Cloud Volumes Service에서 생성된 일반 텍스트 LDAP 쿼리 및 노출된 잠재적 식별 정보의 패킷 캡처를 보여 줍니다. Cloud Volumes Service의 LDAP 쿼리는 현재 SSL을 통한 암호화 또는 LDAP를 지원하지 않습니다. Active Directory에서 요청하는 경우 CVS - 성능은 LDAP 서명을 지원합니다. CVS-SW는 LDAP 서명을 지원하지 않습니다.</block>
+  <block id="b95b607ac94c4a8cb830243ecb537f59" category="cell">LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. LDAP 서명은 Active Directory에서 요청하는 경우 CVS - 성능에서 지원됩니다. CVS-SW는 LDAP 서명을 지원하지 않습니다. 두 서비스 유형 모두에서 봉인은 현재 지원되지 않습니다.</block>
 </blocks>
