@@ -4,7 +4,7 @@ permalink: ehc/aws/aws-migrate-vmware-hcx.html
 keywords: aws, vmc, hybrid multicloud, migrate, vmware hcx, hcx 
 summary:  
 ---
-= TR 4942: VMware HCX를 사용하여 FSx ONTAP(FSxN) 데이터 저장소로 워크로드를 마이그레이션합니다
+= TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
