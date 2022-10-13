@@ -15784,4 +15784,66 @@
   <block id="ce32836b59e052d959dee4d2358e5a21" category="paragraph">테스트 목적으로, 이 검증에 사용된 온프레미스 랩 환경은 Azure VMware 솔루션에 대한 온프레미스 연결을 허용하는 사이트 간 VPN을 통해 연결되었습니다.</block>
   <block id="0bcfdba2f090838df9da44d825fedc49" category="doc">TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다</block>
   <block id="dd5244d49dea74bb9effd68426155ca2" category="sidebar">VMware HCX를 사용하여 워크로드를 ONTAP 데이터 저장소용 FSx로 마이그레이션</block>
+  <block id="cdf4d8a8fa9326debf96606ee7177f41" category="doc">AsciiiDoc 코딩 및 출력 샘플</block>
+  <block id="6c1cc46d8764b2147f50c80e336ab770" category="paragraph">이 문서에는 asciidoc 소스 및 결과 출력의 몇 가지 예가 포함되어 있습니다.</block>
+  <block id="c252a357a127635943f82514442e62b3" category="section-title">제목 수준</block>
+  <block id="8000c50cdc8b68dd9ea0d326040cbd63" category="paragraph">[파란색 밑줄] * 소스 AsciiiiDoc: *</block>
+  <block id="3c2f44ba0863f4f0fcb5023aa4ee6ca2" category="paragraph">[파란색 밑줄] * 생성된 HTML: *</block>
+  <block id="cc0b18a3e7ca3718f584272598e4a21c" category="section-title">제목 레벨 0(문서 제목)</block>
+  <block id="efea650a2edf10e173ba726fa4e90c5f" category="section-title">제목 수준 1(섹션 제목)</block>
+  <block id="2b70e22920b3d78a96efdd65b4b37c1f" category="section-title">제목 수준 2(섹션 제목)</block>
+  <block id="3742ded2a390654e38f763a70bd4e35a" category="section-title">제목 수준 3(섹션 제목)</block>
+  <block id="4d1ebef97112908dabe0c9c786eaa7ba" category="section-title">제목 레벨 4(섹션 제목)</block>
+  <block id="44e6fd3a1839882d90b6020944c4aeb1" category="section-title">제목 수준 5(섹션 제목)</block>
+  <block id="6b96822e050681394160e60c027fb0d0" category="admonition">문서당 문서 제목(수준 0)은 하나만 있어야 하며 섹션 제목은 건너뛸 수 없습니다(섹션 하위 제목은 섹션 아래의 다음 제목 수준이어야 함).</block>
+  <block id="691d1860ec58dd973e803e209697d065" category="section-title">목록</block>
+  <block id="d3263947659da25e39643e07688fb919" category="paragraph">순서가 지정되지 않은 목록:</block>
+  <block id="6e991c331de28266251c487c42df1f10" category="list-text">순서가 지정되지 않은 목록입니다</block>
+  <block id="d1ad2884248be2067d5bc70a584eba6d" category="list-text">아직 순서가 지정되지 않은 목록입니다</block>
+  <block id="b84268ab94bb6da5f97f344b7f78bf9f" category="list-text">순서가 지정되지 않은 목록의 하위 요소입니다</block>
+  <block id="434aab8bf1245d04dc3e96af08e1842e" category="paragraph">정렬된 목록:</block>
+  <block id="07628350d195b6ebaae83ec46df8e1c3" category="list-text">이 목록은 순서가 지정된 목록입니다</block>
+  <block id="964f443f29145e9fa43a38671d07d447" category="list-text">이것은 여전히 순서가 지정된 목록입니다</block>
+  <block id="239cecc0851db8990cd18461b6243348" category="list-text">이 요소는 정렬된 목록의 하위 요소입니다</block>
+  <block id="fff0d600f8a0b5e19e88bfb821dd1157" category="section-title">이미지</block>
+  <block id="340c4d7a25252d5807344db646713010" category="paragraph">리포지토리 내의 이미지 또는 웹 상의 어느 위치에나 연결할 수 있습니다. 리포지토리 내의 이미지의 경우, 이미지가 미디어 폴더에 배치되므로 ":imagesdir:./media/"가 적절하게 설정되어 있는지 확인해야 합니다.</block>
+  <block id="13d002c81cf56705c2becc11e5ed9a4f" category="image-alt">리포지토리 내 이미지</block>
+  <block id="43d8eb4fa9bb019f23b6835a3d3c93d7" category="image-alt">리포지토리 외부의 이미지</block>
+  <block id="bd908db5ccb07777ced8023dffc802f4" category="section-title">링크</block>
+  <block id="69faa60007e518154e5dfa6c7cb9606d" category="paragraph">이미지와 마찬가지로 링크는 리포지토리 내부 또는 웹 상의 모든 위치에서 문서를 참조할 수 있습니다. 내부 참조의 경우 링크 원본에 대한 경로가 "link:::" 문에 지정되었는지 확인하는 것이 중요합니다.</block>
+  <block id="8cc0407dfab26edc02bac943afa1c50d" category="inline-link-macro">NetApp 솔루션 변경 로그(내부)</block>
+  <block id="e5eddd5cb0a7a1048bd37c62e18ae2dd" category="paragraph"><block ref="e5eddd5cb0a7a1048bd37c62e18ae2dd" category="inline-link-macro-rx"></block></block>
+  <block id="4d9909e75daa4ee8685674e4136d2046" category="inline-link-macro">NetApp 솔루션 변경 로그(외부)</block>
+  <block id="bc630a540bb452bb9f726ed7c7e14715" category="paragraph"><block ref="bc630a540bb452bb9f726ed7c7e14715" category="inline-link-macro-rx"></block></block>
+  <block id="3bdabc119341b76ec34be01ada064a84" category="section-title">축소할 수 있는 콘텐츠(별칭 티시)</block>
+  <block id="b78a3223503896721cca1303f776159b" category="example-title">제목</block>
+  <block id="b66944886034ca73431f2e338216bd4b" category="paragraph">축소할 텍스트가 여기에 표시됩니다.</block>
+  <block id="70f60b4a0e07b27ad4d42c2ede9220f3" category="admonition">"제목"을 클릭하여 확장된 콘텐츠를 봅니다</block>
+  <block id="1cc54ce67047f47e6e0b998e4757610b" category="section-title">테이블 만들기</block>
+  <block id="2e0fea6cc0d29edadf544e93bf56013c" category="cell">열 A</block>
+  <block id="778c1ae51201605a08ca7745c8dd3856" category="cell">열 B</block>
+  <block id="00862db58047a1191cc2f83e69ff9892" category="cell">열 C</block>
+  <block id="19273115ac8897b4064a43ccf533c3ba" category="cell">A 열의 텍스트</block>
+  <block id="9ed785bee043f58e69669715e38bfe2d" category="cell">B 열의 텍스트</block>
+  <block id="ec7498417999a2d1bc9ab843b061d478" category="cell">C 열의 텍스트</block>
+  <block id="19ffdf534588898ed43f67fde767f1fd" category="paragraph">다음은 한 행이 전체 테이블에 걸쳐 있고 다른 행에는 여러 열에 걸쳐 있는 데이터가 있는 또 다른 예입니다.</block>
+  <block id="bf767d30d483b6701f943a456017bf9d" category="cell">머리글 열 1</block>
+  <block id="6e3e0843cfe6ff00d3b74bf168580453" category="cell">머리글 열 2</block>
+  <block id="a2fa10d34df17b106b689ca93f07c770" category="cell">머리글 열 3</block>
+  <block id="61bd6ed3bebad9294ee30668abbeff3c" category="cell">머리글 열 4</block>
+  <block id="1a168c8aca72f77bf84798bb31a4cb8c" category="cell">표의 4개 열 전체에 걸쳐 있는 매우 긴 행입니다. 이 행의 유일한 셀이며 빈 셀은 남겨 둘 수 없습니다.</block>
+  <block id="4f14cfb44ee45b336256dd439e135021" category="cell">이 행은 표의 열 3개에 걸쳐 빈 셀 1개를 남겨 둔 긴 행입니다.</block>
+  <block id="43eddd3ae82d79991b5cefa462bed9d7" category="cell">이 행은 두 개의 열에 걸쳐 있으며 두 개의 셀을 비워 둡니다.</block>
+  <block id="77631ca4f0e08419b70726a447333ab6" category="cell">여기</block>
+  <block id="f1965a857bc285d26fe22023aa5ab50d" category="cell">행</block>
+  <block id="a2a551a6458a8de22446cc76d639a9e9" category="cell">있습니다</block>
+  <block id="fea087517c26fadd409bd4b9dc642555" category="cell">정상</block>
+  <block id="00a4cb60b0815316a1416dae59b77543" category="inline-link-macro">AsciiiDoc 문서</block>
+  <block id="c784ba850708b73450bc80d79e01313e" category="admonition">표 레이아웃을 변경하도록 지정할 수 있는 여러 가지 옵션이 있습니다. 자세한 내용은 달성하려는 리포지토리(HTML 버전)에서 예제를 찾은 다음 Vscode로 이동하여 소스를 보거나 을 방문하십시오 <block ref="8ce64cdd9ff98df64c05c93fb30bd0b8" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="e2f7e3242523777351b6658f86564416" category="section-title">탭 블록</block>
+  <block id="d6d281824a9f2f56cd13926cacd6f6c3" category="open-title">첫 번째 탭</block>
+  <block id="a13c148381823333364efc7a66153681" category="paragraph">첫 번째 탭의 내용이 여기에 표시됩니다</block>
+  <block id="99a1d6da572d7987b546c07b1053d7b0" category="open-title">두 번째 탭</block>
+  <block id="d93aaa34fa764ccd0a071f1c256e0a6f" category="paragraph">두 번째 탭의 내용은 여기에 있습니다</block>
+  <block id="3b04793c63a616fa65f54f1d98c263e1" category="admonition">해당 섹션의 내용을 보려면 "두 번째 탭"을 클릭하십시오.</block>
 </blocks>
