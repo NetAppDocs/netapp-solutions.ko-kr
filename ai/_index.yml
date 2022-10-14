@@ -29,8 +29,6 @@ indexpage:
       url: http://www.netapp.com/us/media/tr-4851.pdf
     - title: E-Series 및 BeeGFS for AI로 데이터 이동
       url: https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf
-    - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동
-      url: https://www.netapp.com/media/17082-tr4732.pdf
     - title: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI
       url: hcaios_executive_summary.html
   - title: 마름 및 관리

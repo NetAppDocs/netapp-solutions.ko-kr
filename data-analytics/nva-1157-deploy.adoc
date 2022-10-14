@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/nva-1157-deploy-link.html 
+keywords:  
+summary:  
+---
+= NVA-1157 - 배포: NetApp 스토리지 솔루션을 사용한 Apache Spark 워크로드
+:allow-uri-read: 
+
+
+NetApp의 Karthikeyan Nagalingam입니다
+
+NVA-1157-deploy는 NetApp NFS AFF 스토리지 시스템에서 Apache Spark SQL의 성능 및 기능 검증을 설명합니다. 다양한 시나리오를 기반으로 구성, 아키텍처, 성능 테스트를 검토하고 Spark with NetApp ONTAP 데이터 관리 소프트웨어 사용을 위한 권장사항을 살펴보십시오. 또한 JBOD(Just a Bunch of Disks) 와 NetApp AFF A800 스토리지 컨트롤러를 기반으로 한 테스트 결과에 대해서도 다룹니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf["https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf"^]

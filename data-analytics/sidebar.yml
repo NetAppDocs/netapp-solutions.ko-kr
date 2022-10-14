@@ -115,10 +115,10 @@ entries:
   - title: 결론
     url: "/data-analytics/hdcs-sh-conclusion.html"
 - title: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
-  url: https://www.netapp.com/pdf.html?item=/media/58015-sb-4154.pdf
+  url: "/data-analytics/sb-4154-link.html"
 - title: Splunk SmartStore가 포함된 NetApp StorageGRID
   url: https://www.netapp.com/pdf.html?item=/media/20646-tr-4869.pdf
 - title: NetApp E-Series E5700 및 Splunk Enterprise
-  url: https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf
+  url: "/data-analytics/tr-4623-link.html"
 - title: NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)
-  url: https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf
+  url: "/data-analytics/nva-1157-deploy-link.html"

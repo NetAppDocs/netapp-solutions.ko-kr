@@ -11,29 +11,29 @@ entries:
     - title: NVIDIA DGX A100 시스템 설계 가이드를 지원하는 ONTAP AI
       url: "/ai/nva-1151-design-link.html"
     - title: NVIDIA DGX A100 시스템 탑재 ONTAP AI 구축 가이드
-      url: https://www.netapp.com/pdf.html?item=/media/20708-nva-1151-deploy.pdf
+      url: "/ai/nva-1151-deploy-link.html"
     - title: NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치 설계 가이드를 지원하는 ONTAP AI
-      url: https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf
+      url: "/ai/nva-1153-design-link.html"
     - title: NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치 포함 ONTAP AI 구축 가이드
         를 참조하십시오
-      url: https://www.netapp.com/pdf.html?item=/media/21789-nva-1153-deploy.pdf
+      url: "/ai/nva-1153-deploy-link.html"
   - title: NVIDIA를 통한 EF-Series AI
     url: "/ai/ef-series-ai-overview.html"
     entries:
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 설계를 지원하는 EF-Series AI
-      url: https://www.netapp.com/pdf.html?item=/media/25445-nva-1156-design.pdf
+      url: "/ai/nva-1156-design-link.html"
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 구축이 포함된 EF-Series AI
-      url: https://www.netapp.com/pdf.html?item=/media/25574-nva-1156-deploy.pdf
+      url: "/ai/nva-1156-deploy-link.html"
     - title: BeeGFS 및 NetApp E-Series 구축 가이드
       url: https://www.netapp.com/us/media/tr-4755.pdf
   - title: BeeGFS 및 NetApp E-Series 참조 아키텍처
     url: https://www.netapp.com/us/media/tr-4782.pdf
   - title: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
-    url: https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf
+    url: "/ai/tr-4859-link.html"
   - title: AI 및 ML 모델 교육 워크로드용 NetApp ONTAP 및 Lenovo ThinkSystem SR670
-    url: https://www.netapp.com/media/17115-tr-4810.pdf
+    url: "/ai/tr-4810-link.html"
   - title: AI 및 ML 모델 교육 워크로드용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
-    url: https://www.netapp.com/pdf.html?item=/media/17215-tr4815.pdf
+    url: "/ai/tr-4815-link.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
   - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
@@ -57,7 +57,7 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/nvaie_additional_information.html"
   - title: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
-    url: http://www.netapp.com/us/media/tr-4851.pdf
+    url: "/ai/tr-4851-link.html"
   - title: NetApp AI Control Plane
     type: solutions
     entries:
@@ -142,7 +142,7 @@ entries:
   - title: NetApp DataOps 툴킷
     url: https://github.com/NetApp/netapp-dataops-toolkit
   - title: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
-    url: https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf
+    url: "/ai/tr-4915-link.html"
 - title: 사용 사례
   entries:
   - title: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
@@ -371,14 +371,14 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/osrunai_where_to_find_additional_information.html"
   - title: 자율 주행 워크로드를 위한 NetApp ONTAP AI 솔루션 설계
-    url: http://www.netapp.com/us/media/tr-4799-design.pdf
+    url: "/ai/tr-4799-link.html"
   - title: '의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징'
-    url: https://www.netapp.com/pdf.html?item=/media/7395-tr4811.pdf
+    url: "/ai/tr-4811-link.html"
   - title: 금융 서비스 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처
-    url: https://www.netapp.com/pdf.html?item=/media/17205-tr4807pdf.pdf
+    url: "/ai/tr-4807-link.html"
   - title: NetApp E-Series 및 BeeGFS를 통해 AI 배포
-    url: https://www.netapp.com/us/media/tr-4785.pdf
+    url: "/ai/tr-4785-link.html"
   - title: NetApp E-Series 시스템을 사용한 Quantum StorNext 설계 가이드 를 참조하십시오
-    url: https://www.netapp.com/pdf.html?item=/media/19426-nva-1150-design.pdf
+    url: "/ai/nva-1150-design-link.html"
   - title: NetApp E-Series 시스템을 사용하는 Quantum StorNext 구축 가이드 를 참조하십시오
-    url: https://www.netapp.com/pdf.html?item=/media/19429-nva-1150-deploy.pdf
+    url: "/ai/nva-1150-deploy-link.html"

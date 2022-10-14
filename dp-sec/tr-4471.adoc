@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: dp-sec/tr-4571-link.html 
+keywords:  
+summary:  
+---
+= TR-4471: Veeam Backup & Replication 9.5를 사용한 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지 모범 사례
+:allow-uri-read: 
+
+
+Akash Gupta, NetApp Shawn W대신하여(미주), Stefan Renner(EMEA), Michael Cade(성능), Veeam을 지원합니다
+
+TR-4471에서는 Veeam Backup & Replication 9.5 환경에서 NetApp E-Series 스토리지를 사용할 때의 참조 아키텍처 및 모범 사례에 대해 설명합니다
+
+link:https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf"^]

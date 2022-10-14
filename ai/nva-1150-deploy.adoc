@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ai/nva-1150-deploy-link.html 
+keywords:  
+summary:  
+---
+= NVA-1150-Deploy:Quantum StorNext with NetApp E-Series Systems Design Guide를 참조하십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp, Ryan Rodine
+
+이 문서에서는 NetApp E-Series 스토리지 시스템을 통해 StorNext 병렬 파일 시스템 솔루션을 구축하는 방법에 대해 자세히 설명합니다. 이 솔루션은 NetApp EF280 All-Flash 어레이, NetApp EF300 All-Flash NVMe 어레이, NetApp EF600 All-Flash NVMe 어레이, NetApp E57760 하이브리드 시스템에 적용됩니다. 미디어 및 엔터테인먼트 업계에서 테스트에 널리 사용되는 도구인 프레임 벤치마킹(Frametest Benchmarking)을 기반으로 성능 특성을 제공합니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/19429-nva-1150-deploy.pdf["https://www.netapp.com/pdf.html?item=/media/19429-nva-1150-deploy.pdf"^]

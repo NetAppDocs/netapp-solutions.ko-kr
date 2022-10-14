@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ai/tr-4915-link.html 
+keywords:  
+summary:  
+---
+= TR-4915: AI 및 분석 워크플로우를 위해 E-Series 및 BeeGFS로 데이터 이동
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cody Harryman과 NetApp의 Ryan Rodine이 함께 합니다
+
+TR-4915 에서는 NetApp E-Series SAN 스토리지를 통해 데이터 저장소에서 BeeGFS 파일 시스템으로 데이터를 이동하는 방법에 대해 설명합니다. 고객은 인공 지능(AI) 및 머신 러닝(ML) 애플리케이션의 경우 모델 개발을 위해 페타바이트급 데이터가 넘는 대규모 데이터 세트를 BeeGFS 클러스터로 이동해야 할 수 있습니다. 이 문서에서는 NetApp XCP 및 NetApp Cloud Sync 툴을 사용하여 이러한 성과를 달성하는 방법에 대해 알아봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf["https://www.netapp.com/pdf.html?item=/media/65882-tr-4915.pdf"^]
