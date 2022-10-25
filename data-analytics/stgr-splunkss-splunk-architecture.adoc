@@ -240,7 +240,7 @@ NOTE: 단일 사이트 또는 여러 사이트에 Splunk SmartStore 및 StorageG
 |===
 
 
-==== NetApp StorageGRID 로드 밸런서: SG1000
+=== NetApp StorageGRID 로드 밸런서: SG1000
 
 오브젝트 스토리지에는 클라우드 스토리지 네임스페이스를 제공하는 로드 밸런서가 필요합니다. StorageGRID는 F5 및 Citrix와 같은 주요 공급업체의 타사 로드 밸런싱 장치를 지원하지만 많은 고객이 단순성, 복원력 및 고성능을 위해 엔터프라이즈급 StorageGRID 밸런서를 선택합니다. StorageGRID 로드 밸런서는 VM, 컨테이너 또는 특수 제작된 어플라이언스로 사용할 수 있습니다.
 
@@ -261,7 +261,7 @@ image:stgr-splunkss-image8.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-==== SG6060
+=== SG6060
 
 StorageGRID SG6060 어플라이언스에는 2개의 스토리지 컨트롤러와 60개의 드라이브를 포함하는 컴퓨팅 컨트롤러(SG6060) 및 스토리지 컨트롤러 쉘프(E-Series E2860)가 포함되어 있습니다. 본 제품은 다음과 같은 기능을 제공합니다.
 
@@ -279,7 +279,7 @@ image:stgr-splunkss-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-=== Splunk 설계
+== Splunk 설계
 
 다음 표에는 단일 사이트를 위한 Splunk 구성이 나와 있습니다.
 

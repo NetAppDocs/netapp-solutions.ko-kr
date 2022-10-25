@@ -28,7 +28,7 @@ indexpage:
     - title: FSX ONTAP를 게스트 연결 스토리지로 사용합니다
       url: "/aws/aws-guest.html#fsx-ontap"
     - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/aws/aws-guest.html#cvo"
+      url: "/aws/aws-guest.html#aws-cvo"
     - title: VMC용 하이브리드 멀티 클라우드 솔루션
       url: "/aws/aws-solutions.html"
     - title: AWS에서 NFS 데이터 저장소에 대한 지역 지원
@@ -44,7 +44,7 @@ indexpage:
     - title: 게스트 연결 스토리지로서의 ANF
       url: "/azure/azure-guest.html#anf"
     - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/azure/azure-guest.html#cvo"
+      url: "/azure/azure-guest.html#azure-cvo"
     - title: AVS용 하이브리드 멀티 클라우드 솔루션
       url: "/azure/azure-solutions.html"
     - title: Azure에서 NFS 데이터 저장소에 대한 지역 지원
@@ -58,7 +58,7 @@ indexpage:
     - title: 보충 NFS 데이터 저장소 - Private Preview
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
     - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/gcp/gcp-guest.html#cvo"
+      url: "/gcp/gcp-guest.html#gcp-cvo"
     - title: CVS를 게스트 연결 스토리지로
       url: "/gcp/gcp-guest.html#cvs"
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
@@ -72,6 +72,6 @@ indexpage:
     - title: ONTAP + VMC 시뮬레이터의 FSX
       url: https://netapp-automation.github.io/FSx-VMC-Simulator
     - title: ANF + AVS TCO 계산기
-      url: https://aka.ms/anfcalc
+      url: https://cloud.netapp.com/anf-avs/roi?hs_preview=fXzZRiOb-88710048938
     - title: ANF + AVS 시뮬레이터
       url: https://netapp-automation.github.io/ANF-AVS-Simulator

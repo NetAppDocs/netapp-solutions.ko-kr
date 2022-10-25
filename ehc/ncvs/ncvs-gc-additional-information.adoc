@@ -45,7 +45,7 @@ https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["https://www.netap
 
 
 
-= 버전 기록
+== 버전 기록
 
 |===
 | 버전 | 날짜 | 문서 버전 기록 
@@ -55,7 +55,7 @@ https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["https://www.netap
 |===
 
 
-= 문의하기
+== 문의하기
 
 이 기술 보고서를 개선할 방법을 알려주십시오.
 

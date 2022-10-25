@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: containers/rh-os-n_astra_register.html 
+permalink: containers/anthos-with-netapp/a-w-n_astra_register.html 
 summary: Astra Control Center에서 워크로드를 관리할 수 있도록 하려면 먼저 Red Hat OpenShift 클러스터를 등록해야 합니다. 
 keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
 ---
