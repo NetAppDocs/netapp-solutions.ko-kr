@@ -91,7 +91,9 @@ Cloud Volumes ONTAP 및 GCVE가 올바르게 구성된 후에는 Veeam 복제 �
 ====
 .Veeam 구성 요소를 설치합니다
 ====
-Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.https://helpcenter.veeam.com/docs/backup/qsg_vsphere/deployment_scenarios.html["설치 절차는 Veeam 설명서를 참조하십시오"]
+Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.
+
+https://helpcenter.veeam.com/docs/backup/qsg_vsphere/deployment_scenarios.html["설치 절차는 Veeam 설명서를 참조하십시오"]
 
 ====
 .Veeam으로 VM 복제를 설정합니다
