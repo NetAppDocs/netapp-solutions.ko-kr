@@ -10413,7 +10413,6 @@
   <block id="9967209a1408f78f781d93dd0cdf88c4" category="section-title">안전한 아키텍처 및 테넌시 모델</block>
   <block id="9ba9e0f1cce71f64d3188bfdc502a43d" category="inline-link-macro">“Cloud Volumes Service 아키텍처”</block>
   <block id="33186704f78f73f32736a9ba7f8ddc85" category="inline-link">프라이빗 서비스 액세스</block>
-  <block id="00d6cadb7a586713782bbffe59d5bc21" category="paragraph">Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관리(컨트롤 플레인)와 데이터 액세스(데이터 플레인)를 세분화하여 Google Cloud의 보안 아키텍처를 제공하므로 다른 엔드포인트에 영향을 미치지 않습니다(섹션 참조) <block ref="d861c2ffd2960acc200167f08fd40005" category="inline-link-macro-rx"></block>)를 클릭합니다. Google을 사용합니다<block ref="1ac65cff0d913f26dd36736caeefd5b7" category="inline-link-rx"></block> (PSA) 프레임워크를 사용하여 서비스를 제공합니다. 이 프레임워크는 NetApp에서 제공하고 운영하는 서비스 생산자와 고객 프로젝트에서 VPC(가상 프라이빗 클라우드)인 서비스 소비자 간의 차이를 구별하며, Cloud Volumes Service 파일 공유에 액세스할 클라이언트를 호스팅합니다.</block>
   <block id="5971da0242ce7b616ff2972978613cef" category="inline-link-macro">"임차 모델"</block>
   <block id="01760cb04e3a4a93404ab2c878b036db" category="inline-link-macro">“공유 VPC”</block>
   <block id="e70da8f06ec706ed45906f411481eda0" category="paragraph">이 아키텍처에서 테넌트는 섹션을 참조하십시오 <block ref="0a088dd892133b6a77304655c2b8b829" category="inline-link-macro-rx"></block>)는 사용자가 명시적으로 연결하지 않는 한 서로 완전히 격리된 Google Cloud 프로젝트로 정의됩니다. 테넌트를 통해 Cloud Volumes Service 볼륨 플랫폼을 사용하는 다른 테넌트에서 데이터 볼륨, 외부 이름 서비스 및 기타 필수 요소를 완벽하게 격리할 수 있습니다. Cloud Volumes Service 플랫폼은 VPC 피어링을 통해 연결되므로 이러한 격리가 적용됩니다. 공유 VPC를 사용하여 여러 프로젝트 간에 Cloud Volumes Service 볼륨을 공유할 수 있습니다(섹션 참조) <block ref="c2426c8c5bcdce9adb82a8906c5a3478" category="inline-link-macro-rx"></block>)를 클릭합니다. SMB 공유 및 NFS 내보내기에 액세스 제어를 적용하여 데이터 세트를 보거나 수정할 수 있는 사용자 또는 항목을 제한할 수 있습니다.</block>
@@ -10553,7 +10552,6 @@
   <block id="6df7123d2b1a64b11c7df1c2b837f752" category="paragraph">NFS Kerberos 시스템 계정의 경우 KDC와 새 키 탭이 생성/교환될 때만 암호 재설정이 적용됩니다. 현재 Cloud Volumes Service에서는 이 작업을 수행할 수 없습니다.</block>
   <block id="7631991924ea0015e269781ad88bd8d3" category="section-title">LDAP 및 Kerberos와 함께 사용할 네트워크 포트</block>
   <block id="52d1b9583b81da6bee6ba24d74c4018b" category="inline-link">보안 고려 사항에 대한 Cloud Volumes Service 문서</block>
-  <block id="1e21a0f8a8012a10d3db8d473ba52502" category="paragraph">LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다<block ref="0dc8f2243f86f97f7b6af9378a496f93" category="inline-link-rx"></block>.</block>
   <block id="2363dee608bcd9f6ce7f980bfdad5789" category="section-title">LDAP를 지원합니다</block>
   <block id="d0a2de9b178b436803f7732ff69d0c14" category="paragraph">Cloud Volumes Service는 LDAP 클라이언트 역할을 하며 UNIX ID에 대한 사용자 및 그룹 조회를 위해 표준 LDAP 검색 쿼리를 사용합니다. Cloud Volumes Service에서 제공하는 표준 기본 사용자 이외의 사용자 및 그룹을 사용하려면 LDAP가 필요합니다. NFS Kerberos를 사용자 보안 주체(예: user1@domain.com 사용할 계획이라면 LDAP도 필요합니다. 현재 Microsoft Active Directory를 사용하는 LDAP만 지원됩니다.</block>
   <block id="2eaa173e56517db74fb0eb92806a0877" category="inline-link">RFC-2307-bis</block>
@@ -10829,7 +10827,6 @@
   <block id="b114edcfa107ab9d459e2e75aea2cfdb" category="inline-link">FIPS 140-2 인증 번호 4144</block>
   <block id="855bcb8730de4b24527a09801b103d97" category="list-text">CVS - 성능의 경우 볼륨별 키는 Cloud Volumes Service에 내장된 키 관리자에 저장되며, NetApp ONTAP CryptoMod를 사용하여 AES-256 암호화 키를 생성합니다. CryptoMod는 CMVP FIPS 140-2 검증 모듈 목록에 나열되어 있습니다. 을 참조하십시오<block ref="c8bf3ef21e8efdca1f27a1e57e809607" category="inline-link-rx"></block>.</block>
   <block id="a934c8bfa11942a4baa792ed229b8bb8" category="paragraph">2021년 11월부터 CVS-Performance에 CMEK(Customer-managed Encryption) 기능을 미리 볼 수 있습니다. 이 기능을 사용하면 Google KMS(Key Management Service)에서 호스팅되는 프로젝트별, 지역별 마스터 키를 사용하여 볼륨별 키를 암호화할 수 있습니다. KMS를 사용하면 외부 키 관리자를 연결할 수 있습니다.</block>
-  <block id="fd313eaaaadfe56df9ec88896284165d" category="paragraph">CVS용 KMS 구성 방법에 대한 자세한 내용은<block ref="905a3b34ffbfe930acdbf23dd47d698f" category="inline-link-rx"></block>.</block>
   <block id="08a22fe6e00e4ceb40cd56453b4a5864" category="paragraph">아키텍처에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="d008df97450ac642ad54d58196f67862" category="inline-link-macro-rx"></block></block>
   <block id="fb787119808b111e9df5553be31361c8" category="section-title">전송 중인 데이터 보안</block>
   <block id="8255b8a6d9844c87b5ecd1d2287b2f60" category="paragraph">유휴 데이터의 보안 외에도 Cloud Volumes Service 인스턴스와 클라이언트 또는 복제 타겟 간에 전송 중인 데이터를 안전하게 보호할 수 있어야 합니다. Cloud Volumes Service는 Kerberos를 사용한 SMB 암호화, 패킷의 서명/봉인 및 데이터 전송의 엔드 투 엔드 암호화를 위한 NFS Kerberos 5p 등의 암호화 방법을 사용하여 NAS 프로토콜을 통해 전송 중인 데이터에 대한 암호화를 제공합니다.</block>
@@ -10863,9 +10860,7 @@
   <block id="9b641219ac63451505f5a25a887038d4" category="section-title">백업 및 복원</block>
   <block id="5e2f84170723d4cfed011f9ebc6c557e" category="paragraph">Cloud Volumes Service는 표준 NAS 클라이언트 백업 기능(예: NFS 또는 SMB를 통한 백업)을 제공합니다.</block>
   <block id="0d69441d7fc21e56d3cf2eb944fbf6c1" category="inline-link">볼륨 복제</block>
-  <block id="9fd9d0ecc58c5d26f4934bc140ac2a41" category="list-text">CVS - 성능은 다른 CVS - 성능 볼륨에 대한 교차 지역 볼륨 복제를 제공합니다. 자세한 내용은 을 참조하십시오<block ref="ec408a29560fd662bec08bf50f9ff3d6" category="inline-link-rx"></block> Cloud Volumes Service 설명서를 참조하십시오.</block>
   <block id="161b127f579db2727ace94e4fb6f9e5b" category="inline-link">클라우드 백업</block>
-  <block id="6a7870f99b17bbb49636a1e7be9d4be1" category="list-text">CVS-SW는 서비스 네이티브 볼륨 백업/복원 기능을 제공합니다. 자세한 내용은 을 참조하십시오<block ref="2377dc7e4548195ed704b70f3ce6250c" category="inline-link-rx"></block> Cloud Volumes Service 설명서를 참조하십시오.</block>
   <block id="56a32ac982c7663e59f24c58cfb673d6" category="paragraph">볼륨 복제는 랜섬웨어 이벤트를 포함하여 재해 발생 시 신속한 페일오버를 위해 소스 볼륨의 정확한 복사본을 제공합니다.</block>
   <block id="ae2679a66d07f8c7efd50d972a34a112" category="section-title">지역 간 복제</block>
   <block id="1a094951f7e9c42a89c4ef4b0b328eee" category="paragraph">CVS - 성능은 Google 네트워크에서 실행되는 복제에 사용되는 특정 인터페이스를 사용하여 NetApp이 제어하는 백엔드 서비스 네트워크에서 TLS1.2 AES 256 GCM 암호화를 사용하여 데이터 보호 및 아카이브 사용 사례를 위해 Google Cloud 지역 전반에 걸쳐 볼륨을 안전하게 복제할 수 있게 해줍니다. 운영(소스) 볼륨에는 활성 운영 데이터가 포함되어 있으며 보조(대상) 볼륨에 복제하여 운영 데이터 세트의 정확한 복제본을 제공합니다.</block>
@@ -10873,19 +10868,15 @@
   <block id="fd25283b48ea77209e43fe9173df1354" category="paragraph">파일 및 폴더에 대한 모든 권한은 보조 볼륨으로 복제되지만 내보내기 정책 및 규칙, SMB 공유 및 ACL 공유 등의 공유 액세스 권한은 별도로 처리해야 합니다. 사이트 장애 조치의 경우 대상 사이트는 동일한 이름 서비스와 Active Directory 도메인 연결을 활용하여 사용자 및 그룹 ID와 사용 권한을 일관된 방식으로 처리해야 합니다. 재해 발생 시 보조 볼륨을 페일오버 타겟으로 사용할 수 있습니다. 즉, 2차 볼륨을 읽기-쓰기로 변환하는 복제 관계를 끊으면 됩니다.</block>
   <block id="940c6fa9c7eb366ae4e471e545edb27b" category="paragraph">볼륨 복사본은 읽기 전용이며, 바이러스가 감염된 데이터를 가지고 있거나 랜섬웨어가 기본 데이터 세트를 암호화한 경우 데이터를 빠르게 복구하기 위해 변경 불가능한 데이터 사본을 오프사이트에 제공합니다. 읽기 전용 데이터는 암호화되지 않지만 운영 볼륨이 영향을 받고 복제가 발생하는 경우 감염된 블록도 복제됩니다. 오래되고 영향을 받지 않는 Snapshot 복사본을 사용하여 복구할 수 있지만, 공격이 탐지되는 속도에 따라 SLA가 약속된 RTO/RPO의 범위를 벗어날 수 있습니다.</block>
   <block id="fe62647cc35dde214e0df1ae1fe9d0ab" category="inline-link">보안 고려 사항</block>
-  <block id="344c8cea0d31ef9e8c7c56863c714a04" category="paragraph">또한 Google Cloud에서 CRR(Cross-Region Replication) 관리를 통해 볼륨 삭제, 스냅샷 삭제 또는 스냅샷 스케줄 변경과 같은 악의적인 관리 작업을 방지할 수 있습니다. 이 작업은 볼륨 관리자를 분리하는 사용자 지정 역할을 생성하여 수행합니다. 볼륨 관리자는 소스 볼륨을 삭제할 수는 있지만 미러를 중단할 수는 없으므로 볼륨 작업을 수행할 수 없는 CRR 관리자로부터 대상 볼륨을 삭제할 수 없습니다. 을 참조하십시오<block ref="bf2a9ccb864ad3a1fa1ddc1fec02a961" category="inline-link-rx"></block> 각 관리자 그룹이 허용하는 권한에 대한 Cloud Volumes Service 문서</block>
   <block id="8ee215caafa31f1ecdd53056d288eb19" category="paragraph">Cloud Volumes Service는 높은 데이터 내구성을 제공하지만 외부 이벤트는 데이터 손실을 일으킬 수 있습니다. 바이러스 또는 랜섬웨어와 같은 보안 이벤트가 발생할 경우, 백업 및 복원이 시기적절하게 데이터 액세스를 재개하는 데 중요한 역할을 합니다. 관리자가 실수로 Cloud Volumes Service 볼륨을 삭제할 수 있습니다. 또는 사용자가 단순히 데이터 백업 버전을 몇 개월 동안 유지하고 볼륨 내에 추가 Snapshot 복사본 공간을 유지하는 것은 비용 문제가 됩니다. Snapshot 복사본이 최근 몇 주 동안 손실된 데이터를 복원하는 백업 버전을 보관하는 기본 방법이어야 하지만, 볼륨 내에 있으며 볼륨이 없어지면 손실됩니다.</block>
-  <block id="99144970696c7e366271871a0e83b6cd" category="paragraph">이러한 모든 이유로 NetApp Cloud Volumes Service은 를 통해 백업 서비스를 제공합니다<block ref="253601e5d476a508040b734cbc7b3164" category="inline-link-rx"></block>.</block>
   <block id="a5cef37749b0ea6b89d13e2bfc190bcc" category="paragraph">Cloud Volumes Service 백업은 GCS(Google Cloud Storage)에서 볼륨의 복사본을 생성합니다. 사용 가능한 공간이 아닌 볼륨 내에 저장된 실제 데이터만 백업합니다. 영구 증분 방식으로 작동하므로 볼륨 콘텐츠를 한 번 전송하고 변경된 데이터만 계속 백업합니다. 여러 개의 전체 백업을 사용하는 기존 백업 개념에 비해 많은 양의 백업 스토리지를 절약하여 비용을 절감합니다. 백업 공간의 월별 가격이 볼륨에 비해 낮기 때문에 백업 버전을 더 오래 유지하는 것이 좋습니다.</block>
   <block id="d41618915810c18642064f885af2a835" category="paragraph">사용자는 Cloud Volumes Service 백업을 사용하여 모든 백업 버전을 동일한 지역 내의 동일한 볼륨 또는 다른 볼륨으로 복원할 수 있습니다. 소스 볼륨이 삭제되면 백업 데이터가 보존되므로 독립적으로 관리(예: 삭제)해야 합니다.</block>
   <block id="3289695e643b478f0efa19edc74cf567" category="inline-link">Cloud Volumes Service 백업 설명서</block>
   <block id="be7923d42a302a1a86fdaa9f096fde63" category="inline-link">지원되는 최대 백업 버전 수입니다</block>
   <block id="59aab28b54594c59dab8d19afd9478e4" category="inline-link">가격</block>
-  <block id="57e8b261ab803839f73416e368f552bc" category="paragraph">Cloud Volumes Service 백업은 Cloud Volumes Service에 옵션으로 내장되어 있습니다. 사용자는 볼륨별로 Cloud Volumes Service 백업을 활성화하여 보호할 볼륨을 결정할 수 있습니다. 를 참조하십시오<block ref="218d9dd384a48541f627c5084c286ade" category="inline-link-rx"></block> 백업에 대한 자세한 내용은 를 참조하십시오<block ref="d724a11e2928bd8489b8ad8fe1eac94b" category="inline-link-rx"></block>, 스케줄링 및 을 참조하십시오<block ref="31e05107512c82ef17df4f5c4b3fe0bd" category="inline-link-rx"></block>.</block>
   <block id="9a647ae53ed9b2a783aef42530e1fe97" category="paragraph">프로젝트의 모든 백업 데이터는 GCS 버킷 내에 저장되며, 이 버킷은 서비스에서 관리되며 사용자에게 표시되지 않습니다. 프로젝트마다 다른 버킷을 사용합니다. 현재 버킷은 Cloud Volumes Service 볼륨과 동일한 영역에 있지만 더 많은 옵션에 대해 논의 중입니다. 최신 상태는 설명서를 참조하십시오.</block>
   <block id="4e1c6d2a637d959db4ce4a09b3e5c580" category="paragraph">Cloud Volumes Service 버킷에서 GCS로 데이터를 전송하는 경우 HTTPS 및 TLS1.2가 포함된 서비스 내부 Google 네트워크를 사용합니다. 데이터는 Google에서 관리하는 키로 유휴 상태로 암호화됩니다.</block>
   <block id="5e467dce18f46b1803b06097fae60b82" category="inline-link">역할/netappcloudvolumes.admin</block>
-  <block id="de8a90c8653195ed30cc4920de8c7921" category="paragraph">Cloud Volumes Service 백업(백업 생성, 삭제 및 복원)을 관리하려면 사용자에게 이 있어야 합니다<block ref="595f329bf934dbc7996bb735e9664896" category="inline-link-rx"></block> 역할.</block>
   <block id="d5588adba169169b3d9fbc3d40fa9e91" category="inline-link-macro">다음: 아키텍처 개요</block>
   <block id="70c94a86f99e1aa5d40b6ca87c17a399" category="paragraph"><block ref="70c94a86f99e1aa5d40b6ca87c17a399" category="inline-link-macro-rx"></block></block>
   <block id="6ab0778deb23383f6063990e47d38567" category="summary">Cloud Volumes Service의 모든 볼륨은 AES-256 암호화를 사용하여 유휴 상태로 암호화되므로 미디어에 기록된 모든 사용자 데이터가 암호화되며 볼륨당 키를 통해서만 해독할 수 있습니다.</block>
@@ -10897,7 +10888,6 @@
   <block id="e23c4fadd8e7d70663bc3393bca7d576" category="inline-link">Google KMS(키 관리 서비스).</block>
   <block id="387ccb6d293c8d2f51b2730c375c3f3a" category="paragraph">2021년 11월부터 CMEK(고객 관리 암호화 키) 기능을 미리 볼 수 있습니다. 이렇게 하면 에서 호스팅되는 프로젝트별, 지역별 마스터 키를 사용하여 볼륨별 키를 암호화할 수 있습니다<block ref="145d140dc09dde7f8aacc53f1269c2de" category="inline-link-rx"></block> KMS를 사용하면 외부 키 관리자를 연결할 수 있습니다.</block>
   <block id="1988a6b2308f38718c8100c2e344eb5c" category="inline-link">고객이 관리하는 암호화 키 설정</block>
-  <block id="811bec2d7b00d479640fbf3259346fe6" category="paragraph">CVS용 KMS 구성 - 성능에 대한 자세한 내용은 을 참조하십시오<block ref="a0d8b07d63b271255da3bba6f51651a4" category="inline-link-rx"></block>.</block>
   <block id="6a2064a5b36d77d1da28e1bb96fe613e" category="inline-link-macro">다음: 방화벽.</block>
   <block id="d78ea12f26e93e819db4dd4772e8cb6e" category="paragraph"><block ref="d78ea12f26e93e819db4dd4772e8cb6e" category="inline-link-macro-rx"></block></block>
   <block id="13a2c7416db43025d8318ec9db325859" category="summary">전송 중인 데이터는 NAS 프로토콜 계층에서 암호화할 수 있으며, Google Cloud 네트워크 자체는 다음 섹션에 설명된 대로 암호화됩니다.</block>
@@ -10952,7 +10942,6 @@
   <block id="3e7dfd7567a414307d5fe93ea83ce4f6" category="list-text">NFS 작업 유형이 표시됩니다(FSINFO, ACCESS, GETATTR 등).</block>
   <block id="6b375be1f905197ba21c586647e973f4" category="list-text">보조 프로토콜(마운트, 포트 맵, NLM 등)이 암호화되지 않음 - (내보내기 경로, IP 주소 확인 가능)</block>
   <block id="6de6f14759a24d6fcb16973384e01c00" category="list-text">보안 수준의 최악의 성능: krb5p는 더 많은 암호화/암호 해독을 해야 합니다.</block>
-  <block id="6640e7cef3ca860543c49a5125ba4c5a" category="list-text">파일 개수가 많은 워크로드에 대해 NFSv4.x를 사용할 경우 krb5p보다 성능이 더 우수합니다.</block>
   <block id="abac32415b4bfbaf4765dec9d36149cd" category="paragraph">Cloud Volumes Service에서 구성된 Active Directory 서버는 Kerberos 서버 및 LDAP 서버로 사용됩니다(RFC2307 호환 스키마에서 사용자 ID를 조회하기 위해). 다른 Kerberos 또는 LDAP 서버는 지원되지 않습니다. Cloud Volumes Service에서 ID 관리를 위해 LDAP를 사용하는 것이 좋습니다. NFS Kerberos가 패킷 캡처에 표시되는 방법에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="e06a781bd551a4c8ed55a5dfd008a50c" category="inline-link-macro-rx"></block></block>
   <block id="656b94b95418723e2acea6b86dc53e48" category="inline-link-macro">다음: 유휴 데이터 암호화.</block>
   <block id="6ca1480f90da15333bae5670283ea19f" category="paragraph"><block ref="6ca1480f90da15333bae5670283ea19f" category="inline-link-macro-rx"></block></block>
@@ -10963,8 +10952,6 @@
   <block id="6e0173c8a46418c9ee6c916c7c275ef8" category="inline-link"><block ref="6e0173c8a46418c9ee6c916c7c275ef8" category="inline-link-rx"></block></block>
   <block id="8e65fc49f8ebbf3d9cc9651ce7940654" category="paragraph"><block ref="8e65fc49f8ebbf3d9cc9651ce7940654" category="inline-link-rx"></block></block>
   <block id="0e8aec42089c0c73812fa42d1888b3c8" category="list-text">Google 전용 서비스 액세스</block>
-  <block id="75956b9ee748b806549eeec3c9a81192" category="inline-link"><block ref="75956b9ee748b806549eeec3c9a81192" category="inline-link-rx"></block></block>
-  <block id="6c84917a571a2282fd9fb2a6f058a11e" category="paragraph"><block ref="6c84917a571a2282fd9fb2a6f058a11e" category="inline-link-rx"></block></block>
   <block id="02aed7d7f25878a636d26b696ed151bb" category="list-text">NetApp 제품 설명서</block>
   <block id="f670e58416e680d41a98914939ff8b4d" category="list-text">암호화 검증 모듈 프로그램 — NetApp CryptoMod</block>
   <block id="904728949094c548bcec2129979a28a6" category="inline-link"><block ref="904728949094c548bcec2129979a28a6" category="inline-link-rx"></block></block>
@@ -11016,7 +11003,6 @@
   <block id="c40a72feaf9e622dcbd1a55edff6fdbf" category="paragraph">NFS 마운트에 대한 초기 엑스포트/공유 액세스는 엑스포트 정책 내에 포함된 호스트 기반 엑스포트 정책 규칙을 통해 제어됩니다. 호스트 IP, 호스트 이름, 서브넷, 넷그룹 또는 도메인이 정의되어 NFS 공유를 마운트하는 액세스 권한과 호스트에 허용되는 액세스 수준을 허용합니다. 엑스포트 정책 규칙 구성 옵션은 Cloud Volumes Service 레벨에 따라 다릅니다.</block>
   <block id="519377bf4a5b0a2078c3d66b249040aa" category="paragraph">CVS-SW의 경우 내보내기 정책 구성에 다음 옵션을 사용할 수 있습니다.</block>
   <block id="fdbbd602d808015eb2f536ce2add5b6e" category="list-text">* 클라이언트 일치. * 쉼표로 구분된 IP 주소 목록, 쉼표로 구분된 호스트 이름, 서브넷, 넷그룹, 도메인 이름 목록.</block>
-  <block id="fb467c38c5af2ca41ea3f09fe535144d" category="list-text">* RO/RW 액세스 규칙 * 내보내기에 대한 액세스 수준을 제어하려면 읽기/쓰기 또는 읽기 전용 을 선택합니다. CVS - 성능은 다음 옵션을 제공합니다.</block>
   <block id="4984ee657e0bd2919476369a84dfe159" category="list-text">* RO/RW 액세스 규칙. * 읽기/쓰기 또는 읽기 전용 을 선택하여 내보내기에 대한 액세스 수준을 제어합니다.</block>
   <block id="3a3236a433ddc1bb46fe40e058aad584" category="list-text">* 루트 액세스(켜기/끄기). * 루트 스쿼시를 구성합니다(“ 절 참조)<block ref="60067fcb7aeefdc389264d741499b983" category="inline-xref-macro-rx"></block>"를 참조하십시오.)</block>
   <block id="0c1b0b2a02124e4f1e2111f36d28432e" category="list-text">* Protocol type. * 이 옵션은 NFS 마운트에 대한 액세스를 특정 프로토콜 버전으로 제한합니다. 볼륨에 대해 NFSv3과 NFSv4.1을 모두 지정할 때 두 확인란을 모두 비워 두거나 두 확인란을 모두 선택합니다.</block>
@@ -11052,7 +11038,6 @@
   <block id="13640bb94453faf76256f49439337e2e" category="paragraph">권한 * 읽기-데이터(파일)/목록-디렉토리(디렉토리) * 쓰기-데이터(파일)/생성-파일(디렉토리) * 추가-데이터(파일)/생성-하위 디렉토리(디렉토리) * 실행(파일)/변경-디렉토리(디렉토리) * 삭제 * delete-child * read-attributes * write-named-attributes * write-named-acner-write-write-acl-write-write-write-write-acl-write-write-write-write-acl-write-write-write-write-</block>
   <block id="0bfe97b6a2010bf8a46c30c256d9bc67" category="paragraph">마지막으로, RPC 패킷 제한에 따라 NFS 그룹 멤버 자격(NFSv3 및 NFSv4.x에서 모두)은 AUTH_SYS에 대한 기본값 최대 16으로 제한됩니다. NFS Kerberos는 최대 32개의 그룹과 NFSv4 ACL을 제공하므로 사용자 및 그룹 ACL(ACE당 최대 1024개 항목)을 세부적으로 적용하여 제한을 제거할 수 있습니다.</block>
   <block id="27aabeb671232f388e6288cf9395fda9" category="inline-link">NFS 볼륨 생성 및 관리</block>
-  <block id="b42b7de139bf4398a5d4b048ecf30c9f" category="paragraph">또한 Cloud Volumes Service는 지원되는 최대 그룹을 32개까지 확장할 수 있도록 확장된 그룹 지원을 제공합니다. 이를 위해서는 유효한 UNIX 사용자 및 그룹 ID가 포함된 LDAP 서버에 대한 LDAP 연결이 필요합니다. 이 구성을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="744e76592290230cb7381c9b8a5414da" category="inline-link-rx"></block> Google 문서.</block>
   <block id="75812520c9040a205064d0d2cb2263e9" category="section-title">NFSv3 사용자 및 그룹 ID</block>
   <block id="b1695eaaf5db3491be45228e42d7894f" category="paragraph">NFSv3 사용자 및 그룹 ID는 이름이 아닌 숫자 ID로 와이어를 통해 제공됩니다. Cloud Volumes Service는 NFSv3을 사용하는 이러한 숫자 ID에 대해 사용자 이름 확인을 수행하지 않으며 UNIX 보안 스타일 볼륨에서는 모드 비트만 사용합니다. NFSv4.1 ACL이 있으면 NFSv3을 사용하더라도 ACL을 제대로 해결하려면 숫자 ID 조회 및/또는 이름 문자열 조회가 필요합니다. NTFS 보안 스타일 볼륨에서 Cloud Volumes Service는 유효한 UNIX 사용자로 숫자 ID를 확인한 다음 유효한 Windows 사용자에게 매핑하여 액세스 권한을 협상해야 합니다.</block>
   <block id="c88acee1e86a1d4e088392362c04bb3b" category="section-title">NFSv3 사용자 및 그룹 ID의 보안 제한</block>
@@ -11174,16 +11159,11 @@
   <block id="4591bc0b4ed2ba115e753bad56145791" category="paragraph"><block ref="4591bc0b4ed2ba115e753bad56145791" category="inline-link-macro-rx"></block></block>
   <block id="1e45092c94634e40f68ce647e16109a4" category="paragraph">Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP 포트를 노출합니다.</block>
   <block id="8ace993e6a8c37342617dbf22185890a" category="inline-link">NFS 액세스에 필요한 포트 수</block>
-  <block id="c56328227fc3affbe6ed0ef4ba04f494" category="list-text"><block ref="c56328227fc3affbe6ed0ef4ba04f494" category="inline-link-rx"></block></block>
   <block id="259c7a7ef42d8165caa2c0238cb6f9fe" category="inline-link">SMB 액세스에 필요한 포트</block>
-  <block id="c6563340810489dd712f25c2644eaed8" category="list-text"><block ref="c6563340810489dd712f25c2644eaed8" category="inline-link-rx"></block></block>
   <block id="48e54afcf03ca45bfe38f6b7ff58764a" category="inline-link">구성됨</block>
   <block id="2957bc03d53f1be7c11d427906ed1479" category="inline-link">DNS 기반 DC 검색</block>
-  <block id="150a343c955aa3114dca2e9c39571ad8" category="paragraph">또한 Kerberos를 비롯한 LDAP를 지원하는 SMB, NFS 및 이중 프로토콜 구성을 사용하려면 Windows Active Directory 도메인에 대한 액세스가 필요합니다. Active Directory 연결은 이어야 합니다<block ref="10ec0b3d8ec2c3b73be0dd7483e61c9e" category="inline-link-rx"></block> 지역별로 제공됩니다. Active Directory 도메인 컨트롤러(DC)는 를 사용하여 식별합니다<block ref="821541d595f9fee8c67d91aa5da861b4" category="inline-link-rx"></block> 지정된 DNS 서버를 사용합니다. 반환된 DC 중 하나가 사용됩니다. Active Directory 사이트를 지정하면 자격 있는 DC 목록을 제한할 수 있습니다.</block>
   <block id="02d7b2e18b6bb033bf88be07d39aab4c" category="inline-link">Cloud Volumes Service에 대한 온보딩</block>
-  <block id="7a9b1188e66f0581af9bc76ec3099a55" category="paragraph">Cloud Volumes Service는 'gcloud 컴퓨팅 주소' 명령으로 할당된 CIDR 범위의 IP 주소를 사용합니다<block ref="e8e0c669039859d9678de67879e03e1d" category="inline-link-rx"></block>. 이 CIDR을 소스 주소로 사용하여 Active Directory 도메인 컨트롤러에 대한 인바운드 방화벽을 구성할 수 있습니다.</block>
   <block id="934adb56d62c2e8a1334785cbb6d4987" category="inline-link">여기에 설명된 대로 Cloud Volumes Service CIDR에 포트를 노출합니다</block>
-  <block id="60bb23c83a123fdd2c99980eb34c8f80" category="paragraph">Active Directory 도메인 컨트롤러가 필요합니다<block ref="7b35a292c67c7ee0f89d3dd389e188e4" category="inline-link-rx"></block>.</block>
   <block id="fa995eb117a30c2365b6a07bf00e36e4" category="inline-link-macro">다음: NAS 프로토콜 개요</block>
   <block id="6160acafbed3bd228bd0703f2991a4cb" category="paragraph"><block ref="6160acafbed3bd228bd0703f2991a4cb" category="inline-link-macro-rx"></block></block>
   <block id="4a3327b1b286d1e67b6b26ccadab7e11" category="paragraph">이메일: mailto:doccomments@netapp.com [doccomments@netapp.com^]로 연락해 주십시오. 제목 줄에 기술 보고서 4918 포함.</block>
@@ -11204,7 +11184,6 @@
   <block id="d0455114933a93b857dff40ad9829c80" category="paragraph">ID 및 액세스 관리 <block ref="3e7f3b73b3f103986fbe162302b5e57e" category="inline-link-rx"></block>)는 Google Cloud 프로젝트 인스턴스에 대한 인증(로그인) 및 권한 부여(권한)를 제어할 수 있는 표준 서비스입니다. Google IAM은 권한 승인 및 제거에 대한 전체 감사 추적을 제공합니다. 현재 Cloud Volumes Service는 제어 평면 감사를 제공하지 않습니다.</block>
   <block id="697308a09680ed006fe009f5a90fd74c" category="section-title">인증/권한 개요</block>
   <block id="cb5b383a5c27210bdf8f2fd443c68ebb" category="inline-link">여기에서 세분화된 사용 권한의 전체 목록을 확인할 수 있습니다</block>
-  <block id="73867c3747b10f9f7b4b54a4597ff38b" category="paragraph">IAM은 Cloud Volumes Service에 대한 세분화된 기본 권한을 제공합니다. 를 찾을 수 있습니다<block ref="fefbe49b0be12af5b957eff3a3dc2826" category="inline-link-rx"></block>.</block>
   <block id="f6c6a3fb346fa0197c1eeba05a4736c6" category="paragraph">IAM은 또한 netapcloudvolumes.admin과 netapcloudvolumes.viewer라는 두 가지 사전 정의된 역할을 제공합니다. 이러한 역할은 특정 사용자 또는 서비스 계정에 할당할 수 있습니다.</block>
   <block id="6d90e176a60105dd03d5580c615cc5fe" category="paragraph">IAM 사용자가 Cloud Volumes Service를 관리할 수 있도록 적절한 역할 및 권한을 할당합니다.</block>
   <block id="010558e705f1d93db66b5a129431b39d" category="paragraph">세분화된 사용 권한을 사용하는 예는 다음과 같습니다.</block>
@@ -11219,10 +11198,8 @@
   <block id="9d8270b5a4616fc246d5f96cccc9f61e" category="inline-link">애플리케이션 기본 자격 증명</block>
   <block id="c1f48ac217f6b993bda4f82835777177" category="list-text">사용<block ref="09540132e155f93461287a2e21a4e25d" category="inline-link-rx"></block> 역할/iam.serviceAccountTokenCreator` 포함. 이 코드(스크립트, Terraform 등)는 에서 실행됩니다<block ref="ffba44c35d88772fc8c63157b8dc0cf7" category="inline-link-rx"></block> 서비스 계정을 가장하여 권한을 얻습니다. 이 접근 방식은 Google 보안 모범 사례를 반영합니다.</block>
   <block id="01aa2fa55c64df5a4122b637c9ababc7" category="inline-link">서비스 계정 및 개인 키 생성</block>
-  <block id="00aa2e143f3d3b00e94456b23d239a8d" category="paragraph">을 참조하십시오<block ref="5d862676de2107050ea35e71368d2326" category="inline-link-rx"></block> 자세한 내용은 Google 클라우드 설명서를 참조하십시오.</block>
   <block id="a325b85a1545e8c507701fb5aa32e6b8" category="section-title">Cloud Volumes Service API를 참조하십시오</block>
   <block id="d06e940dcf329e87ca49cb2a665f5fd8" category="inline-link">Google Cloud 설명서에서 Cloud Volumes API를 참조하십시오</block>
-  <block id="4a0d70491e56eae6b1e0743d9c3a3777" category="paragraph">Cloud Volumes Service API는 HTTPS(TLSv1.2)를 기본 네트워크 전송으로 사용하여 REST 기반 API를 사용합니다. 최신 API 정의를 찾을 수 있습니다<block ref="d30245d84ac801bb5beeb0b65de1621d" category="inline-link-rx"></block> 및 에서 API 사용 방법에 대한 정보를 참조하십시오<block ref="00c944b7c7739b905457d5d21be6a7ef" category="inline-link-rx"></block>.</block>
   <block id="de13c3e3b25af602f2652dd51a503a8a" category="paragraph">API 엔드포인트는 표준 HTTPS(TLSv1.2) 기능을 사용하여 NetApp에서 작동 및 보안됩니다.</block>
   <block id="8eac7c9151aa7742216ac387e27479a7" category="section-title">JWT 토큰</block>
   <block id="56ebd33e81a27d6c3c78f2f67f2d3c1a" category="inline-link">RFC-7519</block>
@@ -11252,9 +11229,7 @@
   <block id="16929468b925d0d420441bcbba519e7d" category="doc">Cloud Volumes Service 아키텍처</block>
   <block id="98cdf6a29cf39ecd5239e5071cb0dc88" category="inline-link">Google PSA</block>
   <block id="d4d6aaf620a68430d28b38f847f2a6af" category="inline-link">VPC 네트워크 피어링</block>
-  <block id="f84137720cfd9533352746a01677a6b2" category="paragraph">CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같은 다른 Google Cloud 네이티브 서비스와 유사한 방식으로 Cloud Volumes Service는 을 사용합니다<block ref="0f93a99b9e468a051182b66dabbf3bed" category="inline-link-rx"></block> 서비스를 제공합니다. PSA에서는 서비스를 사용하는 서비스 프로듀서 프로젝트에 내장하고 있습니다<block ref="2d8d4488e7ed7b53a7aafab379ba8587" category="inline-link-rx"></block> 서비스 소비자에 연결합니다. 서비스 생산자는 NetApp에서 제공 및 운영하고, 서비스 소비자는 고객 프로젝트에서 VPC로, Cloud Volumes Service 파일 공유에 액세스하려는 클라이언트를 호스팅합니다.</block>
   <block id="353164decd5aa0c4f58b4e56559e1b13" category="inline-link">아키텍처 섹션을 참조하십시오</block>
-  <block id="9448d83a67980a22f2db155347fa277c" category="paragraph">에서 참조하는 다음 그림<block ref="6a8b5039754626811ee5b8fe5289e273" category="inline-link-rx"></block> 에서는 Cloud Volumes Service 설명서의 개략적인 보기를 보여 줍니다.</block>
   <block id="8055d5a25a1838f115c8636545abb21a" category="paragraph"><block ref="8055d5a25a1838f115c8636545abb21a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a6f34964d3060f5dd66e2cc7c8711679" category="paragraph">점선 위의 파트는 볼륨 수명 주기를 제어하는 서비스의 컨트롤 평면을 보여줍니다. 점선 아래의 부분은 데이터 평면을 나타냅니다. 왼쪽 파란색 상자는 사용자 VPC(서비스 소비자)를 나타내고 오른쪽 파란색 상자는 NetApp에서 제공하는 서비스 생산업체입니다. 둘 다 VPC 피어링을 통해 연결됩니다.</block>
   <block id="0d127864a05110e3053c2690dea7d914" category="section-title">테넌시 모델</block>
@@ -11399,7 +11374,6 @@
   <block id="e3d561744b3b4f6ab5953c2f96daaad7" category="paragraph">MMC를 사용하여 Cloud Volumes Service에서 SMB 공유 및 세션을 보려면 현재 로그인한 사용자가 도메인 관리자여야 합니다. 다른 사용자는 MMC에서 SMB 서버를 보거나 관리할 수 있으며 Cloud Volumes Service SMB 인스턴스에서 공유 또는 세션을 보려고 할 때 사용 권한 없음 대화 상자를 받을 수 있습니다.</block>
   <block id="aaf8b324d80834b9d235cb6b6d84be89" category="paragraph">SMB 서버에 연결하려면 컴퓨터 관리를 열고 컴퓨터 관리를 마우스 오른쪽 단추로 클릭한 다음 다른 컴퓨터에 연결을 선택합니다. 그러면 Cloud Volumes Service 볼륨 정보에 있는 SMB 서버 이름을 입력할 수 있는 컴퓨터 선택 대화 상자가 열립니다.</block>
   <block id="c34ce8bbe19f26cf58867de938f87920" category="paragraph">적절한 권한이 있는 SMB 공유를 보면 Active Directory 연결을 공유하는 Cloud Volumes Service 인스턴스에서 사용 가능한 모든 공유가 표시됩니다. 이 동작을 제어하려면 Cloud Volumes Service 볼륨 인스턴스에서 SMB 공유 숨기기 옵션을 설정합니다.</block>
-  <block id="5bcf8cb715ebf788ba3e70915f4256c2" category="paragraph">지역당 하나의 Active Directory 연결만 허용됩니다.</block>
   <block id="b939aeb87de29dc576ad4adc5fa19bce" category="paragraph"><block ref="b939aeb87de29dc576ad4adc5fa19bce" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c57a1134332b8bafcaa5f411a65b4a49" category="paragraph"><block ref="c57a1134332b8bafcaa5f411a65b4a49" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1325fb66f29e707e7e3402f0d45d59dc" category="paragraph">다음 표에는 MMC에서 지원/지원되지 않는 기능 목록이 나와 있습니다.</block>
@@ -15772,7 +15746,6 @@
   <block id="93d153de96abb104b1cf0b56dddc7dfc" category="sidebar">VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다</block>
   <block id="9e925e9341b490bfd3b4c4ca3b0c1ef2" category="inline-link">여기</block>
   <block id="953fa9bc59561d97ed62ce854465ba35" category="paragraph">vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조)<block ref="1d61bd4e8925f7d5aac61e083b728439" category="inline-link-rx"></block> 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조)<block ref="a9ae15a1c91a14939aefb313015202e6" category="inline-link-rx"></block> vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다. VMFS 데이터 저장소로 사용할 LUN을 프로비저닝할 때 LUN에서 공간 할당 옵션을 수동으로 설정해야 합니다. VMware vSphere용 ONTAP 툴을 사용하는 경우 LUN은 공간 반환을 지원하도록 자동으로 구성되며 추가 작업이 필요하지 않습니다. 을 참조하십시오<block ref="fca823934ad533ca13947daa01d8e441" category="inline-link-rx"></block> 자세한 내용은 기술 자료 문서를 참조하십시오.</block>
-  <block id="a436da0007911ed6531e093688e82535" category="paragraph">공유 VPC를 사용하는 경우 NFS Kerberos 및/또는 를 사용하여 전송 중 암호화 <block ref="639817e82862065dd236f0597e0b07ea" category="inline-link-macro-rx"></block> 트레이스에서 얻은 정보의 대부분을 가릴 수 있습니다. 그러나 일부 트래픽은 과 같은 일반 텍스트로 계속 전송됩니다 <block ref="c2e2f225386e22bd13a8b4b174f478da" category="inline-link-macro-rx"></block> 및 <block ref="86c1c13023c15e9d9a6317a0b69e7ce3" category="inline-link-macro-rx"></block>. 다음 그림에서는 Cloud Volumes Service에서 생성된 일반 텍스트 LDAP 쿼리 및 노출된 잠재적 식별 정보의 패킷 캡처를 보여 줍니다. Cloud Volumes Service의 LDAP 쿼리는 현재 SSL을 통한 암호화 또는 LDAP를 지원하지 않습니다. Active Directory에서 요청하는 경우 CVS - 성능은 LDAP 서명을 지원합니다. CVS-SW는 LDAP 서명을 지원하지 않습니다.</block>
   <block id="b95b607ac94c4a8cb830243ecb537f59" category="cell">LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. LDAP 서명은 Active Directory에서 요청하는 경우 CVS - 성능에서 지원됩니다. CVS-SW는 LDAP 서명을 지원하지 않습니다. 두 서비스 유형 모두에서 봉인은 현재 지원되지 않습니다.</block>
   <block id="ce32836b59e052d959dee4d2358e5a21" category="paragraph">테스트 목적으로, 이 검증에 사용된 온프레미스 랩 환경은 Azure VMware 솔루션에 대한 온프레미스 연결을 허용하는 사이트 간 VPN을 통해 연결되었습니다.</block>
   <block id="0bcfdba2f090838df9da44d825fedc49" category="doc">TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다</block>
@@ -15996,4 +15969,38 @@
   <block id="ba985cf3c812e3ba064fedc7353bbb77" category="section-title">Oracle 데이터베이스 복구 중</block>
   <block id="27f79c88e868588467ec46cf2e4bda8a" category="paragraph">Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.</block>
   <block id="3798d8f6f1f14581181abe3a5ef34dc1" category="paragraph"><block ref="3798d8f6f1f14581181abe3a5ef34dc1" category="inline-link-rx"></block></block>
+  <block id="be89380fb6bca4f70114f63e62d56170" category="paragraph">CVS - 성능은 다음 옵션을 제공합니다.</block>
+  <block id="ba4e54e94054e7face693c67c605c356" category="paragraph">또한 Cloud Volumes Service는 지원되는 최대 그룹을 32개까지 확장할 수 있도록 확장된 그룹 지원을 제공합니다. 이를 위해서는 유효한 UNIX 사용자 및 그룹 ID가 포함된 LDAP 서버에 대한 LDAP 연결이 필요합니다. 이 구성을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="83475a685ed7796506cfa43d02867761" category="inline-link-rx"></block> Google 문서.</block>
+  <block id="6cbefe64a9363b00daf90304f23af91f" category="paragraph">IAM은 Cloud Volumes Service에 대한 세분화된 기본 권한을 제공합니다. 를 찾을 수 있습니다<block ref="6ee187249e148f6dc18788d4bd9facef" category="inline-link-rx"></block>.</block>
+  <block id="a5352bb781d407ae455659be31289072" category="paragraph">을 참조하십시오<block ref="b7490cfc23f9fc425d0c086842945137" category="inline-link-rx"></block> 자세한 내용은 Google 클라우드 설명서를 참조하십시오.</block>
+  <block id="0769af59aedefc59e38ed178f1b26a69" category="paragraph">Cloud Volumes Service API는 HTTPS(TLSv1.2)를 기본 네트워크 전송으로 사용하여 REST 기반 API를 사용합니다. 최신 API 정의를 찾을 수 있습니다<block ref="d30245d84ac801bb5beeb0b65de1621d" category="inline-link-rx"></block> 및 에서 API 사용 방법에 대한 정보를 참조하십시오<block ref="128894ca156a5a6e8f55e2c767fb229d" category="inline-link-rx"></block>.</block>
+  <block id="937e2cde98c9765253269d1c0afecadf" category="paragraph">CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같은 다른 Google Cloud 네이티브 서비스와 유사한 방식으로 Cloud Volumes Service는 을 사용합니다<block ref="c02d6226b0d3e38677762954094ac770" category="inline-link-rx"></block> 서비스를 제공합니다. PSA에서는 서비스를 사용하는 서비스 프로듀서 프로젝트에 내장하고 있습니다<block ref="52f6e7825a87d845e231d32dd70425d9" category="inline-link-rx"></block> 서비스 소비자에 연결합니다. 서비스 생산자는 NetApp에서 제공 및 운영하고, 서비스 소비자는 고객 프로젝트에서 VPC로, Cloud Volumes Service 파일 공유에 액세스하려는 클라이언트를 호스팅합니다.</block>
+  <block id="f32bad39c9c36150710b7f218da79b68" category="paragraph">에서 참조하는 다음 그림<block ref="c1e141ce1d6892e23df03e044ea8ddea" category="inline-link-rx"></block> 에서는 Cloud Volumes Service 설명서의 개략적인 보기를 보여 줍니다.</block>
+  <block id="50e25970f08e142d7d504534e6103381" category="paragraph">공유 VPC를 사용하는 경우 NFS Kerberos 및/또는 를 사용하여 전송 중 암호화 <block ref="639817e82862065dd236f0597e0b07ea" category="inline-link-macro-rx"></block> 트레이스에서 얻은 정보의 대부분을 가릴 수 있습니다. 그러나 일부 트래픽은 과 같은 일반 텍스트로 계속 전송됩니다 <block ref="c2e2f225386e22bd13a8b4b174f478da" category="inline-link-macro-rx"></block> 및 <block ref="86c1c13023c15e9d9a6317a0b69e7ce3" category="inline-link-macro-rx"></block>. 다음 그림에서는 Cloud Volumes Service에서 생성된 일반 텍스트 LDAP 쿼리 및 노출된 잠재적 식별 정보의 패킷 캡처를 보여 줍니다. Cloud Volumes Service의 LDAP 쿼리는 현재 SSL을 통한 암호화 또는 LDAP를 지원하지 않습니다. LDAP 서명은 Active Directory에서 요청하는 경우 두 서비스 유형 모두에서 지원됩니다.</block>
+  <block id="cdea6a10f5f80dc41deaecd1ab6d685c" category="inline-link"><block ref="cdea6a10f5f80dc41deaecd1ab6d685c" category="inline-link-rx"></block></block>
+  <block id="e90d6097f1b3030558db3c189b1336eb" category="paragraph"><block ref="e90d6097f1b3030558db3c189b1336eb" category="inline-link-rx"></block></block>
+  <block id="0a98fdb4c379ace25e6ff7290793de42" category="list-text">Cloud Volumes Service for GCP SOC 2 보고서</block>
+  <block id="f852b2fd00336730713d8703d495e8c8" category="inline-link"><block ref="f852b2fd00336730713d8703d495e8c8" category="inline-link-rx"></block></block>
+  <block id="fbcc55da40f65eba30cc54c0a1add44f" category="paragraph"><block ref="fbcc55da40f65eba30cc54c0a1add44f" category="inline-link-rx"></block></block>
+  <block id="e988e5fd54b0b79f1d8fa9ce06ad58d5" category="cell">버전 1.1</block>
+  <block id="4c4518d4c20175eb4082a6b33eb4badb" category="cell">2022년 10월</block>
+  <block id="0974990f1aa38ac1b1e2c8f4400eccac" category="cell">사소한 수정.</block>
+  <block id="40e62783871c42f02ea7381974156683" category="paragraph">지역 및 서비스 유형별로 하나의 Active Directory 연결만 허용됩니다.</block>
+  <block id="4b93104f564ba3a541cf0f3c0d5231ff" category="paragraph">Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관리(컨트롤 플레인)와 데이터 액세스(데이터 플레인)를 세분화하여 Google Cloud의 보안 아키텍처를 제공하므로 다른 엔드포인트에 영향을 미치지 않습니다(섹션 참조) <block ref="d861c2ffd2960acc200167f08fd40005" category="inline-link-macro-rx"></block>)를 클릭합니다. Google을 사용합니다<block ref="edfc0978cc856d66ea768d8d0a756c7f" category="inline-link-rx"></block> (PSA) 프레임워크를 사용하여 서비스를 제공합니다. 이 프레임워크는 NetApp에서 제공하고 운영하는 서비스 생산자와 고객 프로젝트에서 VPC(가상 프라이빗 클라우드)인 서비스 소비자 간의 차이를 구별하며, Cloud Volumes Service 파일 공유에 액세스할 클라이언트를 호스팅합니다.</block>
+  <block id="36dcc3b472b6be94166908df565c6296" category="paragraph">LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다<block ref="911c132a558e32e6ad95cd656b34cef0" category="inline-link-rx"></block>.</block>
+  <block id="fee67c108b206b17f191b6e55c2c3bf5" category="paragraph">CVS용 KMS 구성 - 성능에 대한 자세한 내용은 을 참조하십시오<block ref="015c0918026b213c09e088f5a4e66cf5" category="inline-link-rx"></block>.</block>
+  <block id="5e91bfe3db0f14c293918a549a298ea4" category="list-text"><block ref="5e91bfe3db0f14c293918a549a298ea4" category="inline-link-rx"></block></block>
+  <block id="83233159e276211ec5d63bae12f7fa13" category="list-text"><block ref="83233159e276211ec5d63bae12f7fa13" category="inline-link-rx"></block></block>
+  <block id="372479242cc767d9b6f4255c5d1a83a2" category="paragraph">또한 Kerberos를 비롯한 LDAP를 지원하는 SMB, NFS 및 이중 프로토콜 구성을 사용하려면 Windows Active Directory 도메인에 대한 액세스가 필요합니다. Active Directory 연결은 이어야 합니다<block ref="c06402ea93b3f0ad51c1049dead08022" category="inline-link-rx"></block> 지역별로 제공됩니다. Active Directory 도메인 컨트롤러(DC)는 를 사용하여 식별합니다<block ref="821541d595f9fee8c67d91aa5da861b4" category="inline-link-rx"></block> 지정된 DNS 서버를 사용합니다. 반환된 DC 중 하나가 사용됩니다. Active Directory 사이트를 지정하면 자격 있는 DC 목록을 제한할 수 있습니다.</block>
+  <block id="1b42538b95d1dfba546347502128dc6f" category="paragraph">Cloud Volumes Service는 와 함께 할당된 CIDR 범위의 IP 주소를 사용하여 에 도달합니다<block ref="3102e8199e828cb030b6f0ade5fc2cec" prefix=" " category="inline-code"></block> 명령을 실행하는 동안<block ref="fa57f547e304618e94a113150f5a6f10" category="inline-link-rx"></block>. 이 CIDR을 소스 주소로 사용하여 Active Directory 도메인 컨트롤러에 대한 인바운드 방화벽을 구성할 수 있습니다.</block>
+  <block id="3f9b1f526933ea0d65f35dc9de6c3511" category="paragraph">Active Directory 도메인 컨트롤러가 필요합니다<block ref="3189909778b53752a351a82f878488f9" category="inline-link-rx"></block>.</block>
+  <block id="fd23e6811a26671ded3b943b77105b04" category="paragraph">CVS용 KMS 구성 방법에 대한 자세한 내용은<block ref="98faaae40bb9e93fd19585182fc5f8cd" category="inline-link-rx"></block>.</block>
+  <block id="ee5db59ef4de297874c68ecfbb9703dd" category="list-text">CVS - 성능은 다른 CVS - 성능 볼륨에 대한 교차 지역 볼륨 복제를 제공합니다. 자세한 내용은 을 참조하십시오<block ref="794b9d99bf1ee07c992aa53818f30cfa" category="inline-link-rx"></block> Cloud Volumes Service 설명서를 참조하십시오.</block>
+  <block id="4ea2725cc6155fd18841b0b590abfd2c" category="list-text">CVS-SW는 서비스 네이티브 볼륨 백업/복원 기능을 제공합니다. 자세한 내용은 을 참조하십시오<block ref="6c3368c2dc26c3df17af0e4b51cfeb8f" category="inline-link-rx"></block> Cloud Volumes Service 설명서를 참조하십시오.</block>
+  <block id="229acda568028d88813753a5a6d94ed2" category="paragraph">또한 Google Cloud에서 CRR(Cross-Region Replication) 관리를 통해 볼륨 삭제, 스냅샷 삭제 또는 스냅샷 스케줄 변경과 같은 악의적인 관리 작업을 방지할 수 있습니다. 이 작업은 볼륨 관리자를 분리하는 사용자 지정 역할을 생성하여 수행합니다. 볼륨 관리자는 소스 볼륨을 삭제할 수는 있지만 미러를 중단할 수는 없으므로 볼륨 작업을 수행할 수 없는 CRR 관리자로부터 대상 볼륨을 삭제할 수 없습니다. 을 참조하십시오<block ref="9d06ff1f6723254a0558372d407a5b25" category="inline-link-rx"></block> 각 관리자 그룹이 허용하는 권한에 대한 Cloud Volumes Service 문서</block>
+  <block id="9005a59e27ca46b748aa987e0e4d7033" category="paragraph">이러한 모든 이유로 NetApp Cloud Volumes Service은 를 통해 백업 서비스를 제공합니다<block ref="2c5c17a80a297a3a0a5d917679cd3e4e" category="inline-link-rx"></block>.</block>
+  <block id="ce1a5f2047354dbdf669b728b8d29dbc" category="paragraph">Cloud Volumes Service 백업은 Cloud Volumes Service에 옵션으로 내장되어 있습니다. 사용자는 볼륨별로 Cloud Volumes Service 백업을 활성화하여 보호할 볼륨을 결정할 수 있습니다. 를 참조하십시오<block ref="2e5c002683c4c8c14af6c5bfa5624d65" category="inline-link-rx"></block> 백업에 대한 자세한 내용은 를 참조하십시오<block ref="206d1e3e86834c101f9945b56779f021" category="inline-link-rx"></block>, 스케줄링 및 을 참조하십시오<block ref="5b129484a692a58746fe16139f6246a5" category="inline-link-rx"></block>.</block>
+  <block id="91a38a783e8c866af190388b25747949" category="paragraph">Cloud Volumes Service 백업(백업 생성, 삭제 및 복원)을 관리하려면 사용자에게 이 있어야 합니다<block ref="3ba38a3c175dc937c3de44bd7b59df33" category="inline-link-rx"></block> 역할.</block>
+  <block id="80cdb99699a1faa47b11b5c87e51dcac" category="inline-link">개인 서비스 액세스</block>
+  <block id="be5d4247c8a8748ec5435acc2e5d8acf" category="cell">구글<block ref="fdc58939c0812f6ae94b2886f47848b6" category="inline-link-rx"></block></block>
 </blocks>

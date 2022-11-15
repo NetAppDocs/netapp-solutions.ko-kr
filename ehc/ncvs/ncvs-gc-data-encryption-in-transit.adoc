@@ -122,7 +122,6 @@ sec=krb5p uses Kerberos V5 for user authentication, integrity checking, and encr
 
  a| 
 * 보안 수준의 최악의 성능: krb5p는 더 많은 암호화/암호 해독을 해야 합니다.
-* 파일 개수가 많은 워크로드에 대해 NFSv4.x를 사용할 경우 krb5p보다 성능이 더 우수합니다.
 
 
 |===

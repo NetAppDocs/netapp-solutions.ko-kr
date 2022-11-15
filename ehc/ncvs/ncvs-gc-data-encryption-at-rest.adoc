@@ -23,6 +23,6 @@ Cloud Volumes Service의 모든 볼륨은 AES-256 암호화를 사용하여 유�
 
 2021년 11월부터 CMEK(고객 관리 암호화 키) 기능을 미리 볼 수 있습니다. 이렇게 하면 에서 호스팅되는 프로젝트별, 지역별 마스터 키를 사용하여 볼륨별 키를 암호화할 수 있습니다 https://cloud.google.com/kms/docs["Google KMS(키 관리 서비스)."^] KMS를 사용하면 외부 키 관리자를 연결할 수 있습니다.
 
-CVS용 KMS 구성 - 성능에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/customer-managed-keys?hl=en_US["고객이 관리하는 암호화 키 설정"^].
+CVS용 KMS 구성 - 성능에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/customer-managed-keys["고객이 관리하는 암호화 키 설정"^].
 
 link:ncvs-gc-firewall.html["다음: 방화벽."]

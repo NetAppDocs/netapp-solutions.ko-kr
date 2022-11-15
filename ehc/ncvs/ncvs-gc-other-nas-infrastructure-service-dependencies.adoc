@@ -58,7 +58,7 @@ NFS Kerberos 시스템 계정의 경우 KDC와 새 키 탭이 생성/교환될 �
 
 == LDAP 및 Kerberos와 함께 사용할 네트워크 포트
 
-LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["보안 고려 사항에 대한 Cloud Volumes Service 문서"^].
+LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations["보안 고려 사항에 대한 Cloud Volumes Service 문서"^].
 
 
 

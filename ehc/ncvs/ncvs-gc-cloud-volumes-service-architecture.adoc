@@ -13,9 +13,9 @@ summary: 'CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같
 :imagesdir: ./../../media/
 
 
-CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같은 다른 Google Cloud 네이티브 서비스와 유사한 방식으로 Cloud Volumes Service는 을 사용합니다 https://cloud.google.com/vpc/docs/private-services-access?hl=en_US["Google PSA"^] 서비스를 제공합니다. PSA에서는 서비스를 사용하는 서비스 프로듀서 프로젝트에 내장하고 있습니다 https://cloud.google.com/vpc/docs/vpc-peering?hl=en_US["VPC 네트워크 피어링"^] 서비스 소비자에 연결합니다. 서비스 생산자는 NetApp에서 제공 및 운영하고, 서비스 소비자는 고객 프로젝트에서 VPC로, Cloud Volumes Service 파일 공유에 액세스하려는 클라이언트를 호스팅합니다.
+CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같은 다른 Google Cloud 네이티브 서비스와 유사한 방식으로 Cloud Volumes Service는 을 사용합니다 https://cloud.google.com/vpc/docs/private-services-access["Google PSA"^] 서비스를 제공합니다. PSA에서는 서비스를 사용하는 서비스 프로듀서 프로젝트에 내장하고 있습니다 https://cloud.google.com/vpc/docs/vpc-peering["VPC 네트워크 피어링"^] 서비스 소비자에 연결합니다. 서비스 생산자는 NetApp에서 제공 및 운영하고, 서비스 소비자는 고객 프로젝트에서 VPC로, Cloud Volumes Service 파일 공유에 액세스하려는 클라이언트를 호스팅합니다.
 
-에서 참조하는 다음 그림 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/architecture?hl=en_US["아키텍처 섹션을 참조하십시오"^] 에서는 Cloud Volumes Service 설명서의 개략적인 보기를 보여 줍니다.
+에서 참조하는 다음 그림 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/architecture["아키텍처 섹션을 참조하십시오"^] 에서는 Cloud Volumes Service 설명서의 개략적인 보기를 보여 줍니다.
 
 image:ncvs-gc-image1.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -55,7 +55,7 @@ Cloud Volumes Service 데이터 플레인은 외부 인터넷에 연결되지 �
 
 패킷 캡처는 네트워크 문제 또는 기타 문제(예: NAS 권한, LDAP 연결 등)를 해결하는 데 유용할 수 있지만 네트워크 IP 주소, MAC 주소, 사용자 및 그룹 이름 및 엔드포인트에서 사용되는 보안 수준에 대한 정보를 얻기 위해 악의적으로 사용할 수도 있습니다. Google Cloud 네트워킹, VPC 및 방화벽 규칙이 구성된 방식 때문에 사용자 로그인 자격 증명 또는 없이 네트워크 패킷에 대한 원치 않는 액세스를 얻기가 어렵습니다 link:<ncvs-gc-control-plane-architecture.html#jwt-tokens["JWT 토큰"] 클라우드로 인스턴스. 공유 VPC 및/또는 외부 네트워크 터널/IP 전달을 사용하여 엔드포인트에 대한 외부 트래픽을 명시적으로 허용하지 않는 한 패킷 캡처는 엔드포인트(예: 가상 머신(VM))에서만 가능하며 VPC 내부 엔드포인트에서만 가능합니다. 클라이언트 외부의 트래픽을 스니핑할 수 있는 방법은 없습니다.
 
-공유 VPC를 사용하는 경우 NFS Kerberos 및/또는 를 사용하여 전송 중 암호화 link:ncvs-gc-data-encryption-in-transit.html#smb-encryption["SMB 암호화"] 트레이스에서 얻은 정보의 대부분을 가릴 수 있습니다. 그러나 일부 트래픽은 과 같은 일반 텍스트로 계속 전송됩니다 link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#dns["DNS"] 및 link:cvs-gc-other-nas-infrastructure-service-dependencies.html#ldap-queries["LDAP 쿼리입니다"]. 다음 그림에서는 Cloud Volumes Service에서 생성된 일반 텍스트 LDAP 쿼리 및 노출된 잠재적 식별 정보의 패킷 캡처를 보여 줍니다. Cloud Volumes Service의 LDAP 쿼리는 현재 SSL을 통한 암호화 또는 LDAP를 지원하지 않습니다. Active Directory에서 요청하는 경우 CVS - 성능은 LDAP 서명을 지원합니다. CVS-SW는 LDAP 서명을 지원하지 않습니다.
+공유 VPC를 사용하는 경우 NFS Kerberos 및/또는 를 사용하여 전송 중 암호화 link:ncvs-gc-data-encryption-in-transit.html#smb-encryption["SMB 암호화"] 트레이스에서 얻은 정보의 대부분을 가릴 수 있습니다. 그러나 일부 트래픽은 과 같은 일반 텍스트로 계속 전송됩니다 link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#dns["DNS"] 및 link:cvs-gc-other-nas-infrastructure-service-dependencies.html#ldap-queries["LDAP 쿼리입니다"]. 다음 그림에서는 Cloud Volumes Service에서 생성된 일반 텍스트 LDAP 쿼리 및 노출된 잠재적 식별 정보의 패킷 캡처를 보여 줍니다. Cloud Volumes Service의 LDAP 쿼리는 현재 SSL을 통한 암호화 또는 LDAP를 지원하지 않습니다. LDAP 서명은 Active Directory에서 요청하는 경우 두 서비스 유형 모두에서 지원됩니다.
 
 image:ncvs-gc-image2.png["오류: 그래픽 이미지가 없습니다"]
 
