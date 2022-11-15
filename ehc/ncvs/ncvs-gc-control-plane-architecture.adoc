@@ -27,7 +27,7 @@ ID 및 액세스 관리 (https://cloud.google.com/iam/docs/overview["IAM"^])는 
 
 === 인증/권한 개요
 
-IAM은 Cloud Volumes Service에 대한 세분화된 기본 권한을 제공합니다. 를 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations["여기에서 세분화된 사용 권한의 전체 목록을 확인할 수 있습니다"^].
+IAM은 Cloud Volumes Service에 대한 세분화된 기본 권한을 제공합니다. 를 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["여기에서 세분화된 사용 권한의 전체 목록을 확인할 수 있습니다"^].
 
 IAM은 또한 netapcloudvolumes.admin과 netapcloudvolumes.viewer라는 두 가지 사전 정의된 역할을 제공합니다. 이러한 역할은 특정 사용자 또는 서비스 계정에 할당할 수 있습니다.
 
@@ -50,13 +50,13 @@ IAM 사용자가 Cloud Volumes Service를 관리할 수 있도록 적절한 역�
 * 사용 https://cloud.google.com/iam/docs/impersonating-service-accounts["서비스 계정 가장"^] 역할/iam.serviceAccountTokenCreator` 포함. 이 코드(스크립트, Terraform 등)는 에서 실행됩니다 https://google.aip.dev/auth/4110["애플리케이션 기본 자격 증명"^] 서비스 계정을 가장하여 권한을 얻습니다. 이 접근 방식은 Google 보안 모범 사례를 반영합니다.
 
 
-을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/api["서비스 계정 및 개인 키 생성"^] 자세한 내용은 Google 클라우드 설명서를 참조하십시오.
+을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/api?hl=en_US["서비스 계정 및 개인 키 생성"^] 자세한 내용은 Google 클라우드 설명서를 참조하십시오.
 
 
 
 == Cloud Volumes Service API를 참조하십시오
 
-Cloud Volumes Service API는 HTTPS(TLSv1.2)를 기본 네트워크 전송으로 사용하여 REST 기반 API를 사용합니다. 최신 API 정의를 찾을 수 있습니다 https://cloudvolumesgcp-api.netapp.com/swagger.json["여기"^] 및 에서 API 사용 방법에 대한 정보를 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/api["Google Cloud 설명서에서 Cloud Volumes API를 참조하십시오"^].
+Cloud Volumes Service API는 HTTPS(TLSv1.2)를 기본 네트워크 전송으로 사용하여 REST 기반 API를 사용합니다. 최신 API 정의를 찾을 수 있습니다 https://cloudvolumesgcp-api.netapp.com/swagger.json["여기"^] 및 에서 API 사용 방법에 대한 정보를 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/api?hl=en_US["Google Cloud 설명서에서 Cloud Volumes API를 참조하십시오"^].
 
 API 엔드포인트는 표준 HTTPS(TLSv1.2) 기능을 사용하여 NetApp에서 작동 및 보안됩니다.
 

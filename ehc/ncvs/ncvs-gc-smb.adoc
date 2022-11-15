@@ -249,7 +249,7 @@ SMB 서버에 연결하려면 컴퓨터 관리를 열고 컴퓨터 관리를 마
 
 적절한 권한이 있는 SMB 공유를 보면 Active Directory 연결을 공유하는 Cloud Volumes Service 인스턴스에서 사용 가능한 모든 공유가 표시됩니다. 이 동작을 제어하려면 Cloud Volumes Service 볼륨 인스턴스에서 SMB 공유 숨기기 옵션을 설정합니다.
 
-지역 및 서비스 유형별로 하나의 Active Directory 연결만 허용됩니다.
+지역당 하나의 Active Directory 연결만 허용됩니다.
 
 image:ncvs-gc-image17.png["오류: 그래픽 이미지가 없습니다"]
 

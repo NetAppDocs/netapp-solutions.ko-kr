@@ -23,7 +23,7 @@ https://cloud.google.com/architecture/partners/netapp-cloud-volumes/["https://cl
 
 * Google 전용 서비스 액세스
 +
-https://cloud.google.com/vpc/docs/private-services-access["https://cloud.google.com/vpc/docs/private-services-access"^]
+https://cloud.google.com/vpc/docs/private-services-access?hl=en_US["https://cloud.google.com/vpc/docs/private-services-access?hl=en_US"^]
 
 * NetApp 제품 설명서
 +
@@ -41,10 +41,6 @@ https://www.netapp.com/pdf.html?item=/media/16716-sb-3938pdf.pdf&v=202093745["ht
 +
 https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf"^]
 
-* Cloud Volumes Service for GCP SOC 2 보고서
-+
-https://www.netapp.com/company/trust-center/compliance/soc-2/["https://www.netapp.com/company/trust-center/compliance/soc-2/"^]
-
 
 
 
@@ -56,9 +52,6 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/["https://www.netap
 
 
 | 버전 1.0 | 2022년 5월 | 최초 릴리스. 
-
-
-| 버전 1.1 | 2022년 10월 | 사소한 수정. 
 |===
 
 

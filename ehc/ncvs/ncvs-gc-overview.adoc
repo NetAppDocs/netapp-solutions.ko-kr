@@ -41,6 +41,6 @@ Oliver Krause, Justin Parisi, NetApp
 | CVS - 성능 | 클라우드 볼륨 서비스, 서비스 유형 CVS - 성능 
 
 
-| PSA | 구글 https://cloud.google.com/vpc/docs/private-services-access["개인 서비스 액세스"] 
+| PSA |  
 |===
 link:ncvs-gc-how-cloud-volumes-service-in-google-cloud-secures-your-data.html["다음: Google Cloud의 Cloud Volumes Service로 데이터를 보호하는 방법"]
