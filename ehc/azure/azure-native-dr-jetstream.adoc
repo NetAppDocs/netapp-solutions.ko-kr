@@ -21,6 +21,7 @@ Jetstream DR을 사용하면 사내에서 AVS로, 특히 Azure NetApp Files로 �
 이 문서에서는 Jetstream DR 운영 원리 및 주요 구성 요소에 대해 설명합니다.
 
 .솔루션 구축 개요
+[%collapsible]
 ====
 . 사내 데이터 센터에 Jetstream DR 소프트웨어를 설치합니다.
 +
@@ -68,6 +69,7 @@ NOTE: 규정된 도메인의 수와 컨텐츠는 평균 IOPS, 총 용량, 우선
 Jetstream DR 소프트웨어는 Jetstream DR Management Server Virtual Appliance(MSA), DR 가상 어플라이언스(DRVA) 및 호스트 구성 요소(I/O 필터 패키지)의 세 가지 주요 구성 요소로 구성됩니다. MSA는 컴퓨팅 클러스터에 호스트 구성 요소를 설치 및 구성한 다음 Jetstream DR 소프트웨어를 관리하는 데 사용됩니다. 다음 목록에는 설치 프로세스에 대한 자세한 설명이 나와 있습니다.
 
 .구내 Jetstream DR을 설치하는 방법
+[%collapsible]
 ====
 . 필수 구성 요소를 확인하십시오.
 . 리소스 및 구성 권장 사항에 대해 용량 계획 툴을 실행합니다(선택 사항이지만 개념 증명 평가에는 권장됨).
@@ -138,6 +140,7 @@ NOTE: 세그먼트 생성을 포함한 네트워크 구성은 AVS 클러스터�
 SLA 및 RTO 요구 사항에 따라 지속적인 페일오버 또는 일반(표준) 페일오버 모드를 사용할 수 있습니다. 제로급 RTO의 경우 복구 사이트에서 연속 재수화를 시작해야 합니다.
 
 .프라이빗 클라우드에 AVS용 Jetstream DR을 설치하는 방법
+[%collapsible]
 ====
 Azure VMware 솔루션 프라이빗 클라우드에 AVS용 Jetstream DR을 설치하려면 다음 단계를 수행하십시오.
 
@@ -186,6 +189,7 @@ image:vmware-dr-image18.png["오류: 그래픽 이미지가 없습니다"]
 == 페일오버/페일백 수행
 
 .페일오버/페일백 수행 방법
+[%collapsible]
 ====
 . 사내 환경의 보호 클러스터에서 재해가 발생한 후(부분 장애 또는 전체 장애) 페일오버를 트리거합니다.
 +

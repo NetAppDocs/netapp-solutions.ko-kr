@@ -20,6 +20,7 @@ summary:
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .리소스 공급자를 등록하고 프라이빗 클라우드를 생성합니다
+[%collapsible]
 ====
 Azure VMware 솔루션을 사용하려면 먼저 확인된 구독 내에 리소스 공급자를 등록해야 합니다.
 
@@ -60,6 +61,7 @@ image:avs-register-create-pc-4.png[""]
 
 ====
 .새 또는 기존 ExpressRoute 가상 네트워크 게이트웨이에 연결합니다
+[%collapsible]
 ====
 새 Azure VNet(Virtual Network)을 생성하려면 Azure VNET Connect 탭을 선택합니다. 또는 가상 네트워크 생성 마법사를 사용하여 Azure 포털에서 수동으로 생성할 수도 있습니다.
 
@@ -87,6 +89,7 @@ NOTE: VNET를 수동으로 생성하는 경우 해당 SKU와 ExpressRoute를 게
 
 ====
 .Azure VMware Solution 프라이빗 클라우드에 대한 네트워크 연결 및 액세스 검증
+[%collapsible]
 ====
 Azure VMware 솔루션에서는 사내 VMware vCenter를 통해 프라이빗 클라우드를 관리할 수 없습니다. 대신, 점프 호스트는 Azure VMware Solution vCenter 인스턴스에 연결하는 데 필요합니다. 지정된 리소스 그룹에 점프 호스트를 생성하고 Azure VMware Solution vCenter에 로그인합니다. 이 점프 호스트는 연결을 위해 생성된 동일한 가상 네트워크의 Windows VM이고 vCenter 및 NSX Manager에 대한 액세스를 제공해야 합니다.
 

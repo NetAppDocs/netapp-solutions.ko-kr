@@ -16,39 +16,49 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.
 
 .VMware vSphere용 NetApp ONTAP 툴
+[%collapsible]
 ====
 .VMware용 ONTAP 툴 - 개요
+[%collapsible]
 =====
 video::otv_overview.mp4[]
 =====
 .ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당
+[%collapsible]
 =====
 video::otv_iscsi_provision.mp4[]
 =====
 .ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당
+[%collapsible]
 =====
 video::otv_nfs_provision.mp4[]
 =====
 ====
 .NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud
+[%collapsible]
 ====
 .iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
+[%collapsible]
 =====
 video::vmc_windows_vm_iscsi.mp4[]
 =====
 .NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
+[%collapsible]
 =====
 video::vmc_linux_vm_nfs.mp4[]
 =====
 .NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
+[%collapsible]
 =====
 video::FSxN-NFS-Datastore-on-VMC-TCO-calculator.mp4[]
 =====
 .NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
+[%collapsible]
 =====
 video::FSxN-NFS-Datastore-on-VMC.mp4[]
 =====
 .FSxN, VMware HCX와 함께 AWS 기반의 VMware Cloud 마이그레이션
+[%collapsible]
 =====
 video::VMC_HCX_Setup.mp4[]
 video::Migration_HCX_VMC_FSxN_VMotion.mp4[]
@@ -56,16 +66,20 @@ video::Migration_HCX_VMC_FSxN_cold_migration.mp4[]
 =====
 ====
 .ANF(Azure NetApp Files)가 있는 Azure 기반 Azure VMware 서비스
+[%collapsible]
 ====
 .Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
+[%collapsible]
 =====
 video::ANF-NFS-datastore-on-AVS.mp4[]
 =====
 .Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
+[%collapsible]
 =====
 video::AVS-guest-connect-DR-use-case.mp4[]
 =====
 .Azure VMware Solution Migrate with ANF, VMware HCX
+[%collapsible]
 =====
 video::Migration_HCX_AVS_ANF_ColdMigration.mp4[]
 video::Migration_HCX_AVS_ANF_VMotion.mp4[]
@@ -73,6 +87,7 @@ video::Migration_HCX_AVS_ANF_Bulk.mp4[]
 =====
 ====
 .VMware vSphere용 SnapCenter 플러그인
+[%collapsible]
 ====
 NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다.
 
@@ -81,27 +96,33 @@ VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, �
 NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/ocsc-42/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-29BABBA7-B15F-452F-B137-2E5B269084B9.html["VMware vSphere용 NetApp SnapCenter 플러그인 개요"].
 
 .VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
+[%collapsible]
 =====
 video::scv_prereq_overview.mp4[]
 =====
 .VMware vSphere용 SnapCenter 플러그인 - 구축
+[%collapsible]
 =====
 video::scv_deployment.mp4[]
 =====
 .VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
+[%collapsible]
 =====
 video::scv_backup_workflow.mp4[]
 =====
 .VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
+[%collapsible]
 =====
 video::scv_restore_workflow.mp4[]
 =====
 .SnapCenter - SQL 복원 워크플로
+[%collapsible]
 =====
 video::scv_sql_restore.mp4[]
 =====
 ====
 .NetApp과 VMware Tanzu
+[%collapsible]
 ====
 VMware Tanzu를 사용하면 vSphere 또는 VMware Cloud Foundation을 통해 Kubernetes 환경을 구축, 관리 및 관리할 수 있습니다. 고객은 VMware의 이 제품 포트폴리오를 통해 요구사항에 가장 적합한 VMware Tanzu 에디션을 선택하여 단일 제어 플레인에서 모든 관련 Kubernetes 클러스터를 관리할 수 있습니다.
 
@@ -114,6 +135,7 @@ VMware Tanzu에 대한 자세한 내용은 를 참조하십시오 https://tanzu.
 
 ====
 .NetApp 및 Red Hat OpenShift의 조합
+[%collapsible]
 ====
 엔터프라이즈 Kubernetes 플랫폼인 Red Hat OpenShift를 사용하면 오픈 하이브리드 클라우드 전략으로 컨테이너 기반 애플리케이션을 실행할 수 있습니다. Red Hat OpenShift는 주요 퍼블릭 클라우드 또는 자가 관리 소프트웨어에서 클라우드 서비스로 사용할 수 있으며 컨테이너 기반 솔루션을 설계할 때 고객이 필요로 하는 유연성을 제공합니다.
 

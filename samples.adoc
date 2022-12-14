@@ -167,6 +167,7 @@ Text to be collapsed goes here.
 [파란색 밑줄] * 생성된 HTML: *
 
 .제목
+[%collapsible]
 ====
 축소할 텍스트가 여기에 표시됩니다.
 

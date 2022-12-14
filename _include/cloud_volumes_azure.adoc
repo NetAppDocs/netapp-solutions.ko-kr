@@ -6,10 +6,12 @@
 ====
 .ANF
 --
+.Azure에서 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -67,6 +69,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 ----
   terraform destroy
 ----
+.수취인:
 '단일 노드 인스턴스'
 
 단일 NetApp ANF 볼륨에 대한 Terraform 변수
@@ -121,10 +124,12 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 --
 .ANF 데이터 보호
 --
+.Azure에서 데이터 보호를 사용하여 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 데이터 보호를 사용하여 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -182,6 +187,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 ----
   terraform destroy
 ----
+.수취인:
 'ANF 데이터 보호'
 
 데이터 보호가 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
@@ -272,10 +278,12 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 --
 .ANF 듀얼 프로토콜
 --
+.Azure에서 이중 프로토콜을 사용하는 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 이중 프로토콜이 활성화된 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -333,6 +341,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 ----
   terraform destroy
 ----
+.수취인:
 '단일 노드 인스턴스'
 
 이중 프로토콜이 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
@@ -399,10 +408,12 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 --
 .스냅샷의 ANF 볼륨
 --
+.Azure의 Snapshot에서 ANF 볼륨을 배포하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure의 스냅샷에서 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -461,6 +472,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 ----
   terraform destroy
 ----
+.수취인:
 '단일 노드 인스턴스'
 
 스냅샷을 사용하는 단일 ANF 볼륨에 대한 Terraform 변수.
@@ -515,10 +527,12 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 --
 .CVO 단일 노드 구축
 --
+.Azure에서 단일 노드 CVO를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 Cloud Volumes ONTAP(단일 노드 CVO)를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -572,6 +586,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 ----
   terraform destroy
 ----
+.수취인:
 '단일 노드 인스턴스'
 
 단일 노드 CVO(Cloud Volumes ONTAP)에 대한 Terraform 변수
@@ -677,10 +692,12 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 --
 .CVO HA 구축
 --
+.Azure에서 CVO HA를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 CVO(Cloud Volumes ONTAP) HA(고가용성)를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -734,6 +751,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 ----
   terraform destroy
 ----
+.수취인:
 'HA 쌍 인스턴스'
 
 HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수

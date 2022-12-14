@@ -30,6 +30,7 @@ VMware HCX는 주로 클라우드 전반에서 애플리케이션 마이그레�
 NOTE: VMware HCX는 마이그레이션이 VM 레벨에 있으므로 모든 데이터 저장소 유형과 함께 작동합니다. 따라서 이 문서는 비용 효율적인 VMware 클라우드 구축을 위해 Azure VMware 솔루션을 포함한 Azure NetApp Files를 구축하려는 기존 NetApp 고객 및 타사 고객에게 적용됩니다.
 
 .높은 수준의 단계
+[%collapsible]
 ====
 이 목록은 Azure 클라우드 측에서 HCX Cloud Manager를 설치 및 구성하고 HCX Connector를 온프레미스에 설치하는 데 필요한 높은 수준의 단계를 제공합니다.
 
@@ -45,6 +46,7 @@ NOTE: VMware HCX는 마이그레이션이 VM 레벨에 있으므로 모든 데�
 
 ====
 .필수 구성 요소
+[%collapsible]
 ====
 시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 다음을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-vmware/configure-vmware-hcx["링크"^]. 연결을 포함한 필수 구성 요소가 구축된 후에는 Azure VMware Solution 포털에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. OVA 설치 프로그램을 다운로드한 후 아래 설명된 대로 설치 프로세스를 진행합니다.
 
@@ -60,6 +62,7 @@ NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지�
 
 ====
 .고급 아키텍처
+[%collapsible]
 ====
 테스트 목적으로, 이 검증에 사용된 온프레미스 랩 환경은 Azure VMware 솔루션에 대한 온프레미스 연결을 허용하는 사이트 간 VPN을 통해 연결되었습니다.
 
@@ -73,6 +76,7 @@ image:anfd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 �
 이 솔루션의 배포를 완료하려면 다음 단계를 따르십시오.
 
 .1단계: 추가 기능 옵션을 사용하여 Azure Portal을 통해 HCX를 설치합니다
+[%collapsible]
 ====
 설치를 수행하려면 다음 단계를 수행하십시오.
 
@@ -95,6 +99,7 @@ image:anfd-hcx-image3.png["HCX 워크로드 이동성 섹션의 완료 스크린
 
 ====
 .2단계: 온-프레미스 vCenter Server에 설치 관리자 OVA를 구축합니다
+[%collapsible]
 ====
 온프레미스 커넥터가 Azure VMware 솔루션의 HCX Manager에 연결하려면 적절한 방화벽 포트가 온-프레미스 환경에서 열려 있어야 합니다.
 
@@ -131,6 +136,7 @@ NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
 
 ====
 .3단계: 라이센스 키로 HCX 커넥터를 활성화합니다
+[%collapsible]
 ====
 VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스를 시작한 후 다음 단계를 수행하여 HCX 커넥터를 활성화하십시오. Azure VMware Solution 포털에서 라이센스 키를 생성하고 VMware HCX Manager에서 활성화합니다.
 
@@ -179,6 +185,7 @@ image:anfd-hcx-image8.png["완료된 프로세스를 보여 주는 스크린샷"
 
 ====
 .4단계: 온프레미스 VMware HCX Connector를 Azure VMware Solution HCX Cloud Manager와 페어링합니다
+[%collapsible]
 ====
 HCX Connector를 온프레미스 및 Azure VMware 솔루션에 설치한 후 페어링을 추가하여 온프레미스 VMware HCX Connector for Azure VMware Solution 프라이빗 클라우드를 구성합니다. 사이트 페어링을 구성하려면 다음 단계를 수행하십시오.
 
@@ -207,6 +214,7 @@ image:anfd-hcx-image11.png["HCX 대시보드의 완료된 프로세스 스크린
 
 ====
 .5단계: 네트워크 프로파일, 컴퓨팅 프로파일 및 서비스 메시를 구성합니다
+[%collapsible]
 ====
 VMware HCX Interconnect 서비스 어플라이언스는 인터넷을 통해 복제 및 vMotion 기반 마이그레이션 기능과 타겟 사이트에 대한 프라이빗 연결을 제공합니다. 상호 연결은 암호화, 트래픽 엔지니어링 및 VM 이동성을 제공합니다. 상호 연결 서비스 어플라이언스를 생성하려면 다음 단계를 수행하십시오.
 
@@ -247,6 +255,7 @@ image:anfd-hcx-image15.png["vSphere Client Interconnect 페이지에 완료된 �
 
 ====
 .6단계: 워크로드 마이그레이션
+[%collapsible]
 ====
 다양한 VMware HCX 마이그레이션 기술을 사용하여 온프레미스 및 Azure SDDC 간에 워크로드를 양방향으로 마이그레이션할 수 있습니다. VM은 HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 여러 마이그레이션 기술을 사용하여 VMware HCX 활성 엔터티로 또는 VMware에서 이동할 수 있습니다.
 

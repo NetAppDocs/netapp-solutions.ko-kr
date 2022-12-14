@@ -237,7 +237,7 @@ image:snapctr_add_cvo_svm_01.PNG["오류: 그래픽 이미지가 없습니다"]
 +
 image:snapctr_add_cvo_svm_02.PNG["오류: 그래픽 이미지가 없습니다"]
 
-. 에 나와 있는 대로 스토리지 시스템을 SnapCenter 데이터베이스 관리 사용자 ID에 할당합니다  SnapCenter host plugin installation.
+. 에 나와 있는 대로 스토리지 시스템을 SnapCenter 데이터베이스 관리 사용자 ID에 할당합니다 <<3.SnapCenter 호스트 플러그인 설치>>.
 +
 image:snapctr_add_cvo_svm_03.PNG["오류: 그래픽 이미지가 없습니다"]
 

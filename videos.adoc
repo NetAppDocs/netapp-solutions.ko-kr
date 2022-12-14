@@ -17,17 +17,47 @@ keywords: netapp, solutions, videos, demos
 [role="lead"]
 NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소개합니다.
 
-[[ai]]
 .인공 지능(AI) 및 최신 데이터 분석
+[#ai%collapsible]
 ====
 * link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7nSrRhuolRPYqvSlGLuTOAO["NetApp AI 솔루션"^]
 * link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7n1sWK-QGq4QMI1VBJS-ZZW["MLOps를 참조하십시오"^]
 
 
 ====
-[[db]]
 .엔터프라이즈 애플리케이션 및 데이터베이스
+[#db%collapsible]
 ====
+[underline] # * AWS 및 FSx *#의 하이브리드 클라우드를 통한 Oracle 현대화에 대한 동영상
+
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.1부 - 사용 사례 및 솔루션 아키텍처
+video::oracle-aws-fsx-part1-usecase_callout.mp4[] a| 
+.2a부 - 최대의 가용성과 자동화된 PDB 재배치를 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
+video::oracle-aws-fsx-part2a-migration-pdbrelo_callout.mp4[] a| 
+.파트 2b - SnapMirror를 통해 BlueXP 콘솔을 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
+video::oracle-aws-fsx-part2b-migration-snapmirror_callout.mp4[]
+
+
+ a| 
+.3부 - 자동화된 데이터베이스 HA/DR 복제 설정, 페일오버, 재동기화
+video::oracle-aws-fsx-part3-hadr_callout.mp4[] a| 
+.파트 4a - 복제된 대기 복제본에서 SnapCenter UI를 사용하여 개발/테스트용 데이터베이스 클론
+video::oracle-aws-fsx-part4a-snapcenter_callout.mp4[] a| 
+.파트 4b - 데이터베이스 백업, 복원, SnapCenter UI를 사용한 클론
+video::oracle-aws-fsx-part4b-bkup-restore-clone-snapctr_callout.mp4[]
+
+
+ a| 
+.파트 4c - BlueXP SaaS 애플리케이션 백업 및 복구를 통한 데이터베이스 백업 및 복구
+video::oracle-aws-fsx-part4c-bkup-restore-snapctrsvc_callout.mp4[] a| 
+ a| 
+
+|===
 * link:https://tv.netapp.com/detail/video/1670591628570468424/deploy-sql-server-always-on-failover-cluster-over-smb-with-azure-netapp-files["Azure NetApp Files의 SQL 고가용성 클러스터"^]
 * link:https://www.youtube.com/watch?v=krzMWjrrMb0["스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론"^]
 * link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"^]
@@ -39,8 +69,8 @@ NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소
 
 
 ====
-[[hmc]]
 .하이브리드 멀티 클라우드(HMC)
+[#hmc%collapsible]
 ====
 [underline]# * AWS/VMC * #에 대한 동영상
 
@@ -95,15 +125,15 @@ video::Migration_HCX_AVS_ANF_Bulk.mp4[] a|
 
 |===
 ====
-[[virtualization]]
 .포함되었습니다
+[#virtualization%collapsible]
 ====
 * link:virtualization/vsphere_demos_videos.html["VMware 비디오 컬렉션"]
 
 
 ====
-[[containers]]
 .컨테이너/Kubernetes
+[#containers%collapsible]
 ====
 * link:containers/anthos-with-netapp/a-w-n_videos_and_demos.html["NetApp 및 Google Anthos 비디오"]
 * link:containers/tanzu_with_netapp/vtwn_videos_and_demos.html["NetApp with VMware Tanzu 비디오"]
@@ -112,8 +142,8 @@ video::Migration_HCX_AVS_ANF_Bulk.mp4[] a|
 
 
 ====
-[[automation]]
 .솔루션 자동화
+[#automation%collapsible]
 ====
 * link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"^]
 

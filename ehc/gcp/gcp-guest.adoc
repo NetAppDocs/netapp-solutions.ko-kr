@@ -33,6 +33,7 @@ CVO를 사용하면 데이터를 에지에서 데이터 센터, 클라우드로 
 === CVO(Cloud Volumes ONTAP)를 게스트 연결 스토리지로 사용합니다
 
 .Google Cloud에 Cloud Volumes ONTAP 배포(직접 수행)
+[%collapsible]
 ====
 Cloud Volumes ONTAP 공유 및 LUN은 GCVE 프라이빗 클라우드 환경에서 생성된 VM에서 마운트할 수 있습니다. Cloud Volumes ONTAP는 iSCSI, SMB 및 NFS 프로토콜을 지원하기 때문에 iSCSI를 통해 마운트할 때 Linux 또는 Windows 클라이언트에서 볼륨을 Linux 클라이언트 및 Windows 클라이언트에 블록 디바이스로 마운트할 수 있습니다. Cloud Volumes ONTAP 볼륨은 몇 가지 간단한 단계를 통해 설정할 수 있습니다.
 
@@ -87,6 +88,7 @@ image:gcve-cvo-guest-9.png[""]
 
 ====
 .SMB 볼륨을 위한 추가 구성
+[%collapsible]
 ====
 . 작업 환경이 준비되면 CIFS 서버가 적절한 DNS 및 Active Directory 구성 매개 변수로 구성되어 있는지 확인합니다. 이 단계는 SMB 볼륨을 생성하기 전에 필요합니다.
 +
@@ -124,6 +126,7 @@ image:gcve-cvo-guest-15.png[""]
 
 ====
 .Cloud Volumes ONTAP의 LUN을 호스트에 연결합니다
+[%collapsible]
 ====
 Cloud Volumes ONTAP LUN을 호스트에 연결하려면 다음 단계를 수행하십시오.
 
@@ -180,6 +183,7 @@ image:gcve-cvo-guest-22.png[""]
 
 ====
 .Linux 클라이언트에 Cloud Volumes ONTAP NFS 볼륨을 마운트합니다
+[%collapsible]
 ====
 Google Cloud VMware Engine 내의 VM에서 DIY(Cloud Volumes ONTAP) 파일 시스템을 마운트하려면 다음 단계를 수행하십시오.
 
@@ -226,6 +230,7 @@ CVS(Cloud Volumes Services)는 고급 클라우드 솔루션을 제공하는 완
 === CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다
 
 .VMware 엔진을 사용하여 Cloud Volumes Service를 구성합니다
+[%collapsible]
 ====
 Cloud Volumes Service 공유는 VMware 엔진 환경에서 생성된 VM에서 마운트할 수 있습니다. Cloud Volumes Service는 SMB 및 NFS 프로토콜을 지원하므로 Linux 클라이언트에 볼륨을 마운트하고 Windows 클라이언트에 매핑할 수도 있습니다. Cloud Volumes Service 볼륨은 간단한 단계를 통해 설정할 수 있습니다.
 
@@ -235,6 +240,7 @@ Google Cloud Marketplace에서 NetApp Cloud Volumes Service for Google Cloud를 
 
 ====
 .CVS NFS 볼륨을 GCVE 프라이빗 클라우드에 생성합니다
+[%collapsible]
 ====
 NFS 볼륨을 생성 및 마운트하려면 다음 단계를 수행하십시오.
 
@@ -288,6 +294,7 @@ image:gcve-cvs-guest-10.png[""]
 
 ====
 .VMware Engine에서 실행 중인 VM에 NFS 내보내기를 마운트합니다
+[%collapsible]
 ====
 NFS 볼륨 마운트를 준비하기 전에 전용 연결의 피어링 상태가 Active(활성)로 표시되는지 확인합니다. 상태가 Active인 경우 mount 명령을 사용합니다.
 
@@ -329,6 +336,7 @@ image:gcve-cvs-guest-22.png[""]
 
 ====
 .VMware Engine에서 실행 중인 VM에 SMB 공유 생성 및 마운트
+[%collapsible]
 ====
 SMB 볼륨의 경우 SMB 볼륨을 생성하기 전에 Active Directory 연결이 구성되어 있는지 확인합니다.
 

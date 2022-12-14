@@ -6,10 +6,12 @@
 ====
 .CVO 단일 노드 구축
 --
+.GCP에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일
 이 섹션에는 GCP(Google Cloud Platform)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -62,6 +64,7 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 ----
     terraform destroy
 ----
+.수취인:
 커넥터
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
@@ -131,10 +134,12 @@ GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 --
 .CVO HA 구축
 --
+.GCP에 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 GCP(Google Cloud Platform)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -187,6 +192,7 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 ----
     terraform destroy
 ----
+.수취인:
 커넥터
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
@@ -304,10 +310,12 @@ GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 --
 .CVS 볼륨
 --
+.GCP 기반 NetApp CVS 볼륨 구축을 위한 Terraform 구성 파일
 이 섹션에는 GCP(Google Cloud Platform)에서 NetApp CVS(Cloud Volumes Services) 볼륨을 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -356,6 +364,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/late
 ----
     terraform destroy
 ----
+.수취인:
 CVS 볼륨
 
 NetApp GCP CVS 볼륨에 대한 Terraform 변수

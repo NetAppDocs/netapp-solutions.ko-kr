@@ -24,6 +24,7 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .GCVE 배포 및 구성
+[%collapsible]
 ====
 GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.
 
@@ -42,6 +43,7 @@ image:gcve-deploy-1.png[""]
 
 ====
 .GCVE에 대한 개인 액세스를 활성화합니다
+[%collapsible]
 ====
 프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.
 

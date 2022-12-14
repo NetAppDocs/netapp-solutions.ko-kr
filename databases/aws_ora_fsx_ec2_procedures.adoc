@@ -204,7 +204,7 @@ NetApp 자동화 팀은 모범 사례에 따라 EC2 인스턴스에서 Oracle �
 
 === 자동화를 실행하도록 Ansible 컨트롤러를 준비합니다
 
-다음 섹션의 지침을 따르십시오." and connecting to an EC2 instance for hosting Oracle database"Ansible 컨트롤러를 실행할 작은 EC2 Linux 인스턴스를 프로비저닝합니다. RedHat을 사용하는 대신 2vCPU 및 8G RAM을 사용하는 Amazon Linux T2.Large로 충분합니다.
+다음 섹션의 지침을 따르십시오."<<Oracle 데이터베이스를 호스팅하기 위한 EC2 인스턴스 생성 및 연결>>"Ansible 컨트롤러를 실행할 작은 EC2 Linux 인스턴스를 프로비저닝합니다. RedHat을 사용하는 대신 2vCPU 및 8G RAM을 사용하는 Amazon Linux T2.Large로 충분합니다.
 
 
 
@@ -226,7 +226,7 @@ git clone https://github.com/NetApp-Automation/na_rds_fsx_oranfs_config.git
 
 자세한 지침을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/cli_automation.html["CLI 구축 Oracle 19c Database"^] CLI 자동화를 통해 Oracle 19c를 구축합니다. 호스트 액세스 인증에 암호 대신 SSH 키 쌍을 사용하고 있기 때문에 플레이북 실행을 위한 명령 구문이 약간 변경됩니다. 다음 목록은 요약 정보입니다.
 
-. 기본적으로 EC2 인스턴스는 액세스 인증을 위해 SSH 키 쌍을 사용합니다. Ansible 컨트롤러 자동화 루트 디렉토리 '/home/EC2-user/na_oracle19c_deploy' 및 '/home/EC2-user/na_RDS_FSX_oranfs_config'에서 단계에 구축된 Oracle 호스트에 대한 SSH 키 'accessstkey.pem'의 복사본을 만듭니다." and connecting to an EC2 instance for hosting Oracle database있습니다."
+. 기본적으로 EC2 인스턴스는 액세스 인증을 위해 SSH 키 쌍을 사용합니다. Ansible 컨트롤러 자동화 루트 디렉토리 '/home/EC2-user/na_oracle19c_deploy' 및 '/home/EC2-user/na_RDS_FSX_oranfs_config'에서 단계에 구축된 Oracle 호스트에 대한 SSH 키 'accessstkey.pem'의 복사본을 만듭니다."<<Oracle 데이터베이스를 호스팅하기 위한 EC2 인스턴스 생성 및 연결>>있습니다."
 . EC2 인스턴스 DB 호스트에 EC2-USER로 로그인하여 python3 라이브러리를 설치합니다.
 +
 [source, cli]
@@ -492,7 +492,7 @@ NOTE: 백업 정책에서 Oracle 아카이브 로그 잘라내기 기능을 활�
 
 SnapCenter의 데이터베이스 백업은 사용자가 구성할 수 있으며 리소스 그룹에서 개별적으로 또는 그룹으로 설정할 수 있습니다. 백업 간격은 RTO 및 RPO 목표에 따라 달라집니다. 전체 데이터베이스 백업을 몇 시간마다 실행하고 빠른 복구를 위해 10-15분 등의 높은 빈도로 로그 백업을 아카이브하는 것이 좋습니다.
 
-의 Oracle 섹션을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/hybrid_dbops_snapcenter_getting_started_onprem.html#8-implement-backup-policy-to-protect-database["백업 정책을 구현하여 데이터베이스를 보호합니다"^] 섹션에 생성된 백업 정책을 구현하기 위한 자세한 단계별 프로세스를 참조하십시오  backup policy for Oracle database 백업 작업 스케줄링에 대한 것입니다.
+의 Oracle 섹션을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/hybrid_dbops_snapcenter_getting_started_onprem.html#8-implement-backup-policy-to-protect-database["백업 정책을 구현하여 데이터베이스를 보호합니다"^] 섹션에 생성된 백업 정책을 구현하기 위한 자세한 단계별 프로세스를 참조하십시오 <<Oracle 데이터베이스에 대한 백업 정책을 구성합니다>> 백업 작업 스케줄링에 대한 것입니다.
 
 다음 이미지는 Oracle 데이터베이스를 백업하도록 설정된 리소스 그룹의 예입니다.
 

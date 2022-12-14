@@ -317,10 +317,10 @@ Cloud Volumes Service의 SMB 서버는 Kerberos 클록 편중, 티켓 사용 기
 | Kerberos를 사용하도록 AES-128 및 AES-256 암호화를 사용합니다 | Active Directory 연결에 AES 암호화를 사용할지 여부를 제어하고 Active Directory 연결을 생성/수정할 때 Active Directory 인증에 AES 암호화 사용 옵션을 사용하여 제어합니다. | 거짓 | 예 
 
 
-| LM 호환성 수준 | Active Directory 연결에 대해 지원되는 인증 방언의 수준입니다. 자세한 내용은 " 단원을 참조하십시오 authentication dialects"를 참조하십시오. | NTLMv2 - KRB | 아니요 
+| LM 호환성 수준 | Active Directory 연결에 대해 지원되는 인증 방언의 수준입니다. 자세한 내용은 " 단원을 참조하십시오<<SMB 인증 방언>>"를 참조하십시오. | NTLMv2 - KRB | 아니요 
 
 
-| 수신 CIFS 트래픽에 SMB 암호화 필요 | 모든 공유에 SMB 암호화가 필요합니다. 이 기능은 Cloud Volumes Service에서 사용되지 않으며 대신 볼륨별로 암호화를 설정합니다(“ 절 참조) share security features"). | 거짓 | 아니요 
+| 수신 CIFS 트래픽에 SMB 암호화 필요 | 모든 공유에 SMB 암호화가 필요합니다. 이 기능은 Cloud Volumes Service에서 사용되지 않으며 대신 볼륨별로 암호화를 설정합니다(“ 절 참조)<<SMB는 보안 기능을 공유합니다>>"). | 거짓 | 아니요 
 
 
 | 클라이언트 세션 보안 | LDAP 통신에 대한 서명 및/또는 봉인을 설정합니다. 이 설정은 현재 Cloud Volumes Service에 설정되어 있지 않지만 향후 릴리즈에서 필요할 수 있습니다. Windows 패치로 인한 LDAP 인증 문제에 대한 해결 방법은 섹션에서 설명합니다 link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#ldap#ldap-channel-binding["“LDAP 채널 바인딩.”"]. | 없음 | 아니요 

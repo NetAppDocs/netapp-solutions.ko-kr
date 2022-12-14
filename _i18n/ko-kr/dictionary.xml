@@ -5667,7 +5667,6 @@
   <block id="1e9df60603ff2a9fe2495b189aecc647" category="list-text"><block ref="efecd5d76f6fc92c9c9a8111cf809724" category="inline-link-macro-rx"></block>. 모든 데이터 저장소에 대해 이 단계를 반복합니다.</block>
   <block id="5f4723c28ea2b13a27b86c1116720a8a" category="inline-link-macro">하드웨어 가속 지원을 확인합니다.</block>
   <block id="aa0cfa24dd578f0629299a21b453583c" category="list-text"><block ref="aa0cfa24dd578f0629299a21b453583c" category="inline-link-macro-rx"></block></block>
-  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="section-title">다음 단계</block>
   <block id="1d3fa7ee382266d716ba7a360f30f188" category="paragraph">이러한 작업이 완료되면 VMFS 데이터 저장소가 가상 머신 프로비저닝에 사용할 준비가 된 것입니다.</block>
   <block id="53001b412ce4896686a413a19f6dcc5f" category="listing-title">Ansible 플레이북</block>
   <block id="963739e9818c0bf4d8959b5cdf6a7956" category="summary">SRA 및 기존 데이터스토어에 사용되는 것과 VVol 복제를 사용할 때는 SRM 내 워크플로우가 크게 다릅니다.</block>
@@ -15574,7 +15573,6 @@
   <block id="05c89cf5b898c5c58986dac08f22a2a1" category="paragraph"><block ref="05c89cf5b898c5c58986dac08f22a2a1" category="inline-link-rx"></block></block>
   <block id="33efddb311b6c85bba97e5349040815f" category="sidebar">워크로드 마이그레이션 솔루션</block>
   <block id="e946411f5b47d53428345ae0e0e5f5fd" category="sidebar">워크로드를 마이그레이션 중입니다</block>
-  <block id="747616909dea0c52e547cd52a7d5a12c" category="example-title">인공 지능(AI) 및 최신 데이터 분석</block>
   <block id="b0d7b47f43a6efe75ff49bfd5e21f6fd" category="list-text"><block ref="b0d7b47f43a6efe75ff49bfd5e21f6fd" category="inline-link-macro-rx"></block></block>
   <block id="90e97692c42b1eb0ec22c639049d78a1" category="list-text"><block ref="90e97692c42b1eb0ec22c639049d78a1" category="inline-link-macro-rx"></block></block>
   <block id="6ff1dafebf930a9c5fef12bf43046987" category="example-title">엔터프라이즈 애플리케이션 및 데이터베이스</block>
@@ -15967,8 +15965,6 @@
   <block id="d02a79fb6f05358e16f9d9cf02288ac3" category="section-title">글로벌 변수를 설정합니다</block>
   <block id="3506caa5fe966a4676faac2993bc1431" category="section-title">자동화 플레이북</block>
   <block id="ba985cf3c812e3ba064fedc7353bbb77" category="section-title">Oracle 데이터베이스 복구 중</block>
-  <block id="27f79c88e868588467ec46cf2e4bda8a" category="paragraph">Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.</block>
-  <block id="3798d8f6f1f14581181abe3a5ef34dc1" category="paragraph"><block ref="3798d8f6f1f14581181abe3a5ef34dc1" category="inline-link-rx"></block></block>
   <block id="fb467c38c5af2ca41ea3f09fe535144d" category="list-text">* RO/RW 액세스 규칙 * 내보내기에 대한 액세스 수준을 제어하려면 읽기/쓰기 또는 읽기 전용 을 선택합니다. CVS - 성능은 다음 옵션을 제공합니다.</block>
   <block id="b42b7de139bf4398a5d4b048ecf30c9f" category="paragraph">또한 Cloud Volumes Service는 지원되는 최대 그룹을 32개까지 확장할 수 있도록 확장된 그룹 지원을 제공합니다. 이를 위해서는 유효한 UNIX 사용자 및 그룹 ID가 포함된 LDAP 서버에 대한 LDAP 연결이 필요합니다. 이 구성을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="744e76592290230cb7381c9b8a5414da" category="inline-link-rx"></block> Google 문서.</block>
   <block id="73867c3747b10f9f7b4b54a4597ff38b" category="paragraph">IAM은 Cloud Volumes Service에 대한 세분화된 기본 권한을 제공합니다. 를 찾을 수 있습니다<block ref="fefbe49b0be12af5b957eff3a3dc2826" category="inline-link-rx"></block>.</block>
@@ -15996,4 +15992,33 @@
   <block id="57e8b261ab803839f73416e368f552bc" category="paragraph">Cloud Volumes Service 백업은 Cloud Volumes Service에 옵션으로 내장되어 있습니다. 사용자는 볼륨별로 Cloud Volumes Service 백업을 활성화하여 보호할 볼륨을 결정할 수 있습니다. 를 참조하십시오<block ref="218d9dd384a48541f627c5084c286ade" category="inline-link-rx"></block> 백업에 대한 자세한 내용은 를 참조하십시오<block ref="d724a11e2928bd8489b8ad8fe1eac94b" category="inline-link-rx"></block>, 스케줄링 및 을 참조하십시오<block ref="31e05107512c82ef17df4f5c4b3fe0bd" category="inline-link-rx"></block>.</block>
   <block id="de8a90c8653195ed30cc4920de8c7921" category="paragraph">Cloud Volumes Service 백업(백업 생성, 삭제 및 복원)을 관리하려면 사용자에게 이 있어야 합니다<block ref="595f329bf934dbc7996bb735e9664896" category="inline-link-rx"></block> 역할.</block>
   <block id="6640e7cef3ca860543c49a5125ba4c5a" category="list-text">파일 개수가 많은 워크로드에 대해 NFSv4.x를 사용할 경우 krb5p보다 성능이 더 우수합니다.</block>
+  <block id="11eb332ab75184a78c40c9174e16f520" category="paragraph-title">NetApp과 VMware: 더 나은 협력</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="section-title">다음 단계</block>
+  <block id="3603e14740d8edd319e72186341cb0af" category="cell">2022년 12월 6일</block>
+  <block id="48461fa824ae344e0934144c7523c3f6" category="cell">Amazon FSx 스토리지를 사용한 하이브리드 클라우드에서 Oracle 데이터베이스 현대화를 위한 7개의 비디오가 추가되었습니다</block>
+  <block id="954a2b08ded0ca2c881930f5ebeee24a" category="example-title">인공 지능(AI) 및 최신 데이터 분석</block>
+  <block id="672d7bebe35b300386767050d4222453" category="paragraph">[underline] # * AWS 및 FSx *#의 하이브리드 클라우드를 통한 Oracle 현대화에 대한 동영상</block>
+  <block id="deb1d0bb3f3f4ef0121635c0f832a3bf" category="video-title">1부 - 사용 사례 및 솔루션 아키텍처</block>
+  <block id="369b9aec1beb25441dc7c7fb46bc0fc6" category="video-title">2a부 - 최대의 가용성과 자동화된 PDB 재배치를 사용하여 사내에서 AWS로 데이터베이스 마이그레이션</block>
+  <block id="2edb94ef9695015c5cd01fec59bcc782" category="video-title">파트 2b - SnapMirror를 통해 BlueXP 콘솔을 사용하여 사내에서 AWS로 데이터베이스 마이그레이션</block>
+  <block id="59fa2b2110d3350efd262bd841c10975" category="video-title">3부 - 자동화된 데이터베이스 HA/DR 복제 설정, 페일오버, 재동기화</block>
+  <block id="938d46c61cee67ddb1711167aba9f463" category="video-title">파트 4a - 복제된 대기 복제본에서 SnapCenter UI를 사용하여 개발/테스트용 데이터베이스 클론</block>
+  <block id="09b285fbf39efff75f085bbadedde45e" category="video-title">파트 4b - 데이터베이스 백업, 복원, SnapCenter UI를 사용한 클론</block>
+  <block id="45885d9d91879afc9c37a8b3e046aac4" category="video-title">파트 4c - BlueXP SaaS 애플리케이션 백업 및 복구를 통한 데이터베이스 백업 및 복구</block>
+  <block id="fe86efdcec6e779b5ef15f62d8f2bc90" category="paragraph-title">AWS에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="8c4271e6faf2cea4cfc8e5b7108d8ee9" category="paragraph-title">절차를 참조하십시오</block>
+  <block id="4e91e39d32f2399e7c90059f4eea5684" category="paragraph-title">수취인:</block>
+  <block id="93726ca0be25ac3bef0f54da1e20751c" category="paragraph-title">AWS에서 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="99661bfb937ca0c49c78878d8d2b0e77" category="paragraph-title">AWS에 NetApp ONTAP FSx 구축을 위한 Terraform 구성 파일</block>
+  <block id="1538b268d8f3b010dea63370c1a65935" category="paragraph-title">레시피:</block>
+  <block id="107933ea485144e916f16cd69884fea6" category="paragraph-title">Azure에서 ANF 볼륨 배포를 위한 Terraform 구성 파일</block>
+  <block id="c2d6144ea47815bb9e1c4e09c0918486" category="paragraph-title">Azure에서 데이터 보호를 사용하여 ANF 볼륨 배포를 위한 Terraform 구성 파일</block>
+  <block id="1ed1215fce9948e3bee78c99bf12de8d" category="paragraph-title">Azure에서 이중 프로토콜을 사용하는 ANF 볼륨 배포를 위한 Terraform 구성 파일</block>
+  <block id="15b915279743f1a43ce2c0f10062e69e" category="paragraph-title">Azure의 Snapshot에서 ANF 볼륨을 배포하기 위한 Terraform 구성 파일</block>
+  <block id="664b1f8a02a683b16bb76004afb03be2" category="paragraph-title">Azure에서 단일 노드 CVO를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="f06bfa867f111b72b9e71b8a75d661da" category="paragraph-title">Azure에서 CVO HA를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="e10db5a03ff1c5409d1b9ef0cf32ae11" category="paragraph-title">GCP에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="1e95e8962dbf55d78e03e8da38f9f408" category="paragraph-title">GCP에 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일</block>
+  <block id="f39b5c8ffff4c5fccbc9ca01bf3bacf8" category="paragraph-title">GCP 기반 NetApp CVS 볼륨 구축을 위한 Terraform 구성 파일</block>
+  <block id="934282d2b6cc731f63bcc3cdfbba32a1" category="paragraph">Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.<block ref="3798d8f6f1f14581181abe3a5ef34dc1" category="inline-link-rx"></block></block>
 </blocks>

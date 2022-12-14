@@ -6,10 +6,12 @@
 ====
 .CVO 단일 노드 구축
 --
+.AWS에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일
 이 섹션에는 AWS(Amazon Web Services)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -74,6 +76,7 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 ----
     terraform destroy
 ----
+.수취인:
 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
@@ -146,10 +149,12 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 --
 .CVO HA 구축
 --
+.AWS에서 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 AWS(Amazon Web Services)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -214,6 +219,7 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 ----
     terraform destroy
 ----
+.수취인:
 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
@@ -313,10 +319,12 @@ HA 쌍의 NetApp CVO 인스턴스에 대한 Terraform 변수
 --
 .FSX 배포
 --
+.AWS에 NetApp ONTAP FSx 구축을 위한 Terraform 구성 파일
 이 섹션에서는 AWS(Amazon Web Services)에서 NetApp ONTAP FSx를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
+.절차를 참조하십시오
 템플릿을 실행하려면:
 
 . 리포지토리를 복제합니다.
@@ -381,6 +389,7 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 ----
     terraform destroy
 ----
+.레시피:
 커넥터
 
 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
