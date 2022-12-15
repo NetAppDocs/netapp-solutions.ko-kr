@@ -17,8 +17,6 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf
   - title: SQL 서버
     links:
-    - title: Azure NetApp Files 기반 SQL Server
-      url: "/sql-srv-anf_overview.html"
     - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
       url: https://www.netapp.com/us/media/tr-4467.pdf
     - title: Microsoft SQL Server 현대화
@@ -29,5 +27,9 @@ indexpage:
     links:
     - title: EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축
       url: "/aws_ora_fsx_ec2_deploy_intro.html"
+    - title: Azure NetApp Files 기반 SQL Server
+      url: "/sql-srv-anf_overview.html"
+    - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
+      url: "/sql-aws-ec2.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
       url: "/hybrid_dbops_snapcenter_usecases.html"
