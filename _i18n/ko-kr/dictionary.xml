@@ -14952,7 +14952,6 @@
   <block id="3100ca44a05fa97ed5f07875f442084e" category="paragraph">다음 섹션에서는 Spark 고객에게 중요한 스토리지 기능에 대해 설명합니다.</block>
   <block id="da2518ef48c60077e2b2c0be7fed7193" category="section-title">스토리지 계층화</block>
   <block id="d9a83ca3a623dce37a2f84027f1495ce" category="paragraph">Hadoop 스토리지 계층화를 사용하면 스토리지 정책에 따라 다양한 스토리지 유형의 파일을 저장할 수 있습니다. 스토리지 유형으로는 핫, 콜드, 웜, 올 SSD, 원 SSD 등이 있습니다. 그리고 게으른 유영이 있습니다.</block>
-  <block id="6a3bcc36155e13e7b4cdcebeb2b3c96e" category="paragraph">NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검증하고 SSD 및 SAS 드라이브를 사용하는 E-Series 스토리지 컨트롤러를 다양한 스토리지 정책으로 수행했습니다. AFF-A800의 Spark 클러스터에는 4개의 컴퓨팅 작업자 노드가 있는 반면 E-Series를 사용하는 클러스터는 8개의 노드를 가지고 있습니다.</block>
   <block id="36edc8f5974bdf6ad51a220254b99dfb" category="paragraph">다음 그림은 Hadoop SSD를 위한 NetApp 솔루션의 성능을 보여줍니다.</block>
   <block id="d09520ed9b4a17ada38e70314907675f" category="inline-image-macro">1TB의 데이터를 정렬할 시간입니다.</block>
   <block id="55fdf8b2dd620bd73dcd37db50e0f0e5" category="paragraph"><block ref="55fdf8b2dd620bd73dcd37db50e0f0e5" category="inline-image-macro-rx" type="image"></block></block>
@@ -16276,4 +16275,7 @@
   <block id="e482c7b116916a3d87aba2ab1365190b" category="inline-link"><block ref="e482c7b116916a3d87aba2ab1365190b" category="inline-link-rx"></block></block>
   <block id="b916fd292760d6ae01e337bf2a132edb" category="paragraph"><block ref="b916fd292760d6ae01e337bf2a132edb" category="inline-link-rx"></block></block>
   <block id="5d0dd45a93153403c2446a809dcb5fc3" category="sidebar">NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server</block>
+  <block id="a91e5d479805e8e523b723cccc32c826" category="paragraph">NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검증하고 SSD 및 SAS 드라이브를 사용하는 E-Series 스토리지 컨트롤러를 다양한 스토리지 정책으로 수행했습니다. AFF-A800의 Spark 클러스터에는 4개의 컴퓨팅 작업자 노드가 있는 반면 E-Series를 사용하는 클러스터는 8개의 노드를 가지고 있습니다. 주로 SSD와 하드 드라이브 디스크의 성능을 비교하기 위해 이 작업을 수행하였습니다.</block>
+  <block id="dc406f8350f51d99347d8d026c0435a5" category="list-text">즉, 회전식 디스크에서 All-Flash로 전환하면 성능이 향상됩니다. 컴퓨팅 노드의 수는 병목 현상이 아니었습니다. NetApp All-Flash 스토리지를 사용하면 런타임 성능이 원활하게 확장됩니다.</block>
+  <block id="2334ec557e1d4fadaa1ebe6292ad3d06" category="list-text">NFS를 사용하면 데이터가 모두 함께 풀링되는 것과 기능적으로 동일하므로 워크로드에 따라 컴퓨팅 노드의 수를 줄일 수 있습니다. Apache Spark 클러스터 사용자는 컴퓨팅 노드 수를 변경할 때 데이터를 수동으로 재조정할 필요가 없습니다.</block>
 </blocks>
