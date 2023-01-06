@@ -14824,7 +14824,6 @@
   <block id="c2f530d95c6332b106d86a53b41e4a36" category="inline-link">TR-3969 Hadoop용 NetApp E-Series 솔루션</block>
   <block id="8cdadd1c9614abebd1b476daba691f36" category="list-text">기본 NL-SAS 구성에는 8개의 컴퓨팅 노드와 96개의 NL-SAS 드라이브가 사용되었습니다. 이 구성에서는 4분 38초 내에 1TB의 데이터가 생성되었습니다. 을 참조하십시오<block ref="f08cd7da48b5d74d9eaab10199016f47" category="inline-link-rx"></block> 클러스터 및 스토리지 구성에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="f895fa75cdc40f4e672bba6f7a873e25" category="list-text">TeraGen을 사용하면 SSD 구성에서 NL-SAS 구성보다 1TB의 데이터가 15.66x 더 빠르게 생성됩니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 작업 완료 시간을 기준으로 할 때 NL-SAS 구성의 속도는 약 2배였습니다.</block>
-  <block id="459f180fc71a8f8bb773d3c879314e39" category="list-text">TeraSort를 사용하면 SSD 구성에서 NL-SAS 구성에 비해 1TB의 데이터를 1138.36배 더 빠르게 정렬할 수 있습니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 따라서 드라이브당 NL-SAS 구성보다 약 3배 빠른 속도를 제공합니다.</block>
   <block id="c13c2e056adb51078f3067ba570d2780" category="section-title">성능 확장 - 스케일아웃</block>
   <block id="beb08cca1e99e0bdbf11c74ebb62d5ea" category="paragraph">AFF 솔루션에서 Hadoop 클러스터의 컴퓨팅 성능이 더 많이 필요한 경우 적절한 수의 스토리지 컨트롤러를 사용하여 데이터 노드를 추가할 수 있습니다. 스토리지 컨트롤러 어레이당 4개의 데이터 노드로 시작하고 워크로드 특성에 따라 스토리지 컨트롤러당 8개의 데이터 노드로 숫자를 늘리는 것이 좋습니다.</block>
   <block id="431bd1a68814e184bc49ff7231450049" category="paragraph">AFF와 FAS는 데이터 이동 없는 분석에 적합합니다. 계산 요구사항에 따라 노드 관리자를 추가할 수 있으며 무중단 운영을 통해 다운타임 없이 스토리지 컨트롤러를 온디맨드 방식으로 추가할 수 있습니다. NetApp은 AFF NVMe 미디어 지원, 효율성 보장, 데이터 축소, QoS, 예측 분석, FAS 클라우드 계층화, 복제, 클라우드 구축, 보안 고객의 요구사항을 충족할 수 있도록 NetApp에서는 추가 라이센스 비용 없이 파일 시스템 분석, 할당량, 온박스 로드 밸런싱과 같은 기능을 제공합니다. NetApp은 동시 작업 수, 낮은 지연 시간, 단순한 운영, 경쟁업체보다 더 높은 초당 처리 성능 등의 이점을 제공합니다. 또한 NetApp Cloud Volumes ONTAP은 3가지 주요 클라우드 공급자 모두에서 실행됩니다.</block>
@@ -16141,9 +16140,7 @@
   <block id="e482c7b116916a3d87aba2ab1365190b" category="inline-link"><block ref="e482c7b116916a3d87aba2ab1365190b" category="inline-link-rx"></block></block>
   <block id="b916fd292760d6ae01e337bf2a132edb" category="paragraph"><block ref="b916fd292760d6ae01e337bf2a132edb" category="inline-link-rx"></block></block>
   <block id="5d0dd45a93153403c2446a809dcb5fc3" category="sidebar">NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server</block>
-  <block id="a91e5d479805e8e523b723cccc32c826" category="paragraph">NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검증하고 SSD 및 SAS 드라이브를 사용하는 E-Series 스토리지 컨트롤러를 다양한 스토리지 정책으로 수행했습니다. AFF-A800의 Spark 클러스터에는 4개의 컴퓨팅 작업자 노드가 있는 반면 E-Series를 사용하는 클러스터는 8개의 노드를 가지고 있습니다. 주로 SSD와 하드 드라이브 디스크의 성능을 비교하기 위해 이 작업을 수행하였습니다.</block>
   <block id="dc406f8350f51d99347d8d026c0435a5" category="list-text">즉, 회전식 디스크에서 All-Flash로 전환하면 성능이 향상됩니다. 컴퓨팅 노드의 수는 병목 현상이 아니었습니다. NetApp All-Flash 스토리지를 사용하면 런타임 성능이 원활하게 확장됩니다.</block>
-  <block id="2334ec557e1d4fadaa1ebe6292ad3d06" category="list-text">NFS를 사용하면 데이터가 모두 함께 풀링되는 것과 기능적으로 동일하므로 워크로드에 따라 컴퓨팅 노드의 수를 줄일 수 있습니다. Apache Spark 클러스터 사용자는 컴퓨팅 노드 수를 변경할 때 데이터를 수동으로 재조정할 필요가 없습니다.</block>
   <block id="67c8804409fa1f91b1b477b7c99d1d71" category="paragraph">저자: Chris Reno, Josh Powell, Suesh Thoppay - NetApp 솔루션 엔지니어링</block>
   <block id="37242160d8bbd9ad700322c3c2499272" category="section-title">가정, 전제 조건 및 구성 요소 개요</block>
   <block id="3ea8c755cca91dd6bbeec88e906263e9" category="paragraph">이 솔루션을 구축하기 전에 구성 요소 개요, 솔루션을 구축하는 데 필요한 전제 조건 및 이 솔루션을 문서화하는 데 필요한 가정을 검토하십시오.</block>
@@ -16156,4 +16153,41 @@
   <block id="ed8b9b5c064b716d4c1d3f30a595410f" category="example-title">Veeam 백업 및 AMP, 복제</block>
   <block id="42c8c901c8d4c00c90f9f66d69df3cdb" category="example-title">Veeam Backup &amp; amp; 복제 서버입니다</block>
   <block id="17f0b02d31e76cb9b2878b4a08f19eb5" category="example-title">Veeam Backup &amp; amp; 복제 구성</block>
+  <block id="53f8aa6361303e58854a4451a706df5e" category="doc">WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안</block>
+  <block id="ae9e79ac4b60eba67cf1c7508417b42c" category="paragraph">NetApp SnapCenter Plug-in for VMware vSphere 소프트웨어 엔지니어링은 다음과 같은 안전한 개발 활동을 사용합니다.</block>
+  <block id="b25a1098aff7d0c5ee590f1e1a114bb9" category="list-text">* DAST(Dynamic Application Security Testing). * 실행 상태의 응용 프로그램에서 취약한 상태를 감지하도록 설계된 기술입니다. DAST는 웹 활성화 애플리케이션의 노출된 HTTP 및 HTML 인터페이스를 테스트합니다.</block>
+  <block id="6cc1fee6b4fc48755d78e93170bbed93" category="list-text">* 타사 코드 통화. * 소프트웨어를 개발하고 오픈 소스 소프트웨어(OSS)를 사용하는 과정에서 제품에 통합된 OSS와 관련된 보안 취약점을 해결하는 것이 중요합니다. 이는 항상 OSS 구성 요소 버전에 새로 발견된 취약점이 보고될 수 있기 때문에 지속적으로 발생하는 것입니다.</block>
+  <block id="87bd0fb9b4198f33535e0e1888a809f5" category="list-text">* 침투 테스트 * 침투 테스트는 시스템, 웹 응용 프로그램 또는 네트워크를 평가하여 공격자가 악용할 수 있는 보안 취약점을 찾는 프로세스입니다. NetApp의 침투 테스트(펜 테스트)는 승인되고 신뢰할 수 있는 타사 기업의 그룹에 의해 수행됩니다. 이러한 테스트 범위에는 정교한 악용 방법이나 도구를 사용하는 악의적인 침입자나 해커 같은 응용 프로그램 또는 소프트웨어에 대한 공격이 포함됩니다.</block>
+  <block id="e3a3be4b4b04c5e0b6a5f1b5ea388380" category="list-text">제품 보안 문제의 대응 활동.* 보안 취약점은 회사 내외부에서 발견되며, 적절한 시기에 해결하지 못할 경우 NetApp의 평판에 심각한 위험을 초래할 수 있습니다. 이 프로세스를 용이하게 하기 위해 PSIRT(Product Security Incident Response Team)는 취약점을 보고 및 추적합니다.</block>
+  <block id="e91db3b3278f7bd95cc704d74c5c9597" category="paragraph">VMware vSphere용 NetApp SnapCenter 플러그인에는 각 릴리즈마다 다음과 같은 보안 기능이 포함되어 있습니다.</block>
+  <block id="4abd7d1d5d223683d3346671efb7e89c" category="list-text">* 제한된 셸 액세스. * SSH는 기본적으로 비활성화되어 있으며, VM 콘솔에서 활성화된 경우에만 1회 로그인이 허용됩니다.</block>
+  <block id="8c264fa5ca2c588d960d98bd30cbc897" category="list-text">로그인 배너에 액세스 경고 * 로그인 프롬프트에 사용자 이름을 입력하면 다음 로그인 배너가 표시됩니다.</block>
+  <block id="0d6633ada3a9803e206b2359d859e892" category="paragraph">사용자가 SSH 채널을 통해 로그인을 완료하면 다음 출력이 표시됩니다.</block>
+  <block id="83e463bb73b12d9ca6e419327073c8a4" category="list-text">* 역할 기반 액세스 제어(RBAC). * 두 가지 유형의 RBAC 컨트롤이 NetApp ONTAP 도구에 연결되어 있습니다.</block>
+  <block id="b883bf79639dfce77e395b8458ee69e4" category="list-text">기본 vCenter Server 권한</block>
+  <block id="721796b1cb3468f0daf819180184d460" category="inline-link">역할 기반 액세스 제어(RBAC)</block>
+  <block id="1d08c46b7567a29be0690a92b9722a58" category="list-text">VMware vCenter 플러그인별 권한 자세한 내용은 을 참조하십시오<block ref="f351263ad3706bd0a472039400dece78" category="inline-link-rx"></block>.</block>
+  <block id="acab4c655c4a7b4db67fc07e22b86222" category="list-text">* 암호화된 통신 채널. * 모든 외부 통신은 TLS를 사용하여 HTTPS를 통해 이루어집니다.</block>
+  <block id="47a37e2d5fc8b7c936ad9b2b7a569a08" category="paragraph">다음 표에는 열려 있는 포트 세부 정보가 나와 있습니다.</block>
+  <block id="10bd16a816f831080065e807daa36a9a" category="cell">TCP v4/V6 포트 번호</block>
+  <block id="d4a973e303ec37692cc8923e3148eef7" category="cell">8080</block>
+  <block id="2c25c3d66f80eeaa8d6e5a144c6f942e" category="cell">OVA GUI에 대한 HTTPS 연결</block>
+  <block id="14b3e670eec63cc0cc456fd904bbfbd9" category="cell">SSH(기본적으로 비활성화됨)</block>
+  <block id="16fc18d787294ad5171100e33d05d4e2" category="cell">3306</block>
+  <block id="4cbf9c234f6b34c242a110cb993252bd" category="cell">MySQL(내부 연결에만 해당, 외부 연결은 기본적으로 비활성화됨)</block>
+  <block id="29ab4efbdb7c727c81ee1382593bc5e2" category="cell">Nginx(데이터 보호 서비스)</block>
+  <block id="89f152cad33314315b4995ed1ca71535" category="inline-link">SSL 인증서를 생성 및/또는 VMware vSphere용 SnapCenter 플러그인(SCV)으로 가져오는 방법</block>
+  <block id="450adc59e39f23172756ac9369494a2d" category="list-text">* CA(인증 기관) 서명 인증서 지원 * VMware vSphere용 SnapCenter 플러그인은 CA 서명 인증서의 기능을 지원합니다. 을 참조하십시오<block ref="9f83d87d5d9f604d96288df21d450fac" category="inline-link-rx"></block>.</block>
+  <block id="05a1aa8021df4579874c4eeb8788e5c9" category="list-text">* 암호 정책 * 다음 암호 정책이 적용됩니다.</block>
+  <block id="2c87609dbbc3630573c64e271de8207d" category="list-text">모든 자격 증명 정보는 SHA256 해싱을 사용하여 저장됩니다.</block>
+  <block id="0f1a6fa0a65f9d5c3c4a16b070104d7a" category="list-text">*기본 운영 체제 이미지.* 이 제품은 제한된 액세스 및 쉘 액세스가 비활성화된 OVA용 Debian Base OS와 함께 제공됩니다. 이렇게 하면 공격 발생 가능성이 줄어듭니다. 모든 SnapCenter 릴리스 기본 운영 체제는 보안 범위를 극대화하기 위해 최신 보안 패치로 업데이트됩니다.</block>
+  <block id="83cd5867ba912e517fa1100299fd1cf3" category="paragraph">NetApp은 VMware vSphere 어플라이언스인 SnapCenter 플러그인과 관련된 소프트웨어 기능 및 보안 패치를 개발한 다음 고객에게 번들 소프트웨어 플랫폼으로 배포합니다. 이러한 어플라이언스에는 특정 Linux 하위 운영 체제 종속성 및 NetApp의 독점 소프트웨어가 포함되어 있으므로 하위 운영 체제를 변경하지 않는 것이 좋습니다. 이 경우 NetApp 어플라이언스에 영향을 줄 가능성이 매우 높기 때문입니다. 이는 NetApp의 어플라이언스 지원 기능에 영향을 미칠 수 있습니다. 보안 관련 문제를 해결하기 위해 NetApp은 어플라이언스의 최신 코드 버전을 테스트하고 구축할 것을 권장합니다.</block>
+  <block id="e50e258ecc9eaa88d6c653c3a24cb319" category="cell">2022년 3월</block>
+  <block id="3107c066ea7eeb48bd5f87594a08fd7a" category="paragraph">&lt;&lt;&lt;&lt;&lt;&lt;&lt; head는 NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검증하고 SSD 및 SAS 드라이브를 사용하는 E-Series 스토리지 컨트롤러를 다양한 스토리지 정책으로 수행했습니다. AFF-A800의 Spark 클러스터에는 4개의 컴퓨팅 작업자 노드가 있는 반면 E-Series를 사용하는 클러스터는 8개의 노드를 가지고 있습니다. 주로 SSD(Solid-State Drive)와 HDD(하드 드라이브 디스크)의 성능을 비교합니다.</block>
+  <block id="dba657bcaa661bcf5461e260c00e4f06" category="paragraph">NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검증하고 SSD 및 SAS 드라이브를 사용하는 E-Series 스토리지 컨트롤러를 다양한 스토리지 정책으로 수행했습니다. AFF-A800의 Spark 클러스터에는 4개의 컴퓨팅 작업자 노드가 있는 반면 E-Series를 사용하는 클러스터는 8개의 노드를 가지고 있습니다. 주로 SSD와 하드 드라이브 디스크의 성능을 비교하기 위해 이 작업을 수행하였습니다. &gt;&gt;&gt;&gt;&gt;&gt; a51c9ddf73ca69e1120ce05edc7b0b9607b96eae</block>
+  <block id="f14f651fb8150de92c527d88344df494" category="list-text">TeraSort를 사용하면 SSD 구성에서 NL-SAS 구성에 비해 1TB의 데이터를 1138.36배 더 빠르게 정렬할 수 있습니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 따라서 드라이브당 NL-SAS 구성보다 약 3배 빠른 속도를 제공합니다. &lt;&lt;&lt;&lt;&lt;&lt;&lt; 머리</block>
+  <block id="52be2edb04819f386804af38bd53a55d" category="list-text">여기서 주목할 점은 회전식 디스크에서 All-Flash로 전환하여 성능을 향상할 수 있다는 것입니다. 컴퓨팅 노드의 수는 병목 현상이 아니었습니다. NetApp의 All-Flash 스토리지를 사용하면 런타임 성능이 원활하게 확장됩니다.</block>
+  <block id="8cc25131075ed11b8263304fceebc5c6" category="list-text">NFS를 사용하면 데이터가 모두 함께 풀링되는 것과 기능적으로 동일하므로 워크로드에 따라 컴퓨팅 노드의 수를 줄일 수 있습니다. Apache Spark 클러스터 사용자는 컴퓨팅 노드의 수를 변경할 때 데이터를 수동으로 재조정할 필요가 없습니다.</block>
+  <block id="6ed171c4fe1ca516676ea457d91105b1" category="list-text">NFS를 사용하면 데이터가 모두 함께 풀링되는 것과 기능적으로 동일하므로 워크로드에 따라 컴퓨팅 노드의 수를 줄일 수 있습니다. Apache Spark 클러스터 사용자는 컴퓨팅 노드 수를 변경할 때 데이터를 수동으로 재조정할 필요가 없습니다. &gt;&gt;&gt;&gt;&gt;&gt; a51c9ddf73ca69e1120ce05edc7b0b9607b96eae</block>
+  <block id="2668a3fec665f31a26e9e428b4ee62a7" category="sidebar">SnapCenter 플러그인 VMware vSphere - 제품 보안</block>
 </blocks>
