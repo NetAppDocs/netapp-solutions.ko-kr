@@ -7,10 +7,10 @@ indexpage:
       url: "/netapp-vmware.html"
     - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
       url: "/vsphere_admin_introduction.html"
-    - title: ONTAP for VMware vSphere의 새로운 기능
-      url: "/vsphere_ontap_whats_new.html"
     - title: ONTAP를 사용하는 VMware vSphere 모범 사례
       url: "/vsphere_ontap_ontap_for_vsphere.html"
+    - title: VMware 가상화를 위한 새로운 기능
+      url: https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_vmware_virtualization.html
   - title: 퍼블릭 클라우드의 VMware
     links:
     - title: NetApp 하이브리드 멀티 클라우드 및 VMware

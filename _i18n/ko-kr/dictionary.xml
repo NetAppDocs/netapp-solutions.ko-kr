@@ -8919,7 +8919,6 @@
   <block id="b84034a4ed4e546b39d5bd268ff06eaa" category="sidebar">시작/모범 사례</block>
   <block id="b0f878715a3d12827d6fb02b0df1f23c" category="sidebar">NetApp 및 VMware: 시작하기</block>
   <block id="690359e9e894d87f3144da561090e3f0" category="sidebar">VMware vSphere 관리자를 위한 NetApp ONTAP의 이점</block>
-  <block id="eaf99c5ef6885367fbd51d3ed4d278a9" category="sidebar">ONTAP for VMware vSphere의 새로운 기능</block>
   <block id="c0bf5949fe87e1e5caf42e4746cd0080" category="sidebar">ONTAP를 사용하는 VMware vSphere 모범 사례</block>
   <block id="584132370dee3f2fccd2ca59888bee18" category="sidebar">퍼블릭 클라우드의 VMware</block>
   <block id="631ed8aac33a641d62d751c3abd77c57" category="sidebar">AWS용 NetApp VMC</block>
@@ -16190,4 +16189,5 @@
   <block id="e08c666b5127e745f8aacbacfce37dcf" category="list-text">* VASA Provider for ONTAP. * VASA Provider for ONTAP는 VMware VASA(vStorage APIs for Storage Awareness) 프레임워크를 지원합니다. 이 제품은 구축 편의성을 위해 VMware vSphere용 ONTAP 툴의 일부로 단일 가상 어플라이언스로 제공됩니다. VASA Provider는 vCenter Server를 ONTAP와 연결하여 VM 스토리지를 프로비저닝하고 모니터링할 수 있도록 지원합니다. 이를 통해 VVol(VMware Virtual Volumes) 지원, 스토리지 기능 프로필 관리, 개별 VM VVol 성능, 용량 모니터링 및 프로파일 규정 준수에 대한 경보를 수행할 수 있습니다.</block>
   <block id="1c7bb8764fc089dda8481678ad1ea0b5" category="list-text">* 스토리지 복제 어댑터. * SRA는 VMware SRM(Site Recovery Manager)과 함께 사용되어 운영 사이트와 재해 복구 사이트 간의 데이터 복제를 관리하고 DR 복제본을 중단 없이 테스트합니다. 검색, 복구 및 재보호 작업을 자동화할 수 있습니다. Windows SRM 서버 및 SRM 어플라이언스에는 SRA 서버 어플라이언스와 SRA 어댑터가 모두 포함됩니다.</block>
   <block id="eff6699ec911b615a51eb7e9e0d89970" category="paragraph">VMware VAAI용 NetApp NFS 플러그인은 ESXi 호스트에서 ONTAP의 NFS 데이터 저장소와 함께 VAAI 기능을 사용할 수 있도록 지원하는 플러그인입니다. 클론 작업을 위한 복제 오프로드, 일반 가상 디스크 파일의 공간 예약, 스냅샷 복사본 오프로드를 지원합니다. 복사 작업을 스토리지로 오프로드하는 것이 반드시 완료되기만은 않습니다. 그러나 이 작업은 네트워크 대역폭 요구 사항을 줄이고 CPU 주기, 버퍼 및 큐와 같은 호스트 리소스를 오프로드합니다. VMware vSphere용 ONTAP 툴을 사용하여 ESXi 호스트 또는 지원되는 경우 VLCM(vSphere Lifecycle Manager)에 플러그인을 설치할 수 있습니다.</block>
+  <block id="082e2767897584434269db14d4ceda54" category="sidebar">VMware 가상화를 위한 새로운 기능</block>
 </blocks>
