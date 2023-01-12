@@ -5020,26 +5020,15 @@
   <block id="f2a693e1f056b96566c4551fcab418f2" category="paragraph">vSphere를 사용하면 엔터프라이즈급 NFS 스토리지를 사용하여 ESXi 클러스터의 모든 노드에 대한 데이터 저장소에 대한 동시 액세스를 제공할 수 있습니다. 데이터 저장소 섹션에서 언급한 것처럼, NFS를 vSphere와 함께 사용할 경우 사용 편의성과 스토리지 효율성 가시성의 이점이 있습니다.</block>
   <block id="743fa5a7bc7d4ba215b096e34779d298" category="paragraph">vSphere와 함께 ONTAP NFS를 사용할 때는 다음과 같은 Best Practice를 따르는 것이 좋습니다.</block>
   <block id="265e673c00294cf97a90c3b0d4fcb076" category="list-text">ONTAP 클러스터의 각 노드에서 각 SVM에 대해 단일 논리 인터페이스(LIF)를 사용합니다. 데이터 저장소당 LIF의 과거 권장사항은 더 이상 필요하지 않습니다. 직접 액세스(LIF 및 데이터 저장소 같은 노드의 경우)가 가장 좋기는 하지만, 성능 영향은 일반적으로 최소(마이크로초)이기 때문에 간접 액세스에 대해 걱정할 필요가 없습니다.</block>
-  <block id="83deede0d0158f0f2469080b6208e88a" category="list-text">VMware는 VMware Infrastructure 3 이후 NFSv3을 지원했습니다. vSphere 6.0은 NFSv4.1에 대한 지원을 추가하여 Kerberos 보안과 같은 일부 고급 기능을 지원합니다. NFSv3에서는 클라이언트측 잠금을 사용하는 경우 NFSv4.1은 서버 측 잠금을 사용합니다. ONTAP 볼륨은 두 프로토콜을 통해 내보낼 수 있지만 ESXi는 하나의 프로토콜을 통해서만 마운트할 수 있습니다. 이 단일 프로토콜 마운트는 다른 ESXi 호스트가 다른 버전을 통해 동일한 데이터 저장소를 마운트하는 것을 배제하지 않습니다. 모든 호스트가 동일한 버전과 동일한 잠금 스타일을 사용하도록 마운트할 때 사용할 프로토콜 버전을 지정해야 합니다. 호스트 간에 NFS 버전을 혼합하지 마십시오. 가능한 경우 호스트 프로필을 사용하여 규정 준수 여부를 확인하십시오.</block>
   <block id="ae4c5baa79e370d8f601cc7082f8123e" category="list-text">NFSv3과 NFSv4.1 간에는 자동 데이터 저장소가 변환되지 않으므로 새로운 NFSv4.1 데이터 저장소를 생성하고 Storage vMotion을 사용하여 VM을 새 데이터 저장소로 마이그레이션합니다.</block>
-  <block id="04826f858f8ad9c66b9d805ca9ff88a3" category="list-text">NFS 내보내기 정책은 vSphere 호스트의 액세스를 제어하는 데 사용됩니다. 여러 볼륨(데이터 저장소)에 하나의 정책을 사용할 수 있습니다. NFSv3에서 ESXi는 sys(UNIX) 보안 스타일을 사용하며 VM을 실행하려면 루트 마운트 옵션이 필요합니다. ONTAP에서 이 옵션을 수퍼 유저라고 하며, 수퍼유저 옵션을 사용할 때 익명 사용자 ID를 지정할 필요가 없습니다. '-anon' 및 '-allow-suid'에 대해 서로 다른 값을 갖는 엑스포트 정책 규칙은 ONTAP 툴에서 SVM 검색 문제를 유발할 수 있습니다. 샘플 정책은 다음과 같습니다.</block>
   <block id="822366735aef72f1a9429ac86dda7338" category="list-text">액세스 프로토콜:NFS3</block>
   <block id="69abbd5c7cd9c1b3828b9aa5a894ff47" category="list-text">클라이언트 일치 사양: 192.168.42.21</block>
   <block id="bd6cc42f9cd65cca72cbd56d2f4bf43d" category="list-text">ro 액세스 규칙: sys</block>
   <block id="581c470a5099548fc9865a4bab8761f8" category="list-text">rw 액세스 규칙: sys</block>
-  <block id="0fd74b9f6a61e12b4a204b3489bd05a9" category="list-text">익명 UID:</block>
   <block id="59d5d8c898df18115bd4ced36c6bc0de" category="list-text">슈퍼유저: sys</block>
   <block id="c184ce6b86d2e6fbf8681d61637c101b" category="list-text">VMware VAAI용 NetApp NFS 플러그인을 사용하는 경우 엑스포트 정책 규칙을 생성하거나 수정할 때 프로토콜을 NFS로 설정해야 합니다. VAAI 복제 오프로드가 작동하려면 NFSv4 프로토콜이 필요하며, 프로토콜을 "NFS"로 지정하면 NFSv3 버전과 NFSv4 버전이 모두 자동으로 포함됩니다.</block>
-  <block id="44e8816851b6d24723bf0e06c3b8b40d" category="list-text">NFS 데이터 저장소 볼륨은 SVM의 루트 볼륨에서 접합되므로 ESXi에서 루트 볼륨에 액세스하여 데이터 저장소 볼륨을 탐색하고 마운트해야 합니다. 루트 볼륨과 데이터 저장소 볼륨의 연결이 중첩된 다른 볼륨에 대한 내보내기 정책에는 읽기 전용 액세스를 허용하는 ESXi 서버에 대한 규칙 또는 규칙이 포함되어야 합니다. 다음은 VAAI 플러그인을 사용하는 루트 볼륨에 대한 샘플 정책입니다.</block>
-  <block id="88b77eec23ea926d7dac5b6ec36713d2" category="list-text">액세스 프로토콜. NFS(NFS3 및 nfs4 모두 포함)</block>
-  <block id="2e5d116b123742b0c1f9b9266e3d45e4" category="list-text">클라이언트 일치 사양. 192.168.42.21</block>
-  <block id="e79bd23a286e2e109f901ac7b9fc1052" category="list-text">ro 액세스 규칙. 시스템</block>
-  <block id="6854a3cd4d70ef13145d55305c745f1c" category="list-text">RW 액세스 규칙. 사용 안 함(루트 볼륨에 대한 최상의 보안)</block>
-  <block id="629cac79e5ae376b5235b5cb87c8c03d" category="list-text">익명 UID.</block>
-  <block id="e76eb6f8b3ceafc6b70386efb46a8295" category="list-text">고급 사용자. Sys(VAAI를 사용하는 루트 볼륨에도 필요)</block>
   <block id="4c571520a8128d1692fc709ffbfb2b1e" category="list-text">VMware vSphere용 ONTAP 툴 사용(가장 중요한 모범 사례):</block>
   <block id="b8d278c6184cb65727ca5ae729db92d7" category="list-text">VMware vSphere용 ONTAP 툴을 사용하면 엑스포트 정책의 관리를 자동으로 간소화할 수 있으므로 데이터 저장소를 프로비저닝할 수 있습니다.</block>
-  <block id="55cf2206291fced620eed577cb8c8a42" category="list-text">플러그인을 사용하여 VMware 클러스터용 데이터 저장소를 생성할 때 단일 ESX Server가 아닌 클러스터를 선택합니다. 이 옵션을 선택하면 데이터 저장소가 클러스터의 모든 호스트에 자동으로 마운트됩니다.</block>
   <block id="e4e62770daaf9887c7868fbc8e248a4b" category="list-text">플러그인 마운트 기능을 사용하여 기존 데이터 저장소를 새 서버에 적용합니다.</block>
   <block id="928562eb576ed6ae31cb1a149d3e751a" category="list-text">VMware vSphere용 ONTAP 툴을 사용하지 않는 경우 모든 서버 또는 추가 액세스 제어가 필요한 각 서버 클러스터에 대해 단일 엑스포트 정책을 사용하십시오.</block>
   <block id="7bccab0fa4c0864835c645c9fde7ebf6" category="list-text">ONTAP는 접합을 사용하여 트리에서 볼륨을 정렬하는 유연한 볼륨 네임스페이스 구조를 제공하지만, 이 접근 방식에는 vSphere의 가치가 없습니다. 스토리지의 네임스페이스 계층에 관계없이 데이터 저장소의 루트에 각 VM에 대한 디렉토리를 생성합니다. 따라서 가장 좋은 방법은 SVM의 루트 볼륨에서 vSphere의 볼륨에 대한 접합 경로를 마운트하는 것입니다. 이것이 바로 VMware vSphere용 ONTAP 툴이 데이터 저장소를 프로비저닝하는 방법입니다. 중첩된 연결 경로가 없다는 것은 루트 볼륨 이외의 볼륨에 종속되지 않으며 볼륨을 오프라인으로 전환하거나 의도적으로 파괴하더라도 다른 볼륨에 대한 경로에 영향을 주지 않는다는 것을 의미합니다.</block>
@@ -5060,11 +5049,9 @@
   <block id="56d43ad1a280ada5e16fd2960ae44b32" category="cell">SRM</block>
   <block id="d595c8f30866b71ea121ced5cde66b1d" category="cell">가상 볼륨</block>
   <block id="6ad5114acf73f68a85c72f11646920cb" category="cell">하드웨어 가속(VAAI)</block>
-  <block id="aa32fdb70496d9a7395ef0d3ccb1c986" category="cell">예(vSphere 6.5 이상, NetApp VAAI 플러그인 1.1.2)</block>
   <block id="ad37ded9046268d8e5ea7cb253bb5dda" category="cell">Kerberos 인증</block>
   <block id="45701e6ef9bc09dca07f8f4abe661dc6" category="cell">예(AES, krb5i를 지원하도록 vSphere 6.5 이상에서 향상)</block>
   <block id="76969a36155d2f41fc6cc3bd3faff244" category="cell">다중 경로 지원</block>
-  <block id="4cdf980fd6cee432c76402bb142269e9" category="cell">아니요(ESXi 6.5 이상은 세션 트렁킹을 통해 지원되며 ONTAP는 pNFS를 통해 지원)</block>
   <block id="7be2e69e5d19c282db8d81c60a51c862" category="summary">이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 솔루션을 구축하는 모범 사례를 설명합니다.</block>
   <block id="1e6584aafa5ae98aebb88d3ddecdaae5" category="doc">vSphere 관리자를 위한 ONTAP 소개</block>
   <block id="74587fa4ad90f8713c0446529a3670e0" category="section-title">ONTAP for vSphere를 선택해야 하는 이유</block>
@@ -5746,29 +5733,21 @@
   <block id="883a5adf98ba177c28c5bc7d95e28763" category="paragraph">이러한 작업이 완료되면 NFS 데이터 저장소가 가상 머신 프로비저닝에 사용할 준비가 된 것입니다.</block>
   <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="doc">모범 사례</block>
   <block id="ff53ee8001042abcefe5c912d0b5012f" category="section-title">vSphere 데이터 저장소 및 프로토콜 기능</block>
-  <block id="7a787d6880ccfe1032af2f4288ce3901" category="paragraph">ONTAP 소프트웨어를 실행하는 시스템의 데이터 저장소에 VMware vSphere를 연결하는 데 5개의 프로토콜이 사용됩니다.</block>
-  <block id="6b8f0029ce30f9b4d5fe0def33875511" category="list-text">FC</block>
   <block id="14eae6ee278098bfad4f8a10fd6c1195" category="list-text">FCoE 를 참조하십시오</block>
   <block id="26bcb9f1cb6f391f4b2c18e676bb458d" category="list-text">NVMe/FC</block>
   <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="list-text">NFS 를 참조하십시오</block>
-  <block id="cbc9a42283809f1edcb32b4a495813f9" category="paragraph">FC, FCoE, NVMe/FC 및 iSCSI는 VMFS(vSphere Virtual Machine File System)를 사용하여 ONTAP 볼륨에 포함된 ONTAP LUN 또는 네임스페이스 내에 VM을 저장하는 블록 프로토콜입니다. VMware는 vSphere 7.0부터 운영 환경에서는 더 이상 소프트웨어 FCoE를 지원하지 않습니다. NFS는 VMFS 없이 VM을 데이터 저장소(단순한 ONTAP 볼륨)에 배치하는 파일 프로토콜입니다. 또한 게스트 OS에서 ONTAP으로 SMB, iSCSI 또는 NFS를 직접 사용할 수도 있습니다.</block>
   <block id="0f2f72ef3f176b98134caf100a06cf5f" category="inline-link">VMware 구성 최대값</block>
-  <block id="6a6d2374b838393f6805b58d97c2c490" category="paragraph">다음 표에는 ONTAP에서 vSphere가 지원하는 기존 데이터 저장소 기능이 나와 있습니다. 이 정보는 VVOL 데이터 저장소에는 적용되지 않지만 일반적으로 지원되는 ONTAP 릴리즈를 사용하는 vSphere 6.x 및 7.x 릴리즈에는 적용됩니다. 상담도 할 수 있습니다<block ref="26c5407c98ec413c85131fd8c0d178b4" category="inline-link-rx"></block> 특정 제한 사항을 확인하기 위한 특정 vSphere 릴리즈</block>
   <block id="9da73946f1bc3be4a41898d06c9d2e8b" category="cell">기능/특징</block>
   <block id="c982f804d02e2d7e937f125d2cac1024" category="cell">FC/FCoE</block>
   <block id="520d0db389f362bf79ef56ca0af3dcab" category="cell">형식</block>
   <block id="99a3142584ca8ad0a3afadeaa6f2ef69" category="cell">VMFS 또는 RDM(Raw Device Mapping)</block>
   <block id="26aae26f61844ac20ab7b04ba6f5c515" category="cell">VMFS 또는 RDM</block>
   <block id="8dc6d0c66219ddb809322c0d248e55e6" category="cell">최대 데이터 저장소 또는 LUN 수</block>
-  <block id="468abcddfc22ae5cb2288b9937b300fb" category="cell">256개 타겟/HBA</block>
-  <block id="72097e262592a146da0e4e856068965b" category="cell">256개 타겟</block>
   <block id="2774ddb6f193789c5d9a480b9e53a38d" category="cell">256개 마운트 기본 NFS. MaxVolumes는 8입니다. VMware vSphere용 ONTAP 툴을 사용하여 256으로 늘리십시오.</block>
   <block id="51c0dc217976e27de06e262947947a62" category="cell">최대 데이터 저장소 크기입니다</block>
   <block id="856c997f909830b8249756c07dc9452b" category="cell">64TB</block>
   <block id="8e5d3a4b085389c59a1a7af7c4067a9b" category="cell">FlexGroup 볼륨에서 100TB FlexVol 볼륨 이상</block>
-  <block id="a4b27c6cd629522064dc48306e2bf8bb" category="cell">최대 데이터스토어 파일 크기(vSphere 버전 5.5 및 VMFS 5 이상을 사용하는 VMDK의 경우)</block>
   <block id="d10549beb2f7bd1e91e5ef8965edd84a" category="cell">62TB</block>
-  <block id="ddf38e51732c3f7da57dc13c31a5483b" category="cell">16TB 62TB는 vSphere에서 지원하는 최대 크기입니다.</block>
   <block id="9aa56a79640231adaec83bc53e59c929" category="cell">LUN 또는 파일 시스템당 최적의 큐 크기</block>
   <block id="edc5121cb9b42a76b718b8ece9d67437" category="paragraph">다음 표에는 지원되는 VMware 스토리지 관련 기능이 나와 있습니다.</block>
   <block id="130b78bfd6c9b050a912fec77e285e3f" category="cell">용량/기능</block>
@@ -5786,7 +5765,6 @@
   <block id="4ee7af004efef335d6a14c60ee758f5e" category="cell">예 VAAI를 사용하지 않을 때 NFS의 모든 VM에 대해 이 설정이 기본값입니다.</block>
   <block id="13bc264ff420559de4156ec40980a4b9" category="cell">VMware 기본 다중 경로</block>
   <block id="8339c514e73f5cced3b83d504d60441b" category="inline-link">Windows Server 장애 조치 클러스터링에 대한 설치</block>
-  <block id="547211ca8a6b93fee863925a03cd341b" category="paragraph">* NetApp은 VMFS 데이터 저장소에서 멀티writer를 사용하는 VMDK가 아닌 Microsoft 클러스터에 게스트 내 iSCSI를 사용할 것을 권장합니다. 이 접근 방식은 Microsoft 및 VMware에서 완벽하게 지원되며 ONTAP(사내 또는 클라우드의 ONTAP 시스템에 대한 SnapMirror)를 통해 뛰어난 유연성을 제공하고 쉽게 구성 및 자동화할 수 있으며 SnapCenter를 통해 보호할 수 있습니다. vSphere 7은 새로운 클러스터 VMDK 옵션을 추가합니다. 이는 멀티 writer를 사용하는 VMDK와 다르지만 클러스터 VMDK 지원을 활성화한 FC 프로토콜을 통해 제공되는 데이터 저장소가 필요합니다. 기타 제한 사항이 적용됩니다. VMware 를 참조하십시오<block ref="b158594c147457b5b6417413cb30f800" category="inline-link-rx"></block> 구성 지침 설명서.</block>
   <block id="a06819d91a165d0491c5816c54b41234" category="paragraph">다음 표에는 지원되는 ONTAP 스토리지 관리 기능이 나와 있습니다.</block>
   <block id="f8d61013f1a3bbf1342f4ced3279c7cf" category="cell">데이터 중복제거</block>
   <block id="72167540968147afed9deb59f0e9fe00" category="cell">어레이에 대한 비용 절감</block>
@@ -5822,10 +5800,7 @@
   <block id="16ee928b12bc598bf52b0f312879ec95" category="section-title">데이터 저장소 레이아웃</block>
   <block id="6104c8ef7be4222a76596ab6a22bb422" category="inline-link-macro">권장되는 ESXi 호스트 및 기타 ONTAP 설정</block>
   <block id="066ed1c180617b2f9028c1f789078de4" category="paragraph">ONTAP 스토리지 시스템은 VM 및 가상 디스크용 데이터 저장소를 유연하게 생성할 수 있습니다. VSC를 사용하여 vSphere용 데이터 저장소를 프로비저닝할 때는 섹션에 나와 있는 ONTAP 모범 사례가 많이 적용되지만 <block ref="311a0f5ed21de3c81d57d9c08f2ace49" category="inline-link-macro-rx"></block>) 다음은 고려해야 할 몇 가지 추가 지침입니다.</block>
-  <block id="73ab3808ccb313675f9b890edf67fd09" category="list-text">ONTAP NFS 데이터 저장소를 사용하여 vSphere를 구축하면 관리가 용이한 고성능 구축이 가능하기 때문에 블록 기반 스토리지 프로토콜로는 얻을 수 없는 VM-데이터 저장소 비율을 제공할 수 있습니다. 이 아키텍처를 사용하면 데이터 저장소 밀도가 10배 증가하여 데이터 저장소 수가 서로 관련지어 줄어들 수 있습니다. 더 큰 데이터 저장소가 스토리지 효율성에 이점을 제공하고 운영 이점을 제공할 수 있지만, 하드웨어 리소스의 최대 성능을 얻기 위해 최소 4개의 데이터 저장소(FlexVol 볼륨)를 사용하여 VM을 단일 ONTAP 컨트롤러에 저장하는 것이 좋습니다. 이 방법을 사용하면 복구 정책이 서로 다른 데이터 저장소를 설정할 수도 있습니다. 비즈니스 요구 사항에 따라 다른 사람보다 더 자주 백업하거나 복제할 수 있는 경우도 있습니다. 설계상 확장되므로 성능을 위해 FlexGroup 볼륨에는 여러 데이터 저장소가 필요하지 않습니다.</block>
-  <block id="68281e9d236ee27e21f68ce5838462f1" category="list-text">FlexVol 볼륨은 ONTAP 9.8 FlexGroup 볼륨, NFS 데이터 저장소부터 사용하는 것이 좋습니다. qtree와 같은 다른 ONTAP 스토리지 컨테이너는 현재 VMware vSphere용 ONTAP 툴에서 지원되지 않으므로 일반적으로 권장되지 않습니다. 단일 볼륨에 여러 qtree로 데이터 저장소를 구축하면 데이터 저장소 수준 할당량 또는 VM 파일 클론의 이점을 누릴 수 있는 고도로 자동화된 환경에 유용할 수 있습니다.</block>
   <block id="dc4d78be836807b32c7ef7f42028b1ef" category="list-text">FlexVol 볼륨 데이터 저장소의 적절한 크기는 약 4TB에서 8TB입니다. 이 크기는 성능, 관리 용이성 및 데이터 보호 측면에서 우수한 균형 점입니다. 작게 시작하고(예: 4TB) 필요에 따라 데이터 저장소를 최대 100TB까지 확장할 수 있습니다. 작은 데이터 저장소가 백업이나 재해 발생 후 복구 속도가 빨라지므로 클러스터 간에 빠르게 이동할 수 있습니다. ONTAP 자동 크기 조정을 사용하면 사용된 공간이 변경될 때 볼륨을 자동으로 확대 및 축소할 수 있습니다. VMware vSphere 데이터 저장소 용량 할당 마법사용 ONTAP 툴은 새 데이터 저장소에 대해 기본적으로 자동 크기 조정을 사용합니다. System Manager 또는 명령줄을 사용하여 확장 및 축소 임계값과 최대 및 최소 크기를 추가로 사용자 지정할 수 있습니다.</block>
-  <block id="12346208f1923ebe162c32f3c4ccf23a" category="list-text">또는 FC, iSCSI 또는 FCoE에서 액세스하는 LUN으로 VMFS 데이터 저장소를 구성할 수도 있습니다. VMFS를 사용하면 클러스터의 모든 ESX 서버에서 기존 LUN에 동시에 액세스할 수 있습니다. VMFS 데이터 저장소의 크기는 최대 64TB이고 최대 32개의 2TB LUN(VMFS 3) 또는 단일 64TB LUN(VMFS 5)으로 구성될 수 있습니다. ONTAP 최대 LUN 크기는 대부분의 시스템에서 16TB이고, 모든 SAN 어레이 시스템에서 128TB입니다. 따라서 16TB LUN 4개를 사용하여 대부분의 ONTAP 시스템에서 VMFS 5 데이터 저장소의 최대 크기를 생성할 수 있습니다. 여러 LUN(하이엔드 FAS 또는 AFF 시스템 사용)을 사용하는 높은 I/O 워크로드에는 성능 이점이 있지만, 데이터 저장소 LUN을 생성, 관리 및 보호하고 가용성 위험을 높이기 위한 관리 복잡성이 추가되어 이러한 이점이 상쇄됩니다. 일반적으로 각 데이터 저장소마다 큰 단일 LUN을 사용하는 것이 좋으며 16TB 데이터 저장소를 넘어서는 특별한 요구 사항이 있는 경우에만 확장할 것을 권장합니다. NFS와 마찬가지로, 단일 ONTAP 컨트롤러에서 성능을 최대화하기 위해 여러 데이터 저장소(볼륨)를 사용하는 것을 고려합니다.</block>
   <block id="c74cab014e402128efd8102b941c0b0c" category="list-text">기존 게스트 운영 체제(OS)는 최고의 성능과 스토리지 효율성을 위해 스토리지 시스템과 조율해야 했습니다. 그러나 Red Hat과 같은 Microsoft 및 Linux 배포업체에서 제공하는 최신 공급업체 지원 OS는 더 이상 가상 환경에서 파일 시스템 파티션을 기본 스토리지 시스템의 블록과 일치시킬 필요가 없습니다. 조정이 필요한 이전 OS를 사용하는 경우 NetApp 지원 기술 자료에서 "VM 정렬"을 사용하는 문서를 검색하거나 NetApp 세일즈 또는 파트너 담당자에게 TR-3747 사본을 요청합니다.</block>
   <block id="3c8b400142a84af9ebe6262bce512ccb" category="list-text">게스트 OS 내에서 조각 모음 유틸리티를 사용하지 마십시오. 성능 이점이 없으며 스토리지 효율성 및 스냅샷 복사본 공간 사용에 영향을 줍니다. 또한 게스트 OS에서 가상 데스크톱에 대한 검색 인덱싱을 해제하는 것도 고려하십시오.</block>
   <block id="14abb814748566a24367c4459a54840b" category="list-text">ONTAP은 혁신적인 스토리지 효율성 기능으로 업계에서 최고의 가용성을 제공하므로 사용 가능한 디스크 공간을 최대한 활용할 수 있습니다. AFF 시스템은 기본 인라인 중복제거 및 압축을 사용해 이 효율성을 더욱 높여줍니다. 데이터는 애그리게이트 내 모든 볼륨에서 중복 제거되므로, 더 이상 단일 데이터 저장소 내에서 유사한 운영 체제 및 유사한 애플리케이션을 그룹화할 필요가 없으며 절약 효과를 극대화할 수 있습니다.</block>
@@ -5851,10 +5826,6 @@
   <block id="3745abd352adaa2cdec42c798060eef6" category="list-text">ONTAP 클러스터 내의 클러스터 네트워크 포트에서 네트워크 흐름 제어를 사용하지 않도록 설정하는 것만 좋습니다. NetApp은 데이터 트래픽에 사용되는 나머지 네트워크 포트에 대한 모범 사례를 위해 다른 권장사항을 제공하지 않습니다. 필요에 따라 활성화하거나 비활성화해야 합니다. 을 참조하십시오<block ref="bdfb81665a0ef86d871a52c0e6ebc591" category="inline-link-rx"></block> 흐름 제어에 대한 자세한 배경 정보</block>
   <block id="730a8287f758961d602b1b050bbe2751" category="list-text">ESXi 및 ONTAP 스토리지 어레이가 이더넷 스토리지 네트워크에 연결되어 있는 경우, 이러한 시스템이 RSTP(Rapid Spanning Tree Protocol) 에지 포트로 연결되거나 Cisco PortFast 기능을 사용하여 연결되는 이더넷 포트를 구성하는 것이 좋습니다. Cisco PortFast 기능을 사용하고 ESXi 서버 또는 ONTAP 스토리지 어레이에 802.1Q VLAN 트렁킹을 사용하는 환경에서는 스패닝 트리 포트패스트 트렁크 기능을 활성화하는 것이 좋습니다.</block>
   <block id="ac4976538e1fc8726f77afc202561afc" category="list-text">Link Aggregation에 대해 다음 모범 사례를 따르는 것이 좋습니다.</block>
-  <block id="102e4f88579e89519d8c614561d5e302" category="list-text">Cisco의 vPC(Virtual PortChannel)와 같은 다중 섀시 링크 집선 그룹 접근 방식을 사용하여 두 개의 개별 스위치 섀시에서 포트의 링크 집계를 지원하는 스위치를 사용합니다.</block>
-  <block id="f331781b955fd46506835e783c953ed4" category="list-text">LACP가 구성된 dvSwitch 5.1 이상을 사용하지 않는 한 ESXi에 연결된 스위치 포트에 대해 LACP를 사용하지 않도록 설정합니다.</block>
-  <block id="eb8cf3a79d16ed9f0e2c1de65c379bc5" category="list-text">LACP를 사용하여 IP 해시를 사용하는 동적 멀티모드 인터페이스 그룹을 통해 ONTAP 스토리지 시스템에 대한 링크 애그리게이트를 생성합니다.</block>
-  <block id="8ebcba6104088fb46f64395277d21edd" category="list-text">ESXi에서 IP 해시 팀 구성 정책을 사용합니다.</block>
   <block id="2432030fc6183a1a6c52cf5e93f3e9ae" category="paragraph">다음 표에는 네트워크 구성 항목에 대한 요약과 설정이 적용되는 위치가 나와 있습니다.</block>
   <block id="7d74f3b92b19da5e606d737d339a9679" category="cell">항목</block>
   <block id="1aa66ef3a8e34a7a538960a80d2e1e31" category="cell">ESXi</block>
@@ -5879,7 +5850,6 @@
   <block id="bcc0e5a3e08cd34e80692195d056b06d" category="cell">페일오버 그룹</block>
   <block id="a4d1a66a448e327c12d3e287098a31d5" category="cell">예(생성)</block>
   <block id="465d5674eb6808b997037470f4dace73" category="cell">예(선택)</block>
-  <block id="93e04df6f821105fd0ab88e95eaee167" category="paragraph">* SVM LIF는 VLAN, MTU 및 기타 설정이 있는 포트, 인터페이스 그룹 또는 VLAN 인터페이스에 연결되지만 SVM 레벨에서 설정이 관리되지 않습니다.</block>
   <block id="50ecdab93bf5a2f1bfb4cd8f81b9bd3d" category="paragraph">** 이러한 디바이스에는 자체 관리 IP 주소가 있지만 이러한 주소는 ESXi 스토리지 네트워킹의 맥락에서 사용되지 않습니다.</block>
   <block id="efd0bde36323238fec688b9cdf0c75a3" category="section-title">SAN(FC, FCoE, NVMe/FC, iSCSI), RDM</block>
   <block id="29cdd488736a6111699f7348320bbed7" category="paragraph">vSphere에서는 블록 스토리지 LUN을 사용하는 세 가지 방법이 있습니다.</block>
@@ -5891,7 +5861,6 @@
   <block id="6bf646772584de04f877d166e564b5ff" category="paragraph">NMP 및 NetApp ONTAP는 모두 ALUA(Asymmetric Logical Unit Access)를 지원하여 최적화된 경로와 최적화되지 않은 경로를 협상합니다. ONTAP에서 ALUA에 최적화된 경로는 액세스하는 LUN을 호스팅하는 노드의 타겟 포트를 사용하여 직접 데이터 경로를 따릅니다. vSphere와 ONTAP 모두에서 ALUA는 기본적으로 사용하도록 설정되어 있습니다. NMP는 ONTAP 클러스터를 ALUA로 인식하며 ALUA 스토리지 어레이 유형 플러그인('VMW_SATP_ALUA')을 사용하고 라운드 로빈 경로 선택 플러그인('VMW_PSP_RR')을 선택합니다.</block>
   <block id="b284ee628d89c3e804c4def2a90f0520" category="paragraph">ESXi 6은 최대 256개의 LUN과 최대 1,024개의 LUN 총 경로를 지원합니다. 이러한 제한을 초과하는 LUN 또는 경로는 ESXi에서 표시되지 않습니다. 최대 LUN 수를 가정할 때 경로 제한에서는 LUN당 경로 수를 4개까지 지정할 수 있습니다. 대규모 ONTAP 클러스터에서는 LUN 제한보다 먼저 경로 제한에 도달할 수 있습니다. 이 제한을 해결하기 위해 ONTAP은 릴리즈 8.3 이상에서 선택적 LUN 맵(SLM)을 지원합니다.</block>
   <block id="8466b1e5abb4751e931c5feb1af4e469" category="inline-link">TR-4080</block>
-  <block id="a1319b3463fde689889152797a3cf966" category="paragraph">SLM은 특정 LUN에 경로를 알리는 노드를 제한합니다. NetApp 모범 사례로서, SVM당 노드당 하나 이상의 LIF를 가지고 SLM을 사용하여 LUN 및 HA 파트너를 호스팅하는 노드에 공고되는 경로를 제한하는 것입니다. 다른 경로는 있지만 기본적으로 광고되지 않습니다. SLM 내에서 ADD 및 REMOVE 노드 인수로 보급된 경로를 수정할 수 있습니다. 8.3 이전 릴리즈에서 생성된 LUN은 모든 경로를 광고하고 호스팅 HA 쌍의 경로만 광고하도록 수정해야 합니다. SLM에 대한 자세한 내용은 의 섹션 5.9를 참조하십시오<block ref="c6b12416d518b4689065ffe16afe88db" category="inline-link-rx"></block>. 이전 portset 방법을 사용하여 LUN에 사용 가능한 경로를 더 줄일 수도 있습니다. Portsets는 igroup의 이니시에이터가 LUN을 볼 수 있는 가시적인 경로의 수를 줄여 줍니다.</block>
   <block id="4157f0c23fc104508f492dc846f187f3" category="list-text">SLM은 기본적으로 활성화되어 있습니다. 포트 세트를 사용하지 않는 경우 추가 구성이 필요하지 않습니다.</block>
   <block id="597f1433ad810b3b86c7ae0f8f95afa8" category="list-text">Data ONTAP 8.3 이전에 생성된 LUN의 경우 'lun mapping remove-reporting-nodes' 명령을 실행하여 보고 노드를 제거하고 LUN 소유 노드 및 해당 HA 파트너에 대한 LUN 액세스를 제한하여 SLM을 수동으로 적용합니다.</block>
   <block id="43919b4d4d6d446ed498e26bff62db84" category="paragraph">블록 프로토콜(iSCSI, FC 및 FCoE)은 고유한 이름과 함께 LUN ID 및 일련 번호를 사용하여 LUN에 액세스합니다. FC 및 FCoE는 WWNs 및 WWPN(Worldwide Name)을 사용하며 iSCSI는 IQN(iSCSI Qualified Name)을 사용합니다. 스토리지 내 LUN의 경로는 블록 프로토콜에는 의미가 없으며 프로토콜의 어느 곳에도 표시되지 않습니다. 따라서 LUN만 포함된 볼륨은 내부적으로 마운트할 필요가 없으며, 데이터 저장소에 사용되는 LUN이 포함된 볼륨에는 접합 경로가 필요하지 않습니다. ONTAP의 NVMe 하위 시스템은 비슷하게 작동합니다.</block>
@@ -5914,7 +5883,6 @@
   <block id="d190c5fcdf8146c1dd7aad1140be4e64" category="list-text">FlexGroup 프로비저닝 기본값을 사용합니다. VMware vSphere용 ONTAP 툴은 vSphere 내에서 FlexGroup를 생성 및 마운트하기 때문에 권장되지만, ONTAP System Manager 또는 명령줄은 특수한 요구 사항에 사용될 수 있습니다. 또한 vSphere에서 테스트한 구성 요소이므로 노드당 구성 멤버 수와 같은 기본값을 사용합니다.</block>
   <block id="9f3fa65c2cc36eabd2228b984c30c5e1" category="list-text">FlexGroup 데이터 저장소를 사이징할 때 FlexGroup는 더 큰 네임스페이스를 생성하는 여러 개의 작은 FlexVol 볼륨으로 구성되어 있습니다. 따라서 가장 큰 가상 머신의 크기를 최소 8배 이상 사이징해야 합니다. 예를 들어 환경에 6TB VM이 있는 경우 48TB 이하의 크기로 FlexGroup 데이터 저장소를 구성할 수 있습니다.</block>
   <block id="5fbee6b763967c822bb1e4a31665b11d" category="list-text">FlexGroup에서 데이터 저장소 공간을 관리할 수 있도록 허용합니다. vSphere 데이터 저장소에서 자동 크기 조정 및 Elastic Sizing을 테스트했습니다. 데이터 저장소가 전체 용량에 근접하면 VMware vSphere용 ONTAP 툴 또는 다른 툴을 사용하여 FlexGroup 볼륨의 크기를 조정할 수 있습니다. FlexGroup는 용량 및 inode의 균형을 유지하며, 용량이 허용하는 경우 폴더(VM) 내의 파일에 우선 순위를 지정합니다.</block>
-  <block id="c4528ad57baf62254d165d4e907e6f59" category="list-text">VMware 및 NetApp은 현재 일반적인 다중 경로 네트워킹 접근 방식을 지원하지 않습니다. NFSv4.1에서는 NetApp이 pNFS를 지원하는 반면 VMware는 세션 트렁킹을 지원합니다. NFSv3은 볼륨에 대한 여러 물리적 경로를 지원하지 않습니다. ONTAP 9.8이 포함된 FlexGroup의 경우 간접 액세스의 영향은 일반적으로 최소(마이크로초)이므로 VMware vSphere용 ONTAP 툴을 단일 마운트로 설정하는 것이 좋습니다. 라운드 로빈 DNS를 사용하여 FlexGroup의 다른 노드에 있는 LIF에 ESXi 호스트를 배포할 수 있지만, 이 경우 VMware vSphere용 ONTAP 툴 없이 FlexGroup를 생성하고 마운트해야 합니다. 그러면 성능 관리 기능을 사용할 수 없습니다.</block>
   <block id="f5f11bb6aa98d02453eca36d5d1d2e19" category="list-text">FlexGroup vSphere 데이터 저장소 지원은 9.8 릴리즈에서 VM 1,500대까지 테스트되었습니다.</block>
   <block id="f48591b3ae898f29a551a2995a7dcfe8" category="list-text">복제 오프로드에 VMware VAAI용 NFS 플러그인을 사용하십시오. FlexGroup 데이터 저장소 내에서 클론 생성이 향상되지만 FlexVol는 FlexGroup 및/또는 ONTAP 볼륨 간에 VM을 복제할 때 ESXi 호스트 복제본보다 성능이 크게 향상되지는 않습니다.</block>
   <block id="57a0d1deb8da99d321814990d26d21ed" category="list-text">VMware vSphere 9.8용 ONTAP 툴을 사용하여 ONTAP 메트릭(대시보드 및 VM 보고서)을 사용하여 FlexGroup VM의 성능을 모니터링하고 개별 VM의 QoS를 관리할 수 있습니다. 이러한 메트릭은 현재 ONTAP 명령 또는 API를 통해 사용할 수 없습니다.</block>
@@ -16194,4 +16162,43 @@
   <block id="70542da4927194cf41c777029ebe56be" category="cell">블로그 추가: NetApp ONTAP용 Amazon FSx와 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다</block>
   <block id="577322186c067590a18f8891be57e7e4" category="inline-link-macro">NetApp ONTAP용 Amazon FSx와 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다</block>
   <block id="c1b7f59fc598d7a811682707bcd4eb40" category="list-text"><block ref="c1b7f59fc598d7a811682707bcd4eb40" category="inline-link-macro-rx"></block></block>
+  <block id="af8dcb8c7a1e8b7e614e570806d8dcee" category="paragraph">7개의 프로토콜을 사용하여 ONTAP 소프트웨어를 실행하는 시스템의 데이터 저장소에 VMware vSphere를 연결합니다.</block>
+  <block id="a7c815fafe60ae637d38216fa6300395" category="list-text">FCP</block>
+  <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe/TCP</block>
+  <block id="f7d773fd2896401c143676940bc001fc" category="list-text">NFS v3</block>
+  <block id="0b99b245267ef194ca3b9f6e694b0983" category="list-text">NFS v4.1</block>
+  <block id="cfa070ed8af17c3125cfd1530fbd387a" category="paragraph">FCP, FCoE, NVMe/FC, NVMe/TCP 및 iSCSI는 vSphere VMFS(Virtual Machine File System)를 사용하여 ONTAP FlexVol 볼륨에 포함된 ONTAP LUN 또는 NVMe 네임스페이스 내에 VM을 저장하는 블록 프로토콜입니다. VMware는 vSphere 7.0부터 운영 환경에서는 더 이상 소프트웨어 FCoE를 지원하지 않습니다. NFS는 VMFS 없이 VM을 데이터 저장소(단순한 ONTAP 볼륨)에 배치하는 파일 프로토콜입니다. SMB(CIFS), iSCSI, NVMe/TCP 또는 NFS를 게스트 OS에서 ONTAP로 직접 사용할 수도 있습니다.</block>
+  <block id="7469c178e150e10730dcab1094765f10" category="paragraph">다음 표에는 ONTAP에서 vSphere가 지원하는 기존 데이터 저장소 기능이 나와 있습니다. 이 정보는 VVOL 데이터 저장소에 적용되지 않지만 일반적으로 지원되는 ONTAP 릴리즈를 사용하는 vSphere 6.x 이상 릴리즈에 적용됩니다. 상담도 할 수 있습니다<block ref="26c5407c98ec413c85131fd8c0d178b4" category="inline-link-rx"></block> 특정 제한 사항을 확인하기 위한 특정 vSphere 릴리즈</block>
+  <block id="6151632541dcd80356c6c76b34d69d0c" category="cell">NVMe - oF</block>
+  <block id="18263a30df8afc60a733e59c60676ac0" category="cell">VMFS를 참조하십시오</block>
+  <block id="aa23f9914ce1939ea7a4d479edfdc915" category="cell">호스트당 LUN 1024개</block>
+  <block id="1af3b27207afc48a363629a315d76b59" category="cell">서버당 LUN 1024개</block>
+  <block id="0705fd627c25b5fba17cd9a022ed7d72" category="cell">서버당 256개의 Names입니다</block>
+  <block id="b4fb1d41fedaec79072964cbb4d16e3d" category="cell">최대 데이터 저장소 파일 크기입니다</block>
+  <block id="fe299bb060ce245b8fe190de21d3978e" category="cell">대용량 파일이 활성화된 ONTAP 9.12.1RC1 이상 포함 16TB 또는 62TB</block>
+  <block id="ca6e77250a239af7b4aed9a1ac058825" category="cell">자동 협상</block>
+  <block id="bad19bc2587cd465cab5cec5a13aa306" category="cell">NFS.MaxQueueDepth in 을 참조하십시오<block ref="0391a4aaf03ed2bf80fb4efb215797d0" category="inline-link-rx"></block>.</block>
+  <block id="d6407966cf588d8d78d4f7e65f1ea6fd" category="cell">V3만 해당**</block>
+  <block id="50ed43e1a7a22335069a344bc706b600" category="cell">예, 새로운 HPP(High Performance Plugin) 사용</block>
+  <block id="5663fa28fe2a703e07072185e3a90a94" category="paragraph">* NetApp은 VMFS 데이터 저장소에 다중 writer 지원 VMDK가 아닌 Microsoft 클러스터에 게스트 내 iSCSI를 사용할 것을 권장합니다. 이 접근 방식은 Microsoft 및 VMware에서 완벽하게 지원되며 ONTAP(사내 또는 클라우드의 ONTAP 시스템에 대한 SnapMirror)를 통해 뛰어난 유연성을 제공하고 쉽게 구성 및 자동화할 수 있으며 SnapCenter를 통해 보호할 수 있습니다. vSphere 7은 새로운 클러스터 VMDK 옵션을 추가합니다. 이는 클러스터 VMDK를 지원하는 FC 프로토콜을 통해 데이터 저장소를 제공해야 하는 멀티writer 지원 VMDK와 다릅니다. 기타 제한 사항이 적용됩니다. VMware 를 참조하십시오<block ref="b158594c147457b5b6417413cb30f800" category="inline-link-rx"></block> 구성 지침 설명서.</block>
+  <block id="e2bd40041a6472b580305ce9017b0b2e" category="paragraph">** NVMe-oF 및 NFS v4.1을 사용하는 데이터 저장소에는 vSphere 복제가 필요합니다. 스토리지 기반 복제는 SRM에서 지원되지 않습니다.</block>
+  <block id="b8c499c7b537f5bd4e51b0a6d6a1e9d0" category="list-text">ONTAP NFS 데이터 저장소를 사용하여 vSphere를 구축하면 관리가 용이한 고성능 구축이 가능하기 때문에 블록 기반 스토리지 프로토콜로는 얻을 수 없는 VM-데이터 저장소 비율을 제공할 수 있습니다. 이 아키텍처를 사용하면 데이터 저장소 밀도가 10배 증가하여 데이터 저장소 수가 서로 관련지어 줄어들 수 있습니다. 더 큰 데이터 저장소가 스토리지 효율성에 이점을 제공하고 운영 이점을 제공할 수 있지만, 하드웨어 리소스의 최대 성능을 얻기 위해 최소 4개의 데이터 저장소(FlexVol 볼륨)를 사용하여 VM을 단일 ONTAP 컨트롤러에 저장하는 것이 좋습니다. 이 방법을 사용하면 복구 정책이 서로 다른 데이터 저장소를 설정할 수도 있습니다. 비즈니스 요구 사항에 따라 다른 사람보다 더 자주 백업하거나 복제할 수 있는 경우도 있습니다. FlexGroup 볼륨은 설계상 확장되므로 성능을 위해 여러 데이터 저장소가 필요하지 않습니다.</block>
+  <block id="241f8fed1e3a823fcd4d0c1eb705b1a2" category="list-text">FlexVol 볼륨은 ONTAP 9.8 FlexGroup 볼륨, NFS 데이터 저장소부터 사용하는 것이 좋습니다. qtree와 같은 다른 ONTAP 스토리지 컨테이너는 현재 VMware vSphere용 ONTAP 툴에서 지원되지 않으므로 일반적으로 권장되지 않습니다. 단일 볼륨에 여러 qtree로 데이터 저장소를 구축하면 데이터 저장소 수준 할당량 또는 VM 파일 클론의 이점을 누릴 수 있는 고도로 자동화된 환경에 유용할 수 있습니다.</block>
+  <block id="964a81e46088ae1cc6306072464a9d73" category="list-text">또는 FC, iSCSI 또는 FCoE에서 액세스하는 LUN으로 VMFS 데이터 저장소를 구성할 수도 있습니다. VMFS를 사용하면 클러스터의 모든 ESX 서버에서 기존 LUN에 동시에 액세스할 수 있습니다. VMFS 데이터 저장소의 크기는 최대 64TB이고 최대 32개의 2TB LUN(VMFS 3) 또는 단일 64TB LUN(VMFS 5)으로 구성될 수 있습니다. ONTAP의 최대 LUN 크기는 대부분의 시스템에서 16TB이고, All-SAN 어레이 시스템에서 128TB입니다. 따라서 16TB LUN 4개를 사용하여 대부분의 ONTAP 시스템에서 VMFS 5 데이터 저장소의 최대 크기를 생성할 수 있습니다. 여러 LUN(하이엔드 FAS 또는 AFF 시스템 사용)을 사용하는 높은 I/O 워크로드에 성능 이점이 있을 수 있지만, 데이터 저장소 LUN을 생성, 관리 및 보호하고 가용성 위험을 높이는 관리 복잡성이 추가되어 이러한 이점을 얻을 수 있습니다. 일반적으로 각 데이터 저장소마다 큰 단일 LUN을 사용하는 것이 좋으며 16TB 데이터 저장소를 넘어서는 특별한 요구 사항이 있는 경우에만 확장할 것을 권장합니다. NFS와 마찬가지로, 단일 ONTAP 컨트롤러에서 성능을 최대화하기 위해 여러 데이터 저장소(볼륨)를 사용하는 것을 고려합니다.</block>
+  <block id="040ffbbbbeda558bdae1e07f5371b4f5" category="list-text">Cisco의 vPC(Virtual PortChannel)와 같은 다중 섀시 링크 집선 그룹 접근 방식을 사용하여 두 개의 개별 스위치 섀시에서 포트의 링크 집계를 지원하는 스위치를 사용합니다.</block>
+  <block id="19d137845c7f6687c99b386dfad0aa97" category="list-text">LACP가 구성된 dvSwitch 5.1 이상을 사용하지 않는 한 ESXi에 연결된 스위치 포트에 대해 LACP를 사용하지 않도록 설정합니다.</block>
+  <block id="30254a2bb3e4b3b958b06d08c724e7db" category="list-text">LACP를 사용하여 IP 해시를 사용하는 동적 멀티모드 인터페이스 그룹을 통해 ONTAP 스토리지 시스템에 대한 링크 애그리게이트를 생성합니다.</block>
+  <block id="d608421cceb8e4c584a2a32d9127879e" category="list-text">ESXi에서 IP 해시 팀 구성 정책을 사용합니다.</block>
+  <block id="ba78d695573c8d4f1205452c675fa539" category="paragraph">* SVM LIF는 VLAN, MTU 및 기타 설정이 있는 포트, 인터페이스 그룹 또는 VLAN 인터페이스에 연결됩니다. 하지만 SVM 레벨에서 설정을 관리하지 않습니다.</block>
+  <block id="631e164314a103fe3183b00b759057b2" category="paragraph">SLM은 특정 LUN에 경로를 알리는 노드를 제한합니다. NetApp 모범 사례로서, SVM당 노드당 하나 이상의 LIF를 가지고 SLM을 사용하여 LUN 및 HA 파트너를 호스팅하는 노드에 공고되는 경로를 제한하는 것입니다. 다른 경로는 있지만 기본적으로 광고되지 않습니다. SLM 내에서 ADD 및 REMOVE 노드 인수로 보급된 경로를 수정할 수 있습니다. 8.3 이전 릴리즈에서 생성된 LUN은 모든 경로를 광고하고 호스팅 HA 쌍의 경로만 광고하도록 수정해야 합니다. SLM에 대한 자세한 내용은 의 섹션 5.9를 참조하십시오<block ref="c6b12416d518b4689065ffe16afe88db" category="inline-link-rx"></block>. 이전 portset 방법을 사용하여 LUN에 사용 가능한 경로를 더 줄일 수도 있습니다. Portsets는 igroup의 이니시에이터가 LUN을 볼 수 있는 가시적인 경로의 수를 줄여 줍니다.</block>
+  <block id="7b997b3be9c993d49799dd9d71d8c3f6" category="list-text">VMware는 VMware Infrastructure 3 이후 NFSv3을 지원했습니다. vSphere 6.0은 NFSv4.1에 대한 지원을 추가하여 Kerberos 보안과 같은 일부 고급 기능을 지원합니다. NFSv3에서는 클라이언트측 잠금을 사용하는 경우 NFSv4.1은 서버 측 잠금을 사용합니다. ONTAP 볼륨은 두 프로토콜을 통해 내보낼 수 있지만 ESXi는 하나의 프로토콜을 통해서만 마운트할 수 있습니다. 이 단일 프로토콜 마운트는 다른 ESXi 호스트가 다른 버전을 통해 동일한 데이터 저장소를 마운트하는 것을 배제하지 않습니다. 모든 호스트가 동일한 버전과 동일한 잠금 스타일을 사용하도록 마운트할 때 사용할 프로토콜 버전을 지정해야 합니다. 호스트 간에 NFS 버전을 혼합하지 마십시오. 가능한 경우 호스트 프로필을 사용하여 규정 준수 여부를 확인하십시오.</block>
+  <block id="d8119941da55a672db49a624330ea7f0" category="list-text">NFS 내보내기 정책은 vSphere 호스트의 액세스를 제어하는 데 사용됩니다. 여러 볼륨(데이터 저장소)에 하나의 정책을 사용할 수 있습니다. NFSv3에서 ESXi는 sys(UNIX) 보안 스타일을 사용하며 VM을 실행하려면 루트 마운트 옵션이 필요합니다. ONTAP에서 이 옵션을 수퍼 유저라고 하며, 수퍼유저 옵션을 사용할 때 익명 사용자 ID를 지정할 필요가 없습니다. 에 대해 다른 값을 사용하여 정책 규칙을 내보냅니다<block ref="ea72d12ecaa06afdb0c8a3b15e485e95" prefix=" " category="inline-code"></block> 및<block ref="df809a941c1287d18c08bb5927b639dc" prefix=" " category="inline-code"></block> ONTAP 툴을 사용하여 SVM 검색 문제를 일으킬 수 있습니다. 샘플 정책은 다음과 같습니다.</block>
+  <block id="0bbc71e6a4ea49af70dd616d3807e524" category="list-text">익명 UID</block>
+  <block id="49bb4e84b97bfe104e9fe7eb7df07a38" category="list-text">NFS 데이터 저장소 볼륨은 SVM의 루트 볼륨에서 접합되므로 ESXi에서 루트 볼륨에 액세스하여 데이터 저장소 볼륨을 탐색하고 마운트해야 합니다. 루트 볼륨과 데이터 저장소 볼륨의 연결이 중첩된 다른 볼륨에 대한 내보내기 정책에는 읽기 전용 액세스를 허용하는 ESXi 서버에 대한 규칙 또는 규칙이 포함되어야 합니다. 다음은 VAAI 플러그인을 사용하는 루트 볼륨에 대한 샘플 정책입니다.</block>
+  <block id="8c93fb3ff528165613797962f5a0ed9c" category="list-text">액세스 프로토콜: NFS(NFS3 및 nfs4 모두 포함)</block>
+  <block id="80e6a4f964e826c69c1c62bd5ea67590" category="list-text">RW 액세스 규칙: 사용 안 함(루트 볼륨에 대한 최상의 보안)</block>
+  <block id="f96625174b4a06d13267f9b0a5a96d59" category="list-text">슈퍼유저:sys(VAAI를 사용하는 루트 볼륨에도 필요)</block>
+  <block id="23aa7b9aeed3fba2a1ec43e630313af7" category="list-text">플러그인을 사용하여 VMware 클러스터용 데이터 저장소를 생성할 때 단일 ESX Server가 아닌 클러스터를 선택합니다. 이 옵션을 선택하면 데이터 저장소가 클러스터의 모든 호스트에 자동으로 마운트됩니다.</block>
+  <block id="313611996c05f7257ad3043572759306" category="cell">ESXi 7.0U3f 이상은 ONTAP 9.12.1RC1 이상에서 세션 트렁킹을 지원합니다</block>
+  <block id="1abaee3673de53b378351ee9dc679daa" category="list-text">VMware 및 NetApp은 현재 일반적인 다중 경로 네트워킹 접근 방식을 지원하지 않습니다. NFSv4.1에서는 NetApp이 pNFS를 지원하는 반면 VMware는 세션 트렁킹을 지원합니다. NFSv3은 볼륨에 대한 여러 물리적 경로를 지원하지 않습니다. ONTAP 9.8이 포함된 FlexGroup의 경우 간접 액세스의 영향은 일반적으로 최소(마이크로초)이므로 VMware vSphere용 ONTAP 툴을 단일 마운트로 설정하는 것이 좋습니다. 라운드 로빈 DNS를 사용하여 FlexGroup의 다른 노드에 있는 LIF에 ESXi 호스트를 배포할 수 있지만, 이 경우 VMware vSphere용 ONTAP 툴 없이 FlexGroup를 생성하고 마운트해야 합니다. 그러면 성능 관리 기능을 사용할 수 없습니다.</block>
 </blocks>
