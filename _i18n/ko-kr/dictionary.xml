@@ -16190,4 +16190,8 @@
   <block id="1c7bb8764fc089dda8481678ad1ea0b5" category="list-text">* 스토리지 복제 어댑터. * SRA는 VMware SRM(Site Recovery Manager)과 함께 사용되어 운영 사이트와 재해 복구 사이트 간의 데이터 복제를 관리하고 DR 복제본을 중단 없이 테스트합니다. 검색, 복구 및 재보호 작업을 자동화할 수 있습니다. Windows SRM 서버 및 SRM 어플라이언스에는 SRA 서버 어플라이언스와 SRA 어댑터가 모두 포함됩니다.</block>
   <block id="eff6699ec911b615a51eb7e9e0d89970" category="paragraph">VMware VAAI용 NetApp NFS 플러그인은 ESXi 호스트에서 ONTAP의 NFS 데이터 저장소와 함께 VAAI 기능을 사용할 수 있도록 지원하는 플러그인입니다. 클론 작업을 위한 복제 오프로드, 일반 가상 디스크 파일의 공간 예약, 스냅샷 복사본 오프로드를 지원합니다. 복사 작업을 스토리지로 오프로드하는 것이 반드시 완료되기만은 않습니다. 그러나 이 작업은 네트워크 대역폭 요구 사항을 줄이고 CPU 주기, 버퍼 및 큐와 같은 호스트 리소스를 오프로드합니다. VMware vSphere용 ONTAP 툴을 사용하여 ESXi 호스트 또는 지원되는 경우 VLCM(vSphere Lifecycle Manager)에 플러그인을 설치할 수 있습니다.</block>
   <block id="082e2767897584434269db14d4ceda54" category="sidebar">VMware 가상화를 위한 새로운 기능</block>
+  <block id="839a1261c70db1f3c149f86d56e21d15" category="cell">2023년 1월 12일</block>
+  <block id="70542da4927194cf41c777029ebe56be" category="cell">블로그 추가: NetApp ONTAP용 Amazon FSx와 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다</block>
+  <block id="577322186c067590a18f8891be57e7e4" category="inline-link-macro">NetApp ONTAP용 Amazon FSx와 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다</block>
+  <block id="c1b7f59fc598d7a811682707bcd4eb40" category="list-text"><block ref="c1b7f59fc598d7a811682707bcd4eb40" category="inline-link-macro-rx"></block></block>
 </blocks>

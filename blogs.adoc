@@ -28,6 +28,7 @@ keywords: netapp, solutions, blogs
 --
 .엔터프라이즈 데이터베이스
 --
+* link:https://aws.amazon.com/blogs/storage/using-netapp-snapcenter-with-amazon-fsx-for-netapp-ontap-to-protect-your-sql-server-workloads/["NetApp ONTAP용 Amazon FSx와 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Modernize-your-Oracle-database-operation-in-hybrid-cloud-with-Amazon-FSx-storage/ba-p/437554["Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Hybrid-cloud-database-solutions-with-SnapCenter/ba-p/171061#M5["SnapCenter 기반의 하이브리드 클라우드 데이터베이스 솔루션"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Automate-Your-Oracle-Database-Infrastructure-in-the-Hybrid-Cloud/ba-p/167046["하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다"]
