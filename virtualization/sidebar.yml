@@ -30,7 +30,7 @@ entries:
     entries:
     - title: vSphere를 위한 ONTAP 기능
       url: "/virtualization/vsphere_ontap_ontap_capabilities_for_vsphere.html"
-    - title: 모범 사례
+    - title: 데이터 저장소 및 프로토콜
       url: "/virtualization/vsphere_ontap_best_practices.html"
     - title: 기타 vSphere 기능
       url: "/virtualization/vsphere_ontap_other_capabilities_for_vsphere.html"

@@ -4,7 +4,7 @@ permalink: virtualization/vsphere_ontap_best_practices.html
 keywords: vSphere, datastore, VMFS, FC, FCoE, NVMe/FC, iSCSI, NFS, vVols 
 summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 솔루션을 구축하는 모범 사례를 설명합니다. 
 ---
-= 모범 사례
+= 데이터 저장소 및 프로토콜
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
