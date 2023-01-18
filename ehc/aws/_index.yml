@@ -21,10 +21,6 @@ indexpage:
     links:
     - title: VMware HCX를 사용하여 워크로드를 FSxN 데이터 저장소로 마이그레이션합니다
       url: "/aws-migrate-vmware-hcx.html"
-  - title: 곧 제공 예정...
-    links:
-    - title: 워크로드 솔루션 확장
-      url: 
   - title: 도구
     links:
     - title: ONTAP+ VMC TCO 계산기에 대한 FSX

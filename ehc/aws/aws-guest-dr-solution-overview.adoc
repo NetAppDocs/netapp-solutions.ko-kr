@@ -34,7 +34,7 @@ image:dr-vmc-aws-image1.png["오류: 그래픽 이미지가 없습니다"]
 
 이 솔루션을 구축하기 전에 구성 요소 개요, 솔루션을 구축하는 데 필요한 전제 조건 및 이 솔루션을 문서화하는 데 필요한 가정을 검토하십시오.
 
-link:aws-guest-dr-sollution-prereqs.html["DR 솔루션 요구 사항, 사전 요청 및 계획"]
+link:aws-guest-dr-solution-prereqs.html["DR 솔루션 요구 사항, 사전 요청 및 계획"]
 
 
 
