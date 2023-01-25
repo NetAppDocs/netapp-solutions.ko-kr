@@ -4,7 +4,7 @@ permalink: databases/aws_ora_fsx_ec2_procedures.html
 summary: 이 섹션에서는 FSx 스토리지와 함께 Oracle RDS 사용자 지정 데이터베이스를 구축하는 구축 절차를 설명합니다. 
 keywords: AWS, Oracle, RDS, HA, DR, database 
 ---
-= AWS EC2/FSx에서 Oracle 구현 절차를 단계별로 수행합니다
+= AWS EC2 및 FSx에서 Oracle Deployment Procedures를 단계별로 수행합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: databases/aws_ora_fsx_ec2_mgmt.html
 summary: 이 섹션에서는 AWS RDS 콘솔 UI를 보완하기 위해 SnapCenter UI를 통해 Oracle 데이터베이스용 AWS RDS Custom을 관리하는 방법에 대해 자세히 설명합니다. 
 keywords: HA, DR, database, Oracle, RDS, AWS, SnapCenter 
 ---
-= EC2/FSx Oracle 데이터베이스 관리
+= EC2 및 FSx Oracle 데이터베이스 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -12112,20 +12112,13 @@
   <block id="b25a4c32c9b6cc39890fa799e15301dc" category="paragraph">Oracle 서버 EC2 인스턴스가 제한 요소가 되었을 때 IOPS 또는 처리량으로 프로비저닝된 FSx 스토리지 용량에 도달하지 않았습니다. 따라서 섹션에 나와 있는 것처럼 사용자 애플리케이션 레벨 트랜잭션 볼륨에 따라 컴퓨팅 및 스토리지의 크기를 적절하게 지정해야 합니다 <block ref="fa519ff010063f0b425f11c556e4445d" category="inline-link-macro-rx"></block></block>
   <block id="fefc87f11b675de356ca673f3a346ac7" category="inline-link-macro">다음: 데이터베이스 마이그레이션.</block>
   <block id="8996ba3a1cc79692db90ae4be7ef8dd3" category="paragraph"><block ref="8996ba3a1cc79692db90ae4be7ef8dd3" category="inline-link-macro-rx"></block></block>
-  <block id="20da1f90c59ba57d043ded8994bb7619" category="summary">이 섹션에서는 맞춤형 Oracle RDS 및 FSx ONTAP 스토리지가 포함된 RDS Oracle 맞춤형 구축 솔루션 아키텍처를 보여 줍니다.</block>
   <block id="c739a7ae4891c6665d1f2f715d2efa3f" category="paragraph"><block ref="c739a7ae4891c6665d1f2f715d2efa3f" category="inline-link-macro-rx"></block></block>
   <block id="ca449b8ca808c6d325abf6b1a047318c" category="paragraph">다음 아키텍처 다이어그램은 FSx 스토리지 서비스가 있는 AWS EC2 인스턴스에 고가용성 Oracle 데이터베이스 구축을 보여 줍니다. 유사한 배포 체계이지만 다른 지역의 대기 구성을 재해 복구에 설정할 수 있습니다.</block>
-  <block id="a0cdfa3b119f53b827ebc38a9519b32d" category="paragraph">환경 내에서 Oracle 컴퓨팅 인스턴스는 AWS EC2 인스턴스 콘솔을 통해 구축됩니다. 콘솔에서 여러 EC2 인스턴스 유형을 사용할 수 있습니다. RedHat Enterprise Linux 8과 함께 M5 Ami 이미지, 최대 10Gps 네트워크 대역폭과 같은 데이터베이스 중심 EC2 인스턴스 유형을 구축하는 것이 좋습니다.</block>
   <block id="228488653f80c4dfe7bd79d5f9634ea4" category="paragraph">반면에 FSx 볼륨의 Oracle 데이터베이스 스토리지는 AWS FSx 콘솔 또는 CLI와 함께 구축됩니다. 이후에 Oracle 바이너리, 데이터 또는 로그 볼륨을 제공하고 EC2 인스턴스 Linux 호스트에 마운트합니다. 사용된 기본 스토리지 프로토콜에 따라 각 데이터 또는 로그 볼륨에 여러 개의 LUN이 할당될 수 있습니다.</block>
-  <block id="736415956026dd8a803e8e2f7c5f0f42" category="paragraph"><block ref="736415956026dd8a803e8e2f7c5f0f42" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0537fe1ac97a9f2e83612f0789e84585" category="paragraph">FSx 스토리지 클러스터는 기본 스토리지 클러스터와 대기 스토리지 클러스터가 모두 두 개의 서로 다른 가용성 영역에 구축되도록 이중 중복성으로 설계되었습니다. 데이터베이스 볼륨은 모든 Oracle 바이너리, 데이터 및 로그 볼륨에 대해 사용자가 구성할 수 있는 간격으로 기본 FSx 클러스터에서 대기 FSx 클러스터로 복제됩니다.</block>
-  <block id="7a9829ab1a28b0d6ca9ddaee5874655a" category="paragraph">이 고가용성 Oracle 환경은 Ansible 컨트롤러 노드와 SnapCenter 백업 서버 및 UI 툴을 사용하여 관리됩니다. Ansible 플레이북 기반 툴킷을 사용하여 Oracle 설치, 구성, 복제를 자동화합니다. Oracle EC2 인스턴스 커널 운영 체제 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 실행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 자동화 설정을 쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 몇 가지 반복 수행할 수 있습니다.</block>
   <block id="be571c48040d6c3bf764ba40188888d2" category="paragraph">SnapCenter는 Oracle 데이터베이스 시점 복구 또는 필요한 경우 운영 또는 대기 영역에서 데이터베이스 클론 복제를 위한 워크플로우를 제공합니다. SnapCenter UI를 통해 Oracle 데이터베이스 백업 및 복제를 스탠바이 FSx 스토리지에 구성하여 RTO 또는 RPO 목표에 따라 고가용성 또는 재해 복구를 수행할 수 있습니다.</block>
   <block id="be22c0b35f58a932be14c9e55b163ac4" category="paragraph">이 솔루션은 Oracle RAC 및 Data Guard 구축에서 사용할 수 있는 기능과 유사한 기능을 제공하는 대체 프로세스를 제공합니다.</block>
   <block id="72db8e2a11aee3fd6b5ea401c9adcbd6" category="inline-link-macro">다음: 배포 절차.</block>
-  <block id="6487ec60d16ab8bf4ce0aa7ebaf86b4f" category="paragraph"><block ref="6487ec60d16ab8bf4ce0aa7ebaf86b4f" category="inline-link-macro-rx"></block></block>
   <block id="f3b25b37995dab3a1b6c753dd74ca21e" category="summary">이 섹션에서는 AWS RDS 콘솔 UI를 보완하기 위해 SnapCenter UI를 통해 Oracle 데이터베이스용 AWS RDS Custom을 관리하는 방법에 대해 자세히 설명합니다.</block>
-  <block id="021f869e266a6eaa7e446e54dfc71149" category="doc">EC2/FSx Oracle 데이터베이스 관리</block>
   <block id="39ebdf3133bce223758100b117a98e70" category="inline-link-macro">이전: 배포 절차.</block>
   <block id="cac2d984db56d4f9cd9b1f85b3cf0c5c" category="paragraph"><block ref="cac2d984db56d4f9cd9b1f85b3cf0c5c" category="inline-link-macro-rx"></block></block>
   <block id="cf8b301cbf8aa698c578ff1f8e64ccc2" category="paragraph">AWS EC2 및 FSx 관리 콘솔 외에도 Ansible 제어 노드 및 SnapCenter UI 툴이 이 Oracle 환경에서 데이터베이스 관리를 위해 구축되었습니다.</block>
@@ -12234,7 +12227,6 @@
   <block id="c3fd0f78855e219b0fd44077ce74e7b5" category="paragraph">이러한 절차는 NetApp Automation Toolkit을 사용하여 퍼블릭 NetApp GitHub 사이트에서 다운로드할 수 있습니다.</block>
   <block id="ba4d6e5d6eeea04cdc5a4f243b1e5dd8" category="paragraph">설정 및 페일오버 테스트를 시도하기 전에 README 지침을 주의 깊게 읽으십시오.</block>
   <block id="7d34df46082e5771e092eb8736597ee0" category="summary">이 섹션에서는 FSx 스토리지와 함께 Oracle RDS 사용자 지정 데이터베이스를 구축하는 구축 절차를 설명합니다.</block>
-  <block id="b8a2bfa78779af1958bed97119657167" category="doc">AWS EC2/FSx에서 Oracle 구현 절차를 단계별로 수행합니다</block>
   <block id="072a1cb4963593f78b428b4c9a0dcc4f" category="inline-link-macro">이전: 솔루션 아키텍처.</block>
   <block id="ef081c8f35bca2da08c6dbdd6f48a6cd" category="paragraph"><block ref="ef081c8f35bca2da08c6dbdd6f48a6cd" category="inline-link-macro-rx"></block></block>
   <block id="f70ec60e40ece5900605229a28081b13" category="section-title">EC2 콘솔을 통해 Oracle용 EC2 Linux 인스턴스를 구축합니다</block>
@@ -12390,7 +12382,6 @@
   <block id="b2d9cc2beb2b12bdad529e6d42551092" category="inline-link-macro">다음: 데이터베이스 관리.</block>
   <block id="454fb11269c81c93532752028abffbcd" category="paragraph"><block ref="454fb11269c81c93532752028abffbcd" category="inline-link-macro-rx"></block></block>
   <block id="8a1d7e9120e3db2795bd53b504018b4e" category="summary">이 백서에서는 여러 가용성 영역 구축에서 AWS FSx 스토리지 서비스를 활용하여 AWS 맞춤형 Oracle RDS 데이터베이스 HA 및 DR용 솔루션의 개요와 검증을 제공합니다.</block>
-  <block id="9ae9d82ee587bffe09c5b3c745d93c1c" category="doc">WP-7357: EC2/FSx Best Practices Introduction에서 Oracle Database Deployment를 참조하십시오</block>
   <block id="b4c8c277e19db14e178b1060214b896e" category="paragraph">Allen Cao, Niyaz Mohamed, Jeffrey Steiner, NetApp</block>
   <block id="6848412b0f30d614f7e0bcd903cac052" category="paragraph">많은 미션 크리티컬 엔터프라이즈 Oracle 데이터베이스는 여전히 사내에서 호스팅되며, 많은 기업은 이러한 Oracle 데이터베이스를 퍼블릭 클라우드로 마이그레이션하려고 합니다. 종종 이러한 Oracle 데이터베이스는 애플리케이션 중심이므로 많은 서비스형 데이터베이스 퍼블릭 클라우드 오퍼링에서 누락되는 사용자별 구성이 필요합니다. 따라서 현재의 데이터베이스 환경에서는 고유한 요구 사항을 수용할 수 있는 고성능의 확장 가능한 컴퓨팅 및 스토리지 서비스를 통해 구축된 퍼블릭 클라우드 기반 Oracle 데이터베이스 솔루션이 필요합니다. AWS EC2 컴퓨팅 인스턴스 및 AWS FSx 스토리지 서비스는 미션 크리티컬 Oracle 데이터베이스 워크로드를 퍼블릭 클라우드로 구축 및 마이그레이션하는 데 활용할 수 있는 이 퍼즐의 누락된 조각일 수 있습니다.</block>
   <block id="37b7c86d51875922e0a9f122a670aa62" category="paragraph">Amazon EC2(Amazon Elastic Compute Cloud)는 클라우드에서 안전하고 크기 조정이 가능한 컴퓨팅 용량을 제공하는 웹 서비스입니다. 이 솔루션은 기업이 웹 기반 클라우드 컴퓨팅을 보다 쉽게 사용할 수 있도록 설계되었습니다. 간단한 Amazon EC2 웹 서비스 인터페이스를 사용하면 최소한의 마찰로 용량을 확보하고 구성할 수 있습니다. 컴퓨팅 리소스를 완벽하게 제어하고 Amazon의 검증된 컴퓨팅 환경에서 실행할 수 있습니다.</block>
@@ -12678,7 +12669,6 @@
   <block id="18d4f7e36efb77494db296ea83bc4753" category="paragraph">NetApp과 함께 배포된 베어 메탈 클러스터의 Anthos에 대한 자세한 내용은 를 참조하십시오 <block ref="eb911f2bc48f3132c014132a2870169f" category="inline-link-macro-rx"></block>.</block>
   <block id="d6c97ba6a05169248582981cf5627522" category="inline-link-macro">다음: VMware의 Anthos 클러스터.</block>
   <block id="9954fadf8d7c9568ecdb434ffa0a15c1" category="paragraph"><block ref="9954fadf8d7c9568ecdb434ffa0a15c1" category="inline-link-macro-rx"></block></block>
-  <block id="d42437507a421bfdd38119d600ab0014" category="sidebar">AWS EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축</block>
   <block id="5ac7b083aa99c6ec0d7a272c37dc611d" category="sidebar">구현 절차</block>
   <block id="71ab9d8f34c9ab92ef83627b823e9825" category="sidebar">데이터베이스 관리</block>
   <block id="c3b88d5ff29715f5f8dd3c907b3f1bc3" category="sidebar">데이터베이스 마이그레이션</block>
@@ -16194,4 +16184,325 @@
   <block id="1abaee3673de53b378351ee9dc679daa" category="list-text">VMware 및 NetApp은 현재 일반적인 다중 경로 네트워킹 접근 방식을 지원하지 않습니다. NFSv4.1에서는 NetApp이 pNFS를 지원하는 반면 VMware는 세션 트렁킹을 지원합니다. NFSv3은 볼륨에 대한 여러 물리적 경로를 지원하지 않습니다. ONTAP 9.8이 포함된 FlexGroup의 경우 간접 액세스의 영향은 일반적으로 최소(마이크로초)이므로 VMware vSphere용 ONTAP 툴을 단일 마운트로 설정하는 것이 좋습니다. 라운드 로빈 DNS를 사용하여 FlexGroup의 다른 노드에 있는 LIF에 ESXi 호스트를 배포할 수 있지만, 이 경우 VMware vSphere용 ONTAP 툴 없이 FlexGroup를 생성하고 마운트해야 합니다. 그러면 성능 관리 기능을 사용할 수 없습니다.</block>
   <block id="4ad396cb9b6773b012067ead8cf08611" category="doc">NetApp DRO(Disaster Recovery Orchestrator) 개요</block>
   <block id="88ac8db9784908706c34feb6caee9044" category="paragraph"><block ref="88ac8db9784908706c34feb6caee9044" category="inline-link-macro-rx"></block></block>
+  <block id="03b125f503e8b797be1fe5a21a10d220" category="summary">이 섹션에서는 azacsnap 도구와 스냅샷 백업, 복원 및 스냅샷을 사용하여 Azure BLOB로 Oracle 데이터베이스를 보호하는 방법에 대해 설명합니다.</block>
+  <block id="b47faaf85acf415e557bd0b669342659" category="doc">Azure 클라우드에서 Oracle 데이터베이스를 보호합니다</block>
+  <block id="cec4dbc9c066ab7b22ef743151be75eb" category="paragraph"><block ref="cec4dbc9c066ab7b22ef743151be75eb" category="inline-link-macro-rx"></block></block>
+  <block id="06a2961d48a854a133ddfe05c7912732" category="section-title">AzAcSnap 툴을 사용하여 Oracle 데이터베이스를 스냅샷으로 백업합니다</block>
+  <block id="30462dbcf926561966ea824afd44e355" category="paragraph">Azure Application-Consistent Snapshot Tool(AzAcSnap)은 스토리지 스냅샷을 생성하기 전에 애플리케이션 정합성 보장 상태로 전환하는 데 필요한 모든 오케스트레이션을 처리하여 타사 데이터베이스의 데이터를 보호하는 명령줄 도구입니다. 그런 다음 데이터베이스를 운영 상태로 되돌릴 수 있습니다.</block>
+  <block id="07612935f16f2665ef52f490f9b1f43b" category="paragraph">Oracle의 경우 데이터베이스를 백업 모드로 전환하여 스냅샷을 생성한 다음 데이터베이스를 백업 모드에서 해제합니다.</block>
+  <block id="070d0b63c9af5e43d43102c1869d4262" category="section-title">데이터 및 로그 볼륨을 백업합니다</block>
+  <block id="7dd57abd8929da4f18cc94d1940161a1" category="paragraph">스냅샷 명령을 실행하는 단순 셸 스크립트를 사용하여 데이터베이스 서버 호스트에서 백업을 설정할 수 있습니다. 그런 다음 crontab에서 실행되도록 스크립트를 예약할 수 있습니다.</block>
+  <block id="087916fda35dba838b68193ed8bc3aeb" category="paragraph">일반적으로 백업 빈도는 원하는 RTO 및 RPO에 따라 달라집니다. 스냅샷을 자주 생성하면 스토리지 공간이 더 많이 사용됩니다. 백업 빈도와 공간 소비 빈도는 서로 상충됩니다.</block>
+  <block id="e2ece357797b760af1c814632edcf99d" category="paragraph">데이터 볼륨은 일반적으로 로그 볼륨보다 더 많은 스토리지 공간을 사용합니다. 따라서 데이터 볼륨에 대해 몇 시간마다 스냅샷을 생성하고 로그 볼륨에 대해 15-30분마다 더 자주 스냅샷을 생성할 수 있습니다.</block>
+  <block id="2a2c2eb0d2bde8c24cc55a11862ca857" category="paragraph">백업 스크립트 및 스케줄링에 대한 다음 예를 참조하십시오.</block>
+  <block id="e048ccd48425229cea678849ba68a190" category="paragraph">데이터 볼륨 스냅샷의 경우:</block>
+  <block id="f0d6345b8e5345f55c21610283eaeedd" category="paragraph">로그 볼륨 스냅샷의 경우:</block>
+  <block id="68b7e37ef318c0e56eabf3e1aded4216" category="paragraph">crontab 일정: 15,30,45 * * * * * * /home/azacsnap/snap_log.sh 0 * /2 * * * /home/azacsnap/snap_data.sh</block>
+  <block id="adf4ba1e0f3190afb18557f038ae1ecf" category="admonition">백업 설정 시<block ref="8ed8c6bfea85d72bc4a36772490109c7" prefix=" " category="inline-code"></block> 구성 파일, 바이너리 볼륨을 포함한 모든 데이터 볼륨을 에 추가합니다<block ref="0fb9dff864caebba259b119756a2ce17" prefix=" " category="inline-code"></block> 및 모든 로그 볼륨을 에<block ref="5e5fb0a2540d102aeebc3dac60712494" prefix=" " category="inline-code"></block>. 스냅샷의 최대 보존은 250개입니다.</block>
+  <block id="a93091ed018686dcf478589ba04fd6f6" category="section-title">스냅샷을 확인합니다</block>
+  <block id="8a46f2968d5dc184634cff75cd1b8b8e" category="paragraph">Azure Portal &gt; Azure NetApp Files/volumes로 이동하여 스냅샷이 성공적으로 생성되었는지 확인합니다.</block>
+  <block id="3542e11f657b779fcef8cc387987e9f2" category="inline-image-macro">이 스크린샷은 스냅샷 목록에 있는 두 개의 파일을 보여 줍니다.</block>
+  <block id="c2dd243538b072e19882bdcd6ac2c6c9" category="inline-image-macro">이 스크린샷은 스냅샷 목록에 있는 8개의 파일을 보여 줍니다.</block>
+  <block id="af143d815dcd69aae3ff8d8bdde9fd58" category="paragraph"><block ref="bf87ea8d7de67f1fdc628b6bb4b400e5" category="inline-image-macro-rx" type="image"></block>
+<block ref="1d682e6513772285b95199f0646e28da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7479b02641600cb6142d8594c1360d11" category="section-title">Oracle 로컬 백업에서 복원 및 복구</block>
+  <block id="76265d8fce7f282b6ff5a8581df8879c" category="paragraph">스냅샷 백업의 주요 이점 중 하나는 소스 데이터베이스 볼륨과 함께 존재하고, 운영 데이터베이스 볼륨을 거의 즉시 롤백할 수 있다는 것입니다.</block>
+  <block id="878609e3e12819fffdd7247406f655be" category="section-title">기본 서버에서 Oracle의 복원 및 복구</block>
+  <block id="8733b7b64c8d2c32caa423c7eb2955fc" category="paragraph">다음 예에서는 동일한 Oracle 호스트의 Azure 대시보드 및 CLI에서 Oracle 데이터베이스를 복원 및 복구하는 방법을 보여 줍니다.</block>
+  <block id="aa30a622663e0f34541394e008fe82cd" category="list-text">복원할 데이터베이스에 테스트 테이블을 만듭니다. [oracao-ora01~]$sqlplus/as sysdba</block>
+  <block id="ea16560565f3889db4dabf938628b462" category="paragraph">SQL* Plus: 릴리즈 19.0.0.0.0 - 운영 날짜: 월 12:02:35 2022 버전 19.8.0.0.0</block>
+  <block id="0409b2fce118cc126a532dea158d2943" category="paragraph">sql&gt; 테이블 testsnapshot(id integer, event varchar(100), dt timestamp) 생성</block>
+  <block id="bec6da77877c0793c1d3eb6c6896e98e" category="paragraph">테이블이 생성되었습니다.</block>
+  <block id="a5b83945adfd5370663cb2d9c4f31d09" category="paragraph">sql&gt; testsnapshot 값에 삽입(1, '스냅샷 복원을 검증하기 위한 데이터 마커 삽입', sysdate)</block>
+  <block id="6ba18fa8fa7d170dfd8fc80f0f3d39f7" category="paragraph">1개의 행이 생성되었습니다.</block>
+  <block id="d1d2dcb121f8bf8fd39724ea075c6409" category="paragraph">sql &gt; 커밋;</block>
+  <block id="a92090dde5e820fde0a68705ee3f2bd0" category="paragraph">커밋이 완료되었습니다.</block>
+  <block id="fd9736dfc88a182f9cb6e5f6a2b97487" category="paragraph">sql &gt; testsnapshot에서 * 선택;</block>
+  <block id="2817b9cf9fc0cd0d8bf9fb03acbfc93f" category="list-text">스냅샷 백업 후에 테이블을 삭제합니다.</block>
+  <block id="07b56c53a9fec8c477afb0cb5f2394af" category="paragraph">[oracao-ora01~]$sqlplus/as sysdba</block>
+  <block id="dcd4d50ecf59b4752c161f0ddc44df44" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 14:20:22 2022 버전 19.8.0.0.0</block>
+  <block id="bee0f13528c2f6f5b67053dc1e942328" category="paragraph">sql &gt; drop table testsnapshot;</block>
+  <block id="cd85f26775e453b2177d5fcc6265b31d" category="paragraph">테이블이 떨어졌습니다.</block>
+  <block id="07e18ec921a195478cdbab47d8d68d89" category="paragraph">sql&gt; testsnapshot에서 * 를 선택합니다. testsnapshot * 오류에서 * 를 선택합니다. 1: ORA-00942: 테이블 또는 뷰가 없습니다</block>
+  <block id="f06f4fbf6e3e0e45b0d4b241ceaf19c9" category="paragraph">sql&gt; shutdown immediate; Database closed. (즉시 종료 데이터베이스가 마운트 해제되었습니다. Oracle 인스턴스가 종료되었습니다. SQL&gt; 종료와 Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0의 연결이 끊겼습니다</block>
+  <block id="09d4fe137595af1cc975247ba704462d" category="list-text">Azure NetApp Files 대시보드에서 로그 볼륨을 마지막으로 사용 가능한 스냅샷으로 복구합니다. 볼륨 되돌리기 * 를 선택합니다.</block>
+  <block id="33ba8417b2640d4172513bbf9cbc3e55" category="inline-image-macro">이 스크린샷은 ANF 대시보드의 볼륨에 대한 스냅샷 재버전의 방법을 보여 줍니다.</block>
+  <block id="546b967f1ce32832a90c77282f0cdf2b" category="paragraph"><block ref="546b967f1ce32832a90c77282f0cdf2b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4b728fe18b10b9b611a1d3ab6acc0df9" category="list-text">되돌리기 볼륨을 확인하고 * Revert * 를 클릭하여 볼륨 재버전을 최신 사용 가능한 백업으로 완료합니다.</block>
+  <block id="5c7deeb27ad1e0e4c1d6d52b2a2a1bfc" category="inline-image-macro">"이 작업을 수행하시겠습니까?" 페이지를 참조하십시오.</block>
+  <block id="ef80226ab5a9d2865852e606297da2cf" category="paragraph"><block ref="ef80226ab5a9d2865852e606297da2cf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18b9906dd2c95b12fdb987b7c2aa9917" category="list-text">데이터 볼륨에 대해 동일한 단계를 반복하고 백업에 복구할 테이블이 포함되어 있는지 확인합니다.</block>
+  <block id="a38e609b2fd5c2dee1b4ccb1cbbac7d4" category="inline-image-macro">이 스크린샷은 ANF 대시보드의 데이터 볼륨에 대한 스냅샷 재버전의 방법을 보여줍니다.</block>
+  <block id="f0d819988fad0119995986a2bdfd9ad6" category="paragraph"><block ref="f0d819988fad0119995986a2bdfd9ad6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fc824d4f774a64498f954eb2ebbc093b" category="list-text">볼륨 버전을 다시 확인하고 "되돌리기"를 클릭합니다.</block>
+  <block id="5e2296a09eabbd34b62da3492091ff33" category="inline-image-macro">"이 작업을 수행하시겠습니까?" 데이터 볼륨 스냅샷 재버전을 위한 페이지입니다.</block>
+  <block id="af5f9a99ee2d86856d0e2477e417dc4c" category="paragraph"><block ref="af5f9a99ee2d86856d0e2477e417dc4c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="170b40e31285910539e0d464f2bf33a6" category="list-text">컨트롤 파일의 복제본이 여러 개 있는 경우 컨트롤 파일을 다시 동기화하고 이전 컨트롤 파일을 사용 가능한 최신 복제본으로 대체합니다.</block>
+  <block id="952cd3804f479f3c31f123d064ccbdf5" category="paragraph">[Oracle@acao-ora01~]$mv/u02/oradata/ORATST/control01.ctl/u02/oradata/ORATST/control01.ctl[Oracle@acao-ora01~]$cp/u03/orareco/ORATactl/controltl/acutl.tl/attrl/a02</block>
+  <block id="bd99bc18393147b05e3f350eb6a61f47" category="list-text">Oracle 서버 VM에 로그인하고 sqlplus를 사용하여 데이터베이스 복구를 실행합니다.</block>
+  <block id="125ab5cbfb90c4a6d038bcca4da6fdc4" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 15:10:17 2022 버전 19.8.0.0.0</block>
+  <block id="010621501012cd31b6666d17dad683d2" category="paragraph">유휴 인스턴스에 연결되었습니다.</block>
+  <block id="6bd3f70e5ab38ca26f8cabd390e15fc0" category="paragraph">sql&gt; 시작 마운트; Oracle 인스턴스가 시작되었습니다.</block>
+  <block id="424459a4363a5afdd1e45d31fcd11efe" category="paragraph">전체 시스템 전역 영역 6442448984바이트 고정 크기 8910936바이트 가변 크기 1090519040바이트 데이터베이스 버퍼 5335154688바이트 다시 실행 버퍼 7864320바이트 데이터베이스가 마운트됨 sql&gt; 취소할 때까지 백업 제어 파일을 사용하여 데이터베이스 복구; ORA-00279: 변경 3188523 스레드 1에 대해 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/09_13/O1_mf_1_43_22rnj280 스레드 시퀀스에 대해 3188523</block>
+  <block id="db9afd3f7adaff3fe1135208fa6b6a09" category="paragraph">로그 지정: {&lt;RET&gt;=Sugested|FileName|Auto|CANCEL}</block>
+  <block id="abc467423916c8ee7c16f566b4ab4ca8" category="paragraph">ORA-00279: change 3188862가 2022-09:09:13 스레드 1에 대해 생성됨 10:01:20 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_44_29f2lgb5_.arc_318280.torg.torg.log에서 더 이상 복구: /318928.torg.torg.2c.1c.2c.turg.2c.318-0028</block>
+  <block id="479d2dfa77fdcde3bfd41fcdebbca1ff" category="paragraph">ORA-00279: change 3193117이 스레드 1에 대해 생성되었습니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_45__29h6qyw_.arc.00280.arc.org에서 더 이상 복구 필요.3800_3708.torg.torg.0_211_3708.torg.wa_3708.torg.tnd.wa_2nd.wa_2nd.toto.toto.toto.toto.toto.toto_3119에 대한 /3119에 대한 /u03_celo.w</block>
+  <block id="c76ff2f7e10a42adf7faec8f9e6faeab" category="paragraph">Ora-00279: change 3193440이 2022-09에서 생성되었습니다. 12:01:20이 스레드 1에 필요합니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_46_%u_.arc ORA-00280: ORT445.RECOG.RECONO.THE_OVERYOVERYOMEO/O.45.A/TRACEMORA/TRACER.0.A/OVERYA/OTRACE.A.A.A.0.A/OVERYA/O.01.A/OTRACULLOG에 대해 더 긴 파일 필요.0.A/O.01_</block>
+  <block id="0e98028493ec8c4a1d181c0d71c3ec7b" category="paragraph">로그 지정: {&lt;RET&gt;=Sugested|FileName|Auto|CANCEL} 미디어 복구가 취소되었습니다. sql &gt; alter database open resetlogs;</block>
+  <block id="f6c9ea366c01da7d664a8c7c3813e0bd" category="paragraph">데이터베이스가 변경되었습니다.</block>
+  <block id="8ad5254ade1fed8d3ccc482196b4c36c" category="paragraph">이 화면에서는 삭제된 테이블이 로컬 스냅샷 백업을 사용하여 복구되었음을 보여 줍니다.</block>
+  <block id="34d73a671fa85d8d86ba1eff63b238d8" category="paragraph"><block ref="34d73a671fa85d8d86ba1eff63b238d8" category="inline-link-macro-rx"></block></block>
+  <block id="0c55b956af322a2409f5dd75af116fee" category="doc">WP-7357: EC2 및 FSx Best Practices Introduction에서 Oracle Database Deployment를 참조하십시오</block>
+  <block id="b985336298cf9391b91c898572090625" category="summary">이 섹션에서는 Azure 가상 머신 및 Azure NetApp Files 스토리지를 사용하는 Oracle 데이터베이스 구축 및 데이터 보호 솔루션 아키텍처에 대해 설명합니다.</block>
+  <block id="fc6024ee9167308c3126789695e7353f" category="paragraph"><block ref="fc6024ee9167308c3126789695e7353f" category="inline-link-macro-rx"></block></block>
+  <block id="91e17bfb5f535513b5320d68f6afe1fc" category="paragraph">다음 아키텍처 다이어그램은 Azure VM 인스턴스 및 Azure NetApp Files 스토리지에 가용성이 높은 Oracle 데이터베이스를 구축하는 방법을 보여 줍니다.</block>
+  <block id="520c5c426000f1dbbd8ac385d5547603" category="paragraph">환경 내에서 Oracle 컴퓨팅 인스턴스는 Azure 서비스 VM 콘솔을 통해 구축됩니다. 콘솔에서 여러 Azure 인스턴스 유형을 사용할 수 있습니다. NetApp은 예상 워크로드를 충족하는 데이터베이스 기반의 Azure VM 인스턴스를 구축할 것을 권장합니다.</block>
+  <block id="9e20ded809aa2fa1bd072f48ceacfdd8" category="paragraph">반면에 Oracle 데이터베이스 스토리지는 Azure 콘솔에서 사용 가능한 Azure NetApp Files 서비스와 함께 구축됩니다. 그런 다음 Oracle 바이너리, 데이터 또는 로그 볼륨이 제시되고 Azure VM 인스턴스 Linux 호스트에 마운트됩니다.</block>
+  <block id="6b5cae77dbc9c4b759bf654b117eb10b" category="inline-image-macro">이 이미지는 기본 사이트, 대기 사이트 및 각 사이트의 VNET 피어링 간의 관계를 보여 줍니다. 이는 4개의 개별 가상 네트워크를 형성합니다.</block>
+  <block id="2246b51fdf61c77213e0ce37d743cd03" category="paragraph"><block ref="2246b51fdf61c77213e0ce37d743cd03" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03aa17a1290e1122adecd07d53463cde" category="paragraph">여러 측면에서 Azure 클라우드에 Azure NetApp Files를 구현하는 것은 RAID 및 이중 컨트롤러와 같은 다양한 내장 이중화 기능을 갖춘 사내 ONTAP 데이터 스토리지 아키텍처와 매우 유사합니다. 재해 복구의 경우 대기 사이트를 여러 지역에서 설정할 수 있으며 애플리케이션 수준 복제(예: Oracle Data Guard)를 사용하여 데이터베이스를 기본 사이트와 동기화할 수 있습니다.</block>
+  <block id="6f1714a5ced243b141295d01d4038364" category="paragraph">Oracle 데이터베이스 구현 및 데이터 보호에 대한 테스트 검증에서 Oracle 데이터베이스는 다음 다이어그램에 표시된 대로 단일 Azure VM에 구축됩니다.</block>
+  <block id="fef3344ae2f384e724a169b6e9d90be7" category="inline-image-macro">이 이미지는 VNET 피어링을 사용하는 단일 Azure VM의 구성을 보여 주어 두 개의 개별 가상 네트워크를 만듭니다.</block>
+  <block id="f3699a22a9267b8e767816c81f821522" category="paragraph"><block ref="f3699a22a9267b8e767816c81f821522" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69cf5342936c24c9fac1c6529c4f825f" category="paragraph">Azure Oracle 환경은 데이터베이스 구축, 백업, 복구 및 데이터베이스 마이그레이션을 위해 NetApp에서 제공하는 툴 키트를 사용하여 자동화를 위해 Ansible 컨트롤러 노드를 사용하여 관리할 수 있습니다. Oracle Azure VM 인스턴스 운영 체제 커널 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 수행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 툴킷을 손쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 수행할 수 있습니다. CLI Ansible 컨트롤러를 설정하는 데 도움이 필요한 경우 을 참조하십시오 <block ref="03bbd03f7d2552fa2076b42f86a04360" category="inline-link-macro-rx"></block> 시작하십시오.</block>
+  <block id="149b87e0b981bcf1e3d652831c207e04" category="inline-link-macro">다음: 고려할 요인.</block>
+  <block id="0a9d288b4b8679857f2d7e7f0d5a63f6" category="paragraph"><block ref="0a9d288b4b8679857f2d7e7f0d5a63f6" category="inline-link-macro-rx"></block></block>
+  <block id="41f2543265fcbcf566ce925409c1bfbb" category="summary">이 섹션에서는 Oracle 데이터베이스를 사내에서 Azure NetApp Files로 또는 그 반대로 마이그레이션하는 방법에 대해 자세히 설명합니다.</block>
+  <block id="3b99478aefcc6039ddcb29f19ce3f1ee" category="doc">사내에서 Azure 클라우드로 데이터베이스 마이그레이션</block>
+  <block id="964310198f864c746c945ff1c6fffe3f" category="inline-link-macro">이전: 데이터베이스 보호.</block>
+  <block id="413dcfd081f137889743981159ac9abe" category="paragraph"><block ref="413dcfd081f137889743981159ac9abe" category="inline-link-macro-rx"></block></block>
+  <block id="3c2b924258f32094eb64883db57a778a" category="paragraph">Oracle이 단일 인스턴스 데이터베이스를 단계적으로 개발하기로 결정함에 따라 많은 조직에서 단일 인스턴스 Oracle 데이터베이스를 멀티 테넌트 컨테이너 데이터베이스로 전환했습니다. 이렇게 하면 최대 가용성 옵션을 사용하여 PDB라는 컨테이너 데이터베이스의 하위 집합을 클라우드로 손쉽게 재배치할 수 있으므로 마이그레이션 중에 가동 중지 시간이 최소화됩니다.</block>
+  <block id="a221bb2d4b0b28bb7e9aa40527e36333" category="paragraph">그러나 여전히 Oracle 데이터베이스의 단일 인스턴스가 있는 경우 PDB 재배치를 시도하기 전에 먼저 Oracle 데이터베이스를 멀티 테넌트 컨테이너 데이터베이스로 변환할 수 있습니다.</block>
+  <block id="3312d9383c6e42558bb6c7ffa86498b5" category="paragraph">다음 섹션에서는 어느 시나리오에서든 온프레미스 Oracle 데이터베이스를 Azure 클라우드로 마이그레이션하는 방법에 대해 자세히 설명합니다.</block>
+  <block id="d7acbe14b605ece64e94636c2ac85151" category="section-title">멀티 테넌트 CDB에서 단일 인스턴스 비 CDB를 PDB로 변환합니다</block>
+  <block id="b65ba7cc82289837e3a44b6025b8a104" category="paragraph">여전히 단일 인스턴스 Oracle 데이터베이스가 있는 경우 Oracle은 얼마 지나지 않아 단일 인스턴스 데이터베이스 지원을 중지하므로 클라우드로 마이그레이션할지 여부와 관계없이 멀티 테넌트 컨테이너 데이터베이스로 변환해야 합니다.</block>
+  <block id="60a4157f0722b484d4ce9ec02662db31" category="paragraph">다음 절차에서는 단일 인스턴스 데이터베이스를 플러깅 지원 데이터베이스 또는 PDB로 컨테이너 데이터베이스에 연결합니다.</block>
+  <block id="aefccbe3e9382cbdd83d84fee06a408d" category="list-text">단일 인스턴스 데이터베이스와 동일한 호스트에 별도의 셸 컨테이너 데이터베이스를 구축합니다<block ref="e1f651debac4f720c13ae930ff3ca14a" prefix=" " category="inline-code"></block>.</block>
+  <block id="182e093a477c76844c12680be3deb7a4" category="list-text">단일 인스턴스 데이터베이스를 종료하고 읽기 전용 모드로 다시 시작합니다.</block>
+  <block id="48270a516aeb2dd47c2b7f5d897c3182" category="list-text">를 실행합니다<block ref="707fc638546e97f4dca068fcf2fbe277" prefix=" " category="inline-code"></block> 데이터베이스 메타데이터를 생성하는 절차입니다.</block>
+  <block id="61c2d2d903cc3e2bc374cc66b3a1572d" category="list-text">단일 인스턴스 데이터베이스를 종료합니다.</block>
+  <block id="d0e90ac40083de7010746f1c7afa8680" category="list-text">컨테이너 데이터베이스를 시작합니다.</block>
+  <block id="c9b14b140c5af8df85a71e71e823fcd9" category="list-text">를 실행합니다<block ref="6f6e7bfe46efb74f46338dcd4b8d7530" prefix=" " category="inline-code"></block> 비 CDB가 CDB와 호환되는지 여부를 확인하는 기능입니다.</block>
+  <block id="b4579eff709cfd4a9e9d9b3c7823a470" category="paragraph">출력이 Yes인 경우 비 CDB가 호환되며 다음 단계를 계속 진행할 수 있습니다.</block>
+  <block id="b788542aadbeda07cae67fad51f01ecf" category="paragraph">결과가 NO인 경우 비 CDB는 호환되지 않으며 를 확인할 수 있습니다<block ref="40bcd9431704d488bfba8de25bdd0469" prefix=" " category="inline-code"></block> 호환되지 않는 이유를 보려면 를 참조하십시오. 계속하기 전에 모든 위반 사항을 해결해야 합니다. 예를 들어, 업그레이드 또는 OPatch 유틸리티를 실행하여 모든 버전 또는 패치 불일치를 해결해야 합니다. 위반 사항을 수정한 후 를 실행합니다<block ref="6f6e7bfe46efb74f46338dcd4b8d7530" prefix=" " category="inline-code"></block> 비 CDB가 CDB와 호환되는지 확인하기 위해 다시 한 번 확인합니다.</block>
+  <block id="3dc81f6d88ee2f38ca30676e4b371634" category="list-text">단일 인스턴스 비 CDB를 연결합니다.</block>
+  <block id="10a9ce9a6e151e6ff04bee976e0cb1de" category="admonition">호스트에 공간이 충분하지 않으면 를 참조하십시오<block ref="4777c7eb130280b37f5b4b3abde7c586" prefix=" " category="inline-code"></block> 옵션을 사용하여 PDB를 생성할 수 있습니다. 이 경우 PDB에 원래 데이터 파일이 사용되었기 때문에 PDB로 플러그인을 연결한 후 단일 인스턴스 비 CDB를 사용할 수 없습니다. 변환 전에 백업을 생성하여 문제가 발생할 경우 다시 되돌릴 수 있도록 합니다.</block>
+  <block id="03d9f2c68151dce9edd03b346e5b110c" category="list-text">소스 단일 인스턴스 비 CDB와 대상 CDB 간의 버전이 다른 경우 변환 후 PDB 업그레이드를 시작합니다. 동일한 버전 변환의 경우 이 단계를 건너뛸 수 있습니다.</block>
+  <block id="81954d0087f2bc7590c39792b2d3ff79" category="paragraph">에서 업그레이드 로그 파일을 검토합니다<block ref="8940bd010306ed7bc730469a2815003c" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="65f9a981d9b9caaa37a227c9d787c280" category="list-text">플러그형 데이터베이스를 열고 PDB 플러그인 위반을 확인한 다음 잘못된 개체를 다시 컴파일합니다.</block>
+  <block id="f4d5586e12195159e664b1f0a78cccd3" category="list-text">실행<block ref="30636d635a272a80dff68679e08f1c7a" prefix=" " category="inline-code"></block> 데이터 사전을 업데이트합니다.</block>
+  <block id="182d7c995640cc8ef16b728a670fbe58" category="paragraph">컨테이너 DB를 종료하고 다시 시작합니다. ncdb가 제한된 모드에서 제외되었습니다.</block>
+  <block id="d6af386b8be94481db3de6778b3fc24a" category="section-title">PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 Azure로 마이그레이션합니다</block>
+  <block id="da5d44e97cbc406251573e1664b5e1f0" category="paragraph">Maximum-availability 옵션을 사용하는 Oracle PDB 재배치에서는 PDB 핫 클론 기술을 사용합니다. 이 기술을 사용하면 PDB가 타겟으로 복제되는 동안 소스 PDB를 사용할 수 있습니다. 전환 시 세션 및 연결이 대상 PDB로 자동으로 리디렉션됩니다. 따라서 재배치되는 PDB의 크기와 관계없이 가동 중지 시간이 최소화됩니다. NetApp은 마이그레이션 절차를 자동화하는 Ansible 기반 툴킷을 제공합니다.</block>
+  <block id="a8efacce1c06e5f64504448dec25740a" category="list-text">동일한 버전 및 패치 수준을 가진 Azure VM의 Azure 퍼블릭 클라우드에서 CDB를 생성합니다.</block>
+  <block id="0f09a4e81820f79a89d0b433bb0de6ca" category="list-text">Ansible 컨트롤러에서 자동화 툴킷 복사본을 복제합니다.</block>
+  <block id="33abd0ac6a3fb7ef8c104725e8360e85" category="list-text">README 파일의 지침을 읽습니다.</block>
+  <block id="59082266ab8171963eb8785041055ee1" category="list-text">이름 확인을 위해 소스 및 타겟 Oracle 서버와 DB 서버 호스트의 구성 파일 모두에 대해 Ansible 호스트 변수 파일을 구성합니다.</block>
+  <block id="166811e58fa2fd17b3ab3305ca4b1948" category="list-text">Ansible 컨트롤러에 필수 구성 요소를 설치합니다.</block>
+  <block id="e40dd1f176a77cef20eb421dee4fea9f" category="list-text">온프레미스 서버에 대해 마이그레이션 전 작업을 실행합니다.</block>
+  <block id="aba7f3209eb8c49aca729c7368fb42fe" category="admonition">admin 사용자는 sudo 권한이 있는 온-프레미스 Oracle 서버 호스트의 관리 사용자입니다. admin 사용자는 암호로 인증됩니다.</block>
+  <block id="a1da14dd2e192d36a7fe7bae327c2b23" category="list-text">온프레미스에서 대상 Azure Oracle 호스트로 Oracle PDB 재배치를 실행합니다.</block>
+  <block id="39f1871870cabd138bd313c450662e67" category="admonition">Ansible 컨트롤러는 사내 또는 Azure 클라우드에 위치할 수 있습니다. 이 컨트롤러는 사내 Oracle 서버 호스트 및 Azure Oracle VM 호스트에 연결해야 합니다. Oracle 데이터베이스 포트(예: 1521)는 사내 Oracle 서버 호스트와 Azure Oracle VM 호스트 간에 열려 있습니다.</block>
+  <block id="63a48a0f7ee4b39ef32c11b92acc2baa" category="section-title">추가 Oracle 데이터베이스 마이그레이션 옵션</block>
+  <block id="7619081ba13aebf0c83d5660f9bf01bb" category="inline-link-macro">Oracle 데이터베이스 마이그레이션 결정 프로세스</block>
+  <block id="0257ad9cf0c221fcf0c611f835c027ca" category="paragraph">추가 마이그레이션 옵션은 Microsoft 설명서를 참조하십시오. <block ref="421a85ebca6e289a6eff559e7e35faf8" category="inline-link-macro-rx"></block>.</block>
+  <block id="a73e5c65844b18c49122a8a79ef3fa65" category="doc">Azure VM 및 Azure NetApp Files에 대한 단계별 Oracle 구축 절차</block>
+  <block id="f8de11946f5850d6f1597a7cf5fc2234" category="inline-link-macro">이전: 고려할 요인.</block>
+  <block id="e9704920b930163220a6e7564d7d680e" category="paragraph"><block ref="e9704920b930163220a6e7564d7d680e" category="inline-link-macro-rx"></block></block>
+  <block id="cf2fb9f52eae11aaa1b6818cc22ade30" category="section-title">Azure 포털 콘솔을 통해 Oracle용 ANF와 Azure VM을 구축합니다</block>
+  <block id="5e89dc82cb54763baa7cece42e7c3189" category="paragraph">Azure를 처음 사용하는 경우 먼저 Azure 계정 환경을 설정해야 합니다. 여기에는 Azure Active Directory를 사용하기 위한 조직 등록이 포함됩니다. 다음 섹션은 이러한 단계를 요약한 것입니다. 자세한 내용은 연결된 Azure 관련 설명서를 참조하십시오.</block>
+  <block id="c743c9c56cd6cc2acf874405ef178af3" category="section-title">Azure 리소스를 생성하고 사용합니다</block>
+  <block id="cc59653114a0ca329e90c87f8de8f2da" category="paragraph">Azure 환경을 설정하고 계정을 만들고 구독과 연결한 후 계정을 사용하여 Azure 포털에 로그인하여 Oracle을 실행하는 데 필요한 리소스를 생성할 수 있습니다.</block>
+  <block id="4848dfd418cc69fdc8a92da472ac41b8" category="section-title">가상 네트워크 또는 VNET를 생성합니다</block>
+  <block id="dd587303db328c6fc30f15fbf133eade" category="paragraph">Azure VNet(Virtual Network)은 Azure의 프라이빗 네트워크에 대한 기본 구성 요소입니다. VNET를 사용하면 Azure VM(가상 머신)과 같은 여러 유형의 Azure 리소스를 사용하여 서로, 인터넷 및 온프레미스 네트워크와 안전하게 통신할 수 있습니다. Azure VM을 프로비저닝하기 전에 먼저 VNet(VM이 배포된)을 구성해야 합니다.</block>
+  <block id="2b9029fce84bbf7056c94e4b86015679" category="inline-link-macro">Azure 포털을 사용하여 가상 네트워크를 생성합니다</block>
+  <block id="698a842fc17e080abbf6b6796628879b" category="paragraph">을 참조하십시오 <block ref="f497c9708f9505977884a23053323735" category="inline-link-macro-rx"></block> VNET를 생성합니다.</block>
+  <block id="66d98f4e89afee6dc557332b0e9ebe43" category="section-title">ANF용 NetApp 스토리지 계정 및 용량 풀을 생성합니다</block>
+  <block id="fecd60b0aedf111caefb4cf98b8d7be5" category="paragraph">이 구축 시나리오에서는 Azure VM OS가 일반 Azure 스토리지를 사용하여 프로비저닝되지만 ANF 볼륨은 NFS를 통해 Oracle 데이터베이스를 실행하도록 프로비저닝됩니다. 먼저 NetApp 스토리지 계정과 스토리지 볼륨을 호스팅할 용량 풀을 생성해야 합니다.</block>
+  <block id="76dc01e3f39d83b88a3d3ad36c338654" category="inline-link-macro">Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다</block>
+  <block id="8a57d5f988c678cd141c2f704e110472" category="paragraph">을 참조하십시오 <block ref="2337ae471c0cc5402cdba65ad3b4dc78" category="inline-link-macro-rx"></block> ANF 용량 풀을 설정하려면 다음을 수행합니다.</block>
+  <block id="ed39ba49be7769bdf483ae876d88cdff" category="section-title">Oracle용 Azure VM을 프로비저닝합니다</block>
+  <block id="acb4908e71af4ce0945c90f9039d0fc2" category="paragraph">워크로드를 기준으로 필요한 Azure VM 유형과 Oracle용 VM vCPU 및 RAM의 크기를 결정합니다. 그런 다음 Azure 콘솔에서 VM 아이콘을 클릭하여 VM 배포 워크플로를 시작합니다.</block>
+  <block id="20d1e12ba2a72916f3917e44ff29b40a" category="list-text">Azure VM 페이지에서 * 생성 * 을 클릭한 다음 * Azure 가상 머신 * 을 선택합니다.</block>
+  <block id="94f088d23454b3c408a17cfff3cb8989" category="inline-image-macro">이 스크린샷은 사용 가능한 Azure VM의 목록을 보여 줍니다.</block>
+  <block id="e28fc410c2020dcbd93af60f3d700d99" category="paragraph"><block ref="e28fc410c2020dcbd93af60f3d700d99" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="78ba4b8df4acae5536f056217b16c353" category="list-text">배포에 대한 구독 ID를 선택한 다음 리소스 그룹, 영역, 호스트 이름, VM 이미지, 크기, 및 인증 방법을 참조하십시오. 디스크 페이지로 이동합니다.</block>
+  <block id="cbbcba216ab68f94c8fab62d9c907a00" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine 페이지의 입력 내용을 보여줍니다.</block>
+  <block id="825d4c0973e48f04ab75cc30df85bbdc" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine 페이지에 대한 추가 입력 정보를 보여 줍니다.</block>
+  <block id="84982a7e7b9cc89bde9621d68800978e" category="paragraph"><block ref="a493253d19b28a6711494154a3160350" category="inline-image-macro-rx" type="image"></block>
+<block ref="81b338659efc8df55ae98546f396c5b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2c435f9a03a03e7cff44b06c9efafa31" category="list-text">OS 로컬 이중화를 위해 * 프리미엄 SSD * 를 선택하고 데이터 디스크가 ANF 스토리지에서 마운트되므로 데이터 디스크를 비워 둡니다. 네트워킹 페이지로 이동합니다.</block>
+  <block id="04faa74bfe9ea34a9831d24d039dc159" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine Disks(가상 머신 디스크 생성) 페이지에 대한 입력을 보여 줍니다.</block>
+  <block id="2e21daafaa3607d62dda1a3411975b12" category="paragraph"><block ref="2e21daafaa3607d62dda1a3411975b12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f9c5742f2bffff7dd4a50e578bfb093b" category="list-text">VNET 및 서브넷을 선택합니다. 외부 VM 액세스를 위한 공용 IP를 할당합니다. 그런 다음 관리 페이지로 이동합니다.</block>
+  <block id="0c0077e9a9d4700a64e70d30e9d110df" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine 페이지에 대한 추가 입력을 보여 줍니다.</block>
+  <block id="4aea6dbf72aa0b36bd98ced95acebcbd" category="paragraph"><block ref="4aea6dbf72aa0b36bd98ced95acebcbd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d5e4bb7568c6e8fb6a1f49aea08e975" category="list-text">관리에 대한 모든 기본값을 유지하고 고급 페이지로 이동합니다.</block>
+  <block id="45291c6293e8de1084c3b8de71bfe120" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine Management(가상 머신 관리 생성) 페이지에 대한 입력 내용을 보여 줍니다.</block>
+  <block id="b031dac11379aafec2eb9832f71648ba" category="paragraph"><block ref="b031dac11379aafec2eb9832f71648ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="22b5d3beb0289dfe21618d5664538321" category="list-text">사용자 지정 스크립트를 사용하여 배포한 후 VM을 사용자 지정해야 하는 경우가 아니면 고급 페이지의 모든 기본값을 유지합니다. 그런 다음 태그 페이지로 이동합니다.</block>
+  <block id="1a911a2f1237ad150a29236bcfe044a0" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine Advanced 페이지에 대한 입력을 보여 줍니다.</block>
+  <block id="00d8612fb98dc237476c6ecd9e0f52c9" category="paragraph"><block ref="00d8612fb98dc237476c6ecd9e0f52c9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46dfe2059392afeb84a872afb7cd09d5" category="list-text">필요한 경우 VM에 대한 태그를 추가합니다. 그런 다음 검토 + 만들기 페이지로 이동합니다.</block>
+  <block id="85e3843de649be49b63e3b04c6887bcd" category="inline-image-macro">이 스크린샷은 Create a Virtual Machine Tags 페이지에 대한 입력 정보를 보여 줍니다.</block>
+  <block id="ddeecdecd575fb71cf4e83d7f09717bc" category="paragraph"><block ref="ddeecdecd575fb71cf4e83d7f09717bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="57a6346e9ebfe8164361d5e2facffb62" category="list-text">배포 워크플로는 구성에 대한 유효성 검사를 실행하고 유효성 검사가 통과한 경우 * Create * 를 클릭하여 VM을 만듭니다.</block>
+  <block id="dec1fd75845506029d8751bb7979c797" category="inline-image-macro">"이 스크린샷은 Create a Virtual Machine 검토 및 생성 페이지에 대한 입력 내용을 보여줍니다."</block>
+  <block id="786b4cd98c208b72f71277850831c1aa" category="paragraph"><block ref="786b4cd98c208b72f71277850831c1aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c18c3fe2e695bda0cb8b3e7ecccbdc4e" category="section-title">Oracle용 ANF 데이터베이스 볼륨 프로비저닝</block>
+  <block id="f162c2b2b89920293c1f24ac435c520e" category="paragraph">Oracle 바이너리, 데이터 및 로그 볼륨에 대해 ANF 용량 풀에 대해 각각 3개의 NFS 볼륨을 생성해야 합니다.</block>
+  <block id="09d8c19d5844128b31e1fa195808b215" category="list-text">Azure 콘솔의 Azure 서비스 목록에서 Azure NetApp Files 를 클릭하여 볼륨 생성 워크플로를 엽니다. ANF 스토리지 계정이 두 개 이상인 경우 볼륨을 프로비저닝할 계정을 클릭합니다.</block>
+  <block id="733cf6b848c8e38a49b4b604225141a5" category="inline-image-macro">이 스크린샷은 ANF가 강조 표시된 Azure Services 페이지를 보여줍니다.</block>
+  <block id="cc553796f259bc80d8c801687c0c1cd0" category="paragraph"><block ref="cc553796f259bc80d8c801687c0c1cd0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8972cd5a80e6e385a27023ce45537a9" category="list-text">NetApp 스토리지 계정에서 * 볼륨 * 을 클릭한 다음 * 볼륨 추가 * 를 클릭하여 새 Oracle 볼륨을 만듭니다.</block>
+  <block id="c8ce9170654447aba6747494e61bf3a2" category="inline-image-macro">이 스크린샷은 NetApp 스토리지 계정의 랜딩 화면을 보여줍니다.</block>
+  <block id="b0d2d575f2aee1703b6e2896d43b72f9" category="inline-image-macro">이 스크린샷은 NetApp 스토리지 계정에서 사용할 수 있는 볼륨을 보여 줍니다.</block>
+  <block id="3371cc932d04403ab2cd0788634d63e5" category="paragraph"><block ref="7266705f76a6cb3a106c34a6e8dc5540" category="inline-image-macro-rx" type="image"></block>
+<block ref="f59831fbf7eaa0d216e8685698d0c55b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbeaec71dc2b8275a14b23283d51cc04" category="list-text">VM 호스트 이름을 접두사로 사용하여 Oracle 볼륨을 식별한 다음 호스트에서 마운트 지점(예: Oracle 바이너리의 경우 u01, Oracle 데이터의 경우 u02, Oracle 로그의 경우 u03)을 확인합니다. VM과 동일한 VNet을 선택합니다. Next(다음): Protocol(프로토콜) &gt; * 를 클릭합니다.</block>
+  <block id="ce4ff1bdb6d954e6967a7c241ff89518" category="inline-image-macro">볼륨 생성 화면</block>
+  <block id="bacf4983022360caacd6f75352136f59" category="paragraph"><block ref="bacf4983022360caacd6f75352136f59" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b50bdcda066df8ed373847c60bc2f546" category="list-text">NFS 프로토콜을 선택하고 허용된 클라이언트에 Oracle 호스트 IP 주소를 추가한 다음 모든 IP 주소 0.0.0.0/0을 허용하는 기본 정책을 제거합니다. 그런 다음 * 다음: 태그 &gt; * 를 클릭합니다.</block>
+  <block id="f8bc211f91c2b350b268959a57418393" category="inline-image-macro">Volume creation(볼륨 생성) 화면의 프로토콜 입력</block>
+  <block id="8ac138d8c4a217ce018b45be622db1ed" category="paragraph"><block ref="8ac138d8c4a217ce018b45be622db1ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fffcdc9cd5233d4718046c8f6d19c80b" category="list-text">필요한 경우 볼륨 태그를 추가합니다. 그런 다음 * 검토 + 생성 &gt; * 을 클릭합니다.</block>
+  <block id="05864b350d713935d13966f3c8fcbcd7" category="inline-image-macro">Volume creation(볼륨 생성) 화면에 입력된 태그.</block>
+  <block id="9bead8568a27fcf83faf41e77f52b246" category="paragraph"><block ref="9bead8568a27fcf83faf41e77f52b246" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e574c0c875926f1fe654026995f3543" category="list-text">유효성 검사에 통과하면 * Create * 를 클릭하여 볼륨을 생성합니다.</block>
+  <block id="4a585922412f050ac4a7fbcc34a2655b" category="inline-image-macro">Volume creation(볼륨 생성) 화면의 단계를 검토하고 생성합니다.</block>
+  <block id="e9c713f1ad3a3f0b14801d722fb77f16" category="paragraph"><block ref="e9c713f1ad3a3f0b14801d722fb77f16" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d2dbc217706d8bb1248bc209e0ab9da" category="section-title">ANF가 있는 Azure VM에서 Oracle을 설치 및 구성합니다</block>
+  <block id="7beaf3d9487c79b7245a1d9ae42d46aa" category="paragraph">NetApp 솔루션 팀은 Azure에서 Oracle을 원활하게 배포하는 데 도움이 되는 많은 Ansible 기반 자동화 툴킷을 만들었습니다. Azure VM에 Oracle을 구축하려면 다음 단계를 따르십시오.</block>
+  <block id="0c782f45b1de4e6d016eafeeb60d286f" category="section-title">Ansible 컨트롤러 설정</block>
+  <block id="58a105c56c05508f7233082bc282a654" category="paragraph">Ansible 컨트롤러를 설정하지 않은 경우 을 참조하십시오 <block ref="03bbd03f7d2552fa2076b42f86a04360" category="inline-link-macro-rx"></block>Ansible 컨트롤러를 설정하는 방법에 대한 자세한 지침이 포함되어 있습니다.</block>
+  <block id="ce9ef6052d2c6ac4b97c01049ee4ec2b" category="section-title">Oracle 구축 자동화 툴킷을 제공합니다</block>
+  <block id="52eae91ee8ea917bc73df6d9f1792469" category="paragraph">Ansible 컨트롤러에 로그인하는 데 사용하는 사용자 ID의 홈 디렉토리에 있는 Oracle 구축 툴킷 복사본을 복제합니다.</block>
+  <block id="19cd6e3dfb797a7325548b346dc358f1" category="section-title">구성에 따라 툴킷을 실행합니다</block>
+  <block id="aa98393908153ea46a2cef869e7dd100" category="paragraph">를 참조하십시오 <block ref="e7ab084e08308da08da1b2dd8151530b" category="inline-link-macro-rx"></block> CLI를 사용하여 플레이북을 실행합니다. CLI가 아닌 Azure 콘솔에서 데이터베이스 볼륨을 생성할 때 글로벌 VAR 파일의 변수 구성에서 ONTAP 부분을 무시할 수 있습니다.</block>
+  <block id="24e16cc700e2ced028e529370af380e1" category="admonition">툴킷 기본값은 RU 19.8과 함께 Oracle 19c를 구축합니다. 경미한 기본 구성 변경 사항이 있는 다른 모든 패치 수준에 쉽게 적용할 수 있습니다. 또한 기본 시드 데이터베이스 활성 로그 파일이 데이터 볼륨에 배포됩니다. 로그 볼륨에 활성 로그 파일이 필요한 경우 초기 구축 후 해당 로그 파일을 재이동해야 합니다. 필요한 경우 NetApp 솔루션 팀에 도움을 요청하십시오.</block>
+  <block id="dd52a71d2066e527d28efdbd46784e07" category="section-title">Oracle용 애플리케이션 정합성 보장 스냅샷을 위해 AzAcSnap 백업 툴을 설정합니다</block>
+  <block id="211e60df4f320c617afaa9a96f62758f" category="paragraph">Azure Application-Consistent Snapshot Tool(AzAcSnap)은 스토리지 스냅샷을 생성하기 전에 애플리케이션 정합성 보장 상태로 전환하는 데 필요한 모든 오케스트레이션을 처리하여 타사 데이터베이스의 데이터를 보호할 수 있는 명령줄 툴입니다. 그런 다음 이러한 데이터베이스를 운영 상태로 되돌립니다. 데이터베이스 서버 호스트에 툴을 설치하는 것이 좋습니다. 다음 설치 및 구성 절차를 참조하십시오.</block>
+  <block id="40390144ce134a2e38bfef9f590f867b" category="section-title">AzAcSnap 도구를 설치합니다</block>
+  <block id="c2d834909e264a2f3bf3d3facd27740b" category="inline-link-macro">AzArcSnap 설치 프로그램</block>
+  <block id="aed9be57adbc2906c27b7f325e1322aa" category="list-text">의 최신 버전을 가져옵니다 <block ref="696590d44d21e9b71649cae0895a0bca" category="inline-link-macro-rx"></block>.</block>
+  <block id="243004130aa732bde904924170fa2e5c" category="list-text">다운로드한 자체 설치 프로그램을 대상 시스템에 복사합니다.</block>
+  <block id="1aa45c54511185e4e2043ee91e8969bc" category="list-text">기본 설치 옵션을 사용하여 루트 사용자로 자체 설치 프로그램을 실행합니다. 필요한 경우 를 사용하여 파일을 실행 가능하게 만듭니다<block ref="48c01707d676030dd223de543c6beb09" prefix=" " category="inline-code"></block> 명령.</block>
+  <block id="483944250a0e1f955ad6fec7c6578bde" category="section-title">Oracle 접속 구성을 구성합니다</block>
+  <block id="b6f7df8a3ada5b45cee3400740b83c9a" category="paragraph">스냅샷 도구는 Oracle 데이터베이스와 통신하며 백업 모드를 설정하거나 해제할 수 있는 적절한 권한이 있는 데이터베이스 사용자가 필요합니다.</block>
+  <block id="6cd11918e51f60b6ce021e9d56c9e74a" category="section-title">AzAcSnap 데이터베이스 사용자를 설정합니다</block>
+  <block id="84fe6666ea577b7ede5c61912d97705e" category="paragraph">다음 예에서는 Oracle 데이터베이스 사용자를 설정하고 sqlplus를 사용하여 Oracle 데이터베이스 통신을 보여 줍니다. 예제 명령은 Oracle 데이터베이스에 사용자(AZACSNAP)를 설정하고 IP 주소, 사용자 이름 및 암호를 적절하게 변경합니다.</block>
+  <block id="342df2b2fb63c81cdd53e5e7bc5d00b9" category="list-text">Oracle 데이터베이스 설치에서 sqlplus를 실행하여 데이터베이스에 로그인합니다.</block>
+  <block id="ab0840eee4ba613870ae404c907c1948" category="list-text">사용자를 생성합니다.</block>
+  <block id="e90b9dc19df07f784e3fc408169077df" category="list-text">사용자 권한을 부여합니다. 이 예제에서는 데이터베이스를 백업 모드로 설정할 수 있도록 AZACSNAP 사용자에 대한 권한을 설정합니다.</block>
+  <block id="f508d634fc1aa5df7fed84e6b58afce9" category="list-text">기본 사용자의 암호 만료 기간을 무제한으로 변경합니다.</block>
+  <block id="bc5fff092e99ce3d1966b94061cb5953" category="list-text">데이터베이스에 대한 azacsnap 연결을 확인합니다.</block>
+  <block id="8e0d0fb1cb3a50066ecd397700dfd22e" category="section-title">Oracle Wallet을 사용하여 DB 액세스를 위한 Linux-user azacsnap 구성</block>
+  <block id="7140a904f4b795616fdc3c3efbdcd066" category="paragraph">AzAcSnap 기본 설치는 azacsnap OS 사용자를 생성합니다. Oracle Wallet에 저장된 암호를 사용하여 Oracle 데이터베이스 액세스를 위해 Bash 셸 환경을 구성해야 합니다.</block>
+  <block id="c54cf7bb99b0e669ce6dc05ec8272470" category="list-text">루트 사용자로 를 실행합니다<block ref="760381f8107a856bc583301b7b272917" prefix=" " category="inline-code"></block> 호스트에서 ORACLE_HOME 및 ORACLE_SID 변수를 식별하는 명령입니다.</block>
+  <block id="2a4941dc3f20c8f34a09b066691e66a5" category="list-text">azacsnap 사용자 bash 프로필에 oracle_home, oracle_SID, TNS_admin 및 경로 변수를 추가합니다. 필요에 따라 변수를 변경합니다.</block>
+  <block id="e3c85fad3d30c470aac355430e98dc21" category="list-text">Linux 사용자 azacsnap로 전자지갑을 만듭니다. 전자지갑 암호를 묻는 메시지가 나타납니다.</block>
+  <block id="83617bd12022f2dd9ba94816c7e56670" category="list-text">Oracle Wallet에 연결 문자열 자격 증명을 추가합니다. 다음 예제 명령에서 AZACSNAP는 AzAcSnap에서 사용할 ConnectString, azacsnap은 Oracle Database User, AzPasswd1은 Oracle User의 데이터베이스 암호입니다. 전자지갑 암호를 묻는 메시지가 다시 나타납니다.</block>
+  <block id="02f08719de6240015b4e67725107792a" category="list-text">를 생성합니다<block ref="9de875b13677cf9b036a438bf9aedf5c" prefix=" " category="inline-code"></block> 파일. 다음 명령 예에서는 호스트를 Oracle Database의 IP 주소로 설정하고 서버 SID를 Oracle Database SID로 설정해야 합니다.</block>
+  <block id="0eec77cc5ed96c42afb08c83ea3f1e3b" category="list-text">를 생성합니다<block ref="0501c2d94325e267bf15055591fb8157" prefix=" " category="inline-code"></block> 파일.</block>
+  <block id="cafefcc0e796f3e73bc39de23dfc6b68" category="list-text">Wallet을 사용하여 Oracle 액세스를 테스트합니다.</block>
+  <block id="8bf6bfb76bcf25b5e1bb9c1d4ede3d34" category="paragraph">명령 [azacsnap@acao-ora01~]$sqlplus/@AZNAP ACSAS SYSBACKUP에서 예상되는 출력입니다</block>
+  <block id="9fac4799a7cb503012dac3d131cf3c15" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 9월 8일 목요일 프로덕션 18:02:07 2022 버전 19.8.0.0.0</block>
+  <block id="54eb020b97d7e8a9f56d67e93754e270" category="section-title">ANF 연결을 구성합니다</block>
+  <block id="8c9356aaf30e863db064ba22b7d4b204" category="paragraph">이 섹션에서는 Azure NetApp Files(VM과 통신)와의 통신을 활성화하는 방법에 대해 설명합니다.</block>
+  <block id="d78964ac0334c0f69ef24aada9864028" category="list-text">Azure Cloud Shell 세션 내에서 기본적으로 서비스 보안 주체와 연결할 구독에 로그인되어 있는지 확인합니다.</block>
+  <block id="8611ff0fcccf2f05ff0dbde909379c14" category="list-text">가입이 올바르지 않으면 다음 명령을 사용합니다.</block>
+  <block id="2d66e076b40e24c73ffa7a1704d985db" category="list-text">다음 예제와 같이 Azure CLI를 사용하여 서비스 보안 주체를 만듭니다.</block>
+  <block id="707cc085819c641d15b9ea2b3b13cb53" category="paragraph">예상 출력:</block>
+  <block id="e8e3af5b539b9415092afd10fc182ff7" category="paragraph">{"clientId":"00aa000a-aaaa-0000-00aa0-00aaaa000aaaa0a", "clientSecret":"00aaaa000a-aaaaaa-0000-00aaaaaaaaaaaaaaa000aaaaaaaaa-aaaaaaaaaaaaaaaaa000aaaaaaa-aaaaaaaaaa-aaaaaaaaaaaaaaaa-00a-aaaaaa <block ref="abe1a2134e98a87862a225c33f62cde4" category="inline-link-rx"></block>, "resourceManagerEndpointUrl": <block ref="5bbe1c35abcaa8749119f86fe8d12120" category="inline-link-rx"></block>, "activeDirectoryGraphResourceId": <block ref="91645ab7f47cce4ce23956a6c4c7df7c" category="inline-link-rx"></block>, "sqlManagementEndpointUrl": <block ref="2ce5923f710fffcd9fdcfffa2d0db664" category="inline-link-rx"></block>, "galleryEndpointUrl": <block ref="92fb62298a12469265ac683928098931" category="inline-link-rx"></block>, "managementEndpointUrl": <block ref="9a3197a885535f07c09e058a5f76aa0c" category="inline-link-rx"></block>}</block>
+  <block id="c51a1e8c830ed4f63c489347dbcce1a7" category="list-text">출력 내용을 잘라내어 라는 파일에 붙여 넣습니다<block ref="b50999884a39c5efe8da46cd87acfeb2" prefix=" " category="inline-code"></block> Linux user azacsnap user bin 디렉토리에 저장되고 적절한 시스템 권한으로 파일을 보호합니다.</block>
+  <block id="211f39ae9cd979a9f01bb800eca0b832" category="admonition">JSON 파일의 형식이 위에서 설명한 대로 정확하게 지정되었는지 확인하십시오. 특히 큰따옴표로 묶인 URL(")을 사용하십시오.</block>
+  <block id="c1f6adfa882cba0dbd256d4909ac588c" category="section-title">AzAcSnap 도구 설정을 완료합니다</block>
+  <block id="e0e7b63ff02eb3221940162934949dd0" category="paragraph">다음 단계에 따라 스냅샷 도구를 구성하고 테스트합니다. 테스트 성공 후 첫 번째 데이터베이스 정합성 보장 스토리지 스냅샷을 수행할 수 있습니다.</block>
+  <block id="fe615094ac9bb468d26149280e3769d7" category="list-text">스냅샷 사용자 계정으로 변경합니다.</block>
+  <block id="4ef9af49185e683998d060aa71c30e2b" category="list-text">명령 위치를 변경합니다.</block>
+  <block id="412d274adbc3fc7cb51ab315d7a77f82" category="list-text">스토리지 백업 세부 정보 파일을 구성합니다. 이렇게 하면 가 생성됩니다<block ref="8ed8c6bfea85d72bc4a36772490109c7" prefix=" " category="inline-code"></block> 구성 파일.</block>
+  <block id="d4c18f094b4959d27f52ee2a9709a6b9" category="paragraph">Oracle 볼륨 3개가 필요한 경우의 결과:</block>
+  <block id="849abd2456a4bd2ccddb94a12dfcc37d" category="paragraph">[azacsnap@acao-ora01 bin]$azacsnap -c configure -- configuration new config file 구성 파일에 주석 추가(주석 추가를 종료하려면 빈 항목 추가): Oracle 스냅샷 백업 구성 파일에 주석 추가(주석 추가를 종료하려면 빈 항목 추가): 추가할 데이터베이스 유형, 'hana', 'oracle' 또는 'exit'(데이터베이스 없음)를 입력합니다. Oracle</block>
+  <block id="fa7ad5b9d050b7a5baa27ffcd8863c42" category="paragraph">=== 추가 Oracle Database details === Oracle Database SID(예: CDB1): ORATST Database Server의 주소(호스트 이름 또는 IP 주소): 172.30.137.142 Oracle 연결 문자열(예: /@AZACSNAP):/@AZACSNAP</block>
+  <block id="44b11046a63da89febd351b4213758cf" category="paragraph">=== Azure NetApp Files 스토리지 세부 정보 ===== 데이터베이스에 Azure NetApp Files를 사용하고 있습니까? (y/n) [n]: y -- 데이터 볼륨은 스냅샷이 되기 전에 애플리케이션이 정합성 보장 상태로 전환됨 -- 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u01 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u02 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: n----- 다른 볼륨은 스냅샷을 위한 애플리케이션을 준비하지 않고 즉시 스냅샷임---- 데이터베이스 구성의 다른 볼륨에 Azure NetApp Files 리소스 추가? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u03 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 다른 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]:n</block>
+  <block id="e16c4d13d5c9c936ac3ca975a729784f" category="paragraph">==== Azure Managed Disk details ===== 데이터베이스에 Azure Managed Disks를 사용하고 있습니까? (y/n) [n]:n</block>
+  <block id="e5e08e0b27271cd7952c3cd754436294" category="paragraph">==== Azure Large Instance (Bare Metal) Storage details ========== 데이터베이스에 Azure Large Instance (Bare Metal)를 사용하고 있습니까? (y/n) [n]:n</block>
+  <block id="cec7485a9812da8e268c6d53917d0776" category="paragraph">추가할 데이터베이스 유형, 'HANA', 'Oracle' 또는 '종료'(데이터베이스 없음)를 입력합니다. 종료합니다</block>
+  <block id="c63145a4ad8c93cb8bdff88f44cf483b" category="paragraph">'azacsnap.json'에 출력을 쓰는 중 구성 편집이 완료되었습니다.</block>
+  <block id="72b0a1cda785576a979ca4ee2e3c8c62" category="list-text">azacsnap Linux 사용자로서, Oracle 백업에 대해 azacsnap 테스트 명령을 실행합니다.</block>
+  <block id="ce9bfcddebc567805a4fdb6bcdf15515" category="paragraph">[azacsnap@acao-ora01 bin]$azacsnap -c test--test oracle--configfile azacsnap.json BEGIN:테스트 프로세스가 'oracle'에 대해 시작되었습니다. BEGIN:Oracle DB 테스트 통과: Oracle DB 버전 1908000000 END:Test process complete for 'oracle' [azacsnap@acao-ora01 bin]$</block>
+  <block id="7be23e8f29bfc799fd8fbcdc55fe0e77" category="list-text">첫 번째 스냅샷 백업을 실행합니다.</block>
+  <block id="42481f217667e9b11be3ea64c971056a" category="inline-link-macro">다음: 데이터베이스 보호.</block>
+  <block id="d39c73ea41fa36408b518637e929e754" category="paragraph"><block ref="d39c73ea41fa36408b518637e929e754" category="inline-link-macro-rx"></block></block>
+  <block id="87561d435f6cd79a59659b543d2991ca" category="summary">이 섹션에서는 맞춤형 Oracle RDS 및 FSx ONTAP 스토리지가 포함된 RDS Oracle 맞춤형 구축 솔루션 아키텍처를 보여 줍니다.</block>
+  <block id="312f941d9e8f224f54ae372016e8f35a" category="paragraph">환경 내에서 Oracle 컴퓨팅 인스턴스는 AWS EC2 인스턴스 콘솔을 통해 구축됩니다. 콘솔에서 여러 EC2 인스턴스 유형을 사용할 수 있습니다. RedHat Enterprise Linux 8과 함께 M5 Ami 이미지와 같은 데이터베이스 기반 EC2 인스턴스 유형 및 최대 10Gbps의 네트워크 대역폭을 구축하는 것이 좋습니다.</block>
+  <block id="830579b4d0c33e9e4fa1f11c61cb73a7" category="inline-image-macro">이 이미지는 운영 HA 클러스터, 즉 대기 HA 클러스터 관리 노드 및 관련 연결 노드를 포함한 샘플 아키텍처 다이어그램을 보여줍니다.</block>
+  <block id="73793421735093db194ae82163f894b3" category="paragraph"><block ref="73793421735093db194ae82163f894b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3d0f7ae75ed6e0e3b522ecc7cac710b" category="paragraph">FSx 스토리지 클러스터는 기본 스토리지 클러스터와 대기 스토리지 클러스터가 모두 두 개의 서로 다른 가용성 영역에 구축되도록 이중 중복성으로 설계되었습니다. 데이터베이스 볼륨은 모든 Oracle 바이너리, 데이터 및 로그 볼륨에 대해 사용자가 구성할 수 있는 간격으로 기본 FSx 클러스터에서 대기 FSx 클러스터로 복제됩니다.</block>
+  <block id="0008c12bed67fcf1f82ece8ff10b5c81" category="paragraph">이 고가용성 Oracle 환경은 Ansible 컨트롤러 노드와 SnapCenter 백업 서버 및 UI 툴을 사용하여 관리됩니다. Ansible 플레이북 기반 툴 키트를 사용하여 Oracle 설치, 구성, 복제를 자동화할 수 있습니다. Oracle EC2 인스턴스 커널 운영 체제 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 실행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 자동화 설정을 쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 몇 가지 반복 수행할 수 있습니다.</block>
+  <block id="1332f9ef53fc751a6087660a11f07ba6" category="paragraph"><block ref="1332f9ef53fc751a6087660a11f07ba6" category="inline-link-macro-rx"></block></block>
+  <block id="1572d96530c843cddbe2d0a8b47abf8a" category="summary">이 모범 사례 가이드에서는 Azure NetApp 파일 스토리지 및 Azure VM에서 Oracle 데이터베이스를 구축하고 보호하기 위한 솔루션에 대해 자세히 설명합니다.</block>
+  <block id="2e0520fcae6cb49914d2308fbaf4e1a8" category="doc">TR-4954: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호</block>
+  <block id="7e6f7643afec42d9c47efa933debef3e" category="paragraph">Allen Cao, Niyaz Mohamed, NetApp</block>
+  <block id="b2bd5134cf9b573edd93cbfe6ee4559d" category="paragraph">많은 미션 크리티컬 Oracle 엔터프라이즈 데이터베이스가 여전히 사내에서 호스팅되며, 많은 기업에서 이러한 Oracle 데이터베이스를 퍼블릭 클라우드로 마이그레이션하려고 합니다. 종종 이러한 Oracle 데이터베이스는 애플리케이션 중심이므로 많은 서비스형 데이터베이스 퍼블릭 클라우드 오퍼링에서 누락되는 사용자별 구성이 필요합니다. 따라서 현재의 데이터베이스 환경에서는 고유한 요구 사항을 수용할 수 있는 고성능의 확장 가능한 컴퓨팅 및 스토리지 서비스를 통해 구축된 퍼블릭 클라우드 기반 Oracle 데이터베이스 솔루션이 필요합니다. Azure 가상 머신 컴퓨팅 인스턴스 및 Azure NetApp Files 스토리지 서비스는 미션 크리티컬 Oracle 데이터베이스 워크로드를 퍼블릭 클라우드로 구축 및 마이그레이션하는 데 활용할 수 있는 퍼즐의 누락된 조각일 수 있습니다.</block>
+  <block id="a58dc8965e4de69beb97a33a5a1935ea" category="paragraph">Azure 가상 시스템은 Azure가 제공하는 여러 가지 유형의 온디맨드 확장 가능한 컴퓨팅 리소스 중 하나입니다. 일반적으로 다른 선택 사항보다 컴퓨팅 환경에 대한 제어 능력이 더 필요한 경우 가상 시스템을 선택합니다. Azure 가상 시스템은 컴퓨팅 또는 메모리 집약적인 워크로드에 관계없이 Oracle 데이터베이스를 실행하는 데 필요한 특정 구성으로 컴퓨터를 빠르고 쉽게 만들 수 있는 방법을 제공합니다. Azure 가상 네트워크의 가상 시스템은 보안 VPN 터널을 통해 조직의 네트워크에 쉽게 연결할 수 있습니다.</block>
+  <block id="466d154dd31c873c4a2fd7113dc6b818" category="paragraph">Azure NetApp Files는 데이터베이스 워크로드를 이전보다 더 빠르고 안전하게 클라우드로 이전할 수 있는 완전 관리형 Microsoft 서비스입니다. 이 솔루션은 클라우드에서 Oracle 데이터베이스와 같은 고성능 워크로드를 실행하는 데 필요한 핵심 요구사항을 충족하도록 설계되었으며, 실제 IOPS 요구사항, 짧은 지연 시간, 고가용성, 높은 내구성, 대규모 관리 편의성을 반영하는 성능 계층을 제공합니다. 빠르고 효율적인 백업, 복구 및 클로닝에 활용할 수 있습니다. Azure NetApp Files는 Azure 데이터 센터 환경 내에서 실행되는 물리적 All-Flash NetApp ONTAP 시스템을 기반으로 하므로 이러한 기능이 가능합니다. Azure NetApp Files는 Azure DC 및 포털에 완벽하게 통합되어 있으며, 고객은 동일한 편안한 그래픽 인터페이스 및 API를 사용하여 다른 Azure 개체와 마찬가지로 공유 파일을 만들고 관리할 수 있습니다. Azure NetApp 파일을 사용하면 추가 위험, 비용 또는 시간 없이 Azure의 모든 기능을 활용할 수 있으며 Azure 네이티브 엔터프라이즈 파일 서비스만 믿고 사용할 수 있습니다.</block>
+  <block id="30106aaa3e986f62cbb327f935569bca" category="inline-link-macro">Oracle Databases on Microsoft Azure 를 참조하십시오</block>
+  <block id="bdb41d103336edebf957f48add0f3554" category="inline-link-macro">NetApp - 자동화</block>
+  <block id="c2add34b573ef3798dd7c5b8972c008a" category="paragraph">이 문서에서는 온프레미스 시스템과 비슷한 성능과 내구성을 제공하는 Azure 가상 머신 및 Azure NetApp Files 스토리지 서비스를 사용하여 Oracle 데이터베이스를 구축, 구성 및 보호하는 방법에 대해 자세히 설명합니다. 모범 사례 지침은 TR-4780을 참조하십시오 <block ref="43d70d3cb7600babfb5820086b5480b6" category="inline-link-macro-rx"></block>. 더 중요한 것은 NetApp이 Azure 퍼블릭 클라우드에서 Oracle 데이터베이스 워크로드의 구현, 구성, 데이터 보호, 마이그레이션 및 관리에 필요한 대부분의 작업을 자동화하는 자동화 툴툴킷을 제공하는 것입니다. 자동화 툴킷을 NetApp 퍼블릭 GitHub 사이트에서 다운로드할 수 있습니다. <block ref="1b9adaed0e4ba13a6d8f6edc7ab8f2d8" category="inline-link-macro-rx"></block>.</block>
+  <block id="3d7dbc3eeea5e87b5d14c9f00c66dd47" category="paragraph"><block ref="3d7dbc3eeea5e87b5d14c9f00c66dd47" category="inline-link-macro-rx"></block></block>
+  <block id="cffc2899d8dda4926e6563cef4e76608" category="summary">이 섹션에서는 Azure 가상 머신 및 Azure NetApp Files 스토리지에 Oracle 데이터베이스를 구축할 때 고려해야 할 요소에 대해 자세히 설명합니다.</block>
+  <block id="3cc4738ed2ec2e682ab2002688fa632b" category="paragraph"><block ref="3cc4738ed2ec2e682ab2002688fa632b" category="inline-link-macro-rx"></block></block>
+  <block id="1a6a6241c0105da34f664d1e12534598" category="paragraph">다음 섹션에서는 Azure NetApp Files 스토리지를 사용하는 Azure 가상 머신 인스턴스의 Azure 퍼블릭 클라우드에서 Oracle 데이터베이스를 구축할 때의 주요 고려 사항에 대해 설명합니다.</block>
+  <block id="c2b3b1e82aa97a133f0f6bbc12843085" category="section-title">VM 유형 및 사이징</block>
+  <block id="4ca9712a9cd82ea80c8e225977fae1bb" category="inline-link-macro">Azure의 가상 머신 크기입니다</block>
+  <block id="7c4a17715675ccfa7ce507eea6098318" category="paragraph">공용 클라우드에서 관계형 데이터베이스의 성능을 최적화하려면 올바른 VM 유형 및 크기를 선택하는 것이 중요합니다. Azure 가상 머신은 Oracle 데이터베이스 워크로드를 호스팅하는 데 사용할 수 있는 다양한 컴퓨팅 인스턴스를 제공합니다. Microsoft 설명서를 참조하십시오 <block ref="d854faa84ea41d8819c42ca3741a3561" category="inline-link-macro-rx"></block> 다양한 유형의 Azure 가상 머신 및 사이징 일반적으로, 중간 규모의 Oracle 데이터베이스를 구축할 때는 범용 Azure 가상 머신을 사용하는 것이 좋습니다. 대용량 Oracle 데이터베이스를 구축하는 경우 메모리에 최적화된 Azure VM이 적합합니다. RAM이 많을수록 더 큰 Oracle SGA 또는 스마트 플래시 캐시를 구성하여 물리적 I/O를 줄이고 데이터베이스 성능을 개선할 수 있습니다.</block>
+  <block id="84942a15b69259aab0ff7c2620afcaf6" category="inline-link-macro">TR-4780: Microsoft Azure의 Oracle 데이터베이스</block>
+  <block id="760a7b6c1bd4f6ebab6918d42feb4825" category="paragraph">Azure NetApp Files는 Azure 가상 머신에 연결된 NFS 마운트로 작동하여 처리량을 늘리고 로컬 스토리지로 스토리지 최적화된 VM 처리량 한도를 극복할 수 있습니다. 따라서 Azure NetApp Files에서 Oracle을 실행하면 라이센스 대상 Oracle CPU 코어 수 및 라이센스 비용을 줄일 수 있습니다. 을 참조하십시오 <block ref="b46cbe9b7b18b9ff8101a014c206465f" category="inline-link-macro-rx"></block>섹션 7 - Oracle 라이센스는 어떻게 작동합니까?</block>
+  <block id="71b93ac808ac25bb511ebcbb028e32e8" category="paragraph">기타 고려해야 할 요소는 다음과 같습니다.</block>
+  <block id="592bc946b588ad0e83c05f528895bcc8" category="list-text">워크로드 특성에 따라 올바른 vCPU 및 RAM 조합을 선택합니다. VM에서 RAM 크기가 증가하면 vCPU 코어 수도 증가합니다. vCPU 코어 수에 Oracle 라이센스 비용이 청구되므로 약간의 균형을 유지해야 합니다.</block>
+  <block id="fb9844eb7ee0ff341d6f7066f78918ff" category="list-text">VM에 스왑 공간을 추가합니다. 기본 Azure VM 배포에서는 데이터베이스에 적합하지 않은 스왑 공간을 생성하지 않습니다.</block>
+  <block id="81afc696937e3786d5701212de79c536" category="section-title">Azure NetApp Files 성능</block>
+  <block id="c7bc5faed38f5284386f25a6fc3a5752" category="paragraph">Azure NetApp Files 볼륨은 용량 풀에서 할당되며 고객은 Azure NetApp Files 스토리지 계정에서 용량 할당을 수행해야 합니다. 각 용량 풀은 다음과 같이 할당됩니다.</block>
+  <block id="3af20f4cec87eac026d0990a8a3f4169" category="list-text">전반적인 성능 기능을 정의하는 서비스 수준.</block>
+  <block id="dd1fb66595c069d1b267fb8ca87e46eb" category="list-text">해당 용량 풀에 대해 초기에 프로비저닝된 스토리지 용량 또는 계층입니다. 프로비저닝된 공간에 대한 총 최대 처리량을 정의하는 서비스 품질(QoS) 수준입니다.</block>
+  <block id="9dc50220b7e70511b5aeebb862346fad" category="paragraph">서비스 수준과 처음에 용량 할당된 스토리지 용량은 특정 Oracle 데이터베이스 볼륨의 성능 수준을 결정합니다.</block>
+  <block id="59b8b6b998c3c0fcd2f1b107a68c290a" category="section-title">Azure NetApp Files에 대한 서비스 수준</block>
+  <block id="f02ad1a8080bf1b50f8a15cb346ed483" category="paragraph">Azure NetApp Files는 Ultra, Premium 및 Standard의 세 가지 서비스 수준을 지원합니다.</block>
+  <block id="3eec40f71dc46b07f32031c9703968ec" category="list-text">* Ultra 스토리지. * 이 계층은 할당된 1TiB 볼륨 할당량당 최대 128MiBps의 처리량을 제공합니다.</block>
+  <block id="1b0fa75a1e8b815e03fb38f8a90d2a73" category="list-text">* 프리미엄 스토리지. * 이 계층은 할당된 1TiB 볼륨 할당량당 최대 64MiBps의 처리량을 제공합니다.</block>
+  <block id="00792f6ec40d3e2833834d90802a7aa5" category="list-text">* 표준 스토리지. * 이 계층은 할당된 1TiB 볼륨 할당량당 최대 16MiBps의 처리량을 제공합니다.</block>
+  <block id="7a720602d11a97fd37964c9979e2f1a5" category="section-title">용량 풀 및 서비스 품질</block>
+  <block id="36ac84521252c58a4238292bf0c21d92" category="paragraph">원하는 서비스 수준마다 프로비저닝된 용량과 관련된 비용이 있으며 프로비저닝된 공간의 전체 최대 처리량을 정의하는 서비스 품질(QoS) 수준이 포함되어 있습니다.</block>
+  <block id="7a93db9cf06fd65415faf241927e2087" category="paragraph">예를 들어, 프리미엄 서비스 수준이 포함된 10TiB 프로비저닝된 단일 용량 풀은 이 용량 풀 내의 모든 볼륨에 대해 1064MBps의 전체 가용 처리량을 제공하므로 40,000MBps(16K) IOPS 또는 80,000,000(8K) IOPS가 가능합니다.</block>
+  <block id="18dc8b2cbfb938a0ba32c141664fba0e" category="paragraph">최소 용량 풀 크기는 4TiB입니다. 스토리지 요구사항 및 비용 관리를 위해 워크로드 요구사항의 변화에 따라 용량 풀 크기를 1TiB 단위로 변경할 수 있습니다.</block>
+  <block id="8a26494cf7b0c3c3ca7cd38e89c068eb" category="section-title">데이터베이스 볼륨에서 서비스 수준을 계산합니다</block>
+  <block id="9ce59559a0b99338ee0bad0c153c961a" category="paragraph">Oracle 데이터베이스 볼륨의 처리량 제한은 볼륨이 속한 용량 풀의 서비스 수준과 볼륨에 할당된 할당량의 조합에 의해 결정됩니다.</block>
+  <block id="b87e1c6e437216fc2d3719c3dad93cb8" category="paragraph">다음 다이어그램은 Oracle 데이터베이스 볼륨의 처리량 한도를 계산하는 방법을 보여 줍니다.</block>
+  <block id="1624b6f83446cd1719c94bae28cbbeb7" category="inline-image-macro">이 이미지는 총 처리량을 결정하기 위해 세 개의 용량 계층에 적용된 수식을 보여 줍니다.</block>
+  <block id="4d06f88a6f007c9821ac2ea5741860c5" category="paragraph"><block ref="4d06f88a6f007c9821ac2ea5741860c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ce3321601c29c87cb29ae9817843b8d" category="paragraph">예제 1에서는 2TiB 할당량이 할당된 프리미엄 스토리지 계층이 있는 용량 풀의 볼륨에 128MiBps(2TiB * 64MiBps)의 처리량 제한이 할당됩니다. 이 시나리오는 용량 풀 크기 또는 실제 볼륨 소비에 관계없이 적용됩니다.</block>
+  <block id="69da5d3e48cc26414a9177d843bd55d9" category="paragraph">예제 2에서는 100GiB가 할당된 프리미엄 스토리지 계층이 있는 용량 풀의 볼륨에 6.25MiBps(0.09765625TiB * 64MiBps)의 처리량 제한이 할당됩니다. 이 시나리오는 용량 풀 크기 또는 실제 볼륨 소비에 관계없이 적용됩니다.</block>
+  <block id="def2c2ae4fa72ee296eada07b44a0cc9" category="paragraph">최소 볼륨 크기는 100GiB입니다.</block>
+  <block id="78ad659ec79d8ee9e7432271167d18d3" category="list-text">소규모 데이터베이스의 경우 모든 Oracle 파일에 단일 볼륨 레이아웃을 사용합니다.</block>
+  <block id="51672f1f7a65c28f28e5e113376309bd" category="inline-image-macro">이 이미지는 각각 데이터 파일, 재실행 로그, 아카이브 로그, 제어 파일이 포함된 세 개의 데이터베이스(DB1, DB2, DB3)를 단일 용량 풀 내에 보여 줍니다.</block>
+  <block id="6dab61143f0fe37930fbd783e5c57c81" category="paragraph"><block ref="6dab61143f0fe37930fbd783e5c57c81" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="816445ad7ba016a8c0be293c985f068b" category="list-text">대규모 데이터베이스의 경우 여러 개의 볼륨 레이아웃이 권장됩니다. 하나는 Oracle 데이터, 중복 제어 파일, 다른 하나는 Oracle 액티브 로그, 아카이브 로그 및 제어 파일용입니다. 데이터베이스를 새 호스트에 재배치하고 신속하게 복구할 수 있도록 로컬 드라이브 대신 Oracle 바이너리에 대한 볼륨을 할당하는 것이 좋습니다.</block>
+  <block id="955db4ecf8716abf17a3ea3f8e113671" category="inline-image-macro">이 이미지는 각각 두 개의 볼륨이 있는 두 개의 데이터베이스를 보여 줍니다. 첫 번째 볼륨에는 데이터 파일이 포함되어 있는 반면, 각 데이터베이스의 두 번째 볼륨에는 재실행 로그, 아카이브 로그, 제어 파일이 포함되어 있습니다. 모두 단일 용량 풀 내에 있습니다.</block>
+  <block id="7432b939dcc290776a34b2e9610a2775" category="paragraph"><block ref="7432b939dcc290776a34b2e9610a2775" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="efeaafaa286e164985a0c325f0727cf1" category="paragraph">가장 일반적인 운영 체제인 Linux에는 네이티브 NFS 기능이 포함되어 있습니다. Oracle은 Oracle에 기본적으로 통합된 직접 NFS(dNFS) 클라이언트를 제공합니다. Oracle dNFS는 OS 캐시를 우회하고 병렬 처리를 가능하게 하여 데이터베이스 성능을 향상시킵니다. Oracle은 20년 이상 NFSv3을 지원해 왔으며 NFSv4는 Oracle 12.1.0.2 이상에서 지원됩니다.</block>
+  <block id="be5ef2ba2540e077db09ca784b1ac18f" category="paragraph">dNFS(Oracle 11g 이후 사용 가능)를 사용하면 Azure Virtual Machine에서 실행되는 Oracle 데이터베이스가 네이티브 NFS 클라이언트보다 훨씬 더 많은 I/O를 구동할 수 있습니다. NetApp 자동화 툴킷을 사용하여 자동화된 Oracle 구축은 NFSv3에서 dNFS를 자동으로 구성합니다.</block>
+  <block id="632bf0b812e05925eff22d7d0a7677c2" category="paragraph">다음 다이어그램은 Oracle dNFS를 사용하는 Azure NetApp Files의 SLOB 벤치마크를 보여줍니다.</block>
+  <block id="08826656fd88155bdfaebbb292320e33" category="inline-image-macro">이 그래프는 dNFS가 KNFS를 통해 DB 순차 파일 지연 시간(ms)을 향상한다는 것을 극적으로 보여 줍니다.</block>
+  <block id="258bafba486e8ac35578ed4c5fff8ab1" category="paragraph"><block ref="258bafba486e8ac35578ed4c5fff8ab1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="24019b0d54b5da3a46b400c6a6dfee77" category="paragraph">최적의 성능을 제공하고 성능 문제를 방지하려면 TCP 슬롯 테이블을 제어하는 커널 매개 변수를 128로 조정합니다.</block>
+  <block id="754e164c2de7ed1f02667d5f74297a0e" category="list-text">다음 표에는 Linux NFSv3의 단일 인스턴스에 대해 권장되는 NFS 마운트 옵션이 나와 있습니다.</block>
+  <block id="fa7abb28d1b83f9ee23d95aff1d3123b" category="inline-image-macro">이 표에는 다음 파일 유형, 제어 파일, 데이터 파일, 재실행 로그, oracle_home, 및 oracle_base.</block>
+  <block id="082aad17dee7d03a3d502a422c1a8c53" category="paragraph"><block ref="082aad17dee7d03a3d502a422c1a8c53" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b71b592b003a6232eebe484a1736be7a" category="paragraph"><block ref="b71b592b003a6232eebe484a1736be7a" category="inline-link-macro-rx"></block></block>
+  <block id="d0dfaca5f0573d672a0f4dc66997c002" category="doc">EC2 및 FSx Oracle 데이터베이스 관리</block>
+  <block id="4020b36b638694a9834cb01b53b25ffe" category="doc">AWS EC2 및 FSx에서 Oracle Deployment Procedures를 단계별로 수행합니다</block>
+  <block id="d842058c0e8814799a596324a98e5323" category="sidebar">AWS EC2 및 FSx Best Practices에 Oracle Database 구축</block>
+  <block id="879f2366c198b1fc05740657cacebcc1" category="sidebar">Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호</block>
+  <block id="fc305603a3cb90ea71cabdf327aaf437" category="sidebar">데이터베이스 보호</block>
 </blocks>

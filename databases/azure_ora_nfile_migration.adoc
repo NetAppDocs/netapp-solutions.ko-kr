@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: databases/azure_ora_nfile_migration.html 
+summary: 이 섹션에서는 Oracle 데이터베이스를 사내에서 Azure NetApp Files로 또는 그 반대로 마이그레이션하는 방법에 대해 자세히 설명합니다. 
+keywords: database, Oracle, Azure, ANF, Azure NetApp Files, migration 
+---
+= 사내에서 Azure 클라우드로 데이터베이스 마이그레이션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+link:azure_ora_nfile_protection.html["이전: 데이터베이스 보호."]
+
+Oracle이 단일 인스턴스 데이터베이스를 단계적으로 개발하기로 결정함에 따라 많은 조직에서 단일 인스턴스 Oracle 데이터베이스를 멀티 테넌트 컨테이너 데이터베이스로 전환했습니다. 이렇게 하면 최대 가용성 옵션을 사용하여 PDB라는 컨테이너 데이터베이스의 하위 집합을 클라우드로 손쉽게 재배치할 수 있으므로 마이그레이션 중에 가동 중지 시간이 최소화됩니다.
+
+그러나 여전히 Oracle 데이터베이스의 단일 인스턴스가 있는 경우 PDB 재배치를 시도하기 전에 먼저 Oracle 데이터베이스를 멀티 테넌트 컨테이너 데이터베이스로 변환할 수 있습니다.
+
+다음 섹션에서는 어느 시나리오에서든 온프레미스 Oracle 데이터베이스를 Azure 클라우드로 마이그레이션하는 방법에 대해 자세히 설명합니다.
+
+
+
+== 멀티 테넌트 CDB에서 단일 인스턴스 비 CDB를 PDB로 변환합니다
+
+여전히 단일 인스턴스 Oracle 데이터베이스가 있는 경우 Oracle은 얼마 지나지 않아 단일 인스턴스 데이터베이스 지원을 중지하므로 클라우드로 마이그레이션할지 여부와 관계없이 멀티 테넌트 컨테이너 데이터베이스로 변환해야 합니다.
+
+다음 절차에서는 단일 인스턴스 데이터베이스를 플러깅 지원 데이터베이스 또는 PDB로 컨테이너 데이터베이스에 연결합니다.
+
+. 단일 인스턴스 데이터베이스와 동일한 호스트에 별도의 셸 컨테이너 데이터베이스를 구축합니다 `ORACLE_HOME`.
+. 단일 인스턴스 데이터베이스를 종료하고 읽기 전용 모드로 다시 시작합니다.
+. 를 실행합니다 `DBMS_PDB.DESCRIBE` 데이터베이스 메타데이터를 생성하는 절차입니다.
++
+[source, cli]
+----
+BEGIN
+  DBMS_PDB.DESCRIBE(
+    pdb_descr_file => '/home/oracle/ncdb.xml');
+END;
+/
+----
+. 단일 인스턴스 데이터베이스를 종료합니다.
+. 컨테이너 데이터베이스를 시작합니다.
+. 를 실행합니다 `DBMS_PDB.CHECK_PLUG_COMPATIBILITY` 비 CDB가 CDB와 호환되는지 여부를 확인하는 기능입니다.
++
+[source, cli]
+----
+SET SERVEROUTPUT ON
+DECLARE
+  compatible CONSTANT VARCHAR2(3) :=
+    CASE DBMS_PDB.CHECK_PLUG_COMPATIBILITY(
+           pdb_descr_file => '/disk1/oracle/ncdb.xml',
+           pdb_name       => 'NCDB')
+    WHEN TRUE THEN 'YES'
+    ELSE 'NO'
+END;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE(compatible);
+END;
+/
+----
++
+출력이 Yes인 경우 비 CDB가 호환되며 다음 단계를 계속 진행할 수 있습니다.
+
++
+결과가 NO인 경우 비 CDB는 호환되지 않으며 를 확인할 수 있습니다 `PDB_PLUG_IN_VIOLATIONS` 호환되지 않는 이유를 보려면 를 참조하십시오. 계속하기 전에 모든 위반 사항을 해결해야 합니다. 예를 들어, 업그레이드 또는 OPatch 유틸리티를 실행하여 모든 버전 또는 패치 불일치를 해결해야 합니다. 위반 사항을 수정한 후 를 실행합니다 `DBMS_PDB.CHECK_PLUG_COMPATIBILITY` 비 CDB가 CDB와 호환되는지 확인하기 위해 다시 한 번 확인합니다.
+
+. 단일 인스턴스 비 CDB를 연결합니다.
++
+[source, cli]
+----
+CREATE PLUGGABLE DATABASE ncdb USING '/home/oracle/ncdb.xml'
+  COPY
+  FILE_NAME_CONVERT = ('/disk1/oracle/dbs/', '/disk2/oracle/ncdb/')
+;
+----
++
+
+NOTE: 호스트에 공간이 충분하지 않으면 를 참조하십시오 `NOCOPY` 옵션을 사용하여 PDB를 생성할 수 있습니다. 이 경우 PDB에 원래 데이터 파일이 사용되었기 때문에 PDB로 플러그인을 연결한 후 단일 인스턴스 비 CDB를 사용할 수 없습니다. 변환 전에 백업을 생성하여 문제가 발생할 경우 다시 되돌릴 수 있도록 합니다.
+
+. 소스 단일 인스턴스 비 CDB와 대상 CDB 간의 버전이 다른 경우 변환 후 PDB 업그레이드를 시작합니다. 동일한 버전 변환의 경우 이 단계를 건너뛸 수 있습니다.
++
+[source, cli]
+----
+sqlplus / as sysdba;
+----
++
+[source, cli]
+----
+alter session set container=ncdb;
+----
++
+[source, cli]
+----
+alter pluggable database open upgrade;
+exit;
+----
++
+[source, cli]
+----
+dbupgrade -c ncdb -l /home/oracle
+----
++
+에서 업그레이드 로그 파일을 검토합니다 `/home/oracle` 디렉토리.
+
+. 플러그형 데이터베이스를 열고 PDB 플러그인 위반을 확인한 다음 잘못된 개체를 다시 컴파일합니다.
++
+[source, cli]
+----
+alter pluggable database ncdb open;
+----
++
+[source, cli]
+----
+alter session set container=ncdb;
+select message from pdb_plug_in_violations where type like '%ERR%' and status <> 'RESOLVED';
+----
++
+[source, cli]
+----
+$ORACLE_HOME/perl/bin/perl $ORACLE_HOME/rdbms/admin/catcon.pl -n 1 -c 'ncdb' -e -b utlrp -d $ORACLE_HOME/rdbms/admin utlrp.sql
+----
+. 실행 `noncdb_to_pdb.sql` 데이터 사전을 업데이트합니다.
++
+[source, cli]
+----
+sqlplus / as sysdba
+----
++
+[source, cli]
+----
+alter session set container=ncdb;
+@$ORACLE_HOME/rdbms/admin/noncdb_to_pdb.sql;
+----
++
+컨테이너 DB를 종료하고 다시 시작합니다. ncdb가 제한된 모드에서 제외되었습니다.
+
+
+
+
+
+== PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 Azure로 마이그레이션합니다
+
+Maximum-availability 옵션을 사용하는 Oracle PDB 재배치에서는 PDB 핫 클론 기술을 사용합니다. 이 기술을 사용하면 PDB가 타겟으로 복제되는 동안 소스 PDB를 사용할 수 있습니다. 전환 시 세션 및 연결이 대상 PDB로 자동으로 리디렉션됩니다. 따라서 재배치되는 PDB의 크기와 관계없이 가동 중지 시간이 최소화됩니다. NetApp은 마이그레이션 절차를 자동화하는 Ansible 기반 툴킷을 제공합니다.
+
+. 동일한 버전 및 패치 수준을 가진 Azure VM의 Azure 퍼블릭 클라우드에서 CDB를 생성합니다.
+. Ansible 컨트롤러에서 자동화 툴킷 복사본을 복제합니다.
++
+[source, cli]
+----
+git clone https://github.com/NetApp-Automation/na_ora_aws_migration.git
+----
+. README 파일의 지침을 읽습니다.
+. 이름 확인을 위해 소스 및 타겟 Oracle 서버와 DB 서버 호스트의 구성 파일 모두에 대해 Ansible 호스트 변수 파일을 구성합니다.
+. Ansible 컨트롤러에 필수 구성 요소를 설치합니다.
++
+[source, cli]
+----
+ansible-playbook -i hosts requirements.yml
+ansible-galaxy collection install -r collections/requirements.yml --force
+----
+. 온프레미스 서버에 대해 마이그레이션 전 작업을 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i hosts ora_pdb_relocate.yml -u admin -k -K -t ora_pdb_relo_onprem
+----
++
+
+NOTE: admin 사용자는 sudo 권한이 있는 온-프레미스 Oracle 서버 호스트의 관리 사용자입니다. admin 사용자는 암호로 인증됩니다.
+
+. 온프레미스에서 대상 Azure Oracle 호스트로 Oracle PDB 재배치를 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i hosts ora_pdb_relocate.yml -u azureuser --private-key db1.pem -t ora_pdb_relo_primary
+----
+
+
+
+NOTE: Ansible 컨트롤러는 사내 또는 Azure 클라우드에 위치할 수 있습니다. 이 컨트롤러는 사내 Oracle 서버 호스트 및 Azure Oracle VM 호스트에 연결해야 합니다. Oracle 데이터베이스 포트(예: 1521)는 사내 Oracle 서버 호스트와 Azure Oracle VM 호스트 간에 열려 있습니다.
+
+
+
+== 추가 Oracle 데이터베이스 마이그레이션 옵션
+
+추가 마이그레이션 옵션은 Microsoft 설명서를 참조하십시오. link:https://learn.microsoft.com/en-us/azure/architecture/example-scenario/oracle-migrate/oracle-migration-overview["Oracle 데이터베이스 마이그레이션 결정 프로세스"^].

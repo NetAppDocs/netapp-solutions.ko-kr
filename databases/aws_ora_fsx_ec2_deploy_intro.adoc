@@ -4,7 +4,7 @@ permalink: databases/aws_ora_fsx_ec2_deploy_intro.html
 summary: 이 백서에서는 여러 가용성 영역 구축에서 AWS FSx 스토리지 서비스를 활용하여 AWS 맞춤형 Oracle RDS 데이터베이스 HA 및 DR용 솔루션의 개요와 검증을 제공합니다. 
 keywords: HA, DR, database, Oracle, RDS, AWS 
 ---
-= WP-7357: EC2/FSx Best Practices Introduction에서 Oracle Database Deployment를 참조하십시오
+= WP-7357: EC2 및 FSx Best Practices Introduction에서 Oracle Database Deployment를 참조하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

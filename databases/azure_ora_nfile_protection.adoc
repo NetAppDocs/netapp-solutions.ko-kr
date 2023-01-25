@@ -1,0 +1,243 @@
+---
+sidebar: sidebar 
+permalink: databases/azure_ora_nfile_protection.html 
+summary: 이 섹션에서는 azacsnap 도구와 스냅샷 백업, 복원 및 스냅샷을 사용하여 Azure BLOB로 Oracle 데이터베이스를 보호하는 방법에 대해 설명합니다. 
+keywords: Oracle, Azure, database, backup, restore 
+---
+= Azure 클라우드에서 Oracle 데이터베이스를 보호합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:table-stripes: odd
+:imagesdir: ./../media/
+
+
+link:azure_ora_nfile_procedures.html["이전: 배포 절차."]
+
+
+
+== AzAcSnap 툴을 사용하여 Oracle 데이터베이스를 스냅샷으로 백업합니다
+
+Azure Application-Consistent Snapshot Tool(AzAcSnap)은 스토리지 스냅샷을 생성하기 전에 애플리케이션 정합성 보장 상태로 전환하는 데 필요한 모든 오케스트레이션을 처리하여 타사 데이터베이스의 데이터를 보호하는 명령줄 도구입니다. 그런 다음 데이터베이스를 운영 상태로 되돌릴 수 있습니다.
+
+Oracle의 경우 데이터베이스를 백업 모드로 전환하여 스냅샷을 생성한 다음 데이터베이스를 백업 모드에서 해제합니다.
+
+
+
+=== 데이터 및 로그 볼륨을 백업합니다
+
+스냅샷 명령을 실행하는 단순 셸 스크립트를 사용하여 데이터베이스 서버 호스트에서 백업을 설정할 수 있습니다. 그런 다음 crontab에서 실행되도록 스크립트를 예약할 수 있습니다.
+
+일반적으로 백업 빈도는 원하는 RTO 및 RPO에 따라 달라집니다. 스냅샷을 자주 생성하면 스토리지 공간이 더 많이 사용됩니다. 백업 빈도와 공간 소비 빈도는 서로 상충됩니다.
+
+데이터 볼륨은 일반적으로 로그 볼륨보다 더 많은 스토리지 공간을 사용합니다. 따라서 데이터 볼륨에 대해 몇 시간마다 스냅샷을 생성하고 로그 볼륨에 대해 15-30분마다 더 자주 스냅샷을 생성할 수 있습니다.
+
+백업 스크립트 및 스케줄링에 대한 다음 예를 참조하십시오.
+
+데이터 볼륨 스냅샷의 경우:
+
+[source, cli]
+----
+ # /bin/sh
+cd /home/azacsnap/bin
+. ~/.bash_profile
+azacsnap -c backup --volume data --prefix acao-ora01-data --retention 36
+azacsnap -c backup --volume other --prefix acao-ora01-log --retention 250
+----
+로그 볼륨 스냅샷의 경우:
+
+[source, cli]
+----
+ # /bin/sh
+cd /home/azacsnap/bin
+. ~/.bash_profile
+azacsnap -c backup --volume other --prefix acao-ora01-log --retention 250
+----
+crontab 일정: 15,30,45 * * * * * * /home/azacsnap/snap_log.sh 0 * /2 * * * /home/azacsnap/snap_data.sh
+
+
+NOTE: 백업 설정 시 `azacsnap.json` 구성 파일, 바이너리 볼륨을 포함한 모든 데이터 볼륨을 에 추가합니다 `dataVolume` 및 모든 로그 볼륨을 에 `otherVolume`. 스냅샷의 최대 보존은 250개입니다.
+
+
+
+=== 스냅샷을 확인합니다
+
+Azure Portal > Azure NetApp Files/volumes로 이동하여 스냅샷이 성공적으로 생성되었는지 확인합니다.
+
+image:db_ora_azure_anf_snap_01.PNG["이 스크린샷은 스냅샷 목록에 있는 두 개의 파일을 보여 줍니다."]
+image:db_ora_azure_anf_snap_02.PNG["이 스크린샷은 스냅샷 목록에 있는 8개의 파일을 보여 줍니다."]
+
+
+
+== Oracle 로컬 백업에서 복원 및 복구
+
+스냅샷 백업의 주요 이점 중 하나는 소스 데이터베이스 볼륨과 함께 존재하고, 운영 데이터베이스 볼륨을 거의 즉시 롤백할 수 있다는 것입니다.
+
+
+
+=== 기본 서버에서 Oracle의 복원 및 복구
+
+다음 예에서는 동일한 Oracle 호스트의 Azure 대시보드 및 CLI에서 Oracle 데이터베이스를 복원 및 복구하는 방법을 보여 줍니다.
+
+. 복원할 데이터베이스에 테스트 테이블을 만듭니다. [oracao-ora01~]$sqlplus/as sysdba
++
+SQL* Plus: 릴리즈 19.0.0.0.0 - 운영 날짜: 월 12:02:35 2022 버전 19.8.0.0.0
+
++
+Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+
++
+연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
+
++
+sql> 테이블 testsnapshot(id integer, event varchar(100), dt timestamp) 생성
+
++
+테이블이 생성되었습니다.
+
++
+sql> testsnapshot 값에 삽입(1, '스냅샷 복원을 검증하기 위한 데이터 마커 삽입', sysdate)
+
++
+1개의 행이 생성되었습니다.
+
++
+sql > 커밋;
+
++
+커밋이 완료되었습니다.
+
++
+sql > testsnapshot에서 * 선택;
+
++
+ ID
++
+[listing]
+----
+EVENT
+--------------------------------------------------------------------------------
+DT
+---------------------------------------------------------------------------
+         1
+insert a data marker to validate snapshot restore
+12-SEP-22 07.07.35.000000 PM
+----
+. 스냅샷 백업 후에 테이블을 삭제합니다.
++
+[oracao-ora01~]$sqlplus/as sysdba
+
++
+SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 14:20:22 2022 버전 19.8.0.0.0
+
++
+Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+
++
+연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
+
++
+sql > drop table testsnapshot;
+
++
+테이블이 떨어졌습니다.
+
++
+sql> testsnapshot에서 * 를 선택합니다. testsnapshot * 오류에서 * 를 선택합니다. 1: ORA-00942: 테이블 또는 뷰가 없습니다
+
++
+sql> shutdown immediate; Database closed. (즉시 종료 데이터베이스가 마운트 해제되었습니다. Oracle 인스턴스가 종료되었습니다. SQL> 종료와 Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0의 연결이 끊겼습니다
+
+. Azure NetApp Files 대시보드에서 로그 볼륨을 마지막으로 사용 가능한 스냅샷으로 복구합니다. 볼륨 되돌리기 * 를 선택합니다.
++
+image:db_ora_azure_anf_restore_01.PNG["이 스크린샷은 ANF 대시보드의 볼륨에 대한 스냅샷 재버전의 방법을 보여 줍니다."]
+
+. 되돌리기 볼륨을 확인하고 * Revert * 를 클릭하여 볼륨 재버전을 최신 사용 가능한 백업으로 완료합니다.
++
+image:db_ora_azure_anf_restore_02.PNG["\"이 작업을 수행하시겠습니까?\" 페이지를 참조하십시오."]
+
+. 데이터 볼륨에 대해 동일한 단계를 반복하고 백업에 복구할 테이블이 포함되어 있는지 확인합니다.
++
+image:db_ora_azure_anf_restore_03.PNG["이 스크린샷은 ANF 대시보드의 데이터 볼륨에 대한 스냅샷 재버전의 방법을 보여줍니다."]
+
+. 볼륨 버전을 다시 확인하고 "되돌리기"를 클릭합니다.
++
+image:db_ora_azure_anf_restore_04.PNG["\"이 작업을 수행하시겠습니까?\" 데이터 볼륨 스냅샷 재버전을 위한 페이지입니다."]
+
+. 컨트롤 파일의 복제본이 여러 개 있는 경우 컨트롤 파일을 다시 동기화하고 이전 컨트롤 파일을 사용 가능한 최신 복제본으로 대체합니다.
++
+[Oracle@acao-ora01~]$mv/u02/oradata/ORATST/control01.ctl/u02/oradata/ORATST/control01.ctl[Oracle@acao-ora01~]$cp/u03/orareco/ORATactl/controltl/acutl.tl/attrl/a02
+
+. Oracle 서버 VM에 로그인하고 sqlplus를 사용하여 데이터베이스 복구를 실행합니다.
++
+[oracao-ora01~]$sqlplus/as sysdba
+
++
+SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 15:10:17 2022 버전 19.8.0.0.0
+
++
+Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+
++
+유휴 인스턴스에 연결되었습니다.
+
++
+sql> 시작 마운트; Oracle 인스턴스가 시작되었습니다.
+
++
+전체 시스템 전역 영역 6442448984바이트 고정 크기 8910936바이트 가변 크기 1090519040바이트 데이터베이스 버퍼 5335154688바이트 다시 실행 버퍼 7864320바이트 데이터베이스가 마운트됨 sql> 취소할 때까지 백업 제어 파일을 사용하여 데이터베이스 복구; ORA-00279: 변경 3188523 스레드 1에 대해 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/09_13/O1_mf_1_43_22rnj280 스레드 시퀀스에 대해 3188523
+
++
+로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
+
++
+ORA-00279: change 3188862가 2022-09:09:13 스레드 1에 대해 생성됨 10:01:20 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_44_29f2lgb5_.arc_318280.torg.torg.log에서 더 이상 복구: /318928.torg.torg.2c.1c.2c.turg.2c.318-0028
+
++
+로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
+
++
+ORA-00279: change 3193117이 스레드 1에 대해 생성되었습니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_45__29h6qyw_.arc.00280.arc.org에서 더 이상 복구 필요.3800_3708.torg.torg.0_211_3708.torg.wa_3708.torg.tnd.wa_2nd.wa_2nd.toto.toto.toto.toto.toto.toto_3119에 대한 /3119에 대한 /u03_celo.w
+
++
+로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
+
++
+Ora-00279: change 3193440이 2022-09에서 생성되었습니다. 12:01:20이 스레드 1에 필요합니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_46_%u_.arc ORA-00280: ORT445.RECOG.RECONO.THE_OVERYOVERYOMEO/O.45.A/TRACEMORA/TRACER.0.A/OVERYA/OTRACE.A.A.A.0.A/OVERYA/O.01.A/OTRACULLOG에 대해 더 긴 파일 필요.0.A/O.01_
+
++
+로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL} 미디어 복구가 취소되었습니다. sql > alter database open resetlogs;
+
++
+데이터베이스가 변경되었습니다.
+
++
+sql > testsnapshot에서 * 선택;
+
++
+ ID
++
+[listing]
+----
+EVENT
+--------------------------------------------------------------------------------
+DT
+---------------------------------------------------------------------------
+         1
+insert a data marker to validate snapshot restore
+12-SEP-22 07.07.35.000000 PM
+
+
+SQL> select systimestamp from dual;
+
+ SYSTIMESTAMP
+---------------------------------------------------------------------------
+13-SEP-22 03.28.52.646977 PM +00:00
+----
+
+
+이 화면에서는 삭제된 테이블이 로컬 스냅샷 백업을 사용하여 복구되었음을 보여 줍니다.
+
+link:azure_ora_nfile_migration.html["다음: 데이터베이스 마이그레이션."]
