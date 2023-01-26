@@ -17,4 +17,4 @@ Chris Seirer, NetApp
 
 TR-4859에서는 IBM의 Spectrum Scale 소프트웨어 스택을 기반으로 전체 병렬 파일 시스템 솔루션을 구축하는 프로세스를 설명합니다. TR-4859는 Spectrum Scale 설치, 인프라 검증, 구성 관리 방법에 대한 세부 정보를 제공하도록 설계되었습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["TR-4859: NetApp E-Series 스토리지를 사용하여 IBM Spectrum Scale 구축 - 설치 및 검증"^]

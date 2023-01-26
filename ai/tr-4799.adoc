@@ -17,4 +17,4 @@ David Arnette 및 Sung-Han Lin, NetApp
 
 NVIDIA DGX 시스템 제품군은 엔터프라이즈 AI용으로 특별 제작된 세계 최초의 통합 인공 지능(AI) 플랫폼입니다. NetApp AFF 스토리지 시스템은 탁월한 성능과 업계 최고 수준의 하이브리드 클라우드 데이터 관리 기능을 제공합니다. NetApp과 NVIDIA는 협력 관계를 맺고 엔터프라이즈급 지원, 안정성 및 성능으로 AI 및 머신 러닝(ML) 워크로드를 지원하는 턴키 솔루션을 고객에게 제공할 수 있는 NetApp ONTAP AI 참조 아키텍처를 구축했습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/8554-tr4799designpdf.pdf["https://www.netapp.com/pdf.html?item=/media/8554-tr4799designpdf.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/8554-tr4799designpdf.pdf["TR-4799 - 설계: 자율 주행 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처"^]

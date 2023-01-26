@@ -17,4 +17,4 @@ Mitch Blackburn, NetApp
 
 TR-4623에서는 NetApp E-Series 및 Splunk 설계의 통합 아키텍처에 대해 설명합니다. 노드 스토리지의 균형, 안정성, 성능, 스토리지 용량, 밀도 및 이 설계에서는 Splunk clustered 인덱스 노드 모델을 채택하므로 확장성이 높고 TCO가 낮습니다. 스토리지를 컴퓨팅에서 분리하여 개별적으로 확장할 수 있으므로 오버프로비저닝 비용을 절감할 수 있습니다. 또한, 이 문서에는 Splunk 머신 로그 이벤트 시뮬레이션 툴에서 얻은 성능 테스트 결과가 요약되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf["https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf["TR-4623: NetApp E-Series E5700 및 Splunk Enterprise"^]

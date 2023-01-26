@@ -17,4 +17,4 @@ Karthikeyan Nagalingam, Sung-Han Lin, NetApp Jacci Cenci, NVIDIA
 
 이 참조 아키텍처는 NVIDIA DGX-1 시스템과 NetApp AFF 스토리지를 사용하여 금융 부문 사용 사례를 위한 인공 지능 인프라를 구축하려는 고객을 위한 지침을 제공합니다. 여기에는 재무 서비스 테스트 사례 및 결과를 위한 딥 러닝 모델 개발에 사용되는 상위 레벨의 워크플로우에 대한 정보가 포함됩니다. 또한 고객 구축을 위한 사이징 권장사항도 포함되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/17205-tr4807pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17205-tr4807pdf.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/17205-tr4807pdf.pdf["TR-4807: 금융 서비스 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처 - 솔루션 설계"^]

@@ -17,4 +17,4 @@ Nagalakshmi Raju, Daniel Landes, Nathan Swartz, amine Bennani, NetApp
 
 인공 지능(AI), 머신 러닝(ML) 및 딥 러닝(DL) 애플리케이션에는 대규모 데이터 세트 및 고계산이 포함됩니다. 이러한 워크로드를 성공적으로 실행하려면 스토리지 및 컴퓨팅 노드를 원활하게 확장할 수 있는 민첩한 인프라가 필요합니다. 이 보고서에는 컴퓨팅 및 스토리지 노드를 원활하게 확장할 수 있는 AI 교육 모델을 분산 모드에서 실행하는 단계가 포함됩니다. 또한, 이 보고서에는 NetApp E-Series 스토리지를 BeeGFS 병렬 파일 시스템과 결합하여 AI 워크로드를 위한 유연하고 비용 효율적이며 단순한 솔루션을 제공하는 방법을 보여주는 다양한 성능 메트릭이 포함되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/17040-tr4785pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17040-tr4785pdf.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/17040-tr4785pdf.pdf["TR-4785: NetApp E-Series 및 BeeGFS를 통해 AI 구축"^]

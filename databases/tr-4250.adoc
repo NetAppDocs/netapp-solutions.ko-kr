@@ -17,4 +17,4 @@ NetApp, Nils Bauer
 
 TR-4250은 Oracle 데이터베이스를 사용하여 SAP 비즈니스 제품군 제품을 지원하는 스토리지 솔루션을 설계하는 데 따르는 문제를 해결합니다. 이 문서는 최신 SAP 솔루션을 사용하는 비즈니스 및 IT 리더가 직면한 일반적인 스토리지 인프라 설계, 구축, 운영 및 관리 문제를 중점적으로 다룹니다. 이 문서의 권장 사항은 일반적인 내용이며 SAP 애플리케이션 또는 SAP 구축 규모와 범위에 국한되지 않습니다. TR-4250은 독자가 NetApp 및 SAP 제품의 기술과 운영에 대해 기본적인 지식을 갖추고 있다고 가정합니다. TR-4250은 NetApp, SAP, Oracle, 고객 기술 직원의 상호 작용을 기반으로 개발되었습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/19525-tr-4250.pdf["https://www.netapp.com/pdf.html?item=/media/19525-tr-4250.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/19525-tr-4250.pdf["TR-4250: SAP with Oracle on UNIX 및 NFS with NetApp Clustered Data ONTAP and SnapManager for SAP 3.4"^]

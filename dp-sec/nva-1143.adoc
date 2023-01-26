@@ -12,4 +12,4 @@ Arvind Ramakrishnan, Abhinav Singh, NetApp
 
 NVA-1143은 NetApp HCI를 설계하고 구축하여 NIST(National Institute of Standards and Technology) SP 800-53 Revision 4 보안 및 개인 정보 보호 제어를 충족하는 방법을 설명합니다. 이 기능은 프라이빗 클라우드 인프라 및 멀티테넌트 구축에 매우 중요합니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/17065-nva1143pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17065-nva1143pdf.pdf"^]
+link:https://www.netapp.com/pdf.html?item=/media/17065-nva1143pdf.pdf["NVA-1143:NetApp HCI-NIST Security Controls for FISMA with HyTrust for Multitenant Infrastructure - NVA Design and Deployment"^]
