@@ -25,9 +25,8 @@ summary:
 | * AWS * | CVO FSx ONTAPlink:aws/aws-guest.html["세부 정보"] | FSX ONTAPlink:aws/aws-native-overview.html["세부 정보"] 
 
 
-| * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] | ANFlink:azure/azure-native-overview.html["세부 정보 ^2"^] 
+| * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] | ANFlink:azure/azure-native-overview.html["세부 정보"] 
 
 
-| * GCP * | CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/["세부 정보 ^3"^] 
+| * GCP * | CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["세부 정보"] 
 |===
-참고: 1 - 현재 초기 가용성(IA)에 있음 2 - 현재 공개 미리 보기 3에 있음 - 현재 비공개 미리 보기에 있음

@@ -4565,7 +4565,6 @@
   <block id="67b586cdf9703ba67abe711415768cc0" category="paragraph">를 방문하십시오 <block ref="01a9bd21bfc714c8dec8aabc5b88eda7" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="8f08ff97ca555f50f0d05fdf950a0568" category="paragraph">Google Cloud는 다음과 같은 구성에서 NetApp 스토리지를 지원합니다.</block>
   <block id="9bb210767ccb9c085c816c82f3b6b1cb" category="inline-link-macro">CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다</block>
-  <block id="c567300e15e9f9b873771e56c72c938b" category="admonition">1-현재 비공개 미리보기에 있습니다</block>
   <block id="5e1c36a2c24e0aaf7844ec890c15e430" category="paragraph">주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
   <block id="a7714bc43e9a27f2c98a38e6b6d7f3d8" category="doc">퍼블릭 클라우드 공급자를 위한 NetApp 스토리지 옵션</block>
@@ -11818,7 +11817,6 @@
   <block id="1b15cf1d695d130132edd42a701b41a1" category="cell">아시아 태평양(홍콩)</block>
   <block id="3b041c1182ede15a52a683344c9512e0" category="section-title">AWS 지역 가용성</block>
   <block id="c5fde59b3560ee1ea5aeeebaf94bdf39" category="section-title">Azure 지역 가용성</block>
-  <block id="7ddf4642a2bfdc9a45847e5d375a1ddb" category="inline-link-macro">세부 정보 ^2</block>
   <block id="844f1178f4ff7b95030ee50d8917da61" category="sidebar">NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="15b1cf33f2d910f9ab5e6fdaeb331bcc" category="sidebar">AWS에서 NFS 데이터 저장소에 대한 지역 지원</block>
   <block id="81a6037600add9bb79d72eb49534ff94" category="sidebar">Azure에서 NFS 데이터 저장소에 대한 지역 지원</block>
@@ -12701,10 +12699,6 @@
   <block id="da0289d58f35e36d18325d6e8038b226" category="admonition">이 파일에 정의된 fschType이라는 선택적 필드가 있습니다. iSCSI 백엔드에서 이 값은 특정 Linux 파일 시스템 유형(XFS, ext4 등)으로 설정하거나 작업자 노드 OS가 사용할 파일 시스템을 결정할 수 있도록 삭제할 수 있습니다.</block>
   <block id="ca2835359be5e4e2e79ed5b6fd777515" category="paragraph"><block ref="ca2835359be5e4e2e79ed5b6fd777515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="43f154001e329eb4cb13b7745ba16dac" category="doc">VMware를 사용하는 NetApp 하이브리드 멀티 클라우드에 지원되는 구성</block>
-  <block id="9b5e2f812e05038b9b432b2e47e60e83" category="cell">ANF<block ref="982de57bbd4b4909ca13b7582da5a7cb" category="inline-link-macro-rx"></block></block>
-  <block id="1d2f8b078a75242901e868e7bd66ab6b" category="inline-link-macro">세부 정보 ^3</block>
-  <block id="ef1c4ae5f356b44ca460e3aaf7bf2a32" category="cell">CV<block ref="3317ea58799e6c9da952335ff4000296" category="inline-link-macro-rx"></block></block>
-  <block id="6830947ed88b541bd76da4fcd40e36de" category="paragraph">참고: 1 - 현재 초기 가용성(IA)에 있음 2 - 현재 공개 미리 보기 3에 있음 - 현재 비공개 미리 보기에 있음</block>
   <block id="9daaf09aeccc99c61fe453295253eae0" category="doc">요약 및 결론: NetApp 하이브리드 멀티 클라우드를 VMware와 함께 사용해야 하는 이유</block>
   <block id="0c17a5e22f572303947d9e14cd98db39" category="paragraph">주요 하이퍼스케일러를 위한 VMware 솔루션과 NetApp Cloud Volumes는 하이브리드 클라우드를 활용하려는 조직에 최고의 잠재력을 제공합니다. 이 섹션의 나머지 부분에서는 NetApp Cloud Volumes의 통합을 통해 진정한 하이브리드 멀티 클라우드 기능을 실현하는 사용 사례를 소개합니다.</block>
   <block id="17c56e542773e2aafc2645d0e9f0d8ec" category="summary">VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드는 주요 퍼블릭 클라우드 하이퍼스케일러에 있는 NetApp 스토리지의 기능을 시연하는 일련의 전략적 기술 기능입니다.</block>
@@ -14151,11 +14145,6 @@
   <block id="e307db07b3975fef922a80d07455ee5e" category="cell">데이터베이스</block>
   <block id="6c6fb0f7e5fe3a7242028f22d2792fca" category="cell">NetApp 솔루션 타일에 엔터프라이즈 애플리케이션 및 데이터베이스용 블로그 섹션이 추가되었습니다. 데이터베이스 블로그에 두 개의 블로그를 추가했습니다.</block>
   <block id="c99ec32d06b1f19699d82b1b34a80ca0" category="paragraph"><block ref="c99ec32d06b1f19699d82b1b34a80ca0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="119d7589ae9a38050e960d08d321b275" category="list-text">Azure NetApp Files(ANF)를 보조 NFS 데이터 저장소 ^1^로 추가</block>
-  <block id="0f9904cf8a560b1c4309e4cf7750b7b9" category="admonition">AVS용 보조 NFS 데이터 저장소로서 1-ANF가 현재 Public Preview에 있습니다. 자세한 내용을 확인하십시오<block ref="5b3a31b4442bd8ea3aebfc18fe8411e5" category="inline-link-rx"></block>.</block>
-  <block id="efe20646a1138596f4f7b7f387cae230" category="list-text">Cloud Volumes Service(CVS)를 보조 NFS 데이터 저장소 ^1^으로 사용</block>
-  <block id="e7e05ca1857ad4b0e930d0672e7657c4" category="inline-link-macro">CVS(Cloud Volumes Service)를 보조 NFS 데이터 저장소로 사용 ^1</block>
-  <block id="8bde1a7decedb03d4e5ae4c5b6c9f5d3" category="paragraph">에 대해 자세히 알아보십시오 <block ref="d54e964e36cd6cf7ab87b4b420d12109" category="inline-link-macro-rx"></block>.</block>
   <block id="58098d451cf2728b0542acd542f9000b" category="cell">* 보조 NFS 데이터 저장소 *</block>
   <block id="51b0e38e5ec7edbe37b6672987ce5f2e" category="paragraph">NetApp이 게스트 연결 스토리지 장치로 NetApp에서 제공하는 3가지 운영 하이퍼스케일러 또는 보조 NFS 데이터 저장소를 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/버스팅 하는 기능에 대해 자세히 알아보십시오.</block>
   <block id="ccb4d111a650d51ca9a8feb2542610be" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 각각 연결된 추측이나 보조 NFS 데이터 저장소로 활용할 수 있습니다.</block>
@@ -16118,9 +16107,7 @@
   <block id="80e6a4f964e826c69c1c62bd5ea67590" category="list-text">RW 액세스 규칙: 사용 안 함(루트 볼륨에 대한 최상의 보안)</block>
   <block id="f96625174b4a06d13267f9b0a5a96d59" category="list-text">슈퍼유저:sys(VAAI를 사용하는 루트 볼륨에도 필요)</block>
   <block id="23aa7b9aeed3fba2a1ec43e630313af7" category="list-text">플러그인을 사용하여 VMware 클러스터용 데이터 저장소를 생성할 때 단일 ESX Server가 아닌 클러스터를 선택합니다. 이 옵션을 선택하면 데이터 저장소가 클러스터의 모든 호스트에 자동으로 마운트됩니다.</block>
-  <block id="313611996c05f7257ad3043572759306" category="cell">ESXi 7.0U3f 이상은 ONTAP 9.12.1RC1 이상에서 세션 트렁킹을 지원합니다</block>
   <block id="1abaee3673de53b378351ee9dc679daa" category="list-text">VMware 및 NetApp은 현재 일반적인 다중 경로 네트워킹 접근 방식을 지원하지 않습니다. NFSv4.1에서는 NetApp이 pNFS를 지원하는 반면 VMware는 세션 트렁킹을 지원합니다. NFSv3은 볼륨에 대한 여러 물리적 경로를 지원하지 않습니다. ONTAP 9.8이 포함된 FlexGroup의 경우 간접 액세스의 영향은 일반적으로 최소(마이크로초)이므로 VMware vSphere용 ONTAP 툴을 단일 마운트로 설정하는 것이 좋습니다. 라운드 로빈 DNS를 사용하여 FlexGroup의 다른 노드에 있는 LIF에 ESXi 호스트를 배포할 수 있지만, 이 경우 VMware vSphere용 ONTAP 툴 없이 FlexGroup를 생성하고 마운트해야 합니다. 그러면 성능 관리 기능을 사용할 수 없습니다.</block>
-  <block id="4ad396cb9b6773b012067ead8cf08611" category="doc">NetApp DRO(Disaster Recovery Orchestrator) 개요</block>
   <block id="88ac8db9784908706c34feb6caee9044" category="paragraph"><block ref="88ac8db9784908706c34feb6caee9044" category="inline-link-macro-rx"></block></block>
   <block id="03b125f503e8b797be1fe5a21a10d220" category="summary">이 섹션에서는 azacsnap 도구와 스냅샷 백업, 복원 및 스냅샷을 사용하여 Azure BLOB로 Oracle 데이터베이스를 보호하는 방법에 대해 설명합니다.</block>
   <block id="b47faaf85acf415e557bd0b669342659" category="doc">Azure 클라우드에서 Oracle 데이터베이스를 보호합니다</block>
@@ -16478,4 +16465,112 @@
   <block id="723a6390c169d3bc05d13cf2c2d2c46c" category="inline-link-macro">TR-4471: Veeam Backup &amp; amp; Replication 9.5를 사용한 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지 모범 사례</block>
   <block id="e81cee893fb9c125a8f73a309501d032" category="paragraph"><block ref="862c81debde204611fa91d8a05e4cd96" category="inline-link-macro-rx"></block></block>
   <block id="8f8f25fc4c86cc0268d10fa4ac7a91c2" category="paragraph"><block ref="8f8f25fc4c86cc0268d10fa4ac7a91c2" category="inline-link-macro-rx"></block></block>
+  <block id="a3a1167ff30c63b986224a9bc982915e" category="inline-link-macro">Google Cloud VMware Engine에 대한 NetApp Cloud Volumes Service 데이터 저장소가 지원됩니다</block>
+  <block id="0c0dedff77b5c6aef92b969b951a742e" category="list-text"><block ref="0c0dedff77b5c6aef92b969b951a742e" category="inline-link-macro-rx"></block></block>
+  <block id="b46d6d6e100776ecf2985ff50a451beb" category="cell">2023-02-07-02</block>
+  <block id="6e6d4a2ed2ec59b98f8da1da20e890bb" category="cell">추가 블로그: Google Cloud VMware Engine에 대한 NetApp Cloud Volumes Service 데이터 저장소 지원의 일반적인 가용성을 소개합니다</block>
+  <block id="7240c168839eaf56e1bc86326fb29d5b" category="cell">TR-4955 추가: ONTAP 및 VMC(AWS VMware Cloud)용 FSx를 통한 재해 복구</block>
+  <block id="dd4fe8081ff6ae9c7e9975937aff6576" category="list-text">Azure NetApp Files(ANF)를 보조 NFS 데이터 저장소로 사용합니다</block>
+  <block id="b2bf74ba9b2080c50a7214bcabdb670c" category="list-text">CVS(Cloud Volumes Service)를 보조 NFS 데이터 저장소로 사용</block>
+  <block id="2029f160bf6b515da4bf64e7e0ddcf0d" category="paragraph">에 대해 자세히 알아보십시오 <block ref="1767b463cb0460dcbd04244dbc891115" category="inline-link-macro-rx"></block></block>
+  <block id="ef7615d9ff40c00e9893de8051347a72" category="cell">ANF<block ref="11e701f660af04a4005e56e6ac4b1c05" category="inline-link-macro-rx"></block></block>
+  <block id="b577d5e5fe684be74c0fcbceb61e27d4" category="cell">CV<block ref="2bc02f38a6be3889a69283e362618186" category="inline-link-macro-rx"></block></block>
+  <block id="d7fe32206230432c446b09e24ab3f41a" category="doc">TR-4955: ONTAP 및 VMC(AWS VMware Cloud)용 FSx를 통한 재해 복구</block>
+  <block id="e99df6551992d3c39b8c5e87ee8a451f" category="paragraph">클라우드로 재해 복구는 사이트 운영 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. NetApp SnapMirror 기술을 사용하면 사내 VMware 워크로드를 AWS에서 실행되는 ONTAP의 FSx에 복제할 수 있습니다.</block>
+  <block id="c52f53db08961cb5fa061b55ca6812c7" category="paragraph">DRO(재해 복구 오케스트레이터, UI를 포함한 스크립팅된 솔루션)를 사용하여 사내에서 ONTAP용 FSx로 복제된 워크로드를 원활하게 복구할 수 있습니다. DRO는 VM 등록을 통해 SnapMirror 레벨에서 VMC로 복구를 자동화하고 NSX-T에서 직접 네트워크 매핑을 수행합니다 이 기능은 모든 VMC 환경에 포함되어 있습니다.</block>
+  <block id="273c8112241e399eaf04dc840d119fb6" category="image-alt">이 그래픽은 사내 데이터 센터, AWS SDDC 기반 VMware 클라우드 인스턴스, NetApp ONTAP용 Amazon FSx 간의 구조 및 상호 연결을 보여 줍니다. 여기에는 SnapMirror 복제, DRaaS Ops 트래픽, 인터넷 또는 직접 연결, VMware Transit Connect가 포함됩니다.</block>
+  <block id="246c1b44b3a8dc5d7fec2fdc031e49c5" category="section-title">AWS에서 VMware Cloud를 구축 및 구성합니다</block>
+  <block id="f828dbeef2a459e165a6fbd33ccf4781" category="paragraph"><block ref="88a970f127e79f2a50f427561bb2a4f6" category="inline-link-macro-rx"></block> AWS 에코시스템의 VMware 기반 워크로드에 클라우드 네이티브 경험을 제공합니다. 각 VMware SDDC(소프트웨어 정의 데이터 센터)는 VPC(Amazon Virtual Private Cloud)에서 실행되며 전체 VMware 스택(vCenter Server 포함), NSX-T 소프트웨어 정의 네트워킹, vSAN 소프트웨어 정의 스토리지 및 워크로드에 컴퓨팅 및 스토리지 리소스를 제공하는 하나 이상의 ESXi 호스트를 제공합니다. AWS에서 VMC 환경을 구성하려면 다음 단계를 수행하십시오 <block ref="48c40480356563b3c93ca3177b91e728" category="inline-link-macro-rx"></block>. DR 목적으로도 파일럿 라이트 클러스터를 사용할 수 있습니다.</block>
+  <block id="c3b336e3bd0ee5f4a24fd28ce72d7dea" category="admonition">최초 릴리즈에서 DRO는 기존의 파일럿 라이트 클러스터를 지원합니다. 온디맨드 SDDC 작성은 향후 릴리스에서 제공될 예정입니다.</block>
+  <block id="09a69d8335838329a7615e73fa6b1fe0" category="section-title">ONTAP용 FSx를 프로비저닝하고 구성합니다</block>
+  <block id="37973daf609f18c7a64511d10e65453e" category="paragraph">NetApp ONTAP용 Amazon FSx는 널리 사용되는 NetApp ONTAP 파일 시스템에 구축된 매우 안정적이고 확장 가능하며 고성능의 풍부한 기능 파일 스토리지를 제공하는 완전 관리형 서비스입니다. 이 단계를 따릅니다 <block ref="a5f36f80544ed8547e72f1f36fb2285b" category="inline-link-macro-rx"></block> ONTAP용 FSx를 프로비저닝하고 구성하려면 다음을 수행합니다.</block>
+  <block id="7f38204cc308b0521e747e38f1cb0062" category="section-title">ONTAP용 FSx에 SnapMirror를 구축하고 구성합니다</block>
+  <block id="4a6b91648345db53156af03bcc00bde8" category="paragraph">다음 단계는 NetApp BlueXP를 사용하고 AWS에서 ONTAP용 프로비저닝된 FSx 인스턴스를 검색하고 적절한 빈도와 NetApp 스냅샷 복사본 보존을 사용하여 원하는 데이터 저장소 볼륨을 사내 환경에서 ONTAP용 FSx로 복제하는 것입니다.</block>
+  <block id="6a4903522028d4e4bd24b3880afcf49f" category="image-alt">이 그래픽은 활성화된 서비스 간의 다양한 상호 작용을 보여 주는 BlueXP Canvas 관계 맵을 보여 줍니다.</block>
+  <block id="45568e41c66e2e325c210961987178e7" category="paragraph">이 링크의 단계에 따라 BlueXP를 구성합니다. NetApp ONTAP CLI를 사용하여 이 링크 이후의 복제를 예약할 수도 있습니다.</block>
+  <block id="07f3fd5642ddcadbf716c250ccf987f0" category="admonition">SnapMirror 관계는 전제 조건이며 미리 만들어야 합니다.</block>
+  <block id="8513f47f7075dac35da070dbceb25a2e" category="section-title">DRO 설치</block>
+  <block id="9f8fa80dd85e2409bd0b4495b821f0f3" category="paragraph">DRO를 시작하려면 지정된 EC2 인스턴스 또는 가상 시스템에서 Ubuntu 운영 체제를 사용하여 필수 구성 요소를 충족하는지 확인합니다. 그런 다음 패키지를 설치합니다.</block>
+  <block id="7bf01cb2204f9dd0fdff029933600264" category="list-text">소스 및 대상 vCenter 및 스토리지 시스템에 대한 접속이 있는지 확인합니다.</block>
+  <block id="4c915967cda97460076cfdb71bc58421" category="list-text">DNS 이름을 사용하는 경우 DNS 확인이 필요합니다. 그렇지 않으면 vCenter 및 스토리지 시스템의 IP 주소를 사용해야 합니다.</block>
+  <block id="3cfe50231d6e1ba1b199fc7421fb72e6" category="list-text">루트 권한이 있는 사용자를 생성합니다. EC2 인스턴스에서 sudo를 사용할 수도 있습니다.</block>
+  <block id="6e968857b32243865ebf039c1facf6cf" category="section-title">OS 요구 사항</block>
+  <block id="e1f99763c526892a0d3133e35deb5140" category="list-text">Ubuntu Focal 20.04(LTS)</block>
+  <block id="184e93a2064767475a538c600a47eb17" category="list-text">지정된 에이전트 VM에 다음 패키지를 설치해야 합니다.</block>
+  <block id="1dfe00693fad27f5da719e6aeea58ef6" category="list-text">Docker-Compose</block>
+  <block id="31b4674ec2f7760117c224c883183141" category="list-text">JQ</block>
+  <block id="240f5270a2e18be8a75b0712b343d07a" category="paragraph">의 사용 권한을 변경합니다<block ref="b1360c159d030cf3e3075d3ec21faf46" prefix=" " category="inline-code"></block>:<block ref="e89a7e38128b2d546718b48d40d827f7" prefix=" " category="inline-code"></block>.</block>
+  <block id="76af5eb969b6b58ab010f271730ae0ee" category="admonition">를 클릭합니다<block ref="60254338249f657a0a83f98258a56bfe" prefix=" " category="inline-code"></block> 스크립트는 필요한 모든 필수 구성 요소를 실행합니다.</block>
+  <block id="478159949d5b4b537a6ca19613ae98bf" category="section-title">패키지를 설치합니다</block>
+  <block id="54d75811a77a2a9b1526f372bc0a733e" category="list-text">지정된 가상 머신에 설치 패키지를 다운로드합니다.</block>
+  <block id="97c5338b12461548bb0ceefccd562486" category="admonition">이 에이전트는 사내에 설치하거나 AWS VPC 내에 설치할 수 있습니다.</block>
+  <block id="2d2a358ce62dfc056eddea09ea87d1d1" category="list-text">패키지의 압축을 풀고 배포 스크립트를 실행한 다음 호스트 IP(예: 10.10.10)를 입력합니다.</block>
+  <block id="4e26021fda30753473246136bacc8094" category="list-text">디렉토리로 이동하고 다음과 같이 배포 스크립트를 실행합니다.</block>
+  <block id="831c1e96a535c517896283e6d834152d" category="list-text">다음 자격 증명을 사용하여 UI에 액세스합니다. *</block>
+  <block id="f1f49b31dc9a5d88e8029b9d361b9059" category="image-alt">재해 복구 오케스트레이터 로그인 화면</block>
+  <block id="7b7ad84593d701138003778be3b6079f" category="section-title">DRO 구성</block>
+  <block id="e9ff74e9030350261c678f0da3a354ee" category="paragraph">ONTAP 및 VMC용 FSx가 올바르게 구성된 후에는 ONTAP용 FSx에서 읽기 전용 SnapMirror 복사본을 사용하여 VMC로 온-프레미스 워크로드의 복구를 자동화하도록 DRO를 구성할 수 있습니다.</block>
+  <block id="0a99b6b57603a6a9f7dc56799a0fdd8e" category="paragraph">ONTAP용 FSx가 구축된 AWS 및 동일한 VPC에 DRO 에이전트를 구축하는 것이 좋습니다(피어 연결도 가능). DRO 에이전트가 네트워크를 통해 온-프레미스 구성 요소와 ONTAP 및 VMC용 FSx 리소스와 통신할 수 있도록 합니다.</block>
+  <block id="c7c5a0daa14b8062f69791fd594efd37" category="paragraph">첫 번째 단계는 온프레미스 및 클라우드 리소스(vCenter 및 스토리지 모두)를 DRO에 검색하고 추가하는 것입니다. 지원되는 브라우저에서 DRO를 열고 기본 사용자 이름 및 암호(admin/admin)와 사이트 추가를 사용합니다. 검색 옵션을 사용하여 사이트를 추가할 수도 있습니다. 다음 플랫폼을 추가합니다.</block>
+  <block id="16ee49909b80df9050959890b8f578cb" category="list-text">사내 vCenter</block>
+  <block id="e7aed9ec7e7600627310e041dbd517f7" category="list-text">ONTAP 스토리지 시스템</block>
+  <block id="e3691c446d2915370eb25cbc68a6521a" category="list-text">VMC vCenter</block>
+  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">ONTAP용 FSX</block>
+  <block id="c532da281c4c378954b0254be09c051b" category="image-alt">임시 자리 표시자 이미지 설명입니다.</block>
+  <block id="3506b8840bdbadcda795249c636510c4" category="image-alt">소스 및 대상 사이트가 포함된 DRO 사이트 개요 페이지</block>
+  <block id="cf5e0df8cb3adb3df51d336ec0b2211a" category="paragraph">추가된 DRO는 자동 검색을 수행하고 소스 스토리지에서 ONTAP용 FSx로 해당 SnapMirror 복제본이 있는 VM을 표시합니다. DRO는 VM에서 사용하는 네트워크 및 포트 그룹을 자동으로 감지하여 채웁니다.</block>
+  <block id="abf7897bce5034c7714d0b7757ccac4c" category="image-alt">219개의 VM과 10개의 데이터 저장소가 포함된 자동 검색 화면</block>
+  <block id="8ad855ec9cdd9c029c645af01c256999" category="paragraph">다음 단계는 필요한 VM을 기능 그룹으로 그룹화하여 리소스 그룹 역할을 하는 것입니다.</block>
+  <block id="cdac0221d4dabd98123be4284952f872" category="section-title">리소스 그룹화</block>
+  <block id="7546309b604714e5c864eef677efcd63" category="paragraph">플랫폼을 추가한 후 복구할 VM을 리소스 그룹으로 그룹화할 수 있습니다. DRO 리소스 그룹을 사용하면 종속 VM 집합을 부팅 순서, 부팅 지연 및 복구 시 실행할 수 있는 선택적 응용 프로그램 유효성 검사가 포함된 논리 그룹으로 그룹화할 수 있습니다.</block>
+  <block id="265d81bb1af077020a501dcc75af41e1" category="paragraph">리소스 그룹 생성을 시작하려면 다음 단계를 수행하십시오.</block>
+  <block id="a226ebee500532f5a9b1a5cbcb1db6d9" category="list-text">리소스 그룹 * 에 액세스하여 * 새 리소스 그룹 생성 * 을 클릭합니다.</block>
+  <block id="cfc3c82954c855841a78a216dec1b32b" category="list-text">새 리소스 그룹 * 의 드롭다운에서 소스 사이트를 선택하고 * 만들기 * 를 클릭합니다.</block>
+  <block id="c47c9ace957accd98c45c515282fb851" category="list-text">리소스 그룹 세부 정보 * 를 입력하고 * 계속 * 을 클릭합니다.</block>
+  <block id="5e4c1f12f71cc535b41e76690fd718e3" category="list-text">검색 옵션을 사용하여 적절한 VM을 선택합니다.</block>
+  <block id="de5c4b583db3aa4040c8d082ee2d1bcd" category="list-text">선택한 VM의 부팅 순서 및 부팅 지연(초)을 선택합니다. 각 VM을 선택하고 우선 순위를 설정하여 전원 켜기 순서의 순서를 설정합니다. 모든 VM의 기본값은 3입니다.</block>
+  <block id="c32b3a0f06aa80c00476ddcabd88fde1" category="paragraph">옵션은 다음과 같습니다.</block>
+  <block id="a89a043e6faeacde759612c6bfa5cc1c" category="paragraph">1 – 전원을 켤 첫 번째 가상 머신 3 – 기본값 5 – 전원을 켤 마지막 가상 머신</block>
+  <block id="84a63bc4997af6ded1933281f4b8babb" category="list-text">리소스 그룹 만들기 * 를 클릭합니다.</block>
+  <block id="0942dfbe3d3b0a1d41f357604f7e9fb2" category="image-alt">테스트 및 DemoRG1의 두 항목이 포함된 자원 그룹 목록의 스크린샷.</block>
+  <block id="a8fc43ecd23ee9eb5e9efa5c60cb20b9" category="section-title">복제 계획</block>
+  <block id="901831e404573eb9a2cc09f43d42e661" category="paragraph">재해가 발생할 경우 애플리케이션을 복구할 계획이 필요합니다. 드롭다운에서 소스 및 대상 vCenter 플랫폼을 선택하고 이 계획에 포함할 리소스 그룹을 선택하고, 애플리케이션 복구 및 전원 켜기 방법(예: 도메인 컨트롤러, 계층 1, 계층 2 등)을 그룹화합니다. 이러한 계획을 청사진이라고도 합니다. 복구 계획을 정의하려면 * Replication Plan * 탭으로 이동하여 * New Replication Plan * 을 클릭합니다.</block>
+  <block id="f2e437ba3d91f90c4bd8d4b35ce32b78" category="paragraph">복제 계획 생성을 시작하려면 다음 단계를 수행하십시오.</block>
+  <block id="7e2b1b88ae2fef26c3f9f94bc389f0d1" category="list-text">Replication Plans * 에 액세스하여 * Create New Replication Plan * 을 클릭합니다.</block>
+  <block id="84ef8711a6a318c8bf4b8acfd4f1551c" category="image-alt">DemoRP라는 하나의 계획이 포함된 복제 계획 화면의 스크린샷</block>
+  <block id="b9493784814dfebf88fc26091f72b601" category="list-text">새 복제 계획 * 에서 소스 사이트, 연결된 vCenter, 대상 사이트 및 연결된 vCenter를 선택하여 계획 이름을 제공하고 복구 매핑을 추가합니다.</block>
+  <block id="88cedf638ed2d7e4779e1c47ee7c5ea1" category="image-alt">복구 매핑을 포함한 복제 계획 세부 정보의 스크린샷</block>
+  <block id="d360387ddbca9636208f2b8a948f56b0" category="list-text">복구 매핑이 완료되면 클러스터 매핑을 선택합니다.</block>
+  <block id="57e1d9c7da09c1484785ce5de748a5a4" category="list-text">리소스 그룹 세부 정보 * 를 선택하고 * 계속 * 을 클릭합니다.</block>
+  <block id="28a5e1b451c50affbe5e71d787ef2818" category="list-text">리소스 그룹의 실행 순서를 설정합니다. 이 옵션을 사용하면 여러 리소스 그룹이 있을 때 작업 순서를 선택할 수 있습니다.</block>
+  <block id="35e931afb6f8f9ea976030c41d20091d" category="list-text">작업을 완료한 후 해당 세그먼트에 대한 네트워크 매핑을 선택합니다. 세그먼트는 VMC 내에서 이미 프로비저닝되어야 하므로 VM을 매핑할 적절한 세그먼트를 선택하십시오.</block>
+  <block id="4279ce58393302704e1d9f4ef8e18ca2" category="list-text">선택한 VM에 따라 데이터 저장소 매핑이 자동으로 선택됩니다.</block>
+  <block id="920e197d79d1f4f66caaef11426066ba" category="admonition">SnapMirror가 볼륨 레벨에 있습니다. 따라서 모든 VM이 복제 대상에 복제됩니다. 데이터 저장소에 속한 모든 VM을 선택해야 합니다. 이 옵션을 선택하지 않으면 복제 계획에 포함된 VM만 처리됩니다.</block>
+  <block id="76074b4a55fc86674d98cacd953dd720" category="list-text">VM 세부 정보 아래에서 VM의 CPU 및 RAM 매개 변수의 크기를 선택적으로 조정할 수 있습니다. 이는 대규모 환경을 소규모 타겟 클러스터로 복구하거나 일대일 물리적 VMware 인프라를 프로비저닝하지 않고도 DR 테스트를 수행할 때 매우 유용합니다. 또한 리소스 그룹에서 선택한 모든 VM에 대한 부팅 순서 및 부팅 지연(초)을 수정할 수 있습니다. 리소스 그룹 부팅 순서 선택 중에 선택한 변경 사항에서 필요한 변경 사항이 있는 경우 부팅 순서를 수정하는 추가 옵션이 있습니다. 기본적으로 리소스 그룹을 선택하는 동안 선택한 부팅 순서가 사용되지만 이 단계에서는 모든 수정 작업을 수행할 수 있습니다.</block>
+  <block id="61b06cf38207274281ff2f90f66b49fa" category="list-text">Create Replication Plan * 을 클릭합니다.</block>
+  <block id="8066d08fcf99bee6a3bb8bc060a5d031" category="paragraph">복제 계획이 생성되면 요구 사항에 따라 페일오버 옵션, 테스트 페일오버 옵션 또는 마이그레이션 옵션을 사용할 수 있습니다. 페일오버 및 테스트 페일오버 옵션 중에 최신 SnapMirror 스냅샷 복사본이 사용되거나, SnapMirror의 보존 정책에 따라 특정 시점의 Snapshot 복사본에서 특정 스냅샷 복사본을 선택할 수 있습니다. 가장 최근의 복제본이 이미 손상 또는 암호화된 상태에서 랜섬웨어와 같은 손상 이벤트가 발생할 경우 시점 옵션이 매우 유용할 수 있습니다. DRO는 사용 가능한 모든 시점을 표시합니다. 복제 계획에 지정된 구성으로 대체 작동을 트리거하거나 테스트 대체 작동을 트리거하려면 * 장애 조치 * 또는 * 테스트 대체 작동 * 을 클릭합니다.</block>
+  <block id="9f6a9153365f1438c116145bc14ba9a9" category="image-alt">이 화면에서는 볼륨 스냅샷 세부 정보가 제공되며 최신 스냅샷을 사용하고 특정 스냅샷을 선택할 수 있습니다.</block>
+  <block id="45c261be0b43693546955e87bd6ac10f" category="paragraph">복제 계획은 작업 메뉴에서 모니터링할 수 있습니다.</block>
+  <block id="0225a4a711bba4eb595e835ad67356fc" category="image-alt">작업 메뉴에는 복제 계획에 대한 모든 작업 및 옵션이 표시되며 로그를 볼 수도 있습니다.</block>
+  <block id="8d2831d40faa91653285bd44edc3917d" category="paragraph">페일오버가 트리거된 후 복구된 항목이 VMC vCenter(VM, 네트워크, 데이터 저장소)에서 표시될 수 있습니다. 기본적으로 VM은 Workload 폴더로 복구됩니다.</block>
+  <block id="d45215d9339daaa38e8c825812d30a02" category="paragraph">페일백은 복제 계획 레벨에서 트리거될 수 있습니다. 테스트 페일오버의 경우 최분해 옵션을 사용하여 변경 사항을 롤백하고 FlexClone 관계를 제거할 수 있습니다. 페일오버와 관련된 페일백은 2단계 프로세스입니다. 복제 계획을 선택하고 * Reverse data sync * 를 선택합니다.</block>
+  <block id="5f3ce61b7a4ffe23687402e421b81e18" category="image-alt">역방향 데이터 동기화 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷</block>
+  <block id="acd827a33a3e445ce9d2c9d94ff63886" category="paragraph">완료되면 페일백을 트리거하여 원래 운영 사이트로 다시 이동할 수 있습니다.</block>
+  <block id="0c86039a87483290f146f9170e80b40b" category="image-alt">페일백 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷</block>
+  <block id="503c1e37074b31fdcd74fbffb13e3983" category="image-alt">원본 프로덕션 사이트가 가동되어 실행 중인 DRO 요약 페이지의 스크린샷.</block>
+  <block id="0d95c1c8686951d59b82bdc816a93231" category="paragraph">NetApp BlueXP에서는 복제 상태가 적절한 볼륨(VMC에 읽기-쓰기 볼륨으로 매핑된 볼륨)에 대해 끊어지는 것을 볼 수 있습니다. 테스트 페일오버 중에 DRO는 대상 또는 복제본 볼륨을 매핑하지 않습니다. 대신 필요한 SnapMirror(또는 Snapshot) 인스턴스의 FlexClone 복사본을 만들고 FlexClone 인스턴스를 노출합니다. FlexClone 인스턴스는 ONTAP용 FSx의 추가 물리적 용량을 소비하지 않습니다. 이 프로세스를 통해 DR 테스트 또는 분류 워크플로우 중에도 볼륨을 수정하지 않고 복제 작업을 계속할 수 있습니다. 또한 이 프로세스를 통해 오류가 발생하거나 손상된 데이터가 복구되면 복제본을 제거할 위험 없이 복구를 정리할 수 있습니다.</block>
+  <block id="648a04436d5621ca9c7c65c66c55cb79" category="section-title">랜섬웨어 복구</block>
+  <block id="f1d63aa61bd9bd59550523eea84313e8" category="paragraph">랜섬웨어에서 복구하는 것은 매우 힘든 작업이 될 수 있습니다. 특히, IT 조직은 안전한 반환 지점이 어디인지 정확히 파악하기가 어려우며, 일단 결정된 후에는 침낭성 맬웨어 또는 취약한 응용 프로그램 등의 재발생 공격으로부터 복구된 워크로드를 보호하기가 어려울 수 있습니다.</block>
+  <block id="c6ceeada99ad37301b94760e7f4bcab8" category="paragraph">DRO는 사용 가능한 모든 시점에서 시스템을 복구할 수 있도록 함으로써 이러한 문제를 해결합니다. 또한 작업 부하를 기능적이면서도 격리된 네트워크로 복구할 수 있으므로 응용 프로그램이 남북 트래픽에 노출되지 않은 위치에서 상호 작동하고 통신할 수 있습니다. 이를 통해 보안 팀은 법의학 조사를 안전하게 수행할 수 있으며, 숨겨진 악성 코드나 잠자는 맬웨어가 없는지 확인할 수 있습니다.</block>
+  <block id="468a6beafe68b7f0e997ea3b22eaf021" category="list-text">효율적이고 복원력이 뛰어난 SnapMirror 복제 사용:</block>
+  <block id="8dc2f1e4e39bbf8b271892846d90aee7" category="list-text">Snapshot 복사본 보존을 통해 사용 가능한 모든 시점으로 복구합니다.</block>
+  <block id="6aaf12643047ec9787cc07db9f7e812a" category="list-text">스토리지, 컴퓨팅, 네트워크 및 애플리케이션 검증 단계에서 수백 또는 수천 개의 VM을 복구하는 데 필요한 모든 단계를 완벽하게 자동화</block>
+  <block id="3067ce32bcf775ef4562f0900ee04ccf" category="list-text">ONTAP FlexClone 기술을 사용하여 복제된 볼륨을 변경하지 않는 방법으로 워크로드 복구</block>
+  <block id="6359f2b426c28e13cbb7b8382496081c" category="list-text">볼륨 또는 스냅샷 복사본에 대한 데이터 손상 위험을 방지합니다.</block>
+  <block id="cd08b15dd8bc6a19026ca47b4bcd618d" category="list-text">DevTest, 보안 테스트, 패치 또는 업그레이드 테스트, 수정 테스트 등과 같은 DR 이외의 다른 워크플로우에 클라우드 컴퓨팅 리소스를 사용하여 DR 데이터를 사용할 수 있습니다.</block>
+  <block id="7d73fdff5300d11e557be0d55023b8e8" category="list-text">CPU 및 RAM 최적화를 통해 보다 작은 컴퓨팅 클러스터로 복구할 수 있으므로 클라우드 비용을 절감할 수 있습니다.</block>
+  <block id="d923ff878d26dac68fc7ac0c94a428f0" category="inline-link-macro">ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO</block>
+  <block id="1ecab9e830a635b196a9f6c159eefe2c" category="list-text"><block ref="1ecab9e830a635b196a9f6c159eefe2c" category="inline-link-macro-rx"></block></block>
+  <block id="28ff345640432a15bb22250f5f3f0b04" category="sidebar">CVS를 보조 데이터 저장소로 사용합니다</block>
+  <block id="46d1e37416bef4df8c1962b95c983bb0" category="sidebar">GCVE+ CVS TCO 계산기</block>
 </blocks>

@@ -61,6 +61,8 @@ indexpage:
       url: "/gcp/gcp-guest.html#gcp-cvo"
     - title: CVS를 게스트 연결 스토리지로
       url: "/gcp/gcp-guest.html#cvs"
+    - title: CVS를 보조 데이터 저장소로 사용합니다
+      url: https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
       url: "/gcp/gcp-solutions.html"
     - title: 보안 개요 - Google Cloud의 NetApp CVS
@@ -75,3 +77,5 @@ indexpage:
       url: https://cloud.netapp.com/anf-avs/roi?hs_preview=fXzZRiOb-88710048938
     - title: ANF + AVS 시뮬레이터
       url: https://netapp-automation.github.io/ANF-AVS-Simulator
+    - title: GCVE+ CVS TCO 계산기
+      url: https://bluexp.netapp.com/gcve-cvs/roi

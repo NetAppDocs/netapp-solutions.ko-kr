@@ -15,6 +15,10 @@ indexpage:
     links:
     - title: SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구
       url: "/gcp-app-dr-sc-cvo-veeam.html"
+  - title: 도구
+    links:
+    - title: GCVE+ CVS TCO 계산기
+      url: https://bluexp.netapp.com/gcve-cvs/roi
   - title: 추가 정보
     links:
     - title: NetApp Cloud Volumes Service를 사용하는 Google Cloud VMware Engine

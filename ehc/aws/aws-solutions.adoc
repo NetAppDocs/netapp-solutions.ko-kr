@@ -30,6 +30,7 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 .보호
 --
 * link:aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
+* link:../dro/dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
 
 
 --
