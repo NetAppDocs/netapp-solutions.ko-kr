@@ -4,7 +4,7 @@ permalink: ai/nva-1153-design-link.html
 keywords:  
 summary:  
 ---
-= NVA-1153-design:NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치가 있는 NetApp ONTAP AI
+= NVA-1153-design:NVIDIA DGX A100 시스템 및 Mellanox Spectrum 이더넷 스위치가 있는 NetApp ONTAP AI
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,4 +17,4 @@ David Arnette 및 Sung-Han Lin, NetApp
 
 NVA-1153-design은 NetApp AFF A800 스토리지 시스템, NVIDIA DGX A100 시스템 및 NVIDIA Mellanox Spectrum SN3700V 200GB 이더넷 스위치를 사용하는 머신 러닝(ML) 및 인공 지능(AI) 워크로드를 위한 NetApp 검증 아키텍처를 설명합니다. 이 설계에서는 컴퓨팅 클러스터 인터커넥트 패브릭을 위한 RoCE(RDMA over Converged Ethernet)를 사용하여 고객에게 고성능 워크로드를 위한 완벽한 이더넷 기반 아키텍처를 제공합니다. 이 문서에는 구현된 아키텍처의 벤치마크 테스트 결과도 포함되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf["NVA-1153-design:NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치가 있는 NetApp ONTAP AI"^]
+link:https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf["NVA-1153-design:NVIDIA DGX A100 시스템 및 Mellanox Spectrum 이더넷 스위치가 있는 NetApp ONTAP AI"^]

@@ -4,7 +4,7 @@ permalink: ai/tr-4811-link.html
 keywords:  
 summary:  
 ---
-= TR-4811: 헬스케어를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징 - 솔루션 설계
+= TR-4811: 의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징 - 솔루션 설계
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,4 +17,4 @@ Rick Huang, Sung-Han Lin, Sathish Thyagarajan, NetApp Jacci Cenci, NVIDIA
 
 이 참조 아키텍처는 NVIDIA DGX-2 시스템과 의료 사용 사례용 NetApp AFF 스토리지를 사용하는 인공 지능(AI) 인프라를 구축하는 고객을 위한 지침을 제공합니다. 이 영상에는 의료 진단 영상, 검증된 테스트 사례 및 결과를 위한 딥 러닝(DL) 모델 개발에 사용되는 고급 워크플로우에 대한 정보가 포함되어 있습니다. 또한 고객 구축을 위한 사이징 권장사항도 포함되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/7395-tr4811.pdf["TR-4811: 헬스케어를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징 - 솔루션 설계"^]
+link:https://www.netapp.com/pdf.html?item=/media/7395-tr4811.pdf["TR-4811: 의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징 - 솔루션 설계"^]

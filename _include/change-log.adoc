@@ -14,6 +14,9 @@
 | 2023-02-07-02 | 하이브리드 클라우드 | TR-4955 추가: ONTAP 및 VMC(AWS VMware Cloud)용 FSx를 통한 재해 복구 
 
 
+| 2023년 1월 24일 | 데이터베이스 | TR-4954 추가: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호 
+
+
 | 2023년 1월 12일 | 데이터베이스 | 블로그 추가: NetApp ONTAP용 Amazon FSx와 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다 
 
 

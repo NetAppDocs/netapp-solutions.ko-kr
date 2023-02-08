@@ -3,6 +3,8 @@ indexpage:
   tiles:
   - title: 오라클
     links:
+    - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
+      url: "/azure_ora_nfile_usecase.html"
     - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
       url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
     - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS

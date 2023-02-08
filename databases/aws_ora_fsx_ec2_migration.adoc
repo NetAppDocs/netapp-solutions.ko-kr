@@ -24,16 +24,20 @@ link:aws_ora_fsx_ec2_mgmt.html["이전: 데이터베이스 관리."]
 
 == ONTAP 스토리지는 온프레미스에서 사용할 수 있습니다
 
-온프레미스 Oracle 데이터베이스가 ONTAP 스토리지 어레이에 앉아 있는 경우 NetApp SnapCenter UI 툴을 사용하여 데이터베이스 마이그레이션을 위한 복제를 쉽게 설정할 수 있습니다.
+온프레미스 Oracle 데이터베이스가 ONTAP 스토리지 어레이에 있는 경우 AWS FSx ONTAP 스토리지에 내장된 NetApp SnapMirror 기술을 사용하여 데이터베이스 마이그레이션을 위한 복제를 쉽게 설정할 수 있습니다. NetApp BlueXP 콘솔을 사용하여 마이그레이션 프로세스를 조정할 수 있습니다.
 
 . 온프레미스 인스턴스와 일치하는 타겟 컴퓨팅 EC2 인스턴스를 구축합니다.
 . FSx 콘솔에서 동일한 크기의 일치하는 데이터베이스 볼륨을 프로비저닝합니다.
 . FSx 데이터베이스 볼륨을 EC2 인스턴스에 마운트합니다.
 . 온프레미스 데이터베이스 볼륨에서 타겟 FSx 데이터베이스 볼륨으로의 SnapMirror 복제를 설정합니다. 초기 동기화는 운영 소스 데이터를 이동하는 데 시간이 다소 걸릴 수 있지만 다음과 같은 증분 업데이트는 훨씬 더 빠릅니다.
-. 전환 시 운영 애플리케이션을 종료하여 모든 트랜잭션을 중지합니다. SnapCenter에서 로그 백업을 실행하여 나머지 트랜잭션을 타겟으로 플러시합니다.
+. 전환 시 운영 애플리케이션을 종료하여 모든 트랜잭션을 중지합니다. Oracle sqlplus CLI 인터페이스에서 Oracle 온라인 로그 스위치를 실행하고 SnapMirror 동기화가 타겟 볼륨에 마지막으로 아카이빙된 로그를 푸시하도록 허용합니다.
 . 미러링된 볼륨을 분할하고 타겟에서 Oracle 복구를 실행하고 서비스를 위해 데이터베이스를 불러옵니다.
 . 애플리케이션을 클라우드의 Oracle 데이터베이스에 지정
 
+
+다음 비디오에서는 NetApp BlueXP 콘솔 및 SnapMirror 복제를 사용하여 Oracle 데이터베이스를 사내에서 AWS FSx/EC2로 마이그레이션하는 방법을 보여줍니다.
+
+link:https://docs.netapp.com/us-en/netapp-solutions/media/oracle-aws-fsx-part2b-migration-snapmirror_callout.mp4["SnapMirror 및 BlueXP를 통해 사내에서 FSx/EC2로 Oracle 데이터베이스 마이그레이션"^]
 
 
 
@@ -56,18 +60,26 @@ AWS S3를 데이터베이스 이동 및 마이그레이션을 위한 스테이�
 
 
 
-== Oracle 멀티 테넌시 CDB/PDB 아키텍처를 사용하여 AWS에서 Oracle 데이터베이스를 통합합니다
+== 최대한의 가용성과 함께 PDB 재배치를 사용하여 온프레미스 Oracle 데이터베이스를 AWS FSx/EC2로 마이그레이션합니다
 
-. AWS 퍼블릭 클라우드에서 CDB를 생성합니다.
-. 온-프레미스 데이터베이스가 CDB/PDB 멀티 테넌시에도 배포된 경우 마이그레이션할 PDB를 언플러그합니다.
-. 메타데이터를 전송하고 밑줄이 그어진 Oracle 데이터 파일을 대상 CDB 인스턴스로 전송합니다.
-. Oracle 검증 절차와의 호환성을 검증합니다.
-. 호환성 검증이 통과하면 언플러그된 PDB를 대상 CDB 컨테이너에 연결합니다.
-. 필요한 경우 데이터 사전을 업데이트합니다.
-. 액세스를 위해 마이그레이션된 PDB를 백업하고 엽니다.
+이 마이그레이션 방식은 PDB/CDB 멀티 테넌트 모델에 이미 배포된 Oracle 데이터베이스에 가장 적합하며 ONTAP 스토리지는 온-프레미스에서 사용할 수 없습니다. PDB 재배치 방법은 Oracle PDB 핫 클론 기술을 활용하여 소스 CDB와 대상 CDB 간에 PDB를 이동하는 동시에 서비스 중단을 최소화합니다.
 
+먼저, 사내에서 마이그레이션할 PDB를 호스팅할 충분한 스토리지를 가진 AWS FSx/EC2에서 CDB를 생성합니다. 여러 온프레미스 PDB를 한 번에 하나씩 재배치할 수 있습니다.
+
+. 멀티 테넌트 PDB/CDB 모델이 아닌 단일 인스턴스에 온-프레미스 데이터베이스가 배포된 경우 의 지침을 따릅니다 link:https://docs.netapp.com/us-en/netapp-solutions/databases/azure_ora_nfile_migration.html#converting-a-single-instance-non-cdb-to-a-pdb-in-a-multitenant-cdb["멀티 테넌트 CDB에서 단일 인스턴스 비 CDB를 PDB로 변환합니다"^] 단일 인스턴스를 멀티 테넌트 PDB/CDB로 변환합니다. 그런 다음 다음 다음 단계에 따라 변환된 PDB를 AWS FSx/EC2에서 CDB로 마이그레이션합니다.
+. 멀티 테넌트 PDB/CDB 모델에 온-프레미스 데이터베이스가 이미 배포된 경우 의 지침을 따릅니다 link:https://docs.netapp.com/us-en/netapp-solutions/databases/azure_ora_nfile_migration.html#migrate-on-premises-oracle-databases-to-azure-with-pdb-relocation["PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 클라우드로 마이그레이션합니다"^] 마이그레이션을 수행합니다.
 
 
-NOTE: PDB 언플러그 및 플러그인에는 마이그레이션 계획 중에 고려해야 하는 애플리케이션 다운타임이 필요합니다.
+다음 비디오에서는 최대 가용성과 함께 PDB 재배치를 사용하여 Oracle 데이터베이스(PDB)를 FSx/EC2로 마이그레이션하는 방법을 보여 줍니다.
 
-또한, NetApp 자동화 팀은 사내에서 AWS 클라우드로 Oracle 데이터베이스를 손쉽게 마이그레이션할 수 있는 마이그레이션 툴킷을 제공합니다. 최신 데이터베이스 마이그레이션 툴은 NetApp 퍼블릭 GitHub 사이트를 참조하십시오.
+link:https://www.netapp.tv/insight/details/29998?playlist_id=0&mcid=85384745435828386870393606008847491796["온프레미스 Oracle PDB를 최대 가용성으로 AWS CDB로 마이그레이션합니다"^]
+
+
+NOTE: 1단계와 2단계의 지침이 Azure 퍼블릭 클라우드의 맥락에서 설명되지만 이 절차는 변경 없이 AWS 클라우드에 적용할 수 있습니다.
+
+NetApp 솔루션 자동화 팀에서는 사내에서 AWS 클라우드로 Oracle 데이터베이스를 쉽게 마이그레이션할 수 있는 마이그레이션 툴킷을 제공합니다. 다음 명령을 사용하여 PDB 재배치용 Oracle 데이터베이스 마이그레이션 툴킷을 다운로드합니다.
+
+[source, cli]
+----
+git clone https://github.com/NetApp-Automation/na_ora_aws_migration.git
+----

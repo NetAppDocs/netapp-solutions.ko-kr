@@ -4,7 +4,7 @@ permalink: ai/nva-1156-deploy-link.html
 keywords:  
 summary:  
 ---
-= NVA-1156 - 구축:NVIDIA DGX A100 Systems 및 BeeGFS를 지원하는 NetApp EF-Series AI
+= NVA-1156-구축:NVIDIA DGX A100 시스템 및 BeeGFS를 지원하는 NetApp EF-Series AI
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,4 +17,4 @@ Abdel Sadek, Tim Chau, Joe McCormick, David Arnette, NetApp
 
 이 문서에서는 NetApp EF600 NVMe 스토리지 시스템을 사용하는 머신 러닝(ML) 및 인공 지능(AI) 워크로드를 위한 NetApp 검증 아키텍처, ThinkParQ BeeGFS 병렬 파일 시스템, NVIDIA DGX A100 시스템 및 NVIDIA Mellanox Quantum QM8700 200Gbps InfiniBand(IB) 스위치에 대해 설명합니다. 또한 이 문서에는 배포가 완료된 후 검증 벤치마크 테스트를 실행하기 위한 지침도 포함되어 있습니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/25574-nva-1156-deploy.pdf["NVA-1156 - 구축:NVIDIA DGX A100 Systems 및 BeeGFS를 지원하는 NetApp EF-Series AI"^]
+link:https://www.netapp.com/pdf.html?item=/media/25574-nva-1156-deploy.pdf["NVA-1156-구축:NVIDIA DGX A100 시스템 및 BeeGFS를 지원하는 NetApp EF-Series AI"^]
