@@ -5,8 +5,10 @@ indexpage:
     links:
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
-    - title: 보충 NFS 데이터 저장소 옵션
+    - title: 보충 NFS 데이터 저장소 옵션 (NetApp 블로그)
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
+    - title: NetApp CVS를 Google Cloud VMware Engine용 데이터 저장소로 사용하는 방법(Google 블로그)
+      url: https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine
     - title: 게스트 연결 스토리지 옵션
       url: "/gcp-guest.html"
     - title: GCP/GCVE용 솔루션
