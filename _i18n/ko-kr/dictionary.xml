@@ -16425,7 +16425,6 @@
   <block id="4c915967cda97460076cfdb71bc58421" category="list-text">DNS 이름을 사용하는 경우 DNS 확인이 필요합니다. 그렇지 않으면 vCenter 및 스토리지 시스템의 IP 주소를 사용해야 합니다.</block>
   <block id="3cfe50231d6e1ba1b199fc7421fb72e6" category="list-text">루트 권한이 있는 사용자를 생성합니다. EC2 인스턴스에서 sudo를 사용할 수도 있습니다.</block>
   <block id="6e968857b32243865ebf039c1facf6cf" category="section-title">OS 요구 사항</block>
-  <block id="e1f99763c526892a0d3133e35deb5140" category="list-text">Ubuntu Focal 20.04(LTS)</block>
   <block id="184e93a2064767475a538c600a47eb17" category="list-text">지정된 에이전트 VM에 다음 패키지를 설치해야 합니다.</block>
   <block id="1dfe00693fad27f5da719e6aeea58ef6" category="list-text">Docker-Compose</block>
   <block id="31b4674ec2f7760117c224c883183141" category="list-text">JQ</block>
@@ -16436,7 +16435,6 @@
   <block id="97c5338b12461548bb0ceefccd562486" category="admonition">이 에이전트는 사내에 설치하거나 AWS VPC 내에 설치할 수 있습니다.</block>
   <block id="2d2a358ce62dfc056eddea09ea87d1d1" category="list-text">패키지의 압축을 풀고 배포 스크립트를 실행한 다음 호스트 IP(예: 10.10.10)를 입력합니다.</block>
   <block id="4e26021fda30753473246136bacc8094" category="list-text">디렉토리로 이동하고 다음과 같이 배포 스크립트를 실행합니다.</block>
-  <block id="831c1e96a535c517896283e6d834152d" category="list-text">다음 자격 증명을 사용하여 UI에 액세스합니다. *</block>
   <block id="f1f49b31dc9a5d88e8029b9d361b9059" category="image-alt">재해 복구 오케스트레이터 로그인 화면</block>
   <block id="7b7ad84593d701138003778be3b6079f" category="section-title">DRO 구성</block>
   <block id="e9ff74e9030350261c678f0da3a354ee" category="paragraph">ONTAP 및 VMC용 FSx가 올바르게 구성된 후에는 ONTAP용 FSx에서 읽기 전용 SnapMirror 복사본을 사용하여 VMC로 온-프레미스 워크로드의 복구를 자동화하도록 DRO를 구성할 수 있습니다.</block>
@@ -16588,4 +16586,8 @@
   <block id="2284540fd2f120164fbe2ca5d318f1f4" category="sidebar">NFS 데이터 저장소 보충 공지</block>
   <block id="92db868215c2d725770eeb14e1e377e1" category="sidebar">CVS: 보조 데이터 저장소로서(NetApp 블로그)</block>
   <block id="d99ca343caa90da336986677343c31fa" category="sidebar">보충 NFS 데이터 저장소 옵션 (NetApp 블로그)</block>
+  <block id="b4fd1d48279ed0bed231fbd3b96a1e3a" category="list-text">최소 2GB 및 4개의 vCPU가 있는 Ubuntu 20.04(LTS</block>
+  <block id="049e44fe327f7679318c6cf222207da7" category="list-text">다음을 사용하여 UI에 액세스합니다.</block>
+  <block id="b7bd19f19df4ca5ef3102741951e7a1b" category="paragraph">다음 기본 자격 증명을 사용합니다.</block>
+  <block id="d644796f5eb5712add7807df8829ee58" category="admonition">암호는 "암호 변경" 옵션을 사용하여 변경할 수 있습니다.</block>
 </blocks>
