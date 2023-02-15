@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: ai/a400-thinksystem-introduction.html 
+keywords: tr4810, 4810, introduction, cluster architecture, lenovo, ai 
+summary: '이 솔루션은 인공 지능 워크로드에 최적화된 NetApp 스토리지와 Lenovo 서버를 사용하는 엔트리 레벨 및 미드레인지 클러스터 아키텍처에 중점을 둡니다. 대부분의 컴퓨팅 작업이 단일 노드(단일 또는 다중 GPU)이거나 몇 개의 컴퓨팅 노드로 분산된 중소 및 중견 팀을 위해 제공됩니다. 대부분의 일상적인 AI 교육 작업은 단일 노드이기 때문에 이것이 주요 제한 사항이 아닙니다.' 
+---
+= TR-4810: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+사티야라잔, 데이비드 아네트, NetApp Mircea Troaca, Lonovo
+
+[role="lead"]
+이 솔루션은 인공 지능(AI) 워크로드에 최적화된 NetApp 스토리지와 Lenovo 서버를 사용하는 미드레인지 클러스터 아키텍처를 제공합니다. 대부분의 컴퓨팅 작업이 단일 노드(단일 또는 다중 GPU)이거나 몇 개의 컴퓨팅 노드로 분산된 중소 및 중견 기업에 적합합니다. 이 솔루션은 대부분의 비즈니스에서 일상적인 AI 교육 작업과 부합합니다.
+
+이 문서에서는 8개의 GPU Lenovo SR670V2 서버, 미드레인지 NetApp AFF A400 스토리지 시스템 및 100GbE 인터커넥트 스위치로 구성된 컴퓨팅 및 스토리지 구성의 테스트 및 검증을 다룹니다. 성능을 측정하기 위해 ImageNet 데이터 세트, 배치 크기 408, 절반 정밀도, CUDA 및 cuDNN을 사용하여 ResNet50을 사용했습니다. 이 아키텍처는 NetApp ONTAP 클라우드 연결형 데이터 스토리지의 엔터프라이즈급 기능이 필요한 AI 이니셔티브부터 시작하여 중소 및 중견 기업을 위한 효율적이고 비용 효율적인 솔루션을 제공합니다.
+
+
+
+== 대상
+
+이 문서는 다음 사용자를 대상으로 합니다.
+
+* AI 시스템의 데이터 과학자, 데이터 엔지니어, 데이터 관리자 및 개발자
+* AI 모델 개발을 위한 솔루션을 설계하는 엔터프라이즈 설계자
+* 딥 러닝(DL) 및 머신 러닝(ML) 개발 목표를 달성하는 효율적인 방법을 찾고 있는 데이터 과학자 및 데이터 엔지니어
+* AI 이니셔티브를 위한 출시 시기를 최대한 단축하려는 비즈니스 리더 및 OT/IT 의사 결정자
+
+
+
+
+== 솔루션 아키텍처
+
+Lenovo ThinkSystem 서버와 NetApp ONTAP with AFF 스토리지가 포함된 이 솔루션은 기존 CPU와 함께 GPU의 처리 능력을 사용하는 대규모 데이터 세트에 대한 AI 교육을 처리하도록 설계되었습니다. 이러한 검증 방식은 단일 NetApp AFF A400 스토리지 시스템과 함께 1, 2 또는 4대의 Lenovo SR670 V2 서버를 사용하는 스케일아웃 아키텍처를 통해 뛰어난 성능과 최적의 데이터 관리를 구현하는 것으로 입증되었습니다. 다음 그림에서는 아키텍처 개요를 제공합니다.
+
+image:a400-thinksystem-image2.png["이 이미지는 관리 서버에 둘러싸인 이더넷 스위치, 각각 8개의 GPU가 있는 SR670 V2s 4개 및 NetApp ONTAP 스토리지 시스템을 보여줍니다."]
+
+이 NetApp 및 Lenovo 솔루션은 다음과 같은 주요 이점을 제공합니다.
+
+* 여러 교육 작업을 동시에 실행할 때 매우 효율적이고 비용 효율적인 성능을 제공합니다
+* 다양한 수의 Lenovo 서버와 다양한 모델의 NetApp 스토리지 컨트롤러를 기반으로 한 확장 가능한 성능
+* 데이터 손실 없이 낮은 RPO(복구 시점 목표) 및 RTO(복구 시간 목표)를 충족하는 강력한 데이터 보호
+* 스냅샷 및 클론을 통해 데이터 관리를 최적화하여 개발 워크플로우를 간소화합니다
+
+
+link:a400-thinksystem-technology-overview.html["다음: 기술 개요"]

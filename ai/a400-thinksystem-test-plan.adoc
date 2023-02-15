@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: ai/a400-thinksystem-test-plan.html 
+keywords: test plan, validation, image recognition training, processes 
+summary: 이 검증에서는 MLPerf v2.0에 명시된 대로 이미지 인식 교육을 수행했습니다. 특히, ImageNet 데이터 세트를 사용하여 ResNet v2.0 모델을 교육했습니다. 주요 메트릭은 원하는 정확도에 도달하는 시간입니다. 또한 스케일 아웃 효율성을 더 잘 판단할 수 있도록 초당 이미지 단위의 교육 대역폭을 보고합니다. 
+---
+= 테스트 계획
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:a400-thinksystem-technology-overview.html["이전: 기술 개요"]
+
+[role="lead"]
+이 검증에서는 MLPerf v2.0에 명시된 대로 이미지 인식 교육을 수행했습니다. 특히, 76.1%의 정확도에 도달할 때까지 ImageNet 데이터 세트를 사용하여 ResNet v2.0 모델을 훈련했습니다. 주요 메트릭은 원하는 정확도에 도달하는 시간입니다. 또한 스케일 아웃 효율성을 더 잘 판단할 수 있도록 초당 이미지 단위의 교육 대역폭을 보고합니다.
+
+1차 테스트 사례에서는 동시에 실행되는 여러 개의 독립적인 교육 프로세스(노드당 1개)를 평가했습니다. 이는 여러 데이터 과학자가 사용하는 공유 시스템인 주요 사용 사례를 시뮬레이션합니다. 두 번째 테스트 사례에서는 스케일아웃 효율성을 평가했습니다.
+
+link:a400-thinksystem-test-results.html["다음: 테스트 결과."]

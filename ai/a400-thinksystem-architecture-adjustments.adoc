@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ai/a400-thinksystem-architecture-adjustments.html 
+keywords: adjustments 
+summary: 검증에 사용된 설정을 다른 사용 사례에 맞게 조정할 수 있습니다. 
+---
+= 아키텍처 조정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:a400-thinksystem-test-procedure-and-detailed-results.html["이전: 테스트 절차 및 자세한 결과"]
+
+[role="lead"]
+이 검증에 사용된 설정을 다른 사용 사례에 맞게 조정할 수 있습니다.
+
+
+
+== CPU 조정
+
+Lenovo에서 권장하는 대로 이 검증을 위해 Skylake Intel Xeon Platinum 8360Y 프로세서를 사용했습니다. 인텔 제온 골드 6330 프로세서인 Cascade Lake CPU는 이 작업 부하가 CPU가 부족하기 때문에 유사한 성능을 제공할 것으로 예상됩니다.
+
+
+
+== 스토리지 용량 증가
+
+추가 디스크 쉘프 및 컨트롤러 모델이 있다면 스토리지 용량 요구사항에 따라 필요 시 공유 스토리지(NFS 볼륨)를 늘릴 수 있습니다. 이 작업은 CLI 또는 스토리지 컨트롤러의 NetApp 웹 인터페이스에서 admin 사용자로 수행할 수 있습니다.
+
+link:a400-thinksystem-conclusion.html["다음: 결론."]

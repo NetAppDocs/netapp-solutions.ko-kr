@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: ai/a400-thinksystem-conclusion.html 
+keywords: acknowledgements, additional information, version history 
+summary: 이 NetApp 및 Lenovo 솔루션은 미드레인지 엔터프라이즈 AI에 적합한 유연한 스케일아웃 아키텍처입니다. NetApp 스토리지는 로컬 SSD 스토리지와 동일하거나 더 우수한 성능을 제공하며 데이터 과학자, 데이터 엔지니어 및 IT 의사 결정자에게 다음과 같은 이점을 제공합니다. 
+---
+= 결론
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:a400-thinksystem-architecture-adjustments.html["이전: 아키텍처 조정."]
+
+[role="lead"]
+여기에서 검증된 NetApp 및 Lenovo 솔루션은 미드레인지 엔터프라이즈 AI에 적합한 유연한 스케일아웃 아키텍처입니다. NetApp 스토리지는 로컬 SSD 스토리지와 동일하거나 더 우수한 성능을 제공하며 데이터 과학자, 데이터 엔지니어 및 IT 의사 결정자에게 다음과 같은 이점을 제공합니다.
+
+* AI 시스템, 분석 및 기타 중요한 비즈니스 시스템 간에 데이터를 손쉽게 공유 이러한 데이터 공유는 인프라 오버헤드를 줄이고 성능을 향상하며 기업 전체에서 데이터 관리를 간소화합니다.
+* 컴퓨팅과 스토리지를 독립적으로 확장 가능하므로 비용을 최소화하고 리소스 활용률을 높일 수 있습니다.
+* 즉각적이고 공간 효율적인 사용자 작업 공간, 통합 버전 제어 및 자동화된 구축을 위해 통합 스냅샷과 복제본을 사용하여 개발 및 구축 워크플로우를 간소화했습니다.
+* 재해 복구 및 비즈니스 연속성을 위한 엔터프라이즈급 데이터 보호 기능
+
+
+
+
+== 감사의 말
+
+* NetApp 기술 마케팅 엔지니어 Karthian Nagalingam
+* Jarrett Upton, 관리자, AI Lab Systems, Lenovo
+
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* NetApp All Flash 어레이 제품 페이지를 참조하십시오
++
+https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
+
+* NetApp AFF A400 페이지
++
+https://docs.netapp.com/us-en/ontap-systems/a400/index.html["https://docs.netapp.com/us-en/ontap-systems/a400/index.html"]
+
+* NetApp ONTAP 데이터 관리 소프트웨어 제품 페이지
++
+http://www.netapp.com/us/products/data-management-software/ontap.aspx["http://www.netapp.com/us/products/data-management-software/ontap.aspx"^]
+
+* MLPerf
++
+https://mlperf.org/["https://mlperf.org"^]
+
+* TensorFlow 벤치마크
++
+https://github.com/tensorflow/benchmarks["https://github.com/tensorflow/benchmarks"^]
+
+* NVIDIA SMI(NVIDIA-SMI)
++
+https://developer.nvidia.com/nvidia-system-management-interface["https://developer.nvidia.com/nvidia-system-management-interface"]
+
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2020년 2월 | 최초 릴리스. SR670 및 AFF A220(TensorFlow 포함)에 대한 검증. 
+
+
+| 버전 2.0 | 2023년 1월 | 업데이트된 릴리스. SR 670 V2 및 AFF A400(MXNet 포함) 검증 
+|===

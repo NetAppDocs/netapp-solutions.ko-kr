@@ -5,6 +5,25 @@ url: "/ai/index.html"
 entries:
 - title: AI 통합 인프라
   entries:
+  - title: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
+    type: solutions
+    entries:
+    - title: 소개
+      url: "/ai/a400-thinksystem-introduction.html"
+    - title: 기술 개요
+      url: "/ai/a400-thinksystem-technology-overview.html"
+    - title: 테스트 계획
+      url: "/ai/a400-thinksystem-test-plan.html"
+    - title: 테스트 결과
+      url: "/ai/a400-thinksystem-test-results.html"
+    - title: 구성을 테스트합니다
+      url: "/ai/a400-thinksystem-test-configuration.html"
+    - title: 테스트 절차 및 자세한 결과
+      url: "/ai/a400-thinksystem-test-procedure-and-detailed-results.html"
+    - title: 아키텍처 조정
+      url: "/ai/a400-thinksystem-architecture-adjustments.html"
+    - title: 결론
+      url: "/ai/a400-thinksystem-conclusion.html"
   - title: NVIDIA와 함께 ONTAP AI
     url: "/ai/ontap-ai-overview.html"
     entries:
