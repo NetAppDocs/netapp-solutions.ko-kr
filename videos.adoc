@@ -28,6 +28,18 @@ NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소
 .엔터프라이즈 애플리케이션 및 데이터베이스
 [#db%collapsible]
 ====
+[underline]# * 오픈 소스 데이터베이스용 동영상 * #
+
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.PostgreSQL 자동 구축, HA/DR 복제 설정, 페일오버, 재동기화
+video::aws_postgres_fsx_ec2_deploy_hadr.mp4[] a| 
+ a| 
+
+|===
 [underline] # * AWS 및 FSx *#의 하이브리드 클라우드를 통한 Oracle 현대화에 대한 동영상
 
 [cols="5a, 5a, 5a"]

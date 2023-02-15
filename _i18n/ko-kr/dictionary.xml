@@ -16590,4 +16590,101 @@
   <block id="049e44fe327f7679318c6cf222207da7" category="list-text">다음을 사용하여 UI에 액세스합니다.</block>
   <block id="b7bd19f19df4ca5ef3102741951e7a1b" category="paragraph">다음 기본 자격 증명을 사용합니다.</block>
   <block id="d644796f5eb5712add7807df8829ee58" category="admonition">암호는 "암호 변경" 옵션을 사용하여 변경할 수 있습니다.</block>
+  <block id="653a98af1c9a004c51b4e7358f06db9a" category="summary">이 솔루션은 PostgreSQL 데이터베이스 구축 및 HA/DR 설정, 페일오버, 재동기화를 위한 개요 및 세부 정보를 제공합니다. 이러한 기능은 AWS의 FSx ONTAP 스토리지 제품 및 NetApp Ansible 자동화 툴킷에 내장된 NetApp SnapMirror 기술을 기반으로 합니다.</block>
+  <block id="e5f44d648a9d8c4db4e2b580d3370fbf" category="doc">TR-4956: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구</block>
+  <block id="03784a7c5600d29113972955e602a944" category="inline-link-macro">DB-엔진</block>
+  <block id="1d8f1bdc206db1d9edd9fa46f02aa08c" category="paragraph">PostgreSQL은 에서 가장 많이 사용되는 데이터베이스 엔진 10개 중 4위에 해당하는 널리 사용되는 오픈 소스 데이터베이스입니다 <block ref="6e2d0e5987102894082cbdb135303e4d" category="inline-link-macro-rx"></block>. 반면 PostgreSQL은 라이선스 없는 오픈 소스 모델에서 고급 기능을 계속 사용하면서 인기를 얻고 있습니다. 반면, 오픈 소스가 되어 있기 때문에 고가용성 및 재해 복구(HA/DR) 영역, 특히 퍼블릭 클라우드에서 운영 수준의 데이터베이스 구축에 대한 자세한 지침은 부족한 실정입니다. 일반적으로 핫 스탠바이 및 웜 스탠바이, 스트리밍 복제 등을 사용하여 일반적인 PostgreSQL HA/DR 시스템을 설정하기 어려울 수 있습니다. 대기 사이트를 프로모션한 다음 운영 사이트로 다시 전환하여 HA/DR 환경을 테스트하는 경우 운영 중단이 발생할 수 있습니다. 읽기 워크로드가 스트리밍 핫 스탠바이에 배포되면 운영 환경에 잘 문서화된 성능 문제가 있습니다.</block>
+  <block id="a685f8093823e999c5eaf32bef74906d" category="paragraph">이 문서에서는 애플리케이션 레벨 PostgreSQL 스트리밍 HA/DR 솔루션을 사용하지 않고 데이터베이스 파일 및 EC2 컴퓨팅 인스턴스(예: 데이터베이스 서버)를 위한 AWS FSx ONTAP 스토리지를 기반으로 PostgreSQL HA/DR 솔루션을 구축하는 방법을 설명합니다. 이 솔루션은 기존의 PostgreSQL 애플리케이션 레벨 스트리밍 복제(HA/DR)와 비교할 수 있는 보다 간편하고 유사한 시스템을 생성하고 그에 상응하는 결과를 제공합니다.</block>
+  <block id="e2543d0568626be8ab6adad9d9a78652" category="paragraph">이 솔루션은 PostgreSQL HA/DR을 위한 AWS 네이티브 FSX ONTAP 클라우드 스토리지에서 사용할 수 있는 검증된 고급 NetApp SnapMirror 스토리지 레벨 복제 기술을 기반으로 구축되었습니다. NetApp 솔루션 팀이 제공하는 자동화 툴킷을 사용하면 간단하게 구축할 수 있습니다. 또한 유사한 기능을 제공하는 동시에 애플리케이션 레벨의 스트리밍 기반 HA/DR 솔루션을 통해 운영 사이트의 복잡성과 성능 저하를 방지합니다. 액티브 운영 사이트에 영향을 주지 않고 솔루션을 쉽게 구축 및 테스트할 수 있습니다.</block>
+  <block id="f67bd3c0833b1d6bf90bb26a55f0a9ce" category="list-text">퍼블릭 AWS 클라우드에서 PostgreSQL을 위한 운영 등급 HA/DR 구축</block>
+  <block id="420a5f3809172bb0dc9d501758fe94d2" category="list-text">퍼블릭 AWS 클라우드에서 PostgreSQL 워크로드 테스트 및 검증</block>
+  <block id="c9d6a5076f52c5abce5f2003446ab211" category="list-text">NetApp SnapMirror 복제 기술을 기반으로 PostgreSQL HA/DR 전략 테스트 및 검증</block>
+  <block id="82aa3e78c2089a2941fb745bb8c72f01" category="paragraph">이 솔루션은 다음과 같은 사용자를 대상으로 합니다.</block>
+  <block id="4a7bde15fa2753ce507cef621fd789b2" category="list-text">퍼블릭 AWS 클라우드에 HA/DR로 PostgreSQL을 구축하려는 DBA</block>
+  <block id="c5e04df584e0992a5dbdae10d89ded97" category="list-text">퍼블릭 AWS 클라우드에서 PostgreSQL 워크로드를 테스트하는 데 관심이 있는 데이터베이스 솔루션 설계자</block>
+  <block id="ba083ee91407315383bac538162833ff" category="list-text">AWS FSx 스토리지에 배포된 PostgreSQL 인스턴스를 배포 및 관리하는 데 관심이 있는 스토리지 관리자</block>
+  <block id="73ad058c671f3e1e105d92585f5ece7a" category="list-text">AWS FSx/EC2에서 PostgreSQL 환경을 구축하는 데 관심이 있는 애플리케이션 소유자입니다.</block>
+  <block id="d17a638ff086388dc5bfbe98528ccfab" category="section-title">솔루션 테스트 및 검증 환경</block>
+  <block id="863fb5b3a3b3b63b57a387bab70de0a9" category="paragraph">이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <block ref="8ea96e516bccf9a47ca2d74131eb7519" category="inline-xref-macro-rx"></block>.</block>
+  <block id="bfa420253f0a67626a51ce1fa045944c" category="image-alt">이 이미지는 온프레미스 및 AWS 사이트를 비롯한 PostgreSQL 하이브리드 클라우드 솔루션의 구성에 대한 자세한 정보를 제공합니다.</block>
+  <block id="34d0b9b49aa480630e91a3619ba7ffb2" category="section-title">하드웨어 및 소프트웨어 구성 요소</block>
+  <block id="a09dc18a1bff4fa8388afca4627d0911" category="cell">FSX ONTAP 저장소</block>
+  <block id="011fedf4050817b8826f95a53d9555b2" category="cell">현재 버전</block>
+  <block id="0b70cdec9293f5625e5aaae9cdd38526" category="cell">동일한 VPC에 2개의 FSx HA 쌍, 운영 및 대기 HA 클러스터와 가용성 존</block>
+  <block id="6a79356b19d3b59e92b358357c5b9053" category="cell">컴퓨팅용 EC2 인스턴스</block>
+  <block id="cc4def82629f09f253176dba801a85f0" category="cell">T2.xLarge/4vCPU/16G</block>
+  <block id="e3d6d4b94f9415561957f8c22f5fea2e" category="cell">2개의 EC2 T2 xLarge를 운영 및 대기 컴퓨팅 인스턴스로 설정합니다</block>
+  <block id="3008feb4272787858d4d27f7e8acb08b" category="cell">Ansible 컨트롤러</block>
+  <block id="26b9568eac10de69d574b84626735921" category="cell">온프레미스 CentOS VM/4vCPU/8G</block>
+  <block id="7f151fffe66dad0021b1918085977654" category="cell">Ansible 자동화 컨트롤러를 온프레미스 또는 클라우드에서 호스팅하기 위한 VM</block>
+  <block id="8b56d55f3caeb71ab2513c28fb1a52fc" category="cell">RedHat Linux</block>
+  <block id="52359c9653f33c68cd1b454f7d05a27b" category="cell">RHEL-8.6.0_HVM-20220503-x86_64-2-Hourly2-GP2</block>
+  <block id="fe6120dacb84838d71b1f43da1a3a514" category="cell">테스트를 위해 RedHat 서브스크립션을 배포했습니다</block>
+  <block id="8003cafa06ec27e11cb235ec9544ef74" category="cell">CentOS Linux</block>
+  <block id="04cd32c57cf3229ae9374fc80cd50d96" category="cell">CentOS Linux 릴리스 8.2.2004(코어)</block>
+  <block id="63b6df5ba9d257bb0f6fbda5541d9171" category="cell">온프레미스 랩에 구축된 Ansible 컨트롤러를 호스팅</block>
+  <block id="399bd1ee587245ecac6f39beaa99886f" category="cell">PostgreSQL</block>
+  <block id="a3c20b719830dc5fda947c7b6f3e42be" category="cell">버전 14.5</block>
+  <block id="f8c3d3a84c62eb07a1009aacdc46a50f" category="cell">Automation은 PostgreSQL.ora yum repo에서 사용 가능한 최신 버전의 PostgreSQL을 가져옵니다</block>
+  <block id="202351f581b52c61061d29151c81d061" category="cell">버전 2.10.3</block>
+  <block id="d222003898249e4a560d569acb0b5563" category="cell">요구 사항 플레이북과 함께 설치된 필수 컬렉션 및 라이브러리에 대한 사전 요구 사항</block>
+  <block id="cd1aedf83959dd52fc058b9120f500e3" category="section-title">구축 시 고려해야 할 주요 요소</block>
+  <block id="b062352f67359ac6729601c60a9a57a2" category="list-text">* PostgreSQL 데이터베이스 백업, 복원 및 복구. * PostgreSQL 데이터베이스는 pg_dump를 사용한 논리적 백업, pg_basebackup 또는 하위 수준의 OS 백업 명령을 사용한 물리적 온라인 백업, 스토리지 레벨 정합성 보장 스냅샷과 같은 다양한 백업 방법을 지원합니다. 이 솔루션은 PostgreSQL 데이터베이스 데이터에 NetApp 정합성 보장 그룹 스냅샷을 사용하고 대기 사이트에서 Wal 볼륨 백업, 복원 및 복구를 수행합니다. NetApp 정합성 보장 그룹 볼륨 스냅샷은 스토리지에 쓰일 때 입출력을 순차적으로 생성하고 데이터베이스 데이터 파일의 무결성을 보호합니다.</block>
+  <block id="a28c157802547f294e145f164007d752" category="list-text">* EC2 컴퓨팅 인스턴스 * 이러한 테스트 및 검증에서는 PostgreSQL 데이터베이스 컴퓨팅 인스턴스에 대해 AWS EC2 T2.xLarge 인스턴스 유형을 사용했습니다. 데이터베이스 워크로드에 최적화되어 있으므로 배치 시 PostgreSQL용 컴퓨팅 인스턴스로 M5 유형 EC2 인스턴스를 사용하는 것이 좋습니다. 대기 컴퓨팅 인스턴스는 항상 FSx HA 클러스터용으로 구축된 패시브(대기) 파일 시스템과 동일한 존에 배포되어야 합니다.</block>
+  <block id="d7aed04148f8b6ba1b91a7ed84d3fd10" category="list-text">* FSx 스토리지 HA 클러스터 단일 또는 다중 영역 배포. * 이러한 테스트 및 검증에서는 단일 AWS 가용성 영역에 FSx HA 클러스터를 구축했습니다. 프로덕션 배포를 위해 FSx HA 쌍을 두 가지 가용성 영역에 배포하는 것이 좋습니다. 운영 및 대기 간에 특정 거리가 필요한 경우 다른 지역에서 비즈니스 연속성을 위한 재해 복구 대기 HA 쌍을 설정할 수 있습니다. FSx HA 클러스터는 스토리지 레벨 이중화를 제공하기 위해 액티브-패시브 파일 시스템 쌍으로 미러링되는 HA 쌍으로 프로비저닝됩니다.</block>
+  <block id="c6f1f46bc7e80b73e6d77a7f862e0625" category="list-text">* PostgreSQL 데이터 및 로그 배치 * 일반적인 PostgreSQL 배포는 데이터 및 로그 파일에 대해 동일한 루트 디렉토리 또는 볼륨을 공유합니다. 테스트 및 검증에서 PostgreSQL 데이터를 분리하고 성능을 위해 두 개의 개별 볼륨에 로그인합니다. 데이터 디렉토리에서 PostgreSQL Wal 로그 및 보관된 Wal 로그를 호스팅하는 로그 디렉토리 또는 볼륨을 가리키는 소프트 링크가 사용됩니다.</block>
+  <block id="6e6dddb70c24cf218d0163faa3fb6a8f" category="list-text">* PostgreSQL 서비스 시작 지연 타이머 * 이 솔루션은 NFS 마운트 볼륨을 사용하여 PostgreSQL 데이터베이스 파일과 Wal 로그 파일을 저장합니다. 데이터베이스 호스트를 재부팅하는 동안 볼륨이 마운트되지 않은 상태에서 PostgreSQL 서비스가 시작하려고 할 수 있습니다. 이로 인해 데이터베이스 서비스 시작 오류가 발생합니다. PostgreSQL 데이터베이스를 올바르게 시작하려면 10 ~ 15초의 타이머 지연이 필요합니다.</block>
+  <block id="ee79ca09fee704e63d972baa3c1319a2" category="list-text">비즈니스 연속성을 위한 * RPO/RTO. * DR을 위해 기본에서 대기로의 FSx 데이터 복제는 비동기를 기반으로 합니다. 즉, RPO는 Snapshot 백업 및 SnapMirror 복제 빈도에 따라 달라집니다. 스냅샷 복사본 및 SnapMirror 복제 빈도가 높아지면 RPO가 감소합니다. 따라서 재해 발생 시 잠재적인 데이터 손실과 스토리지 비용 증가 간에 균형을 유지할 수 있습니다. RPO에 대해 스냅샷 복사본과 SnapMirror 복제를 최소 5분 간격으로 구현할 수 있으며 PostgreSQL은 일반적으로 RTO에 대한 1분 이내에 DR 대기 사이트에서 복구할 수 있습니다.</block>
+  <block id="cbeb123cc0c2c950a65a0c39f8412dc4" category="list-text">* 데이터베이스 백업. * PostgreSQL 데이터베이스가 구축되거나 On-Premrs 데이터 센터에서 AWS FSx 스토리지로 마이그레이션된 후 데이터를 보호하기 위해 FSx HA 쌍에서 자동 동기화됩니다. 재해 발생 시 복제된 대기 사이트로 데이터를 더욱 안전하게 보호할 수 있습니다. 장기 백업 보존 또는 데이터 보호를 위해 내장된 PostgreSQL pg_basebackup 유틸리티를 사용하여 S3 Blob 스토리지로 포팅할 수 있는 전체 데이터베이스 백업을 실행하는 것이 좋습니다.</block>
+  <block id="d2598d7d09e212cad1231cd233c5f7dc" category="paragraph">이 솔루션 배포는 아래에 설명된 자세한 지침을 따라 NetApp Ansible 기반 자동화 툴킷을 사용하여 자동으로 완료할 수 있습니다.</block>
+  <block id="7cfbd2a753781ece3080a48b0a56dad2" category="inline-link-macro">NA_PostgreSQL_AWS_Deploy_HADR</block>
+  <block id="fce91619a13ef0fd71e3ffe1da6b5724" category="list-text">자동화 도구 키트 readme.md의 지침을 읽으십시오 <block ref="139722adb31b9bbcb8f923b221d78595" category="inline-link-macro-rx"></block>.</block>
+  <block id="9a1c6815d4b1e7dc53acf5a926ab662e" category="list-text">다음 비디오 단계별 안내 를 시청하십시오.</block>
+  <block id="c73ece4b7be6bb88143afe096ded59aa" category="list-text">필요한 매개 변수 파일을 구성합니다 <block ref="85cf4e6d42a71e693fd780c8b29accdd" prefix="(" category="inline-code"></block>,<block ref="0c83664bfb17d8d2c0bbc3551297e488" prefix=" " category="inline-code"></block>,<block ref="cb8e25d5e6251a20afadf4c5f4b626bb" prefix=" " category="inline-code"></block>)를 클릭합니다. 그런 다음 복사 버튼을 사용하여 Ansible 컨트롤러 호스트에 파일을 복사합니다.</block>
+  <block id="00aaa5ff8fbd0841ab311f7d9b1e4e78" category="section-title">자동 배포를 위한 사전 요구 사항</block>
+  <block id="fd10b9eacfe4eed8040bda8cae9ea050" category="paragraph">배포에는 다음과 같은 사전 요구 사항이 필요합니다.</block>
+  <block id="e7491272f69c8efda69a595782f44d45" category="list-text">AWS 계정이 설정되었으며 AWS 계정 내에 필요한 VPC 및 네트워크 세그먼트가 생성되었습니다.</block>
+  <block id="f71558e9ad22e37a70099d8b5d8ac06c" category="inline-link-macro">Linux 인스턴스에 대한 사용자 가이드</block>
+  <block id="eb03aa8f939650517c1c56a6d0b9ad2f" category="list-text">AWS EC2 콘솔에서 2개의 EC2 Linux 인스턴스를 구축해야 합니다. 하나는 운영 사이트에, 다른 하나는 대기 DR 사이트에 운영 PostgreSQL DB 서버로 배포해야 합니다. 운영 및 대기 DR 사이트에서 컴퓨팅 이중화를 위해 2개의 추가 EC2 Linux 인스턴스를 대기 PostgreSQL DB 서버로 구축합니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 를 검토합니다 <block ref="32934851360be4fd00506586c2cbc221" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="933d3e5f984811b21da2922f3deb56c4" category="list-text">AWS EC2 콘솔에서 PostgreSQL 데이터베이스 볼륨을 호스팅하기 위해 두 개의 FSx ONTAP 스토리지 HA 클러스터를 구축합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 <block ref="d73b8b529985c5c89147bd81cb29dbfb" category="inline-link-macro-rx"></block> 을 참조하십시오.</block>
+  <block id="7053a216e34d0f83be18a65f22ce62ce" category="list-text">Ansible 컨트롤러를 호스팅할 CentOS Linux VM을 구축합니다. Ansible 컨트롤러는 사내 또는 AWS 클라우드에 위치할 수 있습니다. 사내에 있는 경우 VPC, EC2 Linux 인스턴스 및 FSx 스토리지 클러스터에 SSH를 연결해야 합니다.</block>
+  <block id="d1186b859105640e1dc347ae7b714afa" category="list-text">리소스의 "RHEL/CentOS에서 CLI 배포를 위한 Ansible Control Node 설정" 섹션에 설명된 대로 Ansible 컨트롤러를 설정합니다 <block ref="a9149ecc8f33f363a4eae3089d5c6cb7" category="inline-link-macro-rx"></block>.</block>
+  <block id="007fa0067fff9abdcd3e5b9ce9f20c06" category="list-text">공용 NetApp GitHub 사이트에서 자동화 툴킷 복사본을 복제합니다.</block>
+  <block id="0ca21e6da2c89e765706d9a77f412898" category="list-text">툴킷 루트 디렉토리에서 필수 구성 요소 플레이북을 실행하여 Ansible 컨트롤러용 필수 컬렉션 및 라이브러리를 설치합니다.</block>
+  <block id="df40cb16c4a24c991c143fbddeedd0bc" category="list-text">DB 호스트 변수 파일에 필요한 EC2 FSx 인스턴스 매개 변수를 검색합니다<block ref="ea858a411f1af6150f14b84176148712" prefix=" " category="inline-code"></block> 글로벌 변수 파일을 엽니다<block ref="cb8e25d5e6251a20afadf4c5f4b626bb" prefix=" " category="inline-code"></block> 구성.</block>
+  <block id="57c7844b0a299340cf9b625ce4a0745a" category="section-title">호스트 파일을 구성합니다</block>
+  <block id="ed578fbfbec5634c4fa508cde5bc4e85" category="paragraph">운영 FSx ONTAP 클러스터 관리 IP 및 EC2 인스턴스 호스트 이름을 HOSTS 파일에 입력합니다.</block>
+  <block id="6ef214427ca7b42201d0b0508f56df98" category="section-title">host_name.yml 파일을 host_vars 폴더에 구성합니다</block>
+  <block id="6967d323b85203ba993572c1cd814dc1" category="paragraph">밑줄이 그어진 파란색 필드에 시스템에 적절한 매개 변수를 입력한 다음 항목을 복사하여 에 붙여 넣습니다<block ref="caa6779553864dba00727ae27752b182" prefix=" " category="inline-code"></block> 파일을 Ansible 컨트롤러에 저장합니다<block ref="3342582e194d63e4c91b56623752c9c6" prefix=" " category="inline-code"></block> 폴더.</block>
+  <block id="77ac1da2cd356e327eb4bfc4c5a21bcc" category="section-title">VAR 폴더에서 글로벌 FSX_VAR.yml 파일을 구성합니다</block>
+  <block id="7876ddba2c3af67cbee2b37f64072428" category="paragraph">밑줄이 그어진 파란색 필드에 시스템에 적절한 매개 변수를 입력한 다음 항목을 복사하여 에 붙여 넣습니다<block ref="cb8e25d5e6251a20afadf4c5f4b626bb" prefix=" " category="inline-code"></block> 파일을 Ansible 컨트롤러 호스트에 저장합니다.</block>
+  <block id="d56625a35762821798a2f3dd55ead05d" category="section-title">PostgreSQL 배포 및 HA/DR 설정</block>
+  <block id="943a124028d8f011631df765453640dc" category="paragraph">다음 작업은 PostgreSQL DB 서버 서비스를 구축하고 운영 EC2 DB 서버 호스트의 운영 사이트에서 데이터베이스를 초기화합니다. 그런 다음 대기 운영 EC2 DB 서버 호스트가 대기 사이트에 설정됩니다. 마지막으로, 재해 복구를 위해 운영 사이트 FSx 클러스터에서 대기 사이트 FSx 클러스터로 DB 볼륨 복제가 설정됩니다.</block>
+  <block id="08f6dd070ef1adfcbe3d7f3c70b08905" category="list-text">운영 FSx 클러스터에 DB 볼륨을 생성하고 운영 EC2 인스턴스 호스트에서 PostgreSQL을 설정합니다.</block>
+  <block id="bf22091495c9a041dcbdba3a97795095" category="list-text">대기 DR EC2 인스턴스 호스트를 설정합니다.</block>
+  <block id="f2dd18dfc82378171d01bdd3f956bc6f" category="list-text">FSx ONTAP 클러스터 피어링 및 데이터베이스 볼륨 복제를 설정합니다.</block>
+  <block id="d681aef28cf1f863d0683a6896f12995" category="list-text">이전 단계를 단일 단계의 PostgreSQL 배포 및 HA/DR 설정에 통합합니다.</block>
+  <block id="fe217a2e30a79cebc71db6d5cb676a71" category="list-text">기본 또는 대기 사이트에서 대기 PostgreSQL DB 호스트를 설정하려면 hosts file [DR_PostgreSQL] 섹션의 다른 모든 서버를 주석으로 추가한 다음 각 타겟 호스트(예: psql_01ps 또는 운영 사이트의 대기 EC2 컴퓨팅 인스턴스)와 함께 PostgreSQL_standby_setup.yml 플레이북을 실행합니다. 과 같은 호스트 매개 변수 파일이 있는지 확인합니다<block ref="7c0f59fa275836ef9c4f28bec839acca" prefix=" " category="inline-code"></block> 가 에 구성되어 있습니다<block ref="3342582e194d63e4c91b56623752c9c6" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="d3ecdce9695eacdb90ec80fa276865d4" category="section-title">PostgreSQL 데이터베이스 스냅샷 백업 및 대기 사이트로의 복제</block>
+  <block id="3b320790a7f864b473e3baa86de785fe" category="paragraph">대기 사이트에 대한 PostgreSQL 데이터베이스 스냅샷 백업 및 복제는 사용자 정의 간격으로 Ansible 컨트롤러에서 제어 및 실행될 수 있습니다. 간격이 5분 정도일 수 있다는 것이 검증되었습니다. 따라서 운영 사이트에서 장애가 발생할 경우 예약된 다음 스냅샷 백업 바로 전에 장애가 발생할 경우 5분 내에 데이터가 손실될 수 있습니다.</block>
+  <block id="421057a9fa982de2a1c1f79f5f03d750" category="section-title">DR을 위해 대기 사이트로 페일오버</block>
+  <block id="6ddcc779c247e4adb5b5a56a34edd75d" category="paragraph">PostgreSQL HA/DR 시스템을 DR 실습으로 테스트하려면 다음 플레이북을 실행하여 대기 사이트의 운영 스탠바이 EC2 DB 인스턴스에서 페일오버 및 PostgreSQL 데이터베이스 복구를 실행합니다. 실제 DR 시나리오에서는 실제로 DR 사이트로 페일오버하는 경우에도 동일하게 실행합니다.</block>
+  <block id="724a617bc1dcc9b26fedb732f63a569d" category="section-title">장애 조치 테스트 후 복제된 DB 볼륨을 다시 동기화합니다</block>
+  <block id="6a08e960bd12a4fcddfd08082fbece4b" category="paragraph">페일오버 테스트 후 재동기화를 실행하여 데이터베이스 볼륨 SnapMirror 복제를 다시 설정합니다.</block>
+  <block id="145966bc8e38b26c384abaf4e450f6a7" category="section-title">EC2 컴퓨팅 인스턴스 장애로 인해 운영 EC2 DB 서버에서 대기 EC2 DB 서버로 페일오버</block>
+  <block id="bab50aeeeaabfc4e129f95b2d8d125e5" category="paragraph">라이센스가 필요할 수 있는 이미 잘 구축된 OS 클러스터 웨어에서 수동 페일오버를 실행하는 것이 좋습니다.</block>
+  <block id="73bc97f640d8c1cae3fa624183216b41" category="inline-link-macro"><block ref="73bc97f640d8c1cae3fa624183216b41" category="inline-link-rx"></block></block>
+  <block id="40285fa8e3dc4d66bfadb679f67dfde6" category="paragraph"><block ref="40285fa8e3dc4d66bfadb679f67dfde6" category="inline-link-macro-rx"></block></block>
+  <block id="68253b5715937494905ba0cb9db91d2e" category="inline-link-macro"><block ref="be48c1546d351a5e48dcf4f28738754b" category="inline-link-rx"></block></block>
+  <block id="6dcfba5adaa9302bd59dd5a601b947a2" category="paragraph"><block ref="95bfcff1050e9160bb2bd645993e8c18" category="inline-link-macro-rx"></block></block>
+  <block id="6d183e6080727fa3b49f82e41b18c061" category="inline-link-macro"><block ref="6d183e6080727fa3b49f82e41b18c061" category="inline-link-rx"></block></block>
+  <block id="8fb430b477f47c3062d0f4afb8a9195b" category="paragraph"><block ref="8fb430b477f47c3062d0f4afb8a9195b" category="inline-link-macro-rx"></block></block>
+  <block id="031004dd1775e5fd9d35b534e33217ea" category="paragraph">[underline]# * 오픈 소스 데이터베이스용 동영상 * #</block>
+  <block id="5b70a7f45ddd32cacfe28af238662d3d" category="video-title">PostgreSQL 자동 구축, HA/DR 복제 설정, 페일오버, 재동기화</block>
+  <block id="61c8e892dd7e1908020eb0a312fd4bbb" category="cell">2023년 2월 15일</block>
+  <block id="2ee6a0567aa163f6ace02183cb041cbd" category="cell">AWS FSx/EC2에서 PostgreSQL 고가용성 구축 및 재해 복구 추가</block>
+  <block id="a54420e6e0f519f841f4280cf2545365" category="sidebar">오픈 소스 데이터베이스</block>
+  <block id="67bb2ef7cf3c5ff59f35f28e513bfda3" category="sidebar">AWS FSx/EC2에서 PostgreSQL 고가용성 구축 및 재해 복구</block>
+  <block id="1ae3eccde141a365ede8f18b188ae588" category="sidebar">AWS FSx/EC2에서 PostgreSQL HA 구축 및 DR 자동화</block>
+  <block id="6fabfc29f0b3a196c8407c190bb67293" category="sidebar">데이터베이스용 SnapCenter</block>
 </blocks>
