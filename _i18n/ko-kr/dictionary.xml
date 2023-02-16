@@ -8923,7 +8923,6 @@
   <block id="06aa576b3e3e95c5df800228d146af65" category="sidebar">NVIDIA DGX A100 Systems 및 BeeGFS 구축이 포함된 EF-Series AI</block>
   <block id="2967ab4748573d0cb6f2c4084c4fd70f" category="sidebar">BeeGFS 및 NetApp E-Series 참조 아키텍처</block>
   <block id="1db760587a86f5c1b9ab39aa8cf8cf3d" category="sidebar">NetApp E-Series 스토리지로 IBM Spectrum Scale 구축</block>
-  <block id="08479c0355c887a02e772206b0d5d7f5" category="sidebar">AI 및 ML 모델 교육 워크로드용 NetApp ONTAP 및 Lenovo ThinkSystem SR670</block>
   <block id="e648dd2d4df65a903e9c1204d81abaed" category="sidebar">AI 및 ML 모델 교육 워크로드용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5</block>
   <block id="6a571fb799acb43b64f874729f838e2a" category="sidebar">데이터 파이프라인, 데이터 레이크 및 관리</block>
   <block id="c79bd5ac7ebc0eae5588b9ad529a380f" category="sidebar">자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크</block>
@@ -15608,8 +15607,6 @@
   <block id="7bfbd6c5c294b7f81d430bd31f53aea3" category="paragraph">NVA-1153-design은 NetApp AFF A800 스토리지 시스템, NVIDIA DGX A100 시스템 및 NVIDIA Mellanox Spectrum SN3700V 200GB 이더넷 스위치를 사용하는 머신 러닝(ML) 및 인공 지능(AI) 워크로드를 위한 NetApp 검증 아키텍처를 설명합니다. 이 설계에서는 컴퓨팅 클러스터 인터커넥트 패브릭을 위한 RoCE(RDMA over Converged Ethernet)를 사용하여 고객에게 고성능 워크로드를 위한 완벽한 이더넷 기반 아키텍처를 제공합니다. 이 문서에는 구현된 아키텍처의 벤치마크 테스트 결과도 포함되어 있습니다.</block>
   <block id="981ed5a5ebc4fbc2a64f69a42d9ef36c" category="paragraph">David Arnette, NetApp</block>
   <block id="0e2b7ed1591c52ac15ea956ecb6a5701" category="paragraph">TR-4851은 머신 러닝(ML) 및 딥 러닝(DL) 소프트웨어 개발을 위한 데이터 저장소 및 관리 시스템으로 NetApp StorageGRID 오브젝트 스토리지를 사용하는 방법을 보여줍니다. 이 문서에서는 자율주행 차량 소프트웨어 개발의 데이터 흐름과 요구 사항과 데이터 라이프사이클을 간소화하는 StorageGRID 기능에 대해 설명합니다. 이 솔루션은 ML 및 DL 개발 프로세스에서 일반적인 모든 다단계 데이터 파이프라인 워크플로에 적용됩니다.</block>
-  <block id="5ebb854a0e7b0964891f587bfc1d231a" category="paragraph">Karthikeyan Nagalingam, NetApp Miroslav Hodak, Lenovo</block>
-  <block id="17f161066b709ea249da0f86319938b3" category="paragraph">TR-4810에서는 NetApp 스토리지 컨트롤러 및 Lenovo ThinkSystem 서버에 GPU 기반 인공 지능(AI) 교육을 구축하기 위한 비용 효율적인 엔트리 레벨 컴퓨팅 및 스토리지 아키텍처에 대해 설명합니다. 이 설정은 여러 교육 작업을 동시에 실행하는 중소 및 중견 팀을 위한 공유 리소스로 설계되었습니다.</block>
   <block id="290beddb4a567cd98ba4f9116eee11b4" category="paragraph">NVA-1151-deploy에는 NetApp AFF A800 스토리지 시스템, NVIDIA DGX A100 시스템 및 NVIDIA Mellanox 네트워크 스위치를 사용하는 머신 러닝(ML) 및 인공 지능(AI) 워크로드를 위한 NVA(NetApp Verified Architecture)에 대한 스토리지 시스템 구축 지침이 포함되어 있습니다. 또한 배포가 완료된 후 검증 벤치마크 테스트를 실행하기 위한 지침도 포함되어 있습니다.</block>
   <block id="806008ac96286a2e08058ba3a3daa601" category="paragraph">NetApp, Ryan Rodine</block>
   <block id="3e22ed7172d7770cfa1457b7e70b2b06" category="doc">TR-4915: AI 및 분석 워크플로우를 위해 E-Series 및 BeeGFS로 데이터 이동</block>
@@ -16508,9 +16505,6 @@
   <block id="4f8b12df588cb1e82eb6d578f26c6c62" category="paragraph"><block ref="4f8b12df588cb1e82eb6d578f26c6c62" category="inline-link-macro-rx"></block></block>
   <block id="7054aac0ed39fa340a2d8034700f7366" category="doc">NVA-1151-design:NVIDIA DGX A100 시스템 설계 가이드를 지원하는 NetApp ONTAP AI</block>
   <block id="c3e7dfc3691f26701d35cccf4caf7151" category="paragraph"><block ref="c3e7dfc3691f26701d35cccf4caf7151" category="inline-link-macro-rx"></block></block>
-  <block id="4357c1771697cec588056fc32ddcb708" category="doc">TR-4810: AI 및 ML 모델 교육 워크로드용 NetApp ONTAP 및 Lenovo ThinkSystem SR670</block>
-  <block id="e0f6e346d478416affd57903ead08043" category="paragraph">TR-4810은 V100 GPU에 대한 TensorFlow를 통한 이미지 분류 교육을 평가하는 업계 표준 MLPerf 벤치마크에 대한 성능 데이터를 제공합니다. 성능을 측정하기 위해, ImageNet 데이터 세트, 배치 크기 512, 절반 정밀도, CUDA 및 cuDNN을 사용하여 ResNet50을 사용했습니다. 이 분석은 4개의 GPU SR670 서버와 엔트리 레벨 NetApp 스토리지 시스템을 사용하여 수행했습니다. 이 결과는 공유, 다중 사용자, 다중 작업 사례 등 여기에서 테스트한 여러 사용 사례에서 최대 4개의 서버로 확장 가능한 개별 작업 전체에서 매우 효율적인 성능을 보여줍니다. 대규모 스케일아웃 작업은 효율성이 낮지만 여전히 실현 가능합니다.</block>
-  <block id="f19874be6cd1b381c570f4157608de5f" category="paragraph"><block ref="f19874be6cd1b381c570f4157608de5f" category="inline-link-macro-rx"></block></block>
   <block id="c95fe91ba2d256285401bdabdd666ca7" category="doc">NVA-1151 - 구축:NVIDIA DGX A100 시스템과 NetApp ONTAP AI</block>
   <block id="3f8a5951b902f50dcbc39690406ade15" category="paragraph"><block ref="3f8a5951b902f50dcbc39690406ade15" category="inline-link-macro-rx"></block></block>
   <block id="83c4efb371f86415987632c0baa2d086" category="doc">NVA-1156-설계: NVIDIA DGX A100 시스템 및 BeeGFS를 지원하는 NetApp EF-Series AI</block>
@@ -16594,7 +16588,6 @@
   <block id="e5f44d648a9d8c4db4e2b580d3370fbf" category="doc">TR-4956: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구</block>
   <block id="03784a7c5600d29113972955e602a944" category="inline-link-macro">DB-엔진</block>
   <block id="1d8f1bdc206db1d9edd9fa46f02aa08c" category="paragraph">PostgreSQL은 에서 가장 많이 사용되는 데이터베이스 엔진 10개 중 4위에 해당하는 널리 사용되는 오픈 소스 데이터베이스입니다 <block ref="6e2d0e5987102894082cbdb135303e4d" category="inline-link-macro-rx"></block>. 반면 PostgreSQL은 라이선스 없는 오픈 소스 모델에서 고급 기능을 계속 사용하면서 인기를 얻고 있습니다. 반면, 오픈 소스가 되어 있기 때문에 고가용성 및 재해 복구(HA/DR) 영역, 특히 퍼블릭 클라우드에서 운영 수준의 데이터베이스 구축에 대한 자세한 지침은 부족한 실정입니다. 일반적으로 핫 스탠바이 및 웜 스탠바이, 스트리밍 복제 등을 사용하여 일반적인 PostgreSQL HA/DR 시스템을 설정하기 어려울 수 있습니다. 대기 사이트를 프로모션한 다음 운영 사이트로 다시 전환하여 HA/DR 환경을 테스트하는 경우 운영 중단이 발생할 수 있습니다. 읽기 워크로드가 스트리밍 핫 스탠바이에 배포되면 운영 환경에 잘 문서화된 성능 문제가 있습니다.</block>
-  <block id="a685f8093823e999c5eaf32bef74906d" category="paragraph">이 문서에서는 애플리케이션 레벨 PostgreSQL 스트리밍 HA/DR 솔루션을 사용하지 않고 데이터베이스 파일 및 EC2 컴퓨팅 인스턴스(예: 데이터베이스 서버)를 위한 AWS FSx ONTAP 스토리지를 기반으로 PostgreSQL HA/DR 솔루션을 구축하는 방법을 설명합니다. 이 솔루션은 기존의 PostgreSQL 애플리케이션 레벨 스트리밍 복제(HA/DR)와 비교할 수 있는 보다 간편하고 유사한 시스템을 생성하고 그에 상응하는 결과를 제공합니다.</block>
   <block id="e2543d0568626be8ab6adad9d9a78652" category="paragraph">이 솔루션은 PostgreSQL HA/DR을 위한 AWS 네이티브 FSX ONTAP 클라우드 스토리지에서 사용할 수 있는 검증된 고급 NetApp SnapMirror 스토리지 레벨 복제 기술을 기반으로 구축되었습니다. NetApp 솔루션 팀이 제공하는 자동화 툴킷을 사용하면 간단하게 구축할 수 있습니다. 또한 유사한 기능을 제공하는 동시에 애플리케이션 레벨의 스트리밍 기반 HA/DR 솔루션을 통해 운영 사이트의 복잡성과 성능 저하를 방지합니다. 액티브 운영 사이트에 영향을 주지 않고 솔루션을 쉽게 구축 및 테스트할 수 있습니다.</block>
   <block id="f67bd3c0833b1d6bf90bb26a55f0a9ce" category="list-text">퍼블릭 AWS 클라우드에서 PostgreSQL을 위한 운영 등급 HA/DR 구축</block>
   <block id="420a5f3809172bb0dc9d501758fe94d2" category="list-text">퍼블릭 AWS 클라우드에서 PostgreSQL 워크로드 테스트 및 검증</block>
@@ -16672,13 +16665,10 @@
   <block id="724a617bc1dcc9b26fedb732f63a569d" category="section-title">장애 조치 테스트 후 복제된 DB 볼륨을 다시 동기화합니다</block>
   <block id="6a08e960bd12a4fcddfd08082fbece4b" category="paragraph">페일오버 테스트 후 재동기화를 실행하여 데이터베이스 볼륨 SnapMirror 복제를 다시 설정합니다.</block>
   <block id="145966bc8e38b26c384abaf4e450f6a7" category="section-title">EC2 컴퓨팅 인스턴스 장애로 인해 운영 EC2 DB 서버에서 대기 EC2 DB 서버로 페일오버</block>
-  <block id="bab50aeeeaabfc4e129f95b2d8d125e5" category="paragraph">라이센스가 필요할 수 있는 이미 잘 구축된 OS 클러스터 웨어에서 수동 페일오버를 실행하는 것이 좋습니다.</block>
   <block id="73bc97f640d8c1cae3fa624183216b41" category="inline-link-macro"><block ref="73bc97f640d8c1cae3fa624183216b41" category="inline-link-rx"></block></block>
   <block id="40285fa8e3dc4d66bfadb679f67dfde6" category="paragraph"><block ref="40285fa8e3dc4d66bfadb679f67dfde6" category="inline-link-macro-rx"></block></block>
   <block id="68253b5715937494905ba0cb9db91d2e" category="inline-link-macro"><block ref="be48c1546d351a5e48dcf4f28738754b" category="inline-link-rx"></block></block>
   <block id="6dcfba5adaa9302bd59dd5a601b947a2" category="paragraph"><block ref="95bfcff1050e9160bb2bd645993e8c18" category="inline-link-macro-rx"></block></block>
-  <block id="6d183e6080727fa3b49f82e41b18c061" category="inline-link-macro"><block ref="6d183e6080727fa3b49f82e41b18c061" category="inline-link-rx"></block></block>
-  <block id="8fb430b477f47c3062d0f4afb8a9195b" category="paragraph"><block ref="8fb430b477f47c3062d0f4afb8a9195b" category="inline-link-macro-rx"></block></block>
   <block id="031004dd1775e5fd9d35b534e33217ea" category="paragraph">[underline]# * 오픈 소스 데이터베이스용 동영상 * #</block>
   <block id="5b70a7f45ddd32cacfe28af238662d3d" category="video-title">PostgreSQL 자동 구축, HA/DR 복제 설정, 페일오버, 재동기화</block>
   <block id="61c8e892dd7e1908020eb0a312fd4bbb" category="cell">2023년 2월 15일</block>
@@ -16861,4 +16851,8 @@
   <block id="ad7857a40388167e99516cfe367478d5" category="paragraph">MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입니다. 이 검증에서는 가장 인기 있는 AI 프레임워크 중 하나인 MXNet과 함께 이미지 분류 벤치마크를 사용했습니다. MXNet_벤치마크 교육 스크립트는 AI 교육을 진행하는 데 사용되었습니다. 이 스크립트에는 널리 사용되는 여러 가지 기존 모델의 구현이 포함되어 있으며 가능한 한 빨리 구현되도록 설계되었습니다. 단일 시스템에서 실행하거나 여러 호스트에 걸쳐 분산 모드로 실행할 수 있습니다.</block>
   <block id="a29118c3c40b6309f6b6354a52631e91" category="paragraph"><block ref="a29118c3c40b6309f6b6354a52631e91" category="inline-link-macro-rx"></block></block>
   <block id="f0cbafc85a7a8d2836dd3a3d51266f61" category="sidebar">AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400</block>
+  <block id="3ba3cda3d91af072810327bfd691205c" category="paragraph">이 문서에서는 애플리케이션 수준의 PostgreSQL 스트리밍 HA/DR 솔루션을 사용하지 않고 스토리지 레벨 복제를 사용하여 AWS FSx ONTAP 스토리지 및 EC2 컴퓨팅 인스턴스를 기반으로 PostgreSQL HA/DR 솔루션을 구축하는 방법을 설명합니다. 이 솔루션은 기존의 PostgreSQL 애플리케이션 레벨 스트리밍 복제(HA/DR)와 비교할 수 있는 보다 간편하고 유사한 시스템을 생성하고 그에 상응하는 결과를 제공합니다.</block>
+  <block id="32d16eeba786f125b3c1e4750ad34e08" category="paragraph">NetApp은 수동 페일오버 실행 또는 라이센스가 필요할 수 있는 잘 구축된 OS 클러스터 소프트웨어를 사용할 것을 권장합니다.</block>
+  <block id="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-macro"><block ref="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-rx"></block></block>
+  <block id="b898d8d538a4529dfdb2b8bf025323c2" category="paragraph"><block ref="b898d8d538a4529dfdb2b8bf025323c2" category="inline-link-macro-rx"></block></block>
 </blocks>

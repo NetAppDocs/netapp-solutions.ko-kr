@@ -21,7 +21,7 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 PostgreSQL은 에서 가장 많이 사용되는 데이터베이스 엔진 10개 중 4위에 해당하는 널리 사용되는 오픈 소스 데이터베이스입니다 link:https://db-engines.com/en/ranking["DB-엔진"^]. 반면 PostgreSQL은 라이선스 없는 오픈 소스 모델에서 고급 기능을 계속 사용하면서 인기를 얻고 있습니다. 반면, 오픈 소스가 되어 있기 때문에 고가용성 및 재해 복구(HA/DR) 영역, 특히 퍼블릭 클라우드에서 운영 수준의 데이터베이스 구축에 대한 자세한 지침은 부족한 실정입니다. 일반적으로 핫 스탠바이 및 웜 스탠바이, 스트리밍 복제 등을 사용하여 일반적인 PostgreSQL HA/DR 시스템을 설정하기 어려울 수 있습니다. 대기 사이트를 프로모션한 다음 운영 사이트로 다시 전환하여 HA/DR 환경을 테스트하는 경우 운영 중단이 발생할 수 있습니다. 읽기 워크로드가 스트리밍 핫 스탠바이에 배포되면 운영 환경에 잘 문서화된 성능 문제가 있습니다.
 
-이 문서에서는 애플리케이션 레벨 PostgreSQL 스트리밍 HA/DR 솔루션을 사용하지 않고 데이터베이스 파일 및 EC2 컴퓨팅 인스턴스(예: 데이터베이스 서버)를 위한 AWS FSx ONTAP 스토리지를 기반으로 PostgreSQL HA/DR 솔루션을 구축하는 방법을 설명합니다. 이 솔루션은 기존의 PostgreSQL 애플리케이션 레벨 스트리밍 복제(HA/DR)와 비교할 수 있는 보다 간편하고 유사한 시스템을 생성하고 그에 상응하는 결과를 제공합니다.
+이 문서에서는 애플리케이션 수준의 PostgreSQL 스트리밍 HA/DR 솔루션을 사용하지 않고 스토리지 레벨 복제를 사용하여 AWS FSx ONTAP 스토리지 및 EC2 컴퓨팅 인스턴스를 기반으로 PostgreSQL HA/DR 솔루션을 구축하는 방법을 설명합니다. 이 솔루션은 기존의 PostgreSQL 애플리케이션 레벨 스트리밍 복제(HA/DR)와 비교할 수 있는 보다 간편하고 유사한 시스템을 생성하고 그에 상응하는 결과를 제공합니다.
 
 이 솔루션은 PostgreSQL HA/DR을 위한 AWS 네이티브 FSX ONTAP 클라우드 스토리지에서 사용할 수 있는 검증된 고급 NetApp SnapMirror 스토리지 레벨 복제 기술을 기반으로 구축되었습니다. NetApp 솔루션 팀이 제공하는 자동화 툴킷을 사용하면 간단하게 구축할 수 있습니다. 또한 유사한 기능을 제공하는 동시에 애플리케이션 레벨의 스트리밍 기반 HA/DR 솔루션을 통해 운영 사이트의 복잡성과 성능 저하를 방지합니다. 액티브 운영 사이트에 영향을 주지 않고 솔루션을 쉽게 구축 및 테스트할 수 있습니다.
 
@@ -265,7 +265,7 @@ ansible-playbook -i hosts postgresql_standby_resync.yml -u ec2-user --private-ke
 
 === EC2 컴퓨팅 인스턴스 장애로 인해 운영 EC2 DB 서버에서 대기 EC2 DB 서버로 페일오버
 
-라이센스가 필요할 수 있는 이미 잘 구축된 OS 클러스터 웨어에서 수동 페일오버를 실행하는 것이 좋습니다.
+NetApp은 수동 페일오버 실행 또는 라이센스가 필요할 수 있는 잘 구축된 OS 클러스터 소프트웨어를 사용할 것을 권장합니다.
 
 
 
@@ -283,6 +283,6 @@ link:https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843&sc_
 
 * NetApp 솔루션 자동화
 +
-link:https://review.docs.netapp.com/us-en/netapp-solutions_ajc_psql_aws/automation/automation_introduction.html["https://review.docs.netapp.com/us-en/netapp-solutions_ajc_psql_aws/automation/automation_introduction.html"^]
+link:https://docs.netapp.com/us-en/netapp-solutions/automation/automation_introduction.html["https://docs.netapp.com/us-en/netapp-solutions/automation/automation_introduction.html"^]
 
 
