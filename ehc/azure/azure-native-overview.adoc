@@ -33,7 +33,7 @@ Azure VMware 솔루션의 또 다른 일반적인 사용 사례는 DR(재해 복
 
 
 
-NOTE: Azure NetApp Files 데이터 저장소 기능은 현재 공개 미리 보기에 있습니다. 자세한 내용은 해당 지역의 NetApp 또는 Microsoft 솔루션 설계자에게 문의하십시오.
+NOTE: ANF 데이터 저장소 사용에 대한 자세한 내용은 해당 지역의 NetApp 또는 Microsoft 솔루션 설계자에게 문의하십시오.
 
 
 

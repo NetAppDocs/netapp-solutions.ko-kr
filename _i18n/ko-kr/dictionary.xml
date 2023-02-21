@@ -12969,7 +12969,6 @@
   <block id="feb87b8a766262f1649eb73f664b5237" category="paragraph">요약하자면, 사용 사례는 다음 두 가지 방법으로 분류할 수 있습니다.</block>
   <block id="113270f68f35ffcbf2a57597bd22e665" category="list-text">ANF 데이터 저장소를 사용하여 스토리지 용량을 확장합니다</block>
   <block id="a46f3b69652b37f2becc5ad8def389fe" category="list-text">소프트웨어 정의 데이터 센터(SDDC) 간의 사내 또는 Azure 지역 내에서 비용 최적화된 복구 워크플로를 위해 ANF 데이터 저장소를 재해 복구 타겟으로 사용합니다. 이 가이드에서는 Azure NetApp Files를 사용하여 데이터 저장소에 최적화된 스토리지(현재 공개 미리 보기)를 제공하는 방법에 대해 설명합니다. Azure VMware 솔루션에서 동급 최고의 데이터 보호 및 DR 기능을 제공하므로 vSAN 스토리지에서 스토리지 용량을 오프로드할 수 있습니다.</block>
-  <block id="301964836d84fb491fca23f51f902cd0" category="admonition">Azure NetApp Files 데이터 저장소 기능은 현재 공개 미리 보기에 있습니다. 자세한 내용은 해당 지역의 NetApp 또는 Microsoft 솔루션 설계자에게 문의하십시오.</block>
   <block id="9d5486edf9a5ddec98d7f7509d50101c" category="section-title">Azure의 VMware 클라우드 옵션</block>
   <block id="809dd7fcec8077467eab0222ea68e259" category="paragraph">Azure VMware 솔루션(AVS)은 Microsoft Azure 퍼블릭 클라우드 내에서 완벽하게 작동하는 VMware SDDC를 제공하는 하이브리드 클라우드 서비스입니다. AVS는 Microsoft에서 완벽하게 관리 및 지원하고 Azure 인프라를 사용하는 VMware에서 검증한 최초의 솔루션입니다. 따라서 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN 및 네트워킹 및 보안을 위한 NSX를 얻는 동시에 Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설 및 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접할 수 있는 이점을 누릴 수 있습니다. Azure VMware 솔루션 SDDC와 Azure NetApp Files를 함께 사용하면 네트워크 지연 시간을 최소화하면서 최상의 성능을 얻을 수 있습니다.</block>
   <block id="8718654ef588a85b2a2e46a7727fa16d" category="paragraph">사용된 클라우드에 관계없이 VMware SDDC를 구축할 때 초기 클러스터에 포함되는 구성 요소는 다음과 같습니다.</block>
@@ -13017,7 +13016,6 @@
   <block id="b2666a13d31389019b43a9085ffd2fe8" category="section-title">Azure VMware 솔루션으로 Azure NetApp Files를 구성합니다</block>
   <block id="dbfbac0b1aee2557c747f90a52c200ed" category="paragraph">Azure NetApp Files 간의 새로운 통합을 통해 Azure VMware 솔루션 리소스 공급자 API/CLI를 통해 Azure NetApp Files 볼륨을 포함하는 NFS 데이터 저장소를 생성하고 프라이빗 클라우드에서 원하는 클러스터에 데이터 저장소를 마운트할 수 있습니다. VM 및 애플리케이션 VMDK를 구축하는 것 외에도 Azure NetApp 파일 볼륨은 Azure VMware Solution SDDC 환경에서 생성된 VM에서 마운트할 수 있습니다. Azure NetApp Files는 SMB(서버 메시지 블록) 및 NFS(네트워크 파일 시스템) 프로토콜을 지원하기 때문에 Linux 클라이언트에 볼륨을 마운트하고 Windows 클라이언트에 매핑할 수 있습니다.</block>
   <block id="3fcf61e60f3486b366489a2db86e92c0" category="admonition">최적의 성능을 위해 Azure NetApp Files를 프라이빗 클라우드와 동일한 가용성 영역에 구축하십시오. Express Route Fastpath가 포함된 코로케이션을 통해 최소한의 네트워크 지연 시간으로 최고의 성능을 제공합니다.</block>
-  <block id="2a499560ec410b1e1caeb95f6021ac1e" category="admonition">이 기능은 현재 공개 미리보기에 있습니다.</block>
   <block id="7042805ebe69bccc6ab09f9518f94556" category="paragraph">Azure NetApp File 볼륨을 Azure VMware Solution 프라이빗 클라우드의 VMware 데이터 저장소로 연결하려면 다음 사전 요구 사항이 충족되어야 합니다.</block>
   <block id="49588f95c73f4a9df95958ba5e856d0c" category="list-text">az 로그인을 사용하고 구독이 Microsoft.AVS 네임스페이스의 CloudSanExperience 기능에 등록되어 있는지 확인합니다.</block>
   <block id="c0e46e4183896be214bad3fd077b5834" category="list-text">등록되지 않은 경우 등록한다.</block>
@@ -13033,11 +13031,9 @@
   <block id="187927c7525fb36ec9428b4d84fe0aff" category="list-text">NetApp 계정을 생성한 후 필요한 서비스 수준 및 크기의 용량 풀을 설정합니다. 자세한 내용은 이를 참조하십시오<block ref="0a52e91c67ac030fc237a7b13d0404c6" category="inline-link-rx"></block>.</block>
   <block id="c7d6fd5f235d0c8a960facf04a79e4a7" category="paragraph"><block ref="c7d6fd5f235d0c8a960facf04a79e4a7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c573a9eace62b9790820458dd59448b0" category="list-text">Azure NetApp Files에서 데이터 저장소에 대해 NFSv3이 지원됩니다.</block>
-  <block id="62dfd4c1cc43e59ef3c56bb615d3b182" category="list-text">최적의 성능을 위해 Premium 또는 Ultra 계층을 사용합니다.</block>
   <block id="0d55d5c3a7459f59fd437a2311322791" category="list-text">Azure NetApp Files에 대해 위임된 서브넷을 구성하고 볼륨을 생성할 때 이 서브넷을 지정합니다. 위임된 서브넷을 생성하는 자세한 단계는 이것을 참조하십시오<block ref="e84891bed408b1977d062f4ccc1816aa" category="inline-link-rx"></block>.</block>
   <block id="36fc58c2c3fa32ac586d5628570e9499" category="list-text">용량 풀 블레이드 아래에 있는 볼륨 블레이드를 사용하여 데이터 저장소에 대한 NFS 볼륨을 추가합니다.</block>
   <block id="2832d137c1714a9759f87412fb05253e" category="paragraph"><block ref="2832d137c1714a9759f87412fb05253e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="47e7f43ca3ba65dbd1b1edbe26db8cc4" category="paragraph">크기 또는 할당량별 Azure NetApp Files 볼륨 성능에 대한 자세한 내용은 을 참조하십시오<block ref="bcd13cd67f856c9e615d78327e957b9c" category="inline-link-rx"></block>.</block>
   <block id="372d7a6604390fe9757888aff0a92970" category="example-title">Azure NetApp Files 데이터 저장소를 프라이빗 클라우드에 추가합니다</block>
   <block id="0f9e7cabe2f81455810e96baca91c6a7" category="paragraph">Azure NetApp Files 데이터 저장소를 프라이빗 클라우드에 추가하려면 다음 단계를 수행하십시오.</block>
   <block id="b1248573ef968f7d6fc7eaa453fa4d45" category="list-text">필요한 기능을 등록한 후 적절한 명령을 실행하여 NFS 데이터 저장소를 Azure VMware Solution 프라이빗 클라우드 클러스터에 연결합니다.</block>
@@ -13048,8 +13044,6 @@
   <block id="078f601da77f62e8c7e097d5744f9b1b" category="section-title">사이징 및 성능 최적화</block>
   <block id="2954ff66e26b577154cf218d077ff1a9" category="paragraph">Azure NetApp Files는 Standard(테라바이트당 16MBps), Premium(테라바이트당 64MBps), Ultra(테라바이트당 128MBps)의 세 가지 서비스 수준을 지원합니다. 데이터베이스 워크로드의 성능을 최적화하려면 적절한 볼륨 크기를 프로비저닝하는 것이 중요합니다. Azure NetApp Files에서는 다음 요소를 기준으로 볼륨 성능과 처리량 한도를 결정합니다.</block>
   <block id="a5d62ae512b963e1f05e839467577f19" category="paragraph"><block ref="a5d62ae512b963e1f05e839467577f19" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9ce18fddaa7dc898334afc4ab63a163b" category="list-text">최적의 성능을 위해 데이터 저장소 볼륨에 Premium 또는 Ultra 계층을 사용합니다.</block>
-  <block id="f681df268b9e05fa5155bbf1f38d672f" category="list-text">게스트 VM에 대한 파일 공유 요구 사항은 Standard 또는 Premium 계층 볼륨을 사용합니다.</block>
   <block id="1261ba8eeb83d9d138ff9e9a37214a7e" category="section-title">성능 고려 사항</block>
   <block id="f4479400cc63a0bc54ea3a609d8d89aa" category="paragraph">NFS 버전 3에서는 ESXi 호스트와 단일 스토리지 타겟 간의 접속에 대해 하나의 활성 파이프만 있다는 점을 이해하는 것이 중요합니다. 즉, 페일오버에 대체 연결을 사용할 수 있지만 단일 데이터 저장소 및 기본 스토리지의 대역폭은 단일 연결이 제공할 수 있는 범위로 제한됩니다.</block>
   <block id="f4c57c87dfa0d5843279b51c6e10d0a6" category="paragraph">Azure NetApp Files 볼륨에서 사용 가능한 대역폭을 더 많이 활용하려면 ESXi 호스트에 스토리지 타겟에 대한 여러 개의 접속이 있어야 합니다. 이 문제를 해결하려면 각 데이터 저장소에서 ESXi 호스트와 스토리지 간의 개별 연결을 사용하여 여러 데이터 저장소를 구성할 수 있습니다.</block>
@@ -13057,19 +13051,10 @@
   <block id="c01a936a44f773bc3d0a636cb655c28c" category="list-text">Azure VMware 솔루션에서는 기본적으로 8개의 NFS 데이터 저장소를 허용합니다. 이 문제는 지원 요청을 통해 증가할 수 있습니다.</block>
   <block id="cd58e3b202d882202a16834028640630" category="list-text">더 높은 대역폭과 낮은 지연 시간을 위해 ER fastpath와 Ultra SKU를 함께 활용합니다. 추가 정보</block>
   <block id="6ef5173b6cc36d0f4efabbafeeee7443" category="list-text">Azure NetApp Files의 "기본" 네트워크 기능을 사용하면 Azure VMware 솔루션을 연결하는 데 ExpressRoute 회로 및 ExpressRoute 게이트웨이의 대역폭이 사용됩니다.</block>
-  <block id="0a8e9b67042320d1a2f3f6155fc3e096" category="list-text">"표준" 네트워크 기능이 있는 Azure NetApp Files 볼륨(현재 공개 미리 보기)의 경우 ExpressRoute FastPath가 지원됩니다. FastPath가 활성화되면 네트워크 트래픽이 Azure NetApp Files 볼륨으로 직접 전송되어 더 높은 대역폭과 낮은 대기 시간을 제공하는 게이트웨이를 우회합니다.</block>
-  <block id="1b75d86136a5cde892b315650fd5ea43" category="section-title">성능 최적화</block>
-  <block id="213debd5ccd87a89487239a8460a0f0e" category="paragraph">NFS 데이터 저장소당 권장되는 가상 머신 수는 주관적이지만, 많은 요소가 각 데이터 저장소에 배치할 수 있는 최적의 VM 수를 결정합니다. 대부분의 관리자가 용량만 고려하지만 VMDK에 전송되는 동시 I/O의 양은 전체 성능을 위한 가장 중요한 요소 중 하나입니다. ESXi 호스트에는 데이터 저장소 리소스에 대해 경쟁하는 가상 시스템 간의 공정성을 보장하기 위한 여러 메커니즘이 있습니다. 그러나 성능을 제어하는 가장 쉬운 방법은 각 데이터 저장소에 배치할 가상 머신 수를 조절하는 것입니다. 동시 가상 머신 I/O 패턴이 너무 많은 트래픽을 데이터 저장소로 전송하는 경우 디스크 대기열이 채워지며 지연 시간이 길어집니다.</block>
-  <block id="f9fd5bbf2764cc5b16e9eeeb8b57ee91" category="section-title">볼륨 및 데이터 저장소 사이징</block>
-  <block id="01ab7b17836cfa3916b003d7febafe43" category="paragraph">데이터 저장소를 위해 Azure NetApp Files에서 볼륨을 생성하는 경우 가장 좋은 방법은 필요한 것보다 더 큰 볼륨을 생성하는 것입니다. 최대 볼륨 크기는 100TB까지 가능하지만 작은 데이터 저장소 용량으로 시작하여 필요에 따라 늘리는 것이 좋습니다. 데이터 저장소를 적절하게 사이징하면 데이터 저장소에 너무 많은 가상 머신을 실수로 배치하는 것을 방지하고 리소스 경합 가능성을 줄일 수 있습니다. 가상 머신에 추가 용량이 필요한 경우 데이터 저장소 및 VMDK 크기를 쉽게 늘릴 수 있으므로 필요한 것보다 큰 데이터 저장소를 생성할 필요가 없습니다. 최적의 성능을 위해 크기를 늘리는 대신 데이터 저장소의 수를 늘리는 것이 좋습니다.</block>
   <block id="fad725216d945a6443f15949ae73b316" category="cell">기억해야 할 사항</block>
-  <block id="28c7e0cc515aa1271633669cf0e579ad" category="list-text">ANF NFS 데이터 저장소의 적절한 크기는 4TB에서 8TB입니다.</block>
-  <block id="90f9dde25089c324af635a76b75a7509" category="list-text">15-20개의 VM을 단일 데이터 저장소에 배치합니다. VM 요구 사항에 따라 VM을 35-40 까지 늘릴 수 있습니다.</block>
-  <block id="3236c97f9f8c9cb7fcbc35b9ff162ab3" category="list-text">최상의 성능과 관리 효율성을 얻으려면 게스트가 데이터베이스와 같은 높은 I/O 애플리케이션을 위해 관리하는 NFS/SMB 파일 시스템과 같은 게스트 소유 파일 시스템을 고려하십시오.</block>
   <block id="0d3f5dc8a647758ee9ad71d0af34e75e" category="section-title">데이터 저장소의 크기를 증가시킵니다</block>
   <block id="9ae97248366686f76c6f9f6ac9b8d073" category="paragraph">SDDC에 대한 볼륨 재구성 및 동적 서비스 수준 변경은 전혀 투명합니다. Azure NetApp Files에서 이러한 기능은 지속적인 성능, 용량 및 비용 최적화를 제공합니다. Azure Portal에서 또는 CLI를 사용하여 볼륨의 크기를 조정하여 NFS 데이터 저장소의 크기를 늘립니다. 작업을 완료한 후 vCenter를 액세스하고 데이터 저장소 탭으로 이동하여 해당 데이터 저장소를 마우스 오른쪽 버튼으로 클릭하고 용량 정보 새로 고침 을 선택합니다. 이 접근 방식을 사용하면 데이터 저장소 용량을 늘리고 다운타임 없이 데이터 저장소의 성능을 동적으로 높일 수 있습니다. 또한 이 프로세스는 애플리케이션에 전혀 영향을 미치지 않습니다.</block>
   <block id="264b475cf0374b319edf3b094fe25874" category="list-text">볼륨에 대한 재구성 및 동적 서비스 수준 기능을 사용하면 안정적인 워크로드 크기를 조정하여 비용을 최적화하고 오버 프로비저닝을 방지할 수 있습니다.</block>
-  <block id="c38ea7c6c5e1aef9a1df0cebd81737d9" category="list-text">공용 미리 보기 중에는 VAAI가 설정되어 있지 않습니다.</block>
   <block id="35084d885dea7b061e6894c1cf3036d9" category="section-title">워크로드</block>
   <block id="f7458ac9343d5418ff038f156d9b29fc" category="paragraph">가장 일반적인 사용 사례 중 하나는 마이그레이션입니다. VMware HCX 또는 vMotion을 사용하여 사내 VM으로 이동합니다. 또는 Riverfadow를 사용하여 VM을 Azure NetApp Files 데이터 저장소로 마이그레이션할 수 있습니다.</block>
   <block id="36e402ac6b1a4b9a31bd376a7f89c68e" category="paragraph">VM을 백업하고 신속하게 복구하는 것은 ANF 데이터 저장소의 뛰어난 장점 중 하나입니다. Snapshot 복사본을 사용하여 성능에 영향을 주지 않고 VM 또는 데이터 저장소의 빠른 복사본을 만든 다음, 재해 복구를 위해 지역 간 복제를 사용하여 Azure 스토리지 또는 2차 지역으로 장기 데이터 보호를 위해 전송합니다. 이러한 접근 방식은 변경된 정보만 저장하여 스토리지 공간과 네트워크 대역폭을 최소화합니다.</block>
@@ -14374,7 +14359,6 @@
   <block id="477aa009d1d8f0ca50a38092473e92c8" category="paragraph">이 문서에서는 ONTAP용 FSx를 AWS의 VMware Cloud용 NFS 데이터 저장소로 프로비저닝하고 연결하는 데 필요한 단계를 안내합니다.</block>
   <block id="dfc876546f6dc1183356f103bca8c9bf" category="section-title">연결 옵션</block>
   <block id="96ebe87ba2bf6e2436936fad5261faee" category="paragraph">이 섹션에서는 고속 접속 아키텍처와 추가 호스트 추가 없이 SDDC 클러스터의 스토리지를 확장하는 솔루션을 구축하는 데 필요한 단계에 대해 설명합니다.</block>
-  <block id="373604cc33724c808b5ea035d2c5d911" category="paragraph">NetApp ONTAP용 Amazon FSx는 널리 사용되는 NetApp ONTAP 파일 시스템에 구축된 매우 안정적이고 확장 가능하며 고성능의 풍부한 기능 파일 스토리지를 제공하는 완전 관리형 서비스입니다. Amazon FSx for NetApp ONTAP(Multi-AZ)는 가용성 영역 수준 장애 발생 시 NAS 트래픽에 페일오버 기능을 지원하는 부동 IP 주소를 사용합니다. 이 IP 주소는 VPC CIDR 주소 공간 외부에 있으므로 ENI를 통해 SDDC로 라우팅할 수 없습니다. 따라서 VMware Transit Connect를 사용하여 NAS 인터페이스의 부동 IP 주소에 연결해야 합니다.</block>
   <block id="f86935ff4bae98bba5454898ea941c13" category="paragraph"><block ref="f86935ff4bae98bba5454898ea941c13" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b5dfb62423539055e813d9c1ad0de5ec" category="paragraph">고급 배포 단계는 다음과 같습니다.</block>
   <block id="a7e048390e1de16427d130135387bbfa" category="list-text">새로 지정된 VPC에서 ONTAP용 Amazon FSx를 생성합니다.</block>
@@ -16855,4 +16839,18 @@
   <block id="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-macro"><block ref="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-rx"></block></block>
   <block id="b898d8d538a4529dfdb2b8bf025323c2" category="paragraph"><block ref="b898d8d538a4529dfdb2b8bf025323c2" category="inline-link-macro-rx"></block></block>
   <block id="db297dc3a6b72858a5039fa6507a2b34" category="paragraph">사티야라잔, 데이비드 아네트, NetApp 미르세아 트로aca, Lenovo</block>
+  <block id="c12ff13215c1f6de4c6dad4b8a475398" category="paragraph">[underline]# * SQL Server 데이터베이스용 동영상 * #</block>
+  <block id="b4aaa3fbc0d85cfa527c7cb7f59187fd" category="video-title">NetApp ONTAP용 Amazon FSx를 사용하여 AWS EC2에 SQL Server를 구축합니다</block>
+  <block id="785e5e204bcb101e73976a8c3ad22887" category="paragraph">이 프로세스에 대한 자세한 내용은 다음 비디오를 참조하십시오.</block>
+  <block id="c91dcf7c665570f3603fa32cb3a8c644" category="list-text">용량 바인딩 워크로드에 프리미엄 또는 표준 계층을 사용하고, 필요한 경우 성능 바인딩 워크로드에 Ultra 계층을 사용하는 동시에 기본 vSAN 스토리지를 보완합니다.</block>
+  <block id="60ce6ba5fcd445684c9982883f234b8c" category="paragraph">크기 또는 할당량별 Azure NetApp Files 볼륨 성능에 대한 자세한 내용은 을 참조하십시오 <block ref="62d66f64400ed6e4ba5e012bbe140a31" category="inline-link-macro-rx"></block>.</block>
+  <block id="a01ca5d7b443422e0bc655c4d457707f" category="inline-link-macro">Microsoft의 링크</block>
+  <block id="37028a2422f1f35ed56a07f1003896d1" category="admonition">Azure Portal을 사용하여 Azure NetApp Files 볼륨을 프라이빗 클라우드에 연결할 수 있습니다. 다음 단계를 따르십시오 <block ref="c627cf01abf17d7b29d4322a9f16e21d" category="inline-link-macro-rx"></block> Azure 포털을 사용하여 Azure NetApp Files 데이터 저장소를 마운트하는 방법을 단계별로 안내합니다.</block>
+  <block id="7dfe1e95238cceec93165ab8ff605d28" category="paragraph">이를 참조하십시오 <block ref="06f6144b70bdd3c5a376672271533656" category="inline-link-macro-rx"></block> 사이징 작업 중에 사용할 수 있는 자세한 성능 벤치마크</block>
+  <block id="b1404b6b3614fe54358fb1bdb8bd294a" category="list-text">최적의 용량 및 성능을 위해 데이터 저장소 볼륨에 Premium 또는 Standard 계층을 사용합니다. 성능이 필요한 경우 Ultra 계층을 사용할 수 있습니다.</block>
+  <block id="1048ee221e43763386324d16721681fc" category="list-text">게스트 마운트 요구 사항은 Premium 또는 Ultra 계층을 사용하고 게스트 VM의 파일 공유 요구 사항은 Standard 또는 Premium 계층 볼륨을 사용합니다.</block>
+  <block id="e421004f0e3e2303f272ef4b0fa6c089" category="list-text">"표준" 네트워크 기능이 있는 Azure NetApp Files 볼륨의 경우 ExpressRoute FastPath가 지원됩니다. FastPath가 활성화되면 네트워크 트래픽이 Azure NetApp Files 볼륨으로 직접 전송되어 더 높은 대역폭과 낮은 대기 시간을 제공하는 게이트웨이를 우회합니다.</block>
+  <block id="80a4a92a47a4b87bb9d0fcf9ded1dda8" category="list-text">VAAI가 설정되어 있지 않습니다.</block>
+  <block id="94e2529c9624e06356bacdc7dc76dab9" category="admonition">ANF 데이터 저장소 사용에 대한 자세한 내용은 해당 지역의 NetApp 또는 Microsoft 솔루션 설계자에게 문의하십시오.</block>
+  <block id="a8a748d1990bd3dbc648c22396cec9c4" category="admonition">AWS 기반 VMware Cloud는 ONTAP용 FSx의 다중 AZ 및 단일 AZ 구축을 모두 지원합니다.</block>
 </blocks>

@@ -70,6 +70,18 @@ video::oracle-aws-fsx-part4c-bkup-restore-snapctrsvc_callout.mp4[] a|
  a| 
 
 |===
+[underline]# * SQL Server 데이터베이스용 동영상 * #
+
+[cols="5a, 5a, 5a"]
+|===
+
+
+ a| 
+.NetApp ONTAP용 Amazon FSx를 사용하여 AWS EC2에 SQL Server를 구축합니다
+video::SQLonFSxN.mp4[] a| 
+ a| 
+
+|===
 * link:https://tv.netapp.com/detail/video/1670591628570468424/deploy-sql-server-always-on-failover-cluster-over-smb-with-azure-netapp-files["Azure NetApp Files의 SQL 고가용성 클러스터"^]
 * link:https://www.youtube.com/watch?v=krzMWjrrMb0["스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론"^]
 * link:https://www.youtube.com/watch?v=VcQMJIRzhoY["Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화"^]
