@@ -16718,7 +16718,6 @@
   <block id="e34017da9a1a8d672a4859eb7c75947a" category="paragraph"><block ref="e34017da9a1a8d672a4859eb7c75947a" category="inline-link-macro-rx"></block></block>
   <block id="1d126a9d86b70dcdbc0585754993a848" category="summary">이 솔루션은 인공 지능 워크로드에 최적화된 NetApp 스토리지와 Lenovo 서버를 사용하는 엔트리 레벨 및 미드레인지 클러스터 아키텍처에 중점을 둡니다. 대부분의 컴퓨팅 작업이 단일 노드(단일 또는 다중 GPU)이거나 몇 개의 컴퓨팅 노드로 분산된 중소 및 중견 팀을 위해 제공됩니다. 대부분의 일상적인 AI 교육 작업은 단일 노드이기 때문에 이것이 주요 제한 사항이 아닙니다.</block>
   <block id="119a956725a313a60a3ef97db900f9fa" category="doc">TR-4810: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400</block>
-  <block id="4bdd810ac842a2485ea52dbd42c4d5f8" category="paragraph">사티야라잔, 데이비드 아네트, NetApp Mircea Troaca, Lonovo</block>
   <block id="252875fbe73a0c4ecbd42a23cc730022" category="paragraph">이 솔루션은 인공 지능(AI) 워크로드에 최적화된 NetApp 스토리지와 Lenovo 서버를 사용하는 미드레인지 클러스터 아키텍처를 제공합니다. 대부분의 컴퓨팅 작업이 단일 노드(단일 또는 다중 GPU)이거나 몇 개의 컴퓨팅 노드로 분산된 중소 및 중견 기업에 적합합니다. 이 솔루션은 대부분의 비즈니스에서 일상적인 AI 교육 작업과 부합합니다.</block>
   <block id="2fd79dc2b0743358191fe41cd806d103" category="paragraph">이 문서에서는 8개의 GPU Lenovo SR670V2 서버, 미드레인지 NetApp AFF A400 스토리지 시스템 및 100GbE 인터커넥트 스위치로 구성된 컴퓨팅 및 스토리지 구성의 테스트 및 검증을 다룹니다. 성능을 측정하기 위해 ImageNet 데이터 세트, 배치 크기 408, 절반 정밀도, CUDA 및 cuDNN을 사용하여 ResNet50을 사용했습니다. 이 아키텍처는 NetApp ONTAP 클라우드 연결형 데이터 스토리지의 엔터프라이즈급 기능이 필요한 AI 이니셔티브부터 시작하여 중소 및 중견 기업을 위한 효율적이고 비용 효율적인 솔루션을 제공합니다.</block>
   <block id="a186cc4a556d59a6e7b787796afd96a6" category="list-text">AI 시스템의 데이터 과학자, 데이터 엔지니어, 데이터 관리자 및 개발자</block>
@@ -16855,4 +16854,5 @@
   <block id="32d16eeba786f125b3c1e4750ad34e08" category="paragraph">NetApp은 수동 페일오버 실행 또는 라이센스가 필요할 수 있는 잘 구축된 OS 클러스터 소프트웨어를 사용할 것을 권장합니다.</block>
   <block id="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-macro"><block ref="0a6f7f4424be62bd8f9208328496eeaf" category="inline-link-rx"></block></block>
   <block id="b898d8d538a4529dfdb2b8bf025323c2" category="paragraph"><block ref="b898d8d538a4529dfdb2b8bf025323c2" category="inline-link-macro-rx"></block></block>
+  <block id="db297dc3a6b72858a5039fa6507a2b34" category="paragraph">사티야라잔, 데이비드 아네트, NetApp 미르세아 트로aca, Lenovo</block>
 </blocks>
