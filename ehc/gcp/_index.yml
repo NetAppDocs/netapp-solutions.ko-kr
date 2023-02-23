@@ -17,6 +17,10 @@ indexpage:
     links:
     - title: SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구
       url: "/gcp-app-dr-sc-cvo-veeam.html"
+  - title: 워크로드 마이그레이션 솔루션
+    links:
+    - title: VMware HCX를 사용하여 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
+      url: "/gcp-migrate-vmware-hcx.html"
   - title: 도구
     links:
     - title: GCVE+ CVS TCO 계산기

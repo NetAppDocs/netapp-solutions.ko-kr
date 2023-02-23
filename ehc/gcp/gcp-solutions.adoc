@@ -35,7 +35,8 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 --
 .마이그레이션
 --
-곧 출시 예정!!
+* link:gcp-migrate-vmware-hcx.html["VMware HCX를 사용하여 NetApp Cloud Volume Service NFS 데이터 저장소로 워크로드 마이그레이션"]
+
 
 --
 .확장

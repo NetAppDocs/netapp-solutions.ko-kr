@@ -3,12 +3,10 @@ indexpage:
   tiles:
   - title: 시작하기
     links:
-    - title: 새로운 기능
-      url: "/../aimda-whatsnew.html"
     - title: 비디오 및 데모
       url: "/../videos.html#ai"
     - title: 블로그
-      url: "/../aimda-blogs.html"
+      url: "/../blogs.html#ai"
   - title: AI 워크로드를 위한 통합 인프라
     links:
     - title: NVIDIA와 함께 ONTAP AI
