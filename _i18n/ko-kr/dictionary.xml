@@ -15739,7 +15739,6 @@
   <block id="3e5fc395bc0727ee4a5d50bf7852e11e" category="admonition">SQL Server 워크로드에 별도의 파일 시스템을 사용하는 것이 좋습니다. 파일 시스템이 여러 애플리케이션에 사용되는 경우 파일 시스템 및 파일 시스템 내의 볼륨 모두의 공간 사용량을 모니터링하여 볼륨이 사용 가능한 공간에 대해 경합하지 않는지 확인합니다.</block>
   <block id="9bc03cfd47c7deb1375b7e700fba9c1a" category="admonition">FlexClone 볼륨을 생성하는 데 사용되는 스냅샷 복사본은 자동 삭제 옵션에 의해 삭제되지 않습니다.</block>
   <block id="20292bb9591bce95b16e6ee1415023d3" category="admonition">SQL Server와 같은 미션 크리티컬 애플리케이션에 대해 스토리지 구매의사를 신중하게 고려하고 관리해야 하며, 운영 중단을 최소화해서는 안 됩니다. 이런 경우 스토리지 소비 추세를 모니터링하여 어느 정도의 구매량(있는 경우)을 허용할 수 있는지 확인하는 것이 좋습니다.</block>
-  <block id="d846da4dd06c448920cac63b79adc614" category="list-text">최적의 스토리지 성능을 위해 파일 시스템 용량을 총 데이터베이스 사용 크기의 1.5배 크기로 프로비저닝합니다.</block>
   <block id="e2ec94309dce197f199c6e60cd3070eb" category="list-text">애플리케이션 다운타임을 방지하기 위해 씬 프로비저닝을 사용할 때는 효과적인 작업 계획과 함께 적절한 모니터링이 필요합니다.</block>
   <block id="d7fbab8fe0fe681c9e815507bcdf85c8" category="list-text">스토리지가 가득 찰 때 사람들이 연락할 수 있는 충분한 시간이 확보되도록 Cloudwatch 및 기타 모니터링 툴 알림을 설정해야 합니다.</block>
   <block id="626a89ea253e84625436538e7249e94d" category="section-title">SQL Server용 스토리지를 구성하고 백업, 복원 및 클론 작업을 위해 SnapCenter를 구축합니다</block>
@@ -16952,4 +16951,5 @@
   <block id="dccf3c5043aaab19b4c6eed2cd51be7e" category="paragraph"><block ref="dccf3c5043aaab19b4c6eed2cd51be7e" category="inline-link-rx"></block></block>
   <block id="16844b6a71b4ccf3790079518b5286c4" category="sidebar">VMware HCX를 사용하여 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다</block>
   <block id="204c2f72244c7b6bb96fa507fcbfdde0" category="sidebar">VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다</block>
+  <block id="fbaad71632f1f86a6aec0eb25bf981d7" category="list-text">최적의 스토리지 성능을 위해 파일 시스템 용량을 총 데이터베이스 사용 크기의 1.35배로 프로비저닝합니다.</block>
 </blocks>
