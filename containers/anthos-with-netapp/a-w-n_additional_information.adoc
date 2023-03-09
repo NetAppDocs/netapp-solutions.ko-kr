@@ -29,7 +29,7 @@ https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-
 
 * VMware 문서의 Anthos 클러스터
 +
-https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/overview["https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/overview"^]
+https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview["https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview"^]
 
 * Anthos의 Bare Metal Documentation
 +

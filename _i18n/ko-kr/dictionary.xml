@@ -9896,7 +9896,6 @@
   <block id="89ef90a5be38c2b656627392eee1a2a9" category="paragraph">NetApp의 Anthos는 온프레미스 GKE(Google Kubernetes Engine) 환경을 안정적이고 신뢰할 수 있는 방법으로 구축하기 위한 검증된 모범 사례 하이브리드 클라우드 아키텍처입니다. 이 NetApp 검증 아키텍처 참조 문서는 베어 메탈 및 가상 환경에 구축된 NetApp 솔루션 Anthos의 설계 가이드 및 구현 검증 역할을 합니다. 이 문서에 설명된 아키텍처는 NetApp 및 Google Cloud의 실무 전문가가 기업 데이터 센터 환경에서 Anthos를 실행할 때의 이점을 제공하도록 검증되었습니다.</block>
   <block id="72efb373513d77a08aa5dd7e375a418f" category="section-title">Anthos</block>
   <block id="5b1a0b45a2d6518143a0c9b299e736b4" category="paragraph">Anthos는 조직이 최신 하이브리드 클라우드 인프라를 구축 및 관리하는 동시에 애플리케이션 개발에 중점을 둔 민첩한 워크플로우를 채택할 수 있는 하이브리드 클라우드 Kubernetes 데이터 센터 솔루션입니다. 오픈 소스 기술을 기반으로 구축된 솔루션인 VMware의 Anthos는 Google Cloud의 Anthos GKE와 연결 및 상호 운용이 가능한 VMware vSphere 기반 인프라에서 온-프레미스로 실행됩니다. 컨테이너, 서비스 메시 및 기타 혁신적인 기술을 채택하는 조직은 로컬 및 클라우드 기반 환경에서 일관된 애플리케이션 개발 사이클과 운영 지원 워크로드를 경험할 수 있습니다. 다음 그림은 Anthos 솔루션과 사내 데이터 센터 내의 배포가 클라우드의 인프라와 상호 연결하는 방법을 보여 줍니다.</block>
-  <block id="42fc2dc2813b6a8c6bbca7ebe6d3f51e" category="paragraph">Anthos에 대한 자세한 내용은 Anthos 웹 사이트를 참조하십시오<block ref="bcfc39c80df16a8beb60f78ea034be9d" category="inline-link-rx"></block>.</block>
   <block id="ed4b514e0a9558c7acbec81ecc5fe0e1" category="list-text">* Kubernetes Applications용 Google Cloud Marketplace * 간편한 배포를 위해 선별된 컨테이너 애플리케이션의 카탈로그입니다.</block>
   <block id="b2f70465e1ea6dcdc0843dc8ed3b7f55" category="list-text">* Migrate for Anthos. * 물리적 서비스 및 VM을 사내에서 클라우드로 자동 마이그레이션.</block>
   <block id="52bc26b321a0b4cd1f91f7961a0783c8" category="list-text">* 클라우드 인스턴스의 로깅 및 모니터링을 위해 Google에서 제공하는 Stackdriver. * 관리 서비스입니다.</block>
@@ -9918,7 +9917,6 @@
   <block id="da44b5941c7cfd27a6f5686a3168f332" category="list-text">CRD에 제공된 관리자 이메일 주소를 사용하여 처음으로 Astra Control Center GUI에 로그인할 경우 비밀번호를 변경해야 합니다.</block>
   <block id="d46a5e1e10f8a4a33306d0696cef14f5" category="summary">이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 바와 같이 여러 데이터 센터 환경에 구축된 Anthos with NetApp 솔루션의 배포 검증을 제공합니다.</block>
   <block id="9d171bf7d3d65afb2e7e56d43b4b9ed5" category="doc">NVA-1165: NetApp의 Anthos</block>
-  <block id="e961a4cbc5c7e2be5e3f72a578aeb4da" category="paragraph">NetApp의 Alan Cowles와 Nikhil Kulkarni입니다</block>
   <block id="9b3053daf2ec8e22b4a577982f08f107" category="paragraph">NetApp 솔루션의 Anthos는 다음과 같은 사용 사례를 통해 고객에게 탁월한 가치를 제공하도록 설계되었습니다.</block>
   <block id="cbc828fed325d3834b2bf3b1f2b5e639" category="inline-link">쿠버바이러스</block>
   <block id="341508ebeee3f32bbf4f6fee6cb456a0" category="list-text">엔터프라이즈 컨테이너 및 가상화된 워크로드의 힘을 합쳐 Anthos와 함께 vSphere 또는 베어 메탈에 가상으로 배포<block ref="3149dc0a8051bd1d167afbb1fe9775d9" category="inline-link-rx"></block>.</block>
@@ -9929,7 +9927,6 @@
   <block id="b73ed4ba665437210c3da7d43d6618bf" category="paragraph">Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.</block>
   <block id="87f76f310cf20e85a098d49fa77367e5" category="cell">VMware 기반 Anthos 클러스터</block>
   <block id="bdca6efb043178ef172612dd1e173dde" category="cell">1.10</block>
-  <block id="eb5d694ff9583283fe6d0190a39d5f7a" category="cell">6.7U3, 7.0U3</block>
   <block id="5b9abd64aa4865a31820ebec932e54f2" category="section-title">Anthos Ready 스토리지 파트너 프로그램.</block>
   <block id="02046ad0e82ff27f6e1774aa588fd853" category="cell">배포 유형</block>
   <block id="1552eec8291d257c4b855dcfa425d802" category="cell">스토리지 시스템</block>
@@ -9941,7 +9938,6 @@
   <block id="e5db66c80967b6fa50a1eede0ce50e2f" category="cell">MultiWriter, 볼륨 확장, 스냅샷</block>
   <block id="62a0282d39568be094470486eaf70c4f" category="cell">산</block>
   <block id="4c606f506efd3b3bef3499e3342b5933" category="cell">물리적 블록, 볼륨 확장, 스냅샷</block>
-  <block id="231afe47f3f37d3808096b36c28b4ded" category="cell">요소</block>
   <block id="a2da3c930443e5d1421caec9ee18a376" category="cell">베어 메탈</block>
   <block id="ddffa1813009160db4406c9ef143dd1e" category="section-title">NetApp 스토리지 통합</block>
   <block id="de3b8bd79707b5ac064727a07d81d808" category="paragraph">베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 통해 맞춤형 사용 사례에 최적화된 컴퓨팅 플랫폼을 선택할 수 있으며 다양한 추가 이점을 제공할 수 있습니다.</block>
@@ -9968,7 +9964,6 @@
   <block id="b763f3ad097c7d9beb9849be170a627a" category="cell">하드웨어 이름</block>
   <block id="8c692721fdfc559bf4689567aa48fb47" category="cell">Nexus</block>
   <block id="5cb4ead83aaa15a241ef0e8c36f0678c" category="cell">C9336C-FX2</block>
-  <block id="2f72e4f4112efeb63b9fb0ed1eefd1c9" category="cell">A250</block>
   <block id="8bb152d8bbc90b878b63c05b6b953334" category="section-title">추가 소프트웨어</block>
   <block id="effae9170216f08fb6cb3265a4cae9cc" category="paragraph">다음 표에는 검증 환경에 배포된 추가 소프트웨어 버전의 목록이 나와 있습니다.</block>
   <block id="91c8cbe28b4928f6ea19ea8d1894623a" category="cell">소프트웨어 이름입니다</block>
@@ -9979,7 +9974,6 @@
   <block id="c7a2b443f8714e7071c1d55a3bd2715f" category="section-title">인프라 지원 리소스</block>
   <block id="f8f0e385abfb7fc517b1b9b4e9e8d19e" category="paragraph">베어 메탈에 Anthos를 배포하기 전에 다음 인프라가 마련되어 있어야 합니다.</block>
   <block id="957478b81604fc0a340d863f3b89a2da" category="summary">NetApp은 Trident Storage Orchestrator를 사용하여 Anthos에 구축된 애플리케이션용 스토리지를 프로비저닝할 수 있는 여러 스토리지 플랫폼을 보유하고 있습니다.</block>
-  <block id="f623f7fc1ffb9cfc3afddcf52e2fec23" category="paragraph">NetApp은 Anthos에 구축된 애플리케이션에 스토리지를 프로비저닝할 수 있는 Astra Trident Storage Orchestrator를 통해 검증된 여러 스토리지 플랫폼을 보유하고 있습니다.</block>
   <block id="0c5e049b7be7649501696f84472d6820" category="paragraph"><block ref="0c5e049b7be7649501696f84472d6820" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e2719bf8f96a980f38256b7a4060368" category="list-text">Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 있어야 합니다. 설명된 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 의 경우<block ref="94346839427703f278bfb2bc5962a814" category="inline-link-rx"></block> RHEL의 경우</block>
   <block id="bf98d9390f43e942cd74d874e3bf6d68" category="list-text">디렉토리를 na_Astra_control_suite로 변경합니다.</block>
@@ -9988,9 +9982,7 @@
   <block id="6b682acdf6e246de63c54d6f90044faa" category="paragraph">사용자에게 암호 기반 sudo 액세스가 구성된 경우 다음 명령을 실행하여 플레이북을 실행한 다음 sudo 암호를 입력합니다.</block>
   <block id="bbdfa4f0841eb6d317a11ae76992b8b8" category="summary">이 섹션에서는 NetApp 구축의 Anthos를 사용자 지정하려는 사용자를 위한 로드 밸런싱 장치 옵션을 탐구하는 데 사용됩니다.</block>
   <block id="b935e49429349d1edf159cd09a0b8ff5" category="paragraph">다음 페이지에서는 Anthos with NetApp 솔루션에 검증된 로드 밸런서 옵션에 대한 추가 정보를 제공합니다.</block>
-  <block id="fbc20d9fb2c2f042edf73e3b39b3278a" category="paragraph"><block ref="fbc20d9fb2c2f042edf73e3b39b3278a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f1bcd982a417f561201a3262b52a84d7" category="list-text">NetApp SnapLock. * 지정된 기간 동안 덮어쓰거나 지울 수 없는 특수 볼륨에 데이터를 기록하여 재기록할 수 없는 데이터를 효율적으로 관리</block>
-  <block id="99634a0c579c45d299cfbb8b818c51bb" category="paragraph"><block ref="99634a0c579c45d299cfbb8b818c51bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="678cbe37bb872d145128736b4650ef68" category="paragraph">NetApp은 짧은 지연 시간, 통합 데이터 보호, 멀티 프로토콜 지원으로 강력한 All-Flash(AFF) 및 스케일아웃 하이브리드(FAS) 스토리지 플랫폼을 제공합니다.</block>
   <block id="a150469d40f75f1df1e87a9558f50769" category="paragraph">두 시스템 모두 NetApp ONTAP 데이터 관리 소프트웨어를 기반으로 합니다. 이 소프트웨어는 고가용성, 클라우드 통합, 간소화된 스토리지 관리를 위한 업계 최고의 데이터 관리 소프트웨어로 Data Fabric에 필요한 엔터프라이즈급 속도, 효율성 및 보안을 제공합니다.</block>
   <block id="a9b90f3200d3b94ea47e85db3a435816" category="paragraph">NetApp AFF 및 FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시오<block ref="629508ef5a91b5835f70894f34eed424" category="inline-link-rx"></block>.</block>
@@ -10032,8 +10024,6 @@
   <block id="fdd1d4ba64f526087e6e49e35a884fbd" category="summary">이 섹션에서는 실제 사용자가 이 솔루션을 운영 환경에 배포할 때 수행해야 할 사용자 지정(예: 사용자 지정 로드 밸런싱 장치 인스턴스 배포)에 대해 설명합니다.</block>
   <block id="90f687894749dad073416489141eb43f" category="list-text">NetApp Astra Trident 문서</block>
   <block id="7cfc9495aac39bbaa5defc76b7f4e8db" category="list-text">VMware 문서의 Anthos 클러스터</block>
-  <block id="f5266df5a7db89637cf0d7391221b756" category="inline-link"><block ref="f5266df5a7db89637cf0d7391221b756" category="inline-link-rx"></block></block>
-  <block id="1bdc624c553dda22bc7a529bda2dd06b" category="paragraph"><block ref="1bdc624c553dda22bc7a529bda2dd06b" category="inline-link-rx"></block></block>
   <block id="9ee8ef3c59727b8b17070caf87743214" category="list-text">Anthos의 Bare Metal Documentation</block>
   <block id="bc10096da41c680de98ecf3f1def7d17" category="inline-link"><block ref="bc10096da41c680de98ecf3f1def7d17" category="inline-link-rx"></block></block>
   <block id="d642746f7d7a37b7cb340d9a62d751a5" category="paragraph"><block ref="d642746f7d7a37b7cb340d9a62d751a5" category="inline-link-rx"></block></block>
@@ -10041,30 +10031,17 @@
   <block id="7f640668ae5a8fc28f807fe0d6b9128b" category="paragraph">이러한 방식으로 노드 장애 후 볼륨 재배포가 수행되면 로그아웃 이후에 호스트 연결에 영향을 주지 않고 새 위치로 리디렉션하여 로그인할 수 있습니다. iSCSI 로그인 리디렉션을 사용하는 NetApp Element 소프트웨어 클러스터는 무중단 업그레이드 및 운영이 가능한 자가 복구, 스케일아웃 아키텍처입니다.</block>
   <block id="206188ac4e8ec83453b82a36311f1a25" category="paragraph">VMware의 Anthos 클러스터는 최종 사용자의 프라이빗 데이터 센터에 구축되는 Google Kubernetes Engine의 확장 서비스입니다. 조직은 온프레미스의 Kubernetes 클러스터에서 Google Cloud의 컨테이너에서 실행하도록 설계된 동일한 애플리케이션을 배포할 수 있습니다. VMware의 Anthos 클러스터를 데이터 센터의 기존 VMware vSphere 환경에 구축할 수 있으므로 자본 비용을 절감하고 더욱 신속한 구축 및 확장 작업을 수행할 수 있습니다.</block>
   <block id="b107e7085d2931bbe4118d8c5eed9643" category="paragraph">VMware에 Anthos 클러스터를 구축하는 경우 다음과 같은 구성 요소가 포함됩니다.</block>
-  <block id="d17685a3ddd89e969b430984ce944772" category="paragraph"><block ref="d17685a3ddd89e969b430984ce944772" category="inline-image-macro-rx" type="image"></block></block>
   <block id="348ed6380fe1c4753877d1f13d95d39a" category="paragraph">VMware의 Anthos 클러스터는 다음과 같은 이점을 제공합니다.</block>
   <block id="cf97925041bebbd35543bc4fc24fa499" category="list-text">* 고급 멀티 테넌시 * 각 최종 사용자는 자체 개발 환경에 필요한 가상 리소스와 함께 구축된 자체 사용자 클러스터를 할당할 수 있습니다.</block>
   <block id="a6c34625dcf8367e84732b5219f81cb7" category="list-text">* 개발 후 게시 * 응용 프로그램이 개발 중인 동안 온프레미스 배포를 사용할 수 있습니다. 이를 통해 로컬 데이터 센터의 개인 정보 보호 환경에서 응용 프로그램을 테스트한 후 클라우드에서 공개적으로 제공할 수 있습니다.</block>
   <block id="4418ae814387892bd88d45091a182234" category="list-text">* vSphere High Availability. * 호스트 장애 시 운영 중단을 방지하기 위해 VMware vSphere를 사용하면 호스트를 클러스터링하고 고가용성을 구성할 수 있습니다. 호스트 장애로 인해 중단된 VM은 클러스터의 다른 호스트에서 곧 재부팅되어 서비스가 복구됩니다.</block>
-  <block id="44da02789c784d2615f858b0e9007c1d" category="inline-link">NetApp FlexPod를 참조하십시오</block>
-  <block id="08edd2123939d5309dced149763a50ee" category="inline-link">NetApp HCI</block>
-  <block id="58d64ca3570be3edd23e4165a8c0d9ee" category="paragraph">다음 표에는 NetApp 및 NetApp 파트너 엔지니어가 VMware 배포에서 Anthos 클러스터의 검증을 위해 테스트한 서버 플랫폼이 포함되어 있습니다. 여기에는 와 같은 솔루션이 포함됩니다<block ref="5ea2f6a45afb6a8f064f7631dd737389" category="inline-link-rx"></block> Cisco UCS 서버 및 를 사용합니다<block ref="3ff4d1b07fc6ed14e7fcf7636d0ad5aa" category="inline-link-rx"></block> 하이브리드 클라우드 인프라 플랫폼:</block>
-  <block id="bcb24d33d2a22de9b0c3e9f38becc496" category="cell">보기</block>
-  <block id="9f80c25863c6e1e85d8d5492b437cb64" category="cell">C410</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="section-title">운영 체제</block>
   <block id="69da39b403ff0537d2282cb291d4397c" category="paragraph">VMware의 Anthos 클러스터는 고객이 선택한 대로 vSphere 6 및 7 환경 모두에 배포하여 현재 데이터 센터 인프라를 충족할 수 있습니다.</block>
   <block id="23d300c91b3d48f94c1e7f5953ad3e5e" category="cell">7.0U3</block>
   <block id="89f7e5d7117ac9eb1ece116273f5f012" category="paragraph">NetApp과 NetApp의 파트너 엔지니어는 완벽하게 검증된 솔루션으로 Anthos의 배포를 완료하기 위해 네트워킹 및 스토리지용 추가 데이터 센터 구성 요소를 테스트했습니다.</block>
   <block id="fe02a8fc8838381700e175498b8e1db0" category="cell">Mellanox에서</block>
-  <block id="92666505ce75444ee14be2ebc2f10a60" category="cell">SN</block>
-  <block id="d7a84628c025d30f7b2c52c958767e76" category="cell">2010년</block>
-  <block id="bf07aaec06ff922b8a11ef624141bfdb" category="cell">S410</block>
   <block id="dd4a9a41d8672c9659041812469e1df2" category="paragraph">다음 표에는 검증 환경에 배포된 소프트웨어 버전 목록이 나와 있습니다.</block>
   <block id="da0d53141f6343167596fe8598964773" category="cell">소프트웨어 이름</block>
-  <block id="3c537b8d673e06e2107129b600143391" category="cell">4.1(3e)</block>
-  <block id="f932bed2d12442d21507b51d22b88dd7" category="cell">1.8</block>
-  <block id="c1770c414b5c19c253a48e36fa2da50f" category="paragraph">NetApp에서 실시한 Anthos Ready 플랫폼 검증 중에 연구소 환경은 다음 다이어그램을 기반으로 구축되었으며, 여러 NetApp 스토리지 시스템 및 스토리지 백엔드와 함께 배포된 여러 사용자 클러스터를 테스트할 수 있게 되었습니다.</block>
-  <block id="c1c59b2c25178eb5f3956ae189dc384b" category="paragraph"><block ref="c1c59b2c25178eb5f3956ae189dc384b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13d18f8604b3585f7ab88b87766a8d38" category="paragraph">Anthos를 배포하기 전에 다음과 같은 인프라를 구축해야 합니다.</block>
   <block id="92b7a761f185f74bf3bf9d2229c67a28" category="list-text">클러스터가 동적으로 확장되어야 하는 경우 필요에 따라 네트워크 주소 리스를 제공하는 데 사용할 수 있는 DHCP 서버입니다.</block>
   <block id="8256d4d5c73a64213343972bedd38f45" category="section-title">Anthos를 최소 3개의 노드로 구성된 ESXi 클러스터에 배포합니다</block>
@@ -12583,7 +12560,6 @@
   <block id="f498970d77b95b37672534275d7e8b40" category="paragraph"><block ref="f498970d77b95b37672534275d7e8b40" category="inline-link-macro-rx"></block></block>
   <block id="21e8ffc6f822b183559b39b43061c1d2" category="summary">NetApp은 Anthos와 같은 컨테이너 기반 환경에서 고객이 영구 데이터를 오케스트레이션하고 관리하도록 지원하는 다양한 제품을 제공합니다.</block>
   <block id="7a8b9d74335d44fbaaf7f5d5aebf0cfd" category="paragraph">Google Cloud는 Anthos Ready 스토리지 파트너 프로그램을 통해 Anthos의 새 릴리스와 파트너 스토리지 통합의 업데이트된 검증을 주기적으로 요청합니다. 현재 검증된 스토리지 솔루션, CSI 드라이버, 사용 가능한 기능 및 지원되는 Anthos의 버전 목록을 찾을 수 있습니다<block ref="0ccc93736ba595a77f031ff105798de0" category="inline-link-rx"></block>.</block>
-  <block id="ea3b8c601657928fee815e0d16908cf1" category="paragraph">NetApp은 Anthos 버전에서 Astra Trident CSI를 준수하는 스토리지 오케스트레이터와 ONTAP 및 요소 스토리지 시스템의 검증을 위한 요청을 통해 분기별로 정기적인 규정 준수를 유지해 왔습니다.</block>
   <block id="d9c9cc94777c7797db966b663b32ce4d" category="paragraph">다음 표에는 Anthos Ready 스토리지 파트너 프로그램의 일부로 NetApp 및 NetApp 파트너 엔지니어가 NetApp Astra Trident CSI 드라이버 및 기능 세트를 검증하기 위해 테스트한 Anthos 버전이 포함되어 있습니다.</block>
   <block id="84aafd4e962655f32c5bdea750278fba" category="paragraph">NetApp은 Anthos와 같은 컨테이너 기반 환경에서 영구 데이터를 오케스트레이션하고 관리하는 데 도움이 되는 다양한 제품을 제공합니다.</block>
   <block id="55713395841bbe573d35c776279d08cc" category="paragraph">NetApp Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오<block ref="845024b96ab150d9f628b33995c60669" category="inline-link-rx"></block>.</block>
@@ -12602,16 +12578,8 @@
   <block id="3f3ed1875910e0d28d2c97b78338cc3d" category="paragraph"><block ref="3f3ed1875910e0d28d2c97b78338cc3d" category="inline-link-macro-rx"></block></block>
   <block id="941b2b9e397e77b597402b51e7ef131d" category="paragraph"><block ref="941b2b9e397e77b597402b51e7ef131d" category="inline-link-macro-rx"></block></block>
   <block id="2f0792348007b672e999da06f311bd6f" category="summary">Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다.</block>
-  <block id="c91efa18f13fad38864e99107352d0c5" category="paragraph">Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.</block>
   <block id="e16f8b7c3b79f3d80b3d5b5862b4481a" category="paragraph">관리자는 프로젝트 요구 사항과 특정 수준의 성능을 보장하는 압축, 특정 디스크 유형, QoS 수준 등의 고급 스토리지 기능을 지원하는 스토리지 시스템 모델을 기반으로 여러 스토리지 백엔드를 구성할 수 있습니다. 이러한 백엔드를 정의한 후, 개발자는 프로젝트의 이러한 백엔드를 사용하여 지속적인 PVC(Volume Claim)를 생성하고 필요에 따라 컨테이너에 영구 저장소를 연결할 수 있습니다.</block>
-  <block id="239c66c0132fd8324d609e4f1ce89f79" category="paragraph">Astra Trident의 최신 버전인 22.04는 2022년 4월에 출시되었습니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다<block ref="34562000b9988739736848a0014e5230" category="inline-link-rx"></block>.</block>
   <block id="1efa4d2f8950cdd5154a6c130953c9f2" category="paragraph">22.04 릴리즈를 통해 Trident Operator의 설치를 용이하게 하는 Helm 차트가 제공됩니다.</block>
-  <block id="27bed77b9cf648bc4592d40c2806fb43" category="paragraph">Helm을 사용하여 배포된 사용자 클러스터에 Trident 설치를 자동화하고 영구 볼륨을 프로비저닝하려면 다음 단계를 완료하십시오.</block>
-  <block id="c9c8f06cd5f25063dedfc6eea2b08fa7" category="inline-link">Helm 설치 페이지</block>
-  <block id="43eba64dcd06763432addbcf8db2d367" category="list-text">Trident Helm 저장소 추가:</block>
-  <block id="6a05a869c72ac896a6f7473fba5c9b1e" category="paragraph">구축된 사용자 클러스터에 Trident를 수동으로 설치하고 영구 볼륨을 프로비저닝하려면 다음 단계를 완료하십시오.</block>
-  <block id="79273cfc4ab66c2763755b11b14fedb9" category="list-text">설치 아카이브를 관리 워크스테이션에 다운로드하고 압축을 풉니다. Trident의 현재 버전은 22.04이며 다운로드할 수 있습니다<block ref="c7e04c62da3fb5014b467863172d941c" category="inline-link-rx"></block>.</block>
-  <block id="f0d8974fd014601f60573d339d525772" category="list-text">Trident에는 이 파일을 전달할 수 있는 옵션이 없으므로 사용자 클러스터의 "kubecononfig" 파일의 위치를 참조할 필요가 없도록 환경 변수로 설정합니다.</block>
   <block id="1b8283857d1e7c1a4e80a12b3ba66ad9" category="paragraph"><block ref="1b8283857d1e7c1a4e80a12b3ba66ad9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2540200d51d81caebf749b3eb92aa66f" category="paragraph"><block ref="2540200d51d81caebf749b3eb92aa66f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="695cc7df9129054b4e4bd425d0094832" category="paragraph"><block ref="695cc7df9129054b4e4bd425d0094832" category="inline-image-macro-rx" type="image"></block></block>
@@ -12647,7 +12615,6 @@
   <block id="fc31dc82d7754f65126c60eab5625947" category="inline-link-macro">Google Cloud Console을 사용하여 응용 프로그램을 설치합니다</block>
   <block id="627662d598c35dc9438ec1747d7766dc" category="paragraph"><block ref="627662d598c35dc9438ec1747d7766dc" category="inline-link-macro-rx"></block></block>
   <block id="ee1514b17e642c9cd1384a20cec220e3" category="summary">이 페이지에서 에 연결된 비디오는 이 문서에 설명되어 있는 몇 가지 기능을 보여 줍니다.</block>
-  <block id="63e2e4c63022a2ca3a58778bd242195b" category="paragraph">다음 비디오에서는 이 문서에 설명되어 있는 몇 가지 기능을 설명합니다.</block>
   <block id="1adda60fb6ef5adf0c35c53442bdd87d" category="inline-link-macro">비디오: 베어 메탈에 Anthos의 배포</block>
   <block id="81082fb0b2db5311a27c6cd75db69481" category="paragraph"><block ref="81082fb0b2db5311a27c6cd75db69481" category="inline-link-macro-rx"></block></block>
   <block id="18d4f7e36efb77494db296ea83bc4753" category="paragraph">NetApp과 함께 배포된 베어 메탈 클러스터의 Anthos에 대한 자세한 내용은 를 참조하십시오 <block ref="eb911f2bc48f3132c014132a2870169f" category="inline-link-macro-rx"></block>.</block>
@@ -12668,14 +12635,6 @@
   <block id="6f838db94915ec121c6b32b1df99a983" category="inline-link-macro">다음: F5 BIG-IP 로드 밸런서 설치.</block>
   <block id="ecdb02c5420667abdb9a61d02af359c2" category="paragraph"><block ref="ecdb02c5420667abdb9a61d02af359c2" category="inline-link-macro-rx"></block></block>
   <block id="ea3f2894c4df21a157c45dcbcf989bda" category="paragraph">다음 페이지는 NetApp 솔루션의 Anthos에서 애플리케이션 및 영구 스토리지 관리를 위해 검증된 NetApp 제품에 대한 추가 정보를 제공합니다.</block>
-  <block id="c49053fbce1331670d3c2e81d9625fec" category="admonition">Helm은 GKE-Admin 워크스테이션에 기본적으로 설치되지 않습니다. Ubuntu에서 작동하는 바이너리 형식으로 에서 다운로드할 수 있습니다<block ref="3d578643c15f985f07ca6d975ab0e791" category="inline-link-rx"></block>.</block>
-  <block id="deae9c61cc109057bffb21d54fd54cdc" category="paragraph">Astra Trident Operator 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Astra Trident의 설정 및 구성을 계속하려면 아래 링크를 따라가십시오.</block>
-  <block id="6ed9d9e6160cedf6c16c9fa74e9d08aa" category="inline-link-macro">다음으로, NetApp ONTAP NFS를 살펴보겠습니다.</block>
-  <block id="86beb69e1e89df92a89baa0d004b08b8" category="paragraph"><block ref="86beb69e1e89df92a89baa0d004b08b8" category="inline-link-macro-rx"></block></block>
-  <block id="06a9f54df07db88477918bd7c3f597de" category="inline-link-macro">다음: NetApp Element iSCSI.</block>
-  <block id="dd8532ad7059feaef43031ffa5970de1" category="paragraph"><block ref="dd8532ad7059feaef43031ffa5970de1" category="inline-link-macro-rx"></block></block>
-  <block id="0a180196354cfbb6ec70b20db067fa6b" category="inline-link-macro">다음: NetApp Element.</block>
-  <block id="73978739caea0775c3c807ecfc27f0c0" category="paragraph"><block ref="73978739caea0775c3c807ecfc27f0c0" category="inline-link-macro-rx"></block></block>
   <block id="5aad41fe64600c5795950512637ebae3" category="inline-link-macro">다음: 로드 밸런서 옵션 탐색</block>
   <block id="0b44acd6b2e7596e640212aa28de05c5" category="paragraph"><block ref="0b44acd6b2e7596e640212aa28de05c5" category="inline-link-macro-rx"></block></block>
   <block id="d0ee5cd6f53ec708670800837b7502b7" category="inline-link-macro">다음으로, NetApp ONTAP iSCSI를 살펴보겠습니다.</block>
@@ -16952,4 +16911,54 @@
   <block id="16844b6a71b4ccf3790079518b5286c4" category="sidebar">VMware HCX를 사용하여 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다</block>
   <block id="204c2f72244c7b6bb96fa507fcbfdde0" category="sidebar">VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다</block>
   <block id="fbaad71632f1f86a6aec0eb25bf981d7" category="list-text">최적의 스토리지 성능을 위해 파일 시스템 용량을 총 데이터베이스 사용 크기의 1.35배로 프로비저닝합니다.</block>
+  <block id="697ac904ffe5f281c2b20466e99a46ec" category="paragraph"><block ref="697ac904ffe5f281c2b20466e99a46ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ea2cbade31de8af1dca89093e681575" category="paragraph">다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.</block>
+  <block id="f1633856fe511230f9c635e7a1c53316" category="inline-link-macro">비디오: Anthos 1.14 클러스터의 Trident 배포</block>
+  <block id="cf1f8100313c03361151f9caa6715bac" category="paragraph"><block ref="cf1f8100313c03361151f9caa6715bac" category="inline-link-macro-rx"></block></block>
+  <block id="1780877562a197bb240c255e7ebc64a6" category="paragraph"><block ref="1780877562a197bb240c255e7ebc64a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9f281f23fa0eaa9fab3de640f4c4ed29" category="cell">1.14</block>
+  <block id="b2311a2cf7a04db2bfe860c3fa17635c" category="cell">하드웨어 구성 요소</block>
+  <block id="7b42b4827c459034b51ee8ce9f497ca3" category="cell">스위치(데이터 네트워크)</block>
+  <block id="d5cbf018e46e897c3774dc4576d35dbe" category="cell">스위치(관리 네트워크)</block>
+  <block id="4c6ba3c2ecfdab7b2b5151a4715c51c0" category="cell">AFF 스토리지 시스템</block>
+  <block id="eba1f3287bdc33dfa25c084b5e15a4c5" category="cell">9.12.1</block>
+  <block id="8dfda84fc7f59655e20a770603bf9231" category="cell">23.01</block>
+  <block id="a6eee2bc9df13513ff08680b88b5140c" category="paragraph">NetApp에서 실시한 Anthos Ready 플랫폼 검증 중에 연구소 환경은 다음 다이어그램을 기반으로 구축되었으며, 다양한 NetApp ONTAP 스토리지 백엔드를 사용하여 여러 시나리오를 테스트할 수 있게 되었습니다.</block>
+  <block id="ba18949144254244b0c22a4dda957809" category="paragraph"><block ref="ba18949144254244b0c22a4dda957809" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3001330ca359a25f2bb0fb3a80b81f98" category="inline-link"><block ref="3001330ca359a25f2bb0fb3a80b81f98" category="inline-link-rx"></block></block>
+  <block id="ce31d50048cf83e159c11cdf9571f300" category="paragraph"><block ref="ce31d50048cf83e159c11cdf9571f300" category="inline-link-rx"></block></block>
+  <block id="e961adb60321df286b916effec21c9d5" category="paragraph">NetApp은 Astra Trident Storage Orchestrator를 사용하여 컨테이너로 배포된 애플리케이션의 스토리지를 프로비저닝할 수 있는 여러 스토리지 플랫폼을 제공합니다.</block>
+  <block id="82dc86caf99045e3dfd059ffe973d587" category="list-text">NetApp Cloud Volumes Service(GCP) 및 Azure NetApp Files는 클라우드에서 파일 기반 스토리지를 제공합니다.</block>
+  <block id="e0219edd422866b0cdb0aaa5f2b9352e" category="list-text">NetApp ONTAP용 Amazon FSx는 파일 기반 사용 사례에 대한 스토리지를 제공하는 AWS에서 완벽하게 관리되는 서비스입니다.</block>
+  <block id="8490bfef5919608f9d8461a6bb270666" category="paragraph">NetApp은 Astra Trident CSI를 준수하는 스토리지 오케스트레이터와 Anthos 버전에서 ONTAP 스토리지 시스템을 검증하라는 요청을 포함하여 분기별로 정기적인 규정 준수를 유지해 왔습니다.</block>
+  <block id="594e1ec3daa27e540baa061f731f028f" category="cell">ONTAP 9.12.1</block>
+  <block id="7f7813d8ff1a7fae9bca0ef452fb1346" category="cell">MultiWriter, 볼륨 확장, 스냅샷, PVCDataSource</block>
+  <block id="8c56d327dfefc3dfd3c4c4fbe25a8bd1" category="cell">원시 블록, 볼륨 확장, 스냅샷, PVCDataSource</block>
+  <block id="9fe6d7d50b2c6958117a19834e038c82" category="cell">1.13</block>
+  <block id="775d4bb28d257a6aa23992563a82c458" category="cell">22.10</block>
+  <block id="74eb178224c5fa701fbcd96998feaafe" category="cell">ONTAP 9.9.1</block>
+  <block id="e0076fd5294e757abc41b2328ed8c57d" category="cell">요소 12.3</block>
+  <block id="7f35d44665a62879611c82424828f0fd" category="inline-link-macro">다음: Anthos를 위한 고급 구성 옵션.</block>
+  <block id="bff5cad56bec414a2d44f250d8a8ad3d" category="paragraph"><block ref="bff5cad56bec414a2d44f250d8a8ad3d" category="inline-link-macro-rx"></block></block>
+  <block id="001a38f118eab6df015a51079735d9c9" category="paragraph">Anthos에 대한 자세한 내용은 Anthos 웹 사이트를 참조하십시오<block ref="984918f1ee4e70aa6181e0564d0768e7" category="inline-link-rx"></block>.</block>
+  <block id="dbadbc59fa29afd33e371d5285fde4cf" category="paragraph">Banu Sundhar와 NetApp의 Suresh Thoppay가 있습니다</block>
+  <block id="94806f6a6daed15d3a6ea4f0146cf8ee" category="paragraph">NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, Cloud Volumes ONTAP, Cloud Volumes Service, Azure NetApp Files, FSxN for NetApp ONTAP 스토리지 시스템이 포함되어 있으며, 이 모든 것이 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.</block>
+  <block id="57f64c5c85667657a2c67b472c545e5a" category="paragraph">을 참조하십시오<block ref="0c665fc00d0d39d9ca9d157ca926b271" category="inline-link-rx"></block> 에서 검증된 릴리스에 대한 지원 매트릭스를 참조하십시오.</block>
+  <block id="8986a7e5e5d0b79b5251a648f9f67ef6" category="paragraph">Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP를 비롯한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.</block>
+  <block id="5be08e29583206baf8c89778e711c743" category="paragraph"><block ref="5be08e29583206baf8c89778e711c743" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e79464fd5ecc0abac7a7f768780ea0f4" category="paragraph">Astra Trident의 최신 버전에 대한 문서를 찾을 수 있습니다<block ref="845024b96ab150d9f628b33995c60669" category="inline-link-rx"></block>. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다<block ref="34562000b9988739736848a0014e5230" category="inline-link-rx"></block>.</block>
+  <block id="dee50dd9c6fd0b4d11789e8a074455c0" category="paragraph">Astra Trident 설치에 대한 자세한 내용은 을 참조하십시오<block ref="df28848dc0c60e349970187bfd75a0df" category="inline-link-rx"></block>.</block>
+  <block id="6cfca408e9e3b476e6440302dbe3a550" category="section-title">스토리지 시스템 백엔드를 생성합니다</block>
+  <block id="6d82ca16bfbce249e1f9ea541bff13ff" category="inline-link-macro">백엔드를 생성합니다.</block>
+  <block id="1e449644660ede384d0f8370105c8852" category="paragraph">Astra Trident Operator 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Astra Trident의 설정 및 구성을 계속하려면 아래 링크를 따라가십시오.<block ref="0510ad325b52db9e306380d77ace3c72" category="inline-link-macro-rx"></block></block>
+  <block id="14f4c7abe09c4481722f1fa6563f2604" category="section-title">스토리지 클래스를 생성합니다</block>
+  <block id="69dd4ff02a34defa6f31ed5f8bb209f6" category="paragraph">백엔드를 생성한 후 Kubernetes 사용자가 볼륨을 생성할 때 지정할 스토리지 클래스를 생성해야 합니다. Kubernetes 사용자는 이름으로 스토리지 클래스를 지정하는 PVC(영구적 볼륨 클레임)를 사용하여 볼륨을 프로비저닝합니다. 아래 링크를 따라 스토리지 클래스를 생성합니다.<block ref="034759ff187a64d8fb38f587d14777c0" category="inline-link-macro-rx"></block></block>
+  <block id="50cbd0d28725f746b370915ee052232c" category="section-title">볼륨을 동적으로 프로비저닝</block>
+  <block id="72407fd74e9ce26b706ed85bc90bd124" category="inline-link-macro">PVC를 작성합니다</block>
+  <block id="35a0b000c0ba5920cef3268fee2323b4" category="paragraph">스토리지 클래스를 사용하여 볼륨을 동적으로 프로비저닝하는 Kubernetes 영구 볼륨 클레임(PVC) 객체를 생성해야 합니다. 아래 링크를 따라 PVC 객체를 만듭니다.<block ref="0af94896212bb2843496226f6871904c" category="inline-link-macro-rx"></block></block>
+  <block id="279865aaa331ec925a99c3272eb45478" category="section-title">볼륨을 사용합니다</block>
+  <block id="fed9c63a200801110024280f08877e16" category="inline-link-macro">POD에 볼륨을 마운트합니다</block>
+  <block id="d822bbb4d6960be49b781e594679db64" category="paragraph">위 단계에서 프로비저닝된 볼륨은 POD에 볼륨을 마운트하여 응용 프로그램에서 사용할 수 있습니다. 아래 링크는 예를 보여줍니다.<block ref="48fadb04c46cf19aa1b5e274dd9b5da9" category="inline-link-macro-rx"></block></block>
+  <block id="7a11d367cfedc152ce1db261fb8f21fd" category="inline-link-macro">다음: Anthos를 위한 고급 구성 옵션.</block>
+  <block id="fca5cd0af87c3fa0c3d74ee21a3d346f" category="paragraph"><block ref="fca5cd0af87c3fa0c3d74ee21a3d346f" category="inline-link-macro-rx"></block></block>
 </blocks>

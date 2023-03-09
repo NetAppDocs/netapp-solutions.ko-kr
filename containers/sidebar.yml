@@ -19,20 +19,11 @@ entries:
     entries:
     - title: NetApp ONTAP를 참조하십시오
       url: "/containers/anthos-with-netapp/a-w-n_netapp_ontap.html"
-    - title: NetApp Element
-      url: "/containers/anthos-with-netapp/a-w-n_netapp_element.html"
   - title: NetApp 스토리지 통합 개요
     url: "/containers/anthos-with-netapp/a-w-n_overview_storint.html"
     entries:
     - title: NetApp Astra Trident 개요
       url: "/containers/anthos-with-netapp/a-w-n_overview_trident.html"
-      entries:
-      - title: NetApp ONTAP NFS 를 참조하십시오
-        url: "/containers/anthos-with-netapp/a-w-n_trident_ontap_nfs.html"
-      - title: NetApp ONTAP iSCSI를 참조하십시오
-        url: "/containers/anthos-with-netapp/a-w-n_trident_ontap_iscsi.html"
-      - title: NetApp Element iSCSI 를 참조하십시오
-        url: "/containers/anthos-with-netapp/a-w-n_trident_element_iscsi.html"
   - title: Anthos를 위한 고급 구성 옵션
     url: "/containers/anthos-with-netapp/a-w-n_overview_advanced.html"
     entries:
