@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-nfs-netapp-solution-for-silly-rename-issue-in-nfs-to-kafka-workload.html 
+keywords: solution, posix, xfs, ext4, rebalancing 
+summary: 이 섹션에서는 nfs 서버 및 NFS 클라이언트가 이 문제를 해결하는 데 필요한 변경 사항과 이름 바꾸기 문제에 대해 설명합니다. 
+---
+= NFS에서 Kafka 워크로드로의 이름 바꾸기 문제를 해결하기 위한 NetApp 솔루션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-nfs-introduction.html["이전: 소개."]
+
+[role="lead"]
+Kafka는 기본 파일 시스템이 POSIX를 준수한다고 가정합니다(예: XFS 또는 ext4). Kafka 리소스 재조정은 애플리케이션이 파일을 계속 사용하는 동안 파일을 제거합니다. POSIX 호환 파일 시스템을 사용하면 연결을 끊을 수 있습니다. 그러나 파일에 대한 모든 참조가 제거된 후에만 파일을 제거합니다. 기본 파일 시스템이 네트워크에 연결되어 있는 경우 NFS 클라이언트는 링크 해제 통화를 차단하고 워크플로우를 관리합니다. 연결 해제 중인 파일에 대해 보류 중인 열기 때문에 NFS 클라이언트는 이름 바꾸기 요청을 NFS 서버로 보내고 연결되지 않은 파일의 마지막 닫기에서는 이름이 변경된 파일에 대해 제거 작업을 실행합니다. 이 동작은 일반적으로 NFS의 이름이 바보 같은 이름 바꾸기라고 하며 NFS 클라이언트가 조율합니다.
+
+NFSv3 서버의 스토리지를 사용하는 Kafka 브로커는 이 동작으로 인해 문제가 발생합니다. 그러나 NFSv4.x 프로토콜에는 열려 있는 연결되지 않은 파일에 대해 서버가 책임을 지도록 하여 이 문제를 해결할 수 있는 기능이 있습니다. 이 선택적 기능을 지원하는 NFS 서버는 파일을 열 때 NFS 클라이언트에 소유권 기능을 전달합니다. 그런 다음 보류 중인 가 열려 있고 서버가 흐름을 관리할 수 있으면 NFS 클라이언트가 연결 해제 관리를 중단합니다. NFSv4 사양에서는 구축 지침을 제공하지만 지금까지 이 선택적 기능을 지원하는 알려진 NFS 서버 구현은 없었습니다.
+
+NFS 서버와 NFS 클라이언트가 이름 바꾸기 문제를 해결하려면 다음 변경 사항이 필요합니다.
+
+* * NFS 클라이언트 변경 사항(Linux). * 파일을 열 때 NFS 서버가 플래그를 응답하여 열린 파일의 연결 해제 처리 기능을 나타냅니다. NFS 클라이언트 측 변경 사항을 사용하면 NFS 서버가 해당 플래그가 있을 때 연결 해제를 처리할 수 있습니다. NetApp은 이러한 변경 사항으로 오픈 소스 Linux NFS 클라이언트를 업데이트했습니다. 업데이트된 NFS 클라이언트는 RHEL8.7 및 RHEL9.1에서 일반적으로 사용할 수 있습니다.
+* * NFS 서버에 대한 변경. * NFS 서버가 열린 내용을 추적합니다. 이제 기존 열린 파일의 연결 해제는 POSIX 의미론과 일치하도록 서버에서 관리됩니다. 마지막 열기가 닫히면 NFS 서버가 파일의 실제 제거를 시작하여 이름이 바보스러운 이름 바꾸기 프로세스를 방지합니다. ONTAP NFS 서버는 최신 버전인 ONTAP 9.12.1에서 이 기능을 구현했습니다.
+
+
+Kafka는 NFS 클라이언트 및 서버의 변경 사항을 통해 네트워크에 연결된 NFS 스토리지의 모든 이점을 안전하게 누릴 수 있습니다.
+
+link:kafka-nfs-functional-validation-silly-rename-fix.html["다음: 기능 검증 - 어리석은 이름 변경 수정."]

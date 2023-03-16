@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-nfs-where-to-find-additional-information.html 
+keywords:  
+summary:  
+---
+= 추가 정보를 찾을 수 있는 위치
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-nfs-conclusion.html["이전: 결론."]
+
+[role="lead"]
+이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
+
+* 아파치 카프카란?
++
+https://www.confluent.io/what-is-apache-kafka/["https://www.confluent.io/what-is-apache-kafka/"^]
+
+* 이름이 바보 같습니까?
++
+https://linux-nfs.org/wiki/index.php/Server-side_silly_rename["https://linux-nfs.org/wiki/index.php/Server-side_silly_rename"^]
+
+* ONATP는 스트리밍 애플리케이션에 대해 읽혀집니다.
++
+https://www.netapp.com/blog/ontap-ready-for-streaming-applications/["https://www.netapp.com/blog/ontap-ready-for-streaming-applications/"^]
+
+* Kafka의 이름 변경 문제.
++
+https://sbg.technology/2018/07/10/kafka-nfs/["https://sbg.technology/2018/07/10/kafka-nfs/"^]
+
+* NetApp 제품 설명서
++
+https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
+
+* NFS란 무엇입니까?
++
+https://en.wikipedia.org/wiki/Network_File_System["https://en.wikipedia.org/wiki/Network_File_System"^]
+
+* Kafka 파티션 재할당이란 무엇입니까?
++
+https://docs.cloudera.com/runtime/7.2.10/kafka-managing/topics/kafka-manage-cli-reassign-overview.html["https://docs.cloudera.com/runtime/7.2.10/kafka-managing/topics/kafka-manage-cli-reassign-overview.html"^]
+
+* OpenMessaging 벤치마크란 무엇입니까?
++
+https://openmessaging.cloud/["https://openmessaging.cloud/"^]
+
+* Kafka 브로커를 어떻게 마이그레이션합니까?
++
+https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtime-58c216129058["https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtime-58c216129058"^]
+
+* Prometheus로 Kafka 브로커를 어떻게 모니터링하십니까?
++
+https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/[]
+
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2022년 11월 | 최초 릴리스. 
+|===

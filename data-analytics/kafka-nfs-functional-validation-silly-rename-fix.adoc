@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-nfs-functional-validation-silly-rename-fix.html 
+keywords: validation setup, architecture flow, testing methodology 
+summary: 기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스터가 파티션 재배포와 같은 Kafka 작업을 수행하지 않는 반면, 수정 사항이 있는 NFSv4에 마운트된 또 다른 클러스터는 중단 없이 동일한 작업을 수행할 수 있음을 보여주었습니다. 
+---
+= 기능 검증 - 이름 바꾸기 수정 바보
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-nfs-netapp-solution-for-silly-rename-issue-in-nfs-to-kafka-workload.html["이전: NFS에서 Kafka 워크로드로 이름 바꾸기 인한 어리석은 문제를 위한 NetApp 솔루션"]
+
+[role="lead"]
+기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스터가 파티션 재배포와 같은 Kafka 작업을 수행하지 않는 반면, 수정 사항이 있는 NFSv4에 마운트된 또 다른 클러스터는 중단 없이 동일한 작업을 수행할 수 있음을 보여주었습니다.
+
+
+
+== 검증 설정
+
+이 설정은 AWS에서 실행됩니다. 다음 표에는 검증에 사용된 다양한 플랫폼 구성 요소와 환경 구성이 나와 있습니다.
+
+|===
+| 플랫폼 구성 요소 | 환경 구성 
+
+
+| Confluent 플랫폼 버전 7.2.1  a| 
+* 3 x zookeers – T3.xLarge
+* 브로커 서버 4대 – R3.xLarge
+* Grafana 1개 – T3.xLarge
+* 제어 센터 1개 – T3.xLarge
+* 프로듀서/소비자 3대
+
+
+
+
+| 모든 노드의 운영 체제 | RHEL8.7 이상 
+
+
+| NetApp Cloud Volumes ONTAP 인스턴스 | 단일 노드 인스턴스 – M5.2xLarge 
+|===
+다음 그림에서는 이 솔루션의 아키텍처 구성을 보여 줍니다.
+
+image:kafka-nfs-image1.png["이 이미지는 각각 프로듀서 Swarm, Kafka 클러스터 및 CVO 인스턴스가 있는 3개의 전용 서브넷이 포함된 VPC를 포함하는 AWS 토폴로지를 보여줍니다."]
+
+
+
+== 아키텍처 흐름
+
+* * Compute. * 4노드 Kafka 클러스터와 3노드 zookeeper 앙상블이 전용 서버에서 실행되고 있었습니다.
+* * 모니터링. * Prometheus-Grafana 조합에 두 개의 노드를 사용했습니다.
+* * 워크로드. * 워크로드를 생성하는 데 별도의 3노드 클러스터를 사용하여 Kafka 클러스터에 생성하고 사용합니다.
+* * 스토리지. * 이 인스턴스에는 500GB GP2 AWS-EBS 볼륨 2개가 연결된 단일 노드 NetApp Cloud Volumes ONTAP 인스턴스가 사용되었습니다. 그런 다음 LIF를 통해 이러한 볼륨을 단일 NFSv4.1 볼륨으로 Kafka 클러스터에 노출했습니다.
+
+
+Kafka의 기본 속성은 모든 서버에 대해 선택되었습니다. 지퍼지기 백팔도 마찬가지였습니다.
+
+
+
+== 테스트 방법
+
+. 두 개의 유사한 Kafka 클러스터가 생성되었으며 다음과 같은 차이점이 있습니다.
++
+** * 클러스터 1. * 운영 지원 ONTAP 버전 9.12.1을 실행하는 백엔드 NFS v4.1 서버는 NetApp CVO 인스턴스에서 호스팅되었습니다. 브로커에 RHEL 8.7/RHEL 9.1이 설치되었습니다.
+** * 클러스터 2. * 백엔드 NFS 서버는 수동으로 생성된 일반 Linux NFSv3 서버였습니다.
+
+
+. 두 Kafka 클러스터 모두에서 데모 주제가 생성되었습니다.
++
+클러스터 1:
+
++
+image:kafka-nfs-image2.png["이 스크린샷은 클러스터 1에서 생성된 데모 항목을 보여 줍니다."]
+
++
+클러스터 2:
+
++
+image:kafka-nfs-image3.png["이 스크린샷은 클러스터 2에서 생성된 데모 항목을 보여 줍니다."]
+
+. 두 클러스터에 대해 새로 생성된 이러한 항목에 데이터가 로드되었습니다. 이 작업은 기본 Kafka 패키지에 포함된 프로듀서-perf-test 툴킷을 사용하여 수행되었습니다.
++
+....
+./kafka-producer-perf-test.sh --topic __a_demo_topic --throughput -1 --num-records 3000000 --record-size 1024 --producer-props acks=all bootstrap.servers=172.30.0.160:9092,172.30.0.172:9092,172.30.0.188:9092,172.30.0.123:9092
+....
+. telnet을 사용하여 각 클러스터에 대해 broker-1에 대한 상태 점검을 수행했습니다.
++
+** 텔넷 `172.30.0.160 9092`
+** 텔넷 `172.30.0.198 9092`
++
+두 클러스터 모두에서 브로커의 상태 점검이 성공적으로 완료된 경우 다음 스크린샷에 나와 있습니다.
+
++
+image:kafka-nfs-image4.png["이 스크린샷은 두 브로커에 대한 성공적인 상태 점검을 위한 정보를 보여줍니다."]
+
+
+
+. NFSv3 스토리지 볼륨을 사용하는 Kafka 클러스터가 중단되는 장애 조건을 트리거하기 위해 두 클러스터에서 파티션 재할당 프로세스를 시작했습니다. 파티션 재할당이 을(를) 사용하여 수행되었습니다 `kafka-reassign-partitions.sh`. 자세한 프로세스는 다음과 같습니다.
++
+.. Kafka 클러스터의 주제에 대한 파티션을 재할당하기 위해 제안된 재할당 구성 JSON을 생성했습니다(두 클러스터에 대해 수행됨).
++
+....
+kafka-reassign-partitions --bootstrap-server=172.30.0.160:9092,172.30.0.172:9092,172.30.0.188:9092,172.30.0.123:9092 --broker-list "1,2,3,4" --topics-to-move-json-file /tmp/topics.json --generate
+....
+.. 생성된 재할당 JSON이 에 저장되었습니다 `/tmp/reassignment- file.json`.
+.. 실제 파티션 재할당 프로세스는 다음 명령을 통해 트리거되었습니다.
++
+....
+kafka-reassign-partitions --bootstrap-server=172.30.0.198:9092,172.30.0.163:9092,172.30.0.221:9092,172.30.0.204:9092 --reassignment-json-file /tmp/reassignment-file.json –execute
+....
+
+
+. 재할당이 완료되고 몇 분 후에 브로커에 대한 또 다른 상태 점검 결과, NFSv3 스토리지 볼륨을 사용하는 클러스터가 이름이 바보 같은 문제로 실행되고 충돌이 발생했던 반면, NetApp ONTAP NFSv4.1 스토리지 볼륨을 사용하는 클러스터 1은 수정 작업을 중단 없이 계속했습니다.
++
+image:kafka-nfs-image5.png["이 스크린샷은 충돌한 브로커의 출력을 보여줍니다."]
+
++
+** cluster1-Broker-1이 활성 상태입니다.
+** Cluster2-broker-1이 작동하지 않습니다.
+
+
+. Kafka 로그 디렉토리를 확인했을 때 수정하여 NetApp ONTAP NFSv4.1 스토리지 볼륨을 사용하는 클러스터 1에서 파티션을 클린 할당했다는 것이 분명했지만, 일반 NFSv3 스토리지를 사용하는 클러스터 2에서는 이름 변경 문제가 우스꽝스러운 이유로 발생하지 않아 충돌이 발생하지 않았습니다. 다음 그림에서는 클러스터 2의 파티션 재조정을 보여 주며, NFSv3 스토리지에서 이름 바꾸기 문제가 우스꽝스러운 것으로 나타났습니다.
++
+image:kafka-nfs-image6.png["이 스크린샷은 Cluster 2 충돌에 대한 로그 출력을 보여 줍니다."]
+
++
+다음 그림은 NetApp NFSv4.1 스토리지를 사용하여 클러스터 1의 파티션을 완전히 재조정하는 방법을 보여줍니다.
+
++
+image:kafka-nfs-image7.png["이 스크린샷은 클러스터 1에 대한 클린 파티션 할당에 대한 로그 출력을 보여 주는 반면"]
+
+
+
+link:kafka-nfs-why-netapp-nfs-for-kafka-workloads.html["다음으로, Kafka 워크로드를 위한 NetApp NFS를 선택해야 하는 이유"]

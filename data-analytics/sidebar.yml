@@ -3,6 +3,25 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
+- title: NetApp NFS 스토리지를 사용하는 Apache Kafka 워크로드
+  type: solutions
+  entries:
+  - title: 소개
+    url: "/data-analytics/kafka-nfs-introduction.html"
+  - title: NFS에서 Kafka 워크로드로 이름 바꾸기 인한 어리석은 문제를 해결하기 위한 NetApp 솔루션
+    url: "/data-analytics/kafka-nfs-netapp-solution-for-silly-rename-issue-in-nfs-to-kafka-workload.html"
+  - title: 기능 검증 - 이름 바꾸기 수정 바보
+    url: "/data-analytics/kafka-nfs-functional-validation-silly-rename-fix.html"
+  - title: Kafka 워크로드를 위해 NetApp NFS를 선택해야 하는 이유
+    url: "/data-analytics/kafka-nfs-why-netapp-nfs-for-kafka-workloads.html"
+  - title: AWS의 성능 개요 및 검증
+    url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws.html"
+  - title: AFF On-Premises를 통한 성능 개요 및 검증
+    url: "/data-analytics/kafka-nfs-performance-overview-and-validation-with-aff-on-premises.html"
+  - title: 결론
+    url: "/data-analytics/kafka-nfs-conclusion.html"
+  - title: 추가 정보를 찾을 수 있는 위치
+    url: "/data-analytics/kafka-nfs-where-to-find-additional-information.html"
 - title: NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka
   type: solutions
   entries:

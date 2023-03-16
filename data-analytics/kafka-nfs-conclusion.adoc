@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/kafka-nfs-conclusion.html 
+keywords: conclusion 
+summary: 이름 바꾸기 비용이 저렴하다는 어리석은 문제를 위한 NetApp 솔루션은 이전에 NFS와 호환되지 않았던 워크로드를 위해 중앙에서 관리하는 단순한 형태의 스토리지를 제공합니다. 
+---
+= 결론
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:kafka-nfs-performance-overview-and-validation-with-aff-on-premises.html["이전: AFF On-Premises를 통한 성능 개요 및 검증"]
+
+[role="lead"]
+이름 바꾸기 비용이 저렴하다는 어리석은 문제를 위한 NetApp 솔루션은 이전에 NFS와 호환되지 않았던 워크로드를 위해 중앙에서 관리하는 단순한 형태의 스토리지를 제공합니다. 이 새로운 패러다임은 고객이 재해 복구 및 데이터 보호를 위해 마이그레이션 및 미러링이 용이한 보다 관리가 용이한 Kafka 클러스터를 생성할 수 있도록 해 줍니다. 또한 NFS는 CPU 활용률 감소, 복구 시간 단축, 스토리지 효율성 대폭 향상, NetApp ONTAP를 통한 성능 향상과 같은 추가 이점을 제공합니다.
+
+link:kafka-nfs-where-to-find-additional-information.html["다음: 추가 정보를 찾을 위치."]
