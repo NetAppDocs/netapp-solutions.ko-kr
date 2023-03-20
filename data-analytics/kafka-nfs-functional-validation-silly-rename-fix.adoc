@@ -63,6 +63,12 @@ Kafka의 기본 속성은 모든 서버에 대해 선택되었습니다. 지퍼�
 
 == 테스트 방법
 
+. 업데이트 `-is-preserve-unlink-enabled true` 다음과 같이 Kafka 볼륨으로 이동합니다.
++
+....
+aws-shantanclastrecall-aws::*> volume create -vserver kafka_svm -volume kafka_fg_vol01 -aggregate kafka_aggr -size 3500GB -state online -policy kafka_policy -security-style unix -unix-permissions 0777 -junction-path /kafka_fg_vol01 -type RW -is-preserve-unlink-enabled true
+[Job 32] Job succeeded: Successful
+....
 . 두 개의 유사한 Kafka 클러스터가 생성되었으며 다음과 같은 차이점이 있습니다.
 +
 ** * 클러스터 1. * 운영 지원 ONTAP 버전 9.12.1을 실행하는 백엔드 NFS v4.1 서버는 NetApp CVO 인스턴스에서 호스팅되었습니다. 브로커에 RHEL 8.7/RHEL 9.1이 설치되었습니다.

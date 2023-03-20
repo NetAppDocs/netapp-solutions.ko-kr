@@ -17324,4 +17324,5 @@
   <block id="7d576967253ca2f566f9693183407367" category="sidebar">NetApp NFS 스토리지를 사용하는 Apache Kafka 워크로드</block>
   <block id="a5428e6b4b42638886ab5870a883efb9" category="sidebar">NFS에서 Kafka 워크로드로 이름 바꾸기 인한 어리석은 문제를 해결하기 위한 NetApp 솔루션</block>
   <block id="0d7c7eeec9388fceaff3d06e03b45fe9" category="sidebar">AFF On-Premises를 통한 성능 개요 및 검증</block>
+  <block id="c31fea06105fe5260bb879284c6181e0" category="list-text">업데이트<block ref="9733772c7c0780d4ef7a6a8d6a9dbd7d" prefix=" " category="inline-code"></block> 다음과 같이 Kafka 볼륨으로 이동합니다.</block>
 </blocks>
