@@ -58,6 +58,18 @@ https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtim
 +
 https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/[]
 
+* Apache Kafka용 관리 플랫폼
++
+https://www.instaclustr.com/platform/managed-apache-kafka/[]
+
+* 아파치 카프카 지원
++
+https://www.instaclustr.com/support-solutions/kafka-support/[]
+
+* Apache Kafka용 컨설팅 서비스
++
+https://www.instaclustr.com/services/consulting/[]
+
 
 
 
@@ -68,5 +80,5 @@ https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and
 | 버전 | 날짜 | 문서 버전 기록 
 
 
-| 버전 1.0 | 2022년 11월 | 최초 릴리스. 
+| 버전 1.0 | 2023년 3월 | 최초 릴리스. 
 |===

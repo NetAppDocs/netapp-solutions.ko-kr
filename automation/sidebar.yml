@@ -13,6 +13,6 @@ entries:
 - title: Terraform을 통한 Cloud Volumes Automation
   url: "/automation/cloud_volumes_terraform.html"
 - title: ONTAP용 FSX 모니터링 및 자동 리사이징은 AWS Lambda 함수를 사용합니다
-  url: automation/fsxn_monitoring_resizing_automation.html
+  url: "/automation/fsxn_monitoring_resizing_automation.html"
 - title: 요청 자동화
   url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20<request_title>
