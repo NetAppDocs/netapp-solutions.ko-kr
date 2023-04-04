@@ -22,6 +22,8 @@ summary:
 
 == 퍼블릭 클라우드의 VMware 클라우드 옵션
 
+이 섹션에서는 각 클라우드 공급자가 해당 퍼블릭 클라우드 오퍼링 내에서 VMware SDDC(Software Defined Data Center) 및/또는 VCF(VMware Cloud Foundation) 스택을 지원하는 방법에 대해 설명합니다.
+
 
 
 === Azure VMware 솔루션

@@ -92,7 +92,7 @@ NOTE: 게스트 내 저장소는 Cloud Volumes ONTAP 및 Cloud Volumes Services�
 
 == NetApp 스토리지 옵션
 
-NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 각각 연결된 추측이나 보조 NFS 데이터 저장소로 활용할 수 있습니다.
+NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 게스트 연결 또는 보조 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.
 
 를 방문하십시오 link:ehc-support-configs.html["지원되는 NetApp 스토리지 옵션"] 를 참조하십시오.
 

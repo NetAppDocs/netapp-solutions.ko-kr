@@ -14077,7 +14077,6 @@
   <block id="c99ec32d06b1f19699d82b1b34a80ca0" category="paragraph"><block ref="c99ec32d06b1f19699d82b1b34a80ca0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="58098d451cf2728b0542acd542f9000b" category="cell">* 보조 NFS 데이터 저장소 *</block>
   <block id="51b0e38e5ec7edbe37b6672987ce5f2e" category="paragraph">NetApp이 게스트 연결 스토리지 장치로 NetApp에서 제공하는 3가지 운영 하이퍼스케일러 또는 보조 NFS 데이터 저장소를 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확장/버스팅 하는 기능에 대해 자세히 알아보십시오.</block>
-  <block id="ccb4d111a650d51ca9a8feb2542610be" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 각각 연결된 추측이나 보조 NFS 데이터 저장소로 활용할 수 있습니다.</block>
   <block id="d22e98327d29984cdf19ebfeeb53bd99" category="paragraph">NetApp이 AWS VMware 클라우드(VMC)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 보충 NFS 데이터 저장소에서 마이그레이션 워크플로우에 전환하여 클라우드, 백업/복원 및 재해 복구를 확대/급증할 수 있습니다.</block>
   <block id="e3dea11e8144be98f637687e2a2cf316" category="paragraph">AWS VMC에서 NetApp 스토리지를 guess connected 또는 보완 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
   <block id="206616b83a19162051802c3823da0f7c" category="paragraph">또한 NetApp은 게스트 내(게스트 연결) 스토리지로서 프로비저닝되거나 각 하이퍼스케일러에서 보조 NFS 데이터 저장소로 제공하는 솔루션을 제공합니다. 모든 솔루션은 클라우드 워크로드의 VMware 분류와 함께 분류됩니다. 이러한 분류에는 다음이 포함됩니다.</block>
@@ -17422,4 +17421,6 @@
   <block id="9d5591555b2fbddd314212720dc97729" category="list-text">Apache Kafka용 컨설팅 서비스</block>
   <block id="583ea5ea8c7ad81fed86a1925483124c" category="paragraph"><block ref="583ea5ea8c7ad81fed86a1925483124c" category="inline-link-rx"></block></block>
   <block id="fb4d860c1938626a4cb9b8f66c6eb6f2" category="cell">2023년 3월</block>
+  <block id="0ab328bbf8073ef01a9d54504bf7b317" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 게스트 연결 또는 보조 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
+  <block id="f53db24f3a12ed8109f77a0f93c877af" category="paragraph">이 섹션에서는 각 클라우드 공급자가 해당 퍼블릭 클라우드 오퍼링 내에서 VMware SDDC(Software Defined Data Center) 및/또는 VCF(VMware Cloud Foundation) 스택을 지원하는 방법에 대해 설명합니다.</block>
 </blocks>
