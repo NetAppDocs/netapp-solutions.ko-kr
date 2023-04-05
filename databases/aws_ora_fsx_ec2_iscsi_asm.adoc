@@ -1,0 +1,1098 @@
+---
+sidebar: sidebar 
+permalink: databases/aws_ora_fsx_ec2_iscsi_asm.html 
+keywords: Oracle, AWS, FSx ONTAP, Database, Oracle ASM, Oracle Restart, iSCSI 
+summary: 이 솔루션은 ASM을 볼륨 관리자로 사용하여 독립 실행형 재시작 방식으로 구성된 iSCSI 프로토콜과 Oracle 데이터베이스를 사용하는 AWS FSx ONTAP 스토리지와 EC2 컴퓨팅 인스턴스의 Oracle 데이터베이스 구축 및 보호에 대한 개요와 세부 정보를 제공합니다. 
+---
+= TR-4965: iSCSI/ASM을 사용하는 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Allen Cao, Niyaz Mohamed, NetApp
+
+
+
+== 목적
+
+ASM(Automatic Storage Management)은 많은 Oracle 설치에 사용되는 일반적인 Oracle 스토리지 볼륨 관리자입니다. 또한 Oracle에서 권장하는 스토리지 관리 솔루션이기도 합니다. 기존 볼륨 관리자 및 파일 시스템을 대체할 수 있습니다. Oracle 버전 11g부터 ASM은 데이터베이스가 아닌 그리드 인프라와 함께 패키지로 제공됩니다. 따라서 RAC를 사용하지 않는 스토리지 관리에 Oracle ASM을 활용하려면 Oracle Restart라고도 하는 독립 실행형 서버에 Oracle 그리드 인프라를 설치해야 합니다. 이렇게 하면 더욱 단순한 Oracle 데이터베이스 구축에 따르는 복잡성이 더욱 증가합니다. 그러나 이름에서 알 수 있듯이 Oracle이 재시작 모드로 구축되면 사용자 개입 없이 호스트를 재부팅한 후 오류가 발생한 Oracle 서비스가 다시 시작됩니다. 이를 통해 특정 수준의 고가용성 또는 HA 기능을 제공할 수 있습니다.
+
+이 문서에서는 EC2 컴퓨팅 인스턴스가 있는 ONTAP 스토리지 환경을 위한 Amazon FSx에서 iSCSI 프로토콜과 Oracle ASM을 사용하여 Oracle 데이터베이스를 구축하는 방법을 보여 줍니다. 또한 NetApp BlueXP 콘솔을 통해 NetApp SnapCenter 서비스를 사용하여 개발/테스트 또는 기타 사용 사례에서 AWS 퍼블릭 클라우드에서 스토리지 효율적인 데이터베이스 작업을 위해 Oracle 데이터베이스를 백업, 복원, 복제하는 방법을 보여줍니다.
+
+이 솔루션은 다음과 같은 사용 사례를 해결합니다.
+
+* ONTAP 스토리지용 Amazon FSx 및 iSCSI/ASM을 사용하는 EC2 컴퓨팅 인스턴스에 Oracle 데이터베이스 구축
+* iSCSI/ASM을 사용하여 퍼블릭 AWS 클라우드에서 Oracle 워크로드 테스트 및 검증
+* AWS에 구축된 Oracle 데이터베이스 재시작 기능의 테스트 및 검증
+
+
+
+
+== 대상
+
+이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
+
+* iSCSI/ASM을 통해 AWS 퍼블릭 클라우드에 Oracle을 구축하려는 DBA
+* AWS 퍼블릭 클라우드에서 Oracle 워크로드를 테스트하려는 데이터베이스 솔루션 설계자
+* AWS FSx 스토리지에 구축된 Oracle 데이터베이스를 구축하고 관리하려는 스토리지 관리자
+* AWS FSx/EC2에서 Oracle 데이터베이스를 가동하려는 애플리케이션 소유자입니다.
+
+
+
+
+== 솔루션 테스트 및 검증 환경
+
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <<Key Factors for Deployment Consideration>>.
+
+
+
+=== 있습니다
+
+image::aws_ora_fsx_ec2_iscsi_asm_architecture.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+
+
+
+=== 하드웨어 및 소프트웨어 구성 요소
+
+|===
+
+
+3+| * 하드웨어 * 
+
+
+| FSX ONTAP 저장소 | AWS에서 제공하는 현재 버전입니다 | 동일한 VPC 및 가용성 존에 FSx HA 클러스터 1개 
+
+
+| 컴퓨팅용 EC2 인스턴스 | T2.xLarge/4vCPU/16G | EC2 T2 xLarge EC2 인스턴스 2개, 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 
+
+
+3+| * 소프트웨어 * 
+
+
+| RedHat Linux | RHEL-8.6.0_HVM-20220503-x86_64-2-Hourly2-GP2 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
+
+
+| Oracle Grid Infrastructure | 버전 19.18 | RU 패치 p34762026_190000_Linux-x86-64.zip 를 적용했습니다 
+
+
+| Oracle 데이터베이스 | 버전 19.18 | RU 패치 p34765931_190000_Linux-x86-64.zip 를 적용했습니다 
+
+
+| Oracle OPatch | 버전 12.2.0.1.36 | 최신 패치 p6880880_190000_Linux-x86-64.zip 
+
+
+| SnapCenter 서비스 | 버전 | v2.3.1.2324 
+|===
+
+
+=== 구축 시 고려해야 할 주요 요소
+
+* * EC2 컴퓨팅 인스턴스 * 이러한 테스트 및 검증에서는 Oracle 데이터베이스 컴퓨팅 인스턴스에 AWS EC2 T2.xLarge 인스턴스 유형을 사용했습니다. 운영 구축 환경에서는 데이터베이스 워크로드에 최적화된 M5 유형 EC2 인스턴스를 Oracle의 컴퓨팅 인스턴스로 사용하는 것이 좋습니다. 실제 워크로드 요구 사항에 따라 vCPU 수와 RAM 양에 따라 EC2 인스턴스를 적절하게 사이징해야 합니다.
+* * FSx 스토리지 HA 클러스터 단일 또는 다중 영역 배포. * 이러한 테스트 및 검증에서는 단일 AWS 가용성 영역에 FSx HA 클러스터를 구축했습니다. 프로덕션 배포를 위해 FSx HA 쌍을 두 가지 가용성 영역에 배포하는 것이 좋습니다. FSx HA 클러스터는 스토리지 레벨 이중화를 제공하기 위해 액티브-패시브 파일 시스템 쌍으로 미러링되는 HA 쌍으로 프로비저닝됩니다. 다중 영역 구축을 통해 단일 AWS 영역에서 장애가 발생할 경우 고가용성을 더욱 강화할 수 있습니다.
+* * FSx 스토리지 클러스터 크기 조정 * ONTAP 스토리지 파일 시스템용 Amazon FSx는 최대 160,000개의 원시 SSD IOPS, 최대 4Gbps 처리량 및 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.
+* * Oracle 데이터 및 로그 레이아웃 * 테스트 및 검증에서 각각 데이터 및 로그용 ASM 디스크 그룹 2개를 구축했습니다. DATA ASM 디스크 그룹 내에서 데이터 볼륨에 4개의 LUN을 프로비저닝했습니다. logs ASM 디스크 그룹 내에서 로그 볼륨에 2개의 LUN을 프로비저닝했습니다. 일반적으로 ONTAP 볼륨용 Amazon FSx 내에 여러 개의 LUN을 배치하면 성능이 향상됩니다.
+* * iSCSI 구성. * EC2 인스턴스 데이터베이스 서버는 iSCSI 프로토콜을 사용하여 FSx 스토리지에 연결합니다. EC2 인스턴스는 일반적으로 단일 네트워크 인터페이스 또는 ENI로 구축합니다. 단일 NIC 인터페이스는 iSCSI 및 애플리케이션 트래픽을 모두 전달합니다. 애플리케이션 및 iSCSI 트래픽 처리량 요구사항을 모두 충족하는 올바른 EC2 컴퓨팅 인스턴스를 선택하려면 Oracle AWR 보고서를 신중하게 분석하여 Oracle 데이터베이스 PEEK I/O 처리량 요구사항을 측정하는 것이 중요합니다. 또한 다중 경로가 올바르게 구성된 두 FSx iSCSI 엔드포인트 모두에 4개의 iSCSI 연결을 할당하는 것이 좋습니다.
+* * 사용자가 생성한 각 Oracle ASM 디스크 그룹에 사용할 Oracle ASM 이중화 레벨 * FSx는 이미 FSx 클러스터 레벨에서 스토리지를 미러링하므로 외부 이중화를 사용해야 합니다. 이는 옵션이 Oracle ASM이 디스크 그룹의 내용을 미러링하지 못하도록 허용하지 않는다는 것을 의미합니다.
+* * 데이터베이스 백업 * NetApp은 클라우드에서 데이터베이스 백업, 복원, 복제를 위한 SnapCenter 소프트웨어 서비스의 SaaS 버전을 제공하며 NetApp BlueXP 콘솔 UI를 통해 이용할 수 있습니다. 신속한(1분 이내) 스냅샷 백업, 빠른(몇 분) 데이터베이스 복원, 데이터베이스 복제를 위해 이러한 서비스를 구현하는 것이 좋습니다.
+
+
+
+
+== 솔루션 구축
+
+다음 섹션에서는 단계별 배포 절차를 제공합니다.
+
+
+
+=== 배포를 위한 사전 요구 사항
+
+[%collapsible]
+====
+배포에는 다음과 같은 사전 요구 사항이 필요합니다.
+
+. AWS 계정이 설정되었으며 AWS 계정 내에 필요한 VPC 및 네트워크 세그먼트가 생성되었습니다.
+. AWS EC2 콘솔에서 2개의 EC2 Linux 인스턴스를 구축해야 합니다. 하나는 운영 Oracle DB 서버로, 다른 하나는 선택적 대체 클론 타겟 DB 서버입니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 를 검토합니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html["Linux 인스턴스에 대한 사용자 가이드"^] 를 참조하십시오.
+. AWS EC2 콘솔에서 ONTAP 스토리지 HA 클러스터용 Amazon FSx를 구축하여 Oracle 데이터베이스 볼륨을 호스팅합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["ONTAP 파일 시스템용 FSx 생성"^] 을 참조하십시오.
+. 2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다 `ora_01` 이라는 FSx 파일 시스템이 있습니다 `fsx_01`. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오.
++
+....
+git clone https://github.com/NetApp-Automation/na_aws_fsx_ec2_deploy.git
+....
+
+
+====
+
+
+=== EC2 인스턴스 커널 구성
+
+[%collapsible]
+====
+사전 요구 사항이 용량 할당된 상태에서 EC2 인스턴스에 루트 사용자로 로그인하여 Oracle 설치를 위한 Linux 커널을 구성합니다.
+
+. 스테이징 디렉터리를 만듭니다 `/tmp/archive` 폴더를 지정하고 를 설정합니다 `777` 권한.
++
+....
+mkdir /tmp/archive
+
+chmod 777 /tmp/archive
+....
+. Oracle 바이너리 설치 파일 및 기타 필요한 rpm 파일을 에 다운로드하고 스테이징합니다 `/tmp/archive` 디렉토리.
++
+에 명시된 설치 파일의 다음 목록을 참조하십시오 `/tmp/archive` EC2 인스턴스에서 선택합니다.
+
++
+....
+[ec2-user@ip-172-30-15-58 ~]$ ls -l /tmp/archive
+total 10537316
+-rw-rw-r--. 1 ec2-user ec2-user      19112 Mar 21 15:57 compat-libcap1-1.10-7.el7.x86_64.rpm
+-rw-rw-r--  1 ec2-user ec2-user 3059705302 Mar 21 22:01 LINUX.X64_193000_db_home.zip
+-rw-rw-r--  1 ec2-user ec2-user 2889184573 Mar 21 21:09 LINUX.X64_193000_grid_home.zip
+-rw-rw-r--. 1 ec2-user ec2-user     589145 Mar 21 15:56 netapp_linux_unified_host_utilities-7-1.x86_64.rpm
+-rw-rw-r--. 1 ec2-user ec2-user      31828 Mar 21 15:55 oracle-database-preinstall-19c-1.0-2.el8.x86_64.rpm
+-rw-rw-r--  1 ec2-user ec2-user 2872741741 Mar 21 22:31 p34762026_190000_Linux-x86-64.zip
+-rw-rw-r--  1 ec2-user ec2-user 1843577895 Mar 21 22:32 p34765931_190000_Linux-x86-64.zip
+-rw-rw-r--  1 ec2-user ec2-user  124347218 Mar 21 22:33 p6880880_190000_Linux-x86-64.zip
+-rw-r--r--  1 ec2-user ec2-user     257136 Mar 22 16:25 policycoreutils-python-utils-2.9-9.el8.noarch.rpm
+....
+. 대부분의 커널 구성 요구 사항을 충족하는 Oracle 19c 사전 설치 RPM을 설치합니다.
++
+....
+yum install /tmp/archive/oracle-database-preinstall-19c-1.0-2.el8.x86_64.rpm
+....
+. 누락된 을 다운로드하고 설치합니다 `compat-libcap1` Linux 8에서
++
+....
+yum install /tmp/archive/compat-libcap1-1.10-7.el7.x86_64.rpm
+....
+. NetApp에서 NetApp 호스트 유틸리티를 다운로드하고 설치합니다.
++
+....
+yum install /tmp/archive/netapp_linux_unified_host_utilities-7-1.x86_64.rpm
+....
+. 설치합니다 `policycoreutils-python-utils`이는 EC2 인스턴스에서 사용할 수 없습니다.
++
+....
+yum install /tmp/archive/policycoreutils-python-utils-2.9-9.el8.noarch.rpm
+....
+. 열려 있는 JDK 버전 1.8을 설치합니다.
++
+....
+yum install java-1.8.0-openjdk.x86_64
+....
+. iSCSI 초기자 유틸리티를 설치합니다.
++
+....
+yum install iscsi-initiator-utils
+....
+. 설치합니다 `sg3_utils`.
++
+....
+yum install sg3_utils
+....
+. 설치합니다 `device-mapper-multipath`.
++
+....
+yum install device-mapper-multipath
+....
+. 현재 시스템에서 투명 HugePages를 비활성화합니다.
++
+....
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+....
++
+에 다음 행을 추가합니다 `/etc/rc.local` 를 눌러 비활성화합니다 `transparent_hugepage` 재부팅 후:
+
++
+....
+  # Disable transparent hugepages
+          if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
+            echo never > /sys/kernel/mm/transparent_hugepage/enabled
+          fi
+          if test -f /sys/kernel/mm/transparent_hugepage/defrag; then
+            echo never > /sys/kernel/mm/transparent_hugepage/defrag
+          fi
+....
+. SELinux를 변경하여 해제합니다 `SELINUX=enforcing` 를 선택합니다 `SELINUX=disabled`. 변경 사항을 적용하려면 호스트를 재부팅해야 합니다.
++
+....
+vi /etc/sysconfig/selinux
+....
+. 에 다음 행을 추가합니다 `limit.conf` 따옴표 없이 파일 설명자 제한과 스택 크기를 설정하려면 다음을 수행합니다 `" "`.
++
+....
+vi /etc/security/limits.conf
+  "*               hard    nofile          65536"
+  "*               soft    stack           10240"
+....
+. 다음 명령을 실행하여 EC2 인스턴스에 스왑 공간을 추가합니다. link:https://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/["스왑 파일을 사용하여 Amazon EC2 인스턴스에서 스왑 공간으로 사용할 메모리를 어떻게 할당합니까?"^] 정확한 추가 공간은 최대 16G RAM의 크기에 따라 달라집니다.
+. 변경 `node.session.timeo.replacement_timeout` 에 있습니다 `iscsi.conf` 120 ~ 5초 사이의 구성 파일.
++
+....
+vi /etc/iscsi/iscsid.conf
+....
+. EC2 인스턴스에서 iSCSI 서비스를 설정 및 시작합니다.
++
+....
+systemctl enable iscsid
+systemctl start iscsid
+....
+. 데이터베이스 LUN 매핑에 사용할 iSCSI 이니시에이터 주소를 검색합니다.
++
+....
+cat /etc/iscsi/initiatorname.iscsi
+....
+. ASM sysasm 그룹에 사용할 ASM 그룹을 추가합니다
++
+....
+groupadd asm
+....
+. Oracle 사용자를 수정하여 ASM을 보조 그룹으로 추가합니다(Oracle 사용자는 Oracle 사전 설치 RPM 설치 후 생성되어야 함).
++
+....
+usermod -a -G asm oracle
+....
+. EC2 인스턴스를 재부팅합니다.
+
+
+====
+
+
+=== 데이터베이스 볼륨 및 LUN을 EC2 인스턴스 호스트에 프로비저닝 및 매핑합니다
+
+[%collapsible]
+====
+FSx 콘솔에서 Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅하도록 세 개의 볼륨을 프로비저닝합니다.
+
+. SSH를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인합니다.
+. 다음 명령을 실행하여 Oracle 바이너리에 대한 볼륨을 생성합니다.
++
+....
+vol create -volume ora_01_biny -aggregate aggr1 -size 50G -state online  -type RW -snapshot-policy none -tiering-policy snapshot-only
+....
+. 다음 명령을 실행하여 Oracle 데이터용 볼륨을 생성합니다.
++
+....
+vol create -volume ora_01_data -aggregate aggr1 -size 100G -state online  -type RW -snapshot-policy none -tiering-policy snapshot-only
+....
+. 다음 명령을 실행하여 Oracle 로그용 볼륨을 생성합니다.
++
+....
+vol create -volume ora_01_logs -aggregate aggr1 -size 100G -state online  -type RW -snapshot-policy none -tiering-policy snapshot-only
+....
+. 데이터베이스 바이너리 볼륨 내에 바이너리 LUN을 생성합니다.
++
+....
+lun create -path /vol/ora_01_biny/ora_01_biny_01 -size 40G -ostype linux
+....
+. 데이터베이스 데이터 볼륨 내에 데이터 LUN을 생성합니다.
++
+....
+lun create -path /vol/ora_01_data/ora_01_data_01 -size 20G -ostype linux
+
+lun create -path /vol/ora_01_data/ora_01_data_02 -size 20G -ostype linux
+
+lun create -path /vol/ora_01_data/ora_01_data_03 -size 20G -ostype linux
+
+lun create -path /vol/ora_01_data/ora_01_data_04 -size 20G -ostype linux
+....
+. 데이터베이스 로그 볼륨 내에 로그 LUN을 생성합니다.
++
+....
+lun create -path /vol/ora_01_logs/ora_01_logs_01 -size 40G -ostype linux
+
+lun create -path /vol/ora_01_logs/ora_01_logs_02 -size 40G -ostype linux
+....
+. 위의 EC2 커널 구성의 14단계에서 검색된 이니시에이터를 사용하여 EC2 인스턴스에 대한 igroup을 생성합니다.
++
+....
+igroup create -igroup ora_01 -protocol iscsi -ostype linux -initiator iqn.1994-05.com.redhat:f65fed7641c2
+....
+. LUN을 위에서 생성한 igroup에 매핑합니다. 볼륨 내의 각 추가 LUN에 대해 LUN ID를 순차적으로 증분합니다.
++
+....
+map -path /vol/ora_01_biny/ora_01_biny_01 -igroup ora_01 -vserver svm_ora -lun-id 0
+map -path /vol/ora_01_data/ora_01_data_01 -igroup ora_01 -vserver svm_ora -lun-id 1
+map -path /vol/ora_01_data/ora_01_data_02 -igroup ora_01 -vserver svm_ora -lun-id 2
+map -path /vol/ora_01_data/ora_01_data_03 -igroup ora_01 -vserver svm_ora -lun-id 3
+map -path /vol/ora_01_data/ora_01_data_04 -igroup ora_01 -vserver svm_ora -lun-id 4
+map -path /vol/ora_01_logs/ora_01_logs_01 -igroup ora_01 -vserver svm_ora -lun-id 5
+map -path /vol/ora_01_logs/ora_01_logs_02 -igroup ora_01 -vserver svm_ora -lun-id 6
+....
+. LUN 매핑을 확인합니다.
++
+....
+mapping show
+....
++
+이 문제는 다음 항목을 반환해야 합니다.
+
++
+....
+FsxId02ad7bf3476b741df::> mapping show
+  (lun mapping show)
+Vserver    Path                                      Igroup   LUN ID  Protocol
+---------- ----------------------------------------  -------  ------  --------
+svm_ora    /vol/ora_01_biny/ora_01_biny_01           ora_01        0  iscsi
+svm_ora    /vol/ora_01_data/ora_01_data_01           ora_01        1  iscsi
+svm_ora    /vol/ora_01_data/ora_01_data_02           ora_01        2  iscsi
+svm_ora    /vol/ora_01_data/ora_01_data_03           ora_01        3  iscsi
+svm_ora    /vol/ora_01_data/ora_01_data_04           ora_01        4  iscsi
+svm_ora    /vol/ora_01_logs/ora_01_logs_01           ora_01        5  iscsi
+svm_ora    /vol/ora_01_logs/ora_01_logs_02           ora_01        6  iscsi
+....
+
+
+====
+
+
+=== 데이터베이스 스토리지 구성
+
+[%collapsible]
+====
+이제 EC2 인스턴스 호스트에서 Oracle 그리드 인프라 및 데이터베이스 설치를 위한 FSx 스토리지를 가져와서 설정합니다.
+
+. EC2 사용자로 SSH를 통해 EC2 인스턴스에 로그인합니다. 그런 다음 SSH 키와 EC2 인스턴스 IP 주소로 변경합니다.
++
+....
+ssh -i ora_01.pem ec2-user@172.30.15.58
+....
+. SVM iSCSI IP 주소를 사용하여 FSx iSCSI 엔드포인트를 검색합니다. 그런 다음 환경별 포털 주소로 변경합니다.
++
+....
+sudo iscsiadm iscsiadm --mode discovery --op update --type sendtargets --portal 172.30.15.51
+....
+. 각 타겟에 로그인하여 iSCSI 세션을 설정합니다.
++
+....
+sudo iscsiadm --mode node -l all
+....
++
+명령의 예상 출력은 다음과 같습니다.
+
++
+....
+[ec2-user@ip-172-30-15-58 ~]$ sudo iscsiadm --mode node -l all
+Logging in to [iface: default, target: iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3, portal: 172.30.15.51,3260]
+Logging in to [iface: default, target: iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3, portal: 172.30.15.13,3260]
+Login to [iface: default, target: iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3, portal: 172.30.15.51,3260] successful.
+Login to [iface: default, target: iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3, portal: 172.30.15.13,3260] successful.
+....
+. 활성 iSCSI 세션 목록을 보고 확인합니다.
++
+....
+sudo iscsiadm --mode session
+....
++
+iSCSI 세션을 반환합니다.
+
++
+....
+[ec2-user@ip-172-30-15-58 ~]$ sudo iscsiadm --mode session
+tcp: [1] 172.30.15.51:3260,1028 iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3 (non-flash)
+tcp: [2] 172.30.15.13:3260,1029 iqn.1992-08.com.netapp:sn.1f795e65c74911edb785affbf0a2b26e:vs.3 (non-flash)
+....
+. LUN을 호스트로 가져왔는지 확인합니다.
++
+....
+sudo sanlun lun show
+....
++
+그러면 FSx의 Oracle LUN 목록이 반환됩니다.
+
++
+....
+
+[ec2-user@ip-172-30-15-58 ~]$ sudo sanlun lun show
+controller(7mode/E-Series)/                                   device          host                  lun
+vserver(cDOT/FlashRay)        lun-pathname                    filename        adapter    protocol   size    product
+
+svm_ora                       /vol/ora_01_logs/ora_01_logs_02 /dev/sdn        host3      iSCSI      40g     cDOT
+svm_ora                       /vol/ora_01_logs/ora_01_logs_01 /dev/sdm        host3      iSCSI      40g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_03 /dev/sdk        host3      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_04 /dev/sdl        host3      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_01 /dev/sdi        host3      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_02 /dev/sdj        host3      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_biny/ora_01_biny_01 /dev/sdh        host3      iSCSI      40g     cDOT
+svm_ora                       /vol/ora_01_logs/ora_01_logs_02 /dev/sdg        host2      iSCSI      40g     cDOT
+svm_ora                       /vol/ora_01_logs/ora_01_logs_01 /dev/sdf        host2      iSCSI      40g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_04 /dev/sde        host2      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_02 /dev/sdc        host2      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_03 /dev/sdd        host2      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_data/ora_01_data_01 /dev/sdb        host2      iSCSI      20g     cDOT
+svm_ora                       /vol/ora_01_biny/ora_01_biny_01 /dev/sda        host2      iSCSI      40g     cDOT
+....
+. 를 구성합니다 `multipath.conf` 다음 기본 항목과 블랙리스트 항목이 있는 파일입니다.
++
+....
+sudo vi /etc/multipath.conf
+
+defaults {
+    find_multipaths yes
+    user_friendly_names yes
+}
+
+[source, cli]
+blacklist {
+    devnode "^(ram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
+    devnode "^hd[a-z]"
+    devnode "^cciss.*"
+}
+....
+. 다중 경로 서비스를 시작합니다.
++
+....
+sudo systemctl start multipathd
+....
++
+이제 다중 경로 장치가 에 나타납니다 `/dev/mapper` 디렉토리.
+
++
+....
+[ec2-user@ip-172-30-15-58 ~]$ ls -l /dev/mapper
+total 0
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e68512d -> ../dm-0
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685141 -> ../dm-1
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685142 -> ../dm-2
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685143 -> ../dm-3
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685144 -> ../dm-4
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685145 -> ../dm-5
+lrwxrwxrwx 1 root root       7 Mar 21 20:13 3600a09806c574235472455534e685146 -> ../dm-6
+crw------- 1 root root 10, 236 Mar 21 18:19 control
+....
+. SSH를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인하여 각 LUN의 일련 번호 16진수 번호를 검색합니다. 6c574xxx...로 시작합니다. 16진수 번호는 AWS 공급업체 ID인 3600a0980으로 시작합니다.
++
+....
+lun show -fields serial-hex
+....
++
+그리고 다음과 같이 돌아옵니다.
+
++
+....
+FsxId02ad7bf3476b741df::> lun show -fields serial-hex
+vserver path                            serial-hex
+------- ------------------------------- ------------------------
+svm_ora /vol/ora_01_biny/ora_01_biny_01 6c574235472455534e68512d
+svm_ora /vol/ora_01_data/ora_01_data_01 6c574235472455534e685141
+svm_ora /vol/ora_01_data/ora_01_data_02 6c574235472455534e685142
+svm_ora /vol/ora_01_data/ora_01_data_03 6c574235472455534e685143
+svm_ora /vol/ora_01_data/ora_01_data_04 6c574235472455534e685144
+svm_ora /vol/ora_01_logs/ora_01_logs_01 6c574235472455534e685145
+svm_ora /vol/ora_01_logs/ora_01_logs_02 6c574235472455534e685146
+7 entries were displayed.
+....
+. 를 업데이트합니다 `/dev/multipath.conf` 파일 - 다중 경로 장치에 대한 사용자 친화적인 이름을 추가합니다.
++
+....
+sudo vi /etc/multipath.conf
+....
++
+다음 항목이 있는 경우:
+
++
+....
+multipaths {
+        multipath {
+                wwid            3600a09806c574235472455534e68512d
+                alias           ora_01_biny_01
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685141
+                alias           ora_01_data_01
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685142
+                alias           ora_01_data_02
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685143
+                alias           ora_01_data_03
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685144
+                alias           ora_01_data_04
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685145
+                alias           ora_01_logs_01
+        }
+        multipath {
+                wwid            3600a09806c574235472455534e685146
+                alias           ora_01_logs_02
+        }
+....
+. 다중 경로 서비스를 재부팅하여 에서 장치가 에 있는지 확인합니다 `/dev/mapper` LUN 이름 대 직렬 16진수 ID로 변경되었습니다.
++
+....
+sudo systemctl restart multipathd
+....
++
+확인합니다 `/dev/mapper` 다음과 같이 돌아가려면:
+
++
+....
+[ec2-user@ip-172-30-15-58 ~]$ ls -l /dev/mapper
+total 0
+crw------- 1 root root 10, 236 Mar 21 18:19 control
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_biny_01 -> ../dm-0
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_data_01 -> ../dm-1
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_data_02 -> ../dm-2
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_data_03 -> ../dm-3
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_data_04 -> ../dm-4
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_logs_01 -> ../dm-5
+lrwxrwxrwx 1 root root       7 Mar 21 20:41 ora_01_logs_02 -> ../dm-6
+....
+. 단일 주 파티션으로 바이너리 LUN을 파티셔닝합니다.
++
+....
+sudo fdisk /dev/mapper/ora_01_biny_01
+....
+. XFS 파일 시스템을 사용하여 분할된 바이너리 LUN을 포맷합니다.
++
+....
+sudo mkfs.xfs /dev/mapper/ora_01_biny_01p1
+....
+. 에 바이너리 LUN을 마운트합니다 `/u01`.
++
+....
+sudo mount -t xfs /dev/mapper/ora_01_biny_01p1 /u01
+....
+. 변경 `/u01` 마운트 지점 소유권을 Oracle 사용자에게 부여하며, 기본 그룹이 사용됩니다.
++
+....
+chown oracle:oinstall /u01
+....
+. 바이너리 LUN의 UUI를 찾습니다.
++
+....
+sudo blkid /dev/mapper/ora_01_biny_01p1
+....
+. 에 마운트 지점을 추가합니다 `/etc/fstab`.
++
+....
+sudo vi /etc/fstab
+....
++
+다음 줄을 추가합니다.
+
++
+....
+UUID=d89fb1c9-4f89-4de4-b4d9-17754036d11d       /u01    xfs     defaults,nofail 0       2
+....
++
+
+NOTE: EC2 인스턴스 재부팅 중에 발생할 수 있는 루트 잠금 문제를 방지하려면 UUID와 NOFAIL 옵션을 사용하여 바이너리를 마운트하는 것이 중요합니다.
+
+. 루트 사용자로 Oracle 디바이스에 대한 udev 규칙을 추가합니다.
++
+....
+vi /etc/udev/rules.d/99-oracle-asmdevices.rules
+....
++
+다음 항목 포함:
+
++
+....
+ENV{DM_NAME}=="ora_01_data_*", GROUP:="oinstall", OWNER:="oracle", MODE:="660"
+ENV{DM_NAME}=="ora_01_logs_*", GROUP:="oinstall", OWNER:="oracle", MODE:="660"
+....
+. 루트 사용자로 udev 규칙을 다시 로드합니다.
++
+....
+udevadm control --reload-rules
+....
+. 루트 사용자로 udev 규칙을 트리거합니다.
++
+....
+udevadm trigger
+....
+. 루트 사용자로 multipathd를 다시 로드합니다.
++
+....
+systemctl restart multipathd
+....
+
+
+====
+
+
+=== Oracle 그리드 인프라 설치
+
+[%collapsible]
+====
+. SSH를 통해 EC2 인스턴스로 로그인하고 주석 처리를 해제하여 암호 인증을 활성화합니다 `PasswordAuthentication yes` 그런 다음 의견을 남기기 바랍니다 `PasswordAuthentication no`.
++
+....
+sudo vi /etc/ssh/sshd_config
+....
+. sshd 서비스를 다시 시작합니다.
++
+....
+sudo systemctl restart sshd
+....
+. Oracle 사용자 암호를 재설정합니다.
++
+....
+sudo passwd oracle
+....
+. Oracle Restart 소프트웨어 소유자 사용자(Oracle)로 로그인합니다. 다음과 같이 Oracle 디렉토리를 생성합니다.
++
+....
+mkdir -p /u01/app/oracle
+mkdir -p /u01/app/oraInventory
+....
+. 디렉터리 권한 설정을 변경합니다.
++
+....
+chmod -R 775 /u01/app
+....
+. 그리드 홈 디렉터리를 만들고 변경합니다.
++
+....
+mkdir -p /u01/app/oracle/product/19.0.0/grid
+cd /u01/app/oracle/product/19.0.0/grid
+....
+. 그리드 설치 파일의 압축을 풉니다.
++
+....
+unzip -q /tmp/archive/LINUX.X64_193000_grid_home.zip
+....
+. 그리드 홈에서 을 삭제합니다 `OPatch` 디렉토리.
++
+....
+rm -rf OPatch
+....
+. 그리드 홈에서 복사합니다 `p6880880_190000_Linux-x86-64.zip` grid_home 으로 이동한 다음 압축을 풉니다.
++
+....
+cp /tmp/archive/p6880880_190000_Linux-x86-64.zip .
+unzip p6880880_190000_Linux-x86-64.zip
+....
+. 그리드 홈에서 수정합니다 `cv/admin/cvu_config`, 주석 취소 및 바꾸기 `CV_ASSUME_DISTID=OEL5` 와 함께 `CV_ASSUME_DISTID=OL7`.
++
+....
+vi cv/admin/cvu_config
+....
+. 를 준비합니다 `gridsetup.rsp` 자동 설치용 파일 및 RSP 파일을 에 배치합니다 `/tmp/archive` 디렉토리. RSP 파일은 다음 정보를 사용하여 섹션 A, B 및 G를 포함해야 합니다.
++
+....
+INVENTORY_LOCATION=/u01/app/oraInventory
+oracle.install.option=HA_CONFIG
+ORACLE_BASE=/u01/app/oracle
+oracle.install.asm.OSDBA=dba
+oracle.install.asm.OSOPER=oper
+oracle.install.asm.OSASM=asm
+oracle.install.asm.SYSASMPassword="SetPWD"
+oracle.install.asm.diskGroup.name=DATA
+oracle.install.asm.diskGroup.redundancy=EXTERNAL
+oracle.install.asm.diskGroup.AUSize=4
+oracle.install.asm.diskGroup.disks=/dev/mapper/ora_01_data*
+oracle.install.asm.diskGroup.diskDiscoveryString=/dev/mapper/*
+oracle.install.asm.monitorPassword="SetPWD"
+oracle.install.asm.configureAFD=true
+....
+. EC2 인스턴스에 루트 사용자로 로그인하여 설정합니다 `ORACLE_HOME` 및 `ORACLE_BASE`.
++
+....
+export ORACLE_HOME=/u01/app/oracle/product/19.0.0/grid
+export ORACLE_BASE=/tmp
+cd /u01/app/oracle/product/19.0.0/grid/bin
+....
+. Oracle ASM 필터 드라이버와 함께 사용할 디스크 디바이스를 프로비저닝합니다.
++
+....
+ ./asmcmd afd_label DATA01 /dev/mapper/ora_01_data_01 --init
+
+ ./asmcmd afd_label DATA02 /dev/mapper/ora_01_data_02 --init
+
+ ./asmcmd afd_label DATA03 /dev/mapper/ora_01_data_03 --init
+
+ ./asmcmd afd_label DATA04 /dev/mapper/ora_01_data_04 --init
+
+ ./asmcmd afd_label LOGS01 /dev/mapper/ora_01_logs_01 --init
+
+ ./asmcmd afd_label LOGS02 /dev/mapper/ora_01_logs_02 --init
+....
+. 장치 소유권을 로 변경합니다 `oracle:oinstall`.
++
+....
+chown oracle:oinstall /dev/mapper/ora_01_data_01
+chown oracle:oinstall /dev/mapper/ora_01_data_02
+chown oracle:oinstall /dev/mapper/ora_01_data_03
+chown oracle:oinstall /dev/mapper/ora_01_data_04
+chown oracle:oinstall /dev/mapper/ora_01_logs_01
+chown oracle:oinstall /dev/mapper/ora_01_logs_02
+....
+. 설치합니다 `cvuqdisk-1.0.10-1.rpm`.
++
+....
+rpm -ivh /u01/app/oracle/product/19.0.0/grid/cv/rpm/cvuqdisk-1.0.10-1.rpm
+....
+. 설정 해제 `$ORACLE_BASE`.
++
+....
+unset ORACLE_BASE
+....
+. EC2 인스턴스에 Oracle 사용자로 로그인하여 에서 패치를 추출합니다 `/tmp/archive` 폴더.
++
+....
+unzip p34762026_190000_Linux-x86-64.zip
+....
+. Oracle 사용자로 를 시작합니다 `gridSetup.sh` 그리드 인프라 설치용.
++
+....
+ ./gridSetup.sh -applyRU /tmp/archive/34762026/ -silent -responseFile /tmp/archive/gridsetup.rsp
+....
++
+그리드 인프라에 대해 잘못된 그룹에 대한 경고를 무시합니다. 단일 Oracle 사용자를 사용하여 Oracle Restart를 관리하고 있으므로 이 작업이 필요합니다.
+
+. 루트 사용자로 다음 스크립트를 실행합니다.
++
+....
+/u01/app/oraInventory/orainstRoot.sh
+
+/u01/app/oracle/product/19.0.0/grid/root.sh
+....
+. Oracle 사용자는 다음 명령을 실행하여 구성을 완료합니다.
++
+....
+/u01/app/oracle/product/19.0.0/grid/gridSetup.sh -executeConfigTools -responseFile /tmp/archive/gridsetup.rsp -silent
+....
+. "[INS-43080] 일부 구성 도우미가 실패했거나, 취소되었거나, 건너뛰었습니다" 메시지를 받은 경우 Oracle 사용자로 다음 명령을 실행하여 데이터 디스크 그룹 리소스가 생성되었는지 확인하십시오.
++
+....
+bin/crsctl stat res -t
+....
+. 데이터 디스크 그룹이 생성되지 않은 경우 multipathd를 루트 사용자로 다시 로드합니다.
++
+....
+systemctl restart multipathd
+....
+. Oracle 사용자는 그리드 설치 중에 데이터 디스크 그룹이 생성되지 않은 경우 데이터 디스크 그룹을 생성합니다.
++
+....
+bin/asmca -silent -sysAsmPassword 'yourPWD' -asmsnmpPassword 'yourPWD' -createDiskGroup -diskString '/dev/mapper/*' -diskGroupName DATA -disklist '/dev/mapper/ora_01_data_01,/dev/mapper/ora_01_data_02,/dev/mapper/ora_01_data_03,/dev/mapper/ora_01_data_04' -redundancy EXTERNAL
+....
+. Oracle 사용자로 로그 디스크 그룹을 생성합니다.
++
+....
+bin/asmca -silent -sysAsmPassword 'yourPWD' -asmsnmpPassword 'yourPWD' -createDiskGroup -diskString '/dev/mapper/*' -diskGroupName LOGS -disklist '/dev/mapper/ora_01_logs_01,/dev/mapper/ora_01_logs_02' -redundancy EXTERNAL
+....
+. Oracle 사용자는 설치 구성 후 그리드 서비스를 검증합니다.
++
+....
+bin/crsctl stat res -t
++
+Name                Target  State        Server                   State details
+Local Resources
+ora.DATA.dg         ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.LISTENER.lsnr   ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.LOGS.dg         ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.asm             ONLINE  ONLINE       ip-172-30-15-58          Started,STABLE
+ora.ons             OFFLINE OFFLINE      ip-172-30-15-58          STABLE
+Cluster Resources
+ora.cssd            ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.diskmon         OFFLINE OFFLINE                               STABLE
+ora.driver.afd      ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.evmd            ONLINE  ONLINE       ip-172-30-15-58          STABLE
+....
+. Valiate ASM 필터 드라이버 상태입니다.
++
+....
+[oracle@ip-172-30-15-58 grid]$ export ORACLE_HOME=/u01/app/oracle/product/19.0.0/grid
+[oracle@ip-172-30-15-58 grid]$ export ORACLE_SID=+ASM
+[oracle@ip-172-30-15-58 grid]$ export PATH=$PATH:$ORACLE_HOME/bin
+[oracle@ip-172-30-15-58 grid]$ asmcmd
+ASMCMD> lsdg
+State    Type    Rebal  Sector  Logical_Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
+MOUNTED  EXTERN  N         512             512   4096  1048576     81920    81847                0           81847              0             N  DATA/
+MOUNTED  EXTERN  N         512             512   4096  1048576     81920    81853                0           81853              0             N  LOGS/
+ASMCMD> afd_state
+ASMCMD-9526: The AFD state is 'LOADED' and filtering is 'ENABLED' on host 'ip-172-30-15-58.ec2.internal'
+....
+
+
+====
+
+
+=== Oracle 데이터베이스 설치
+
+[%collapsible]
+====
+. Oracle 사용자로 로그인하고 설정을 해제합니다 `$ORACLE_HOME` 및 `$ORACLE_SID` 설정되어 있는지 확인합니다.
++
+....
+unset ORACLE_HOME
+unset ORACLE_SID
+....
+. Oracle DB 홈 디렉토리를 생성하고 변경합니다.
++
+....
+mkdir /u01/app/oracle/product/19.0.0/db1
+cd /u01/app/oracle/product/19.0.0/db1
+....
+. Oracle DB 설치 파일의 압축을 풉니다.
++
+....
+unzip -q /tmp/archive/LINUX.X64_193000_db_home.zip
+....
+. DB 홈에서 를 삭제합니다 `OPatch` 디렉토리.
++
+....
+rm -rf OPatch
+....
+. DB 홈에서 복사합니다 `p6880880_190000_Linux-x86-64.zip` 를 선택합니다 `grid_home`그런 다음 압축을 풉니다.
++
+....
+cp /tmp/archive/p6880880_190000_Linux-x86-64.zip .
+unzip p6880880_190000_Linux-x86-64.zip
+....
+. DB 홈에서 수정한다 `cv/admin/cvu_config`을 클릭합니다 `CV_ASSUME_DISTID=OEL5` 와 함께 `CV_ASSUME_DISTID=OL7`.
++
+....
+vi cv/admin/cvu_config
+....
+. 에서 `/tmp/archive` 디렉토리에서 DB 19.18 RU 패치의 포장을 풉니다.
++
+....
+unzip p34765931_190000_Linux-x86-64.zip
+....
+. 에서 DB 자동 설치 RSP 파일을 준비합니다 `/tmp/archive/dbinstall.rsp` 다음 값이 있는 디렉터리:
++
+....
+oracle.install.option=INSTALL_DB_SWONLY
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/u01/app/oraInventory
+ORACLE_HOME=/u01/app/oracle/product/19.0.0/db1
+ORACLE_BASE=/u01/app/oracle
+oracle.install.db.InstallEdition=EE
+oracle.install.db.OSDBA_GROUP=dba
+oracle.install.db.OSOPER_GROUP=oper
+oracle.install.db.OSBACKUPDBA_GROUP=oper
+oracle.install.db.OSDGDBA_GROUP=dba
+oracle.install.db.OSKMDBA_GROUP=dba
+oracle.install.db.OSRACDBA_GROUP=dba
+oracle.install.db.rootconfig.executeRootScript=false
+....
+. 소프트웨어 전용 DB 자동 설치 실행
++
+....
+ ./runInstaller -applyRU /tmp/archive/34765931/ -silent -ignorePrereqFailure -responseFile /tmp/archive/dbinstall.rsp
+....
+. 를 실행합니다 `root.sh` 소프트웨어 전용 설치 후 스크립트.
++
+....
+/u01/app/oracle/product/19.0.0/db1/root.sh
+....
+. 를 생성합니다 `dbca.rsp` 다음 항목이 있는 파일:
++
+....
+gdbName=db1.demo.netapp.com
+sid=db1
+createAsContainerDatabase=true
+numberOfPDBs=3
+pdbName=db1_pdb
+useLocalUndoForPDBs=true
+pdbAdminPassword="yourPWD"
+templateName=General_Purpose.dbc
+sysPassword="yourPWD"
+systemPassword="yourPWD"
+dbsnmpPassword="yourPWD"
+storageType=ASM
+diskGroupName=DATA
+characterSet=AL32UTF8
+nationalCharacterSet=AL16UTF16
+listeners=LISTENER
+databaseType=MULTIPURPOSE
+automaticMemoryManagement=false
+totalMemory=8192
+....
+. dbca를 사용하여 DB 생성을 시작합니다.
++
+....
+bin/dbca -silent -createDatabase -responseFile /tmp/archive/dbca.rsp
+
+output:
+Prepare for db operation
+7% complete
+Registering database with Oracle Restart
+11% complete
+Copying database files
+33% complete
+Creating and starting Oracle instance
+35% complete
+38% complete
+42% complete
+45% complete
+48% complete
+Completing Database Creation
+53% complete
+55% complete
+56% complete
+Creating Pluggable Databases
+60% complete
+64% complete
+69% complete
+78% complete
+Executing Post Configuration Actions
+100% complete
+Database creation complete. For details check the logfiles at:
+ /u01/app/oracle/cfgtoollogs/dbca/db1.
+Database Information:
+Global Database Name:db1.demo.netapp.com
+System Identifier(SID):db1
+Look at the log file "/u01/app/oracle/cfgtoollogs/dbca/db1/db1.log" for further details.
+....
+. DB 생성 후 Oracle Restart HA 서비스를 확인합니다.
++
+....
+[oracle@ip-172-30-15-58 db1]$ ../grid/bin/crsctl stat res -t
+
+Name           	Target  State        Server                   State details
+
+Local Resources
+
+ora.DATA.dg		ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.LISTENER.lsnr	ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.LOGS.dg		ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.asm		ONLINE  ONLINE       ip-172-30-15-58          Started,STABLE
+ora.ons		OFFLINE OFFLINE      ip-172-30-15-58          STABLE
+
+Cluster Resources
+
+ora.cssd        	ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.db1.db		ONLINE  ONLINE       ip-172-30-15-58          Open,HOME=/u01/app/oracle/product/19.0.0/db1,STABLE
+ora.diskmon		OFFLINE OFFLINE                               STABLE
+ora.driver.afd	ONLINE  ONLINE       ip-172-30-15-58          STABLE
+ora.evmd		ONLINE  ONLINE       ip-172-30-15-58          STABLE
+....
+. Oracle 사용자를 설정합니다 `.bash_profile`.
++
+....
+vi ~/.bash_profile
+....
+. 다음 항목 추가:
++
+....
+export ORACLE_HOME=/u01/app/oracle/product/19.0.0/db1
+export ORACLE_SID=db1
+export PATH=$PATH:$ORACLE_HOME/bin
+alias asm='export ORACLE_HOME=/u01/app/oracle/product/19.0.0/grid;export ORACLE_SID=+ASM;export PATH=$PATH:$ORACLE_HOME/bin'
+....
+. 생성된 CDB/PDB를 검증합니다.
++
+....
+/home/oracle/.bash_profile
+
+sqlplus / as sysdba
+
+SQL> select name, open_mode from v$database;
+
+NAME      OPEN_MODE
+
+DB1       READ WRITE
+
+SQL> select name from v$datafile;
+
+NAME
+
++DATA/DB1/DATAFILE/system.256.1132176177
++DATA/DB1/DATAFILE/sysaux.257.1132176221
++DATA/DB1/DATAFILE/undotbs1.258.1132176247
++DATA/DB1/86B637B62FE07A65E053F706E80A27CA/DATAFILE/system.265.1132177009
++DATA/DB1/86B637B62FE07A65E053F706E80A27CA/DATAFILE/sysaux.266.1132177009
++DATA/DB1/DATAFILE/users.259.1132176247
++DATA/DB1/86B637B62FE07A65E053F706E80A27CA/DATAFILE/undotbs1.267.1132177009
++DATA/DB1/F7852758DCD6B800E0533A0F1EAC1DC6/DATAFILE/system.271.1132177853
++DATA/DB1/F7852758DCD6B800E0533A0F1EAC1DC6/DATAFILE/sysaux.272.1132177853
++DATA/DB1/F7852758DCD6B800E0533A0F1EAC1DC6/DATAFILE/undotbs1.270.1132177853
++DATA/DB1/F7852758DCD6B800E0533A0F1EAC1DC6/DATAFILE/users.274.1132177871
+
+NAME
+
++DATA/DB1/F785288BBCD1BA78E0533A0F1EACCD6F/DATAFILE/system.276.1132177871
++DATA/DB1/F785288BBCD1BA78E0533A0F1EACCD6F/DATAFILE/sysaux.277.1132177871
++DATA/DB1/F785288BBCD1BA78E0533A0F1EACCD6F/DATAFILE/undotbs1.275.1132177871
++DATA/DB1/F785288BBCD1BA78E0533A0F1EACCD6F/DATAFILE/users.279.1132177889
++DATA/DB1/F78529A14DD8BB18E0533A0F1EACB8ED/DATAFILE/system.281.1132177889
++DATA/DB1/F78529A14DD8BB18E0533A0F1EACB8ED/DATAFILE/sysaux.282.1132177889
++DATA/DB1/F78529A14DD8BB18E0533A0F1EACB8ED/DATAFILE/undotbs1.280.1132177889
++DATA/DB1/F78529A14DD8BB18E0533A0F1EACB8ED/DATAFILE/users.284.1132177907
+
+19 rows selected.
+
+SQL> show pdbs
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+
+         2 PDB$SEED                       READ ONLY  NO
+         3 DB1_PDB1                       READ WRITE NO
+         4 DB1_PDB2                       READ WRITE NO
+         5 DB1_PDB3                       READ WRITE NO
+SQL>
+....
+. DB 복구 위치를 +logs 디스크 그룹으로 설정합니다.
++
+....
+alter system set db_recovery_file_dest_size = 80G scope=both;
+
+alter system set db_recovery_file_dest = '+LOGS' scope=both;
+....
+. sqlplus를 사용하여 데이터베이스에 로그인하고 아카이브 로그 모드를 설정합니다.
++
+....
+sqlplus /as sysdba.
+
+shutdown immediate;
+
+startup mount;
+
+alter database archivelog;
+
+alter database open;
+....
+
+
+이것으로 ONTAP 및 EC2 컴퓨팅 인스턴스의 Amazon FSx에서 Oracle 19c 버전 19.18 재시작 구축이 완료되었습니다. 필요한 경우 Oracle 제어 파일 및 온라인 로그 파일을 + 로그 디스크 그룹으로 재배치하는 것이 좋습니다.
+
+====
+
+
+=== 자동화된 구축 옵션
+
+NetApp은 이 솔루션 구현을 지원하기 위해 Ansible과 함께 완전 자동화된 솔루션 배포 툴킷을 릴리즈할 것입니다. 도구 키트의 가용성을 다시 확인하십시오. 릴리스 후 링크가 여기에 게시됩니다.
+
+
+
+== SnapCenter 서비스를 사용한 Oracle 데이터베이스 백업, 복원 및 클론 복제
+
+을 참조하십시오 link:snapctr_svcs_ora.html["Oracle용 SnapCenter 서비스"^] Oracle 데이터베이스 백업, 복원 및 NetApp BlueXP 콘솔을 사용한 클론에 대한 자세한 내용
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* 새 데이터베이스 설치를 통해 독립 실행형 서버용 Oracle Grid Infrastructure 설치
++
+link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-oracle-grid-infrastructure-for-a-standalone-server-with-a-new-database-installation.html#GUID-0B1CEE8C-C893-46AA-8A6A-7B5FAAEC72B3["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-oracle-grid-infrastructure-for-a-standalone-server-with-a-new-database-installation.html#GUID-0B1CEE8C-C893-46AA-8A6A-7B5FAAEC72B3"^]
+
+* 응답 파일을 사용하여 Oracle 데이터베이스 설치 및 구성
++
+link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7"^]
+
+* NetApp ONTAP용 Amazon FSx
++
+link:https://aws.amazon.com/fsx/netapp-ontap/["https://aws.amazon.com/fsx/netapp-ontap/"^]
+
+* Amazon EC2
++
+link:https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843&sc_channel=ps&s_kwcid=AL!4422!3!467723097970!e!!g!!aws%20ec2&ef_id=Cj0KCQiA54KfBhCKARIsAJzSrdqwQrghn6I71jiWzSeaT9Uh1-vY-VfhJixF-xnv5rWwn2S7RqZOTQ0aAh7eEALw_wcB:G:s&s_kwcid=AL!4422!3!467723097970!e!!g!!aws%20ec2["https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843&sc_channel=ps&s_kwcid=AL!4422!3!467723097970!e!!g!!aws%20ec2&ef_id=Cj0KCQiA54KfBhCKARIsAJzSrdqwQrghn6I71jiWzSeaT9Uh1-vY-VfhJixF-xnv5rWwn2S7RqZOTQ0aAh7eEALw_wcB:G:s&s_kwcid=AL!4422!3!467723097970!e!!g!!aws%20ec2"^]
+
+

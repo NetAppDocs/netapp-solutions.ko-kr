@@ -16614,7 +16614,6 @@
   <block id="61c8e892dd7e1908020eb0a312fd4bbb" category="cell">2023년 2월 15일</block>
   <block id="2ee6a0567aa163f6ace02183cb041cbd" category="cell">AWS FSx/EC2에서 PostgreSQL 고가용성 구축 및 재해 복구 추가</block>
   <block id="a54420e6e0f519f841f4280cf2545365" category="sidebar">오픈 소스 데이터베이스</block>
-  <block id="67bb2ef7cf3c5ff59f35f28e513bfda3" category="sidebar">AWS FSx/EC2에서 PostgreSQL 고가용성 구축 및 재해 복구</block>
   <block id="1ae3eccde141a365ede8f18b188ae588" category="sidebar">AWS FSx/EC2에서 PostgreSQL HA 구축 및 DR 자동화</block>
   <block id="6fabfc29f0b3a196c8407c190bb67293" category="sidebar">데이터베이스용 SnapCenter</block>
   <block id="1f599c1b266e901a2c8d38e266e23c6f" category="summary">이 섹션에서는 자세한 테스트 절차 결과를 설명합니다.</block>
@@ -17423,4 +17422,310 @@
   <block id="fb4d860c1938626a4cb9b8f66c6eb6f2" category="cell">2023년 3월</block>
   <block id="0ab328bbf8073ef01a9d54504bf7b317" category="paragraph">NetApp 스토리지는 세 가지 주요 하이퍼 스케일러 내에서 게스트 연결 또는 보조 NFS 데이터 저장소로 여러 가지 방법으로 활용할 수 있습니다.</block>
   <block id="f53db24f3a12ed8109f77a0f93c877af" category="paragraph">이 섹션에서는 각 클라우드 공급자가 해당 퍼블릭 클라우드 오퍼링 내에서 VMware SDDC(Software Defined Data Center) 및/또는 VCF(VMware Cloud Foundation) 스택을 지원하는 방법에 대해 설명합니다.</block>
+  <block id="4557eca5dd55b5b5ecc0b0ef61f1dd21" category="cell">2023년 3월 31일</block>
+  <block id="71cc1ac63221b4b22fee5b3615ed204b" category="cell">iSCSI/ASM이 포함된 AWS FSx/EC2에 Oracle Database Deployment and Protection 추가</block>
+  <block id="5df30196a94efca9537353cd93678f3a" category="cell">SnapCenter 서비스를 통해 Oracle 데이터베이스 백업, 복원 및 복제 추가</block>
+  <block id="86d943d0743178f4b51317bf89a99ff7" category="summary">이 솔루션은 ASM을 볼륨 관리자로 사용하여 독립 실행형 재시작 방식으로 구성된 iSCSI 프로토콜과 Oracle 데이터베이스를 사용하는 AWS FSx ONTAP 스토리지와 EC2 컴퓨팅 인스턴스의 Oracle 데이터베이스 구축 및 보호에 대한 개요와 세부 정보를 제공합니다.</block>
+  <block id="4f3c9d31ccf189b3cb7f494f26684484" category="doc">TR-4965: iSCSI/ASM을 사용하는 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호</block>
+  <block id="418241bdca49e4aec92c0ff810e8e099" category="paragraph">ASM(Automatic Storage Management)은 많은 Oracle 설치에 사용되는 일반적인 Oracle 스토리지 볼륨 관리자입니다. 또한 Oracle에서 권장하는 스토리지 관리 솔루션이기도 합니다. 기존 볼륨 관리자 및 파일 시스템을 대체할 수 있습니다. Oracle 버전 11g부터 ASM은 데이터베이스가 아닌 그리드 인프라와 함께 패키지로 제공됩니다. 따라서 RAC를 사용하지 않는 스토리지 관리에 Oracle ASM을 활용하려면 Oracle Restart라고도 하는 독립 실행형 서버에 Oracle 그리드 인프라를 설치해야 합니다. 이렇게 하면 더욱 단순한 Oracle 데이터베이스 구축에 따르는 복잡성이 더욱 증가합니다. 그러나 이름에서 알 수 있듯이 Oracle이 재시작 모드로 구축되면 사용자 개입 없이 호스트를 재부팅한 후 오류가 발생한 Oracle 서비스가 다시 시작됩니다. 이를 통해 특정 수준의 고가용성 또는 HA 기능을 제공할 수 있습니다.</block>
+  <block id="47a7a6100cb8ee47f5b0126bacce0e8f" category="paragraph">이 문서에서는 EC2 컴퓨팅 인스턴스가 있는 ONTAP 스토리지 환경을 위한 Amazon FSx에서 iSCSI 프로토콜과 Oracle ASM을 사용하여 Oracle 데이터베이스를 구축하는 방법을 보여 줍니다. 또한 NetApp BlueXP 콘솔을 통해 NetApp SnapCenter 서비스를 사용하여 개발/테스트 또는 기타 사용 사례에서 AWS 퍼블릭 클라우드에서 스토리지 효율적인 데이터베이스 작업을 위해 Oracle 데이터베이스를 백업, 복원, 복제하는 방법을 보여줍니다.</block>
+  <block id="2dda300300a9a8c69d259bcce9dff4f3" category="list-text">ONTAP 스토리지용 Amazon FSx 및 iSCSI/ASM을 사용하는 EC2 컴퓨팅 인스턴스에 Oracle 데이터베이스 구축</block>
+  <block id="a47b73991317ed980de57441ff2ec0b0" category="list-text">iSCSI/ASM을 사용하여 퍼블릭 AWS 클라우드에서 Oracle 워크로드 테스트 및 검증</block>
+  <block id="7776a288eb4d92068f227343e40955be" category="list-text">AWS에 구축된 Oracle 데이터베이스 재시작 기능의 테스트 및 검증</block>
+  <block id="c7940228c5d339083ac147fb2a5041de" category="list-text">iSCSI/ASM을 통해 AWS 퍼블릭 클라우드에 Oracle을 구축하려는 DBA</block>
+  <block id="53a21d50adb7cce93e4304c816d40c51" category="list-text">AWS 퍼블릭 클라우드에서 Oracle 워크로드를 테스트하려는 데이터베이스 솔루션 설계자</block>
+  <block id="b316baf0d21d8e459e4220a2cf5102a5" category="list-text">AWS FSx 스토리지에 구축된 Oracle 데이터베이스를 구축하고 관리하려는 스토리지 관리자</block>
+  <block id="6b41622d6a121d89a6342fe9ff47665c" category="list-text">AWS FSx/EC2에서 Oracle 데이터베이스를 가동하려는 애플리케이션 소유자입니다.</block>
+  <block id="60eafe38e4de145948f4622ffcf3fecf" category="image-alt">이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.</block>
+  <block id="f90fb2d1bd04ce25f4b6a79bead231a3" category="cell">AWS에서 제공하는 현재 버전입니다</block>
+  <block id="ceafc9f8393b625e8cce03cbeba6e867" category="cell">동일한 VPC 및 가용성 존에 FSx HA 클러스터 1개</block>
+  <block id="0fcdacbce30d770260160f025dfa97ef" category="cell">EC2 T2 xLarge EC2 인스턴스 2개, 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로</block>
+  <block id="357401b243915afd7226703258f54f69" category="cell">Oracle Grid Infrastructure</block>
+  <block id="8cbabca4a2c1b4268e8c216b1710182d" category="cell">버전 19.18</block>
+  <block id="4cd47afc935feac95110477afb324f6f" category="cell">RU 패치 p34762026_190000_Linux-x86-64.zip 를 적용했습니다</block>
+  <block id="a7c40910ade029baa6baa8b8e613db65" category="cell">RU 패치 p34765931_190000_Linux-x86-64.zip 를 적용했습니다</block>
+  <block id="a8b401bad03767cc28230a30d6556c5b" category="cell">Oracle OPatch</block>
+  <block id="cc61533b1a42263eaadfd935441bb4b5" category="cell">버전 12.2.0.1.36</block>
+  <block id="8091f15fd8b9f1a609b3a98e8bcdda81" category="cell">최신 패치 p6880880_190000_Linux-x86-64.zip</block>
+  <block id="fed6fa1f1b675c268f8b78258e2545a7" category="cell">SnapCenter 서비스</block>
+  <block id="313d712dbc391a0b9d6dca3efe0d2608" category="cell">v2.3.1.2324</block>
+  <block id="b1a9b82f5c1b9e62aff87e622f684e76" category="list-text">* EC2 컴퓨팅 인스턴스 * 이러한 테스트 및 검증에서는 Oracle 데이터베이스 컴퓨팅 인스턴스에 AWS EC2 T2.xLarge 인스턴스 유형을 사용했습니다. 운영 구축 환경에서는 데이터베이스 워크로드에 최적화된 M5 유형 EC2 인스턴스를 Oracle의 컴퓨팅 인스턴스로 사용하는 것이 좋습니다. 실제 워크로드 요구 사항에 따라 vCPU 수와 RAM 양에 따라 EC2 인스턴스를 적절하게 사이징해야 합니다.</block>
+  <block id="11a64b78983fb952ba99933c98fc56df" category="list-text">* FSx 스토리지 HA 클러스터 단일 또는 다중 영역 배포. * 이러한 테스트 및 검증에서는 단일 AWS 가용성 영역에 FSx HA 클러스터를 구축했습니다. 프로덕션 배포를 위해 FSx HA 쌍을 두 가지 가용성 영역에 배포하는 것이 좋습니다. FSx HA 클러스터는 스토리지 레벨 이중화를 제공하기 위해 액티브-패시브 파일 시스템 쌍으로 미러링되는 HA 쌍으로 프로비저닝됩니다. 다중 영역 구축을 통해 단일 AWS 영역에서 장애가 발생할 경우 고가용성을 더욱 강화할 수 있습니다.</block>
+  <block id="660a107d1d4a80542a6c11d9a1ed2db4" category="list-text">* FSx 스토리지 클러스터 크기 조정 * ONTAP 스토리지 파일 시스템용 Amazon FSx는 최대 160,000개의 원시 SSD IOPS, 최대 4Gbps 처리량 및 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.</block>
+  <block id="0907de49479565aae7dd2f8a84ef2915" category="list-text">* Oracle 데이터 및 로그 레이아웃 * 테스트 및 검증에서 각각 데이터 및 로그용 ASM 디스크 그룹 2개를 구축했습니다. DATA ASM 디스크 그룹 내에서 데이터 볼륨에 4개의 LUN을 프로비저닝했습니다. logs ASM 디스크 그룹 내에서 로그 볼륨에 2개의 LUN을 프로비저닝했습니다. 일반적으로 ONTAP 볼륨용 Amazon FSx 내에 여러 개의 LUN을 배치하면 성능이 향상됩니다.</block>
+  <block id="511a515ed4428c1ca16462485a26f4fc" category="list-text">* iSCSI 구성. * EC2 인스턴스 데이터베이스 서버는 iSCSI 프로토콜을 사용하여 FSx 스토리지에 연결합니다. EC2 인스턴스는 일반적으로 단일 네트워크 인터페이스 또는 ENI로 구축합니다. 단일 NIC 인터페이스는 iSCSI 및 애플리케이션 트래픽을 모두 전달합니다. 애플리케이션 및 iSCSI 트래픽 처리량 요구사항을 모두 충족하는 올바른 EC2 컴퓨팅 인스턴스를 선택하려면 Oracle AWR 보고서를 신중하게 분석하여 Oracle 데이터베이스 PEEK I/O 처리량 요구사항을 측정하는 것이 중요합니다. 또한 다중 경로가 올바르게 구성된 두 FSx iSCSI 엔드포인트 모두에 4개의 iSCSI 연결을 할당하는 것이 좋습니다.</block>
+  <block id="db1de135a2e3ba870a8f80ce78d2d05e" category="list-text">* 사용자가 생성한 각 Oracle ASM 디스크 그룹에 사용할 Oracle ASM 이중화 레벨 * FSx는 이미 FSx 클러스터 레벨에서 스토리지를 미러링하므로 외부 이중화를 사용해야 합니다. 이는 옵션이 Oracle ASM이 디스크 그룹의 내용을 미러링하지 못하도록 허용하지 않는다는 것을 의미합니다.</block>
+  <block id="e35fd1c687443b2da6a609bba53616b4" category="list-text">* 데이터베이스 백업 * NetApp은 클라우드에서 데이터베이스 백업, 복원, 복제를 위한 SnapCenter 소프트웨어 서비스의 SaaS 버전을 제공하며 NetApp BlueXP 콘솔 UI를 통해 이용할 수 있습니다. 신속한(1분 이내) 스냅샷 백업, 빠른(몇 분) 데이터베이스 복원, 데이터베이스 복제를 위해 이러한 서비스를 구현하는 것이 좋습니다.</block>
+  <block id="77e4d80ae2f4257081e17476b146608a" category="section-title">솔루션 구축</block>
+  <block id="2398118900b3388f97d9931571f1bbda" category="paragraph">다음 섹션에서는 단계별 배포 절차를 제공합니다.</block>
+  <block id="782bd8949cb40c80fd3f3126eccab35a" category="section-title">배포를 위한 사전 요구 사항</block>
+  <block id="2cb106b524fea2beb3ee19372f04427b" category="list-text">AWS EC2 콘솔에서 2개의 EC2 Linux 인스턴스를 구축해야 합니다. 하나는 운영 Oracle DB 서버로, 다른 하나는 선택적 대체 클론 타겟 DB 서버입니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 를 검토합니다 <block ref="b75ecbbec453f67f58d497ccd97a8075" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="11f86864c5928690c88625e77eb1a480" category="list-text">AWS EC2 콘솔에서 ONTAP 스토리지 HA 클러스터용 Amazon FSx를 구축하여 Oracle 데이터베이스 볼륨을 호스팅합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 <block ref="17d8b312d287f0afd6f44b3f25c4f20b" category="inline-link-macro-rx"></block> 을 참조하십시오.</block>
+  <block id="dd303169f721e79331b3683ddafddcc1" category="list-text">2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다<block ref="460dc55b5ffb0266f2c889b06ee73344" prefix=" " category="inline-code"></block> 이라는 FSx 파일 시스템이 있습니다<block ref="8cbb7b3050d3c3aa08a529f429bc4555" prefix=" " category="inline-code"></block>. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오.</block>
+  <block id="62ee860e3d0c08c6573d2e328543e8de" category="section-title">EC2 인스턴스 커널 구성</block>
+  <block id="39fb43106d288435c8737acd0c5b18ba" category="paragraph">사전 요구 사항이 용량 할당된 상태에서 EC2 인스턴스에 루트 사용자로 로그인하여 Oracle 설치를 위한 Linux 커널을 구성합니다.</block>
+  <block id="5a8cdca62a149c76be848350ba5cbfd0" category="list-text">스테이징 디렉터리를 만듭니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 폴더를 지정하고 를 설정합니다<block ref="f1c1592588411002af340cbaedd6fc33" prefix=" " category="inline-code"></block> 권한.</block>
+  <block id="e252f38e51fe6c121fdf68268f7365b7" category="list-text">Oracle 바이너리 설치 파일 및 기타 필요한 rpm 파일을 에 다운로드하고 스테이징합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="2463a0e4e0f5e0cae480165d25c3d218" category="paragraph">에 명시된 설치 파일의 다음 목록을 참조하십시오<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> EC2 인스턴스에서 선택합니다.</block>
+  <block id="7b25ef659963c88fe23b78fc4712aabf" category="list-text">대부분의 커널 구성 요구 사항을 충족하는 Oracle 19c 사전 설치 RPM을 설치합니다.</block>
+  <block id="1527576f8dc9eea4d63eb05b809aaa52" category="list-text">누락된 을 다운로드하고 설치합니다<block ref="d2e5af6ee2b267de9dac1b472a03adf3" prefix=" " category="inline-code"></block> Linux 8에서</block>
+  <block id="b2371ec5566671ad5a4ad4a5ea6cba11" category="list-text">NetApp에서 NetApp 호스트 유틸리티를 다운로드하고 설치합니다.</block>
+  <block id="b6e7702627b94eaa3030b577d6d705bc" category="list-text">설치합니다<block ref="c8dff58175a7ddfedf00d77953ef42dd" prefix=" " category="inline-code"></block>이는 EC2 인스턴스에서 사용할 수 없습니다.</block>
+  <block id="9a16a877dc258dab15fccea468433118" category="list-text">열려 있는 JDK 버전 1.8을 설치합니다.</block>
+  <block id="1684a037c41a5a896a961b99be3d79c7" category="list-text">iSCSI 초기자 유틸리티를 설치합니다.</block>
+  <block id="c9d53c5d17f956afae2225c70107de12" category="list-text">설치합니다<block ref="4c17da57a03262c55ed7eaf9b11476b4" prefix=" " category="inline-code"></block>.</block>
+  <block id="390748df672cba58066187eedd5aae0e" category="list-text">설치합니다<block ref="a3938eeca32dce6ca3908d2eae163c75" prefix=" " category="inline-code"></block>.</block>
+  <block id="8d5128c24aba40267289419650d61baf" category="list-text">현재 시스템에서 투명 HugePages를 비활성화합니다.</block>
+  <block id="0410d25eb8075ef0d6eb88ced58d20d0" category="paragraph">에 다음 행을 추가합니다<block ref="08561da4afe8299be4016c92bfe83435" prefix=" " category="inline-code"></block> 를 눌러 비활성화합니다<block ref="d78ade61a64b6a278ed6278e7cfd91f3" prefix=" " category="inline-code"></block> 재부팅 후:</block>
+  <block id="ac762383bc7427decd2147abbadaccaa" category="list-text">SELinux를 변경하여 해제합니다<block ref="cb42f4736bc8f64983eeffc1e0b4f44a" prefix=" " category="inline-code"></block> 를 선택합니다<block ref="52647e37ec523adfcaa3fec9bcef128e" prefix=" " category="inline-code"></block>. 변경 사항을 적용하려면 호스트를 재부팅해야 합니다.</block>
+  <block id="2d1601e142ebdb74931ee9a254b65262" category="list-text">에 다음 행을 추가합니다<block ref="8b5eec1c5f63341b700263cc37cbae02" prefix=" " category="inline-code"></block> 따옴표 없이 파일 설명자 제한과 스택 크기를 설정하려면 다음을 수행합니다<block ref="fcc3d7489d15ef49dbbf735234234cf7" prefix=" " category="inline-code"></block>.</block>
+  <block id="410eaf64cdfb52cb0921ea732490d0db" category="list-text">다음 명령을 실행하여 EC2 인스턴스에 스왑 공간을 추가합니다. <block ref="53c9867a131506eab4afe1a1678bb974" category="inline-link-macro-rx"></block> 정확한 추가 공간은 최대 16G RAM의 크기에 따라 달라집니다.</block>
+  <block id="c9f7be60d92cf42de8f14f5ab8547971" category="list-text">변경<block ref="b7e6d8bff01730e41b7d91437e6a25d0" prefix=" " category="inline-code"></block> 에 있습니다<block ref="c30b27a1b058924e30212c72bb553665" prefix=" " category="inline-code"></block> 120 ~ 5초 사이의 구성 파일.</block>
+  <block id="bca8f765f0293b09679dd10ece969e68" category="list-text">EC2 인스턴스에서 iSCSI 서비스를 설정 및 시작합니다.</block>
+  <block id="3cb574654986fcf318668b4bf3313724" category="list-text">데이터베이스 LUN 매핑에 사용할 iSCSI 이니시에이터 주소를 검색합니다.</block>
+  <block id="d5dbcd1ace089fec7f75fa03e884cb93" category="list-text">ASM sysasm 그룹에 사용할 ASM 그룹을 추가합니다</block>
+  <block id="f7b4c2e912a168f005ed7cc2b4799c08" category="list-text">Oracle 사용자를 수정하여 ASM을 보조 그룹으로 추가합니다(Oracle 사용자는 Oracle 사전 설치 RPM 설치 후 생성되어야 함).</block>
+  <block id="8d3a75a7cdef66372dcf58e6278bba70" category="list-text">EC2 인스턴스를 재부팅합니다.</block>
+  <block id="64014fc61a9016f43a5537d6da141cc1" category="section-title">데이터베이스 볼륨 및 LUN을 EC2 인스턴스 호스트에 프로비저닝 및 매핑합니다</block>
+  <block id="44d3f8c485fe8f9d96289b7bb283f99c" category="paragraph">FSx 콘솔에서 Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅하도록 세 개의 볼륨을 프로비저닝합니다.</block>
+  <block id="c848cfd9c04d86e7b9919e11add79f6c" category="list-text">SSH를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인합니다.</block>
+  <block id="eff24d82c422927b06fd0cacd430b653" category="list-text">다음 명령을 실행하여 Oracle 바이너리에 대한 볼륨을 생성합니다.</block>
+  <block id="569cffa50e6428a06bffa2e19d12e0e3" category="list-text">다음 명령을 실행하여 Oracle 데이터용 볼륨을 생성합니다.</block>
+  <block id="9985026df910c788cb47555f7d72a68e" category="list-text">다음 명령을 실행하여 Oracle 로그용 볼륨을 생성합니다.</block>
+  <block id="cc70e928fff63a76ca8cf30a05d95a80" category="list-text">데이터베이스 바이너리 볼륨 내에 바이너리 LUN을 생성합니다.</block>
+  <block id="dc4301dd6be2058cb9d1a1e3408388eb" category="list-text">데이터베이스 데이터 볼륨 내에 데이터 LUN을 생성합니다.</block>
+  <block id="49cf66e4521ade9e7ffc2aae313ee978" category="list-text">데이터베이스 로그 볼륨 내에 로그 LUN을 생성합니다.</block>
+  <block id="3e408df5c51ac33acd5978f1f48cab19" category="list-text">위의 EC2 커널 구성의 14단계에서 검색된 이니시에이터를 사용하여 EC2 인스턴스에 대한 igroup을 생성합니다.</block>
+  <block id="ceed9a3dd22f247b70bb6774943f9284" category="list-text">LUN을 위에서 생성한 igroup에 매핑합니다. 볼륨 내의 각 추가 LUN에 대해 LUN ID를 순차적으로 증분합니다.</block>
+  <block id="18519dc23f47343cf516e789bf2e818b" category="list-text">LUN 매핑을 확인합니다.</block>
+  <block id="3208f25d37711dd9ffc43d93ada2a3cc" category="paragraph">이 문제는 다음 항목을 반환해야 합니다.</block>
+  <block id="35c1914e41e83f92dd8779f5708f3224" category="section-title">데이터베이스 스토리지 구성</block>
+  <block id="47d78479fc855bd2f99f02fb94118789" category="paragraph">이제 EC2 인스턴스 호스트에서 Oracle 그리드 인프라 및 데이터베이스 설치를 위한 FSx 스토리지를 가져와서 설정합니다.</block>
+  <block id="d4d6ba977b18ebe6448e464802298bbf" category="list-text">EC2 사용자로 SSH를 통해 EC2 인스턴스에 로그인합니다. 그런 다음 SSH 키와 EC2 인스턴스 IP 주소로 변경합니다.</block>
+  <block id="a7939166c08e8ac6da1530309825a401" category="list-text">SVM iSCSI IP 주소를 사용하여 FSx iSCSI 엔드포인트를 검색합니다. 그런 다음 환경별 포털 주소로 변경합니다.</block>
+  <block id="1bc103d13645d8a07f4a05f2eee064f8" category="list-text">각 타겟에 로그인하여 iSCSI 세션을 설정합니다.</block>
+  <block id="fc5113f60b8b0390133d7abda7290515" category="paragraph">명령의 예상 출력은 다음과 같습니다.</block>
+  <block id="c541a8df6ddefee9ae370e31bf1109cc" category="list-text">활성 iSCSI 세션 목록을 보고 확인합니다.</block>
+  <block id="efe44c0a293be7b9e3d17291e1bd0fce" category="paragraph">iSCSI 세션을 반환합니다.</block>
+  <block id="e4a8008161f8d488131b8bf10831bf6c" category="list-text">LUN을 호스트로 가져왔는지 확인합니다.</block>
+  <block id="f467f5c5010c383146b412ebc7d2a967" category="paragraph">그러면 FSx의 Oracle LUN 목록이 반환됩니다.</block>
+  <block id="08b7a2f63e8caee3c8d0f32a3d9dd5ea" category="list-text">를 구성합니다<block ref="9ac80d53ede05256c28cf9e043eb423c" prefix=" " category="inline-code"></block> 다음 기본 항목과 블랙리스트 항목이 있는 파일입니다.</block>
+  <block id="794a654f60052714db9eba2a7ff4b608" category="list-text">다중 경로 서비스를 시작합니다.</block>
+  <block id="65b4cea56e6d27de22dc85622fe6a7fb" category="paragraph">이제 다중 경로 장치가 에 나타납니다<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="d282577e5b16ee7f17ce7cd0f718be4c" category="list-text">SSH를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인하여 각 LUN의 일련 번호 16진수 번호를 검색합니다. 6c574xxx...로 시작합니다. 16진수 번호는 AWS 공급업체 ID인 3600a0980으로 시작합니다.</block>
+  <block id="2720e08c2a6367757e2dc57afee1620c" category="paragraph">그리고 다음과 같이 돌아옵니다.</block>
+  <block id="ecf2aff9ad02b9026ff22f4fc6a68e73" category="list-text">를 업데이트합니다<block ref="bacd7d75ae434c4a777b1baef0e31f36" prefix=" " category="inline-code"></block> 파일 - 다중 경로 장치에 대한 사용자 친화적인 이름을 추가합니다.</block>
+  <block id="75104fff60881baaf37dcb441594f8a1" category="paragraph">다음 항목이 있는 경우:</block>
+  <block id="e73e686392436f1038dd926c4a775f24" category="list-text">다중 경로 서비스를 재부팅하여 에서 장치가 에 있는지 확인합니다<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block> LUN 이름 대 직렬 16진수 ID로 변경되었습니다.</block>
+  <block id="5f9e8fcf665ea0cca4e1c6eea45645e4" category="paragraph">확인합니다<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block> 다음과 같이 돌아가려면:</block>
+  <block id="6f6e08574875efd99672521b7c49bd5f" category="list-text">단일 주 파티션으로 바이너리 LUN을 파티셔닝합니다.</block>
+  <block id="d90e8b8ea181e08e8bf690f2c3143681" category="list-text">XFS 파일 시스템을 사용하여 분할된 바이너리 LUN을 포맷합니다.</block>
+  <block id="999ccfc779bcbed2a3561bff37f884d1" category="list-text">에 바이너리 LUN을 마운트합니다<block ref="a8946fa5f211c5345e3610710e471cb4" prefix=" " category="inline-code"></block>.</block>
+  <block id="22e45c04a42f3d5d2b9ca76b19445949" category="list-text">변경<block ref="a8946fa5f211c5345e3610710e471cb4" prefix=" " category="inline-code"></block> 마운트 지점 소유권을 Oracle 사용자에게 부여하며, 기본 그룹이 사용됩니다.</block>
+  <block id="a7d5cd359d07f4d25f07c14cac7c892f" category="list-text">바이너리 LUN의 UUI를 찾습니다.</block>
+  <block id="419b15da0e06224d0919aaf7cf7c0394" category="list-text">에 마운트 지점을 추가합니다<block ref="816a3ef77b62ade41c3f936c958aa555" prefix=" " category="inline-code"></block>.</block>
+  <block id="4f86d8e0be25b09fa4c4f087139fcd0d" category="paragraph">다음 줄을 추가합니다.</block>
+  <block id="b79f3809b435063f1d43819c9baaf816" category="admonition">EC2 인스턴스 재부팅 중에 발생할 수 있는 루트 잠금 문제를 방지하려면 UUID와 NOFAIL 옵션을 사용하여 바이너리를 마운트하는 것이 중요합니다.</block>
+  <block id="ad7b51bb9b820412dddd78b34ccf36ea" category="list-text">루트 사용자로 Oracle 디바이스에 대한 udev 규칙을 추가합니다.</block>
+  <block id="8e7c7ff83f0da1eceabb8c7fbb255de4" category="paragraph">다음 항목 포함:</block>
+  <block id="d347f5dbb8625ab56eb3b8ad0f1ed6ca" category="list-text">루트 사용자로 udev 규칙을 다시 로드합니다.</block>
+  <block id="967abd537fdc45fbfc59ee4d5fbd70d2" category="list-text">루트 사용자로 udev 규칙을 트리거합니다.</block>
+  <block id="aeead6d2d9990fef69ffefd2efd88b90" category="list-text">루트 사용자로 multipathd를 다시 로드합니다.</block>
+  <block id="3cadabe14e57cb049891c97e754906d7" category="section-title">Oracle 그리드 인프라 설치</block>
+  <block id="2ba967266d1ac37f6ee2c138c7a219f1" category="list-text">SSH를 통해 EC2 인스턴스로 로그인하고 주석 처리를 해제하여 암호 인증을 활성화합니다<block ref="cd94e87e5216cd088acdc4de0e9c30f1" prefix=" " category="inline-code"></block> 그런 다음 의견을 남기기 바랍니다<block ref="f18918133cfc22e041baab71b051c41f" prefix=" " category="inline-code"></block>.</block>
+  <block id="f919e378a236907726426311e1222ca5" category="list-text">sshd 서비스를 다시 시작합니다.</block>
+  <block id="886890ea240491bd5c7fbf2ad26038e0" category="list-text">Oracle 사용자 암호를 재설정합니다.</block>
+  <block id="312dbdb4917346c5535b58edeb72d5d8" category="list-text">Oracle Restart 소프트웨어 소유자 사용자(Oracle)로 로그인합니다. 다음과 같이 Oracle 디렉토리를 생성합니다.</block>
+  <block id="2fce107e9da63a27050a1b7738518797" category="list-text">디렉터리 권한 설정을 변경합니다.</block>
+  <block id="de76f7d30e13c7b0fac443a1b582500b" category="list-text">그리드 홈 디렉터리를 만들고 변경합니다.</block>
+  <block id="ca3eab9cf7a8f03f19d82f95a9ccebc0" category="list-text">그리드 설치 파일의 압축을 풉니다.</block>
+  <block id="4cb0c768cefd4361adc66dd3dfac2ad8" category="list-text">그리드 홈에서 을 삭제합니다<block ref="29b6fb214b3224ca10c7261aa01e44b5" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="572656c141066b10c23d5205e70be53b" category="list-text">그리드 홈에서 복사합니다<block ref="63628571f2dfaeb6f0a0a676290e6e82" prefix=" " category="inline-code"></block> grid_home 으로 이동한 다음 압축을 풉니다.</block>
+  <block id="5d940bd40ee32694345bce5774d5c678" category="list-text">그리드 홈에서 수정합니다<block ref="ef8657f0a0a00af93ba7f1c8885339ca" prefix=" " category="inline-code"></block>, 주석 취소 및 바꾸기<block ref="bb7738211dd8eb3dbadf4cc63ae8eb8a" prefix=" " category="inline-code"></block> 와 함께<block ref="b2affc1a941fe7e5e65933911250249c" prefix=" " category="inline-code"></block>.</block>
+  <block id="e4dae708382daa7f76913b9e5b686a1c" category="list-text">를 준비합니다<block ref="77d9f4d56c58834c8dacf6d0cb94e085" prefix=" " category="inline-code"></block> 자동 설치용 파일 및 RSP 파일을 에 배치합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리. RSP 파일은 다음 정보를 사용하여 섹션 A, B 및 G를 포함해야 합니다.</block>
+  <block id="72eab9d7fc33889fd5bf6a85943c4e4a" category="list-text">EC2 인스턴스에 루트 사용자로 로그인하여 설정합니다<block ref="e1f651debac4f720c13ae930ff3ca14a" prefix=" " category="inline-code"></block> 및<block ref="456a3c82b7208b5c2a000597b1330564" prefix=" " category="inline-code"></block>.</block>
+  <block id="d134d418859128801ec294cd10bcbd8e" category="list-text">Oracle ASM 필터 드라이버와 함께 사용할 디스크 디바이스를 프로비저닝합니다.</block>
+  <block id="8826276fbf00e07d49f72479d3b0da2b" category="list-text">장치 소유권을 로 변경합니다<block ref="ab3d4d3deefe8df93125b9c71378718c" prefix=" " category="inline-code"></block>.</block>
+  <block id="3e6c5f0c8e9c1310879c66839bb0f8d5" category="list-text">설치합니다<block ref="a27b4e2b8f4a0b0419894dfeac36419e" prefix=" " category="inline-code"></block>.</block>
+  <block id="cfdbf231484c64b98bc4f3569cd7b324" category="list-text">설정 해제<block ref="c0c2c8394b04a929ffc60091aa1f72ca" prefix=" " category="inline-code"></block>.</block>
+  <block id="9817d9ff96af960709b8094b73294545" category="list-text">EC2 인스턴스에 Oracle 사용자로 로그인하여 에서 패치를 추출합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 폴더.</block>
+  <block id="971a0a45b8dae69114b7ad2a60cb7f96" category="list-text">Oracle 사용자로 를 시작합니다<block ref="30c950549715985c6b7c7cd6990d0f4b" prefix=" " category="inline-code"></block> 그리드 인프라 설치용.</block>
+  <block id="5de6732dda1e7bccbd8e8b367ad248dd" category="paragraph">그리드 인프라에 대해 잘못된 그룹에 대한 경고를 무시합니다. 단일 Oracle 사용자를 사용하여 Oracle Restart를 관리하고 있으므로 이 작업이 필요합니다.</block>
+  <block id="306b4d4b77c54aeb5cbfcd36749043f5" category="list-text">루트 사용자로 다음 스크립트를 실행합니다.</block>
+  <block id="7dff0a250c79eafa071ee2d5713b7123" category="list-text">Oracle 사용자는 다음 명령을 실행하여 구성을 완료합니다.</block>
+  <block id="ecbea27c1b60fd5cd72a96184d8d2bef" category="list-text">"[INS-43080] 일부 구성 도우미가 실패했거나, 취소되었거나, 건너뛰었습니다" 메시지를 받은 경우 Oracle 사용자로 다음 명령을 실행하여 데이터 디스크 그룹 리소스가 생성되었는지 확인하십시오.</block>
+  <block id="02521e82deae97953ff19793ad44493b" category="list-text">데이터 디스크 그룹이 생성되지 않은 경우 multipathd를 루트 사용자로 다시 로드합니다.</block>
+  <block id="e8c5b866f6d35a070a878d3abb75cf8d" category="list-text">Oracle 사용자는 그리드 설치 중에 데이터 디스크 그룹이 생성되지 않은 경우 데이터 디스크 그룹을 생성합니다.</block>
+  <block id="3f2a67de0c5824d878c62c0bc347e09b" category="list-text">Oracle 사용자로 로그 디스크 그룹을 생성합니다.</block>
+  <block id="f71fbb7ff86224d636aac5f9bb42f27d" category="list-text">Oracle 사용자는 설치 구성 후 그리드 서비스를 검증합니다.</block>
+  <block id="f9ba171dd47a8cef31bac8aa17eeb44d" category="list-text">Valiate ASM 필터 드라이버 상태입니다.</block>
+  <block id="b7e3e332087b6a041c83ce22cce9043c" category="section-title">Oracle 데이터베이스 설치</block>
+  <block id="9250c441cd32cef9ac89c4aaea3311e2" category="list-text">Oracle 사용자로 로그인하고 설정을 해제합니다<block ref="88ee3ad336791517a935931e1e50382a" prefix=" " category="inline-code"></block> 및<block ref="1548c2f12948ef1485a923f5891a3489" prefix=" " category="inline-code"></block> 설정되어 있는지 확인합니다.</block>
+  <block id="9c1b98a904b357f470c8d87cf837d8cf" category="list-text">Oracle DB 홈 디렉토리를 생성하고 변경합니다.</block>
+  <block id="74d5f0f080c7e7c4f0011e6b16a1072f" category="list-text">Oracle DB 설치 파일의 압축을 풉니다.</block>
+  <block id="1fdd02c9779c06712368af7ed65c00dd" category="list-text">DB 홈에서 를 삭제합니다<block ref="29b6fb214b3224ca10c7261aa01e44b5" prefix=" " category="inline-code"></block> 디렉토리.</block>
+  <block id="948ac6ddaa5b19c62366a04abf60547d" category="list-text">DB 홈에서 복사합니다<block ref="63628571f2dfaeb6f0a0a676290e6e82" prefix=" " category="inline-code"></block> 를 선택합니다<block ref="22f5bd75d60d3065afc99a50bc98d9ae" prefix=" " category="inline-code"></block>그런 다음 압축을 풉니다.</block>
+  <block id="d86c0eec890e4216540c2b834f6339f5" category="list-text">DB 홈에서 수정한다<block ref="ef8657f0a0a00af93ba7f1c8885339ca" prefix=" " category="inline-code"></block>을 클릭합니다<block ref="bb7738211dd8eb3dbadf4cc63ae8eb8a" prefix=" " category="inline-code"></block> 와 함께<block ref="b2affc1a941fe7e5e65933911250249c" prefix=" " category="inline-code"></block>.</block>
+  <block id="95233719931805924ded9cd671e036df" category="list-text">에서<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리에서 DB 19.18 RU 패치의 포장을 풉니다.</block>
+  <block id="0181cf4258f052eaf2d48f78cd4fed7b" category="list-text">에서 DB 자동 설치 RSP 파일을 준비합니다<block ref="2d9ffa0a3db25b02bcd0091245449764" prefix=" " category="inline-code"></block> 다음 값이 있는 디렉터리:</block>
+  <block id="0838265859443cbbcdfc0834fb13e402" category="list-text">소프트웨어 전용 DB 자동 설치 실행</block>
+  <block id="4c3b15e92dacacd38d6f1d3174ad1e9f" category="list-text">를 실행합니다<block ref="08030ad08b2b991d61b424afd8828758" prefix=" " category="inline-code"></block> 소프트웨어 전용 설치 후 스크립트.</block>
+  <block id="67bee4155203a684288d87caec62ca7e" category="list-text">를 생성합니다<block ref="c170c347c737b82ad62c48db1f7bff3c" prefix=" " category="inline-code"></block> 다음 항목이 있는 파일:</block>
+  <block id="6ffd5c1d97bca346a601eadabda25b0d" category="list-text">dbca를 사용하여 DB 생성을 시작합니다.</block>
+  <block id="0bdb291c3f45b8d3e9cd39da181febb1" category="list-text">DB 생성 후 Oracle Restart HA 서비스를 확인합니다.</block>
+  <block id="05472424b7ce7bd118009f6cde3a0614" category="list-text">Oracle 사용자를 설정합니다<block ref="9e0037ad71166970bde5f910189cc94a" prefix=" " category="inline-code"></block>.</block>
+  <block id="cadaa91ab9001028d3a153b4325f10a5" category="list-text">다음 항목 추가:</block>
+  <block id="ab5f5bab123b3441fc9c838b46ff1150" category="list-text">생성된 CDB/PDB를 검증합니다.</block>
+  <block id="561a4d93b7f68977bd06286fa019a254" category="list-text">DB 복구 위치를 +logs 디스크 그룹으로 설정합니다.</block>
+  <block id="a0b58d032d36bf0801e5ca3a2aa515d9" category="list-text">sqlplus를 사용하여 데이터베이스에 로그인하고 아카이브 로그 모드를 설정합니다.</block>
+  <block id="0a31d377857a1d2e24f8e85950a44aac" category="paragraph">이것으로 ONTAP 및 EC2 컴퓨팅 인스턴스의 Amazon FSx에서 Oracle 19c 버전 19.18 재시작 구축이 완료되었습니다. 필요한 경우 Oracle 제어 파일 및 온라인 로그 파일을 + 로그 디스크 그룹으로 재배치하는 것이 좋습니다.</block>
+  <block id="4d3617697efd9a8201cb07f5e610e306" category="section-title">자동화된 구축 옵션</block>
+  <block id="3809b24192da05cb9bdf6fc7f86ce5d6" category="paragraph">NetApp은 이 솔루션 구현을 지원하기 위해 Ansible과 함께 완전 자동화된 솔루션 배포 툴킷을 릴리즈할 것입니다. 도구 키트의 가용성을 다시 확인하십시오. 릴리스 후 링크가 여기에 게시됩니다.</block>
+  <block id="6cf7e59477fa5c8722c79a0910c40cd8" category="section-title">SnapCenter 서비스를 사용한 Oracle 데이터베이스 백업, 복원 및 클론 복제</block>
+  <block id="a0c9cf73752e72933d08cadbcdf8c05a" category="inline-link-macro">Oracle용 SnapCenter 서비스</block>
+  <block id="916b48729c536f6a12c2122673bc394a" category="paragraph">을 참조하십시오 <block ref="3e99507ec3d2036a04c899dadd6c66e9" category="inline-link-macro-rx"></block> Oracle 데이터베이스 백업, 복원 및 NetApp BlueXP 콘솔을 사용한 클론에 대한 자세한 내용</block>
+  <block id="aa5a3d07c03024007dadc921fdbe67cb" category="paragraph">이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.</block>
+  <block id="5424ed1a1b4c4815e1d1676f23aa1da4" category="list-text">새 데이터베이스 설치를 통해 독립 실행형 서버용 Oracle Grid Infrastructure 설치</block>
+  <block id="a7410994d191ba6c350f0f764df86934" category="inline-link-macro"><block ref="a7410994d191ba6c350f0f764df86934" category="inline-link-rx"></block></block>
+  <block id="094328bca120efd3d6fba90d69b806f8" category="paragraph"><block ref="094328bca120efd3d6fba90d69b806f8" category="inline-link-macro-rx"></block></block>
+  <block id="8ae84196c6f373ef488c40b0b95e030d" category="list-text">응답 파일을 사용하여 Oracle 데이터베이스 설치 및 구성</block>
+  <block id="ee622e67d0075e37fff43bbf337e98b2" category="inline-link-macro"><block ref="ee622e67d0075e37fff43bbf337e98b2" category="inline-link-rx"></block></block>
+  <block id="2d94d091f5afb89e4f1aab002cef14a3" category="paragraph"><block ref="2d94d091f5afb89e4f1aab002cef14a3" category="inline-link-macro-rx"></block></block>
+  <block id="6845898fa7e9ec1fa3b8934d8e91b0c1" category="summary">이 솔루션은 BlueXP 콘솔을 사용하여 NetApp SnapCenter SaaS를 사용하여 Oracle 데이터베이스 백업, 복원, 클론에 대한 개요와 세부 정보를 제공합니다.</block>
+  <block id="9caa022ffa5eb0757a1a86c936148e7f" category="doc">TR-4964: SnapCenter 서비스를 사용하여 Oracle 데이터베이스 백업, 복원 및 클론 복제</block>
+  <block id="8ae5c33b293249b4befae60cdc1d6364" category="paragraph">SnapCenter 서비스는 NetApp BlueXP 클라우드 관리 콘솔을 통해 제공되는 기존 SnapCenter 데이터베이스 관리 UI 툴의 SaaS 버전입니다. NetApp 클라우드 스토리지에서 실행되는 Oracle 및 HANA와 같은 데이터베이스를 위한 NetApp 클라우드 백업 및 데이터 보호 솔루션의 필수적인 부분입니다. 이 SaaS 기반 서비스는 일반적으로 Windows 도메인 환경에서 작동하는 Windows 서버가 필요한 기존의 SnapCenter 독립 실행형 서버 배포를 간소화합니다.</block>
+  <block id="05530a14144f96daea2a6f96bb61b38b" category="paragraph">이 문서에서는 ONTAP 스토리지와 EC2 컴퓨팅 인스턴스를 위해 Amazon FSx에 구축된 Oracle 데이터베이스를 백업, 복원 및 클론 복제하도록 SnapCenter 서비스를 설정하는 방법을 설명합니다. SnapCenter 서비스는 설정 및 사용이 훨씬 간편하지만 레거시 SnapCenter UI 도구에서 사용할 수 있는 주요 기능을 제공합니다.</block>
+  <block id="d47397f53e6c7682397a8f8688daddcc" category="list-text">Amazon FSx for ONTAP에서 호스팅되는 Oracle 데이터베이스에 대한 스냅샷을 사용한 데이터베이스 백업</block>
+  <block id="403ca933973134cbaf8f9354830b4d9c" category="list-text">장애 발생 시 Oracle 데이터베이스 복구</block>
+  <block id="6f2d8b46ec98e47be22d4747b82a02d2" category="list-text">개발/테스트 환경 또는 기타 사용 사례에서 운영 데이터베이스를 빠르고 효율적으로 클로닝</block>
+  <block id="de98fb1438e12380191eaa97d6c6b90d" category="paragraph">이 솔루션은 다음 대상자를 대상으로 합니다.</block>
+  <block id="bdc080d1f53262a817a1472a559d75dd" category="list-text">ONTAP 스토리지용 Amazon FSx에서 실행되는 Oracle 데이터베이스를 관리하는 DBA</block>
+  <block id="d6e066caa1ab2a9ead96779ac0a95670" category="list-text">퍼블릭 AWS 클라우드에서 Oracle 데이터베이스 백업, 복원 및 클론 테스트에 관심이 있는 솔루션 설계자</block>
+  <block id="3e05bb0c3eae0733dd3f5b6eda0da89e" category="list-text">ONTAP 스토리지용 Amazon FSx를 지원 및 관리하는 스토리지 관리자</block>
+  <block id="e55870c74749ffe7a1d8b4c1a9cb5b60" category="list-text">ONTAP 스토리지용 Amazon FSx에 구축된 애플리케이션을 소유한 애플리케이션 소유자입니다</block>
+  <block id="a9bed64bc676f536e10a189728888614" category="image-alt">이 이미지는 UI, 커넥터 및 관리 리소스를 포함하여 BlueXP 콘솔 내의 Cloud Backup for Application에 대한 자세한 그림을 제공합니다.</block>
+  <block id="ccd967b78d046cba29272c0823500e3f" category="paragraph">이 이미지는 UI, 커넥터 및 관리 리소스를 포함하여 BlueXP 콘솔 내의 Cloud Backup for Application에 대한 자세한 그림을 제공합니다.</block>
+  <block id="6f4cd1b0523380b825fa78ec70975a14" category="cell">EC2 T2 xLarge EC2 인스턴스 2개, 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로</block>
+  <block id="86fae68c14c723bf36942c2c83e8a847" category="list-text">* Connector는 데이터베이스와 동일한 VPC에 구축되고 FSx. * 가능하면 커넥터를 동일한 AWS VPC에 구축하여 FSx 스토리지와 EC2 컴퓨팅 인스턴스에 연결할 수 있도록 해야 합니다.</block>
+  <block id="f4c5cbc76886ee4d3b06a979e007f04c" category="list-text">* SnapCenter 커넥터용으로 생성된 AWS IAM 정책 * JSON 형식의 정책은 자세한 SnapCenter 서비스 설명서에서 확인할 수 있습니다. BlueXP 콘솔을 사용하여 커넥터 배포를 시작하면 필수 구성 요소를 설정하라는 메시지가 표시됩니다. 이 정책은 커넥터를 소유한 AWS 사용자 계정에 할당해야 합니다.</block>
+  <block id="9a4e5feb06bb2dae4e8b115b6528fb7d" category="list-text">* AWS 계정에서 생성된 AWS 계정 액세스 키 및 SSH 키 쌍 * 커넥터 호스트에 로그인한 다음 EC2 DB 서버 호스트에 데이터베이스 플러그인을 구축하기 위해 SSH 키 쌍이 EC2 사용자에게 할당됩니다. 액세스 키는 필요한 커넥터를 프로비저닝할 수 있는 권한을 부여합니다.</block>
+  <block id="e59f5f07f322e64b80fa8264dd4389e7" category="list-text">* BlueXP 콘솔 설정에 추가된 자격 증명입니다. * ONTAP용 Amazon FSx를 BlueXP 작업 환경에 추가하려면 BlueXP 콘솔에서 ONTAP용 Amazon FSx에 액세스할 수 있는 권한을 부여하는 자격 증명이 BlueXP 콘솔 설정에서 설정됩니다.</block>
+  <block id="7d3fac201e712c335b848cf4411e68e0" category="list-text">* EC2 데이터베이스 인스턴스 호스트에 구축된 SnapCenter 플러그인 * SnapCenter 서비스는 EC2 데이터베이스 인스턴스 호스트의 SnapCenter 플러그인에서 실행되는 API 호출을 수행합니다. 서비스를 설정하기 전에 배포해야 합니다.</block>
+  <block id="16d04337973f389d2f7da86eac115afd" category="paragraph">광범위한 NetApp 설명서를 통해 클라우드 네이티브 애플리케이션 데이터를 보호할 수 있습니다. 이 문서의 목표는 ONTAP용 Amazon FSx 및 EC2 컴퓨팅 인스턴스에 구축된 Oracle 데이터베이스를 보호하기 위해 BlueXP 콘솔과 SnapCenter 서비스 구축을 다루는 단계별 절차를 제공하는 것입니다. 이 문서는 보다 일반적인 지침에서 누락되었을 수 있는 특정 세부 정보를 작성합니다.</block>
+  <block id="20c4c0cc24d7fc086bd9c72220d4827f" category="paragraph">시작하려면 다음 단계를 완료하십시오.</block>
+  <block id="eb5668f5c3459c84cc715cf197e7c91a" category="inline-link-macro">클라우드 네이티브 애플리케이션 데이터 보호</block>
+  <block id="fba4ab9f47a6aa18ae1b02fb3d8f6db1" category="list-text">일반 지침을 읽으십시오 <block ref="ac041fb7031b2bcbcb203adcabf84a4f" category="inline-link-macro-rx"></block> Oracle 및 ONTAP용 Amazon FSx 관련 섹션도 제공됩니다.</block>
+  <block id="f2f7f5c9af8a75d22b9aca95d23faad9" category="list-text">다음 비디오 연습을 시청하십시오.</block>
+  <block id="80478dbd4349cfca50f458d912a95795" category="section-title">SnapCenter 서비스 구축을 위한 사전 요구 사항</block>
+  <block id="ee260886ab2b6b27905543032620ac6f" category="list-text">Oracle 데이터베이스가 완전히 구축 및 실행되고 있는 EC2 인스턴스의 운영 Oracle 데이터베이스 서버</block>
+  <block id="d7ab5019b6e4c888e46cb145fb2d5fc4" category="list-text">위의 데이터베이스를 호스팅하는 AWS에 구축된 ONTAP용 Amazon FSx 클러스터입니다.</block>
+  <block id="0191527f1e188e7a6d18289a5ac9c936" category="list-text">개발/테스트 워크로드 또는 운영 Oracle 데이터베이스의 전체 데이터 세트가 필요한 사용 사례를 지원하기 위해 Oracle 데이터베이스의 클론 복제를 대체 호스트에 테스트하는 데 사용할 수 있는 EC2 인스턴스의 선택적 데이터베이스 서버입니다.</block>
+  <block id="ab12a73272bb7f9d19f02c65ce057f61" category="inline-link-macro">iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호</block>
+  <block id="58580b46e10b35944b7405415499a369" category="list-text">ONTAP 및 EC2 컴퓨팅 인스턴스용 Amazon FSx에서 Oracle 데이터베이스 구축을 위한 위의 필수 조건을 충족하는 데 도움이 필요한 경우 을 참조하십시오 <block ref="84dfb8b43ed6d356540ab11fdb4b0e89" category="inline-link-macro-rx"></block>.</block>
+  <block id="b8b1139d652a0eeb20f8d04852ac0ff4" category="section-title">BlueXP 준비 과정</block>
+  <block id="1273c8a63109161e6fd1f18d6998523f" category="inline-link-macro">NetApp BlueXP</block>
+  <block id="87d337785ad5798c5ccb41300628991a" category="list-text">링크를 사용하십시오 <block ref="f796c57cbc184209dde3e35268bc382f" category="inline-link-macro-rx"></block> BlueXP 콘솔 액세스를 등록하려면</block>
+  <block id="398c495b453cb83c96b3fd0cda544bd5" category="list-text">ONTAP용 Amazon FSx와 같은 AWS 클라우드 리소스를 관리하도록 BlueXP를 설정하려면 이미 AWS 계정이 설정되어 있어야 합니다. 그런 다음 AWS 계정에 로그인하여 커넥터 구축에 사용할 AWS 계정에 SnapCenter 서비스 액세스 권한을 부여하기 위한 IAM 정책을 생성할 수 있습니다.</block>
+  <block id="ead8f2b206d64f3dc022b5aff7ebf5ef" category="inline-image-macro">GUI에서 이 단계를 보여 주는 스크린샷</block>
+  <block id="f6d580bf790e26134ef61bf9d6fe18fe" category="paragraph"><block ref="f6d580bf790e26134ef61bf9d6fe18fe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="72c085381ac33d4812eff61d168042a4" category="paragraph">이 정책은 커넥터 프로비저닝을 시작할 때 사용할 수 있는 JSON 문자열로 구성해야 하며, IAM 정책이 생성되어 커넥터 배포에 사용되는 AWS 계정에 부여되었음을 알리는 메시지가 표시됩니다.</block>
+  <block id="a54002868f2640fbd1fc4f9adc7d9df8" category="list-text">또한 AWS VPC, AWS 계정의 키와 기밀 정보, EC2 액세스를 위한 SSH 키, 보안 그룹 등을 커넥터 프로비저닝할 준비가 되어 있어야 합니다.</block>
+  <block id="43e23d889dea00cd09a68857a66540a2" category="section-title">SnapCenter 서비스용 커넥터를 배포합니다</block>
+  <block id="6e557be0e45c40d783bbd8866f9a399d" category="list-text">BlueXP 콘솔에 로그인합니다. 공유 계정의 경우 * 계정 * &gt; * 계정 관리 * &gt; * Workspace * 를 클릭하여 새 작업 영역을 추가하여 개별 작업 영역을 만드는 것이 좋습니다.</block>
+  <block id="ff983eb1cf4195dbceed01ba6d95f4bd" category="paragraph"><block ref="ff983eb1cf4195dbceed01ba6d95f4bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c47cec29fcf0d8e782f2c91ad12914b4" category="list-text">커넥터 추가 * 를 클릭하여 커넥터 프로비저닝 워크플로를 시작합니다.</block>
+  <block id="06daec2780fc4a5c0089241439b6abc4" category="paragraph"><block ref="06daec2780fc4a5c0089241439b6abc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6bb78288dc7f5beb506e79a3af8041de" category="list-text">클라우드 공급자를 선택하십시오(이 경우 * Amazon Web Services *).</block>
+  <block id="8087e08b633357d4802bcc914799e1e0" category="paragraph"><block ref="8087e08b633357d4802bcc914799e1e0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="06a5177c61e31798acfdd25d766ef121" category="list-text">이미 AWS 계정에 설정되어 있는 경우 * 권한 *, * 인증 * 및 * 네트워킹 * 단계를 건너뜁니다. 그렇지 않은 경우 계속하기 전에 이러한 구성을 수행해야 합니다. 여기에서 이전 섹션에서 참조하는 AWS 정책에 대한 사용 권한도 검색할 수 있습니다."<block ref="2204dd011c923b13eaa19e758c798231" category="inline-xref-macro-rx"></block>있습니다."</block>
+  <block id="79463376ddcde3119f1d61ab3e8ace01" category="paragraph"><block ref="79463376ddcde3119f1d61ab3e8ace01" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3aa90e294a5c6f1393c075c038193c2" category="list-text">AWS 계정 인증 액세스 키 및 암호 키를 입력합니다.</block>
+  <block id="6a45e1d81bff2e550eac67a6a5fa7cbf" category="paragraph"><block ref="6a45e1d81bff2e550eac67a6a5fa7cbf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="712e596a90ac38ed31c6d4d55347a559" category="list-text">커넥터 인스턴스의 이름을 지정하고 * Details * 에서 * Create Role * 을 선택합니다.</block>
+  <block id="98c5e6a562ea83f6e395b91667156df3" category="paragraph"><block ref="98c5e6a562ea83f6e395b91667156df3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a195a46dbd792968c9fcafd533a33b51" category="list-text">EC2 액세스를 위한 적절한 VPC, 서브넷 및 SSH 키 쌍을 사용하여 네트워킹을 구성합니다.</block>
+  <block id="fde599fe1b1ccfb7275d4e17f0b4fc17" category="paragraph"><block ref="fde599fe1b1ccfb7275d4e17f0b4fc17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1509007123cad8688bdef6b265c409ce" category="list-text">커넥터의 보안 그룹을 설정합니다.</block>
+  <block id="e3d2711238be85fe0acd7b353cb0571c" category="paragraph"><block ref="e3d2711238be85fe0acd7b353cb0571c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f067570884442aa68da666583a8530cc" category="list-text">요약 페이지를 검토하고 커넥터 생성을 시작하려면 * 추가 * 를 클릭합니다. 일반적으로 배포를 완료하는 데 약 10분이 소요됩니다. 완료되면 커넥터 인스턴스가 AWS EC2 대시보드에 나타납니다.</block>
+  <block id="165138d0d406e2c17d45e777fc26ebc5" category="paragraph"><block ref="165138d0d406e2c17d45e777fc26ebc5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="96e8e4df8b3ca0b4eec3a79081f69a5f" category="inline-link-macro">스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다</block>
+  <block id="bb7fc4f6e011b0abf2d72151ba43d448" category="list-text">커넥터를 구축한 후 다음 지침에 따라 커넥터 EC2 호스트에 SSH 키를 사용하여 EC2 사용자로 로그인하여 SnapCenter 플러그인을 설치합니다. <block ref="4d36f47e6f1b893c6ddd7262bda1c9b4" category="inline-link-macro-rx"></block>.</block>
+  <block id="bb46d1e3b94fe670b59ad65582cc45d9" category="section-title">SnapCenter 서비스 설정</block>
+  <block id="c874496d8de4031470108dc34d998d2c" category="paragraph">커넥터를 배치한 상태에서 이제 다음 절차에 따라 SnapCenter 서비스를 설정할 수 있습니다.</block>
+  <block id="3ecf7d7cbb172543fe0f740496cfb9b0" category="list-text">내 작업 환경 * 에서 * 작업 환경 추가 * 를 클릭하여 AWS에 배포된 FSx를 검색합니다.</block>
+  <block id="537b713708147506a182f9e62348c997" category="paragraph"><block ref="537b713708147506a182f9e62348c997" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4daeb16c1a9b1a0d173181068ef06541" category="list-text">해당 위치로 * Amazon Web Services * 를 선택합니다.</block>
+  <block id="25949fd8842fc6d4e2a3d0e74bbc18d9" category="paragraph"><block ref="25949fd8842fc6d4e2a3d0e74bbc18d9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="beb3aca877ee917cc965b653f4f954c2" category="list-text">ONTAP * 용 * 아마존 FSx 옆에 있는 * 기존 * 검색 을 클릭합니다.</block>
+  <block id="669e7983bcf1791e42789eb5557823c1" category="paragraph"><block ref="669e7983bcf1791e42789eb5557823c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="818214abd1c968ef46c7d7ffea09d9cf" category="list-text">ONTAP용 FSx를 관리하는 데 필요한 권한을 BlueXP에 제공하는 자격 증명을 선택합니다. 자격 증명을 추가하지 않은 경우 BlueXP 콘솔의 오른쪽 상단 모서리에 있는 * 설정 * 메뉴에서 자격 증명을 추가할 수 있습니다.</block>
+  <block id="2dd86f2e91e85ccea46f244108988758" category="paragraph"><block ref="2dd86f2e91e85ccea46f244108988758" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c90af5467bb4ade93f516a477fab6ce" category="list-text">Amazon FSx for ONTAP가 구축된 AWS 영역을 선택하고 Oracle 데이터베이스를 호스팅하는 FSx 클러스터를 선택하고 추가 를 클릭합니다.</block>
+  <block id="39accbdb3a3b52363e35c6bd0a5768d8" category="paragraph"><block ref="39accbdb3a3b52363e35c6bd0a5768d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c6a9497923f20e49ad508a714878556d" category="list-text">이제 검색된 ONTAP용 Amazon FSx 인스턴스가 작업 환경에 나타납니다.</block>
+  <block id="b996189c5d6c6476140b17331222eaf4" category="paragraph"><block ref="b996189c5d6c6476140b17331222eaf4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5abed4635dac308091151770538f31f6" category="list-text">fsxadmin 계정 자격 증명을 사용하여 FSx 클러스터에 로그인할 수 있습니다.</block>
+  <block id="a0297da6f92a68d1492ecdf77c4949fb" category="paragraph"><block ref="a0297da6f92a68d1492ecdf77c4949fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="72788f45d9fca0c46cf26a1728176b48" category="list-text">ONTAP용 Amazon FSx에 로그인한 후 데이터베이스 저장소 정보(예: 데이터베이스 볼륨)를 검토합니다.</block>
+  <block id="8a51384a3ecf5b098e9facdac7fd4742" category="paragraph"><block ref="8a51384a3ecf5b098e9facdac7fd4742" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="04353f9112bb1b7ff1621abd8ff0ef5b" category="list-text">콘솔의 왼쪽 사이드바에서 보호 아이콘 위로 마우스를 가져간 다음 * 보호 * &gt; * 응용 프로그램 * 을 클릭하여 응용 프로그램 시작 페이지를 엽니다. 응용 프로그램 검색 * 을 클릭합니다.</block>
+  <block id="c174305d25dc1c3ea7e6fd64534c302d" category="paragraph"><block ref="c174305d25dc1c3ea7e6fd64534c302d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="598fd5b506ddf6b5a73368a488fa16c0" category="list-text">애플리케이션 소스 유형으로 * Cloud Native * 를 선택합니다.</block>
+  <block id="4645a6f0abb4aa3edf2172708fd672e0" category="paragraph"><block ref="4645a6f0abb4aa3edf2172708fd672e0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bfcedcc06ce70b69b0c25371a7b68359" category="list-text">애플리케이션 유형에 대해 * Oracle * 을 선택합니다.</block>
+  <block id="d90ff0259aa21df9ff992d15f1efcbd2" category="paragraph"><block ref="d90ff0259aa21df9ff992d15f1efcbd2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6cbdf0cef43778a4cfb3432da64609c7" category="list-text">호스트를 추가할 수 있도록 Oracle EC2 인스턴스 호스트 세부 정보를 제공합니다. 커넥터를 프로비저닝한 후 플러그인을 배포하므로 호스트에 Oracle용 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다.</block>
+  <block id="932a85fd3682f29ed640be5455be6e1d" category="paragraph"><block ref="932a85fd3682f29ed640be5455be6e1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="99674e4e12f2b87ea13d459f88886121" category="list-text">Oracle EC2 호스트를 검색하여 * Applications * 에 추가하면 호스트의 모든 데이터베이스가 검색되어 페이지에 표시됩니다. 데이터베이스 * 보호 상태 * 가 * 보호되지 않음 * 으로 표시됩니다.</block>
+  <block id="a91f39c3d22fe697afbaa8e861c6f1e1" category="paragraph"><block ref="a91f39c3d22fe697afbaa8e861c6f1e1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9958dec2bab238d2e917ab477e6687a5" category="paragraph">이것으로 Oracle용 SnapCenter 서비스의 초기 설정이 완료되었습니다. 이 문서의 다음 세 섹션에서는 Oracle 데이터베이스 백업, 복원 및 클론 작업에 대해 설명합니다.</block>
+  <block id="7f7c0dda9cb78e17432e91abc3c9a290" category="section-title">Oracle 데이터베이스 백업</block>
+  <block id="d243d925299e4128a453e9d54b57e25d" category="list-text">데이터베이스 * 보호 상태 * 옆에 있는 세 개의 점을 클릭한 다음 * 정책 * 을 클릭하여 Oracle 데이터베이스를 보호하기 위해 적용할 수 있는 기본 사전 로드된 데이터베이스 보호 정책을 확인합니다.</block>
+  <block id="f5ec19f9ff10edc4aa6fc1c116c6b23e" category="paragraph"><block ref="f5ec19f9ff10edc4aa6fc1c116c6b23e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b95d24dbc11f9b34c6cf18b07dcf3f7" category="list-text">사용자 지정된 백업 빈도와 백업 데이터 보존 기간을 사용하여 고유한 정책을 생성할 수도 있습니다.</block>
+  <block id="dd06e85eab955d6e3843bf0f5c71961c" category="paragraph"><block ref="dd06e85eab955d6e3843bf0f5c71961c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="44fa14fc437558bfdfce0d0ac643d1e2" category="list-text">정책 구성에 만족하면 원하는 정책을 지정하여 데이터베이스를 보호할 수 있습니다.</block>
+  <block id="2bf8224a90f863c821d826f3501d5c0a" category="paragraph"><block ref="2bf8224a90f863c821d826f3501d5c0a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4861abebdaa3d58ada4e621adac79010" category="list-text">데이터베이스에 할당할 정책을 선택합니다.</block>
+  <block id="c6f05663d6855c56941461ecc27d6b12" category="paragraph"><block ref="c6f05663d6855c56941461ecc27d6b12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da1635fa4036afa9fa39c868740e8560" category="list-text">정책이 적용되면 데이터베이스 보호 상태가 녹색 확인 표시와 함께 * Protected * 로 변경됩니다.</block>
+  <block id="0d63626c21bc3f6eaeff860db7839e8e" category="paragraph"><block ref="0d63626c21bc3f6eaeff860db7839e8e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7474327f9583bb0f2aa4aa276aa11e53" category="list-text">데이터베이스 백업은 미리 정의된 일정에 따라 실행됩니다. 아래 그림과 같이 일회성 주문형 백업을 실행할 수도 있습니다.</block>
+  <block id="3adad6846dd8bf1ff91c627d2f4bea27" category="paragraph"><block ref="3adad6846dd8bf1ff91c627d2f4bea27" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7ba3fa48656ab6088ca8f9f4c64578f" category="list-text">데이터베이스 백업 세부 정보는 메뉴 목록에서 * 세부 정보 보기 * 를 클릭하여 볼 수 있습니다. 여기에는 백업 이름, 백업 유형, SCN 및 백업 날짜가 포함됩니다. 백업 세트는 데이터 볼륨과 로그 볼륨 모두에 대한 스냅샷을 포함합니다. 로그 볼륨 스냅숏은 데이터베이스 볼륨 스냅숏 바로 다음에 수행됩니다. 긴 목록에서 특정 백업을 찾는 경우 필터를 적용할 수 있습니다.</block>
+  <block id="c76057368e5767af8f13e84e53b3194f" category="paragraph"><block ref="c76057368e5767af8f13e84e53b3194f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8fd0ba63e6574c7326fb2e810b4537e0" category="section-title">Oracle 데이터베이스 복원 및 복구</block>
+  <block id="d747acf93ee8abac3afd574a32b975fe" category="list-text">데이터베이스 복원의 경우 SCN 또는 백업 시간으로 올바른 백업을 선택합니다. 데이터베이스 데이터 백업에서 점 3개를 클릭한 다음 * 복원 * 을 클릭하여 데이터베이스 복원 및 복구를 시작합니다.</block>
+  <block id="7331f40ac7ceea61fa15e6868eba99e7" category="paragraph"><block ref="7331f40ac7ceea61fa15e6868eba99e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4ced09bd050d5fa98df8a41ef04173e0" category="list-text">복원 설정을 선택합니다. 백업 후 물리적 데이터베이스 구조에서 변경된 내용이 없는 경우(예: 데이터 파일 또는 디스크 그룹 추가) 일반적으로 더 빠른 * Force in Place restore * 옵션을 사용할 수 있습니다. 그렇지 않으면 이 확인란을 선택하지 마십시오.</block>
+  <block id="2684b5e65a8e3b537bd594678549bc4e" category="paragraph"><block ref="2684b5e65a8e3b537bd594678549bc4e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d58c0a59c722f81b5e2d0f77ffc4e126" category="list-text">데이터베이스 복원 및 복구를 검토하고 시작합니다.</block>
+  <block id="9ab34ce0349fd7db7573bad83c07a487" category="paragraph"><block ref="9ab34ce0349fd7db7573bad83c07a487" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e370cf26e04645138a40a3379e743fb7" category="list-text">Job Monitoring* 탭에서 실행 중인 복원 작업의 상태 및 세부 정보를 볼 수 있습니다.</block>
+  <block id="e9214106e8bbcaae5a214e937af349e6" category="paragraph"><block ref="e9214106e8bbcaae5a214e937af349e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd84eda02c29b3672e3476ed8c8be12d" category="paragraph"><block ref="bd84eda02c29b3672e3476ed8c8be12d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9dc2f50af584776a2ecc51a0ebcdded2" category="section-title">Oracle 데이터베이스 클론</block>
+  <block id="35526fc92bd49edc3a11a0affafeae3b" category="paragraph">데이터베이스를 복제하려면 동일한 데이터베이스 백업 세부 정보 페이지에서 클론 워크플로우를 실행합니다.</block>
+  <block id="71f8cd32cfa279d796f673879629f671" category="list-text">올바른 데이터베이스 백업 복사본을 선택하고 세 개의 점을 클릭하여 메뉴를 표시한 다음 * Clone * 옵션을 선택합니다.</block>
+  <block id="b858b9fa0a1f0db13263cc0c2cc5cf3d" category="paragraph"><block ref="b858b9fa0a1f0db13263cc0c2cc5cf3d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d552bd00a2d8ed3e1872a0f795180b9f" category="list-text">복제된 데이터베이스 매개 변수를 변경할 필요가 없으면 * Basic * 옵션을 선택합니다.</block>
+  <block id="867de7ff195f530db4a1e5643a75c689" category="paragraph"><block ref="867de7ff195f530db4a1e5643a75c689" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="90b931da49f7db8ce97de89c2b7ea8d5" category="list-text">또는 * Specification file * 을 선택하여 현재 init 파일을 다운로드하고, 변경한 다음 다시 작업에 업로드할 수 있습니다.</block>
+  <block id="f89a131e2cb4beb2f5dc697ac61b460f" category="paragraph"><block ref="f89a131e2cb4beb2f5dc697ac61b460f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b9252d48a9fcf8c03ec68f357e943a" category="list-text">작업을 검토하고 시작합니다.</block>
+  <block id="77281e34749b6599332dd1416b12f533" category="paragraph"><block ref="77281e34749b6599332dd1416b12f533" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3d388d0f32172ebe7aea2c3eeae0dfc4" category="list-text">Job Monitoring* 탭에서 클론 생성 작업 상태를 모니터링합니다.</block>
+  <block id="827b60b27e967d900114ade1f31eed53" category="paragraph"><block ref="827b60b27e967d900114ade1f31eed53" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4e0fb0a8b932b4f05d487ea8a5748901" category="list-text">EC2 인스턴스 호스트에서 클론 복제된 데이터베이스를 확인합니다.</block>
+  <block id="d139cf7562ab53c3922d5a0a6804786c" category="paragraph"><block ref="d139cf7562ab53c3922d5a0a6804786c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6cfa4396db779261100202ab3f0ffdcd" category="paragraph"><block ref="6cfa4396db779261100202ab3f0ffdcd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f12aeeed0f164c86af69a57fddb01689" category="list-text">BlueXP 설정 및 관리</block>
+  <block id="74e12c8bec754bf4a9feb44c8cada2dc" category="inline-link-macro"><block ref="74e12c8bec754bf4a9feb44c8cada2dc" category="inline-link-rx"></block></block>
+  <block id="54d1b98b8cdfd12e2afc7f08278645ba" category="paragraph"><block ref="54d1b98b8cdfd12e2afc7f08278645ba" category="inline-link-macro-rx"></block></block>
+  <block id="846099e77083903f32f72c0e2156c3c5" category="list-text">Cloud Backup 설명서</block>
+  <block id="ed133d2d4bade971a41aae35897a0bd2" category="inline-link-macro"><block ref="ed133d2d4bade971a41aae35897a0bd2" category="inline-link-rx"></block></block>
+  <block id="21af149e524c5f7a8eb5e23197309e60" category="paragraph"><block ref="21af149e524c5f7a8eb5e23197309e60" category="inline-link-macro-rx"></block></block>
+  <block id="7e7efb7e7b278c5ce5253a775d1c8313" category="sidebar">AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구</block>
+  <block id="d36111f9de8e485ef98facff50b6fd6e" category="sidebar">iSCSI/ASM을 통한 Oracle 데이터베이스 구축 및 보호</block>
 </blocks>
