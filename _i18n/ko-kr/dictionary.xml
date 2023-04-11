@@ -8995,7 +8995,6 @@
   <block id="6abbceca4793ffe4b329045f63b4d219" category="sidebar">운영 관리</block>
   <block id="1b31ca8ddb749644af37aa10b42e6930" category="sidebar">GPU 고려 사항</block>
   <block id="a1da2a2d050a6b61256020afd015a056" category="sidebar">솔루션을 제공합니다</block>
-  <block id="739169d2451850e6df7246db70c28cc7" category="sidebar">ESG 기술 검증: NetApp 가상 데스크톱 서비스를 통해 엔터프라이즈 규모의 VDI</block>
   <block id="4725a75839c620bb95363c5f7f2ee9bc" category="sidebar">VMware Horizon을 참조하십시오</block>
   <block id="e2a1b52ebd707739003f77464bbcaa80" category="sidebar">FlexPod 데스크톱 가상화 솔루션</block>
   <block id="9d0be07780aeb437025d4b3420d12540" category="sidebar">NetApp XCP 데이터 마이그레이션</block>
@@ -17728,4 +17727,21 @@
   <block id="21af149e524c5f7a8eb5e23197309e60" category="paragraph"><block ref="21af149e524c5f7a8eb5e23197309e60" category="inline-link-macro-rx"></block></block>
   <block id="7e7efb7e7b278c5ce5253a775d1c8313" category="sidebar">AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구</block>
   <block id="d36111f9de8e485ef98facff50b6fd6e" category="sidebar">iSCSI/ASM을 통한 Oracle 데이터베이스 구축 및 보호</block>
+  <block id="5ed492cbbbf7e6d167035a7c10478daa" category="summary">NetApp HCI를 사용하는 VMware 최종 사용자 컴퓨팅은 사전 검증된 모범 사례 데이터 센터 아키텍처로, 엔터프라이즈 규모로 가상 데스크톱 워크로드를 구축할 수 있습니다.</block>
+  <block id="b4a3c2c985fcfc0d0e59c8d9c3259eb0" category="doc">NVA-1129-deploy: NetApp HCI 및 NVIDIA GPU를 이용한 VMware 최종 사용자 컴퓨팅</block>
+  <block id="8b3f1e47da9509d2edf2f21012c6ec7e" category="paragraph">NetApp HCI를 사용하는 VMware 최종 사용자 컴퓨팅은 사전 검증된 모범 사례 데이터 센터 아키텍처로, 엔터프라이즈 규모로 가상 데스크톱 워크로드를 구축할 수 있습니다. 이 문서에서는 안정적이고 위험 없는 방식으로 솔루션을 운영 규모에 구축하는 방법에 대해 설명합니다</block>
+  <block id="ba999af3664a8f6c5b43a92bc11de64a" category="paragraph"><block ref="ba999af3664a8f6c5b43a92bc11de64a" category="inline-link-macro-rx"></block></block>
+  <block id="85864e2699dfaceb7f8d1f85448939fe" category="doc">NVA-1132-design:NetApp HCI를 사용한 VMware 최종 사용자 컴퓨팅</block>
+  <block id="52940073ac3f539b3c6d9ac1e41d5f06" category="paragraph">NetApp HCI를 사용하는 VMware 최종 사용자 컴퓨팅은 사전 검증된 모범 사례 데이터 센터 아키텍처로, 엔터프라이즈 규모로 가상 데스크톱 워크로드를 구축할 수 있습니다. 이 문서에서는 안정적이고 위험 없는 방식으로 운영 환경에서 솔루션을 구축하기 위한 아키텍처 설계와 모범 사례에 대해 설명합니다.</block>
+  <block id="8c40c45c2332a47a83ae257f42af2331" category="paragraph"><block ref="8c40c45c2332a47a83ae257f42af2331" category="inline-link-macro-rx"></block></block>
+  <block id="cb4afc4348edbcbc0ddb144315301438" category="summary">FlexPod 설계 가이드를 검토하여 FlexPod 가상화 솔루션에 대해 자세히 알아보십시오.</block>
+  <block id="4de89e2522c54dd93e1f7435cd5845e9" category="doc">FlexPod 데스크톱 가상화 솔루션</block>
+  <block id="99f9c871e415b6401535b222011ec217" category="inline-link-macro">FlexPod 설계 가이드</block>
+  <block id="2de05ca96bfd006d0687e6e5b3edfcad" category="paragraph">을 검토하여 FlexPod 가상화 솔루션에 대해 자세히 알아보십시오 <block ref="7464c5c011fed90b6d391ce107d84818" category="inline-link-macro-rx"></block></block>
+  <block id="36f00397200c227ebfe56599e7bafcd5" category="doc">NVA-1129-design: NetApp HCI 및 NVIDIA GPU를 사용한 VMware 최종 사용자 컴퓨팅</block>
+  <block id="8a36e2f35bf4a10959caf61f15d8df63" category="paragraph"><block ref="8a36e2f35bf4a10959caf61f15d8df63" category="inline-link-macro-rx"></block></block>
+  <block id="be493f1fc0b02ae45602c7c13f7b5dc7" category="summary">TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프트웨어를 기반으로 하는 VMware Horizon 환경에서 NetApp HCI 615C를 사용하여 3D 그래픽 워크로드를 처리하는 방법에 대한 지침을 제공합니다.</block>
+  <block id="ff1d278a485c443dc5d8fc9f10f1a702" category="doc">VMware Horizon 7을 지원하는 NetApp HCI for Virtual Desktop Infrastructure - 3D 그래픽을 통해 파워 유저의 역량을 강화하십시오</block>
+  <block id="e3162938e0d7b1bbc74111cc5b5871c5" category="paragraph">TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프트웨어로 구동되는 VMware Horizon 환경에서 NetApp H615C 컴퓨팅 노드를 사용하여 3D 그래픽 워크로드를 처리하는 방법에 대한 지침을 제공합니다. 또한 H615C에 대한 SPECviewperf 13의 예비 테스트에서 얻은 결과를 제공합니다.</block>
+  <block id="1de37c09602b46db5de57a946efe2768" category="paragraph"><block ref="1de37c09602b46db5de57a946efe2768" category="inline-link-macro-rx"></block></block>
 </blocks>

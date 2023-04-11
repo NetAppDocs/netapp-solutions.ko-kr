@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: virtualization/flex-virtual-solutions.html 
+keywords: cisco, flexpod, solutions, reports, documents 
+summary: FlexPod 설계 가이드를 검토하여 FlexPod 가상화 솔루션에 대해 자세히 알아보십시오. 
+---
+= FlexPod 데스크톱 가상화 솔루션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+을 검토하여 FlexPod 가상화 솔루션에 대해 자세히 알아보십시오 link:https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt1_general-table0=Desktop%20Virtualization["FlexPod 설계 가이드"^]

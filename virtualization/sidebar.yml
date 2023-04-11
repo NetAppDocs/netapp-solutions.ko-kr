@@ -140,37 +140,19 @@ entries:
         url: "/vdi-vds/hcvdivds_conclusion.html"
       - title: 추가 정보를 찾을 수 있는 위치
         url: "/vdi-vds/hcvdivds_where_to_find_additional_information.html"
-    - title: 'ESG 기술 검증: NetApp 가상 데스크톱 서비스를 통해 엔터프라이즈 규모의 VDI'
-      url: https://www.esg-global.com/validation/esg-technical-validation-vdi-at-enterprise-scale-with-netapp-virtual-desktop-service
   - title: VMware Horizon을 참조하십시오
     entries:
     - title: VMware를 통한 최종 사용자 컴퓨팅(설계 가이드)
-      url: https://www.netapp.com/us/media/nva-1132-design.pdf
+      url: "/virtualization/nva-1132-design.html"
     - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(설계 가이드)
-      url: https://www.netapp.com/us/media/nva-1129-design.pdf
+      url: "/virtualization/nva-1129-design.html"
     - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)
-      url: https://www.netapp.com/us/media/nva-1129-deploy.pdf
+      url: "/virtualization/nva-1129-deploy.html"
     - title: 3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅
-      url: https://www.netapp.com/us/media/tr-4792.pdf
+      url: "/virtualization/tr-4792-link.html"
   - title: FlexPod 데스크톱 가상화 솔루션
-    url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt1_general-table0=Desktop%20Virtualization
+    url: "/virtualization/flex-virtual-solutions.html"
 - title: 데모 및 자습서
   entries:
   - title: 비디오
     url: "/virtualization/vsphere_demos_videos.html"
-- title: 블로그
-  entries:
-  - title: NetApp 및 VMware Cloud Foundation(VCF)
-    entries:
-    - title: '1부: 시작하기'
-      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-getting-started
-    - title: '2부: VCF 및 ONTAP 주 저장소'
-      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-ontap-principal-storage
-    - title: '3부: VCF 및 Element Principal storage'
-      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-element-principal-storage
-    - title: '4부: VMware용 ONTAP 툴 및 보조 스토리지'
-      url: https://www.netapp.com/blog/netapp-vmware-cloud-foundation-supplemental-storage
-  - title: 클라우드 기반 VMware 구축을 위한 스토리지 최적화
-    url: https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments
-  - title: NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오
-    url: https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution
