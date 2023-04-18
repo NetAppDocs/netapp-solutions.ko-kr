@@ -17744,4 +17744,113 @@
   <block id="ff1d278a485c443dc5d8fc9f10f1a702" category="doc">VMware Horizon 7을 지원하는 NetApp HCI for Virtual Desktop Infrastructure - 3D 그래픽을 통해 파워 유저의 역량을 강화하십시오</block>
   <block id="e3162938e0d7b1bbc74111cc5b5871c5" category="paragraph">TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프트웨어로 구동되는 VMware Horizon 환경에서 NetApp H615C 컴퓨팅 노드를 사용하여 3D 그래픽 워크로드를 처리하는 방법에 대한 지침을 제공합니다. 또한 H615C에 대한 SPECviewperf 13의 예비 테스트에서 얻은 결과를 제공합니다.</block>
   <block id="1de37c09602b46db5de57a946efe2768" category="paragraph"><block ref="1de37c09602b46db5de57a946efe2768" category="inline-link-macro-rx"></block></block>
+  <block id="6e74710636e2da95cda4899adcdf891e" category="summary">데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서 액세스할 수 있습니다.</block>
+  <block id="8394db253ec71ed9d59b9429983b8eb4" category="doc">데이터 과학자 및 기타 애플리케이션을 위한 데이터 중복</block>
+  <block id="352ca87bc1d3676d3b2548644189d052" category="paragraph"><block ref="352ca87bc1d3676d3b2548644189d052" category="inline-link-macro-rx"></block></block>
+  <block id="f4900d1d4a0a26325c4c9514e57c2c75" category="paragraph">데이터 중복 사용 사례를 위해서는 NetApp BlueXP, NetApp Cloud Volumes ONTAP 및 AWS SageMaker 노트북 이 필요합니다.</block>
+  <block id="6e6b6052efed2574e2dc05cbdc5d66d5" category="paragraph">다음 표에는 사용 사례를 구현하는 데 필요한 소프트웨어 구성요소가 나와 있습니다.</block>
+  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="cell">BlueXP</block>
+  <block id="dda9f6d67571441afa5cfb6b54b70873" category="cell">AWS SageMaker 노트북</block>
+  <block id="cc5f7f3bee6dcb16913051d6fc267977" category="paragraph">데이터 이중화 솔루션을 구축하려면 다음 작업이 필요합니다.</block>
+  <block id="6bb1f60bf0d00924a1bba54557e1feae" category="list-text">BlueXP 커넥터</block>
+  <block id="cf25fa6cf104cc1a67119acb6d4d364d" category="list-text">머신 러닝을 위한 데이터</block>
+  <block id="5a1439989b12745b5a4ed4b944539247" category="list-text">AWS SageMaker를 참조하십시오</block>
+  <block id="59b20c2117a395af59d54a6533498e99" category="list-text">Jupyter Notebooks에서 검증된 머신 러닝</block>
+  <block id="46e0bb4f28dbf5013a68a8a69a3cf9f5" category="section-title">BlueXP 커넥터</block>
+  <block id="de3e31c5aaf9bdeca7bc072f649ddc2e" category="paragraph">이 검증에서 AWS를 사용했습니다. Azure 및 Google Cloud에도 적용됩니다. AWS에서 BlueXP 커넥터를 생성하려면 다음 단계를 수행하십시오.</block>
+  <block id="4d7b48a5181bdd203b2ff52910c67d94" category="list-text">BlueXP의 mcel-marketplace-subscription을 기반으로 자격 증명을 사용했습니다.</block>
+  <block id="c0caffb5ab49caead75d39f6416ba841" category="list-text">환경에 적합한 지역을 선택하십시오(예: us-east-1[N Virginia])를 선택하고 인증 방법(예: 역할 또는 AWS 키 가정)을 선택합니다. 이 검증에서는 AWS 키를 사용합니다.</block>
+  <block id="86b72593a2ce2f4e46e7669ced916111" category="list-text">커넥터 이름을 제공하고 역할을 생성합니다.</block>
+  <block id="71ffd00d3592df40d0db94a71ceab12d" category="list-text">공용 IP가 필요한지 여부에 따라 VPC, 서브넷 또는 키 쌍 등의 네트워크 세부 정보를 제공합니다.</block>
+  <block id="b5b37cef840fa0a17af0ef55c09a0e1f" category="list-text">HTTP, HTTPS 또는 소스 유형의 SSH 액세스(예: Anywhere 및 IP 범위 정보)와 같은 보안 그룹에 대한 세부 정보를 제공합니다.</block>
+  <block id="45b20434e20aeebd5991cd84f2cf11c9" category="list-text">BlueXP 커넥터를 검토하고 생성합니다.</block>
+  <block id="92043f8a1dc0b0180854c25bcf5ff79d" category="list-text">BlueXP EC2 인스턴스 상태가 AWS 콘솔에서 실행 중인지 확인하고 * Networking * 탭에서 IP 주소를 확인합니다.</block>
+  <block id="7044ee6a43ee2152ca6d008fcb8228c3" category="list-text">BlueXP 포털에서 커넥터 사용자 인터페이스에 로그인하거나 브라우저에서 IP 주소를 사용하여 액세스할 수 있습니다.</block>
+  <block id="064d933c0c02c4fe7ef1a07ad3a537d7" category="paragraph">BlueXP에서 Cloud Volumes ONTAP 인스턴스를 만들려면 다음 단계를 수행하십시오.</block>
+  <block id="da6e487de6af8700c3cf58ffb20a876c" category="list-text">새 작업 환경을 생성하고 클라우드 공급자를 선택한 다음 Cloud Volumes ONTAP 인스턴스 유형(예: ONTAP의 경우 단일 CVO, HA 또는 Amazon FSxN)을 선택합니다.</block>
+  <block id="dcb89e397dde3dedb1a32224f0c15b78" category="list-text">Cloud Volumes ONTAP 클러스터 이름 및 자격 증명과 같은 세부 정보를 제공합니다. 이 검증에서 라는 Cloud Volumes ONTAP 인스턴스를 만들었습니다<block ref="c7e44ecb645a5c83f843ae05090c5940" prefix=" " category="inline-code"></block>.</block>
+  <block id="9cf479af21359b2928a1b672d60577f2" category="list-text">Cloud Volumes ONTAP에 필요한 서비스를 선택합니다. 이 검증에서는 모니터링만 하기로 선택했으므로 * 데이터 감지 및 규정 준수 * 와 * 클라우드 서비스로 백업 * 을 비활성화했습니다.</block>
+  <block id="cb95ef3838d59d553c71f50b1cadee27" category="list-text">Location &amp; Connectivity * 섹션에서 AWS 지역, VPC, 서브넷, 보안 그룹, SSH 인증 방법을 선택합니다. 암호 또는 키 쌍 중 하나를 입력합니다.</block>
+  <block id="fdd5d37c21ee01084537317345b3d78b" category="list-text">충전 방법을 선택합니다. 이 검증에는 * Professional * 을 사용했습니다.</block>
+  <block id="00efec60d606ea6ad0bafe93bc77df92" category="list-text">POC 및 소규모 워크로드 *, * 데이터베이스 및 애플리케이션 데이터 운영 워크로드 *, * 비용 효율적인 DR * 또는 * 고성능 운영 워크로드 * 와 같은 사전 구성된 패키지를 선택할 수 있습니다. 이 검증에서 우리는 * POC 및 소규모 워크로드 * 를 선택합니다.</block>
+  <block id="f22934293c2f2a761ea26fa4ae1828e1" category="list-text">특정 크기, 허용되는 프로토콜 및 내보내기 옵션으로 볼륨을 생성합니다. 이 검증에서 라는 볼륨을 생성했습니다<block ref="2b0d59c7031769e80c8e5118b6ec7694" prefix=" " category="inline-code"></block>.</block>
+  <block id="f2706214c4a60177d14fb8495cbc6924" category="list-text">프로파일 디스크 유형 및 계층화 정책을 선택합니다. 이 검증에서는 * 스토리지 효율성 * 및 * 범용 SSD – 동적 성능 * 을 비활성화했습니다.</block>
+  <block id="40d3f73a73f67ce67b286aef7a5d3ecb" category="list-text">마지막으로 Cloud Volumes ONTAP 인스턴스를 검토하고 만듭니다. 그런 다음 BlueXP가 Cloud Volumes ONTAP 작업 환경을 만들 때까지 15-20분 정도 기다립니다.</block>
+  <block id="a8b538b74c3f662c2248af9c6d4742db" category="list-text">duality 프로토콜을 사용하도록 다음 매개 변수를 구성합니다. 이중화 프로토콜(NFS/S3)은 ONTAP 9에서 지원됩니다. 12.1 이상</block>
+  <block id="15b53c14b58ee146309847451d1eb90a" category="list-text">이 검증에서 라는 SVM을 생성했습니다<block ref="c7e44ecb645a5c83f843ae05090c5940" prefix=" " category="inline-code"></block> 볼륨을 높이십시오<block ref="2b0d59c7031769e80c8e5118b6ec7694" prefix=" " category="inline-code"></block>.</block>
+  <block id="3514969b2381af83551c246e34b74403" category="list-text">SVM이 NFS 및 S3에 대한 프로토콜 지원을 가지고 있는지 확인합니다. 그렇지 않은 경우 SVM을 수정하여 지원을 받을 수 있습니다.</block>
+  <block id="e41c06ffff0f8c9cadbc7f8bb37f8ae5" category="list-text">필요한 경우 CA 인증서를 만들어 설치합니다.</block>
+  <block id="0395f8062a8a7f4af05113bae8133737" category="list-text">서비스 데이터 정책을 생성합니다.</block>
+  <block id="6e16e110899749a795fe713253d850e7" category="list-text">집계 세부 정보를 확인합니다.</block>
+  <block id="5d3f8e127103f0d5cf3de305db892b4d" category="list-text">사용자 및 그룹을 생성합니다.</block>
+  <block id="efa22127bde2d3ab2e4f5b9a42d14814" category="list-text">NFS 볼륨에 버킷을 생성합니다.</block>
+  <block id="c3fd6f44bf88d3f0eae4742edb58eafc" category="paragraph">AWS SageMaker에서 AWS 노트북을 만들려면 다음 단계를 수행하십시오.</block>
+  <block id="31378aab1ee6190e0b7fe33c501a5625" category="list-text">노트북 인스턴스를 만드는 사용자에게 AmazonSageMakerFullAccess IAM 정책이 있거나 AmazonSageMakerFullAccess 권한이 있는 기존 그룹에 속하는지 확인하십시오. 이 검증에서 사용자는 기존 그룹의 일부입니다.</block>
+  <block id="13c1455885d16af64f1bb96c4e48680a" category="list-text">다음 정보를 제공합니다.</block>
+  <block id="bb8101aed18120fa18dedaa994ffeea0" category="list-text">전자 필기장 인스턴스 이름입니다.</block>
+  <block id="6239d232142a089e53e7a13fa721237a" category="list-text">인스턴스 유형.</block>
+  <block id="37056dac7373f7e1b74382036d25b69e" category="list-text">플랫폼 식별자입니다.</block>
+  <block id="38e2059c32c628cf89e90a6844a93800" category="list-text">AmazonSageMakerFullAccess 권한이 있는 IAM 역할을 선택합니다.</block>
+  <block id="55d7da5ede713135b1c2ebd7a615c3b4" category="list-text">루트 액세스 – 설정.</block>
+  <block id="8f0e92e4434abc32ff62a914ae9f2ba6" category="list-text">암호화 키 - 사용자 정의 암호화 없음을 선택합니다.</block>
+  <block id="8b77028d248afd826900d895636b4e98" category="list-text">나머지 기본 옵션을 유지합니다.</block>
+  <block id="78456ee20793f732edfa9105bbb4e490" category="list-text">이 검증에서 SageMaker 인스턴스 세부 정보는 다음과 같습니다.</block>
+  <block id="e90e797343ea3f751b0c32e808edaff8" category="inline-image-macro">단계를 보여 주는 스크린샷</block>
+  <block id="07d5be91bebaccd4767fcceff99f3dde" category="paragraph"><block ref="07d5be91bebaccd4767fcceff99f3dde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69e41ee119a70fc66edf204cbcf365b1" category="paragraph"><block ref="69e41ee119a70fc66edf204cbcf365b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4789a9ab6472480889e111503d068623" category="list-text">AWS 노트북을 시작합니다.</block>
+  <block id="faf1aea43a6d3bd1af488b8baa828561" category="paragraph"><block ref="faf1aea43a6d3bd1af488b8baa828561" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbfbebd805ee7945ad38bc26f8fa9f1b" category="list-text">Jupyter 연구실을 엽니다.</block>
+  <block id="bcca330921c0ce477877bc982c12a6fb" category="paragraph"><block ref="bcca330921c0ce477877bc982c12a6fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab3269ab0de58f5611205f6ace06f3af" category="list-text">터미널에 로그인하여 Cloud Volumes ONTAP 볼륨을 마운트합니다.</block>
+  <block id="cc0649b0871fde24c4a46e09186a36e0" category="list-text">AWS CLI 명령을 사용하여 Cloud Volumes ONTAP 볼륨에 생성된 버킷을 확인합니다.</block>
+  <block id="4f31ff9815d3a8a959e7c557213068d6" category="paragraph">이 검증에서 우리는 다양한 Wikimedia 프로젝트에서 생성된 정보에서 구조화된 컨텐츠를 추출하기 위해 군중의 노력을 기울인 DBpedia의 데이터 세트를 사용했습니다.</block>
+  <block id="06d6ccf33b49ed20a34cdc26b6820253" category="list-text">DBpedia GitHub 위치에서 데이터를 다운로드하고 압축을 풉니다. 이전 단원에서 사용한 것과 동일한 터미널을 사용합니다.</block>
+  <block id="7f50b7f719282741fdf7ce5b8ca1f3dd" category="list-text">데이터를 Cloud Volumes ONTAP 위치로 복사하고 AWS CLI를 사용하여 S3 버킷에서 확인합니다.</block>
+  <block id="0ecfbac978ab3f5979ec31eb5574d93e" category="list-text">기본 검증을 수행하여 읽기/쓰기 기능이 S3 버킷에서 작동하는지 확인합니다.</block>
+  <block id="877169a066e14f0512d5f119945ef14d" category="section-title">Jupyter Notebooks에서 머신 러닝을 검증합니다</block>
+  <block id="6f73420916237ed836932ccf967d82ba" category="paragraph">다음 검증에서는 아래의 SageMaker BlazingText 예제를 사용하여 텍스트 분류를 통해 머신 러닝 빌드, 교육 및 배포 모델을 제공합니다.</block>
+  <block id="3cf03767e04159d1ec88e7fb0827b487" category="list-text">boto3 및 SageMaker 패키지를 설치합니다.</block>
+  <block id="b1282d58a4dcde0a2015d98ad33afd4c" category="paragraph">출력:</block>
+  <block id="39017441ac701ebaef8de7116e7f71a0" category="list-text">다음 단계에서는 데이터를 입력합니다 <block ref="0a726fdd06082d233cd4eade40f12612" prefix="(" category="inline-code"></block>)가 S3 버킷에서 다운로드됩니다<block ref="90d9a986b9b5e7c07c50a03ccc06a244" prefix=" " category="inline-code"></block> 기계 학습에 사용되는 Jupyter Notebook 인스턴스에.</block>
+  <block id="a270350e3527fea9a36815fa5fe04ba0" category="list-text">다음 코드에서는 추론 중에 실제 클래스 이름을 검색하는 데 사용되는 클래스 레이블에 대한 정수 인덱스의 매핑을 만듭니다.</block>
+  <block id="d17fa3d0aed3f8aaa5e78b447054126d" category="paragraph">출력에는 의 파일과 폴더가 나열됩니다<block ref="90d9a986b9b5e7c07c50a03ccc06a244" prefix=" " category="inline-code"></block> AWS SageMaker 머신 러닝 검증을 위한 데이터로 사용되는 버킷</block>
+  <block id="0cfbf64679378e3e5367734fd2bd69aa" category="list-text">데이터 전처리 단계를 시작하여 BlazingText 알고리즘과 nltk 라이브러리에서 사용할 수 있는 공간 분리 토큰화된 텍스트 형식으로 교육 데이터를 사전 처리하여 DBPedia 데이터 세트의 입력 문장을 토큰화합니다. nltk 토큰화 및 기타 라이브러리를 다운로드합니다. 를 클릭합니다<block ref="6d49a792c1080aa5b33d27ec694621b6" prefix=" " category="inline-code"></block> 병렬로 각 데이터 인스턴스에 적용되는 Python 다중 처리 모듈을 사용합니다.</block>
+  <block id="d68566815a7248bae03e105c2db8853a" category="list-text">SageMaker에서 교육 작업을 실행하는 데 사용할 수 있도록 형식 지정된 교육 데이터 세트를 S3에 업로드합니다. 그런 다음 Python SDK를 사용하여 버킷과 접두사 위치에 두 개의 파일을 업로드합니다.</block>
+  <block id="bc41af112e1f02120a4a6e16f34767ef" category="list-text">모델 아티팩트가 로드되는 S3에서 출력 위치를 설정하여 아티팩트가 알고리즘 교육 작업의 출력이 될 수 있도록 합니다. 을 생성합니다<block ref="6e3281884db83f9ee468a6e798b6bdfb" prefix=" " category="inline-code"></block> 교육 작업을 시작할 것을 반대합니다.</block>
+  <block id="41215e143c2b3810b37c4e4f47819077" category="list-text">SageMaker를 정의합니다<block ref="a0b1f5f7b93af313b6e2452f52c8f3f6" prefix=" " category="inline-code"></block> c4.4x4 대형 인스턴스의 중계 모드를 사용하여 DBPedia 데이터세트에서 텍스트 분류를 훈련하기 위한 리소스 구성 및 하이퍼 매개변수.</block>
+  <block id="6c773c4d6e4a7dda7e00352894786bdb" category="list-text">데이터 채널과 알고리즘 간의 핸드셰이크를 준비합니다. 이렇게 하려면 를 만듭니다<block ref="0e021845d2c0e4ad94a91ce444c13681" prefix=" " category="inline-code"></block> 데이터 채널의 객체를 알고리즘에 사용하기 위한 사전 내에 보관합니다.</block>
+  <block id="3b29bef19a742b8ab66cddf620871d31" category="list-text">작업이 완료되면 작업 완료 메시지가 나타납니다. 훈련된 모델은 로 설정된 S3 버킷에서 찾을 수 있습니다<block ref="212ad7a4c11069727ffd02f333d7d8b1" prefix=" " category="inline-code"></block> 계산기로.</block>
+  <block id="6cb5683d87e53b375bd915572f960759" category="list-text">교육이 완료되면 아마존 SageMaker 실시간 호스팅 엔드포인트로 교육 받은 모델을 배포하여 예측을 수행합니다.</block>
+  <block id="4254a612097ca58653de7c0c39da8df2" category="list-text">기본적으로 모델은 가장 높은 확률로 하나의 예측을 반환합니다. 를 눌러 맨 위를 검색합니다<block ref="8ce4b16b22b58894aa86c421e8759df3" prefix=" " category="inline-code"></block> 예측, 설정<block ref="8ce4b16b22b58894aa86c421e8759df3" prefix=" " category="inline-code"></block> 를 구성 파일에 저장합니다.</block>
+  <block id="67be4f1bb90039baec0d8f73ff82a47e" category="list-text">전자 필기장을 닫기 전에 끝점을 삭제합니다.</block>
+  <block id="891844576f11e816faf55d68309946b4" category="paragraph"><block ref="891844576f11e816faf55d68309946b4" category="inline-link-macro-rx"></block></block>
+  <block id="7caace9abf76a798c629a9134d1bb259" category="summary">NFS 및 S3의 이중 프로토콜 액세스 사용 사례는 머신 러닝 및 데이터 과학 분야입니다. 예를 들어, 데이터 과학자 팀이 AWS SageMaker를 사용하여 머신 러닝 프로젝트에 참여하고 있을 수 있으며 이때 NFS 형식으로 저장된 데이터에 액세스해야 합니다. 하지만 다른 팀 구성원과 협업하거나 S3를 사용하는 다른 애플리케이션과 통합하기 위해 S3 버킷을 통해 데이터에 액세스하고 공유해야 할 수도 있습니다.</block>
+  <block id="c065dcd23d9d1ec5adae07e55bed5122" category="paragraph"><block ref="c065dcd23d9d1ec5adae07e55bed5122" category="inline-link-macro-rx"></block></block>
+  <block id="ee8cf3bf54dea46135e299d79fa1c179" category="paragraph">이 솔루션은 다음 기술을 사용합니다.</block>
+  <block id="a03ea23912d3b35c875ff398aa4888af" category="list-text">* AWS SageMaker 노트북 * 은 개발자와 데이터 과학자가 고품질 ML 모델을 효율적으로 제작, 교육 및 배포할 수 있는 머신 러닝 기능을 제공합니다.</block>
+  <block id="bbe2552dc6295d353c02fd85c243f334" category="list-text">* NetApp BlueXP. * 를 사용하면 AWS, Azure, Google Cloud뿐만 아니라 온프레미스에서 스토리지를 검색, 구축, 운영할 수 있습니다. 데이터 손실, 사이버 위협, 계획되지 않은 운영 중단에 대비한 데이터 보호 기능을 제공하고 데이터 스토리지 및 인프라를 최적화합니다.</block>
+  <block id="aa6fa71ab9848c5875470d36bbc2138a" category="list-text">* NetApp Cloud Volumes ONTAP. * 는 AWS, Azure 및 Google Cloud에서 NFS, SMB/CIFS, iSCSI, S3 프로토콜을 지원하는 엔터프라이즈급 스토리지 볼륨을 제공하여 사용자가 클라우드에서 데이터에 액세스하고 관리할 수 있는 유연성을 제공합니다.</block>
+  <block id="eea496572a01ca3e5ced1dfe99a5809c" category="paragraph">BlueXP에서 NetApp Cloud Volumes ONTAP을 생성하여 ML 데이터를 저장합니다.</block>
+  <block id="923baf107dc23ca10f968a4fdecd4f4f" category="paragraph">다음 그림은 솔루션의 기술 구성요소를 보여 줍니다.</block>
+  <block id="8afbfe3aeb9c594404d5c244cf8f6024" category="inline-image-macro">이 그림은 솔루션의 기술 구성요소를 보여 줍니다.</block>
+  <block id="eaf4eb821a18e60305e45cf9cce407dd" category="paragraph"><block ref="eaf4eb821a18e60305e45cf9cce407dd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="55c5281d80934f950192f768715495f0" category="paragraph">이 팀은 NetApp Cloud Volumes ONTAP를 활용하여 데이터를 단일 위치에 저장하고 NFS 및 S3 프로토콜 모두에서 액세스할 수 있습니다. 데이터 과학자는 AWS SageMaker에서 직접 NFS 형식의 데이터에 액세스할 수 있는 반면, 다른 팀원이나 애플리케이션은 S3 버킷을 통해 동일한 데이터에 액세스할 수 있습니다.</block>
+  <block id="f8ba1b513231e9ca54a5c3b94733c28d" category="paragraph">따라서 서로 다른 스토리지 솔루션 간에 추가 소프트웨어 또는 데이터 마이그레이션을 수행할 필요 없이 데이터를 쉽고 효율적으로 액세스 및 공유할 수 있습니다. 또한 팀 구성원 간의 보다 능률적인 워크플로 및 협업을 통해 머신 러닝 모델을 보다 빠르고 효과적으로 개발할 수 있습니다.</block>
+  <block id="90c0fb73ec9f52bf43a1ec0b34196d95" category="inline-link-macro">다음은 데이터 과학자와 기타 애플리케이션을 위한 데이터 이중화입니다.</block>
+  <block id="b425d409342f0d671a0dd6742f8bf09f" category="paragraph"><block ref="b425d409342f0d671a0dd6742f8bf09f" category="inline-link-macro-rx"></block></block>
+  <block id="16147684eb6910d9d73a43bb83091da4" category="summary">데이터 과학자와 엔지니어는 NFS 형식으로 저장된 데이터에 액세스해야 하는 경우가 많지만, AWS는 S3 버킷 액세스만 지원하므로 AWS SageMaker의 S3 프로토콜에서 이 데이터에 직접 액세스하는 것은 어려울 수 있습니다. 하지만 NetApp ONTAP는 NFS 및 S3에 대한 이중 프로토콜 액세스를 지원하여 솔루션을 제공합니다. 이 솔루션을 통해 데이터 과학자와 엔지니어는 NetApp Cloud Volumes ONTAP의 S3 버킷을 통해 AWS SageMaker 노트북에서 NFS 데이터에 액세스할 수 있습니다. 이 접근 방식을 사용하면 추가 소프트웨어 없이 NFS 및 S3에서 동일한 데이터에 쉽게 액세스하고 공유할 수 있습니다.</block>
+  <block id="e8ce8afdd7d335aed5b93d4a41ae0115" category="doc">TR-4967: NetApp 파일 오브젝트 이중화 및 AWS SageMaker를 통한 클라우드 데이터 관리</block>
+  <block id="6b9283149a6cf88268f83de626fe265f" category="paragraph"><block ref="6b9283149a6cf88268f83de626fe265f" category="inline-link-macro-rx"></block></block>
+  <block id="af7ba099603ccd4070a5102166f2c998" category="summary">이 검증 결과에 따라 데이터 과학자와 엔지니어는 NetApp Cloud Volumes ONTAP의 S3 버킷을 통해 AWS SageMaker Jupyter Notebooks에서 NFS 데이터에 액세스할 수 있습니다. 이 접근 방식을 사용하면 추가 소프트웨어 없이 NFS 및 S3에서 동일한 데이터에 쉽게 액세스하고 공유할 수 있습니다.</block>
+  <block id="4fb1e7ca4e76c4bb7a3052dc8d47879b" category="inline-link-macro">이전: 데이터 과학자 및 기타 애플리케이션을 위한 데이터 중복</block>
+  <block id="51218734514eb89f2125e2ee2c444e31" category="paragraph"><block ref="51218734514eb89f2125e2ee2c444e31" category="inline-link-macro-rx"></block></block>
+  <block id="8053f00cf5e08f449b7cafe189c73a39" category="list-text">SageMaker BlazingText를 사용한 텍스트 분류</block>
+  <block id="7fba377195a6600e8ac2b2d5a433e7d3" category="inline-link"><block ref="7fba377195a6600e8ac2b2d5a433e7d3" category="inline-link-rx"></block></block>
+  <block id="d8908a1e1cf55570441dd5a42baadacc" category="paragraph"><block ref="d8908a1e1cf55570441dd5a42baadacc" category="inline-link-rx"></block></block>
+  <block id="d6667429b7c60bcbf5e5d593e91d6cae" category="list-text">S3 오브젝트 스토리지를 위한 ONTAP 버전 지원</block>
+  <block id="91ef54d96688b56bf968f57803df6675" category="inline-link"><block ref="91ef54d96688b56bf968f57803df6675" category="inline-link-rx"></block></block>
+  <block id="53a581d907d105a589be9419e91b16fa" category="paragraph"><block ref="53a581d907d105a589be9419e91b16fa" category="inline-link-rx"></block></block>
+  <block id="904837c9cf9bc52a96ce17d051fddec9" category="cell">2023년 4월</block>
+  <block id="1d2114df6a9f8f5d7e8f597e9c70a6c1" category="sidebar">NetApp File-Object 이중화 및 AWS SageMaker를 통한 클라우드 데이터 관리</block>
 </blocks>

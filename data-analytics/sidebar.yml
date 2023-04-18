@@ -3,6 +3,17 @@ section: data-analytics
 title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
+- title: NetApp File-Object 이중화 및 AWS SageMaker를 통한 클라우드 데이터 관리
+  type: solutions
+  entries:
+  - title: 솔루션 개요
+    url: "/data-analytics/cdm-fod-solution-overview.html"
+  - title: 솔루션 기술
+    url: "/data-analytics/cdm-fod-solution-technology.html"
+  - title: 데이터 과학자 및 기타 애플리케이션을 위한 데이터 중복
+    url: "/data-analytics/cdm-fod-data-duality-for-data-scientists-and-other-applications.html"
+  - title: 결론
+    url: "/data-analytics/cdm-fod-conclusion.html"
 - title: NetApp NFS 스토리지를 사용하는 Apache Kafka 워크로드
   type: solutions
   entries:

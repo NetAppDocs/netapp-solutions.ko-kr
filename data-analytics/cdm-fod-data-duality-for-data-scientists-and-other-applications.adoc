@@ -1,0 +1,855 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/cdm-fod-data-duality-for-data-scientists-and-other-applications.html 
+keywords: technology requirements, software, bluexp, cloud volumes ontap, sagemaker, aws, machine learning data 
+summary: 데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서 액세스할 수 있습니다. 
+---
+= 데이터 과학자 및 기타 애플리케이션을 위한 데이터 중복
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:cdm-fod-solution-technology.html["이전: 솔루션 기술."]
+
+[role="lead"]
+데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서 액세스할 수 있습니다.
+
+
+
+== 기술 요구 사항
+
+데이터 중복 사용 사례를 위해서는 NetApp BlueXP, NetApp Cloud Volumes ONTAP 및 AWS SageMaker 노트북 이 필요합니다.
+
+
+
+=== 소프트웨어 요구 사항
+
+다음 표에는 사용 사례를 구현하는 데 필요한 소프트웨어 구성요소가 나와 있습니다.
+
+|===
+| 소프트웨어 | 수량 
+
+
+| BlueXP | 1 
+
+
+| NetApp Cloud Volumes ONTAP를 참조하십시오 | 1 
+
+
+| AWS SageMaker 노트북 | 1 
+|===
+
+
+== 구현 절차
+
+데이터 이중화 솔루션을 구축하려면 다음 작업이 필요합니다.
+
+* BlueXP 커넥터
+* NetApp Cloud Volumes ONTAP를 참조하십시오
+* 머신 러닝을 위한 데이터
+* AWS SageMaker를 참조하십시오
+* Jupyter Notebooks에서 검증된 머신 러닝
+
+
+
+
+=== BlueXP 커넥터
+
+이 검증에서 AWS를 사용했습니다. Azure 및 Google Cloud에도 적용됩니다. AWS에서 BlueXP 커넥터를 생성하려면 다음 단계를 수행하십시오.
+
+. BlueXP의 mcel-marketplace-subscription을 기반으로 자격 증명을 사용했습니다.
+. 환경에 적합한 지역을 선택하십시오(예: us-east-1[N Virginia])를 선택하고 인증 방법(예: 역할 또는 AWS 키 가정)을 선택합니다. 이 검증에서는 AWS 키를 사용합니다.
+. 커넥터 이름을 제공하고 역할을 생성합니다.
+. 공용 IP가 필요한지 여부에 따라 VPC, 서브넷 또는 키 쌍 등의 네트워크 세부 정보를 제공합니다.
+. HTTP, HTTPS 또는 소스 유형의 SSH 액세스(예: Anywhere 및 IP 범위 정보)와 같은 보안 그룹에 대한 세부 정보를 제공합니다.
+. BlueXP 커넥터를 검토하고 생성합니다.
+. BlueXP EC2 인스턴스 상태가 AWS 콘솔에서 실행 중인지 확인하고 * Networking * 탭에서 IP 주소를 확인합니다.
+. BlueXP 포털에서 커넥터 사용자 인터페이스에 로그인하거나 브라우저에서 IP 주소를 사용하여 액세스할 수 있습니다.
+
+
+
+
+=== NetApp Cloud Volumes ONTAP를 참조하십시오
+
+BlueXP에서 Cloud Volumes ONTAP 인스턴스를 만들려면 다음 단계를 수행하십시오.
+
+. 새 작업 환경을 생성하고 클라우드 공급자를 선택한 다음 Cloud Volumes ONTAP 인스턴스 유형(예: ONTAP의 경우 단일 CVO, HA 또는 Amazon FSxN)을 선택합니다.
+. Cloud Volumes ONTAP 클러스터 이름 및 자격 증명과 같은 세부 정보를 제공합니다. 이 검증에서 라는 Cloud Volumes ONTAP 인스턴스를 만들었습니다 `svm_sagemaker_cvo_sn1`.
+. Cloud Volumes ONTAP에 필요한 서비스를 선택합니다. 이 검증에서는 모니터링만 하기로 선택했으므로 * 데이터 감지 및 규정 준수 * 와 * 클라우드 서비스로 백업 * 을 비활성화했습니다.
+. Location & Connectivity * 섹션에서 AWS 지역, VPC, 서브넷, 보안 그룹, SSH 인증 방법을 선택합니다. 암호 또는 키 쌍 중 하나를 입력합니다.
+. 충전 방법을 선택합니다. 이 검증에는 * Professional * 을 사용했습니다.
+. POC 및 소규모 워크로드 *, * 데이터베이스 및 애플리케이션 데이터 운영 워크로드 *, * 비용 효율적인 DR * 또는 * 고성능 운영 워크로드 * 와 같은 사전 구성된 패키지를 선택할 수 있습니다. 이 검증에서 우리는 * POC 및 소규모 워크로드 * 를 선택합니다.
+. 특정 크기, 허용되는 프로토콜 및 내보내기 옵션으로 볼륨을 생성합니다. 이 검증에서 라는 볼륨을 생성했습니다 `vol1`.
+. 프로파일 디스크 유형 및 계층화 정책을 선택합니다. 이 검증에서는 * 스토리지 효율성 * 및 * 범용 SSD – 동적 성능 * 을 비활성화했습니다.
+. 마지막으로 Cloud Volumes ONTAP 인스턴스를 검토하고 만듭니다. 그런 다음 BlueXP가 Cloud Volumes ONTAP 작업 환경을 만들 때까지 15-20분 정도 기다립니다.
+. duality 프로토콜을 사용하도록 다음 매개 변수를 구성합니다. 이중화 프로토콜(NFS/S3)은 ONTAP 9에서 지원됩니다. 12.1 이상
++
+.. 이 검증에서 라는 SVM을 생성했습니다 `svm_sagemaker_cvo_sn1` 볼륨을 높이십시오 `vol1`.
+.. SVM이 NFS 및 S3에 대한 프로토콜 지원을 가지고 있는지 확인합니다. 그렇지 않은 경우 SVM을 수정하여 지원을 받을 수 있습니다.
++
+....
+sagemaker_cvo_sn1::> vserver show -vserver svm_sagemaker_cvo_sn1
+                                    Vserver: svm_sagemaker_cvo_sn1
+                               Vserver Type: data
+                            Vserver Subtype: default
+                               Vserver UUID: 911065dd-a8bc-11ed-bc24-e1c0f00ad86b
+                                Root Volume: svm_sagemaker_cvo_sn1_root
+                                  Aggregate: aggr1
+                                 NIS Domain: -
+                 Root Volume Security Style: unix
+                                LDAP Client: -
+               Default Volume Language Code: C.UTF-8
+                            Snapshot Policy: default
+                              Data Services: data-cifs, data-flexcache,
+                                             data-iscsi, data-nfs,
+                                             data-nvme-tcp
+                                    Comment:
+                               Quota Policy: default
+                List of Aggregates Assigned: aggr1
+ Limit on Maximum Number of Volumes allowed: unlimited
+                        Vserver Admin State: running
+                  Vserver Operational State: running
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: nfs, cifs, fcp, iscsi, ndmp, s3
+                       Disallowed Protocols: nvme
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: false
+                               IPspace Name: Default
+                         Foreground Process: -
+                    Logical Space Reporting: true
+                  Logical Space Enforcement: false
+Default Anti_ransomware State of the Vserver's Volumes: disabled
+            Enable Analytics on New Volumes: false
+    Enable Activity Tracking on New Volumes: false
+
+sagemaker_cvo_sn1::>
+....
+
+
+. 필요한 경우 CA 인증서를 만들어 설치합니다.
+. 서비스 데이터 정책을 생성합니다.
++
+....
+sagemaker_cvo_sn1::*> network interface service-policy create -vserver svm_sagemaker_cvo_sn1 -policy sagemaker_s3_nfs_policy -services data-core,data-s3-server,data-nfs,data-flexcache
+sagemaker_cvo_sn1::*> network interface create -vserver svm_sagemaker_cvo_sn1 -lif svm_sagemaker_cvo_sn1_s3_lif -service-policy sagemaker_s3_nfs_policy -home-node sagemaker_cvo_sn1-01 -address 172.30.10.41 -netmask 255.255.255.192
+
+Warning: The configured failover-group has no valid failover targets for the LIF's failover-policy. To view the failover targets for a LIF, use
+         the "network interface show -failover" command.
+
+sagemaker_cvo_sn1::*>
+sagemaker_cvo_sn1::*> network interface show
+Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+sagemaker_cvo_sn1
+            cluster-mgmt up/up    172.30.10.40/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+            intercluster up/up    172.30.10.48/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+            sagemaker_cvo_sn1-01_mgmt1
+                         up/up    172.30.10.58/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+svm_sagemaker_cvo_sn1
+            svm_sagemaker_cvo_sn1_data_lif
+                         up/up    172.30.10.23/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+            svm_sagemaker_cvo_sn1_mgmt_lif
+                         up/up    172.30.10.32/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+            svm_sagemaker_cvo_sn1_s3_lif
+                         up/up    172.30.10.41/26    sagemaker_cvo_sn1-01
+                                                                   e0a     true
+6 entries were displayed.
+
+sagemaker_cvo_sn1::*>
+sagemaker_cvo_sn1::*> vserver object-store-server create -vserver svm_sagemaker_cvo_sn1  -is-http-enabled true -object-store-server svm_sagemaker_cvo_s3_sn1 -is-https-enabled false
+sagemaker_cvo_sn1::*> vserver object-store-server show
+
+Vserver: svm_sagemaker_cvo_sn1
+
+           Object Store Server Name: svm_sagemaker_cvo_s3_sn1
+               Administrative State: up
+                       HTTP Enabled: true
+             Listener Port For HTTP: 80
+                      HTTPS Enabled: false
+     Secure Listener Port For HTTPS: 443
+  Certificate for HTTPS Connections: -
+                  Default UNIX User: pcuser
+               Default Windows User: -
+                            Comment:
+
+sagemaker_cvo_sn1::*>
+....
+. 집계 세부 정보를 확인합니다.
++
+....
+sagemaker_cvo_sn1::*> aggr show
+
+
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+aggr0_sagemaker_cvo_sn1_01
+           124.0GB   50.88GB   59% online       1 sagemaker_cvo_   raid0,
+                                                  sn1-01           normal
+aggr1      907.1GB   904.9GB    0% online       2 sagemaker_cvo_   raid0,
+                                                  sn1-01           normal
+2 entries were displayed.
+
+sagemaker_cvo_sn1::*>
+....
+. 사용자 및 그룹을 생성합니다.
++
+....
+sagemaker_cvo_sn1::*> vserver object-store-server user create -vserver svm_sagemaker_cvo_sn1 -user s3user
+
+sagemaker_cvo_sn1::*> vserver object-store-server user show
+Vserver     User            ID        Access Key          Secret Key
+----------- --------------- --------- ------------------- -------------------
+svm_sagemaker_cvo_sn1
+            root            0         -                   -
+   Comment: Root User
+svm_sagemaker_cvo_sn1
+            s3user          1         0ZNAX21JW5Q8AP80CQ2E
+                                                          PpLs4gA9K0_2gPhuykkp014gBjcC9Rbi3QDX_6rr
+2 entries were displayed.
+
+sagemaker_cvo_sn1::*>
+
+
+sagemaker_cvo_sn1::*> vserver object-store-server group create -name s3group -users s3user -comment ""
+
+sagemaker_cvo_sn1::*>
+sagemaker_cvo_sn1::*> vserver object-store-server group delete -gid 1 -vserver svm_sagemaker_cvo_sn1
+
+sagemaker_cvo_sn1::*> vserver object-store-server group create -name s3group -users s3user -comment "" -policies FullAccess
+
+sagemaker_cvo_sn1::*>
+....
+. NFS 볼륨에 버킷을 생성합니다.
++
+....
+sagemaker_cvo_sn1::*> vserver object-store-server bucket create -bucket ontapbucket1 -type nas -comment "" -vserver svm_sagemaker_cvo_sn1 -nas-path /vol1
+sagemaker_cvo_sn1::*> vserver object-store-server bucket show
+Vserver     Bucket          Type     Volume            Size       Encryption Role       NAS Path
+----------- --------------- -------- ----------------- ---------- ---------- ---------- ----------
+svm_sagemaker_cvo_sn1
+            ontapbucket1    nas      vol1              -          false      -          /vol1
+sagemaker_cvo_sn1::*>
+....
+
+
+
+
+=== AWS SageMaker를 참조하십시오
+
+AWS SageMaker에서 AWS 노트북을 만들려면 다음 단계를 수행하십시오.
+
+. 노트북 인스턴스를 만드는 사용자에게 AmazonSageMakerFullAccess IAM 정책이 있거나 AmazonSageMakerFullAccess 권한이 있는 기존 그룹에 속하는지 확인하십시오. 이 검증에서 사용자는 기존 그룹의 일부입니다.
+. 다음 정보를 제공합니다.
++
+** 전자 필기장 인스턴스 이름입니다.
+** 인스턴스 유형.
+** 플랫폼 식별자입니다.
+** AmazonSageMakerFullAccess 권한이 있는 IAM 역할을 선택합니다.
+** 루트 액세스 – 설정.
+** 암호화 키 - 사용자 정의 암호화 없음을 선택합니다.
+** 나머지 기본 옵션을 유지합니다.
+
+
+. 이 검증에서 SageMaker 인스턴스 세부 정보는 다음과 같습니다.
++
+image:cdm-fod-image2.png["단계를 보여 주는 스크린샷"]
+
++
+image:cdm-fod-image3.png["단계를 보여 주는 스크린샷"]
+
+. AWS 노트북을 시작합니다.
++
+image:cdm-fod-image4.png["단계를 보여 주는 스크린샷"]
+
+. Jupyter 연구실을 엽니다.
++
+image:cdm-fod-image5.png["단계를 보여 주는 스크린샷"]
+
+. 터미널에 로그인하여 Cloud Volumes ONTAP 볼륨을 마운트합니다.
++
+....
+sh-4.2$ sudo mkdir /vol1; sudo mount -t nfs 172.30.10.41:/vol1 /vol1
+sh-4.2$ df -h
+Filesystem          Size  Used Avail Use% Mounted on
+devtmpfs            2.0G     0  2.0G   0% /dev
+tmpfs               2.0G     0  2.0G   0% /dev/shm
+tmpfs               2.0G  624K  2.0G   1% /run
+tmpfs               2.0G     0  2.0G   0% /sys/fs/cgroup
+/dev/xvda1          140G  114G   27G  82% /
+/dev/xvdf           4.8G   72K  4.6G   1% /home/ec2-user/SageMaker
+tmpfs               393M     0  393M   0% /run/user/1001
+tmpfs               393M     0  393M   0% /run/user/1002
+tmpfs               393M     0  393M   0% /run/user/1000
+172.30.10.41:/vol1  973M  189M  785M  20% /vol1
+sh-4.2$
+....
+. AWS CLI 명령을 사용하여 Cloud Volumes ONTAP 볼륨에 생성된 버킷을 확인합니다.
++
+....
+sh-4.2$ aws configure --profile netapp
+AWS Access Key ID [None]: 0ZNAX21JW5Q8AP80CQ2E
+AWS Secret Access Key [None]: PpLs4gA9K0_2gPhuykkp014gBjcC9Rbi3QDX_6rr
+Default region name [None]: us-east-1
+Default output format [None]:
+sh-4.2$
+
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url
+2023-02-10 17:59:48 ontapbucket1
+
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url  s3://ontapbucket1/
+
+
+2023-02-10 18:46:44       4747 1
+2023-02-10 18:48:32         96 setup.cfg
+
+sh-4.2$
+....
+
+
+
+
+=== 머신 러닝을 위한 데이터
+
+이 검증에서 우리는 다양한 Wikimedia 프로젝트에서 생성된 정보에서 구조화된 컨텐츠를 추출하기 위해 군중의 노력을 기울인 DBpedia의 데이터 세트를 사용했습니다.
+
+. DBpedia GitHub 위치에서 데이터를 다운로드하고 압축을 풉니다. 이전 단원에서 사용한 것과 동일한 터미널을 사용합니다.
++
+....
+sh-4.2$ wget
+--2023-02-14 23:12:11--
+Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location:  [following]
+--2023-02-14 23:12:11--
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 68431223 (65M) [application/octet-stream]
+Saving to: ‘dbpedia_csv.tar.gz’
+
+100%[==============================================================================================================================================================>] 68,431,223  56.2MB/s   in 1.2s
+
+2023-02-14 23:12:13 (56.2 MB/s) - ‘dbpedia_csv.tar.gz’ saved [68431223/68431223]
+
+sh-4.2$ tar -zxvf dbpedia_csv.tar.gz
+dbpedia_csv/
+dbpedia_csv/test.csv
+dbpedia_csv/classes.txt
+dbpedia_csv/train.csv
+dbpedia_csv/readme.txt
+sh-4.2$
+....
+. 데이터를 Cloud Volumes ONTAP 위치로 복사하고 AWS CLI를 사용하여 S3 버킷에서 확인합니다.
++
+....
+sh-4.2$ df -h
+Filesystem          Size  Used Avail Use% Mounted on
+devtmpfs            2.0G     0  2.0G   0% /dev
+tmpfs               2.0G     0  2.0G   0% /dev/shm
+tmpfs               2.0G  628K  2.0G   1% /run
+tmpfs               2.0G     0  2.0G   0% /sys/fs/cgroup
+/dev/xvda1          140G  114G   27G  82% /
+/dev/xvdf           4.8G   52K  4.6G   1% /home/ec2-user/SageMaker
+tmpfs               393M     0  393M   0% /run/user/1002
+tmpfs               393M     0  393M   0% /run/user/1001
+tmpfs               393M     0  393M   0% /run/user/1000
+172.30.10.41:/vol1  973M  384K  973M   1% /vol1
+sh-4.2$ pwd
+/home/ec2-user
+sh-4.2$ cp -ra dbpedia_csv /vol1
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url  s3://ontapbucket1/
+                           PRE dbpedia_csv/
+2023-02-10 18:46:44       4747 1
+2023-02-10 18:48:32         96 setup.cfg
+sh-4.2$
+....
+. 기본 검증을 수행하여 읽기/쓰기 기능이 S3 버킷에서 작동하는지 확인합니다.
++
+....
+sh-4.2$ aws s3 cp  --profile netapp --endpoint-url  /usr/share/doc/util-linux-2.30.2 s3://ontapbucket1/ --recursive
+upload: ../../../usr/share/doc/util-linux-2.30.2/deprecated.txt to s3://ontapbucket1/deprecated.txt
+upload: ../../../usr/share/doc/util-linux-2.30.2/getopt-parse.bash to s3://ontapbucket1/getopt-parse.bash
+upload: ../../../usr/share/doc/util-linux-2.30.2/README to s3://ontapbucket1/README
+upload: ../../../usr/share/doc/util-linux-2.30.2/getopt-parse.tcsh to s3://ontapbucket1/getopt-parse.tcsh
+upload: ../../../usr/share/doc/util-linux-2.30.2/AUTHORS to s3://ontapbucket1/AUTHORS
+upload: ../../../usr/share/doc/util-linux-2.30.2/NEWS to s3://ontapbucket1/NEWS
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url  s3://ontapbucket1/s3://ontapbucket1/
+
+An error occurred (InternalError) when calling the ListObjectsV2 operation: We encountered an internal error. Please try again.
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url  s3://ontapbucket1/
+                           PRE dbpedia_csv/
+2023-02-16 19:19:27      26774 AUTHORS
+2023-02-16 19:19:27      72727 NEWS
+2023-02-16 19:19:27       4493 README
+2023-02-16 19:19:27       2825 deprecated.txt
+2023-02-16 19:19:27       1590 getopt-parse.bash
+2023-02-16 19:19:27       2245 getopt-parse.tcsh
+sh-4.2$ ls -ltr /vol1
+total 132
+drwxrwxr-x 2 ec2-user ec2-user  4096 Mar 29  2015 dbpedia_csv
+-rw-r--r-- 1 nobody   nobody    2245 Apr 10 17:37 getopt-parse.tcsh
+-rw-r--r-- 1 nobody   nobody    2825 Apr 10 17:37 deprecated.txt
+-rw-r--r-- 1 nobody   nobody    4493 Apr 10 17:37 README
+-rw-r--r-- 1 nobody   nobody    1590 Apr 10 17:37 getopt-parse.bash
+-rw-r--r-- 1 nobody   nobody   26774 Apr 10 17:37 AUTHORS
+-rw-r--r-- 1 nobody   nobody   72727 Apr 10 17:37 NEWS
+sh-4.2$ ls -ltr /vol1/dbpedia_csv/
+total 192104
+-rw------- 1 ec2-user ec2-user 174148970 Mar 28  2015 train.csv
+-rw------- 1 ec2-user ec2-user  21775285 Mar 28  2015 test.csv
+-rw------- 1 ec2-user ec2-user       146 Mar 28  2015 classes.txt
+-rw-rw-r-- 1 ec2-user ec2-user      1758 Mar 29  2015 readme.txt
+sh-4.2$ chmod -R 777 /vol1/dbpedia_csv
+sh-4.2$ ls -ltr /vol1/dbpedia_csv/
+total 192104
+-rwxrwxrwx 1 ec2-user ec2-user 174148970 Mar 28  2015 train.csv
+-rwxrwxrwx 1 ec2-user ec2-user  21775285 Mar 28  2015 test.csv
+-rwxrwxrwx 1 ec2-user ec2-user       146 Mar 28  2015 classes.txt
+-rwxrwxrwx 1 ec2-user ec2-user      1758 Mar 29  2015 readme.txt
+sh-4.2$ aws s3 cp --profile netapp --endpoint-url http://172.30.2.248/ s3://ontapbucket1/ /tmp --recursive
+download: s3://ontapbucket1/AUTHORS to ../../tmp/AUTHORS
+download: s3://ontapbucket1/README to ../../tmp/README
+download: s3://ontapbucket1/NEWS to ../../tmp/NEWS
+download: s3://ontapbucket1/dbpedia_csv/classes.txt to ../../tmp/dbpedia_csv/classes.txt
+download: s3://ontapbucket1/dbpedia_csv/readme.txt to ../../tmp/dbpedia_csv/readme.txt
+download: s3://ontapbucket1/deprecated.txt to ../../tmp/deprecated.txt
+download: s3://ontapbucket1/getopt-parse.bash to ../../tmp/getopt-parse.bash
+download: s3://ontapbucket1/getopt-parse.tcsh to ../../tmp/getopt-parse.tcsh
+download: s3://ontapbucket1/dbpedia_csv/test.csv to ../../tmp/dbpedia_csv/test.csv
+download: s3://ontapbucket1/dbpedia_csv/train.csv to ../../tmp/dbpedia_csv/train.csv
+sh-4.2$
+sh-4.2$ aws s3 ls --profile netapp --endpoint-url  s3://ontapbucket1/
+                           PRE dbpedia_csv/
+2023-02-16 19:19:27      26774 AUTHORS
+2023-02-16 19:19:27      72727 NEWS
+2023-02-16 19:19:27       4493 README
+2023-02-16 19:19:27       2825 deprecated.txt
+2023-02-16 19:19:27       1590 getopt-parse.bash
+2023-02-16 19:19:27       2245 getopt-parse.tcsh
+sh-4.2$
+....
+
+
+
+
+== Jupyter Notebooks에서 머신 러닝을 검증합니다
+
+다음 검증에서는 아래의 SageMaker BlazingText 예제를 사용하여 텍스트 분류를 통해 머신 러닝 빌드, 교육 및 배포 모델을 제공합니다.
+
+. boto3 및 SageMaker 패키지를 설치합니다.
++
+....
+In [1]:  pip install --upgrade boto3 sagemaker
+....
++
+출력:
+
++
+....
+Looking in indexes: https://pypi.org/simple, https://pip.repos.neuron.amazo naws.com
+Requirement already satisfied: boto3 in /home/ec2-user/anaconda3/envs/pytho n3/lib/python3.10/site-packages (1.26.44)
+Collecting boto3
+  Downloading boto3-1.26.72-py3-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 14.6 MB/s eta 0: 00:00
+Requirement already satisfied: sagemaker in /home/ec2-user/anaconda3/envs/p ython3/lib/python3.10/site-packages (2.127.0)
+Collecting sagemaker
+  Downloading sagemaker-2.132.0.tar.gz (668 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 668.0/668.0 kB 12.3 MB/s eta 0:
+00:0000:01
+  Preparing metadata (setup.py) ... done
+Collecting botocore<1.30.0,>=1.29.72
+  Downloading botocore-1.29.72-py3-none-any.whl (10.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 44.3 MB/s eta 0: 00:0000:010:01
+Requirement already satisfied: s3transfer<0.7.0,>=0.6.0 in /home/ec2-user/a naconda3/envs/python3/lib/python3.10/site-packages (from boto3) (0.6.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/ec2-user/ana conda3/envs/python3/lib/python3.10/site-packages (from boto3) (0.10.0)
+Requirement already satisfied: attrs<23,>=20.3.0 in /home/ec2-user/anaconda
+3/envs/python3/lib/python3.10/site-packages (from sagemaker) (22.1.0)
+Requirement already satisfied: google-pasta in /home/ec2-user/anaconda3/env s/python3/lib/python3.10/site-packages (from sagemaker) (0.2.0)
+Requirement already satisfied: numpy<2.0,>=1.9.0 in /home/ec2-user/anaconda
+3/envs/python3/lib/python3.10/site-packages (from sagemaker) (1.22.4)
+Requirement already satisfied: protobuf<4.0,>=3.1 in /home/ec2-user/anacond a3/envs/python3/lib/python3.10/site-packages (from sagemaker) (3.20.3)
+Requirement already satisfied: protobuf3-to-dict<1.0,>=0.1.5 in /home/ec2-u ser/anaconda3/envs/python3/lib/python3.10/site-packages (from sagemaker)
+(0.1.5)
+Requirement already satisfied: smdebug_rulesconfig==1.0.1 in /home/ec2-use r/anaconda3/envs/python3/lib/python3.10/site-packages (from sagemaker) (1.
+0.1) Requirement already satisfied: importlib-metadata<5.0,>=1.4.0 in /home/ec2user/anaconda3/envs/python3/lib/python3.10/site-packages (from sagemaker)
+(4.13.0)
+Requirement already satisfied: packaging>=20.0 in /home/ec2-user/anaconda3/ envs/python3/lib/python3.10/site-packages (from sagemaker) (21.3)
+Requirement already satisfied: pandas in /home/ec2-user/anaconda3/envs/pyth on3/lib/python3.10/site-packages (from sagemaker) (1.5.1)
+Requirement already satisfied: pathos in /home/ec2-user/anaconda3/envs/pyth on3/lib/python3.10/site-packages (from sagemaker) (0.3.0)
+Requirement already satisfied: schema in /home/ec2-user/anaconda3/envs/pyth on3/lib/python3.10/site-packages (from sagemaker) (0.7.5) Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/ec2-use r/anaconda3/envs/python3/lib/python3.10/site-packages (from botocore<1.30.
+0,>=1.29.72->boto3) (2.8.2)
+Requirement already satisfied: urllib3<1.27,>=1.25.4 in /home/ec2-user/anac onda3/envs/python3/lib/python3.10/site-packages (from botocore<1.30.0,>=1.2
+9.72->boto3) (1.26.8) Requirement already satisfied: zipp>=0.5 in /home/ec2-user/anaconda3/envs/p ython3/lib/python3.10/site-packages (from importlib-metadata<5.0,>=1.4.0->s agemaker) (3.10.0)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /home/ec2-user/a naconda3/envs/python3/lib/python3.10/site-packages (from packaging>=20.0->s agemaker) (3.0.9)
+Requirement already satisfied: six in /home/ec2-user/anaconda3/envs/python
+3/lib/python3.10/site-packages (from protobuf3-to-dict<1.0,>=0.1.5->sagemak er) (1.16.0)
+Requirement already satisfied: pytz>=2020.1 in /home/ec2-user/anaconda3/env s/python3/lib/python3.10/site-packages (from pandas->sagemaker) (2022.5)
+Requirement already satisfied: ppft>=1.7.6.6 in /home/ec2-user/anaconda3/en vs/python3/lib/python3.10/site-packages (from pathos->sagemaker) (1.7.6.6) Requirement already satisfied: multiprocess>=0.70.14 in /home/ec2-user/anac onda3/envs/python3/lib/python3.10/site-packages (from pathos->sagemaker)
+(0.70.14)
+Requirement already satisfied: dill>=0.3.6 in /home/ec2-user/anaconda3/env s/python3/lib/python3.10/site-packages (from pathos->sagemaker) (0.3.6)
+Requirement already satisfied: pox>=0.3.2 in /home/ec2-user/anaconda3/envs/ python3/lib/python3.10/site-packages (from pathos->sagemaker) (0.3.2) Requirement already satisfied: contextlib2>=0.5.5 in /home/ec2-user/anacond a3/envs/python3/lib/python3.10/site-packages (from schema->sagemaker) (21.
+6.0) Building wheels for collected packages: sagemaker
+  Building wheel for sagemaker (setup.py) ... done
+  Created wheel for sagemaker: filename=sagemaker-2.132.0-py2.py3-none-any. whl size=905449 sha256=f6100a5dc95627f2e2a49824e38f0481459a27805ee19b5a06ec
+83db0252fd41
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/60/41/b6/482e7ab096
+520df034fbf2dddd244a1d7ba0681b27ef45aa61
+Successfully built sagemaker
+Installing collected packages: botocore, boto3, sagemaker
+  Attempting uninstall: botocore     Found existing installation: botocore 1.24.19
+    Uninstalling botocore-1.24.19:       Successfully uninstalled botocore-1.24.19
+  Attempting uninstall: boto3     Found existing installation: boto3 1.26.44
+    Uninstalling boto3-1.26.44:
+      Successfully uninstalled boto3-1.26.44
+  Attempting uninstall: sagemaker     Found existing installation: sagemaker 2.127.0
+    Uninstalling sagemaker-2.127.0:
+      Successfully uninstalled sagemaker-2.127.0
+ERROR: pip's dependency resolver does not currently take into account all t he packages that are installed. This behaviour is the source of the followi ng dependency conflicts.
+awscli 1.27.44 requires botocore==1.29.44, but you have botocore 1.29.72 wh ich is incompatible.
+aiobotocore 2.0.1 requires botocore<1.22.9,>=1.22.8, but you have botocore 1.29.72 which is incompatible. Successfully installed boto3-1.26.72 botocore-1.29.72 sagemaker-2.132.0 Note: you may need to restart the kernel to use updated packages.
+....
+. 다음 단계에서는 데이터를 입력합니다 (`dbpedia_csv`)가 S3 버킷에서 다운로드됩니다 `ontapbucket1` 기계 학습에 사용되는 Jupyter Notebook 인스턴스에.
++
+....
+In [2]: import sagemaker
+In [3]: from sagemaker import get_execution_role
+In [4]:
+import json
+import boto3
+sess = sagemaker.Session()
+role = get_execution_role()
+print(role)
+bucket = "ontapbucket1"
+print(bucket)
+sess.s3_client = boto3.client('s3',region_name='',aws_access_key_id = '0ZNAX21JW5Q8AP80CQ2E',  aws_secret_access_key = 'PpLs4gA9K0_2gPhuykkp014gBjcC9Rbi3QDX_6rr',
+                              use_ssl = False, endpoint_url = 'http://172.30.10.41',
+                              config=boto3.session.Config(signature_version='s3v4', s3={'addressing_style':'path'}) )
+sess.s3_resource = boto3.resource('s3',region_name='',aws_access_key_id = '0ZNAX21JW5Q8AP80CQ2E', aws_secret_access_key = 'PpLs4gA9K0_2gPhuykkp014gBjcC9Rbi3QDX_6rr',
+                              use_ssl = False, endpoint_url = 'http://172.30.10.41',
+                              config=boto3.session.Config(signature_version='s3v4', s3={'addressing_style':'path'}) )
+prefix = "blazingtext/supervised"
+import os
+my_bucket = sess.s3_resource.Bucket(bucket)
+my_bucket = sess.s3_resource.Bucket(bucket)
+#os.mkdir('dbpedia_csv')
+for s3_object in my_bucket.objects.all():
+    filename = s3_object.key
+#    print(filename)
+#    print(s3_object.key)
+    my_bucket.download_file(s3_object.key, filename)
+....
+. 다음 코드에서는 추론 중에 실제 클래스 이름을 검색하는 데 사용되는 클래스 레이블에 대한 정수 인덱스의 매핑을 만듭니다.
++
+....
+index_to_label = {}
+with open("dbpedia_csv/classes.txt") as f:
+    for i,label in enumerate(f.readlines()):
+        index_to_label[str(i + 1)] = label.strip()
+....
++
+출력에는 의 파일과 폴더가 나열됩니다 `ontapbucket1` AWS SageMaker 머신 러닝 검증을 위한 데이터로 사용되는 버킷
+
++
+....
+arn:aws:iam::210811600188:role/SageMakerFullRole ontapbucket1
+AUTHORS
+AUTHORS
+NEWS
+NEWS
+README README
+dbpedia_csv/classes.txt dbpedia_csv/classes.txt dbpedia_csv/readme.txt dbpedia_csv/readme.txt dbpedia_csv/test.csv dbpedia_csv/test.csv dbpedia_csv/train.csv dbpedia_csv/train.csv deprecated.txt deprecated.txt getopt-parse.bash getopt-parse.bash getopt-parse.tcsh getopt-parse.tcsh
+In [5]: ls
+AUTHORS       deprecated.txt     getopt-parse.tcsh  NEWS    Untitled.ipynb dbpedia_csv/  getopt-parse.bash  lost+found/        README
+In [6]: ls -l dbpedia_csv
+total 191344
+-rw-rw-r-- 1 ec2-user ec2-user       146 Feb 16 19:43 classes.txt
+-rw-rw-r-- 1 ec2-user ec2-user      1758 Feb 16 19:43 readme.txt
+-rw-rw-r-- 1 ec2-user ec2-user  21775285 Feb 16 19:43 test.csv
+-rw-rw-r-- 1 ec2-user ec2-user 174148970 Feb 16 19:43 train.csv
+....
+. 데이터 전처리 단계를 시작하여 BlazingText 알고리즘과 nltk 라이브러리에서 사용할 수 있는 공간 분리 토큰화된 텍스트 형식으로 교육 데이터를 사전 처리하여 DBPedia 데이터 세트의 입력 문장을 토큰화합니다. nltk 토큰화 및 기타 라이브러리를 다운로드합니다. 를 클릭합니다 `transform_instance` 병렬로 각 데이터 인스턴스에 적용되는 Python 다중 처리 모듈을 사용합니다.
++
+....
+ln [7]: from random import shuffle
+import multiprocessing
+from multiprocessing import Pool
+import csv
+import nltk
+nltk.download("punkt")
+def transform_instance(row):
+    cur_row = []
+    label ="__label__" + index_to_label [row[0]] # Prefix the index-ed label with __label__
+    cur_row.append (label)
+    cur_row.extend(nltk.word_tokenize(row[1].lower ()))
+    cur_row.extend(nltk.word_tokenize(row[2].lower ()))
+    return cur_row
+def preprocess(input_file, output_file, keep=1):
+    all_rows = []
+    with open(input_file,"r") as csvinfile:
+        csv_reader = csv.reader(csvinfile, delimiter=",")
+        for row in csv_reader:
+            all_rows.append(row)
+    shuffle(all_rows)
+    all_rows = all_rows[: int(keep * len(all_rows))]
+    pool = Pool(processes=multiprocessing.cpu_count())
+    transformed_rows = pool.map(transform_instance, all_rows)
+    pool.close()
+    pool. join()
+    with open(output_file, "w") as csvoutfile:
+        csv_writer = csv.writer (csvoutfile, delimiter=" ", lineterminator="\n")
+        csv_writer.writerows (transformed_rows)
+
+# Preparing the training dataset
+# since preprocessing the whole dataset might take a couple of minutes,
+# we keep 20% of the training dataset for this demo.
+# Set keep to 1 if you want to use the complete dataset
+preprocess("dbpedia_csv/train.csv","dbpedia.train", keep=0.2)
+# Preparing the validation dataset
+preprocess("dbpedia_csv/test.csv","dbpedia.validation")
+sess = sagemaker.Session()
+role = get_execution_role()
+print (role) # This is the role that sageMaker would use to leverage Aws resources (S3,  Cloudwatch) on your behalf
+bucket = sess.default_bucket() # Replace with your own bucket name if needed
+print("default Bucket::: ")
+print(bucket)
+....
++
+출력:
+
++
+....
+[nltk_data] Downloading package punkt to /home/ec2-user/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+arn:aws:iam::210811600188:role/SageMakerFullRole default Bucket::: sagemaker-us-east-1-210811600188
+....
+. SageMaker에서 교육 작업을 실행하는 데 사용할 수 있도록 형식 지정된 교육 데이터 세트를 S3에 업로드합니다. 그런 다음 Python SDK를 사용하여 버킷과 접두사 위치에 두 개의 파일을 업로드합니다.
++
+....
+ln [8]: %%time
+train_channel = prefix + "/train"
+validation_channel = prefix + "/validation"
+sess.upload_data(path="dbpedia.train", bucket=bucket, key_prefix=train_channel)
+sess.upload_data(path="dbpedia.validation", bucket=bucket, key_prefix=validation_channel)
+s3_train_data = "s3://{}/{}".format(bucket, train_channel)
+s3_validation_data = "s3://{}/{}".format(bucket, validation_channel)
+....
++
+출력:
+
++
+....
+CPU times: user 546 ms, sys: 163 ms, total: 709 ms
+Wall time: 1.32 s
+....
+. 모델 아티팩트가 로드되는 S3에서 출력 위치를 설정하여 아티팩트가 알고리즘 교육 작업의 출력이 될 수 있도록 합니다. 을 생성합니다 `sageMaker.estimator.Estimator` 교육 작업을 시작할 것을 반대합니다.
++
+....
+In [9]: s3_output_location = "s3://{}/{}/output".format(bucket, prefix)
+In [10]: region_name = boto3.Session().region_name
+In [11]: container = sagemaker.amazon.amazon_estimator.get_image_uri(region_name, "blazingtext","latest")
+print("Using SageMaker BlazingText container: {} ({})".format(container, region_name))
+....
++
+출력:
+
++
+....
+The method get_image_uri has been renamed in sagemaker>=2.
+See: https://sagemaker.readthedocs.io/en/stable/v2.html for details.
+Defaulting to the only supported framework/algorithm version: 1. Ignoring f ramework/algorithm version: latest.
+Using SageMaker BlazingText container: 811284229777.dkr.ecr.us-east-1.amazo naws.com/blazingtext:1 (us-east-1)
+....
+. SageMaker를 정의합니다 `Estrimator` c4.4x4 대형 인스턴스의 중계 모드를 사용하여 DBPedia 데이터세트에서 텍스트 분류를 훈련하기 위한 리소스 구성 및 하이퍼 매개변수.
++
+....
+In [12]: bt_model = sagemaker.estimator.Estimator(
+container,
+role,
+instance_count=1,
+instance_type="ml.c4.4xlarge",
+volume_size=30,
+max_run=360000,
+input_mode="File",
+output_path=s3_output_location,
+hyperparameters={
+        "mode": "supervised",
+        "epochs": 1,
+        "min_count": 2,
+        "learning_rate": 0.05,
+        "vector_dim": 10,
+        "early_stopping": True,
+        "patience": 4,
+        "min_epochs": 5,
+        "word_ngrams": 2,
+ },
+     )
+....
+. 데이터 채널과 알고리즘 간의 핸드셰이크를 준비합니다. 이렇게 하려면 를 만듭니다 `sagemaker.session.s3_input` 데이터 채널의 객체를 알고리즘에 사용하기 위한 사전 내에 보관합니다.
++
+....
+ln [13]: train_data = sagemaker.inputs.TrainingInput(
+    s3_train_data,
+    distribution="FullyReplicated",
+    content_type="text/plain",
+    s3_data_type="S3Prefix",
+)
+validation_data = sagemaker.inputs.TrainingInput(
+    s3_validation_data,
+    distribution="FullyReplicated",
+    content_type="text/plain",
+    s3_data_type="S3Prefix",
+)
+data_channels = {"train": train_data, "validation": validation_data}
+....
+. 작업이 완료되면 작업 완료 메시지가 나타납니다. 훈련된 모델은 로 설정된 S3 버킷에서 찾을 수 있습니다 `output_path` 계산기로.
++
+....
+ln [14]: bt_model.fit(inputs=data_channels, logs=True)
+....
++
+출력:
+
++
+....
+INFO:sagemaker:Creating training-job with name: blazingtext-2023-02-16-20-3
+7-30-748
+2023-02-16 20:37:30 Starting - Starting the training job......
+2023-02-16 20:38:09 Starting - Preparing the instances for training......
+2023-02-16 20:39:24 Downloading - Downloading input data
+2023-02-16 20:39:24 Training - Training image download completed. Training in progress... Arguments: train
+[02/16/2023 20:39:41 WARNING 140279908747072] Loggers have already been set up. [02/16/2023 20:39:41 WARNING 140279908747072] Loggers have already been set up.
+[02/16/2023 20:39:41 INFO 140279908747072] nvidia-smi took: 0.0251793861389
+16016 secs to identify 0 gpus
+[02/16/2023 20:39:41 INFO 140279908747072] Running single machine CPU Blazi ngText training using supervised mode.
+Number of CPU sockets found in instance is  1
+[02/16/2023 20:39:41 INFO 140279908747072] Processing /opt/ml/input/data/tr ain/dbpedia.train . File size: 35.0693244934082 MB
+[02/16/2023 20:39:41 INFO 140279908747072] Processing /opt/ml/input/data/va lidation/dbpedia.validation . File size: 21.887572288513184 MB
+Read 6M words
+Number of words:  149301
+Loading validation data from /opt/ml/input/data/validation/dbpedia.validati on
+Loaded validation data.
+-------------- End of epoch: 1 ##### Alpha: 0.0000  Progress: 100.00%  Million Words/sec: 10.39 ##### Training finished.
+Average throughput in Million words/sec: 10.39
+Total training time in seconds: 0.60
+#train_accuracy: 0.7223
+Number of train examples: 112000
+#validation_accuracy: 0.7205
+Number of validation examples: 70000
+2023-02-16 20:39:55 Uploading - Uploading generated training model
+2023-02-16 20:40:11 Completed - Training job completed
+Training seconds: 68
+Billable seconds: 68
+....
+. 교육이 완료되면 아마존 SageMaker 실시간 호스팅 엔드포인트로 교육 받은 모델을 배포하여 예측을 수행합니다.
++
+....
+In [15]: from sagemaker.serializers import JSONSerializer
+ text_classifier = bt_model.deploy(
+     initial_instance_count=1, instance_type="ml.m4.xlarge", serializer=JSONS
+)
+....
++
+출력:
+
++
+....
+INFO:sagemaker:Creating model with name: blazingtext-2023-02-16-20-41-33-10
+0
+INFO:sagemaker:Creating endpoint-config with name blazingtext-2023-02-16-20
+-41-33-100
+INFO:sagemaker:Creating endpoint with name blazingtext-2023-02-16-20-41-33-
+100
+-------!
+....
++
+....
+In [16]: sentences = [
+    "Convair was an american aircraft manufacturing company which later expanded into rockets and spacecraft.",
+       "Berwick secondary college is situated in the outer melbourne metropolitan suburb of berwick .",
+]
+# using the same nltk tokenizer that we used during data preparation for training
+tokenized_sentences = [" ".join(nltk.word_tokenize(sent)) for sent in sentences]
+payload = {"instances": tokenized_sentences} response = text_classifier.predict(payload)
+predictions = json.loads(response)
+print(json.dumps(predictions, indent=2))
+....
++
+....
+[
+  {
+    "label": [
+      "__label__Artist"
+    ],
+    "prob": [
+      0.4090951681137085
+    ]
+  },
+  {
+    "label": [
+      "__label__EducationalInstitution"
+    ],
+    "prob": [
+      0.49466073513031006
+    ]
+  }
+]
+....
+. 기본적으로 모델은 가장 높은 확률로 하나의 예측을 반환합니다. 를 눌러 맨 위를 검색합니다 `k` 예측, 설정 `k` 를 구성 파일에 저장합니다.
++
+....
+In [17]: payload = {"instances": tokenized_sentences, "configuration": {"k": 2}}
+ response = text_classifier.predict(payload)
+
+ predictions = json.loads(response)
+ print(json.dumps(predictions, indent=2))
+....
++
+....
+[
+  {
+    "label": [
+      "__label__Artist",
+      "__label__MeanOfTransportation"
+    ],
+    "prob": [
+      0.4090951681137085,
+      0.26930734515190125
+    ]
+  },
+  {
+    "label": [
+      "__label__EducationalInstitution",
+      "__label__Building"
+    ],
+    "prob": [
+      0.49466073513031006,
+      0.15817692875862122
+    ]
+  }
+]
+....
+. 전자 필기장을 닫기 전에 끝점을 삭제합니다.
++
+....
+In [18]: sess.delete_endpoint(text_classifier.endpoint)
+WARNING:sagemaker.deprecations:The endpoint attribute has been renamed in s agemaker>=2.
+See: https://sagemaker.readthedocs.io/en/stable/v2.html for details.
+INFO:sagemaker:Deleting endpoint with name: blazingtext-2023-02-16-20-41-33
+-100
+....
+
+
+link:cdm-fod-conclusion.html["다음: 결론."]
