@@ -14,6 +14,12 @@
 | 2023년 3월 31일 | 데이터베이스 | SnapCenter 서비스를 통해 Oracle 데이터베이스 백업, 복원 및 복제 추가 
 
 
+| 2023/03/29 | 자동화 | 개인/공용 배포 옵션과 수동/자동 배포 옵션을 사용하여 ONTAP 모니터링 및 자동 리사이징용 블로그 "FSx for Monitoring and Auto-Resizing using AWS Lambda Function"이 업데이트되었습니다. 
+
+
+| 2023년 3월 22일 | 자동화 | ONTAP 모니터링 및 자동 리사이징용 FSx for AWS Lambda 함수 추가 
+
+
 | 2023년 2월 15일 | 데이터베이스 | AWS FSx/EC2에서 PostgreSQL 고가용성 구축 및 재해 복구 추가 
 
 
