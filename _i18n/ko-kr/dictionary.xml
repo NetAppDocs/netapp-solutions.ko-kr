@@ -6552,10 +6552,6 @@
   <block id="881cbd1ce3fdb52f73a82f8674a2a364" category="list-text">Ansible(버전 2.10.0 이상)</block>
   <block id="0bcc70105ad279503e31fe7b3f47b665" category="list-text">기트</block>
   <block id="6e3d8a0ff7934b777031953fe936bac8" category="paragraph">위 요구 사항이 설치되지 않은 새 Ubuntu/Debian 시스템이 있는 경우 다음 단계에 따라 해당 시스템을 Ansible 제어 노드로 설정합니다.</block>
-  <block id="532d3723890df934cc5c2c39477405a2" category="list-text">sh 파일을 만듭니다</block>
-  <block id="e95a2c08843a70246648b7107a26cec4" category="list-text">파일에 아래 내용을 붙여 넣습니다</block>
-  <block id="86c8310d98a974adb7ac7c4025dd8b5c" category="list-text">파일을 실행 파일로 만듭니다</block>
-  <block id="22db3e24628482683b9bf06c38e497ee" category="list-text">스크립트를 루트로 실행합니다.</block>
   <block id="b9b07f10c0ce1735548942e3abaa3447" category="summary">이 페이지에서는 NetApp Cloud Manager를 통해 CVO 및 Cloud Manager Connector 구축에 필요한 업데이트 토큰 및 액세스/비밀 키를 수집하는 데 필요한 자세한 정보를 제공합니다.</block>
   <block id="bcc03f70ea2e77a98ddb6e8267e4892f" category="paragraph">AWX/Ansible Tower를 통해 Ansible 플레이북을 사용하여 CVO 및 커넥터의 자동 배포를 구성하려면 다음 정보가 필요합니다.</block>
   <block id="193fc1c355935356ecd5d07811792512" category="section-title">AWS에서 액세스/비밀 키 획득</block>
@@ -17910,4 +17906,6 @@
   <block id="611e6e1c3920f2514daecc54ecfb79d1" category="cell">(선택 사항) "internet_access" 변수가 False로 설정된 경우 SMTP 사용자 이름을 저장하기 위해 AWS 매개 변수 저장소에 사용되는 경로 이름을 입력합니다.</block>
   <block id="00dc34bddd9d78c3a39608fed34bb12c" category="cell">SMTP_PASSWORD_SSM_PARAMETER *</block>
   <block id="7d7fbea26b1aa16fe546b51310bfd752" category="cell">(선택 사항) "internet_access" 변수가 False로 설정된 경우 SMTP 암호를 저장하기 위해 AWS 매개 변수 저장소에 사용되는 경로 이름을 입력합니다.</block>
+  <block id="675f82a779038c3f679b04bc0aadca1a" category="list-text">터미널에 아래 콘텐츠를 붙여 넣습니다</block>
+  <block id="56ee829a33ac57c3b6d427e35b3b2e86" category="list-text">단말기에 아래 콘텐츠를 붙여 넣습니다</block>
 </blocks>

@@ -34,36 +34,13 @@ subscription-manager repos --enable rhel-7-server-ansible-2.9-rpms
 ----
 
 
-. sh 파일을 만듭니다
+. 터미널에 아래 콘텐츠를 붙여 넣습니다
 +
 [source, cli]
 ----
-vi setup.sh
-----
-. 파일에 아래 내용을 붙여 넣습니다
-+
-[source, cli]
-----
-#!/bin/bash
-echo "Installing Python ------>"
-sudo yum -y install python3 >/dev/null
-echo "Installing Python Pip ------>"
-sudo yum -y install python3-pip >/dev/null
-echo "Installing Ansible ------>"
-python3 -W ignore -m pip --disable-pip-version-check install ansible >/dev/null
-echo "Installing git ------>"
-sudo yum -y install git >/dev/null
-----
-. 파일을 실행 파일로 만듭니다
-+
-[source, cli]
-----
-chmod +x setup.sh
-----
-. 스크립트를 루트로 실행합니다.
-+
-[source, cli]
-----
-./setup.sh
+sudo yum -y install python3 >> install.log
+sudo yum -y install python3-pip >> install.log
+python3 -W ignore -m pip --disable-pip-version-check install ansible >> install.log
+sudo yum -y install git >> install.log
 ----
 
