@@ -17908,4 +17908,5 @@
   <block id="7d7fbea26b1aa16fe546b51310bfd752" category="cell">(선택 사항) "internet_access" 변수가 False로 설정된 경우 SMTP 암호를 저장하기 위해 AWS 매개 변수 저장소에 사용되는 경로 이름을 입력합니다.</block>
   <block id="675f82a779038c3f679b04bc0aadca1a" category="list-text">터미널에 아래 콘텐츠를 붙여 넣습니다</block>
   <block id="56ee829a33ac57c3b6d427e35b3b2e86" category="list-text">단말기에 아래 콘텐츠를 붙여 넣습니다</block>
+  <block id="8650b39d5e09def4c11e24f034a41e67" category="doc">TR-4955: ANF(Azure NetApp Files) 및 AVS(Azure VMware Solution)를 통한 재해 복구</block>
 </blocks>
