@@ -17,6 +17,8 @@ indexpage:
     links:
     - title: AWS에서 VMC를 사용한 재해 복구(게스트 연결)
       url: "/aws-guest-dr-solution-overview.html"
+    - title: NetApp ONTAP용 AWS FSx를 사용하여 VMware Cloud에서 Veeam 백업 및 복원
+      url: "/aws-vmc-veeam-fsx-solution.html"
     - title: ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO
       url: "/../dro/aws-dro-overview.html"
   - title: 워크로드 마이그레이션 솔루션
