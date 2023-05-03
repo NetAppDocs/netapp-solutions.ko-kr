@@ -459,5 +459,5 @@ VMware Cloud는 비즈니스 크리티컬 애플리케이션을 실행하고 중
 
 * https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^]
 * https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^]
-* https://www.veeam.com/kb2414["AWS 기반 VMware 클라우드 및 Dell EMC 지원 기반 VMware 클라우드 고려 사항 및 제한 사항"]
+* https://www.veeam.com/kb2414["AWS의 VMware Cloud 지원: 고려 사항 및 제한 사항"]
 
