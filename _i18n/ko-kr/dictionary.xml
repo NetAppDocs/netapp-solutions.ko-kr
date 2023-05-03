@@ -18087,4 +18087,40 @@
   <block id="1260fc391141c4810f2e3a97eaef162e" category="cell">2023년 3월 22일</block>
   <block id="ba7124a5ffeb6501794efa91cdcb129b" category="cell">FSx ONTAP에 대한 VMware 설명서에 NFS 데이터 저장소로 대한 링크가 추가되었습니다</block>
   <block id="d7c05d05b1d6ce69dff2a4eaa1692f17" category="sidebar">NetApp ONTAP용 AWS FSx를 사용하여 VMware Cloud에서 Veeam 백업 및 복원</block>
+  <block id="1f791cf07735c71bdb472a0ccd42abc7" category="cell">2023년 5월 4일</block>
+  <block id="35cec0f40dca2af7a6d3c73676c4629d" category="cell">"VMware vSphere 8의 새로운 기능" 콘텐츠가 추가되었습니다</block>
+  <block id="8b5fd5c25439f60370c36458db046f5e" category="doc">VMware vSphere 8의 새로운 기능</block>
+  <block id="d64ac18d7cdc111af11284a04f9e8b1e" category="paragraph">저자: NetApp 솔루션 엔지니어링 Chris Reno</block>
+  <block id="5a16d86949ce13083d30d1c331be09cb" category="paragraph">NetApp과 VMware의 기술 통합은 20년 동안 수천 시간의 엔지니어링 시간을 아우르는 오랜 경험을 가지고 있습니다. vSphere 8과 ONTAP 9.12가 등장하면서 두 회사는 가장 까다로운 고객 워크로드도 충족할 수 있는 제품을 공급하고 있습니다. 이러한 제품을 함께 사용하는 솔루션은 사내 또는 퍼블릭 클라우드에서 모두 해결할 수 있는 실질적인 고객 과제를 안고 있습니다. 이러한 제품을 함께 사용하는 경우, 온프레미스 또는 퍼블릭 클라우드에서 고객의 실질적인 문제가 해결됩니다.</block>
+  <block id="4eba71964e65640552100b4af7c50e86" category="paragraph">제품, 프로토콜, 운영 체제 등의 지원 능력을 확인할 수 있도록 아래 리소스를 검토하십시오.</block>
+  <block id="bab924f6f70545a4aab5c02282b4321d" category="list-text">를 클릭합니다<block ref="cdfba3111aed90ef850f414330a864eb" category="inline-link-rx"></block> (IMT). IMT에는 FC/FCoE, iSCSI, NFS 및 CIFS 구성을 구축하는 데 사용할 수 있는 검증된 구성 요소와 버전이 정의되어 있으며, 추가 플러그인 및 소프트웨어 오퍼링과의 통합도 가능합니다.</block>
+  <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware 호환성 가이드 를 참조하십시오</block>
+  <block id="e96d25b875cbad01256de32331620fce" category="list-text">를 클릭합니다<block ref="132c849774dbad448418b619a953cbd1" category="inline-link-rx"></block>. VMware 호환성 가이드 에는 VMware Infrastructure 및 소프트웨어 제품과의 시스템, I/O, 스토리지/SAN, 백업 호환성 등이 나와 있습니다.</block>
+  <block id="cca95a1e810067767564618ea73079be" category="list-text"><block ref="ec744c32e869920be1556ab8ebc057ef" category="inline-link-rx"></block>. VMware vSphere용 ONTAP 툴은 VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터) 확장을 포함하는 단일 vCenter Server 플러그인입니다. VMware vSphere 8을 완벽하게 지원하는 OTV 9.12는 고객에게 매일 진정한 가치를 제공합니다.</block>
+  <block id="ae33d50ae700fed2ee8028004d9fa2d8" category="section-title">NetApp ONTAP 및 VMware 지원 릴리즈</block>
+  <block id="ed126bbe4f371826a7c7c9d6fdd35e54" category="admonition">아래 표에서 링크를 선택할 때 페이지가 구축되도록 하십시오.</block>
+  <block id="e450cac7ca4b207e6cb6c51eeb3c76dd" category="cell">* VMware vSphere 릴리즈 *</block>
+  <block id="54d1b3917151f3d89ddbd7aef9f811dd" category="cell">* SAN *</block>
+  <block id="b4ccd4984cce17a35c772737cf9415b1" category="cell">* NFS *</block>
+  <block id="ea2b80d118e24f4d3328c20552636f22" category="cell">* OTV *</block>
+  <block id="dccf9c2e4a699b348abaf0369603c1a0" category="cell">* SnapCenter *</block>
+  <block id="b97d2c4e1a2a118c500af6e32504301f" category="cell">* vSphere 8 *</block>
+  <block id="3c30688c35eac25f7729ec4ee134e7e3" category="cell"><block ref="f010a57a1b1362e74ef056cd949b4f6b" category="inline-link-rx"></block></block>
+  <block id="c538764856660dbf5ac35d08c5b7bcdf" category="cell"><block ref="5983a3bb611cf1b4562bfd78f97ed318" category="inline-link-rx"></block></block>
+  <block id="a140bde1e447ebe74a0b6b693d05d3c6" category="cell"><block ref="c14e144a71a125f874ca16b78c671347" category="inline-link-rx"></block></block>
+  <block id="8d153eb947f0747c73debd6aa0564387" category="cell"><block ref="9e4cfb7f25d7fb71f62ac8aad4b23fac" category="inline-link-rx"></block></block>
+  <block id="87efc48b7f668d33418b1f846e08a0bf" category="cell">* vSphere 8u1 *</block>
+  <block id="adebed85a7d92b0f3fc4b5cfc97078b6" category="cell"><block ref="bdb3662ee535fb90a843ab7d85efbd16" category="inline-link-rx"></block></block>
+  <block id="055cce5491290ec858a19e499e0d9e71" category="cell"><block ref="bd210893ee82e4c865fcf08bbaf31838" category="inline-link-rx"></block></block>
+  <block id="336d5ebc5436534e61d16e63ddfca327" category="cell">-</block>
+  <block id="1f0f8c35492e97597c98b9dc82afa362" category="cell">* 스토리지 시스템/프로토콜 *</block>
+  <block id="e90637603dd7a81f8a9115bb4ffd28f9" category="cell">* OTV-SRA *</block>
+  <block id="d7d7d2428ec9c1791dc7f644b043a8d4" category="cell">* OTV – VASA 공급자 *</block>
+  <block id="81e3cc47d6ed146bbe1096018a69f40c" category="cell">* VMware vSphere * 용 SnapCenter 플러그인</block>
+  <block id="1a718e68b847d8b2043c7f76af9a4858" category="cell"><block ref="34ab3c79d36e5a654b9402fe2fcf7f3b" category="inline-link-rx"></block></block>
+  <block id="391de35bbb4cf1a51813527b129bb11e" category="cell"><block ref="e3a74d6b6b54621583ac737da6124d3a" category="inline-link-rx"></block></block>
+  <block id="47c5c0877638b8f808901039637b1474" category="cell"><block ref="8ef8fc61fd753b52cc179e3463e5820b" category="inline-link-rx"></block></block>
+  <block id="b8145535eda5b8ac300fd64bfa74cc26" category="cell"><block ref="64c621ea990d75acd1bb8fba7b272f2c" category="inline-link-rx"></block></block>
+  <block id="315a0755b344c41b2a45eb62f3868930" category="cell"><block ref="c0dded1a1fb8dd474b19235d36c5c4c7" category="inline-link-rx"></block></block>
+  <block id="1e6ad53e48d26e8f800d9e60c340e84d" category="sidebar">VMware vSphere 8의 새로운 기능</block>
 </blocks>

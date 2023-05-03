@@ -3,6 +3,8 @@ indexpage:
   tiles:
   - title: 시작/모범 사례
     links:
+    - title: VMware vSphere 8의 새로운 기능
+      url: "/vmware-vsphere8-intro.html"
     - title: 'NetApp 및 VMware: 시작하기'
       url: "/netapp-vmware.html"
     - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
