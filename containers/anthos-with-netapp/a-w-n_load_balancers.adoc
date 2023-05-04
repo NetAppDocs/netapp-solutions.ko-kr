@@ -13,6 +13,7 @@ summary: 이 섹션에서는 NetApp 구축의 Anthos를 사용자 지정하려�
 :imagesdir: ./../../media/
 
 
+[role="lead"]
 Anthos에 배포된 애플리케이션은 Anthos의 온프레미스 환경에 배포된 로드 밸런서에 의해 제공되는 서비스에 의해 전 세계에 노출됩니다.
 
 다음 페이지에서는 Anthos with NetApp 솔루션에 검증된 로드 밸런서 옵션에 대한 추가 정보를 제공합니다.

@@ -15,6 +15,7 @@ summary: 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 �
 
 link:xcp-bp-data-migration-from-7-mode-to-ontap.html["이전: 7-Mode에서 ONTAP로 데이터 마이그레이션"]
 
+[role="lead"]
 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 정보가 포함된 CIFS 데이터를 마이그레이션하는 단계별 절차에 대해 설명합니다.
 
 . 대상 ONTAP 시스템이 정상인지 확인합니다.

@@ -10,6 +10,7 @@ summary:
 
 Commvault, NetApp Girish Chanchlandi의 Akash Gupta
 
+[role="lead"]
 TR-4320에서는 Commvault Data Platform V11 환경에서 NetApp E-Series 스토리지를 사용할 때의 참조 아키텍처 및 모범 사례에 대해 간략하게 설명합니다. CommVault와 NetApp은 이 참조 아키텍처를 공동으로 개발하여 Commvault Data Platform V11 배포에 대한 지침을 제공하고 NetApp E-Series 스토리지를 활용해 이 솔루션의 애플리케이션 시간을 단축합니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/17042-tr4320pdf.pdf["TR-4320: NetApp E-Series 및 Commvault Data Platform V11 - 참조 아키텍처 및 스토리지 모범 사례"^]

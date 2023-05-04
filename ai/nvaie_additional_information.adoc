@@ -15,6 +15,7 @@ summary: 'NVIDIA AI Enterprise with NetApp and VMware - Where to Find Additional
 
 link:nvaie_ngc_tensorflow.html["이전: 사용 사례 예 - TensorFlow 교육 작업"]
 
+[role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
 * NetApp ONTAP 데이터 관리 소프트웨어 - ONTAP 정보 라이브러리

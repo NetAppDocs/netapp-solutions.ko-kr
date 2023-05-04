@@ -15,6 +15,7 @@ summary: NetApp StorageGRID의 계층형 스토리지를 위해 Kafka와 Conflue
 
 link:confluent-kafka-technology-overview.html["이전: 기술 개요"]
 
+[role="lead"]
 NetApp StorageGRID에서 Confluent Platform 6.2 계층형 스토리지를 사용하여 검증을 수행했습니다. NetApp과 Confluent 팀은 이 검증을 함께 수행하여 검증에 필요한 테스트 사례를 실행했습니다.
 
 

@@ -15,6 +15,7 @@ summary: 이 페이지에서는 Pandas 및 Dask DataFrames를 사용하여 Crite
 
 link:aks-anf_libraries_for_data_processing_and_model_training.html["이전: 데이터 처리 및 모델 훈련을 위한 라이브러리."]
 
+[role="lead"]
 이 섹션에서는 Pandas 및 Dask DataFrames를 사용하여 Criteo Terabyte 데이터 세트에서 Click Logs 데이터를 로드하는 방법을 설명합니다. 이 사용 사례는 광고 교환을 위한 디지털 광고에서 광고 클릭 여부를 예측하여 사용자의 프로필을 작성하는 데 사용됩니다. 또한 교환에서 자동화된 파이프라인에서 정확한 모델을 사용하지 않는 경우도 해당됩니다.
 
 Click Logs 데이터 세트에서 15일차 데이터를 로드하여 총 45GB를 기록했습니다. Jupyter Notebook CTR-PandasRF-Collated에서 다음 셀을 실행하면 처음 5000만 개의 행이 포함된 Pandas DataFrame을 생성하고 좌골키트학습 무작위 포리스트 모델을 생성합니다.

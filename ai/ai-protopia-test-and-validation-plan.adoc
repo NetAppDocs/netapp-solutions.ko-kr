@@ -15,6 +15,7 @@ summary: 이 섹션에서는 이 솔루션에서 검증된 세 가지 시나리�
 
 link:ai-protopia-technology-overview.html["이전: 기술 개요"]
 
+[role="lead"]
 이 솔루션 설계의 경우 다음 세 가지 시나리오를 검증했습니다.
 
 * Kubernetes용 NetApp DataOps Toolkit을 사용하여 조율된 JupyterLab 작업 공간 내의 프로토피아 난독 처리 기능을 사용하거나 사용하지 않는 추론 작업.

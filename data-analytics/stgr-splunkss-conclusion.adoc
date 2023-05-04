@@ -15,6 +15,7 @@ summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT �
 
 link:stgr-splunkss-single-site-smartstore-performance.html["이전: 단일 사이트 SmartStore 성능."]
 
+[role="lead"]
 Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 고객 조직 전반에서 Splunk를 사용할 때 성능이 크게 향상되었습니다. 따라서 더 많은 데이터 소스를 추가해야 할 뿐만 아니라 데이터를 더 오래 보관해야 하므로 Splunk 인프라가 강조됩니다.
 
 Splunk SmartStore와 NetApp StorageGRID의 결합을 통해 조직은 확장 가능한 아키텍처를 제공하여 SmartStore 및 StorageGRID 오브젝트 스토리지를 통해 수집 성능을 높이고 여러 지리적 지역에서 Splunk 환경을 위한 확장성을 향상할 수 있습니다.

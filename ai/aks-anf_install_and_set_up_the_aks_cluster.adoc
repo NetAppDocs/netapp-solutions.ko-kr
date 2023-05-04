@@ -15,6 +15,7 @@ summary: 이 페이지에서는 AKS 클러스터를 설정하는 데 필요한 �
 
 link:aks-anf_click-through_rate_prediction_use_case_summary.html["이전: 클릭률 예측 사용 사례 요약"]
 
+[role="lead"]
 AKS 클러스터를 설치 및 설정하려면 웹 페이지를 참조하십시오 https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal["AKS 클러스터를 생성합니다"^] 그런 다음 다음 다음 단계를 완료합니다.
 
 . 노드 유형(시스템 [CPU] 또는 작업자 [GPU] 노드)을 선택할 때 다음을 선택합니다.

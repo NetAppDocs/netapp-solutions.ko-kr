@@ -15,6 +15,7 @@ summary: 'NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 �
 
 link:xcp-bp-migration-workflow-overview.html["이전: 마이그레이션 워크플로우."]
 
+[role="lead"]
 NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 파일 시스템 검사를 실행하고 모든 NAS(NFS, SMB) 파일 시스템에 대한 그래프 및 보기와 같은 통계를 시각화하는 데 도움이 됩니다. 1.6에서 시작하는 xCP는 구성 및 systemctl 옵션을 사용하여 간단한 배포 단계를 통해 서비스로 실행할 수 있습니다. xCP 구성 옵션은 Postgres 및 웹 서버를 설치 및 구성하고 자격 증명을 수집하는 방법을 안내합니다. systemctl 옵션은 GUI의 REST API 통신을 위한 서비스로 xCP를 실행합니다.
 
 다음 그림에서는 xCP 파일 분석 흐름을 보여 줍니다.

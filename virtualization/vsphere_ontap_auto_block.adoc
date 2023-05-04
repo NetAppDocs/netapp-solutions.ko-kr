@@ -8,6 +8,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리�
 :allow-uri-read: 
 
 
+[role="lead"]
 VMware vSphere는 ONTAP SAN 프로토콜이 지원되는 다음 VMFS 데이터 저장소 옵션을 지원합니다.
 
 [cols="50,50"]

@@ -15,6 +15,7 @@ summary: 이 섹션의 명령은 CSV 형식으로 데이터를 덤프합니다. 
 
 link:xcp-bp-specific-date-based-scan-and-copy-of-data.html["이전: 특정 날짜 기반 스캔 및 데이터 복사."]
 
+[role="lead"]
 다음 명령을 실행하면 데이터가 CSV 형식으로 덤프됩니다. 크기 열의 합계를 합산하여 데이터의 총 크기를 구할 수 있습니다.
 
 ....

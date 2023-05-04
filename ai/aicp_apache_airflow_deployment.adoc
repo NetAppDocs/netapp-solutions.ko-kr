@@ -13,6 +13,7 @@ summary: 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Kubernetes에서 Apache Airflow를 실행하는 것이 좋습니다. 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축하기 위해 완료해야 하는 작업에 대해 설명합니다.
 
 

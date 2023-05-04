@@ -15,6 +15,7 @@ summary: 이 페이지에서는 주요 AI, ML 및 DL 사용 사례 및 아키텍
 
 link:apache-spark-use-cases-summary.html["이전: 사용 사례 요약"]
 
+[role="lead"]
 주요 AI, ML 및 DL 사용 사례 및 방법론을 다음 절로 나눌 수 있습니다.
 
 

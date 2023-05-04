@@ -13,6 +13,7 @@ summary: 'GPU는 일반적으로 반복적인 산술 계산을 수행하여 그�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 GPU는 일반적으로 반복적인 산술 계산을 수행하여 그래픽 시각화(렌더링)에 사용됩니다. 이 반복적 컴퓨팅 기능은 AI 및 딥 러닝 사용 사례에 자주 사용됩니다.
 
 그래픽 집약적 애플리케이션의 경우, Microsoft Azure는 VM당 1~4개의 GPU가 장착된 NVIDIA Tesla M60 카드 기반의 NV 시리즈를 제공합니다. 각 NVIDIA Tesla M60 카드에는 각각 8GB의 GDDR5 메모리가 탑재된 Maxwell 기반 GPU 2개가 포함되어 있습니다(총 16GB).

@@ -13,6 +13,7 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 :imagesdir: ./../media/
 
 
+[role="lead"]
 하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.
 
 .VMware vSphere용 NetApp ONTAP 툴

@@ -15,6 +15,7 @@ summary: 이 페이지에서는 이 솔루션에 사용된 기술에 대해 설�
 
 link:kafka-sc-solution.html["이전: 해결책."]
 
+[role="lead"]
 이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명합니다.
 
 

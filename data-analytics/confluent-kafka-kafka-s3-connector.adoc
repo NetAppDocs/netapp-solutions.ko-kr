@@ -15,6 +15,7 @@ summary: 이 설정에서는 Kafka S3 싱크 커넥터를 사용하여 바로 Ka
 
 link:confluent-kafka-performance-tests-with-scalability.html["이전: 확장성의 성능 테스트."]
 
+[role="lead"]
 Amazon S3 싱크 커넥터는 Apache Kafka 항목의 데이터를 Avro, JSON 또는 바이트 형식의 S3 오브젝트로 내보냅니다. Amazon S3 싱크 커넥터는 주기적으로 Kafka의 데이터를 폴링하여 S3로 업로드합니다. 분할자는 모든 Kafka 파티션의 데이터를 청크로 분할하는 데 사용됩니다. 각 데이터 청크는 S3 오브젝트로 표시됩니다. 키 이름은 주제, Kafka 파티션 및 이 데이터 청크의 시작 오프셋을 인코딩합니다.
 
 이 설정에서는 Kafka S3 싱크 커넥터를 사용하여 바로 Kafka에서 오브젝트 스토리지의 항목을 읽고 쓰는 방법을 보여 줍니다. 이 테스트에서는 독립 실행형 Confluent 클러스터를 사용했지만 이 설정은 분산 클러스터에 적용됩니다.

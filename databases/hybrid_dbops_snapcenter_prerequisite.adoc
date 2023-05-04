@@ -16,6 +16,7 @@ keywords: workflow, prerequisites, licensing, networking, security
 
 link:hybrid_dbops_snapcenter_requirements.html["이전: 솔루션 요구 사항."]
 
+[role="lead"]
 하이브리드 클라우드 데이터베이스 워크로드를 실행하기 전에 사내와 클라우드 모두에서 특정 사전 요구사항을 구성해야 합니다. 다음 섹션에서는 이 프로세스에 대한 개략적인 요약을 제공하고 다음 링크를 통해 필요한 시스템 구성에 대한 추가 정보를 제공합니다.
 
 

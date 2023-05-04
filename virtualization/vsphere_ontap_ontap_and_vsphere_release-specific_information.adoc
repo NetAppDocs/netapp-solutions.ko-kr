@@ -13,6 +13,7 @@ summary: 이 섹션에서는 특정 릴리즈의 ONTAP 및 vSphere에서 지원�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 섹션에서는 특정 릴리즈의 ONTAP 및 vSphere에서 지원하는 기능에 대한 지침을 제공합니다. NetApp은 와 릴리스의 특정 조합을 확인하는 것이 좋습니다 http://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스"^].
 
 

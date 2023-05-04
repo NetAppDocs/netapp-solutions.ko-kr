@@ -15,6 +15,7 @@ summary: 이 페이지에는 분산형 또는 대규모 교육에서 Azure NetAp
 
 link:aks-anf_cloud_resource_requirements.html["이전: 클라우드 리소스 요구사항"]
 
+[role="lead"]
 이 사용 사례는 공개적으로 제공되는 를 기반으로 합니다 http://labs.criteo.com/2013/12/download-terabyte-click-logs/["테라바이트 로그를 클릭합니다"^] 데이터 세트 시작 https://ailab.criteo.com/["Criteo AI Lab을 참조하십시오"^]. 최근 ML 플랫폼 및 애플리케이션의 발전으로 이제 대규모 학습에 많은 관심이 집중되고 있습니다. 클릭 비율(CTR)은 온라인 광고 노출 100회 당 평균 클릭 수(백분율로 표시)로 정의됩니다. 디지털 마케팅, 소매, 전자 상거래 및 서비스 공급자를 포함한 다양한 산업 및 사용 사례에서 핵심 메트릭으로 널리 채택되고 있습니다. CTR을 잠재적인 고객 트래픽에 대한 중요한 메트릭으로 사용하는 예는 다음과 같습니다.
 
 * * 디지털 마케팅: * in https://support.google.com/google-ads/answer/2615875?hl=en["Google 웹로그 분석"^], CTR은 광고주 또는 상인의 키워드, 광고 및 무료 리스팅이 얼마나 잘 수행되고 있는지 측정하는 데 사용할 수 있습니다. 높은 CTR은 사용자가 귀하의 광고 및 리스팅을 유용하고 관련성 있는 것으로 찾도록 하는 좋은 지표입니다. 또한 CTR은 의 구성 요소인 키워드의 예상 CTR에 기여합니다 https://support.google.com/google-ads/answer/1752122?hl=en["광고 순위"^].

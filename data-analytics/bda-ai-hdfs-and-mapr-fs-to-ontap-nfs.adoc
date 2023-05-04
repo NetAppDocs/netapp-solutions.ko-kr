@@ -15,6 +15,7 @@ summary: '이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR �
 
 link:bda-ai-gpfs-to-netapp-ontap-nfs.html["이전: GPFS에서 NetApp ONTAP NFS로,"]
 
+[role="lead"]
 이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다. xCP는 비동기 스레드 및 HDFS C API 호출을 사용하여 MapR-FS 및 HDFS에서 데이터를 통신 및 전송합니다. 아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.
 
 image:bda-ai-image6.png["오류: 그래픽 이미지가 없습니다"]

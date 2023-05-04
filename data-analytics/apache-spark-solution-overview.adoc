@@ -15,6 +15,7 @@ summary: 이 문서에서는 Apache Spark 아키텍처, 고객 사용 사례 및
 
 Rick Huang, Karthikeyan Nagalingam, NetApp
 
+[role="lead"]
 이 문서에서는 Apache Spark 아키텍처, 고객 사용 사례 및 빅데이터 분석 및 인공 지능(AI)과 관련된 NetApp 스토리지 포트폴리오에 대해 중점적으로 소개합니다. 또한 적절한 Spark 솔루션을 선택할 수 있도록 업계 표준 AI, 머신 러닝(ML) 및 딥 러닝(DL) 툴을 일반적인 Hadoop 시스템과 비교하여 다양한 테스트 결과를 제공합니다. 시작하려면 Spark 아키텍처, 적절한 구성 요소 및 두 가지 배포 모드(클러스터 및 클라이언트)가 필요합니다.
 
 또한 이 문서는 구성 문제를 해결하기 위한 고객 사용 사례를 제공하며 빅데이터 분석 및 AI, ML, Spark를 지원하는 DL과 관련된 NetApp 스토리지 포트폴리오의 개요를 설명합니다. 그런 다음 Spark 관련 사용 사례 및 NetApp Spark 솔루션 포트폴리오의 테스트 결과를 마무리합니다.

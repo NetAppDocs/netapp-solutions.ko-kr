@@ -16,6 +16,7 @@ keywords: HA, DR, database, Oracle, RDS, AWS, SnapCenter
 
 link:aws_ora_fsx_ec2_procedures.html["이전: 배포 절차."]
 
+[role="lead"]
 AWS EC2 및 FSx 관리 콘솔 외에도 Ansible 제어 노드 및 SnapCenter UI 툴이 이 Oracle 환경에서 데이터베이스 관리를 위해 구축되었습니다.
 
 Ansible 제어 노드를 사용하면 커널 또는 패치 업데이트를 위해 운영 인스턴스와 대기 인스턴스를 동기화된 상태로 유지하는 병렬 업데이트를 통해 Oracle 환경 구성을 관리할 수 있습니다. NetApp 자동화 툴킷을 통해 페일오버, 재동기화 및 페일백을 자동화하여 Ansible을 통해 빠른 애플리케이션 복구 및 가용성을 아카이브할 수 있습니다. 플레이북을 사용하여 반복적인 데이터베이스 관리 작업을 실행하여 사람의 실수를 줄일 수 있습니다.

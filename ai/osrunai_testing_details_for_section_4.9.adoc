@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 섹션에서는 섹션에 대한 테스트 세부 정보를 다룹니다 link:osrunai_basic_resource_allocation_fairness.html["기본 자원 할당 공정성"].
 
 다음 순서로 작업을 제출합니다.

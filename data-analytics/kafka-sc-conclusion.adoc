@@ -15,6 +15,7 @@ summary: 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러를 사�
 
 link:kafka-sc-performance-best-practice-guidelines.html["이전: 성능 모범 사례 지침."]
 
+[role="lead"]
 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러에 유창한 confluent에서 31.74GBps의 계층화 처리량에 도달했습니다.
 
 

@@ -15,6 +15,7 @@ summary: 볼륨에 대해 원하는 서비스 수준을 사용하는 다른 용�
 
 link:aks-anf_set_up_dask_with_rapids_deployment_on_aks_using_helm.html["이전: Helm을 사용하여 AKS에서 RAPIDS 배포를 사용하여 Dask를 설정합니다."]
 
+[role="lead"]
 볼륨에 대해 원하는 서비스 수준을 사용하는 다른 용량 풀로 볼륨을 이동하여 기존 볼륨의 서비스 수준을 변경할 수 있습니다. 이 솔루션을 통해 고객은 작은 데이터 세트와 Standard Tier의 적은 수의 GPU로 시작한 후 데이터 및 GPU가 증가함에 따라 프리미엄 계층으로 스케일아웃 또는 스케일업할 수 있습니다. Premium Tier는 Standard Tier보다 테라바이트당 처리량이 4배 더 향상되었으며, 볼륨의 서비스 수준을 변경하기 위해 데이터를 이동할 필요 없이 스케일업이 가능합니다.
 
 

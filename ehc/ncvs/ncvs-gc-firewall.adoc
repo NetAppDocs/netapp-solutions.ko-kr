@@ -15,6 +15,7 @@ summary: Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여�
 
 link:ncvs-gc-data-encryption-at-rest.html["이전: 저장된 데이터 암호화."]
 
+[role="lead"]
 Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP 포트를 노출합니다.
 
 * https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["NFS 액세스에 필요한 포트 수"^]

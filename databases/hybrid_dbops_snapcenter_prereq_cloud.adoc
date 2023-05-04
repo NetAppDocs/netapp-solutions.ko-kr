@@ -16,6 +16,7 @@ keywords: prerequisites, aws, azure, gcp, cloud central, cloud volumes ontap
 
 link:hybrid_dbops_snapcenter_prereq_onprem.html["이전: 사전 요구 사항 온-프레미스."]
 
+[role="lead"]
 Cloud Manager 커넥터와 Cloud Volumes ONTAP를 설치하고 SnapMirror를 구성하기 전에 먼저 클라우드 환경에 대한 몇 가지 준비를 수행해야 합니다. 이 페이지에서는 수행해야 하는 작업과 Cloud Volumes ONTAP를 구축할 때의 고려 사항에 대해 설명합니다.
 
 

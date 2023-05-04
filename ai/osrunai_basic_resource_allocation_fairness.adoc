@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 섹션에서는 'team-d'가 더 많은 GPU(할당량 아래)를 요청할 때 시스템이 'team-b'와 'team-c'의 워크로드를 일시 중지하고 공평한 분배 방식으로 보류 중인 상태로 전환한다는 것을 보여 줍니다.
 
 작업 제출, 사용된 컨테이너 이미지 및 실행된 명령 시퀀스를 포함한 자세한 내용은 섹션을 참조하십시오 link:osrunai_testing_details_for_section_4.9.html["섹션 4.9의 테스트 세부 정보"].

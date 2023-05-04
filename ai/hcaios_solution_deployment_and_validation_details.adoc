@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 다음 섹션에서는 솔루션 구축 및 검증에 대한 세부 정보를 다룹니다.
 
 link:hcaios_ontap_ai_deployment.html["다음: ONTAP AI 배포"]

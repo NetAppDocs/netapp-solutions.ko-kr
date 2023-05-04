@@ -13,6 +13,7 @@ summary: VMware vCenter Site Recovery Manager는 모든 가상화된 애플리�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 VMware vCenter Site Recovery Manager는 모든 가상화된 애플리케이션의 재해 복구 관리를 간소화하기 위해 중앙 집중식 복구 계획의 자동화된 오케스트레이션 및 무중단 테스트를 제공하는 재해 복구 솔루션입니다.
 
 NetApp ONTAP 시스템에 Site Recovery Manager를 구축하면 재해 복구 비용을 크게 절감하고 복잡성을 줄일 수 있습니다. NetApp은 관리하기 쉽고 확장성이 뛰어난 고성능 스토리지 어플라이언스 및 강력한 소프트웨어 제품을 통해 vSphere 환경을 지원하는 유연한 스토리지 및 데이터 관리 솔루션을 제공합니다.

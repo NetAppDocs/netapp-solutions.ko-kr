@@ -15,6 +15,7 @@ summary: NetApp은 단일 볼륨 또는 여러 볼륨에서 중복 파일을 찾
 
 link:xcp-bp-using-the-xcp-data-mover-to-migrate-large-files.html["이전: XCP Data Mover를 사용하여 대용량 파일을 마이그레이션합니다."]
 
+[role="lead"]
 NetApp은 단일 볼륨 또는 여러 볼륨에서 중복 파일을 찾기 위한 요청을 받았습니다. NetApp은 다음과 같은 솔루션을 제공했습니다.
 
 단일 볼륨의 경우 다음 명령을 실행합니다.

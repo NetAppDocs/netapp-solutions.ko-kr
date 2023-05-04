@@ -15,6 +15,7 @@ summary: 이 페이지에는 이 작업을 만드는 데 사용된 라이브러�
 
 link:aks-anf_azure_netapp_files_performance_tiers.html["이전: Azure NetApp Files 성능 계층"]
 
+[role="lead"]
 다음 표에서는 이 작업을 만드는 데 사용된 라이브러리와 프레임워크를 보여 줍니다. 이러한 모든 구성 요소는 Azure의 역할 기반 액세스 및 보안 제어와 완벽하게 통합됩니다.
 
 |===

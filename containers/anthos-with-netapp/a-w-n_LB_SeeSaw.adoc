@@ -8,6 +8,7 @@ keywords: Anthos, GKE, Kubernetes, SeeSaw, LoadBalancer
 :allow-uri-read: 
 
 
+[role="lead"]
 이 페이지에는 시소 관리 로드 밸런서에 대한 설치 및 구성 지침이 나와 있습니다.
 
 seesaw는 VMware 환경의 Anthos 클러스터에 설치된 버전 1.6에서 1.10에 이르는 기본 관리형 네트워크 로드 밸런싱 장치입니다.

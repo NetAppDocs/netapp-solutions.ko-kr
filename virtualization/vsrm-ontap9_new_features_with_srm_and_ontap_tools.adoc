@@ -13,6 +13,7 @@ summary: 기존 가상 어플라이언스로 전환한 ONTAP 툴은 다양한 �
 :imagesdir: ./../media/
 
 
+[role="lead"]
 기존 가상 어플라이언스로 전환한 ONTAP 툴은 다양한 새로운 기능, 더 높은 제한, 새로운 VVOL 지원을 제공합니다.
 
 

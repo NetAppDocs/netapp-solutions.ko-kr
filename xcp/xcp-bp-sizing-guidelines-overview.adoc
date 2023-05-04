@@ -15,6 +15,7 @@ summary: 이 섹션에서는 NFS용 100만 개의 다른 파일 크기로 XCP �
 
 link:xcp-bp-deployment-steps.html["이전: 배포 단계."]
 
+[role="lead"]
 이 섹션에서는 NFS용 100만 개의 다른 파일 크기로 XCP 복사 및 XCP 동기화 작업을 수행하는 대략적인 시간을 제공합니다.
 
 

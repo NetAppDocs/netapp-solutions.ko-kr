@@ -16,6 +16,7 @@ keywords: requirements, virtualized, bare metal, versions, automation
 
 link:hybrid_dbops_snapcenter_architecture.html["이전: 솔루션 아키텍처."]
 
+[role="lead"]
 이 솔루션은 하이브리드 클라우드 설정에서 개발/테스트 및 재해 복구 작업에 널리 사용되는 모든 퍼블릭 클라우드에 버스트가 가능한 온프레미스 운영 데이터베이스를 지원하도록 설계되었습니다.
 
 이 솔루션은 현재 SnapCenter에서 지원하는 모든 데이터베이스를 지원하지만 Oracle 및 SQL Server 데이터베이스만 여기에 나와 있습니다. 이 솔루션은 베어 메탈 워크로드도 지원되지만 가상화된 데이터베이스 워크로드에서 검증을 받았습니다.

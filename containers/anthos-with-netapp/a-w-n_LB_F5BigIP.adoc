@@ -8,6 +8,7 @@ keywords: Anthos, GKE, Kubernetes, F5, BigIP, LoadBalancer
 :allow-uri-read: 
 
 
+[role="lead"]
 F5 BIG-IP는 ADC(Application Delivery Controller)로서 L4-L7 로드 밸런싱, SSL/TLS 오프로드, DNS, 방화벽 등과 같은 다양한 고급 프로덕션 등급 트래픽 관리 및 보안 서비스를 제공합니다. 이러한 서비스는 애플리케이션의 가용성, 보안 및 성능을 대폭 향상시킵니다.
 
 F5 BIG-IP는 전용 하드웨어, 클라우드 또는 온프레미스 가상 어플라이언스 등 다양한 방식으로 배포 및 사용할 수 있습니다. F5 BIG-IP를 탐색하고 배포하려면 여기 있는 설명서를 참조하십시오.

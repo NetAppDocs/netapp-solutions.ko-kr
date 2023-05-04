@@ -15,6 +15,7 @@ summary: 클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 �
 
 link:ncvs-gc-security-considerations-and-attack-surfaces.html["이전: 보안 고려 사항 및 공격 표면"]
 
+[role="lead"]
 클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 방식을 이해하는 것입니다. 이 섹션에서는 Google의 Cloud Volumes Service 아키텍처의 다양한 측면을 다루어 데이터 보안 방식에 대한 잠재적 우려를 완화하고 가장 안전한 배포를 위해 추가 구성 단계가 필요할 수 있는 영역을 설명합니다.
 
 Cloud Volumes Service의 일반 아키텍처는 컨트롤 플레인과 데이터 플레인의 두 가지 주요 구성 요소로 나눌 수 있습니다.

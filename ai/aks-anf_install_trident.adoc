@@ -15,6 +15,7 @@ summary:
 
 link:aks-anf_peer_aks_vnet_and_azure_netapp_files_vnet.html["이전: 피어 AKS VNET 및 Azure NetApp Files VNET"]
 
+[role="lead"]
 Hrom을 사용하여 Trident를 설치하려면 다음 단계를 완료하십시오.
 
 . Helm을 설치합니다(설치 지침은 를 참조하십시오 https://helm.sh/docs/intro/install/["출처"^])를 클릭합니다.

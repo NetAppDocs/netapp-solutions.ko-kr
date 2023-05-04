@@ -15,6 +15,7 @@ summary: 마이그레이션은 마이그레이션 계획 및 완료를 위해 �
 
 link:xcp-bp-netapp-xcp-overview.html["그 전에 NetApp XCP가 있습니다."]
 
+[role="lead"]
 마이그레이션은 마이그레이션 계획 및 완료를 위해 따라야 할 단계가 다릅니다. NetApp XCP를 사용하여 타사 NAS 스토리지나 직접 연결된 NAS 내보낸 스토리지에서 데이터를 마이그레이션하려면 이 섹션에 제공된 마이그레이션 지침을 따르십시오.
 
 다음 그림에서는 NAS에서 NetApp NAS로의 마이그레이션 워크플로우를 보여 줍니다.

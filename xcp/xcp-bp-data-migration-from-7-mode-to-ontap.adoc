@@ -15,6 +15,7 @@ summary: 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 O
 
 link:xcp-bp-creating-a-csv-file-from-smb-cifs-share.html["이전: SMB/CIFS 공유에서 CSV 파일 생성"]
 
+[role="lead"]
 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 ONTAP로 데이터를 마이그레이션하기 위한 자세한 단계를 제공합니다.
 
 

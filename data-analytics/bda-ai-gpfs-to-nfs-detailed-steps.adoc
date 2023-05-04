@@ -15,6 +15,7 @@ summary: 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 �
 
 link:bda-ai-business-benefits.html["이전: 비즈니스 혜택."]
 
+[role="lead"]
 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 데이터를 이동하는 데 필요한 세부 단계를 제공합니다.
 
 

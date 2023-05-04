@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../../media/
 
 
+[role="lead"]
 VMware Cloud를 AWS VPC에 연결하여 사용할 준비가 되면 NetApp ONTAP용 Amazon FSx를 원래 연결되거나 기존 기본 VPC가 아닌 새로 지정된 VPC에 구축해야 합니다.
 
 먼저 SDDC가 있는 지역과 가용성 영역에 VPC를 추가로 구축한 다음, NetApp ONTAP용 Amazon FSx를 새 VPC에 구축합니다. https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-6B20CA3B-ABCD-4939-9176-BCEA44473C2B.html["VMware Cloud에서 SDDC 그룹 구성"^] 콘솔은 ONTAP용 FSx를 구축할 새로 지정된 VPC에 연결하는 데 필요한 네트워킹 구성 옵션을 활성화합니다.

@@ -15,6 +15,7 @@ summary: 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 �
 
 NetApp의 Karthikeyan Nagalingam입니다
 
+[role="lead"]
 이 문서에서는 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. AI는 NFS 엑스포트를 통해 NFS 데이터를 처리하는 한편, 고객은 HDFS, Blob 또는 S3 스토리지와 같은 빅데이터 분석 플랫폼과 GPFS와 같은 HPC 플랫폼에 AI 데이터를 저장할 수 있습니다. 이 문서에서는 NetApp XCP 및 NIPAM을 사용하여 빅데이터 분석 데이터와 HPC 데이터를 AI로 이동하는 방법에 대해 설명합니다. 또한 빅데이터 및 HPC에서 AI로 데이터를 이동하면 얻을 수 있는 비즈니스 이점에 대해서도 설명합니다.
 
 

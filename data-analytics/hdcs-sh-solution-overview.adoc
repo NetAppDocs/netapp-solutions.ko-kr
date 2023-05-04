@@ -10,6 +10,7 @@ summary: 본 문서는 NetApp AFF 및 FAS 스토리지 시스템, NetApp Cloud V
 
 NetApp의 Karthikeyan Nagalingam 및 Sathish Thyagarajan
 
+[role="lead"]
 본 문서는 NetApp AFF 및 FAS 스토리지 시스템, NetApp Cloud Volumes ONTAP, NetApp 연결형 스토리지, Spark 및 Hadoop용 NetApp FlexClone 기술을 사용하는 하이브리드 클라우드 데이터 솔루션에 대해 설명합니다. 이러한 솔루션 아키텍처를 통해 고객은 자신의 환경에 적합한 데이터 보호 솔루션을 선택할 수 있습니다. NetApp은 고객과의 상호 작용 및 비즈니스 사용 사례를 기반으로 이러한 솔루션을 설계했습니다. 이 문서에서는 다음과 같은 자세한 정보를 제공합니다.
 
 * Spark 및 Hadoop 환경 및 고객의 당면 과제를 해결하기 위해 데이터 보호가 필요한 이유

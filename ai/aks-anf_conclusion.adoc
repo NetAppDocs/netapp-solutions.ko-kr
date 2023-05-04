@@ -15,6 +15,7 @@ summary: Docker, Kubernetes 등의 오케스트레이션 툴과 통합된 Azure 
 
 link:aks-anf_dataset_and_model_versioning_using_netapp_dataops_toolkit.html["이전: NetApp DataOps 툴킷을 사용하여 데이터 세트 및 모델 버전 관리"]
 
+[role="lead"]
 Azure NetApp Files, RAPIDS 및 DASK는 Docker, Kubernetes 등의 오케스트레이션 툴과 통합하여 대규모 ML 처리 및 훈련 구축을 간소화하고 있습니다. 이 솔루션은 엔드 투 엔드 데이터 파이프라인을 통합함으로써 수많은 고급 컴퓨팅 워크로드에서 발생하는 지연 시간과 복잡성을 줄여 개발과 운영 간의 격차를 효과적으로 해소합니다. 데이터 과학자는 대규모 데이터 세트에서 쿼리를 실행하고 교육 단계 동안 다른 사용자와 데이터 및 알고리즘 모델을 안전하게 공유할 수 있습니다.
 
 자체 AI/ML 파이프라인을 구축할 때는 아키텍처 구성 요소의 통합, 관리, 보안 및 접근성을 구성하는 것이 매우 어렵습니다. 개발자가 자신의 환경에 액세스하고 제어하도록 하는 것은 또 다른 도전 과제입니다.

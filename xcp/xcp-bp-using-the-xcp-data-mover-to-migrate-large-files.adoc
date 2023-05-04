@@ -15,6 +15,7 @@ summary: '이 사용 사례는 TV 네트워크 고객을 기반으로 합니다.
 
 link:xcp-bp-using-the-xcp-data-mover-to-migrate-millions-of-small-files-to-flexible-storage.html["이전: XCP Data Mover를 사용하여 수백만 개의 작은 파일을 유연한 스토리지로 마이그레이션합니다."]
 
+[role="lead"]
 이 사용 사례는 TV 네트워크 고객을 기반으로 합니다. 고객은 Oracle RMAN(Recovery Manager) 백업 파일을 클라우드로 마이그레이션하고 심장박동기 소프트웨어가 설치된 Azure NetApp Files를 사용하여 Oracle EBS(E-Business Suite) 애플리케이션을 실행하려고 했습니다. 또한 고객은 데이터베이스 백업 파일을 주문형 클라우드 스토리지로 마이그레이션하고 대용량 파일(각각 25GB~50GB 범위)을 Azure로 전송하길 원했습니다.
 
 다음 그림에서는 대용량 파일의 경우 사내에서 Azure NetApp Files으로 데이터를 마이그레이션하는 방법을 보여 줍니다.

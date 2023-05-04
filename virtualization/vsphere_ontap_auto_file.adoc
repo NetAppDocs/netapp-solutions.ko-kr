@@ -20,6 +20,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 NFS 데이터 저장
 :authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
+[role="lead"]
 VMware vSphere는 다음 NFS 프로토콜을 지원하며 두 프로토콜 모두 ONTAP를 지원합니다.
 
 * link:vsphere_ontap_auto_file_nfs.html["NFS 버전 3"]

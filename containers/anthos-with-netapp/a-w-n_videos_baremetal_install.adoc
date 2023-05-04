@@ -13,6 +13,7 @@ summary: 이 페이지에서 에 연결된 이 비디오는 베어 메탈 클러
 :imagesdir: ../../media/
 
 
+[role="lead"]
 이 링크의 비디오는 Anthos를 베어 메탈 클러스터에 배포하는 방법을 보여 줍니다.
 
 video::Anthos-Deploy-Bare-Metal.mp4[Deploying Anthos on bare metal - Anthos with NetApp]

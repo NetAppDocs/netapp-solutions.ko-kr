@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 섹션에서는 GPU 리소스의 우선순위 지정 및 밸런싱을 유지하면서 높은 클러스터 사용률을 달성하는 Run:AI 오케스트레이션 솔루션을 시연하기 위해 4개의 데이터 과학 팀이 각자 고유의 워크로드를 제출하는 실제 시나리오를 에뮬레이트합니다. 먼저 섹션에 설명된 ResNet-50 벤치마크를 사용합니다 link:osrunai_resnet-50_with_imagenet_dataset_benchmark_summary.html["ImageNet 데이터 세트 벤치마크 요약을 통한 ResNet-50"]:
 
 ....

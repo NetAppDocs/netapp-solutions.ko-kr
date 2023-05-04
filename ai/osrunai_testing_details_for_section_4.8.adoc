@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 섹션에서는 섹션의 테스트 세부 정보를 다룹니다 link:osrunai_achieving_high_cluster_utilization_with_over-uota_gpu_allocation.html["할당량 초과 GPU 할당을 통한 높은 클러스터 사용률 달성"].
 
 다음 순서로 작업을 제출합니다.

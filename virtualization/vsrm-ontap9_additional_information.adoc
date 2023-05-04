@@ -13,6 +13,7 @@ summary: 이 문서에 설명된 정보에 대해 자세히 알아보려면 다�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
 * TR-4597: ONTAP용 VMware vSpherehttps://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_ontap_ontap_for_vsphere.html["https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_ontap_ontap_for_vsphere.html"^]

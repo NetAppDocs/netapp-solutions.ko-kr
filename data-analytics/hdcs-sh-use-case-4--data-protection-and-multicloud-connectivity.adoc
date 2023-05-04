@@ -15,6 +15,7 @@ summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 
 
 link:hdcs-sh-use-case-3--enabling-devtest-on-existing-hadoop-data.html["이전: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest 설정"]
 
+[role="lead"]
 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 멀티 클라우드 연결을 제공하는 클라우드 서비스 파트너와 관련이 있습니다.
 
 

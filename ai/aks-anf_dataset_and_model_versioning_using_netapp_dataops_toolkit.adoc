@@ -15,6 +15,7 @@ summary: Kubernetes용 NetApp DataOps 툴킷은 스토리지 리소스와 Kubern
 
 link:aks-anf_monitor_dask_and_rapids_with_prometheus_and_grafana.html["이전: Prometheus 및 Grafana를 사용하여 Dask 및 RAPIDS를 모니터링합니다."]
 
+[role="lead"]
 Kubernetes용 NetApp DataOps 툴킷은 스토리지 리소스와 Kubernetes 워크로드를 데이터 과학 작업 공간 수준까지 추상화합니다. 이러한 기능은 데이터 과학자와 데이터 엔지니어를 위해 설계된 간단하고 사용하기 쉬운 인터페이스로 패키징되어 있습니다. 데이터 과학자와 엔지니어는 익숙한 형식의 Python 프로그램을 사용하여 JupyterLab 작업 공간을 단 몇 초 만에 프로비저닝 및 폐기할 수 있습니다. 이러한 작업 공간에는 테라바이트나 페타바이트급의 스토리지 용량이 포함될 수 있으므로 데이터 과학자는 모든 훈련 데이터 세트를 프로젝트 작업 공간에 직접 저장할 수 있습니다. 작업 영역과 데이터 볼륨을 별도로 관리하는 시대는 지났습니다.
 
 자세한 내용은 툴킷 을 참조하십시오 https://github.com/NetApp/netapp-data-science-toolkit["GitHub 리포지토리"^].

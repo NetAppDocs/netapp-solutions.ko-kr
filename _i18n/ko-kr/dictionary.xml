@@ -16448,7 +16448,6 @@
   <block id="a5e99aa2ffae2218fdcf2038b1b3fd1b" category="doc">TR-4851: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크 - 솔루션 설계</block>
   <block id="ba9a0dcacc73fb54c527ad33eceb30c1" category="paragraph"><block ref="ba9a0dcacc73fb54c527ad33eceb30c1" category="inline-link-macro-rx"></block></block>
   <block id="fcf432f7f886df6aeafb1dec9357085d" category="doc">NVA-1150-Deploy:Quantum StorNext with NetApp E-Series 시스템 구축 가이드</block>
-  <block id="74e37c842f0aa66d129305c85d5f458a" category="paragraph">이 문서에서는 NetApp E-Series 스토리지 시스템을 통해 StorNext 병렬 파일 시스템 솔루션을 구축하는 방법에 대해 자세히 설명합니다. 이 솔루션은 NetApp EF280 All-Flash 어레이, NetApp EF300 All-Flash NVMe 어레이, NetApp EF600 All-Flash NVMe 어레이, NetApp E57760 하이브리드 시스템에 적용됩니다. 미디어 및 엔터테인먼트 업계에서 테스트에 널리 사용되는 도구인 프레임 벤치마킹(Frametest Benchmarking)을 기반으로 성능 특성을 제공합니다.</block>
   <block id="a06fe4c2db4f7b09c705e4e8dafb5627" category="paragraph"><block ref="a06fe4c2db4f7b09c705e4e8dafb5627" category="inline-link-macro-rx"></block></block>
   <block id="837896d23c0eee81106906ab4cef7a6d" category="doc">TR-4799 - 설계: 자율 주행 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처</block>
   <block id="63e3877ed0a830d2fb8beed8fffb2df4" category="paragraph">NVIDIA DGX 시스템 제품군은 엔터프라이즈 AI용으로 특별 제작된 세계 최초의 통합 인공 지능(AI) 플랫폼입니다. NetApp AFF 스토리지 시스템은 탁월한 성능과 업계 최고 수준의 하이브리드 클라우드 데이터 관리 기능을 제공합니다. NetApp과 NVIDIA는 협력 관계를 맺고 엔터프라이즈급 지원, 안정성 및 성능으로 AI 및 머신 러닝(ML) 워크로드를 지원하는 턴키 솔루션을 고객에게 제공할 수 있는 NetApp ONTAP AI 참조 아키텍처를 구축했습니다.</block>
@@ -18124,4 +18123,5 @@
   <block id="1e6ad53e48d26e8f800d9e60c340e84d" category="sidebar">VMware vSphere 8의 새로운 기능</block>
   <block id="1e0561f6acd458eaa1243b2cd1f781e1" category="inline-link">AWS의 VMware Cloud 지원: 고려 사항 및 제한 사항</block>
   <block id="2d57bbd81ef9a580a0f2d6b36c8d86c2" category="list-text"><block ref="2d57bbd81ef9a580a0f2d6b36c8d86c2" category="inline-link-rx"></block></block>
+  <block id="25dbf1b5193ae9eff63687c18c19e6f5" category="paragraph">이 문서에서는 NetApp E-Series 스토리지 시스템을 통해 StorNext 병렬 파일 시스템 솔루션을 구축하는 방법에 대해 자세히 설명합니다. 이 솔루션은 NetApp EF280 All-Flash 어레이, NetApp EF300 All-Flash NVMe 어레이, NetApp EF600 All-Flash NVMe 어레이, NetApp E57760 하이브리드 시스템에 적용됩니다. 미디어 및 엔터테인먼트 업계에서 테스트에 널리 사용되는 도구인 프레임 벤치마킹(Frametest Benchmarking)을 기반으로 성능 특성을 제공합니다.</block>
 </blocks>

@@ -15,6 +15,7 @@ summary: 이 페이지에서는 Azure NetApp Files에 대해 위임된 서브넷
 
 link:aks-anf_install_and_set_up_the_aks_cluster.html["이전: AKS 클러스터를 설치하고 설정합니다."]
 
+[role="lead"]
 Azure NetApp Files에 대해 위임된 서브넷을 만들려면 다음 단계를 수행하십시오.
 
 . Azure 포털에서 가상 네트워크로 이동합니다. 새로 생성한 가상 네트워크를 찾습니다. AKS-VNET와 같은 접두사가 있어야 합니다.

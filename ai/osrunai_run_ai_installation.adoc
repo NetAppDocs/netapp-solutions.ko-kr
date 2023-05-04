@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Run:AI를 설치하려면 다음 단계를 완료하십시오.
 
 . DeepOps를 사용하여 Kubernetes 클러스터를 설치하고 NetApp 기본 스토리지 클래스를 구성합니다.

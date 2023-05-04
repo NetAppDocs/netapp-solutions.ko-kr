@@ -16,6 +16,7 @@ keywords: tr-4908, tr4908, 4908, hybrid cloud, database, snapcenter, gui
 
 NetApp의 Felix Melligan, Alan Cao
 
+[role="lead"]
 이 솔루션은 NetApp 현장 및 고객에게 NetApp SnapCenter GUI 기반 툴과 퍼블릭 클라우드의 NetApp 스토리지 서비스 CVO를 사용하여 데이터베이스를 하이브리드 클라우드 환경으로 구성, 운영 및 마이그레이션하는 데 필요한 지침과 사용 사례를 제공합니다.
 
 * 하이브리드 클라우드에서 데이터베이스 개발/테스트 작업

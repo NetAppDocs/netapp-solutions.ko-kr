@@ -16,6 +16,7 @@ keywords: prerequisites, on prem, on premises, installation, security, automatio
 
 link:hybrid_dbops_snapcenter_prerequisite.html["이전: 사전 요구 사항 구성."]
 
+[role="lead"]
 SnapCenter 하이브리드 클라우드 데이터베이스 워크로드 환경을 준비하기 위해 온프레미스에서 다음 작업을 완료해야 합니다.
 
 

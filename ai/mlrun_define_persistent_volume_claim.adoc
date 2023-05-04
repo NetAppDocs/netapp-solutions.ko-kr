@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 . 다음 YAML을 파일에 저장하여 기본 유형의 PVC를 생성합니다.
 +
 ....

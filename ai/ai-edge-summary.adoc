@@ -13,4 +13,5 @@ summary:
 :imagesdir: ./media/
 
 
+[role="lead"]
 ADAS(Advanced Driver Assistance Systems), Industry 4.0, 스마트 시티 및 IoT(Internet of Things)와 같은 몇 가지 새로운 애플리케이션 시나리오에서는 지연 시간이 거의 없이 지속적인 데이터 스트림을 처리해야 합니다. 이 문서에서는 이러한 요구사항을 충족하는 에지 환경에서 NetApp 스토리지 컨트롤러 및 Lenovo ThinkSystem 서버에 GPU 기반 인공 지능(AI) 추론을 배포하기 위한 컴퓨팅 및 스토리지 아키텍처에 대해 설명합니다. 또한, NVIDIA T4 GPU가 장착된 에지 서버에서 다양한 추론 작업을 평가하여 업계 표준 MLPerf Inference 벤치마크의 성능 데이터도 제공합니다. 오프라인, 단일 스트림 및 다중 스트림 추론 시나리오의 성능을 조사한 결과, 비용 효율적인 공유 네트워크 스토리지 시스템이 포함된 아키텍처의 성능이 매우 뛰어나며 여러 에지 서버에 대한 데이터 및 모델 관리의 중앙 지점을 제공하는 것으로 나타났습니다.

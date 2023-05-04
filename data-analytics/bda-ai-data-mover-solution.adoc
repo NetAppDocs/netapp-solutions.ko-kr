@@ -15,6 +15,7 @@ summary: 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Sto
 
 link:bda-ai-customer-challenges.html["이전: 고객의 당면 과제."]
 
+[role="lead"]
 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 'Hadoop distcp' 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다.
 
 다음 다이어그램에서는 HDFS 스토리지를 사용하여 실행되는 Spark 클러스터에서 NetApp ONTAP NFS 볼륨으로 이동하는 일반적인 데이터 이동을 보여 줍니다. 이렇게 하면 NVIDIA에서 AI 작업을 처리할 수 있습니다.

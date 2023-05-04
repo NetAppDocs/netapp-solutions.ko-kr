@@ -15,6 +15,7 @@ summary: 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 �
 
 link:hdcs-sh-use-case-5--accelerate-analytic-workloads.html["이전: 사용 사례 5 - 분석 워크로드 가속화"]
 
+[role="lead"]
 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 충족하기 위해 NetApp에서 제공하는 사용 사례 및 솔루션을 요약합니다. 고객은 NetApp이 제공하는 Data Fabric을 사용하여 다음을 수행할 수 있습니다.
 
 * NetApp의 풍부한 데이터 관리 기능과 Hadoop 기본 워크플로우와의 통합을 활용하여 적합한 데이터 보호 솔루션을 유연하게 선택할 수 있습니다.

@@ -15,6 +15,7 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA
 
 link:nvaie_ngc_setup.html["이전: 설정."]
 
+[role="lead"]
 이 섹션에서는 NVIDIA AI Enterprise 환경 내에서 TensorFlow 교육 작업을 실행하기 위해 수행해야 하는 작업에 대해 설명합니다.
 
 

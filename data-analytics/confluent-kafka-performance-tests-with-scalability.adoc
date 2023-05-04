@@ -15,6 +15,7 @@ summary: NetApp은 NetApp StorageGRID 설정을 통해 생산 및 소비자 워�
 
 link:confluent-kafka-confluent-kafka-certification.html["이전: Confluent verification."]
 
+[role="lead"]
 NetApp StorageGRID 설정을 통해 생산자 및 소비자 워크로드를 위한 3~4개의 노드로 계층형 스토리지 테스트를 수행했습니다. 이 테스트에 따르면 완료 시간과 성능 결과는 StorageGRID 노드 수에 정비례합니다. StorageGRID를 설치하려면 최소 3개의 노드가 필요합니다.
 
 * 스토리지 노드의 수가 증가했을 때 생산 및 소비자 작업을 완료하는 데 걸리는 시간이 선형적으로 감소했습니다.

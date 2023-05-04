@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 다음 타사 API를 이행 엔진으로 연결하여 질문에 답변했습니다.
 
 * https://weatherstack.com/["WeatherStack API를 참조하십시오"^]: 지정된 위치에 날씨, 온도, 강우량 및 눈을 반환합니다.

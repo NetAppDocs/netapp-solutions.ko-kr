@@ -16,6 +16,7 @@ keywords: architecture, database, Oracle, Azure, Azure NetApp Files
 
 link:azure_ora_nfile_usecase.html["이전: 소개."]
 
+[role="lead"]
 다음 아키텍처 다이어그램은 Azure VM 인스턴스 및 Azure NetApp Files 스토리지에 가용성이 높은 Oracle 데이터베이스를 구축하는 방법을 보여 줍니다.
 
 환경 내에서 Oracle 컴퓨팅 인스턴스는 Azure 서비스 VM 콘솔을 통해 구축됩니다. 콘솔에서 여러 Azure 인스턴스 유형을 사용할 수 있습니다. NetApp은 예상 워크로드를 충족하는 데이터베이스 기반의 Azure VM 인스턴스를 구축할 것을 권장합니다.

@@ -15,6 +15,7 @@ summary: 'NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경�
 
 link:hdcs-sh-solution-overview.html["이전: 솔루션 개요"]
 
+[role="lead"]
 NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경에서 데이터 관리를 단순화하고 통합하여 디지털 전환을 가속합니다.
 
 NetApp이 제공하는 Data Fabric은 데이터 가시성과 통찰력, 데이터 액세스 및 제어, 데이터 보호 및 보안을 위한 일관성 있는 통합 데이터 관리 서비스 및 애플리케이션(구성 요소)을 제공합니다(아래 그림 참조).

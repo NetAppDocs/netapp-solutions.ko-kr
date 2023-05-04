@@ -8,6 +8,7 @@ keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astr
 :allow-uri-read: 
 
 
+[role="lead"]
 Astra Control Center에서 워크로드를 관리할 수 있도록 하려면 먼저 Red Hat OpenShift 클러스터를 등록해야 합니다.
 
 

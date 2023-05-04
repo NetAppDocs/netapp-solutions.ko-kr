@@ -15,6 +15,7 @@ summary: 'AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 
 
 link:kafka-sc-confluent-performance-validation.html["이전: Confluent Performance validation."]
 
+[role="lead"]
 AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 농작물 사용 워크로드 중 5개 또는 8개의 브로커 노드로 계층형 스토리지 테스트를 수행했습니다. 테스트에 따르면 AFF A900 리소스 활용률이 100%에 이를 때까지 브로커 노드의 수에 따라 완료 시간과 성능 결과가 확장되었습니다. ONTAP 스토리지 컨트롤러를 설치하려면 최소 하나의 HA 쌍이 필요했습니다.
 
 S3 검색 작업에 대한 성능은 Confluent 브로커 노드의 수에 따라 선형으로 향상되었습니다. ONTAP 스토리지 컨트롤러는 단일 배포에서 최대 12개의 HA 쌍을 지원합니다.

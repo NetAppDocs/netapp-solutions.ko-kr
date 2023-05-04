@@ -15,6 +15,7 @@ summary:
 
 link:bda-ai-mapr-fs-to-ontap-nfs.html["이전: MapR-FS에서 ONTAP NFS로"]
 
+[role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
 * NetApp 데이터 이동 없는 분석 모듈 모범 사례

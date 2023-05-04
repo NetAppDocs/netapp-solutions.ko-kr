@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 기술 보고서에 대한 의견이 있으십니까?
 
 이메일 주소는 doccomments@netapp.com 으로 보내주시고 제목 줄에 TR-4597을 포함시키십시오.

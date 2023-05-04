@@ -16,6 +16,7 @@ keywords: architecture, Oracle RDS, RDS, FSx ONTAP, FSx, AWS, Oracle, HA, DR
 
 link:aws_ora_fsx_ec2_deploy_intro.html["이전: 소개."]
 
+[role="lead"]
 다음 아키텍처 다이어그램은 FSx 스토리지 서비스가 있는 AWS EC2 인스턴스에 고가용성 Oracle 데이터베이스 구축을 보여 줍니다. 유사한 배포 체계이지만 다른 지역의 대기 구성을 재해 복구에 설정할 수 있습니다.
 
 환경 내에서 Oracle 컴퓨팅 인스턴스는 AWS EC2 인스턴스 콘솔을 통해 구축됩니다. 콘솔에서 여러 EC2 인스턴스 유형을 사용할 수 있습니다. RedHat Enterprise Linux 8과 함께 M5 Ami 이미지와 같은 데이터베이스 기반 EC2 인스턴스 유형 및 최대 10Gbps의 네트워크 대역폭을 구축하는 것이 좋습니다.

@@ -15,6 +15,7 @@ summary: TeraGen 벤치마킹 툴에서 TeraSort 및 TeraValidate 스크립트�
 
 link:apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html["이전: 주요 AI, ML 및 DL 사용 사례 및 아키텍처"]
 
+[role="lead"]
 TeraGen 벤치마킹 툴에서 TeraSort 및 TeraValidate 스크립트를 사용하여 E5760, E5724 및 AFF-A800 구성을 사용하여 Spark 성능 검증을 측정했습니다. 또한, Spark NLP 파이프라인 및 TensorFlow 배포 교육, Horovod 분산 교육, DeepFM을 통한 CTR 예측에 Keras를 사용한 다중 작업자 딥 러닝 등 3가지 주요 사용 사례를 테스트했습니다.
 
 E-Series와 StorageGRID 검증 모두에 Hadoop 복제 계수 2를 사용했습니다. AFF 검증에서는 하나의 데이터 소스만 사용했습니다.

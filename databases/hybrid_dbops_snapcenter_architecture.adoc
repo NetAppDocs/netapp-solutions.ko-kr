@@ -16,6 +16,7 @@ keywords: architecture, synchronized database
 
 link:hybrid_dbops_snapcenter_usecases.html["이전: 소개."]
 
+[role="lead"]
 다음 아키텍처 다이어그램은 개발/테스트 및 재해 복구 작업을 위해 하이브리드 클라우드에서 엔터프라이즈 데이터베이스 작업을 구축하는 일반적인 과정을 보여 줍니다.
 
 image:Hybrid_Cloud_DB_Diagram.png["오류: 그래픽 이미지가 없습니다"]

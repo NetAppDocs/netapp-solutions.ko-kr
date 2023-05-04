@@ -15,6 +15,7 @@ summary: '이 페이지에서는 제어(Helm)를 사용하여 AKS에서 RAPIDS�
 
 link:aks-anf_install_trident.html["이전: Trident를 설치합니다."]
 
+[role="lead"]
 Hrom을 사용하여 AKS에서 RAPIDS를 사용하여 Dask를 설정하려면 다음 단계를 수행하십시오.
 
 . RAPIDS를 사용하여 Dask를 설치하기 위한 네임스페이스를 생성합니다.

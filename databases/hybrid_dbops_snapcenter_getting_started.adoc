@@ -16,6 +16,7 @@ keywords: introduction, workflow
 
 link:hybrid_dbops_snapcenter_prereq_cloud.html["이전: 퍼블릭 클라우드의 사전 요구 사항"]
 
+[role="lead"]
 이 섹션에서는 이전 섹션에서 설명한 사전 요구 사항을 충족하기 위해 완료해야 하는 작업을 요약합니다. 다음 섹션에서는 사내 및 퍼블릭 클라우드 운영에 모두 필요한 개략적인 작업 목록을 제공합니다. 자세한 프로세스와 절차는 관련 링크를 클릭하여 액세스할 수 있습니다.
 
 

@@ -10,6 +10,7 @@ summary:
 
 Akash Gupta와 Principled Technologies, NetApp
 
+[role="lead"]
 TR-4704에서는 NetApp E-Series 스토리지에 Veritas NetBackup을 구축하는 방법을 설명합니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["TR-4704: NetApp E-Series 스토리지를 사용하여 Veritas NetBackup 구축"^]

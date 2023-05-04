@@ -15,6 +15,7 @@ summary: NetApp XCP는 멀티스레드와 맞춤형 기능을 사용하여 데�
 
 link:xcp-bp-introduction.html["이전: 소개."]
 
+[role="lead"]
 NetApp XCP는 멀티스레드와 맞춤형 기능을 사용하여 데이터를 전송합니다. 데이터 이동 또는 마이그레이션, 파일 시스템 분석, 빠른 디렉토리 트리 삭제의 세 가지 주요 활용 사례에 맞게 설계되었습니다.
 
 

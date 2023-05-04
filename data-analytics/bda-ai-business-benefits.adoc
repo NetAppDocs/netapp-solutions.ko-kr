@@ -15,6 +15,7 @@ summary: 이 섹션에서는 이 솔루션의 비즈니스 이점에 대해 설�
 
 link:bda-ai-hdfs-and-mapr-fs-to-ontap-nfs.html["이전: HDFS 및 MapR-FS에서 ONTAP NFS로."]
 
+[role="lead"]
 데이터를 빅데이터 분석에서 AI로 이동하면 다음과 같은 이점이 있습니다.
 
 * 서로 다른 Hadoop 파일 시스템과 GPFS에서 데이터를 유니파이드 NFS 스토리지 시스템으로 추출하는 기능

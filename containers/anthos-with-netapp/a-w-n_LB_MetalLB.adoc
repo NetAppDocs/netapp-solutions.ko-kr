@@ -8,6 +8,7 @@ keywords: Anthos, Kubernetes, MetalLB, LoadBalancer, Astra, Astra Control Center
 :allow-uri-read: 
 
 
+[role="lead"]
 이 페이지에는 MetalLB 관리 로드 밸런서에 대한 설치 및 구성 지침이 나와 있습니다.
 
 

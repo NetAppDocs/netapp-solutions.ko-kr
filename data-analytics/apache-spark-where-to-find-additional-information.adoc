@@ -15,6 +15,7 @@ summary:
 
 link:apache-spark-conclusion.html["이전: 결론."]
 
+[role="lead"]
 이 TR에 사용된 참조 자료는 다음과 같습니다.
 
 * Apache Spark 아키텍처 및 구성 요소

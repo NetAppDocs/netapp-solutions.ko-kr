@@ -15,6 +15,7 @@ summary: 이 페이지에서는 이 솔루션의 성능을 개선하기 위한 �
 
 link:kafka-sc-performance-tests-with-produce-consume-workload-generator.html["이전: 생산물을 사용한 성능 테스트 - 워크로드 생성기 사용"]
 
+[role="lead"]
 * ONTAP의 경우 가능하면 GET SIZE >= 1MB 를 사용합니다.
 * 브로커 노드의 erver.properties` 에서 num.network.threads` 및 num.io.threads를 증가시키면 계층화 작업이 S3 계층으로 증가하게 됩니다. 이러한 결과는 num.network.threads` 및 num.io.threads가 32로 설정된 것입니다.
 * S3 버킷은 구성원 애그리게이트당 8개의 구성요소를 목표로 해야 합니다.

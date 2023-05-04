@@ -15,6 +15,7 @@ summary: Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 �
 
 link:ncvs-gc-overview.html["이전: 개요."]
 
+[role="lead"]
 Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 보호할 수 있는 다양한 방법을 제공합니다.
 
 

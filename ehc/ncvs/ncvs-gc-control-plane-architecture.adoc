@@ -15,6 +15,7 @@ summary: Cloud Volumes Service에 대한 모든 관리 작업은 API를 통해 �
 
 link:ncvs-gc-cloud-volumes-service-architecture.html["이전: Cloud Volumes Service 아키텍처."]
 
+[role="lead"]
 Cloud Volumes Service에 대한 모든 관리 작업은 API를 통해 수행됩니다. GCP 클라우드 콘솔에 통합된 Cloud Volumes Service 관리도 Cloud Volumes Service API를 사용합니다.
 
 

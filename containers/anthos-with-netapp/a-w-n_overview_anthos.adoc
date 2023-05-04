@@ -13,6 +13,7 @@ summary: Anthos는 단일 플랫폼에서 개발과 IT 운영을 통합하여 �
 :imagesdir: ./../../media/
 
 
+[role="lead"]
 NetApp의 Anthos는 온프레미스 GKE(Google Kubernetes Engine) 환경을 안정적이고 신뢰할 수 있는 방법으로 구축하기 위한 검증된 모범 사례 하이브리드 클라우드 아키텍처입니다. 이 NetApp 검증 아키텍처 참조 문서는 베어 메탈 및 가상 환경에 구축된 NetApp 솔루션 Anthos의 설계 가이드 및 구현 검증 역할을 합니다. 이 문서에 설명된 아키텍처는 NetApp 및 Google Cloud의 실무 전문가가 기업 데이터 센터 환경에서 Anthos를 실행할 때의 이점을 제공하도록 검증되었습니다.
 
 

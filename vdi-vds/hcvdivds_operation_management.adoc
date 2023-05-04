@@ -13,6 +13,7 @@ summary: NetApp VDS를 사용하면 관리자가 작업을 다른 사용자에�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp VDS를 사용하면 관리자가 작업을 다른 사용자에게 위임할 수 있습니다. 배포된 서버에 연결하여 문제를 해결하고, 로그를 보고, 감사 보고서를 실행할 수 있습니다. 고객 지원, 헬프데스크 또는 레벨 3 기술자는 사용자 세션을 섀도잉하고, 프로세스 목록을 보고, 필요한 경우 프로세스를 종료할 수 있습니다.
 
 VDS 로그 파일에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/virtual-desktop-service/guide_troubleshooting_failed_VDS_actions.html["실패한 VDA 작업 문제 해결 페이지"^].

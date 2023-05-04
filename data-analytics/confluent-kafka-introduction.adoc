@@ -15,6 +15,7 @@ summary: 이 문서에서는 NetApp 스토리지 컨트롤러에서 Kafka를 사
 
 Karthkeyan Nagalingam, Joseph Kandatillarambil, NetApp Rankesh Kumar, Confluent
 
+[role="lead"]
 Apache Kafka는 매일 수조 건의 이벤트를 처리할 수 있는 커뮤니티 분산 이벤트 스트리밍 플랫폼입니다. 처음에 메시징 큐로 구상된 Kafka는 분산 커밋 로그의 추상화를 기반으로 합니다. Kafka는 2011년 LinkedIn에서 제작 및 오픈 소스를 통해 메시지 큐에서 완전한 이벤트 스트리밍 플랫폼으로 발전했습니다. Confluent는 Apache Kafka를 Confluent Platform과 함께 배포할 수 있도록 합니다. Confluent Platform은 Kafka를 보완하는 추가적인 커뮤니티 및 상용 기능을 제공하여 대규모 생산 환경에서 운영자와 개발자 모두의 스트리밍 경험을 개선하도록 설계되었습니다.
 
 이 문서에서는 다음 내용을 제공하여 NetApp의 오브젝트 스토리지 제품에서 Confluent Tiered Storage를 사용하기 위한 모범 사례 지침을 설명합니다.

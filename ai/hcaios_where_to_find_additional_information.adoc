@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
 * cnvrg.io( https://cnvrg.io["https://cnvrg.io"^]):

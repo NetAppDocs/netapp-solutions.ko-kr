@@ -15,6 +15,7 @@ summary:
 
 David Arnette, NetApp Takashi Oishi, Fujitsu
 
+[role="lead"]
 이 솔루션은 NetApp 스토리지 시스템 및 Fujitsu 서버를 통해 인공 지능 시스템을 구축하는 스케일아웃 아키텍처에 중점을 둡니다. 이 솔루션은 Fujitsu GX2570 서버와 NetApp AFF A800 스토리지 시스템을 사용하는 MLperf v0.6 모델 교육 벤치마크에서 검증되었습니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/17215-tr4815.pdf["TR-4815: AI 및 ML 모델 훈련 워크로드용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5"^]

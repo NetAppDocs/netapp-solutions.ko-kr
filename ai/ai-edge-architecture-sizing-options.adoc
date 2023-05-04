@@ -15,6 +15,7 @@ summary: 다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 
 
 link:ai-edge-test-results.html["이전: 테스트 결과."]
 
+[role="lead"]
 다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 수 있습니다.
 
 

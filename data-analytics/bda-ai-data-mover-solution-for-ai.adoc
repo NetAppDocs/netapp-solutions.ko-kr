@@ -15,6 +15,7 @@ summary: AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처�
 
 link:bda-ai-data-mover-solution.html["이전: Data Mover 솔루션"]
 
+[role="lead"]
 AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처리해야 하는 고객의 요구사항을 기반으로 합니다. NetApp은 NIPAM을 사용하여 HDFS에서 NFS로 데이터를 이동합니다. 한 사용 사례에서 고객은 사내 NFS로 데이터를 이동해야 했고, 또 다른 고객은 클라우드의 GPU 클라우드 인스턴스에서 데이터를 처리하기 위해 Windows Azure Storage Blob에서 Cloud Volumes Service로 데이터를 이동해야 했습니다.
 
 다음 다이어그램에서는 Data Mover 솔루션 세부 정보를 보여 줍니다.

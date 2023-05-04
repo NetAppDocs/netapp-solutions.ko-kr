@@ -15,6 +15,7 @@ summary: 이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartS
 
 link:stgr-splunkss-splunk-architecture.html["이전: Splunk 아키텍처."]
 
+[role="lead"]
 이 섹션에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. Splunk SmartStore는 웜 데이터를 원격 스토리지로 이동합니다. 이 경우 성능 검증을 위한 StorageGRID 오브젝트 스토리지가 사용됩니다.
 
 image:stgr-splunkss-image10.png["오류: 그래픽 이미지가 없습니다"]

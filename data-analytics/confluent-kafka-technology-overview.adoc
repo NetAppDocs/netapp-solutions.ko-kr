@@ -15,6 +15,7 @@ summary: 이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명�
 
 link:confluent-kafka-solution.html["이전: 솔루션 아키텍처 세부 정보."]
 
+[role="lead"]
 이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명합니다.
 
 

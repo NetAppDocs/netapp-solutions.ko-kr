@@ -15,6 +15,7 @@ summary: '이 섹션에서는 이 백서의 초점을 구성하는 데이터 보
 
 link:hdcs-sh-hadoop-data-protection-and-netapp.html["이전: Hadoop 데이터 보호 및 NetApp"]
 
+[role="lead"]
 이 섹션에서는 이 백서의 초점을 구성하는 데이터 보호 활용 사례에 대해 자세히 설명합니다. 나머지 섹션에서는 고객 문제(시나리오), 요구 사항 및 당면 과제, 솔루션 등 각 사용 사례에 대한 자세한 정보를 제공합니다.
 
 
