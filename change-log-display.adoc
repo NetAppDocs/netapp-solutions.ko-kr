@@ -27,6 +27,9 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2023년 5월 5일 | 데이터베이스 | 새로운 TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server를 위한 백업 및 복구 
+
+
 | 2023년 5월 4일 | 포함되었습니다 | "VMware vSphere 8의 새로운 기능" 콘텐츠가 추가되었습니다 
 
 
@@ -518,6 +521,9 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 
 
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
+
+
+| 2023년 5월 5일 | 데이터베이스 | 새로운 TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server를 위한 백업 및 복구 
 
 
 | 2023년 3월 31일 | 데이터베이스 | iSCSI/ASM이 포함된 AWS FSx/EC2에 Oracle Database Deployment and Protection 추가 

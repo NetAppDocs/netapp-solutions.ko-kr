@@ -37,6 +37,8 @@ indexpage:
       url: "/sql-aws-ec2.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
       url: "/hybrid_dbops_snapcenter_usecases.html"
+    - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+      url: "/sqlsb-backup-and-restore-aws-fsxn.html"
   - title: 오픈 소스 데이터베이스
     links:
     - title: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구

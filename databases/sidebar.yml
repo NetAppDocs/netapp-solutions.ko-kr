@@ -81,6 +81,8 @@ entries:
       url: "/databases/sql-srv-anf_where_to_find_additional_information.html"
   - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
     url: "/databases/sql-aws-ec2.html"
+  - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+    url: "/databases/sqlsb-backup-and-restore-aws-fsxn.html"
   - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
     url: "/databases/tr-4467-link.html"
   - title: Microsoft SQL Server 현대화
