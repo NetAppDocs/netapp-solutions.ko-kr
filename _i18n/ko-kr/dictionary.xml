@@ -17448,7 +17448,6 @@
   <block id="11f86864c5928690c88625e77eb1a480" category="list-text">AWS EC2 콘솔에서 ONTAP 스토리지 HA 클러스터용 Amazon FSx를 구축하여 Oracle 데이터베이스 볼륨을 호스팅합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 <block ref="17d8b312d287f0afd6f44b3f25c4f20b" category="inline-link-macro-rx"></block> 을 참조하십시오.</block>
   <block id="dd303169f721e79331b3683ddafddcc1" category="list-text">2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다<block ref="460dc55b5ffb0266f2c889b06ee73344" prefix=" " category="inline-code"></block> 이라는 FSx 파일 시스템이 있습니다<block ref="8cbb7b3050d3c3aa08a529f429bc4555" prefix=" " category="inline-code"></block>. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오.</block>
   <block id="62ee860e3d0c08c6573d2e328543e8de" category="section-title">EC2 인스턴스 커널 구성</block>
-  <block id="39fb43106d288435c8737acd0c5b18ba" category="paragraph">사전 요구 사항이 용량 할당된 상태에서 EC2 인스턴스에 루트 사용자로 로그인하여 Oracle 설치를 위한 Linux 커널을 구성합니다.</block>
   <block id="5a8cdca62a149c76be848350ba5cbfd0" category="list-text">스테이징 디렉터리를 만듭니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 폴더를 지정하고 를 설정합니다<block ref="f1c1592588411002af340cbaedd6fc33" prefix=" " category="inline-code"></block> 권한.</block>
   <block id="e252f38e51fe6c121fdf68268f7365b7" category="list-text">Oracle 바이너리 설치 파일 및 기타 필요한 rpm 파일을 에 다운로드하고 스테이징합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리.</block>
   <block id="2463a0e4e0f5e0cae480165d25c3d218" category="paragraph">에 명시된 설치 파일의 다음 목록을 참조하십시오<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> EC2 인스턴스에서 선택합니다.</block>
@@ -17472,7 +17471,6 @@
   <block id="f7b4c2e912a168f005ed7cc2b4799c08" category="list-text">Oracle 사용자를 수정하여 ASM을 보조 그룹으로 추가합니다(Oracle 사용자는 Oracle 사전 설치 RPM 설치 후 생성되어야 함).</block>
   <block id="8d3a75a7cdef66372dcf58e6278bba70" category="list-text">EC2 인스턴스를 재부팅합니다.</block>
   <block id="64014fc61a9016f43a5537d6da141cc1" category="section-title">데이터베이스 볼륨 및 LUN을 EC2 인스턴스 호스트에 프로비저닝 및 매핑합니다</block>
-  <block id="44d3f8c485fe8f9d96289b7bb283f99c" category="paragraph">FSx 콘솔에서 Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅하도록 세 개의 볼륨을 프로비저닝합니다.</block>
   <block id="c848cfd9c04d86e7b9919e11add79f6c" category="list-text">SSH를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인합니다.</block>
   <block id="eff24d82c422927b06fd0cacd430b653" category="list-text">다음 명령을 실행하여 Oracle 바이너리에 대한 볼륨을 생성합니다.</block>
   <block id="569cffa50e6428a06bffa2e19d12e0e3" category="list-text">다음 명령을 실행하여 Oracle 데이터용 볼륨을 생성합니다.</block>
@@ -17486,7 +17484,6 @@
   <block id="3208f25d37711dd9ffc43d93ada2a3cc" category="paragraph">이 문제는 다음 항목을 반환해야 합니다.</block>
   <block id="35c1914e41e83f92dd8779f5708f3224" category="section-title">데이터베이스 스토리지 구성</block>
   <block id="47d78479fc855bd2f99f02fb94118789" category="paragraph">이제 EC2 인스턴스 호스트에서 Oracle 그리드 인프라 및 데이터베이스 설치를 위한 FSx 스토리지를 가져와서 설정합니다.</block>
-  <block id="d4d6ba977b18ebe6448e464802298bbf" category="list-text">EC2 사용자로 SSH를 통해 EC2 인스턴스에 로그인합니다. 그런 다음 SSH 키와 EC2 인스턴스 IP 주소로 변경합니다.</block>
   <block id="a7939166c08e8ac6da1530309825a401" category="list-text">SVM iSCSI IP 주소를 사용하여 FSx iSCSI 엔드포인트를 검색합니다. 그런 다음 환경별 포털 주소로 변경합니다.</block>
   <block id="1bc103d13645d8a07f4a05f2eee064f8" category="list-text">각 타겟에 로그인하여 iSCSI 세션을 설정합니다.</block>
   <block id="fc5113f60b8b0390133d7abda7290515" category="paragraph">명령의 예상 출력은 다음과 같습니다.</block>
@@ -17530,17 +17527,11 @@
   <block id="e4dae708382daa7f76913b9e5b686a1c" category="list-text">를 준비합니다<block ref="77d9f4d56c58834c8dacf6d0cb94e085" prefix=" " category="inline-code"></block> 자동 설치용 파일 및 RSP 파일을 에 배치합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리. RSP 파일은 다음 정보를 사용하여 섹션 A, B 및 G를 포함해야 합니다.</block>
   <block id="72eab9d7fc33889fd5bf6a85943c4e4a" category="list-text">EC2 인스턴스에 루트 사용자로 로그인하여 설정합니다<block ref="e1f651debac4f720c13ae930ff3ca14a" prefix=" " category="inline-code"></block> 및<block ref="456a3c82b7208b5c2a000597b1330564" prefix=" " category="inline-code"></block>.</block>
   <block id="d134d418859128801ec294cd10bcbd8e" category="list-text">Oracle ASM 필터 드라이버와 함께 사용할 디스크 디바이스를 프로비저닝합니다.</block>
-  <block id="8826276fbf00e07d49f72479d3b0da2b" category="list-text">장치 소유권을 로 변경합니다<block ref="ab3d4d3deefe8df93125b9c71378718c" prefix=" " category="inline-code"></block>.</block>
   <block id="3e6c5f0c8e9c1310879c66839bb0f8d5" category="list-text">설치합니다<block ref="a27b4e2b8f4a0b0419894dfeac36419e" prefix=" " category="inline-code"></block>.</block>
   <block id="cfdbf231484c64b98bc4f3569cd7b324" category="list-text">설정 해제<block ref="c0c2c8394b04a929ffc60091aa1f72ca" prefix=" " category="inline-code"></block>.</block>
   <block id="9817d9ff96af960709b8094b73294545" category="list-text">EC2 인스턴스에 Oracle 사용자로 로그인하여 에서 패치를 추출합니다<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 폴더.</block>
-  <block id="971a0a45b8dae69114b7ad2a60cb7f96" category="list-text">Oracle 사용자로 를 시작합니다<block ref="30c950549715985c6b7c7cd6990d0f4b" prefix=" " category="inline-code"></block> 그리드 인프라 설치용.</block>
   <block id="5de6732dda1e7bccbd8e8b367ad248dd" category="paragraph">그리드 인프라에 대해 잘못된 그룹에 대한 경고를 무시합니다. 단일 Oracle 사용자를 사용하여 Oracle Restart를 관리하고 있으므로 이 작업이 필요합니다.</block>
-  <block id="306b4d4b77c54aeb5cbfcd36749043f5" category="list-text">루트 사용자로 다음 스크립트를 실행합니다.</block>
   <block id="7dff0a250c79eafa071ee2d5713b7123" category="list-text">Oracle 사용자는 다음 명령을 실행하여 구성을 완료합니다.</block>
-  <block id="ecbea27c1b60fd5cd72a96184d8d2bef" category="list-text">"[INS-43080] 일부 구성 도우미가 실패했거나, 취소되었거나, 건너뛰었습니다" 메시지를 받은 경우 Oracle 사용자로 다음 명령을 실행하여 데이터 디스크 그룹 리소스가 생성되었는지 확인하십시오.</block>
-  <block id="02521e82deae97953ff19793ad44493b" category="list-text">데이터 디스크 그룹이 생성되지 않은 경우 multipathd를 루트 사용자로 다시 로드합니다.</block>
-  <block id="e8c5b866f6d35a070a878d3abb75cf8d" category="list-text">Oracle 사용자는 그리드 설치 중에 데이터 디스크 그룹이 생성되지 않은 경우 데이터 디스크 그룹을 생성합니다.</block>
   <block id="3f2a67de0c5824d878c62c0bc347e09b" category="list-text">Oracle 사용자로 로그 디스크 그룹을 생성합니다.</block>
   <block id="f71fbb7ff86224d636aac5f9bb42f27d" category="list-text">Oracle 사용자는 설치 구성 후 그리드 서비스를 검증합니다.</block>
   <block id="f9ba171dd47a8cef31bac8aa17eeb44d" category="list-text">Valiate ASM 필터 드라이버 상태입니다.</block>
@@ -17553,11 +17544,6 @@
   <block id="d86c0eec890e4216540c2b834f6339f5" category="list-text">DB 홈에서 수정한다<block ref="ef8657f0a0a00af93ba7f1c8885339ca" prefix=" " category="inline-code"></block>을 클릭합니다<block ref="bb7738211dd8eb3dbadf4cc63ae8eb8a" prefix=" " category="inline-code"></block> 와 함께<block ref="b2affc1a941fe7e5e65933911250249c" prefix=" " category="inline-code"></block>.</block>
   <block id="95233719931805924ded9cd671e036df" category="list-text">에서<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block> 디렉토리에서 DB 19.18 RU 패치의 포장을 풉니다.</block>
   <block id="0181cf4258f052eaf2d48f78cd4fed7b" category="list-text">에서 DB 자동 설치 RSP 파일을 준비합니다<block ref="2d9ffa0a3db25b02bcd0091245449764" prefix=" " category="inline-code"></block> 다음 값이 있는 디렉터리:</block>
-  <block id="0838265859443cbbcdfc0834fb13e402" category="list-text">소프트웨어 전용 DB 자동 설치 실행</block>
-  <block id="4c3b15e92dacacd38d6f1d3174ad1e9f" category="list-text">를 실행합니다<block ref="08030ad08b2b991d61b424afd8828758" prefix=" " category="inline-code"></block> 소프트웨어 전용 설치 후 스크립트.</block>
-  <block id="67bee4155203a684288d87caec62ca7e" category="list-text">를 생성합니다<block ref="c170c347c737b82ad62c48db1f7bff3c" prefix=" " category="inline-code"></block> 다음 항목이 있는 파일:</block>
-  <block id="6ffd5c1d97bca346a601eadabda25b0d" category="list-text">dbca를 사용하여 DB 생성을 시작합니다.</block>
-  <block id="0bdb291c3f45b8d3e9cd39da181febb1" category="list-text">DB 생성 후 Oracle Restart HA 서비스를 확인합니다.</block>
   <block id="05472424b7ce7bd118009f6cde3a0614" category="list-text">Oracle 사용자를 설정합니다<block ref="9e0037ad71166970bde5f910189cc94a" prefix=" " category="inline-code"></block>.</block>
   <block id="cadaa91ab9001028d3a153b4325f10a5" category="list-text">다음 항목 추가:</block>
   <block id="ab5f5bab123b3441fc9c838b46ff1150" category="list-text">생성된 CDB/PDB를 검증합니다.</block>
@@ -18388,4 +18374,17 @@
   <block id="3a20c678f6addcc9b8fec17f91c8cfa4" category="cell">2023년 5월 5일</block>
   <block id="957df08ed5fbb9ca926ca88b2c974f4f" category="cell">새로운 TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server를 위한 백업 및 복구</block>
   <block id="d5ae477fb23aecff7256445ae91344bc" category="sidebar">ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구</block>
+  <block id="0f7a8130eb652cd33a4fa9cdefc41cc6" category="admonition">Oracle 설치 파일을 스테이징할 충분한 공간을 확보하기 위해 EC2 인스턴스 루트 볼륨에 50G 이상을 할당했는지 확인합니다.</block>
+  <block id="f352a88dccea452ec98375dda0311257" category="paragraph">사전 요구 사항이 용량 할당된 상태에서 EC2 인스턴스에 EC2-USER 및 sudo로 로그인하여 Oracle 설치를 위한 Linux 커널을 구성합니다.</block>
+  <block id="35e176617d52dd956b8015d8ca19c32d" category="paragraph">FSx 클러스터 관리 IP를 사용하여 ssh를 통해 FSx 클러스터에 로그인하여 Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅하여 명령줄에서 세 개의 볼륨을 프로비저닝합니다.</block>
+  <block id="aa218771b85a8ecc41cc249ba90ea5f8" category="list-text">SSH 키와 EC2 인스턴스 IP 주소를 사용하여 SSH를 통해 EC2 사용자로 EC2 인스턴스에 로그인합니다.</block>
+  <block id="71d434c6aec8c195bc1cd610cf2aadf7" category="list-text">EC2 인스턴스 호스트를 재부팅합니다.</block>
+  <block id="5fa683f35265bf7469d9de8c3afc1f42" category="list-text">그리드 홈 /u01/app/oracle/product/19.0.0/GRID에서 Oracle 사용자로 를 실행합니다<block ref="30c950549715985c6b7c7cd6990d0f4b" prefix=" " category="inline-code"></block> 그리드 인프라 설치용.</block>
+  <block id="26f36488ec442bab2ba0cda087d435eb" category="list-text">루트 사용자로 다음 스크립트를 실행합니다.</block>
+  <block id="ada113db66e2b1b6ed982918830cd12e" category="list-text">루트 사용자로 multipathd를 다시 로드합니다.</block>
+  <block id="bdae34f2df30f19488bd87890188b905" category="list-text">db1 home/u01/app/oracle/product/19.0.0/db1에서 자동 소프트웨어 전용 DB 설치를 실행합니다.</block>
+  <block id="f9db0d5335309d4958e09e8149d7de4d" category="list-text">루트 사용자로 를 실행합니다<block ref="08030ad08b2b991d61b424afd8828758" prefix=" " category="inline-code"></block> 소프트웨어 전용 설치 후 스크립트.</block>
+  <block id="2bba715ff3b85da75ce86da55f5d9173" category="list-text">Oracle 사용자로 을 생성합니다<block ref="c170c347c737b82ad62c48db1f7bff3c" prefix=" " category="inline-code"></block> 다음 항목이 있는 파일:</block>
+  <block id="c96739fe831515243fc940e9ee867ea3" category="list-text">Oracle 사용자로 dbca를 사용하여 DB 생성을 시작합니다.</block>
+  <block id="2a00dbe4c39e81805212ab123d0995df" category="list-text">Oracle 사용자로서 DB 생성 후 Oracle Restart HA 서비스를 확인합니다.</block>
 </blocks>
