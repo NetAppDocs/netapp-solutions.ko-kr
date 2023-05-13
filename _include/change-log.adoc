@@ -32,24 +32,6 @@
 | 2023년 5월 4일 | 포함되었습니다 | "VMware vSphere 8의 새로운 기능" 콘텐츠가 추가되었습니다 
 
 
-| 2023-02-07-02 | 하이브리드 클라우드 | TR-4955 추가: ANF(Azure NetApp Files) 및 AVS(Azure VMware Solution)를 통한 재해 복구 
-
-
-| 2023년 5월 5일 | 데이터베이스 | 새로운 TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server를 위한 백업 및 복구 
-
-
-| 2023년 5월 4일 | 포함되었습니다 | "VMware vSphere 8의 새로운 기능" 콘텐츠가 추가되었습니다 
-
-
-| 2023-02-07-02 | 하이브리드 클라우드 | TR-4955 추가: ANF(Azure NetApp Files) 및 AVS(Azure VMware Solution)를 통한 재해 복구 
-
-
-| 2023년 5월 5일 | 데이터베이스 | 새로운 TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server를 위한 백업 및 복구 
-
-
-| 2023년 5월 4일 | 포함되었습니다 | "VMware vSphere 8의 새로운 기능" 콘텐츠가 추가되었습니다 
-
-
 | 2023년 4월 27일 | 하이브리드 클라우드 | ONTAP용 AWS FSx를 사용하여 VMware Cloud에 Veeam 백업 및 복원 기능이 추가되었습니다 
 
 

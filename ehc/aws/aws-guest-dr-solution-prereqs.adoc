@@ -695,7 +695,7 @@ Veeam Backup & Replication 서버를 AWS의 VMware Cloud 또는 EC2 인스턴스
 =====
 FSx ONTAP에 미러링된 응용 프로그램 데이터를 복원하려면 먼저 온-프레미스 SnapCenter 데이터베이스의 전체 복원을 수행해야 합니다. 이 프로세스가 완료되면 VM과의 통신이 다시 설정되고 FSx ONTAP를 기본 스토리지로 사용하여 응용 프로그램 백업을 다시 시작할 수 있습니다.
 
-AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 link:aws-guest-dr-solution-overview.html#deploy-secondary-snapcenter["보조 Windows SnapCenter 서버를 배포합니다"].
+AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 link:aws-guest-dr-solution-overview#deploy-secondary-snapcenter["보조 Windows SnapCenter 서버를 배포합니다"].
 
 =====
 .Veeam Backup & amp; 복제 구성
