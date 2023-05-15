@@ -18489,5 +18489,5 @@
   <block id="8c649830ad367719c501f8fc9ba4d387" category="inline-link-macro">자세한 지침을 보려면 여기를 클릭하십시오</block>
   <block id="d2068521e0b773365643b7537a1caa7f" category="list-text">Ansible 제어 호스트로 사용할 수 있도록 Linux 호스트를 구성합니다<block ref="27248a019dbeee842c240071693b6fb8" category="inline-link-macro-rx"></block></block>
   <block id="8ac2da66fa1da7b6cb74292caea13c74" category="sidebar">Azure NetApp Files 및 AVS를 통한 재해 복구(DRO</block>
-  <block id="e803c7623578d344ea73942638292dd7" category="paragraph">AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 <block ref="ca85f0dca2a53221dac110ce9ee032e6" category="inline-link-macro-rx"></block>.</block>
+  <block id="52463fc86a53e3e78c2a77069889838f" category="paragraph">AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 <block ref="1d252dd870179a0ef2258cd4837b106d" category="inline-link-macro-rx"></block>.</block>
 </blocks>
