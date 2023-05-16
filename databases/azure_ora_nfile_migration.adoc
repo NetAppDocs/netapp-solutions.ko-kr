@@ -87,9 +87,21 @@ NOTE: 호스트에 공간이 충분하지 않으면 를 참조하십시오 `NOCO
 [source, cli]
 ----
 sqlplus / as sysdba;
-alter session set container=ncdb
+----
++
+[source, cli]
+----
+alter session set container=ncdb;
+----
++
+[source, cli]
+----
 alter pluggable database open upgrade;
 exit;
+----
++
+[source, cli]
+----
 dbupgrade -c ncdb -l /home/oracle
 ----
 +
@@ -100,8 +112,16 @@ dbupgrade -c ncdb -l /home/oracle
 [source, cli]
 ----
 alter pluggable database ncdb open;
+----
++
+[source, cli]
+----
 alter session set container=ncdb;
 select message from pdb_plug_in_violations where type like '%ERR%' and status <> 'RESOLVED';
+----
++
+[source, cli]
+----
 $ORACLE_HOME/perl/bin/perl $ORACLE_HOME/rdbms/admin/catcon.pl -n 1 -c 'ncdb' -e -b utlrp -d $ORACLE_HOME/rdbms/admin utlrp.sql
 ----
 . 실행 `noncdb_to_pdb.sql` 데이터 사전을 업데이트합니다.
@@ -109,6 +129,10 @@ $ORACLE_HOME/perl/bin/perl $ORACLE_HOME/rdbms/admin/catcon.pl -n 1 -c 'ncdb' -e 
 [source, cli]
 ----
 sqlplus / as sysdba
+----
++
+[source, cli]
+----
 alter session set container=ncdb;
 @$ORACLE_HOME/rdbms/admin/noncdb_to_pdb.sql;
 ----
@@ -155,11 +179,10 @@ NOTE: admin 사용자는 sudo 권한이 있는 온-프레미스 Oracle 서버 �
 ----
 ansible-playbook -i hosts ora_pdb_relocate.yml -u azureuser --private-key db1.pem -t ora_pdb_relo_primary
 ----
-+
+
+
 
 NOTE: Ansible 컨트롤러는 사내 또는 Azure 클라우드에 위치할 수 있습니다. 이 컨트롤러는 사내 Oracle 서버 호스트 및 Azure Oracle VM 호스트에 연결해야 합니다. Oracle 데이터베이스 포트(예: 1521)는 사내 Oracle 서버 호스트와 Azure Oracle VM 호스트 간에 열려 있습니다.
-
-
 
 
 
