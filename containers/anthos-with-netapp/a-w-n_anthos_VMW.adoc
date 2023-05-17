@@ -40,7 +40,7 @@ VMware의 Anthos 클러스터는 다음과 같은 이점을 제공합니다.
 
 VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 가상 서버 및 네트워크를 중앙에서 관리하기 위한 가상화 플랫폼입니다.
 
-VMware vSphere에 대한 자세한 내용은 를 참조하십시오 https://www.vmware.com/products/vsphere.html["VMware vSphere 웹 사이트"^].
+VMware vSphere에 대한 자세한 내용은 를 참조하십시오 https://["VMware vSphere 웹 사이트"^].
 
 VMware vSphere는 다음과 같은 기능을 제공합니다.
 
@@ -58,7 +58,7 @@ VMware vSphere는 다음과 같은 기능을 제공합니다.
 
 === 컴퓨팅
 
-Google Cloud는 Anthos Ready 플랫폼 파트너 프로그램을 통해 Anthos의 새로운 릴리스로 파트너 서버 플랫폼의 업데이트된 검증을 주기적으로 요청합니다. 현재 검증된 서버 플랫폼 목록과 지원되는 Anthos 버전을 확인할 수 있습니다 https://cloud.google.com/anthos/docs/resources/partner-platforms["여기"^].
+Google Cloud는 Anthos Ready 플랫폼 파트너 프로그램을 통해 Anthos의 새로운 릴리스로 파트너 서버 플랫폼의 업데이트된 검증을 주기적으로 요청합니다. 현재 검증된 서버 플랫폼 목록과 지원되는 Anthos 버전을 확인할 수 있습니다 https://["여기"^].
 
 
 
@@ -151,7 +151,7 @@ Anthos를 배포하기 전에 다음과 같은 인프라를 구축해야 합니�
 
 선호도 그룹을 구성하려면 아래에서 사용 중인 VMware vSphere 버전에 해당하는 링크를 참조하십시오.
 
-https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-FF28F29C-8B67-4EFF-A2EF-63B3537E6934.html["vSphere 6.7 설명서: DRS 선호도 규칙 사용"^].https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-FF28F29C-8B67-4EFF-A2EF-63B3537E6934.html["vSphere 7.0 설명서: DRS 선호도 규칙 사용"^].
+https://["vSphere 6.7 설명서: DRS 선호도 규칙 사용"^].https://["vSphere 7.0 설명서: DRS 선호도 규칙 사용"^].
 
 
 NOTE: Anthos는 각 개별 'cluster.yAML' 파일에 구성 옵션을 사용하여 사용자 환경의 ESXi 호스트 수에 따라 활성화 또는 비활성화할 수 있는 노드 선호도 규칙을 자동으로 생성합니다.

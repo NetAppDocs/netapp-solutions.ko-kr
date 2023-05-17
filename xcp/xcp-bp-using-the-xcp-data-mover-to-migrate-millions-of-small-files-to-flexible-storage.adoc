@@ -22,6 +22,6 @@ link:xcp-bp-high-performance-computing-to-ontap-nfs.html["이전: ONTAP NFS에 �
 
 image:xcp-bp_image31.png["오류: 그래픽 이미지가 없습니다"]
 
-자세한 내용은 를 참조하십시오 https://blog.netapp.com/XCP-cloud-data-migration["NetApp XCP Data Mover 솔루션: 사내에서 클라우드로"^] 블로그:
+자세한 내용은 를 참조하십시오 https://["NetApp XCP Data Mover 솔루션: 사내에서 클라우드로"^] 블로그:
 
 link:xcp-bp-using-the-xcp-data-mover-to-migrate-large-files.html["다음으로 xCP Data Mover를 사용하여 대용량 파일을 마이그레이션합니다."]

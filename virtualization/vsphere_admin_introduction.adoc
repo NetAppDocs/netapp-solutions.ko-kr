@@ -31,7 +31,7 @@ NetApp은 가상화 환경 관리와 관련된 고유한 당면 과제를 해결
 
 지원되는 NetApp 및 VMware 솔루션에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* https://mysupport.netapp.com/matrix/#welcome["NetApp 상호 운용성 매트릭스 툴"^] (IMT). IMT에는 FC/FCoE, iSCSI, NFS 및 CIFS 구성을 구축하는 데 사용할 수 있는 검증된 구성 요소와 버전이 정의되어 있습니다.
-* https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware 호환성 가이드 를 참조하십시오"^]. VMware 호환성 가이드 에는 VMware Infrastructure 및 소프트웨어 제품과의 시스템, I/O, 스토리지/SAN 및 백업 호환성 목록이 나와 있습니다
-* https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/["VMware용 NetApp ONTAP 툴"^]. VMware vSphere용 ONTAP 툴은 VSC, VASA 공급자, SRA(스토리지 복제 어댑터) 확장을 포함한 단일 vCenter Server 플러그인입니다.
+* https://["NetApp 상호 운용성 매트릭스 툴"^] (IMT). IMT에는 FC/FCoE, iSCSI, NFS 및 CIFS 구성을 구축하는 데 사용할 수 있는 검증된 구성 요소와 버전이 정의되어 있습니다.
+* https://["VMware 호환성 가이드 를 참조하십시오"^]. VMware 호환성 가이드 에는 VMware Infrastructure 및 소프트웨어 제품과의 시스템, I/O, 스토리지/SAN 및 백업 호환성 목록이 나와 있습니다
+* https://["VMware용 NetApp ONTAP 툴"^]. VMware vSphere용 ONTAP 툴은 VSC, VASA 공급자, SRA(스토리지 복제 어댑터) 확장을 포함한 단일 vCenter Server 플러그인입니다.
 

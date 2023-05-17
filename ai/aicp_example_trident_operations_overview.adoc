@@ -22,9 +22,9 @@ summary: Trident 작업의 예
 
 Kubernetes 클러스터 내의 컨테이너에 마운트할 NetApp 스토리지 시스템/플랫폼에 기존 볼륨이 있지만, 클러스터의 PVC와 연결되지 않은 경우 이러한 볼륨을 가져와야 합니다. Trident 볼륨 가져오기 기능을 사용하여 이러한 볼륨을 가져올 수 있습니다.
 
-다음 예제 명령은 섹션의 예에서 생성된 각 Trident 백엔드에 대해 동일한 볼륨("PB_FG_ALL"이라는 이름)을 두 번 가져오는 것을 보여 줍니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"], 1단계. 같은 볼륨을 이러한 방식으로 두 번 가져오면 섹션에 설명된 대로 여러 LIF에서 볼륨(기존 FlexGroup 볼륨)을 여러 번 마운트할 수 있습니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"], 1단계. PVC에 대한 자세한 내용은 를 참조하십시오 https://kubernetes.io/docs/concepts/storage/persistent-volumes/["Kubernetes 공식 문서"^]. 볼륨 가져오기 기능에 대한 자세한 내용은 를 참조하십시오 https://netapp-trident.readthedocs.io/["Trident 문서"^].
+다음 예제 명령은 섹션의 예에서 생성된 각 Trident 백엔드에 대해 동일한 볼륨("PB_FG_ALL"이라는 이름)을 두 번 가져오는 것을 보여 줍니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"], 1단계. 같은 볼륨을 이러한 방식으로 두 번 가져오면 섹션에 설명된 대로 여러 LIF에서 볼륨(기존 FlexGroup 볼륨)을 여러 번 마운트할 수 있습니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"], 1단계. PVC에 대한 자세한 내용은 를 참조하십시오 https://["Kubernetes 공식 문서"^]. 볼륨 가져오기 기능에 대한 자세한 내용은 를 참조하십시오 https://["Trident 문서"^].
 
-예제 PVC 규격 파일에는 'ReadOnlyMany'의 'accessModes' 값이 지정되어 있습니다. 'accessMode' 필드에 대한 자세한 내용은 를 참조하십시오 https://kubernetes.io/docs/concepts/storage/persistent-volumes/["Kubernetes 공식 문서"^].
+예제 PVC 규격 파일에는 'ReadOnlyMany'의 'accessModes' 값이 지정되어 있습니다. 'accessMode' 필드에 대한 자세한 내용은 를 참조하십시오 https://["Kubernetes 공식 문서"^].
 
 
 NOTE: 다음 가져오기 명령에 지정된 백엔드 이름은 섹션의 예제에서 생성한 백엔드에 해당합니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"], 1단계. 다음 예제 PVC 정의 파일에 지정된 StorageClass 이름은 섹션의 예제에서 만든 StorageClasses에 해당합니다 link:aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html["ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예"], 1단계.
@@ -82,7 +82,7 @@ pb-fg-all-iface2     Bound    default-pb-fg-all-iface2-85aee     10995116277760 
 
 Trident를 사용하여 NetApp 스토리지 시스템 또는 플랫폼에서 새 볼륨을 프로비저닝할 수 있습니다. 다음 명령 예에서는 새 FlexVol 볼륨의 프로비저닝을 보여 줍니다. 이 예제에서는 섹션의 예제에서 만든 StorageClass 를 사용하여 볼륨을 프로비저닝합니다 link:aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html["ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예"], 2단계.
 
-다음 PVC 정의 파일에는 ReadWriteMany 의 accessModes 값이 지정되어 있습니다. 'accessMode' 필드에 대한 자세한 내용은 를 참조하십시오 https://kubernetes.io/docs/concepts/storage/persistent-volumes/["Kubernetes 공식 문서"^].
+다음 PVC 정의 파일에는 ReadWriteMany 의 accessModes 값이 지정되어 있습니다. 'accessMode' 필드에 대한 자세한 내용은 를 참조하십시오 https://["Kubernetes 공식 문서"^].
 
 ....
 $ cat << EOF > ./pvc-tensorflow-results.yaml

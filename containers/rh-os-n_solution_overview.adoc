@@ -57,7 +57,7 @@ NetApp OpenShift의 경우 NetApp 솔루션은 다음과 같은 주요 구성요
 
 Red Hat OpenShift Container Platform은 완전히 지원되는 엔터프라이즈 Kubernetes 플랫폼입니다. Red Hat은 컨테이너화된 애플리케이션을 구축, 배포 및 관리하기 위해 모든 구성 요소가 완벽하게 통합된 애플리케이션 플랫폼을 제공하기 위해 오픈 소스 Kubernetes를 몇 가지 개선하였습니다.
 
-자세한 내용은 OpenShift 웹 사이트를 참조하십시오 https://www.openshift.com["여기"].
+자세한 내용은 OpenShift 웹 사이트를 참조하십시오 https://["여기"].
 
 
 
@@ -65,7 +65,7 @@ Red Hat OpenShift Container Platform은 완전히 지원되는 엔터프라이�
 
 NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
 
-자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://["여기"].
 
 
 
@@ -73,11 +73,11 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되어 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.
 
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://["여기"].
 
 Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://["여기"].
 
 
 

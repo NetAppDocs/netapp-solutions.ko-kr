@@ -73,6 +73,8 @@ entries:
       url: "/ehc/azure/azure-native-dr-jetstream.html"
     - title: ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구
       url: "/ehc/azure/azure-guest-dr-cvo.html"
+    - title: Azure NetApp Files 및 AVS를 통한 재해 복구(DRO
+      url: "/ehc/dro/azure-dro-overview.html"
   - title: 워크로드를 마이그레이션 중입니다
     entries:
     - title: VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다

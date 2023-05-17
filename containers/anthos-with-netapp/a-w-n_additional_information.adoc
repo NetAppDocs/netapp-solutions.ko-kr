@@ -18,26 +18,26 @@ summary:
 
 * NetApp 문서
 +
-https://docs.netapp.com/["https://docs.netapp.com/"^]
+https://["https://docs.netapp.com/"^]
 
 * NetApp Astra Trident 문서
 +
-https://docs.netapp.com/us-en/trident/index.html["https://docs.netapp.com/us-en/trident/index.html"]
+https://["https://docs.netapp.com/us-en/trident/index.html"]
 
 * NetApp Astra Control Center 문서
 +
-https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
+https://["https://docs.netapp.com/us-en/astra-control-center/"^]
 
 * VMware 문서의 Anthos 클러스터
 +
-https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview["https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview"^]
+https://["https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview"^]
 
 * Anthos의 Bare Metal Documentation
 +
-https://cloud.google.com/anthos/clusters/docs/bare-metal/latest["https://cloud.google.com/anthos/clusters/docs/bare-metal/latest"]
+https://["https://cloud.google.com/anthos/clusters/docs/bare-metal/latest"]
 
 * VMware vSphere 설명서
 +
-https://docs.vmware.com["https://docs.vmware.com/"^]
+https://["https://docs.vmware.com/"^]
 
 

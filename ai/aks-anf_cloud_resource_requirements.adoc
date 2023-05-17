@@ -19,13 +19,13 @@ link:aks-anf_software_requirements.html["이전: 소프트웨어 요구 사항."
 
 == Azure NetApp Files를 구성합니다
 
-에 설명된 대로 Azure NetApp Files를 구성합니다 https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal["QuickStart: Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다"^].
+에 설명된 대로 Azure NetApp Files를 구성합니다 https://["QuickStart: Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다"^].
 
 Trident를 통해 볼륨을 생성하므로 "Azure NetApp Files용 NFS 볼륨 생성" 섹션을 계속 진행할 수 있습니다. 계속하기 전에 다음 단계를 완료하십시오.
 
-. Azure Shell을 통해 Azure NetApp Files 및 NetApp 리소스 공급자 에 등록( https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-register["링크"^])를 클릭합니다.
-. Azure NetApp Files( https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["링크"^])를 클릭합니다.
-. 용량 풀 설정(필요에 따라 최소 4TB Standard 또는 Premium)( https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["링크"^]). 다음 표에는 클라우드에서 설정을 위한 네트워크 구성 요구 사항이 나와 있습니다. Dask 클러스터와 Azure NetApp Files는 동일한 Azure VNet(Virtual Network) 또는 피어링된 VNET에 있어야 합니다.
+. Azure Shell을 통해 Azure NetApp Files 및 NetApp 리소스 공급자 에 등록( https://["링크"^])를 클릭합니다.
+. Azure NetApp Files( https://["링크"^])를 클릭합니다.
+. 용량 풀 설정(필요에 따라 최소 4TB Standard 또는 Premium)( https://["링크"^]). 다음 표에는 클라우드에서 설정을 위한 네트워크 구성 요구 사항이 나와 있습니다. Dask 클러스터와 Azure NetApp Files는 동일한 Azure VNet(Virtual Network) 또는 피어링된 VNET에 있어야 합니다.
 
 
 |===

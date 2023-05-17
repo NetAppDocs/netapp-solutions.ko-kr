@@ -37,7 +37,7 @@ image:mlrun_image3.png["오류: 그래픽 이미지가 없습니다"]
 
 == NetApp AI Control Plane
 
-NetApp AI Control Plane을 사용하면 최고의 확장성, 간소화된 구축, 무중단 데이터 가용성을 제공하는 솔루션을 통해 AI 및 ML을 활용할 수 있습니다. AI Control Plane 솔루션은 Kubernetes 및 Kubeflow를 NetApp 구현 Data Fabric과 통합합니다. 클라우드 네이티브 구현을 위한 업계 표준 컨테이너 오케스트레이션 플랫폼인 Kubernetes는 워크로드 확장성 및 이동성을 지원합니다. Kubeflow는 관리 및 구현을 간소화하여 개발자가 더 많은 데이터 과학을 더 빠르게 수행할 수 있도록 지원하는 오픈 소스 머신 러닝 플랫폼입니다. NetApp 구현 Data Fabric은 최고의 데이터 가용성 및 이동성을 제공하여 에지, 코어, 클라우드에 이르는 파이프라인 전반에서 데이터에 액세스할 수 있도록 합니다. 이 기술 보고서에서는 MLRun 파이프라인에서 NetApp AI Control Plane을 사용합니다. 다음 이미지는 각 클러스터에 대해 서로 다른 엔드포인트를 가질 수 있는 Kubernetes 클러스터 관리 페이지를 보여줍니다. NFS 영구 볼륨을 Kubernetes 클러스터에 연결했고 다음 이미지에는 클러스터에 연결된 영구 볼륨이 표시됩니다. 여기서 https://www.netapp.com/us/media/ds-netapp-project-trident.pdf["NetApp 트라이던트"^] 영구 스토리지 지원 및 데이터 관리 기능을 제공합니다.
+NetApp AI Control Plane을 사용하면 최고의 확장성, 간소화된 구축, 무중단 데이터 가용성을 제공하는 솔루션을 통해 AI 및 ML을 활용할 수 있습니다. AI Control Plane 솔루션은 Kubernetes 및 Kubeflow를 NetApp 구현 Data Fabric과 통합합니다. 클라우드 네이티브 구현을 위한 업계 표준 컨테이너 오케스트레이션 플랫폼인 Kubernetes는 워크로드 확장성 및 이동성을 지원합니다. Kubeflow는 관리 및 구현을 간소화하여 개발자가 더 많은 데이터 과학을 더 빠르게 수행할 수 있도록 지원하는 오픈 소스 머신 러닝 플랫폼입니다. NetApp 구현 Data Fabric은 최고의 데이터 가용성 및 이동성을 제공하여 에지, 코어, 클라우드에 이르는 파이프라인 전반에서 데이터에 액세스할 수 있도록 합니다. 이 기술 보고서에서는 MLRun 파이프라인에서 NetApp AI Control Plane을 사용합니다. 다음 이미지는 각 클러스터에 대해 서로 다른 엔드포인트를 가질 수 있는 Kubernetes 클러스터 관리 페이지를 보여줍니다. NFS 영구 볼륨을 Kubernetes 클러스터에 연결했고 다음 이미지에는 클러스터에 연결된 영구 볼륨이 표시됩니다. 여기서 https://["NetApp 트라이던트"^] 영구 스토리지 지원 및 데이터 관리 기능을 제공합니다.
 
 image:mlrun_image4.png["오류: 그래픽 이미지가 없습니다"]
 

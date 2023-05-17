@@ -22,6 +22,6 @@ Kubernetes용 Red Hat Advanced Cluster Management는 Red Hat OpenShift 클러스
 
 image::redhat_openshift_image65.jpg[ACM 아키텍처]
 
-자세한 내용은 설명서를 참조하십시오 https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/["여기"].
+자세한 내용은 설명서를 참조하십시오 https://["여기"].
 
 link:rh-os-n_use_case_advanced_cluster_management_deployment_prerequisites.html["다음: 배포 전제 조건."]

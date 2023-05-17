@@ -101,7 +101,7 @@ image:ai-edge-image7.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-NOTE: 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/19339-DS-4082.pdf["NetApp EF-Series NetApp EF-Series All-Flash 어레이 EF600, F300, EF570, EF280 데이터시트"^].
+NOTE: 자세한 내용은 를 참조하십시오 https://["NetApp EF-Series NetApp EF-Series All-Flash 어레이 EF600, F300, EF570, EF280 데이터시트"^].
 
 
 
@@ -147,7 +147,7 @@ ONTAP 9은 다음과 같은 기능을 통해 지속적으로 변화하는 까다
 
 == NetApp SANtricity를 참조하십시오
 
-NetApp SANtricity는 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이에 업계 최고의 성능, 안정성, 단순성을 제공하도록 설계되었습니다. 데이터 분석, 비디오 감시, 백업 및 복구 등 워크로드가 많은 애플리케이션에서 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이의 성능과 활용률을 극대화합니다. SANtricity를 사용하면 스토리지를 온라인 상태로 유지하면서 구성 조정, 유지 관리, 용량 확장 및 기타 작업을 완료할 수 있습니다. 또한 SANtricity는 사용하기 쉬운 온박스형 시스템 관리자 인터페이스를 통해 뛰어난 데이터 보호, 사전 예방 모니터링 및 인증 보안을 제공합니다. 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/7676-ds-3891.pdf["NetApp E-Series SANtricity 소프트웨어 데이터시트 를 참조하십시오"^].
+NetApp SANtricity는 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이에 업계 최고의 성능, 안정성, 단순성을 제공하도록 설계되었습니다. 데이터 분석, 비디오 감시, 백업 및 복구 등 워크로드가 많은 애플리케이션에서 E-Series 하이브리드 플래시 및 EF-Series All-Flash 어레이의 성능과 활용률을 극대화합니다. SANtricity를 사용하면 스토리지를 온라인 상태로 유지하면서 구성 조정, 유지 관리, 용량 확장 및 기타 작업을 완료할 수 있습니다. 또한 SANtricity는 사용하기 쉬운 온박스형 시스템 관리자 인터페이스를 통해 뛰어난 데이터 보호, 사전 예방 모니터링 및 인증 보안을 제공합니다. 자세한 내용은 를 참조하십시오 https://["NetApp E-Series SANtricity 소프트웨어 데이터시트 를 참조하십시오"^].
 
 
 
@@ -171,13 +171,13 @@ SANtricity 소프트웨어는 사용이 간편한 온박스형 시스템 관리�
 
 == NetApp 트라이던트
 
-https://netapp.io/persistent-storage-provisioner-for-kubernetes/["트라이던트"^] NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(예: ML 개발자 및 데이터 과학자)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 NetApp 고급 데이터 관리 기능을 활용할 수 있습니다.
+https://["트라이던트"^] NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(예: ML 개발자 및 데이터 과학자)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 NetApp 고급 데이터 관리 기능을 활용할 수 있습니다.
 
 
 
 == NetApp Cloud Sync를 참조하십시오
 
-https://docs.netapp.com/us-en/occm/concept_cloud_sync.html["Cloud Sync"^] 는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, Amazon S3(Amazon Simple Storage Service), Amazon Elastic File System(Amazon EFS), Azure Blob, Google Cloud Storage 간에 파일을 전송해야 하는 경우 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync를 사용하면 파일을 필요한 곳으로 빠르고 안전하게 이동할 수 있습니다. 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 미리 정의된 일정에 따라 데이터를 지속적으로 동기화하여 변경된 부분만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다. Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software as a Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. AWS, Azure, Google Cloud Platform 또는 온프레미스에서 Cloud Sync 데이터 브로커를 구축할 수 있습니다.
+https://["Cloud Sync"^] 는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, Amazon S3(Amazon Simple Storage Service), Amazon Elastic File System(Amazon EFS), Azure Blob, Google Cloud Storage 간에 파일을 전송해야 하는 경우 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync를 사용하면 파일을 필요한 곳으로 빠르고 안전하게 이동할 수 있습니다. 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 미리 정의된 일정에 따라 데이터를 지속적으로 동기화하여 변경된 부분만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다. Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software as a Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. AWS, Azure, Google Cloud Platform 또는 온프레미스에서 Cloud Sync 데이터 브로커를 구축할 수 있습니다.
 
 
 
@@ -210,7 +210,7 @@ image:ai-edge-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 ==== MLPerf
 
-MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입니다. 여기에는 영상 분류, 물체 감지, 의료 영상 및 NLP(자연어 처리)를 비롯한 다양한 적용 AI 영역을 다룹니다. 이 검증에서는 이 검증이 완료될 때 MLPerf 추론의 최신 반복인 Inference v0.7 워크로드를 사용했습니다. 를 클릭합니다 https://mlcommons.org/en/news/mlperf-inference-v07/["MLPerf Inference v0.7"^] 데이터 센터 및 에지 시스템을 위한 새로운 벤치마크 4개가 포함된 제품군:
+MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입니다. 여기에는 영상 분류, 물체 감지, 의료 영상 및 NLP(자연어 처리)를 비롯한 다양한 적용 AI 영역을 다룹니다. 이 검증에서는 이 검증이 완료될 때 MLPerf 추론의 최신 반복인 Inference v0.7 워크로드를 사용했습니다. 를 클릭합니다 https://["MLPerf Inference v0.7"^] 데이터 센터 및 에지 시스템을 위한 새로운 벤치마크 4개가 포함된 제품군:
 
 * * BERT. * Transformers(BERT)의 양방향 Encoder Representation은 Squad 데이터 세트를 사용하여 질문 답변에 맞게 미세 조정되었습니다.
 * * DLRM. * DLRM(Deep Learning Recommendation Model)은 CTR(Click-Through Rates)을 최적화하도록 교육받은 개인 설정 및 권장 모델입니다.
@@ -221,6 +221,6 @@ MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입�
 * * Offline. * 배치 처리 응용 프로그램을 다루는 가장 간단한 시나리오이며 메트릭은 초당 샘플 처리량입니다. 모든 데이터를 시스템에서 사용할 수 있으며 벤치마크는 모든 샘플을 처리하는 데 걸리는 시간을 측정합니다.
 
 
-Lenovo는 이 문서에 사용된 서버인 T4가 포함된 SE350에 대한 MLPerf Inference 점수를 게시했습니다. 의 결과를 참조하십시오 https://mlperf.org/inference-results-0-7/["https://mlperf.org/inference-results-0-7/"] 입력 #0.7-145의 "Edge, Closed Division" 섹션에 있습니다.
+Lenovo는 이 문서에 사용된 서버인 T4가 포함된 SE350에 대한 MLPerf Inference 점수를 게시했습니다. 의 결과를 참조하십시오 https://["https://mlperf.org/inference-results-0-7/"] 입력 #0.7-145의 "Edge, Closed Division" 섹션에 있습니다.
 
 link:ai-edge-test-plan.html["다음: 테스트 계획."]

@@ -16,6 +16,9 @@ keywords: Oracle, Azure, database, backup, restore
 
 link:azure_ora_nfile_procedures.html["이전: 배포 절차."]
 
+[role="lead"]
+저자: Allen Cao, NetApp 솔루션 엔지니어링
+
 
 
 == AzAcSnap 툴을 사용하여 Oracle 데이터베이스를 스냅샷으로 백업합니다
@@ -55,8 +58,13 @@ cd /home/azacsnap/bin
 . ~/.bash_profile
 azacsnap -c backup --volume other --prefix acao-ora01-log --retention 250
 ----
-crontab 일정: 15,30,45 * * * * * * /home/azacsnap/snap_log.sh 0 * /2 * * * /home/azacsnap/snap_data.sh
+crontab 일정:
 
+[listing]
+----
+15,30,45 * * * * /home/azacsnap/snap_log.sh
+0 */2 * * * /home/azacsnap/snap_data.sh
+----
 
 NOTE: 백업 설정 시 `azacsnap.json` 구성 파일, 바이너리 볼륨을 포함한 모든 데이터 볼륨을 에 추가합니다 `dataVolume` 및 모든 로그 볼륨을 에 `otherVolume`. 스냅샷의 최대 보존은 250개입니다.
 
@@ -81,42 +89,40 @@ image:db_ora_azure_anf_snap_02.PNG["이 스크린샷은 스냅샷 목록에 있�
 
 다음 예에서는 동일한 Oracle 호스트의 Azure 대시보드 및 CLI에서 Oracle 데이터베이스를 복원 및 복구하는 방법을 보여 줍니다.
 
-. 복원할 데이터베이스에 테스트 테이블을 만듭니다. [oracao-ora01~]$sqlplus/as sysdba
-+
-SQL* Plus: 릴리즈 19.0.0.0.0 - 운영 날짜: 월 12:02:35 2022 버전 19.8.0.0.0
-
-+
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
-
-+
-연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
-
-+
-sql> 테이블 testsnapshot(id integer, event varchar(100), dt timestamp) 생성
-
-+
-테이블이 생성되었습니다.
-
-+
-sql> testsnapshot 값에 삽입(1, '스냅샷 복원을 검증하기 위한 데이터 마커 삽입', sysdate)
-
-+
-1개의 행이 생성되었습니다.
-
-+
-sql > 커밋;
-
-+
-커밋이 완료되었습니다.
-
-+
-sql > testsnapshot에서 * 선택;
-
-+
- ID
+. 복원할 데이터베이스에 테스트 테이블을 만듭니다.
 +
 [listing]
 ----
+[oracle@acao-ora01 ~]$ sqlplus / as sysdba
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Sep 12 19:02:35 2022
+Version 19.8.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
+
+SQL> create table testsnapshot(
+     id integer,
+     event varchar(100),
+     dt timestamp);
+
+Table created.
+
+SQL> insert into testsnapshot values(1,'insert a data marker to validate snapshot restore',sysdate);
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from testsnapshot;
+
+ ID
+----------
 EVENT
 --------------------------------------------------------------------------------
 DT
@@ -127,29 +133,38 @@ insert a data marker to validate snapshot restore
 ----
 . 스냅샷 백업 후에 테이블을 삭제합니다.
 +
-[oracao-ora01~]$sqlplus/as sysdba
+[listing]
+----
+[oracle@acao-ora01 ~]$ sqlplus / as sysdba
 
-+
-SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 14:20:22 2022 버전 19.8.0.0.0
+SQL*Plus: Release 19.0.0.0.0 - Production on Tue Sep 13 14:20:22 2022
+Version 19.8.0.0.0
 
-+
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
 
-+
-연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
 
-+
-sql > drop table testsnapshot;
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
 
-+
-테이블이 떨어졌습니다.
+SQL> drop table testsnapshot;
 
-+
-sql> testsnapshot에서 * 를 선택합니다. testsnapshot * 오류에서 * 를 선택합니다. 1: ORA-00942: 테이블 또는 뷰가 없습니다
+Table dropped.
 
-+
-sql> shutdown immediate; Database closed. (즉시 종료 데이터베이스가 마운트 해제되었습니다. Oracle 인스턴스가 종료되었습니다. SQL> 종료와 Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0의 연결이 끊겼습니다
+SQL> select * from testsnapshot;
+select * from testsnapshot
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
 
+SQL> shutdown immediate;
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+SQL> exit
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
+----
 . Azure NetApp Files 대시보드에서 로그 볼륨을 마지막으로 사용 가능한 스냅샷으로 복구합니다. 볼륨 되돌리기 * 를 선택합니다.
 +
 image:db_ora_azure_anf_restore_01.PNG["이 스크린샷은 ANF 대시보드의 볼륨에 대한 스냅샷 재버전의 방법을 보여 줍니다."]
@@ -168,59 +183,80 @@ image:db_ora_azure_anf_restore_04.PNG["\"이 작업을 수행하시겠습니까?
 
 . 컨트롤 파일의 복제본이 여러 개 있는 경우 컨트롤 파일을 다시 동기화하고 이전 컨트롤 파일을 사용 가능한 최신 복제본으로 대체합니다.
 +
-[Oracle@acao-ora01~]$mv/u02/oradata/ORATST/control01.ctl/u02/oradata/ORATST/control01.ctl[Oracle@acao-ora01~]$cp/u03/orareco/ORATactl/controltl/acutl.tl/attrl/a02
-
+[listing]
+----
+[oracle@acao-ora01 ~]$ mv /u02/oradata/ORATST/control01.ctl /u02/oradata/ORATST/control01.ctl.bk
+[oracle@acao-ora01 ~]$ cp /u03/orareco/ORATST/control02.ctl /u02/oradata/ORATST/control01.ctl
+----
 . Oracle 서버 VM에 로그인하고 sqlplus를 사용하여 데이터베이스 복구를 실행합니다.
-+
-[oracao-ora01~]$sqlplus/as sysdba
-
-+
-SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 15:10:17 2022 버전 19.8.0.0.0
-
-+
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
-
-+
-유휴 인스턴스에 연결되었습니다.
-
-+
-sql> 시작 마운트; Oracle 인스턴스가 시작되었습니다.
-
-+
-전체 시스템 전역 영역 6442448984바이트 고정 크기 8910936바이트 가변 크기 1090519040바이트 데이터베이스 버퍼 5335154688바이트 다시 실행 버퍼 7864320바이트 데이터베이스가 마운트됨 sql> 취소할 때까지 백업 제어 파일을 사용하여 데이터베이스 복구; ORA-00279: 변경 3188523 스레드 1에 대해 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/09_13/O1_mf_1_43_22rnj280 스레드 시퀀스에 대해 3188523
-
-+
-로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
-
-+
-ORA-00279: change 3188862가 2022-09:09:13 스레드 1에 대해 생성됨 10:01:20 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_44_29f2lgb5_.arc_318280.torg.torg.log에서 더 이상 복구: /318928.torg.torg.2c.1c.2c.turg.2c.318-0028
-
-+
-로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
-
-+
-ORA-00279: change 3193117이 스레드 1에 대해 생성되었습니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_45__29h6qyw_.arc.00280.arc.org에서 더 이상 복구 필요.3800_3708.torg.torg.0_211_3708.torg.wa_3708.torg.tnd.wa_2nd.wa_2nd.toto.toto.toto.toto.toto.toto_3119에 대한 /3119에 대한 /u03_celo.w
-
-+
-로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL}
-
-+
-Ora-00279: change 3193440이 2022-09에서 생성되었습니다. 12:01:20이 스레드 1에 필요합니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_46_%u_.arc ORA-00280: ORT445.RECOG.RECONO.THE_OVERYOVERYOMEO/O.45.A/TRACEMORA/TRACER.0.A/OVERYA/OTRACE.A.A.A.0.A/OVERYA/O.01.A/OTRACULLOG에 대해 더 긴 파일 필요.0.A/O.01_
-
-+
-로그 지정: {<RET>=Sugested|FileName|Auto|CANCEL} 미디어 복구가 취소되었습니다. sql > alter database open resetlogs;
-
-+
-데이터베이스가 변경되었습니다.
-
-+
-sql > testsnapshot에서 * 선택;
-
-+
- ID
 +
 [listing]
 ----
+[oracle@acao-ora01 ~]$ sqlplus / as sysdba
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Tue Sep 13 15:10:17 2022
+Version 19.8.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Connected to an idle instance.
+
+SQL> startup mount;
+ORACLE instance started.
+
+Total System Global Area 6442448984 bytes
+Fixed Size                  8910936 bytes
+Variable Size            1090519040 bytes
+Database Buffers         5335154688 bytes
+Redo Buffers                7864320 bytes
+Database mounted.
+SQL> recover database using backup controlfile until cancel;
+ORA-00279: change 3188523 generated at 09/13/2022 10:00:09 needed for thread 1
+ORA-00289: suggestion :
+/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_43__22rnjq9q_.arc
+ORA-00280: change 3188523 for thread 1 is in sequence #43
+
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+
+ORA-00279: change 3188862 generated at 09/13/2022 10:01:20 needed for thread 1
+ORA-00289: suggestion :
+/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_44__29f2lgb5_.arc
+ORA-00280: change 3188862 for thread 1 is in sequence #44
+ORA-00278: log file
+'/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_43__22rnjq9q_.arc' no longer
+needed for this recovery
+
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+
+ORA-00279: change 3193117 generated at 09/13/2022 12:00:08 needed for thread 1
+ORA-00289: suggestion :
+/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_45__29h6qqyw_.arc
+ORA-00280: change 3193117 for thread 1 is in sequence #45
+ORA-00278: log file
+'/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_44__29f2lgb5_.arc' no longer
+needed for this recovery
+
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+
+ORA-00279: change 3193440 generated at 09/13/2022 12:01:20 needed for thread 1
+ORA-00289: suggestion :
+/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_46_%u_.arc
+ORA-00280: change 3193440 for thread 1 is in sequence #46
+ORA-00278: log file
+'/u03/orareco/ORATST/archivelog/2022_09_13/o1_mf_1_45__29h6qqyw_.arc' no longer
+needed for this recovery
+
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+cancel
+Media recovery cancelled.
+SQL> alter database open resetlogs;
+
+Database altered.
+
+SQL> select * from testsnapshot;
+
+  ID
+----------
 EVENT
 --------------------------------------------------------------------------------
 DT
@@ -228,7 +264,6 @@ DT
          1
 insert a data marker to validate snapshot restore
 12-SEP-22 07.07.35.000000 PM
-
 
 SQL> select systimestamp from dual;
 

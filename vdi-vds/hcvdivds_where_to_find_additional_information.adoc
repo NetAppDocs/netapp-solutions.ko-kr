@@ -16,10 +16,10 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* https://cloud.netapp.com/home["NetApp 클라우드"]
-* https://docs.netapp.com/us-en/virtual-desktop-service/index.html["NetApp VDS 제품 설명서"]
-* https://docs.microsoft.com/en-us/learn/modules/connect-on-premises-network-with-vpn-gateway/["VPN 게이트웨이를 사용하여 온프레미스 네트워크를 Azure에 연결합니다"]
-* https://portal.azure.com/["Azure 포털"]
-* https://azure.microsoft.com/en-us/services/virtual-desktop/["Microsoft Windows 가상 데스크톱"]
-* https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-register?WT.mc_id=Portal-Microsoft_Azure_NetApp["Azure NetApp Files 등록"]
+* https://["NetApp 클라우드"]
+* https://["NetApp VDS 제품 설명서"]
+* https://["VPN 게이트웨이를 사용하여 온프레미스 네트워크를 Azure에 연결합니다"]
+* https://["Azure 포털"]
+* https://["Microsoft Windows 가상 데스크톱"]
+* https://["Azure NetApp Files 등록"]
 

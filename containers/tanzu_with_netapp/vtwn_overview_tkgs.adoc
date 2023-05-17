@@ -21,7 +21,7 @@ image::vtwn_image03.png[VMware Tanzu Kubernetes 서비스]
 
 Tanzu Kubernetes Grid Service에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html["여기"^].
 
-기능 세트, 네트워킹 등과 관련하여 많은 아키텍처 고려사항이 있습니다. 선택한 아키텍처에 따라 Tanzu Kubernetes Grid Service의 사전 요구사항과 구축 프로세스가 다릅니다. 사용자 환경에 Tanzu Kubernetes Grid Service를 구축 및 구성하려면 가이드를 따르십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-74EC2571-4352-4E15-838E-5F56C8C68D15.html["여기"^]. 또한 TKGS를 통해 구축된 Tanzu Kubernetes 클러스터 노드에 로그인하려면 이 절차에 따르십시오 https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-37DC1DF2-119B-4E9E-8CA6-C194F39DDEDA.html["링크"^].
+기능 세트, 네트워킹 등과 관련하여 많은 아키텍처 고려사항이 있습니다. 선택한 아키텍처에 따라 Tanzu Kubernetes Grid Service의 사전 요구사항과 구축 프로세스가 다릅니다. 사용자 환경에 Tanzu Kubernetes Grid Service를 구축 및 구성하려면 가이드를 따르십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-74EC2571-4352-4E15-838E-5F56C8C68D15.html["여기"^]. 또한 TKGS를 통해 구축된 Tanzu Kubernetes 클러스터 노드에 로그인하려면 이 절차에 따르십시오 https://["링크"^].
 
 NetApp은 원하는 워크로드 요구사항을 충족하기 위해 작업자 노드의 구성을 선택하여 내결함성을 지원하기 위해 모든 운영 환경을 다중 마스터 구축에 구축할 것을 권장합니다. 따라서 사용량이 많은 워크로드에 권장되는 VM 클래스에는 최소 4개의 vCPU와 12GB RAM이 있습니다.
 

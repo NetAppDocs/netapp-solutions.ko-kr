@@ -25,7 +25,7 @@ NOTE: F5 BIG-IP 시스템은 전용 하드웨어, 클라우드 또는 12.x 이�
 
 == 검증된 릴리즈
 
-이 솔루션은 VMware vSphere에 구축된 가상 어플라이언스를 사용합니다. F5 Big-IP 가상 어플라이언스에 대한 네트워킹은 네트워크 환경에 따라 2개 또는 3개 설정 구성으로 구성할 수 있습니다. 이 문서의 배포는 두 가지 설정 구성을 기반으로 합니다. Anthos에서 사용할 가상 어플라이언스 구성에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/solutions/partners/installing-f5-big-ip-adc-for-gke-on-prem["여기"].
+이 솔루션은 VMware vSphere에 구축된 가상 어플라이언스를 사용합니다. F5 Big-IP 가상 어플라이언스에 대한 네트워킹은 네트워크 환경에 따라 2개 또는 3개 설정 구성으로 구성할 수 있습니다. 이 문서의 배포는 두 가지 설정 구성을 기반으로 합니다. Anthos에서 사용할 가상 어플라이언스 구성에 대한 자세한 내용은 을 참조하십시오 https://["여기"].
 
 NetApp의 솔루션 엔지니어링 팀은 당사 랩의 다음 표에 있는 릴리스가 사내 Anthos의 배포와 연동되어 작동되고 있다는 것을 검증했습니다.
 
@@ -46,7 +46,7 @@ NetApp의 솔루션 엔지니어링 팀은 당사 랩의 다음 표에 있는 �
 
 F5 BIG-IP를 설치하려면 다음 단계를 수행하십시오.
 
-. F5에서 가상 응용 프로그램 OVA(Open Virtual Appliance) 파일을 다운로드합니다 https://downloads.f5.com/esd/serveDownload.jsp?path=/big-ip/big-ip_v15.x/15.0.1/english/virtual-edition/&sw=BIG-IP&pro=big-ip_v15.x&ver=15.0.1&container=Virtual-Edition&file=BIGIP-15.0.1-0.0.11.ALL-vmware.ova["여기"].
+. F5에서 가상 응용 프로그램 OVA(Open Virtual Appliance) 파일을 다운로드합니다 https://["여기"].
 +
 
 NOTE: 어플라이언스를 다운로드하려면 F5 키를 등록해야 합니다. 빅 IP Virtual Edition 로드 밸런서에 대한 30일 데모 라이센스를 제공합니다. 어플라이언스 배포에는 영구적인 10Gbps 라이센스를 사용하는 것이 좋습니다.

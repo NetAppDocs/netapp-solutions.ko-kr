@@ -16,7 +16,7 @@ summary: 이 페이지에서는 기본 작업 스트림 대시보드를 사용�
 link:aks-anf_load_day_15_in_dask_and_train_a_dask_cuml_random_forest_model.html["이전: Dask에서 Day 15를 로드하여 Dask cuML 무작위 포리스트 모델을 교육합니다."]
 
 [role="lead"]
-를 클릭합니다 https://docs.dask.org/en/latest/scheduling.html["Dask 분산 스케줄러입니다"^] 다음과 같은 두 가지 형태로 실시간 피드백을 제공합니다.
+를 클릭합니다 https://["Dask 분산 스케줄러입니다"^] 다음과 같은 두 가지 형태로 실시간 피드백을 제공합니다.
 
 * 실시간 정보가 포함된 여러 플롯과 테이블이 포함된 대화형 대시보드
 * 콘솔 또는 노트북에서 대화형 사용에 적합한 진행률 표시줄

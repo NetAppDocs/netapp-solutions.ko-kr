@@ -22,7 +22,7 @@ Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 보호할 
 
 == 안전한 아키텍처 및 테넌시 모델
 
-Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관리(컨트롤 플레인)와 데이터 액세스(데이터 플레인)를 세분화하여 Google Cloud의 보안 아키텍처를 제공하므로 다른 엔드포인트에 영향을 미치지 않습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html["“Cloud Volumes Service 아키텍처”"])를 클릭합니다. Google을 사용합니다 https://cloud.google.com/vpc/docs/private-services-access?hl=en_US["프라이빗 서비스 액세스"^] (PSA) 프레임워크를 사용하여 서비스를 제공합니다. 이 프레임워크는 NetApp에서 제공하고 운영하는 서비스 생산자와 고객 프로젝트에서 VPC(가상 프라이빗 클라우드)인 서비스 소비자 간의 차이를 구별하며, Cloud Volumes Service 파일 공유에 액세스할 클라이언트를 호스팅합니다.
+Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관리(컨트롤 플레인)와 데이터 액세스(데이터 플레인)를 세분화하여 Google Cloud의 보안 아키텍처를 제공하므로 다른 엔드포인트에 영향을 미치지 않습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html["“Cloud Volumes Service 아키텍처”"])를 클릭합니다. Google을 사용합니다 https://["프라이빗 서비스 액세스"^] (PSA) 프레임워크를 사용하여 서비스를 제공합니다. 이 프레임워크는 NetApp에서 제공하고 운영하는 서비스 생산자와 고객 프로젝트에서 VPC(가상 프라이빗 클라우드)인 서비스 소비자 간의 차이를 구별하며, Cloud Volumes Service 파일 공유에 액세스할 클라이언트를 호스팅합니다.
 
 이 아키텍처에서 테넌트는 섹션을 참조하십시오 link:ncvs-gc-cloud-volumes-service-architecture.html#tenancy-model[""임차 모델""])는 사용자가 명시적으로 연결하지 않는 한 서로 완전히 격리된 Google Cloud 프로젝트로 정의됩니다. 테넌트를 통해 Cloud Volumes Service 볼륨 플랫폼을 사용하는 다른 테넌트에서 데이터 볼륨, 외부 이름 서비스 및 기타 필수 요소를 완벽하게 격리할 수 있습니다. Cloud Volumes Service 플랫폼은 VPC 피어링을 통해 연결되므로 이러한 격리가 적용됩니다. 공유 VPC를 사용하여 여러 프로젝트 간에 Cloud Volumes Service 볼륨을 공유할 수 있습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html#tenancy-model#shared-vpcs["“공유 VPC”"])를 클릭합니다. SMB 공유 및 NFS 내보내기에 액세스 제어를 적용하여 데이터 세트를 보거나 수정할 수 있는 사용자 또는 항목을 제한할 수 있습니다.
 
@@ -30,7 +30,7 @@ Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관�
 
 == 컨트롤 플레인을 위한 강력한 ID 관리
 
-Cloud Volumes Service 구성이 수행되는 컨트롤 플레인에서 을 사용하여 ID 관리를 관리합니다 https://cloud.google.com/iam/docs/overview["IAM(Identity Access Management)"^]. IAM은 Google Cloud 프로젝트 인스턴스에 대한 인증(로그인) 및 권한 부여(권한)를 제어할 수 있는 표준 서비스입니다. 모든 구성은 TLS 1.2 암호화를 사용하는 보안 HTTPS 전송을 통해 Cloud Volumes Service API로 수행되며, 보안을 강화하기 위해 JWT 토큰을 사용하여 인증이 수행됩니다. Cloud Volumes Service용 Google 콘솔 UI는 사용자 입력을 Cloud Volumes Service API 호출로 변환합니다.
+Cloud Volumes Service 구성이 수행되는 컨트롤 플레인에서 을 사용하여 ID 관리를 관리합니다 https://["IAM(Identity Access Management)"^]. IAM은 Google Cloud 프로젝트 인스턴스에 대한 인증(로그인) 및 권한 부여(권한)를 제어할 수 있는 표준 서비스입니다. 모든 구성은 TLS 1.2 암호화를 사용하는 보안 HTTPS 전송을 통해 Cloud Volumes Service API로 수행되며, 보안을 강화하기 위해 JWT 토큰을 사용하여 인증이 수행됩니다. Cloud Volumes Service용 Google 콘솔 UI는 사용자 입력을 Cloud Volumes Service API 호출로 변환합니다.
 
 
 

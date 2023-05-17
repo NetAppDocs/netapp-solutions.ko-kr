@@ -16,6 +16,6 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* VMware 제품 설명서https://www.vmware.com/support/pubs/["https://www.vmware.com/support/pubs/"^]
-* NetApp 제품 설명서https://docs.netapp.com["https://docs.netapp.com"^]
+* VMware 제품 설명서https://["https://www.vmware.com/support/pubs/"^]
+* NetApp 제품 설명서https://["https://docs.netapp.com"^]
 

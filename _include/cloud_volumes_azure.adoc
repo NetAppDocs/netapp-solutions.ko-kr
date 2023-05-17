@@ -9,7 +9,7 @@
 .Azure에서 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -127,7 +127,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 .Azure에서 데이터 보호를 사용하여 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 데이터 보호를 사용하여 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -281,7 +281,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 .Azure에서 이중 프로토콜을 사용하는 ANF 볼륨 배포를 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 이중 프로토콜이 활성화된 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -411,7 +411,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 .Azure의 Snapshot에서 ANF 볼륨을 배포하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure의 스냅샷에서 ANF(Azure NetApp Files) 볼륨을 배포/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -530,7 +530,7 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 .Azure에서 단일 노드 CVO를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 Cloud Volumes ONTAP(단일 노드 CVO)를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -627,7 +627,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 | az_connector_associate_public_ip_address * | 문자열 | (필수) 공용 IP 주소를 가상 머신에 연결할지 여부를 나타냅니다. 
 
 
-| az_connector_account_id * | 문자열 | (필수) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+| az_connector_account_id * | 문자열 | (필수) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
 
 
 | az_connector_admin_password * | 문자열 | (필수) 커넥터 암호. 
@@ -660,7 +660,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 | az_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
 
 
-| az_cvo_workspace_id * | 문자열 | (필수) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
+| az_cvo_workspace_id * | 문자열 | (필수) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://[]. 
 
 
 | az_cvo_capacity_tier * | 문자열 | (필수) 첫 번째 데이터 애그리게이트에 대해 데이터 계층화를 사용할 것인지 여부: ['Blob', 'none'] 기본값은 BLOB입니다. 
@@ -695,7 +695,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 .Azure에서 CVO HA를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 Azure에서 CVO(Cloud Volumes ONTAP) HA(고가용성)를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
+Terraform 문서: https://[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -792,7 +792,7 @@ HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수
 | az_connector_associate_public_ip_address * | 문자열 | (필수) 공용 IP 주소를 가상 머신에 연결할지 여부를 나타냅니다. 
 
 
-| az_connector_account_id * | 문자열 | (필수) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
+| az_connector_account_id * | 문자열 | (필수) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
 
 
 | az_connector_admin_password * | 문자열 | (필수) 커넥터 암호. 
@@ -825,7 +825,7 @@ HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수
 | az_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
 
 
-| az_cvo_workspace_id * | 문자열 | (필수) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
+| az_cvo_workspace_id * | 문자열 | (필수) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://[]. 
 
 
 | az_cvo_capacity_tier * | 문자열 | (필수) 첫 번째 데이터 애그리게이트에 대해 데이터 계층화를 사용할 것인지 여부: ['Blob', 'none'] 기본값은 BLOB입니다. 

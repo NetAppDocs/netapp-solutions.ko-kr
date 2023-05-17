@@ -26,11 +26,11 @@ link:cdm-fod-data-duality-for-data-scientists-and-other-applications.html["이�
 
 * SageMaker BlazingText를 사용한 텍스트 분류
 +
-https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/blazingtext_text_classification_dbpedia/blazingtext_text_classification_dbpedia.html["https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/blazingtext_text_classification_dbpedia/blazingtext_text_classification_dbpedia.html"^]
+https://["https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/blazingtext_text_classification_dbpedia/blazingtext_text_classification_dbpedia.html"^]
 
 * S3 오브젝트 스토리지를 위한 ONTAP 버전 지원
 +
-https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html["https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html"^]
+https://["https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html"^]
 
 
 

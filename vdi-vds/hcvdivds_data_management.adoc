@@ -9,7 +9,7 @@ summary: 배포의 일부로 파일 서비스 방법을 선택하여 사용자 �
 
 
 [role="lead"]
-배포의 일부로 파일 서비스 방법을 선택하여 사용자 프로필, 공유 데이터 및 홈 드라이브 폴더를 호스팅할 수 있습니다. 사용 가능한 옵션은 파일 서버, Azure 파일 또는 Azure NetApp Files입니다. 그러나 배포 후에는 Command Center 툴을 사용하여 SMB 공유를 가리키도록 이 선택 사항을 수정할 수 있습니다. link:hcvdivds_why_ontap.html["NetApp ONTAP을 사용하여 호스팅하면 여러 가지 이점이 있습니다"]. SMB 공유를 변경하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/virtual-desktop-service/Architectural.change_data_layer.html["데이터 계층 변경"^].
+배포의 일부로 파일 서비스 방법을 선택하여 사용자 프로필, 공유 데이터 및 홈 드라이브 폴더를 호스팅할 수 있습니다. 사용 가능한 옵션은 파일 서버, Azure 파일 또는 Azure NetApp Files입니다. 그러나 배포 후에는 Command Center 툴을 사용하여 SMB 공유를 가리키도록 이 선택 사항을 수정할 수 있습니다. link:hcvdivds_why_ontap.html["NetApp ONTAP을 사용하여 호스팅하면 여러 가지 이점이 있습니다"]. SMB 공유를 변경하는 방법에 대한 자세한 내용은 을 참조하십시오 https://["데이터 계층 변경"^].
 
 
 
@@ -26,7 +26,7 @@ image:hcvdivds_image13.png["오류: 그래픽 이미지가 없습니다"]
 * 데이터를 캐시할 디스크 용량이 충분한 에지
 
 
-소프트웨어를 다운로드하고 Edge의 디스크 캐시 용량을 계산하려면 을 참조하십시오 https://docs.netapp.com/us-en/occm/download_gfc_resources.html#download-required-resources["GFC 설명서"^].
+소프트웨어를 다운로드하고 Edge의 디스크 캐시 용량을 계산하려면 을 참조하십시오 https://["GFC 설명서"^].
 
 검증을 위해 NetApp HCI의 에지 리소스와 Azure의 동일한 VM에 핵심 및 관리 리소스를 배포했습니다. 코어는 대용량 데이터 액세스가 필요하고 에지는 코어의 서브셋이라는 점에 유의하십시오. 소프트웨어를 설치한 후 사용하기 전에 활성화된 라이센스를 활성화해야 합니다. 이렇게 하려면 다음 단계를 완료하십시오.
 
@@ -34,7 +34,7 @@ image:hcvdivds_image13.png["오류: 그래픽 이미지가 없습니다"]
 +
 image:hcvdivds_image27.png["오류: 그래픽 이미지가 없습니다"]
 
-. 글로벌 파일 캐시에 사용할 서비스 계정을 제공합니다. 이 계정에 필요한 사용 권한은 를 참조하십시오 https://docs.netapp.com/us-en/occm/download_gfc_resources.html#download-required-resources["GFC 설명서"^].
+. 글로벌 파일 캐시에 사용할 서비스 계정을 제공합니다. 이 계정에 필요한 사용 권한은 를 참조하십시오 https://["GFC 설명서"^].
 +
 image:hcvdivds_image28.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -74,7 +74,7 @@ image:hcvdivds_image35.png["오류: 그래픽 이미지가 없습니다"]
 
 image:hcvdivds_image36.png["오류: 그래픽 이미지가 없습니다"]
 
-자세한 내용은 다음을 참조하십시오 https://www.youtube.com/watch?v=91LKb1qsLIM["Talon 및 Azure NetApp Files 배포에 대한 비디오"^].
+자세한 내용은 다음을 참조하십시오 https://["Talon 및 Azure NetApp Files 배포에 대한 비디오"^].
 
 
 
@@ -84,8 +84,8 @@ NetApp VDS는 Exchange, SharePoint 및 Microsoft OneDrive를 포함하여 Salesf
 
 image:hcvdivds_image14.png["오류: 그래픽 이미지가 없습니다"]
 
-Microsoft Office 365 데이터 보호 데모를 보려면 을 참조하십시오 https://www.youtube.com/watch?v=MRPBSu8RaC0&ab_channel=NetApp["이 비디오"^].
+Microsoft Office 365 데이터 보호 데모를 보려면 을 참조하십시오 https://["이 비디오"^].
 
-Salesforce 데이터 보호 데모를 보려면 를 참조하십시오 https://www.youtube.com/watch?v=1j1l3Qwo9nw&ab_channel=NetApp["이 비디오"^].
+Salesforce 데이터 보호 데모를 보려면 를 참조하십시오 https://["이 비디오"^].
 
 link:hcvdivds_operation_management.html["다음: 작업 관리"]

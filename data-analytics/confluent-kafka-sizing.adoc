@@ -136,6 +136,6 @@ Apache Kafka의 데이터를 사용하고 Apache Kafka로 다시 생성하지 �
 * * Apache ZooKeeper. * Count:5; Apache Kafka Connect 작업자: Count:2; Schema Registry: Count:2; REST Proxy: Count:2; ksqlDB:Count:2; Confluorent Control Center: Count:1.
 
 
-사용 사례를 염두에 두고 플랫폼 팀에 리버스 모드를 사용합니다. 파티션 모드를 사용하여 단일 항목에 필요한 파티션 수를 계산합니다. 을 참조하십시오 https://eventsizer.io[] 역 및 파티션 모드에 따른 크기 조정.
+사용 사례를 염두에 두고 플랫폼 팀에 리버스 모드를 사용합니다. 파티션 모드를 사용하여 단일 항목에 필요한 파티션 수를 계산합니다. 을 참조하십시오 https://[] 역 및 파티션 모드에 따른 크기 조정.
 
 link:confluent-kafka-conclusion.html["다음: 결론."]

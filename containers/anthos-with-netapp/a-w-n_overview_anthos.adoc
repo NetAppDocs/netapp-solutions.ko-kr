@@ -22,7 +22,7 @@ NetApp의 Anthos는 온프레미스 GKE(Google Kubernetes Engine) 환경을 안�
 
 Anthos는 조직이 최신 하이브리드 클라우드 인프라를 구축 및 관리하는 동시에 애플리케이션 개발에 중점을 둔 민첩한 워크플로우를 채택할 수 있는 하이브리드 클라우드 Kubernetes 데이터 센터 솔루션입니다. 오픈 소스 기술을 기반으로 구축된 솔루션인 VMware의 Anthos는 Google Cloud의 Anthos GKE와 연결 및 상호 운용이 가능한 VMware vSphere 기반 인프라에서 온-프레미스로 실행됩니다. 컨테이너, 서비스 메시 및 기타 혁신적인 기술을 채택하는 조직은 로컬 및 클라우드 기반 환경에서 일관된 애플리케이션 개발 사이클과 운영 지원 워크로드를 경험할 수 있습니다. 다음 그림은 Anthos 솔루션과 사내 데이터 센터 내의 배포가 클라우드의 인프라와 상호 연결하는 방법을 보여 줍니다.
 
-Anthos에 대한 자세한 내용은 Anthos 웹 사이트를 참조하십시오 https://cloud.google.com/anthos["여기"^].
+Anthos에 대한 자세한 내용은 Anthos 웹 사이트를 참조하십시오 https://["여기"^].
 
 Anthos는 다음과 같은 기능을 제공합니다.
 

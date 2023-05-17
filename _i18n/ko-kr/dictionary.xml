@@ -3913,9 +3913,6 @@
   <block id="def8ebf26c2dec5f6af5a00893fae037" category="paragraph">이 솔루션은 AWX/Tower 환경 또는 Ansible 제어 호스트의 CLI에서 실행되도록 설계되었습니다.</block>
   <block id="8ca0a52cf9938328875e0a8803ae71dd" category="list-text">작업 템플릿은 ONTAP_config, Linux_config 및 Oracle_config에 대한 태그를 지정하여 3단계로 실행됩니다.</block>
   <block id="da3d0d670ace8a327170aa25ee29f272" category="section-title">Ansible 제어 호스트를 통해 CLI</block>
-  <block id="6a5f01bc22c397ee84e04e48c178e980" category="inline-link-macro">RHEL 7/8 또는 CentOS 7/8 에 대해서는 여기를 클릭하십시오</block>
-  <block id="7946c3996884ee105962c5334bfd9fef" category="inline-link-macro">Ubuntu/Debian의 경우 여기를 참조하십시오</block>
-  <block id="f5344fe4d88d29ee79ba6110f60cfa9b" category="list-text">Ansible 제어 호스트로 사용할 수 있도록 Linux 호스트를 구성합니다<block ref="8688caf90b0dc445f61be35cbf93ed1a" category="inline-link-macro-rx"></block>, 또는<block ref="2b00e81c1e240a58c4df0e850699511b" category="inline-link-macro-rx"></block></block>
   <block id="28e934ddab7714830f8afe8d3b641dc9" category="list-text">Ansible 제어 호스트를 구성한 후 Ansible 자동화 저장소를 클론 복제할 수 있습니다.</block>
   <block id="f667be8dac02593d217a02ac5bfb18de" category="list-text">ONTAP 클러스터 관리 및 Oracle 서버 관리 IP의 IP 및/또는 호스트 이름으로 hosts 파일을 편집합니다.</block>
   <block id="95bd15e6b4a109de659c54c331c06284" category="list-text">해당 환경에 맞는 변수를 작성하고 복사하여 VAR.yml 파일에 붙여 넣습니다.</block>
@@ -6870,7 +6867,6 @@
   <block id="7d71ba8ea6767ea10d7cd61cbd787f89" category="inline-link">디스크 공간 자동 증가 기능 페이지</block>
   <block id="abf872062b9eb23bdf6d671c27508d96" category="paragraph">VM 디스크 크기를 자동으로 늘리려면 를 참조하십시오<block ref="627eb07506141f4255cfbedd7fe89646" category="inline-link-rx"></block>.</block>
   <block id="cc6d8546c611bac5ab11fa1a5948ac1d" category="inline-link">최종 사용자 요구 사항 페이지</block>
-  <block id="e148ddcb2ae92c77834ae7f48df04786" category="paragraph">클라이언트를 수동으로 구성할 게이트웨이 주소를 식별하려면 를 참조하십시오<block ref="3a5e891ac91af8fef1ca1458249fe76e" category="inline-link-rx"></block>.</block>
   <block id="b4f83b03956523a39e8bbbd0895f0f29" category="section-title">Cloud Insights</block>
   <block id="efb9afc2e01262d41bf1fa60ddc36414" category="paragraph">NetApp Cloud Insights는 NetApp 및 기타 타사 인프라 구성 요소에서 실행되는 인프라 및 애플리케이션에 대한 완벽한 가시성을 제공하는 웹 기반 모니터링 툴입니다. Cloud Insights은 프라이빗 클라우드와 퍼블릭 클라우드를 모두 지원하여 리소스 모니터링, 문제 해결 및 최적화를 지원합니다.</block>
   <block id="4894eb73d4d2ad7eaebb0968e871cb70" category="paragraph">에이전트 없이 데이터 수집기로부터 메트릭을 수집하려면 인수 단위 VM(Windows 또는 Linux)만 프라이빗 클라우드에 설치해야 합니다. 에이전트 기반 데이터 수집기를 사용하면 Windows 성능 모니터 또는 텔레그라프가 지원하는 모든 입력 에이전트에서 사용자 지정 메트릭을 가져올 수 있습니다.</block>
@@ -7623,7 +7619,6 @@
   <block id="8fe1ffd8f7dcf339dd4f34aabb6e1c99" category="cell">컨테이너 스토리지 관리</block>
   <block id="a84024ce06ef98519b3b51300b2c8fbf" category="cell">20.10</block>
   <block id="d94e09dc1956d9513e690f8d24852f05" category="inline-link">Anthos의 Bare Metal 문서</block>
-  <block id="dea0bcd20b41ad5a5b5830e0facf5d5d" category="paragraph">베어 메탈 하드웨어 및 소프트웨어 요구 사항에 대한 Anthos는 를 참조하십시오<block ref="39597b4f74e08019db4cace51500cfd6" category="inline-link-rx"></block> 페이지.</block>
   <block id="71196ec10a92c76a666a93f55523b96e" category="inline-link-macro">다음: 배포 요약.</block>
   <block id="1b8d67e147d4d9c532832778cca5fee8" category="paragraph"><block ref="1b8d67e147d4d9c532832778cca5fee8" category="inline-link-macro-rx"></block></block>
   <block id="58c0d00b6ee4c263f1fbe431b41eebf4" category="summary">Astra Control Center에서 애플리케이션 워크로드를 관리하고 나면 해당 워크로드에 대한 보호 설정을 구성할 수 있습니다.</block>
@@ -11497,8 +11492,6 @@
   <block id="66bd3dbe1f46a5715420e201e457ff65" category="paragraph">NetApp 솔루션 자동화는 NetApp 솔루션에서 활용하는 많은 공통 작업에 대한 단순성과 반복성을 제공합니다.</block>
   <block id="bf7d92f5ef43a7e0ab10c8d11d28ef6e" category="paragraph">솔루션 자동화를 실행하기 전에 자동화를 실행하는 방법에 맞게 환경을 구성해야 합니다. 명령줄이나 AWX 또는 타워와 같은 도구를 통해 자동화를 실행할 수 있는 옵션이 있습니다.</block>
   <block id="dcdcb9b7436ca5ceca042e84e9c3ccf5" category="paragraph">다음 섹션에서는 지정된 각 환경에 맞게 환경을 구성하는 데 필요한 단계를 설명합니다.</block>
-  <block id="60e34857d044a02ae86f645c2e97e40f" category="paragraph">stdin&gt;의 미해결 지시문 - 포함::containers/rh-os-n_overview_astra_cc_install_manual.adoc []</block>
-  <block id="2b0a99e34b337bd6d8ed27dd9482c9e6" category="paragraph">stdin&gt;에서 해결되지 않은 지침 - 포함:: containers/rh-os-n_overview_astra_cc_install_Ansible.adoc []</block>
   <block id="245ab73d4b9beb43ff76c082e9bc77db" category="open-title">AI/데이터 분석</block>
   <block id="901b32f6abd15fbb3d43fbd044218a64" category="open-title">엔터프라이즈 애플리케이션 및 DB</block>
   <block id="71fbb346a6b64c94052f0e171d5d3eed" category="open-title">데이터 보호 및 데이터 마이그레이션</block>
@@ -11805,7 +11798,6 @@
   <block id="e1ea84e227dd99913363ade155774bcf" category="cell">NetApp 설계 가이드를 통해 NVIDIA DGX SuperPOD 추가</block>
   <block id="1edbb6849585c57ecbf402c0706ecf2d" category="sidebar">NetApp을 포함한 NVIDIA DGX SuperPOD(설계 가이드)</block>
   <block id="e340bc103d02ce2b8e016eb60705029c" category="sidebar">SAP 및 SAP HANA</block>
-  <block id="f1fc5bef6accc6d1fab4ab73142df7f3" category="list-text">Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 다음 절차를 따르십시오<block ref="3c36e2d6ece22f6d90a18a4cf2722cef" category="inline-link-rx"></block> Ubuntu 및 절차의 경우<block ref="94346839427703f278bfb2bc5962a814" category="inline-link-rx"></block> RHEL의 경우</block>
   <block id="703fd9e283392bf196948a4c2ed72680" category="list-text">NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. 타볼을 다운로드한 후 워크스테이션으로 전송합니다.</block>
   <block id="42042ccfc3ffee97e94beca237148ed4" category="list-text">Astra Control Center가 설치될 OpenShift 클러스터에 대한 관리자 액세스 권한이 있는 kubecononfig 파일을 만들거나 얻습니다.</block>
   <block id="aff7b433e7f33e585c67f69803192117" category="list-text">VAR/VAR.yml 파일을 편집하여 필요한 정보로 변수를 입력합니다.</block>
@@ -11894,8 +11886,6 @@
   <block id="0e6886020b4adf5871ebc7346b63c3a0" category="list-text">Astra Control Center가 설치되어 있는 Tanzu Kubernetes 클러스터에 대한 클러스터 관리자 액세스 권한이 있어야 합니다.</block>
   <block id="8bd3433e327d75f3a3c33d9998840fce" category="list-text">RHEL 또는 Ubuntu 관리 워크스테이션.</block>
   <block id="ed060d0439d2eda03baa2005199d9bc1" category="paragraph">이 솔루션은 Ansible 플레이북을 사용하여 Astra Control Center를 설치하는 자동화된 절차를 설명합니다. Astra Control Center를 설치하기 위한 수동 절차를 찾고 있는 경우 자세한 설치 및 작동 설명서를 따르십시오 <block ref="30c5ae998902105fcf03dc0b9654af4c" category="inline-link-macro-rx"></block>.</block>
-  <block id="662609908ab8e0f372d83dea3511370b" category="inline-link">절차를 참조하십시오</block>
-  <block id="8575c02ec176b0f64904bcbd79e81cba" category="list-text">Astra Control Center를 배포하는 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 있어야 합니다. 다음 단계를 따르십시오<block ref="c1972c5d94c51919767b49f6cefbf6ba" category="inline-link-rx"></block> Ubuntu 및 이에 대한<block ref="c4dab530b5bf152ded398881b8308451" category="inline-link-rx"></block> RHEL의 경우</block>
   <block id="df57d245f4173d8ac23df756917bb6ae" category="list-text">Astra Control Center가 설치될 사용자 또는 워크로드 Tanzu Kubernetes 클러스터에 대한 관리자 액세스 권한이 있는 kubecon무그림 파일을 만들거나 얻습니다.</block>
   <block id="b2d9440273952d4b05aed1b36c66494d" category="list-text">디렉터리를 na_Astra_control_suite로 변경합니다.</block>
   <block id="7489123185b81a6e11b42218fabb4c3b" category="list-text">VAR/VAR.yml 파일을 편집하여 필요한 정보로 변수를 입력합니다.</block>
@@ -13441,7 +13431,6 @@
   <block id="eb7b93b4aadbfaf4b78c0c4bfe125171" category="paragraph">복구 단계를 계속 진행하려면 다음 필수 구성 요소가 완료된 것으로 가정합니다.</block>
   <block id="aca50891060f7ebe7be1192b4a8b78ad" category="list-text">Veeam Full Restore를 사용하여 Windows Server VM을 VMware Cloud SDDC로 복구했습니다.</block>
   <block id="9731e8839876f65368eab4ef1eecdc20" category="inline-link-macro">SnapCenter 백업 및 복원 프로세스 요약</block>
-  <block id="fe51b70218e2191f0338d4bcb01eb4a7" category="list-text">보조 SnapCenter 서버가 설정되었고 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 복원 및 구성이 완료되었습니다 <block ref="f1b6dca3014749c436758b70cc0d8f7f" category="inline-link-macro-rx"></block></block>
   <block id="565a76f57020cb4db728d0a24384a0d9" category="section-title">VM: SQL Server VM에 대한 사후 복원 구성</block>
   <block id="eface2367b3de31eee3102f62de9295d" category="paragraph">VM 복원이 완료된 후 SnapCenter 내에서 호스트 VM을 재검색할 수 있도록 네트워킹 및 기타 항목을 구성해야 합니다.</block>
   <block id="0a64ec0b8b14816ed47650a0096fd3b3" category="list-text">관리 및 iSCSI 또는 NFS에 새 IP 주소를 할당합니다.</block>
@@ -13693,10 +13682,8 @@
   <block id="4b152f4bba0a5ca6345daa47736e4622" category="section-title">SnapCenter 구성</block>
   <block id="411fce4d2b732a8bfda73c4f04da246c" category="paragraph">FSx ONTAP에 미러링된 응용 프로그램 데이터를 복원하려면 먼저 온-프레미스 SnapCenter 데이터베이스의 전체 복원을 수행해야 합니다. 이 프로세스가 완료되면 VM과의 통신이 다시 설정되고 FSx ONTAP를 기본 스토리지로 사용하여 응용 프로그램 백업을 다시 시작할 수 있습니다.</block>
   <block id="d307f68836099290d00bdc9341ec2be7" category="inline-link-macro">보조 Windows SnapCenter 서버를 배포합니다</block>
-  <block id="520d23cd5df8582645ee42124b69ccae" category="paragraph">AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 <block ref="a29fcfa081b59708af69951be417dc25" category="inline-link-macro-rx"></block>.</block>
   <block id="50d8cb6b9ada9f3e6328cb534ed5773f" category="paragraph">Amazon S3 스토리지에 백업된 가상 머신을 복구하려면 Veeam Server를 Windows 서버에 설치하고 원래 백업 저장소가 포함된 VMware Cloud, FSx ONTAP 및 S3 버킷과 통신하도록 구성해야 합니다. 또한 VM이 복구된 후 새 백업을 수행하려면 FSx ONTAP에 새 백업 리포지토리가 구성되어 있어야 합니다.</block>
   <block id="845690e8aecca4f756b60cbd6c80c7f9" category="inline-link-macro">2차 Veeam Backup &amp; amp; Replication Server를 구축합니다</block>
-  <block id="82a8a7d9b8f053ce73af1c1b5b8694ff" category="paragraph">애플리케이션 VM의 장애 조치를 완료하는 데 필요한 전체 단계 목록은 섹션을 참조하십시오 <block ref="83d03cb08c05a76f36dedd6b85344746" category="inline-link-macro-rx"></block>.</block>
   <block id="db4ff15d9c0c503103508af3dd860139" category="summary">NetApp AFF A-Series 시스템은 클라우드에서 다양한 엔터프라이즈 시나리오를 지원하는 유연한 데이터 관리 옵션을 갖춘 고성능 스토리지 인프라를 제공합니다. 이 솔루션에서는 ONTAP AFF A300을 기본 사내 스토리지 시스템으로 사용했습니다.</block>
   <block id="6e5148fc476ca76eb8c330524bc1064d" category="paragraph">이 솔루션에서 NetApp ONTAP를 VMware 및 SnapCenter용 ONTAP 툴과 함께 사용하여 VMware vSphere와 긴밀하게 통합된 포괄적인 관리 및 애플리케이션 백업 기능을 제공했습니다.</block>
   <block id="e64f2bbe0643eeea77fa30ad5e4bdbe4" category="paragraph">가상 머신 및 VMDK 파일을 호스팅하는 VMware 데이터 저장소에는 ONTAP 스토리지를 사용했습니다. VMware는 연결된 데이터 저장소에 대해 여러 스토리지 프로토콜을 지원하며, 이 솔루션에서는 ESXi 호스트의 데이터 저장소에 NFS 볼륨을 사용했습니다. 그러나 ONTAP 스토리지 시스템은 VMware에서 지원하는 모든 프로토콜을 지원합니다.</block>
@@ -13816,7 +13803,6 @@
   <block id="c8ae03dc8bb68d2ad3e63a9126f795e6" category="doc">Oracle 애플리케이션 데이터를 복구합니다</block>
   <block id="18ed07dc9f8533a3a2cf047292765486" category="paragraph">복구 단계를 계속하려면 다음 필수 구성 요소를 완료하십시오.</block>
   <block id="d55274d1968c306eb025dc5e6eca42b4" category="list-text">Veeam Full Restore를 사용하여 Oracle Linux 서버 VM을 VMware Cloud SDDC로 복구했습니다.</block>
-  <block id="66d808fa42d45f6883d1a223ee26eb0c" category="list-text">보조 SnapCenter 서버가 설정되었으며 이 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 및 구성 파일이 복원되었습니다 <block ref="f1b6dca3014749c436758b70cc0d8f7f" category="inline-link-macro-rx"></block></block>
   <block id="b723df724fefe9f2021e7bb7bd8a57d0" category="section-title">Oracle 복원을 위해 FSx 구성 - SnapMirror 관계를 끊습니다</block>
   <block id="ab26994a6aef07f6a796a6109f921a28" category="paragraph">FSxN 인스턴스에서 호스팅되는 보조 스토리지 볼륨을 Oracle 서버에서 액세스할 수 있도록 하려면 먼저 기존 SnapMirror 관계를 해제해야 합니다.</block>
   <block id="d80c0676712ecc3e8d717347b9a0113a" category="list-text">FSx CLI에 로그인한 후 다음 명령을 실행하여 올바른 이름으로 필터링된 볼륨을 확인합니다.</block>
@@ -14044,7 +14030,6 @@
   <block id="adf79b820407599132e907adb994746d" category="list-text">사내에서 스케일아웃 백업 저장소의 일부로 사용된 원래 S3 버킷을 마운트합니다.</block>
   <block id="a706ef66660617fcf4a5aeb2e6f6d76b" category="list-text">VM을 복구한 후 SQL 및 Oracle VM을 보호하기 위한 새로운 백업 작업을 설정합니다.</block>
   <block id="28850f35c95cf12d5e28a35c2fdd8e5d" category="inline-link-macro">Veeam Full Restore로 애플리케이션 VM을 복구합니다</block>
-  <block id="5ad23c05d5054f7daf749b3a328903be" category="paragraph">Veeam을 사용하여 VM을 복원하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="145e19bb138e7c87e2d24d78a1c11e93" category="inline-link-macro-rx"></block>.</block>
   <block id="f377bdd54f0f567b139a5913567466f1" category="paragraph">* VMware Tanzu Kubernetes Grid(TKG) *</block>
   <block id="7a3368d887604b1812f8f796b668f0e7" category="paragraph">* VMware Tanzu Kubernetes Grid Service(TKGS) *</block>
   <block id="8da30835717bc9e00a9ea2b89d75d943" category="paragraph">* VMware Tanzu Kubernetes Grid Integrated(TKGI) *</block>
@@ -14152,7 +14137,6 @@
   <block id="14cdb7188d3a5edcc69cb9fe2ebf708b" category="paragraph">첫 번째 단계는 Google Cloud에서 Cloud Volumes ONTAP를 구성하는 것입니다 <block ref="21dbe7906aa79142ad8a44237d3d84a5" category="inline-link-rx"></block>)를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.</block>
   <block id="1b6eb09708583df3feb79dd7e7b9ed2a" category="paragraph"><block ref="1b6eb09708583df3feb79dd7e7b9ed2a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b67ee8de7f0f6f1b68e41ce4be6b4a0b" category="inline-link">SnapCenter를 사용하여 복제를 설정합니다</block>
-  <block id="8064e6b40ef12da2c44763dcfe735ae8" category="paragraph">SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오<block ref="68793c30d3c5e8a024de6c79bc478fe1" category="inline-link-rx"></block></block>
   <block id="5a101eac27a34cdc3b06c105760d0cee" category="example-title">GCVE 호스트 및 CVO 데이터 액세스를 구성합니다</block>
   <block id="1fe9f40218e52161bc5e31e2cd383a0b" category="paragraph">SDDC를 배포할 때 고려해야 할 두 가지 중요한 요소는 GCVE 솔루션의 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간 입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.</block>
   <block id="4f7b492a9eedf950f4dbd01357b22979" category="paragraph">모든 VPC 및 GCVE에 Cloud Volumes ONTAP를 구축할 수 있습니다. VM이 iSCSI LUN에 접속하려면 해당 VPC에 대한 전용 연결이 있어야 합니다.</block>
@@ -16012,7 +15996,6 @@
   <block id="2a2c2eb0d2bde8c24cc55a11862ca857" category="paragraph">백업 스크립트 및 스케줄링에 대한 다음 예를 참조하십시오.</block>
   <block id="e048ccd48425229cea678849ba68a190" category="paragraph">데이터 볼륨 스냅샷의 경우:</block>
   <block id="f0d6345b8e5345f55c21610283eaeedd" category="paragraph">로그 볼륨 스냅샷의 경우:</block>
-  <block id="68b7e37ef318c0e56eabf3e1aded4216" category="paragraph">crontab 일정: 15,30,45 * * * * * * /home/azacsnap/snap_log.sh 0 * /2 * * * /home/azacsnap/snap_data.sh</block>
   <block id="adf4ba1e0f3190afb18557f038ae1ecf" category="admonition">백업 설정 시<block ref="8ed8c6bfea85d72bc4a36772490109c7" prefix=" " category="inline-code"></block> 구성 파일, 바이너리 볼륨을 포함한 모든 데이터 볼륨을 에 추가합니다<block ref="0fb9dff864caebba259b119756a2ce17" prefix=" " category="inline-code"></block> 및 모든 로그 볼륨을 에<block ref="5e5fb0a2540d102aeebc3dac60712494" prefix=" " category="inline-code"></block>. 스냅샷의 최대 보존은 250개입니다.</block>
   <block id="a93091ed018686dcf478589ba04fd6f6" category="section-title">스냅샷을 확인합니다</block>
   <block id="8a46f2968d5dc184634cff75cd1b8b8e" category="paragraph">Azure Portal &gt; Azure NetApp Files/volumes로 이동하여 스냅샷이 성공적으로 생성되었는지 확인합니다.</block>
@@ -16024,22 +16007,7 @@
   <block id="76265d8fce7f282b6ff5a8581df8879c" category="paragraph">스냅샷 백업의 주요 이점 중 하나는 소스 데이터베이스 볼륨과 함께 존재하고, 운영 데이터베이스 볼륨을 거의 즉시 롤백할 수 있다는 것입니다.</block>
   <block id="878609e3e12819fffdd7247406f655be" category="section-title">기본 서버에서 Oracle의 복원 및 복구</block>
   <block id="8733b7b64c8d2c32caa423c7eb2955fc" category="paragraph">다음 예에서는 동일한 Oracle 호스트의 Azure 대시보드 및 CLI에서 Oracle 데이터베이스를 복원 및 복구하는 방법을 보여 줍니다.</block>
-  <block id="aa30a622663e0f34541394e008fe82cd" category="list-text">복원할 데이터베이스에 테스트 테이블을 만듭니다. [oracao-ora01~]$sqlplus/as sysdba</block>
-  <block id="ea16560565f3889db4dabf938628b462" category="paragraph">SQL* Plus: 릴리즈 19.0.0.0.0 - 운영 날짜: 월 12:02:35 2022 버전 19.8.0.0.0</block>
-  <block id="0409b2fce118cc126a532dea158d2943" category="paragraph">sql&gt; 테이블 testsnapshot(id integer, event varchar(100), dt timestamp) 생성</block>
-  <block id="bec6da77877c0793c1d3eb6c6896e98e" category="paragraph">테이블이 생성되었습니다.</block>
-  <block id="a5b83945adfd5370663cb2d9c4f31d09" category="paragraph">sql&gt; testsnapshot 값에 삽입(1, '스냅샷 복원을 검증하기 위한 데이터 마커 삽입', sysdate)</block>
-  <block id="6ba18fa8fa7d170dfd8fc80f0f3d39f7" category="paragraph">1개의 행이 생성되었습니다.</block>
-  <block id="d1d2dcb121f8bf8fd39724ea075c6409" category="paragraph">sql &gt; 커밋;</block>
-  <block id="a92090dde5e820fde0a68705ee3f2bd0" category="paragraph">커밋이 완료되었습니다.</block>
-  <block id="fd9736dfc88a182f9cb6e5f6a2b97487" category="paragraph">sql &gt; testsnapshot에서 * 선택;</block>
   <block id="2817b9cf9fc0cd0d8bf9fb03acbfc93f" category="list-text">스냅샷 백업 후에 테이블을 삭제합니다.</block>
-  <block id="07b56c53a9fec8c477afb0cb5f2394af" category="paragraph">[oracao-ora01~]$sqlplus/as sysdba</block>
-  <block id="dcd4d50ecf59b4752c161f0ddc44df44" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 14:20:22 2022 버전 19.8.0.0.0</block>
-  <block id="bee0f13528c2f6f5b67053dc1e942328" category="paragraph">sql &gt; drop table testsnapshot;</block>
-  <block id="cd85f26775e453b2177d5fcc6265b31d" category="paragraph">테이블이 떨어졌습니다.</block>
-  <block id="07e18ec921a195478cdbab47d8d68d89" category="paragraph">sql&gt; testsnapshot에서 * 를 선택합니다. testsnapshot * 오류에서 * 를 선택합니다. 1: ORA-00942: 테이블 또는 뷰가 없습니다</block>
-  <block id="f06f4fbf6e3e0e45b0d4b241ceaf19c9" category="paragraph">sql&gt; shutdown immediate; Database closed. (즉시 종료 데이터베이스가 마운트 해제되었습니다. Oracle 인스턴스가 종료되었습니다. SQL&gt; 종료와 Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0의 연결이 끊겼습니다</block>
   <block id="09d4fe137595af1cc975247ba704462d" category="list-text">Azure NetApp Files 대시보드에서 로그 볼륨을 마지막으로 사용 가능한 스냅샷으로 복구합니다. 볼륨 되돌리기 * 를 선택합니다.</block>
   <block id="33ba8417b2640d4172513bbf9cbc3e55" category="inline-image-macro">이 스크린샷은 ANF 대시보드의 볼륨에 대한 스냅샷 재버전의 방법을 보여 줍니다.</block>
   <block id="546b967f1ce32832a90c77282f0cdf2b" category="paragraph"><block ref="546b967f1ce32832a90c77282f0cdf2b" category="inline-image-macro-rx" type="image"></block></block>
@@ -16053,18 +16021,7 @@
   <block id="5e2296a09eabbd34b62da3492091ff33" category="inline-image-macro">"이 작업을 수행하시겠습니까?" 데이터 볼륨 스냅샷 재버전을 위한 페이지입니다.</block>
   <block id="af5f9a99ee2d86856d0e2477e417dc4c" category="paragraph"><block ref="af5f9a99ee2d86856d0e2477e417dc4c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="170b40e31285910539e0d464f2bf33a6" category="list-text">컨트롤 파일의 복제본이 여러 개 있는 경우 컨트롤 파일을 다시 동기화하고 이전 컨트롤 파일을 사용 가능한 최신 복제본으로 대체합니다.</block>
-  <block id="952cd3804f479f3c31f123d064ccbdf5" category="paragraph">[Oracle@acao-ora01~]$mv/u02/oradata/ORATST/control01.ctl/u02/oradata/ORATST/control01.ctl[Oracle@acao-ora01~]$cp/u03/orareco/ORATactl/controltl/acutl.tl/attrl/a02</block>
   <block id="bd99bc18393147b05e3f350eb6a61f47" category="list-text">Oracle 서버 VM에 로그인하고 sqlplus를 사용하여 데이터베이스 복구를 실행합니다.</block>
-  <block id="125ab5cbfb90c4a6d038bcca4da6fdc4" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 제품 릴리스 SEP 13 15:10:17 2022 버전 19.8.0.0.0</block>
-  <block id="010621501012cd31b6666d17dad683d2" category="paragraph">유휴 인스턴스에 연결되었습니다.</block>
-  <block id="6bd3f70e5ab38ca26f8cabd390e15fc0" category="paragraph">sql&gt; 시작 마운트; Oracle 인스턴스가 시작되었습니다.</block>
-  <block id="424459a4363a5afdd1e45d31fcd11efe" category="paragraph">전체 시스템 전역 영역 6442448984바이트 고정 크기 8910936바이트 가변 크기 1090519040바이트 데이터베이스 버퍼 5335154688바이트 다시 실행 버퍼 7864320바이트 데이터베이스가 마운트됨 sql&gt; 취소할 때까지 백업 제어 파일을 사용하여 데이터베이스 복구; ORA-00279: 변경 3188523 스레드 1에 대해 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/09_13/O1_mf_1_43_22rnj280 스레드 시퀀스에 대해 3188523</block>
-  <block id="db9afd3f7adaff3fe1135208fa6b6a09" category="paragraph">로그 지정: {&lt;RET&gt;=Sugested|FileName|Auto|CANCEL}</block>
-  <block id="abc467423916c8ee7c16f566b4ab4ca8" category="paragraph">ORA-00279: change 3188862가 2022-09:09:13 스레드 1에 대해 생성됨 10:01:20 필요 ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_44_29f2lgb5_.arc_318280.torg.torg.log에서 더 이상 복구: /318928.torg.torg.2c.1c.2c.turg.2c.318-0028</block>
-  <block id="479d2dfa77fdcde3bfd41fcdebbca1ff" category="paragraph">ORA-00279: change 3193117이 스레드 1에 대해 생성되었습니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_45__29h6qyw_.arc.00280.arc.org에서 더 이상 복구 필요.3800_3708.torg.torg.0_211_3708.torg.wa_3708.torg.tnd.wa_2nd.wa_2nd.toto.toto.toto.toto.toto.toto_3119에 대한 /3119에 대한 /u03_celo.w</block>
-  <block id="c76ff2f7e10a42adf7faec8f9e6faeab" category="paragraph">Ora-00279: change 3193440이 2022-09에서 생성되었습니다. 12:01:20이 스레드 1에 필요합니다. ORA-00289: 제안: /u03/orareco/ORATST/archivelog/2022_09_13/O1_mf_1_46_%u_.arc ORA-00280: ORT445.RECOG.RECONO.THE_OVERYOVERYOMEO/O.45.A/TRACEMORA/TRACER.0.A/OVERYA/OTRACE.A.A.A.0.A/OVERYA/O.01.A/OTRACULLOG에 대해 더 긴 파일 필요.0.A/O.01_</block>
-  <block id="0e98028493ec8c4a1d181c0d71c3ec7b" category="paragraph">로그 지정: {&lt;RET&gt;=Sugested|FileName|Auto|CANCEL} 미디어 복구가 취소되었습니다. sql &gt; alter database open resetlogs;</block>
-  <block id="f6c9ea366c01da7d664a8c7c3813e0bd" category="paragraph">데이터베이스가 변경되었습니다.</block>
   <block id="8ad5254ade1fed8d3ccc482196b4c36c" category="paragraph">이 화면에서는 삭제된 테이블이 로컬 스냅샷 백업을 사용하여 복구되었음을 보여 줍니다.</block>
   <block id="34d73a671fa85d8d86ba1eff63b238d8" category="paragraph"><block ref="34d73a671fa85d8d86ba1eff63b238d8" category="inline-link-macro-rx"></block></block>
   <block id="0c55b956af322a2409f5dd75af116fee" category="doc">WP-7357: EC2 및 FSx Best Practices Introduction에서 Oracle Database Deployment를 참조하십시오</block>
@@ -16220,15 +16177,12 @@
   <block id="02f08719de6240015b4e67725107792a" category="list-text">를 생성합니다<block ref="9de875b13677cf9b036a438bf9aedf5c" prefix=" " category="inline-code"></block> 파일. 다음 명령 예에서는 호스트를 Oracle Database의 IP 주소로 설정하고 서버 SID를 Oracle Database SID로 설정해야 합니다.</block>
   <block id="0eec77cc5ed96c42afb08c83ea3f1e3b" category="list-text">를 생성합니다<block ref="0501c2d94325e267bf15055591fb8157" prefix=" " category="inline-code"></block> 파일.</block>
   <block id="cafefcc0e796f3e73bc39de23dfc6b68" category="list-text">Wallet을 사용하여 Oracle 액세스를 테스트합니다.</block>
-  <block id="8bf6bfb76bcf25b5e1bb9c1d4ede3d34" category="paragraph">명령 [azacsnap@acao-ora01~]$sqlplus/@AZNAP ACSAS SYSBACKUP에서 예상되는 출력입니다</block>
-  <block id="9fac4799a7cb503012dac3d131cf3c15" category="paragraph">SQL* Plus: 릴리스 19.0.0.0.0 - 9월 8일 목요일 프로덕션 18:02:07 2022 버전 19.8.0.0.0</block>
   <block id="54eb020b97d7e8a9f56d67e93754e270" category="section-title">ANF 연결을 구성합니다</block>
   <block id="8c9356aaf30e863db064ba22b7d4b204" category="paragraph">이 섹션에서는 Azure NetApp Files(VM과 통신)와의 통신을 활성화하는 방법에 대해 설명합니다.</block>
   <block id="d78964ac0334c0f69ef24aada9864028" category="list-text">Azure Cloud Shell 세션 내에서 기본적으로 서비스 보안 주체와 연결할 구독에 로그인되어 있는지 확인합니다.</block>
   <block id="8611ff0fcccf2f05ff0dbde909379c14" category="list-text">가입이 올바르지 않으면 다음 명령을 사용합니다.</block>
   <block id="2d66e076b40e24c73ffa7a1704d985db" category="list-text">다음 예제와 같이 Azure CLI를 사용하여 서비스 보안 주체를 만듭니다.</block>
   <block id="707cc085819c641d15b9ea2b3b13cb53" category="paragraph">예상 출력:</block>
-  <block id="e8e3af5b539b9415092afd10fc182ff7" category="paragraph">{"clientId":"00aa000a-aaaa-0000-00aa0-00aaaa000aaaa0a", "clientSecret":"00aaaa000a-aaaaaa-0000-00aaaaaaaaaaaaaaa000aaaaaaaaa-aaaaaaaaaaaaaaaaa000aaaaaaa-aaaaaaaaaa-aaaaaaaaaaaaaaaa-00a-aaaaaa <block ref="abe1a2134e98a87862a225c33f62cde4" category="inline-link-rx"></block>, "resourceManagerEndpointUrl": <block ref="5bbe1c35abcaa8749119f86fe8d12120" category="inline-link-rx"></block>, "activeDirectoryGraphResourceId": <block ref="91645ab7f47cce4ce23956a6c4c7df7c" category="inline-link-rx"></block>, "sqlManagementEndpointUrl": <block ref="2ce5923f710fffcd9fdcfffa2d0db664" category="inline-link-rx"></block>, "galleryEndpointUrl": <block ref="92fb62298a12469265ac683928098931" category="inline-link-rx"></block>, "managementEndpointUrl": <block ref="9a3197a885535f07c09e058a5f76aa0c" category="inline-link-rx"></block>}</block>
   <block id="c51a1e8c830ed4f63c489347dbcce1a7" category="list-text">출력 내용을 잘라내어 라는 파일에 붙여 넣습니다<block ref="b50999884a39c5efe8da46cd87acfeb2" prefix=" " category="inline-code"></block> Linux user azacsnap user bin 디렉토리에 저장되고 적절한 시스템 권한으로 파일을 보호합니다.</block>
   <block id="211f39ae9cd979a9f01bb800eca0b832" category="admonition">JSON 파일의 형식이 위에서 설명한 대로 정확하게 지정되었는지 확인하십시오. 특히 큰따옴표로 묶인 URL(")을 사용하십시오.</block>
   <block id="c1f6adfa882cba0dbd256d4909ac588c" category="section-title">AzAcSnap 도구 설정을 완료합니다</block>
@@ -16237,15 +16191,7 @@
   <block id="4ef9af49185e683998d060aa71c30e2b" category="list-text">명령 위치를 변경합니다.</block>
   <block id="412d274adbc3fc7cb51ab315d7a77f82" category="list-text">스토리지 백업 세부 정보 파일을 구성합니다. 이렇게 하면 가 생성됩니다<block ref="8ed8c6bfea85d72bc4a36772490109c7" prefix=" " category="inline-code"></block> 구성 파일.</block>
   <block id="d4c18f094b4959d27f52ee2a9709a6b9" category="paragraph">Oracle 볼륨 3개가 필요한 경우의 결과:</block>
-  <block id="849abd2456a4bd2ccddb94a12dfcc37d" category="paragraph">[azacsnap@acao-ora01 bin]$azacsnap -c configure -- configuration new config file 구성 파일에 주석 추가(주석 추가를 종료하려면 빈 항목 추가): Oracle 스냅샷 백업 구성 파일에 주석 추가(주석 추가를 종료하려면 빈 항목 추가): 추가할 데이터베이스 유형, 'hana', 'oracle' 또는 'exit'(데이터베이스 없음)를 입력합니다. Oracle</block>
-  <block id="fa7ad5b9d050b7a5baa27ffcd8863c42" category="paragraph">=== 추가 Oracle Database details === Oracle Database SID(예: CDB1): ORATST Database Server의 주소(호스트 이름 또는 IP 주소): 172.30.137.142 Oracle 연결 문자열(예: /@AZACSNAP):/@AZACSNAP</block>
-  <block id="44b11046a63da89febd351b4213758cf" category="paragraph">=== Azure NetApp Files 스토리지 세부 정보 ===== 데이터베이스에 Azure NetApp Files를 사용하고 있습니까? (y/n) [n]: y -- 데이터 볼륨은 스냅샷이 되기 전에 애플리케이션이 정합성 보장 상태로 전환됨 -- 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u01 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u02 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 데이터 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]: n----- 다른 볼륨은 스냅샷을 위한 애플리케이션을 준비하지 않고 즉시 스냅샷임---- 데이터베이스 구성의 다른 볼륨에 Azure NetApp Files 리소스 추가? (y/n) [n]: y 전체 Azure NetApp Files 스토리지 볼륨 리소스 ID(예: /Subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...):/Subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u03 서비스 보안 주체 인증 파일 이름 또는 Azure-auth.file<block ref="88c14b7c14e63dd3e0345f1f112a2bd3" category="inline-link-rx"></block> Oracle.json 데이터베이스 구성의 다른 볼륨 섹션에 Azure NetApp Files 리소스를 추가합니까? (y/n) [n]:n</block>
-  <block id="e16c4d13d5c9c936ac3ca975a729784f" category="paragraph">==== Azure Managed Disk details ===== 데이터베이스에 Azure Managed Disks를 사용하고 있습니까? (y/n) [n]:n</block>
-  <block id="e5e08e0b27271cd7952c3cd754436294" category="paragraph">==== Azure Large Instance (Bare Metal) Storage details ========== 데이터베이스에 Azure Large Instance (Bare Metal)를 사용하고 있습니까? (y/n) [n]:n</block>
-  <block id="cec7485a9812da8e268c6d53917d0776" category="paragraph">추가할 데이터베이스 유형, 'HANA', 'Oracle' 또는 '종료'(데이터베이스 없음)를 입력합니다. 종료합니다</block>
-  <block id="c63145a4ad8c93cb8bdff88f44cf483b" category="paragraph">'azacsnap.json'에 출력을 쓰는 중 구성 편집이 완료되었습니다.</block>
   <block id="72b0a1cda785576a979ca4ee2e3c8c62" category="list-text">azacsnap Linux 사용자로서, Oracle 백업에 대해 azacsnap 테스트 명령을 실행합니다.</block>
-  <block id="ce9bfcddebc567805a4fdb6bcdf15515" category="paragraph">[azacsnap@acao-ora01 bin]$azacsnap -c test--test oracle--configfile azacsnap.json BEGIN:테스트 프로세스가 'oracle'에 대해 시작되었습니다. BEGIN:Oracle DB 테스트 통과: Oracle DB 버전 1908000000 END:Test process complete for 'oracle' [azacsnap@acao-ora01 bin]$</block>
   <block id="7be23e8f29bfc799fd8fbcdc55fe0e77" category="list-text">첫 번째 스냅샷 백업을 실행합니다.</block>
   <block id="42481f217667e9b11be3ea64c971056a" category="inline-link-macro">다음: 데이터베이스 보호.</block>
   <block id="d39c73ea41fa36408b518637e929e754" category="paragraph"><block ref="d39c73ea41fa36408b518637e929e754" category="inline-link-macro-rx"></block></block>
@@ -16429,7 +16375,6 @@
   <block id="cd08b15dd8bc6a19026ca47b4bcd618d" category="list-text">DevTest, 보안 테스트, 패치 또는 업그레이드 테스트, 수정 테스트 등과 같은 DR 이외의 다른 워크플로우에 클라우드 컴퓨팅 리소스를 사용하여 DR 데이터를 사용할 수 있습니다.</block>
   <block id="7d73fdff5300d11e557be0d55023b8e8" category="list-text">CPU 및 RAM 최적화를 통해 보다 작은 컴퓨팅 클러스터로 복구할 수 있으므로 클라우드 비용을 절감할 수 있습니다.</block>
   <block id="d923ff878d26dac68fc7ac0c94a428f0" category="inline-link-macro">ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO</block>
-  <block id="1ecab9e830a635b196a9f6c159eefe2c" category="list-text"><block ref="1ecab9e830a635b196a9f6c159eefe2c" category="inline-link-macro-rx"></block></block>
   <block id="46d1e37416bef4df8c1962b95c983bb0" category="sidebar">GCVE+ CVS TCO 계산기</block>
   <block id="15a2a7497ac6041e1b73d7cb41406245" category="doc">TR-4811: 의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징 - 솔루션 설계</block>
   <block id="5c6168ae6047f496e6903dde0fd3033c" category="paragraph"><block ref="5c6168ae6047f496e6903dde0fd3033c" category="inline-link-macro-rx"></block></block>
@@ -18387,4 +18332,167 @@
   <block id="2bba715ff3b85da75ce86da55f5d9173" category="list-text">Oracle 사용자로 을 생성합니다<block ref="c170c347c737b82ad62c48db1f7bff3c" prefix=" " category="inline-code"></block> 다음 항목이 있는 파일:</block>
   <block id="c96739fe831515243fc940e9ee867ea3" category="list-text">Oracle 사용자로 dbca를 사용하여 DB 생성을 시작합니다.</block>
   <block id="2a00dbe4c39e81805212ab123d0995df" category="list-text">Oracle 사용자로서 DB 생성 후 Oracle Restart HA 서비스를 확인합니다.</block>
+  <block id="6c55fdff3e1fbf1476c8edd9169f1f2c" category="cell">TR-4955 추가: ANF(Azure NetApp Files) 및 AVS(Azure VMware Solution)를 통한 재해 복구</block>
+  <block id="a7fb28a136e66b85611d0ab47d44e747" category="list-text">Astra Control Center를 배포하는 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 있어야 합니다. 절차를 따르십시오<block ref="33c646d34972887e04f4f11763cd42b6" category="inline-link-rx"></block> Ubuntu 및 RHEL의 경우</block>
+  <block id="c9e4df26177106ff846782e8ee98f56a" category="list-text">Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 절차를 따르십시오<block ref="33c646d34972887e04f4f11763cd42b6" category="inline-link-rx"></block> Ubuntu 및 RHEL의 경우</block>
+  <block id="8319a8c7a5b0b686057dbf3e7b4068f2" category="paragraph">베어 메탈 하드웨어 및 소프트웨어 요구 사항에 대한 Anthos는 를 참조하십시오<block ref="ee9c468e431b4e6c834acacee08b5282" category="inline-link-rx"></block> 페이지.</block>
+  <block id="9b368ea783a99ed08472f5ee27e26dc9" category="paragraph">클라이언트를 수동으로 구성할 게이트웨이 주소를 식별하려면 를 참조하십시오<block ref="65651a617c871e663f36b036935811c9" category="inline-link-rx"></block>.</block>
+  <block id="0fc2ee38d3f3fcee9b5d5d0bad287f93" category="paragraph">SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오<block ref="06275778c7333bddf485b7069aff5016" category="inline-link-rx"></block></block>
+  <block id="e88bacbfc81933567e64c9db4797fe2a" category="paragraph">저자: Niyaz Mohamed, NetApp 솔루션 엔지니어링</block>
+  <block id="b9f6e76ebb09998e4efe8f7d8cdfc1a1" category="paragraph">클라우드 내 영역 간의 블록 레벨 복제를 사용하는 재해 복구는 사이트 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. ANF(Azure NetApp Files) 교차 지역 볼륨 복제를 사용하면 Azure NetApp Files 볼륨을 기본 AVS 사이트의 NFS 데이터 저장소로 사용하는 AVS(Azure VMware Solution) SDDC 사이트에서 실행되는 VMware 워크로드를 대상 복구 영역의 지정된 보조 AVS 사이트로 복제할 수 있습니다.</block>
+  <block id="6d3f247317af532e62e79af4e327e266" category="paragraph">DRO(재해 복구 오케스트레이터)(UI가 포함된 스크립팅된 솔루션)를 사용하여 AVS SDDC 간에 복제된 워크로드를 원활하게 복구할 수 있습니다. DRO는 복제 피어링을 끊은 다음 AVS에 VM 등록을 통해 대상 볼륨을 데이터 저장소로 마운트하고 NSX-T(모든 AVS 프라이빗 클라우드에 포함)에서 직접 네트워크 매핑을 실행하여 복구를 자동화합니다.</block>
+  <block id="20e61ee0f35516bf40c8c03f94d14f55" category="paragraph"><block ref="20e61ee0f35516bf40c8c03f94d14f55" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="54c0031f2ddfceeed5c28d8d32afd359" category="section-title">필수 구성 요소 및 일반 권장 사항</block>
+  <block id="608e90a0df6dcf86f27467ce0c8ce54a" category="inline-link">Azure NetApp Files에 대한 볼륨 복제를 생성합니다</block>
+  <block id="d855c43d14116e9cb3ec0930fee2f0dd" category="list-text">복제 피어링을 생성하여 지역 간 복제를 활성화했는지 확인합니다. 을 참조하십시오<block ref="56da0221e637860c42ff0ac193595610" category="inline-link-rx"></block>.</block>
+  <block id="83fefb057e39fc350c2c2f61a5961065" category="list-text">소스 클라우드와 타겟 Azure VMware 솔루션 프라이빗 클라우드 간에 ExpressRoute Global Reach를 구성해야 합니다.</block>
+  <block id="6dce98a4bb089817cf9567558449180b" category="list-text">리소스에 액세스할 수 있는 서비스 보안 주체가 있어야 합니다.</block>
+  <block id="aebc7c3350448dc30015a87c3d89c2b2" category="list-text">기본 AVS 사이트에서 보조 AVS 사이트로 연결되는 토폴로지는 다음과 같습니다.</block>
+  <block id="f29fabe637a472bf5222b12a0bc5df77" category="inline-link">복제</block>
+  <block id="83fd61302a69aa66e69339e94e4ca2cf" category="list-text">를 구성합니다<block ref="6d62eaf7384c288add248477bcaf361d" category="inline-link-rx"></block> 비즈니스 요구 및 데이터 변경률에 따라 각 볼륨에 대한 일정을 적절히 조정합니다.</block>
+  <block id="7379a17a14e118aac108f1550bda8e15" category="admonition">계단식 및 팬인 및 팬아웃 토폴로지는 지원되지 않습니다.</block>
+  <block id="5f06c97396f318992ec4285e547a7199" category="section-title">Azure VMware 솔루션을 구축합니다</block>
+  <block id="2d8e14d52496d7d3ab1bad5b1a8b0495" category="paragraph">를 클릭합니다<block ref="b39fc18162263c3a663125bcc24a1d36" category="inline-link-rx"></block> AVS(AVS)는 Microsoft Azure 퍼블릭 클라우드 내에 완벽하게 작동하는 VMware SDDC를 제공하는 하이브리드 클라우드 서비스입니다. AVS는 Microsoft에서 완벽하게 관리 및 지원하고 Azure 인프라를 사용하는 VMware에서 검증한 최초의 솔루션입니다. 따라서 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN 및 네트워킹 및 보안을 위한 NSX를 얻는 동시에 Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설 및 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접할 수 있는 이점을 누릴 수 있습니다. Azure VMware 솔루션 SDDC와 Azure NetApp Files를 함께 사용하면 네트워크 지연 시간을 최소화하면서 최상의 성능을 얻을 수 있습니다.</block>
+  <block id="8f000bfe6ad06c9db52b34d413dc097e" category="paragraph">Azure에서 AVS 프라이빗 클라우드를 구성하려면 이 단계를 수행하십시오<block ref="23c22ea299bb83ce2f82b3e1aef71be4" category="inline-link-rx"></block> NetApp 제품 설명서를 참조하십시오<block ref="21d8cba1c79bac0a64be5fa1f1f2361c" category="inline-link-rx"></block> Microsoft 설명서를 참조하십시오. 최소 구성으로 설정된 파일럿 라이트 환경을 DR 용도로 사용할 수 있습니다. 이 설정에는 중요한 애플리케이션을 지원하는 핵심 구성 요소만 포함되며, 페일오버가 발생하는 경우 더 많은 호스트를 확장하고 확장하여 대량의 로드를 처리할 수 있습니다.</block>
+  <block id="c83dbf8bbfc81d6ea552177583a233a5" category="admonition">최초 릴리즈에서 DRO는 기존 AVS SDDC 클러스터를 지원합니다. 온디맨드 SDDC 작성은 향후 릴리스에서 제공될 예정입니다.</block>
+  <block id="96b758bcd58744b4e5415c3fbccd1a69" category="section-title">Azure NetApp Files 프로비저닝 및 구성</block>
+  <block id="2b636a8d03864ac97b7c30dc68f6f5a5" category="paragraph"><block ref="b56d3f248ea42ace920423401847f715" category="inline-link-rx"></block> 는 엔터프라이즈급 고성능 용량제 파일 스토리지 서비스입니다. 이 단계를 따릅니다<block ref="1b959b45bbb3571141089802677ad765" category="inline-link-rx"></block> AVS 프라이빗 클라우드 구축을 최적화하기 위해 Azure NetApp Files를 NFS 데이터 저장소로 프로비저닝 및 구성합니다.</block>
+  <block id="2b1f9ff65c4506ccd4f1f6fb38649e87" category="section-title">Azure NetApp Files 기반 데이터 저장소 볼륨에 대한 볼륨 복제를 생성합니다</block>
+  <block id="5b95256d6ffa7467ef57d3c3f61ac38e" category="paragraph">첫 번째 단계는 AVS 기본 사이트에서 AVS 보조 사이트로 원하는 데이터 저장소 볼륨에 대한 교차 지역 복제를 적절한 빈도와 보존 기능으로 설정하는 것입니다.</block>
+  <block id="0ebe5ac118b62c003b65a9b3c4f80ef6" category="paragraph"><block ref="0ebe5ac118b62c003b65a9b3c4f80ef6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca34c3e14ec19e036e86327c18ee97ff" category="inline-link">서비스 수준을 수정합니다</block>
+  <block id="1ac65c0a16d2eabb709d6d5b908f1745" category="paragraph">이 단계를 따릅니다<block ref="57cbb08765e0326150e1717bd79f16bf" category="inline-link-rx"></block> 복제 피어링을 생성하여 지역 간 복제를 설정합니다. 대상 용량 풀의 서비스 수준은 소스 용량 풀의 서비스 수준과 일치할 수 있습니다. 그러나 이러한 특정 사용 사례에서 표준 서비스 수준을 선택한 다음<block ref="bacca1ab9fb985a705f3d2cbf4a7d58d" category="inline-link-rx"></block> 실제 재해 또는 DR 시뮬레이션이 발생하는 경우</block>
+  <block id="d9b36624eeaef41c5bf0404b4f9667f6" category="admonition">교차 지역 복제 관계는 사전 요구 사항으로, 미리 만들어야 합니다.</block>
+  <block id="08735c190fa885a2bf1b7f36e1a2e8f3" category="paragraph">DRO를 시작하려면 지정된 Azure 가상 시스템에서 Ubuntu 운영 체제를 사용하고 필수 구성 요소를 충족하는지 확인하십시오. 그런 다음 패키지를 설치합니다.</block>
+  <block id="265472db458c37e522224c854e725fa5" category="paragraph">* 필수 구성 요소: *</block>
+  <block id="2d2a5bfbd24c72950efbb0e05ff2c550" category="list-text">리소스에 액세스할 수 있는 서비스 보안 주체</block>
+  <block id="291877ab9f9a26d5f7df0bcddeab5117" category="list-text">소스 및 대상 SDDC 및 Azure NetApp Files 인스턴스에 대한 적절한 연결이 있는지 확인합니다.</block>
+  <block id="5b0500a3592d99943c80ff54a25e978a" category="list-text">DNS 이름을 사용하는 경우 DNS 확인이 필요합니다. 그렇지 않으면 vCenter에 IP 주소를 사용합니다.</block>
+  <block id="f06e54cea384d49e828ee5affd70c17f" category="paragraph">* OS 요구 사항: *</block>
+  <block id="a3b6d9fb713cfc6d2e0a7693c132f7a7" category="list-text">Ubuntu Focal 20.04 (LTS) 지정된 에이전트 가상 머신에 다음 패키지를 설치해야 합니다.</block>
+  <block id="0de0c471eabb6df904aed1160e17e5d0" category="list-text">Docker-Compose</block>
+  <block id="c8a224d936a830223e7341615d656cb8" category="list-text">JqChange<block ref="b1360c159d030cf3e3075d3ec21faf46" prefix=" " category="inline-code"></block> 이 새 권한에 대한 설명:<block ref="e89a7e38128b2d546718b48d40d827f7" prefix=" " category="inline-code"></block>.</block>
+  <block id="dac09e97665f1ce51b0eda57eb8d689f" category="admonition">를 클릭합니다<block ref="60254338249f657a0a83f98258a56bfe" prefix=" " category="inline-code"></block> 스크립트는 필요한 모든 필수 구성 요소를 실행합니다.</block>
+  <block id="8b389947da1beb9b783d0f6d93ff7379" category="paragraph">단계는 다음과 같습니다.</block>
+  <block id="198238f0cb3b3c1ae0f172d5550ed1b1" category="admonition">에이전트는 SDDC와 별도로 AVS 사이트 영역이나 기본 AVS 사이트 영역에 설치해야 합니다.</block>
+  <block id="0034cd44b3a2a2ebcd2491e08285c630" category="list-text">패키지의 압축을 풀고 배포 스크립트를 실행한 다음 호스트 IP를 입력합니다(예: <block ref="53c2d28edefdf501ab7c92e02a0c1687" prefix=" " category="inline-code"></block>)를 클릭합니다.</block>
+  <block id="e458c281a9aec07ea6c3bbd3fd4dee05" category="list-text">다음 자격 증명을 사용하여 UI에 액세스합니다.</block>
+  <block id="257b3e8f9b30327f40243dfa0e6c25da" category="list-text">사용자 이름:<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block></block>
+  <block id="1b97f2409234d30285a10523ee6223cf" category="list-text">암호:<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block></block>
+  <block id="0300b90d969cf3be8deea87c973b7034" category="paragraph"><block ref="0300b90d969cf3be8deea87c973b7034" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e4a41f8b4753b15c1780f1b356cc4d36" category="paragraph">Azure NetApp Files 및 AVS가 올바르게 구성된 후 운영 AVS 사이트에서 보조 AVS 사이트로 워크로드 복구를 자동화하도록 DRO 구성을 시작할 수 있습니다. DRO 에이전트가 네트워크를 통해 적절한 AVS 및 Azure NetApp Files 구성 요소와 통신할 수 있도록 보조 AVS 사이트에 DRO 에이전트를 구축하고 ExpressRoute 게이트웨이 연결을 구성하는 것이 좋습니다.</block>
+  <block id="fd44f09b19421de944f8952f94dfe971" category="paragraph">첫 번째 단계는 자격 증명을 추가하는 것입니다. DRO는 Azure NetApp Files 및 Azure VMware 솔루션을 검색할 수 있는 권한이 필요합니다. Azure AD(Active Directory) 응용 프로그램을 생성 및 설정하고 DRO에 필요한 Azure 자격 증명을 획득하여 Azure 계정에 필요한 권한을 부여할 수 있습니다. 서비스 보안 주체를 Azure 구독에 바인딩하고 필요한 관련 권한이 있는 사용자 지정 역할을 할당해야 합니다. 소스 및 대상 환경을 추가하면 서비스 보안 주체와 연결된 자격 증명을 선택하라는 메시지가 표시됩니다. 새 사이트 추가를 클릭하기 전에 이러한 자격 증명을 DRO에 추가해야 합니다.</block>
+  <block id="0ea5490a5da4ab07ce30763f4395b20a" category="paragraph">이 작업을 수행하려면 다음 단계를 수행하십시오.</block>
+  <block id="e496bc8a09ef0bff2ed49dfc9746a61f" category="list-text">지원되는 브라우저에서 DRO를 열고 기본 사용자 이름과 암호를 사용합니다 <block ref="21232f297a57a5a743894a0e4a801fc3" prefix="(" category="inline-code"></block><block ref="21232f297a57a5a743894a0e4a801fc3" prefix="/" category="inline-code"></block>)를 클릭합니다. 암호는 암호 변경 옵션을 사용하여 처음 로그인한 후 재설정할 수 있습니다.</block>
+  <block id="4ad2c508aa57459523225fea48cf2928" category="list-text">DRO 콘솔의 오른쪽 상단에서 * 설정 * 아이콘을 클릭하고 * 자격 증명 * 을 선택합니다.</block>
+  <block id="9a9321b8db1cac9beeecfa829e763dbe" category="list-text">새 자격 증명 추가 를 클릭하고 마법사의 단계를 따릅니다.</block>
+  <block id="f61fc6d956a5905e154da7bdc578662b" category="list-text">자격 증명을 정의하려면 필요한 권한을 부여하는 Azure Active Directory 서비스 보안 주체에 대한 정보를 입력합니다.</block>
+  <block id="a5f3bff0d7667c1bb37c185dbaac3ff8" category="list-text">자격 증명 이름입니다</block>
+  <block id="7131a7a6bfe81200d21d5a33c64847b6" category="list-text">테넌트 ID입니다</block>
+  <block id="1b4739e491387ef5d8a546854308e5fe" category="list-text">클라이언트 암호</block>
+  <block id="9bf79c7f10eadd0b612b8c354ad19bdc" category="list-text">구독 ID입니다</block>
+  <block id="3fb6b543576d4e6de4d8330552086cbf" category="paragraph">AD 응용 프로그램을 만들 때 이 정보를 캡처해야 합니다.</block>
+  <block id="7c0994c6d36bea4a46a67ee7be492a0c" category="list-text">새 자격 증명에 대한 세부 정보를 확인하고 자격 증명 추가 를 클릭합니다.</block>
+  <block id="860e0c902a247fd6fc5ba818a2e4c119" category="paragraph"><block ref="860e0c902a247fd6fc5ba818a2e4c119" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a569d23d0a18f8e5cdf96a9dbe0b318" category="paragraph">자격 증명을 추가한 후에는 운영 및 보조 AVS 사이트(vCenter 및 Azure NetApp Files 스토리지 계정 모두)를 검색하고 DRO에 추가해야 합니다. 소스 및 대상 사이트를 추가하려면 다음 단계를 수행하십시오.</block>
+  <block id="01822078d676b28b71765f19b2abc174" category="list-text">검색 * 탭으로 이동합니다.</block>
+  <block id="27976ab4d078e6248b695907df6518a4" category="list-text">새 사이트 추가 * 를 클릭합니다.</block>
+  <block id="aed2a8b3a917727d4b43e29919cfccde" category="list-text">다음 기본 AVS 사이트(콘솔에서 * 소스 * 로 지정됨)를 추가합니다.</block>
+  <block id="889354880d57dd4dd4f8f3038526d974" category="list-text">SDDC vCenter</block>
+  <block id="05f07fc27436b04820daaf552aae5b87" category="list-text">Azure NetApp Files 스토리지 계정입니다</block>
+  <block id="996c97afe4bc38c9853d27530a3df15e" category="list-text">다음 보조 AVS 사이트(* 콘솔에서 * 대상 * 으로 지정됨)를 추가합니다.</block>
+  <block id="a4005489f8d17cfe23209801e4384811" category="paragraph"><block ref="a4005489f8d17cfe23209801e4384811" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4e505f2bafbc80afa614f045310efd28" category="list-text">Source, * 를 차례로 클릭하여 사이트 세부 정보를 추가하고 친숙한 사이트 이름을 입력한 다음 커넥터를 선택합니다. 그런 다음 * 계속 * 을 클릭합니다.</block>
+  <block id="a8984cd143f24c2d3e7b4079bac3b8d6" category="admonition">데모용으로 소스 사이트 추가는 이 문서에서 다룹니다.</block>
+  <block id="03cb7c845b27b00d2fd5fcd6ca22399f" category="list-text">vCenter 세부 정보를 업데이트합니다. 이렇게 하려면 기본 AVS SDDC 드롭다운에서 자격 증명, Azure 지역 및 리소스 그룹을 선택합니다.</block>
+  <block id="ae848f14f01425473dd19fd9cfcc5fa9" category="list-text">DRO는 해당 지역 내에서 사용 가능한 모든 DC를 나열합니다. 드롭다운에서 지정된 사설 클라우드 URL을 선택합니다.</block>
+  <block id="c02b7f0ffcc1d4da79302adf29a66e56" category="list-text">를 입력합니다<block ref="2a07e8a0872e7f8458933397e500f4e7" prefix=" " category="inline-code"></block> 사용자 자격 증명. 이 기능은 Azure Portal에서 액세스할 수 있습니다. 여기에 설명된 단계를 따릅니다<block ref="9a765fe55ce09b5bcc5b9862623e77f3" category="inline-link-rx"></block>. 완료되면 * Continue * 를 클릭합니다.</block>
+  <block id="4cc62b4cb463cf57b77ddc7d6cb1e329" category="paragraph"><block ref="4cc62b4cb463cf57b77ddc7d6cb1e329" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="becc83b5605c625633fe2d8e0b8b380e" category="list-text">Azure Resource 그룹과 NetApp 계정을 선택하여 Source Storge 세부 정보(ANF)를 선택합니다.</block>
+  <block id="5296858fb0caa0a11f03202fcd7425e6" category="list-text">Create Site * 를 클릭합니다.</block>
+  <block id="81f0a9cde4a335215c94ace73a76a98a" category="paragraph"><block ref="81f0a9cde4a335215c94ace73a76a98a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b43e8d7859f4e668e88bbec1012614f" category="paragraph">DRO가 추가되면 자동 검색을 수행하고 소스 사이트에서 대상 사이트로 해당 지역 간 복제본이 있는 VM을 표시합니다. DRO는 VM에서 사용하는 네트워크와 세그먼트를 자동으로 감지하여 채웁니다.</block>
+  <block id="5b775ba0f30d059b52a43b406cc2e7c3" category="paragraph"><block ref="5b775ba0f30d059b52a43b406cc2e7c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e9078f0eac4eabfab52411e25a94a45" category="paragraph">다음 단계는 필요한 VM을 자원 그룹으로 그룹화하는 것입니다.</block>
+  <block id="fd8b6f30869f4dd563c888ca814a33a9" category="paragraph">플랫폼을 추가한 후 복구하려는 VM을 리소스 그룹으로 그룹화합니다. DRO 리소스 그룹을 사용하면 종속 VM 집합을 부팅 순서, 부팅 지연 및 복구 시 실행할 수 있는 선택적 응용 프로그램 유효성 검사가 포함된 논리 그룹으로 그룹화할 수 있습니다.</block>
+  <block id="d77884116359bfb00f05bd00d3e8d049" category="paragraph">자원 그룹 만들기를 시작하려면 * 새 자원 그룹 만들기 * 메뉴 항목을 클릭합니다.</block>
+  <block id="86cf73bd568d170320c05da514d80d57" category="list-text">Resource 그룹 * PS에 액세스하고 * Create New Resource Group * 을 클릭합니다.</block>
+  <block id="d05668f7a7c152b43c71f4e10ff83eb2" category="paragraph"><block ref="d05668f7a7c152b43c71f4e10ff83eb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="729041edea69eb39efcf6d3bb4958c20" category="list-text">새 리소스 그룹 아래의 드롭다운에서 소스 사이트를 선택하고 * 만들기 * 를 클릭합니다.</block>
+  <block id="8b2c5e430ee578e1098fd0dd29ed3832" category="list-text">리소스 그룹 세부 정보를 입력하고 * Continue * 를 클릭합니다.</block>
+  <block id="2036968de3c8690e533f2393b6eb23f2" category="list-text">검색 옵션을 사용하여 적절한 VM을 선택합니다.</block>
+  <block id="9bdc69df94caa6e66eeb26bc6f11fe0b" category="list-text">선택한 모든 VM에 대해 * 부트 순서 * 및 * 부트 지연 * (초)을 선택합니다. 각 가상 머신을 선택하고 우선 순위를 설정하여 전원 켜기 순서의 순서를 설정합니다. 모든 가상 머신의 기본값은 3입니다. 옵션은 다음과 같습니다.</block>
+  <block id="7bf779821eb857b7312d9fd21e28409c" category="list-text">전원을 켤 첫 번째 가상 시스템</block>
+  <block id="7a1920d61156abc05a60135aefe8bc67" category="list-text">기본값</block>
+  <block id="d3e1ce3079804318222f44cc5797acb6" category="list-text">전원을 켤 마지막 가상 컴퓨터</block>
+  <block id="aae5a12fc4a2fe256183b387a6d13520" category="paragraph"><block ref="aae5a12fc4a2fe256183b387a6d13520" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ca70125ce517c525f91333e5647c922" category="paragraph"><block ref="2ca70125ce517c525f91333e5647c922" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="01768278e2504e3e5697ae9ff4974842" category="paragraph">재해가 발생할 경우 애플리케이션을 복구할 계획이 있어야 합니다. 드롭다운에서 소스 및 대상 vCenter 플랫폼을 선택하고, 이 계획에 포함할 리소스 그룹을 선택하고, 애플리케이션 복구 및 전원 켜기 방식(예: 도메인 컨트롤러, 계층 1, 계층 2 등)의 그룹도 포함합니다. 계획도 종종 청사진이라고 부릅니다. 복구 계획을 정의하려면 Replication Plan 탭으로 이동하여 * New Replication Plan * 을 클릭합니다.</block>
+  <block id="578c9ba6f5077731855dfceecbaaa69e" category="list-text">Replication Plans * 로 이동하고 * Create New Replication Plan * 을 클릭합니다.</block>
+  <block id="ab134bc6f5a247f30cd04a21a42a6e3e" category="paragraph"><block ref="ab134bc6f5a247f30cd04a21a42a6e3e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dc4a81ccf4d35c2d79e13b8d9e764ac3" category="list-text">새 복제 계획 * 에서 소스 사이트, 연결된 vCenter, 대상 사이트 및 연결된 vCenter를 선택하여 계획의 이름을 제공하고 복구 매핑을 추가합니다.</block>
+  <block id="111af38498fbc99787f757630f9b6502" category="paragraph"><block ref="111af38498fbc99787f757630f9b6502" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb0d3f2303ecd179cbb41b4a89ce5c67" category="list-text">복구 매핑이 완료되면 * 클러스터 매핑 * 을 선택합니다.</block>
+  <block id="e7c6ba3de84b5549973968926ac0d23b" category="paragraph"><block ref="e7c6ba3de84b5549973968926ac0d23b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b2246eeda2d9dd58b6d0c476b7f59257" category="list-text">완료되면 네트워크 매핑을 해당 세그먼트에 설정합니다. 세그먼트는 이미 보조 AVS 클러스터에서 프로비저닝되어야 하며, VM을 이러한 세그먼트로 매핑하려면 적절한 세그먼트를 선택하십시오.</block>
+  <block id="853f23cf3569d309e9916974d1a51876" category="list-text">데이터 저장소 매핑은 선택한 VM에 따라 자동으로 선택됩니다.</block>
+  <block id="cbbdb677d49130a99047900675796b52" category="admonition">CRR(교차 지역 복제)이 볼륨 레벨에 있습니다. 따라서 해당 볼륨에 상주하는 모든 VM이 CRR 대상에 복제됩니다. 복제 계획에 포함된 가상 머신만 처리되므로 데이터 저장소의 일부인 모든 VM을 선택해야 합니다.</block>
+  <block id="8799c7fd170fa15c94184f5e4db288d8" category="paragraph"><block ref="8799c7fd170fa15c94184f5e4db288d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="884f1298b3bdd040ffb399dbc04901f0" category="list-text">VM 세부 정보 아래에서 VM CPU 및 RAM 매개 변수의 크기를 선택적으로 조정할 수 있습니다. 이 기능은 대규모 환경을 소규모 타겟 클러스터로 복구하거나 일대일 물리적 VMware 인프라를 프로비저닝하지 않고 DR 테스트를 수행할 때 매우 유용합니다. 또한 리소스 그룹에서 선택한 모든 VM에 대한 부팅 순서 및 부팅 지연(초)을 수정합니다. 리소스 그룹 부팅 순서를 선택하는 동안 선택한 항목에서 변경이 필요한 경우 부팅 순서를 수정하는 추가 옵션이 있습니다. 기본적으로 리소스 그룹을 선택하는 동안 선택한 부팅 순서가 사용되지만 이 단계에서는 모든 수정 작업을 수행할 수 있습니다.</block>
+  <block id="f178cb66ab34b8fced158ec43b1b9b9d" category="paragraph"><block ref="f178cb66ab34b8fced158ec43b1b9b9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="be14c33c0e1307565b1b4265090e6004" category="list-text">Create Replication Plan * 을 클릭합니다. 복제 계획이 생성되면 요구 사항에 따라 장애 조치, 테스트 대체 작동 또는 마이그레이션 옵션을 실행할 수 있습니다.</block>
+  <block id="3d1083389392951c6f9506a1a837c338" category="paragraph"><block ref="3d1083389392951c6f9506a1a837c338" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eabe44ce43c0d27a3c7ed6090f8da8fe" category="paragraph">페일오버 및 테스트 페일오버 옵션 중에 최신 스냅샷이 사용되거나 특정 시점 스냅샷에서 특정 스냅샷을 선택할 수 있습니다. 가장 최근의 복제본이 이미 손상 또는 암호화된 상태에서 랜섬웨어와 같은 손상 이벤트가 발생할 경우 시점 옵션이 매우 유용할 수 있습니다. DRO는 사용 가능한 모든 시점을 표시합니다.</block>
+  <block id="b7ff5d05bb51bb1ba1f1948430b7f0ea" category="paragraph"><block ref="b7ff5d05bb51bb1ba1f1948430b7f0ea" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b20ccdef37c2fb3ba1dd6564f66dfd75" category="paragraph">복제 계획에 지정된 구성으로 대체 작동을 트리거하거나 테스트 대체 작동을 트리거하려면 * 장애 조치 * 또는 * 테스트 장애 조치 * 를 클릭합니다. 작업 메뉴에서 복제 계획을 모니터링할 수 있습니다.</block>
+  <block id="a2d45a6a3294c0f5907fc2a39cdf9427" category="paragraph"><block ref="a2d45a6a3294c0f5907fc2a39cdf9427" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c599217b8b3d1ed882a32d34779619f5" category="paragraph">페일오버가 트리거된 후 보조 사이트 AVS SDDC vCenter(VM, 네트워크 및 데이터 저장소)에서 복구된 항목을 볼 수 있습니다. 기본적으로 VM은 Workload 폴더로 복구됩니다.</block>
+  <block id="22ab0c39f2f3febca61797b34cd8fabf" category="paragraph"><block ref="22ab0c39f2f3febca61797b34cd8fabf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1403207c6b26d5ba9741226bc07955f" category="paragraph">페일백은 복제 계획 레벨에서 트리거될 수 있습니다. 테스트 대체 작동의 경우, tear down 옵션을 사용하여 변경 사항을 롤백하고 새로 생성된 볼륨을 제거할 수 있습니다. 장애 조치와 관련된 장애 복구는 2단계 프로세스입니다. 복제 계획을 선택하고 * Reverse Data sync * 를 선택합니다.</block>
+  <block id="d653f5939cefc7bad010a2de7775f6b3" category="paragraph"><block ref="d653f5939cefc7bad010a2de7775f6b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="85ee6e66825baba0f8198b3dd30e87f0" category="paragraph">이 단계가 완료된 후 페일백을 트리거하여 기본 AVS 사이트로 다시 이동합니다.</block>
+  <block id="2cf097957a2bdcb5522a184f3700c7cc" category="paragraph"><block ref="2cf097957a2bdcb5522a184f3700c7cc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="080e59f9730db0f9835804935f719573" category="paragraph"><block ref="080e59f9730db0f9835804935f719573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5272991f0466fbd09b9b828354b71fbf" category="paragraph">Azure 포털에서 보조 사이트 AVS SDDC에 읽기/쓰기 볼륨으로 매핑된 적절한 볼륨에 대한 복제 상태가 끊어진 것을 확인할 수 있습니다. 테스트 페일오버 중에 DRO는 대상 또는 복제본 볼륨을 매핑하지 않습니다. 대신 필요한 교차 지역 복제 스냅샷의 새 볼륨을 생성하고 볼륨을 데이터 저장소로 노출합니다. 그러면 용량 풀의 추가 물리적 용량을 사용하고 소스 볼륨이 수정되지 않습니다. 특히, DR 테스트 또는 선별적 워크플로우 중에도 복제 작업을 계속할 수 있습니다. 또한 이 프로세스를 통해 오류가 발생하거나 손상된 데이터가 복구되면 복제본이 손상될 위험 없이 복구를 정리할 수 있습니다.</block>
+  <block id="a5f63dad4856a347b9b7fc5a308fa216" category="paragraph">랜섬웨어에서 복구하는 것은 매우 힘든 작업이 될 수 있습니다. 특히, IT 조직은 안전한 반환 지점이 무엇인지 정확히 파악하기가 어려울 수 있으며, 일단 결정된 후에는 복구된 워크로드가 재발생하는 공격으로부터 보호하는 방법(예: 휴면 맬웨어로부터 또는 취약한 응용 프로그램을 통해)을 찾기가 어려울 수 있습니다.</block>
+  <block id="0dd7fb82cd5ca2189a0483762c3ad4cd" category="paragraph">DRO는 조직이 사용 가능한 모든 시점에서 복구할 수 있도록 함으로써 이러한 문제를 해결합니다. 그런 다음, 워크로드가 기능적/고립된 네트워크로 복구되어 애플리케이션이 서로 작동하고 통신할 수 있지만 남북 트래픽에 노출되지 않도록 합니다. 이 프로세스를 통해 보안 팀은 법의학 조사를 수행하고 숨겨진 맬웨어 또는 침낭된 맬웨어를 식별할 수 있는 안전한 장소를 확보할 수 있습니다.</block>
+  <block id="97873cb64dd3b9de78b8dbf3541c1cb7" category="paragraph">Azure NetApp Files 및 Azure VMware 재해 복구 솔루션은 다음과 같은 이점을 제공합니다.</block>
+  <block id="ea9b3d561aaa24c619c8bd8b411ed6df" category="list-text">효율적이고 탄력적인 Azure NetApp Files 교차 지역 복제 활용</block>
+  <block id="616f4cdbcb09376a462dda8ef67bbb64" category="list-text">스냅샷 보존을 통해 사용 가능한 모든 시점으로 복구합니다.</block>
+  <block id="848e2ec26d0beb2339e91c67f385d9d3" category="list-text">스토리지, 컴퓨팅, 네트워크 및 애플리케이션 검증 단계에서 수백, 수천 개의 VM을 복구하는 데 필요한 모든 단계를 완전히 자동화합니다.</block>
+  <block id="5248044020773fc0da962da4f0c97062" category="list-text">워크로드 복구에서는 복제된 볼륨을 조작하지 않는 “최신 스냅샷에서 새 볼륨 생성” 프로세스를 활용합니다.</block>
+  <block id="c197954fd8a0b84ad03ef564ae13bcf5" category="list-text">볼륨 또는 스냅샷의 데이터 손상 위험을 방지합니다.</block>
+  <block id="a709ce349016e4ae3d5d0c4d9dfbd871" category="list-text">DR 테스트 워크플로우 중에 복제 중단을 방지합니다.</block>
+  <block id="95a8950fc6379e50b04cfa6f61a36d11" category="list-text">DR 이외의 작업에 개발/테스트, 보안 테스트, 패치 및 업그레이드 테스트, 문제 해결 테스트 등 DR 데이터와 클라우드 컴퓨팅 리소스를 활용할 수 있습니다.</block>
+  <block id="8f3b531b04dadc9320674c0e42b1a487" category="list-text">CPU 및 RAM 최적화를 통해 보다 작은 컴퓨팅 클러스터로 복구할 수 있으므로 클라우드 비용을 절감할 수 있습니다.</block>
+  <block id="f64a0d6a033b67f67edba41e1bd8152c" category="inline-link"><block ref="f64a0d6a033b67f67edba41e1bd8152c" category="inline-link-rx"></block></block>
+  <block id="5b7bf21e5e287cfaa11c6e67e2073b27" category="paragraph"><block ref="5b7bf21e5e287cfaa11c6e67e2073b27" category="inline-link-rx"></block></block>
+  <block id="7b6802bdcfa19b11a01e1fa2b2f6010d" category="list-text">Azure NetApp Files 볼륨의 교차 지역 복제</block>
+  <block id="0bfb405aa5c708395d0f8a337e30b65e" category="inline-link"><block ref="0bfb405aa5c708395d0f8a337e30b65e" category="inline-link-rx"></block></block>
+  <block id="a931d15f7c97401d5f17df4edb5f3ad6" category="paragraph"><block ref="a931d15f7c97401d5f17df4edb5f3ad6" category="inline-link-rx"></block></block>
+  <block id="3de91620717e92c6908e156194bcf68a" category="list-text"><block ref="3de91620717e92c6908e156194bcf68a" category="inline-link-rx"></block></block>
+  <block id="4af3bddf434f9895d84aceb3a82b8c71" category="inline-link"><block ref="4af3bddf434f9895d84aceb3a82b8c71" category="inline-link-rx"></block></block>
+  <block id="e01e170739dafe7d8690e443b02ffa37" category="paragraph"><block ref="e01e170739dafe7d8690e443b02ffa37" category="inline-link-rx"></block></block>
+  <block id="95e48cdadbed4c3715638febbf224db0" category="inline-link"><block ref="95e48cdadbed4c3715638febbf224db0" category="inline-link-rx"></block></block>
+  <block id="1f012963182d3d85fbf4cd4c6093d56c" category="paragraph"><block ref="1f012963182d3d85fbf4cd4c6093d56c" category="inline-link-rx"></block></block>
+  <block id="e0d783f10c59be2d7b43e92ef42c1540" category="list-text">Azure VMware 솔루션을 구축 및 구성합니다</block>
+  <block id="164a8b646e75ab3984103d6026f5a8f3" category="inline-link"><block ref="164a8b646e75ab3984103d6026f5a8f3" category="inline-link-rx"></block></block>
+  <block id="42bdffc2ff584c6491929199aa95fdef" category="paragraph"><block ref="42bdffc2ff584c6491929199aa95fdef" category="inline-link-rx"></block></block>
+  <block id="e41aedb86788cb5e4409a06bc4b16279" category="inline-link-macro">ANF 및 AVS를 통한 재해 복구(DRO</block>
+  <block id="c26f803d28a5cb346d4655a22f90bb26" category="list-text"><block ref="c26f803d28a5cb346d4655a22f90bb26" category="inline-link-macro-rx"></block></block>
+  <block id="bcc01e72c7e79a58e573ae6519d6b0b4" category="list-text"><block ref="bcc01e72c7e79a58e573ae6519d6b0b4" category="inline-link-macro-rx"></block></block>
+  <block id="fa907e97b7f9d454ad88521e57137cfe" category="paragraph">Veeam을 사용하여 VM을 복원하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="00a6103995562d7a2009f890514665b7" category="inline-link-macro-rx"></block>.</block>
+  <block id="6afeb7a829e309830236eb7d13dafb4b" category="list-text">보조 SnapCenter 서버가 설정되었고 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 복원 및 구성이 완료되었습니다 <block ref="c05666153a222d3eb881a4a76532fde4" category="inline-link-macro-rx"></block></block>
+  <block id="7ddf1a9656f14a9883540ea830093e20" category="list-text">보조 SnapCenter 서버가 설정되었으며 이 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 및 구성 파일이 복원되었습니다 <block ref="c05666153a222d3eb881a4a76532fde4" category="inline-link-macro-rx"></block></block>
+  <block id="52463fc86a53e3e78c2a77069889838f" category="paragraph">AWS에 있는 SnapCenter 서버에서 완료해야 하는 단계 목록은 섹션을 참조하십시오 <block ref="1d252dd870179a0ef2258cd4837b106d" category="inline-link-macro-rx"></block>.</block>
+  <block id="5de00fbb5f941e4a6da089a424224039" category="paragraph">애플리케이션 VM의 장애 조치를 완료하는 데 필요한 전체 단계 목록은 섹션을 참조하십시오 <block ref="26a23d90f8b49a2bef24fd9bd32f1a97" category="inline-link-macro-rx"></block>.</block>
+  <block id="5fe36f3a6d3cc4a34d1f045b7cd14ac3" category="paragraph">명령의 예상 출력:</block>
+  <block id="b1d4b4bb33f177bb183f21d1c085e800" category="paragraph">저자: Allen Cao, NetApp 솔루션 엔지니어링</block>
+  <block id="c0340939954e1026bd670680d03fe329" category="paragraph">crontab 일정:</block>
+  <block id="e0ffc65e6881a5936afffc4b840e9cd5" category="list-text">복원할 데이터베이스에 테스트 테이블을 만듭니다.</block>
+  <block id="8705d70129ca2e423b28fad13ebb5bf5" category="paragraph">저자: Allen Cao, Niyaz Mohamed, NetApp</block>
+  <block id="ca1f43ed95dcff37918897f15b054794" category="section-title">Azure 가상 머신</block>
+  <block id="8c649830ad367719c501f8fc9ba4d387" category="inline-link-macro">자세한 지침을 보려면 여기를 클릭하십시오</block>
+  <block id="d2068521e0b773365643b7537a1caa7f" category="list-text">Ansible 제어 호스트로 사용할 수 있도록 Linux 호스트를 구성합니다<block ref="27248a019dbeee842c240071693b6fb8" category="inline-link-macro-rx"></block></block>
+  <block id="8ac2da66fa1da7b6cb74292caea13c74" category="sidebar">Azure NetApp Files 및 AVS를 통한 재해 복구(DRO</block>
 </blocks>

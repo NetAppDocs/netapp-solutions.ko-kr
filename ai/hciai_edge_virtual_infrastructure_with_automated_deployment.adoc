@@ -17,7 +17,7 @@ summary:
 
 == NDE 배포 필수 구성 요소
 
-을 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2798490["NetApp HCI 필수 구성 요소 체크리스트"^] 배포를 시작하기 전에 NetApp HCI에 대한 요구 사항 및 권장 사항을 확인하십시오.
+을 참조하십시오 https://["NetApp HCI 필수 구성 요소 체크리스트"^] 배포를 시작하기 전에 NetApp HCI에 대한 요구 사항 및 권장 사항을 확인하십시오.
 
 . 네트워크 및 스위치 요구 사항 및 구성
 . 필요한 VLAN ID를 준비합니다
@@ -50,7 +50,7 @@ NOTE: 이 검증에서는 NDE를 사용하여 모든 주소를 자동으로 구�
 NDE에 대한 자세한 단계는 본 문서에서 다루지 않습니다.
 
 +
-기본 NetApp HCI 플랫폼 배포 완료에 대한 단계별 지침은 를 참조하십시오 http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-180/home.html?cp=3_0["구축 가이드"^].
+기본 NetApp HCI 플랫폼 배포 완료에 대한 단계별 지침은 를 참조하십시오 http://["구축 가이드"^].
 
 . NDE가 완료되면 vCenter에 로그인하여 ONTAP Select 및 애플리케이션에서 사용할 NFS 네트워크에 대한 분산 포트 그룹 NetApp HCI VDS 01-NFS_Network를 생성합니다.
 

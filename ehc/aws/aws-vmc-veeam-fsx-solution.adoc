@@ -78,7 +78,7 @@ VMware Cloud(AWS의 경우)는 NFS 데이터 저장소를 보조 스토리지로
 
 . ONTAP NFS 데이터 저장소용 FSx에 상주하는 VMDK 및 애플리케이션 데이터가 있는 Oracle 데이터베이스 VM
 . ONTAP NFS 데이터 저장소용 FSx에 상주하는 VMDK가 있는 Linux 및 Windows 파일 서버 VM
-. Veeam을 사용하려면 백업 환경의 서버와 구성 요소 간 통신에 특정 TCP 포트가 필요합니다. Veeam 백업 인프라 구성 요소에서 필요한 방화벽 규칙이 자동으로 생성됩니다. 네트워크 포트 요구 사항의 전체 목록은 의 포트 섹션을 참조하십시오 https://helpcenter.veeam.com/docs/backup/vsphere/used_ports.html?zoom_highlight=network+ports&ver=120["Veeam Backup and Replication User Guide for VMware vSphere를 참조하십시오"].
+. Veeam을 사용하려면 백업 환경의 서버와 구성 요소 간 통신에 특정 TCP 포트가 필요합니다. Veeam 백업 인프라 구성 요소에서 필요한 방화벽 규칙이 자동으로 생성됩니다. 네트워크 포트 요구 사항의 전체 목록은 의 포트 섹션을 참조하십시오 https://["Veeam Backup and Replication User Guide for VMware vSphere를 참조하십시오"].
 
 
 ====
@@ -114,11 +114,11 @@ image::aws-vmc-veeam-00.png[솔루션 아키텍처 다이어그램]
 
 ONTAP 파일 시스템 생성을 위한 FSx, 백업 저장소로 사용할 iSCSI 볼륨 마운트, 백업 작업 생성 및 실행, VM 및 데이터베이스 복원 수행 등을 살펴보겠습니다.
 
-NetApp ONTAP용 FSx에 대한 자세한 내용은 를 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^].
+NetApp ONTAP용 FSx에 대한 자세한 내용은 를 참조하십시오 https://["ONTAP용 FSX 사용 설명서"^].
 
-Veeam Backup and Replication에 대한 자세한 내용은 을 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^] 사이트.
+Veeam Backup and Replication에 대한 자세한 내용은 을 참조하십시오 https://["Veeam Help Center 기술 문서"^] 사이트.
 
-AWS에서 Veeam Backup and Replication을 VMware Cloud로 사용할 때의 고려 사항 및 제한 사항은 을 참조하십시오 https://www.veeam.com/kb2414["AWS 기반 VMware 클라우드 및 Dell EMC 지원 기반 VMware 클라우드 고려 사항 및 제한 사항"].
+AWS에서 Veeam Backup and Replication을 VMware Cloud로 사용할 때의 고려 사항 및 제한 사항은 을 참조하십시오 https://["AWS 기반 VMware 클라우드 및 Dell EMC 지원 기반 VMware 클라우드 고려 사항 및 제한 사항"].
 
 
 
@@ -128,11 +128,11 @@ Veeam 프록시 서버는 Veeam Backup & Replication 소프트웨어의 구성 �
 
 Veeam 프록시 서버 설계를 선택할 때는 필요한 동시 작업 수와 전송 모드 또는 스토리지 액세스 유형을 고려해야 합니다.
 
-프록시 서버의 수와 시스템 요구 사항에 대한 사이징은 를 참조하십시오 https://bp.veeam.com/vbr/2_Design_Structures/D_Veeam_Components/D_backup_proxies/vmware_proxies.html["Veeam VMware vSphere 모범 사례 가이드"].
+프록시 서버의 수와 시스템 요구 사항에 대한 사이징은 를 참조하십시오 https://["Veeam VMware vSphere 모범 사례 가이드"].
 
 Veeam Data Mover는 Veeam Proxy Server의 구성 요소이며 소스에서 VM 데이터를 가져오고 타겟으로 전송하기 위한 수단으로 전송 모드를 사용합니다. 전송 모드는 백업 작업을 구성하는 동안 지정됩니다. 직접 스토리지 액세스를 사용하여 NFS 데이터 저장소에서 데이터 백업의 효율성을 높일 수 있습니다.
 
-운송 모드에 대한 자세한 내용은 를 참조하십시오 https://helpcenter.veeam.com/docs/backup/vsphere/transport_modes.html?ver=120["Veeam Backup and Replication User Guide for VMware vSphere를 참조하십시오"].
+운송 모드에 대한 자세한 내용은 를 참조하십시오 https://["Veeam Backup and Replication User Guide for VMware vSphere를 참조하십시오"].
 
 다음 단계에서는 VMware Cloud SDDC의 Windows VM에 Veeam Proxy Server를 구축하는 방법을 살펴봅니다.
 
@@ -214,7 +214,7 @@ FSx for ONTAP에서 iSCSI LUN을 생성 및 구성하고 Veeam 백업 및 프록
 NOTE: ONTAP용 FSx에서 iSCSI LUN을 생성하는 과정은 여러 단계로 이루어집니다. 볼륨을 생성하는 첫 번째 단계는 Amazon FSx 콘솔 또는 NetApp ONTAP CLI에서 수행할 수 있습니다.
 
 
-NOTE: ONTAP용 FSx 사용에 대한 자세한 내용은 를 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^].
+NOTE: ONTAP용 FSx 사용에 대한 자세한 내용은 를 참조하십시오 https://["ONTAP용 FSX 사용 설명서"^].
 
 . NetApp ONTAP CLI에서 다음 명령을 사용하여 초기 볼륨을 생성합니다.
 +
@@ -282,7 +282,7 @@ image::aws-vmc-veeam-16.png[서버 마운트 를 선택합니다]
 
 === Veeam 백업 작업을 구성합니다
 
-이전 섹션의 백업 리포지토리를 사용하여 백업 작업을 생성해야 합니다. 백업 작업 생성은 스토리지 관리자의 일반적인 일부이며 여기서는 모든 단계를 다루지 않습니다. Veeam에서 백업 작업 생성에 대한 자세한 내용은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^].
+이전 섹션의 백업 리포지토리를 사용하여 백업 작업을 생성해야 합니다. 백업 작업 생성은 스토리지 관리자의 일반적인 일부이며 여기서는 모든 단계를 다루지 않습니다. Veeam에서 백업 작업 생성에 대한 자세한 내용은 를 참조하십시오 https://["Veeam Help Center 기술 문서"^].
 
 이 솔루션에서는 다음에 대해 별도의 백업 작업이 생성되었습니다.
 
@@ -313,7 +313,7 @@ image::aws-vmc-veeam-18.png[장기 보존 정책]
 
 Veeam을 사용하여 전체 복원을 수행하는 것은 애플리케이션 복원을 수행하는 첫 번째 단계입니다. VM의 전체 복원 전원이 켜져 있고 모든 서비스가 정상적으로 실행 중임을 확인했습니다.
 
-서버 복원은 스토리지 관리자의 정상적인 일부이며 여기서는 모든 단계를 다루지 않습니다. Veeam에서 전체 복원을 수행하는 방법에 대한 자세한 내용은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^].
+서버 복원은 스토리지 관리자의 정상적인 일부이며 여기서는 모든 단계를 다루지 않습니다. Veeam에서 전체 복원을 수행하는 방법에 대한 자세한 내용은 를 참조하십시오 https://["Veeam Help Center 기술 문서"^].
 
 
 
@@ -358,7 +358,7 @@ image::aws-vmc-veeam-24.png[SQL Server 복구 프로세스를 모니터링합니
 
 
 ====
-Veeam Explorer로 SQL Server 복원 작업을 수행하는 방법에 대한 자세한 내용은 의 Microsoft SQL Server 섹션을 참조하십시오 https://helpcenter.veeam.com/docs/backup/explorers/vesql_user_guide.html?ver=120["Veeam Explorers 사용자 가이드"].
+Veeam Explorer로 SQL Server 복원 작업을 수행하는 방법에 대한 자세한 내용은 의 Microsoft SQL Server 섹션을 참조하십시오 https://["Veeam Explorers 사용자 가이드"].
 
 
 
@@ -366,7 +366,7 @@ Veeam Explorer로 SQL Server 복원 작업을 수행하는 방법에 대한 자�
 
 Oracle 데이터베이스용 Veeam Explorer를 사용하면 표준 Oracle 데이터베이스 복원 또는 즉각적인 복구를 통해 무중단 복원을 수행할 수 있습니다. 또한 빠른 액세스, Data Guard 데이터베이스 복구 및 RMAN 백업으로부터의 복구를 위해 데이터베이스를 게시하는 기능도 지원합니다.
 
-Veeam Explorer로 Oracle 데이터베이스 복원 작업을 수행하는 방법에 대한 자세한 내용은 의 Oracle 섹션을 참조하십시오 https://helpcenter.veeam.com/docs/backup/explorers/veor_user_guide.html?ver=120["Veeam Explorers 사용자 가이드"].
+Veeam Explorer로 Oracle 데이터베이스 복원 작업을 수행하는 방법에 대한 자세한 내용은 의 Oracle 섹션을 참조하십시오 https://["Veeam Explorers 사용자 가이드"].
 
 .Veeam Explorer로 Oracle 데이터베이스를 복원합니다
 [%collapsible]
@@ -457,7 +457,7 @@ VMware Cloud는 비즈니스 크리티컬 애플리케이션을 실행하고 중
 
 이 솔루션에 제공되는 기술에 대한 자세한 내용은 다음 추가 정보를 참조하십시오.
 
-* https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^]
-* https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^]
-* https://www.veeam.com/kb2414["AWS의 VMware Cloud 지원: 고려 사항 및 제한 사항"]
+* https://["ONTAP용 FSX 사용 설명서"^]
+* https://["Veeam Help Center 기술 문서"^]
+* https://["AWS의 VMware Cloud 지원: 고려 사항 및 제한 사항"]
 

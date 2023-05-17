@@ -20,6 +20,6 @@ link:xcp-bp-using-the-xcp-data-mover-to-migrate-millions-of-small-files-to-flexi
 
 다음 그림에서는 대용량 파일의 경우 사내에서 Azure NetApp Files으로 데이터를 마이그레이션하는 방법을 보여 줍니다.
 
-자세한 내용은 를 참조하십시오 https://blog.netapp.com/XCP-cloud-data-migration["NetApp XCP Data Mover 솔루션: 사내에서 클라우드로"^] 블로그:
+자세한 내용은 를 참조하십시오 https://["NetApp XCP Data Mover 솔루션: 사내에서 클라우드로"^] 블로그:
 
 link:xcp-bp-duplicate-files.html["다음: 파일을 복제합니다."]

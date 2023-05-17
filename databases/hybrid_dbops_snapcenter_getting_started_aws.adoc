@@ -41,13 +41,13 @@ NOTE: 그 결과를 더욱 쉽게 확인할 수 있도록 AWS에 구축된 이 �
 === 2.AWS에서 Cloud Manager 및 Cloud Volumes ONTAP를 구축하는 단계
 
 
-NOTE: Cloud Manager와 Cloud Volumes ONTAP를 구축하는 방법은 매우 간단합니다. 이 방법은 가장 간단하지만 가장 많은 권한이 필요합니다. 이 방법이 AWS 환경에 적합하지 않은 경우 을 참조하십시오 https://docs.netapp.com/us-en/occm/task_creating_connectors_aws.html["NetApp 클라우드 문서"^].
+NOTE: Cloud Manager와 Cloud Volumes ONTAP를 구축하는 방법은 매우 간단합니다. 이 방법은 가장 간단하지만 가장 많은 권한이 필요합니다. 이 방법이 AWS 환경에 적합하지 않은 경우 을 참조하십시오 https://["NetApp 클라우드 문서"^].
 
 
 
 ==== Cloud Manager 커넥터를 배포합니다
 
-. 로 이동합니다 https://cloud.netapp.com/cloud-manager["NetApp Cloud Central에서"^] 로그인 또는 가입
+. 로 이동합니다 https://["NetApp Cloud Central에서"^] 로그인 또는 가입
 +
 image:cloud_central_login_page.PNG["오류: 그래픽 이미지가 없습니다"]
 
@@ -67,11 +67,11 @@ image:cloud_central_add_conn_1.PNG["오류: 그래픽 이미지가 없습니다"
 +
 image:cloud_central_add_conn_3.PNG["오류: 그래픽 이미지가 없습니다"]
 
-. 암호 키와 액세스 키를 입력합니다. 사용자에게 에 설명된 올바른 권한이 있는지 확인합니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["NetApp 정책 페이지를 참조하십시오"^].
+. 암호 키와 액세스 키를 입력합니다. 사용자에게 에 설명된 올바른 권한이 있는지 확인합니다 https://["NetApp 정책 페이지를 참조하십시오"^].
 +
 image:cloud_central_add_conn_4.PNG["오류: 그래픽 이미지가 없습니다"]
 
-. 커넥터에 이름을 지정하고 에 설명된 대로 미리 정의된 역할을 사용합니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["NetApp 정책 페이지를 참조하십시오"^] 또는 Cloud Manager에게 역할을 맡도록 요청하십시오.
+. 커넥터에 이름을 지정하고 에 설명된 대로 미리 정의된 역할을 사용합니다 https://["NetApp 정책 페이지를 참조하십시오"^] 또는 Cloud Manager에게 역할을 맡도록 요청하십시오.
 +
 image:cloud_central_add_conn_5.PNG["오류: 그래픽 이미지가 없습니다"]
 
@@ -153,7 +153,7 @@ image:cloud_central_add_we_10.PNG["오류: 그래픽 이미지가 없습니다"]
 
 
 
-. 구축할 추가 서비스를 선택하십시오. 이러한 서비스에 대한 자세한 내용은 를 참조하십시오 https://cloud.netapp.com["NetApp Cloud 홈 페이지"^].
+. 구축할 추가 서비스를 선택하십시오. 이러한 서비스에 대한 자세한 내용은 를 참조하십시오 https://["NetApp Cloud 홈 페이지"^].
 +
 image:cloud_central_add_we_11.PNG["오류: 그래픽 이미지가 없습니다"]
 
@@ -174,7 +174,7 @@ image:cloud_central_add_we_14.PNG["오류: 그래픽 이미지가 없습니다"]
 
 TIP: 중재자가 AWS API와 통신해야 합니다. 중재자 EC2 인스턴스를 구축한 후 API에 연결할 수 있으면 공용 IP 주소가 필요하지 않습니다.
 
-. 부동 IP 주소는 클러스터 관리 및 데이터 서비스 IP를 포함하여 Cloud Volumes ONTAP가 사용하는 다양한 IP 주소에 대한 액세스를 허용하는 데 사용됩니다. 이러한 주소는 네트워크 내에서 아직 라우팅할 수 없는 주소여야 하며 AWS 환경의 라우팅 테이블에 추가됩니다. 이러한 주소는 페일오버 중에 HA 쌍의 일관된 IP 주소를 지원하는 데 필요합니다. 부동 IP 주소에 대한 자세한 내용은 에서 찾을 수 있습니다 https://docs.netapp.com/us-en/occm/reference_networking_aws.html#requirements-for-ha-pairs-in-multiple-azs["NetApp 클라우드 문서화"^].
+. 부동 IP 주소는 클러스터 관리 및 데이터 서비스 IP를 포함하여 Cloud Volumes ONTAP가 사용하는 다양한 IP 주소에 대한 액세스를 허용하는 데 사용됩니다. 이러한 주소는 네트워크 내에서 아직 라우팅할 수 없는 주소여야 하며 AWS 환경의 라우팅 테이블에 추가됩니다. 이러한 주소는 페일오버 중에 HA 쌍의 일관된 IP 주소를 지원하는 데 필요합니다. 부동 IP 주소에 대한 자세한 내용은 에서 찾을 수 있습니다 https://["NetApp 클라우드 문서화"^].
 +
 image:cloud_central_add_we_15.PNG["오류: 그래픽 이미지가 없습니다"]
 
@@ -226,7 +226,7 @@ image:cloud_central_add_we_25.PNG["오류: 그래픽 이미지가 없습니다"]
 
 소스 ONTAP 시스템과 타겟 ONTAP 시스템을 구축했으므로 이제 데이터베이스 데이터가 포함된 볼륨을 클라우드에 복제할 수 있습니다.
 
-SnapMirror용 호환 ONTAP 버전에 대한 지침은 를 참조하십시오 https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-dap%2FGUID-0810D764-4CEA-4683-8280-032433B1886B.html["SnapMirror 호환성 매트릭스"^].
+SnapMirror용 호환 ONTAP 버전에 대한 지침은 를 참조하십시오 https://["SnapMirror 호환성 매트릭스"^].
 
 . 소스 ONTAP 시스템(온-프레미스)을 클릭하고 대상을 끌어다 놓고 복제 > 활성화 를 선택하거나 복제 > 메뉴 > 복제 를 선택합니다.
 +
@@ -294,14 +294,14 @@ image:cloud_central_replication_13.png["오류: 그래픽 이미지가 없습니
 
 === 데이터베이스 워크로드에 EC2 컴퓨팅 인스턴스를 구축합니다
 
-AWS는 다양한 워크로드를 위해 EC2 컴퓨팅 인스턴스를 사전 구성되어 있습니다. 인스턴스 유형 선택에 따라 CPU 코어 수, 메모리 용량, 스토리지 유형 및 용량, 네트워크 성능이 결정됩니다. 사용 사례의 경우, OS 파티션을 제외하고 데이터베이스 워크로드를 실행할 기본 스토리지가 CVO 또는 FSx ONTAP 스토리지 엔진에서 할당됩니다. 따라서 고려해야 할 주요 요소는 CPU 코어, 메모리 및 네트워크 성능 수준을 선택하는 것입니다. 일반적인 AWS EC2 인스턴스 유형은 여기에서 찾을 수 있습니다. https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#InstanceTypes:["EC2 인스턴스 유형"].
+AWS는 다양한 워크로드를 위해 EC2 컴퓨팅 인스턴스를 사전 구성되어 있습니다. 인스턴스 유형 선택에 따라 CPU 코어 수, 메모리 용량, 스토리지 유형 및 용량, 네트워크 성능이 결정됩니다. 사용 사례의 경우, OS 파티션을 제외하고 데이터베이스 워크로드를 실행할 기본 스토리지가 CVO 또는 FSx ONTAP 스토리지 엔진에서 할당됩니다. 따라서 고려해야 할 주요 요소는 CPU 코어, 메모리 및 네트워크 성능 수준을 선택하는 것입니다. 일반적인 AWS EC2 인스턴스 유형은 여기에서 찾을 수 있습니다. https://["EC2 인스턴스 유형"].
 
 
 
 ==== 컴퓨팅 인스턴스 사이징
 
 . 필요한 워크로드를 기준으로 적합한 인스턴스 유형을 선택합니다. 고려해야 할 요소에는 지원할 비즈니스 트랜잭션 수, 동시 사용자 수, 데이터 세트 사이징 등이 포함됩니다.
-. EC2 대시보드에서 EC2 인스턴스 구축을 시작할 수 있습니다. 정확한 배포 절차는 이 솔루션의 범위를 벗어납니다. 을 참조하십시오 https://aws.amazon.com/pm/ec2/?trk=ps_a134p000004f2ZGAAY&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_US&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=US&sc_geo=NAMER&sc_outcome=acq&sc_detail=%2Bec2%20%2Bcloud&sc_content=EC2%20Cloud%20Compute_bmm&sc_matchtype=b&sc_segment=536455698896&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|EC2|US|EN|Text&s_kwcid=AL!4422!3!536455698896!b!!g!!%2Bec2%20%2Bcloud&ef_id=EAIaIQobChMIua378M-p8wIVToFQBh0wfQhsEAMYASAAEgKTzvD_BwE:G:s&s_kwcid=AL!4422!3!536455698896!b!!g!!%2Bec2%20%2Bcloud["Amazon EC2"] 를 참조하십시오.
+. EC2 대시보드에서 EC2 인스턴스 구축을 시작할 수 있습니다. 정확한 배포 절차는 이 솔루션의 범위를 벗어납니다. 을 참조하십시오 https://["Amazon EC2"] 를 참조하십시오.
 
 
 
@@ -313,7 +313,7 @@ AWS는 다양한 워크로드를 위해 EC2 컴퓨팅 인스턴스를 사전 구
 . SnapCenter 관리 도메인 내에서 이름 확인을 위해 DNS 서버에 Oracle 대기 인스턴스를 추가합니다.
 . 암호 없이 sudo 권한을 가진 SnapCenter OS 자격 증명으로 Linux 관리 사용자 ID를 추가합니다. EC2 인스턴스에서 SSH 암호 인증을 사용하여 ID를 활성화합니다. (기본적으로 EC2 인스턴스에서는 SSH 암호 인증 및 암호 없는 sudo가 해제되어 있습니다.)
 . OS 패치, Oracle 버전 및 패치 등과 같은 온프레미스 Oracle 설치와 일치하도록 Oracle 설치를 구성합니다.
-. NetApp Ansible DB 자동화 역할을 활용하여 데이터베이스 개발/테스트 및 재해 복구 사용 사례에 맞게 EC2 인스턴스를 구성할 수 있습니다. 자동화 코드는 NetApp 퍼블릭 GitHub 사이트에서 다운로드할 수 있습니다. https://github.com/NetApp-Automation/na_oracle19c_deploy["Oracle 19c 자동화된 구축"^]. 목표는 사내 OS 및 데이터베이스 구성과 일치하도록 EC2 인스턴스에 데이터베이스 소프트웨어 스택을 설치 및 구성하는 것입니다.
+. NetApp Ansible DB 자동화 역할을 활용하여 데이터베이스 개발/테스트 및 재해 복구 사용 사례에 맞게 EC2 인스턴스를 구성할 수 있습니다. 자동화 코드는 NetApp 퍼블릭 GitHub 사이트에서 다운로드할 수 있습니다. https://["Oracle 19c 자동화된 구축"^]. 목표는 사내 OS 및 데이터베이스 구성과 일치하도록 EC2 인스턴스에 데이터베이스 소프트웨어 스택을 설치 및 구성하는 것입니다.
 
 
 
@@ -326,7 +326,7 @@ AWS는 다양한 워크로드를 위해 EC2 컴퓨팅 인스턴스를 사전 구
 . Windows 방화벽을 비활성화하고, 호스트를 Windows SnapCenter 도메인에 연결하고, DNS 서버에 인스턴스를 추가하여 이름을 확인합니다.
 . SnapCenter 로그 볼륨을 프로비저닝하여 SQL Server 로그 파일을 저장합니다.
 . Windows 호스트에서 iSCSI를 구성하여 볼륨을 마운트하고 디스크 드라이브를 포맷합니다.
-. SQL Server용 NetApp 자동화 솔루션을 사용하면 이전 작업 중 많은 작업을 자동화할 수 있습니다. 새로 게시된 역할 및 솔루션은 NetApp 자동화 퍼블릭 GitHub 사이트 에서 확인할 수 있습니다. https://github.com/NetApp-Automation["NetApp 자동화"^].
+. SQL Server용 NetApp 자동화 솔루션을 사용하면 이전 작업 중 많은 작업을 자동화할 수 있습니다. 새로 게시된 역할 및 솔루션은 NetApp 자동화 퍼블릭 GitHub 사이트 에서 확인할 수 있습니다. https://["NetApp 자동화"^].
 
 
 link:hybrid_dbops_snapcenter_devtest.html["다음: 개발/테스트 환경의 클라우드 용량 증가를 위한 워크플로우"]

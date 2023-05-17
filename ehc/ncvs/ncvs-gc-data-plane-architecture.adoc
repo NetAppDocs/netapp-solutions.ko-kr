@@ -16,9 +16,9 @@ summary: Cloud Volumes Service for Google Cloud는 Google Cloud 프라이빗 서
 link:ncvs-gc-control-plane-architecture.html["이전: 컨트롤 플레인 아키텍처"]
 
 [role="lead"]
-Cloud Volumes Service for Google Cloud는 Google Cloud를 활용합니다 https://cloud.google.com/vpc/docs/configure-private-services-access["프라이빗 서비스 액세스"^] 프레임워크: 이 프레임워크에서는 사용자가 Cloud Volumes Service에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다.
+Cloud Volumes Service for Google Cloud는 Google Cloud를 활용합니다 https://["프라이빗 서비스 액세스"^] 프레임워크: 이 프레임워크에서는 사용자가 Cloud Volumes Service에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다.
 
-Google Cloud용 Cloud Volumes Service의 아키텍처 개요는 를 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/architecture["Cloud Volumes Service용 아키텍처"^].
+Google Cloud용 Cloud Volumes Service의 아키텍처 개요는 를 참조하십시오 https://["Cloud Volumes Service용 아키텍처"^].
 
 사용자 VPC(독립 실행형 또는 공유)는 볼륨을 호스팅하는 Cloud Volumes Service 관리 테넌트 프로젝트 내의 VPC에 대해 자세히 살펴봅니다.
 

@@ -43,7 +43,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저�
 
 == VMFS 데이터 저장소를 프로비저닝합니다
 
-. 과의 호환성을 확인하십시오 https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"].
+. 과의 호환성을 확인하십시오 https://["상호 운용성 매트릭스 툴(IMT)"].
 . link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-esx-cpg/GUID-7D444A0D-02CE-4A21-8017-CB1DC99EFD9A.html++["NVMe/FC 구성이 지원되는지 확인하십시오."]
 
 

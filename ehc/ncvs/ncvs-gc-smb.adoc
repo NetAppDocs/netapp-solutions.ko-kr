@@ -16,7 +16,7 @@ summary: SMB는 이더넷 네트워크를 통해 여러 SMB 클라이언트에 �
 link:ncvs-gc-nfs.html["이전: NFS."]
 
 [role="lead"]
-https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11)["중소기업"^] 는 이더넷 네트워크를 통해 여러 SMB 클라이언트에 중앙 집중식 사용자/그룹 인증, 권한, 잠금 및 파일 공유를 제공하는 Microsoft에서 개발한 네트워크 파일 공유 프로토콜입니다. 파일 및 폴더는 다양한 공유 속성으로 구성할 수 있고 공유 수준 권한을 통해 액세스 제어를 제공하는 공유를 통해 클라이언트에 제공됩니다. SMB는 Windows, Apple 및 Linux 클라이언트를 비롯하여 프로토콜을 지원하는 모든 클라이언트에 제공될 수 있습니다.
+https://["중소기업"^] 는 이더넷 네트워크를 통해 여러 SMB 클라이언트에 중앙 집중식 사용자/그룹 인증, 권한, 잠금 및 파일 공유를 제공하는 Microsoft에서 개발한 네트워크 파일 공유 프로토콜입니다. 파일 및 폴더는 다양한 공유 속성으로 구성할 수 있고 공유 수준 권한을 통해 액세스 제어를 제공하는 공유를 통해 클라이언트에 제공됩니다. SMB는 Windows, Apple 및 Linux 클라이언트를 비롯하여 프로토콜을 지원하는 모든 클라이언트에 제공될 수 있습니다.
 
 Cloud Volumes Service는 SMB 2.1 및 3.x 버전의 프로토콜을 지원합니다.
 
@@ -97,7 +97,7 @@ image:ncvs-gc-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 === SMB 인증 방언
 
-Cloud Volumes Service는 다음을 지원합니다 https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/8df1a501-ce4e-4287-8848-5f1d4733e280["방언"^] SMB 인증의 경우:
+Cloud Volumes Service는 다음을 지원합니다 https://["방언"^] SMB 인증의 경우:
 
 * LM
 * NTLM
@@ -109,7 +109,7 @@ SMB 공유 액세스를 위한 Kerberos 인증은 사용할 수 있는 가장 �
 
 또한 Cloud Volumes Service는 LM 및 NTLM 인증에 대한 이전 버전과의 호환성을 지원합니다. Kerberos가 잘못 구성된 경우(예: SMB 별칭 생성 시), 공유 액세스는 NTLMv2와 같은 취약한 인증 방법으로 되돌아갑니다. 이러한 메커니즘은 보안성이 떨어지기 때문에 일부 Active Directory 환경에서는 비활성화됩니다. 취약한 인증 방법을 사용하지 않도록 설정하고 Kerberos를 제대로 구성하지 않으면 다시 사용할 유효한 인증 방법이 없기 때문에 공유 액세스가 실패합니다.
 
-Active Directory에서 지원되는 인증 수준을 구성/보는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level["네트워크 보안: LAN Manager 인증 레벨"^].
+Active Directory에서 지원되는 인증 수준을 구성/보는 방법에 대한 자세한 내용은 을 참조하십시오 https://["네트워크 보안: LAN Manager 인증 레벨"^].
 
 
 
@@ -160,7 +160,7 @@ image:ncvs-gc-image11.png["오류: 그래픽 이미지가 없습니다"]
 * 개별 사용자 대신 그룹을 사용하여 액세스 제어를 수행할 수 있어 관리가 용이하고 그룹 관리를 통해 ACL을 공유할 사용자를 더 빠르게 제거/추가할 수 있습니다.
 * 공유 권한에 있는 ACE에 대한 덜 제한적이고 보다 일반적인 공유 액세스를 허용하고 보다 세분화된 액세스 제어를 위한 파일 권한을 가진 사용자 및 그룹에 대한 액세스를 잠급니다.
 * 명시적 거부 ACL은 ACL 허용 을 재정의하므로 일반적인 사용을 피합니다. 파일 시스템에 대한 액세스를 신속하게 제한해야 하는 사용자 또는 그룹의 명시적 거부 ACL 사용을 제한합니다.
-* 에 주의를 기울이십시오 https://www.varonis.com/blog/permission-propagation/["ACL 상속"^] 사용 권한을 수정할 때 설정; 파일 수가 많은 디렉토리 또는 볼륨의 최상위 레벨에서 상속 플래그를 설정하면 해당 디렉토리 또는 볼륨 아래의 각 파일에 상속된 사용 권한이 추가되었음을 의미합니다. 의도하지 않은 액세스/거부 및 각 파일이 조정될 때 권한 수정 장기 이탈과 같은 원치 않는 동작이 발생할 수 있습니다.
+* 에 주의를 기울이십시오 https://["ACL 상속"^] 사용 권한을 수정할 때 설정; 파일 수가 많은 디렉토리 또는 볼륨의 최상위 레벨에서 상속 플래그를 설정하면 해당 디렉토리 또는 볼륨 아래의 각 파일에 상속된 사용 권한이 추가되었음을 의미합니다. 의도하지 않은 액세스/거부 및 각 파일이 조정될 때 권한 수정 장기 이탈과 같은 원치 않는 동작이 발생할 수 있습니다.
 
 
 
@@ -180,17 +180,17 @@ image:ncvs-gc-image12.png["오류: 그래픽 이미지가 없습니다"]
 
 * * SMB 암호화 활성화(CVS - 성능 및 CVS - SW 모두에 사용 가능). * SMB 공유에서 SMB 암호화는 기본적으로 비활성화되어 있습니다(선택 취소됨). 이 확인란을 선택하면 SMB 암호화가 활성화됩니다. 즉, SMB 클라이언트와 서버 간의 트래픽은 협상된 가장 높은 암호화 수준으로 전송 중에 암호화됩니다. Cloud Volumes Service는 SMB에 대해 최대 AES-256 암호화를 지원합니다. SMB 암호화를 활성화하면 SMB 클라이언트에서 성능 저하가 발생할 수 있으며, 이는 대략 10~20% 범위에서 나타날 수도 있고 그렇지 않을 수도 있습니다. 테스트 결과, 성능 저하가 허용 가능한지 여부를 확인하는 것이 좋습니다.
 * * SMB 공유 숨기기(CVS - 성능 및 CVS - SW 모두에 사용 가능) * 이 옵션을 설정하면 SMB 공유 경로가 일반 탐색에서 숨겨집니다. 즉, 공유 경로를 모르는 클라이언트는 기본 UNC 경로("\\CVS-SMB" 등)에 액세스할 때 공유를 볼 수 없습니다. 이 확인란을 선택하면 SMB 공유 경로를 명시적으로 알고 있거나 그룹 정책 개체에서 정의한 공유 경로를 가진 클라이언트만 액세스할 수 있습니다(난독 처리를 통한 보안).
-* * ABE(액세스 기반 열거) 사용(CVS-SW만 해당). * SMB 공유를 숨기는 것과 비슷하지만, 공유 또는 파일이 개체에 액세스할 권한이 없는 사용자 또는 그룹에서만 숨겨지는 것을 제외하고는 차이가 있습니다. 예를 들어, Windows 사용자 'Joe'가 권한을 통한 읽기 액세스를 최소한 허용하지 않으면 Windows 사용자 'Joe'는 SMB 공유나 파일을 전혀 볼 수 없습니다. 이 기능은 기본적으로 비활성화되어 있으며 확인란을 선택하여 활성화할 수 있습니다. ABE에 대한 자세한 내용은 NetApp 기술 자료 문서를 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_does_Access_Based_Enumeration_(ABE)_work["ABE(Access Based Enumeration)는 어떻게 작동합니까?"^]
-* * 지속적으로 사용 가능한(CA) 공유 지원 활성화(CVS - 성능만 해당) * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/What_are_SMB_Continuously_Available_(CA)_Shares["지속적으로 사용 가능한 SMB 공유"^] Cloud Volumes Service 백엔드 시스템의 노드 간에 잠금 상태를 복제하여 페일오버 이벤트 중에 애플리케이션 중단을 최소화할 수 있는 방법을 제공합니다. 이 기능은 보안 기능이 아니지만 전반적으로 더 뛰어난 복원력을 제공합니다. 현재 이 기능에는 SQL Server 및 FSLogix 애플리케이션만 지원됩니다.
+* * ABE(액세스 기반 열거) 사용(CVS-SW만 해당). * SMB 공유를 숨기는 것과 비슷하지만, 공유 또는 파일이 개체에 액세스할 권한이 없는 사용자 또는 그룹에서만 숨겨지는 것을 제외하고는 차이가 있습니다. 예를 들어, Windows 사용자 'Joe'가 권한을 통한 읽기 액세스를 최소한 허용하지 않으면 Windows 사용자 'Joe'는 SMB 공유나 파일을 전혀 볼 수 없습니다. 이 기능은 기본적으로 비활성화되어 있으며 확인란을 선택하여 활성화할 수 있습니다. ABE에 대한 자세한 내용은 NetApp 기술 자료 문서를 참조하십시오 https://["ABE(Access Based Enumeration)는 어떻게 작동합니까?"^]
+* * 지속적으로 사용 가능한(CA) 공유 지원 활성화(CVS - 성능만 해당) * https://["지속적으로 사용 가능한 SMB 공유"^] Cloud Volumes Service 백엔드 시스템의 노드 간에 잠금 상태를 복제하여 페일오버 이벤트 중에 애플리케이션 중단을 최소화할 수 있는 방법을 제공합니다. 이 기능은 보안 기능이 아니지만 전반적으로 더 뛰어난 복원력을 제공합니다. 현재 이 기능에는 SQL Server 및 FSLogix 애플리케이션만 지원됩니다.
 
 
 
 
 == 숨겨진 기본 공유
 
-SMB 서버가 Cloud Volumes Service에서 생성되면 서버가 생성됩니다 https://library.netapp.com/ecmdocs/ECMP1366834/html/GUID-5B56B12D-219C-4E23-B3F8-1CB1C4F619CE.html["숨겨진 관리 공유"^] ($ 명명 규칙 사용) - 데이터 볼륨 SMB 공유 이외에 생성됩니다. 여기에는 C$(네임스페이스 액세스) 및 IPC$(Microsoft Management Console(MMC) 액세스에 사용되는 RPC(원격 프로시저 호출)와 같은 프로그램 간 통신을 위한 명명된 파이프 공유)가 포함됩니다.
+SMB 서버가 Cloud Volumes Service에서 생성되면 서버가 생성됩니다 https://["숨겨진 관리 공유"^] ($ 명명 규칙 사용) - 데이터 볼륨 SMB 공유 이외에 생성됩니다. 여기에는 C$(네임스페이스 액세스) 및 IPC$(Microsoft Management Console(MMC) 액세스에 사용되는 RPC(원격 프로시저 호출)와 같은 프로그램 간 통신을 위한 명명된 파이프 공유)가 포함됩니다.
 
-IPC$ 공유는 공유 ACL을 포함하지 않으며 수정할 수 없습니다. RPC 호출 및 에 엄격하게 사용됩니다 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/inter-process-communication-share-null-session["Windows에서는 기본적으로 이러한 공유에 대한 익명 액세스를 허용하지 않습니다"^].
+IPC$ 공유는 공유 ACL을 포함하지 않으며 수정할 수 없습니다. RPC 호출 및 에 엄격하게 사용됩니다 https://["Windows에서는 기본적으로 이러한 공유에 대한 익명 액세스를 허용하지 않습니다"^].
 
 C$ 공유는 기본적으로 BUILTIN/Administrators 액세스를 허용하지만, Cloud Volumes Service 자동화는 공유 ACL을 제거하고, C$ 공유에 대한 액세스를 통해 Cloud Volumes Service 파일 시스템에 마운트된 모든 볼륨을 볼 수 있으므로 다른 사람에게 액세스를 허용하지 않습니다. 따라서 '\\server\C$'로 이동하려고 하면 실패합니다.
 
@@ -200,9 +200,9 @@ C$ 공유는 기본적으로 BUILTIN/Administrators 액세스를 허용하지만
 
 Cloud Volumes Service SMB 서버는 일부 도메인 사용자 및 그룹에 액세스 권한을 적용하는 로컬 그룹(예: BUILTIN\Administrators)이 있다는 점에서 일반 Windows SMB 서버와 유사한 기능을 유지합니다.
 
-백업 사용자에 추가할 사용자를 지정하면 해당 Active Directory 연결을 사용하는 Cloud Volumes Service 인스턴스의 BUILTIN\Backup Operators 그룹에 사용자가 추가되고 이 그룹에 이 사용자가 추가됩니다 https://docs.microsoft.com/en-us/windows-hardware/drivers/ifs/privileges["SeBackupPrivilege 및 SeRestorePrivilege를 참조하십시오"^].
+백업 사용자에 추가할 사용자를 지정하면 해당 Active Directory 연결을 사용하는 Cloud Volumes Service 인스턴스의 BUILTIN\Backup Operators 그룹에 사용자가 추가되고 이 그룹에 이 사용자가 추가됩니다 https://["SeBackupPrivilege 및 SeRestorePrivilege를 참조하십시오"^].
 
-사용자를 보안 권한 사용자 에 추가하면 사용자에게 SeSecurityPrivilege 가 부여되며, 이 권한은 와 같은 일부 응용 프로그램 사용 사례에 유용합니다 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/add-sesecurityprivilege-user-account-task.html["SMB 공유의 SQL Server"^].
+사용자를 보안 권한 사용자 에 추가하면 사용자에게 SeSecurityPrivilege 가 부여되며, 이 권한은 와 같은 일부 응용 프로그램 사용 사례에 유용합니다 https://["SMB 공유의 SQL Server"^].
 
 image:ncvs-gc-image13.png["오류: 그래픽 이미지가 없습니다"]
 

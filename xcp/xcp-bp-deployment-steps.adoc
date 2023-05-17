@@ -57,10 +57,10 @@ link:xcp-bp-file-analytics.html["이전: 파일 분석."]
 
 == 구축 단계 - NAS
 
-데이터 전송에 NetApp XCP를 배포하려면 먼저 대상 위치에 XCP 소프트웨어를 설치하고 활성화합니다. 에서 세부 정보를 검토할 수 있습니다 https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064["NetApp XCP 사용자 가이드"^]. 이렇게 하려면 다음 단계를 완료하십시오.
+데이터 전송에 NetApp XCP를 배포하려면 먼저 대상 위치에 XCP 소프트웨어를 설치하고 활성화합니다. 에서 세부 정보를 검토할 수 있습니다 https://["NetApp XCP 사용자 가이드"^]. 이렇게 하려면 다음 단계를 완료하십시오.
 
 . 섹션에 설명된 대로 필수 구성 요소를 충족합니다 link:xcp-bp-netapp-xcp-overview.html#prerequisites-for-xcp[""XCP의 필수 구성 요소""]
-. 에서 XCP 소프트웨어를 다운로드합니다 https://mysupport.netapp.com/site/products/all/details/netapp-xcp/downloads-tab["NetApp XCP(다운로드) 페이지"^].
+. 에서 XCP 소프트웨어를 다운로드합니다 https://["NetApp XCP(다운로드) 페이지"^].
 . 다운로드한 xCP tar 파일을 xCP 서버에 복사합니다.
 +
 ....
@@ -71,7 +71,7 @@ link:xcp-bp-file-analytics.html["이전: 파일 분석."]
 ....
 [root@mastr-53 src]# tar -zxvf NETAPP_XCP_1.6.1.tgz
 ....
-. 에서 라이센스를 다운로드합니다 https://xcp.netapp.com/license/xcp.xwic%20["https://xcp.netapp.com/license/xcp.xwic"^] xCP 서버에 복사합니다.
+. 에서 라이센스를 다운로드합니다 https://["https://xcp.netapp.com/license/xcp.xwic"^] xCP 서버에 복사합니다.
 . 라이센스를 활성화합니다.
 +
 ....
@@ -224,12 +224,12 @@ STATUS      : PASSED
 ....
 
 
-xCP 문서는 'CAN', '카피', '동기화', 'fy' 작업에 대한 여러 가지 옵션(예)을 제공합니다. 자세한 내용은 를 참조하십시오 https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63064["NetApp XCP 사용자 가이드"^].
+xCP 문서는 'CAN', '카피', '동기화', 'fy' 작업에 대한 여러 가지 옵션(예)을 제공합니다. 자세한 내용은 를 참조하십시오 https://["NetApp XCP 사용자 가이드"^].
 
 
 NOTE: Windows 고객은 ACL(액세스 제어 목록)을 사용하여 데이터를 복사해야 합니다. NetApp은 'xCP copy -acl -frodbackuser\<사용자 이름> -frodbackgroup\<사용자 이름 또는 groupname><source><destination>' 명령을 사용할 것을 권장합니다. 성능을 극대화하려면 ACL이 있는 SMB 데이터와 NFS와 SMB가 모두 액세스할 수 있는 데이터를 가진 소스 볼륨을 고려할 때 타겟은 NTFS 볼륨이어야 합니다. xCP(NFS 버전)를 사용하여 Linux 서버에서 데이터를 복사하고 Windows 서버에서 '-ACL' 및 '-NoData' 옵션을 사용하여 xCP(SMB 버전) 동기화를 실행하여 소스 데이터에서 타겟 SMB 데이터로 ACL을 복사합니다.
 
-자세한 단계는 을 참조하십시오 https://helpcenter.netwrix.com/NA/Configure_IT_Infrastructure/Accounts/DCA_Manage_Auditing_Security_Log.html["'감사 및 보안 로그 관리' 정책 구성"^].
+자세한 단계는 을 참조하십시오 https://["'감사 및 보안 로그 관리' 정책 구성"^].
 
 
 

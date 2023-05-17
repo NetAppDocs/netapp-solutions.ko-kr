@@ -73,7 +73,7 @@ NOTE: Docker 설치는 20.10 이상의 Docker 버전이 있어야 하며, 팟맨
 . NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. tarball을 다운로드한 후 관리자 워크스테이션으로 전송합니다.
 +
 
-NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://cloud.netapp.com/astra-register["Astra 등록 사이트입니다"^].
+NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://["Astra 등록 사이트입니다"^].
 
 . tar ball의 압축을 풀고 작업 디렉토리를 결과 폴더로 변경합니다.
 +
@@ -279,7 +279,7 @@ image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
 --
 .자동화 [Ansible]
 --
-. Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 다음 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_ubuntu_debian_setup.html["여기"] Ubuntu 및 절차의 경우 https://docs.netapp.com/us-en/netapp-solutions/automation/automation_rhel_centos_setup.html["여기"] RHEL의 경우
+. Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 절차를 따르십시오 https://["여기"] Ubuntu 및 RHEL의 경우
 . Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
 +
 [source, cli]
@@ -289,7 +289,7 @@ git clone https://github.com/NetApp-Automation/na_astra_control_suite.git
 . NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. 타볼을 다운로드한 후 워크스테이션으로 전송합니다.
 +
 
-NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://cloud.netapp.com/astra-register["Astra 등록 사이트입니다"^].
+NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://["Astra 등록 사이트입니다"^].
 
 . Astra Control Center가 설치될 OpenShift 클러스터에 대한 관리자 액세스 권한이 있는 kubecononfig 파일을 만들거나 얻습니다.
 . 디렉토리를 na_Astra_control_suite로 변경합니다.
@@ -447,7 +447,7 @@ image:redhat_openshift_image90.jpg["Astra Control Center에서 라이센스를 �
 
 +
 
-NOTE: NetApp Astra Control Center의 설치 또는 구성 관련 문제가 발생할 경우 알려진 문제에 대한 기술 자료를 이용할 수 있습니다 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra["여기"].
+NOTE: NetApp Astra Control Center의 설치 또는 구성 관련 문제가 발생할 경우 알려진 문제에 대한 기술 자료를 이용할 수 있습니다 https://["여기"].
 
 
 

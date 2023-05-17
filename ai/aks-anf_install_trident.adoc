@@ -18,7 +18,7 @@ link:aks-anf_peer_aks_vnet_and_azure_netapp_files_vnet.html["이전: 피어 AKS 
 [role="lead"]
 Hrom을 사용하여 Trident를 설치하려면 다음 단계를 완료하십시오.
 
-. Helm을 설치합니다(설치 지침은 를 참조하십시오 https://helm.sh/docs/intro/install/["출처"^])를 클릭합니다.
+. Helm을 설치합니다(설치 지침은 를 참조하십시오 https://["출처"^])를 클릭합니다.
 . Trident 20.01.1 설치 프로그램을 다운로드하고 압축을 풉니다.
 +
 ....
@@ -35,7 +35,7 @@ $cd trident-installer
 ....
 $sudo cp ./tridentctl /usr/local/bin
 ....
-. Kubernetes(K8s) 클러스터에 Trident를 설치하고 H제어( https://scaleoutsean.github.io/2021/02/02/trident-21.01-install-with-helm-on-netapp-hci.html["출처"^]):
+. Kubernetes(K8s) 클러스터에 Trident를 설치하고 H제어( https://["출처"^]):
 +
 .. 디렉터리를 'helm' 디렉토리로 변경합니다.
 +

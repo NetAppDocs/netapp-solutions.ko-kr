@@ -15,19 +15,19 @@
 
 Red Hat OpenShift Container Platform은 완전히 지원되는 엔터프라이즈 Kubernetes 플랫폼입니다. Red Hat은 컨테이너화된 애플리케이션을 구축, 배포 및 관리하기 위해 모든 구성 요소가 완벽하게 통합된 애플리케이션 플랫폼을 제공하기 위해 오픈 소스 Kubernetes를 몇 가지 개선하였습니다.
 
-자세한 내용은 OpenShift 웹 사이트를 참조하십시오 https://www.openshift.com["여기"].
+자세한 내용은 OpenShift 웹 사이트를 참조하십시오 https://["여기"].
 
 NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
 
-자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://["여기"].
 
 NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되어 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.
 
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://["여기"].
 
 Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://["여기"].
 
 [role="normal"]
 NetApp은 컨테이너화된 애플리케이션을 위해 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격이 있는 여러 스토리지 플랫폼을 제공합니다.
@@ -56,7 +56,7 @@ NOTE: NetApp 포트폴리오의 각 스토리지 시스템은 온프레미스 �
 [role="normal"]
 NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST API, AI 정보에 기반한 예측 분석 및 수정 조치, 무중단 하드웨어 업그레이드, 교차 스토리지 가져오기 등의 기능을 갖춘 강력한 스토리지 소프트웨어 툴입니다.
 
-NetApp ONTAP 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP 웹 사이트"^].
+NetApp ONTAP 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://["NetApp ONTAP 웹 사이트"^].
 
 ONTAP는 다음과 같은 기능을 제공합니다.
 
@@ -77,7 +77,7 @@ ONTAP는 다음과 같은 기능을 제공합니다.
 
 
 
-ONTAP에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 문서 센터"^].
+ONTAP에 대한 자세한 내용은 를 참조하십시오 https://["ONTAP 9 문서 센터"^].
 
 
 NOTE: NetApp ONTAP는 사내, 가상화 또는 클라우드에서 사용할 수 있습니다.
@@ -96,7 +96,7 @@ NetApp은 짧은 지연 시간, 통합 데이터 보호, 멀티 프로토콜 지
 
 두 시스템 모두 NetApp ONTAP 데이터 관리 소프트웨어를 기반으로 합니다. 이 소프트웨어는 고가용성, 클라우드 통합, 간소화된 스토리지 관리를 위한 업계 최고의 데이터 관리 소프트웨어로 Data Fabric에 필요한 엔터프라이즈급 속도, 효율성 및 보안을 제공합니다.
 
-NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시오 https://docs.netapp.com/platstor/index.jsp["여기"].
+NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시오 https://["여기"].
 
 
 
@@ -104,7 +104,7 @@ NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시
 
 ONTAP Select는 NetApp ONTAP의 소프트웨어 정의 배포로, 사용자 환경의 하이퍼바이저에 구축할 수 있습니다. VMware vSphere 또는 KVM에 설치할 수 있으며 하드웨어 기반 ONTAP 시스템의 모든 기능과 환경을 제공합니다.
 
-ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.netapp.com/us-en/ontap-select/["여기"].
+ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https://["여기"].
 
 
 
@@ -112,16 +112,16 @@ ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https:/
 
 NetApp Cloud Volumes ONTAP는 클라우드 구축 버전의 NetApp ONTAP로, Amazon AWS, Microsoft Azure, Google Cloud를 비롯한 다양한 퍼블릭 클라우드에 구축할 수 있습니다.
 
-Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.netapp.com/us-en/occm/#discover-whats-new["여기"].
+Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://["여기"].
 
 [role="normal"]
 NetApp은 상태 저장 컨테이너 애플리케이션 및 데이터의 오케스트레이션, 관리, 보호 및 마이그레이션을 지원하는 다양한 제품을 제공합니다.
 
 image:devops_with_netapp_image1.jpg["오류: 그래픽 이미지가 없습니다"]
 
-NetApp Astra Control은 NetApp 데이터 보호 기술을 기반으로 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다. Astra Control Service는 클라우드 네이티브 Kubernetes 구축에서 상태 저장 워크로드를 지원할 수 있습니다. Astra Control Center는 {k8s_distribution_name}과 같은 엔터프라이즈 Kubernetes 플랫폼의 온프레미스 구축에서 상태 저장 워크로드를 지원할 수 있습니다. 자세한 내용은 NetApp Astra Control 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+NetApp Astra Control은 NetApp 데이터 보호 기술을 기반으로 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다. Astra Control Service는 클라우드 네이티브 Kubernetes 구축에서 상태 저장 워크로드를 지원할 수 있습니다. Astra Control Center는 {k8s_distribution_name}과 같은 엔터프라이즈 Kubernetes 플랫폼의 온프레미스 구축에서 상태 저장 워크로드를 지원할 수 있습니다. 자세한 내용은 NetApp Astra Control 웹 사이트를 참조하십시오 https://["여기"].
 
-NetApp Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+NetApp Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://["여기"].
 
 다음 페이지에서는 {solution_name} 솔루션의 애플리케이션 및 영구 스토리지 관리에 대해 검증된 NetApp 제품에 대한 추가 정보를 제공합니다.
 
@@ -155,7 +155,7 @@ image:redhat_openshift_image2.png["오류: 그래픽 이미지가 없습니다"]
 
 Astra Trident는 빠른 개발 주기를 제공하며, Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.
 
-Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"].
+Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 https://["여기"].
 
 20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod에 대한 자동 복구를 포함한 추가 지원을 제공합니다.
 

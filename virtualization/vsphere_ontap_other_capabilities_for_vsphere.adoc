@@ -19,7 +19,7 @@ summary: SnapCenter를 사용하면 여러 작업에 적용할 수 있는 백업
 
 VM을 백업하고 신속하게 복구하는 것은 ONTAP for vSphere의 탁월한 강점 중 하나로서, vCenter에서 VMware vSphere용 SnapCenter 플러그인을 사용하여 이러한 기능을 쉽게 관리할 수 있습니다. Snapshot 복사본을 사용하여 성능에 영향을 주지 않고 VM 또는 데이터 저장소의 빠른 복사본을 만든 다음 SnapMirror를 사용하여 보조 시스템으로 보내 장기적인 오프 사이트 데이터 보호를 제공할 수 있습니다. 이러한 접근 방식은 변경된 정보만 저장하여 스토리지 공간과 네트워크 대역폭을 최소화합니다.
 
-SnapCenter를 사용하면 여러 작업에 적용할 수 있는 백업 정책을 생성할 수 있습니다. 이러한 정책은 스케줄, 보존, 복제 및 기타 기능을 정의할 수 있습니다. VMware 스냅샷을 생성하기 전에 하이퍼바이저의 I/O 중지 기능을 활용하는 VM 정합성 보장 스냅샷을 옵션으로 선택할 수 있습니다. 그러나 VMware 스냅샷의 성능 때문에 게스트 파일 시스템을 중지해야 하는 경우가 아니면 일반적으로 이러한 스냅샷을 사용하지 않는 것이 좋습니다. 대신 ONTAP 스냅샷 복사본을 일반 보호에 사용하고 SnapCenter 플러그인과 같은 애플리케이션 툴을 사용하여 SQL Server 또는 Oracle 등의 트랜잭션 데이터를 보호합니다. 이러한 스냅샷 복사본은 VMware(정합성 보장) 스냅샷과 다르며 장기 보호에 적합합니다. VMware 스냅샷은 전용입니다 http://pubs.vmware.com/vsphere-65/index.jsp?topic=%2Fcom.vmware.vsphere.vm_admin.doc%2FGUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html["권장"^] 성능 및 기타 효과로 인한 단기 사용.
+SnapCenter를 사용하면 여러 작업에 적용할 수 있는 백업 정책을 생성할 수 있습니다. 이러한 정책은 스케줄, 보존, 복제 및 기타 기능을 정의할 수 있습니다. VMware 스냅샷을 생성하기 전에 하이퍼바이저의 I/O 중지 기능을 활용하는 VM 정합성 보장 스냅샷을 옵션으로 선택할 수 있습니다. 그러나 VMware 스냅샷의 성능 때문에 게스트 파일 시스템을 중지해야 하는 경우가 아니면 일반적으로 이러한 스냅샷을 사용하지 않는 것이 좋습니다. 대신 ONTAP 스냅샷 복사본을 일반 보호에 사용하고 SnapCenter 플러그인과 같은 애플리케이션 툴을 사용하여 SQL Server 또는 Oracle 등의 트랜잭션 데이터를 보호합니다. 이러한 스냅샷 복사본은 VMware(정합성 보장) 스냅샷과 다르며 장기 보호에 적합합니다. VMware 스냅샷은 전용입니다 http://["권장"^] 성능 및 기타 효과로 인한 단기 사용.
 
 이러한 플러그인은 물리적 환경과 가상 환경 모두에서 데이터베이스를 보호하는 확장된 기능을 제공합니다. vSphere를 사용하면 RDM LUN에 데이터가 저장되어 있는 SQL Server 또는 Oracle 데이터베이스, 게스트 OS에 직접 연결된 iSCSI LUN 또는 VMFS 또는 NFS 데이터 저장소의 VMDK 파일을 보호할 수 있습니다. 플러그인을 사용하면 다양한 유형의 데이터베이스 백업을 지정할 수 있고, 온라인 또는 오프라인 백업을 지원하고, 로그 파일과 함께 데이터베이스 파일을 보호할 수 있습니다. 플러그인은 백업 및 복구 외에도 개발 또는 테스트 용도로 데이터베이스 클론 복제도 지원합니다.
 
@@ -29,7 +29,7 @@ image:vsphere_ontap_image4.png["오류: 그래픽 이미지가 없습니다"]
 
 향상된 재해 복구 기능을 위해 ONTAP용 NetApp SRA를 VMware Site Recovery Manager와 함께 사용하는 것이 좋습니다. 데이터 저장소를 DR 사이트로 복제할 수 있을 뿐만 아니라, 복제된 데이터 저장소를 클론 복제하여 DR 환경에서 무중단 테스트를 수행할 수도 있습니다. SRA에 내장된 자동화를 통해 운영 중단이 해결된 후 재해 복구 및 운영 재보호 작업도 쉽게 수행할 수 있습니다.
 
-마지막으로, 최고 수준의 데이터 보호를 위해 NetApp MetroCluster를 사용하는 VMware vMSC(vSphere Metro Storage Cluster) 구성을 고려해 보십시오. vMSC는 동기식 복제와 스토리지 기반 클러스터링이 결합된 VMware 인증 솔루션으로, 고가용성 클러스터의 이점을 동일하게 제공하고 별도의 사이트에 분산하여 사이트 재해로부터 보호합니다. NetApp MetroCluster은 단일 스토리지 구성 요소 장애로부터 투명하게 복구하고 사이트 재해 발생 시 단일 명령 복구를 통해 동기식 복제를 위한 비용 효율적인 구성을 제공합니다. vMSC는 에 자세히 설명되어 있습니다 http://www.netapp.com/us/media/tr-4128.pdf["TR-4128"^].
+마지막으로, 최고 수준의 데이터 보호를 위해 NetApp MetroCluster를 사용하는 VMware vMSC(vSphere Metro Storage Cluster) 구성을 고려해 보십시오. vMSC는 동기식 복제와 스토리지 기반 클러스터링이 결합된 VMware 인증 솔루션으로, 고가용성 클러스터의 이점을 동일하게 제공하고 별도의 사이트에 분산하여 사이트 재해로부터 보호합니다. NetApp MetroCluster은 단일 스토리지 구성 요소 장애로부터 투명하게 복구하고 사이트 재해 발생 시 단일 명령 복구를 통해 동기식 복제를 위한 비용 효율적인 구성을 제공합니다. vMSC는 에 자세히 설명되어 있습니다 http://["TR-4128"^].
 
 
 
@@ -37,7 +37,7 @@ image:vsphere_ontap_image4.png["오류: 그래픽 이미지가 없습니다"]
 
 VM이 데이터 저장소에서 삭제될 때 공간을 다른 용도로 재확보할 수 있습니다. NFS 데이터 저장소를 사용할 경우 VM이 삭제될 때 공간이 즉시 재확보됩니다. 물론 이 방법은 볼륨이 씬 프로비저닝될 때만 의미가 있습니다. 즉, 볼륨 보장이 없음으로 설정됩니다. 하지만 VM 게스트 OS 내에서 파일이 삭제되면 NFS 데이터 저장소에서 공간이 자동으로 재확보되지 않습니다. LUN 기반 VMFS 데이터 저장소의 경우 ESXi 및 게스트 OS에서 VAAI UNMAP 프리미티브를 스토리지에 발급하여(씬 프로비저닝을 사용하는 경우 다시) 공간을 재확보할 수 있습니다. 릴리스에 따라 이 지원은 수동 또는 자동입니다.
 
-vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조) https://kb.vmware.com/s/article/2057513["2057513"^] 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조) https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.storage.doc/GUID-B40D1420-26FD-4318-8A72-FA29C9A395C2.html["저장 공간 재확보"^] vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다. VMFS 데이터 저장소로 사용할 LUN을 프로비저닝할 때 LUN에서 공간 할당 옵션을 수동으로 설정해야 합니다. VMware vSphere용 ONTAP 툴을 사용하는 경우 LUN은 공간 반환을 지원하도록 자동으로 구성되며 추가 작업이 필요하지 않습니다. 을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider/Devices_backing_volume_do_not_support_UNMAP["여기"^] 자세한 내용은 기술 자료 문서를 참조하십시오.
+vSphere 5.5 이상에서는 "vmkfstools –y" 명령이 사용 가능한 블록 수를 지정하는 esxcli storage vmfs unmap" 명령으로 대체됩니다(VMware KB 참조) https://["2057513"^] 참조). vSphere 6.5 이상에서는 VMFS 6을 사용할 때 공간이 자동으로 비동기적으로 재확보되어야 합니다(참조) https://["저장 공간 재확보"^] vSphere 설명서 참조), 필요한 경우 수동으로 실행할 수도 있습니다. 이 자동 UNMAP은 ONTAP에서 지원되며, VMware vSphere용 ONTAP 툴을 사용하면 우선 순위가 낮습니다. VMFS 데이터 저장소로 사용할 LUN을 프로비저닝할 때 LUN에서 공간 할당 옵션을 수동으로 설정해야 합니다. VMware vSphere용 ONTAP 툴을 사용하는 경우 LUN은 공간 반환을 지원하도록 자동으로 구성되며 추가 작업이 필요하지 않습니다. 을 참조하십시오 https://["여기"^] 자세한 내용은 기술 자료 문서를 참조하십시오.
 
 
 
@@ -83,7 +83,7 @@ vSphere 환경에서 ONTAP 스토리지 효율성을 사용하는 방법은 다�
 * 씬 프로비저닝은 VM에도 적용되며, NetApp은 일반적으로 일반 파일 대신 씬 프로비저닝된 VMDK를 권장합니다. 씬 프로비저닝을 사용할 때는 ONTAP vSphere, ONTAP 또는 기타 사용 가능한 툴을 사용하여 사용 가능한 공간을 모니터링하여 공간 부족 문제를 방지해야 합니다.
 * ONTAP 시스템에서 씬 프로비저닝을 사용할 경우 성능 저하가 발생하지 않습니다. 데이터는 사용 가능한 공간에 작성되므로 쓰기 성능과 읽기 성능이 극대화됩니다. 이러한 사실에도 불구하고 Microsoft 장애 조치 클러스터링 또는 기타 지연 시간이 짧은 애플리케이션과 같은 일부 제품은 보장되거나 고정 프로비저닝이 필요할 수 있으며, 지원 문제를 피하기 위해 이러한 요구사항을 따르는 것이 좋습니다.
 * 중복 제거를 최대한 절약하기 위해서는 하드 디스크 기반 시스템에서 백그라운드 중복제거를 예약하거나 AFF 시스템에서 자동 백그라운드 중복제거를 사용하는 것이 좋습니다. 그러나 예약된 프로세스는 실행 시 시스템 리소스를 사용하므로 주말과 같이 사용량이 적은 시간에 일정을 계획하거나 자주 실행하여 변경된 데이터 처리 양을 줄이는 것이 좋습니다. AFF 시스템에서 자동 백그라운드 중복 제거를 수행하면 전경 작업에 미치는 영향이 훨씬 적습니다. 백그라운드 압축(하드 디스크 기반 시스템의 경우)도 리소스를 사용하므로 성능 요구사항이 제한적인 2차 워크로드에만 고려해야 합니다.
-* NetApp AFF 시스템은 주로 인라인 스토리지 효율성 기능을 사용합니다. 7-Mode Transition Tool, SnapMirror 또는 Volume Move와 같은 블록 복제를 사용하는 NetApp 툴을 사용하여 데이터를 해당 데이터 위치로 이동할 경우, 압축 및 컴팩션 스캐너를 실행하여 효율성 절약 효과를 극대화하는 것이 좋습니다. 이 NetApp Support를 검토하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_maximize_storage_efficiency_post_AFF_ONTAP_9.x_migration["KB 문서를 참조하십시오"^] 를 참조하십시오.
+* NetApp AFF 시스템은 주로 인라인 스토리지 효율성 기능을 사용합니다. 7-Mode Transition Tool, SnapMirror 또는 Volume Move와 같은 블록 복제를 사용하는 NetApp 툴을 사용하여 데이터를 해당 데이터 위치로 이동할 경우, 압축 및 컴팩션 스캐너를 실행하여 효율성 절약 효과를 극대화하는 것이 좋습니다. 이 NetApp Support를 검토하십시오 https://["KB 문서를 참조하십시오"^] 를 참조하십시오.
 * 스냅샷 복사본은 압축 또는 중복제거에 의해 줄어들 수 있는 블록을 잠글 수 있습니다. 예약된 백그라운드 효율성 또는 일회성 스캐너를 사용할 때는 다음 스냅샷 복사본을 생성하기 전에 이러한 작업이 실행되고 완료되었는지 확인하십시오. 스냅샷 복사본 및 보존을 검토하여 백그라운드 또는 스캐너 작업을 실행하기 전에 필요한 스냅샷 복사본만 보존하는지 확인합니다.
 
 
@@ -241,12 +241,12 @@ image:vsphere_ontap_image7.png["오류: 그래픽 이미지가 없습니다"]
 
 VASA는 스토리지를 쿼리하고 스토리지 기능 집합을 vCenter에 반환하는 기술을 제공합니다. VASA 공급업체 공급자는 스토리지 시스템 API 및 구성 요소 및 vCenter에서 인식할 수 있는 VMware API 간의 변환을 제공합니다. NetApp의 VASA Provider for ONTAP은 VMware vSphere 어플라이언스 VM을 위한 ONTAP 툴의 일부로 제공되며, vCenter 플러그인을 통해 VVOL 데이터 저장소를 프로비저닝하고 관리할 수 있을 뿐만 아니라 스토리지 기능 프로필(SCP)을 정의할 수 있습니다.
 
-ONTAP는 VMFS 및 NFS VVOL 데이터 저장소를 모두 지원합니다. SAN 데이터 저장소와 VVOL을 함께 사용하면 VM 수준 정밀도와 같은 NFS의 몇 가지 이점이 있습니다. 다음은 고려해야 할 몇 가지 모범 사례이며 에서 추가 정보를 찾을 수 있습니다 http://www.netapp.com/us/media/tr-4400.pdf["TR-4400"^]:
+ONTAP는 VMFS 및 NFS VVOL 데이터 저장소를 모두 지원합니다. SAN 데이터 저장소와 VVOL을 함께 사용하면 VM 수준 정밀도와 같은 NFS의 몇 가지 이점이 있습니다. 다음은 고려해야 할 몇 가지 모범 사례이며 에서 추가 정보를 찾을 수 있습니다 http://["TR-4400"^]:
 
 * VVOL 데이터 저장소는 여러 클러스터 노드의 여러 FlexVol 볼륨으로 구성될 수 있습니다. 가장 간단한 방법은 볼륨에 기능이 다른 경우에도 단일 데이터 저장소를 사용하는 것입니다. SPBM은 호환 볼륨이 VM에 사용되는지 확인합니다. 하지만 모든 볼륨은 단일 ONTAP SVM에 속하고 단일 프로토콜을 사용하여 액세스해야 합니다. 각 프로토콜당 하나의 LIF로 충분합니다. 스토리지 기능이 릴리즈별로 다를 수 있으므로 단일 VVOL 데이터 저장소 내에서 여러 ONTAP 릴리즈를 사용하는 것은 피하십시오.
 * VMware vSphere용 ONTAP 툴을 사용하여 VVOL 데이터 저장소를 만들고 관리합니다. 데이터 저장소와 해당 프로필을 관리하는 것 외에도 필요한 경우 데이터 저장소에 액세스하기 위한 프로토콜 엔드포인트가 자동으로 생성됩니다. LUN을 사용하는 경우 LUN PES는 LUN ID 300 이상을 사용하여 매핑됩니다. ESXi 호스트 고급 시스템 설정 Disk.MaxLUN이 300보다 높은 LUN ID 번호를 허용하는지 확인합니다(기본값은 1,024). vCenter에서 ESXi 호스트를 선택한 다음 구성 탭을 선택하고 고급 시스템 설정 목록에서 Disk.MaxLUN을 찾아 이 단계를 수행합니다.
 * VMware vSphere를 위한 VASA Provider, vCenter Server(어플라이언스 또는 Windows 기반) 또는 ONTAP 툴을 VVOL 데이터 저장소에 설치하거나 마이그레이션하지 마십시오. 상호 의존하기 때문에 정전이 발생하거나 기타 데이터 센터가 중단될 경우 이를 관리할 수 없습니다.
-* VASA Provider VM을 정기적으로 백업합니다. VASA Provider가 포함된 기존 데이터 저장소의 시간별 스냅샷 복사본을 최소한 생성합니다. VASA Provider 보호 및 복구에 대한 자세한 내용은 다음을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Virtual_volumes%3A_Protecting_and_Recovering_the_NetApp_VASA_Provider["KB 문서를 참조하십시오"^].
+* VASA Provider VM을 정기적으로 백업합니다. VASA Provider가 포함된 기존 데이터 저장소의 시간별 스냅샷 복사본을 최소한 생성합니다. VASA Provider 보호 및 복구에 대한 자세한 내용은 다음을 참조하십시오 https://["KB 문서를 참조하십시오"^].
 
 
 다음 그림은 VVol 구성 요소를 보여줍니다.
@@ -262,7 +262,7 @@ ONTAP의 또 다른 강점은 하이브리드 클라우드를 광범위하게 �
 * * Cloud Volumes. * NetApp Cloud Volumes Service for AWS 또는 GCP 및 Azure NetApp Files for ANF는 주요 퍼블릭 클라우드 환경에서 고성능 멀티 프로토콜 관리 스토리지 서비스를 제공합니다. VMware Cloud VM 게스트가 직접 사용할 수 있습니다.
 * * Cloud Volumes ONTAP. * NetApp Cloud Volumes ONTAP 데이터 관리 소프트웨어는 선택한 클라우드에서 데이터에 제어, 보호, 유연성 및 효율성을 제공합니다. Cloud Volumes ONTAP는 NetApp ONTAP 스토리지 소프트웨어를 기반으로 하는 클라우드 네이티브 데이터 관리 소프트웨어입니다. Cloud Manager와 함께 사용하면 사내 ONTAP 시스템과 함께 Cloud Volumes ONTAP 인스턴스를 구축하고 관리할 수 있습니다. 고급 NAS 및 iSCSI SAN 기능과 함께 스냅샷 복사본 및 SnapMirror 복제를 포함한 통합 데이터 관리를 활용하십시오.
 * * 클라우드 서비스. * Cloud Backup Service 또는 SnapMirror 클라우드를 사용하여 퍼블릭 클라우드 스토리지를 사용하는 사내 시스템의 데이터를 보호합니다. Cloud Sync를 사용하면 NAS, 오브젝트 저장소 및 Cloud Volumes Service 스토리지에서 데이터를 마이그레이션하고 동기화 상태를 유지할 수 있습니다.
-* * FabricPool. * FabricPool는 ONTAP 데이터를 빠르고 쉽게 계층화할 수 있도록 지원합니다. 스냅샷 복사본의 콜드 블록은 퍼블릭 클라우드 또는 프라이빗 StorageGRID 오브젝트 저장소의 오브젝트 저장소로 마이그레이션할 수 있으며, ONTAP 데이터에 다시 액세스할 때 자동으로 호출됩니다. 또는 SnapVault에서 이미 관리하는 데이터를 보호하기 위해 개체 계층을 세 번째 수준으로 사용할 수도 있습니다. 이 접근 방식을 통해 다음을 수행할 수 있습니다 https://www.linkedin.com/pulse/rethink-vmware-backup-again-keith-aasen/["VM의 스냅샷 복사본을 더 많이 저장합니다"^] 주요 및/또는 보조 ONTAP 스토리지 시스템
+* * FabricPool. * FabricPool는 ONTAP 데이터를 빠르고 쉽게 계층화할 수 있도록 지원합니다. 스냅샷 복사본의 콜드 블록은 퍼블릭 클라우드 또는 프라이빗 StorageGRID 오브젝트 저장소의 오브젝트 저장소로 마이그레이션할 수 있으며, ONTAP 데이터에 다시 액세스할 때 자동으로 호출됩니다. 또는 SnapVault에서 이미 관리하는 데이터를 보호하기 위해 개체 계층을 세 번째 수준으로 사용할 수도 있습니다. 이 접근 방식을 통해 다음을 수행할 수 있습니다 https://["VM의 스냅샷 복사본을 더 많이 저장합니다"^] 주요 및/또는 보조 ONTAP 스토리지 시스템
 * * ONTAP Select. * NetApp 소프트웨어 정의 스토리지를 사용하여 프라이빗 클라우드를 인터넷으로 원격 시설 및 사무소로 확장할 수 있습니다. ONTAP Select를 사용하여 블록 및 파일 서비스와 엔터프라이즈 데이터 센터에서 사용하는 vSphere 데이터 관리 기능을 지원할 수 있습니다.
 
 

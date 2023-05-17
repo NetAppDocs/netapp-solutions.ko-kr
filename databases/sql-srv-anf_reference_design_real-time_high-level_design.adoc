@@ -78,8 +78,8 @@ NOTE: 21개 데이터베이스를 복원하는 데 약 9시간이 걸렸습니�
 온-프레미스 SQL Server에서 Azure NetApp Files로 데이터를 이동하는 기타 마이그레이션 옵션은 다음과 같습니다.
 
 * 데이터와 로그 파일을 분리하고 Azure Blob 저장소에 복사한 다음 URL에서 ANF 파일 공유가 마운트된 Azure VM의 SQL Server에 연결합니다.
-* Always On Availability Group Deployment On-Premises를 사용하는 경우 를 사용합니다 https://docs.microsoft.com/en-us/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-onprem-availability["Azure 복제본 추가 마법사"^] 를 눌러 Azure에서 복제본을 생성한 다음 페일오버를 수행합니다.
-* SQL Server를 사용합니다 https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication["트랜잭션 복제"^] Azure SQL Server 인스턴스를 구독자로 구성하려면 복제를 사용하지 않도록 설정하고 사용자를 Azure 데이터베이스 인스턴스로 지정합니다.
+* Always On Availability Group Deployment On-Premises를 사용하는 경우 를 사용합니다 https://["Azure 복제본 추가 마법사"^] 를 눌러 Azure에서 복제본을 생성한 다음 페일오버를 수행합니다.
+* SQL Server를 사용합니다 https://["트랜잭션 복제"^] Azure SQL Server 인스턴스를 구독자로 구성하려면 복제를 사용하지 않도록 설정하고 사용자를 Azure 데이터베이스 인스턴스로 지정합니다.
 * Windows 가져오기/내보내기 서비스를 사용하여 하드 드라이브를 배송합니다.
 
 
@@ -89,7 +89,7 @@ NOTE: 21개 데이터베이스를 복원하는 데 약 9시간이 걸렸습니�
 
 백업 및 복구는 모든 SQL Server 배포의 중요한 부분입니다. AOAG와 같은 고가용성 솔루션과 함께 다양한 데이터 장애 및 손실 시나리오에서 신속하게 복구할 수 있는 적절한 안전망을 갖추고 있어야 합니다. SQL Server 데이터베이스 정지 도구, Azure 백업(스트리밍) 또는 Commvault와 같은 타사 백업 도구를 사용하여 데이터베이스의 애플리케이션 정합성이 보장되는 백업을 수행할 수 있습니다.
 
-Azure NetApp Files 스냅샷 기술을 사용하면 성능이나 네트워크 활용도에 영향을 주지 않고 사용자 데이터베이스의 시점(PiT) 복사본을 쉽게 생성할 수 있습니다. 또한 이 기술을 사용하면 스냅샷 복사본을 새 볼륨으로 복원하거나 복원 볼륨 기능을 사용하여 스냅샷 복사본이 생성된 시점의 상태로 빠르게 되돌릴 수 있습니다. Azure NetApp Files 스냅샷 프로세스는 매우 빠르고 효율적이므로 Azure 백업에서 제공되는 스트리밍 백업과 달리 매일 여러 번 백업할 수 있습니다. 특정 날짜에 여러 개의 Snapshot 복사본이 가능하므로 RPO 및 RTO 시간이 크게 줄어들 수 있습니다. 스냅샷 복사본을 생성하기 전에 데이터가 손상되지 않고 디스크에 적절히 플러시되도록 응용 프로그램 일관성을 추가하려면 SQL Server 데이터베이스 정지 도구를 사용합니다 (https://mysupport.netapp.com/site/tools/tool-eula/scsqlapi["SCSQLAPI 도구"^]; 이 링크에 액세스하려면 NetApp SSO 로그인 자격 증명이 필요합니다.) 이 툴은 PowerShell 내에서 실행할 수 있습니다. PowerShell은 SQL Server 데이터베이스를 중지시키고 애플리케이션 정합성이 보장되는 스토리지 Snapshot 복사본을 백업에 사용할 수 있도록 합니다.
+Azure NetApp Files 스냅샷 기술을 사용하면 성능이나 네트워크 활용도에 영향을 주지 않고 사용자 데이터베이스의 시점(PiT) 복사본을 쉽게 생성할 수 있습니다. 또한 이 기술을 사용하면 스냅샷 복사본을 새 볼륨으로 복원하거나 복원 볼륨 기능을 사용하여 스냅샷 복사본이 생성된 시점의 상태로 빠르게 되돌릴 수 있습니다. Azure NetApp Files 스냅샷 프로세스는 매우 빠르고 효율적이므로 Azure 백업에서 제공되는 스트리밍 백업과 달리 매일 여러 번 백업할 수 있습니다. 특정 날짜에 여러 개의 Snapshot 복사본이 가능하므로 RPO 및 RTO 시간이 크게 줄어들 수 있습니다. 스냅샷 복사본을 생성하기 전에 데이터가 손상되지 않고 디스크에 적절히 플러시되도록 응용 프로그램 일관성을 추가하려면 SQL Server 데이터베이스 정지 도구를 사용합니다 (https://["SCSQLAPI 도구"^]; 이 링크에 액세스하려면 NetApp SSO 로그인 자격 증명이 필요합니다.) 이 툴은 PowerShell 내에서 실행할 수 있습니다. PowerShell은 SQL Server 데이터베이스를 중지시키고 애플리케이션 정합성이 보장되는 스토리지 Snapshot 복사본을 백업에 사용할 수 있도록 합니다.
 
 * 참고: *
 
@@ -98,7 +98,7 @@ Azure NetApp Files 스냅샷 기술을 사용하면 성능이나 네트워크 �
 * 파일을 별도의 Azure NetApp Files 볼륨에 배치하여 각 데이터베이스에서 격리합니다.
 
 
-SCSQL API의 방대한 제한으로 인해 https://docs.microsoft.com/en-us/azure/backup/backup-azure-sql-database["Azure 백업"^] SLA 요구사항을 충족하기 위해 데이터 보호에 사용되었습니다. Azure 가상 머신 및 Azure NetApp Files에서 실행되는 SQL Server의 스트림 기반 백업을 제공합니다. Azure Backup은 빈번한 로그 백업 및 최대 1초의 피트 복구를 통해 15분 RPO를 실현합니다.
+SCSQL API의 방대한 제한으로 인해 https://["Azure 백업"^] SLA 요구사항을 충족하기 위해 데이터 보호에 사용되었습니다. Azure 가상 머신 및 Azure NetApp Files에서 실행되는 SQL Server의 스트림 기반 백업을 제공합니다. Azure Backup은 빈번한 로그 백업 및 최대 1초의 피트 복구를 통해 15분 RPO를 실현합니다.
 
 
 
@@ -144,7 +144,7 @@ SQL Server 가용성 그룹의 모든 노드에 대해 동일한 스토리지를
 
 === 장기적인 스냅샷 복사본 아카이브
 
-많은 조직에서는 필수 규정 준수 요구 사항으로 데이터베이스 파일의 스냅샷 데이터를 장기간 보존해야 합니다. 이 프로세스는 HLD에서 사용되지 않지만 를 사용하여 간단한 배치 스크립트를 사용하여 쉽게 수행할 수 있습니다 https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10["AzCopy"^] 를 눌러 Azure Blob 컨테이너에 스냅샷 디렉토리를 복사합니다. 예약된 작업을 사용하여 특정 일정에 따라 배치 스크립트를 트리거할 수 있습니다. 이 프로세스는 다음과 같은 단계로 구성되어 있습니다.
+많은 조직에서는 필수 규정 준수 요구 사항으로 데이터베이스 파일의 스냅샷 데이터를 장기간 보존해야 합니다. 이 프로세스는 HLD에서 사용되지 않지만 를 사용하여 간단한 배치 스크립트를 사용하여 쉽게 수행할 수 있습니다 https://["AzCopy"^] 를 눌러 Azure Blob 컨테이너에 스냅샷 디렉토리를 복사합니다. 예약된 작업을 사용하여 특정 일정에 따라 배치 스크립트를 트리거할 수 있습니다. 이 프로세스는 다음과 같은 단계로 구성되어 있습니다.
 
 . AzCopy V10 실행 파일을 다운로드합니다. exe 파일이기 때문에 설치할 것이 없습니다.
 . 적절한 권한이 있는 컨테이너 수준에서 SAS 토큰을 사용하여 AzCopy에 권한을 부여합니다.
@@ -154,7 +154,7 @@ SQL Server 가용성 그룹의 모든 노드에 대해 동일한 스토리지를
 * 참고: *
 
 * 배치 파일에서 SAS 토큰에 나타나는 % 문자를 이스케이프해야 합니다. 이 작업은 SAS 토큰 문자열의 기존 % 문자 옆에 % 문자를 추가하여 수행할 수 있습니다.
-* 를 클릭합니다 https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer["보안 전송이 필요합니다"^] 저장소 계정 설정에 따라 저장소 계정에 대한 연결이 TLS(Transport Layer Security)로 보호되는지 여부가 결정됩니다. 이 설정은 기본적으로 사용됩니다. 다음 배치 스크립트 예제에서는 스냅샷 복사본 디렉토리에서 지정된 Blob 컨테이너로 데이터를 재귀적으로 복제합니다.
+* 를 클릭합니다 https://["보안 전송이 필요합니다"^] 저장소 계정 설정에 따라 저장소 계정에 대한 연결이 TLS(Transport Layer Security)로 보호되는지 여부가 결정됩니다. 이 설정은 기본적으로 사용됩니다. 다음 배치 스크립트 예제에서는 스냅샷 복사본 디렉토리에서 지정된 Blob 컨테이너로 데이터를 재귀적으로 복제합니다.
 
 
 ....

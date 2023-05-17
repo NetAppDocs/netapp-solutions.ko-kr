@@ -32,7 +32,7 @@ NetApp Snapshot은 교육 코드 내에 통합되어 모든 실험에 대한 데
 
 == AKS 설정 및 설치
 
-AKS 클러스터의 설정 및 설치는 로 이동하십시오 https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal["AKS 클러스터를 생성합니다"^]. 그런 다음 다음 다음 일련의 단계를 수행합니다.
+AKS 클러스터의 설정 및 설치는 로 이동하십시오 https://["AKS 클러스터를 생성합니다"^]. 그런 다음 다음 다음 일련의 단계를 수행합니다.
 
 . 노드 유형(시스템(CPU) 또는 작업자(GPU) 노드인지 여부)을 선택할 때 다음을 선택합니다.
 +
@@ -47,8 +47,8 @@ NOTE: 배포에는 5~10분이 소요됩니다.
 
 
 
-. 구축이 완료되면 Connect to Cluster를 클릭합니다. 새로 생성한 AKS 클러스터에 연결하려면 로컬 환경(랩톱/PC)에서 Kubernetes 명령줄 도구를 설치하십시오. 를 방문하십시오 https://kubernetes.io/docs/tasks/tools/install-kubectl/["도구를 설치합니다"^] OS에 따라 설치합니다.
-. https://docs.microsoft.com/cli/azure/install-azure-cli["로컬 환경에 Azure CLI를 설치합니다"^].
+. 구축이 완료되면 Connect to Cluster를 클릭합니다. 새로 생성한 AKS 클러스터에 연결하려면 로컬 환경(랩톱/PC)에서 Kubernetes 명령줄 도구를 설치하십시오. 를 방문하십시오 https://["도구를 설치합니다"^] OS에 따라 설치합니다.
+. https://["로컬 환경에 Azure CLI를 설치합니다"^].
 . 터미널에서 AKS 클러스터에 액세스하려면 먼저 'az login'을 입력하고 자격 증명을 입력하십시오.
 . 다음 두 명령을 실행합니다.
 +
@@ -103,13 +103,13 @@ Azure NetApp Files 볼륨은 애플리케이션 클러스터에 할당되며 Kub
 
 == Azure NetApp Files 설정
 
-Azure NetApp Files 설정을 완료하려면 먼저 에 설명된 대로 구성해야 합니다 https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes["QuickStart: Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다"^].
+Azure NetApp Files 설정을 완료하려면 먼저 에 설명된 대로 구성해야 합니다 https://["QuickStart: Azure NetApp Files를 설정하고 NFS 볼륨을 생성합니다"^].
 
 하지만 Trident를 통해 볼륨을 생성하므로 Azure NetApp Files용 NFS 볼륨을 생성하는 단계를 생략할 수 있습니다. 계속하기 전에 다음 사항을 확인하십시오.
 
-. https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-register["Azure NetApp Files 및 NetApp 리소스 공급자에 등록(Azure 클라우드 셸 이용)"^].
-. https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["Azure NetApp Files에서 계정을 생성했습니다"^].
-. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["용량 풀을 설정합니다"^] (요구사항에 따라 최소 4TiB 표준 또는 프리미엄).
+. https://["Azure NetApp Files 및 NetApp 리소스 공급자에 등록(Azure 클라우드 셸 이용)"^].
+. https://["Azure NetApp Files에서 계정을 생성했습니다"^].
+. https://["용량 풀을 설정합니다"^] (요구사항에 따라 최소 4TiB 표준 또는 프리미엄).
 
 
 
@@ -141,7 +141,7 @@ NOTE: 모든 별표 이외의 섹션은 기본적으로 그대로 둡니다
 . 추가 또는 확인 을 클릭하여 가상 네트워크에 피어링을 추가합니다.
 
 
-자세한 내용은 를 참조하십시오 https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal["가상 네트워크 피어링을 생성, 변경 또는 삭제합니다"^].
+자세한 내용은 를 참조하십시오 https://["가상 네트워크 피어링을 생성, 변경 또는 삭제합니다"^].
 
 
 
@@ -157,7 +157,7 @@ NetApp Trident를 사용하면 교육 데이터 세트 및 교육 받은 모델�
 
 Trident 소프트웨어를 설치하려면 다음 단계를 완료하십시오.
 
-. https://helm.sh/docs/intro/install/["첫 번째 설치 Helm"^].
+. https://["첫 번째 설치 Helm"^].
 . Trident 21.01.1 설치 프로그램을 다운로드하고 압축을 풉니다.
 +
 ....
@@ -207,7 +207,7 @@ Azure NetApp Files 백엔드 및 스토리지 클래스를 설정하려면 다�
 ....
 cd ~
 ....
-. 의 클론을 생성합니다 https://github.com/dedmari/lane-detection-SCNN-horovod.git["프로젝트 리포지토리"^] 차선 감지 SCNN-horovod.
+. 의 클론을 생성합니다 https://["프로젝트 리포지토리"^] 차선 감지 SCNN-horovod.
 . 트리덴트-구성 디렉토리로 이동합니다.
 +
 ....
@@ -321,7 +321,7 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes-csi/external-snap
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
 ....
-. K8s 'volumesnapshotclass'를 설정합니다. 볼륨 스냅샷을 생성하기 전에 https://netapp-trident.readthedocs.io/en/stable-v20.01/kubernetes/concepts/objects.html["볼륨 스냅샷 클래스입니다"^] 설정해야 합니다. Azure NetApp Files용 볼륨 스냅샷 클래스를 생성하고 NetApp Snapshot 기술을 사용하여 ML 버전 관리를 달성하는 데 사용합니다. volumesapshotclass NetApp-CSI-snapclass를 생성하고 다음과 같이 기본 'volumesnapshotclass'로 설정합니다.
+. K8s 'volumesnapshotclass'를 설정합니다. 볼륨 스냅샷을 생성하기 전에 https://["볼륨 스냅샷 클래스입니다"^] 설정해야 합니다. Azure NetApp Files용 볼륨 스냅샷 클래스를 생성하고 NetApp Snapshot 기술을 사용하여 ML 버전 관리를 달성하는 데 사용합니다. volumesapshotclass NetApp-CSI-snapclass를 생성하고 다음과 같이 기본 'volumesnapshotclass'로 설정합니다.
 +
 ....
 kubectl create -f netapp-volume-snapshot-class.yaml
@@ -351,12 +351,12 @@ image:runai-ld_image10.png["오류: 그래픽 이미지가 없습니다"]
 
 run:AI를 설치하려면 다음 단계를 완료하십시오.
 
-. https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/["설치 실행: AKS에 AI 클러스터"^].
+. https://["설치 실행: AKS에 AI 클러스터"^].
 . app.runai.ai 으로 이동하여 새 프로젝트 만들기 를 클릭하고 이름을 차선 감지 로 지정합니다. 이렇게 하면 runai로 시작하는 K8s 클러스터의 이름 뒤에 프로젝트 이름이 붙습니다. 이 경우 생성된 네임스페이스는 runai-lane-detection입니다.
 +
 image:runai-ld_image11.png["오류: 그래픽 이미지가 없습니다"]
 
-. https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/["설치 실행: AI CLI"^].
+. https://["설치 실행: AI CLI"^].
 . 터미널에서 다음 명령을 사용하여 레인 감지를 기본 run:AI 프로젝트로 설정합니다.
 +
 ....
@@ -740,7 +740,7 @@ image:runai-ld_image38.png["오류: 그래픽 이미지가 없습니다"]
 
 == Azure NetApp Files 서비스 레벨
 
-볼륨을 를 사용하는 다른 용량 풀로 이동하여 기존 볼륨의 서비스 수준을 변경할 수 있습니다 https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-service-levels["서비스 레벨"^] 볼륨에 대한 을 선택합니다. 볼륨에 대한 이 기존 서비스 수준 변경 사항은 데이터를 마이그레이션할 필요가 없습니다. 볼륨에 대한 액세스에도 영향을 주지 않습니다.
+볼륨을 를 사용하는 다른 용량 풀로 이동하여 기존 볼륨의 서비스 수준을 변경할 수 있습니다 https://["서비스 레벨"^] 볼륨에 대한 을 선택합니다. 볼륨에 대한 이 기존 서비스 수준 변경 사항은 데이터를 마이그레이션할 필요가 없습니다. 볼륨에 대한 액세스에도 영향을 주지 않습니다.
 
 
 
@@ -762,9 +762,9 @@ image:runai-ld_image40.png["오류: 그래픽 이미지가 없습니다"]
 
 === 서비스 수준 변경 자동화
 
-동적 서비스 수준 변경은 현재 공개 미리 보기에 있지만 기본적으로 활성화되어 있지 않습니다. Azure 구독에서 이 기능을 활성화하려면 “ 문서에 제공된 다음 단계를 수행하십시오 file:///C:\Users\crich\Downloads\•%09https:\docs.microsoft.com\azure\azure-netapp-files\dynamic-change-volume-service-level["볼륨의 서비스 수준을 동적으로 변경합니다"^].”
+동적 서비스 수준 변경은 현재 공개 미리 보기에 있지만 기본적으로 활성화되어 있지 않습니다. Azure 구독에서 이 기능을 활성화하려면 “ 문서에 제공된 다음 단계를 수행하십시오 file://["볼륨의 서비스 수준을 동적으로 변경합니다"^].”
 
-* Azure:CLI에 대해 다음 명령을 사용할 수도 있습니다. Azure NetApp Files의 풀 크기 변경에 대한 자세한 내용은 를 참조하십시오 https://docs.microsoft.com/cli/azure/netappfiles/volume?view=azure-cli-latest-az_netappfiles_volume_pool_change["AZ NetApp 파일 볼륨: ANF(Azure NetApp Files) 볼륨 리소스 관리"^].
+* Azure:CLI에 대해 다음 명령을 사용할 수도 있습니다. Azure NetApp Files의 풀 크기 변경에 대한 자세한 내용은 를 참조하십시오 https://["AZ NetApp 파일 볼륨: ANF(Azure NetApp Files) 볼륨 리소스 관리"^].
 +
 ....
 az netappfiles volume pool-change -g mygroup
@@ -773,7 +773,7 @@ az netappfiles volume pool-change -g mygroup
 --name myvolname
 --new-pool-resource-id mynewresourceid
 ....
-* 여기에 표시된 'et-aznetapfilesvolumepool' cmdlet은 Azure NetApp Files 볼륨의 풀을 변경할 수 있습니다. 볼륨 풀 크기 및 Azure PowerShell 변경에 대한 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/powershell/module/az.netappfiles/set-aznetappfilesvolumepool?view=azps-5.8.0["Azure NetApp Files 볼륨의 풀을 변경합니다"^].
+* 여기에 표시된 'et-aznetapfilesvolumepool' cmdlet은 Azure NetApp Files 볼륨의 풀을 변경할 수 있습니다. 볼륨 풀 크기 및 Azure PowerShell 변경에 대한 자세한 내용은 을 참조하십시오 https://["Azure NetApp Files 볼륨의 풀을 변경합니다"^].
 +
 ....
 Set-AzNetAppFilesVolumePool

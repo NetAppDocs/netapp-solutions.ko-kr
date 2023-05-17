@@ -25,7 +25,7 @@ DevOps 워크플로우의 가장 일반적인 용도 중 하나는 지속적인 
 
 image::dwn_image1.jpg[NetApp Astra 활용 사례 1 아키텍처를 사용한 DevOps]
 
-이 사용 사례를 검증하는 데 사용된 애플리케이션은 입니다 https://magento.com/["마멘토"^]웹 기반 프런트 엔드를 사용하는 전자 상거래 솔루션, 검색 및 분석 기능을 위한 Elasticsearch 인스턴스, 모든 쇼핑 인벤토리 및 트랜잭션 세부 정보를 추적하는 MariaDB 데이터베이스 이 컨테이너형 애플리케이션은 Red Hat OpenShift 클러스터에 설치되었습니다. 애플리케이션의 모든 Pod에서 영구 볼륨을 사용하여 데이터를 저장했습니다. 영구 볼륨은 NetApp 스토리지 시스템에서 스토리지를 프로비저닝할 수 있는 Kubernetes용 컨테이너 스토리지 인터페이스 호환 스토리지 오케스트레이터인 NetApp Astra Trident에 의해 자동으로 생성되었습니다. 또한 Astra Control Center의 애플리케이션 보호 기능을 활용하기 위해 해당 애플리케이션을 Astra Control에서 관리했으며, 이 애플리케이션을 사용하여 애플리케이션의 상태를 영구 볼륨에 저장된 데이터와 함께 저장하는 애플리케이션 백업을 트리거했습니다. 을 사용했습니다 https://github.com/NetApp/netapp-astra-toolkits["NetApp Astra Control Python SDK"^] 애플리케이션 백업을 트리거하는 프로세스를 자동화하기 위해 CI/CD 파이프라인에 도입되었습니다. 이 파이프라인은 이라는 인기 있는 CI/CD 툴을 사용하여 생성 및 실행되었습니다 [https://www.jenkins.io/["젠킨스"^]] 응용 프로그램을 빌드, 보호 및 배포하기 위한 흐름을 자동화합니다.
+이 사용 사례를 검증하는 데 사용된 애플리케이션은 입니다 https://["마멘토"^]웹 기반 프런트 엔드를 사용하는 전자 상거래 솔루션, 검색 및 분석 기능을 위한 Elasticsearch 인스턴스, 모든 쇼핑 인벤토리 및 트랜잭션 세부 정보를 추적하는 MariaDB 데이터베이스 이 컨테이너형 애플리케이션은 Red Hat OpenShift 클러스터에 설치되었습니다. 애플리케이션의 모든 Pod에서 영구 볼륨을 사용하여 데이터를 저장했습니다. 영구 볼륨은 NetApp 스토리지 시스템에서 스토리지를 프로비저닝할 수 있는 Kubernetes용 컨테이너 스토리지 인터페이스 호환 스토리지 오케스트레이터인 NetApp Astra Trident에 의해 자동으로 생성되었습니다. 또한 Astra Control Center의 애플리케이션 보호 기능을 활용하기 위해 해당 애플리케이션을 Astra Control에서 관리했으며, 이 애플리케이션을 사용하여 애플리케이션의 상태를 영구 볼륨에 저장된 데이터와 함께 저장하는 애플리케이션 백업을 트리거했습니다. 을 사용했습니다 https://["NetApp Astra Control Python SDK"^] 애플리케이션 백업을 트리거하는 프로세스를 자동화하기 위해 CI/CD 파이프라인에 도입되었습니다. 이 파이프라인은 이라는 인기 있는 CI/CD 툴을 사용하여 생성 및 실행되었습니다 [https://["젠킨스"^]] 응용 프로그램을 빌드, 보호 및 배포하기 위한 흐름을 자동화합니다.
 
 CI/CD 파이프라인에 보호를 도입하기 위한 사전 요구 사항과 절차를 살펴보겠습니다.
 
@@ -103,7 +103,7 @@ image::dwn_image8.jpg[자격 증명을 생성합니다]
 
 . 다른 두 자격 증명에도 같은 절차를 반복합니다.
 . 대시보드로 돌아가서 새 항목을 클릭하여 파이프라인을 생성한 다음 파이프라인을 클릭합니다.
-. Jenkinsfile에서 파이프라인을 복사합니다 https://github.com/NetApp/netapp-astra-toolkits/blob/main/ci_cd_examples/jenkins_pipelines/protecting_apps_in_ci_cd_pipelines/Jenkinsfile["여기"^].
+. Jenkinsfile에서 파이프라인을 복사합니다 https://["여기"^].
 . Jenkins 파이프라인 섹션에 파이프라인을 붙여넣은 다음 저장을 클릭합니다.
 . Helm 차트 버전, 업그레이드할 Magento 응용 프로그램 버전, Astra 도구 키트 버전, Astra Control Center FQDN, API 토큰 및 인스턴스 ID를 포함한 각 세부 정보로 Jenkins 파이프라인의 매개 변수를 채웁니다. 운영 및 스테이징 환경 모두의 Docker 레지스트리, 네임스페이스 및 Magento IP를 지정하고 생성된 자격 증명의 자격 증명 ID도 지정합니다.
 +

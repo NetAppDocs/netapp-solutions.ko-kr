@@ -20,39 +20,39 @@ link:ai-protopia-conclusion.html["이전: 결론."]
 
 * NetApp ONTAP 데이터 관리 소프트웨어 - ONTAP 정보 라이브러리
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
+http://["http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
 
 * 컨테이너용 NetApp 영구 스토리지 - NetApp Trident
 +
-https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
+https://["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
 
 * NetApp DataOps 툴킷
 +
-https://github.com/NetApp/netapp-dataops-toolkit["https://github.com/NetApp/netapp-dataops-toolkit"^]
+https://["https://github.com/NetApp/netapp-dataops-toolkit"^]
 
 * 컨테이너용 NetApp 영구 스토리지 - NetApp Astra Trident
 +
-https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
+https://["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
 
 * 토폴로지 AI - 기밀 추론
 +
-https://protopia.ai/blog/protopia-ai-takes-on-the-missing-link-in-ai-privacy-confidential-inference/["https://protopia.ai/blog/protopia-ai-takes-on-the-missing-link-in-ai-privacy-confidential-inference/"^]
+https://["https://protopia.ai/blog/protopia-ai-takes-on-the-missing-link-in-ai-privacy-confidential-inference/"^]
 
 * NetApp Cloud Sync를 참조하십시오
 +
-https://docs.netapp.com/us-en/occm/concept_cloud_sync.html#how-cloud-sync-works["https://docs.netapp.com/us-en/occm/concept_cloud_sync.html#how-cloud-sync-works"^]
+https://["https://docs.netapp.com/us-en/occm/concept_cloud_sync.html#how-cloud-sync-works"^]
 
 * NVIDIA Triton Inference Server를 참조하십시오
 +
-https://developer.nvidia.com/nvidia-triton-inference-server["https://developer.nvidia.com/nvidia-triton-inference-server"^]
+https://["https://developer.nvidia.com/nvidia-triton-inference-server"^]
 
 * NVIDIA Triton Inference Server 설명서
 +
-https://docs.nvidia.com/deeplearning/triton-inference-server/index.html["https://docs.nvidia.com/deeplearning/triton-inference-server/index.html"^]
+https://["https://docs.nvidia.com/deeplearning/triton-inference-server/index.html"^]
 
 * PyTorch의 FaceBoxes
 +
-https://github.com/zisianw/FaceBoxes.PyTorch["https://github.com/zisianw/FaceBoxes.PyTorch"^]
+https://["https://github.com/zisianw/FaceBoxes.PyTorch"^]
 
 
 

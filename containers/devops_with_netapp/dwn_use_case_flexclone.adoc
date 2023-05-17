@@ -22,7 +22,7 @@ NetApp FlexClone 기술은 NetApp FlexVol의 쓰기 가능한 시점 스냅샷 �
 
 image::Astra-DevOps-UC3-FlexClone.png[FlexClone 이미지]
 
-NetApp FlexClone 기술에 대한 자세한 내용은 의 페이지를 참조하십시오 https://docs.netapp.com/us-en/ontap/concepts/flexclone-volumes-files-luns-concept.html["NetApp 문서"].
+NetApp FlexClone 기술에 대한 자세한 내용은 의 페이지를 참조하십시오 https://["NetApp 문서"].
 
 
 

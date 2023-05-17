@@ -57,7 +57,7 @@ SnapCenter는 장기간 아카이브 및 보존을 위해 운영 스토리지 �
 온프레미스 ONTAP 시스템과 FSx ONTAP 간에 SnapMirror 관계를 설정하려면 다음 단계가 필요합니다.
 
 
-NOTE: 을 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/ONTAPGuide.pdf["ONTAP용 FSX – ONTAP 사용 설명서"^] FSx를 사용하여 SnapMirror 관계를 만드는 방법에 대한 자세한 내용은 를 참조하십시오.
+NOTE: 을 참조하십시오 https://["ONTAP용 FSX – ONTAP 사용 설명서"^] FSx를 사용하여 SnapMirror 관계를 만드는 방법에 대한 자세한 내용은 를 참조하십시오.
 
 .소스 및 대상 클러스터간 논리 인터페이스를 기록합니다
 [%collapsible]
@@ -160,7 +160,7 @@ NOTE: 보조 스토리지에서 이러한 레이블은 스냅샷 보존을 적�
 
 image:dr-vmc-aws-image17.png["오류: 그래픽 이미지가 없습니다"]
 
-SQL Server 데이터베이스에 대한 SnapCenter 정책을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
+SQL Server 데이터베이스에 대한 SnapCenter 정책을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://["SnapCenter 설명서"^].
 
 우선 유지할 스냅샷 복사본 수를 결정하는 규칙을 사용하여 SnapMirror 정책을 생성해야 합니다.
 
@@ -226,9 +226,9 @@ FSx-Dest::> volume create -vserver DestSVM -volume DestVolName -aggregate DestAg
 ====
 이 솔루션은 NetApp SnapCenter를 사용하여 SQL Server 및 Oracle 데이터베이스의 애플리케이션 정합성이 보장되는 백업을 수행합니다. Veeam Backup & Replication을 사용하여 가상 머신의 VMDK를 백업하면 사내 및 클라우드 기반 데이터 센터를 위한 포괄적인 재해 복구 솔루션을 제공할 수 있습니다.
 
-SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 https://docs.netapp.com/us-en/snapcenter/install/install_workflow.html["NetApp 문서 센터"^].
+SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 https://["NetApp 문서 센터"^].
 
-SnapCenter 소프트웨어는 에서 얻을 수 있습니다 https://mysupport.netapp.com["이 링크"^].
+SnapCenter 소프트웨어는 에서 얻을 수 있습니다 https://["이 링크"^].
 
 설치가 완료되면 _\https://Virtual_Cluster_IP_or_FQDN:8146_ 를 사용하여 웹 브라우저에서 SnapCenter 콘솔에 액세스할 수 있습니다.
 
@@ -254,7 +254,7 @@ image:dr-vmc-aws-image20.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-SnapCenter에 스토리지 시스템을 추가하는 방법에 대한 자세한 내용은 에서 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/install/task_add_storage_systems.html["이 링크"^].
+SnapCenter에 스토리지 시스템을 추가하는 방법에 대한 자세한 내용은 에서 설명서를 참조하십시오 https://["이 링크"^].
 
 ====
 .SnapCenter에 호스트를 추가합니다
@@ -283,9 +283,9 @@ SnapCenter 웹 클라이언트의 설정 섹션에서 정책에 액세스할 수
 
 image:dr-vmc-aws-image23.png["오류: 그래픽 이미지가 없습니다"]
 
-SQL Server 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
+SQL Server 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://["SnapCenter 설명서"^].
 
-Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_create_backup_policies_for_oracle_database.html["SnapCenter 설명서"^].
+Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://["SnapCenter 설명서"^].
 
 * 참고: *
 
@@ -312,16 +312,16 @@ image:dr-vmc-aws-image25.png["오류: 그래픽 이미지가 없습니다"]
 
 SnapCenter 설명서는 SQL Server 및 Oracle 데이터베이스 모두에 대한 리소스 그룹을 생성하는 단계별 세부 정보를 제공합니다.
 
-SQL 리소스 백업의 경우 에 따릅니다 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_back_up_sql_resources.html["이 링크"^].
+SQL 리소스 백업의 경우 에 따릅니다 https://["이 링크"^].
 
-Oracle 리소스 백업에 대해서는 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_back_up_oracle_resources.html["이 링크"^].
+Oracle 리소스 백업에 대해서는 을 참조하십시오 https://["이 링크"^].
 
 ====
 
 
 === Veeam Backup Server를 구축 및 구성합니다
 
-Veeam 백업 및 복제 소프트웨어는 Veeam 스케일 아웃 백업 저장소(SOBR)를 사용하여 애플리케이션 가상 머신을 백업하고 백업 복사본을 Amazon S3 버킷에 아카이빙하는 데 사용됩니다. Veeam을 이 솔루션의 Windows 서버에 구축했습니다. Veeam 구축에 대한 자세한 지침은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html["Veeam Help Center 기술 문서"^].
+Veeam 백업 및 복제 소프트웨어는 Veeam 스케일 아웃 백업 저장소(SOBR)를 사용하여 애플리케이션 가상 머신을 백업하고 백업 복사본을 Amazon S3 버킷에 아카이빙하는 데 사용됩니다. Veeam을 이 솔루션의 Windows 서버에 구축했습니다. Veeam 구축에 대한 자세한 지침은 를 참조하십시오 https://["Veeam Help Center 기술 문서"^].
 
 .Veeam 스케일아웃 백업 저장소를 구성합니다
 [%collapsible]
@@ -364,7 +364,7 @@ image:dr-vmc-aws-image30.png["오류: 그래픽 이미지가 없습니다"]
 +
 image:dr-vmc-aws-image31.png["오류: 그래픽 이미지가 없습니다"]
 
-. 새 백업 저장소 마법사의 모든 단계를 수행하여 리포지토리를 생성합니다. Veeam Backup Repositories 생성에 대한 자세한 내용은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html["Veeam 문서를 참조하십시오"^].
+. 새 백업 저장소 마법사의 모든 단계를 수행하여 리포지토리를 생성합니다. Veeam Backup Repositories 생성에 대한 자세한 내용은 를 참조하십시오 https://["Veeam 문서를 참조하십시오"^].
 +
 image:dr-vmc-aws-image32.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -419,7 +419,7 @@ image:dr-vmc-aws-image39.png["오류: 그래픽 이미지가 없습니다"]
 .스케일아웃 백업 저장소 작업을 생성합니다
 [%collapsible]
 =====
-Veeam을 구성하는 마지막 단계는 새로 생성한 SOBR을 백업 대상으로 사용하여 백업 작업을 생성하는 것입니다. 백업 작업 생성은 스토리지 관리자의 일반적인 일부이며 여기서는 자세한 단계를 다루지 않습니다. Veeam에서 백업 작업 생성에 대한 자세한 내용은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html["Veeam Help Center 기술 문서"^].
+Veeam을 구성하는 마지막 단계는 새로 생성한 SOBR을 백업 대상으로 사용하여 백업 작업을 생성하는 것입니다. 백업 작업 생성은 스토리지 관리자의 일반적인 일부이며 여기서는 자세한 단계를 다루지 않습니다. Veeam에서 백업 작업 생성에 대한 자세한 내용은 를 참조하십시오 https://["Veeam Help Center 기술 문서"^].
 
 =====
 ====
@@ -430,13 +430,13 @@ Veeam을 구성하는 마지막 단계는 새로 생성한 SOBR을 백업 대상
 애플리케이션 VM 및 데이터베이스 볼륨을 AWS에서 실행되는 VMware Cloud Volume 서비스로 페일오버하려면 SnapCenter Server와 Veeam Backup and Replication Server의 실행 중인 인스턴스를 설치 및 구성해야 합니다. 페일오버가 완료된 후 사내 데이터 센터에 대한 페일백이 계획 및 실행될 때까지 정상적인 백업 작업을 재개하도록 이러한 툴을 구성해야 합니다.
 
 .보조 Windows SnapCenter 서버를 배포합니다
-[%collapsible]
+[#deploy-secondary-snapcenter%collapsible]
 ====
 SnapCenter 서버는 VMware 클라우드 SDDC에 구축하거나 VMware 클라우드 환경에 대한 네트워크 연결을 통해 VPC에 상주하는 EC2 인스턴스에 설치됩니다.
 
-SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 https://docs.netapp.com/us-en/snapcenter/install/install_workflow.html["NetApp 문서화 센터"^].
+SnapCenter 소프트웨어는 NetApp Support 사이트에서 제공되며 도메인 또는 작업 그룹에 있는 Microsoft Windows 시스템에 설치할 수 있습니다. 자세한 계획 가이드 및 설치 지침은 에서 확인할 수 있습니다 https://["NetApp 문서화 센터"^].
 
-SnapCenter 소프트웨어는 에서 찾을 수 있습니다 https://mysupport.netapp.com["이 링크"^].
+SnapCenter 소프트웨어는 에서 찾을 수 있습니다 https://["이 링크"^].
 
 ====
 .보조 Windows SnapCenter 서버를 구성합니다
@@ -457,9 +457,9 @@ FSx ONTAP에 미러링된 애플리케이션 데이터를 복구하려면 먼저
 
 ====
 .2차 Veeam Backup & amp; Replication Server를 구축합니다
-[%collapsible]
+[#deploy-secondary-veeam%collapsible]
 ====
-Veeam Backup & Replication 서버를 AWS의 VMware Cloud 또는 EC2 인스턴스에 설치할 수 있습니다. 자세한 구현 지침은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html["Veeam Help Center 기술 문서"^].
+Veeam Backup & Replication 서버를 AWS의 VMware Cloud 또는 EC2 인스턴스에 설치할 수 있습니다. 자세한 구현 지침은 를 참조하십시오 https://["Veeam Help Center 기술 문서"^].
 
 ====
 .Secondary Veeam Backup & amp; Replication Server를 구성합니다
@@ -475,14 +475,14 @@ Amazon S3 스토리지에 백업된 가상 머신의 복구를 수행하려면 V
 . VM을 복구한 후 SQL 및 Oracle VM을 보호하기 위한 새로운 백업 작업을 설정합니다.
 
 
-Veeam을 사용하여 VM을 복원하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 link:aws-guest-dr-restore-veeam-full.html["Veeam Full Restore로 애플리케이션 VM을 복구합니다"].
+Veeam을 사용하여 VM을 복원하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 link:#restore-veeam-full["Veeam Full Restore로 애플리케이션 VM을 복구합니다"].
 
 ====
 
 
 === 재해 복구를 위한 SnapCenter 데이터베이스 백업
 
-SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다. 이 단계에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["이 링크"^].
+SnapCenter를 사용하면 재해 발생 시 SnapCenter 서버를 복구하기 위해 기본 MySQL 데이터베이스와 구성 데이터를 백업 및 복구할 수 있습니다. 이 솔루션을 위해 VPC에 상주하는 AWS EC2 인스턴스에서 SnapCenter 데이터베이스 및 구성을 복구했습니다. 이 단계에 대한 자세한 내용은 을 참조하십시오 https://["이 링크"^].
 
 .SnapCenter 백업 사전 요구 사항
 [%collapsible]
@@ -497,7 +497,7 @@ SnapCenter 백업에 필요한 사전 요구 사항은 다음과 같습니다.
 
 ====
 .SnapCenter 백업 및 복원 프로세스 요약
-[%collapsible]
+[#snapcenter-backup-and-restore-process-summary%collapsible]
 ====
 * 백업 db 및 config 파일을 호스팅하기 위해 사내 ONTAP 시스템에 볼륨을 생성합니다.
 * 온프레미스와 FSx/CVO 간에 SnapMirror 관계를 설정합니다.
@@ -515,7 +515,7 @@ SnapCenter 백업에 필요한 사전 요구 사항은 다음과 같습니다.
 .SnapCenter 데이터베이스 및 구성을 백업합니다
 [%collapsible]
 ====
-SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["이 링크"^].
+SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오 https://["이 링크"^].
 
 .Swagger에 로그인하고 인증 토큰을 얻습니다
 [%collapsible]
@@ -755,7 +755,7 @@ image:dr-vmc-aws-image67.png["오류: 그래픽 이미지가 없습니다"]
 복구 단계를 계속 진행하려면 다음 필수 구성 요소가 완료된 것으로 가정합니다.
 
 . Veeam Full Restore를 사용하여 Windows Server VM을 VMware Cloud SDDC로 복구했습니다.
-. 보조 SnapCenter 서버가 설정되었고 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 복원 및 구성이 완료되었습니다 link:aws-guest-dr-snapcenter-db-backup.html#snapcenter-backup-and-restore-process-summary["SnapCenter 백업 및 복원 프로세스 요약"]
+. 보조 SnapCenter 서버가 설정되었고 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 복원 및 구성이 완료되었습니다 link:#snapcenter-backup-and-restore-process-summary["SnapCenter 백업 및 복원 프로세스 요약"]
 
 
 .VM: SQL Server VM에 대한 사후 복원 구성
@@ -870,7 +870,7 @@ image:dr-vmc-aws-image76.png["오류: 그래픽 이미지가 없습니다"]
 복구 단계를 계속하려면 다음 필수 구성 요소를 완료하십시오.
 
 . Veeam Full Restore를 사용하여 Oracle Linux 서버 VM을 VMware Cloud SDDC로 복구했습니다.
-. 보조 SnapCenter 서버가 설정되었으며 이 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 및 구성 파일이 복원되었습니다 link:aws-guest-dr-snapcenter-db-backup.html#snapcenter-backup-and-restore-process-summary["SnapCenter 백업 및 복원 프로세스 요약"]
+. 보조 SnapCenter 서버가 설정되었으며 이 섹션에 설명된 단계를 사용하여 SnapCenter 데이터베이스 및 구성 파일이 복원되었습니다 link:#snapcenter-backup-and-restore-process-summary["SnapCenter 백업 및 복원 프로세스 요약"]
 
 
 .Oracle 복원을 위해 FSx 구성 - SnapMirror 관계를 끊습니다
@@ -966,9 +966,9 @@ AWS 기반 ONTAP용 FSX는 SnapCenter 및 SyncMirror와 원활하게 통합되�
 
 * 솔루션 설명서 링크
 +
-https://docs.netapp.com/us-en/netapp-solutions/ehc/index.html["VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드"]
+https://["VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드"]
 
 +
-https://docs.netapp.com/us-en/netapp-solutions/index.html["NetApp 솔루션"]
+https://["NetApp 솔루션"]
 
 

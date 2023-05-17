@@ -16,15 +16,15 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* cnvrg.io( https://cnvrg.io["https://cnvrg.io"^]):
+* cnvrg.io( https://["https://cnvrg.io"^]):
 +
 ** cnvrg 코어(무료 ML 플랫폼)
 +
-https://cnvrg.io/platform/core[]
+https://[]
 
 ** cnvrg 문서
 +
-https://app.cnvrg.io/docs["https://app.cnvrg.io/docs"^]
+https://["https://app.cnvrg.io/docs"^]
 
 
 
@@ -32,15 +32,15 @@ https://app.cnvrg.io/docs["https://app.cnvrg.io/docs"^]
 +
 ** NVIDIA DGX-1 서버
 +
-https://www.nvidia.com/en-us/data-center/dgx-1/[]
+https://[]
 
 ** NVIDIA Tesla V100 Tensor 코어 GPU
 +
-https://www.nvidia.com/en-us/data-center/tesla-v100/[]
+https://[]
 
 ** NGC(NVIDIA GPU Cloud)
 +
-https://www.nvidia.com/en-us/gpu-cloud/[]
+https://[]
 
 
 
@@ -48,19 +48,19 @@ https://www.nvidia.com/en-us/gpu-cloud/[]
 +
 ** AFF 데이터시트 를 참조하십시오
 +
-https://www.netapp.com/us/media/d-3582.pdf[]
+https://[]
 
 ** AFF를 위한 NetApp FlashAdvantage
 +
-https://www.netapp.com/us/media/ds-3733.pdf[]
+https://[]
 
 ** ONTAP 9.x 설명서
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286[]
+http://[]
 
 ** NetApp FlexGroup 기술 보고서
 +
-https://www.netapp.com/us/media/tr-4557.pdf[]
+https://[]
 
 
 
@@ -68,7 +68,7 @@ https://www.netapp.com/us/media/tr-4557.pdf[]
 +
 ** NetApp 트라이던트
 +
-https://netapp.io/persistent-storage-provisioner-for-kubernetes/[]
+https://[]
 
 
 
@@ -76,7 +76,7 @@ https://netapp.io/persistent-storage-provisioner-for-kubernetes/[]
 +
 ** NetApp 상호 운용성 매트릭스 툴
 +
-http://support.netapp.com/matrix[]
+http://[]
 
 
 
@@ -84,11 +84,11 @@ http://support.netapp.com/matrix[]
 +
 ** Cisco Nexus 3232C 스위치
 +
-https://www.cisco.com/c/en/us/products/switches/nexus-3232c-switch/index.html[]
+https://[]
 
 ** Mellanox Spectrum 2000 시리즈 스위치
 +
-http://www.mellanox.com/page/products_dyn?product_family=251&mtag=sn2000[]
+http://[]
 
 
 
@@ -96,39 +96,39 @@ http://www.mellanox.com/page/products_dyn?product_family=251&mtag=sn2000[]
 +
 ** 달리
 +
-https://github.com/NVIDIA/DALI[]
+https://[]
 
 ** TensorFlow: 모두를 위한 오픈 소스 머신 러닝 프레임워크
 +
-https://www.tensorflow.org/[]
+https://[]
 
 ** Horovod: Uber의 TensorFlow용 오픈 소스 분산 딥 러닝 프레임워크
 +
-https://eng.uber.com/horovod/[]
+https://[]
 
 ** 컨테이너 런타임 에코시스템에서 GPU 지원
 +
-https://devblogs.nvidia.com/gpu-containers-runtime/[]
+https://[]
 
 ** Docker 를 참조하십시오
 +
-https://docs.docker.com[]
+https://[]
 
 ** 쿠버네티스
 +
-https://kubernetes.io/docs/home/[]
+https://[]
 
 ** NVIDIA DeepOps
 +
-https://github.com/NVIDIA/deepops[]
+https://[]
 
 ** Kubeflow
 +
-http://www.kubeflow.org/[]
+http://[]
 
 ** Jupyter 노트북 서버
 +
-http://www.jupyter.org/[]
+http://[]
 
 
 
@@ -136,7 +136,7 @@ http://www.jupyter.org/[]
 +
 ** NIH 흉부 X선 데이터 세트
 +
-https://nihcc.app.box.com/v/ChestXray-NIHCC[]
+https://[]
 
 ** Xiaosong Wang, Yifan Peng, Le Lu, Zhivyong Lu, Mohammadadadhadi Bagheri, Ronald Summers, ChestX-ray8: 병원 스케일 흉부 X선 데이터베이스 및 약한 감독 하에 Common Thorax 질환의 분류 및 국소화에 대한 벤치마크, IEEE CVPR, pp. 3462-3471, 2017TR-4841-0620
 

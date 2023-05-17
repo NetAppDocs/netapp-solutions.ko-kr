@@ -18,8 +18,8 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 . Kubernetes용 Advanced Cluster Management에 대한 Red Hat 서브스크립션
 
 
-Advanced Cluster Management는 OpenShift 클러스터를 위한 추가 기능으로, 허브 및 관리 클러스터에서 사용되는 기능을 기반으로 하드웨어 리소스에 대한 특정 요구 사항과 제한이 있습니다. 클러스터를 사이징할 때는 이러한 문제를 고려해야 합니다. 설명서를 참조하십시오 https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html-single/install/index#network-configuration["여기"] 를 참조하십시오.
+Advanced Cluster Management는 OpenShift 클러스터를 위한 추가 기능으로, 허브 및 관리 클러스터에서 사용되는 기능을 기반으로 하드웨어 리소스에 대한 특정 요구 사항과 제한이 있습니다. 클러스터를 사이징할 때는 이러한 문제를 고려해야 합니다. 설명서를 참조하십시오 https://["여기"] 를 참조하십시오.
 
-선택적으로 허브 클러스터에 인프라 구성 요소를 호스팅하는 전용 노드가 있고 해당 노드에만 고급 클러스터 관리 리소스를 설치하려면 해당 노드에 내약성과 선택기를 추가해야 합니다. 자세한 내용은 설명서를 참조하십시오 https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/install/installing#installing-on-infra-node["여기"].
+선택적으로 허브 클러스터에 인프라 구성 요소를 호스팅하는 전용 노드가 있고 해당 노드에만 고급 클러스터 관리 리소스를 설치하려면 해당 노드에 내약성과 선택기를 추가해야 합니다. 자세한 내용은 설명서를 참조하십시오 https://["여기"].
 
 link:rh-os-n_use_case_advanced_cluster_management_deployment.html["다음: 설치."]

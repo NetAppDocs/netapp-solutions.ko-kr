@@ -95,7 +95,7 @@ NetApp NFS 직접 액세스를 사용할 때의 주요 이점은 다음과 같�
 * 동적 다중 스레드 기능을 활용하여 백업 시간 단축
 
 
-을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/data-analytics/hdcs-sh-solution-overview.html["TR-4657: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop"^] Hadoop 데이터, 클라우드에서 사내로 백업 및 재해 복구, 기존 Hadoop 데이터에 대한 DevTest, 데이터 보호 및 멀티 클라우드 연결, 분석 워크로드 가속화 등을 지원합니다.
+을 참조하십시오 https://["TR-4657: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop"^] Hadoop 데이터, 클라우드에서 사내로 백업 및 재해 복구, 기존 Hadoop 데이터에 대한 DevTest, 데이터 보호 및 멀티 클라우드 연결, 분석 워크로드 가속화 등을 지원합니다.
 
 다음 섹션에서는 Spark 고객에게 중요한 스토리지 기능에 대해 설명합니다.
 
@@ -115,7 +115,7 @@ NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검�
 
 image:apache-spark-image2.png["1TB의 데이터를 정렬할 시간입니다."]
 
-* 기본 NL-SAS 구성에는 8개의 컴퓨팅 노드와 96개의 NL-SAS 드라이브가 사용되었습니다. 이 구성에서는 4분 38초 내에 1TB의 데이터가 생성되었습니다. 을 참조하십시오 https://www.netapp.com/media/16420-tr-3969.pdf["TR-3969 Hadoop용 NetApp E-Series 솔루션"^] 클러스터 및 스토리지 구성에 대한 자세한 내용은 를 참조하십시오.
+* 기본 NL-SAS 구성에는 8개의 컴퓨팅 노드와 96개의 NL-SAS 드라이브가 사용되었습니다. 이 구성에서는 4분 38초 내에 1TB의 데이터가 생성되었습니다. 을 참조하십시오 https://["TR-3969 Hadoop용 NetApp E-Series 솔루션"^] 클러스터 및 스토리지 구성에 대한 자세한 내용은 를 참조하십시오.
 * TeraGen을 사용하면 SSD 구성에서 NL-SAS 구성보다 1TB의 데이터가 15.66x 더 빠르게 생성됩니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 작업 완료 시간을 기준으로 할 때 NL-SAS 구성의 속도는 약 2배였습니다.
 * TeraSort를 사용하면 SSD 구성에서 NL-SAS 구성에 비해 1TB의 데이터를 1138.36배 더 빠르게 정렬할 수 있습니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 따라서 드라이브당 NL-SAS 구성보다 약 3배 빠른 속도를 제공합니다. <<<<<<< 머리
 * 여기서 주목할 점은 회전식 디스크에서 All-Flash로 전환하여 성능을 향상할 수 있다는 것입니다. 컴퓨팅 노드의 수는 병목 현상이 아니었습니다. NetApp의 All-Flash 스토리지를 사용하면 런타임 성능이 원활하게 확장됩니다.
@@ -151,6 +151,6 @@ NetApp 시스템은 SAS, iSCSI, FCP, InfiniBand를 비롯한 대부분의 Hadoop
 
 === 운영 및 지원 솔루션
 
-이 문서에 설명된 Hadoop 솔루션은 NetApp에서 지원됩니다. 또한 이러한 솔루션은 주요 Hadoop 총판에서도 인증되었습니다. 자세한 내용은 를 참조하십시오 https://www.mapr.com/partners/partner/netapp["MapR"^] 사이트 http://hortonworks.com/partner/netapp/["Hortonworks의"^] 사이트 및 Cloudera http://www.cloudera.com/partners/partners-listing.html?q=netapp["인증"^] 및 http://www.cloudera.com/partners/solutions/netapp.html["파트너"^] 있습니다.
+이 문서에 설명된 Hadoop 솔루션은 NetApp에서 지원됩니다. 또한 이러한 솔루션은 주요 Hadoop 총판에서도 인증되었습니다. 자세한 내용은 를 참조하십시오 https://["MapR"^] 사이트 http://["Hortonworks의"^] 사이트 및 Cloudera http://["인증"^] 및 http://["파트너"^] 있습니다.
 
 link:apache-spark-target-audience.html["다음: 대상."]

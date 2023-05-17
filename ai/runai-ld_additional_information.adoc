@@ -18,57 +18,57 @@ summary: 이 문서에 설명된 정보에 대해 자세히 알아보려면 다�
 
 * 데이터 세트: TuSimple
 +
-https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection["https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection"^]
+https://["https://github.com/TuSimple/tusimple-benchmark/tree/master/doc/lane_detection"^]
 
 * 딥 러닝 네트워크 아키텍처: 공간 컨볼루ional 신경망
 +
-https://arxiv.org/abs/1712.06080["https://arxiv.org/abs/1712.06080"^]
+https://["https://arxiv.org/abs/1712.06080"^]
 
 * 분산형 딥 러닝 교육 프레임워크: Horovod
 +
-https://horovod.ai/["https://horovod.ai/"^]
+https://["https://horovod.ai/"^]
 
 * 실행: AI 컨테이너 오케스트레이션 솔루션: 실행: AI 제품 소개
 +
-https://docs.run.ai/home/components/["https://docs.run.ai/home/components/"^]
+https://["https://docs.run.ai/home/components/"^]
 
 * AI 설치 설명서를 실행하십시오
 +
-https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai["https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai"^] https://docs.run.ai/Administrator/Researcher-Setup/cli-install/["https://docs.run.ai/Administrator/Researcher-Setup/cli-install/#runai-cli-installation"^]
+https://["https://docs.run.ai/Administrator/Cluster-Setup/cluster-install/#step-3-install-runai"^] https://["https://docs.run.ai/Administrator/Researcher-Setup/cli-install/#runai-cli-installation"^]
 
 * 실행 중인 작업 제출: AI CLI
 +
-https://docs.run.ai/Researcher/cli-reference/runai-submit/["https://docs.run.ai/Researcher/cli-reference/runai-submit/"^]
+https://["https://docs.run.ai/Researcher/cli-reference/runai-submit/"^]
 
 +
-https://docs.run.ai/Researcher/cli-reference/runai-submit-mpi/["https://docs.run.ai/Researcher/cli-reference/runai-submit-mpi/"^]
+https://["https://docs.run.ai/Researcher/cli-reference/runai-submit-mpi/"^]
 
 * Azure 클라우드 리소스: Azure NetApp Files
 +
-https://docs.microsoft.com/azure/azure-netapp-files/["https://docs.microsoft.com/azure/azure-netapp-files/"^]
+https://["https://docs.microsoft.com/azure/azure-netapp-files/"^]
 
 * Azure Kubernetes 서비스
 +
-https://azure.microsoft.com/services/kubernetes-service/-features["https://azure.microsoft.com/services/kubernetes-service/-features"^]
+https://["https://azure.microsoft.com/services/kubernetes-service/-features"^]
 
 * Azure VM SKU
 +
-https://azure.microsoft.com/services/virtual-machines/["https://azure.microsoft.com/services/virtual-machines/"^]
+https://["https://azure.microsoft.com/services/virtual-machines/"^]
 
 * GPU SKU가 포함된 Azure VM
 +
-https://docs.microsoft.com/azure/virtual-machines/sizes-gpu["https://docs.microsoft.com/azure/virtual-machines/sizes-gpu"^]
+https://["https://docs.microsoft.com/azure/virtual-machines/sizes-gpu"^]
 
 * NetApp 트라이던트
 +
-https://github.com/NetApp/trident/releases["https://github.com/NetApp/trident/releases"^]
+https://["https://github.com/NetApp/trident/releases"^]
 
 * NetApp 구현 Data Fabric
 +
-https://www.netapp.com/data-fabric/what-is-data-fabric/["https://www.netapp.com/data-fabric/what-is-data-fabric/"^]
+https://["https://www.netapp.com/data-fabric/what-is-data-fabric/"^]
 
 * NetApp 제품 설명서
 +
-https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
+https://["https://www.netapp.com/support-and-training/documentation/"^]
 
 

@@ -50,7 +50,7 @@ n_trees = 10
 rf_model = RandomForestClassifier(max_depth=max_depth, n_estimators=n_trees)
 rf_model.fit(df_sliced, Y)
 ....
-훈련된 무작위 포리스트 모델을 사용하여 예측을 수행하려면 이 전자 필기장에서 다음 단락을 실행하십시오. 중복을 피하기 위해 15일째부터 마지막 100만 행을 테스트 세트로 테스트했습니다. 또한 이 셀은 예측의 정확도를 계산하고, 사용자가 광고를 클릭하는지 여부를 모델이 정확하게 예측한 발생 비율로 정의됩니다. 이 노트북에서 잘 모르는 구성 요소를 검토하려면 을 참조하십시오 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html["공식 좌골 키트 - 학습 문서"^].
+훈련된 무작위 포리스트 모델을 사용하여 예측을 수행하려면 이 전자 필기장에서 다음 단락을 실행하십시오. 중복을 피하기 위해 15일째부터 마지막 100만 행을 테스트 세트로 테스트했습니다. 또한 이 셀은 예측의 정확도를 계산하고, 사용자가 광고를 클릭하는지 여부를 모델이 정확하게 예측한 발생 비율로 정의됩니다. 이 노트북에서 잘 모르는 구성 요소를 검토하려면 을 참조하십시오 https://["공식 좌골 키트 - 학습 문서"^].
 
 ....
 # testing data, last 1M rows in day15

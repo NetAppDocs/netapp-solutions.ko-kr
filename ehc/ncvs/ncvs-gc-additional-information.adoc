@@ -20,27 +20,27 @@ link:ncvs-gc-service-operation.html["이전: 서비스 작업."]
 
 * Cloud Volumes Service용 Google Cloud 설명서
 +
-https://cloud.google.com/architecture/partners/netapp-cloud-volumes/["https://cloud.google.com/architecture/partners/netapp-cloud-volumes/"^]
+https://["https://cloud.google.com/architecture/partners/netapp-cloud-volumes/"^]
 
 * Google 전용 서비스 액세스
 +
-https://cloud.google.com/vpc/docs/private-services-access?hl=en_US["https://cloud.google.com/vpc/docs/private-services-access?hl=en_US"^]
+https://["https://cloud.google.com/vpc/docs/private-services-access?hl=en_US"^]
 
 * NetApp 제품 설명서
 +
-https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
+https://["https://www.netapp.com/support-and-training/documentation/"^]
 
 * 암호화 검증 모듈 프로그램 — NetApp CryptoMod
 +
-https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4144["https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4144"^]
+https://["https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4144"^]
 
 * 랜섬웨어용 NetApp 솔루션
 +
-https://www.netapp.com/pdf.html?item=/media/16716-sb-3938pdf.pdf&v=202093745["https://www.netapp.com/pdf.html?item=/media/16716-sb-3938pdf.pdf&v=202093745"^]
+https://["https://www.netapp.com/pdf.html?item=/media/16716-sb-3938pdf.pdf&v=202093745"^]
 
 * TR-4616: ONTAP에서 NFS Kerberos
 +
-https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf"^]
+https://["https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf"^]
 
 
 

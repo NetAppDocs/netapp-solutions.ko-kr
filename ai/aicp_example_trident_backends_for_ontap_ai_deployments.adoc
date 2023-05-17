@@ -14,7 +14,7 @@ summary: Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 
 
 
 [role="lead"]
-Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Trident 백엔드를 생성해야 합니다. 다음 예는 ONTAP AI 포드에 NetApp AI Control Plane 솔루션을 구축할 경우 생성할 수 있는 다양한 유형의 백엔드를 보여줍니다. 백엔드에 대한 자세한 내용은 을 참조하십시오 https://netapp-trident.readthedocs.io/["Trident 문서"^].
+Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Trident 백엔드를 생성해야 합니다. 다음 예는 ONTAP AI 포드에 NetApp AI Control Plane 솔루션을 구축할 경우 생성할 수 있는 다양한 유형의 백엔드를 보여줍니다. 백엔드에 대한 자세한 내용은 을 참조하십시오 https://["Trident 문서"^].
 
 . NetApp AFF 시스템에서 사용할 각 데이터 LIF(데이터 액세스를 제공하는 논리적 네트워크 인터페이스)에 대해 FlexGroup 지원 Trident 백엔드를 생성하는 것이 좋습니다. LIF 간 볼륨 마운트의 균형을 조정할 수 있습니다
 +

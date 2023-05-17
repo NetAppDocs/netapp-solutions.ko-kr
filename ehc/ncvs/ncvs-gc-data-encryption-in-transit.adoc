@@ -22,11 +22,11 @@ link:ncvs-gc-data-plane-architecture.html["이전: 데이터 플레인 아키텍
 
 == Google Cloud 네트워크
 
-Google Cloud는 에 설명된 대로 네트워크 수준의 트래픽을 암호화합니다 https://cloud.google.com/security/encryption-in-transit["전송 중인 암호화"^] Google 문서. “Cloud Volumes Services 아키텍처” 섹션에서 언급한 것처럼 Cloud Volumes Service는 NetApp이 제어하는 PSA 생산자 프로젝트를 통해 제공됩니다.
+Google Cloud는 에 설명된 대로 네트워크 수준의 트래픽을 암호화합니다 https://["전송 중인 암호화"^] Google 문서. “Cloud Volumes Services 아키텍처” 섹션에서 언급한 것처럼 Cloud Volumes Service는 NetApp이 제어하는 PSA 생산자 프로젝트를 통해 제공됩니다.
 
 CVS-SW의 경우 프로듀서 테넌트는 Google VM을 실행하여 서비스를 제공합니다. 사용자 VM과 Cloud Volumes Service VM 간의 트래픽은 Google에서 자동으로 암호화됩니다.
 
-CVS의 데이터 경로 - 성능은 네트워크 계층에서 완전히 암호화되지 않지만, NetApp과 Google은 이 조합을 사용합니다 https://1.ieee802.org/security/802-1ae/["IEEE 802.1AE 암호화(MACSec)"^], https://datatracker.ietf.org/doc/html/rfc2003["캡슐화"^] (데이터 암호화) 및 물리적으로 제한된 네트워크를 통해 Cloud Volumes Service CVS - 성능 서비스 유형과 Google 클라우드 간에 전송 중인 데이터를 보호합니다.
+CVS의 데이터 경로 - 성능은 네트워크 계층에서 완전히 암호화되지 않지만, NetApp과 Google은 이 조합을 사용합니다 https://["IEEE 802.1AE 암호화(MACSec)"^], https://["캡슐화"^] (데이터 암호화) 및 물리적으로 제한된 네트워크를 통해 Cloud Volumes Service CVS - 성능 서비스 유형과 Google 클라우드 간에 전송 중인 데이터를 보호합니다.
 
 
 
@@ -38,7 +38,7 @@ NFS 및 SMB NAS 프로토콜은 프로토콜 계층에서 선택적 전송 암�
 
 === SMB 암호화
 
-https://docs.microsoft.com/en-us/windows-server/storage/file-server/smb-security["SMB 암호화"^] SMB 데이터의 엔드 투 엔드 암호화를 제공하고 신뢰할 수 없는 네트워크에서 데이터를 도청하지 못하도록 보호합니다. 클라이언트/서버 데이터 연결(SMB3.x 가능 클라이언트에만 사용 가능)과 서버/도메인 컨트롤러 인증에 대해 암호화를 설정할 수 있습니다.
+https://["SMB 암호화"^] SMB 데이터의 엔드 투 엔드 암호화를 제공하고 신뢰할 수 없는 네트워크에서 데이터를 도청하지 못하도록 보호합니다. 클라이언트/서버 데이터 연결(SMB3.x 가능 클라이언트에만 사용 가능)과 서버/도메인 컨트롤러 인증에 대해 암호화를 설정할 수 있습니다.
 
 SMB 암호화가 활성화된 경우 암호화를 지원하지 않는 클라이언트는 공유에 액세스할 수 없습니다.
 
@@ -48,13 +48,13 @@ Cloud Volumes Service는 SMB 암호화를 위한 RC4-HMAC, AES-128-CTS-HMAC-SHA1
 
 === NFSv4.1 Kerberos
 
-NFSv4.1의 경우 CVS - 성능은 에서 설명한 대로 Kerberos 인증을 제공합니다 https://datatracker.ietf.org/doc/html/rfc7530["RFC7530"^]. 볼륨별로 Kerberos를 활성화할 수 있습니다.
+NFSv4.1의 경우 CVS - 성능은 에서 설명한 대로 Kerberos 인증을 제공합니다 https://["RFC7530"^]. 볼륨별로 Kerberos를 활성화할 수 있습니다.
 
 Kerberos에서 현재 가장 강력한 암호화 유형은 AES-256-CTS-HMAC-SHA1입니다. NetApp Cloud Volumes Service는 NFS용 AES-256-CTS-HMAC-SHA1, AES-128-CTS-HMAC-SHA1, DES3 및 DES를 지원합니다. 또한 CIFS/SMB 트래픽에 대해 ARCFOUR-HMAC(RC4)를 지원하지만 NFS에는 지원하지 않습니다.
 
 Kerberos는 Kerberos 보안의 강화 방법을 선택할 수 있는 NFS 마운트에 대해 세 가지 서로 다른 보안 수준을 제공합니다.
 
-RedHat에 따름 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/s1-nfs-client-config-options["일반 마운트 옵션"^] 설명서:
+RedHat에 따름 https://["일반 마운트 옵션"^] 설명서:
 
 ....
 sec=krb5 uses Kerberos V5 instead of local UNIX UIDs and GIDs to authenticate users.

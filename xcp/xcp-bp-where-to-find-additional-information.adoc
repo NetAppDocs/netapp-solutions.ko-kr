@@ -18,9 +18,9 @@ link:xcp-bp-troubleshooting.html["이전: 문제 해결."]
 [role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
-* NetApp XCP 블로그https://blog.netapp.com/tag/netapp-xcp/["https://blog.netapp.com/tag/netapp-xcp/"^]
-* NetApp XCP 사용자 가이드https://library-clnt.dmz.netapp.com/documentation/productlibrary/index.html?productID=63064["https://library-clnt.dmz.netapp.com/documentation/productlibrary/index.html?productID=63064"^]
-* bigdata Analytics 데이터를 인공 지능으로 분석 – AI용 Data Mover 솔루션https://www.netapp.com/us/media/tr-4732.pdf["https://www.netapp.com/us/media/tr-4732.pdf"^]
+* NetApp XCP 블로그https://["https://blog.netapp.com/tag/netapp-xcp/"^]
+* NetApp XCP 사용자 가이드https://["https://library-clnt.dmz.netapp.com/documentation/productlibrary/index.html?productID=63064"^]
+* bigdata Analytics 데이터를 인공 지능으로 분석 – AI용 Data Mover 솔루션https://["https://www.netapp.com/us/media/tr-4732.pdf"^]
 
 
 link:xcp-bp-version-history.html["다음: 버전 기록."]

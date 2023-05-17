@@ -16,7 +16,7 @@ summary: 이 문서는 MLPerf Inference v0.7 코드, MLPerf Inference v1.1 코�
 link:ai-edge-technology-overview.html["이전: 기술 개요"]
 
 [role="lead"]
-이 문서는 MLPerf Inference v0.7을 따릅니다 https://github.com/mlperf/inference_results_v0.7/tree/master/closed/Lenovo["코드"^], MLPerf Inference v1.1 https://github.com/mlcommons/inference_results_v1.1/tree/main/closed/Lenovo["코드"^], 및 https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc["규칙"^]. 아래 표에 정의된 대로 에지에서 추론을 위해 설계된 MLPerf 벤치마크를 실행했습니다.
+이 문서는 MLPerf Inference v0.7을 따릅니다 https://["코드"^], MLPerf Inference v1.1 https://["코드"^], 및 https://["규칙"^]. 아래 표에 정의된 대로 에지에서 추론을 위해 설계된 MLPerf 벤치마크를 실행했습니다.
 
 |===
 | 영역 | 작업 | 모델 | 데이터 세트 | QSL 크기 | 품질 | 멀티스트림 지연 제한 

@@ -20,55 +20,55 @@ link:kafka-nfs-conclusion.html["이전: 결론."]
 
 * 아파치 카프카란?
 +
-https://www.confluent.io/what-is-apache-kafka/["https://www.confluent.io/what-is-apache-kafka/"^]
+https://["https://www.confluent.io/what-is-apache-kafka/"^]
 
 * 이름이 바보 같습니까?
 +
-https://linux-nfs.org/wiki/index.php/Server-side_silly_rename["https://linux-nfs.org/wiki/index.php/Server-side_silly_rename"^]
+https://["https://linux-nfs.org/wiki/index.php/Server-side_silly_rename"^]
 
 * ONATP는 스트리밍 애플리케이션에 대해 읽혀집니다.
 +
-https://www.netapp.com/blog/ontap-ready-for-streaming-applications/["https://www.netapp.com/blog/ontap-ready-for-streaming-applications/"^]
+https://["https://www.netapp.com/blog/ontap-ready-for-streaming-applications/"^]
 
 * Kafka의 이름 변경 문제.
 +
-https://sbg.technology/2018/07/10/kafka-nfs/["https://sbg.technology/2018/07/10/kafka-nfs/"^]
+https://["https://sbg.technology/2018/07/10/kafka-nfs/"^]
 
 * NetApp 제품 설명서
 +
-https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
+https://["https://www.netapp.com/support-and-training/documentation/"^]
 
 * NFS란 무엇입니까?
 +
-https://en.wikipedia.org/wiki/Network_File_System["https://en.wikipedia.org/wiki/Network_File_System"^]
+https://["https://en.wikipedia.org/wiki/Network_File_System"^]
 
 * Kafka 파티션 재할당이란 무엇입니까?
 +
-https://docs.cloudera.com/runtime/7.2.10/kafka-managing/topics/kafka-manage-cli-reassign-overview.html["https://docs.cloudera.com/runtime/7.2.10/kafka-managing/topics/kafka-manage-cli-reassign-overview.html"^]
+https://["https://docs.cloudera.com/runtime/7.2.10/kafka-managing/topics/kafka-manage-cli-reassign-overview.html"^]
 
 * OpenMessaging 벤치마크란 무엇입니까?
 +
-https://openmessaging.cloud/["https://openmessaging.cloud/"^]
+https://["https://openmessaging.cloud/"^]
 
 * Kafka 브로커를 어떻게 마이그레이션합니까?
 +
-https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtime-58c216129058["https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtime-58c216129058"^]
+https://["https://medium.com/@sanchitbansal26/how-to-migrate-kafka-cluster-with-no-downtime-58c216129058"^]
 
 * Prometheus로 Kafka 브로커를 어떻게 모니터링하십니까?
 +
-https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/[]
+https://[]
 
 * Apache Kafka용 관리 플랫폼
 +
-https://www.instaclustr.com/platform/managed-apache-kafka/[]
+https://[]
 
 * 아파치 카프카 지원
 +
-https://www.instaclustr.com/support-solutions/kafka-support/[]
+https://[]
 
 * Apache Kafka용 컨설팅 서비스
 +
-https://www.instaclustr.com/services/consulting/[]
+https://[]
 
 
 

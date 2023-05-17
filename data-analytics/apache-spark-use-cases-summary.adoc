@@ -27,7 +27,7 @@ Apache Spark는 스트리밍 추출, 변환 및 로드(ETL) 프로세스, 데이
 * * 복잡한 세션 분석. * Spark 스트리밍은 웹 사이트나 응용 프로그램에 로그인한 후 사용자 활동과 같은 이벤트를 수집하여 그룹화하고 분석합니다. 예를 들어 Netflix는 이 기능을 사용하여 실시간 영화 권장 사항을 제공합니다.
 
 
-스트리밍 데이터 구성, Confluent Kafka 검증 및 성능 테스트에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/data-analytics/confluent-kafka-introduction.html["TR-4912: NetApp을 통해 Confluent Kafka 계층형 스토리지를 위한 모범 사례 지침"^].
+스트리밍 데이터 구성, Confluent Kafka 검증 및 성능 테스트에 대한 자세한 내용은 을 참조하십시오 https://["TR-4912: NetApp을 통해 Confluent Kafka 계층형 스토리지를 위한 모범 사례 지침"^].
 
 
 
@@ -65,12 +65,12 @@ Apache Spark는 SQL, R, Python 등 Spark 이외의 개발 언어를 사용하여
 
 == 자연어 처리
 
-자연어 처리(NLP)로 가능해진 대화형 AI는 컴퓨터가 인간과 통신할 수 있도록 지원하는 AI의 지점입니다. NLP는 스마트 비서 및 챗봇에서 Google 검색 및 예측 텍스트에 이르기까지 모든 업계 수직 및 다양한 사용 사례에서 널리 사용되고 있습니다. 에 따르면 https://www.forbes.com/sites/forbestechcouncil/2021/05/07/nice-chatbot-ing-with-you/?sh=7011eff571f4["Gartner"^] 2022년까지 70%의 사용자가 매일 대화형 AI 플랫폼과 상호 작용할 것으로 예측 인간과 기계 사이의 고품질 대화를 위해서는 신속하고 지능적이며 자연스러운 대화가 이루어져야 합니다.
+자연어 처리(NLP)로 가능해진 대화형 AI는 컴퓨터가 인간과 통신할 수 있도록 지원하는 AI의 지점입니다. NLP는 스마트 비서 및 챗봇에서 Google 검색 및 예측 텍스트에 이르기까지 모든 업계 수직 및 다양한 사용 사례에서 널리 사용되고 있습니다. 에 따르면 https://["Gartner"^] 2022년까지 70%의 사용자가 매일 대화형 AI 플랫폼과 상호 작용할 것으로 예측 인간과 기계 사이의 고품질 대화를 위해서는 신속하고 지능적이며 자연스러운 대화가 이루어져야 합니다.
 
 고객은 NLP 및 ASR(자동 음성 인식) 모델을 처리하고 교육하기 위해 대량의 데이터가 필요합니다. 또한 에지, 코어, 클라우드 전반에서 데이터를 이동해야 하며, 인류와 자연적 통신을 위해 수 밀리초 내에 추론을 수행할 수 있는 기능이 필요합니다. NetApp AI 및 Apache Spark는 컴퓨팅, 스토리지, 데이터 처리, 모델 교육, 미세 조정, 있습니다.
 
 정서 분석은 NLP에서 텍스트에서 긍정적, 부정적 또는 중립적 감정을 추출하는 연구 분야입니다. 고객 의견 분석에는 지원 센터 직원의 성과 파악부터 적절한 자동 챗봇 응답 제공에 이르기까지 다양한 활용 사례가 있습니다. 또한 분기별 수익 통화 시 기업 담당자와 대상 간의 상호 작용을 기반으로 회사의 주가를 예측하기도 했습니다. 또한, 감정 분석을 사용하여 브랜드가 제공하는 제품, 서비스 또는 지원에 대한 고객의 관점을 결정할 수 있습니다.
 
-을 사용했습니다 https://www.johnsnowlabs.com/spark-nlp/["스파크 NLP"^] 라이브러리 시작 https://www.johnsnowlabs.com/["John Snow Labs를 참조하십시오"^] 를 포함하여 Transformers(BERT) 모델의 사전 교육 파이프라인 및 양방향 인코더 표현을 로드합니다 https://nlp.johnsnowlabs.com/2021/11/11/classifierdl_bertwiki_finance_sentiment_pipeline_en.html["금융 뉴스 정서"^] 및 https://nlp.johnsnowlabs.com/2021/11/03/bert_sequence_classifier_finbert_en.html["핀베르트"^]즉, 토큰화, 명명된 엔터티 인식, 모델 교육, 피팅 및 정서 분석을 대규모로 수행합니다. Spark NLP는 BERT, Albert, Electra, XLNet, DistillBERT 등의 최첨단 변압기(transformer)를 제공하는 유일한 오픈 소스 NLP 라이브러리입니다. Roberta, DeBERTa, XLM-Roberta, Longrofer, Elmo, Universal 문장 인코더, Google T5, MarianMT 및 GPT2. 이 라이브러리는 Python 및 R 뿐만 아니라 Apache Spark를 기본적으로 확장하여 JVM 에코시스템(Java, Scala, Kotlin)에서도 사용할 수 있습니다.
+을 사용했습니다 https://["스파크 NLP"^] 라이브러리 시작 https://["John Snow Labs를 참조하십시오"^] 를 포함하여 Transformers(BERT) 모델의 사전 교육 파이프라인 및 양방향 인코더 표현을 로드합니다 https://["금융 뉴스 정서"^] 및 https://["핀베르트"^]즉, 토큰화, 명명된 엔터티 인식, 모델 교육, 피팅 및 정서 분석을 대규모로 수행합니다. Spark NLP는 BERT, Albert, Electra, XLNet, DistillBERT 등의 최첨단 변압기(transformer)를 제공하는 유일한 오픈 소스 NLP 라이브러리입니다. Roberta, DeBERTa, XLM-Roberta, Longrofer, Elmo, Universal 문장 인코더, Google T5, MarianMT 및 GPT2. 이 라이브러리는 Python 및 R 뿐만 아니라 Apache Spark를 기본적으로 확장하여 JVM 에코시스템(Java, Scala, Kotlin)에서도 사용할 수 있습니다.
 
 link:apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html["다음: 주요 AI, ML 및 DL 사용 사례 및 아키텍처"]
