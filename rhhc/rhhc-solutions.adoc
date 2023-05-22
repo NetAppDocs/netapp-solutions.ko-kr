@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: rhhc/rhhc-solutions.html 
+keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Astra Control Center, Advanced Cluster Management, ACM, Hub Cluster 
+summary:  
+---
+= Red Hat OpenShift Container 워크로드를 위한 NetApp 하이브리드 멀티 클라우드 지원 솔루션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 솔루션은 OpenShift 컨테이너 플랫폼(OCP), OpenShift Advanced Cluster Manager(ACM), NetApp ONTAP, NetApp BlueXP, NetApp Astra Control Center(ACC)를 사용해 마이그레이션 및 중앙 집중식 데이터 보호를 테스트하고 검증합니다.
+
+이 솔루션의 경우 다음 시나리오가 NetApp에서 테스트 및 검증되었습니다. 이 솔루션은 다음과 같은 특성을 기반으로 여러 시나리오로 구분됩니다.
+
+* 온프레미스
+* 클라우드
++
+** 자가 관리형 OpenShift 클러스터와 자가 관리형 NetApp 스토리지
+** 공급자가 관리하는 OpenShift 클러스터와 공급자 관리 NetApp 스토리지
+
+
+
+
+** 앞으로 추가 솔루션과 사용 사례를 구축하게 될 것입니다.**
+
+
+
+== 시나리오 1: ACC를 사용하여 사내 환경 내에서 데이터 보호 및 마이그레이션
+
+** 사내: 자체 관리형 OpenShift 클러스터와 자가 관리형 NetApp 스토리지**
+
+* ACC를 사용하여 데이터 보호를 위한 스냅샷 복사본, 백업 및 복원을 생성합니다.
+* ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
+
+
+
+
+=== 시나리오 1
+
+image:rhhc-on-premises.png[""]
+
+
+
+== 시나리오 2: ACC를 사용해 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션:
+
+온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지** AWS 클라우드: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**
+
+* ACC를 사용하여 데이터 보호를 위한 백업 및 복원을 수행합니다.
+* ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
+
+
+
+
+=== 시나리오 2
+
+image:rhhc-self-managed-aws.png[""]
+
+
+
+== 시나리오 3: 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션:
+
+** 온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**** AWS Cloud: 공급자 관리 OpenShift 클러스터(Rosa) 및 공급자 관리 스토리지(FSxN)**
+
+* BlueXP를 사용하여 영구 볼륨(FSxN)의 복제를 수행합니다.
+* OpenShift GitOps를 사용하여 애플리케이션 메타데이터를 다시 생성합니다.
+
+
+
+
+=== 시나리오 3
+
+image:rhhc-rosa-with-fsxn.png[""]
+
+MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].

@@ -113,6 +113,6 @@ image:kafka-sc-image8.png["이 그래픽은 환경이 검증을 위한 단일 HA
 
 이 테스트에서는 무거운 주제 보존 워크로드에서 오브젝트 스토리지의 삭제 성능을 검사했습니다. 보존 워크로드는 테스트 주제와 동시에 많은 메시지를 생성하는 TOCC 스크립트를 사용하여 생성되었습니다. 테스트 주제는 공격적인 크기 기반 및 시간 기반 보존 설정으로 구성되었으며, 이로 인해 이벤트 스트림이 개체 저장소에서 지속적으로 제거됩니다. 그런 다음 세그먼트가 아카이브되었습니다. 이로 인해 오브젝트 저장소 삭제 작업의 브로커링 및 컬렉션에 의해 오브젝트 스토리지가 많이 삭제되었습니다.
 
-검증 세부 정보는 를 참조하십시오 https://["유창하게"^] 웹 사이트.
+검증 세부 정보는 를 참조하십시오 https://docs.confluent.io/platform/current/kafka/tiered-storage.html["유창하게"^] 웹 사이트.
 
 link:kafka-sc-performance-tests-with-produce-consume-workload-generator.html["다음: 생산 방식의 성능 테스트 - 워크로드 생성기 소비"]

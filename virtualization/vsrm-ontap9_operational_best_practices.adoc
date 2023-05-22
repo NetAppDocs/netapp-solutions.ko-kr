@@ -32,7 +32,7 @@ SAN 프로토콜은 각 사이트에서 동종이어야 합니다. NFS와 SAN을
 ....
 snap autodelete modify –volume -commitment try
 ....
-SAN 데이터 저장소가 포함된 볼륨의 경우 볼륨 자동 크기 조정을 '확대'로 설정하고 NFS 데이터 저장소의 경우 'grow_shrink'로 설정해야 합니다. 을 참조하십시오 https://["ONTAP 9 문서 센터"^] 특정 구문입니다.
+SAN 데이터 저장소가 포함된 볼륨의 경우 볼륨 자동 크기 조정을 '확대'로 설정하고 NFS 데이터 저장소의 경우 'grow_shrink'로 설정해야 합니다. 을 참조하십시오 https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-910%2Fvolume__autosize.html["ONTAP 9 문서 센터"^] 특정 구문입니다.
 
 
 
@@ -122,11 +122,11 @@ NetApp은 애플리케이션 팀과 협력하여 페일오버 시나리오에 �
 
 사이트 간 네트워크 차이는 문제가 될 수 있습니다. 일부 환경에서는 운영 사이트와 DR 사이트 모두에서 동일한 네트워크 IP 주소를 사용할 수 있습니다. 이러한 기능을 확장 가상 LAN(VLAN) 또는 확장 네트워크 설정이라고 합니다. 다른 환경에서는 DR 사이트와 관련하여 운영 사이트에서 서로 다른 네트워크 IP 주소(예: VLAN)를 사용해야 할 수 있습니다.
 
-VMware는 이 문제를 해결할 수 있는 여러 가지 방법을 제공합니다. VMware NSX-T Data Center와 같은 네트워크 가상화 기술은 운영 환경의 계층 2에서 계층 7까지 전체 네트워킹 스택을 추상화하여 보다 휴대성이 뛰어난 솔루션을 제공합니다. SRM에서 NSX-T 옵션에 대한 자세한 내용을 읽을 수 있습니다 https://["여기"^].
+VMware는 이 문제를 해결할 수 있는 여러 가지 방법을 제공합니다. VMware NSX-T Data Center와 같은 네트워크 가상화 기술은 운영 환경의 계층 2에서 계층 7까지 전체 네트워킹 스택을 추상화하여 보다 휴대성이 뛰어난 솔루션을 제공합니다. SRM에서 NSX-T 옵션에 대한 자세한 내용을 읽을 수 있습니다 https://docs.vmware.com/en/Site-Recovery-Manager/8.4/com.vmware.srm.admin.doc/GUID-89402F1B-1AFB-42CD-B7D5-9535AF32435D.html["여기"^].
 
 또한 SRM은 VM이 복구될 때 VM의 네트워크 구성을 변경할 수 있는 기능을 제공합니다. 이 재구성에는 IP 주소, 게이트웨이 주소 및 DNS 서버 설정과 같은 설정이 포함됩니다. 복구 시 개별 VM에 적용되는 다양한 네트워크 설정을 복구 계획에 있는 VM의 속성 설정에서 지정할 수 있습니다.
 
-복구 계획에서 각 VM의 속성을 편집하지 않고도 여러 VM에 서로 다른 네트워크 설정을 적용하도록 SRM을 구성하려면 VMware에서 DR-IP-customizer라는 도구를 제공합니다. 이 유틸리티를 사용하는 방법에 대한 자세한 내용은 VMware 설명서를 참조하십시오 https://["여기"^].
+복구 계획에서 각 VM의 속성을 편집하지 않고도 여러 VM에 서로 다른 네트워크 설정을 적용하도록 SRM을 구성하려면 VMware에서 DR-IP-customizer라는 도구를 제공합니다. 이 유틸리티를 사용하는 방법에 대한 자세한 내용은 VMware 설명서를 참조하십시오 https://docs.vmware.com/en/Site-Recovery-Manager/8.4/com.vmware.srm.admin.doc/GUID-2B7E2B25-2B82-4BC4-876B-2FE0A3D71B84.html["여기"^].
 
 
 

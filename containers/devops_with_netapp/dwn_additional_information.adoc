@@ -18,30 +18,30 @@ summary:
 
 * NetApp 문서
 +
-https://["https://docs.netapp.com/"^]
+https://docs.netapp.com/["https://docs.netapp.com/"^]
 
 * Astra Trident 문서
 +
-https://["https://docs.netapp.com/us-en/trident/"^]
+https://docs.netapp.com/us-en/trident/["https://docs.netapp.com/us-en/trident/"^]
 
 * NetApp Astra Control Center 문서
 +
-https://["https://docs.netapp.com/us-en/astra-control-center/"^]
+https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
 
 * Ansible 설명서
 +
-https://["https://docs.ansible.com/"^]
+https://docs.ansible.com/["https://docs.ansible.com/"^]
 
 * Red Hat OpenShift 설명서
 +
-https://["https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/"^]
+https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/["https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/"^]
 
 * Rancher 문서
 +
-https://["https://rancher.com/docs/"^]
+https://rancher.com/docs/["https://rancher.com/docs/"^]
 
 * Kubernetes 문서
 +
-https://["https://kubernetes.io/docs/home/"^]
+https://kubernetes.io/docs/home/["https://kubernetes.io/docs/home/"^]
 
 

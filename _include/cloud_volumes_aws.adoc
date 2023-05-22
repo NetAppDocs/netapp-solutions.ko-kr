@@ -9,7 +9,7 @@
 .AWS에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일
 이 섹션에는 AWS(Amazon Web Services)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -114,7 +114,7 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 | * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
 
 
-| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
@@ -152,7 +152,7 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 .AWS에서 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 AWS(Amazon Web Services)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -257,7 +257,7 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 | * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
 
 
-| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
@@ -322,7 +322,7 @@ HA 쌍의 NetApp CVO 인스턴스에 대한 Terraform 변수
 .AWS에 NetApp ONTAP FSx 구축을 위한 Terraform 구성 파일
 이 섹션에서는 AWS(Amazon Web Services)에서 NetApp ONTAP FSx를 구축/구성하기 위한 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -427,7 +427,7 @@ NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 | * AWS_CONNETOR_IAM_INSTANCE_PROFILE_NAME * | 문자열 | (필수) Connector의 인스턴스 프로파일 이름입니다. 
 
 
-| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * AWS_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * AWS_connector_public_IP_bool * | 불입니다 | (선택 사항) 공용 IP 주소를 인스턴스에 연결할지 여부를 나타냅니다. 제공되지 않으면 서브넷의 구성에 따라 연결이 수행됩니다. 
@@ -454,7 +454,7 @@ NetApp ONTAP FSx 인스턴스에 대한 Terraform 변수
 | * FSX_secondary_subnet_id * | 문자열 | (필수) 작업 환경을 생성할 보조 서브넷 ID입니다. 
 
 
-| * FSX_ACCOUNT_ID * | 문자열 | (필수) FSx 인스턴스가 연결될 NetApp 계정 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * FSX_ACCOUNT_ID * | 문자열 | (필수) FSx 인스턴스가 연결될 NetApp 계정 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * FSX_workspace_id * | 문자열 | (필수) 작업 환경의 Cloud Manager 작업 공간의 ID입니다. 

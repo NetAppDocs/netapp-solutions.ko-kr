@@ -16,7 +16,7 @@ summary: 이 섹션에서는 Jupyter Notebooks와 이 솔루션에 유용한 기
 link:ai-sent-validation-results.html["이전: 확인 결과."]
 
 [role="lead"]
-감정 분석 파이프라인이 포함된 두 개의 노트북이 있습니다. https://["“Support-Center-Model-Transfer-Learning-and-fine-Tuning.ipynb”"] 및 link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/Support-Center-Sentiment-Analysis-Pipeline.ipynb["“지원 센터-정서-분석-파이프라인.iynb”"]. 이 노트북은 함께 지원 센터 데이터를 수집하고 사용자 데이터에 맞게 조정된 최첨단 딥 러닝 모델을 사용하여 각 문장에서 감정을 추출하는 파이프라인을 개발하는 방법을 보여줍니다.
+감정 분석 파이프라인이 포함된 두 개의 노트북이 있습니다. https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/Support-Center-Model-Transfer-Learning-and-Fine-Tuning.ipynb["“Support-Center-Model-Transfer-Learning-and-fine-Tuning.ipynb”"] 및 link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/Support-Center-Sentiment-Analysis-Pipeline.ipynb["“지원 센터-정서-분석-파이프라인.iynb”"]. 이 노트북은 함께 지원 센터 데이터를 수집하고 사용자 데이터에 맞게 조정된 최첨단 딥 러닝 모델을 사용하여 각 문장에서 감정을 추출하는 파이프라인을 개발하는 방법을 보여줍니다.
 
 
 

@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Run:AI를 Kubernetes 클러스터에 설치하고 컨테이너를 올바르게 구성하면 에 다음과 같은 대시보드와 뷰가 표시됩니다 https://["https://app.run.ai"^] 다음 그림과 같이 브라우저에서
+Run:AI를 Kubernetes 클러스터에 설치하고 컨테이너를 올바르게 구성하면 에 다음과 같은 대시보드와 뷰가 표시됩니다 https://app.run.ai/["https://app.run.ai"^] 다음 그림과 같이 브라우저에서
 
 image:osrunai_image3.png["오류: 그래픽 이미지가 없습니다"]
 

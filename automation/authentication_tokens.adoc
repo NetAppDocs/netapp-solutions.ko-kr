@@ -37,7 +37,7 @@ image::access_keys.png[토큰 새로 고침]
 
 === NetApp Cloud Central에서 업데이트 토큰 획득
 
-. 에서 계정 자격 증명을 사용하여 Cloud Central 계정에 로그인합니다 https://[]
+. 에서 계정 자격 증명을 사용하여 Cloud Central 계정에 로그인합니다 https://services.cloud.netapp.com/refresh-token[]
 . 새로 고침 토큰을 생성하고 배포를 위해 저장합니다.
 
 
@@ -47,7 +47,7 @@ image::token_authentication.png[토큰 새로 고침]
 
 === 클라이언트 ID를 가져오는 중입니다
 
-. API 페이지에 액세스하여 에서 클라이언트 ID를 복사합니다 https://[].
+. API 페이지에 액세스하여 에서 클라이언트 ID를 복사합니다 https://services.cloud.netapp.com/developer-hub[].
 . 오른쪽 위 모서리에 있는 "인증 방법 알아보기"를 클릭합니다.
 . 로그인 시 사용자 이름/암호가 필요한 경우 나타나는 인증 창에서 일반 액세스에서 클라이언트 ID를 복사합니다. SSO를 사용하는 페더레이션 사용자는 "토큰 새로 고침 탭"에서 클라이언트 ID를 복사해야 합니다.
 

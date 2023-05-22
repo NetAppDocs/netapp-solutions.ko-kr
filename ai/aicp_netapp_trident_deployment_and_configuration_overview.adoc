@@ -22,7 +22,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에서 NetApp Trident를 
 
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
-. Kubernetes 작업 클러스터가 이미 있으며, Trident에서 지원하는 Kubernetes 버전을 실행 중입니다. 지원되는 버전 목록은 를 참조하십시오 https://["Trident 문서"^].
+. Kubernetes 작업 클러스터가 이미 있으며, Trident에서 지원하는 Kubernetes 버전을 실행 중입니다. 지원되는 버전 목록은 를 참조하십시오 https://docs.netapp.com/us-en/trident/["Trident 문서"^].
 . Trident에서 지원하는 작업 중인 NetApp 스토리지 어플라이언스, 소프트웨어 정의 인스턴스 또는 클라우드 스토리지 서비스가 이미 있습니다.
 
 
@@ -34,8 +34,8 @@ Kubernetes 클러스터에 NetApp Trident를 설치 및 구성하려면 배포 �
 
 . 다음 방법 중 하나를 사용하여 Trident를 배포합니다.
 +
-** NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축한 경우, NVIDIA DeepOps를 사용하여 Kubernetes 클러스터에 Trident를 구축할 수도 있습니다. DeepOps를 사용하여 Trident를 배포하려면 을 따릅니다 https://["Trident 배포 지침"] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
-** NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 배포하지 않았거나 Trident를 수동으로 배포하려는 경우 에 따라 Trident를 배포할 수 있습니다 https://["배포 지침"^] Trident 문서 구성 방법에 대한 자세한 내용은 Trident 백엔드와 하나 이상의 Kubernetes StorageClass를 생성해야 합니다 https://["백엔드"^] 및 https://["StorageClaes를 참조하십시오"^] NetApp Docs에서 연결된 하위 섹션을 참조하십시오.
+** NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축한 경우, NVIDIA DeepOps를 사용하여 Kubernetes 클러스터에 Trident를 구축할 수도 있습니다. DeepOps를 사용하여 Trident를 배포하려면 을 따릅니다 https://github.com/NVIDIA/deepops/tree/master/docs/k8s-cluster#netapp-trident["Trident 배포 지침"] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+** NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 배포하지 않았거나 Trident를 수동으로 배포하려는 경우 에 따라 Trident를 배포할 수 있습니다 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["배포 지침"^] Trident 문서 구성 방법에 대한 자세한 내용은 Trident 백엔드와 하나 이상의 Kubernetes StorageClass를 생성해야 합니다 https://docs.netapp.com/us-en/trident/trident-use/backends.html["백엔드"^] 및 https://docs.netapp.com/us-en/trident/trident-use/manage-stor-class.html["StorageClaes를 참조하십시오"^] NetApp Docs에서 연결된 하위 섹션을 참조하십시오.
 +
 
 NOTE: ONTAP AI Pod에 NetApp AI Control Plane 솔루션을 구축하는 경우 를 참조하십시오 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["ONTAP AI 배포에 대한 Trident 백엔드 예"] 및 를 생성할 수 있는 다른 Trident 백엔드의 몇 가지 예를 확인하십시오 link:aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html["ONTAP AI 배포를 위한 Kubernetes Storagecles의 예"] 생성할 수 있는 여러 Kubernetes StorageClasses의 몇 가지 예를 확인하십시오.

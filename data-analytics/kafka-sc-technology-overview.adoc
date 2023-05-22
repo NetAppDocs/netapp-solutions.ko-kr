@@ -130,7 +130,7 @@ image:kafka-sc-image6.png["이 그래픽은 Confluent 플랫폼의 구성 요소
 
 === Confluent 이벤트 스트리밍 기술 개요
 
-Confluent Platform의 핵심은 입니다 https://["카프카"^]가장 인기 있는 오픈 소스 분산 스트리밍 플랫폼입니다. Kafka의 주요 기능은 다음과 같습니다.
+Confluent Platform의 핵심은 입니다 https://kafka.apache.org/["카프카"^]가장 인기 있는 오픈 소스 분산 스트리밍 플랫폼입니다. Kafka의 주요 기능은 다음과 같습니다.
 
 * 레코드 스트림을 게시하고 구독합니다.
 * 내결함성이 있는 방식으로 레코드 스트림을 저장합니다.
@@ -145,7 +145,7 @@ Confluent Platform의 핵심은 입니다 https://["카프카"^]가장 인기 �
 
 * * Confluent Control Center. * Kafka 관리 및 모니터링을 위한 UI 기반 시스템. Kafka Connect를 쉽게 관리하고 다른 시스템에 대한 연결을 생성, 편집 및 관리할 수 있습니다.
 * Kubernetes를 위한 * Contfluent. * Kubernetes를 위한 Confluent는 Kubernetes 운영자입니다. Kubernetes 운영자는 특정 플랫폼 애플리케이션에 대한 고유한 기능과 요구 사항을 제공하여 Kubernetes의 오케스트레이션 기능을 확장합니다. Confluent Platform의 경우, Kubernetes에서 Kafka의 구축 프로세스를 크게 간소화하고 일반적인 인프라 라이프사이클 작업을 자동화할 수 있습니다.
-* * Kafka 연결 커넥터 * 커넥터는 Kafka Connect API를 사용하여 Kafka를 데이터베이스, 키 값 저장소, 검색 인덱스 및 파일 시스템 등의 다른 시스템에 연결합니다. Confluorent Hub에는 가장 널리 사용되는 데이터 소스 및 싱크에 대한 다운로드 가능한 커넥터가 있습니다. 여기에는 Confluorent Platform이 포함된 이러한 커넥터의 전체 테스트 및 지원 버전이 포함됩니다. 자세한 내용은 을 참조하십시오 https://["여기"^].
+* * Kafka 연결 커넥터 * 커넥터는 Kafka Connect API를 사용하여 Kafka를 데이터베이스, 키 값 저장소, 검색 인덱스 및 파일 시스템 등의 다른 시스템에 연결합니다. Confluorent Hub에는 가장 널리 사용되는 데이터 소스 및 싱크에 대한 다운로드 가능한 커넥터가 있습니다. 여기에는 Confluorent Platform이 포함된 이러한 커넥터의 전체 테스트 및 지원 버전이 포함됩니다. 자세한 내용은 을 참조하십시오 https://docs.confluent.io/home/connect/userguide.html["여기"^].
 * * 자체 밸런싱 클러스터 * 는 자동화된 로드 밸런싱, 장애 감지 및 자동 복구를 제공합니다. 또한 수동 조정 없이 필요에 따라 브로커를 추가하거나 해체할 수 있도록 지원합니다.
 * * 연결 클러스터. * 직접 클러스터를 연결하고 링크 브리지를 통해 클러스터 간에 주제를 미러링합니다. 클러스터 링크를 사용하면 멀티 데이터 센터, 멀티 클러스터, 하이브리드 클라우드 구축을 간편하게 설정할 수 있습니다.
 * * Confluorent auto data balancer. * 브로커 수, 파티션 크기, 파티션 수 및 클러스터 내의 리더 수에 대한 클러스터를 모니터링합니다. 균형 조정을 통해 트래픽을 재조정함으로써 운영 워크로드에 미치는 영향을 최소화하면서 클러스터 전체에서 짝수 워크로드를 생성할 수 있습니다.

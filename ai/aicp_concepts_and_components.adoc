@@ -32,7 +32,7 @@ AI는 컴퓨터가 인간의 마음의 인지 기능을 모방하도록 훈련�
 
 컨테이너는 공유 호스트 운영 체제 커널 위에서 실행되는 격리된 사용자 공간 인스턴스입니다. 컨테이너 채택이 빠르게 증가하고 있습니다. 컨테이너는 가상 머신(VM)이 제공하는 것과 동일한 애플리케이션 샌드박스(sandbox)의 많은 이점을 제공합니다. 하지만 VM이 사용하는 하이퍼바이저 및 게스트 운영 체제 계층이 없어졌기 때문에 컨테이너는 훨씬 더 가볍습니다. 다음 그림에서는 가상 시스템과 컨테이너를 보여 줍니다.
 
-또한 컨테이너를 사용하면 애플리케이션 종속성, 실행 시간 등을 애플리케이션과 직접 효율적으로 패키징할 수 있습니다. 가장 일반적으로 사용되는 컨테이너 패키징 형식은 Docker 컨테이너입니다. Docker 컨테이너 형식으로 컨테이너화된 애플리케이션은 Docker 컨테이너를 실행할 수 있는 모든 시스템에서 실행할 수 있습니다. 모든 종속성이 컨테이너 자체에 패키지되어 있기 때문에 응용 프로그램의 종속성이 컴퓨터에 없는 경우에도 마찬가지입니다. 자세한 내용은 를 참조하십시오 https://["Docker 웹 사이트"^].
+또한 컨테이너를 사용하면 애플리케이션 종속성, 실행 시간 등을 애플리케이션과 직접 효율적으로 패키징할 수 있습니다. 가장 일반적으로 사용되는 컨테이너 패키징 형식은 Docker 컨테이너입니다. Docker 컨테이너 형식으로 컨테이너화된 애플리케이션은 Docker 컨테이너를 실행할 수 있는 모든 시스템에서 실행할 수 있습니다. 모든 종속성이 컨테이너 자체에 패키지되어 있기 때문에 응용 프로그램의 종속성이 컴퓨터에 없는 경우에도 마찬가지입니다. 자세한 내용은 를 참조하십시오 https://www.docker.com["Docker 웹 사이트"^].
 
 image:aicp_image2.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -40,25 +40,25 @@ image:aicp_image2.png["오류: 그래픽 이미지가 없습니다"]
 
 == 쿠버네티스
 
-Kubernetes는 Google에서 원래 설계한 개방형 소스, 분산형 컨테이너 오케스트레이션 플랫폼으로, 현재 CNCF(Cloud Native Computing Foundation)에서 관리하고 있습니다. Kubernetes는 컨테이너화된 애플리케이션의 구축, 관리, 확장 기능을 자동화할 수 있습니다. 최근 몇 년 동안 Kubernetes는 주요 컨테이너 오케스트레이션 플랫폼으로 부상했습니다. 다른 컨테이너 패키징 형식과 실행 시간이 지원되지만 Kubernetes는 Docker 컨테이너용 오케스트레이션 시스템으로 가장 많이 사용됩니다. 자세한 내용은 를 참조하십시오 https://["Kubernetes 웹 사이트"^].
+Kubernetes는 Google에서 원래 설계한 개방형 소스, 분산형 컨테이너 오케스트레이션 플랫폼으로, 현재 CNCF(Cloud Native Computing Foundation)에서 관리하고 있습니다. Kubernetes는 컨테이너화된 애플리케이션의 구축, 관리, 확장 기능을 자동화할 수 있습니다. 최근 몇 년 동안 Kubernetes는 주요 컨테이너 오케스트레이션 플랫폼으로 부상했습니다. 다른 컨테이너 패키징 형식과 실행 시간이 지원되지만 Kubernetes는 Docker 컨테이너용 오케스트레이션 시스템으로 가장 많이 사용됩니다. 자세한 내용은 를 참조하십시오 https://kubernetes.io["Kubernetes 웹 사이트"^].
 
 
 
 == NetApp 트라이던트
 
-Trident는 NetApp에서 개발 및 유지 관리하는 오픈 소스 스토리지 오케스트레이터로서 Kubernetes 워크로드를 위한 영구 스토리지의 생성, 관리 및 사용을 크게 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 Kubernetes 사용자(개발자, 데이터 과학자, Kubernetes 관리자 등)가 이미 익숙한 표준 Kubernetes 형식으로 영구 스토리지 볼륨을 생성, 관리 및 상호 작용할 수 있습니다. 이와 동시에 NetApp 기술에서 제공하는 NetApp 고급 데이터 관리 기능과 Data Fabric을 활용할 수 있습니다. Trident는 영구 스토리지의 복잡성을 추상화하여 사용이 간편합니다. 자세한 내용은 를 참조하십시오 https://["Trident 웹 사이트"^].
+Trident는 NetApp에서 개발 및 유지 관리하는 오픈 소스 스토리지 오케스트레이터로서 Kubernetes 워크로드를 위한 영구 스토리지의 생성, 관리 및 사용을 크게 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 Kubernetes 사용자(개발자, 데이터 과학자, Kubernetes 관리자 등)가 이미 익숙한 표준 Kubernetes 형식으로 영구 스토리지 볼륨을 생성, 관리 및 상호 작용할 수 있습니다. 이와 동시에 NetApp 기술에서 제공하는 NetApp 고급 데이터 관리 기능과 Data Fabric을 활용할 수 있습니다. Trident는 영구 스토리지의 복잡성을 추상화하여 사용이 간편합니다. 자세한 내용은 를 참조하십시오 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["Trident 웹 사이트"^].
 
 
 
 == NVIDIA DeepOps
 
-DeepOps는 NVIDIA의 오픈 소스 프로젝트로, Ansible을 사용하여 GPU 서버 클러스터를 모범 사례에 따라 자동으로 구축합니다. DeepOps는 모듈식이며 다양한 배포 작업에 사용할 수 있습니다. 이 문서와 이 문서에서 설명하는 검증 연습에서는 GPU 서버 작업자 노드로 구성된 Kubernetes 클러스터를 배포하는 데 DeepOps를 사용합니다. 자세한 내용은 를 참조하십시오 https://["DeepOps 웹 사이트"^].
+DeepOps는 NVIDIA의 오픈 소스 프로젝트로, Ansible을 사용하여 GPU 서버 클러스터를 모범 사례에 따라 자동으로 구축합니다. DeepOps는 모듈식이며 다양한 배포 작업에 사용할 수 있습니다. 이 문서와 이 문서에서 설명하는 검증 연습에서는 GPU 서버 작업자 노드로 구성된 Kubernetes 클러스터를 배포하는 데 DeepOps를 사용합니다. 자세한 내용은 를 참조하십시오 https://github.com/NVIDIA/deepops["DeepOps 웹 사이트"^].
 
 
 
 == Kubeflow
 
-Kubeflow는 Google에서 원래 개발한 Kubernetes용 오픈 소스 AI 및 ML 툴킷입니다. Kubeflow 프로젝트를 통해 Kubernetes에서 AI 및 ML 워크플로우를 간단하게 배포, 이식 및 확장할 수 있습니다. Kubeflow는 복잡한 Kubernetes를 추상화하여 데이터 과학자가 자신이 가장 잘 알고 있는 데이터 과학에 집중할 수 있도록 지원합니다. 시각화는 다음 그림을 참조하십시오. 쿠버플로는 엔터프라이즈 IT 부서가 Kubernetes에서 점점 더 표준화되고 있으므로 상당한 주목을 받고 있습니다. 자세한 내용은 를 참조하십시오 http://["Kubeflow 웹 사이트"^].
+Kubeflow는 Google에서 원래 개발한 Kubernetes용 오픈 소스 AI 및 ML 툴킷입니다. Kubeflow 프로젝트를 통해 Kubernetes에서 AI 및 ML 워크플로우를 간단하게 배포, 이식 및 확장할 수 있습니다. Kubeflow는 복잡한 Kubernetes를 추상화하여 데이터 과학자가 자신이 가장 잘 알고 있는 데이터 과학에 집중할 수 있도록 지원합니다. 시각화는 다음 그림을 참조하십시오. 쿠버플로는 엔터프라이즈 IT 부서가 Kubernetes에서 점점 더 표준화되고 있으므로 상당한 주목을 받고 있습니다. 자세한 내용은 를 참조하십시오 http://www.kubeflow.org/["Kubeflow 웹 사이트"^].
 
 image:aicp_image3.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -66,13 +66,13 @@ image:aicp_image3.png["오류: 그래픽 이미지가 없습니다"]
 
 === Kubeflow 파이프라인
 
-Kubeflow 파이프라인은 Kubeflow의 핵심 구성 요소입니다. Kubeflow 파이프라인은 이식 가능하고 확장 가능한 AI 및 ML 워크플로우를 정의하고 배포하기 위한 플랫폼 및 표준입니다. 자세한 내용은 를 참조하십시오 https://["Kubeflow 공식 문서"^].
+Kubeflow 파이프라인은 Kubeflow의 핵심 구성 요소입니다. Kubeflow 파이프라인은 이식 가능하고 확장 가능한 AI 및 ML 워크플로우를 정의하고 배포하기 위한 플랫폼 및 표준입니다. 자세한 내용은 를 참조하십시오 https://www.kubeflow.org/docs/components/pipelines/pipelines/["Kubeflow 공식 문서"^].
 
 
 
 === Jupyter 노트북 서버
 
-Jupyter Notebook Server는 데이터 과학자가 실시간 코드와 설명이 포함된 Jupyter Notebooks라는 위키 형식의 문서를 만들 수 있는 오픈 소스 웹 애플리케이션입니다. Jupyter Notebooks는 AI 및 ML 프로젝트를 문서화, 저장, 공유하는 수단으로 AI 및 ML 커뮤니티에서 널리 사용되고 있습니다. Kubeflow는 Kubernetes에서 Jupyter Notebook Server의 프로비저닝 및 구축을 단순화합니다. Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 http://["Jupyter 웹 사이트"^]. Kubeflow와 관련하여 Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 https://["Kubeflow 공식 문서"^].
+Jupyter Notebook Server는 데이터 과학자가 실시간 코드와 설명이 포함된 Jupyter Notebooks라는 위키 형식의 문서를 만들 수 있는 오픈 소스 웹 애플리케이션입니다. Jupyter Notebooks는 AI 및 ML 프로젝트를 문서화, 저장, 공유하는 수단으로 AI 및 ML 커뮤니티에서 널리 사용되고 있습니다. Kubeflow는 Kubernetes에서 Jupyter Notebook Server의 프로비저닝 및 구축을 단순화합니다. Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 http://www.jupyter.org/["Jupyter 웹 사이트"^]. Kubeflow와 관련하여 Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 https://www.kubeflow.org/docs/components/notebooks/overview/["Kubeflow 공식 문서"^].
 
 
 

@@ -5,7 +5,7 @@
 . NetApp Support 사이트에 로그인하여 NetApp Astra Control Center의 최신 버전을 다운로드하십시오. 그렇게 하려면 NetApp 계정에 연결된 라이센스가 필요합니다. tarball을 다운로드한 후 관리자 워크스테이션으로 전송합니다.
 +
 
-NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://["Astra 등록 사이트입니다"^].
+NOTE: Astra Control 평가판 라이센스를 시작하려면 를 방문하십시오 https://cloud.netapp.com/astra-register["Astra 등록 사이트입니다"^].
 
 . tar ball의 압축을 풀고 작업 디렉토리를 결과 폴더로 변경합니다.
 +

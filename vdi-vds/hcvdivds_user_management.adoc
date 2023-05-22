@@ -26,7 +26,7 @@ image:hcvdivds_image10.png["오류: 그래픽 이미지가 없습니다"]
 
 image:hcvdivds_image11.png["오류: 그래픽 이미지가 없습니다"]
 
-자세한 내용은 을 참조하십시오 https://["이 비디오"^] NetApp VDS의 사용자 권한 및 사용자 관리
+자세한 내용은 을 참조하십시오 https://youtu.be/RftG7v9n8hw["이 비디오"^] NetApp VDS의 사용자 권한 및 사용자 관리
 
 데이터 센터에 대한 API 호출을 사용하여 Active Directory 그룹을 CRAUserGroup으로 정의하면 해당 그룹의 모든 사용자가 UI를 사용하여 관리할 수 있도록 CloudWorkspace로 가져옵니다. 클라우드 작업 영역이 사용자에 대해 활성화되면 VDS는 사용자 홈 폴더, 설정 권한, 사용자 속성 업데이트 등을 만듭니다.
 

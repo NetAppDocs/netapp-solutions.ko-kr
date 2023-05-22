@@ -104,7 +104,7 @@ image:azure-validate-network-2.png[""]
 
 image:azure-validate-network-3.png[""]
 
-Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다  관리자 사용자 이름을 * cloudadmin@vsphere.loca l * 로 사용하고 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다  관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.
+Windows 가상 머신에서 브라우저를 열고 vCenter 웹 클라이언트 URL로 이동합니다 (https://10.21.0.2/)[] 관리자 사용자 이름을 * cloudadmin@vsphere.loca l * 로 사용하고 복사한 암호를 붙여 넣습니다. 마찬가지로 웹 클라이언트 URL을 사용하여 NSX-T Manager에 액세스할 수도 있습니다 (https://10.21.0.3/)[] 관리자 사용자 이름을 사용하여 복사한 암호를 붙여 넣어 새 세그먼트를 만들거나 기존 계층 게이트웨이를 수정합니다.
 
 
 NOTE: 웹 클라이언트 URL은 프로비저닝된 각 SDDC에 따라 다릅니다.

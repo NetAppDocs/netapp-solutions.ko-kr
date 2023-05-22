@@ -17,7 +17,7 @@ NetApp Element 소프트웨어는 모듈식의 확장 가능한 성능을 제공
 
 image:redhat_openshift_image64.jpg["오류: 그래픽 이미지가 없습니다"]
 
-NetApp Element 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://["NetApp SolidFire 웹 사이트"^].
+NetApp Element 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/data-storage/solidfire/["NetApp SolidFire 웹 사이트"^].
 
 
 

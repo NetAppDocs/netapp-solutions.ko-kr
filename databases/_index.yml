@@ -3,12 +3,12 @@ indexpage:
   tiles:
   - title: 오라클
     links:
+    - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
+      url: "/aws_ora_fsx_ec2_nfs_asm.html"
     - title: iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
     - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
       url: "/azure_ora_nfile_usecase.html"
-    - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
-      url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
     - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
       url: https://www.netapp.com/us/media/tr-4250.pdf
     - title: NetApp ONTAP에 Oracle 데이터베이스 구축
@@ -39,6 +39,8 @@ indexpage:
       url: "/hybrid_dbops_snapcenter_usecases.html"
     - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
       url: "/sqlsb-backup-and-restore-aws-fsxn.html"
+    - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
+      url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
   - title: 오픈 소스 데이터베이스
     links:
     - title: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구

@@ -40,27 +40,27 @@ link:a400-thinksystem-architecture-adjustments.html["이전: 아키텍처 조정
 
 * NetApp All Flash 어레이 제품 페이지를 참조하십시오
 +
-https://["https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
+https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
 
 * NetApp AFF A400 페이지
 +
-https://["https://docs.netapp.com/us-en/ontap-systems/a400/index.html"]
+https://docs.netapp.com/us-en/ontap-systems/a400/index.html["https://docs.netapp.com/us-en/ontap-systems/a400/index.html"]
 
 * NetApp ONTAP 데이터 관리 소프트웨어 제품 페이지
 +
-http://["http://www.netapp.com/us/products/data-management-software/ontap.aspx"^]
+http://www.netapp.com/us/products/data-management-software/ontap.aspx["http://www.netapp.com/us/products/data-management-software/ontap.aspx"^]
 
 * MLPerf
 +
-https://["https://mlperf.org"^]
+https://mlperf.org/["https://mlperf.org"^]
 
 * TensorFlow 벤치마크
 +
-https://["https://github.com/tensorflow/benchmarks"^]
+https://github.com/tensorflow/benchmarks["https://github.com/tensorflow/benchmarks"^]
 
 * NVIDIA SMI(NVIDIA-SMI)
 +
-https://["https://developer.nvidia.com/nvidia-system-management-interface"]
+https://developer.nvidia.com/nvidia-system-management-interface["https://developer.nvidia.com/nvidia-system-management-interface"]
 
 
 

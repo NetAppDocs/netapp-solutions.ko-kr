@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: rhhc/rhhc-overview.html 
+keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Astra Control Center, Advanced Cluster Management, ACM, Hub Cluster 
+summary:  
+---
+= Red Hat OpenShift Container 워크로드를 위한 NetApp 하이브리드 멀티 클라우드 솔루션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 개요
+
+NetApp은 기존 엔터프라이즈 애플리케이션을 현대화하고 Kubernetes를 기반으로 구축된 컨테이너 및 오케스트레이션 플랫폼을 사용하여 새로운 애플리케이션을 구축하는 고객이 크게 증가하고 있습니다. Red Hat OpenShift Container Platform은 많은 고객이 채택한 한 가지 예입니다.
+
+점점 더 많은 고객이 기업 내에 컨테이너를 채택하기 시작함에 따라 NetApp은 상태 저장 애플리케이션의 영구 스토리지 요구사항과 데이터 보호, 데이터 보안, 데이터 마이그레이션과 같은 기존의 데이터 관리 요구사항을 충족할 수 있는 완벽한 위치를 선점하고 있습니다. 그러나 이러한 요구 사항은 서로 다른 전략, 도구 및 방법을 사용하여 충족됩니다.
+
+** NetApp ONTAP** 아래에 나열된 스토리지 옵션을 사용하여 컨테이너 및 Kubernetes 구축을 위한 보안, 데이터 보호, 안정성 및 유연성을 확보할 수 있습니다.
+
+* 사내 자가 관리형 스토리지:
++
+** NetApp 패브릭 연결 스토리지(FAS), NetApp All Flash FAS 어레이(AFF), NetApp All SAN 어레이(ASA) 및 ONTAP Select
+
+
+* 온프레미스에서 공급자 관리 스토리지:
++
+** NetApp Keystone, STaaS(서비스형 스토리지) 제공
+
+
+* 클라우드에서 자가 관리 스토리지:
++
+** NetApp Cloud Volumes ONTAP(CVO)은 하이퍼스케일러에 자가 관리하는 스토리지를 제공합니다
+
+
+* 클라우드 내 공급자 관리 스토리지:
++
+** Cloud Volumes Service for Google Cloud(CVS), Azure NetApp Files(ANF), Amazon FSx for NetApp ONTAP는 하이퍼스케일러에 완전 관리형 스토리지를 제공합니다
+
+
+
+
+image:rhhc-ontap-features.png[""]
+
+** NetApp BlueXP** - 단일 제어 플레인/인터페이스에서 모든 스토리지 및 데이터 자산을 관리할 수 있습니다.
+
+BlueXP를 사용하여 클라우드 스토리지(예: Cloud Volumes ONTAP 및 Azure NetApp Files)를 생성 및 관리하고, 데이터를 이동, 보호 및 분석하며, 많은 사내 및 에지 스토리지 장치를 제어할 수 있습니다.
+
+** NetApp Astra Trident**는 CSI 규정 준수 스토리지 오케스트레이터로서, 위에서 언급한 다양한 NetApp 스토리지 옵션을 통해 영구 스토리지를 빠르고 쉽게 사용할 수 있습니다. NetApp에서 관리 및 지원하는 오픈 소스 소프트웨어입니다.
+
+image:rhhc-trident-features.png[""]
+
+비즈니스 크리티컬 컨테이너 워크로드에는 영구 볼륨 이상의 용량이 필요합니다. 이들의 데이터 관리 요구사항에 따라 애플리케이션 Kubernetes 객체의 보호 및 마이그레이션이 필요합니다.
+
+
+NOTE: 애플리케이션 데이터에는 사용자 데이터 외에도 Kubernetes 객체가 포함됩니다. 몇 가지 예는 다음과 같습니다. POD 사양, PVC, 구축, 서비스 맞춤형 구성 개체(예: 구성 맵 및 암호), 스냅샷 복사본, 백업, CRS, CRD와 같은 클론 맞춤형 리소스 등의 영구 데이터)가 있습니다
+
+** NetApp Astra Control**, 완전 관리형 및 자가 관리 소프트웨어로 모두 사용 가능하며, 강력한 애플리케이션 데이터 관리를 위한 오케스트레이션을 제공합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-family/["Astra 문서"] Astra 제품군에 대한 자세한 내용은
+
+이 참조 문서는 NetApp Astra Control Center를 사용하여 RedHat OpenShift 컨테이너 플랫폼에 배포된 컨테이너 기반 애플리케이션의 마이그레이션 및 보호를 검증합니다. 또한 이 솔루션은 컨테이너 플랫폼 관리를 위한 Red Hat Advanced Cluster Management(ACM)의 배포 및 사용에 대한 자세한 정보를 제공합니다. 또한, Astra Trident CSI 프로비저닝을 사용하여 NetApp 스토리지를 Red Hat OpenShift 컨테이너 플랫폼과 통합하기 위한 세부 정보도 제공합니다. Astra Control Center는 허브 클러스터에 구축되며 컨테이너 애플리케이션 및 영구 스토리지 라이프사이클을 관리하는 데 사용됩니다. 마지막으로, NetApp FSx for NetApp ONTAP(FSxN)를 영구 스토리지로 사용하는 AWS(Rosa)의 관리되는 Red Hat OpenShift 클러스터에서 복제, 페일오버 및 컨테이너 워크로드에 대한 페일백용 솔루션을 제공합니다.

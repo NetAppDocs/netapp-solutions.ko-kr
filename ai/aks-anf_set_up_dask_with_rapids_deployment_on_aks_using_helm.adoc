@@ -47,7 +47,7 @@ kubectl -n rapids-dask apply -f <your yaml file>
 ....
 
 
-. "rapidsai git" 리포지토리 복제( https://["https://github.com/rapidsai/helm-chart"^])를 클릭합니다.
+. "rapidsai git" 리포지토리 복제( https://github.com/rapidsai/helm-chart["https://github.com/rapidsai/helm-chart"^])를 클릭합니다.
 +
 ....
 git clone https://github.com/rapidsai/helm-chart helm-chart

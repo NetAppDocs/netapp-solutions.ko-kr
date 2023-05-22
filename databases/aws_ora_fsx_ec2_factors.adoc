@@ -59,7 +59,9 @@ image:aws_ora_fsx_ec2_stor_13.PNG["오류: 그래픽 이미지가 없습니다"]
 
 == NFS 구성
 
-가장 일반적인 운영 체제인 Linux에는 네이티브 NFS 기능이 포함되어 있습니다. Oracle은 Oracle에 기본적으로 통합된 직접 NFS(dNFS) 클라이언트를 제공합니다. Oracle은 20년 이상 NFSv3을 지원해 왔으며 NFSv4는 Oracle 12.1.0.2 이상에서 지원됩니다. NetApp 자동화 툴킷을 사용하여 자동화된 Oracle 구축은 NFSv3에서 dNFS를 자동으로 구성합니다.
+가장 일반적인 운영 체제인 Linux에는 네이티브 NFS 기능이 포함되어 있습니다. Oracle은 Oracle에 기본적으로 통합된 직접 NFS(dNFS) 클라이언트를 제공합니다. Oracle은 20년 이상 NFSv3을 지원해 왔습니다. dNFS는 모든 버전의 Oracle에서 NFSv3에서 지원됩니다. NFSv4 표준을 따르는 모든 OS에서 NFSv4가 지원됩니다. NFSv4를 지원하는 dNFS를 지원하려면 Oracle 12.1.0.2 이상이 필요합니다. NFSv4.1은 특정 OS 지원이 필요합니다. 지원되는 OS에 대해서는 NetApp 상호 운용성 매트릭스 툴(IMT)을 참조하십시오. NFSv4.1에 대한 dNFS 지원을 위해서는 Oracle 버전 19.3.0.0 이상이 필요합니다.
+
+NetApp 자동화 툴킷을 사용하여 자동화된 Oracle 구축은 NFSv3에서 dNFS를 자동으로 구성합니다.
 
 기타 고려 사항:
 
@@ -79,7 +81,7 @@ image:aws_ora_fsx_ec2_nfs_01.PNG["오류: 그래픽 이미지가 없습니다"]
 
 
 
-NOTE: dNFS를 사용하기 전에 Oracle Doc 1495104.1에 설명된 패치가 설치되어 있는지 확인하십시오. Oracle 12c를 시작으로 DNFS에는 NFSv3, NFSv4, NFSv4.1 지원이 포함되어 있습니다. NetApp 지원 정책은 모든 클라이언트에서 v3 및 v4를 지원하지만 작성 당시에는 NFSv4.1이 Oracle dNFS에 사용하도록 지원되지 않습니다.
+NOTE: dNFS를 사용하기 전에 Oracle Doc 1495104.1에 설명된 패치가 설치되어 있는지 확인하십시오. NFSv3 및 NFSv4에 대한 NetApp Support Matrix에는 특정 운영 체제가 포함되어 있지 않습니다. RFC를 따르는 모든 OS가 지원됩니다. 온라인 IMT에서 NFSv3 또는 NFSv4 지원을 검색할 때 일치하는 항목이 표시되지 않으므로 특정 OS를 선택하지 마십시오. 모든 OS는 일반 정책에 의해 암시적으로 지원됩니다.
 
 
 

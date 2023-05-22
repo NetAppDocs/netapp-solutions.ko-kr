@@ -20,7 +20,7 @@ link:bda-ai-gpfs-to-nfs-detailed-steps.html["이전: GPFS에서 NFS로 - 세부 
 
 . 각 MapR 노드에 대해 LUN 3개를 프로비저닝하고 모든 MapR 노드에 대한 LUN 소유권을 제공합니다.
 . 설치 중에 MapR-FS에 사용되는 MapR 클러스터 디스크에 새로 추가된 LUN을 선택합니다.
-. 에 따라 MapR 클러스터를 설치합니다 https://["MapR 6.1 문서"^].
+. 에 따라 MapR 클러스터를 설치합니다 https://mapr.com/docs/61/install.html["MapR 6.1 문서"^].
 . Hadoop Jar xxx와 같은 MapReduce 명령을 사용하여 기본 Hadoop 작업을 확인합니다.
 . 고객 데이터를 MapR-FS에 유지 예를 들어, Teragen을 사용하여 MapR-FS에서 약 테라바이트의 샘플 데이터를 생성했습니다.
 . MapR-FS를 NFS 내보내기로 구성합니다.

@@ -1,0 +1,49 @@
+---
+section: rhhc
+title: Red Hat OpenShift를 포함하는 NetApp 하이브리드 멀티 클라우드
+url: "/rhhc/index.html"
+entries:
+- title: 개요
+  url: "/rhhc/rhhc-overview.html"
+  entries:
+  - title: 가치 제안
+    url: "/rhhc/rhhc-value-prop.html"
+  - title: 검증된 솔루션
+    url: "/rhhc/rhhc-solutions.html"
+  - title: 검증된 버전
+    url: "/rhhc/rhhc-versions.html"
+  - title: 지원되는 스토리지 옵션
+    url: "/rhhc/rhhc-storage-options.html"
+- title: 온프레미스
+  url: "/rhhc/rhhc-overview.html"
+  entries:
+  - title: 솔루션 개요
+    url: "/rhhc/on-premises/solution.html"
+  - title: VMware에서 Red Hat OpenShift Container 워크로드를 구성합니다
+    url: "/rhhc/on-premises/setup.html"
+  - title: VMware에서 컨테이너 워크로드를 보호합니다
+    url: "/rhhc/on-premises/data-protection.html"
+  - title: VMware에서 컨테이너 워크로드를 마이그레이션합니다
+    url: "/rhhc/on-premises/data-migration.html"
+- title: 자체 관리형 구성 요소를 지원하는 하이브리드 클라우드
+  url: "/rhhc/rhhc-overview.html"
+  entries:
+  - title: 솔루션 개요
+    url: "/rhhc/self-managed/solution.html"
+  - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
+    url: "/rhhc/self-managed/setup.html"
+  - title: AWS에서 컨테이너 워크로드를 보호합니다
+    url: "/rhhc/self-managed/data-protection.html"
+  - title: 컨테이너 워크로드를 AWS로 마이그레이션
+    url: "/rhhc/self-managed/data-migration.html"
+- title: 공급자 관리 구성 요소를 지원하는 하이브리드 클라우드
+  url: "/rhhc/rhhc-overview.html"
+  entries:
+  - title: 솔루션 개요
+    url: "/rhhc/provider-managed/solution.html"
+  - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
+    url: "/rhhc/provider-managed/setup.html"
+  - title: AWS에서 컨테이너 워크로드를 보호합니다
+    url: "/rhhc/provider-managed/data-protection.html"
+  - title: AWS에서 컨테이너 워크로드를 마이그레이션합니다
+    url: "/rhhc/provider-managed/data-migration.html"

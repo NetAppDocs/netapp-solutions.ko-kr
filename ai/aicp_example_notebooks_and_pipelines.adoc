@@ -14,12 +14,12 @@ summary: Jupyter Notebooks 및 Kubeflow 파이프라인 예제
 
 
 [role="lead"]
-를 클릭합니다 https://["Kubernetes용 NetApp 데이터 과학 툴킷"] Kubeflow와 함께 사용할 수 있습니다. Kubeflow와 함께 NetApp Data Science Toolkit을 사용하면 다음과 같은 이점이 있습니다.
+를 클릭합니다 https://github.com/NetApp/netapp-data-science-toolkit/tree/main/Kubernetes["Kubernetes용 NetApp 데이터 과학 툴킷"] Kubeflow와 함께 사용할 수 있습니다. Kubeflow와 함께 NetApp Data Science Toolkit을 사용하면 다음과 같은 이점이 있습니다.
 
 * 데이터 과학자는 Jupyter Notebook 내에서 직접 고급 NetApp 데이터 관리 작업을 수행할 수 있습니다.
 * 고급 NetApp 데이터 관리 작업은 Kubeflow 파이프라인 프레임워크를 사용하여 자동화된 워크플로우에 통합할 수 있습니다.
 
 
-을 참조하십시오 https://["Kubeflow 예"] Kubeflow 기반 툴킷 사용에 대한 자세한 내용은 NetApp Data Science Toolkit GitHub 리포지토리 를 참조하십시오.
+을 참조하십시오 https://github.com/NetApp/netapp-data-science-toolkit/tree/main/Kubernetes/Examples/Kubeflow["Kubeflow 예"] Kubeflow 기반 툴킷 사용에 대한 자세한 내용은 NetApp Data Science Toolkit GitHub 리포지토리 를 참조하십시오.
 
 link:aicp_apache_airflow_deployment.html["다음: Apache Airflow Deployment"]

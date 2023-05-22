@@ -84,7 +84,7 @@ rpcinfo -p < NAS IP or on-prem nfs data LIF ip >
 . 텔넷 명령 "<온프레미스 NFS 데이터 LIF IP 또는 NAS IP>2049"를 사용하여 XCP 서버에서 NFS 포트에 액세스할 수 있는지 확인합니다. 기본 포트는 2049입니다. 환경에 다른 포트가 있는 경우 해당 IP를 사용하십시오.
 . NFS의 경우 'howmount -e <nas ip>' 명령을 사용하여 xCP 서버에서 공유에 액세스할 수 있는지 확인하십시오.
 . 대상 볼륨의 inode 수를 소스 파일의 파일 수(파일 수)보다 많이 늘립니다.
-. 에서 xCP 라이센스를 다운로드합니다 https://["NetApp XCP 라이센스 포털"^].
+. 에서 xCP 라이센스를 다운로드합니다 https://xcp.netapp.com/license/xcp.xwic["NetApp XCP 라이센스 포털"^].
 +
 .. mysupport.netapp.com 에 NetApp 계정이 있어야 하며, 그렇지 않은 경우 무료로 등록할 수 있습니다.
 .. 라이센스를 다운로드하여 준비하십시오.

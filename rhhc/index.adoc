@@ -1,0 +1,16 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: rhhc/index.html 
+lead: NetApp Hybrid Multicloud solutions with  Red Hat OpenShift container platform are a set of strategic and technology capabilities that demonstrate the ease of orchestrating data protection and migration capabilities for stateful container workloads on-premises and in the public cloud. 
+summary: Red Hat OpenShift 컨테이너 플랫폼을 지원하는 NetApp 하이브리드 멀티 클라우드 솔루션은 온프레미스 및 퍼블릭 클라우드의 상태 저장 컨테이너 워크로드에 대한 데이터 보호 및 마이그레이션 기능을 오케스트레이션하기가 용이함을 보여주는 전략적 및 기술 기능 세트입니다. 
+---
+= Red Hat OpenShift Container 워크로드를 지원하는 NetApp 하이브리드 멀티 클라우드
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

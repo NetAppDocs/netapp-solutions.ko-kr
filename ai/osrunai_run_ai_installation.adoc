@@ -25,7 +25,7 @@ Run:AI를 설치하려면 다음 단계를 완료하십시오.
 
 . 러닝 설치: AI:
 +
-.. 에 로그인합니다 https://["AI 관리자 UI를 실행합니다"^] 클러스터를 생성합니다.
+.. 에 로그인합니다 https://app.run.ai["AI 관리자 UI를 실행합니다"^] 클러스터를 생성합니다.
 .. 생성된 'runai-operator-<clustername>.yAML' 파일을 다운로드합니다.
 .. Kubernetes 클러스터에 운영자 구성을 적용하십시오.
 +
@@ -36,9 +36,9 @@ kubectl apply -f runai-operator-<clustername>.yaml
 
 . 설치를 확인합니다.
 +
-.. 로 이동합니다 https://["https://app.run.ai/"^].
+.. 로 이동합니다 https://app.run.ai/["https://app.run.ai/"^].
 .. 개요 대시보드로 이동합니다.
-.. 오른쪽 위에 있는 GPU 수가 예상 GPU 수를 반영하고 GPU 노드가 모두 서버 목록에 있는지 확인합니다.실행:AI 배포에 대한 자세한 내용은 을 참조하십시오 https://["Run 설치: 사내 Kubernetes 클러스터에 AI를 설치합니다"^] 및 https://["Run:AI CLI 설치"^].
+.. 오른쪽 위에 있는 GPU 수가 예상 GPU 수를 반영하고 GPU 노드가 모두 서버 목록에 있는지 확인합니다.실행:AI 배포에 대한 자세한 내용은 을 참조하십시오 https://docs.run.ai/Administrator/Cluster-Setup/Installing-Run-AI-on-an-on-premise-Kubernetes-Cluster/["Run 설치: 사내 Kubernetes 클러스터에 AI를 설치합니다"^] 및 https://docs.run.ai/Administrator/Researcher-Setup/Installing-the-Run-AI-Command-Line-Interface/["Run:AI CLI 설치"^].
 
 
 

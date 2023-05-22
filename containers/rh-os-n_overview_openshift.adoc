@@ -48,7 +48,7 @@ IPI 설치 방법은 대부분의 경우 개발, 테스트 및 생산 환경에 
 
 OpenShift의 설치 관리자 프로비저닝 인프라(IPI) 배포에는 다음과 같은 고급 단계가 포함됩니다.
 
-. Red Hat OpenShift를 방문하십시오 https://["웹 사이트"^] SSO 자격 증명을 사용하여 로그인합니다.
+. Red Hat OpenShift를 방문하십시오 https://www.openshift.com["웹 사이트"^] SSO 자격 증명을 사용하여 로그인합니다.
 . Red Hat OpenShift를 배포할 환경을 선택하십시오.
 +
 image:redhat_openshift_image8.jpeg["오류: 그래픽 이미지가 없습니다"]
@@ -57,7 +57,7 @@ image:redhat_openshift_image8.jpeg["오류: 그래픽 이미지가 없습니다"
 +
 image:redhat_openshift_image9.jpeg["오류: 그래픽 이미지가 없습니다"]
 
-. 를 따릅니다 https://["설치 지침"] Red Hat이 선택한 환경에 배포할 수 있도록 제공합니다.
+. 를 따릅니다 https://docs.openshift.com/container-platform/4.7/installing/index.html["설치 지침"] Red Hat이 선택한 환경에 배포할 수 있도록 제공합니다.
 
 
 

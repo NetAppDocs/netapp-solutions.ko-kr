@@ -59,7 +59,7 @@ NFS Kerberos 시스템 계정의 경우 KDC와 새 키 탭이 생성/교환될 �
 
 == LDAP 및 Kerberos와 함께 사용할 네트워크 포트
 
-LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다 https://["보안 고려 사항에 대한 Cloud Volumes Service 문서"^].
+LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["보안 고려 사항에 대한 Cloud Volumes Service 문서"^].
 
 
 
@@ -67,9 +67,9 @@ LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인
 
 Cloud Volumes Service는 LDAP 클라이언트 역할을 하며 UNIX ID에 대한 사용자 및 그룹 조회를 위해 표준 LDAP 검색 쿼리를 사용합니다. Cloud Volumes Service에서 제공하는 표준 기본 사용자 이외의 사용자 및 그룹을 사용하려면 LDAP가 필요합니다. NFS Kerberos를 사용자 보안 주체(예: user1@domain.com 사용할 계획이라면 LDAP도 필요합니다. 현재 Microsoft Active Directory를 사용하는 LDAP만 지원됩니다.
 
-Active Directory를 UNIX LDAP 서버로 사용하려면 UNIX ID에 사용할 사용자 및 그룹에 필요한 UNIX 속성을 채워야 합니다. Cloud Volumes Service에서는 에 따라 특성을 쿼리하는 기본 LDAP 스키마 템플릿을 사용합니다 https://["RFC-2307-bis"^]. 따라서 다음 표에서는 사용자 및 그룹에 채울 최소 필수 Active Directory 속성과 각 속성이 사용되는 특성을 보여 줍니다.
+Active Directory를 UNIX LDAP 서버로 사용하려면 UNIX ID에 사용할 사용자 및 그룹에 필요한 UNIX 속성을 채워야 합니다. Cloud Volumes Service에서는 에 따라 특성을 쿼리하는 기본 LDAP 스키마 템플릿을 사용합니다 https://tools.ietf.org/id/draft-howard-rfc2307bis-01.txt["RFC-2307-bis"^]. 따라서 다음 표에서는 사용자 및 그룹에 채울 최소 필수 Active Directory 속성과 각 속성이 사용되는 특성을 보여 줍니다.
 
-Active Directory에서 LDAP 속성을 설정하는 방법에 대한 자세한 내용은 을 참조하십시오 https://["이중 프로토콜 액세스 관리."^]
+Active Directory에서 LDAP 속성을 설정하는 방법에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/managing-dual-protocol-access["이중 프로토콜 액세스 관리."^]
 
 |===
 | 속성 | 기능 
@@ -305,7 +305,7 @@ TEXT
 
 === LDAP 채널 바인딩
 
-Windows Active Directory 도메인 컨트롤러의 취약점으로 인해 https://["Microsoft 보안 권고 ADV190023"^] DC에서 LDAP 바인드를 허용하는 방법을 변경합니다.
+Windows Active Directory 도메인 컨트롤러의 취약점으로 인해 https://msrc.microsoft.com/update-guide/vulnerability/ADV190023["Microsoft 보안 권고 ADV190023"^] DC에서 LDAP 바인드를 허용하는 방법을 변경합니다.
 
 Cloud Volumes Service에 미치는 영향은 모든 LDAP 클라이언트와 동일합니다. Cloud Volumes Service는 현재 채널 바인딩을 지원하지 않습니다. Cloud Volumes Service는 협상을 통해 기본적으로 LDAP 서명을 지원하므로 LDAP 채널 바인딩은 문제가 되지 않습니다. 채널 바인딩이 설정된 LDAP에 바인딩하는 데 문제가 있는 경우 ADV190023의 개선 단계를 수행하여 Cloud Volumes Service에서 LDAP 바인딩이 성공하도록 허용합니다.
 
@@ -313,13 +313,13 @@ Cloud Volumes Service에 미치는 영향은 모든 LDAP 클라이언트와 동�
 
 == DNS
 
-Active Directory와 Kerberos 모두 호스트 이름 대 IP/IP 대 호스트 이름 확인에 대한 DNS에 대한 종속성을 가집니다. DNS를 열려면 포트 53이 열려 있어야 합니다. Cloud Volumes Service는 DNS 레코드를 수정하지 않으며 현재 의 사용을 지원하지 않습니다 https://["다이나믹 DNS"^] 네트워크 인터페이스.
+Active Directory와 Kerberos 모두 호스트 이름 대 IP/IP 대 호스트 이름 확인에 대한 DNS에 대한 종속성을 가집니다. DNS를 열려면 포트 53이 열려 있어야 합니다. Cloud Volumes Service는 DNS 레코드를 수정하지 않으며 현재 의 사용을 지원하지 않습니다 https://support.google.com/domains/answer/6147083?hl=en["다이나믹 DNS"^] 네트워크 인터페이스.
 
-DNS 레코드를 업데이트할 수 있는 서버를 제한하도록 Active Directory DNS를 구성할 수 있습니다. 자세한 내용은 을 참조하십시오 https://["Windows DNS 보안"^].
+DNS 레코드를 업데이트할 수 있는 서버를 제한하도록 Active Directory DNS를 구성할 수 있습니다. 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/learn/modules/secure-windows-server-domain-name-system/["Windows DNS 보안"^].
 
 Google 프로젝트 내의 리소스는 기본적으로 Active Directory DNS와 연결되지 않은 Google Cloud DNS를 사용합니다. 클라우드 DNS를 사용하는 클라이언트는 Cloud Volumes Service에서 반환하는 UNC 경로를 확인할 수 없습니다. Active Directory 도메인에 참가한 Windows 클라이언트는 Active Directory DNS를 사용하도록 구성되어 있으며 이러한 UNC 경로를 확인할 수 있습니다.
 
-Active Directory에 클라이언트를 연결하려면 Active Directory DNS를 사용하도록 해당 DNS 구성을 구성해야 합니다. 필요에 따라 Active Directory DNS로 요청을 전달하도록 Cloud DNS를 구성할 수 있습니다. 을 참조하십시오 https://["클라이언트가 SMB NetBIOS 이름을 확인할 수 없는 이유는 무엇입니까?"^]를 참조하십시오.
+Active Directory에 클라이언트를 연결하려면 Active Directory DNS를 사용하도록 해당 DNS 구성을 구성해야 합니다. 필요에 따라 Active Directory DNS로 요청을 전달하도록 Cloud DNS를 구성할 수 있습니다. 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/faqs-netapp["클라이언트가 SMB NetBIOS 이름을 확인할 수 없는 이유는 무엇입니까?"^]를 참조하십시오.
 
 
 NOTE: Cloud Volumes Service는 현재 DNSSEC를 지원하지 않으며 DNS 쿼리는 일반 텍스트로 수행됩니다.

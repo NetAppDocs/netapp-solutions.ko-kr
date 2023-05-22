@@ -26,27 +26,27 @@ link:kafka-sc-performance-best-practice-guidelines.html["이전: 성능 모범 �
 
 * Confluent란 무엇입니까?
 +
-https://["https://www.confluent.io/apache-kafka-vs-confluent/"^]
+https://www.confluent.io/apache-kafka-vs-confluent/["https://www.confluent.io/apache-kafka-vs-confluent/"^]
 
 * S3 싱크 매개 변수 세부 정보
 +
-https://["https://docs.confluent.io/kafka-connect-s3-sink/current/configuration_options.html#s3-configuration-options"^]
+https://docs.confluent.io/kafka-connect-s3-sink/current/configuration_options.html["https://docs.confluent.io/kafka-connect-s3-sink/current/configuration_options.html#s3-configuration-options"^]
 
 * 아파치 카프카
 +
-https://["https://en.wikipedia.org/wiki/Apache_Kafka"^]
+https://en.wikipedia.org/wiki/Apache_Kafka["https://en.wikipedia.org/wiki/Apache_Kafka"^]
 
 * S3 in ONTAP 모범 사례
 +
-https://["https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf["https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf"^]
 
 * S3 오브젝트 스토리지 관리
 +
-https://["https://docs.netapp.com/us-en/ontap/s3-config/s3-support-concept.html"^]
+https://docs.netapp.com/us-en/ontap/s3-config/s3-support-concept.html["https://docs.netapp.com/us-en/ontap/s3-config/s3-support-concept.html"^]
 
 * NetApp 제품 설명서
 +
-https://["https://www.netapp.com/support-and-training/documentation/"^]
+https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
 
 
 

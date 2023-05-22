@@ -1,0 +1,49 @@
+---
+indexpage:
+  tiles:
+  - title: 시작하기
+    links:
+    - title: 개요
+      url: "/rhhc-overview.html"
+    - title: 가치 제안
+      url: "/rhhc-value-prop.html"
+    - title: 검증된 솔루션
+      url: "/rhhc-solutions.html"
+    - title: 검증된 버전
+      url: "/rhhc-versions.html"
+    - title: 지원되는 스토리지 옵션
+      url: "/rhhc-storage-options.html"
+    - title: 추가 문서
+      url: "/rhhc-resources.html"
+    - title: 비디오 및 데모
+      url: "../videos.html#rhhc"
+  - title: 높지 않습니다
+    links:
+    - title: 온프레미스 솔루션
+      url: "/on-premises/solution.html"
+    - title: 환경을 구성합니다
+      url: "/on-premises/setup.html"
+    - title: ACC를 사용한 데이터 보호
+      url: "/on-premises/data-protection.html"
+    - title: ACC를 사용한 데이터 마이그레이션
+      url: "/on-premises/data-migration.html"
+  - title: 하이브리드 클라우드 워크로드(자가 관리 구성 요소)
+    links:
+    - title: 자체 관리되는 구성 요소가 포함된 하이브리드 클라우드 솔루션
+      url: "/self-managed/solution.html"
+    - title: 환경을 구성합니다
+      url: "/self-managed/setup.html"
+    - title: ACC를 사용한 데이터 보호
+      url: "/self-managed/data-protection.html"
+    - title: ACC를 사용한 데이터 마이그레이션
+      url: "/self-managed/data-migration.html"
+  - title: 하이브리드 클라우드 워크로드(공급자 관리 구성 요소)
+    links:
+    - title: 공급자 관리 구성요소를 사용한 하이브리드 클라우드 솔루션
+      url: "/provider-managed/solution.html"
+    - title: 환경을 구성합니다
+      url: "/provider-managed/setup.html"
+    - title: ACS를 사용한 데이터 보호
+      url: "/provider-managed/data-protection.html"
+    - title: BlueXP를 사용한 데이터 마이그레이션
+      url: "/provider-managed/data-migration.html"

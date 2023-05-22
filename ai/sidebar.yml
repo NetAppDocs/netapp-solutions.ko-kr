@@ -87,7 +87,6 @@ entries:
     - title: Kubernetes 구축
       url: "/ai/aicp_kubernetes_deployment.html"
     - title: NetApp Trident 구축 및 구성
-      url: "/ai/aicp_netapp_trident_deployment_and_configuration_overview.html"
       entries:
       - title: Trident 구축
         url: "/ai/aicp_netapp_trident_deployment_and_configuration_overview.html"

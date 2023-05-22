@@ -19,7 +19,7 @@ summary:
 ....
 $ runai submit netapp1 -i netapp/tensorflow-tf1-py3:20.01.0 --local-image --large-shm  -v /mnt:/mnt -v /tmp:/tmp --command python --args "/netapp/scripts/run.py" --args "--dataset_dir=/mnt/mount_0/dataset/imagenet/imagenet_original/" --args "--num_mounts=2"  --args "--dgx_version=dgx1" --args "--num_devices=1" -g 1
 ....
-에서와 같이 ResNet-50 벤치마크를 실행했습니다 https://["NVA-1121"^]. 우리는 공공 Docker 리포지토리에 없는 컨테이너에 '--local-image' 플래그를 사용했습니다. 호스트 DGX-1 노드의 /mnt와 /tmp 디렉토리를 각각 컨테이너에 `/mnt', '/tmp' 디렉토리에 마운트했습니다. 데이터 세트는 디렉토리를 가리키는 dataset_dir와 함께 NetApp AFFA800에 있습니다. '--num_devices=1'과 '-g 1'은 이 작업에 하나의 GPU를 할당한다는 것을 의미합니다. 전자는 run.py 스크립트의 주장이고 후자는 runai submit 명령의 플래그입니다.
+에서와 같이 ResNet-50 벤치마크를 실행했습니다 https://www.netapp.com/us/media/nva-1121-design.pdf["NVA-1121"^]. 우리는 공공 Docker 리포지토리에 없는 컨테이너에 '--local-image' 플래그를 사용했습니다. 호스트 DGX-1 노드의 /mnt와 /tmp 디렉토리를 각각 컨테이너에 `/mnt', '/tmp' 디렉토리에 마운트했습니다. 데이터 세트는 디렉토리를 가리키는 dataset_dir와 함께 NetApp AFFA800에 있습니다. '--num_devices=1'과 '-g 1'은 이 작업에 하나의 GPU를 할당한다는 것을 의미합니다. 전자는 run.py 스크립트의 주장이고 후자는 runai submit 명령의 플래그입니다.
 
 다음 그림은 97%의 GPU 사용률과 16개의 사용 가능한 GPU가 할당된 시스템 개요 대시보드를 보여 줍니다. GPU/프로젝트 막대 차트에서 각 팀에 할당된 GPU 수를 쉽게 확인할 수 있습니다. 실행 중인 작업 창에는 현재 실행 중인 작업 이름, 프로젝트, 사용자, 유형, 노드, GPU 사용량, 실행 시간, 진행률 및 활용률 세부 정보 대기 시간이 있는 대기열의 워크로드 목록이 보류 중인 작업에 표시됩니다. 마지막으로, 노드 상자는 클러스터의 개별 DGX-1 노드에 대한 GPU 수와 활용률을 제공합니다.
 

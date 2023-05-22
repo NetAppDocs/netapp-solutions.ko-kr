@@ -22,7 +22,7 @@ summary:
 
 사내 스토리지 시스템 및 클라우드 스토리지 서비스에서 제공하는 기능 차이로 인해 사내 애플리케이션을 클라우드로 마이그레이션하려는 많은 회사가 이러한 노력에 어려움을 겪고 있습니다. 이러한 격차로 인해 Microsoft SQL Server와 같은 엔터프라이즈 애플리케이션을 마이그레이션하는 데 훨씬 더 많은 문제가 있었습니다. 특히, 강력한 스냅샷, 스토리지 효율성 기능, 고가용성, 안정성, 일관된 성능 등과 같은 엔터프라이즈 애플리케이션을 실행하는 데 필요한 서비스 간의 격차를 좁히기 위해 고객은 설계 트레이드오프나 forgo 애플리케이션 마이그레이션을 수행할 수밖에 없었습니다. NetApp ONTAP용 FSx를 사용하면 고객은 더 이상 타협할 필요가 없습니다. NetApp ONTAP용 FSX는 AWS에서 판매, 지원, 청구 및 완벽하게 관리되는 네이티브 AWS 서비스입니다. NetApp ONTAP의 강력한 기능을 사용하여 NetApp에서 30년 동안 사내에 제공해온 엔터프라이즈급 스토리지 및 데이터 관리 기능을 관리형 서비스로 제공합니다.
 
-데이터베이스 관리자는 EC2 인스턴스에서 SQL Server를 사용하여 데이터베이스 환경과 기본 운영 체제에 액세스하고 사용자 지정할 수 있습니다. 와 함께 EC2 인스턴스의 SQL Server https://["AWS FSx ONTAP"^] 데이터베이스 파일을 저장하려면, 블록 레벨 복제를 사용하여 고성능, 데이터 관리 및 간단하고 쉬운 마이그레이션 경로를 설정합니다. 따라서 간단한 인양이동 접근 방식, 클릭 수 감소, 스키마 변환 없이 AWS VPC에서 복잡한 데이터베이스를 실행할 수 있습니다.
+데이터베이스 관리자는 EC2 인스턴스에서 SQL Server를 사용하여 데이터베이스 환경과 기본 운영 체제에 액세스하고 사용자 지정할 수 있습니다. 와 함께 EC2 인스턴스의 SQL Server https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["AWS FSx ONTAP"^] 데이터베이스 파일을 저장하려면, 블록 레벨 복제를 사용하여 고성능, 데이터 관리 및 간단하고 쉬운 마이그레이션 경로를 설정합니다. 따라서 간단한 인양이동 접근 방식, 클릭 수 감소, 스키마 변환 없이 AWS VPC에서 복잡한 데이터베이스를 실행할 수 있습니다.
 
 
 
@@ -104,7 +104,7 @@ FSx ONTAP를 사용하면 스토리지를 조달하는 것이 가장 쉬우므�
 |===
 이 구성에서는 볼륨의 총 크기가 파일 시스템에서 사용 가능한 실제 스토리지보다 클 수 있습니다. LUN 또는 스냅샷 복사본에 볼륨에서 사용 가능한 공간보다 더 많은 공간이 필요한 경우 볼륨은 자동으로 확장되므로 포함된 파일 시스템에서 더 많은 공간을 차지합니다. 자동 확장 기능을 사용하면 FSx ONTAP에서 미리 결정한 최대 크기까지 볼륨 크기를 자동으로 늘릴 수 있습니다. 볼륨의 자동 증가를 지원하려면 포함하는 파일 시스템에 사용 가능한 공간이 있어야 합니다. 따라서 자동 확장 기능이 설정된 경우 포함된 파일 시스템의 사용 가능한 공간을 모니터링하고 필요할 때 파일 시스템을 업데이트해야 합니다.
 
-이와 함께 를 설정합니다 https://["공간 할당"^] LUN의 옵션을 Enabled로 설정하면, FSx ONTAP는 볼륨의 공간이 부족하고 볼륨의 LUN이 쓰기를 수락할 수 없을 때 EC2 호스트에 알립니다. 또한 이 옵션을 사용하면 EC2 호스트의 SQL Server가 데이터를 삭제할 때 ONTAP용 FSx가 공간을 자동으로 재확보할 수 있습니다. 공간 할당 옵션은 기본적으로 사용하지 않도록 설정됩니다.
+이와 함께 를 설정합니다 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/What_does_the_LUN_option_space_alloc_do%3F["공간 할당"^] LUN의 옵션을 Enabled로 설정하면, FSx ONTAP는 볼륨의 공간이 부족하고 볼륨의 LUN이 쓰기를 수락할 수 없을 때 EC2 호스트에 알립니다. 또한 이 옵션을 사용하면 EC2 호스트의 SQL Server가 데이터를 삭제할 때 ONTAP용 FSx가 공간을 자동으로 재확보할 수 있습니다. 공간 할당 옵션은 기본적으로 사용하지 않도록 설정됩니다.
 
 
 NOTE: 공간 예약 LUN이 NONE-Guaranteed 볼륨에 생성된 경우 LUN은 공간이 예약되지 않은 LUN과 동일하게 작동합니다. 이는 보장된 볼륨 중 어느 것도 LUN에 할당할 공간이 없기 때문입니다. 볼륨 자체는 이 볼륨에 쓸 때만 공간을 할당할 수 있습니다. 이 경우 보장이 없기 때문입니다.
@@ -143,7 +143,7 @@ SnapCenter를 사용하여 SQL Server 작업을 수행하려면 먼저 SQL Serve
 ====
 SQL Server용 볼륨 및 LUN을 생성하려면 다음 단계를 수행하십시오.
 
-. 에서 Amazon FSx 콘솔을 엽니다 https://[]
+. 에서 Amazon FSx 콘솔을 엽니다 https://console.aws.amazon.com/fsx/[]
 . 생성 방법 아래의 표준 생성 옵션을 사용하여 NetApp ONTAP 파일 시스템에 대한 Amazon FSx를 생성합니다. 이를 통해 FSxadmin 및 vsadmin 자격 증명을 정의할 수 있습니다.
 +
 image:sql-awsec2-image1.png["오류: 그래픽 이미지가 없습니다"]
@@ -156,7 +156,7 @@ image:sql-awsec2-image2.png["오류: 그래픽 이미지가 없습니다"]
 +
 image:sql-awsec2-image3.png["오류: 그래픽 이미지가 없습니다"]
 
-. 에 나와 있는 단계에 따라 볼륨을 생성합니다 https://["NetApp ONTAP용 FSx에서 볼륨 생성"^].
+. 에 나와 있는 단계에 따라 볼륨을 생성합니다 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-volumes.html["NetApp ONTAP용 FSx에서 볼륨 생성"^].
 +
 |===
 
@@ -212,7 +212,7 @@ lun create -path /vol/vol_awssqlprod01_data/lun_awssqlprod01_data -size 700GB -o
 +
 image:sql-awsec2-image5.png["오류: 그래픽 이미지가 없습니다"]
 
-. OS 파티셔닝 스키마와 입출력 정렬을 달성하려면 Windows_2008을 권장되는 LUN 유형으로 사용합니다. 을 참조하십시오 https://["여기"^] 자세한 내용은 를 참조하십시오.
+. OS 파티셔닝 스키마와 입출력 정렬을 달성하려면 Windows_2008을 권장되는 LUN 유형으로 사용합니다. 을 참조하십시오 https://docs.netapp.com/us-en/ontap/san-admin/io-misalignments-properly-aligned-luns-concept.html["여기"^] 자세한 내용은 를 참조하십시오.
 . 다음 SSH 명령을 사용하여 방금 생성한 LUN에 igroup을 매핑합니다.
 +
 ....
@@ -345,9 +345,9 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 
 
 |===
-자세한 내용은 공간 및 사이징 요구 사항을 참조하십시오 
+자세한 내용은 공간 및 사이징 요구 사항을 참조하십시오 (https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html)[]
 
-버전 호환성은 를 참조하십시오 https://["NetApp 상호 운용성 매트릭스 툴"^].
+버전 호환성은 를 참조하십시오 https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^].
 
 ====
 .데이터베이스 스토리지 레이아웃
@@ -386,7 +386,7 @@ NOTE: 새 데이터베이스를 만들 때는 데이터와 로그에 대해 별�
 .SnapCenter 설치 및 설정
 [%collapsible]
 ====
-를 따릅니다 https://["SnapCenter 서버를 설치합니다"^] 및 https://["Microsoft SQL Server용 SnapCenter 플러그인 설치"^] SnapCenter를 설치하고 설정합니다.
+를 따릅니다 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^] 및 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html["Microsoft SQL Server용 SnapCenter 플러그인 설치"^] SnapCenter를 설치하고 설정합니다.
 
 SnapCenter를 설치한 후 다음 단계를 수행하여 설정합니다.
 
@@ -590,10 +590,10 @@ video::SQLonFSxN.mp4[width=400]
 ====
 다음 .YAML 파일은 AWS 콘솔의 Cloud formation Template과 함께 사용할 수 있습니다.
 
-* https://["https://github.com/NetApp-Automation/fsxn-iscsisetup-cft"^]
+* https://github.com/NetApp-Automation/fsxn-iscsisetup-cft["https://github.com/NetApp-Automation/fsxn-iscsisetup-cft"^]
 
 
-PowerShell을 사용하여 iSCSI LUN 생성 및 NetApp SnapCenter 설치를 자동화하려면 에서 리포를 클론 복제하십시오 https://["이 GitHub 링크를 클릭합니다"^].
+PowerShell을 사용하여 iSCSI LUN 생성 및 NetApp SnapCenter 설치를 자동화하려면 에서 리포를 클론 복제하십시오 https://github.com/NetApp-Automation/fsxn-iscsisetup-ps["이 GitHub 링크를 클릭합니다"^].
 
 ====
 .부록 B: 볼륨 및 LUN 프로비저닝을 위한 Powershell 스크립트
@@ -719,30 +719,30 @@ Remove-Item -Path $MyInvocation.MyCommand.Source
 
 * NetApp ONTAP용 Amazon FSx
 +
-https://["https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html"^]
+https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html"^]
 
 * NetApp ONTAP용 FSx 시작하기
 +
-https://["https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html"^]
+https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html"^]
 
 * SnapCenter 인터페이스의 개요입니다
 +
-https://["https://www.youtube.com/watch?v=lVEBF4kV6Ag&t=0s"^]
+https://www.youtube.com/watch?v=lVEBF4kV6Ag&t=0s["https://www.youtube.com/watch?v=lVEBF4kV6Ag&t=0s"^]
 
 * SnapCenter 탐색 창 옵션을 둘러봅니다
 +
-https://["https://www.youtube.com/watch?v=_lDKt-koySQ"^]
+https://www.youtube.com/watch?v=_lDKt-koySQ["https://www.youtube.com/watch?v=_lDKt-koySQ"^]
 
 * SQL Server용 SnapCenter 4.0 플러그인을 설치합니다
 +
-https://["https://www.youtube.com/watch?v=MopbUFSdHKE"^]
+https://www.youtube.com/watch?v=MopbUFSdHKE["https://www.youtube.com/watch?v=MopbUFSdHKE"^]
 
 * SnapCenter with SQL Server 플러그인을 사용하여 데이터베이스를 백업 및 복원하는 방법
 +
-https://["https://www.youtube.com/watch?v=K343qPD5_Ys"^]
+https://www.youtube.com/watch?v=K343qPD5_Ys["https://www.youtube.com/watch?v=K343qPD5_Ys"^]
 
 * SnapCenter with SQL Server 플러그인을 사용하여 데이터베이스를 복제하는 방법
 +
-https://["https://www.youtube.com/watch?v=ogEc4DkGv1E"^]
+https://www.youtube.com/watch?v=ogEc4DkGv1E["https://www.youtube.com/watch?v=ogEc4DkGv1E"^]
 
 

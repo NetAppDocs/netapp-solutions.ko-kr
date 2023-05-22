@@ -33,7 +33,7 @@ NetApp DataOps 툴킷은 스토리지 시스템 관리를 위한 1차 서비스 
 
 == Riva 모범 사례
 
-NVIDIA는 몇 가지 일반적인 기능을 제공합니다 https://["모범 데이터 사례"^] Riva 사용:
+NVIDIA는 몇 가지 일반적인 기능을 제공합니다 https://docs.nvidia.com/deeplearning/riva/user-guide/docs/best-practices.html["모범 데이터 사례"^] Riva 사용:
 
 * * 가능한 경우 무손실 오디오 형식을 사용합니다. * MP3와 같은 손실 코덱을 사용하면 품질이 저하될 수 있습니다.
 * * 교육 데이터를 보강합니다. * 오디오 교육 데이터에 배경 잡음을 추가하면 처음에는 정확도가 떨어되지만 견고성이 향상됩니다.

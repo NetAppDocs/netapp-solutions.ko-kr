@@ -242,10 +242,7 @@ echo "export PATH=\$PATH:\$ORACLE_HOME/bin" >> /home/azacsnap/.bash_profile
 [source, cli]
 ----
 sudo su - azacsnap
-----
-+
-[source, cli]
-----
+
 mkstore -wrl $TNS_ADMIN/.oracle_wallet/ -create
 ----
 . Oracle Wallet에 연결 문자열 자격 증명을 추가합니다. 다음 예제 명령에서 AZACSNAP는 AzAcSnap에서 사용할 ConnectString, azacsnap은 Oracle Database User, AzPasswd1은 Oracle User의 데이터베이스 암호입니다. 전자지갑 암호를 묻는 메시지가 다시 나타납니다.
@@ -279,20 +276,24 @@ WALLET_LOCATION=(
 sqlplus /@AZACSNAP as SYSBACKUP
 ----
 +
-8bf6bfb76bcf25b5e1bb9c1d4ede3d34
+명령의 예상 출력:
 
 +
-9fac4799a7cb503012dac3d131cf3c15
+[listing]
+----
+[azacsnap@acao-ora01 ~]$ sqlplus /@AZACSNAP as SYSBACKUP
 
-+
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu Sep 8 18:02:07 2022
+Version 19.8.0.0.0
 
-+
-연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
 
-+
-sql> 을 클릭합니다
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
 
+SQL>
+----
 
 
 
@@ -323,8 +324,21 @@ az ad sp create-for-rbac --name "AzAcSnap" --role Contributor --scopes /subscrip
 예상 출력:
 
 +
-e8e3af5b539b9415092afd10fc182ff7
-
+[listing]
+----
+{
+  "clientId": "00aa000a-aaaa-0000-00a0-00aa000aaa0a",
+  "clientSecret": "00aa000a-aaaa-0000-00a0-00aa000aaa0a",
+  "subscriptionId": "00aa000a-aaaa-0000-00a0-00aa000aaa0a",
+  "tenantId": "00aa000a-aaaa-0000-00a0-00aa000aaa0a",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+----
 . 출력 내용을 잘라내어 라는 파일에 붙여 넣습니다 `oracle.json` Linux user azacsnap user bin 디렉토리에 저장되고 적절한 시스템 권한으로 파일을 보호합니다.
 
 
@@ -359,26 +373,45 @@ azacsnap -c configure –-configuration new
 Oracle 볼륨 3개가 필요한 경우의 결과:
 
 +
-849abd2456a4bd2ccddb94a12dfcc37d
+[listing]
+----
+[azacsnap@acao-ora01 bin]$ azacsnap -c configure --configuration new
+Building new config file
+Add comment to config file (blank entry to exit adding comments): Oracle snapshot bkup
+Add comment to config file (blank entry to exit adding comments):
+Enter the database type to add, 'hana', 'oracle', or 'exit' (for no database): oracle
 
-+
-fa7ad5b9d050b7a5baa27ffcd8863c42
+=== Add Oracle Database details ===
+Oracle Database SID (e.g. CDB1): ORATST
+Database Server's Address (hostname or IP address): 172.30.137.142
+Oracle connect string (e.g. /@AZACSNAP): /@AZACSNAP
 
-+
-44b11046a63da89febd351b4213758cf
+=== Azure NetApp Files Storage details ===
+Are you using Azure NetApp Files for the database? (y/n) [n]: y
+--- DATA Volumes have the Application put into a consistent state before they are snapshot ---
+Add Azure NetApp Files resource to DATA Volume section of Database configuration? (y/n) [n]: y
+Full Azure NetApp Files Storage Volume Resource ID (e.g. /subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...): /subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u01
+Service Principal Authentication filename or Azure Key Vault Resource ID (e.g. auth-file.json or https://...): oracle.json
+Add Azure NetApp Files resource to DATA Volume section of Database configuration? (y/n) [n]: y
+Full Azure NetApp Files Storage Volume Resource ID (e.g. /subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...): /subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u02
+Service Principal Authentication filename or Azure Key Vault Resource ID (e.g. auth-file.json or https://...): oracle.json
+Add Azure NetApp Files resource to DATA Volume section of Database configuration? (y/n) [n]: n
+--- OTHER Volumes are snapshot immediately without preparing any application for snapshot ---
+Add Azure NetApp Files resource to OTHER Volume section of Database configuration? (y/n) [n]: y
+Full Azure NetApp Files Storage Volume Resource ID (e.g. /subscriptions/.../resourceGroups/.../providers/Microsoft.NetApp/netAppAccounts/.../capacityPools/Premium/volumes/...): /subscriptions/0efa2dfb-917c-4497-b56a-b3f4eadb8111/resourceGroups/ANFAVSRG/providers/Microsoft.NetApp/netAppAccounts/ANFAVSAcct/capacityPools/CapPool/volumes/acao-ora01-u03
+Service Principal Authentication filename or Azure Key Vault Resource ID (e.g. auth-file.json or https://...): oracle.json
+Add Azure NetApp Files resource to OTHER Volume section of Database configuration? (y/n) [n]: n
 
-+
-e16c4d13d5c9c936ac3ca975a729784f
+=== Azure Managed Disk details ===
+Are you using Azure Managed Disks for the database? (y/n) [n]: n
 
-+
-e5e08e0b27271cd7952c3cd754436294
+=== Azure Large Instance (Bare Metal) Storage details ===
+Are you using Azure Large Instance (Bare Metal) for the database? (y/n) [n]: n
 
-+
-cec7485a9812da8e268c6d53917d0776
+Enter the database type to add, 'hana', 'oracle', or 'exit' (for no database): exit
 
-+
-c63145a4ad8c93cb8bdff88f44cf483b
-
+Editing configuration complete, writing output to 'azacsnap.json'.
+----
 . azacsnap Linux 사용자로서, Oracle 백업에 대해 azacsnap 테스트 명령을 실행합니다.
 +
 [source, cli]
@@ -390,8 +423,15 @@ azacsnap -c test --test oracle --configfile azacsnap.json
 예상 출력:
 
 +
-ce9bfcddebc567805a4fdb6bcdf15515
-
+[listing]
+----
+[azacsnap@acao-ora01 bin]$ azacsnap -c test --test oracle --configfile azacsnap.json
+BEGIN : Test process started for 'oracle'
+BEGIN : Oracle DB tests
+PASSED: Successful connectivity to Oracle DB version 1908000000
+END   : Test process complete for 'oracle'
+[azacsnap@acao-ora01 bin]$
+----
 . 첫 번째 스냅샷 백업을 실행합니다.
 +
 [source, cli]

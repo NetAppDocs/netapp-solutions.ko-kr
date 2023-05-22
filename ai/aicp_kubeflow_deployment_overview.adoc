@@ -22,7 +22,7 @@ summary: 이 페이지에서는 Kubernetes 클러스터에 Kubeflow를 구축하
 
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
-. Kubernetes 작업 클러스터가 이미 있으며, Kubeflow에서 지원하는 Kubernetes 버전을 실행하고 있습니다. 지원되는 버전 목록은 를 참조하십시오 https://["Kubeflow 공식 문서"^].
+. Kubernetes 작업 클러스터가 이미 있으며, Kubeflow에서 지원하는 Kubernetes 버전을 실행하고 있습니다. 지원되는 버전 목록은 를 참조하십시오 https://www.kubeflow.org/docs/started/getting-started/["Kubeflow 공식 문서"^].
 . 에 설명된 대로 Kubernetes 클러스터에 NetApp Trident를 이미 설치 및 구성했습니다 link:aicp_netapp_trident_deployment_and_configuration_overview.html["Trident 구축 및 구성"].
 
 
@@ -61,9 +61,9 @@ ontap-ai-flexvols-retain (default)   csi.trident.netapp.io   54s
 NVIDIA DeepOps에서 제공하는 Kubeflow 구현 툴을 사용할 것을 권장합니다. DeepOps 구축 툴을 사용하여 Kubernetes 클러스터에 Kubeflow를 배포하려면 배포 점프 호스트에서 다음 작업을 수행합니다.
 
 
-NOTE: 또는 에 따라 Kubeflow를 수동으로 배포할 수도 있습니다 https://["설치 지침"^] 공식 Kubeflow 문서에서 제공됩니다
+NOTE: 또는 에 따라 Kubeflow를 수동으로 배포할 수도 있습니다 https://www.kubeflow.org/docs/started/getting-started/["설치 지침"^] 공식 Kubeflow 문서에서 제공됩니다
 
-. 에 따라 클러스터에 Kubeflow를 구현합니다 https://["Kubeflow 구축 지침"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+. 에 따라 클러스터에 Kubeflow를 구현합니다 https://github.com/NVIDIA/deepops/blob/master/docs/k8s-cluster/kubeflow.md["Kubeflow 구축 지침"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
 . DeepOps Kubeflow 구현 도구에서 출력하는 Kubeflow 대시보드 URL을 기록합니다.
 +
 ....
@@ -231,7 +231,7 @@ mysql-pv-claim   Bound    pvc-b2429afd-d028-11e9-9b9d-00505681a82d   20Gi       
 ....
 . 웹 브라우저에서 2단계에서 기록해 둔 URL로 이동하여 Kubeflow 중앙 대시보드에 액세스합니다.
 +
-기본 사용자 이름은 admin@kubeflow.org, 기본 암호는 12341234입니다. 추가 사용자를 생성하려면 의 지침을 따르십시오 https://["Kubeflow 공식 문서"^].
+기본 사용자 이름은 admin@kubeflow.org, 기본 암호는 12341234입니다. 추가 사용자를 생성하려면 의 지침을 따르십시오 https://www.kubeflow.org/docs/components/multi-tenancy/["Kubeflow 공식 문서"^].
 
 
 

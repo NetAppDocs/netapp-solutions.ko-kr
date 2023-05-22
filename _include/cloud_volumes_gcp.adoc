@@ -9,7 +9,7 @@
 .GCP에 NetApp CVO(단일 노드 인스턴스)를 구축하기 위한 Terraform 구성 파일
 이 섹션에는 GCP(Google Cloud Platform)에서 단일 노드 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -96,7 +96,7 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 | * GCP_CONNETOR_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 Connector를 생성하는 데 사용됩니다. 
 
 
-| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 |===
 '단일 노드 인스턴스'
 
@@ -123,7 +123,7 @@ GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 | * GCP_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
 
 
-| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://[]. 
+| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * GCP_cvo_license_type * | 문자열 | (선택 사항) 사용할 라이센스 유형입니다. 단일 노드의 경우: ['capacity-paygo', 'GCP-cot-score-paygo', 'GCP-cot-standard-paygo', 'GCP-cot-premium-paygo', 'GCP-cot-premium-BYOL'], HA:['ha-capacity-paygo', 'GCP-ha-cot-cot-Explore-paygo', 'GCP-ha-cot-standard-paygo', 'GCP-ha-cot-premium-BYOL'] 기본값은 단일 노드의 경우 'capacity-paygo'이고 HA의 경우 'ha-capacity-pago'입니다. 
@@ -137,7 +137,7 @@ GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 .GCP에 NetApp CVO(HA 쌍)를 구축하기 위한 Terraform 구성 파일
 이 섹션에서는 GCP(Google Cloud Platform)의 고가용성 쌍에 NetApp CVO(Cloud Volumes ONTAP)를 구축/구성하는 다양한 Terraform 구성 파일을 다룹니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:
@@ -224,7 +224,7 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 | * GCP_CONNETOR_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 Connector를 생성하는 데 사용됩니다. 
 
 
-| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://[]. 
+| * GCP_CONNETOR_ACCOUNT_ID * | 문자열 | (선택 사항) Connector가 연결될 NetApp 계정 ID 제공되지 않은 경우 Cloud Manager는 첫 번째 계정을 사용합니다. 계정이 없는 경우 Cloud Manager에서 새 계정을 만듭니다. Cloud Manager의 어카운트 탭에서 어카운트 ID를 확인할 수 있습니다 https://cloudmanager.netapp.com[]. 
 |===
 하쌍
 
@@ -293,7 +293,7 @@ GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 | * GCP_cvo_svm_password * | 문자열 | (필수) Cloud Volumes ONTAP의 admin 암호입니다. 
 
 
-| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://[]. 
+| * GCP_cvo_workspace_id * | 문자열 | (선택 사항) Cloud Volumes ONTAP를 구축할 Cloud Manager 작업 공간의 ID입니다. 제공되지 않은 경우 Cloud Manager는 첫 번째 작업 공간을 사용합니다. 의 작업 공간 탭에서 ID를 찾을 수 있습니다 https://cloudmanager.netapp.com[]. 
 
 
 | * GCP_cvo_license_type * | 문자열 | (선택 사항) 사용할 라이센스 유형입니다. 단일 노드의 경우: ['capacity-paygo', 'GCP-cot-score-paygo', 'GCP-cot-standard-paygo', 'GCP-cot-premium-paygo', 'GCP-cot-premium-BYOL'], HA:['ha-capacity-paygo', 'GCP-ha-cot-cot-Explore-paygo', 'GCP-ha-cot-standard-paygo', 'GCP-ha-cot-premium-BYOL'] 기본값은 단일 노드의 경우 'capacity-paygo'이고 HA의 경우 'ha-capacity-pago'입니다. 
@@ -313,7 +313,7 @@ GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 .GCP 기반 NetApp CVS 볼륨 구축을 위한 Terraform 구성 파일
 이 섹션에는 GCP(Google Cloud Platform)에서 NetApp CVS(Cloud Volumes Services) 볼륨을 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
-Terraform 문서: https://[]
+Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/latest/docs[]
 
 .절차를 참조하십시오
 템플릿을 실행하려면:

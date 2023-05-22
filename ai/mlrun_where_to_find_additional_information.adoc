@@ -20,7 +20,7 @@ summary:
 +
 ** NetApp AI Control Plane 기술 보고서
 +
-https://["https://www.netapp.com/us/media/tr-4798.pdf"^]
+https://www.netapp.com/us/media/tr-4798.pdf["https://www.netapp.com/us/media/tr-4798.pdf"^]
 
 
 
@@ -28,28 +28,28 @@ https://["https://www.netapp.com/us/media/tr-4798.pdf"^]
 +
 ** NetApp 트라이던트
 +
-https://["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
+https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
 
 
 
 * ML 프레임워크 및 도구:
 +
-** TensorFlow: 모두를 위한 오픈 소스 머신 러닝 프레임워크 https://["https://www.tensorflow.org/"^]
+** TensorFlow: 모두를 위한 오픈 소스 머신 러닝 프레임워크 https://www.tensorflow.org/["https://www.tensorflow.org/"^]
 ** Docker 를 참조하십시오
 +
-https://["https://docs.docker.com"^]
+https://docs.docker.com["https://docs.docker.com"^]
 
 ** 쿠버네티스
 +
-https://["https://kubernetes.io/docs/home/"^]
+https://kubernetes.io/docs/home/["https://kubernetes.io/docs/home/"^]
 
 ** Kubeflow
 +
-http://["http://www.kubeflow.org/"^]
+http://www.kubeflow.org/["http://www.kubeflow.org/"^]
 
 ** Jupyter 노트북 서버
 +
-http://["http://www.jupyter.org/"^]
+http://www.jupyter.org/["http://www.jupyter.org/"^]
 
 
 
@@ -57,15 +57,15 @@ http://["http://www.jupyter.org/"^]
 +
 ** Iguazio 데이터 과학 플랫폼 문서
 +
-https://["https://www.iguazio.com/docs/"^]
+https://www.iguazio.com/docs/["https://www.iguazio.com/docs/"^]
 
 ** Nuclio 서버리스 기능
 +
-https://["https://nuclio.io/"^]
+https://nuclio.io/["https://nuclio.io/"^]
 
 ** MLRun OpenSource 파이프라인 오케스트레이션 프레임워크
 +
-https://["https://www.iguazio.com/open-source/mlrun/"^]
+https://www.iguazio.com/open-source/mlrun/["https://www.iguazio.com/open-source/mlrun/"^]
 
 
 
@@ -73,15 +73,15 @@ https://["https://www.iguazio.com/open-source/mlrun/"^]
 +
 ** NVIDIA DGX-1 시스템
 +
-https://["https://www.nvidia.com/en-us/data-center/dgx-1/"^]
+https://www.nvidia.com/en-us/data-center/dgx-1/["https://www.nvidia.com/en-us/data-center/dgx-1/"^]
 
 ** NVIDIA Tesla V100 Tensor 코어 GPU
 +
-https://["https://www.nvidia.com/en-us/data-center/tesla-v100/"^]
+https://www.nvidia.com/en-us/data-center/tesla-v100/["https://www.nvidia.com/en-us/data-center/tesla-v100/"^]
 
 ** NVIDIA GPU 클라우드
 +
-https://["https://www.nvidia.com/en-us/gpu-cloud/"^]
+https://www.nvidia.com/en-us/gpu-cloud/["https://www.nvidia.com/en-us/gpu-cloud/"^]
 
 
 
@@ -89,19 +89,19 @@ https://["https://www.nvidia.com/en-us/gpu-cloud/"^]
 +
 ** AFF 데이터시트 를 참조하십시오
 +
-https://["https://www.netapp.com/us/media/ds-3582.pdf"^]
+https://www.netapp.com/us/media/ds-3582.pdf["https://www.netapp.com/us/media/ds-3582.pdf"^]
 
 ** AFF용 NetApp 플래시의 이점
 +
-https://["https://www.netapp.com/us/media/ds-3733.pdf"^]
+https://www.netapp.com/us/media/ds-3733.pdf["https://www.netapp.com/us/media/ds-3733.pdf"^]
 
 ** ONTAP 9.x 설명서
 +
-https://["https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286"^]
 
 ** NetApp FlexGroup 기술 보고서
 +
-https://["https://www.netapp.com/us/media/tr-4557.pdf"^]
+https://www.netapp.com/us/media/tr-4557.pdf["https://www.netapp.com/us/media/tr-4557.pdf"^]
 
 
 
@@ -109,15 +109,15 @@ https://["https://www.netapp.com/us/media/tr-4557.pdf"^]
 +
 ** DGX-1 및 Cisco 네트워킹 기반 ONTAP AI 설계 가이드
 +
-https://["https://www.netapp.com/us/media/nva-1121-design.pdf"^]
+https://www.netapp.com/us/media/nva-1121-design.pdf["https://www.netapp.com/us/media/nva-1121-design.pdf"^]
 
 ** DGX-1 및 Cisco 네트워킹 지원 ONTAP AI 배포 가이드
 +
-https://["https://www.netapp.com/us/media/nva-1121-deploy.pdf"^]
+https://www.netapp.com/us/media/nva-1121-deploy.pdf["https://www.netapp.com/us/media/nva-1121-deploy.pdf"^]
 
 ** DGX-1 및 Mellanox 네트워킹 설계 가이드를 지원하는 ONTAP AI
 +
-https://["https://www.netapp.com/us/media/nva-1138-design.pdf"^]
+https://www.netapp.com/us/media/nva-1138-design.pdf["https://www.netapp.com/us/media/nva-1138-design.pdf"^]
 
 
 
@@ -125,11 +125,11 @@ https://["https://www.netapp.com/us/media/nva-1138-design.pdf"^]
 +
 ** Cisco Nexus 3232C 시리즈 스위치
 +
-https://["https://www.cisco.com/c/en/us/products/switches/nexus-3232c-switch/index.html"^]
+https://www.cisco.com/c/en/us/products/switches/nexus-3232c-switch/index.html["https://www.cisco.com/c/en/us/products/switches/nexus-3232c-switch/index.html"^]
 
 ** Mellanox 스케일 아웃 SN2000 이더넷 스위치 시리즈
 +
-https://["https://www.mellanox.com/page/products_dyn?product_family=251&mtag=sn2000"^]
+https://www.mellanox.com/page/products_dyn?product_family=251&mtag=sn2000["https://www.mellanox.com/page/products_dyn?product_family=251&mtag=sn2000"^]
 
 
 

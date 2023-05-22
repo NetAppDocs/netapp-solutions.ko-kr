@@ -606,16 +606,16 @@ image:sqlsb-aws-image93.png["오류: 그래픽 이미지가 없습니다"]
 
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* https://["TR-4714: NetApp SnapCenter를 사용하여 Microsoft SQL Server에 대한 모범 사례 가이드"^]
+* https://www.netapp.com/pdf.html?item=/media/12400-tr4714pdf.pdf["TR-4714: NetApp SnapCenter를 사용하여 Microsoft SQL Server에 대한 모범 사례 가이드"^]
 +
-https://["https://www.netapp.com/pdf.html?item=/media/12400-tr4714pdf.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/12400-tr4714pdf.pdf["https://www.netapp.com/pdf.html?item=/media/12400-tr4714pdf.pdf"^]
 
-* https://["데이터베이스 복원 요구 사항"^]
+* https://docs.netapp.com/us-en/snapcenter-45/protect-scsql/concept_requirements_for_restoring_a_database.html["데이터베이스 복원 요구 사항"^]
 +
-https://["https://docs.netapp.com/us-en/snapcenter-45/protect-scsql/concept_requirements_for_restoring_a_database.html"^]
+https://docs.netapp.com/us-en/snapcenter-45/protect-scsql/concept_requirements_for_restoring_a_database.html["https://docs.netapp.com/us-en/snapcenter-45/protect-scsql/concept_requirements_for_restoring_a_database.html"^]
 
 * 복제된 데이터베이스 수명주기에 대한 이해
 +
-https://["https://library.netapp.com/ecmdocs/ECMP1217281/html/GUID-4631AFF4-64FE-4190-931E-690FCADA5963.html"^]
+https://library.netapp.com/ecmdocs/ECMP1217281/html/GUID-4631AFF4-64FE-4190-931E-690FCADA5963.html["https://library.netapp.com/ecmdocs/ECMP1217281/html/GUID-4631AFF4-64FE-4190-931E-690FCADA5963.html"^]
 
 

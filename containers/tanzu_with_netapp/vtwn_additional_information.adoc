@@ -17,34 +17,34 @@ summary:
 
 * NetApp 문서
 +
-https://["https://docs.netapp.com/"^]
+https://docs.netapp.com/["https://docs.netapp.com/"^]
 
 * Astra Trident 문서
 +
-https://["https://docs.netapp.com/us-en/trident/"^]
+https://docs.netapp.com/us-en/trident/["https://docs.netapp.com/us-en/trident/"^]
 
 * NetApp Astra Control Center 문서
 +
-https://["https://docs.netapp.com/us-en/astra-control-center/"^]
+https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
 
 * Ansible 설명서
 +
-https://["https://docs.ansible.com/"^]
+https://docs.ansible.com/["https://docs.ansible.com/"^]
 
 * VMware Tanzu 설명서
 +
-https://["https://docs.vmware.com/en/VMware-Tanzu/index.html"^]
+https://docs.vmware.com/en/VMware-Tanzu/index.html["https://docs.vmware.com/en/VMware-Tanzu/index.html"^]
 
 * VMware Tanzu Kubernetes Grid 설명서
 +
-https://["https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-index.html"^]
+https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-index.html["https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-index.html"^]
 
 * VMware Tanzu Kubernetes Grid Service 설명서
 +
-https://["https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html"^]
+https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html["https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html"^]
 
 * VMware Tanzu Kubernetes Grid Integrated Edition 설명서
 +
-https://["https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Integrated-Edition/index.html"^]
+https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Integrated-Edition/index.html["https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Integrated-Edition/index.html"^]
 
 

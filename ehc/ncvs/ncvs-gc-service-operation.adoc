@@ -66,12 +66,12 @@ Cloud Volumes Service 계약이 종료된 경우 NetApp은 특정 기간 이후�
 
 == 인증
 
-Cloud Volumes Services for Google Cloud는 현재 ISO/IEC 27001:2013 및 ISO/IEC 27018:2019 표준에 따라 인증되었습니다. 또한 이 서비스는 최근 SOC2 Type I Attestation 보고서를 받았습니다. 데이터 보안 및 개인 정보 보호에 대한 NetApp의 약속에 대한 자세한 내용은 을 참조하십시오 https://["규정 준수: 데이터 보안 및 데이터 개인 정보 보호"^].
+Cloud Volumes Services for Google Cloud는 현재 ISO/IEC 27001:2013 및 ISO/IEC 27018:2019 표준에 따라 인증되었습니다. 또한 이 서비스는 최근 SOC2 Type I Attestation 보고서를 받았습니다. 데이터 보안 및 개인 정보 보호에 대한 NetApp의 약속에 대한 자세한 내용은 을 참조하십시오 https://www.netapp.com/company/trust-center/compliance/["규정 준수: 데이터 보안 및 데이터 개인 정보 보호"^].
 
 
 
 == GDPR을 참조하십시오
 
-개인 정보 보호 및 GDPR 준수에 대한 NetApp의 약속은 당사의 다양한 규정으로 제공됩니다  https://["고객 계약"^]있습니다 https://["고객 데이터 처리 부록"^]를 포함합니다  https://["표준 계약 조항"^] 유럽 위원회에서 제공. 또한 NetApp은 개인 정보 보호 정책에 이러한 의무를 이행하며, 이는 기업 행동 강령에 명시된 핵심 가치를 기반으로 합니다.
+개인 정보 보호 및 GDPR 준수에 대한 NetApp의 약속은 당사의 다양한 규정으로 제공됩니다  https://www.netapp.com/how-to-buy/sales-terms-and-conditions%22%20/o%20%22SEO%20-%20Sales%20Terms%20and%20Conditions["고객 계약"^]있습니다 https://netapp.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCqPPgcufskl_71q-FelD4DHz5EMJVOkqqT0iiORT10DlfZnZeMpDrse5W6K9LEw6o*["고객 데이터 처리 부록"^]를 포함합니다  https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en["표준 계약 조항"^] 유럽 위원회에서 제공. 또한 NetApp은 개인 정보 보호 정책에 이러한 의무를 이행하며, 이는 기업 행동 강령에 명시된 핵심 가치를 기반으로 합니다.
 
 link:ncvs-gc-additional-information.html["다음: 추가 정보, 버전 기록 및 연락처 정보"]

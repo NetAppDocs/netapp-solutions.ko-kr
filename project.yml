@@ -23,6 +23,7 @@ sidebar:
   - section: databases
   - section: data-analytics
   - section: ehc
+  - section: rhhc
   - section: virtualization
   - section: automation
   - title: FlexPod 솔루션
@@ -48,7 +49,7 @@ homepage:
     - title: 비디오 데모
       url: videos.html
     - title: 법적 고지
-      url: reference_legal_notices.html
+      url: legal-notices.html
   - title: 솔루션 랜딩 페이지
     links:
     - title: 인공 지능
@@ -61,6 +62,8 @@ homepage:
       url: data-analytics/index.html
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
       url: ehc/index.html
+    - title: Red Hat을 사용하는 NetApp 하이브리드 멀티 클라우드
+      url: rhhc/index.html
     - title: SAP 및 SAP HANA
       url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
     - title: 포함되었습니다

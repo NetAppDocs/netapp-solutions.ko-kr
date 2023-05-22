@@ -30,11 +30,11 @@ image:azure-dro-image1.png["오류: 그래픽 이미지가 없습니다"]
 
 === 필수 구성 요소 및 일반 권장 사항
 
-* 복제 피어링을 생성하여 지역 간 복제를 활성화했는지 확인합니다. 을 참조하십시오 https://["Azure NetApp Files에 대한 볼륨 복제를 생성합니다"^].
+* 복제 피어링을 생성하여 지역 간 복제를 활성화했는지 확인합니다. 을 참조하십시오 https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering["Azure NetApp Files에 대한 볼륨 복제를 생성합니다"^].
 * 소스 클라우드와 타겟 Azure VMware 솔루션 프라이빗 클라우드 간에 ExpressRoute Global Reach를 구성해야 합니다.
 * 리소스에 액세스할 수 있는 서비스 보안 주체가 있어야 합니다.
 * 기본 AVS 사이트에서 보조 AVS 사이트로 연결되는 토폴로지는 다음과 같습니다.
-* 를 구성합니다 https://["복제"^] 비즈니스 요구 및 데이터 변경률에 따라 각 볼륨에 대한 일정을 적절히 조정합니다.
+* 를 구성합니다 https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction["복제"^] 비즈니스 요구 및 데이터 변경률에 따라 각 볼륨에 대한 일정을 적절히 조정합니다.
 
 
 
@@ -48,9 +48,9 @@ NOTE: 계단식 및 팬인 및 팬아웃 토폴로지는 지원되지 않습니�
 
 === Azure VMware 솔루션을 구축합니다
 
-를 클릭합니다 https://["Azure VMware 솔루션"^] AVS(AVS)는 Microsoft Azure 퍼블릭 클라우드 내에 완벽하게 작동하는 VMware SDDC를 제공하는 하이브리드 클라우드 서비스입니다. AVS는 Microsoft에서 완벽하게 관리 및 지원하고 Azure 인프라를 사용하는 VMware에서 검증한 최초의 솔루션입니다. 따라서 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN 및 네트워킹 및 보안을 위한 NSX를 얻는 동시에 Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설 및 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접할 수 있는 이점을 누릴 수 있습니다. Azure VMware 솔루션 SDDC와 Azure NetApp Files를 함께 사용하면 네트워크 지연 시간을 최소화하면서 최상의 성능을 얻을 수 있습니다.
+를 클릭합니다 https://learn.microsoft.com/en-us/azure/azure-vmware/introduction["Azure VMware 솔루션"^] AVS(AVS)는 Microsoft Azure 퍼블릭 클라우드 내에 완벽하게 작동하는 VMware SDDC를 제공하는 하이브리드 클라우드 서비스입니다. AVS는 Microsoft에서 완벽하게 관리 및 지원하고 Azure 인프라를 사용하는 VMware에서 검증한 최초의 솔루션입니다. 따라서 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN 및 네트워킹 및 보안을 위한 NSX를 얻는 동시에 Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설 및 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접할 수 있는 이점을 누릴 수 있습니다. Azure VMware 솔루션 SDDC와 Azure NetApp Files를 함께 사용하면 네트워크 지연 시간을 최소화하면서 최상의 성능을 얻을 수 있습니다.
 
-Azure에서 AVS 프라이빗 클라우드를 구성하려면 이 단계를 수행하십시오 https://["링크"^] NetApp 제품 설명서를 참조하십시오 https://["링크"^] Microsoft 설명서를 참조하십시오. 최소 구성으로 설정된 파일럿 라이트 환경을 DR 용도로 사용할 수 있습니다. 이 설정에는 중요한 애플리케이션을 지원하는 핵심 구성 요소만 포함되며, 페일오버가 발생하는 경우 더 많은 호스트를 확장하고 확장하여 대량의 로드를 처리할 수 있습니다.
+Azure에서 AVS 프라이빗 클라우드를 구성하려면 이 단계를 수행하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html["링크"^] NetApp 제품 설명서를 참조하십시오 https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal["링크"^] Microsoft 설명서를 참조하십시오. 최소 구성으로 설정된 파일럿 라이트 환경을 DR 용도로 사용할 수 있습니다. 이 설정에는 중요한 애플리케이션을 지원하는 핵심 구성 요소만 포함되며, 페일오버가 발생하는 경우 더 많은 호스트를 확장하고 확장하여 대량의 로드를 처리할 수 있습니다.
 
 
 NOTE: 최초 릴리즈에서 DRO는 기존 AVS SDDC 클러스터를 지원합니다. 온디맨드 SDDC 작성은 향후 릴리스에서 제공될 예정입니다.
@@ -59,7 +59,7 @@ NOTE: 최초 릴리즈에서 DRO는 기존 AVS SDDC 클러스터를 지원합니
 
 === Azure NetApp Files 프로비저닝 및 구성
 
-https://["Azure NetApp Files"^] 는 엔터프라이즈급 고성능 용량제 파일 스토리지 서비스입니다. 이 단계를 따릅니다 https://["링크"^] AVS 프라이빗 클라우드 구축을 최적화하기 위해 Azure NetApp Files를 NFS 데이터 저장소로 프로비저닝 및 구성합니다.
+https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-introduction["Azure NetApp Files"^] 는 엔터프라이즈급 고성능 용량제 파일 스토리지 서비스입니다. 이 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal["링크"^] AVS 프라이빗 클라우드 구축을 최적화하기 위해 Azure NetApp Files를 NFS 데이터 저장소로 프로비저닝 및 구성합니다.
 
 
 
@@ -69,7 +69,7 @@ https://["Azure NetApp Files"^] 는 엔터프라이즈급 고성능 용량제 �
 
 image:azure-dro-image2.png["오류: 그래픽 이미지가 없습니다"]
 
-이 단계를 따릅니다 https://["링크"^] 복제 피어링을 생성하여 지역 간 복제를 설정합니다. 대상 용량 풀의 서비스 수준은 소스 용량 풀의 서비스 수준과 일치할 수 있습니다. 그러나 이러한 특정 사용 사례에서 표준 서비스 수준을 선택한 다음 https://["서비스 수준을 수정합니다"^] 실제 재해 또는 DR 시뮬레이션이 발생하는 경우
+이 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering["링크"^] 복제 피어링을 생성하여 지역 간 복제를 설정합니다. 대상 용량 풀의 서비스 수준은 소스 용량 풀의 서비스 수준과 일치할 수 있습니다. 그러나 이러한 특정 사용 사례에서 표준 서비스 수준을 선택한 다음 https://learn.microsoft.com/en-us/azure/azure-netapp-files/dynamic-change-volume-service-level["서비스 수준을 수정합니다"^] 실제 재해 또는 DR 시뮬레이션이 발생하는 경우
 
 
 NOTE: 교차 지역 복제 관계는 사전 요구 사항으로, 미리 만들어야 합니다.
@@ -183,7 +183,7 @@ NOTE: 데모용으로 소스 사이트 추가는 이 문서에서 다룹니다.
 
 . vCenter 세부 정보를 업데이트합니다. 이렇게 하려면 기본 AVS SDDC 드롭다운에서 자격 증명, Azure 지역 및 리소스 그룹을 선택합니다.
 . DRO는 해당 지역 내에서 사용 가능한 모든 DC를 나열합니다. 드롭다운에서 지정된 사설 클라우드 URL을 선택합니다.
-. 를 입력합니다 `cloudadmin@vsphere.local` 사용자 자격 증명. 이 기능은 Azure Portal에서 액세스할 수 있습니다. 여기에 설명된 단계를 따릅니다 https://["링크"^]. 완료되면 * Continue * 를 클릭합니다.
+. 를 입력합니다 `cloudadmin@vsphere.local` 사용자 자격 증명. 이 기능은 Azure Portal에서 액세스할 수 있습니다. 여기에 설명된 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud["링크"^]. 완료되면 * Continue * 를 클릭합니다.
 +
 image:azure-dro-image6.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -328,22 +328,22 @@ Azure NetApp Files 및 Azure VMware 재해 복구 솔루션은 다음과 같은 
 
 * Azure NetApp Files에 대한 볼륨 복제를 생성합니다
 +
-https://["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering"^]
+https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering"^]
 
 * Azure NetApp Files 볼륨의 교차 지역 복제
 +
-https://["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction#service-level-objectives"^]
+https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction%23service-level-objectives["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction#service-level-objectives"^]
 
-* https://["Azure VMware 솔루션"^]
+* https://learn.microsoft.com/en-us/azure/azure-vmware/introduction["Azure VMware 솔루션"^]
 +
-https://["https://learn.microsoft.com/en-us/azure/azure-vmware/introduction"^]
+https://learn.microsoft.com/en-us/azure/azure-vmware/introduction["https://learn.microsoft.com/en-us/azure/azure-vmware/introduction"^]
 
 * Azure에서 가상화 환경을 구축하고 구성합니다
 +
-https://["https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html"^]
+https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html["https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html"^]
 
 * Azure VMware 솔루션을 구축 및 구성합니다
 +
-https://["https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal"^]
+https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal["https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal"^]
 
 

@@ -46,7 +46,7 @@ VVOL이 포함된 SRM을 사용하려면 클러스터 범위 자격 증명 및 �
 * 기본 vsadmin SVM 계정에는 ONTAP 툴 작업을 수행하는 데 필요한 액세스 수준이 없습니다. 따라서 새 SVM 계정을 생성해야 합니다.
 * ONTAP 9.8 이상을 사용하는 경우, ONTAP System Manager의 사용자 메뉴와 함께 ONTAP 도구 어플라이언스의 JSON 파일을 사용하여 RBAC 최소 권한 사용자 계정을 "\https://<IP address>:9083/VSC/config/"에서 생성하는 것이 좋습니다. 관리자 암호를 사용하여 JSON 파일을 다운로드합니다. SVM 또는 클러스터 범위 어카운트에 사용할 수 있습니다.
 +
-ONTAP 9.6 이하를 사용하는 경우 에서 사용할 수 있는 RBAC 사용자 작성 도구(RUC)를 사용해야 합니다 https://["NetApp Support 사이트 Toolchest"^].
+ONTAP 9.6 이하를 사용하는 경우 에서 사용할 수 있는 RBAC 사용자 작성 도구(RUC)를 사용해야 합니다 https://mysupport.netapp.com/site/tools/tool-eula/rbac["NetApp Support 사이트 Toolchest"^].
 
 * vCenter UI 플러그인, VASA Provider 및 SRA 서버는 모두 완전히 통합된 서비스이므로 ONTAP용 vCenter UI 툴에서 스토리지를 추가하는 것과 동일한 방식으로 SRM에서 SRA 어댑터에 스토리지를 추가해야 합니다. 그렇지 않으면 SRA 서버는 SRA 어댑터를 통해 SRM에서 전송되는 요청을 인식하지 못할 수 있습니다.
 * SVM 범위 자격 증명을 사용할 때는 NFS 경로 검사가 수행되지 않습니다. 물리적 위치가 SVM에서 논리적으로 추상화되기 때문입니다. 하지만 최신 ONTAP 시스템은 간접 경로를 사용할 때 눈에 띄는 성능 저하가 더 이상 발생하지 않으므로 이는 우려의 원인이 아닙니다.

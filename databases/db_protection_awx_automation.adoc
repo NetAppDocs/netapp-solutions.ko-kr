@@ -221,7 +221,7 @@ extra_vars:
 +
 .. 이름 및 조직 세부 정보를 입력합니다.
 .. 소스 제어 자격 증명 유형 필드에서 Git 를 선택합니다.
-.. 를 입력합니다 <https://[] 소스 제어 URL입니다.
+.. 를 입력합니다 <https://github.com/NetApp-Automation/na_oracle19c_data_protection.git>[] 소스 제어 URL입니다.
 .. 저장 을 클릭합니다.
 .. 소스 코드가 변경되면 프로젝트를 가끔 동기화해야 할 수 있습니다.
 

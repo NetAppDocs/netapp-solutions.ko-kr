@@ -42,7 +42,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 
 == 단계
 
-* 과(와) 호환 여부를 점검하십시오 https://["상호 운용성 매트릭스 툴(IMT)."]
+* 과(와) 호환 여부를 점검하십시오 https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)."]
 +
 ** link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-nfs-vaai/GUID-DA231492-F8D1-4E1B-A634-79BA906ECE76.html++["NFS 구성이 지원되는지 확인합니다."]
 

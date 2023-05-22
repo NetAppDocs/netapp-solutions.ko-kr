@@ -48,7 +48,7 @@ permitted by applicable law.
 * * 역할 기반 액세스 제어(RBAC). * 두 가지 유형의 RBAC 컨트롤이 NetApp ONTAP 도구에 연결되어 있습니다.
 +
 ** 기본 vCenter Server 권한
-** VMware vCenter 플러그인별 권한 자세한 내용은 을 참조하십시오 https://["역할 기반 액세스 제어(RBAC)"^].
+** VMware vCenter 플러그인별 권한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["역할 기반 액세스 제어(RBAC)"^].
 
 
 * * 암호화된 통신 채널. * 모든 외부 통신은 TLS를 사용하여 HTTPS를 통해 이루어집니다.
@@ -75,7 +75,7 @@ permitted by applicable law.
 
 | 443 | Nginx(데이터 보호 서비스) 
 |===
-* * CA(인증 기관) 서명 인증서 지원 * VMware vSphere용 SnapCenter 플러그인은 CA 서명 인증서의 기능을 지원합니다. 을 참조하십시오 https://["SSL 인증서를 생성 및/또는 VMware vSphere용 SnapCenter 플러그인(SCV)으로 가져오는 방법"^].
+* * CA(인증 기관) 서명 인증서 지원 * VMware vSphere용 SnapCenter 플러그인은 CA 서명 인증서의 기능을 지원합니다. 을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["SSL 인증서를 생성 및/또는 VMware vSphere용 SnapCenter 플러그인(SCV)으로 가져오는 방법"^].
 * * 암호 정책 * 다음 암호 정책이 적용됩니다.
 +
 ** 암호는 로그 파일에 기록되지 않습니다.

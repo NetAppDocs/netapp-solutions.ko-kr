@@ -14,7 +14,7 @@ Oliver Krause, Justin Parisi, NetApp
 
 == 문서 범위
 
-특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp의 보안 제품에 대한 개요입니다 https://["Cloud Volumes Service는 Google Cloud에서 제공합니다"^].
+특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp의 보안 제품에 대한 개요입니다 https://cloud.netapp.com/cloud-volumes-service-for-gcp["Cloud Volumes Service는 Google Cloud에서 제공합니다"^].
 
 
 

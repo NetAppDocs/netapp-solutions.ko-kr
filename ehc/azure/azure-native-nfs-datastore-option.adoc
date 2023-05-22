@@ -18,7 +18,7 @@ NFS 데이터 저장소 지원은 vSphere의 스토리지 기능을 크게 확�
 
 vSphere on NFS는 강력한 성능과 안정성을 제공하기 때문에 사내 가상화 구축에 널리 채택되는 옵션입니다. 사내 데이터 센터에 NAS(Network-Attached Storage)가 많이 있는 경우 Azure NetApp 파일 데이터 저장소와 Azure에 Azure VMware 솔루션 SDDC를 구축하여 용량 및 성능 문제를 해결하는 것이 좋습니다.
 
-Azure NetApp Files는 업계 최고의 고가용성 NetApp ONTAP 데이터 관리 소프트웨어를 기반으로 구축되었습니다. Microsoft Azure 서비스는 기본, 메인스트림, 전문 등 세 가지 범주로 분류됩니다. Azure NetApp Files는 특수 범주에 속하며 이미 여러 지역에 배포된 하드웨어를 통해 지원됩니다. Azure NetApp Files에는 고가용성(HA)이 내장되어 있어 대부분의 운영 중단으로부터 데이터를 보호하고 업계 최고 수준의 SLA를 제공합니다 https://["99.99%"^] 가동 시간.
+Azure NetApp Files는 업계 최고의 고가용성 NetApp ONTAP 데이터 관리 소프트웨어를 기반으로 구축되었습니다. Microsoft Azure 서비스는 기본, 메인스트림, 전문 등 세 가지 범주로 분류됩니다. Azure NetApp Files는 특수 범주에 속하며 이미 여러 지역에 배포된 하드웨어를 통해 지원됩니다. Azure NetApp Files에는 고가용성(HA)이 내장되어 있어 대부분의 운영 중단으로부터 데이터를 보호하고 업계 최고 수준의 SLA를 제공합니다 https://azure.microsoft.com/support/legal/sla/netapp/v1_1/["99.99%"^] 가동 시간.
 
 Azure NetApp Files 데이터 저장소 기능을 도입하기 전에 성능 및 스토리지 집약적인 워크로드를 호스팅하려는 고객을 위한 스케일아웃 작업에 컴퓨팅 및 스토리지를 모두 확장해야 했습니다.
 
@@ -148,12 +148,12 @@ az extension add --name vmware
 .Azure NetApp Files 볼륨을 생성하고 마운트합니다
 [%collapsible]
 ====
-. Azure Portal에 로그인하고 Azure NetApp Files에 액세스합니다. az provider register"--namespace Microsoft.NetApp –wait 명령을 사용하여 Azure NetApp Files 서비스에 대한 액세스를 확인하고 Azure NetApp Files 리소스 공급자를 등록합니다. 등록 후 NetApp 계정을 만드십시오. 이를 참조하십시오 https://["링크"^] 를 참조하십시오.
+. Azure Portal에 로그인하고 Azure NetApp Files에 액세스합니다. az provider register"--namespace Microsoft.NetApp –wait 명령을 사용하여 Azure NetApp Files 서비스에 대한 액세스를 확인하고 Azure NetApp Files 리소스 공급자를 등록합니다. 등록 후 NetApp 계정을 만드십시오. 이를 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["링크"^] 를 참조하십시오.
 
 
 image:vmware-dr-image2.png["오류: 그래픽 이미지가 없습니다"]
 
-. NetApp 계정을 생성한 후 필요한 서비스 수준 및 크기의 용량 풀을 설정합니다. 자세한 내용은 이를 참조하십시오 https://["링크"^].
+. NetApp 계정을 생성한 후 필요한 서비스 수준 및 크기의 용량 풀을 설정합니다. 자세한 내용은 이를 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["링크"^].
 
 
 image:vmware-dr-image3.png["오류: 그래픽 이미지가 없습니다"]
@@ -168,7 +168,7 @@ image:vmware-dr-image3.png["오류: 그래픽 이미지가 없습니다"]
 
 
 |===
-. Azure NetApp Files에 대해 위임된 서브넷을 구성하고 볼륨을 생성할 때 이 서브넷을 지정합니다. 위임된 서브넷을 생성하는 자세한 단계는 이것을 참조하십시오 https://["링크"^].
+. Azure NetApp Files에 대해 위임된 서브넷을 구성하고 볼륨을 생성할 때 이 서브넷을 지정합니다. 위임된 서브넷을 생성하는 자세한 단계는 이것을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet["링크"^].
 . 용량 풀 블레이드 아래에 있는 볼륨 블레이드를 사용하여 데이터 저장소에 대한 NFS 볼륨을 추가합니다.
 
 
@@ -228,7 +228,7 @@ Azure NetApp Files는 Standard(테라바이트당 16MBps), Premium(테라바이�
 
 image:vmware-dr-image6.png["오류: 그래픽 이미지가 없습니다"]
 
-자세한 내용은 을 참조하십시오 https://["Azure NetApp Files의 서비스 레벨"^].
+자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["Azure NetApp Files의 서비스 레벨"^].
 
 이를 참조하십시오 link:https://learn.microsoft.com/en-us/azure/azure-netapp-files/performance-benchmarks-azure-vmware-solution["Microsoft의 링크"] 사이징 작업 중에 사용할 수 있는 자세한 성능 벤치마크
 

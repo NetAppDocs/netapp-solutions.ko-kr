@@ -14,14 +14,30 @@ keywords: database, Oracle, Azure NetApp files, Azure
 :imagesdir: ./../media/
 
 
-Allen Cao, Niyaz Mohamed, NetApp
-
 [role="lead"]
+저자: Allen Cao, Niyaz Mohamed, NetApp
+
+
+
+== 개요
+
 많은 미션 크리티컬 Oracle 엔터프라이즈 데이터베이스가 여전히 사내에서 호스팅되며, 많은 기업에서 이러한 Oracle 데이터베이스를 퍼블릭 클라우드로 마이그레이션하려고 합니다. 종종 이러한 Oracle 데이터베이스는 애플리케이션 중심이므로 많은 서비스형 데이터베이스 퍼블릭 클라우드 오퍼링에서 누락되는 사용자별 구성이 필요합니다. 따라서 현재의 데이터베이스 환경에서는 고유한 요구 사항을 수용할 수 있는 고성능의 확장 가능한 컴퓨팅 및 스토리지 서비스를 통해 구축된 퍼블릭 클라우드 기반 Oracle 데이터베이스 솔루션이 필요합니다. Azure 가상 머신 컴퓨팅 인스턴스 및 Azure NetApp Files 스토리지 서비스는 미션 크리티컬 Oracle 데이터베이스 워크로드를 퍼블릭 클라우드로 구축 및 마이그레이션하는 데 활용할 수 있는 퍼즐의 누락된 조각일 수 있습니다.
+
+
+
+== Azure 가상 머신
 
 Azure 가상 시스템은 Azure가 제공하는 여러 가지 유형의 온디맨드 확장 가능한 컴퓨팅 리소스 중 하나입니다. 일반적으로 다른 선택 사항보다 컴퓨팅 환경에 대한 제어 능력이 더 필요한 경우 가상 시스템을 선택합니다. Azure 가상 시스템은 컴퓨팅 또는 메모리 집약적인 워크로드에 관계없이 Oracle 데이터베이스를 실행하는 데 필요한 특정 구성으로 컴퓨터를 빠르고 쉽게 만들 수 있는 방법을 제공합니다. Azure 가상 네트워크의 가상 시스템은 보안 VPN 터널을 통해 조직의 네트워크에 쉽게 연결할 수 있습니다.
 
+
+
+== Azure NetApp Files(ANF)
+
 Azure NetApp Files는 데이터베이스 워크로드를 이전보다 더 빠르고 안전하게 클라우드로 이전할 수 있는 완전 관리형 Microsoft 서비스입니다. 이 솔루션은 클라우드에서 Oracle 데이터베이스와 같은 고성능 워크로드를 실행하는 데 필요한 핵심 요구사항을 충족하도록 설계되었으며, 실제 IOPS 요구사항, 짧은 지연 시간, 고가용성, 높은 내구성, 대규모 관리 편의성을 반영하는 성능 계층을 제공합니다. 빠르고 효율적인 백업, 복구 및 클로닝에 활용할 수 있습니다. Azure NetApp Files는 Azure 데이터 센터 환경 내에서 실행되는 물리적 All-Flash NetApp ONTAP 시스템을 기반으로 하므로 이러한 기능이 가능합니다. Azure NetApp Files는 Azure DC 및 포털에 완벽하게 통합되어 있으며, 고객은 동일한 편안한 그래픽 인터페이스 및 API를 사용하여 다른 Azure 개체와 마찬가지로 공유 파일을 만들고 관리할 수 있습니다. Azure NetApp 파일을 사용하면 추가 위험, 비용 또는 시간 없이 Azure의 모든 기능을 활용할 수 있으며 Azure 네이티브 엔터프라이즈 파일 서비스만 믿고 사용할 수 있습니다.
+
+
+
+== 결론
 
 이 문서에서는 온프레미스 시스템과 비슷한 성능과 내구성을 제공하는 Azure 가상 머신 및 Azure NetApp Files 스토리지 서비스를 사용하여 Oracle 데이터베이스를 구축, 구성 및 보호하는 방법에 대해 자세히 설명합니다. 모범 사례 지침은 TR-4780을 참조하십시오 link:https://www.netapp.com/media/17105-tr4780.pdf["Oracle Databases on Microsoft Azure 를 참조하십시오"^]. 더 중요한 것은 NetApp이 Azure 퍼블릭 클라우드에서 Oracle 데이터베이스 워크로드의 구현, 구성, 데이터 보호, 마이그레이션 및 관리에 필요한 대부분의 작업을 자동화하는 자동화 툴툴킷을 제공하는 것입니다. 자동화 툴킷을 NetApp 퍼블릭 GitHub 사이트에서 다운로드할 수 있습니다. link:https://github.com/NetApp-Automation/["NetApp - 자동화"^].
 

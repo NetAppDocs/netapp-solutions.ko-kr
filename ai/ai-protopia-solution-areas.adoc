@@ -46,8 +46,8 @@ link:ai-protopia-overview.html["이전: 개요."]
 
 == AI/ML 분석의 클라우드 마이그레이션
 
-엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다 https://["데이터 보호"^] 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.
+엔터프라이즈 고객은 전통적으로 AI/ML 모델을 온프레미스에 교육 및 배포했습니다. 규모의 경제 및 효율성 측면에서 이러한 고객은 AI/ML 기능을 퍼블릭, 하이브리드 또는 멀티 클라우드 클라우드 구현 환경으로 이전하기 위해 확장하고 있습니다. 그러나 다른 인프라에 노출될 수 있는 데이터에 바인딩됩니다. NetApp 솔루션은 에 필요한 모든 범위의 사이버 보안 위협을 해결합니다 https://www.netapp.com/data-protection/?internal_promo=mdw_aiml_ww_all_awareness-coas_blog["데이터 보호"^] 또한, 보안 평가 및 프로토피아 데이터 변환과 결합하면 이미지 처리 AI/ML 워크로드를 클라우드로 마이그레이션하는 데 따른 위험을 최소화할 수 있습니다.
 
-다른 업계에서의 에지 컴퓨팅 및 AI 추론의 추가 사용 사례는 를 참조하십시오 https://["TR-4886 Ai Inferencing at the Edge(가장자리 기준 TR-4886 AI 추론"^] 그리고 NetApp AI 블로그, https://["인텔리전스와 개인 정보 보호 비교"^].
+다른 업계에서의 에지 컴퓨팅 및 AI 추론의 추가 사용 사례는 를 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ai/ai-edge-introduction.html["TR-4886 Ai Inferencing at the Edge(가장자리 기준 TR-4886 AI 추론"^] 그리고 NetApp AI 블로그, https://www.netapp.com/blog/federated-learning-intelligence-vs-privacy/["인텔리전스와 개인 정보 보호 비교"^].
 
 link:ai-protopia-technology-overview.html["다음: 기술 개요"]

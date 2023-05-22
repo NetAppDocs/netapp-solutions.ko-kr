@@ -82,6 +82,6 @@ summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 사용�
 
 NOTE: 이 멀티 OS 환경은 베어 메탈 솔루션의 Anthos의 지원되는 OS 버전과의 상호 운용성을 보여줍니다. 우리는 고객이 구축을 위해 하나 또는 일부 운영 체제를 표준화할 것으로 예상하고 있습니다.
 
-베어 메탈 하드웨어 및 소프트웨어 요구 사항에 대한 Anthos는 를 참조하십시오 https://["Anthos의 Bare Metal 문서"^] 페이지.
+베어 메탈 하드웨어 및 소프트웨어 요구 사항에 대한 Anthos는 를 참조하십시오 https://cloud.google.com/anthos/clusters/docs/bare-metal/latest["Anthos의 Bare Metal 문서"^] 페이지.
 
 link:bmanthos_deployment_summary.html["다음: 배포 요약."]

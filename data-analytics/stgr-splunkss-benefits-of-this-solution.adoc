@@ -23,6 +23,6 @@ link:stgr-splunkss-introduction.html["이전: 소개."]
 * 데이터 가용성 * 데이터 가용성, 성능, 지리적 분산, 보존, 보호, 변화하는 데이터의 비즈니스 가치에 맞춰 동적으로 조정할 수 있는 메타데이터 기반 정책을 통해 스토리지 비용을 절감합니다.
 
 
-로컬(핫)과 원격(웜) 스토리지 간의 버킷 복사본 전송을 처리하는 인덱서의 구성 요소인 SmartStore 캐시를 사용하여 성능을 높입니다. 이 솔루션을 위한 Splunk 사이징은 을 기반으로 합니다 https://["Splunk에서 제공하는 지침"^]. 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.
+로컬(핫)과 원격(웜) 스토리지 간의 버킷 복사본 전송을 처리하는 인덱서의 구성 요소인 SmartStore 캐시를 사용하여 성능을 높입니다. 이 솔루션을 위한 Splunk 사이징은 을 기반으로 합니다 https://docs.splunk.com/Documentation/Splunk/8.0.5/Capacity/Summaryofperformancerecommendations["Splunk에서 제공하는 지침"^]. 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.
 
 link:stgr-splunkss-intelligent-tiering-and-cost-savings.html["다음 단계: 지능형 계층화 및 비용 절감."]

@@ -59,7 +59,7 @@ link:kafka-nfs-functional-validation-silly-rename-fix.html["이전: 기능 검�
 
 === 벤치마킹 툴
 
-이 테스트 사례에 사용된 벤치마킹 툴은 입니다 https://["OpenMessaging"^] 프레임워크: OpenMessaging은 공급업체에 구애받지 않고 언어와 독립적입니다. 금융, 전자 상거래, IoT 및 빅 데이터에 대한 업계 지침을 제공하며 이기종 시스템 및 플랫폼에서 메시징 및 스트리밍 애플리케이션을 개발하는 데 도움이 됩니다. 다음 그림에서는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여 줍니다.
+이 테스트 사례에 사용된 벤치마킹 툴은 입니다 https://openmessaging.cloud/["OpenMessaging"^] 프레임워크: OpenMessaging은 공급업체에 구애받지 않고 언어와 독립적입니다. 금융, 전자 상거래, IoT 및 빅 데이터에 대한 업계 지침을 제공하며 이기종 시스템 및 플랫폼에서 메시징 및 스트리밍 애플리케이션을 개발하는 데 도움이 됩니다. 다음 그림에서는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여 줍니다.
 
 image:kafka-nfs-image8.png["이 이미지는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여줍니다."]
 

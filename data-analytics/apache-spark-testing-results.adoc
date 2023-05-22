@@ -79,7 +79,7 @@ E-Series와 StorageGRID 검증 모두에 Hadoop 복제 계수 2를 사용했습�
 
 == 재무 정서 분석
 
-발표했습니다 https://["TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석"^]즉, 포괄적인 대화형 AI 파이프라인은 를 사용하여 구축되었습니다 https://["NetApp DataOps 툴킷"^], AFF 스토리지 및 NVIDIA DGX 시스템. 파이프라인은 DataOps 툴킷을 활용하여 배치 오디오 신호 처리, 자동 음성 인식(ASR), 전송 학습 및 정서 분석을 수행합니다. https://["NVIDIA Riva SDK를 참조하십시오"^], 및 https://["Tao 프레임워크"^]. 정서 분석 활용 사례를 금융 서비스 산업으로 확대하면서 스파르크LP 워크플로를 구축하고, 명명된 엔터티 인식 등의 다양한 NLP 작업을 위한 BERT 모델을 3개 로드했으며, NASDAQ 상위 10개 기업의 분기별 수익 통화에 대해 문장 수준의 감정을 얻었습니다.
+발표했습니다 https://docs.netapp.com/us-en/netapp-solutions/ai/ai-sent-support-center-analytics.html["TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석"^]즉, 포괄적인 대화형 AI 파이프라인은 를 사용하여 구축되었습니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^], AFF 스토리지 및 NVIDIA DGX 시스템. 파이프라인은 DataOps 툴킷을 활용하여 배치 오디오 신호 처리, 자동 음성 인식(ASR), 전송 학습 및 정서 분석을 수행합니다. https://developer.nvidia.com/riva["NVIDIA Riva SDK를 참조하십시오"^], 및 https://developer.nvidia.com/tao["Tao 프레임워크"^]. 정서 분석 활용 사례를 금융 서비스 산업으로 확대하면서 스파르크LP 워크플로를 구축하고, 명명된 엔터티 인식 등의 다양한 NLP 작업을 위한 BERT 모델을 3개 로드했으며, NASDAQ 상위 10개 기업의 분기별 수익 통화에 대해 문장 수준의 감정을 얻었습니다.
 
 다음 스크립트의 entiment_analysis_spark. py는 다음 표와 같이 FinBERT 모델을 사용하여 HDFS에서 전사체를 처리하고 양의, 중성적이고, 부정적인 정서 수를 산출합니다.
 
@@ -242,7 +242,7 @@ image:apache-spark-image12.png["Horovod Spark 워크플로 런타임."]
 
 CTR을 최대화하도록 설계된 추천 시스템의 경우 낮은 순서에서 높은 순서로 수학적으로 계산할 수 있는 사용자 행동 뒤에 정교한 기능 상호 작용을 학습해야 합니다. 낮은 순서의 기능과 높은 순서의 기능 상호 작용은 둘 중 하나를 편향하지 않고 우수한 딥 러닝 모델에 똑같이 중요합니다. 인수 기계 기반 신경 네트워크인 DeepFM(Deep Factorization Machine)은 새로운 신경망 아키텍처에서 기능 학습을 위한 권장 사항과 딥 러닝을 위한 인수 기계(factorization Machine)를 결합합니다.
 
-기존의 공장 인수 기계는 쌍 단위 기능 상호 작용을 기능 간의 잠재적 벡터의 내부 제품으로 모델링하고 이론적으로 높은 순서 정보를 캡처할 수 있지만, 실제로 머신 러닝 실무자는 높은 계산 및 스토리지 복잡성으로 인해 일반적으로 2차 기능 상호 작용만 사용합니다. Google과 같은 딥 뉴럴 네트워크 변형 https://["와이드  앰프, 딥 모델"^] 반면, 선형 와이드 모델과 딥 모델을 결합하여 하이브리드 네트워크 구조에서 정교한 기능 상호 작용을 학습합니다.
+기존의 공장 인수 기계는 쌍 단위 기능 상호 작용을 기능 간의 잠재적 벡터의 내부 제품으로 모델링하고 이론적으로 높은 순서 정보를 캡처할 수 있지만, 실제로 머신 러닝 실무자는 높은 계산 및 스토리지 복잡성으로 인해 일반적으로 2차 기능 상호 작용만 사용합니다. Google과 같은 딥 뉴럴 네트워크 변형 https://arxiv.org/abs/1606.07792["와이드  앰프, 딥 모델"^] 반면, 선형 와이드 모델과 딥 모델을 결합하여 하이브리드 네트워크 구조에서 정교한 기능 상호 작용을 학습합니다.
 
 이 Wide & Deep Model에는 기본 와이드 모델과 딥 모델에 대한 두 가지 입력이 있으며, 그 중 후자는 여전히 전문적인 피처 엔지니어링을 필요로 하므로 다른 영역에 대해 일반화할 수 없는 기술을 렌더링합니다. 광각 및 딥 모델과 달리, DeepFM은 넓은 부분과 깊은 부분이 동일한 입력 및 포함 벡터를 공유하기 때문에 기능 엔지니어링 없이 RAW 기능으로 효율적으로 교육을 받을 수 있습니다.
 
@@ -269,7 +269,7 @@ CTR을 최대화하도록 설계된 추천 시스템의 경우 낮은 순서에�
     .config("spark.driver.maxResultSize", "50gb") \
     .getOrCreate()
 ....
-위 'parkSession.builder' 설정에서도 활성화했다 https://["Apache 화살표"^]이는 Df. toPandas() 메소드를 사용하여 Spark DataFrame을 Pandas DataFrame으로 변환합니다.
+위 'parkSession.builder' 설정에서도 활성화했다 https://arrow.apache.org/["Apache 화살표"^]이는 Df. toPandas() 메소드를 사용하여 Spark DataFrame을 Pandas DataFrame으로 변환합니다.
 
 ....
 22/06/17 15:56:21 INFO scheduler.DAGScheduler: Job 2 finished: toPandas at /sparkusecase/DeepCTR/examples/run_classification_criteo_spark.py:96, took 627.126487 s
@@ -287,7 +287,7 @@ Testing dataset size =  9168124
 2022-06-18 07:19:20.101478: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
 ....
-소스에서 TensorFlow를 빌드하려면 사용을 권장합니다 https://["Bazel"^]. 우리는 현재 환경에 대해 셸 프롬프트에서 다음 명령을 실행하여 df, df-plugins, Bazel을 설치합니다.
+소스에서 TensorFlow를 빌드하려면 사용을 권장합니다 https://bazel.build/["Bazel"^]. 우리는 현재 환경에 대해 셸 프롬프트에서 다음 명령을 실행하여 df, df-plugins, Bazel을 설치합니다.
 
 ....
 yum install dnf
@@ -305,9 +305,9 @@ yum update
 scl enable devtoolset-11 bash
 . /opt/rh/devtoolset-11/enable
 ....
-마지막 두 명령은 /opt/rh/dev툴셋 -11/root/usr/bin/gcc(GCC 11.2.1)를 사용하는 dev툴셋 -11을 활성화합니다. 또한 git 버전이 1.8.3 이상인지 확인하십시오(RHEL 7.9와 함께 제공됨). 이를 참조하십시오 https://["기사"^] git를 2.24.1로 업데이트하는 경우.
+마지막 두 명령은 /opt/rh/dev툴셋 -11/root/usr/bin/gcc(GCC 11.2.1)를 사용하는 dev툴셋 -11을 활성화합니다. 또한 git 버전이 1.8.3 이상인지 확인하십시오(RHEL 7.9와 함께 제공됨). 이를 참조하십시오 https://travis.media/how-to-upgrade-git-on-rhel7-and-centos7/["기사"^] git를 2.24.1로 업데이트하는 경우.
 
-최신 TensorFlow 마스터 저장소 를 이미 복제했다고 가정합니다. 그런 다음 "작업 공간" 파일을 사용하여 "작업 공간" 디렉토리를 만들어 AVX, AVX2 및 FMA를 사용하여 소스에서 TensorFlow를 구축합니다. '설정' 파일을 실행하고 올바른 Python 바이너리 위치를 지정합니다. https://["CUDA"^] GPU를 사용하지 않았기 때문에 테스트에 사용할 수 없습니다. 설정에 따라 '.bazelrc' 파일이 생성됩니다. 또한 파일을 편집하고 "build--define=no_hdfs_support=false"를 설정하여 HDFS 지원을 활성화했습니다. 절의 '.bazelrc'를 참조하십시오 link:apache-spark-python-scripts-for-each-major-use-case.html["“주요 활용 사례별로 Python 스크립트,”"] 설정 및 플래그의 전체 목록을 표시합니다.
+최신 TensorFlow 마스터 저장소 를 이미 복제했다고 가정합니다. 그런 다음 "작업 공간" 파일을 사용하여 "작업 공간" 디렉토리를 만들어 AVX, AVX2 및 FMA를 사용하여 소스에서 TensorFlow를 구축합니다. '설정' 파일을 실행하고 올바른 Python 바이너리 위치를 지정합니다. https://developer.nvidia.com/cuda-toolkit["CUDA"^] GPU를 사용하지 않았기 때문에 테스트에 사용할 수 없습니다. 설정에 따라 '.bazelrc' 파일이 생성됩니다. 또한 파일을 편집하고 "build--define=no_hdfs_support=false"를 설정하여 HDFS 지원을 활성화했습니다. 절의 '.bazelrc'를 참조하십시오 link:apache-spark-python-scripts-for-each-major-use-case.html["“주요 활용 사례별로 Python 스크립트,”"] 설정 및 플래그의 전체 목록을 표시합니다.
 
 ....
 ./configure

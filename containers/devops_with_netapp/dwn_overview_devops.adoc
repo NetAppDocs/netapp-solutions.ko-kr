@@ -33,9 +33,9 @@ image::dwn_image_16.png[CI/CD 이미지]
 
 CI/CD 유형 워크플로에 도움이 될 수 있는 널리 사용되는 애플리케이션의 예는 다음과 같습니다.
 
-https://["ArgoCD를 참조하십시오"]
-https://["젠킨스"]
-https://["테크톤"]
+https://argoproj.github.io/cd/["ArgoCD를 참조하십시오"]
+https://jenkins.io["젠킨스"]
+https://tekton.dev["테크톤"]
 
 이 기술 보고서의 후반부에 포함된 일부 사용 사례는 Jenkins에서 입증되었지만, 조직이 자체 관행으로 구현한 어떤 툴에도 기본 CI/CD 원칙을 적용할 수 있습니다.
 
@@ -47,7 +47,7 @@ https://["테크톤"]
 
 image::dwn_image_17.png[인프라 코드 이미지]
 
-최종 사용자는 와 같은 프로그래밍 언어를 사용하는 경우가 많습니다 https://["파이썬"] 또는 등의 자동화 툴을 사용할 수 있습니다 https://["Ansible"] 또는 https://["인형"] 필요할 때 개발자가 호출할 수 있는 자동화되고 반복 가능한 인프라 확장 작업을 생성합니다.
+최종 사용자는 와 같은 프로그래밍 언어를 사용하는 경우가 많습니다 https://www.python.org/["파이썬"] 또는 등의 자동화 툴을 사용할 수 있습니다 https://www.ansible.com/["Ansible"] 또는 https://puppet.com/["인형"] 필요할 때 개발자가 호출할 수 있는 자동화되고 반복 가능한 인프라 확장 작업을 생성합니다.
 
 NetApp ONTAP 및 Astra Control에는 퍼블릭 API와 Ansible 모듈 또는 소프트웨어 개발 툴킷이 포함되어 있어 운영 자동화를 매우 쉽게 채택하고 DevOps 프로세스에 통합할 수 있습니다.
 

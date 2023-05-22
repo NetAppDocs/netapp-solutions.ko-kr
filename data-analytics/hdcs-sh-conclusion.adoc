@@ -33,23 +33,23 @@ link:hdcs-sh-use-case-5--accelerate-analytic-workloads.html["이전: 사용 사�
 
 * NetApp 빅데이터 분석 솔루션
 +
-https://["https://www.netapp.com/us/solutions/applications/big-data-analytics/index.aspx"^]
+https://www.netapp.com/us/solutions/applications/big-data-analytics/index.aspx["https://www.netapp.com/us/solutions/applications/big-data-analytics/index.aspx"^]
 
 * NetApp 스토리지를 사용하는 Apache Spark 워크로드
 +
-https://["https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf["https://www.netapp.com/pdf.html?item=/media/26877-nva-1157-deploy.pdf"^]
 
 * Apache Spark용 NetApp 스토리지 솔루션
 +
-https://["https://www.netapp.com/media/16864-tr-4570.pdf"^]
+https://www.netapp.com/media/16864-tr-4570.pdf["https://www.netapp.com/media/16864-tr-4570.pdf"^]
 
 * NetApp에서 지원하는 Data Fabric 기반 Apache Hadoop
 +
-https://["https://www.netapp.com/media/16877-tr-4529.pdf"^]
+https://www.netapp.com/media/16877-tr-4529.pdf["https://www.netapp.com/media/16877-tr-4529.pdf"^]
 
 * NetApp 데이터 이동 없는 분석 모듈
 +
-https://["https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071["https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071"^]
 
 
 

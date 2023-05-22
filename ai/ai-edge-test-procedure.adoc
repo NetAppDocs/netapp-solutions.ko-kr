@@ -22,9 +22,9 @@ link:ai-edge-test-configuration.html["이전: 구성을 테스트합니다."]
 
 == 운영 체제 및 AI 추론 설정
 
-AFF C190의 경우 NVIDIA GPU를 지원하고 MLPerf를 사용하는 NVIDIA 드라이버 및 Docker와 함께 Ubuntu 18.04를 사용했습니다 https://["코드"^] MLPerf Inference v0.7에 대한 Lenovo 제출의 일부로 사용할 수 있습니다.
+AFF C190의 경우 NVIDIA GPU를 지원하고 MLPerf를 사용하는 NVIDIA 드라이버 및 Docker와 함께 Ubuntu 18.04를 사용했습니다 https://github.com/mlperf/inference_results_v0.7/tree/master/closed/Lenovo["코드"^] MLPerf Inference v0.7에 대한 Lenovo 제출의 일부로 사용할 수 있습니다.
 
-EF280의 경우 NVIDIA GPU 및 MLPerf를 지원하는 Ubuntu 20.04와 NVIDIA 드라이버 및 Docker를 사용했습니다 https://["코드"^] MLPerf Inference v1.1에 대한 Lenovo 제출의 일부로 제공됩니다.
+EF280의 경우 NVIDIA GPU 및 MLPerf를 지원하는 Ubuntu 20.04와 NVIDIA 드라이버 및 Docker를 사용했습니다 https://github.com/mlcommons/inference_results_v1.1/tree/main/closed/Lenovo["코드"^] MLPerf Inference v1.1에 대한 Lenovo 제출의 일부로 제공됩니다.
 
 AI 추론을 설정하려면 다음 단계를 수행하십시오.
 

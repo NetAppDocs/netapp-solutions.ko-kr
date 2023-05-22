@@ -22,7 +22,7 @@ link:aks-anf_conclusion.html["이전: 결론."]
 +
 ** Azure NetApp Files용 솔루션 아키텍처 페이지
 +
-https://["https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-solution-architectures"^]
+https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-solution-architectures["https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files-solution-architectures"^]
 
 
 
@@ -30,7 +30,7 @@ https://["https://docs.microsoft.com/azure/azure-netapp-files/azure-netapp-files
 +
 ** Azure NetApp Files 및 Trident
 +
-https://["https://netapptrident.readthedocs.io/en/stablev20.07/kubernetes/operations/tasks/backends/anf.html"^]
+https://netapptrident.readthedocs.io/en/stablev20.07/kubernetes/operations/tasks/backends/anf.html["https://netapptrident.readthedocs.io/en/stablev20.07/kubernetes/operations/tasks/backends/anf.html"^]
 
 
 
@@ -38,23 +38,23 @@ https://["https://netapptrident.readthedocs.io/en/stablev20.07/kubernetes/operat
 +
 ** Dask(질문)
 +
-https://["https://docs.dask.org/en/latest/"^]
+https://docs.dask.org/en/latest/["https://docs.dask.org/en/latest/"^]
 
 ** Dask를 설치합니다
 +
-https://["https://docs.dask.org/en/latest/install.html"^]
+https://docs.dask.org/en/latest/install.html["https://docs.dask.org/en/latest/install.html"^]
 
 ** Dask API
 +
-https://["https://docs.dask.org/en/latest/api.html"^]
+https://docs.dask.org/en/latest/api.html["https://docs.dask.org/en/latest/api.html"^]
 
 ** Dask 기계 학습
 +
-https://["https://examples.dask.org/machine-learning.html"^]
+https://examples.dask.org/machine-learning.html["https://examples.dask.org/machine-learning.html"^]
 
 ** Dask 분산 진단
 +
-https://["https://docs.dask.org/en/latest/diagnostics-distributed.html"^]
+https://docs.dask.org/en/latest/diagnostics-distributed.html["https://docs.dask.org/en/latest/diagnostics-distributed.html"^]
 
 
 
@@ -62,23 +62,23 @@ https://["https://docs.dask.org/en/latest/diagnostics-distributed.html"^]
 +
 ** TensorFlow: 모두를 위한 오픈 소스 머신 러닝 프레임워크
 +
-https://["https://www.tensorflow.org/"^]
+https://www.tensorflow.org/["https://www.tensorflow.org/"^]
 
 ** Docker 를 참조하십시오
 +
-https://["https://docs.docker.com"^]
+https://docs.docker.com/["https://docs.docker.com"^]
 
 ** 쿠버네티스
 +
-https://["https://kubernetes.io/docs/home/"^]
+https://kubernetes.io/docs/home/["https://kubernetes.io/docs/home/"^]
 
 ** Kubeflow
 +
-http://["http://www.kubeflow.org/"^]
+http://www.kubeflow.org/["http://www.kubeflow.org/"^]
 
 ** Jupyter 노트북 서버
 +
-http://["http://www.jupyter.org/"^]
+http://www.jupyter.org/["http://www.jupyter.org/"^]
 
 
 

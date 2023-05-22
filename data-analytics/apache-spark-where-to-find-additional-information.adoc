@@ -20,62 +20,62 @@ link:apache-spark-conclusion.html["이전: 결론."]
 
 * Apache Spark 아키텍처 및 구성 요소
 +
-http://["http://spark.apache.org/docs/latest/cluster-overview.html"^]
+http://spark.apache.org/docs/latest/cluster-overview.html["http://spark.apache.org/docs/latest/cluster-overview.html"^]
 
 * Apache Spark 사용 사례
 +
-https://["https://www.qubole.com/blog/big-data/apache-spark-use-cases/"^]
+https://www.qubole.com/blog/big-data/apache-spark-use-cases/["https://www.qubole.com/blog/big-data/apache-spark-use-cases/"^]
 
 * Apache 당면 과제
 +
-http://["http://www.infoworld.com/article/2897287/big-data/5-reasons-to-turn-to-spark-for-big-data-analytics.html"^]
+http://www.infoworld.com/article/2897287/big-data/5-reasons-to-turn-to-spark-for-big-data-analytics.html["http://www.infoworld.com/article/2897287/big-data/5-reasons-to-turn-to-spark-for-big-data-analytics.html"^]
 
 * 스파크 NLP
 +
-https://["https://www.johnsnowlabs.com/spark-nlp/"^]
+https://www.johnsnowlabs.com/spark-nlp/["https://www.johnsnowlabs.com/spark-nlp/"^]
 
 * 베르
 +
-https://["https://arxiv.org/abs/1810.04805"^]
+https://arxiv.org/abs/1810.04805["https://arxiv.org/abs/1810.04805"^]
 
 * Deep and Cross Network for Ad Predictions를 클릭합니다
 +
-https://["https://arxiv.org/abs/1708.05123"^]
+https://arxiv.org/abs/1708.05123["https://arxiv.org/abs/1708.05123"^]
 
 * FlexGroup
 +
-http://["http://www.netapp.com/us/media/tr-4557.pdf"^]
+http://www.netapp.com/us/media/tr-4557.pdf["http://www.netapp.com/us/media/tr-4557.pdf"^]
 
 * 스트리밍 ETL
 +
-https://["https://www.infoq.com/articles/apache-spark-streaming"^]
+https://www.infoq.com/articles/apache-spark-streaming["https://www.infoq.com/articles/apache-spark-streaming"^]
 
 * Hadoop용 NetApp E-Series 솔루션
 +
-https://["https://www.netapp.com/media/16420-tr-3969.pdf"^]
+https://www.netapp.com/media/16420-tr-3969.pdf["https://www.netapp.com/media/16420-tr-3969.pdf"^]
 
 * NetApp AI와 고객 커뮤니케이션을 통한 감정 분석
 +
-https://["https://docs.netapp.com/us-en/netapp-solutions/pdfs/sidebar/Sentiment_analysis_with_NetApp_AI.pdf"^]
+https://docs.netapp.com/us-en/netapp-solutions/pdfs/sidebar/Sentiment_analysis_with_NetApp_AI.pdf["https://docs.netapp.com/us-en/netapp-solutions/pdfs/sidebar/Sentiment_analysis_with_NetApp_AI.pdf"^]
 
 * NetApp의 최신 데이터 분석 솔루션
 +
-https://["https://docs.netapp.com/us-en/netapp-solutions/data-analytics/index.html"^]
+https://docs.netapp.com/us-en/netapp-solutions/data-analytics/index.html["https://docs.netapp.com/us-en/netapp-solutions/data-analytics/index.html"^]
 
 * SnapMirror를 참조하십시오
 +
-https://["https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-concept.html"^]
+https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-concept.html["https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-concept.html"^]
 
 * xCP
 +
-https://["https://mysupport.netapp.com/documentation/docweb/index.html?productID=63942&language=en-US"^]
+https://mysupport.netapp.com/documentation/docweb/index.html?productID=63942&language=en-US["https://mysupport.netapp.com/documentation/docweb/index.html?productID=63942&language=en-US"^]
 
 * Cloud Sync
 +
-https://["https://cloud.netapp.com/cloud-sync-service"^]
+https://cloud.netapp.com/cloud-sync-service["https://cloud.netapp.com/cloud-sync-service"^]
 
 * DataOps 툴킷
 +
-https://["https://github.com/NetApp/netapp-dataops-toolkit"^]
+https://github.com/NetApp/netapp-dataops-toolkit["https://github.com/NetApp/netapp-dataops-toolkit"^]
 
 

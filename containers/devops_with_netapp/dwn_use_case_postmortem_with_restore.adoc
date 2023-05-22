@@ -57,7 +57,7 @@ image::dwn_image10.jpg[사후 작업 흐름]
 image::dwn_image12.jpg[실패한 앱]
 
 . Jenkins에 로그인하고 새 항목, 파이프라인을 차례로 클릭하여 파이프라인을 생성합니다.
-. Jenkinsfile에서 파이프라인을 복사합니다 https://["여기"^].
+. Jenkinsfile에서 파이프라인을 복사합니다 https://github.com/NetApp/netapp-astra-toolkits/blob/main/ci_cd_examples/jenkins_pipelines/clone_for_postmortem_and_restore/Jenkinsfile["여기"^].
 . Jenkins 파이프라인 섹션에 파이프라인을 붙여넣은 다음 저장을 클릭합니다.
 . 운영 환경의 현재 Magento 응용 프로그램 버전, Astra Control Center FQDN, API 토큰, 운영 및 디버그 환경의 인스턴스 ID 및 응용 프로그램 이름 또는 네임스페이스, 소스 및 대상 클러스터 이름과 같은 각 세부 정보로 Jenkins 파이프라인의 매개 변수를 채웁니다. 이 활용 사례를 위해 운영 환경은 'magento-prod'라는 네임스페이스이며, 디버그 환경은 Red Hat OpenShift 클러스터에 구성된 'magento-debug'라는 네임스페이스입니다.
 +

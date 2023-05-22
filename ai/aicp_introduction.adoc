@@ -22,7 +22,7 @@ Mike Oglesby, NetApp에서 직접 지원합니다
 
 참고: 동일한 데이터 세트에 대한 공유 액세스가 필요한 다수의 GPU 서버가 포함된 대규모 HPC 스타일 분산 교육이거나 병렬 파일 시스템이 필요하거나 선호한다면, 확인해 보십시오 link:https://www.netapp.com/pdf.html?item=/media/31317-tr-4890.pdf["TR-4890"^]. 이 기술 보고서에서는 을 포함하는 방법을 설명합니다 link:https://blog.netapp.com/solution-support-for-beegfs-and-e-series/["NetApp의 완벽하게 지원되는 병렬 파일 시스템 솔루션인 BeeGFS"^] NetApp AI Control Plane의 일부로, 이 솔루션은 소수의 NVIDIA DGX A100 시스템에서 완전한 140개 노드 SuperPOD까지 확장하도록 설계되었습니다.
 
-NetApp AI Control Plane은 데이터 과학자 및 데이터 엔지니어를 대상으로 하므로 최소한의 NetApp 또는 NetApp ONTAP ® 전문 지식이 필요합니다. 이 솔루션에서는 단순하고 친숙한 툴과 인터페이스를 사용하여 데이터 관리 기능을 실행할 수 있습니다. 귀사 환경에 NetApp 스토리지가 이미 구축되어 있다면 지금 바로 NetApp AI Control Plane을 시험 구동할 수 있습니다. 솔루션을 시험하고 싶지만 NetApp 스토리지가 없는 경우, 를 방문하십시오 http://["cloud.netapp.com"^]클라우드 기반 NetApp 스토리지 솔루션을 사용하여 몇 분 이내에 시스템을 구축하고 실행할 수 있습니다. 다음 그림은 솔루션을 시각적으로 보여 줍니다.
+NetApp AI Control Plane은 데이터 과학자 및 데이터 엔지니어를 대상으로 하므로 최소한의 NetApp 또는 NetApp ONTAP ® 전문 지식이 필요합니다. 이 솔루션에서는 단순하고 친숙한 툴과 인터페이스를 사용하여 데이터 관리 기능을 실행할 수 있습니다. 귀사 환경에 NetApp 스토리지가 이미 구축되어 있다면 지금 바로 NetApp AI Control Plane을 시험 구동할 수 있습니다. 솔루션을 시험하고 싶지만 NetApp 스토리지가 없는 경우, 를 방문하십시오 http://cloud.netapp.com/["cloud.netapp.com"^]클라우드 기반 NetApp 스토리지 솔루션을 사용하여 몇 분 이내에 시스템을 구축하고 실행할 수 있습니다. 다음 그림은 솔루션을 시각적으로 보여 줍니다.
 
 image:aicp_image1.png["오류: 그래픽 이미지가 없습니다"]
 

@@ -16,8 +16,8 @@ summary:
 [role="lead"]
 NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축하고 구성하려면 배포 점프 호스트에서 다음 작업을 수행하십시오.
 
-. 의 지침에 따라 NVIDIA DeepOps를 다운로드합니다 https://["시작 페이지"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
-. 의 지침에 따라 클러스터에 Kubernetes를 배포합니다 https://["Kubernetes 구축 가이드"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+. 의 지침에 따라 NVIDIA DeepOps를 다운로드합니다 https://github.com/NVIDIA/deepops/blob/master/docs/getting-started.md["시작 페이지"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
+. 의 지침에 따라 클러스터에 Kubernetes를 배포합니다 https://github.com/NVIDIA/deepops/blob/master/docs/kubernetes-cluster.md["Kubernetes 구축 가이드"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
 
 
 

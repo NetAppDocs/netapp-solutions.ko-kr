@@ -48,16 +48,16 @@ NOTE: VMware HCX는 마이그레이션이 VM 레벨에 있으므로 모든 데�
 .필수 구성 요소
 [%collapsible]
 ====
-시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 다음을 참조하십시오 https://["링크"^]. 연결을 포함한 필수 구성 요소가 구축된 후에는 Azure VMware Solution 포털에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. OVA 설치 프로그램을 다운로드한 후 아래 설명된 대로 설치 프로세스를 진행합니다.
+시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 다음을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-vmware/configure-vmware-hcx["링크"^]. 연결을 포함한 필수 구성 요소가 구축된 후에는 Azure VMware Solution 포털에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. OVA 설치 프로그램을 다운로드한 후 아래 설명된 대로 설치 프로세스를 진행합니다.
 
 
 NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지원 티켓을 통해 제공되며 추가 비용 없이 지원됩니다.
 
-* 기존 Azure VMware 솔루션 SDDC(소프트웨어 정의 데이터 센터)를 사용하거나 이를 사용하여 프라이빗 클라우드를 생성합니다 https://["NetApp 링크"^] 또는 이 https://["Microsoft 링크"^].
-* 사내 VMware vSphere 지원 데이터 센터에서 VM 및 관련 데이터를 마이그레이션하려면 데이터 센터에서 SDDC 환경으로 네트워크를 연결해야 합니다. 워크로드를 마이그레이션하기 전에 https://["사이트 간 VPN 또는 Express 라우트 전역 연결 연결을 설정합니다"^] 데이터 관리 및 보호
+* 기존 Azure VMware 솔루션 SDDC(소프트웨어 정의 데이터 센터)를 사용하거나 이를 사용하여 프라이빗 클라우드를 생성합니다 https://docs.netapp.com/us-en/netapp-solutions/ehc/azure/azure-setup.html["NetApp 링크"^] 또는 이 https://docs.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal["Microsoft 링크"^].
+* 사내 VMware vSphere 지원 데이터 센터에서 VM 및 관련 데이터를 마이그레이션하려면 데이터 센터에서 SDDC 환경으로 네트워크를 연결해야 합니다. 워크로드를 마이그레이션하기 전에 https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud["사이트 간 VPN 또는 Express 라우트 전역 연결 연결을 설정합니다"^] 데이터 관리 및 보호
 * 사내 VMware vCenter Server 환경에서 Azure VMware Solution 프라이빗 클라우드로 가는 네트워크 경로는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
-* 필수 를 확인하십시오 https://["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다. 프라이빗 클라우드에서 vMotion 네트워크의 라우팅은 기본적으로 구성됩니다.
-* Azure NetApp Files NFS 볼륨은 Azure VMware 솔루션에서 데이터 저장소로 마운트되어야 합니다. 이에 설명된 단계를 따릅니다 https://["링크"^] Azure NetApp Files 데이터 저장소를 Azure VMware 솔루션 호스트에 연결합니다.
+* 필수 를 확인하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다. 프라이빗 클라우드에서 vMotion 네트워크의 라우팅은 기본적으로 구성됩니다.
+* Azure NetApp Files NFS 볼륨은 Azure VMware 솔루션에서 데이터 저장소로 마운트되어야 합니다. 이에 설명된 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal["링크"^] Azure NetApp Files 데이터 저장소를 Azure VMware 솔루션 호스트에 연결합니다.
 
 
 ====
@@ -132,7 +132,7 @@ NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
 
 
 
-단계별 지침은 를 참조하십시오 https://["VMware HCX 사용자 가이드"^].
+단계별 지침은 를 참조하십시오 https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html["VMware HCX 사용자 가이드"^].
 
 ====
 .3단계: 라이센스 키로 HCX 커넥터를 활성화합니다
@@ -149,7 +149,7 @@ image:anfd-hcx-image7.png["HCX 키 추가 스크린샷."]
 
 NOTE: 배포된 각 온프레미스 HCX Connector에는 별도의 키가 필요합니다.
 
-. 사내 VMware HCX Manager()에 로그인합니다 https://["https://hcxmanagerIP:9443"^] 관리자 자격 증명을 사용합니다.
+. 사내 VMware HCX Manager()에 로그인합니다 https://hcxmanagerIP:9443["https://hcxmanagerIP:9443"^] 관리자 자격 증명을 사용합니다.
 +
 
 NOTE: OVA 배포 중에 정의된 암호를 사용합니다.
@@ -259,7 +259,7 @@ image:anfd-hcx-image15.png["vSphere Client Interconnect 페이지에 완료된 �
 ====
 다양한 VMware HCX 마이그레이션 기술을 사용하여 온프레미스 및 Azure SDDC 간에 워크로드를 양방향으로 마이그레이션할 수 있습니다. VM은 HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 여러 마이그레이션 기술을 사용하여 VMware HCX 활성 엔터티로 또는 VMware에서 이동할 수 있습니다.
 
-다양한 HCX 마이그레이션 메커니즘에 대한 자세한 내용은 을 참조하십시오 https://["VMware HCX 마이그레이션 유형"^].
+다양한 HCX 마이그레이션 메커니즘에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["VMware HCX 마이그레이션 유형"^].
 
 * 대량 마이그레이션 *
 
@@ -291,7 +291,7 @@ image:anfd-hcx-image19.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-다양한 마이그레이션 옵션과 HCX를 사용하여 워크로드를 온프레미스에서 Azure VMware 솔루션으로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오 https://["VMware HCX 사용자 가이드"^].
+다양한 마이그레이션 옵션과 HCX를 사용하여 워크로드를 온프레미스에서 Azure VMware 솔루션으로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-14D48C15-3D75-485B-850F-C5FCB96B5637.html["VMware HCX 사용자 가이드"^].
 
 이 프로세스에 대해 자세히 알아보려면 자세한 단계별 안내 비디오를 참조하십시오.
 
@@ -335,14 +335,14 @@ Azure NetApp Files와 HCX는 사내 모든 유형/공급업체 스토리지에 �
 
 * Azure VMware 솔루션 설명서
 +
-https://["https://docs.microsoft.com/en-us/azure/azure-vmware/"^]
+https://docs.microsoft.com/en-us/azure/azure-vmware/["https://docs.microsoft.com/en-us/azure/azure-vmware/"^]
 
 * Azure NetApp Files 설명서
 +
-https://["https://docs.microsoft.com/en-us/azure/azure-netapp-files/"^]
+https://docs.microsoft.com/en-us/azure/azure-netapp-files/["https://docs.microsoft.com/en-us/azure/azure-netapp-files/"^]
 
 * VMware HCX 사용자 가이드
 +
-https://["https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html"^]
+https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html["https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html"^]
 
 

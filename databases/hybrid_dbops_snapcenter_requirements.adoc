@@ -53,28 +53,28 @@ ONTAP 스토리지 클러스터에서 DB 호스트에 제공된 DB 볼륨이 있
 | 네트워킹 포트 open-ssh 22-tcp 8145, 8146, 10000, 11104, 11105 
 
 
-.3+| * 클라우드-AWS * | https://["Cloud Manager 커넥터"^] 
+.3+| * 클라우드-AWS * | https://docs.netapp.com/us-en/occm/task_creating_connectors_aws.html["Cloud Manager 커넥터"^] 
 
 
-| https://["Cloud Volumes ONTAP"^] 
+| https://docs.netapp.com/us-en/occm/task_getting_started_aws.html["Cloud Volumes ONTAP"^] 
 
 
 | DB OS EC2 인스턴스를 온프레미스에 일치시킵니다 
 
 
-.3+| * 클라우드 - Azure * | https://["Cloud Manager 커넥터"^] 
+.3+| * 클라우드 - Azure * | https://docs.netapp.com/us-en/occm/task_creating_connectors_azure.html["Cloud Manager 커넥터"^] 
 
 
-| https://["Cloud Volumes ONTAP"^] 
+| https://docs.netapp.com/us-en/occm/task_getting_started_azure.html["Cloud Volumes ONTAP"^] 
 
 
 | DB OS Azure 가상 시스템을 온프레미스에 일치시킵니다 
 
 
-.3+| * Cloud-GCP * | https://["Cloud Manager 커넥터"^] 
+.3+| * Cloud-GCP * | https://docs.netapp.com/us-en/occm/task_creating_connectors_gcp.html["Cloud Manager 커넥터"^] 
 
 
-| https://["Cloud Volumes ONTAP"^] 
+| https://docs.netapp.com/us-en/occm/task_getting_started_gcp.html["Cloud Volumes ONTAP"^] 
 
 
 | DB OS Google Compute Engine 인스턴스를 온프레미스에 일치시킵니다 

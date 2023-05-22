@@ -61,11 +61,11 @@ DevOps 사례에서는 최종 사용자가 코드를 개발 중인 환경을 제
 
 현재 수많은 컨테이너 오케스트레이션 플랫폼을 사용하고 있습니다. 이러한 플랫폼의 대부분은 Kubernetes를 기반으로 하지만 각각 장단점이 있습니다. 따라서 DevOps 워크플로우에 사용할 컨테이너 오케스트레이션 플랫폼을 선택할 때는 기능 세트와 통합을 이해하는 것이 중요합니다. NetApp Astra 제품군을 사용하여 전체 DevOps 사용 사례에 대해 다음 플랫폼을 지원합니다.
 
-* https://["Red Hat OpenShift"] 4.6.8+
-* https://["목장"] 2.5 이상
-* https://["쿠버네티스"] 1.20 이상
-* https://["VMware Tanzu Kubernetes Grid를 참조하십시오"] 1.4 이상
-* https://["VMware Tanzu Kubernetes Grid Integrated Edition을 참조하십시오"] 1.12.2 이상
+* https://www.redhat.com/en/technologies/cloud-computing/openshift["Red Hat OpenShift"] 4.6.8+
+* https://rancher.com/["목장"] 2.5 이상
+* https://kubernetes.io/["쿠버네티스"] 1.20 이상
+* https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/index.html["VMware Tanzu Kubernetes Grid를 참조하십시오"] 1.4 이상
+* https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Integrated-Edition/index.html["VMware Tanzu Kubernetes Grid Integrated Edition을 참조하십시오"] 1.12.2 이상
 
 
 
@@ -74,7 +74,7 @@ DevOps 사례에서는 최종 사용자가 코드를 개발 중인 환경을 제
 
 NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 구축에 적합한 여러 스토리지 시스템을 보유하고 있습니다. NetApp 포트폴리오에는 NetApp ONTAP, NetApp Element, NetApp E-Series 스토리지 시스템이 포함되어 있으며, 컨테이너식 애플리케이션을 위한 영구 스토리지를 제공할 수 있습니다.
 
-자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://["여기"].
+자세한 내용은 NetApp 웹 사이트를 참조하십시오 https://www.netapp.com["여기"].
 
 
 
@@ -82,10 +82,10 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 NetApp Astra Control Center는 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 사내 환경에 구축된 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
 
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://["여기"].
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 
 Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://["여기"].
+자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
 
 link:dwn_overview_devops.html["다음: DevOps 개요"]

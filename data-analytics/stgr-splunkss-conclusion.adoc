@@ -28,27 +28,27 @@ Splunk SmartStore와 NetApp StorageGRID의 결합을 통해 조직은 확장 가
 
 * NetApp StorageGRID 문서 리소스
 +
-https://["https://www.netapp.com/data-storage/storagegrid/documentation/"^]
+https://www.netapp.com/data-storage/storagegrid/documentation/["https://www.netapp.com/data-storage/storagegrid/documentation/"^]
 
 * NetApp 제품 설명서
 +
-https://["https://docs.netapp.com"^]
+https://docs.netapp.com["https://docs.netapp.com"^]
 
 * Splunk Enterprise 문서
 +
-https://["https://docs.splunk.com/Documentation/Splunk"^]
+https://docs.splunk.com/Documentation/Splunk["https://docs.splunk.com/Documentation/Splunk"^]
 
 * Splunk Enterprise는 SmartStore를 기반으로 합니다
 +
-https://["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore"^]
+https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore"^]
 
 * Splunk Enterprise Distributed Deployment Manual을 참조하십시오
 +
-https://["https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview"^]
+https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview["https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview"^]
 
 * Splunk Enterprise 인덱서 및 인덱서 클러스터 관리
 +
-https://["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers"^]
+https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers"^]
 
 
 

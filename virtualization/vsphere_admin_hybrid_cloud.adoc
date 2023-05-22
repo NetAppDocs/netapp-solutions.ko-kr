@@ -32,4 +32,4 @@ Azure, AWS, IBM 또는 Google 클라우드 중에서 선택하여 비용을 최�
 image:vsphere_admin_hybrid_cloud.png["하이브리드 클라우드"]
 
 
-NOTE: ONTAP 및 하이브리드 클라우드에 대한 자세한 내용은 를 참조하십시오 https://["ONTAP과 클라우드"^] ONTAP 9 문서 센터
+NOTE: ONTAP 및 하이브리드 클라우드에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/ontap-9/index.jsp?lang=en["ONTAP과 클라우드"^] ONTAP 9 문서 센터

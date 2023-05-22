@@ -16,7 +16,7 @@ summary: NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST
 [role="normal"]
 NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST API, AI 정보에 기반한 예측 분석 및 수정 조치, 무중단 하드웨어 업그레이드, 교차 스토리지 가져오기 등의 기능을 갖춘 강력한 스토리지 소프트웨어 툴입니다.
 
-NetApp ONTAP 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://["NetApp ONTAP 웹 사이트"^].
+NetApp ONTAP 스토리지 시스템에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP 웹 사이트"^].
 
 ONTAP는 다음과 같은 기능을 제공합니다.
 
@@ -37,7 +37,7 @@ ONTAP는 다음과 같은 기능을 제공합니다.
 
 
 
-ONTAP에 대한 자세한 내용은 를 참조하십시오 https://["ONTAP 9 문서 센터"^].
+ONTAP에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 문서 센터"^].
 
 
 NOTE: NetApp ONTAP는 사내, 가상화 또는 클라우드에서 사용할 수 있습니다.
@@ -56,7 +56,7 @@ NetApp은 짧은 지연 시간, 통합 데이터 보호, 멀티 프로토콜 지
 
 두 시스템 모두 단순화된 고가용성 클라우드 통합형 스토리지 관리를 위한 업계 최고의 데이터 관리 소프트웨어인 NetApp ONTAP 데이터 관리 소프트웨어를 통해 Data Fabric 요구에 맞는 엔터프라이즈급 속도, 효율성 및 보안을 제공합니다.
 
-NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시오 https://["여기"].
+NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시오 https://docs.netapp.com/platstor/index.jsp["여기"].
 
 
 
@@ -64,7 +64,7 @@ NetApp AFF/FAS 플랫폼에 대한 자세한 내용을 보려면 클릭하십시
 
 ONTAP Select는 NetApp ONTAP의 소프트웨어 정의 배포로, 사용자 환경의 하이퍼바이저에 구축할 수 있습니다. VMware vSphere 또는 KVM에 설치할 수 있으며 하드웨어 기반 ONTAP 시스템의 모든 기능과 환경을 제공합니다.
 
-ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https://["여기"].
+ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.netapp.com/us-en/ontap-select/["여기"].
 
 
 
@@ -72,6 +72,6 @@ ONTAP Select에 대한 자세한 내용을 보려면 을 클릭합니다 https:/
 
 NetApp Cloud Volumes ONTAP는 클라우드 구축 버전의 NetApp ONTAP로, Amazon AWS, Microsoft Azure, Google Cloud를 비롯한 다양한 퍼블릭 클라우드에 구축할 수 있습니다.
 
-Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://["여기"].
+Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.netapp.com/us-en/occm/#discover-whats-new["여기"].
 
 link:vtwn_overview_storint.html["다음은 NetApp 스토리지 통합 개요입니다."]

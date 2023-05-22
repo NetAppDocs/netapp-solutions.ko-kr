@@ -10,7 +10,7 @@ summary: VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 
 
 VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 가상 서버 및 네트워크를 중앙에서 관리하기 위한 가상화 플랫폼입니다.
 
-VMware vSphere에 대한 자세한 내용은 를 참조하십시오 https://["VMware vSphere 웹 사이트"^].
+VMware vSphere에 대한 자세한 내용은 를 참조하십시오 https://www.vmware.com/products/vsphere.html["VMware vSphere 웹 사이트"^].
 
 VMware vSphere는 다음과 같은 기능을 제공합니다.
 
@@ -91,7 +91,7 @@ VM 및 호스트 친화성을 활성화하여 여러 하이퍼바이저 노드�
 
 유사성 또는 반유사성은 VM 및/또는 호스트 세트에 대한 규칙을 정의하는 방법으로, VM이 그룹의 동일한 호스트 또는 호스트에서 함께 실행되는지 아니면 다른 호스트에서 실행되는지를 결정합니다. VM 및/또는 동일한 매개 변수와 조건 집합을 가진 호스트로 구성된 선호도 그룹을 생성하여 VM에 적용됩니다. 선호도 그룹의 VM이 그룹의 동일한 호스트에서 실행되는지, 아니면 다른 호스트에서 개별적으로 실행되는지에 따라 선호도 그룹의 매개 변수는 양의 선호도 또는 음의 선호도를 정의할 수 있습니다.
 
-선호도 그룹을 구성하려면 을 참조하십시오 https://["vSphere 6.7 설명서: DRS 선호도 규칙 사용"^].
+선호도 그룹을 구성하려면 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-FF28F29C-8B67-4EFF-A2EF-63B3537E6934.html["vSphere 6.7 설명서: DRS 선호도 규칙 사용"^].
 
 
 
@@ -99,6 +99,6 @@ VM 및 호스트 친화성을 활성화하여 여러 하이퍼바이저 노드�
 
 IPI를 사용하면 이 문서 앞부분에서 설명한 대화형 마법사를 통해 OpenShift 클러스터를 쉽게 배포할 수 있습니다. 그러나 클러스터 배포의 일부로 일부 기본값을 변경해야 할 수도 있습니다.
 
-이 경우 즉시 클러스터를 배포하지 않고도 마법사를 실행하고 작업을 수행할 수 있지만 마법사는 나중에 클러스터를 배포할 수 있는 구성 파일을 만듭니다. IPI 기본값을 변경해야 하거나 다중 테넌시와 같은 다른 용도로 환경에 여러 동일한 클러스터를 배포하려는 경우 매우 유용합니다. OpenShift에 대한 사용자 지정 설치 구성을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://["Red Hat OpenShift 사용자 지정과 함께 vSphere에 클러스터 설치"^].
+이 경우 즉시 클러스터를 배포하지 않고도 마법사를 실행하고 작업을 수행할 수 있지만 마법사는 나중에 클러스터를 배포할 수 있는 구성 파일을 만듭니다. IPI 기본값을 변경해야 하거나 다중 테넌시와 같은 다른 용도로 환경에 여러 동일한 클러스터를 배포하려는 경우 매우 유용합니다. OpenShift에 대한 사용자 지정 설치 구성을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere-installer-provisioned-customizations.html["Red Hat OpenShift 사용자 지정과 함께 vSphere에 클러스터 설치"^].
 
 link:rh-os-n_overview_netapp.html["다음은 NetApp 스토리지 개요입니다."]

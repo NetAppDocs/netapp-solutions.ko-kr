@@ -6,6 +6,8 @@ entries:
 - title: Oracle 데이터베이스
   type: solutions
   entries:
+  - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
+    url: "/databases/aws_ora_fsx_ec2_nfs_asm.html"
   - title: iSCSI/ASM을 통한 Oracle 데이터베이스 구축 및 보호
     url: "/databases/aws_ora_fsx_ec2_iscsi_asm.html"
   - title: AWS EC2 및 FSx Best Practices에 Oracle Database 구축
