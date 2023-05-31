@@ -42,6 +42,18 @@ entries:
       url: "/virtualization/vsphere_ontap_where_to_find_additional_information.html"
     - title: 문의하기
       url: "/virtualization/vsphere_ontap_contact_us.html"
+  - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
+    url: "/virtualization/vvols-overview.html"
+    type: solutions
+    entries:
+    - title: ONTAP에서 VVOL 사용
+      url: "/virtualization/vvols-ontap.html"
+    - title: VVOL 스토리지 구축
+      url: "/virtualization/vvols-deploy.html"
+    - title: VVOL 보호
+      url: "/virtualization/vvols-protect.html"
+    - title: 문제 해결
+      url: "/virtualization/vvols-resources.html"
   - title: NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자
     url: "/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
     type: solutions

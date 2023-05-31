@@ -345,7 +345,7 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 
 
 |===
-자세한 내용은 공간 및 사이징 요구 사항을 참조하십시오 (https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html)[]
+자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html["요구사항을 충족해야 합니다"].
 
 버전 호환성은 를 참조하십시오 https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^].
 
@@ -580,7 +580,8 @@ image:sql-awsec2-image27.png["오류: 그래픽 이미지가 없습니다"]
 ====
 이 프로세스에 대한 자세한 내용은 다음 비디오를 참조하십시오.
 
-video::SQLonFSxN.mp4[width=400]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27f28284-433d-4273-8748-b01200fb3cd7["ONTAP용 AWS FSx를 사용하여 Amazon EC2에 SQL Server를 구축합니다"]
+
 
 
 == 부록

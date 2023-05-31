@@ -15,9 +15,9 @@ summary:
 
 다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.
 
-* link:dwn_videos_data_protection_in_ci_cd_pipeline.html["비디오: Astra Control을 통해 CI/CD 파이프라인에서 데이터 보호를 통합합니다"]
-* link:dwn_videos_clone_for_postmortem_and_restore.html["비디오: NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"]
-* link:dwn_videos_astra_control_flexclone.html["비디오: Astra Control 및 NetApp FlexClone 기술로 소프트웨어 개발을 가속화하십시오"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a6400379-52ff-4c8f-867f-b01200fa4a5e["Astra Control Center를 통해 CI/CD 파이프라인에서 데이터 보호"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3ae8eb53-eda3-410b-99e8-b01200fa30a8["NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=26b7ea00-9eda-4864-80ab-b01200fa13ac["Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오"]
 
 
 link:dwn_additional_information.html["다음: 추가 정보: NetApp Astra를 통한 DevOps"]

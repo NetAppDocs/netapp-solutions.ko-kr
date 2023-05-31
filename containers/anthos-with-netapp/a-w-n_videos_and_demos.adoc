@@ -16,8 +16,8 @@ summary: 이 페이지에서 에 연결된 비디오는 이 문서에 설명되�
 [role="lead"]
 다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.
 
-link:a-w-n_videos_baremetal_install.html["비디오: 베어 메탈에 Anthos의 배포"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a9e5fd88-6bdc-4d23-a4b5-b01200effc06["NetApp의 Bare Metal - Anthos에 Anthos 배포"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ea4c03a-85e9-4d90-bf3c-afb6011b051c["비디오: Anthos 1.14 클러스터의 Trident 배포"]
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ea4c03a-85e9-4d90-bf3c-afb6011b051c["비디오: Anthos 1.14 클러스터의 Trident 배포"]
 
 link:a-w-n_additional_information.html["다음: 추가 정보를 찾을 위치."]

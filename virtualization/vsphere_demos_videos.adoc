@@ -19,73 +19,35 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 .VMware vSphere용 NetApp ONTAP 툴
 [%collapsible]
 ====
-.VMware용 ONTAP 툴 - 개요
-[%collapsible]
-=====
-video::otv_overview.mp4[]
-=====
-.ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당
-[%collapsible]
-=====
-video::otv_iscsi_provision.mp4[]
-=====
-.ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당
-[%collapsible]
-=====
-video::otv_nfs_provision.mp4[]
-=====
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d2ac19ba-28c4-4c07-8724-b01200f99845["VMware용 ONTAP 툴 - 개요"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c047271-aecc-437c-a444-b01200f9671a["ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a34bcd1c-3aaa-4917-9a5d-b01200f97f08["ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당"]
+
+
 ====
 .NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud
 [%collapsible]
 ====
-.iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
-[%collapsible]
-=====
-video::vmc_windows_vm_iscsi.mp4[]
-=====
-.NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
-[%collapsible]
-=====
-video::vmc_linux_vm_nfs.mp4[]
-=====
-.NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
-[%collapsible]
-=====
-video::FSxN-NFS-Datastore-on-VMC-TCO-calculator.mp4[]
-=====
-.NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
-[%collapsible]
-=====
-video::FSxN-NFS-Datastore-on-VMC.mp4[]
-=====
-.FSxN, VMware HCX와 함께 AWS 기반의 VMware Cloud 마이그레이션
-[%collapsible]
-=====
-video::VMC_HCX_Setup.mp4[]
-video::Migration_HCX_VMC_FSxN_VMotion.mp4[]
-video::Migration_HCX_VMC_FSxN_cold_migration.mp4[]
-=====
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d03e040-634f-4086-8cb5-b01200fb8515["iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c3befe1b-4f32-4839-a031-b01200fb6d60["NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0fedec5-dc17-47af-8821-b01200f00e08["NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2065dcc1-f31a-4e71-a7d5-b01200f01171["NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6132c921-a44c-4c81-aab7-b01200fb5d29["VMC를 위한 VMware HCX 구축 및 구성 설정"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=52661f10-3f90-4f3d-865a-b01200f06d31["VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=685c0dc2-9d8a-42ff-b46d-b01200f056b0["VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모"]
+
+
 ====
 .ANF(Azure NetApp Files)가 있는 Azure 기반 Azure VMware 서비스
 [%collapsible]
 ====
-.Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
-[%collapsible]
-=====
-video::ANF-NFS-datastore-on-AVS.mp4[]
-=====
-.Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
-[%collapsible]
-=====
-video::AVS-guest-connect-DR-use-case.mp4[]
-=====
-.Azure VMware Solution Migrate with ANF, VMware HCX
-[%collapsible]
-=====
-video::Migration_HCX_AVS_ANF_ColdMigration.mp4[]
-video::Migration_HCX_AVS_ANF_VMotion.mp4[]
-video::Migration_HCX_AVS_ANF_Bulk.mp4[]
-=====
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c5ddb30-6c31-4cde-86e2-b01200effbd6["Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cd19888-8314-4cfc-ba30-b01200efff4f["Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b7ffa5ad-5559-4e56-a166-b01200f025bc["VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=986bb505-6f3d-4a5a-b016-b01200f03f18["VMware HCX와 함께 AVS 및 ANF용 vMotion 데모"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=255640f5-4dff-438c-8d50-b01200f017d1["VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모"]
+
+
 ====
 .VMware vSphere용 SnapCenter 플러그인
 [%collapsible]
@@ -96,31 +58,13 @@ VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, �
 
 NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/ocsc-42/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-29BABBA7-B15F-452F-B137-2E5B269084B9.html["VMware vSphere용 NetApp SnapCenter 플러그인 개요"].
 
-.VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
-[%collapsible]
-=====
-video::scv_prereq_overview.mp4[]
-=====
-.VMware vSphere용 SnapCenter 플러그인 - 구축
-[%collapsible]
-=====
-video::scv_deployment.mp4[]
-=====
-.VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
-[%collapsible]
-=====
-video::scv_backup_workflow.mp4[]
-=====
-.VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
-[%collapsible]
-=====
-video::scv_restore_workflow.mp4[]
-=====
-.SnapCenter - SQL 복원 워크플로
-[%collapsible]
-=====
-video::scv_sql_restore.mp4[]
-=====
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=38881de9-9ab5-4a8e-a17d-b01200fade6a["VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=10cbcf2c-9964-41aa-ad7f-b01200faca01["VMware vSphere용 SnapCenter 플러그인 - 구축"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b7272f18-c424-4cc3-bc0d-b01200faaf25["VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ed41002e-585c-445d-a60c-b01200fb1188["VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우"]
+* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8df4ad1f-83ad-448b-9405-b01200fb2567["SnapCenter - SQL 복원 워크플로"]
+
+
 ====
 .NetApp과 VMware Tanzu
 [%collapsible]

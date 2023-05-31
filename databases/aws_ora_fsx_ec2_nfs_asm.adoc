@@ -4,7 +4,7 @@ permalink: databases/aws_ora_fsx_ec2_nfs_asm.html
 keywords: Oracle, AWS, FSx ONTAP, Database, Oracle ASM, Oracle Restart, Oracle 19c, NFS, dNFS 
 summary: 이 솔루션은 ASM을 볼륨 관리자로 사용하여 독립 실행형 재시작 방식으로 구성된 NFS 프로토콜 및 Oracle 데이터베이스를 사용하는 AWS FSx ONTAP 스토리지 및 EC2 컴퓨팅 인스턴스의 Oracle 데이터베이스 구축 및 보호에 대한 개요와 세부 정보를 제공합니다. 
 ---
-= TR-XXXX: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재가동 시 Oracle 19c
+= TR-4974: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재가동 시 Oracle 19c
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
