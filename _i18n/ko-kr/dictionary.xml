@@ -19184,4 +19184,8 @@ NFS v3를 통한 VVOL을 사용한 네트워크 구성의 예:
   <block id="3a30229aa77d2ff319b5648560b5c4fb" category="list-text"><block ref="3a30229aa77d2ff319b5648560b5c4fb" category="inline-link-macro-rx"></block></block>
   <block id="993e64eb12fccfcd60446d9022f4df0f" category="list-text"><block ref="993e64eb12fccfcd60446d9022f4df0f" category="inline-link-macro-rx"></block></block>
   <block id="883c8d1cbd39f9d229e4d41d04637d5c" category="sidebar">NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨</block>
+  <block id="8856d6754d87bd5cea98aca2dc6bae02" category="cell">Red Hat의 하이브리드 멀티 클라우드</block>
+  <block id="ad7299eadf8b7bc851beaaf29efb9fad" category="cell">퍼블릭 클라우드의 Red Hat 기술과 각 하이퍼스케일러의 NetApp 스토리지 옵션을 비롯한 하이브리드 멀티 클라우드 모델에서 NetApp을 정의합니다.  하이브리드 멀티 클라우드 랜딩 페이지는 콘텐츠별 '타일'에 나와 있는 인기 있는 콘텐츠를 제공합니다.</block>
+  <block id="a4ab3fb5550933627c37dbd35217441e" category="inline-link-macro">Red Hat 콘텐츠를 사용한 하이브리드 멀티 클라우드</block>
+  <block id="a1e36e03e5410cb33f877c31957cf797" category="cell"><block ref="a1e36e03e5410cb33f877c31957cf797" category="inline-link-macro-rx"></block></block>
 </blocks>
