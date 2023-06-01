@@ -106,6 +106,19 @@ video::rhhc-failover-failback.mp4[]
 link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용하여 DR을 수행합니다"]
 
 ====
+.Red Hat OpenShift를 사용한 하이브리드 멀티 클라우드
+[#rhhc%collapsible]
+====
+.Astra Control Service를 사용한 Rosa DR
+video::rhhc-Rosa-DR-demo-audio.mp4[]
+.FSxN과 Astra Trident의 통합
+video::rhhc-install-trident-using-helm.mp4[]
+.FSxN이 있는 Rosa에서 애플리케이션의 장애 복구 및 장애 복구
+video::rhhc-failover-failback.mp4[]
+.Astra Control Center를 사용하여 DR을 수행합니다
+link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용하여 DR을 수행합니다"]
+
+====
 .포함되었습니다
 [#virtualization%collapsible]
 ====
