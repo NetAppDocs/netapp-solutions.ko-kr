@@ -5,13 +5,12 @@ keywords: OpenShift, deploy, baremetal, private cloud, virtual
 summary: Red Hat OpenShift Container Platform은 온프레미스 인프라와 하이브리드 클라우드 인프라 전반에서 개발 및 IT 운영을 단일 플랫폼에서 통합하여 애플리케이션을 일관되게 개발, 배포 및 관리합니다. Red Hat OpenShift는 컨테이너 기반 워크로드를 위해 설계된 세계 최고의 엔터프라이즈 Linux 배포판인 Kubernetes 및 Red Hat Enterprise Linux CoreOS를 비롯한 오픈 소스 혁신과 업계 표준을 기반으로 구축되었습니다. 
 ---
 = OpenShift 개요
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
+
+
+
+== OpenShift 개요
 
 Red Hat OpenShift Container Platform은 온프레미스 인프라와 하이브리드 클라우드 인프라 전반에서 개발 및 IT 운영을 단일 플랫폼에서 통합하여 애플리케이션을 일관되게 개발, 배포 및 관리합니다. Red Hat OpenShift는 컨테이너 기반 워크로드를 위해 설계된 세계 최고의 엔터프라이즈 Linux 배포판인 Kubernetes 및 Red Hat Enterprise Linux CoreOS를 비롯한 오픈 소스 혁신과 업계 표준을 기반으로 구축되었습니다. OpenShift는 CNCF(Cloud Native Computing Foundation) 인증 Kubernetes 프로그램의 일부로, 컨테이너 워크로드의 이동성과 상호 운용성을 제공합니다.
 
@@ -40,7 +39,7 @@ image:redhat_openshift_image4.png["오류: 그래픽 이미지가 없습니다"]
 
 Red Hat OpenShift 4부터 OpenShift를 위한 배포 방법에는 고도의 맞춤형 배포를 위한 UPI(User Provisioned Infrastructure)를 사용한 수동 배포 또는 IPI(Installer Provisioned Infrastructure)를 사용한 완전 자동화된 배포가 포함됩니다.
 
-IPI 설치 방법은 대부분의 경우 개발, 테스트 및 생산 환경에 OCP 클러스터를 신속하게 배포할 수 있기 때문에 선호되는 방법입니다.
+IPI 설치 방법은 개발, 테스트 및 프로덕션 환경을 위한 OpenShift 클러스터를 신속하게 배포할 수 있기 때문에 대부분의 경우 선호되는 방법입니다.
 
 
 
