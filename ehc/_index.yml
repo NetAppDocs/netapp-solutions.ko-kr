@@ -55,18 +55,16 @@ indexpage:
       url: "/gcp/index.html"
     - title: 가상화 환경을 구성합니다
       url: "/gcp/gcp-setup.html"
-    - title: NFS 데이터 저장소 보충 공지
-      url: https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine
+    - title: NetApp CVS를 보조 NFS 데이터 저장소로서 소개합니다
+      url: "/gcp/gcp-ncvs-datastore.html"
     - title: CVO를 게스트 연결 스토리지로 사용
       url: "/gcp/gcp-guest.html#gcp-cvo"
     - title: CVS를 게스트 연결 스토리지로
       url: "/gcp/gcp-guest.html#cvs"
-    - title: 'CVS: 보조 데이터 저장소로서(NetApp 블로그)'
-      url: https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/
-    - title: NetApp CVS를 Google Cloud VMware Engine용 데이터 저장소로 사용하는 방법(Google 블로그)
-      url: https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
       url: "/gcp/gcp-solutions.html"
+    - title: Google Cloud에서 NetApp CVS NFS 데이터 저장소에 대한 지역 지원
+      url: "/gcp/gcp-regions.html"
     - title: 보안 개요 - Google Cloud의 NetApp CVS
       url: "/ncvs/ncvs-gc-overview.html"
   - title: 도구

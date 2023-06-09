@@ -5,6 +5,8 @@ indexpage:
     links:
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
+    - title: GCVE에서 NetApp Cloud Volume Service를 사용하는 보조 NFS 데이터 저장소
+      url: "/gcp-ncvs-datastore.html"
     - title: 보충 NFS 데이터 저장소 옵션 (NetApp 블로그)
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
     - title: NetApp CVS를 Google Cloud VMware Engine용 데이터 저장소로 사용하는 방법(Google 블로그)
@@ -17,16 +19,22 @@ indexpage:
     links:
     - title: SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구
       url: "/gcp-app-dr-sc-cvo-veeam.html"
+    - title: NetApp SnapCenter를 사용한 애플리케이션 정합성 보장 재해 복구 및 NetApp CVS에 Veeam 복제 GCVE
+      url: "/gcp-app-dr-sc-cvs-veeam.html"
   - title: 워크로드 마이그레이션 솔루션
     links:
     - title: VMware HCX를 사용하여 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
       url: "/gcp-migrate-vmware-hcx.html"
+    - title: Veeam 복제를 사용하여 VM 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
+      url: "/gcp-migrate-veeam.html"
   - title: 도구
     links:
     - title: GCVE+ CVS TCO 계산기
       url: https://bluexp.netapp.com/gcve-cvs/roi
   - title: 추가 정보
     links:
+    - title: Google Cloud에서 NetApp CVS NFS 데이터 저장소에 대한 지역 지원
+      url: "/gcp-regions.html"
     - title: NetApp Cloud Volumes Service를 사용하는 Google Cloud VMware Engine
       url: https://www.netapp.com/google-cloud/google-cloud-vmware-engine-registration/
     - title: 보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service

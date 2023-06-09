@@ -2,8 +2,12 @@
 :allow-uri-read: 
 
 
-GCP/GCVE에서 보조 NFS 데이터 저장소의 가용성은 Google에서 정의합니다. 먼저 특정 지역에서 GCVE 및 CVS를 모두 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 CVS 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.
+GCVE용 보조 NFS 데이터 저장소는 NetApp 클라우드 볼륨 서비스에서 지원됩니다.
 
-* GCVE 및 CVS의 가용성을 확인합니다 link:["여기"].
-* CVS 보조 NFS 데이터 저장소의 가용성을 확인합니다 link:["여기"].
 
+NOTE: CVS 전용 - GCVE NFS 데이터 저장소에는 성능 볼륨을 사용할 수 있습니다.
+사용 가능한 위치는 을 참조하십시오 link:https://bluexp.netapp.com/cloud-volumes-global-regions#cvsGc["글로벌 지역 지도"]
+
+Google Cloud VMware Engine은 다음 위치에서 사용할 수 있습니다 image:gcve_regions_Mar2023.png[""]
+지연 시간을 최소화하려면 볼륨을 마운트하려는 NetApp CVS 볼륨 및 GCVE가 동일한 가용성 영역에 있어야 합니다.
+Google 및 NetApp 솔루션 설계자와 협력하여 가용성 및 TCO 최적화

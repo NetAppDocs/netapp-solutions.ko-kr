@@ -31,6 +31,8 @@ entries:
       url: "/ehc/azure/azure-native-overview.html"
     - title: AVS용 게스트 연결 스토리지
       url: "/ehc/azure/azure-guest.html"
+    - title: GCVE용 보조 NFS 데이터 저장소
+      url: "/ehc/gcp/gcp-ncvs-datastore.html"
     - title: GCVE용 게스트 연결 저장소
       url: "/ehc/gcp/gcp-guest.html"
     - title: NFS 데이터 저장소에 대한 지역 지원
@@ -84,10 +86,20 @@ entries:
 - title: NetApp for GCP/GCVE
   url: "/ehc/gcp/index.html"
   entries:
-  - title: SnapCenter, CVO, Veeam 복제를 통한 애플리케이션 재해 복구
-    url: "/ehc/gcp/gcp-app-dr-sc-cvo-veeam.html"
-  - title: VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
-    url: "/ehc/gcp/gcp-migrate-vmware-hcx.html"
+  - title: 워크로드 보호
+    entries:
+    - title: Veeam을 통한 재해 복구(보충 NFS 데이터 저장소)
+      url: "/ehc/gcp/gcp-app-dr-sc-cvs-veeam.html"
+    - title: Veeam을 통한 재해 복구(게스트 연결 스토리지)
+      url: "/ehc/gcp/gcp-app-dr-sc-cvo-veeam.html"
+  - title: 워크로드를 마이그레이션 중입니다
+    entries:
+    - title: VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
+      url: "/ehc/gcp/gcp-migrate-vmware-hcx.html"
+    - title: Veeam 복제를 사용하여 VM 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
+      url: "/ehc/gcp/gcp-migrate-veeam.html"
+  - title: NetApp CVS NFS 데이터 저장소에 대한 지역 지원
+    url: "/ehc/gcp/gcp-regions.html"
   - title: 보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service
     type: solutions
     entries:

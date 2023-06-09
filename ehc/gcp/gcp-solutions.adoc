@@ -30,12 +30,14 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 .보호
 --
 * link:gcp-app-dr-sc-cvo-veeam.html["SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구"]
+* link:gcp-app-dr-sc-cvs-veeam.html["NetApp SnapCenter를 사용한 애플리케이션 정합성 보장 재해 복구 및 NetApp CVS에 Veeam 복제 GCVE"]
 
 
 --
 .마이그레이션
 --
 * link:gcp-migrate-vmware-hcx.html["VMware HCX를 사용하여 NetApp Cloud Volume Service NFS 데이터 저장소로 워크로드 마이그레이션"]
+* link:gcp-migrate-veeam.html["Veeam을 사용하여 NetApp Cloud Volume Service NFS 데이터 저장소로 VM 복제"]
 
 
 --
