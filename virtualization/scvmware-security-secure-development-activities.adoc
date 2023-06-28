@@ -4,11 +4,17 @@ permalink: virtualization/scvmware-security-secure-development-activities.html
 keywords: security, snapcenter, treat modeling, dast, vulnerability scanning, penetration testing 
 summary:  
 ---
-= WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안
+= WP-7355: VMware vSphere용 SnapCenter 플러그인 - 제품 보안
 :allow-uri-read: 
 
 
 Chance Bingen, NetApp
+
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
+
+
+
+== 안전한 개발 활동
 
 [role="lead"]
 NetApp SnapCenter Plug-in for VMware vSphere 소프트웨어 엔지니어링은 다음과 같은 안전한 개발 활동을 사용합니다.
@@ -98,4 +104,7 @@ NetApp은 VMware vSphere 어플라이언스인 SnapCenter 플러그인과 관련
 
 
 | 버전 1.0 | 2022년 3월 | 최초 릴리스. 
+
+
+| 버전 1.0.1 | 2023년 6월 | 경미한 문법 및 브랜딩 편집. 
 |===

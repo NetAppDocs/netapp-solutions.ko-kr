@@ -15,6 +15,8 @@ summary: 이 문서에서는 VMware vSphere용 ONTAP 툴의 제품 보안에 대
 
 Chance Bingen, Dan Tullege, Jenn Schrie, NetApp
 
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
+
 
 
 == 안전한 개발 활동

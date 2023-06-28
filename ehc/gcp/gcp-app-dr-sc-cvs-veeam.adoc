@@ -83,8 +83,7 @@ image:dr-cvo-gcve-image2.png["오류: 그래픽 이미지가 없습니다"]
 
 SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-guest-dr-config-snapmirror.html["SnapCenter를 사용하여 복제를 설정합니다"]
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=395e33db-0d63-4e48-8898-b01200f006ca["비디오: SnapCenter로 SQL VM 보호"]
-
+video::dr-cvo-gcve-video2.mp4[Review of SQL VM protection with SnapCenter]
 ====
 .GCVE 호스트 및 CVO 데이터 액세스를 구성합니다
 [%collapsible]
@@ -111,13 +110,13 @@ https://helpcenter.veeam.com/docs/backup/vsphere/replication_components.html?ver
 ====
 사내 vCenter와 GCVE vCenter를 모두 Veeam에 등록해야 합니다. https://helpcenter.veeam.com/docs/backup/vsphere/replica_job.html?ver=120["vSphere VM 복제 작업을 설정합니다"] 마법사의 게스트 처리 단계에서 애플리케이션 인식 백업 및 복구를 위해 SnapCenter를 활용할 예정이므로 애플리케이션 처리 비활성화 를 선택합니다.
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8b7e4a9b-7de1-4d48-a8e2-b01200f00692["비디오: SQL VM의 Veeam 복제"]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8b7e4a9b-7de1-4d48-a8e2-b01200f00692["SQL VM의 Veeam 복제 작업"]
 
 ====
 .Microsoft SQL Server VM의 페일오버
 [%collapsible]
 ====
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9762dc99-081b-41a2-ac68-b01200f00ac0["비디오: SQL VM의 페일오버"]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9762dc99-081b-41a2-ac68-b01200f00ac0["SQL VM 페일오버"]
 
 ====
 
