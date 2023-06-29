@@ -580,7 +580,6 @@ image:sql-awsec2-image27.png["오류: 그래픽 이미지가 없습니다"]
 ====
 이 프로세스에 대한 자세한 내용은 다음 비디오를 참조하십시오.
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27f28284-433d-4273-8748-b01200fb3cd7["ONTAP용 AWS FSx를 사용하여 Amazon EC2에 SQL Server를 구축합니다"]
 
 
 

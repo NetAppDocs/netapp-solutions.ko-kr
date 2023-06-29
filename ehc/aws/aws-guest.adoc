@@ -126,7 +126,6 @@ image:aws-fsx-guest-21.png[""]
 
 
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c3befe1b-4f32-4839-a031-b01200fb6d60["이 프로세스에 대한 비디오 안내를 시청하십시오."]
 
 ====
 .Microsoft Windows 클라이언트에 FSx ONTAP 볼륨을 연결합니다
@@ -166,7 +165,6 @@ image:aws-fsx-guest-26.png[""]
 .NetApp ONTAP LUN용 FSx를 iSCSI를 사용하여 호스트에 연결합니다
 [%collapsible]
 ====
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d03e040-634f-4086-8cb5-b01200fb8515["이 단계에 대한 비디오 안내를 시청하십시오."]
 
 FSx의 iSCSI 트래픽은 이전 섹션에 제공된 경로를 통해 VMware Transit Connect/AWS Transit Gateway를 통과합니다. NetApp ONTAP용 Amazon FSx에서 LUN을 구성하려면 찾은 문서를 따르십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["여기"].
 

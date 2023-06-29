@@ -20,4 +20,5 @@ summary:
 
 == AWS 기반 Red Hat OpenShift Service를 위한 FSX NetApp ONTAP(Rosa)
 
-다음 비디오에서는 을 보여 줍니다 link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01dd455e-7f5a-421c-b501-b01200fa91fd["한 지역에서 실행되고 다른 지역으로 복원되는 Rosa 응용 프로그램의 백업"].
+다음 비디오에서는 한 지역에서 실행되고 다른 지역으로 복원되는 Rosa 응용 프로그램의 백업을 보여 줍니다.
+

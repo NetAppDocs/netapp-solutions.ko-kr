@@ -64,4 +64,3 @@ NOTE: ONTAP용 FSX는 현재 확장 클러스터에서 지원되지 않습니다
 
 이 프로세스에 대해 자세히 알아보려면 자세한 단계별 안내 비디오를 참조하십시오.
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6462f4e4-2320-42d2-8d0b-b01200f00ccb["VMC SDDC에 ONTAP 볼륨용 Amazon FSx를 마운트합니다"]

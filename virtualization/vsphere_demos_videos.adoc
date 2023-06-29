@@ -4,7 +4,7 @@ permalink: virtualization/vsphere_demos_videos.html
 keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, Cloud Sync, FabricPool, ONTAP 
 summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설명을 제공합니다. 
 ---
-= 하이브리드 클라우드, 가상화 및 컨테이너 비디오 및 데모
+= 가상화 비디오 및 데모
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,35 +19,89 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 .VMware vSphere용 NetApp ONTAP 툴
 [%collapsible]
 ====
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d2ac19ba-28c4-4c07-8724-b01200f99845["VMware용 ONTAP 툴 - 개요"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c047271-aecc-437c-a444-b01200f9671a["ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a34bcd1c-3aaa-4917-9a5d-b01200f97f08["ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당"]
+[cols="5a, 5a, 5a"]
+|===
 
 
+ a| 
+VMware용 ONTAP 툴 - 개요
+
+ a| 
+ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당
+
+ a| 
+ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당
+
+
+|===
 ====
 .NetApp ONTAP용 AWS FSx가 있는 AWS 기반 VMware Cloud
 [%collapsible]
 ====
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d03e040-634f-4086-8cb5-b01200fb8515["iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c3befe1b-4f32-4839-a031-b01200fb6d60["NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0fedec5-dc17-47af-8821-b01200f00e08["NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2065dcc1-f31a-4e71-a7d5-b01200f01171["NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6132c921-a44c-4c81-aab7-b01200fb5d29["VMC를 위한 VMware HCX 구축 및 구성 설정"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=52661f10-3f90-4f3d-865a-b01200f06d31["VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=685c0dc2-9d8a-42ff-b46d-b01200f056b0["VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모"]
+[cols="5a, 5a, 5a"]
+|===
 
 
+ a| 
+iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
+
+ a| 
+NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
+
+ a| 
+NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
+
+
+
+
+ a| 
+NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
+
+ a| 
+VMC를 위한 VMware HCX 구축 및 구성 설정
+
+ a| 
+VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모
+
+
+
+
+ a| 
+VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모
+
+ a| 
+ a| 
+
+|===
 ====
 .ANF(Azure NetApp Files)가 있는 Azure 기반 Azure VMware 서비스
 [%collapsible]
 ====
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c5ddb30-6c31-4cde-86e2-b01200effbd6["Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cd19888-8314-4cfc-ba30-b01200efff4f["Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b7ffa5ad-5559-4e56-a166-b01200f025bc["VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=986bb505-6f3d-4a5a-b016-b01200f03f18["VMware HCX와 함께 AVS 및 ANF용 vMotion 데모"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=255640f5-4dff-438c-8d50-b01200f017d1["VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모"]
+[cols="5a, 5a, 5a"]
+|===
 
 
+ a| 
+Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
+
+ a| 
+Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
+
+ a| 
+VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모
+
+
+
+
+ a| 
+VMware HCX와 함께 AVS 및 ANF용 vMotion 데모
+
+ a| 
+VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모
+
+ a| 
+
+|===
 ====
 .VMware vSphere용 SnapCenter 플러그인
 [%collapsible]
@@ -58,13 +112,31 @@ VMware vSphere용 SnapCenter 플러그인을 사용하면 VM에 대한 백업, �
 
 NetApp SnapCenter Plug-in for VMware vSphere에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/ocsc-42/index.jsp?topic=%2Fcom.netapp.doc.ocsc-con%2FGUID-29BABBA7-B15F-452F-B137-2E5B269084B9.html["VMware vSphere용 NetApp SnapCenter 플러그인 개요"].
 
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=38881de9-9ab5-4a8e-a17d-b01200fade6a["VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=10cbcf2c-9964-41aa-ad7f-b01200faca01["VMware vSphere용 SnapCenter 플러그인 - 구축"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b7272f18-c424-4cc3-bc0d-b01200faaf25["VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ed41002e-585c-445d-a60c-b01200fb1188["VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우"]
-* link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8df4ad1f-83ad-448b-9405-b01200fb2567["SnapCenter - SQL 복원 워크플로"]
+[cols="5a, 5a, 5a"]
+|===
 
 
+ a| 
+VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
+
+ a| 
+VMware vSphere용 SnapCenter 플러그인 - 구축
+
+ a| 
+VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
+
+
+
+
+ a| 
+VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
+
+ a| 
+SnapCenter - SQL 복원 워크플로
+
+ a| 
+
+|===
 ====
 .NetApp과 VMware Tanzu
 [%collapsible]
@@ -73,21 +145,19 @@ VMware Tanzu를 사용하면 vSphere 또는 VMware Cloud Foundation을 통해 Ku
 
 VMware Tanzu에 대한 자세한 내용은 를 참조하십시오 https://tanzu.vmware.com/tanzu["VMware Tanzu 개요"^]. 이 리뷰에서는 VMware Tanzu에 대한 사용 사례, 추가 기능 및 기타 정보를 제공합니다.
 
-* https://www.youtube.com/watch?v=ZtbXeOJKhrc["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법 1부"^]
-* https://www.youtube.com/watch?v=FVRKjWH7AoE["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 2부"^]
-* https://www.youtube.com/watch?v=Y-34SUtTTtU["NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 3부"^]
+[cols="5a, 5a, 5a"]
+|===
 
 
-====
-.NetApp 및 Red Hat OpenShift의 조합
-[%collapsible]
-====
-엔터프라이즈 Kubernetes 플랫폼인 Red Hat OpenShift를 사용하면 오픈 하이브리드 클라우드 전략으로 컨테이너 기반 애플리케이션을 실행할 수 있습니다. Red Hat OpenShift는 주요 퍼블릭 클라우드 또는 자가 관리 소프트웨어에서 클라우드 서비스로 사용할 수 있으며 컨테이너 기반 솔루션을 설계할 때 고객이 필요로 하는 유연성을 제공합니다.
+ a| 
+NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법 1부
 
-Red Hat OpenShift에 대한 자세한 내용은 다음을 참조하십시오 https://www.redhat.com/en/technologies/cloud-computing/openshift["Red Hat OpenShift 개요"^]. 제품 설명서 및 배포 옵션을 검토하여 Red Hat OpenShift에 대해 자세히 알아볼 수도 있습니다.
+video::ZtbXeOJKhrc[youtube,width=360] a| 
+NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 2부
 
-* https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_videos_workload_migration_manual.html["워크로드 마이그레이션 - NetApp의 Red Hat OpenShift"^]
-* https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_videos_RHV_deployment.html["RHV 기반 Red Hat OpenShift Deployment: NetApp 기반 Red Hat OpenShift"^]
+video::FVRKjWH7AoE[youtube,width=360] a| 
+NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 3부
 
-
+video::Y-34SUtTTtU[youtube,width=360]
+|===
 ====

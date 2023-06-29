@@ -45,7 +45,7 @@ NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터�
 [%collapsible]
 ====
 * 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 제어 차트 URL: https://netapp.github.io/trident-helm-chart[]
-* 데모 비디오: link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=621ae20d-7567-4bbf-809d-b01200fa7a68["Rosa 클러스터를 위한 Astra Trident와 FSxN 통합"]
+
 
 
 

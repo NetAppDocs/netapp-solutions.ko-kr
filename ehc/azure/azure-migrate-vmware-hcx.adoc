@@ -293,13 +293,15 @@ image:anfd-hcx-image19.png["오류: 그래픽 이미지가 없습니다"]
 
 다양한 마이그레이션 옵션과 HCX를 사용하여 워크로드를 온프레미스에서 Azure VMware 솔루션으로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-14D48C15-3D75-485B-850F-C5FCB96B5637.html["VMware HCX 사용자 가이드"^].
 
-이 프로세스에 대해 자세히 알아보려면 언제든지 을(를) 참조하십시오 link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=255640f5-4dff-438c-8d50-b01200f017d1["자세한 단계별 안내 비디오를 따릅니다"].
+이 프로세스에 대해 자세히 알아보려면 다음 비디오를 시청하십시오.
+
 
 다음은 HCX vMotion 옵션의 스크린샷입니다.
 
 image:anfd-hcx-image20.png["오류: 그래픽 이미지가 없습니다"]
 
-이 프로세스에 대해 자세히 알아보려면 언제든지 을(를) 참조하십시오 link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=986bb505-6f3d-4a5a-b016-b01200f03f18["자세한 단계별 안내 비디오를 따릅니다"].
+이 프로세스에 대해 자세히 알아보려면 다음 비디오를 시청하십시오.
+
 
 
 NOTE: 마이그레이션을 처리할 수 있는 대역폭이 충분한지 확인합니다.
