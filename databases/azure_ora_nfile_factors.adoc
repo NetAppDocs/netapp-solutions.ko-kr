@@ -130,6 +130,6 @@ image:aws_ora_fsx_ec2_nfs_01.PNG["이 표에는 다음 파일 유형, 제어 파
 
 
 
-NOTE: dNFS를 사용하기 전에 Oracle Doc 1495104.1에 설명된 패치가 설치되어 있는지 확인하십시오. Oracle 12c를 시작으로 DNFS에는 NFSv3, NFSv4, NFSv4.1 지원이 포함되어 있습니다. NetApp 지원 정책은 모든 클라이언트에서 v3 및 v4를 지원하지만 작성 당시에는 NFSv4.1이 Oracle dNFS에 사용하도록 지원되지 않습니다.
+NOTE: dNFS를 사용하기 전에 Oracle Doc 1495104.1에 설명된 패치가 설치되어 있는지 확인하십시오. NFSv3 및 NFSv4에 대한 NetApp Support Matrix에는 특정 운영 체제가 포함되어 있지 않습니다. RFC를 따르는 모든 OS가 지원됩니다. 온라인 IMT에서 NFSv3 또는 NFSv4 지원을 검색할 때 일치하는 항목이 표시되지 않으므로 특정 OS를 선택하지 마십시오. 모든 OS는 일반 정책에 의해 암시적으로 지원됩니다.
 
 link:azure_ora_nfile_procedures.html["다음: 배포 절차."]

@@ -6,6 +6,8 @@ entries:
 - title: Oracle 데이터베이스
   type: solutions
   entries:
+  - title: AWS FSx ONTAP를 사용한 Oracle VLDB의 빠른 복구 및 클론
+    url: "/databases/aws_ora_fsx_ec2_inc_merge.html"
   - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
     url: "/databases/aws_ora_fsx_ec2_nfs_asm.html"
   - title: iSCSI/ASM을 통한 Oracle 데이터베이스 구축 및 보호
@@ -83,6 +85,8 @@ entries:
       url: "/databases/sql-srv-anf_where_to_find_additional_information.html"
   - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
     url: "/databases/sql-aws-ec2.html"
+  - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+    url: "/databases/sqlsb-backup-and-restore-aws-fsxn.html"
   - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
     url: "/databases/sqlsb-backup-and-restore-aws-fsxn.html"
   - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
