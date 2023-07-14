@@ -122,6 +122,9 @@
 | 2022년 8월 25일 | 데이터베이스 | 블로그 추가 - Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오 
 
 
+| 2023년 7월 14일 | 데이터 분석 | TR-4947: NetApp NFS 스토리지를 사용한 Apache Kafka 워크로드 업데이트(AWS FSxN 포함) 
+
+
 | 2022년 8월 25일 | AI | 새로운 솔루션: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise 
 
 
