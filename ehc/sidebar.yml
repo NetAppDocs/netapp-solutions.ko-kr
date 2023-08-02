@@ -101,7 +101,6 @@ entries:
   - title: NetApp CVS NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/gcp/gcp-regions.html"
   - title: 보안 개요 - Google Cloud의 NetApp CVS(Cloud Volumes Service
-    type: solutions
     entries:
     - title: 개요
       url: "/ehc/ncvs/ncvs-gc-overview.html"

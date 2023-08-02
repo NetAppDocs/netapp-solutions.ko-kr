@@ -4,7 +4,6 @@ title: 컨테이너
 url: "/containers/index.html"
 entries:
 - title: NetApp의 Anthos
-  type: solutions
   url: "/containers/anthos-with-netapp/a-w-n_solution_overview.html"
   entries:
   - title: Anthos 개요
@@ -43,7 +42,6 @@ entries:
   - title: 추가 정보
     url: "/containers/anthos-with-netapp/a-w-n_additional_information.html"
 - title: NetApp Astra와 DevOps
-  type: solutions
   url: "/containers/devops_with_netapp/dwn_solution_overview.html"
   entries:
   - title: DevOps 개요
@@ -74,7 +72,6 @@ entries:
   - title: 추가 정보
     url: "/containers/devops_with_netapp/dwn_additional_information.html"
 - title: NetApp의 Red Hat OpenShift
-  type: solutions
   url: "/containers/rh-os-n_solution_overview.html"
   entries:
   - title: Red Hat OpenShift 개요
@@ -198,7 +195,6 @@ entries:
   - title: 추가 정보
     url: "/containers/rh-os-n_additional_information.html"
 - title: NetApp의 VMware Tanzu
-  type: solutions
   url: "/containers/tanzu_with_netapp/vtwn_solution_overview.html"
   entries:
   - title: VMware Tanzu 개요
@@ -242,7 +238,6 @@ entries:
   entries:
   - title: Anthos의 Bare Metal
     url: "/containers/baremetal-anthos/bmanthos_introduction.html"
-    type: solutions
     entries:
     - title: 솔루션 개요
       url: "/containers/baremetal-anthos/bmanthos_solution_overview.html"

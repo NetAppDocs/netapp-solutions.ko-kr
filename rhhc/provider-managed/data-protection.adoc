@@ -22,3 +22,4 @@ summary:
 
 다음 비디오에서는 한 지역에서 실행되고 다른 지역으로 복원되는 Rosa 응용 프로그램의 백업을 보여 줍니다.
 
+video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto,width=360]

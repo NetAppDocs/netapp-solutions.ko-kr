@@ -103,6 +103,7 @@ image:vvols-image6.png["ONTAP 툴 VVol 대시보드, 400"]
 
 * ONTAP VVOL 한계 *
 
+[cols="40%, 30%, 30%"]
 |===
 | 용량/기능 | SAN(SCSI 또는 NVMe-oF) | NFS 를 참조하십시오 
 

@@ -29,6 +29,12 @@ NetApp은 Astra Trident CSI를 준수하는 스토리지 오케스트레이터�
 | 배포 유형 | 버전 | 스토리지 시스템 | Astra Trident 버전 | 프로토콜 | 피처 
 
 
+| VMware | 1.15 | ONTAP 9.12.1 | 23.04 | NAS | MultiWriter, 볼륨 확장, 스냅샷, PVCDataSource 
+
+
+| VMware | 1.15 | ONTAP 9.12.1 | 23.04 | 산 | 원시 블록, 볼륨 확장, 스냅샷, PVCDataSource 
+
+
 | VMware | 1.14 | ONTAP 9.12.1 | 23.01 | NAS | MultiWriter, 볼륨 확장, 스냅샷, PVCDataSource 
 
 

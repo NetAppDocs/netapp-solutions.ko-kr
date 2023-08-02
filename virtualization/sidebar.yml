@@ -12,7 +12,6 @@ entries:
 - title: ONTAP용 VMware 가상화
   entries:
   - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
-    type: solutions
     entries:
     - title: 소개
       url: "/virtualization/vsphere_admin_introduction.html"
@@ -26,7 +25,6 @@ entries:
       url: "/virtualization/vsphere_admin_hybrid_cloud.html"
   - title: ONTAP를 사용하는 VMware vSphere 모범 사례
     url: "/virtualization/vsphere_ontap_ontap_for_vsphere.html"
-    type: solutions
     entries:
     - title: vSphere를 위한 ONTAP 기능
       url: "/virtualization/vsphere_ontap_ontap_capabilities_for_vsphere.html"
@@ -44,7 +42,6 @@ entries:
       url: "/virtualization/vsphere_ontap_contact_us.html"
   - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
     url: "/virtualization/vvols-overview.html"
-    type: solutions
     entries:
     - title: ONTAP에서 VVOL 사용
       url: "/virtualization/vvols-ontap.html"
@@ -56,7 +53,6 @@ entries:
       url: "/virtualization/vvols-resources.html"
   - title: NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자
     url: "/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
-    type: solutions
     entries:
     - title: SRM 및 ONTAP 도구의 새로운 기능
       url: "/virtualization/vsrm-ontap9_new_features_with_srm_and_ontap_tools.html"
@@ -74,13 +70,10 @@ entries:
       url: "/virtualization/vsrm-ontap9_additional_information.html"
   - title: VMware vSphere용 ONTAP 툴 - 제품 보안
     url: "/virtualization/tools-vmware-secure-development-activities.html"
-    type: solutions
   - title: SnapCenter 플러그인 VMware vSphere - 제품 보안
     url: "/virtualization/scvmware-security-secure-development-activities.html"
-    type: solutions
   - title: VMware vSphere 자동화
     url: "/virtualization/vsphere_auto_introduction.html"
-    type: solutions
     entries:
     - title: 기존 블록 스토리지 용량 할당
       url: "/virtualization/vsphere_ontap_auto_block.html"
@@ -112,7 +105,6 @@ entries:
     entries:
     - title: NetApp 가상 데스크톱 서비스 기반의 하이브리드 클라우드 VDI
       url: "/vdi-vds/hcvdivds_hybrid_cloud_vdi_with_virtual_desktop_service.html"
-      type: solutions
       entries:
       - title: 사용 사례
         url: "/vdi-vds/hcvdivds_use_cases.html"
@@ -161,7 +153,7 @@ entries:
     - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)
       url: "/virtualization/nva-1129-deploy.html"
     - title: 3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅
-      url: "/virtualization/tr-4792-link.html"
+      url: "/virtualization/tr-4792.html"
   - title: FlexPod 데스크톱 가상화 솔루션
     url: "/virtualization/flex-virtual-solutions.html"
 - title: 데모 및 자습서

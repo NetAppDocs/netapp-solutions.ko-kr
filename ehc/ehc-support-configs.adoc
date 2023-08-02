@@ -16,17 +16,24 @@ summary:
 [role="lead"]
 주요 하이퍼 스케일러에서 NetApp 스토리지 지원 조합을 이해합니다.
 
+[cols="50%, 50%"]
 |===
 
 
-|  | * 게스트 연결됨 * | * 보조 NFS 데이터 저장소 * 
+|  | * 게스트 연결됨 * 
 
 
-| * AWS * | CVO FSx ONTAPlink:aws/aws-guest.html["세부 정보"] | FSX ONTAPlink:aws/aws-native-overview.html["세부 정보"] 
+| * 보조 NFS 데이터 저장소 * | * AWS * 
 
 
-| * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] | ANFlink:azure/azure-native-overview.html["세부 정보"] 
+| CVO FSx ONTAPlink:aws/aws-guest.html["세부 정보"] | FSX ONTAPlink:aws/aws-native-overview.html["세부 정보"] 
 
 
-| * GCP * | CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["세부 정보"] 
+| * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] 
+
+
+| ANFlink:azure/azure-native-overview.html["세부 정보"] | * GCP * 
+
+
+| CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["세부 정보"] 
 |===

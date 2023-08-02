@@ -5,7 +5,6 @@ entries:
 - title: 데이터 마이그레이션
   entries:
   - title: NetApp XCP의 모범 사례 지침
-    type: solutions
     entries:
     - title: 소개
       url: "/xcp/xcp-bp-introduction.html"
@@ -54,13 +53,13 @@ entries:
 - title: 데이터 보호
   entries:
   - title: NetApp E-Series 및 Commvault 데이터 플랫폼 V11
-    url: "/dp-sec/tr-4320-link.html"
+    url: "/dp-sec/tr-4320.html"
   - title: Veeam Backup Replication 9.5의 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지 모범
       사례
-    url: "/dp-sec/tr-4571-link.html"
+    url: "/dp-sec/tr-4571.html"
   - title: NetApp E-Series 스토리지를 사용한 Veritas NetBackup 구축
-    url: "/dp-sec/tr-4704-link.html"
+    url: "/dp-sec/tr-4704.html"
 - title: 보안
   entries:
   - title: NIST Multitenant Infrastructure용 HyTrust를 사용한 FISMA 보안 제어
-    url: "/dp-sec/nva-1143-link.html"
+    url: "/dp-sec/nva-1143.html"

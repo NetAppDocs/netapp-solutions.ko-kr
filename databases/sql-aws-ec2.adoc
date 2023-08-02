@@ -72,7 +72,10 @@ Amazon FSx for NetApp ONTAP 및 EC2 인스턴스에 SQL Server를 함께 사용�
 ====
 FSx ONTAP를 사용하면 스토리지를 조달하는 것이 가장 쉬우므로 파일 시스템을 업데이트하여 수행할 수 있습니다. 이 간단한 프로세스를 통해 필요에 따라 동적인 비용 및 성능 최적화를 수행할 수 있으며, SQL 워크로드의 균형을 유지하는 데 도움이 되며, 씬 프로비저닝을 위한 훌륭한 원동력이기도 합니다. FSX ONTAP 씬 프로비저닝은 SQL Server를 실행하는 EC2 인스턴스에 파일 시스템에서 프로비저닝되는 것보다 더 많은 논리적 스토리지를 제공하도록 설계되었습니다. 공간을 미리 할당하는 대신 데이터가 기록될 때 스토리지 공간이 각 볼륨 또는 LUN에 동적으로 할당됩니다. 대부분의 구성에서는 볼륨 또는 LUN의 데이터가 삭제되고 스냅샷 복사본이 보류되지 않는 경우에도 사용 가능한 공간이 다시 해제됩니다. 다음 표에는 스토리지를 동적으로 할당할 수 있는 구성 설정이 나와 있습니다.
 
+[cols="40%, 60%"]
 |===
+
+
 | 설정 | 구성 
 
 
@@ -304,6 +307,7 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 ====
 다음 표에는 Microsoft Windows Server에 SnapCenter Server 및 플러그인을 설치하기 위한 최소 요구 사항이 나열되어 있습니다.
 
+[cols="50%, 50%"]
 |===
 | 구성 요소 | 요구 사항 
 
@@ -345,6 +349,7 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 
 
 |===
+자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html["요구사항을 충족해야 합니다"].
 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html["요구사항을 충족해야 합니다"].
 
 버전 호환성은 를 참조하십시오 https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^].
@@ -434,6 +439,8 @@ image:sql-awsec2-image18.png["오류: 그래픽 이미지가 없습니다"]
 데이터베이스와 로그 파일을 FSx ONTAP LUN에 배치한 후 SnapCenter를 사용하여 데이터베이스를 백업할 수 있습니다. 다음 프로세스를 사용하여 전체 백업을 생성합니다.
 
 |===
+
+
 | 모범 사례 
 
 
@@ -467,6 +474,8 @@ image:sql-awsec2-image23.png["오류: 그래픽 이미지가 없습니다"]
 
 
 |===
+
+
 | 모범 사례 
 
 
@@ -515,6 +524,8 @@ SnapCenter는 리소스 그룹 내의 인스턴스 또는 인스턴스 그룹에
 전체 백업 외에도 중요 데이터베이스에 대한 트랜잭션 로그 백업을 구성하는 것이 좋습니다. 데이터베이스 속성이 전체 복구 모델로 설정되어 있는지 확인합니다.
 
 |===
+
+
 | 모범 사례 
 
 
@@ -580,7 +591,7 @@ image:sql-awsec2-image27.png["오류: 그래픽 이미지가 없습니다"]
 ====
 이 프로세스에 대한 자세한 내용은 다음 비디오를 참조하십시오.
 
-
+video::27f28284-433d-4273-8748-b01200fb3cd7[panopto,width=360]
 
 
 == 부록

@@ -21,15 +21,13 @@ link:a400-thinksystem-introduction.html["이전: 소개."]
 
 NetApp AFF 스토리지 시스템을 사용하는 기업은 업계 최고의 성능, 탁월한 유연성, 클라우드 통합, 동급 최고의 데이터 관리 등을 통해 엔터프라이즈 스토리지 요구사항을 충족할 수 있습니다. 플래시 전용으로 설계된 AFF 시스템은 비즈니스 크리티컬 데이터를 더 빠르게 처리하고 관리, 보호할 수 있도록 지원합니다.
 
-NetApp AFF A400은 FAS2650 하드웨어 및 SSD 플래시 미디어를 기반으로 하는 미드레인지 NVMe 플래시 스토리지 시스템입니다.
-
 image:a400-thinksystem-image3.png["이 그림은 NetApp AFF A400 스토리지 컨트롤러의 앞면을 보여줍니다."]
 
 image:a400-thinksystem-image4.png["이 그림은 NetApp AFF A400 스토리지 컨트롤러의 뒷면을 보여줍니다."]
 
-NetApp AFF A400 미드레인지 스토리지 시스템의 기능은 다음과 같습니다.
+NetApp AFF A400은 다음과 같은 기능을 포함하는 미드레인지 NVMe 플래시 스토리지 시스템입니다.
 
-* 최대 유효 용량: 702.7PB
+* 최대 실제 용량:~20PB
 * 최대 스케일아웃: 2~24노드(12개의 HA 쌍)
 * 25GbE 및 16Gb FC 호스트 지원
 * RoCE(100GbE RDMA over Converged Ethernet) 와 NVMe 확장 스토리지 쉘프 연결

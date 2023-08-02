@@ -32,6 +32,7 @@ NetApp과 VMware의 기술 통합은 20년 동안 수천 시간의 엔지니어�
 
 NOTE: 아래 표에서 링크를 선택할 때 페이지가 구축되도록 하십시오.
 
+[cols="20%, 20%, 20%, 20%, 20%"]
 |===
 
 
@@ -43,6 +44,7 @@ NOTE: 아래 표에서 링크를 선택할 때 페이지가 구축되도록 하�
 
 | * vSphere 8u1 * | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=1&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=976&isHWU&src=IMT["링크"] | - | - 
 |===
+[cols="20%, 20%, 20%, 20%, 20%"]
 |===
 
 

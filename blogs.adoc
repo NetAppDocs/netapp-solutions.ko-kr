@@ -42,6 +42,7 @@ keywords: netapp, solutions, blogs
 * link:https://cloud.netapp.com/blog/aws-fsxo-blg-configure-hybrid-cloud-with-fsx-for-netapp-ontap-and-vmware-cloud-on-aws-sddc-using-vmware-hcx["VMware HCX를 사용하여 NetApp ONTAP용 FSx 및 AWS SDDC 기반 VMware 클라우드를 구성할 수 있습니다"]
 * link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["Google Cloud VMware Engine(NetApp)에 대한 NetApp Cloud Volumes Service 데이터 저장소 지원"]
 * link:https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine["NetApp CVS를 Google Cloud VMware Engine(Google)용 데이터 저장소로 사용하는 방법"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]
 
 
 --
@@ -57,6 +58,8 @@ keywords: netapp, solutions, blogs
 
 * link:https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments["클라우드 기반 VMware 구축을 위한 스토리지 최적화"]
 * link:https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution["NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/NetApp-and-VMware-Better-than-ever/ba-p/445780["NetApp와 VMware – 그 어느 때보다 우수합니다"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]
 
 
 --
@@ -71,6 +74,8 @@ keywords: netapp, solutions, blogs
 * link:https://cloud.netapp.com/blog/astra-blg-astra-control-center-the-easy-button-for-application-data-management["NetApp Astra Control Center: 어플리케이션 데이터 관리를 위한 간편한 버튼"]
 * link:https://netapp.io/2021/05/21/docker-rate-limit-issue/["Red Hat OpenShift에 NetApp Trident 설치 – Docker의 'toomanyrequest' 문제를 해결하는 방법!"]
 * link:https://blog.netapp.com/accelerate-your-k8s-journey["ONTAP와 함께 VMware Tanzu를 사용하여 Kubernetes 여정을 가속화하십시오"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634["vSphere 기반 Kubernetes(1부)"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-2/ba-p/445848["vSphere 기반 Kubernetes(2부)"]
 
 
 --

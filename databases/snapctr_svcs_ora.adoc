@@ -60,6 +60,7 @@ image::snapctr_svcs_architecture.png[이 이미지는 UI, 커넥터 및 관리 �
 
 === 하드웨어 및 소프트웨어 구성 요소
 
+[cols="33%, 33%, 33%"]
 |===
 
 
@@ -111,7 +112,7 @@ image::snapctr_svcs_architecture.png[이 이미지는 UI, 커넥터 및 관리 �
 * 일반 지침을 읽으십시오 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html#architecture["클라우드 네이티브 애플리케이션 데이터 보호"^] Oracle 및 ONTAP용 Amazon FSx 관련 섹션도 제공됩니다.
 * 다음 비디오 연습을 시청하십시오.
 +
-
+video::4b0fd212-7641-46b8-9e55-b01200f9383a[panopto,width=360]
 
 
 

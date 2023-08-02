@@ -58,6 +58,7 @@ image::aws_ora_fsx_ec2_nfs_asm_architecture.png[이 이미지는 iSCSI 및 ASM�
 
 === 하드웨어 및 소프트웨어 구성 요소
 
+[cols="33%, 33%, 33%"]
 |===
 
 

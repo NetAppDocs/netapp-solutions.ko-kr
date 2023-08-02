@@ -14,8 +14,14 @@ summary:
 
 
 [role="lead"]
-NetApp Retail Assistant(Nara)의 데모 비디오를 녹화했습니다. 을 클릭합니다 https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b4aae689-31b5-440c-8dde-ac050140ece7["이 링크"^] 다음 그림을 열고 비디오 데모를 재생합니다.
+NetApp Retail Assistant(Nara)의 데모 비디오를 녹화했습니다.
 
+
+
+== 나라 동영상 데모
+
+.나라 동영상 데모
+video::b4aae689-31b5-440c-8dde-ac050140ece7[panopto]
 image:cainvidia_image4.png["오류: 그래픽 이미지가 없습니다"]
 
 link:cainvidia_use_netapp_cloud_sync_to_archive_conversation_history.html["다음: NetApp Cloud Sync를 사용하여 대화 내용 아카이빙"]

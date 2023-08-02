@@ -4,7 +4,6 @@ settings:
   harmony_integration: maestro
   internal:
     pdf_enabled: false
-    lipi_enabled: false
   prod:
     pdf_enabled: true
     harmony_enabled: false
@@ -36,60 +35,4 @@ sidebar:
   - title: NetApp 솔루션 정보
     url: "/about.html"
   - title: 법적 고지
-    url: "/reference_legal_notices.html"
-homepage:
-  tiles:
-  - title: 소개
-    links:
-    - title: 이 리포지터리 정보
-      url: about.html
-    - title: 변경 기록
-      url: change-log-display.html
-    - title: 블로그
-      url: blogs.html
-    - title: 비디오 데모
-      url: videos.html
-    - title: 법적 고지
-      url: legal-notices.html
-  - title: 솔루션 랜딩 페이지
-    links:
-    - title: 인공 지능
-      url: ai/index.html
-    - title: 컨테이너
-      url: containers/index.html
-    - title: 엔터프라이즈 데이터베이스
-      url: databases/index.html
-    - title: 최신 데이터 분석
-      url: data-analytics/index.html
-    - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
-      url: ehc/index.html
-    - title: Red Hat을 사용하는 NetApp 하이브리드 멀티 클라우드
-      url: rhhc/index.html
-    - title: SAP 및 SAP HANA
-      url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
-    - title: 포함되었습니다
-      url: virtualization/index.html
-  - title: 솔루션 자동화
-    links:
-    - title: 소개
-      url: automation/automation_introduction.html
-    - title: 시작하기
-      url: automation/getting-started.html
-    - title: 자동화 요청
-      url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20%3Crequest_title%3E
-  - title: FlexPod - NetApp Cisco 솔루션
-    links:
-    - title: FlexPod 솔루션 기술 콘텐츠
-      url: https://docs.netapp.com/us-en/flexpod/
-    - title: FlexPod 영업 페이지
-      url: https://flexpod.com
-    - title: 비디오 및 데모
-      url: https://tv.netapp.com/search?q=flexpod
-    - title: 블로그
-      url: https://blog.netapp.com/tag/FlexPod/
-  - title: 피드백
-    links:
-    - title: 새 솔루션 제안
-      url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Solution]%0d%0a%0d%0aSolution%20Use%20Case:%20%0d%0aSolution%20Description:%20%0d%0aAdditional%20Comments:&title=Request%20Solution%20-%20%3Csolution%3E
-    - title: 솔루션 피드백을 제공합니다
-      url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Solution%20Feedback]%0d%0a%0d%0aSolution%20Name:%20%0d%0aSolution%20Feedback:%20%0d%0aAdditional%20Comments:&title=Solution%20Feedback%20-%20%3Csolution%3E
+    url: "/legal-notices.html"

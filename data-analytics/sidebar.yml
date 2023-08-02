@@ -4,7 +4,6 @@ title: 최신 데이터 분석
 url: "/data-analytics/index.html"
 entries:
 - title: NetApp File-Object 이중화 및 AWS SageMaker를 통한 클라우드 데이터 관리
-  type: solutions
   entries:
   - title: 솔루션 개요
     url: "/data-analytics/cdm-fod-solution-overview.html"
@@ -15,7 +14,6 @@ entries:
   - title: 결론
     url: "/data-analytics/cdm-fod-conclusion.html"
 - title: NetApp NFS 스토리지를 사용하는 Apache Kafka 워크로드
-  type: solutions
   entries:
   - title: 소개
     url: "/data-analytics/kafka-nfs-introduction.html"
@@ -25,8 +23,10 @@ entries:
     url: "/data-analytics/kafka-nfs-functional-validation-silly-rename-fix.html"
   - title: Kafka 워크로드를 위해 NetApp NFS를 선택해야 하는 이유
     url: "/data-analytics/kafka-nfs-why-netapp-nfs-for-kafka-workloads.html"
-  - title: AWS의 성능 개요 및 검증
+  - title: AWS-Cloud Volume ONTAP의 성능 개요 및 검증
     url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws.html"
+  - title: AWS-FSxN NetApp ONTAP의 성능 개요 및 검증
+    url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws-FSxN.html"
   - title: AFF On-Premises를 통한 성능 개요 및 검증
     url: "/data-analytics/kafka-nfs-performance-overview-and-validation-with-aff-on-premises.html"
   - title: 결론
@@ -34,7 +34,6 @@ entries:
   - title: 추가 정보를 찾을 수 있는 위치
     url: "/data-analytics/kafka-nfs-where-to-find-additional-information.html"
 - title: NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent Kafka
-  type: solutions
   entries:
   - title: 개요
     url: "/data-analytics/kafka-ontap-overview.html"
@@ -51,7 +50,6 @@ entries:
   - title: 결론
     url: "/data-analytics/kafka-sc-conclusion.html"
 - title: Apache Spark용 NetApp 스토리지 솔루션
-  type: solutions
   entries:
   - title: 솔루션 개요
     url: "/data-analytics/apache-spark-solution-overview.html"
@@ -76,7 +74,6 @@ entries:
   - title: 추가 정보를 찾을 수 있는 위치
     url: "/data-analytics/apache-spark-where-to-find-additional-information.html"
 - title: 인공 지능에 빅 데이터 분석 데이터 활용
-  type: solutions
   entries:
   - title: 소개
     url: "/data-analytics/bda-ai-introduction.html"
@@ -99,7 +96,6 @@ entries:
   - title: 추가 정보를 찾을 수 있는 위치
     url: "/data-analytics/bda-ai-where-to-find-additional-information.html"
 - title: Confluent Kafka 모범 사례
-  type: solutions
   entries:
   - title: 소개
     url: "/data-analytics/confluent-kafka-introduction.html"
@@ -122,7 +118,6 @@ entries:
   - title: 결론
     url: "/data-analytics/confluent-kafka-conclusion.html"
 - title: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop
-  type: solutions
   entries:
   - title: 솔루션 개요
     url: "/data-analytics/hdcs-sh-solution-overview.html"
@@ -145,10 +140,10 @@ entries:
   - title: 결론
     url: "/data-analytics/hdcs-sh-conclusion.html"
 - title: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
-  url: "/data-analytics/sb-4154-link.html"
+  url: "/data-analytics/sb-4154.html"
 - title: Splunk SmartStore가 포함된 NetApp StorageGRID
   url: https://www.netapp.com/pdf.html?item=/media/20646-tr-4869.pdf
 - title: NetApp E-Series E5700 및 Splunk Enterprise
-  url: "/data-analytics/tr-4623-link.html"
+  url: "/data-analytics/tr-4623.html"
 - title: NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)
-  url: "/data-analytics/nva-1157-deploy-link.html"
+  url: "/data-analytics/nva-1157-deploy.html"

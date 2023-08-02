@@ -183,7 +183,7 @@ NOTE: "제목"을 클릭하여 확장된 콘텐츠를 봅니다
 
 [source]
 ----
-[%autowidth.stretch]
+[width=100%,cols="33%, 33%, 33%", frame=none, grid=rows]
 |===
 | Column A | Column B | Column C
 | Text in column A
@@ -193,6 +193,7 @@ NOTE: "제목"을 클릭하여 확장된 콘텐츠를 봅니다
 ----
 [파란색 밑줄] * 생성된 HTML: *
 
+[cols="33%, 33%, 33%"]
 |===
 
 
@@ -207,7 +208,7 @@ NOTE: "제목"을 클릭하여 확장된 콘텐츠를 봅니다
 
 [source]
 ----
-[%autowidth.stretch,cols="*,*,*,*"]
+[width=100%,cols="25%, 25%, 25%, 25%", frame=none, grid=rows]
 |===
 | Header Column 1 | Header Column 2 | Header Column 3 | Header Column 4
 
@@ -219,7 +220,7 @@ NOTE: "제목"을 클릭하여 확장된 콘텐츠를 봅니다
 ----
 [파란색 밑줄] * 생성된 HTML: *
 
-[cols="*,*,*,*"]
+[cols="25%, 25%, 25%, 25%"]
 |===
 | 머리글 열 1 | 머리글 열 2 | 머리글 열 3 | 머리글 열 4 
 

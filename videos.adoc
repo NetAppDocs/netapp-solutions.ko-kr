@@ -30,71 +30,32 @@ NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소
 ====
 [underline]# * 오픈 소스 데이터베이스용 동영상 * #
 
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-PostgreSQL 자동 구축, HA/DR 복제 설정, 페일오버, 재동기화
-
- a| 
- a| 
-
-|===
+.PostgreSQL 자동 구축, HA/DR 복제 설정, 페일오버, 재동기화
+video::e479b91f-eacd-46bf-bfa1-b01200f0015[panopto,width=360]
 [underline] # * AWS 및 FSx *#의 하이브리드 클라우드를 통한 Oracle 현대화에 대한 동영상
 
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-1부 - 사용 사례 및 솔루션 아키텍처
-
- a| 
-2a부 - 최대의 가용성과 자동화된 PDB 재배치를 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
-
- a| 
-파트 2b - SnapMirror를 통해 BlueXP 콘솔을 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
-
-
-
-
- a| 
-3부 - 자동화된 데이터베이스 HA/DR 복제 설정, 페일오버, 재동기화
-
- a| 
-파트 4a - 복제된 대기 복제본에서 SnapCenter UI를 사용하여 개발/테스트용 데이터베이스 클론
-
- a| 
-파트 4b - 데이터베이스 백업, 복원, SnapCenter UI를 사용한 클론
-
-
-
-
- a| 
-파트 4c - BlueXP SaaS 애플리케이션 백업 및 복구를 통한 데이터베이스 백업 및 복구
-
- a| 
- a| 
-
-|===
+.1부 - 사용 사례 및 솔루션 아키텍처
+video::b1a7bb05-caea-44a0-bd9a-b01200f372e9[panopto,width=360]
+.2a부 - 최대의 가용성과 자동화된 PDB 재배치를 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
+video::bb088a3e-bbfb-4927-bf44-b01200f38b17[panopto,width=360]
+.파트 2b - SnapMirror를 통해 BlueXP 콘솔을 사용하여 사내에서 AWS로 데이터베이스 마이그레이션
+video::c0df32f8-d6d3-4b79-b0bd-b01200f3a2e8[panopto,width=360]
+.3부 - 자동화된 데이터베이스 HA/DR 복제 설정, 페일오버, 재동기화
+video::5fd03759-a691-4007-9748-b01200f3b79c[panopto,width=360]
+.파트 4a - 복제된 대기 복제본에서 SnapCenter UI를 사용하여 개발/테스트용 데이터베이스 클론
+video::2f731d7c-0873-4a4d-8491-b01200f90a82[panopto,width=360]
+.파트 4b - 데이터베이스 백업, 복원, SnapCenter UI를 사용한 클론
+video::97790d62-ff19-40e0-9784-b01200f920ed[panopto,width=360]
+.파트 4c - BlueXP SaaS 애플리케이션 백업 및 복구를 통한 데이터베이스 백업 및 복구
+video::4b0fd212-7641-46b8-9e55-b01200f9383a[panopto,width=360]
 [underline]# * SQL Server 데이터베이스용 동영상 * #
 
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-NetApp ONTAP용 Amazon FSx를 사용하여 AWS EC2에 SQL Server를 구축합니다
-
- a| 
-스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론
-
-video::krzMWjrrMb0[youtube,width=360] a| 
-Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화
-
+.NetApp ONTAP용 Amazon FSx를 사용하여 AWS EC2에 SQL Server를 구축합니다
+video::27f28284-433d-4273-8748-b01200fb3cd7[panopto,width=360]
+.스토리지 스냅샷을 사용하는 Oracle 멀티 테넌트 플러그형 데이터베이스 클론
+video::krzMWjrrMb0[youtube,width=360]
+.Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화
 video::VcQMJIRzhoY[youtube,width=360]
-|===
 * 사례 연구 *
 
 * link:https://customers.netapp.com/en/sap-azure-netapp-files-case-study["Azure NetApp Files 기반 SAP"^]
@@ -106,96 +67,46 @@ video::VcQMJIRzhoY[youtube,width=360]
 ====
 [underline]# * AWS/VMC * #에 대한 동영상
 
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
-
- a| 
-NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
-
- a| 
-NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
-
-
-
-
- a| 
-NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
-
- a| 
-VMC를 위한 VMware HCX 구축 및 구성 설정
-
- a| 
-VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모
-
-
-
-
- a| 
-VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모
-
- a| 
- a| 
-
-|===
+.iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
+video::0d03e040-634f-4086-8cb5-b01200fb8515[panopto,width=360]
+.NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
+video::c3befe1b-4f32-4839-a031-b01200fb6d60[panopto,width=360]
+. NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
+video::f0fedec5-dc17-47af-8821-b01200f00e08[panopto,width=360]
+.NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
+video::2065dcc1-f31a-4e71-a7d5-b01200f01171[panopto,width=360]
+.VMC를 위한 VMware HCX 구축 및 구성 설정
+video::6132c921-a44c-4c81-aab7-b01200fb5d29[panopto,width=360]
+.VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모
+video::52661f10-3f90-4f3d-865a-b01200f06d31[panopto,width=360]
+.VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모
+video::685c0dc2-9d8a-42ff-b46d-b01200f056b0[panopto,width=360]
 [underline]# * Azure/AVS * 용 동영상 #
 
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
-
- a| 
-Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
-
- a| 
-VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모
-
-
-
-
- a| 
-VMware HCX와 함께 AVS 및 ANF용 vMotion 데모
-
- a| 
-VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모
-
- a| 
-
-|===
+.Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
+video::8c5ddb30-6c31-4cde-86e2-b01200effbd6[panopto,width=360]
+. Cloud Volumes ONTAP, SnapCenter 및 Jetstream을 사용한 Azure VMware 솔루션 DR
+video::5cd19888-8314-4cfc-ba30-b01200efff4f[panopto,width=360]
+.VMware HCX for AVS 및 ANF와 함께 콜드 마이그레이션 데모
+video::b7ffa5ad-5559-4e56-a166-b01200f025bc[panopto,width=360]
+.VMware HCX와 함께 AVS 및 ANF용 vMotion 데모
+video::986bb505-6f3d-4a5a-b016-b01200f03f18[panopto,width=360]
+.VMware HCX for AVS 및 ANF와 함께 대량 마이그레이션 데모
+video::255640f5-4dff-438c-8d50-b01200f017d1[panopto,width=360]
 ====
 .Red Hat OpenShift를 사용한 하이브리드 멀티 클라우드
 [#rhhc%collapsible]
 ====
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-Astra Control Service를 사용한 Rosa DR
-
- a| 
-FSxN과 Astra Trident의 통합
-
- a| 
-FSxN이 있는 Rosa에서 애플리케이션의 장애 복구 및 장애 복구
-
-
-
-
- a| 
-Astra Control Center를 사용하여 DR을 수행합니다
+.Astra Control Service를 사용한 Rosa DR
+video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto,width=360]
+.FSxN과 Astra Trident의 통합
+video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto,width=360]
+.FSxN이 있는 Rosa에서 애플리케이션의 장애 복구 및 장애 복구
+video::e9a07d79-42a1-4480-86be-b01200fa62f5[panopto,width=360]
+[밑줄]# * Astra Control Center를 사용한 DR * #
 
 link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["NetAppTV를 시청해 보십시오"]
- a| 
- a| 
 
-|===
 ====
 .포함되었습니다
 [#virtualization%collapsible]
@@ -217,15 +128,6 @@ link:https://www.netapp.tv/details/29504?mcid=3560978028644170419079062806556098
 .솔루션 자동화
 [#automation%collapsible]
 ====
-[cols="5a, 5a, 5a"]
-|===
-
-
- a| 
-Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화
-
-video::VcQMJIRzhoY[youtube,width=360] a| 
- a| 
-
-|===
+.Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화
+video::VcQMJIRzhoY[youtube,width=360]
 ====

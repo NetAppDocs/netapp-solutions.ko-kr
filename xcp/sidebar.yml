@@ -3,7 +3,6 @@ section: xcp
 title: NetApp XCP 데이터 마이그레이션
 entries:
 - title: NetApp XCP의 모범 사례 지침
-  type: solutions
   entries:
   - title: 소개
     url: "/xcp/xcp-bp-introduction.html"
