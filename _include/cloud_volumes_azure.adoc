@@ -74,9 +74,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 단일 NetApp ANF 볼륨에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -192,9 +191,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 데이터 보호가 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -346,9 +344,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 이중 프로토콜이 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -477,9 +474,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 스냅샷을 사용하는 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -591,9 +587,8 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 
 단일 노드 CVO(Cloud Volumes ONTAP)에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -756,9 +751,8 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 
 HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 

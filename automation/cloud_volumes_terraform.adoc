@@ -139,9 +139,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -181,9 +180,8 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -282,9 +280,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -324,9 +321,8 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
 HA 쌍의 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -452,9 +448,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -494,9 +489,8 @@ FSx 인스턴스
 
 NetApp ONTAP FSx 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -610,9 +604,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 단일 NetApp ANF 볼륨에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -728,9 +721,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 데이터 보호가 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -882,9 +874,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 이중 프로토콜이 활성화된 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1013,9 +1004,8 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 스냅샷을 사용하는 단일 ANF 볼륨에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1127,9 +1117,8 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 
 단일 노드 CVO(Cloud Volumes ONTAP)에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1292,9 +1281,8 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 
 HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1463,9 +1451,8 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1496,9 +1483,8 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
 GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1591,9 +1577,8 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1624,9 +1609,8 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
 GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -1763,9 +1747,8 @@ CVS 볼륨
 
 NetApp GCP CVS 볼륨에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 

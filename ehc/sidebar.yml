@@ -144,3 +144,9 @@ entries:
       url: "/ehc/ncvs/ncvs-gc-service-operation.html"
     - title: 추가 정보
       url: "/ehc/ncvs/ncvs-gc-additional-information.html"
+- title: BlueXP 백업 및 복구
+  entries:
+  - title: VM용 BlueXP 백업 및 복구
+    entries:
+    - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
+      url: "/ehc/bxp/bxp-scv-hybrid-solution.html"

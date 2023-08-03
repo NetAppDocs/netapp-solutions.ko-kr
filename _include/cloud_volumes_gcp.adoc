@@ -69,9 +69,8 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -102,9 +101,8 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
 GCP의 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -197,9 +195,8 @@ NOTE: 변수 "GCP_connector_deploy_bool"을 true/false 로 설정하여 커넥�
 
 CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -230,9 +227,8 @@ CVO 배포용 NetApp GCP 커넥터 인스턴스에 대한 Terraform 변수.
 
 GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -369,9 +365,8 @@ CVS 볼륨
 
 NetApp GCP CVS 볼륨에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 

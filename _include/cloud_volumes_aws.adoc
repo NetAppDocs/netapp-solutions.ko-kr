@@ -81,9 +81,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -123,9 +122,8 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
 단일 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -224,9 +222,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -266,9 +263,8 @@ CVO 구축의 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
 HA 쌍의 NetApp CVO 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -394,9 +390,8 @@ NOTE: 변수 "AWS_CONNECTOR_DEPLOY_BOOL"을 TRUE/FALSE로 설정하여 커넥터
 
 NetApp AWS 커넥터 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 
@@ -436,9 +431,8 @@ FSx 인스턴스
 
 NetApp ONTAP FSx 인스턴스에 대한 Terraform 변수
 
+[cols="20%, 10%, 70%"]
 |===
-
-
 | * 이름 * | * 유형 * | * 설명 * 
 
 

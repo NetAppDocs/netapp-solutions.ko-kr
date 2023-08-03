@@ -20,7 +20,7 @@ summary: 그래픽 워크스테이션은 일반적으로 제조, 의료, 에너�
 
 ANSYS Fluent, ANSYS Mechanical, Autodesk AutoCAD, Autodesk Inventor, Autodesk 3DS Max, Dassault Systèmes SOLIDWORKS, Dassault Systèmes CATIA, PTC Creo, Siemens PLM NX 등 2021년 1월 기준 다양한 클라우드에서 사용할 수 있는 GPU가 다음 표에 나열되어 있습니다.
 
-[cols="20,20,20,20,20"]
+[cols="20%, 20%, 20%, 20%, 20%"]
 |===
 | GPU 모델 | Microsoft Azure를 참조하십시오 | Google Compute(GCP) | AWS(Amazon Web Services) | 사내(NetApp HCI) 
 
@@ -38,7 +38,7 @@ ANSYS Fluent, ANSYS Mechanical, Autodesk AutoCAD, Autodesk Inventor, Autodesk 3D
 |===
 다른 사용자 및 전용 개인 데스크톱과의 공유 데스크톱 세션도 사용할 수 있습니다. 가상 데스크톱은 GPU를 1~4개 가질 수 있거나 NetApp HCI를 통해 부분 GPU를 활용할 수 있습니다. NVIDIA T4는 광범위한 사용자 워크로드의 요구사항을 충족할 수 있는 다기능 GPU 카드입니다. NetApp HCI H615C의 각 GPU 카드에는 서버당 16GB의 프레임 버퍼 메모리와 3개의 카드가 있습니다. 단일 H615C 서버에서 호스팅할 수 있는 사용자 수는 사용자 워크로드에 따라 다릅니다.
 
-[cols="25,25,25,25"]
+[cols="25%, 25%, 25%, 25%"]
 |===
 | 사용자/서버 | 표시등(4GB) | 보통(8GB) | 중량지(16GB) 
 

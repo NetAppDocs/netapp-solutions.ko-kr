@@ -66,6 +66,7 @@ permitted by applicable law.
 
 
 
+[cols="25%, 25%, 50%"]
 |===
 | TCP v4/V6 포트 번호 | 방향 | 기능 
 
@@ -110,14 +111,3 @@ permitted by applicable law.
 
 
 
-
-
-
-== 버전 기록
-
-|===
-| 버전 | 날짜 | 문서 버전 기록 
-
-
-| 버전 1.0 | 2021년 11월 | 최초 릴리스 
-|===

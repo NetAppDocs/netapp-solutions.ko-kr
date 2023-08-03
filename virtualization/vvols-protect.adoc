@@ -104,50 +104,20 @@ VMware vSphere REST API용 SnapCenter 플러그인에 대한 자세한 내용은
 
 다음 모범 사례를 사용하면 SnapCenter 배포를 최대한 활용할 수 있습니다.
 
-|===
-
-
- a| 
-* SCV는 vCenter Server RBAC와 ONTAP RBAC를 모두 지원하며 플러그인이 등록될 때 자동으로 생성되는 사전 정의된 vCenter 역할을 포함합니다. 지원되는 RBAC 유형에 대해 자세히 알아볼 수 있습니다 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["여기."]
+. SCV는 vCenter Server RBAC와 ONTAP RBAC를 모두 지원하며 플러그인이 등록될 때 자동으로 생성되는 사전 정의된 vCenter 역할을 포함합니다. 지원되는 RBAC 유형에 대해 자세히 알아볼 수 있습니다 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["여기."]
 +
 ** vCenter UI를 사용하여 설명된 사전 정의된 역할을 사용하여 최소 권한 계정 액세스를 할당합니다 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["여기"].
 ** SnapCenter 서버와 함께 SCV를 사용하는 경우 _SnapCenterAdmin_role을 할당해야 합니다.
 ** ONTAP RBAC는 SCV에서 사용되는 스토리지 시스템을 추가 및 관리하는 데 사용되는 사용자 계정을 의미합니다. ONTAP RBAC는 VVOL 기반 백업에 적용되지 않습니다. ONTAP RBAC 및 SCV에 대해 자세히 알아보십시오 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_ontap_rbac_features_in_snapcenter.html["여기"].
 
 
+. SnapMirror를 사용하여 소스 볼륨의 전체 복제본을 사용하여 백업 데이터 세트를 두 번째 시스템으로 복제합니다. 앞서 언급했듯이 소스 볼륨 스냅샷 보존 설정과 관계없이 백업 데이터의 장기 보존을 위해 미러 볼트(mirror-vault) 정책을 사용할 수도 있습니다. 두 가지 메커니즘 모두 VVOL에서 지원됩니다.
+. SCV에는 VVOL 기능을 위해 VMware vSphere용 ONTAP 툴도 필요하므로 항상 NetApp IMT(Interoperability Matrix Tool)에서 특정 버전 호환성을 확인하십시오
+. VMware SRM에서 VVol 복제를 사용하는 경우 정책 RPO 및 백업 일정을 고려해야 합니다
+. 조직에서 정의한 RPO(복구 시점 목표)를 충족하는 보존 설정으로 백업 정책 설계
+. 백업이 실행될 때 상태를 알리도록 리소스 그룹의 알림 설정을 구성합니다(아래 그림 10 참조).
 
 
-
-
- a| 
-* SnapMirror를 사용하여 소스 볼륨의 전체 복제본을 사용하여 백업 데이터 세트를 두 번째 시스템으로 복제합니다. 앞서 언급했듯이 소스 볼륨 스냅샷 보존 설정과 관계없이 백업 데이터의 장기 보존을 위해 미러 볼트(mirror-vault) 정책을 사용할 수도 있습니다. 두 가지 메커니즘 모두 VVOL에서 지원됩니다.
-
-
-
-
- a| 
-* SCV에는 VVOL 기능을 위해 VMware vSphere용 ONTAP 툴도 필요하므로 항상 NetApp IMT(Interoperability Matrix Tool)에서 특정 버전 호환성을 확인하십시오
-
-
-
-
- a| 
-* VMware SRM에서 VVol 복제를 사용하는 경우 정책 RPO 및 백업 일정을 고려해야 합니다
-
-
-
-
- a| 
-* 조직에서 정의한 RPO(복구 시점 목표)를 충족하는 보존 설정으로 백업 정책 설계
-
-
-
-
- a| 
-* 백업이 실행될 때 상태를 알리도록 리소스 그룹의 알림 설정을 구성합니다(아래 그림 10 참조).
-
-
-|===
 
 
 === 리소스 그룹 알림 옵션

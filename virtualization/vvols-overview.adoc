@@ -62,15 +62,12 @@ VASA(VMware vSphere APIs for Storage Awareness)를 사용하면 VM 관리자가 
 
 두 가지 요소가 있습니다.
 
-[cols="20%, 80%"]
-|===
+. * SCP(Storage Capability Profile) *
+SCP(Storage Capability Profile)는 vCenter 관리자가 ONTAP에서 이러한 기능을 관리하는 방법을 실제로 이해하지 않고도 필요한 스토리지 기능을 정의할 수 있는 스토리지 템플릿 형식입니다. 관리자는 템플릿 스타일의 접근 방식을 사용하여 일관되고 예측 가능한 방식으로 스토리지 서비스를 쉽게 제공할 수 있습니다. SCP에 설명된 기능에는 성능, 프로토콜, 스토리지 효율성 및 기타 기능이 포함됩니다. 특정 기능은 버전에 따라 다릅니다. vCenter UI의 ONTAP tools for VMware vSphere 메뉴를 사용하여 생성됩니다. REST API를 사용하여 SCP를 생성할 수도 있습니다. 개별 기능을 선택하여 수동으로 생성하거나 기존(기존) 데이터 저장소에서 자동으로 생성할 수 있습니다.
+. * VM 스토리지 정책 *
+VM 스토리지 정책은 vCenter의 정책 및 프로필 아래에 생성됩니다. VVOL의 경우 NetApp VVOL 스토리지 유형 공급자에서 규칙을 사용하여 규칙 집합을 생성합니다. ONTAP 도구는 개별 규칙을 지정하지 않고 SCP를 간단히 선택할 수 있는 간단한 방법을 제공합니다.
 
 
-| * SCP(Storage Capability Profile) * | SCP(Storage Capability Profile)는 vCenter 관리자가 ONTAP에서 이러한 기능을 관리하는 방법을 실제로 이해하지 않고도 필요한 스토리지 기능을 정의할 수 있는 스토리지 템플릿 형식입니다. 관리자는 템플릿 스타일의 접근 방식을 사용하여 일관되고 예측 가능한 방식으로 스토리지 서비스를 쉽게 제공할 수 있습니다. SCP에 설명된 기능에는 성능, 프로토콜, 스토리지 효율성 및 기타 기능이 포함됩니다. 특정 기능은 버전에 따라 다릅니다. vCenter UI의 ONTAP tools for VMware vSphere 메뉴를 사용하여 생성됩니다. REST API를 사용하여 SCP를 생성할 수도 있습니다. 개별 기능을 선택하여 수동으로 생성하거나 기존(기존) 데이터 저장소에서 자동으로 생성할 수 있습니다. 
-
-
-| * VM 스토리지 정책 * | VM 스토리지 정책은 vCenter의 정책 및 프로필 아래에 생성됩니다. VVOL의 경우 NetApp VVOL 스토리지 유형 공급자에서 규칙을 사용하여 규칙 집합을 생성합니다. ONTAP 도구는 개별 규칙을 지정하지 않고 SCP를 간단히 선택할 수 있는 간단한 방법을 제공합니다. 
-|===
 위에서 설명한 것처럼 정책을 사용하면 볼륨 프로비저닝 작업을 간소화할 수 있습니다. 적절한 정책을 선택하기만 하면 VASA Provider에서 해당 정책을 지원하는 VVOL 데이터 저장소를 표시하고 VVOL을 호환되는 개별 FlexVol 볼륨에 배치합니다(그림 1).
 
 

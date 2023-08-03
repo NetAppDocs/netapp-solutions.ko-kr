@@ -77,7 +77,6 @@ NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에
 image:dr-cvo-gcve-image2.png["오류: 그래픽 이미지가 없습니다"]
 
 SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-guest-dr-overview.html#config-snapmirror["SnapCenter를 사용하여 복제를 설정합니다"]
-SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-guest-dr-overview.html#config-snapmirror["SnapCenter를 사용하여 복제를 설정합니다"]
 
 video::395e33db-0d63-4e48-8898-b01200f006ca[panopto,width=360]
 ====

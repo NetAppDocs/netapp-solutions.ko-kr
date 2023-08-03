@@ -11,24 +11,32 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리�
 [role="lead"]
 VMware vSphere는 ONTAP SAN 프로토콜이 지원되는 다음 VMFS 데이터 저장소 옵션을 지원합니다.
 
-[cols="50,50"]
+[cols="70%, 30%"]
 |===
 | VMFS 데이터 저장소 옵션 | ONTAP SAN 프로토콜 지원 
 
 
-| link:vsphere_ontap_auto_block_fc.html["파이버 채널(FC)"] | 예 
+ a| 
+link:vsphere_ontap_auto_block_fc.html["파이버 채널(FC)"]
+| 예 
 
 
-| link:vsphere_ontap_auto_block_fcoe.html["FCoE(Fibre Channel over Ethernet)"] | 예 
+ a| 
+link:vsphere_ontap_auto_block_fcoe.html["FCoE(Fibre Channel over Ethernet)"]
+| 예 
 
 
-| link:vsphere_ontap_auto_block_iscsi.html["iSCSI"] | 예 
+ a| 
+link:vsphere_ontap_auto_block_iscsi.html["iSCSI"]
+| 예 
 
 
 | RDMA용 iSCSI 확장(iSER) | 아니요 
 
 
-| link:vsphere_ontap_auto_block_nvmeof.html["NVMe over Fabric 및 FC(NVMe/FC)"] | 예 
+ a| 
+link:vsphere_ontap_auto_block_nvmeof.html["NVMe over Fabric 및 FC(NVMe/FC)"]
+| 예 
 
 
 | RDMA over Converged Ethernet(NVMe/RoCE)을 통한 NVMe over Fabric | 아니요 
