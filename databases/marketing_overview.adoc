@@ -40,17 +40,21 @@ NetApp은 고객에게 검증된 Ansible 모듈과 역할을 제공하여 Oracle
 
 1부: 시작하기, 요구 사항, 자동화 세부 정보 및 초기 AWX/타워 구성
 
-video::d844a9c3-4eb3-4512-bf21-b01200f09f66[panopto,width=360]
+.AWX 배포
+video::d844a9c3-4eb3-4512-bf21-b01200f09f66[panopto]
 2부: 변수 및 Playbook 실행
 
-video::6da1b960-e1c9-4950-b750-b01200f0bdfa[panopto,width=360]
+.AWX Playbook 실행
+video::6da1b960-e1c9-4950-b750-b01200f0bdfa[panopto]
 
 
 === CLI 배포
 
 1부: 시작하기, 요구사항, 자동화 세부 정보 및 Ansible Control 호스트 설정
 
-video::373e7f2a-c101-4292-a3e4-b01200f0d078[panopto,width=360]
+.CLI 배포
+video::373e7f2a-c101-4292-a3e4-b01200f0d078[panopto]
 2부: 변수 및 Playbook 실행
 
-video::d58ebdb0-8bac-4ef9-b4d1-b01200f95047[panopto,width=360]
+.CLI Playbook 실행
+video::d58ebdb0-8bac-4ef9-b4d1-b01200f95047[panopto]

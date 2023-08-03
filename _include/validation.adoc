@@ -11,6 +11,8 @@
 
 === Oracle 설치를 검증합니다
 
+. Oracle 서버에 Oracle 사용자로 로그인하고 다음 명령을 실행합니다.
+
 
 [source, cli]
 ----
@@ -18,6 +20,8 @@ ps -ef | grep ora
 ----
 
 NOTE: 설치가 예상대로 완료되고 Oracle DB가 시작되면 Oracle 프로세스가 나열됩니다
+
+. 데이터베이스에 로그인하여 다음 명령 세트로 생성된 DB 구성 설정과 PDB를 확인합니다.
 
 
 [source, cli]
@@ -68,6 +72,8 @@ SVRNAME dirname NFSVERSION------------------------------------------------------
 ----
 This confirms that dNFS is working properly.
 ----
+. 다음 명령을 사용하여 listener를 통해 데이터베이스에 연결하여 hte oracle listener 구성을 확인합니다. 적절한 수신기 포트 및 데이터베이스 서비스 이름으로 변경합니다.
+
 
 [source, cli]
 ----

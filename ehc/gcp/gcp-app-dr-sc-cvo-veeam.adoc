@@ -78,7 +78,8 @@ image:dr-cvo-gcve-image2.png["오류: 그래픽 이미지가 없습니다"]
 
 SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-guest-dr-overview.html#config-snapmirror["SnapCenter를 사용하여 복제를 설정합니다"]
 
-video::395e33db-0d63-4e48-8898-b01200f006ca[panopto,width=360]
+.SnapCenter를 사용하여 복제를 설정합니다
+video::395e33db-0d63-4e48-8898-b01200f006ca[panopto]
 ====
 .GCVE 호스트 및 CVO 데이터 액세스를 구성합니다
 [%collapsible]
@@ -103,12 +104,14 @@ Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시�
 ====
 사내 vCenter와 GCVE vCenter를 모두 Veeam에 등록해야 합니다. https://helpcenter.veeam.com/docs/backup/qsg_vsphere/replication_job.html["vSphere VM 복제 작업을 설정합니다"] 마법사의 게스트 처리 단계에서 애플리케이션 인식 백업 및 복구를 위해 SnapCenter를 활용할 예정이므로 애플리케이션 처리 비활성화 를 선택합니다.
 
-video::8b7e4a9b-7de1-4d48-a8e2-b01200f00692[panopto,width=360]
+.vSphere VM 복제 작업을 설정합니다
+video::8b7e4a9b-7de1-4d48-a8e2-b01200f00692[panopto]
 ====
 .Microsoft SQL Server VM의 페일오버
 [%collapsible]
 ====
-video::9762dc99-081b-41a2-ac68-b01200f00ac0[panopto,width=360]
+.Microsoft SQL Server VM의 페일오버
+video::9762dc99-081b-41a2-ac68-b01200f00ac0[panopto]
 ====
 
 
