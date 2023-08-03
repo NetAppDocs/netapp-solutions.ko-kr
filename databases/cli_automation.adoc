@@ -13,6 +13,9 @@ summary: 이 페이지에서는 NetApp ONTAP 스토리지에 Oracle19c를 구축
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 문서에서는 자동화 CLI(명령줄 인터페이스)를 사용하여 Oracle 19c를 구축하는 방법에 대해 자세히 설명합니다.
+
 
 
 == CLI 구축 Oracle 19c Database

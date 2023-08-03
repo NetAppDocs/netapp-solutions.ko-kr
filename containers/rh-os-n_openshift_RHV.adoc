@@ -13,6 +13,7 @@ summary: 'RHV는 RHEL(Red Hat Enterprise Linux)에서 실행되고 KVM 하이퍼
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Red Hat Virtualization(RHV)은 RHEL(Red Hat Enterprise Linux)에서 실행되고 KVM 하이퍼바이저를 사용하는 엔터프라이즈 가상 데이터 센터 플랫폼입니다.
 
 RHV에 대한 자세한 내용은 를 참조하십시오 https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization["Red Hat 가상화 웹 사이트"^].

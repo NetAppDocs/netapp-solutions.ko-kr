@@ -95,7 +95,7 @@ entries:
         url: "/virtualization/vsphere_ontap_auto_file_nfs41.html"
 - title: VMware - 퍼블릭 클라우드
   url: "/ehc/index.html"
-- title: VMware 하이브리드 클라우드 사용 사례
+- title: VMware 하이브리드 멀티 클라우드 사용 사례
   entries:
   - title: 사용 사례 개요
     url: "/ehc/ehc-use-cases.html"
@@ -114,7 +114,7 @@ entries:
         url: "/vdi-vds/hcvdivds_netapp_hci_overview.html"
       - title: NVIDIA 라이센싱
         url: "/vdi-vds/hcvdivds_nvidia_licensing.html"
-      - title: 구축
+      - title: VDS 배포
         url: "/vdi-vds/hcvdivds_deployment.html"
       - title: 하이브리드 클라우드 환경
         url: "/vdi-vds/hcvdivds_hybrid_cloud_environment.html"

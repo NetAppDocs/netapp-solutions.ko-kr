@@ -52,7 +52,7 @@ entries:
 - title: NetApp for AWS/VMC
   url: "/ehc/aws/index.html"
   entries:
-  - title: 워크로드 보호
+  - title: AWS/VMC에서 워크로드 보호
     entries:
     - title: AWS에서 VMC를 사용한 재해 복구(게스트 연결)
       url: "/ehc/aws/aws-guest-dr-solution-overview.html"
@@ -60,7 +60,7 @@ entries:
       url: "/ehc/aws/aws-vmc-veeam-fsx-solution.html"
     - title: ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO
       url: "/ehc/dro/aws-dro-overview.html"
-  - title: 워크로드를 마이그레이션 중입니다
+  - title: AWS/VMC에서 워크로드 마이그레이션
     entries:
     - title: VMware HCX를 사용하여 워크로드를 ONTAP 데이터 저장소용 FSx로 마이그레이션
       url: "/ehc/aws/aws-migrate-vmware-hcx.html"
@@ -69,7 +69,7 @@ entries:
 - title: NetApp for Azure/AVS
   url: "/ehc/azure/index.html"
   entries:
-  - title: 워크로드 보호
+  - title: Azure/AVS에서 워크로드 보호
     entries:
     - title: ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)
       url: "/ehc/azure/azure-native-dr-jetstream.html"
@@ -77,7 +77,7 @@ entries:
       url: "/ehc/azure/azure-guest-dr-cvo.html"
     - title: Azure NetApp Files 및 AVS를 통한 재해 복구(DRO
       url: "/ehc/dro/azure-dro-overview.html"
-  - title: 워크로드를 마이그레이션 중입니다
+  - title: Azure/AVS에서 워크로드 마이그레이션
     entries:
     - title: VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다
       url: "/ehc/azure/azure-migrate-vmware-hcx.html"
@@ -86,13 +86,13 @@ entries:
 - title: NetApp for GCP/GCVE
   url: "/ehc/gcp/index.html"
   entries:
-  - title: 워크로드 보호
+  - title: GCP/GCVE에서 워크로드 보호
     entries:
     - title: Veeam을 통한 재해 복구(보충 NFS 데이터 저장소)
       url: "/ehc/gcp/gcp-app-dr-sc-cvs-veeam.html"
     - title: Veeam을 통한 재해 복구(게스트 연결 스토리지)
       url: "/ehc/gcp/gcp-app-dr-sc-cvo-veeam.html"
-  - title: 워크로드를 마이그레이션 중입니다
+  - title: GCP/GCVE에서 워크로드를 마이그레이션하는 중입니다
     entries:
     - title: VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
       url: "/ehc/gcp/gcp-migrate-vmware-hcx.html"

@@ -5,9 +5,15 @@ keywords: OpenShift, bare metal, IPI
 summary:  
 ---
 = 베어 메탈 기반 OpenShift
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
+[role="lead"]
 베어 메탈 기반 OpenShift는 상용 서버에 OpenShift Container Platform을 자동으로 배포하는 기능을 제공합니다.
 
 베어 메탈 기반 OpenShift는 OpenShift의 가상 배포와 유사하며 컨테이너화 준비가 되지 않은 애플리케이션에 대해 가상화된 워크로드를 지원하는 동시에 OpenShift 클러스터의 간편한 배포, 신속한 프로비저닝 및 확장을 제공합니다. 베어 메탈에 배포하면 OpenShift 환경 외에도 호스트 하이퍼바이저 환경을 관리하는 데 필요한 추가 오버헤드가 필요하지 않습니다. 베어 메탈 서버에 직접 배포하면 호스트와 OpenShift 환경 간에 리소스를 공유하는 데 따른 물리적 오버헤드 제한도 줄일 수 있습니다.
