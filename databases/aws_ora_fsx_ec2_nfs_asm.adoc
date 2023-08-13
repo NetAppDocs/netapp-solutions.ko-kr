@@ -58,20 +58,21 @@ image::aws_ora_fsx_ec2_nfs_asm_architecture.png[이 이미지는 iSCSI 및 ASM�
 
 === 하드웨어 및 소프트웨어 구성 요소
 
+* 하드웨어 *
+
 [cols="33%, 33%, 33%"]
 |===
-
-
-3+| * 하드웨어 * 
 
 
 | FSX ONTAP 저장소 | AWS에서 제공하는 현재 버전입니다 | 동일한 VPC 및 가용성 존에 FSx HA 클러스터 1개 
 
 
 | 컴퓨팅용 EC2 인스턴스 | T2.xLarge/4vCPU/16G | EC2 T2 xLarge EC2 인스턴스 2개, 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 
+|===
+* 소프트웨어 *
 
-
-3+| * 소프트웨어 * 
+[cols="33%, 33%, 33%"]
+|===
 
 
 | RedHat Linux | RHEL-8.6.0_HVM-20220503-x86_64-2-Hourly2-GP2 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
@@ -898,7 +899,7 @@ NetApp은 이 솔루션 구현을 지원하기 위해 Ansible과 함께 완전 �
 
 == SnapCenter 서비스를 사용한 Oracle 데이터베이스 백업, 복원 및 클론 복제
 
-을 참조하십시오 link:snapctr_svcs_ora.html["Oracle용 SnapCenter 서비스"^] Oracle 데이터베이스 백업, 복원 및 NetApp BlueXP 콘솔을 사용한 클론에 대한 자세한 내용
+현재 NFS 및 ASM 스토리지 옵션이 포함된 Oracle 데이터베이스는 기존 SnapCenter 서버 UI 툴에서만 지원됩니다(참조) link:hybrid_dbops_snapcenter_usecases.html["SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션"^] NetApp SnapCenter UI 툴을 사용한 Oracle 데이터베이스 백업, 복원 및 클론에 대한 자세한 내용은
 
 
 

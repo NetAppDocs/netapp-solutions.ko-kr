@@ -97,7 +97,9 @@ entries:
     url: "/databases/aws_postgres_fsx_ec2_hadr.html"
 - title: 데이터베이스용 SnapCenter
   entries:
-  - title: Oracle용 SnapCenter 서비스
+  - title: Oracle-Azure용 BlueXP SaaS
+    url: "/databases/snapctr_svcs_ora_azure.html"
+  - title: Oracle-AWS용 BlueXP SaaS
     url: "/databases/snapctr_svcs_ora.html"
   - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
     entries:
