@@ -5,7 +5,12 @@ keywords: Anthos, VMware vSphere, ESXi, on_prem
 summary: VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 가상 서버 및 네트워크를 중앙에서 관리하기 위한 가상화 플랫폼입니다. 
 ---
 = VMware 기반 Anthos 클러스터
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 [role="lead"]

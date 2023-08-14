@@ -17,26 +17,28 @@ keywords: netapp, solutions, blogs
 [role="lead"]
 많은 NetApp 솔루션의 특정 기능을 소개하는 블로그를 소개합니다.
 
-[role="tabbed-block"]
-====
-.인공 지능
---
+
+
+== 인공 지능
+
 * link:++https://www.netapp.com/blog/#t=Blogs&sort=%40publish_date_mktg%20descending&layout=card&f:@facet_language_mktg=["영어"]&f:@facet_soultion_mktg=[AI, 분석, 인공 지능]++[NetApp.com AI 블로그]
 * link:https://netapp.io/category/ai-ml/["AI 블로그: thePub"]
 
 
---
-.엔터프라이즈 데이터베이스
---
+
+
+== 엔터프라이즈 데이터베이스
+
 * link:https://aws.amazon.com/blogs/storage/using-netapp-snapcenter-with-amazon-fsx-for-netapp-ontap-to-protect-your-sql-server-workloads/["NetApp ONTAP용 Amazon FSx와 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Modernize-your-Oracle-database-operation-in-hybrid-cloud-with-Amazon-FSx-storage/ba-p/437554["Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Hybrid-cloud-database-solutions-with-SnapCenter/ba-p/171061#M5["SnapCenter 기반의 하이브리드 클라우드 데이터베이스 솔루션"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Automate-Your-Oracle-Database-Infrastructure-in-the-Hybrid-Cloud/ba-p/167046["하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다"]
 
 
---
-.VMware를 사용하는 하이브리드 멀티 클라우드
---
+
+
+== VMware를 사용하는 하이브리드 멀티 클라우드
+
 * link:https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments["클라우드 기반 VMware 구축을 위한 스토리지 최적화"]
 * link:https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution["NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오"]
 * link:https://cloud.netapp.com/blog/aws-fsxo-blg-configure-hybrid-cloud-with-fsx-for-netapp-ontap-and-vmware-cloud-on-aws-sddc-using-vmware-hcx["VMware HCX를 사용하여 NetApp ONTAP용 FSx 및 AWS SDDC 기반 VMware 클라우드를 구성할 수 있습니다"]
@@ -45,9 +47,10 @@ keywords: netapp, solutions, blogs
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]
 
 
---
-.포함되었습니다
---
+
+
+== 포함되었습니다
+
 * NetApp 및 VMware Cloud Foundation(VCF)
 +
 ** link:https://www.netapp.com/blog/netapp-vmware-cloud-foundation-getting-started["1부: 시작하기"]
@@ -62,9 +65,10 @@ keywords: netapp, solutions, blogs
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]
 
 
---
-.컨테이너
---
+
+
+== 컨테이너
+
 * Astra DevOps 사용 사례:
 +
 ** link:https://cloud.netapp.com/blog/astra-blg-easily-integrate-protection-into-your-kubernetes-ci/cd-pipeline-with-netapp-astra-control["NetApp Astra Control을 통해 Kubernetes CI/CD 파이프라인에 보호를 쉽게 통합합니다"]
@@ -77,6 +81,3 @@ keywords: netapp, solutions, blogs
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634["vSphere 기반 Kubernetes(1부)"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-2/ba-p/445848["vSphere 기반 Kubernetes(2부)"]
 
-
---
-====

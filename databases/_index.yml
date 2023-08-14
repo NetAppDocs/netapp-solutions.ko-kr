@@ -49,8 +49,10 @@ indexpage:
       url: "/aws_postgres_fsx_ec2_hadr.html"
   - title: 데이터베이스용 SnapCenter
     links:
+    - title: SnapCenter 서비스를 사용한 Oracle 백업, 복원 및 복제 - Azure
+      url: "/snapctr_svcs_ora_azure.html"
     - title: SnapCenter 서비스를 사용한 Oracle 백업, 복원 및 복제 - AWS
-      url: "/snapctr_svcs_ora.html"
+      url: "/snapctr_svcs_ora_aws.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
       url: "/hybrid_dbops_snapcenter_usecases.html"
   - title: 데이터베이스용 SnapCenter

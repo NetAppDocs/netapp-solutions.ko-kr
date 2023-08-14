@@ -6,6 +6,10 @@ summary:
 ---
 = TR-4400: NetApp ONTAP를 통해 VVOL(VMware vSphere 가상 볼륨)을 이동합니다
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 [role="lead"]

@@ -5,7 +5,12 @@ summary: 'F5 BIG-IP는 ADC(Application Delivery Controller)로서 L4-L7 로드 �
 keywords: Anthos, GKE, Kubernetes, F5, BigIP, LoadBalancer 
 ---
 = F5 BIG-IP 로드 밸런서 설치
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 [role="lead"]

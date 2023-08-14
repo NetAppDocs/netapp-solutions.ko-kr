@@ -5,7 +5,12 @@ summary:
 keywords: Trident, Element, Solidfire, iSCSI 
 ---
 = NetApp Element iSCSI 구성
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 NetApp Element 스토리지 시스템과의 Trident 통합을 활성화하려면 iSCSI 프로토콜을 사용하여 스토리지 시스템과의 통신을 지원하는 백엔드를 생성해야 합니다.

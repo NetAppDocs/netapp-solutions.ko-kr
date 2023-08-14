@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-NetApp이 GCP(Google Cloud Platform) GCVE(Google Cloud Virtualization Engine)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp은 게스트 연결 스토리지 장치로, 또는 NFS 데이터 저장소를 보완하여 워크플로우를 마이그레이션하고, 클라우드로 확장/버스팅, 백업/복원, 재해 복구를 수행합니다.
+NetApp이 GCP(Google Cloud Platform) Google Cloud VMware Engine(GCVE)에 제공하는 기능에 대해 자세히 알아보십시오. NetApp(게스트 연결 스토리지 장치 또는 보조 NFS 데이터 저장소부터 마이그레이션, 클라우드로 확장/버스트, 재해 복구까지.
 
 다음 옵션 중 하나를 선택하여 원하는 콘텐츠의 섹션으로 이동합니다.
 

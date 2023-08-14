@@ -5,7 +5,12 @@ keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenSh
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
 = 워크플로우: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 

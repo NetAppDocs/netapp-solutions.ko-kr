@@ -1,11 +1,16 @@
 ---
 sidebar: sidebar 
-permalink: dp-sec/tr-4571.html 
+permalink: dp-sec/tr-4471.html 
 keywords:  
 summary:  
 ---
 = TR-4471: Veeam Backup & Replication 9.5의 E-Series 및 EF-Series 참조 아키텍처 및 스토리지 모범 사례
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 Akash Gupta, NetApp Shawn W대신하여(미주), Stefan Renner(EMEA), Michael Cade(성능), Veeam을 지원합니다

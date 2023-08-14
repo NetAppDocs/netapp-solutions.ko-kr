@@ -5,7 +5,12 @@ keywords: Trident, Astra Trident, ONTAP, AFF, FAS, iSCSI, Tanzu, TKG, TKGS, TKGI
 summary: iSCSI를 통해 영구 볼륨의 NetApp ONTAP 스토리지 시스템을 VMware Tanzu Kubernetes 클러스터와 통합하기 위한 첫 번째 단계는 각 노드에 로그인하고 iSCSI 볼륨을 마운트하기 위한 iSCSI 유틸리티 또는 패키지를 구성하여 노드를 준비하는 것입니다. 
 ---
 = NetApp ONTAP iSCSI 구성
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 iSCSI를 통해 영구 볼륨의 NetApp ONTAP 스토리지 시스템을 VMware Tanzu Kubernetes 클러스터와 통합하여 각 노드에 로그인하고 iSCSI 볼륨을 마운트하는 iSCSI 유틸리티 또는 패키지를 구성하여 노드를 준비합니다. 이렇게 하려면 여기에 설명된 절차를 따르십시오 link:https://docs.netapp.com/us-en/trident/trident-use/worker-node-prep.html#iscsi-volumes["링크"^].

@@ -5,7 +5,12 @@ summary: 이 페이지에서는 시소 로드 밸런서에 대한 설치 및 구
 keywords: Anthos, GKE, Kubernetes, SeeSaw, LoadBalancer 
 ---
 = 시소 부하 밸런서 설치
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 [role="lead"]

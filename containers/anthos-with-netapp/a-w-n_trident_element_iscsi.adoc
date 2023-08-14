@@ -5,7 +5,12 @@ summary: NetApp Element 스토리지 시스템과의 Trident 통합을 활성화
 keywords: Trident, Element, Solidfire, iSCSI 
 ---
 = NetApp Element iSCSI 구성
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 [role="lead"]

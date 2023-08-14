@@ -5,7 +5,12 @@ keywords: azure, lane, detection, training, solution, design
 summary: 2019년 5월부터 Microsoft는 NetApp ONTAP 기술을 기반으로 엔터프라이즈 NFS 및 SMB 파일 서비스를 위한 Azure 네이티브 자사 포털 서비스를 제공합니다. 
 ---
 = TR-4896: Azure에서 분산된 교육: 차선 감지 - 솔루션 설계
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 Muneer Ahmad and Verron Martina, NetApp Ronden Dar, run:AI

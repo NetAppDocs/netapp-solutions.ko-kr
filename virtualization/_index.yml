@@ -1,51 +1,95 @@
 ---
 indexpage:
   tiles:
-  - title: 시작/모범 사례
+  - title: 'VMware와 NetApp: 협력의 시너지 효과'
     links:
-    - title: VMware vSphere 8의 새로운 기능
-      url: "/vmware-vsphere8-intro.html"
-    - title: 'NetApp 및 VMware: 시작하기'
-      url: "/netapp-vmware.html"
+    - title: VMware와 NetApp를 선택해야 하는 이유
+      url: "/vmware-netapp.html"
+    - title: VMware용 NetApp 솔루션
+      url: "/vmware-on-netapp.html"
+    - title: 고객 사례
+      url: "/vmware-customer-stories.html"
+    - title: VMware Explore의 NetApp 세션
+      url: https://www.vmware.com/explore/video-library.html#text=%22netapp%22&year=2022
+    - title: NetApp TV VMware 세션
+      url: https://www.netapp.tv/search/vmware?mcid=46355890193282798301464636355760311038
+  - title: 시작하기
+    links:
     - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
       url: "/vsphere_admin_introduction.html"
+    - title: 비디오
+      url: "/vsphere_demos_videos.html"
+    - title: 블로그
+      url: "/../blogs.html#vmware"
+  - title: 모범 사례 및 지원
+    links:
     - title: ONTAP를 사용하는 VMware vSphere 모범 사례
       url: "/vsphere_ontap_ontap_for_vsphere.html"
     - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
       url: "/vvols-overview.html"
-    - title: VMware 가상화를 위한 새로운 기능
-      url: https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_vmware_virtualization.html
-  - title: 퍼블릭 클라우드의 VMware
+    - title: NetApp 상호 운용성 매트릭스 툴
+      url: https://mysupport.netapp.com/matrix/#welcome
+    - title: VMware 하드웨어 호환성 가이드 를 참조하십시오
+      url: https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc
+  - title: vSphere 8 및 vSphere+
     links:
-    - title: NetApp 하이브리드 멀티 클라우드 및 VMware
+    - title: vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
+      url: "/netapp-vsphere8.html"
+    - title: VMware vSphere 8의 새로운 기능
+      url: "/vmware-vsphere8-intro.html"
+    - title: VMware vSphere용 ONTAP 툴
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
+  - title: VMware 클라우드 서비스
+    links:
+    - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
       url: "/../ehc/index.html"
-    - title: AWS용 NetApp VMC
+    - title: AWS VMware Cloud(VMC) 기반 NetApp
       url: "/../ehc/aws/aws-vmc.html"
-    - title: NetApp for Azure AVS
+    - title: Azure 기반 NetApp VMware Solution(AVS)
       url: "/../ehc/azure/azure-avs.html"
-    - title: NetApp for Google Cloud Platform GCVE
+    - title: Google Cloud VMware Engine의 NetApp(GCVE)
       url: "/../ehc/gcp/gcp-gcve.html"
+  - title: VMware 소프트웨어 정의 데이터 센터
+    links:
+    - title: NetApp 스토리지 및 VMware Cloud Foundation
+      url: "/vmware-vcf-overview.html"
+    - title: ONTAP 툴을 위한 VMware 클라우드 기반 구축 모드입니다
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html
+    - title: VMware Cloud Foundation으로 FlexPod 하이브리드 클라우드를 확장하십시오
+      url: https://www.netapp.com/blog/expanding-flexpod-hybrid-cloud-with-vmware-cloud-foundation/
+    - title: VMware Cloud Foundation용 FlexPod 설계 가이드
+      url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt0_general-table0=vmware%20cloud%20foundation
+  - title: 컨테이너 및 Kubernetes
+    links:
+    - title: VMware vSphere 기반 Kubernetes
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634
+    - title: NetApp의 VMware Tanzu
+      url: "../containers/tanzu_with_netapp/vtwn_solution_overview.html"
+    - title: NetApp의 Red Hat OpenShift
+      url: "../containers/rh-os-n_solution_overview.html"
+    - title: NetApp의 Anthos
+      url: "../containers/anthos-with-netapp/a-w-n_solution_overview.html"
+    - title: NetApp Astra와 DevOps
+      url: "../containers/devops_with_netapp/dwn_solution_overview.html"
   - title: 보안 데이터 보호
     links:
     - title: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자(SRM
       url: "/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
     - title: VMware vSphere용 ONTAP 툴 - 제품 보안
       url: "/tools-vmware-secure-development-activities.html"
-  - title: 자동화
+    - title: VMware vSphere용 NetApp SnapCenter 플러그인
+      url: "/vmware-scv-overview.html"
+    - title: 하이브리드 멀티 클라우드용 NetApp 데이터 보호 솔루션
+      url: "/vmware-dp-overview.html"
+  - title: 자동화, 프로비저닝 및 모니터링
     links:
+    - title: VMware Aria입니다
+      url: "/netapp-aria.html"
     - title: VMware vSphere 자동화
       url: "/vsphere_auto_introduction.html"
     - title: NetApp 펍
       url: https://netapp.io/
-  - title: 데모 및 자습서
-    links:
-    - title: 비디오
-      url: "/vsphere_demos_videos.html"
-    - title: 블로그
-      url: "/../blogs.html"
-  - title: 추가 리소스
-    links:
-    - title: VMware vSphere용 ONTAP 툴
-      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
-    - title: 가상 데스크톱 솔루션
-      url: "/../vdi-vds/vdi-index.html"
+    - title: NetApp AIQ를 참조하십시오
+      url: https://docs.netapp.com/us-en/active-iq/
+    - title: NetApp BlueXP
+      url: https://docs.netapp.com/us-en/bluexp-family/concept-overview.html

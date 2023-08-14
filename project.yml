@@ -12,7 +12,7 @@ settings:
 sidebar:
   entries:
   - title: NetApp 솔루션 설명서
-    url: "/index.html"
+    url: index.html
   - section: ai
   - section: containers
   - section: data-access
@@ -31,8 +31,8 @@ sidebar:
   - title: 레거시 NetApp HCI 솔루션
     url: https://docs.netapp.com/us-en/hci-solutions/
   - title: Change Log(로그 변경)
-    url: "/change-log-display.html"
+    url: change-log-display.html
   - title: NetApp 솔루션 정보
-    url: "/about.html"
+    url: about.html
   - title: 법적 고지
-    url: "/legal-notices.html"
+    url: legal-notices.html

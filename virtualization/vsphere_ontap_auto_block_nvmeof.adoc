@@ -5,7 +5,21 @@ keywords: vSphere, datastore, VMFS, NVMeoF, ONTAP tools, zone, network interface
 summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저장소용 NetApp ONTAP NVMe/FC 스토리지를 구축하는 단계를 제공합니다. 
 ---
 = vSphere VMFS 데이터 저장소 - ONTAP가 포함된 NVMe/FC
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+:scriptsdir: ./../scripts/
+:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
+:ontap_version: ONTAP 9.8 or later
+:vsphere_version: vSphere 7.0 or later
+:firstname: Suresh
+:authorinitials: STT
+:middlename: Thoppay,
+:lastname: TME - Hybrid Cloud Solutions
+:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
 
@@ -22,12 +36,12 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저�
 
 * vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술
 * link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-059DDF49-2A0C-49F5-BB3B-907A21EC94D6.html++["NVMe/FC에 대한 기본 이해"].
-* {ONTAP_VERSION}을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/ASA
+* ONTAP 9.8 이상을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/ASA
 * ONTAP 자격 증명(SVM 이름, userID 및 암호)
 * 호스트, 타겟, SVM 및 LUN 정보를 위한 ONTAP WWPN
 * link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-esx-cpg/GUID-429C4DDD-5EC0-4DBD-8EA8-76082AB7ADEC.html++["완료된 FC 구성 워크시트"]
 * vCenter Server를 선택합니다
-* vSphere 호스트 정보({vSphere_version})
+* vSphere 호스트 정보(vSphere 7.0 이상)
 * 패브릭 스위치
 +
 ** ONTAP FC 데이터 포트 및 vSphere 호스트가 연결된 경우

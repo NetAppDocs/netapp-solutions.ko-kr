@@ -1,95 +1,94 @@
-= Oracle 설치를 검증합니다
+= 도움을 받을 수 있는 곳
 :allow-uri-read: 
 
 
-
-
-=== Oracle 설치를 검증합니다
-
 . Oracle 서버에 Oracle 사용자로 로그인하고 다음 명령을 실행합니다.
-
-
++
 [source, cli]
 ----
 ps -ef | grep ora
 ----
++
 
 NOTE: 설치가 예상대로 완료되고 Oracle DB가 시작되면 Oracle 프로세스가 나열됩니다
 
 . 데이터베이스에 로그인하여 다음 명령 세트로 생성된 DB 구성 설정과 PDB를 확인합니다.
-
-
++
 [source, cli]
 ----
-sqlplus / as sysdba
-----
-[oracle@localhost~]$sqlplus/as sysdba
+[oracle@localhost ~]$ sqlplus / as sysdba
 
-SQL* Plus: 릴리스 19.0.0.0.0 - 5월 6일 목요일 프로덕션 12:52:51 2021년 버전 19.8.0.0.0
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu May 6 12:52:51 2021
+Version 19.8.0.0.0
 
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
 
-연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
 
-sql> 을 클릭합니다
+SQL>
 
-[source, cli]
-----
-select name, log_mode from v$database;
-----
-sql> v$database에서 이름, log_mode 선택; name log_mode--------- ---------- CDB2 ARCHIVELOG
+SQL> select name, log_mode from v$database;
+NAME      LOG_MODE
+--------- ------------
+CDB2      ARCHIVELOG
 
-[source, cli]
-----
-show pdbs;
-----
-sql > PDB 표시
+SQL> show pdbs
 
-....
     CON_ID CON_NAME                       OPEN MODE  RESTRICTED
 ---------- ------------------------------ ---------- ----------
          2 PDB$SEED                       READ ONLY  NO
          3 CDB2_PDB1                      READ WRITE NO
          4 CDB2_PDB2                      READ WRITE NO
          5 CDB2_PDB3                      READ WRITE NO
-....
-[source, cli]
-----
+
 col svrname form a30
 col dirname form a30
 select svrname, dirname, nfsversion from v$dnfs_servers;
-----
-sql> col svrname form a30 sql> col dirname form a30 sql> v$dnfs_servers에서 svrname, dirname, nfsversion을 선택합니다.
 
-SVRNAME dirname NFSVERSION------------------------------------------------------------ ------------------------------------------------------------ --------------- 172.21.126.200/rhelora03_u02 NFSv3.0 172.21.126.200/rhelora03_uNFSv03 3.0 172.21.126.200/rhelora03_u01 NFSv3.0
+SQL> col svrname form a30
+SQL> col dirname form a30
+SQL> select svrname, dirname, nfsversion from v$dnfs_servers;
 
-[listing]
+SVRNAME                        DIRNAME                        NFSVERSION
+------------------------------ ------------------------------ ----------------
+172.21.126.200                 /rhelora03_u02                 NFSv3.0
+172.21.126.200                 /rhelora03_u03                 NFSv3.0
+172.21.126.200                 /rhelora03_u01                 NFSv3.0
 ----
-This confirms that dNFS is working properly.
-----
++
+그러면 dNFS가 제대로 작동하고 있음을 확인할 수 있습니다.
+
 . 다음 명령을 사용하여 listener를 통해 데이터베이스에 연결하여 hte oracle listener 구성을 확인합니다. 적절한 수신기 포트 및 데이터베이스 서비스 이름으로 변경합니다.
-
-
++
 [source, cli]
 ----
-sqlplus system@//localhost:1523/cdb2_pdb1.cie.netapp.com
+[oracle@localhost ~]$ sqlplus system@//localhost:1523/cdb2_pdb1.cie.netapp.com
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu May 6 13:19:57 2021
+Version 19.8.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter password:
+Last Successful login time: Wed May 05 2021 17:11:11 -04:00
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.8.0.0.0
+
+SQL> show user
+USER is "SYSTEM"
+SQL> show con_name
+CON_NAME
+CDB2_PDB1
 ----
-[Oracle@localhost~]$sqlplus system@//localhost:1523/cdb2_pdb1.cie.netapp.com
++
+이를 통해 Oracle Listener가 제대로 작동하고 있음을 확인할 수 있습니다.
 
-SQL* Plus: 릴리스 19.0.0.0.0 - 5월 6일 13:19:57 2021년 11월 19일 버전 19.8.0.0.0의 목요일 프로덕션
 
-Copyright (c) 1982, 2019, Oracle. 모든 권리 보유.
 
-비밀번호 입력: 마지막으로 성공한 로그인 시간: 2021년 5월 5일 17:11:11-04:00
-
-연결 대상: Oracle Database 19c Enterprise Edition 릴리스 19.0.0.0.0 - 프로덕션 버전 19.8.0.0.0
-
-sql> show user is "system" sql> show con_name con_name CDB2_PDB1
-
-[listing]
-----
-This confirms that Oracle listener is working properly.
-----
 
 
 === 도움을 받을 수 있는 곳

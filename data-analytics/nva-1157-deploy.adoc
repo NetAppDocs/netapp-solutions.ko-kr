@@ -5,7 +5,12 @@ keywords:
 summary:  
 ---
 = NVA-1157 - 배포: NetApp 스토리지 솔루션을 사용한 Apache Spark 워크로드
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 NetApp의 Karthikeyan Nagalingam입니다

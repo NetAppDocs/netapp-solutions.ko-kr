@@ -4,7 +4,7 @@ permalink: ehc/aws/aws-vmc-veeam-fsx-solution.html
 keywords: disaster recovery, vmc, vmware cloud, aws, amazon web services, nfs datastore, fsxn, fsx for ontap, fsx for netapp ontap, backup, restore, sql server, oracle 
 summary:  
 ---
-= ONTAP용 AWS FSx를 사용하여 VMware Cloud에서 Veeam 백업 및 복원
+= Amazon FSx for ONTAP를 사용한 VMware 클라우드에서 Veeam 백업 및 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

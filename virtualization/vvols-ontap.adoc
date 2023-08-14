@@ -5,9 +5,15 @@ keywords: tr-4400, vvols, ontap
 summary: 이 문서에서는 VMware vSphere용 ONTAP 툴의 제품 보안에 대해 설명합니다. 
 ---
 = ONTAP에서 VVOL 사용
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
+[role="lead"]
 ONTAP에서 VVOL을 사용하려면 VMware vSphere 가상 어플라이언스를 위한 ONTAP 툴의 일부로 포함된 VASA 공급자 소프트웨어가 필요합니다.
 
 ONTAP 툴에는 vCenter UI 확장, REST API 서버, VMware Site Recovery Manager용 스토리지 복제 어댑터, 모니터링 및 호스트 구성 툴, VMware 환경을 보다 효율적으로 관리하는 데 도움이 되는 보고서 배열도 포함되어 있습니다.

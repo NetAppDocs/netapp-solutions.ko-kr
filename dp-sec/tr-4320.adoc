@@ -5,7 +5,12 @@ keywords:
 summary:  
 ---
 = TR-4320: NetApp E-Series 및 Commvault Data Platform V11 - 참조 아키텍처 및 스토리지 모범 사례
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 Commvault, NetApp Girish Chanchlandi의 Akash Gupta

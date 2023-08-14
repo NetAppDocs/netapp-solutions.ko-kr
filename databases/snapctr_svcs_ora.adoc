@@ -234,6 +234,38 @@ image:snapctr_svcs_credential_07-aws.png["GUI에서 이 단계를 보여 주는 
 
 . 검토 및 * 추가 *.
 image:snapctr_svcs_credential_08-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+. 먼저 AWS EC2 콘솔에서 * IAM(Identity and Access Management) * MENU * Roles *, * Create role * 에서 역할을 생성하여 역할 생성 워크플로를 시작합니다.
++
+image:snapctr_svcs_credential_01-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. 신뢰할 수 있는 엔터티 선택 * 페이지에서 * AWS 계정 *, * 다른 AWS 계정 * 을 선택하고 BlueXP 계정 ID에 붙여넣은 후 BlueXP 콘솔에서 검색할 수 있습니다.
++
+image:snapctr_svcs_credential_02-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. FSX로 권한 정책을 필터링하고 * 권한 정책 * 을 역할에 추가합니다.
++
+image:snapctr_svcs_credential_03-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. Role details * 페이지에서 역할의 이름을 지정하고 설명을 추가한 다음 * Create role * 을 클릭합니다.
++
+image:snapctr_svcs_credential_04-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. BlueXP 콘솔로 돌아가서 콘솔 오른쪽 위의 설정 아이콘을 클릭하여 * 계정 자격 증명 * 페이지를 열고 * 자격 증명 추가 * 를 클릭하여 자격 증명 구성 워크플로우를 시작합니다.
++
+image:snapctr_svcs_credential_05-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. 자격 증명 위치를 * Amazon Web Services - BlueXP * 로 선택합니다.
++
+image:snapctr_svcs_credential_06-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. 적절한 * 역할 ARN * 을 사용하여 AWS 자격 증명을 정의합니다. 이 역할은 위의 1단계에서 생성한 AWS IAM 역할에서 검색할 수 있습니다. BlueXP * 계정 ID * 로, 1단계에서 AWS IAM 역할을 생성하는 데 사용됩니다.
++
+image:snapctr_svcs_credential_07-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
+. 검토 및 * 추가 *.
++
+image:snapctr_svcs_credential_08-aws.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+
 
 
 ====

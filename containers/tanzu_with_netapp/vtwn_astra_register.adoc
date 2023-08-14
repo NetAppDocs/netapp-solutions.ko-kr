@@ -5,7 +5,12 @@ summary: Astra Control Center에서 워크로드를 관리할 수 있도록 하�
 keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, Tanzu, Tanzu Kubernetes clusters, VMware Tanzu 
 ---
 = Astra Control Center에 VMware Tanzu Kubernetes 클러스터를 등록합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 Astra Control Center에서 워크로드를 관리할 수 있도록 하려면 먼저 Tanzu Kubernetes 클러스터를 등록해야 합니다.

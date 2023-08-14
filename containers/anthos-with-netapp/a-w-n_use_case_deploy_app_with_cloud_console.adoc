@@ -5,7 +5,12 @@ keywords: Anthos, Astra Trident, NetApp ONTAP, ONTAP, Trident
 summary: Google Cloud Console을 사용하여 온프레미스 Anthos GKE 클러스터에 응용 프로그램을 배포하는 방법 
 ---
 = Google Cloud Console Marketplace에서 애플리케이션을 배포합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 

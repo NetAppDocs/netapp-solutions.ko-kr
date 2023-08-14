@@ -5,7 +5,12 @@ keywords: OpenShift, Kubernetes, Astra Control, Astra Trident, NetApp ONTAP, Clo
 summary: FlexClone 기술을 사용하여 빠르게 구축합니다 
 ---
 = NetApp FlexClone 기술을 사용하여 소프트웨어 개발 가속화
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 

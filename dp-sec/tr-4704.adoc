@@ -5,7 +5,12 @@ keywords:
 summary:  
 ---
 = TR-4704: NetApp E-Series 스토리지를 사용하여 Veritas NetBackup 구축
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 Akash Gupta와 Principled Technologies, NetApp

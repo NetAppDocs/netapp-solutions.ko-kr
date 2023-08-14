@@ -5,7 +5,21 @@ keywords: vSphere, datastore, VMFS, iSCSI, ONTAP tools, vlan, network interface,
 summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 iSCSI VMFS 데이터 저장소를 구축하는 단계를 제공합니다. 
 ---
 = vSphere VMFS 데이터 저장소 - ONTAP를 사용하는 iSCSI 스토리지 백엔드
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+:scriptsdir: ./../scripts/
+:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
+:ontap_version: ONTAP 9.8 or later
+:vsphere_version: vSphere 7.0 or later
+:firstname: Suresh
+:authorinitials: STT
+:middlename: Thoppay,
+:lastname: TME - Hybrid Cloud Solutions
+:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
 
@@ -21,14 +35,14 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리�
 == 필요한 것
 
 * vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술
-* {ONTAP_VERSION}을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/ASA
+* ONTAP 9.8 이상을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/ASA
 * ONTAP 자격 증명(SVM 이름, userID 및 암호)
 * iSCSI를 위한 ONTAP 네트워크 포트, SVM 및 LUN 정보
 * link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-iscsi-esx-cpg/GUID-429C4DDD-5EC0-4DBD-8EA8-76082AB7ADEC.html++["완료된 iSCSI 구성 워크시트"]
 * vCenter Server 자격 증명
 * vSphere 호스트 정보입니다
 +
-** {vSphere_version}
+** vSphere 7.0 이상
 
 
 * iSCSI VMkernel 어댑터 IP 정보

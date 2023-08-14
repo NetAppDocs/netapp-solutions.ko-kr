@@ -5,7 +5,12 @@ keywords: Anthos, bare metal, linux
 summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 통해 맞춤형 사용 사례에 최적화된 컴퓨팅 플랫폼을 선택할 수 있으며 다양한 추가 이점을 제공할 수 있습니다. 
 ---
 = Anthos의 Bare Metal
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
 
 
 

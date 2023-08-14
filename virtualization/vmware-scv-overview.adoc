@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: virtualization/vmware-scv-overview.html 
+keywords: netapp, vmware, getting, started 
+summary:  
+---
+= VMware vSphere용 SnapCenter 플러그인
+:allow-uri-read: 
+
+
+
+
+== VMware vSphere용 SnapCenter 플러그인
+
+[role="lead"]
+VMware vSphere용 SnapCenter 플러그인은 VM(가상 머신), 데이터 저장소 및 VMDK에 대해 신속하고 효율적이며 VM 정합성이 보장되는 백업 및 복원 작업을 제공합니다. SnapCenter Server와 함께 작동하여 SnapCenter 애플리케이션별 플러그인의 애플리케이션 기반 백업 및 복원 기능을 지원합니다.
+
+
+
+=== 설명서 리소스
+
+자세한 내용은 다음 문서 리소스를 참조하십시오.
+
+* link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere용 SnapCenter 플러그인 설명서"]
+
+
+
+
+=== 솔루션 리소스를 참조하십시오
+
+VMware vSphere용 SnapCenter 플러그인 과 VM용 BlueXP 백업 및 복구를 제공하는 다음 3-2-1 백업 솔루션을 참조하십시오.
+
+기술 보고서: link:../ehc/bxp/bxp-scv-hybrid-solution.html["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"]
+
+Tech OnTap 블로그: link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-backup-and/ba-p/446180["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"]
+
+
+
+=== 비디오 리소스
+
+.VMware vSphere용 SnapCenter 플러그인 - 솔루션 전제 조건
+video::38881de9-9ab5-4a8e-a17d-b01200fade6a[panopto]
+.VMware vSphere용 SnapCenter 플러그인 - 구축
+video::10cbcf2c-9964-41aa-ad7f-b01200faca01[panopto]
+.VMware vSphere용 SnapCenter 플러그인 - 백업 워크플로우
+video::b7272f18-c424-4cc3-bc0d-b01200faaf25[panopto]
+.VMware vSphere용 SnapCenter 플러그인 - 복구 워크플로우
+video::ed41002e-585c-445d-a60c-b01200fb1188[panopto]
+.SnapCenter - SQL 복원 워크플로
+video::8df4ad1f-83ad-448b-9405-b01200fb2567[panopto]

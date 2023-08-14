@@ -5,7 +5,12 @@ keywords:
 summary:  
 ---
 = NVA-1143:NetApp HCI-NIST Security Controls for FISMA with HyTrust Infrastructure-NVA 설계 및 구축
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
 
 [role="lead"]
