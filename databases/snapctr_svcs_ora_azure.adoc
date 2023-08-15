@@ -52,27 +52,29 @@ SnapCenter 서비스는 NetApp BlueXP 클라우드 관리 콘솔을 통해 제�
 
 === 있습니다
 
-image::snapctr_svcs_azure_architect.png[이 이미지는 UI, 커넥터 및 관리 리소스를 포함하여 BlueXP 콘솔 내의 Cloud Backup for Application에 대한 자세한 그림을 제공합니다.]
+image::snapctr_svcs_azure_architect.png[이 이미지에서는 UI, 커넥터, 관리하는 리소스를 비롯하여 BlueXP 콘솔 내 애플리케이션의 BlueXP 백업 및 복구에 대한 자세한 정보를 제공합니다.]
 
-이 이미지는 UI, 커넥터 및 관리 리소스를 포함하여 BlueXP 콘솔 내의 Cloud Backup for Application에 대한 자세한 그림을 제공합니다.
+이 이미지는 UI, 커넥터, 관리하는 리소스를 비롯하여 BlueXP 콘솔 내의 애플리케이션에 대한 BlueXP 백업 및 복구 정보를 상세하게 제공합니다.
 
 
 
 === 하드웨어 및 소프트웨어 구성 요소
 
+* 하드웨어 *
+
+[cols="30%, 30%, 40%"]
 |===
-
-
-3+| * 하드웨어 * 
 
 
 | Azure NetApp Files 스토리지 | Premium 서비스 레벨 | 자동 QoS 유형 및 4TB 스토리지 용량 테스트 중 
 
 
 | 컴퓨팅을 위한 Azure 인스턴스 | 표준 B4ms(vCPU 4개, 16GiB 메모리) | 두 개의 인스턴스가 배포되었습니다. 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 배포됩니다 
+|===
+* 소프트웨어 *
 
-
-3+| * 소프트웨어 * 
+[cols="30%, 30%, 40%"]
+|===
 
 
 | RedHat Linux | Red Hat Enterprise Linux 8.7(LVM) - x64 Gen2 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
@@ -108,7 +110,8 @@ image::snapctr_svcs_azure_architect.png[이 이미지는 UI, 커넥터 및 관�
 * 일반 지침을 읽으십시오 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html#architecture["클라우드 네이티브 애플리케이션 데이터 보호"^] Oracle 및 Azure NetApp Files 관련 섹션도 있습니다.
 * 다음 비디오 연습을 시청하십시오
 +
-
+.Oracle 및 ANF 구축 비디오
+video::48adf2d8-3f5e-4ab3-b25c-b04a014635ac[panopto]
 
 
 
@@ -423,7 +426,7 @@ image:snapctr_svcs_clone_07-azure.png["오류: 그래픽 이미지가 없습니�
 +
 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.htmll["https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html"^]
 
-* Cloud Backup 설명서
+* BlueXP 백업 및 복구 설명서
 +
 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/index.html["https://docs.netapp.com/us-en/cloud-manager-backup-restore/index.html"^]
 

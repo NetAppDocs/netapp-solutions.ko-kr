@@ -316,7 +316,7 @@ entries:
       url: "/ai/cainvidia_solution_overview.html"
     - title: 솔루션 기술
       url: "/ai/cainvidia_solution_technology.html"
-    - title: Jarvis, Cloud Sync 및 Nemo를 사용하여 가상 도우미를 빌드합니다
+    - title: Jarvis, BlueXP Copy and Sync, Nemo를 사용하여 가상 어시스턴트를 구축합니다
       url: "/ai/cainvidia_build_a_virtual_assistant_using_jarvis,_cloud_sync,_and_nemo_overview.html"
       entries:
       - title: Jarvis 배포
@@ -327,7 +327,7 @@ entries:
         url: "/ai/cainvidia_connect_to_third-party_apis_as_fulfillment_engine.html"
       - title: NetApp Retail Assistant 데모
         url: "/ai/cainvidia_netapp_retail_assistant_demonstration.html"
-      - title: NetApp Cloud Sync를 사용하여 대화 내용 아카이빙
+      - title: NetApp BlueXP 복사 및 동기화를 사용하여 대화 기록을 아카이브합니다
         url: "/ai/cainvidia_use_netapp_cloud_sync_to_archive_conversation_history.html"
       - title: Nemo Training을 사용하여 Intent 모델을 확장합니다
         url: "/ai/cainvidia_expand_intent_models_using_nemo_training.html"

@@ -144,7 +144,7 @@ image:azure-cvo-guest-4.png[""]
 +
 image:azure-cvo-guest-5.png[""]
 
-. 클라우드 데이터 감지, 클라우드 백업 및 Cloud Insights를 포함하여 Cloud Volumes ONTAP 구축을 위한 애드온 서비스를 선택하십시오. 서비스를 선택한 다음 계속 을 클릭합니다.
+. BlueXP 분류, BlueXP 백업 및 복구, Cloud Insights를 비롯하여 Cloud Volumes ONTAP 구축을 위한 애드온 서비스를 선택하십시오. 서비스를 선택한 다음 계속 을 클릭합니다.
 +
 image:azure-cvo-guest-6.png[""]
 

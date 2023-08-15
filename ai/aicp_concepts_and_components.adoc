@@ -158,13 +158,13 @@ image:aicp_image6.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
-== NetApp Cloud Sync를 참조하십시오
+== NetApp BlueXP 복사 및 동기화
 
-Cloud Sync는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 사내 NFS 또는 SMB 파일 공유 간에 파일을 전송해야 하는 경우, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, AWS S3, AWS EFS, Azure Blob, Google 클라우드 스토리지 또는 IBM 클라우드 오브젝트 스토리지인 Cloud Sync는 필요한 파일을 빠르고 안전하게 이동시킵니다.
+BlueXP 복사 및 동기화는 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유 간에 파일을 전송해야 하는 경우, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, AWS S3, AWS EFS, Azure Blob, Google Cloud Storage, 즉 IBM Cloud Object Storage, BlueXP Copy and Sync는 필요한 파일을 빠르고 안전하게 이동합니다.
 
-데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. Cloud Sync는 사전 정의된 일정에 따라 업데이트가 트리거되거나 지속적으로 데이터가 동기화될 때 필요 시 데이터를 동기화할 수 있습니다. Cloud Sync는 델타만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다.
+데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. BlueXP 복사 및 동기화는 업데이트가 트리거되거나 미리 정의된 일정에 따라 데이터가 지속적으로 동기화되는 경우 필요 시 데이터를 동기화할 수 있습니다. BlueXP Copy 및 Sync는 변경된 부분만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다.
 
-Cloud Sync는 매우 간편한 설정 및 사용이 가능한 SaaS(Software as a Service) 툴입니다. Cloud Sync에 의해 트리거되는 데이터 전송은 데이터 브로커가 수행합니다. Cloud Sync 데이터 브로커는 AWS, Azure, Google Cloud Platform 또는 온프레미스에 구축할 수 있습니다.
+BlueXP Copy and Sync는 매우 간단하게 설정하고 사용할 수 있는 서비스형 소프트웨어(SaaS) 툴입니다. BlueXP Copy 및 Sync에 의해 트리거되는 데이터 전송은 데이터 브로커에 의해 수행됩니다. BlueXP Copy 및 Sync 데이터 브로커는 AWS, Azure, Google Cloud Platform 또는 사내에 구축할 수 있습니다.
 
 
 

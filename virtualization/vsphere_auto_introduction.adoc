@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: virtualization/vsphere_auto_introduction.html 
-keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, Cloud Sync, FabricPool, ONTAP 
+keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, BlueXP Copy and Sync, FabricPool, ONTAP 
 summary: 이 페이지에서는 VMware vSphere 환경에서 기본 ONTAP 기능을 자동화할 때의 이점에 대해 설명합니다. 
 ---
 = ONTAP 및 vSphere 자동화 소개

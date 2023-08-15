@@ -423,7 +423,7 @@ Veeam을 구성하는 마지막 단계는 새로 생성한 SOBR을 백업 대상
 ====
 
 
-=== 클라우드 백업 툴 및 구성
+=== BlueXP 백업 및 복구 툴 및 구성
 
 애플리케이션 VM 및 데이터베이스 볼륨을 AWS에서 실행되는 VMware Cloud Volume 서비스로 페일오버하려면 SnapCenter Server와 Veeam Backup and Replication Server의 실행 중인 인스턴스를 설치 및 구성해야 합니다. 페일오버가 완료된 후 사내 데이터 센터에 대한 페일백이 계획 및 실행될 때까지 정상적인 백업 작업을 재개하도록 이러한 툴을 구성해야 합니다.
 

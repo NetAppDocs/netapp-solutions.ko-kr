@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: virtualization/vsphere_admin_introduction.html 
-keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, Cloud Sync, FabricPool, ONTAP 
+keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, BlueXP Copy and Sync, FabricPool, ONTAP 
 summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 솔루션을 구축하는 모범 사례를 설명합니다. 
 ---
 = vSphere 관리자를 위한 ONTAP 소개

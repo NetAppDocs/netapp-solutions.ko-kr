@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: virtualization/vsphere_admin_hybrid_cloud.html 
-keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, Cloud Sync, FabricPool, ONTAP 
+keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, BlueXP Copy and Sync, FabricPool, ONTAP 
 summary: 이 페이지에서는 ONTAP 및 VMware vSphere에서 사용할 수 있는 하이브리드 클라우드 기능에 대해 설명합니다. 
 ---
 = ONTAP 및 vSphere 기반의 하이브리드 클라우드
@@ -25,7 +25,7 @@ Azure, AWS, IBM 또는 Google 클라우드 중에서 선택하여 비용을 최�
 
 일부 고객은 전체 워크로드를 클라우드로 이동하도록 선택합니다. 이는 단순히 클라우드를 데이터 보호에 사용하는 것보다 더 복잡할 수 있지만 클라우드 기반 스토리지를 사용하기 위해 애플리케이션을 재작성할 필요가 없기 때문에 ONTAP를 사용하면 손쉽게 이전할 수 있습니다. 클라우드의 ONTAP는 사내 ONTAP처럼 작동합니다. 사내 ONTAP 시스템은 더 적은 물리적 공간에 더 많은 데이터를 저장하고 거의 사용되지 않는 데이터를 계층화하여 스토리지 비용을 절감할 수 있는 데이터 효율성 기능을 제공합니다. 하이브리드 클라우드 구성을 사용하거나 전체 워크로드를 클라우드로 이동할 때 ONTAP은 스토리지 성능 및 효율성을 극대화합니다.
 
-또한 NetApp은 ONTAP용 클라우드 기반 백업(SnapMirror 클라우드, Cloud Backup Service 및 Cloud Sync), 스토리지 계층화 및 아카이빙 툴(FabricPool)을 제공하여 운영 비용을 줄이고 광범위한 클라우드 활용을 지원합니다.
+또한 NetApp은 클라우드 기반 백업(SnapMirror Cloud, BlueXP 백업 및 복구 서비스, BlueXP Copy and Sync)과 ONTAP를 위한 스토리지 계층화 및 아카이빙 툴(FabricPool)을 제공하여 운영 비용을 절감하고 클라우드의 광범위한 이점을 활용할 수 있도록 지원합니다.
 
 다음 그림은 샘플 하이브리드 클라우드 사용 사례를 보여줍니다.
 
