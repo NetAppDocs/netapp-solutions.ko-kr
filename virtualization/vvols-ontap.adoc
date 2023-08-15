@@ -182,5 +182,3 @@ NFS v3를 통한 VVOL을 사용한 네트워크 구성의 예:
 image:vvols-image8.png["\"NFS v3을 통한 vVols를 사용한 네트워크 구성\" ,500"]
 
 
-
-image:vvols-image8.png["NFS v3,500을 통해 VVOL을 사용한 네트워크 구성"]
