@@ -34,7 +34,7 @@ image:vvols-image5.png["ONTAP 툴 VASA 공급자 아키텍처, 240"]
 
 === 제품 설치
 
-새로 설치하려면 가상 어플라이언스를 vSphere 환경에 구축하십시오. ONTAP 툴의 현재 릴리즈는 자동으로 vCenter에 등록되고 기본적으로 VASA Provider가 설정됩니다. ESXi 호스트 및 vCenter Server 정보 외에도 어플라이언스에 대한 IP 주소 구성 세부 정보도 필요합니다. 앞서 설명했듯이, VASA Provider를 사용하려면 VVOL을 위해 사용할 ONTAP 클러스터에 ONTAP FlexClone 라이센스가 이미 설치되어 있어야 합니다. 이 어플라이언스에는 가용성을 보장하기 위한 감시 기능이 내장되어 있으며 Best Practice는 VMware High Availability 및 옵션으로 Fault Tolerance 기능을 사용하여 구성해야 합니다. 자세한 내용은 섹션 4.1을 참조하십시오. 어플라이언스를 다시 시작하지 못할 수 있으므로 ONTAP 툴 어플라이언스 또는 VCSA(vCenter Server Appliance)를 VVol 스토리지로 설치하거나 이동하지 마십시오.
+새로 설치하려면 가상 어플라이언스를 vSphere 환경에 구축하십시오. ONTAP 툴의 현재 릴리즈는 자동으로 vCenter에 등록되고 기본적으로 VASA Provider가 설정됩니다. ESXi 호스트 및 vCenter Server 정보 외에도 어플라이언스에 대한 IP 주소 구성 세부 정보도 필요합니다. 앞서 설명했듯이, VASA Provider를 사용하려면 VVOL을 위해 사용할 ONTAP 클러스터에 ONTAP FlexClone 라이센스가 이미 설치되어 있어야 합니다. 이 어플라이언스에는 가용성을 보장하기 위한 감시 기능이 내장되어 있으며 Best Practice는 VMware High Availability 및 옵션으로 Fault Tolerance 기능을 사용하여 구성해야 합니다. 어플라이언스를 다시 시작하지 못할 수 있으므로 ONTAP 툴 어플라이언스 또는 VCSA(vCenter Server Appliance)를 VVol 스토리지로 설치하거나 이동하지 마십시오.
 
 ONTAP 도구의 현재 위치 업그레이드는 NetApp Support 사이트(NSS)에서 다운로드할 수 있는 업그레이드 ISO 파일을 사용하여 지원됩니다. 어플라이언스를 업그레이드하려면 Deployment and Setup Guide(배포 및 설정 가이드) 지침을 따르십시오.
 
@@ -170,7 +170,7 @@ ONTAP 클러스터에 워크로드를 분산하거나, 다양한 정책 옵션�
 . * 기본 SCP를 예제 템플릿으로 사용하여 고유한 템플릿을 만듭니다. *
 포함된 CP는 대부분의 범용 용도에 적합하지만, 요구 사항은 다를 수 있습니다.
 . * 최대 IOPS를 사용하여 알 수 없는 VM을 제어하거나 VM을 테스트하는 것을 고려해 보십시오. *
-VASA Provider 7.1에서 처음 사용할 수 있는 Max IOPS를 사용하면 알 수 없는 워크로드를 위해 IOPS를 특정 VVOL으로 제한하여 다른 중요한 워크로드에 미치는 영향을 방지할 수 있습니다. 성능 관리에 대한 자세한 내용은 표 4를 참조하십시오.
+VASA Provider 7.1에서 처음 사용할 수 있는 Max IOPS를 사용하면 알 수 없는 워크로드를 위해 IOPS를 특정 VVOL으로 제한하여 다른 중요한 워크로드에 미치는 영향을 방지할 수 있습니다.
 . * 충분한 데이터 LIF가 있는지 확인하십시오. *
 HA 쌍당 최소 2개의 LIF를 생성합니다. 작업 부하에 따라 더 많은 작업이 필요할 수 있습니다.
 . * 모든 프로토콜 모범 사례를 따르십시오. *
