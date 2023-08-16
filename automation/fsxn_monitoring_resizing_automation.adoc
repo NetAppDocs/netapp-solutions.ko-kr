@@ -13,9 +13,6 @@ summary: 이 페이지에서는 AWS FSxN 모니터링 및 임계값에 따른 �
 :imagesdir: ./../media/
 
 
-[role="lead"]
-저자 : 드루프 티야기, 니야즈 모하메드
-
 
 
 == 개요: AWS Lambda 함수를 통해 ONTAP용 FSx 모니터링 및 자동 크기 조정
@@ -43,6 +40,7 @@ ONTAP용 FSX는 원활한 배포 및 관리 환경을 제공합니다. 스토리
 * 정기적으로 점검을 모니터링하는 기능
 * 인터넷 액세스 유무에 관계없이 솔루션을 사용할 수 있습니다
 * 수동으로 구축하거나 AWS CloudFormation Template을 사용하여 구축할 수 있습니다
+* 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 수 있습니다
 
 
 ====
@@ -77,6 +75,9 @@ image:fsxn-monitoring-resizing-architecture.png["이 이미지는 이 솔루션�
 
 === 자동화된 배포
 
+
+NOTE: 단일 FSx for ONTAP 파일 시스템을 다룹니다.
+
 [%collapsible]
 ====
 이 솔루션의 자동 배포를 완료하려면 다음 단계를 따르십시오.
@@ -95,7 +96,7 @@ git clone https://github.com/NetApp-Automation/fsxn-monitoring-auto-resizing.git
 [%collapsible]
 =====
 . AWS 콘솔 > * S3 * 로 이동하고 * Create Bucket * 을 클릭합니다. 기본 설정으로 버킷을 작성합니다.
-. 버킷에 들어간 후 * 업로드 * > * 파일 추가 * 를 클릭하고 시스템의 복제된 GitHub 리포지토리에서 * Paramiko.zip * 및 * Requests.zip * 을 선택합니다.
+. 버킷 안에 들어가면 * Upload * > * Add files * 를 클릭하고 시스템의 클론 복제된 GitHub 저장소에서 * Utilities.zip * 을 선택합니다.
 +
 image:fsxn-monitoring-resizing-s3-upload-zip-files.png["이 이미지는 zip 파일이 업로드되는 S3 창을 보여 줍니다"]
 
@@ -169,6 +170,9 @@ image:fsxn-monitoring-resizing-email-2.png["이 이미지는 알림을 사용할
 
 === 수동 배포
 
+
+NOTE: 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 수 있습니다.
+
 [%collapsible]
 ====
 이 솔루션의 수동 배포를 완료하려면 다음 단계를 따르십시오.
@@ -211,6 +215,7 @@ KMS key source: My current account
 Value: <Enter the password for "fsxadmin" user configured on FSx for ONTAP>
 ----
 Create Parameter * 를 클릭합니다.
+모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
 image:fsxn-monitoring-resizing-ssm-parameter.png["이 이미지는 AWS 콘솔의 SSM 매개 변수 생성 창을 보여 줍니다."]
 
@@ -297,11 +302,11 @@ image:fsxn-monitoring-resizing-lambda-creation-2.png["이 이미지는 AWS 콘�
 image:fsxn-monitoring-resizing-add-layer-button.png["이 이미지는 AWS 람다 기능 콘솔의 Add layer 버튼을 보여줍니다."]
 
 . 레이어 소스 * 에서 * 새 레이어 만들기 * 를 클릭합니다
-. 요청 시 2개 레이어 - 1개, Paramiko에 대해 1개, * Requests.zip * 및 * Paramiko.zip * 파일을 업로드합니다. 호환되는 런타임으로 * Python 3.9 * 를 선택하고 * Create * 를 클릭합니다.
+. 계층을 만들고 * Utilities.zip * 파일을 업로드합니다. 호환되는 런타임으로 * Python 3.9 * 를 선택하고 * Create * 를 클릭합니다.
 +
 image:fsxn-monitoring-resizing-create-layer-paramiko.png["이 이미지는 AWS 콘솔에서 새 계층 생성 창을 보여줍니다."]
 
-. AWS Lambda * 레이어 추가 * > * 사용자 정의 레이어 * 로 다시 이동하여 paramiko를 추가하고 계층을 하나씩 요청합니다.
+. AWS Lambda * Add Layer * > * Custom Layers * 로 다시 이동하여 유틸리티 계층을 추가합니다.
 +
 image:fsxn-monitoring-resizing-add-layer-window.png["이 이미지는 AWS 람다 기능 콘솔의 Add layer 창을 보여줍니다."]
 
@@ -325,6 +330,10 @@ image:fsxn-monitoring-resizing-layers-added.png["이 이미지는 AWS 람다 기
 | * 이름 * | * 유형 * | * 설명 * 
 
 
+| * fsxList * | 목록 | (필수) 모니터링할 모든 FSx for ONTAP 파일 시스템 목록입니다.
+모니터링 및 자동 크기 조정을 위해 목록에 모든 파일 시스템을 포함합니다. 
+
+
 | fsxMgmtIp * | 문자열 | (필수) AWS의 ONTAP 콘솔용 FSx에서 "Management EndPoint-IP address"를 입력합니다. 
 
 
@@ -335,12 +344,6 @@ image:fsxn-monitoring-resizing-layers-added.png["이 이미지는 AWS 람다 기
 
 
 | * resize_threshold * (크기 조정 임계값 * | 정수 | (필수) 0-100의 임계값 비율을 입력합니다. 이 임계값은 스토리지 용량, 볼륨 및 LUN 사용을 측정하는 데 사용되며 사용율이 이 임계값 이상으로 증가하면 크기 조정 작업이 수행됩니다. 
-
-
-| * 발신자_이메일 * | 문자열 | (필수) lambda 함수가 모니터링 및 크기 조정과 관련된 알림 알림을 보내는 데 사용할 SES에 등록된 이메일 ID를 입력합니다. 
-
-
-| 수신자_이메일 * | 문자열 | (필수) 경고 알림을 수신할 이메일 ID를 입력합니다. 
 
 
 | * FSX_PASSWORD_SSM_PARAMETER * | 문자열 | (필수) "fsxadmin" 암호를 저장하기 위해 AWS Parameter Store에서 사용되는 경로 이름을 입력합니다. 
@@ -365,6 +368,12 @@ image:fsxn-monitoring-resizing-layers-added.png["이 이미지는 AWS 람다 기
 
 
 | SMTP_PASSWORD_SSM_PARAMETER * | 문자열 | (선택 사항) "internet_access" 변수가 False로 설정된 경우 SMTP 암호를 저장하기 위해 AWS 매개 변수 저장소에 사용되는 경로 이름을 입력합니다. 
+
+
+| * 발신자_이메일 * | 문자열 | (필수) lambda 함수가 모니터링 및 크기 조정과 관련된 알림 알림을 보내는 데 사용할 SES에 등록된 이메일 ID를 입력합니다. 
+
+
+| 수신자_이메일 * | 문자열 | (필수) 경고 알림을 수신할 이메일 ID를 입력합니다. 
 |===
 +
 image:fsxn-monitoring-resizing-lambda-code.png["이 이미지는 AWS 람다 기능 콘솔의 람다 코드를 나타냅니다."]
