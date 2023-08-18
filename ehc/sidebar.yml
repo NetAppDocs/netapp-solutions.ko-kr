@@ -60,6 +60,8 @@ entries:
       url: "/ehc/aws/aws-vmc-veeam-fsx-solution.html"
     - title: ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO
       url: "/ehc/dro/aws-dro-overview.html"
+    - title: Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
+      url: "/ehc/aws/veeam-fsxn-dr-to-vmc.html"
   - title: AWS/VMC에서 워크로드 마이그레이션
     entries:
     - title: VMware HCX를 사용하여 워크로드를 ONTAP 데이터 저장소용 FSx로 마이그레이션
@@ -77,6 +79,9 @@ entries:
       url: "/ehc/azure/azure-guest-dr-cvo.html"
     - title: Azure NetApp Files 및 AVS를 통한 재해 복구(DRO
       url: "/ehc/dro/azure-dro-overview.html"
+    - title: Azure VMware Solution으로 재해 복구를 위해 Veeam Replication 및 Azure NetApp Files
+        데이터 저장소를 사용합니다
+      url: "/ehc/azure/veeam-anf-dr-to-avs.html"
   - title: Azure/AVS에서 워크로드 마이그레이션
     entries:
     - title: VMware HCX를 사용하여 ANF 데이터 저장소로 워크로드를 마이그레이션합니다

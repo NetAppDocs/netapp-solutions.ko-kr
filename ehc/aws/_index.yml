@@ -21,6 +21,8 @@ indexpage:
       url: "/aws-vmc-veeam-fsx-solution.html"
     - title: ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO
       url: "/../dro/aws-dro-overview.html"
+    - title: Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
+      url: "/veeam-fsxn-dr-to-vmc.html"
   - title: 워크로드 마이그레이션 솔루션
     links:
     - title: VMware HCX를 사용하여 워크로드를 FSxN 데이터 저장소로 마이그레이션합니다

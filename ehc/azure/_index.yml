@@ -21,6 +21,9 @@ indexpage:
       url: "/azure-guest-dr-cvo.html"
     - title: Azure NetApp Files 및 AVS를 통한 재해 복구(DRO
       url: "/../dro/azure-dro-overview.html"
+    - title: Azure VMware Solution으로 재해 복구를 위해 Veeam Replication 및 Azure NetApp Files
+        데이터 저장소를 사용합니다
+      url: "/veeam-anf-dr-to-avs.html"
   - title: 워크로드 마이그레이션 솔루션
     links:
     - title: VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다
