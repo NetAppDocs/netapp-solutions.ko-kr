@@ -74,7 +74,7 @@ indexpage:
     - title: ONTAP + VMC 시뮬레이터의 FSX
       url: https://netapp-automation.github.io/FSx-VMC-Simulator
     - title: ANF + AVS TCO 계산기
-      url: https://cloud.netapp.com/anf-avs/roi?hs_preview=fXzZRiOb-88710048938
+      url: https://bluexp.netapp.com/anf-avs/tcoestimator
     - title: ANF + AVS 시뮬레이터
       url: https://netapp-automation.github.io/ANF-AVS-Simulator
     - title: GCVE+ CVS TCO 계산기
