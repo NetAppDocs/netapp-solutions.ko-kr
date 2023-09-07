@@ -89,7 +89,7 @@ NOTE: 단일 FSx for ONTAP 파일 시스템을 다룹니다.
 
 [listing]
 ----
-git clone https://github.com/NetApp-Automation/fsxn-monitoring-auto-resizing.git
+git clone https://github.com/NetApp/fsxn-monitoring-auto-resizing.git
 ----
 =====
 .2단계: AWS S3 버킷을 설정합니다
@@ -184,7 +184,7 @@ NOTE: 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 
 
 [listing]
 ----
-git clone https://github.com/NetApp-Automation/fsxn-monitoring-auto-resizing.git
+git clone https://github.com/NetApp/fsxn-monitoring-auto-resizing.git
 ----
 =====
 .2단계: AWS SES SMTP 설정(인터넷에 액세스할 수 없는 경우 필요)

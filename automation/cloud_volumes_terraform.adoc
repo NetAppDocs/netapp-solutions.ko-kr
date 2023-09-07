@@ -14,7 +14,7 @@ summary: '이 페이지에서는 Terraform을 사용하여 클라우드 공급�
 
 
 [role="lead"]
-이 솔루션에서는 Terraform 모듈을 사용하여 AWS(CVO Single Node, CVO HA, FSX ONTAP) 및 Azure(CVO Single Node, CVO HA, ANF)에 Cloud Volumes를 자동으로 구축합니다. 코드는 에서 찾을 수 있습니다 https://github.com/NetApp-Automation/na_cloud_volumes_automation[]
+이 솔루션에서는 Terraform 모듈을 사용하여 AWS(CVO Single Node, CVO HA, FSX ONTAP) 및 Azure(CVO Single Node, CVO HA, ANF)에 Cloud Volumes를 자동으로 구축합니다. 코드는 에서 찾을 수 있습니다 https://github.com/NetApp/na_cloud_volumes_automation[]
 
 
 
@@ -76,7 +76,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -217,7 +217,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -385,7 +385,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -548,7 +548,7 @@ Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/late
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -665,7 +665,7 @@ Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/late
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -818,7 +818,7 @@ Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/late
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -947,7 +947,7 @@ Terraform 문서: https://registry.terraform.io/providers/hashicorp/azurerm/late
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -1065,7 +1065,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -1229,7 +1229,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -1400,7 +1400,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -1526,7 +1526,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-cloudman
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +
@@ -1700,7 +1700,7 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/late
 +
 [source, cli]
 ----
-    git clone https://github.com/NetApp-Automation/na_cloud_volumes_automation.git
+    git clone https://github.com/NetApp/na_cloud_volumes_automation.git
 ----
 . 원하는 폴더로 이동합니다
 +

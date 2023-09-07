@@ -103,7 +103,7 @@ NOTE: 를 클릭합니다 `deploy.sh` 스크립트는 필요한 모든 필수 �
 . 지정된 가상 머신에 설치 패키지를 다운로드합니다.
 +
 ....
-git clone <link here>
+git clone https://github.com/NetApp/DRO-Azure.git
 ....
 +
 

@@ -580,10 +580,10 @@ video::27f28284-433d-4273-8748-b01200fb3cd7[panopto]
 ====
 다음 .YAML 파일은 AWS 콘솔의 Cloud formation Template과 함께 사용할 수 있습니다.
 
-* https://github.com/NetApp-Automation/fsxn-iscsisetup-cft["https://github.com/NetApp-Automation/fsxn-iscsisetup-cft"^]
+* https://github.com/NetApp/fsxn-iscsisetup-cft["https://github.com/NetApp/fsxn-iscsisetup-cft"^]
 
 
-PowerShell을 사용하여 iSCSI LUN 생성 및 NetApp SnapCenter 설치를 자동화하려면 에서 리포를 클론 복제하십시오 https://github.com/NetApp-Automation/fsxn-iscsisetup-ps["이 GitHub 링크를 클릭합니다"^].
+PowerShell을 사용하여 iSCSI LUN 생성 및 NetApp SnapCenter 설치를 자동화하려면 에서 리포를 클론 복제하십시오 https://github.com/NetApp/fsxn-iscsisetup-ps["이 GitHub 링크를 클릭합니다"^].
 
 ====
 .부록 B: 볼륨 및 LUN 프로비저닝을 위한 Powershell 스크립트
