@@ -78,23 +78,21 @@ image:fsxn-monitoring-resizing-architecture.png["이 이미지는 이 솔루션�
 
 NOTE: 단일 FSx for ONTAP 파일 시스템을 다룹니다.
 
-[%collapsible]
-====
 이 솔루션의 자동 배포를 완료하려면 다음 단계를 따르십시오.
 
 .1단계: GitHub 리포지토리 클론
 [%collapsible]
-=====
+====
 로컬 시스템에서 GitHub 리포지토리 클론 생성:
 
 [listing]
 ----
 git clone https://github.com/NetApp/fsxn-monitoring-auto-resizing.git
 ----
-=====
+====
 .2단계: AWS S3 버킷을 설정합니다
 [%collapsible]
-=====
+====
 . AWS 콘솔 > * S3 * 로 이동하고 * Create Bucket * 을 클릭합니다. 기본 설정으로 버킷을 작성합니다.
 . 버킷 안에 들어가면 * Upload * > * Add files * 를 클릭하고 시스템의 클론 복제된 GitHub 저장소에서 * Utilities.zip * 을 선택합니다.
 +
@@ -102,10 +100,10 @@ image:fsxn-monitoring-resizing-s3-upload-zip-files.png["이 이미지는 zip 파
 
 
 
-=====
+====
 .3단계: AWS SES SMTP 설정(인터넷에 액세스할 수 없는 경우 필요)
 [%collapsible]
-=====
+====
 인터넷 액세스 없이 솔루션을 배포하려는 경우 이 단계를 따르십시오(참고: VPC 엔드포인트를 설정할 때 추가 비용이 발생합니다).
 
 . AWS Console > * AWS SES(Simple Email Service) * > * SMTP Settings * 로 이동하고 * SMTP 자격 증명 생성 * 을 클릭합니다
@@ -119,10 +117,10 @@ image:fsxn-monitoring-resizing-ses-smtp-creds-addition.png["이 이미지는 AWS
 
 
 
-=====
+====
 .4단계: AWS CloudFormation 구축
 [%collapsible]
-=====
+====
 . AWS 콘솔 > * CloudFormation * > 스택 생성 > 새 리소스 사용(표준)으로 이동합니다.
 +
 [listing]
@@ -164,7 +162,6 @@ image:fsxn-monitoring-resizing-email-2.png["이 이미지는 알림을 사용할
 
 
 
-=====
 ====
 
 
@@ -173,23 +170,21 @@ image:fsxn-monitoring-resizing-email-2.png["이 이미지는 알림을 사용할
 
 NOTE: 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 수 있습니다.
 
-[%collapsible]
-====
 이 솔루션의 수동 배포를 완료하려면 다음 단계를 따르십시오.
 
 .1단계: GitHub 리포지토리 클론
 [%collapsible]
-=====
+====
 로컬 시스템에서 GitHub 리포지토리 클론 생성:
 
 [listing]
 ----
 git clone https://github.com/NetApp/fsxn-monitoring-auto-resizing.git
 ----
-=====
+====
 .2단계: AWS SES SMTP 설정(인터넷에 액세스할 수 없는 경우 필요)
 [%collapsible]
-=====
+====
 인터넷 액세스 없이 솔루션을 배포하려는 경우 이 단계를 따르십시오(참고: VPC 엔드포인트를 설정할 때 추가 비용이 발생합니다).
 
 . AWS 콘솔 > * AWS SES(Simple Email Service) * > SMTP 설정 으로 이동하고 * SMTP 자격 증명 생성 * 을 클릭합니다
@@ -199,10 +194,10 @@ image:fsxn-monitoring-resizing-ses-smtp-creds-addition.png["이 이미지는 AWS
 
 
 
-=====
+====
 .3단계: fsxadmin 암호에 대한 SSM 매개 변수를 생성합니다
 [%collapsible]
-=====
+====
 AWS 콘솔 > * 매개 변수 저장소 * 로 이동하고 * 매개 변수 생성 * 을 클릭합니다.
 
 [listing]
@@ -215,16 +210,17 @@ KMS key source: My current account
 Value: <Enter the password for "fsxadmin" user configured on FSx for ONTAP>
 ----
 Create Parameter * 를 클릭합니다.
+
 모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
 image:fsxn-monitoring-resizing-ssm-parameter.png["이 이미지는 AWS 콘솔의 SSM 매개 변수 생성 창을 보여 줍니다."]
 
 인터넷 액세스 없이 솔루션을 배포하는 경우 SMTP 사용자 이름과 SMTP 암호를 저장하는 것과 동일한 단계를 수행합니다. 그렇지 않으면 이 두 매개 변수 추가를 건너뜁니다.
 
-=====
+====
 .4단계: 이메일 서비스 설정
 [%collapsible]
-=====
+====
 AWS 콘솔 > * SES(Simple Email Service) * 로 이동하고 * ID 생성 * 을 클릭합니다.
 
 [listing]
@@ -238,10 +234,10 @@ ID 생성 * 을 클릭합니다
 
 image:fsxn-monitoring-resizing-ses.png["이 이미지는 AWS 콘솔의 SES ID 생성 창을 보여 줍니다."]
 
-=====
+====
 .5단계: VPC 엔드포인트 설정(인터넷 액세스가 없는 경우 필요)
 [%collapsible]
-=====
+====
 
 NOTE: 인터넷 액세스 없이 배포된 경우에만 필요합니다. VPC 엔드포인트와 관련하여 추가 비용이 발생합니다.
 
@@ -269,10 +265,10 @@ image:fsxn-monitoring-resizing-vpc-endpoint-create-2.png["이 이미지는 VPC �
 . SES 및 SSM VPC 엔드포인트를 생성할 때도 동일한 프로세스를 따르십시오. 각 * com.amazonaws.<region>.smtp * 및 * com.amazonaws.<region>.ssm * 에 해당하는 서비스를 제외하고 모든 매개변수는 위와 동일합니다.
 
 
-=====
+====
 .6단계: AWS Lambda 함수를 생성하고 설정합니다
 [%collapsible]
-=====
+====
 . AWS 콘솔 > * AWS Lambda * > * Functions * 로 이동하고 FSx for ONTAP와 동일한 영역에서 * Create Function * 을 클릭합니다
 . 기본 * Author from scratch * 를 사용하고 다음 필드를 업데이트합니다.
 +
@@ -397,7 +393,6 @@ image:fsxn-monitoring-resizing-eventbridge.png["이 이미지는 AWS 람다 기�
 
 
 
-=====
 ====
 
 

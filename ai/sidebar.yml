@@ -383,6 +383,8 @@ entries:
     url: "/ai/tr-4811.html"
   - title: 금융 서비스 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처
     url: "/ai/tr-4807.html"
+  - title: Generative AI 및 NetApp 가치
+    url: "/ai/wp-genai.html"
   - title: NetApp E-Series 및 BeeGFS를 통해 AI 배포
     url: "/ai/tr-4785.html"
   - title: NetApp E-Series 시스템을 사용한 Quantum StorNext 설계 가이드 를 참조하십시오
