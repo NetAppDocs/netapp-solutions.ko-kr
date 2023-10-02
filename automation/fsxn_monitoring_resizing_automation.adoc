@@ -210,6 +210,7 @@ KMS key source: My current account
 Value: <Enter the password for "fsxadmin" user configured on FSx for ONTAP>
 ----
 Create Parameter * 를 클릭합니다.
+모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
 모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
@@ -302,7 +303,7 @@ image:fsxn-monitoring-resizing-add-layer-button.png["이 이미지는 AWS 람다
 +
 image:fsxn-monitoring-resizing-create-layer-paramiko.png["이 이미지는 AWS 콘솔에서 새 계층 생성 창을 보여줍니다."]
 
-. AWS Lambda 함수 > * 계층 추가 * > * 사용자 지정 계층 * 으로 다시 이동하고 유틸리티 계층을 추가합니다.
+. AWS Lambda * Add Layer * > * Custom Layers * 로 다시 이동하여 유틸리티 계층을 추가합니다.
 +
 image:fsxn-monitoring-resizing-add-layer-window.png["이 이미지는 AWS 람다 기능 콘솔의 Add layer 창을 보여줍니다."]
 

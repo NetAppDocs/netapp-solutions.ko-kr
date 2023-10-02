@@ -3,6 +3,8 @@ indexpage:
   tiles:
   - title: 오라클
     links:
+    - title: AWS FSx ONTAP로 Active Data Guard 비용 절감
+      url: "/aws_ora_fsx_ec2_data_guard.html"
     - title: AWS FSx ONTAP의 증분 병합을 사용하여 Oracle VLDB의 빠른 복구 및 복제
       url: "/aws_ora_fsx_ec2_inc_merge.html"
     - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
@@ -26,7 +28,9 @@ indexpage:
     - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
       url: https://www.netapp.com/us/media/tr-4467.pdf
     - title: Microsoft SQL Server 현대화
-      url: https://www.netapp.com/pdf.html?item=/media/15613-na-446.pdf
+      url: https://www.netapp.com/pdf.html?item=/media/15613-na-446.
+    - title: ONTAP 지원 Microsoft SQL Server를 위한 모범 사례 가이드
+      url: https://www.netapp.com/pdf.html?item=/media/8585-tr4590.pdf
     - title: Microsoft SQL Server with NetApp EF-Series 모범 사례 가이드 를 참조하십시오
       url: https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf
   - title: 하이브리드 클라우드 데이터베이스 솔루션
@@ -47,6 +51,8 @@ indexpage:
     links:
     - title: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구
       url: "/aws_postgres_fsx_ec2_hadr.html"
+    - title: NetApp ONTAP의 MySQL 데이터베이스
+      url: https://www.netapp.com/pdf.html?item=/media/16423-tr-4722pdf.pdf
   - title: 데이터베이스용 SnapCenter
     links:
     - title: SnapCenter 서비스를 사용한 Oracle 백업, 복원 및 복제 - Azure
@@ -55,3 +61,19 @@ indexpage:
       url: "/snapctr_svcs_ora_aws.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
       url: "/hybrid_dbops_snapcenter_usecases.html"
+  - title: DB Automation 툴킷
+    links:
+    - title: Oracle 마이그레이션
+      url: "/databases/automation_ora_migration.html"
+    - title: AWS FSx ONTAP을 사용한 Oracle HA/DR
+      url: "/databases/automation_ora_hadr_fsx.html"
+    - title: AWS FSx ONTAP 및 EC2 프로비저닝
+      url: "/databases/automation_fsx_ec2_provision.html"
+    - title: AWS에서 PostgreSQL 배포
+      url: https://github.com/NetApp/na_postgresql_aws_deploy_hadr
+    - title: Oracle 데이터 보호
+      url: https://github.com/NetApp/na_oracle19c_data_protection
+    - title: Oracle 구축
+      url: https://github.com/NetApp/na_oracle19c_deploy
+    - title: Oracle RAC 구축
+      url: https://github.com/NetApp/na_NVA-1155/tree/master/ora19c_rac_deployment

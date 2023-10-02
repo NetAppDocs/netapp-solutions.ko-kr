@@ -323,13 +323,13 @@ igroup create -igroup ora_01 -protocol iscsi -ostype linux -initiator iqn.1994-0
 . LUN을 위에서 생성한 igroup에 매핑합니다. 볼륨 내의 각 추가 LUN에 대해 LUN ID를 순차적으로 증분합니다.
 +
 ....
-map -path /vol/ora_01_biny/ora_01_biny_01 -igroup ora_01 -vserver svm_ora -lun-id 0
-map -path /vol/ora_01_data/ora_01_data_01 -igroup ora_01 -vserver svm_ora -lun-id 1
-map -path /vol/ora_01_data/ora_01_data_02 -igroup ora_01 -vserver svm_ora -lun-id 2
-map -path /vol/ora_01_data/ora_01_data_03 -igroup ora_01 -vserver svm_ora -lun-id 3
-map -path /vol/ora_01_data/ora_01_data_04 -igroup ora_01 -vserver svm_ora -lun-id 4
-map -path /vol/ora_01_logs/ora_01_logs_01 -igroup ora_01 -vserver svm_ora -lun-id 5
-map -path /vol/ora_01_logs/ora_01_logs_02 -igroup ora_01 -vserver svm_ora -lun-id 6
+lun map -path /vol/ora_01_biny/ora_01_biny_01 -igroup ora_01 -vserver svm_ora -lun-id 0
+lun map -path /vol/ora_01_data/ora_01_data_01 -igroup ora_01 -vserver svm_ora -lun-id 1
+lun map -path /vol/ora_01_data/ora_01_data_02 -igroup ora_01 -vserver svm_ora -lun-id 2
+lun map -path /vol/ora_01_data/ora_01_data_03 -igroup ora_01 -vserver svm_ora -lun-id 3
+lun map -path /vol/ora_01_data/ora_01_data_04 -igroup ora_01 -vserver svm_ora -lun-id 4
+lun map -path /vol/ora_01_logs/ora_01_logs_01 -igroup ora_01 -vserver svm_ora -lun-id 5
+lun map -path /vol/ora_01_logs/ora_01_logs_02 -igroup ora_01 -vserver svm_ora -lun-id 6
 ....
 . LUN 매핑을 확인합니다.
 +
@@ -444,7 +444,6 @@ defaults {
     user_friendly_names yes
 }
 
-[source, cli]
 blacklist {
     devnode "^(ram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
     devnode "^hd[a-z]"
@@ -533,6 +532,7 @@ multipaths {
                 wwid            3600a09806c574235472455534e685146
                 alias           ora_01_logs_02
         }
+}
 ....
 . 다중 경로 서비스를 재부팅하여 에서 장치가 에 있는지 확인합니다 `/dev/mapper` LUN 이름 대 직렬 16진수 ID로 변경되었습니다.
 +
@@ -675,11 +675,10 @@ unzip -q /tmp/archive/LINUX.X64_193000_grid_home.zip
 ....
 rm -rf OPatch
 ....
-. 그리드 홈에서 복사합니다 `p6880880_190000_Linux-x86-64.zip` grid_home 으로 이동한 다음 압축을 풉니다.
+. 그리드 홈에서 압축을 풉니다 `p6880880_190000_Linux-x86-64.zip`.
 +
 ....
-cp /tmp/archive/p6880880_190000_Linux-x86-64.zip .
-unzip p6880880_190000_Linux-x86-64.zip
+unzip -q /tmp/archive/p6880880_190000_Linux-x86-64.zip
 ....
 . 그리드 홈에서 수정합니다 `cv/admin/cvu_config`, 주석 취소 및 바꾸기 `CV_ASSUME_DISTID=OEL5` 와 함께 `CV_ASSUME_DISTID=OL7`.
 +
@@ -699,8 +698,8 @@ oracle.install.asm.SYSASMPassword="SetPWD"
 oracle.install.asm.diskGroup.name=DATA
 oracle.install.asm.diskGroup.redundancy=EXTERNAL
 oracle.install.asm.diskGroup.AUSize=4
-oracle.install.asm.diskGroup.disks=/dev/mapper/ora_01_data*
-oracle.install.asm.diskGroup.diskDiscoveryString=/dev/mapper/ora_01_data_01,/dev/mapper/ora_01_data_02,/dev/mapper/ora_01_data_03,/dev/mapper/ora_01_data_04
+oracle.install.asm.diskGroup.disks=/dev/mapper/ora_01_data_01,/dev/mapper/ora_01_data_02,/dev/mapper/ora_01_data_03,/dev/mapper/ora_01_data_04
+oracle.install.asm.diskGroup.diskDiscoveryString=/dev/mapper/*
 oracle.install.asm.monitorPassword="SetPWD"
 oracle.install.asm.configureAFD=true
 ....
@@ -834,11 +833,10 @@ unzip -q /tmp/archive/LINUX.X64_193000_db_home.zip
 ....
 rm -rf OPatch
 ....
-. DB 홈에서 복사합니다 `p6880880_190000_Linux-x86-64.zip` 를 선택합니다 `grid_home`그런 다음 압축을 풉니다.
+. DB HOME에서 압축을 풉니다 `p6880880_190000_Linux-x86-64.zip`.
 +
 ....
-cp /tmp/archive/p6880880_190000_Linux-x86-64.zip .
-unzip p6880880_190000_Linux-x86-64.zip
+unzip -q /tmp/archive/p6880880_190000_Linux-x86-64.zip
 ....
 . DB 홈에서 수정한다 `cv/admin/cvu_config`을 클릭합니다 `CV_ASSUME_DISTID=OEL5` 와 함께 `CV_ASSUME_DISTID=OL7`.
 +

@@ -5,6 +5,8 @@ url: "/databases/index.html"
 entries:
 - title: Oracle 데이터베이스
   entries:
+  - title: AWS FSx ONTAP로 Active Data Guard 비용 절감
+    url: "/databases/aws_ora_fsx_ec2_data_guard.html"
   - title: AWS FSx ONTAP를 사용한 Oracle VLDB의 빠른 복구 및 클론
     url: "/databases/aws_ora_fsx_ec2_inc_merge.html"
   - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
@@ -70,6 +72,10 @@ entries:
     url: "/databases/tr-4794.html"
 - title: Microsoft SQL Server를 참조하십시오
   entries:
+  - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+    url: "/databases/sqlsb-backup-restore-aws-fsxn.html"
+  - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
+    url: "/databases/sql-aws-ec2.html"
   - title: Azure NetApp Files 기반 SQL Server
     url: "/databases/sql-srv-anf_overview.html"
     entries:
@@ -89,12 +95,16 @@ entries:
     url: "/databases/tr-4467.html"
   - title: Microsoft SQL Server 현대화
     url: "/databases/na-446.html"
+  - title: ONTAP 지원 Microsoft SQL Server를 위한 모범 사례 가이드
+    url: "/databases/tr-4590.html"
   - title: Microsoft SQL Server with NetApp EF-Series 모범 사례 가이드 를 참조하십시오
     url: "/databases/tr-4764.html"
 - title: 오픈 소스 데이터베이스
   entries:
   - title: AWS FSx/EC2에서 PostgreSQL HA 구축 및 DR 자동화
     url: "/databases/aws_postgres_fsx_ec2_hadr.html"
+  - title: NetApp ONTAP의 MySQL 데이터베이스
+    url: "/databases/tr-4722.html"
 - title: 데이터베이스용 SnapCenter
   entries:
   - title: Oracle-Azure용 BlueXP SaaS
@@ -127,3 +137,10 @@ entries:
       url: "/databases/hybrid_dbops_snapcenter_devtest.html"
     - title: 재해 복구 워크플로우
       url: "/databases/hybrid_dbops_snapcenter_dr.html"
+- title: DB Automation 툴킷
+  entries:
+  - title: Oracle 마이그레이션
+    url: "/databases/automation_ora_migration.html"
+  - title: AWS FSx ONTAP을 사용한 Oracle HA/DR
+    url: "/databases/automation_ora_hadr_fsx.html"
+  - title: AWS FSx ONTAP 및 EC2 프로비저닝
