@@ -212,8 +212,6 @@ Value: <Enter the password for "fsxadmin" user configured on FSx for ONTAP>
 Create Parameter * 를 클릭합니다.
 모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
-모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
-
 image:fsxn-monitoring-resizing-ssm-parameter.png["이 이미지는 AWS 콘솔의 SSM 매개 변수 생성 창을 보여 줍니다."]
 
 인터넷 액세스 없이 솔루션을 배포하는 경우 SMTP 사용자 이름과 SMTP 암호를 저장하는 것과 동일한 단계를 수행합니다. 그렇지 않으면 이 두 매개 변수 추가를 건너뜁니다.
@@ -303,7 +301,7 @@ image:fsxn-monitoring-resizing-add-layer-button.png["이 이미지는 AWS 람다
 +
 image:fsxn-monitoring-resizing-create-layer-paramiko.png["이 이미지는 AWS 콘솔에서 새 계층 생성 창을 보여줍니다."]
 
-. AWS Lambda * Add Layer * > * Custom Layers * 로 다시 이동하여 유틸리티 계층을 추가합니다.
+. AWS Lambda 함수 > * 계층 추가 * > * 사용자 지정 계층 * 으로 다시 이동하고 유틸리티 계층을 추가합니다.
 +
 image:fsxn-monitoring-resizing-add-layer-window.png["이 이미지는 AWS 람다 기능 콘솔의 Add layer 창을 보여줍니다."]
 

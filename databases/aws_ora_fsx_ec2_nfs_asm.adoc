@@ -58,21 +58,20 @@ image::aws_ora_fsx_ec2_nfs_asm_architecture.png[이 이미지는 iSCSI 및 ASM�
 
 === 하드웨어 및 소프트웨어 구성 요소
 
-* 하드웨어 *
-
 [cols="33%, 33%, 33%"]
 |===
+
+
+3+| * 하드웨어 * 
 
 
 | FSX ONTAP 저장소 | AWS에서 제공하는 현재 버전입니다 | 동일한 VPC 및 가용성 존에 FSx HA 클러스터 1개 
 
 
 | 컴퓨팅용 EC2 인스턴스 | T2.xLarge/4vCPU/16G | EC2 T2 xLarge EC2 인스턴스 2개, 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 
-|===
-* 소프트웨어 *
 
-[cols="33%, 33%, 33%"]
-|===
+
+3+| * 소프트웨어 * 
 
 
 | RedHat Linux | RHEL-8.6.0_HVM-20220503-x86_64-2-Hourly2-GP2 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
