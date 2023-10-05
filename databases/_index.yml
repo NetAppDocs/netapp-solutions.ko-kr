@@ -20,7 +20,7 @@ indexpage:
   - title: SQL 서버
     links:
     - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
-      url: "/sqlsb-backup-and-restore-aws-fsxn.html"
+      url: "/sqlsb-backup-restore-aws-fsxn.html"
     - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
       url: "/sql-aws-ec2.html"
     - title: Azure NetApp Files 기반 SQL Server
