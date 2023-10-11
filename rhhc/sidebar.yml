@@ -25,16 +25,18 @@ entries:
     url: "/rhhc/on-premises/rhhc-op-data-protection.html"
   - title: VMware에서 컨테이너 워크로드를 마이그레이션합니다
     url: "/rhhc/on-premises/rhhc-op-data-migration.html"
-- title: 자체 관리형 구성 요소를 지원하는 하이브리드 클라우드
+- title: 자체 관리형 구성요소(온프레미스/AWS/GCP)를 포함하는 하이브리드 클라우드
   url: "/rhhc/rhhc-overview.html"
   entries:
   - title: 솔루션 개요
     url: "/rhhc/self-managed/rhhc-sm-solution.html"
   - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
     url: "/rhhc/self-managed/rhhc-sm-setup.html"
-  - title: AWS에서 컨테이너 워크로드를 보호합니다
+  - title: GCP에서 Red Hat OpenShift Container 워크로드를 구성합니다
+    url: "/rhhc/self-managed/rhhc-sm-gcp-setup.html"
+  - title: AWS/GCP에서 컨테이너 워크로드 보호
     url: "/rhhc/self-managed/rhhc-sm-data-protection.html"
-  - title: 컨테이너 워크로드를 AWS로 마이그레이션
+  - title: 컨테이너 워크로드를 AWS/GCP로 마이그레이션합니다
     url: "/rhhc/self-managed/rhhc-sm-data-migration.html"
 - title: 공급자 관리 구성 요소를 지원하는 하이브리드 클라우드
   url: "/rhhc/rhhc-overview.html"

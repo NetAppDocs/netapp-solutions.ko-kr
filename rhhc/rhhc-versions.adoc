@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 이 솔루션은 OpenShift 컨테이너 플랫폼, OpenShift Advanced Cluster Manager, NetApp ONTAP, NetApp Astra Control Center를 사용하여 마이그레이션 및 중앙 집중식 데이터 보호를 테스트하고 검증합니다.
 
-아래 표에 나와 있는 버전을 사용하여 솔루션의 다양한 시나리오를 검증했습니다.
+솔루션의 시나리오 1, 2 및 3은 아래 표에 표시된 버전을 사용하여 검증되었습니다.
 
 [cols="25%, 75%"]
 |===
@@ -44,4 +44,35 @@ summary:
 
 
 | NetApp ONTAP * 용 * AWS FSx | 싱글 AZ 
+|===
+솔루션의 시나리오 4는 아래 표에 표시된 버전을 사용하여 검증되었습니다.
+
+[cols="25%, 75%"]
+|===
+
+
+| * 구성 요소 * | * 버전 * 
+
+
+| * VMware * | vSphere Client 버전 8.0.2.00000
+VMware ESXi, 8.0.2, 22380479 
+
+
+| * 허브 클러스터 * | OpenShift 4.13.13 
+
+
+| * 소스 및 대상 클러스터 * | OpenShift 4.13.12
+데이터를 더 많이 활용하십시오 
+
+
+| * NetApp Astra Trident * | Trident 서버 및 클라이언트 23.07.0 
+
+
+| * NetApp Astra Control Center * 에서 확인할 수 있습니다 | ACC 23.07.0-25 
+
+
+| * NetApp ONTAP * | ONTAP 9.12.1 
+
+
+| * Cloud Volumes ONTAP * | 단일 AZ, 단일 노드, 9.14.0 
 |===

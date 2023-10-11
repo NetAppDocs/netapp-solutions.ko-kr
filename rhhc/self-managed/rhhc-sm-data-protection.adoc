@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이 페이지에는 Astra Control Center(ACC)를 사용하여 VMware vSphere에서 실행되는 Red Hat OpenShift Container 기반 애플리케이션에 대한 데이터 보호 옵션이 나와 있습니다.
+이 페이지에는 VMware vSphere 또는 ACC(Astra Control Center)를 사용하는 클라우드에서 실행되는 Red Hat OpenShift Container 기반 애플리케이션에 대한 데이터 보호 옵션이 나와 있습니다.
 
 사용자가 Red Hat OpenShift를 사용하여 애플리케이션을 현대화하는 과정에서 실수로 인한 삭제나 기타 인적 오류로부터 애플리케이션을 보호하기 위한 데이터 보호 전략이 마련되어야 합니다. 규정 또는 규정 준수 목적으로도 데이터 마스터를 보호하기 위해 보호 전략이 필요한 경우가 많습니다.
 
@@ -69,4 +69,6 @@ NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능
 
 link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용한 재해 복구 데모 비디오"]
 
+.Astra Control Center를 통한 데이터 보호
+video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
 Astra Control Center 데이터 보호 기능에 대한 자세한 내용을 확인할 수 있습니다 link:https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html["여기"]

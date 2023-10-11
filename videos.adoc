@@ -107,6 +107,12 @@ video::e9a07d79-42a1-4480-86be-b01200fa62f5[panopto,width=360]
 
 link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["NetAppTV를 시청해 보십시오"]
 
+.Google Cloud Platform에 OpenShift Cluster 설치
+video::4efc68f1-d37f-4cdd-874a-b09700e71da9[panopto,width=360]
+.OpenShift 클러스터를 Astra Control Center로 가져오기
+video::57b63822-6bf0-4d7b-b844-b09700eac6ac[panopto,width=360]
+.Astra Control Center를 통한 데이터 보호
+video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
 ====
 .포함되었습니다
 [#virtualization%collapsible]

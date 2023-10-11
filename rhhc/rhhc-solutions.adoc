@@ -77,4 +77,17 @@ image:rhhc-self-managed-aws.png[""]
 
 image:rhhc-rosa-with-fsxn.png[""]
 
+
+
+=== 시나리오 4: ACC를 사용하여 온프레미스 환경에서 GCP 환경으로의 데이터 보호 및 마이그레이션:
+
+** 온프레미스: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
+** Google Cloud: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
+
+* ACC를 사용하여 데이터 보호를 위한 백업 및 복원을 수행합니다.
+* ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
+
+
+image:rhhc-self-managed-gcp.png[""]
+
 MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].

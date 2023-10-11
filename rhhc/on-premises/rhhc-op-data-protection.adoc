@@ -92,6 +92,8 @@ NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능
 
 link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용한 재해 복구 데모 비디오"]
 
+.Astra Control Center를 통한 데이터 보호
+video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
 
 
 == MetroCluster를 통한 비즈니스 연속성
