@@ -52,6 +52,22 @@ entries:
     url: "/ai/tr-4815.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
+  - title: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
+    entries:
+    - title: 소개
+      url: "/ai/ddlnexus_introduction.html"
+    - title: 기술 개요
+      url: "/ai/ddlnexus_technology_overview.html"
+    - title: 있습니다
+      url: "/ai/ddlnexus_architecture.html"
+    - title: 초기 설정
+      url: "/ai/ddlnexus_initial_setup.html"
+    - title: 기존 NetApp 볼륨을 Domino에 표시합니다
+      url: "/ai/ddlnexus_expose_netapp_vols.html"
+    - title: 서로 다른 환경에서 동일한 데이터에 액세스합니다
+      url: "/ai/ddlnexus_access_data_hybrid.html"
+    - title: 추가 정보를 찾을 수 있는 위치
+      url: "/ai/ddlnexus_additional_information.html"
   - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
     entries:
     - title: 소개

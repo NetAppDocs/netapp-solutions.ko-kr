@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: ai/ddlnexus_expose_netapp_vols.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우드 MLOps - 기존 NetApp 볼륨을 Domino에 노출 
+---
+= 기존 NetApp 볼륨을 Domino에 표시합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ddlnexus_initial_setup.html["이전: 초기 설정."]
+
+[role="lead"]
+이 섹션에서는 기존 NetApp ONTAP NFS 볼륨을 Domino MLOps 플랫폼에 노출하기 위해 수행해야 하는 작업에 대해 설명합니다. 이와 같은 단계는 온프레미스와 AWS 모두에 적용됩니다.
+
+
+
+== NetApp ONTAP 볼륨을 Domino에 노출하는 이유
+
+NetApp 볼륨을 Domino와 함께 사용하면 다음과 같은 이점이 있습니다.
+
+* NetApp ONTAP의 스케일아웃 기능을 활용하여 매우 큰 데이터 세트에서 워크로드를 실행할 수 있습니다.
+* 개별 노드에 데이터를 복사하지 않고도 여러 컴퓨팅 노드에서 워크로드를 실행할 수 있습니다.
+* NetApp의 하이브리드 멀티 클라우드 데이터 이동과 동기화 기능을 활용하여 여러 데이터 센터 및/또는 클라우드에서 데이터에 액세스할 수 있습니다.
+* 다른 데이터 센터 또는 클라우드에 데이터 캐시를 쉽고 빠르게 생성할 수 있기를 원합니다.
+
+
+
+
+== Astra Trident가 프로비저닝하지 않은 기존 NFS 볼륨을 노출합니다
+
+기존 NetApp ONTAP NFS 볼륨을 Astra Trident에 의해 프로비저닝하지 않은 경우 이 하위 섹션에 설명된 단계를 따르십시오.
+
+
+
+=== Kubernetes에서 PV 및 PVC를 생성합니다
+
+
+NOTE: 온프레미스 볼륨의 경우 온프레미스 Kubernetes 클러스터에 PV 및 PVC를 생성합니다. Amazon FSx for NetApp ONTAP 볼륨의 경우 Amazon EKS에서 PV 및 PVC를 생성합니다.
+
+먼저 Kubernetes 클러스터에 영구 볼륨(PV) 및 영구 볼륨 클레임(PVC)을 생성해야 합니다. PV 및 PVC를 생성하려면 를 사용합니다 link:https://docs.dominodatalab.com/en/latest/admin_guide/4cdae9/set-up-kubernetes-pv-and-pvc/#_nfs_pvpvc_example["NFS PV/PVC 예"] Domino 관리 가이드에서 값을 업데이트하여 환경에 맞게 업데이트합니다. 에 올바른 값을 지정해야 합니다 `namespace`, `nfs.path`, 및 `nfs.server` 필드를 선택합니다. 또한 해당 ONTAP NFS 볼륨에 저장된 데이터의 특성을 나타내는 PV 및 PVC 고유 이름을 지정하는 것이 좋습니다. 예를 들어, 볼륨에 제조 결함의 이미지가 포함되어 있으면 PV, `pv-mfg-defect-images`및 PVC, `pvc-mfg-defect-images`.
+
+
+
+=== Domino에서 외부 데이터 볼륨을 등록합니다
+
+그런 다음 Domino에 외부 데이터 볼륨을 등록해야 합니다. 외부 데이터 볼륨을 등록하려면 을 참조하십시오 link:https://docs.dominodatalab.com/en/latest/admin_guide/9c3564/register-external-data-volumes/["지침"] Domino 관리 가이드 볼륨을 등록할 때 'Volume Type(볼륨 유형)' 드롭다운 메뉴에서 "NFS"를 선택해야 합니다. "NFS"를 선택하면 '사용 가능한 볼륨' 목록에 PVC가 표시됩니다.
+
+image:ddlnexus_image3.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== Astra Trident가 프로비저닝한 기존 볼륨을 노출합니다
+
+기존 볼륨을 Astra Trident에 의해 프로비저닝한 경우 이 하위 섹션에 설명된 단계를 따르십시오.
+
+
+
+=== 기존 PVC 편집
+
+Astra Trident에 의해 볼륨을 프로비저닝한 경우 해당 볼륨에 해당하는 영구 볼륨 클레임(PVC)이 이미 존재합니다. 이 볼륨을 Domino에 노출하려면 PVC를 편집하고 의 레이블 목록에 다음 레이블을 추가해야 합니다 `metadata.labels` 필드:
+
+....
+"dominodatalab.com/external-data-volume": "Generic"
+....
+
+
+=== Domino에서 외부 데이터 볼륨을 등록합니다
+
+그런 다음 Domino에 외부 데이터 볼륨을 등록해야 합니다. 외부 데이터 볼륨을 등록하려면 을 참조하십시오 link:https://docs.dominodatalab.com/en/latest/admin_guide/9c3564/register-external-data-volumes/["지침"] Domino 관리 가이드 볼륨을 등록할 때 'Volume Type(볼륨 유형)' 드롭다운 메뉴에서 "Generic(일반)"을 선택해야 합니다. "Generic(일반)"을 선택하면 'Available Volumes(사용 가능한 볼륨)' 목록에 PVC가 표시됩니다.
+
+link:ddlnexus_access_data_hybrid.html["다음: 여러 환경에서 동일한 데이터에 액세스합니다."]

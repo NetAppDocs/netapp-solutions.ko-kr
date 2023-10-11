@@ -33,6 +33,8 @@ indexpage:
     links:
     - title: NetApp DataOps 툴킷
       url: https://github.com/NetApp/netapp-dataops-toolkit
+    - title: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
+      url: ddlnexus_introduction.html
     - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
       url: nvaie_introduction.html
     - title: AI 파이프라인 및 밤공간 관리를 위한 NetApp AI 컨트롤 플레인

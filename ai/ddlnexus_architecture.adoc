@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: ai/ddlnexus_architecture.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드 멀티 클라우드 MLOps 
+---
+= 있습니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:ddlnexus_technology_overview.html["이전: 기술 개요."]
+
+[role="lead"]
+이 솔루션은 Domino Nexus의 하이브리드 멀티 클라우드 워크로드 스케줄링 기능을 NetApp 데이터 서비스와 결합하여 통합된 하이브리드 클라우드 MLOps 플랫폼을 구축합니다. 자세한 내용은 다음 표를 참조하십시오.
+
+|===
+| 구성 요소 | 이름 | 방법입니다 
+
+
+| MLOps 제어 평면 | link:https://domino.ai/platform/nexus["Domino Nexus 탑재 Domino Enterprise AI 플랫폼"] | 설치하고 
+
+
+| MLOps 플랫폼 컴퓨팅 환경 | link:https://docs.dominodatalab.com/en/latest/admin_guide/5781ea/data-planes/["Domino Nexus 데이터 플레인"] | AWS, 온프레미스 데이터 센터에 있습니다 
+
+
+| 온프레미스 컴퓨팅 플랫폼 | link:https://kubernetes.io["쿠버네티스"] 와 함께 link:https://docs.netapp.com/us-en/trident/index.html["NetApp Astra Trident"] | 온프레미스 데이터 센터 
+
+
+| 클라우드 컴퓨팅 플랫폼 | link:https://aws.amazon.com/eks/["Amazon Elastic Kubernetes Service(EKS)"] 와 함께 link:https://docs.netapp.com/us-en/trident/index.html["NetApp Astra Trident"] | 설치하고 
+
+
+| 온프레미스 데이터 플랫폼 | link:https://www.netapp.com/data-storage/["NetApp 스토리지 어플라이언스"] 에서 제공 link:https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP를 참조하십시오"] | 온프레미스 데이터 센터 
+
+
+| 클라우드 데이터 플랫폼 | link:https://aws.amazon.com/fsx/netapp-ontap/["NetApp ONTAP용 Amazon FSx"] | 설치하고 
+|===
+image:ddlnexus_image1.png["오류: 그래픽 이미지가 없습니다"]
+
+link:ddlnexus_initial_setup.html["다음: 초기 설정."]
