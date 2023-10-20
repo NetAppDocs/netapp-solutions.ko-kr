@@ -79,6 +79,14 @@ indexpage:
       url: https://netapp-automation.github.io/ANF-AVS-Simulator
     - title: GCVE+ CVS TCO 계산기
       url: https://bluexp.netapp.com/gcve-cvs/roi
+    - title: AWS용 DRO 및 VMC 시뮬레이터
+      url: https://netapp-automation.github.io/dro-simulator/?intro-1
+    - title: AVS 시뮬레이터가 있는 ANF용 DRO
+      url: https://netapp-automation.github.io/dro-simulator-avs-anf/?intro-1
+    - title: BlueXP DRaaS 시뮬레이터
+      url: https://netapp-automation.github.io/DRaaS_Simulator/?0.1
+    - title: BlueXP - VM을 위한 백업 및 복구 시뮬레이터
+      url: https://netapp-automation.github.io/Backup_and_Recovery_for_VMs_Simulator/?0.1
   - title: BlueXP 백업 및 복구
     links:
     - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
