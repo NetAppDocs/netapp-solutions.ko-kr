@@ -1,0 +1,19 @@
+---
+indexpage:
+  tiles:
+  - title: Sovereign Cloud를 위한 VMware 리소스
+    links:
+    - title: VMware Sovereign Cloud 개요
+      url: https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/docs/vmw-sovereign-cloud-solution-brief-customer.pdf
+    - title: VMware Sovereign Cloud란 무엇입니까?
+      url: https://www.vmware.com/topics/glossary/content/sovereign-cloud.html
+    - title: 새로운 VMware Sovereign Cloud Initiative를 소개합니다
+      url: https://blogs.vmware.com/cloud/2021/10/06/vmware-sovereign-cloud/
+    - title: VMware Sovereign 클라우드 기술 백서
+      url: https://www.vmware.com/content/dam/learn/en/amer/fy22/pdf/1173457_Sovereign_Cloud_Technical_Whitepaper_V3.pdf
+  - title: 'NetApp 기반의 VMware Sovereign Cloud: 활용 사례'
+    links:
+    - title: 개요
+      url: "/sc-overview.html"
+    - title: 개체 저장소 확장으로 사용되는 StorageGRID
+      url: "/sc-use-cases.html#StorageGRID"

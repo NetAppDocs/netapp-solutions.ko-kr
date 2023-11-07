@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: vmw-sc/sc-use-cases.html 
+keywords: NetApp Solutions, vmware, sovereign cloud, netapp, use case 
+summary:  
+---
+= VMware Sovereign Cloud를 사용한 Netpp: 활용 사례
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp는 여러 NetApp 기술을 통합하여 VMware Sovereign Cloud 개념을 지원합니다.
+
+다음 링크를 사용하여 NetApp 기술과 VMware Sovereign Cloud의 통합에 대해 자세히 알아보십시오.
+
+* link:#storageGRID["개체 저장소 확장으로 사용되는 NetApp StorageGRID"]
+
+
+
+
+== 개체 저장소 확장으로 사용되는 NetApp StorageGRID
+
+NetApp는 VMware와 협력하여 VMware 소버린 클라우드를 지원하기 위해 NetApp StorageGRID를 VMware Cloud Director에 통합했습니다. 이 VMware Cloud Director 플러그인을 사용하면 서비스 제공업체가 사용 사례에 관계없이 StorageGRID를 오브젝트 스토리지 오퍼링으로 사용할 수 있으며 서비스 제공업체가 오퍼링 카탈로그의 다른 부분을 관리하는 데 사용하는 것과 동일한 VMware 멀티 테넌트 솔루션(VMware Cloud Director)을 통해 StorageGRID 관리를 수행할 수 있습니다.
+
+VMware 소버린 클라우드를 제공하는 파트너는 NetApp StorageGRID를 선택하여 비정형 데이터를 통해 클라우드 환경을 관리하고 유지할 수 있습니다. Amazon S3 API와 같은 업계 표준 API에 대한 기본 지원에서 범용 호환성은 다양한 클라우드 환경에서 원활한 상호 운용성을 보장하며, 자동화된 라이프사이클 관리와 같은 고유한 혁신을 통해 보다 비용 효율적인 보호, 스토리지 및 고객의 비정형 데이터를 장기간 보존하도록 지원합니다.
+
+NetApp의 Sovereign Cloud와 Cloud Director 공급자 고객 통합:
+
+* 메타데이터를 비롯한 중요 데이터가 여전히 주권의 통제하에 있으며, 데이터 개인 정보 보호법을 위반할 수 있는 외부 기관의 액세스를 방지합니다.
+* 보안 및 규정 준수를 강화하여 빠르게 진화하는 공격 벡터로부터 애플리케이션과 데이터를 보호하고 신뢰할 수 있는 로컬에 대한 지속적인 규정 준수를 유지합니다. 인프라, 기본 제공 프레임워크 및 로컬 전문가
+* 미래 지향형 인프라로 변화하는 데이터 개인 정보 보호 규정, 보안 위협, 지정학에 빠르게 대응합니다.
+* 안전한 데이터 공유 및 분석을 통해 데이터의 가치를 극대화하여 개인 정보 보호법을 위반하지 않고 혁신을 주도할 수 있습니다. 데이터 무결성이 보호되어 정확한 인사이트를 보장합니다.
+
+
+StorageGRID 통합에 대한 자세한 내용은 다음을 참조하십시오.
+
+* link:https://news.vmware.com/releases/vmware-explore-2023-barcelona-sovereign-cloud["VMware 발표"]
+* link:https://www.businesswire.com/news/home/20231107247067/en/NetApp-Announces-VMware-Sovereign-Cloud-Integration-and-Simplified-Data-Management-for-Modern-Virtualized-Applications["비즈니스 유선을 통한 NetApp 발표"]
+
