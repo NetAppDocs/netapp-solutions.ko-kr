@@ -47,10 +47,6 @@ https://www.netapp.com/media/16864-tr-4570.pdf["https://www.netapp.com/media/168
 +
 https://www.netapp.com/media/16877-tr-4529.pdf["https://www.netapp.com/media/16877-tr-4529.pdf"^]
 
-* NetApp 데이터 이동 없는 분석 모듈
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071["https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071"^]
-
 
 
 
@@ -75,4 +71,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2854071["https://library.n
 
 
 | 버전 2.0 | 2021년 10월 | 사용 사례 5로 업데이트: 분석 워크로드 가속화 
+
+
+| 버전 3.0 | 2023년 11월 | NIPAM 세부 정보가 제거되었습니다 
 |===

@@ -22,7 +22,7 @@ link:hdcs-sh-hadoop-data-protection-and-netapp.html["이전: Hadoop 데이터 �
 
 == 사용 사례 1: Hadoop 데이터 백업
 
-이 활용 사례에서 In-Place Analytics Module은 대형 금융 기관에서 긴 백업 시간을 24시간 이상으로 단축하면서 몇 시간 미만으로 단축하도록 지원했습니다.
+이 사용 사례에서 NetApp NFS 볼륨을 통해 대형 금융 기관의 긴 백업 시간을 24시간 이상에서 몇 시간 이하로 줄일 수 있습니다.
 
 
 
@@ -48,4 +48,4 @@ NetApp 솔루션을 통해 온라인 음악 유통업체는 다양한 지점에�
 
 가장 큰 금융 서비스 및 투자 은행 중 하나는 NetApp 네트워크 연결 스토리지 솔루션을 사용하여 I/O 대기 시간을 줄이고 정량 재무 분석 플랫폼을 가속화했습니다.
 
-link:hdcs-sh-use-case-1--backing-up-hadoop-data.html["다음: 활용 사례 1 - Hadoop 데이터 백업"]
+link:hdcs-sh-use-case-1-backing-up-hadoop-data.html["다음: 활용 사례 1 - Hadoop 데이터 백업"]

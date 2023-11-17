@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/hdcs-sh-use-case-1--backing-up-hadoop-data.html 
+permalink: data-analytics/hdcs-sh-use-case-1-backing-up-hadoop-data.html 
 keywords: use case 2, Hadoop repository, dr, disaster recovery 
 summary: 이 시나리오에서는 고객이 대규모 사내 Hadoop 저장소를 보유하고 있으며 재해 복구를 위해 백업하려고 합니다. 그러나 고객의 현재 백업 솔루션은 비용이 많이 들고 24시간 이상의 긴 백업 윈도우에 어려움을 겪고 있습니다. 
 ---
@@ -40,7 +40,7 @@ link:hdcs-sh-overview-of-hadoop-data-protection-use-cases.html["이전: Hadoop �
 
 
 
-== 고객의 기존 백업 솔루션
+== 고객의 기존 백업 솔루션 x
 
 아래 그림은 원래 Hadoop 네이티브 백업 솔루션을 보여 줍니다.
 
@@ -76,7 +76,7 @@ image:hdcs-sh-image5.png["오류: 그래픽 이미지가 없습니다"]
 
 === 솔루션 A
 
-솔루션 A는 아래 그림과 같이 데이터 이동 없는 분석 모듈을 백업 Hadoop 클러스터에 추가하여 NetApp NFS 스토리지 시스템에 대한 보조 백업을 허용함으로써 테이프 요구 사항을 제거합니다.
+솔루션 A에서 백업 Hadoop 클러스터는 보조 백업을 NetApp NFS 스토리지 시스템으로 전송하므로 아래 그림과 같이 테이프 요구 사항이 해소됩니다.
 
 image:hdcs-sh-image6.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -91,7 +91,7 @@ image:hdcs-sh-image6.png["오류: 그래픽 이미지가 없습니다"]
 NOTE: Hadoop 스냅샷은 운영 환경에서 백업 Hadoop 클러스터로 데이터를 보호하는 데 사용됩니다.
 
 * NetApp ONTAP 스토리지 컨트롤러는 NFS로 내보낸 볼륨을 제공하며 백업 Hadoop 클러스터에 프로비저닝됩니다.
-* MapReduce와 여러 개의 mapper를 활용하는 "Hadoop distcp" 명령을 실행하면 데이터 이동 없는 분석 모듈을 사용하여 분석 데이터가 백업 Hadoop 클러스터에서 NFS로 보호됩니다.
+* 를 실행합니다 `Hadoop distcp` MapReduce 및 여러 매퍼를 활용하여 분석 데이터는 백업 Hadoop 클러스터에서 NFS로 보호됩니다.
 +
 NetApp 스토리지 시스템의 NFS에 데이터가 저장된 후 NetApp Snapshot, SnapRestore 및 FlexClone 기술을 사용하여 필요에 따라 Hadoop 데이터를 백업, 복원, 복제할 수 있습니다.
 
@@ -121,7 +121,7 @@ NOTE: SnapMirror 기술을 사용하여 Hadoop 데이터를 클라우드뿐 아�
 
 === 해결 방법 B
 
-솔루션 B는 운영 Hadoop 클러스터에 데이터 이동 없는 분석 모듈을 추가하여 아래 그림과 같이 백업 Hadoop 클러스터가 필요하지 않습니다.
+솔루션 B는 아래 그림과 같이 NFS 볼륨을 운영 Hadoop 클러스터에 추가하므로 백업 Hadoop 클러스터가 필요하지 않습니다.
 
 image:hdcs-sh-image7.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -129,7 +129,7 @@ image:hdcs-sh-image7.png["오류: 그래픽 이미지가 없습니다"]
 
 * NetApp ONTAP 스토리지 컨트롤러는 운영 Hadoop 클러스터에 NFS 내보내기를 프로비저닝합니다.
 +
-Hadoop 네이티브 'Hadoop distcp' 명령은 Hadoop 데이터를 데이터 이동 없는 분석 모듈을 통해 운영 클러스터 HDFS에서 NFS로 보호합니다.
+Hadoop의 기본 구성 `hadoop distcp` 명령은 운영 클러스터 HDFS에서 NFS로 Hadoop 데이터를 보호합니다.
 
 * NetApp 스토리지 시스템의 NFS에 데이터가 저장된 후에는 Snapshot, SnapRestore 및 FlexClone 기술을 사용하여 필요에 따라 Hadoop 데이터를 백업, 복원, 복제할 수 있습니다.
 
@@ -168,4 +168,4 @@ NOTE: 스냅샷 기술은 데이터 크기에 관계없이 몇 초 내에 백업
 * NetApp 툴을 통해 엔터프라이즈 관리 기능을 지원합니다.
 
 
-link:hdcs-sh-use-case-2--backup-and-disaster-recovery-from-the-cloud-to-on-premises.html["다음: 사용 사례 2 - 클라우드에서 사내로 백업 및 재해 복구"]
+link:hdcs-sh-use-case-2-backup-and-disaster-recovery-from-the-cloud-to-on-premises.html["다음: 사용 사례 2 - 클라우드에서 사내로 백업 및 재해 복구"]

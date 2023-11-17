@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/hdcs-sh-use-case-5--accelerate-analytic-workloads.html 
+permalink: data-analytics/hdcs-sh-use-case-5-accelerate-analytic-workloads.html 
 keywords: analytics platform, nfs, hadoop, jbod, monte carlo 
 summary: 이 시나리오에서는 NetApp NFS 스토리지 솔루션을 사용하여 대형 금융 서비스 및 투자 은행의 분석 플랫폼을 현대화함으로써 자산 관리 및 정량적 사업부의 투자 위험 및 파생물 분석에 상당한 개선을 이루었습니다. 
 ---
@@ -13,7 +13,7 @@ summary: 이 시나리오에서는 NetApp NFS 스토리지 솔루션을 사용�
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-use-case-4--data-protection-and-multicloud-connectivity.html["이전: 사용 사례 4 - 데이터 보호 및 멀티 클라우드 연결"]
+link:hdcs-sh-use-case-4-data-protection-and-multicloud-connectivity.html["이전: 사용 사례 4 - 데이터 보호 및 멀티 클라우드 연결"]
 
 [role="lead"]
 이 시나리오에서는 NetApp NFS 스토리지 솔루션을 사용하여 대형 금융 서비스 및 투자 은행의 분석 플랫폼을 현대화함으로써 자산 관리 및 정량적 사업부의 투자 위험 및 파생물 분석에 상당한 개선을 이루었습니다.
