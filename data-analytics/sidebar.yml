@@ -128,15 +128,15 @@ entries:
   - title: Hadoop 데이터 보호 활용 사례 개요
     url: "/data-analytics/hdcs-sh-overview-of-hadoop-data-protection-use-cases.html"
   - title: 활용 사례 1 - Hadoop 데이터 백업
-    url: "/data-analytics/hdcs-sh-use-case-1--backing-up-hadoop-data.html"
+    url: "/data-analytics/hdcs-sh-use-case-1-backing-up-hadoop-data.html"
   - title: 사용 사례 2 - 클라우드에서 사내까지 백업 및 재해 복구
-    url: "/data-analytics/hdcs-sh-use-case-2--backup-and-disaster-recovery-from-the-cloud-to-on-premises.html"
+    url: "/data-analytics/hdcs-sh-use-case-2-backup-and-disaster-recovery-from-the-cloud-to-on-premises.html"
   - title: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest 설정
-    url: "/data-analytics/hdcs-sh-use-case-3--enabling-devtest-on-existing-hadoop-data.html"
+    url: "/data-analytics/hdcs-sh-use-case-3-enabling-devtest-on-existing-hadoop-data.html"
   - title: 사용 사례 4 - 데이터 보호 및 멀티 클라우드 연결
-    url: "/data-analytics/hdcs-sh-use-case-4--data-protection-and-multicloud-connectivity.html"
+    url: "/data-analytics/hdcs-sh-use-case-4-data-protection-and-multicloud-connectivity.html"
   - title: 사용 사례 5 - 분석 워크로드 가속화
-    url: "/data-analytics/hdcs-sh-use-case-5--accelerate-analytic-workloads.html"
+    url: "/data-analytics/hdcs-sh-use-case-5-accelerate-analytic-workloads.html"
   - title: 결론
     url: "/data-analytics/hdcs-sh-conclusion.html"
 - title: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
