@@ -39,6 +39,5 @@ NetApp의 Sovereign Cloud와 Cloud Director 공급자 고객 통합:
 
 StorageGRID 통합에 대한 자세한 내용은 다음을 참조하십시오.
 
-* link:https://news.vmware.com/releases/vmware-explore-2023-barcelona-sovereign-cloud["VMware 발표"]
-* link:https://www.businesswire.com/news/home/20231107247067/en/NetApp-Announces-VMware-Sovereign-Cloud-Integration-and-Simplified-Data-Management-for-Modern-Virtualized-Applications["비즈니스 유선을 통한 NetApp 발표"]
+* link:https://www.netapp.com/newsroom/press-releases/news-rel-20231107-561294/["NetApp 공지"]
 
