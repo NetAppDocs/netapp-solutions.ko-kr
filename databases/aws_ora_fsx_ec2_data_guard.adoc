@@ -4,7 +4,7 @@ permalink: databases/aws_ora_fsx_ec2_data_guard.html
 keywords: Oracle, AWS, FSx ONTAP, FSx, Database, Oracle 19c, Data Guard 
 summary: 이 솔루션은 AWS FSx ONTAP을 대기 사이트 Oracle 데이터베이스 스토리지로 사용하여 Oracle Data Guard를 구성하여 AWS에서 Oracle Data Guard HA/DR 솔루션의 라이센싱 및 운영 비용을 절감하는 방법에 대한 개요와 세부 정보를 제공합니다. 
 ---
-= TR-4981: AWS FSx ONTAP로 Active Data Guard 비용 절감
+= TR-4981: Amazon FSx ONTAP을 사용한 Oracle Active Data Guard 비용 절감
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -21,11 +21,11 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 Oracle Data Guard는 기본 데이터베이스 및 대기 데이터베이스 복제 구성의 엔터프라이즈 데이터에 대한 고가용성, 데이터 보호 및 재해 복구를 보장합니다. Oracle Active Data Guard는 기본 데이터베이스에서 대기 데이터베이스로 데이터 복제가 활성 상태인 동안 사용자가 대기 데이터베이스에 액세스할 수 있도록 합니다. Data Guard는 Oracle Database Enterprise Edition의 기능입니다. 별도의 라이센스가 필요하지 않습니다. 반면 Active Data Guard는 Oracle Database Enterprise Edition 옵션이므로 별도의 라이센스가 필요합니다. 여러 대기 데이터베이스가 Active Data Guard 설정의 기본 데이터베이스로부터 데이터 복제를 수신할 수 있습니다. 그러나 각각의 추가 대기 데이터베이스에는 활성 Data Guard 라이센스와 기본 데이터베이스의 크기로 추가 스토리지가 필요합니다. 운영 비용이 빠르게 증가합니다.
 
-Oracle 데이터베이스 작업의 비용 절감에 관심이 있고 AWS에서 Active Data Guard를 설정할 계획이라면 대안을 고려해야 합니다. Active Data Guard 대신 Data Guard를 사용하여 기본 데이터베이스에서 AWS FSx ONTAP 스토리지의 단일 물리적 대기 데이터베이스로 복제합니다. 그런 다음 이 대기 데이터베이스의 여러 복사본을 복제해 읽기/쓰기 액세스를 위해 열어 보고, 개발, 테스트 등과 같은 다른 여러 활용 사례를 지원할 수 있습니다 그 결과 Active Data Guard의 기능을 효과적으로 제공하는 동시에 추가 대기 데이터베이스당 Active Data Guard 라이센스 및 추가 스토리지 비용을 절감할 수 있습니다. 이 문서에서는 AWS의 기존 기본 데이터베이스로 Oracle Data Guard를 설정하고 AWS FSx ONTAP 스토리지에 물리적 대기 데이터베이스를 배치하는 방법을 설명합니다. 대기 데이터베이스는 스냅샷을 통해 백업되고 필요에 따라 활용 사례를 위해 읽기/쓰기 액세스를 위해 클론됩니다.
+Oracle 데이터베이스 작업의 비용 절감에 관심이 있고 AWS에서 Active Data Guard를 설정할 계획이라면 대안을 고려해야 합니다. Active Data Guard 대신 Data Guard를 사용하여 기본 데이터베이스에서 Amazon FSx ONTAP 스토리지의 단일 물리적 대기 데이터베이스로 복제합니다. 그런 다음 이 대기 데이터베이스의 여러 복사본을 복제해 읽기/쓰기 액세스를 위해 열어 보고, 개발, 테스트 등과 같은 다른 여러 활용 사례를 지원할 수 있습니다 그 결과 Active Data Guard의 기능을 효과적으로 제공하는 동시에 추가 대기 데이터베이스당 Active Data Guard 라이센스 및 추가 스토리지 비용을 절감할 수 있습니다. 이 문서에서는 AWS의 기존 기본 데이터베이스로 Oracle Data Guard를 설정하고 Amazon FSx ONTAP 스토리지에 물리적 대기 데이터베이스를 배치하는 방법을 설명합니다. 대기 데이터베이스는 스냅샷을 통해 백업되고 필요에 따라 활용 사례를 위해 읽기/쓰기 액세스를 위해 클론됩니다.
 
 이 솔루션은 다음과 같은 사용 사례를 해결합니다.
 
-* Oracle Data Guard는 AWS의 모든 스토리지에 있는 기본 데이터베이스와 AWS FSx ONTAP 스토리지의 대기 데이터베이스 사이에 있습니다.
+* Oracle Data Guard는 AWS의 모든 스토리지에 있는 기본 데이터베이스와 Amazon FSx ONTAP 스토리지의 대기 데이터베이스 사이에 있습니다.
 * 보고, 개발, 테스트 등과 같은 활용 사례를 제공하기 위해 데이터 복제를 위해 닫혀 있는 동안 대기 데이터베이스의 클론을 생성합니다
 
 

@@ -5,7 +5,9 @@ url: "/databases/index.html"
 entries:
 - title: Oracle 데이터베이스
   entries:
-  - title: AWS FSx ONTAP로 Active Data Guard 비용 절감
+  - title: 게스트가 마운트되는 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 Oracle
+    url: "/databases/aws_ora_fsx_vmc_guestmount.html"
+  - title: Amazon FSx ONTAP을 통한 Oracle Active Data Guard 비용 절감
     url: "/databases/aws_ora_fsx_ec2_data_guard.html"
   - title: AWS FSx ONTAP를 사용한 Oracle VLDB의 빠른 복구 및 클론
     url: "/databases/aws_ora_fsx_ec2_inc_merge.html"

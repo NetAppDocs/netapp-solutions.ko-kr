@@ -3,7 +3,9 @@ indexpage:
   tiles:
   - title: 오라클
     links:
-    - title: AWS FSx ONTAP로 Active Data Guard 비용 절감
+    - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하게 자가 관리 가능한 Oracle
+      url: "/aws_ora_fsx_vmc_guestmount.html"
+    - title: AWS FSx ONTAP을 통해 Oracle Active Data Guard 비용 절감
       url: "/aws_ora_fsx_ec2_data_guard.html"
     - title: AWS FSx ONTAP의 증분 병합을 사용하여 Oracle VLDB의 빠른 복구 및 복제
       url: "/aws_ora_fsx_ec2_inc_merge.html"

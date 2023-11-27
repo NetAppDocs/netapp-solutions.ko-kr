@@ -7,6 +7,9 @@
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2023년 11월 27일 | 데이터베이스 | TR-4979: 게스트 마운트 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 단순화된 자가 관리 Oracle 
+
+
 | 2023년 7월 11일 | 주권 클라우드 | 새 내용: StorageGRID As a Object Store 확장 
 
 
