@@ -3,7 +3,7 @@ indexpage:
   tiles:
   - title: 오라클
     links:
-    - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하게 자가 관리 가능한 Oracle
+    - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하고 자가 관리형 Oracle을 제공합니다
       url: "/aws_ora_fsx_vmc_guestmount.html"
     - title: AWS FSx ONTAP을 통해 Oracle Active Data Guard 비용 절감
       url: "/aws_ora_fsx_ec2_data_guard.html"
@@ -37,6 +37,8 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf
   - title: 하이브리드 클라우드 데이터베이스 솔루션
     links:
+    - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
+      url: "/automation_ora_asa_iscsi.html"
     - title: EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축
       url: "/aws_ora_fsx_ec2_deploy_intro.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
@@ -75,7 +77,9 @@ indexpage:
       url: https://github.com/NetApp/na_postgresql_aws_deploy_hadr
     - title: Oracle 데이터 보호
       url: https://github.com/NetApp/na_oracle19c_data_protection
-    - title: Oracle 구축
+    - title: iSCSI를 위한 Oracle 구축
+      url: https://bitbucket.ngage.netapp.com/scm/ns-bb/na_oracle_deploy_iscsi.git
+    - title: NFS를 위한 Oracle 구축
       url: https://github.com/NetApp/na_oracle19c_deploy
     - title: Oracle RAC 구축
       url: https://github.com/NetApp/na_NVA-1155/tree/master/ora19c_rac_deployment

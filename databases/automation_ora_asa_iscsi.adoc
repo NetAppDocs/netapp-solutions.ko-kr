@@ -1,0 +1,524 @@
+---
+sidebar: sidebar 
+permalink: databases/automation_ora_asa_iscsi.html 
+keywords: Database, Oracle, ASA, ONTAP, NetApp ASA 
+summary: 이 솔루션은 iSCSI 프로토콜을 사용하는 기본 데이터베이스 스토리지 및 ASM을 볼륨 관리자로 사용하여 독립 실행형 재시작에 구성된 Oracle 데이터베이스를 기반으로 하는 NetApp ASA 어레이에서 자동화된 Oracle 배포 및 보호에 대한 개요 및 세부 정보를 제공합니다. 
+---
+= TR-4983: iSCSI를 지원하는 NetApp ASA에서 간편하고 자동화된 Oracle 배포
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Allen Cao, Niyaz Mohamed, NetApp
+
+
+
+== 목적
+
+NetApp ASA 시스템은 SAN 인프라에 최신 솔루션을 제공합니다. 규모에 따라 간소화하고, 데이터베이스와 같은 비즈니스 크리티컬 애플리케이션의 성능을 높이고, 데이터 가용성(99.9999% 가동 시간)을 보장하고, TCO와 탄소 발자국을 줄일 수 있도록 지원합니다. NetApp ASA 시스템에는 가장 높은 성능이 요구되는 애플리케이션을 위해 설계된 A-Series 모델과 비용 효율적인 대용량 구축을 위해 최적화된 C-Series 모델이 포함됩니다. ASA A-Series 및 C-Series 시스템은 탁월한 성능을 제공하여 고객 경험을 향상하고 결과 도출 시간을 단축하고, 비즈니스 크리티컬 데이터의 가용성을 유지하고, 안전하게 보호하며, 모든 워크로드에 대해 업계에서 가장 효율적인 보장을 바탕으로 더 많은 실제 용량을 제공합니다.
+
+이 문서에서는 Ansible 자동화를 사용하여 ASA 시스템으로 구축된 SAN 환경에서 Oracle 데이터베이스를 간단하게 구현하는 방법을 설명합니다. Oracle 데이터베이스는 데이터 액세스를 위한 iSCSI 프로토콜 및 ASA 스토리지 어레이의 스토리지 관리를 위한 Oracle ASM이 포함된 독립 실행형 재시작 구성으로 구축됩니다. 또한 NetApp SnapCenter UI 툴을 사용하여 개발/테스트를 위해 Oracle 데이터베이스를 백업, 복원 및 복제하는 방법과 NetApp ASA 시스템의 스토리지 효율적인 데이터베이스 작업을 위한 기타 사용 사례를 보여줍니다.
+
+이 솔루션은 다음과 같은 사용 사례를 해결합니다.
+
+* NetApp ASA 시스템에서 기본 데이터베이스 스토리지로 Oracle 데이터베이스 구현을 자동화합니다
+* NetApp SnapCenter 툴을 사용하여 NetApp ASA 시스템에서 Oracle 데이터베이스 백업 및 복원
+* NetApp SnapCenter 툴을 사용하여 NetApp ASA 시스템에서 개발/테스트나 기타 사용 사례를 위한 Oracle 데이터베이스 클론
+
+
+
+
+== 대상
+
+이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
+
+* NetApp ASA 시스템에 Oracle을 구축하려는 DBA입니다.
+* NetApp ASA 시스템에서 Oracle 워크로드를 테스트하려는 데이터베이스 솔루션 설계자입니다.
+* NetApp ASA 시스템에서 Oracle 데이터베이스를 구축하고 관리하려는 스토리지 관리자
+* NetApp ASA 시스템에서 Oracle 데이터베이스를 사용하고자 하는 애플리케이션 소유자
+
+
+
+
+== 솔루션 테스트 및 검증 환경
+
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 랩 설정에서 수행되었습니다. 섹션을 참조하십시오 <<Key Factors for Deployment Consideration>> 를 참조하십시오.
+
+
+
+=== 있습니다
+
+image::automation_ora_asa_iscsi_archit.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+
+
+
+=== 하드웨어 및 소프트웨어 구성 요소
+
+[cols="33%, 33%, 33%"]
+|===
+
+
+3+| * 하드웨어 * 
+
+
+| NetApp ASA A400 | 버전 9.13.1P1 | NS224 쉘프 2개, 총 69.3TiB 용량의 NVMe AFF 드라이브 48개 
+
+
+| UCSB-B200-M4를 참조하십시오 | 인텔(R) 제온(R) CPU E5-2690 v4 @ 2.60GHz | 4노드 VMware ESXi 클러스터 
+
+
+3+| * 소프트웨어 * 
+
+
+| RedHat Linux | RHEL-8.6, 4.18.0-372.9.1.el8.x86_64 커널 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
+
+
+| Windows Server를 선택합니다 | 2022 표준, 10.0.20348 빌드 20348 | 호스팅 SnapCenter 서버 
+
+
+| Oracle Grid Infrastructure | 버전 19.18 | RU 패치 p34762026_190000_Linux-x86-64.zip 를 적용했습니다 
+
+
+| Oracle 데이터베이스 | 버전 19.18 | RU 패치 p34765931_190000_Linux-x86-64.zip 를 적용했습니다 
+
+
+| Oracle OPatch | 버전 12.2.0.1.36 | 최신 패치 p6880880_190000_Linux-x86-64.zip 
+
+
+| SnapCenter 서버 | 버전 4.9P1 | 작업 그룹 배포 
+
+
+| VMware vSphere 하이퍼바이저 | 버전 6.5.0.20000 | VMware Tools, 버전: 11365 - Linux, 12352 - Windows 
+
+
+| JDK를 엽니다 | 버전 java-1.8.0-openjdk.x86_64 | DB VM에 대한 SnapCenter 플러그인 요구 사항 
+|===
+
+
+=== 실습 환경의 Oracle 데이터베이스 구성
+
+[cols="33%, 33%, 33%"]
+|===
+
+
+3+|  
+
+
+| * 서버 * | * 데이터베이스 * | * DB 스토리지 * 
+
+
+| 오라_01 | NTAP1(NTAP1_PDB1, NTAP1_PDB2, NTAP1_PDB3) | ASA A400의 iSCSI LUN 
+
+
+| 오라_02 | NTAP2(NTAP2_PDB1, NTAP2_PDB2, NTAP2_PDB3) | ASA A400의 iSCSI LUN 
+|===
+
+
+=== 구축 시 고려해야 할 주요 요소
+
+* * Oracle 데이터베이스 스토리지 레이아웃. * 이 자동화된 Oracle 배포에서는 기본적으로 Oracle 바이너리, 데이터 및 로그를 호스팅하기 위해 4개의 데이터베이스 볼륨을 프로비저닝합니다. 그런 다음 데이터 및 로그 LUN에서 2개의 ASM 디스크 그룹을 생성합니다. Data ASM 디스크 그룹 내에서 각 ASA A400 클러스터 노드의 볼륨에 2개의 데이터 LUN을 프로비저닝합니다. logs ASM 디스크 그룹 내에서는 단일 ASA A400 노드의 로그 볼륨에 2개의 LUN을 생성합니다. ONTAP 볼륨 내에 여러 LUN이 배치되므로 일반적으로 성능이 향상됩니다.
+* * 여러 DB 서버 배포. * 자동화 솔루션은 하나의 Ansible 플레이북 실행에서 여러 DB 서버에 Oracle 컨테이너 데이터베이스를 구축할 수 있습니다. DB 서버 수에 관계없이 Playbook 실행은 동일하게 유지됩니다. 멀티 DB 서버 배포의 경우, 플레이북은 데이터베이스 LUN을 ASA A400의 이중 컨트롤러에 최적으로 배치하는 알고리즘을 사용하여 구축됩니다. 홀수 DB 서버의 이진 및 로그 LUN은 컨트롤러 1의 서버 호스트 인덱스 위치에 있습니다. 짝수 DB 서버의 이진 및 로그 LUN은 컨트롤러 2의 서버 호스트 인덱스 위치에 있습니다. DB 데이터 LUN이 두 컨트롤러에 균등하게 분산됩니다. Oracle ASM은 두 컨트롤러의 데이터 LUN을 단일 ASM 디스크 그룹으로 결합하여 두 컨트롤러의 처리 기능을 최대한 활용합니다.
+* * iSCSI 구성. * 데이터베이스 VM은 스토리지 액세스를 위한 iSCSI 프로토콜을 사용하여 ASA 스토리지에 연결됩니다. 이중화를 위해 각 컨트롤러 노드에서 이중 경로를 구성하고 다중 경로 스토리지 액세스를 위해 DB 서버에서 iSCSI 다중 경로를 설정해야 합니다. 스토리지 네트워크에서 점보 프레임을 활성화하여 성능과 처리량을 극대화합니다.
+* *귀하가 생성하는 각 Oracle ASM 디스크 그룹에 사용할 Oracle ASM 이중화 수준.* ASA A400은 클러스터 디스크 수준에서 데이터 보호를 위해 RAID DP의 스토리지를 구성하므로 을 사용해야 합니다 `External Redundancy`다시 말해, 이 옵션이 Oracle ASM이 디스크 그룹의 콘텐츠를 미러링하도록 허용하지 않습니다.
+* * 데이터베이스 백업. * NetApp는 사용자에게 친숙한 UI 인터페이스를 통해 데이터베이스 백업, 복원 및 복제를 위한 SnapCenter 소프트웨어 제품군을 제공합니다. NetApp은 이와 같은 관리 툴을 구현하여 1분 이내에 신속하게 스냅샷 백업, 신속한(분) 데이터베이스 복원 및 데이터베이스 복제를 수행할 것을 권장합니다.
+
+
+
+
+== 솔루션 구축
+
+다음 섹션에서는 Oracle ASM을 데이터베이스 볼륨 관리자로 사용하는 단일 노드 재시작 구성에서 iSCSI를 통해 DB VM에 직접 마운트된 데이터베이스 LUN을 사용하는 NetApp ASA A400의 자동화된 Oracle 19c 배포 및 보호를 위한 단계별 절차를 제공합니다.
+
+
+
+=== 배포를 위한 사전 요구 사항
+
+[%collapsible]
+====
+배포에는 다음과 같은 사전 요구 사항이 필요합니다.
+
+. NetApp ASA 스토리지 시스템이 설치 및 구성된 것으로 가정합니다. 여기에는 iSCSI 브로드캐스트 도메인, 두 컨트롤러 노드의 LACP 인터페이스 그룹 a0a, 두 컨트롤러 노드의 iSCSI VLAN 포트(a0a-<iscsi-a-vlan-id>, a0a-<iscsi-b-vlan-id>)가 포함됩니다. 다음 링크는 도움이 필요한 경우 자세한 단계별 지침을 제공합니다. link:https://docs.netapp.com/us-en/ontap-systems/asa400/install-detailed-guide.html["자세한 가이드 - ASA A400"^]
+. 최신 버전의 Ansible 및 Git가 설치된 Ansible 컨트롤러 노드로 Linux VM을 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:https://review.docs.netapp.com/us-en/netapp-solutions_acao_ora_vmc/automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^] 섹션 - `Setup the Ansible Control Node for CLI deployments on RHEL / CentOS` 또는 `Setup the Ansible Control Node for CLI deployments on Ubuntu / Debian`.
+. NetApp Oracle Deployment Automation Toolkit for iSCSI의 복제본을 복제합니다.
++
+[source, cli]
+----
+git clone https://bitbucket.ngage.netapp.com/scm/ns-bb/na_oracle_deploy_iscsi.git
+----
+. NetApp SnapCenter UI 도구를 최신 버전으로 실행할 Windows 서버를 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^]
+. 베어 메탈 또는 가상화된 VM 중 RHEL Oracle DB 서버 두 대를 구축합니다. 암호 권한이 없는 sudo를 사용하여 DB 서버에 관리자 사용자를 생성하고 Ansible 호스트와 Oracle DB 서버 호스트 간에 SSH 개인/공개 키 인증을 활성화합니다. DB server/tmp/archive 디렉토리에 Oracle 19c 설치 파일 스테이징
++
+....
+installer_archives:
+  - "LINUX.X64_193000_grid_home.zip"
+  - "p34762026_190000_Linux-x86-64.zip"
+  - "LINUX.X64_193000_db_home.zip"
+  - "p34765931_190000_Linux-x86-64.zip"
+  - "p6880880_190000_Linux-x86-64.zip"
+....
++
+
+NOTE: Oracle 설치 파일을 스테이징할 수 있는 충분한 공간을 확보하기 위해 Oracle VM 루트 볼륨에 50G 이상을 할당했는지 확인합니다.
+
+. 다음 동영상을 시청하십시오.
++
+.iSCSI를 사용하여 NetApp ASA에서 Oracle을 간편하고 자동으로 구현합니다
+video::79095731-6b02-41d5-9fa1-b0c00100d055[panopto,width=360]
+
+
+====
+
+
+=== 자동화 매개 변수 파일
+
+[%collapsible]
+====
+Ansible 플레이북은 사전 정의된 매개 변수를 사용하여 데이터베이스 설치 및 구성 작업을 실행합니다. 이 Oracle 자동화 솔루션의 경우 플레이북을 실행하기 전에 사용자가 입력해야 하는 세 가지 사용자 정의 매개 변수 파일이 있습니다.
+
+* 호스트 - 자동화 플레이북이 실행되는 타겟을 정의합니다.
+* vars/vars.yml - 모든 대상에 적용되는 변수를 정의하는 전역 변수 파일입니다.
+* host_vars/host_name.yml - 로컬 대상에만 적용되는 변수를 정의하는 지역 변수 파일입니다. 본 사용 사례에서는 Oracle DB 서버가 해당됩니다.
+
+
+이러한 사용자 정의 변수 파일 외에도 필요한 경우가 아니면 변경할 필요가 없는 기본 매개 변수가 포함된 여러 기본 변수 파일이 있습니다. 다음 섹션에서는 사용자 정의 변수 파일을 구성하는 방법을 보여 줍니다.
+
+====
+
+
+=== 매개 변수 파일 구성
+
+[%collapsible]
+====
+. Ansible 대상 `hosts` 파일 구성:
++
+[source, shell]
+----
+# Enter NetApp ASA controller management IP address
+[ontap]
+172.16.9.32
+
+# Enter Oracle servers names to be deployed one by one, follow by each Oracle server public IP address, and ssh private key of admin user for the server.
+[oracle]
+ora_01 ansible_host=10.61.180.21 ansible_ssh_private_key_file=ora_01.pem
+ora_02 ansible_host=10.61.180.23 ansible_ssh_private_key_file=ora_02.pem
+
+----
+. 글로벌 `vars/vars.yml` 파일 구성
++
+[source, shell]
+----
+#############################################################################################################
+######                 Oracle 19c deployment global user configurable variables                        ######
+######                 Consolidate all variables from ONTAP, linux and oracle                          ######
+#############################################################################################################
+
+#############################################################################################################
+######                 ONTAP env specific config variables                                             ######
+#############################################################################################################
+
+# Enter the ONTAP platform: on-prem, aws_fsx, aws_cvo, etc.
+ontap_platform: on-prem
+
+# Enter ONTAP cluster management user credentials
+username: "xxxxxxxx"
+password: "xxxxxxxx"
+
+
+###### on-prem platform specific user defined variables ######
+
+# Enter Oracle SVM iSCSI lif addresses. Each controller configures with dual paths iscsi_a, iscsi_b for redundancy
+ora_iscsi_lif_mgmt:
+  - {name: '{{ svm_name }}_mgmt', address: 172.21.253.220, netmask: 255.255.255.0, vlan_name: ora_mgmt, vlan_id: 3509}
+
+ora_iscsi_lifs_node1:
+  - {name: '{{ svm_name }}_lif_1a', address: 172.21.234.221, netmask: 255.255.255.0, vlan_name: ora_iscsi_a, vlan_id: 3490}
+  - {name: '{{ svm_name }}_lif_1b', address: 172.21.235.221, netmask: 255.255.255.0, vlan_name: ora_iscsi_b, vlan_id: 3491}
+ora_iscsi_lifs_node2:
+  - {name: '{{ svm_name }}_lif_2a', address: 172.21.234.223, netmask: 255.255.255.0, vlan_name: ora_iscsi_a, vlan_id: 3490}
+  - {name: '{{ svm_name }}_lif_2b', address: 172.21.235.223, netmask: 255.255.255.0, vlan_name: ora_iscsi_b, vlan_id: 3491}
+
+
+#############################################################################################################
+###                   Linux env specific config variables                                                 ###
+#############################################################################################################
+
+# Enter RHEL subscription to enable repo
+redhat_sub_username: xxxxxxxx
+redhat_sub_password: "xxxxxxxx"
+
+
+#############################################################################################################
+###                   Oracle DB env specific config variables                                             ###
+#############################################################################################################
+
+# Enter Database domain name
+db_domain: solutions.netapp.com
+
+# Enter initial password for all required Oracle passwords. Change them after installation.
+initial_pwd_all: xxxxxxxx
+
+----
+. 로컬 DB 서버 `host_vars/host_name.yml` 구성
++
+[source, shell]
+----
+# User configurable Oracle host specific parameters
+
+# Enter container database SID. By default, a container DB is created with 3 PDBs within the CDB
+oracle_sid: NTAP1
+
+# Enter database shared memory size or SGA. CDB is created with SGA at 75% of memory_limit, MB. The grand total of SGA should not exceed 75% available RAM on node.
+memory_limit: 8192
+
+----
+
+
+====
+
+
+=== 플레이북 실행
+
+[%collapsible]
+====
+자동화 툴킷에는 총 5개의 플레이북이 있습니다. 각 작업 블록은 서로 다른 작업 블록을 수행하며 서로 다른 용도로 사용됩니다.
+
+....
+0-all_playbook.yml - execute playbooks from 1-4 in one playbook run.
+1-ansible_requirements.yml - set up Ansible controller with required libs and collections.
+2-linux_config.yml - execute Linux kernel configuration on Oracle DB servers.
+3-ontap_config.yml - configure ONTAP for Oracle database including the creation of SVM, data volumes/luns provision, host igroup setup, etc.
+4-oracle_config.yml - install and configure Oracle on DB servers for grid infrastructure and create a container database.
+5-destroy.yml - optional to undo the environment to dismantle all.
+....
+다음 명령을 사용하여 플레이북을 실행할 수 있는 세 가지 옵션이 있습니다.
+
+. 한 번의 실행으로 모든 플레이북을 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i hosts 0-all_playbook.yml -u admin -e @vars/vars.yml
+----
+. 1-4의 숫자 순서에 따라 한 번에 하나씩 플레이북을 실행합니다.
++
+[source, cli]]
+----
+ansible-playbook -i hosts 1-ansible_requirements.yml -u admin -e @vars/vars.yml
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 2-linux_config.yml -u admin -e @vars/vars.yml
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 3-ontap_config.yml -u admin -e @vars/vars.yml
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 4-oracle_config.yml -u admin -e @vars/vars.yml
+----
+. 태그를 사용하여 0-ALL_Playbook.yml을 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i hosts 0-all_playbook.yml -u admin -e @vars/vars.yml -t ansible_requirements
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 0-all_playbook.yml -u admin -e @vars/vars.yml -t linux_config
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 0-all_playbook.yml -u admin -e @vars/vars.yml -t ontap_config
+----
++
+[source, cli]
+----
+ansible-playbook -i hosts 0-all_playbook.yml -u admin -e @vars/vars.yml -t oracle_config
+----
+. 환경을 실행 취소하십시오
++
+[source, cli]
+----
+ansible-playbook -i hosts 5-destroy.yml -u admin -e @vars/vars.yml
+----
+
+
+====
+
+
+=== 사후 실행 검증
+
+[%collapsible]
+====
+플레이북을 실행한 후 Oracle DB 서버에 Oracle 사용자로 로그인하여 Oracle 그리드 인프라 및 데이터베이스가 성공적으로 생성되었는지 확인합니다. 다음은 호스트 ora_01에서 Oracle 데이터베이스 검증의 예입니다.
+
+. 생성된 그리드 인프라 및 리소스를 검증합니다.
++
+....
+
+[oracle@ora_01 ~]$ df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+devtmpfs                      7.7G   40K  7.7G   1% /dev
+tmpfs                         7.8G  1.1G  6.7G  15% /dev/shm
+tmpfs                         7.8G  312M  7.5G   4% /run
+tmpfs                         7.8G     0  7.8G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root          44G   38G  6.8G  85% /
+/dev/sda1                    1014M  258M  757M  26% /boot
+tmpfs                         1.6G   12K  1.6G   1% /run/user/42
+tmpfs                         1.6G  4.0K  1.6G   1% /run/user/1000
+/dev/mapper/ora_01_biny_01p1   40G   21G   20G  52% /u01
+[oracle@ora_01 ~]$ asm
+[oracle@ora_01 ~]$ crsctl stat res -t
+--------------------------------------------------------------------------------
+Name           Target  State        Server                   State details
+--------------------------------------------------------------------------------
+Local Resources
+--------------------------------------------------------------------------------
+ora.DATA.dg
+               ONLINE  ONLINE       ora_01                   STABLE
+ora.LISTENER.lsnr
+               ONLINE  INTERMEDIATE ora_01                   Not All Endpoints Re
+                                                             gistered,STABLE
+ora.LOGS.dg
+               ONLINE  ONLINE       ora_01                   STABLE
+ora.asm
+               ONLINE  ONLINE       ora_01                   Started,STABLE
+ora.ons
+               OFFLINE OFFLINE      ora_01                   STABLE
+--------------------------------------------------------------------------------
+Cluster Resources
+--------------------------------------------------------------------------------
+ora.cssd
+      1        ONLINE  ONLINE       ora_01                   STABLE
+ora.diskmon
+      1        OFFLINE OFFLINE                               STABLE
+ora.driver.afd
+      1        ONLINE  ONLINE       ora_01                   STABLE
+ora.evmd
+      1        ONLINE  ONLINE       ora_01                   STABLE
+ora.ntap1.db
+      1        ONLINE  ONLINE       ora_01                   Open,HOME=/u01/app/o
+                                                             racle/product/19.0.0
+                                                             /NTAP1,STABLE
+--------------------------------------------------------------------------------
+[oracle@ora_01 ~]$
+
+....
++
+
+NOTE: 를 무시합니다 `Not All Endpoints Registered` 상태 세부 정보. 이는 수신기와 수동 및 동적 데이터베이스 등록이 충돌하여 발생하므로 무시해도 됩니다.
+
+. ASM 필터 드라이버가 예상대로 작동하는지 확인합니다.
++
+....
+
+[oracle@ora_01 ~]$ asmcmd
+ASMCMD> lsdg
+State    Type    Rebal  Sector  Logical_Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
+MOUNTED  EXTERN  N         512             512   4096  4194304    327680   318644                0          318644              0             N  DATA/
+MOUNTED  EXTERN  N         512             512   4096  4194304     81920    78880                0           78880              0             N  LOGS/
+ASMCMD> lsdsk
+Path
+AFD:ORA_01_DAT1_01
+AFD:ORA_01_DAT1_03
+AFD:ORA_01_DAT1_05
+AFD:ORA_01_DAT1_07
+AFD:ORA_01_DAT2_02
+AFD:ORA_01_DAT2_04
+AFD:ORA_01_DAT2_06
+AFD:ORA_01_DAT2_08
+AFD:ORA_01_LOGS_01
+AFD:ORA_01_LOGS_02
+ASMCMD> afd_state
+ASMCMD-9526: The AFD state is 'LOADED' and filtering is 'ENABLED' on host 'ora_01'
+ASMCMD>
+
+....
+. Oracle Enterprise Manager Express에 로그인하여 데이터베이스를 검증합니다.
++
+image::automation_ora_asa_em_01.png[이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다]
+
++
+image::automation_ora_asa_em_02.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
+
++
+....
+Enable additional port from sqlplus for login to individual container database or PDBs.
+
+SQL> show pdbs
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 NTAP1_PDB1                     READ WRITE NO
+         4 NTAP1_PDB2                     READ WRITE NO
+         5 NTAP1_PDB3                     READ WRITE NO
+SQL> alter session set container=NTAP1_PDB1;
+
+Session altered.
+
+SQL> select dbms_xdb_config.gethttpsport() from dual;
+
+DBMS_XDB_CONFIG.GETHTTPSPORT()
+------------------------------
+                             0
+
+SQL> exec DBMS_XDB_CONFIG.SETHTTPSPORT(5501);
+
+PL/SQL procedure successfully completed.
+
+SQL> select dbms_xdb_config.gethttpsport() from dual;
+
+DBMS_XDB_CONFIG.GETHTTPSPORT()
+------------------------------
+                          5501
+
+login to NTAP1_PDB1 from port 5501.
+....
++
+image::automation_ora_asa_em_03.png[이 이미지는 Oracle Enterprise Manager Express의 PDB 데이터베이스 보기를 제공합니다]
+
+
+
+====
+
+
+=== SnapCenter를 사용하여 Oracle 백업, 복원 및 클론 복제를 수행합니다
+
+[%collapsible]
+====
+TR-4979를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_vmc_guestmount.html#oracle-backup-restore-and-clone-with-snapcenter["게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하게 자가 관리 가능한 Oracle"^] 섹션을 참조하십시오 `Oracle backup, restore, and clone with SnapCenter` SnapCenter를 설정하고 데이터베이스 백업, 복원 및 클론 워크플로우를 실행하는 방법에 대한 자세한 내용은 를 참조하십시오.
+
+====
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* NetApp ASA: All-Flash SAN 어레이
++
+link:https://www.netapp.com/data-storage/all-flash-san-storage-array/["https://www.netapp.com/data-storage/all-flash-san-storage-array/"^]
+
+* 새 데이터베이스 설치를 통해 독립 실행형 서버용 Oracle Grid Infrastructure 설치
++
+link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-oracle-grid-infrastructure-for-a-standalone-server-with-a-new-database-installation.html#GUID-0B1CEE8C-C893-46AA-8A6A-7B5FAAEC72B3["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-oracle-grid-infrastructure-for-a-standalone-server-with-a-new-database-installation.html#GUID-0B1CEE8C-C893-46AA-8A6A-7B5FAAEC72B3"^]
+
+* 응답 파일을 사용하여 Oracle 데이터베이스 설치 및 구성
++
+link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7"^]
+
+* ONTAP와 함께 Red Hat Enterprise Linux 8.2를 사용하십시오
++
+link:https://docs.netapp.com/us-en/ontap-sanhost/hu_rhel_82.html#all-san-array-configurations["https://docs.netapp.com/us-en/ontap-sanhost/hu_rhel_82.html#all-san-array-configurations"^]
+
+

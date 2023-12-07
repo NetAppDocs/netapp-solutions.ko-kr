@@ -5,6 +5,8 @@ url: "/databases/index.html"
 entries:
 - title: Oracle 데이터베이스
   entries:
+  - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
+    url: "/databases/automation_ora_asa_iscsi.html"
   - title: 게스트가 마운트되는 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 Oracle
     url: "/databases/aws_ora_fsx_vmc_guestmount.html"
   - title: Amazon FSx ONTAP을 통한 Oracle Active Data Guard 비용 절감

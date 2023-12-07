@@ -7,6 +7,9 @@
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2023년 7월 12일 | 데이터베이스 | TR-4983: iSCSI를 지원하는 NetApp ASA에서 간편하고 자동화된 Oracle 배포 
+
+
 | 2023년 11월 27일 | 데이터베이스 | TR-4979: 게스트 마운트 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 단순화된 자가 관리 Oracle 
 
 
@@ -22,7 +25,7 @@
 | 2023년 10월 10일 | Red Hat OpenShift를 사용한 하이브리드 멀티 클라우드 | Google Cloud에 대한 새 콘텐츠가 추가되었습니다 
 
 
-| 2023년 9월 29일 | 데이터베이스 | AWS FSx ONTAP을 사용한 새로운 TR-4981: Active Data Guard 비용 절감 기능이 추가되었습니다 
+| 2023년 9월 29일 | 데이터베이스 | 새로운 TR-4981: AWS FSx ONTAP를 사용한 Oracle Active Data Guard 비용 절감 기능이 추가되었습니다 
 
 
 | 2023년 9월 19일 | AI | 백서 추가: Generative AI and NetApp Value 
