@@ -13,8 +13,6 @@ summary: 이 섹션에서는 솔루션 설계 검증 환경에 대해 간략하�
 :imagesdir: ./../media/
 
 
-link:ai-protopia-test-and-validation-plan.hcaios_solution_deployment_and_validation_details["이전: 테스트 및 검증 계획."]
-
 [role="lead"]
 다음 표에서는 솔루션 설계 검증 환경을 간략하게 보여 줍니다.
 
@@ -33,4 +31,3 @@ link:ai-protopia-test-and-validation-plan.hcaios_solution_deployment_and_validat
 
 | NVIDIA Triton Inference Server를 참조하십시오 | 21.11-3장 
 |===
-link:ai-protopia-test-procedure.html["다음: 테스트 절차"]

@@ -87,5 +87,3 @@ Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위�
 == 검증된 릴리즈에 대한 최신 지원 매트릭스
 
 을 참조하십시오 https://cloud.google.com/anthos/docs/resources/partner-storage#netapp["여기"] 에서 검증된 릴리스에 대한 지원 매트릭스를 참조하십시오.
-
-link:a-w-n_overview_anthos.html["다음: Anthos 개요."]

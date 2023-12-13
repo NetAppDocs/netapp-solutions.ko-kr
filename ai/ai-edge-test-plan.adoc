@@ -13,8 +13,6 @@ summary: 이 문서는 MLPerf Inference v0.7 코드, MLPerf Inference v1.1 코�
 :imagesdir: ./../media/
 
 
-link:ai-edge-technology-overview.html["이전: 기술 개요"]
-
 [role="lead"]
 이 문서는 MLPerf Inference v0.7을 따릅니다 https://github.com/mlperf/inference_results_v0.7/tree/master/closed/Lenovo["코드"^], MLPerf Inference v1.1 https://github.com/mlcommons/inference_results_v1.1/tree/main/closed/Lenovo["코드"^], 및 https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc["규칙"^]. 아래 표에 정의된 대로 에지에서 추론을 위해 설계된 MLPerf 벤치마크를 실행했습니다.
 
@@ -63,5 +61,3 @@ link:ai-edge-technology-overview.html["이전: 기술 개요"]
 | 언어 | 언어 처리 | 단일 스트림, 오프라인 
 |===
 이 검증에서 개발된 네트워크 스토리지 아키텍처를 사용하여 이러한 벤치마크를 수행한 결과 및 이전에 MLPerf에 제출한 에지 서버에서 로컬 실행의 결과를 비교했습니다. 이와 비교하여 공유 스토리지가 추론 성능에 미치는 영향을 확인합니다.
-
-link:ai-edge-test-configuration.html["다음: 구성을 테스트합니다."]

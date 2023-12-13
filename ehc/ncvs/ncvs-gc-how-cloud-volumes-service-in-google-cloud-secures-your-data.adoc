@@ -13,8 +13,6 @@ summary: Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 �
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-overview.html["이전: 개요."]
-
 [role="lead"]
 Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 보호할 수 있는 다양한 방법을 제공합니다.
 
@@ -74,5 +72,3 @@ Google Cloud에서 실행되는 Cloud Volumes Service는 "신뢰, 모든 것을 
 == 업계 최고 수준의 Snapshot 복사본으로 랜섬웨어에 신속하게 대응
 
 Cloud Volumes Service은 데이터 보호 및 백업 외에도 변경 불가능한 스냅샷 복사본에 대한 지원을 제공합니다(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#detection,-prevention-and-mitigation-of-ransomeware,-malware,-and-viruses#immutable-snapshot-copies["“변경 불가능한 Snapshot 복사본”"]랜섬웨어 공격으로부터 복구할 수 있는 볼륨(섹션 참조 link:ncvs-gc-service-operation.html["“서비스 운영”"]) 문제를 발견하는 후 몇 초 이내에 운영 중단을 최소화하십시오. 복구 시간과 효과는 스냅샷 일정에 따라 다르지만 랜섬웨어 공격의 경우 한 시간 차이만큼 작은 스냅샷 복사본을 생성할 수 있습니다. 스냅샷 복사본은 성능 및 용량 사용에 거의 영향을 주지 않고, 데이터 세트를 보호하는 데 있어 위험이 낮은 하이 보상 접근 방식입니다.
-
-link:ncvs-gc-security-considerations-and-attack-surfaces.html["다음: 보안 고려 사항 및 공격 표면"]

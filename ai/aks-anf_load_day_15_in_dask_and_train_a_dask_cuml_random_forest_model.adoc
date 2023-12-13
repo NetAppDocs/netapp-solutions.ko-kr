@@ -13,8 +13,6 @@ summary: 이 섹션에서는 Pandas에서 Criteo Click Logs day 15를 로드하�
 :imagesdir: ./../media/
 
 
-link:aks-anf_load_criteo_click_logs_day_15_in_pandas_and_train_a_scikit-learn_random_forest_model.html["이전: Pandas에서 Logs day 15를 Load Critio 클릭하여 좌골 키트 교육 - Learn random forest model."]
-
 [role="lead"]
 이전 섹션과 비슷한 방식으로, Pandas에서 Criteo Click Logs day 15 를 로드하고 좌골키트학습 무작위 포리스트 모델을 훈련합니다. 이 예에서는 Dask cuDF를 사용하여 DataFrame 로드를 수행하고 Dask cuML에서 임의의 포리스트 모델을 교육했습니다. 이 섹션에서는 교육 시간과 규모의 차이를 비교했습니다 link:aks-anf_training_time_comparison.html["“교육 시간 비교.”"]
 
@@ -75,4 +73,3 @@ pred_df = cuml_model.predict(gdf_test)
 # calculate accuracy
 cu_score = cuml.metrics.accuracy_score( test_y, pred_df )
 ....
-link:aks-anf_monitor_dask_using_native_task_streams_dashboard.html["다음: 기본 작업 스트림 대시보드를 사용하여 Dask를 모니터링합니다."]

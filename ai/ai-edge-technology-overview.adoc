@@ -13,7 +13,8 @@ summary: 이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합�
 :imagesdir: ./../media/
 
 
-link:ai-edge-introduction.html["이전: 소개."]
+[role="lead"]
+이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합니다.
 
 
 
@@ -222,5 +223,3 @@ MLPerf는 AI 성능 평가를 위한 업계 최고의 벤치마크 제품군입�
 
 
 Lenovo는 이 문서에 사용된 서버인 T4가 포함된 SE350에 대한 MLPerf Inference 점수를 게시했습니다. 의 결과를 참조하십시오 https://mlperf.org/inference-results-0-7/["https://mlperf.org/inference-results-0-7/"] 입력 #0.7-145의 "Edge, Closed Division" 섹션에 있습니다.
-
-link:ai-edge-test-plan.html["다음: 테스트 계획."]

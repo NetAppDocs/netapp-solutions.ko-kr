@@ -95,5 +95,3 @@ NetApp StorageGRID는 사용자가 S3 프로토콜을 통해 액세스할 수 �
 NetApp Cloud Volumes ONTAP 데이터 관리 소프트웨어는 AWS, Google Cloud Platform 및 Microsoft Azure를 비롯한 퍼블릭 클라우드 공급자의 유연성을 통해 사용자 데이터에 제어, 보호 및 효율성을 제공합니다. Cloud Volumes ONTAP은 NetApp ONTAP 스토리지 소프트웨어를 기반으로 하는 클라우드 네이티브 데이터 관리 소프트웨어로, 클라우드 데이터 요구사항을 해결하는 뛰어난 범용 스토리지 플랫폼을 제공합니다. 클라우드와 사내에서 동일한 스토리지 소프트웨어를 사용하는 사용자는 새로운 데이터 관리 방법을 통해 IT 직원을 교육하지 않고도 Data Fabric의 가치를 실현할 수 있습니다.
 
 하이브리드 클라우드 구현 모델에 관심 있는 고객을 위해 Cloud Volumes ONTAP은 대부분의 퍼블릭 클라우드에서 동일한 기능과 동급 최고의 성능을 제공하여 어떠한 환경에도 일관되고 원활한 사용자 경험을 제공할 수 있습니다.
-
-link:hcaios_hardware_and_software_requirements.html["다음: 하드웨어 및 소프트웨어 요구 사항"]

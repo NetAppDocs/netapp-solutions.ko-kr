@@ -13,7 +13,8 @@ summary: 이 섹션에서는 NetApp XCP 데이터 전송을 위한 구축 단계
 :imagesdir: ./../media/
 
 
-link:xcp-bp-file-analytics.html["이전: 파일 분석."]
+[role="lead"]
+이 섹션에서는 NetApp XCP 데이터 전송을 위한 구축 단계에 대해 설명합니다.
 
 
 
@@ -338,5 +339,3 @@ drwxr-xr-x 2 tester supergroup 4096 Nov 16 17:01 /xcpsrc_vol/mohankarthiknfs_des
 
 
 
-
-link:xcp-bp-sizing-guidelines-overview.html["다음: 사이징 지침"]

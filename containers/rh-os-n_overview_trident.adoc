@@ -447,5 +447,3 @@ Astra Trident Operator 설치를 완료한 후에는 사용 중인 특정 NetApp
 * link:rh-os-n_trident_ontap_iscsi.html["NetApp ONTAP iSCSI를 참조하십시오"]
 * link:rh-os-n_trident_element_iscsi.html["NetApp Element iSCSI 를 참조하십시오"]
 
-
-link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]

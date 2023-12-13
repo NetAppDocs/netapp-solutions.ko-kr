@@ -13,8 +13,6 @@ summary: 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Sto
 :imagesdir: ./../media/
 
 
-link:bda-ai-customer-challenges.html["이전: 고객의 당면 과제."]
-
 [role="lead"]
 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Storage Blob, S3 또는 Google 파일 시스템과 같은 HDFS 또는 HCFS에 저장됩니다. 우리는 소스에서 'Hadoop distcp' 명령을 사용하여 NIPAM의 도움을 받아 HDFS, MapR-FS 및 S3를 NetApp ONTAP NFS로 데이터를 복사하는 소스로 사용하여 테스트를 수행했습니다.
 
@@ -26,5 +24,3 @@ Hadoop distcp 명령은 MapReduce 프로그램을 사용하여 데이터를 복�
 
 
 NOTE: NIPAM은 MapR에서 지원 또는 인증되지 않았습니다.
-
-link:bda-ai-data-mover-solution-for-ai.html["다음은 AI용 Data Mover 솔루션입니다."]

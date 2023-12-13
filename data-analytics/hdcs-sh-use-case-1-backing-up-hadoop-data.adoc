@@ -13,8 +13,6 @@ summary: 이 시나리오에서는 고객이 대규모 사내 Hadoop 저장소�
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-overview-of-hadoop-data-protection-use-cases.html["이전: Hadoop 데이터 보호 활용 사례 개요"]
-
 
 
 == 시나리오
@@ -167,5 +165,3 @@ NOTE: 스냅샷 기술은 데이터 크기에 관계없이 몇 초 내에 백업
 * 스냅샷 기술을 사용하여 공간 효율적인 백업을 생성할 수 있습니다.
 * NetApp 툴을 통해 엔터프라이즈 관리 기능을 지원합니다.
 
-
-link:hdcs-sh-use-case-2-backup-and-disaster-recovery-from-the-cloud-to-on-premises.html["다음: 사용 사례 2 - 클라우드에서 사내로 백업 및 재해 복구"]

@@ -26,5 +26,3 @@ image:a-w-n_netapp_overview.png["오류: 그래픽 이미지가 없습니다"]
 
 
 NOTE: NetApp 포트폴리오의 각 스토리지 시스템은 온프레미스 사이트와 클라우드 간에 데이터 관리와 이동을 모두 쉽게 하여 데이터가 애플리케이션의 위치에 있도록 보장합니다.
-
-link:a-w-n_netapp_ontap.html["다음은 NetApp ONTAP의 차례입니다."]

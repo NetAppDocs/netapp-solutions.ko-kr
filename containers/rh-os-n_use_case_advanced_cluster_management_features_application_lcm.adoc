@@ -29,5 +29,3 @@ image::redhat_openshift_image79.jpg[응용 프로그램 목록]
 
 . 이제 콘솔에서 애플리케이션을 모니터링 및 관리할 수 있습니다.
 
-
-link:rh-os-n_use_case_advanced_cluster_management_features_governance_risk.html["다음: 기능 - 거버넌스 및 위험."]

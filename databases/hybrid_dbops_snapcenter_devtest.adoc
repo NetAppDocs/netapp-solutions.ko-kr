@@ -14,8 +14,6 @@ keywords: hybrid cloud, database, solutions, dev/test, workflow
 :imagesdir: ./../media/
 
 
-link:hybrid_dbops_snapcenter_getting_started_aws.html["이전:AWS 퍼블릭 클라우드 시작하기"]
-
 [role="lead"]
 퍼블릭 클라우드의 민첩성, 가치 창출 시간, 비용 절감은 모두 데이터베이스 애플리케이션 개발 및 테스트 노력을 위한 퍼블릭 클라우드를 채택하는 기업에게 의미 있는 가치 제안입니다. SnapCenter보다 더 나은 도구는 없습니다. SnapCenter은 운영 데이터베이스를 사내에서도 보호할 수 있을 뿐만 아니라 추가 스토리지를 거의 사용하지 않고 퍼블릭 클라우드에서 애플리케이션 개발 또는 코드 테스트용 복사본을 신속하게 클론 복제할 수 있습니다. 다음은 이 도구를 사용하는 단계별 프로세스에 대한 세부 정보입니다.
 
@@ -158,5 +156,3 @@ image:snapctr_sql_clone_10.PNG["오류: 그래픽 이미지가 없습니다"]
 == 도움을 받을 수 있는 곳
 
 이 솔루션 및 사용 사례에 대한 도움이 필요한 경우 에 가입하십시오 link:https://netapppub.slack.com/archives/C021R4WC0LC["NetApp Solution Automation 커뮤니티는 Slack 채널을 지원합니다"] 질문 또는 질문을 게시할 수 있는 솔루션 자동화 채널을 찾아보십시오.
-
-link:hybrid_dbops_snapcenter_dr.html["다음: 재해 복구 워크플로."]

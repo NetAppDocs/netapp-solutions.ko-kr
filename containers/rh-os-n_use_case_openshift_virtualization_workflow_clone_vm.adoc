@@ -73,5 +73,3 @@ image::redhat_openshift_image59.JPG[PVC 복제]
 . 생성 을 클릭하여 새 VM을 생성합니다.
 . VM이 성공적으로 생성된 후 새 VM이 소스 VM의 클론인지 액세스하고 확인합니다.
 
-
-link:rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html["다음: 워크플로우: 스냅샷으로부터 VM을 생성하십시오."]

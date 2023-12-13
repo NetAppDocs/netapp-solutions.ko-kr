@@ -14,8 +14,6 @@ keywords: database, Oracle, Azure, ANF, Azure NetApp Files, migration
 :imagesdir: ./../media/
 
 
-link:azure_ora_nfile_protection.html["이전: 데이터베이스 보호."]
-
 [role="lead"]
 Oracle이 단일 인스턴스 데이터베이스를 단계적으로 개발하기로 결정함에 따라 많은 조직에서 단일 인스턴스 Oracle 데이터베이스를 멀티 테넌트 컨테이너 데이터베이스로 전환했습니다. 이렇게 하면 최대 가용성 옵션을 사용하여 PDB라는 컨테이너 데이터베이스의 하위 집합을 클라우드로 손쉽게 재배치할 수 있으므로 마이그레이션 중에 가동 중지 시간이 최소화됩니다.
 

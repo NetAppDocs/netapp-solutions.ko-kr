@@ -81,5 +81,3 @@ EOF
 ----
 . 마찬가지로, ResourceQuota를 생성하여 다른 프로젝트 전용 스토리지로부터 스토리지를 요청하는 Project-2의 리소스를 제한합니다.
 
-
-link:rh-os-n_use_case_multitenancy_validation.html["다음: 검증."]

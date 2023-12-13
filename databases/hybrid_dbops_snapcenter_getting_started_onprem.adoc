@@ -14,7 +14,8 @@ keywords: workflow, on premises, rbac, roles, permissions
 :imagesdir: ./../media/
 
 
-link:hybrid_dbops_snapcenter_getting_started.html["이전: 시작하기 개요"]
+[role="lead"]
+NetApp SnapCenter 툴은 RBAC(역할 기반 액세스 제어)를 사용하여 사용자 리소스 액세스 및 권한 부여를 관리하고 SnapCenter 설치를 통해 미리 채워진 역할을 생성합니다. 필요에 따라 사용자 지정 역할을 만들 수도 있습니다.
 
 
 
@@ -24,7 +25,7 @@ link:hybrid_dbops_snapcenter_getting_started.html["이전: 시작하기 개요"]
 
 === SnapCenter에서 데이터베이스 관리자 설정
 
-NetApp SnapCenter 툴은 RBAC(역할 기반 액세스 제어)를 사용하여 사용자 리소스 액세스 및 권한 부여를 관리하고 SnapCenter 설치를 통해 미리 채워진 역할을 생성합니다. 필요에 따라 사용자 지정 역할을 만들 수도 있습니다. 데이터베이스 백업, 복원 및/또는 재해 복구를 위해 SnapCenter에서 지원하는 각 데이터베이스 플랫폼에 대해 전용 관리 사용자 ID를 갖는 것이 적합합니다. 단일 ID를 사용하여 모든 데이터베이스를 관리할 수도 있습니다. 테스트 사례 및 데모에서는 Oracle과 SQL Server 모두에 대해 각각 전용 관리 사용자를 생성했습니다.
+데이터베이스 백업, 복원 및/또는 재해 복구를 위해 SnapCenter에서 지원하는 각 데이터베이스 플랫폼에 대해 전용 관리 사용자 ID를 갖는 것이 적합합니다. 단일 ID를 사용하여 모든 데이터베이스를 관리할 수도 있습니다. 테스트 사례 및 데모에서는 Oracle과 SQL Server 모두에 대해 각각 전용 관리 사용자를 생성했습니다.
 
 특정 SnapCenter 리소스는 SnapCenter 관리자 역할만 사용하여 프로비저닝할 수 있습니다. 그러면 액세스를 위해 리소스를 다른 사용자 ID에 할당할 수 있습니다.
 
@@ -553,5 +554,3 @@ image:snapctr_job_status_sql.PNG["오류: 그래픽 이미지가 없습니다"]
 image:snapctr_job_status_ora.PNG["오류: 그래픽 이미지가 없습니다"]
 
 이때 운영 장애가 발생할 경우 클라우드의 데이터베이스 백업 복사본을 클론 복제하여 개발/테스트 프로세스를 실행하거나 재해 복구를 수행할 수 있습니다.
-
-link:hybrid_dbops_snapcenter_getting_started_aws.html["다음:AWS 퍼블릭 클라우드 시작하기"]

@@ -13,8 +13,6 @@ summary: 이 섹션에서는 AKS VNET를 Azure NetApp Files VNET와 피어로 �
 :imagesdir: ./../media/
 
 
-link:aks-anf_create_a_delegated_subnet_for_azure_netapp_files.html["이전: Azure NetApp Files에 대해 위임된 서브넷을 만듭니다."]
-
 [role="lead"]
 AKS VNET를 Azure NetApp Files VNET와 상호 운용하려면 다음 단계를 수행하십시오.
 
@@ -32,5 +30,3 @@ AKS VNET를 Azure NetApp Files VNET와 상호 운용하려면 다음 단계를 �
 
 
 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering["가상 네트워크 피어링을 생성, 변경 또는 삭제합니다"^].
-
-link:aks-anf_install_trident.html["다음: Trident를 설치합니다."]

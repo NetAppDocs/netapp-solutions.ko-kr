@@ -13,8 +13,6 @@ summary: '이 사용 사례는 우리가 수행한 가장 큰 재무 고객 개�
 :imagesdir: ./../media/
 
 
-link:xcp-bp-customer-scenarios-overview.html["이전: 고객 시나리오."]
-
 [role="lead"]
 이 사용 사례는 우리가 수행한 가장 큰 재무 고객 개념 증명(CPOC)을 기반으로 합니다. 역사적으로 우리는 NetApp NIPAM(In-Place 분석 모듈)을 사용하여 분석 데이터를 NetApp ONTAP AI로 이동시켰습니다. 하지만 최근 NetApp XCP의 향상된 기능과 향상된 성능, 고유한 NetApp Data Mover 솔루션 접근 방식 덕분에 NetApp XCP를 사용하여 데이터 마이그레이션을 다시 수행할 수 있게 되었습니다.
 
@@ -42,5 +40,3 @@ image:xcp-bp_image30.png["오류: 그래픽 이미지가 없습니다"]
 고객 사용 사례, 녹화된 데모 및 테스트 결과에 대한 자세한 내용은 를 참조하십시오 https://blog.netapp.com/data-migration-xcp["XCP를 사용하여 데이터 레이크와 고성능 컴퓨팅에서 ONTAP NFS로 데이터를 이동합니다"^] 블로그:
 
 NetApp XCP를 사용하여 MapR-FS 데이터를 ONTAP NFS로 이동하는 방법에 대한 자세한 내용은 의 부록 B를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/17082-tr4732pdf.pdf&ntap-no-cache["TR-4732: 인공 지능에 대한 빅 데이터 분석 데이터"^].
-
-link:xcp-bp-high-performance-computing-to-ontap-nfs.html["다음: ONTAP NFS에 대한 고성능 컴퓨팅."]

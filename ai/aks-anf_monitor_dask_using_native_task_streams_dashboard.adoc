@@ -13,8 +13,6 @@ summary: 이 페이지에서는 기본 작업 스트림 대시보드를 사용�
 :imagesdir: ./../media/
 
 
-link:aks-anf_load_day_15_in_dask_and_train_a_dask_cuml_random_forest_model.html["이전: Dask에서 Day 15를 로드하여 Dask cuML 무작위 포리스트 모델을 교육합니다."]
-
 [role="lead"]
 를 클릭합니다 https://docs.dask.org/en/latest/scheduling.html["Dask 분산 스케줄러입니다"^] 다음과 같은 두 가지 형태로 실시간 피드백을 제공합니다.
 
@@ -29,5 +27,3 @@ image:aks-anf_image13.png["오류: 그래픽 이미지가 없습니다"]
 개별 작업을 분석하고 실행 시간을 밀리초 단위로 점검하거나 장애물이나 장애물을 식별할 수 있는 옵션이 있습니다. 예를 들어 다음 그림에서는 랜덤 포리스트 모델 피팅 단계에 대한 작업 스트림을 보여 줍니다. DataFrame 프로세싱을 위한 고유한 청크, 랜덤 포리스트에 맞는 _Construct_RF 등 훨씬 더 많은 함수가 실행되고 있습니다. Criteo Click Logs에서 하루 동안 수집한 데이터의 크기가 45GB로 인해 대부분의 시간이 DataFrame 작업에 소비되었습니다.
 
 image:aks-anf_image14.png["오류: 그래픽 이미지가 없습니다"]
-
-link:aks-anf_training_time_comparison.html["다음: 교육 시간 비교."]

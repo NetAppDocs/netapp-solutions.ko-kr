@@ -13,7 +13,8 @@ summary: 이 섹션에서는 NetApp XCP를 사용한 데이터 마이그레이�
 :imagesdir: ./../media/
 
 
-link:xcp-bp-best-practice-guidelines-and-recommendations.html["이전: 모범 사례 지침 및 권장 사항"]
+[role="lead"]
+이 섹션에서는 NetApp XCP를 사용한 데이터 마이그레이션에 대한 문제 해결 지침을 제공합니다.
 
 
 
@@ -57,5 +58,3 @@ A800-Node1_vs1 xcpdest 39999990 21251126
 A800-Node1-2::>
 ....
 
-
-link:xcp-bp-where-to-find-additional-information.html["다음: 추가 정보를 찾을 위치."]

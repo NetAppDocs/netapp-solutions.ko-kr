@@ -13,8 +13,6 @@ summary: AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처�
 :imagesdir: ./../media/
 
 
-link:bda-ai-data-mover-solution.html["이전: Data Mover 솔루션"]
-
 [role="lead"]
 AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처리해야 하는 고객의 요구사항을 기반으로 합니다. NetApp은 NIPAM을 사용하여 HDFS에서 NFS로 데이터를 이동합니다. 한 사용 사례에서 고객은 사내 NFS로 데이터를 이동해야 했고, 또 다른 고객은 클라우드의 GPU 클라우드 인스턴스에서 데이터를 처리하기 위해 Windows Azure Storage Blob에서 Cloud Volumes Service로 데이터를 이동해야 했습니다.
 
@@ -37,5 +35,3 @@ Data Mover 솔루션을 구축하려면 다음 단계가 필요합니다.
 이 시나리오에서는 고객이 사내의 NetApp 스토리지 컨트롤러에서 AI 처리를 위해 필요한 원격 위치의 NAS 시스템에 대용량 파일 개수 데이터가 있습니다. 이 시나리오에서는 XCP 마이그레이션 도구를 사용하여 데이터를 더 빠른 속도로 마이그레이션하는 것이 좋습니다.
 
 하이브리드 사용 사례인 고객은 BlueXP Copy 및 Sync를 사용하여 NVIDIA 클러스터에 있는 GPU와 같은 GPU를 사용하여 NFS, CIFS, S3 데이터의 온프레미스 데이터를 클라우드로 마이그레이션하고 AI 처리를 위해 그 반대로 마이그레이션할 수 있습니다. BlueXP Copy 및 Sync와 XCP 마이그레이션 툴은 모두 NetApp ONTAP NFS로의 NFS 데이터 마이그레이션에 사용됩니다.
-
-link:bda-ai-gpfs-to-netapp-ontap-nfs.html["다음: GPFS에서 NetApp ONTAP NFS로."]

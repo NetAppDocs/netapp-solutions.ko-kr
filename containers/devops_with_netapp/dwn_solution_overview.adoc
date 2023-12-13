@@ -87,5 +87,3 @@ NetApp Astra Control Center는 신뢰할 수 있는 NetApp 데이터 보호 기�
 Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
-
-link:dwn_overview_devops.html["다음: DevOps 개요"]

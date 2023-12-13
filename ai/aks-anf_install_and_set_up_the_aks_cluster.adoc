@@ -13,8 +13,6 @@ summary: 이 페이지에서는 AKS 클러스터를 설정하는 데 필요한 �
 :imagesdir: ./../media/
 
 
-link:aks-anf_click-through_rate_prediction_use_case_summary.html["이전: 클릭률 예측 사용 사례 요약"]
-
 [role="lead"]
 AKS 클러스터를 설치 및 설정하려면 웹 페이지를 참조하십시오 https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal["AKS 클러스터를 생성합니다"^] 그런 다음 다음 다음 단계를 완료합니다.
 
@@ -46,5 +44,3 @@ aks get-credentials --resource-group resourcegroup --name aksclustername
 
 
 image:aks-anf_image4.png["오류: 그래픽 이미지가 없습니다"]
-
-link:aks-anf_create_a_delegated_subnet_for_azure_netapp_files.html["다음: Azure NetApp Files에 대해 위임된 서브넷을 만듭니다."]

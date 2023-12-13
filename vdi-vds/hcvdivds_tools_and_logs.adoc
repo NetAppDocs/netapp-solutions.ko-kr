@@ -50,5 +50,3 @@ image:hcvdivds_image20.png["오류: 그래픽 이미지가 없습니다"]
 == 로그 파일
 
 image:hcvdivds_image21.png["오류: 그래픽 이미지가 없습니다"]확인합니다 link:https://docs.netapp.com/us-en/virtual-desktop-service/Troubleshooting.reviewing_vds_logs.html["자동화 로그"] 를 참조하십시오.
-
-link:hcvdivds_conclusion.html["다음: 결론"]

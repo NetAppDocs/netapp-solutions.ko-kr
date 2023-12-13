@@ -13,8 +13,6 @@ summary: 'AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 
 :imagesdir: ./../media/
 
 
-link:kafka-sc-confluent-performance-validation.html["이전: Confluent Performance validation."]
-
 [role="lead"]
 AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 농작물 사용 워크로드 중 5개 또는 8개의 브로커 노드로 계층형 스토리지 테스트를 수행했습니다. 테스트에 따르면 AFF A900 리소스 활용률이 100%에 이를 때까지 브로커 노드의 수에 따라 완료 시간과 성능 결과가 확장되었습니다. ONTAP 스토리지 컨트롤러를 설치하려면 최소 하나의 HA 쌍이 필요했습니다.
 
@@ -34,4 +32,3 @@ image:kafka-sc-image10.png["이 데이터 그래프는 약 31.74GBps의 Kafka �
 object_store_server:wle-mendocino-07-08:get_data:34080805907b/ s
 object_store_server:wle-mendocino-07-08:put_data:484236974b/ s
 ....
-link:kafka-sc-performance-best-practice-guidelines.html["다음은 성능 모범 사례 지침입니다."]

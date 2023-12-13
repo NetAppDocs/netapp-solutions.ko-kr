@@ -118,4 +118,3 @@ Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배�
 
 | VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 6.7U3 
 |===
-link:rh-os-n_overview_openshift.html["다음은 Red Hat OpenShift 개요입니다."]

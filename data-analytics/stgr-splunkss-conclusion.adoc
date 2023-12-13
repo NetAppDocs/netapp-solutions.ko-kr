@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-analytics/stgr-splunkss-conclusion.html 
-keywords: conclusion, references, history 
+keywords: conclusion, references 
 summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 고객 조직 전반에서 Splunk를 사용할 때 성능이 크게 향상되었습니다. 따라서 더 많은 데이터 소스를 추가해야 할 뿐만 아니라 데이터를 더 오래 보관해야 하므로 Splunk 인프라가 강조됩니다. 
 ---
 = 결론
@@ -12,8 +12,6 @@ summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT �
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-link:stgr-splunkss-single-site-smartstore-performance.html["이전: 단일 사이트 SmartStore 성능."]
 
 [role="lead"]
 Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 고객 조직 전반에서 Splunk를 사용할 때 성능이 크게 향상되었습니다. 따라서 더 많은 데이터 소스를 추가해야 할 뿐만 아니라 데이터를 더 오래 보관해야 하므로 Splunk 인프라가 강조됩니다.
@@ -51,14 +49,3 @@ https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview["h
 https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers"^]
 
 
-
-
-
-== 버전 기록
-
-|===
-| 버전 | 날짜 | 문서 버전 기록 
-
-
-| 1.0 | 2022년 7월 | 최초 릴리스. 
-|===

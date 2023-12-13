@@ -13,8 +13,6 @@ summary: 이 사용 사례에서 고객은 DevTest와 보고 목적으로 동일
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-use-case-2-backup-and-disaster-recovery-from-the-cloud-to-on-premises.html["이전: 사용 사례 2 - 클라우드에서 사내로 백업 및 재해 복구"]
-
 [role="lead"]
 이 사용 사례에서 고객은 DevTest와 보고 목적으로 동일한 데이터 센터와 원격 위치에서 대량의 분석 데이터를 포함하는 기존 Hadoop 클러스터를 기반으로 새로운 Hadoop/Spark 클러스터를 신속하고 효율적으로 구축해야 합니다.
 
@@ -49,5 +47,3 @@ NetApp System Manager 또는 스토리지 관리 프롬프트 내의 Snapshot �
 이 이미지는 DevTest용 Hadoop 클러스터를 보여 줍니다.
 
 image:hdcs-sh-image11.png["오류: 그래픽 이미지가 없습니다"]
-
-link:hdcs-sh-use-case-4-data-protection-and-multicloud-connectivity.html["다음: 사용 사례 4 - 데이터 보호 및 멀티 클라우드 연결"]

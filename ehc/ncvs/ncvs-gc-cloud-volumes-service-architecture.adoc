@@ -76,5 +76,3 @@ image:ncvs-gc-image4.png["오류: 그래픽 이미지가 없습니다"]
 공격자는 의 VM에 새 NIC(네트워크 인터페이스 카드)를 추가하려고 시도할 수 있습니다 https://en.wikipedia.org/wiki/Promiscuous_mode["무차별 모드"^] 모든 트래픽을 스니핑하기 위해 기존 NIC에서 Promiscuous 모드를 활성화(포트 미러링)하거나 활성화합니다. Google Cloud에서 새 NIC를 추가하려면 VM을 완전히 종료해야 하므로 경고가 생성되므로 공격자가 이를 놓치지 않고 확인할 수 없습니다.
 
 또한 NIC를 무차별 모드로 설정할 수 없으며 Google Cloud에서 경고를 트리거합니다.
-
-link:ncvs-gc-control-plane-architecture.html["다음: 컨트롤 플레인 아키텍처"]

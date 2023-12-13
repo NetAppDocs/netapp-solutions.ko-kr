@@ -13,7 +13,8 @@ summary: 이 페이지에서는 Azure NetApp Files에 대한 클라우드 리소
 :imagesdir: ./../media/
 
 
-link:aks-anf_software_requirements.html["이전: 소프트웨어 요구 사항."]
+[role="lead"]
+이 페이지에서는 Azure NetApp Files에 대한 클라우드 리소스 구성에 대해 설명합니다.
 
 
 
@@ -46,4 +47,3 @@ Trident를 통해 볼륨을 생성하므로 "Azure NetApp Files용 NFS 볼륨 �
 
 | 용량(TB | 4 
 |===
-link:aks-anf_click-through_rate_prediction_use_case_summary.html["다음: 클릭률 예측 사용 사례 요약"]

@@ -23,5 +23,3 @@ NetApp Retail Assistant(Nara)의 데모 비디오를 녹화했습니다.
 .나라 동영상 데모
 video::b4aae689-31b5-440c-8dde-ac050140ece7[panopto]
 image:cainvidia_image4.png["오류: 그래픽 이미지가 없습니다"]
-
-link:cainvidia_use_netapp_cloud_sync_to_archive_conversation_history.html["다음: NetApp BlueXP 복사 및 동기화를 사용하여 대화 기록을 아카이브합니다"]

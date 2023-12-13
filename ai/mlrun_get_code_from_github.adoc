@@ -29,5 +29,3 @@ cd /User
 git clone .
 ....
 이제 Jupyter 작업 공간의 파일 트리에 'netops-netapp' 폴더가 표시됩니다.
-
-link:mlrun_configure_working_environment.html["다음: 작업 환경 구성"]

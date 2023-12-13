@@ -13,7 +13,8 @@ summary: 이 섹션에서는 이 솔루션의 다양한 구성 요소에 대한 
 :imagesdir: ./../media/
 
 
-link:ai-sent-architecture.html["이전: 아키텍처."]
+[role="lead"]
+이 섹션에서는 이 솔루션의 다양한 구성 요소에 대한 설계 고려 사항에 대해 설명합니다.
 
 
 
@@ -48,5 +49,3 @@ NVIDIA는 몇 가지 일반적인 기능을 제공합니다 https://docs.nvidia.
 image:ai-sent-image10.png["오류: 그래픽 이미지가 없습니다"]
 
 NetApp DataOps 툴킷은 즉각적인 데이터 클론 복제 기술을 사용하여 데이터 품질 점검 파이프라인을 보완합니다. 레이블이 지정된 각 파일을 평가하고 기존의 레이블 파일과 비교해야 합니다. 이러한 품질 검사를 다양한 데이터 스토리지 시스템에 분산하면 이러한 검사가 빠르고 효율적으로 실행됩니다.
-
-link:ai-sent-deploying-support-center-sentiment-analysis.html["다음: 지원 센터 정서 분석 구축"]

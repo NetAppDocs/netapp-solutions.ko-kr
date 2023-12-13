@@ -67,6 +67,15 @@ NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능
 
 === 데모 비디오:
 
-link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용한 재해 복구 데모 비디오"]
+link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["백업을 사용하는 Astra Control Center를 사용한 재해 복구 시연 비디오"]
 
 Astra Control Center 데이터 보호 기능에 대한 자세한 내용을 확인할 수 있습니다 link:https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html["여기"]
+
+
+
+== ACC를 사용한 재해 복구(복제를 사용한 페일오버 및 페일백
+
+[밑줄]# * 데모 비디오 * #
+
+.애플리케이션 장애 조치 및 장애 복구를 위해 Astra Control을 사용합니다
+video::4e550e59-369e-4607-88ec-b0d60142c584[panopto,width=360]

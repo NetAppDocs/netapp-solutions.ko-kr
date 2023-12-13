@@ -89,5 +89,3 @@ image::dwn_image14.jpg[Prod 앱을 복원했습니다]
 
 
 이 두 가지 작업을 함께 수행할 경우 일반 비즈니스 운영으로 더 빠르게 되돌릴 수 있습니다. 이 사용 사례를 실제 작동 중인 경우 비디오를 시청하십시오 link:dwn_videos_clone_for_postmortem_and_restore.html["여기"^].
-
-link:dwn_videos_and_demos.html["다음: 비디오 및 데모 - NetApp Astra의 DevOps"]

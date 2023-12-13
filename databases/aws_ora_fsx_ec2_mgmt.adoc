@@ -14,8 +14,6 @@ keywords: HA, DR, database, Oracle, RDS, AWS, SnapCenter
 :imagesdir: ./../media/
 
 
-link:aws_ora_fsx_ec2_procedures.html["이전: 배포 절차."]
-
 [role="lead"]
 AWS EC2 및 FSx 관리 콘솔 외에도 Ansible 제어 노드 및 SnapCenter UI 툴이 이 Oracle 환경에서 데이터베이스 관리를 위해 구축되었습니다.
 
@@ -275,5 +273,3 @@ NOTE: 대신 기본 Oracle 백업 복제본을 사용하여 동일한 절차를 
 git clone https://github.com/NetApp-Automation/na_ora_hadr_failover_resync.git
 ----
 설정 및 페일오버 테스트를 시도하기 전에 README 지침을 주의 깊게 읽으십시오.
-
-link:aws_ora_fsx_ec2_migration.html["다음: 데이터베이스 마이그레이션."]

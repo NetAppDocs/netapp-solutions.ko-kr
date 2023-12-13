@@ -153,5 +153,3 @@ NOTE: OSP 서버 그룹에 대해 특정 하드 선호도/반선호도 제한이
 IPI를 사용하면 이 문서 앞부분에서 설명한 대화형 마법사를 통해 OpenShift 클러스터를 쉽게 배포할 수 있습니다. 그러나 클러스터 배포의 일부로 일부 기본값을 변경해야 할 수도 있습니다.
 
 이 경우 클러스터를 즉시 배포하지 않고 wizardarder를 실행하고 작업을 수행할 수 있습니다. 대신 나중에 클러스터를 배포할 수 있는 구성 파일이 생성됩니다. IPI 기본값을 변경해야 하거나 다중 테넌시와 같은 다른 용도로 환경에 여러 동일한 클러스터를 배포하려는 경우 매우 유용합니다. OpenShift에 대한 사용자 지정 설치 구성을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.openshift.com/container-platform/4.7/installing/installing_openstack/installing-openstack-installer-custom.html["Red Hat OpenShift 사용자 지정을 통해 OpenStack에 클러스터 설치"^].
-
-link:rh-os-n_overview_netapp.html["다음은 NetApp 스토리지 개요입니다."]

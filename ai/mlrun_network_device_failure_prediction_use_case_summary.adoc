@@ -20,5 +20,3 @@ summary:
 * 발권 시스템과 통합
 * 네트워크 장애를 방지하기 위한 사전 예방 조치 이과지오(Iguazio)의 구현 결과, 60%의 장애를 사전에 예방했습니다.
 
-
-link:mlrun_setup_overview.html["다음: 설정 개요"]

@@ -23,5 +23,3 @@ NOTE: 이 섹션에서는 타사 로드 밸런서 사용 또는 맞춤형 컨테
 * link:rh-os-n_load_balancers.html["로드 밸런서 옵션 탐색"]
 * link:rh-os-n_private_registry.html["개인 이미지 레지스트리 구성"]
 
-
-link:rh-os-n_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]

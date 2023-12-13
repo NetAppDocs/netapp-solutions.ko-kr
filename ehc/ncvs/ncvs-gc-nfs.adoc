@@ -13,8 +13,6 @@ summary: 'NFS는 RFC(Request for Comments)에 정의된 공개 IETF 표준인 �
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-basics-of-nas-protocols.html["이전: NAS 프로토콜의 기본 사항_개요"]
-
 [role="lead"]
 NFS는 RFC(Request for Comments)에 정의된 공개 IETF 표준인 분산 파일 시스템 프로토콜로, 누구나 프로토콜을 구현할 수 있도록 합니다.
 
@@ -469,4 +467,3 @@ nfsidmap-l 출력에서는 디스플레이에 사용자 pcuser가 표시되지�
   gid:root@CVSDEMO.LOCAL
   uid:root@CVSDEMO.LOCAL
 ....
-link:ncvs-gc-smb.html["다음: SMB."]

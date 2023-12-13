@@ -130,5 +130,3 @@ NOTE: 이 멀티 OS 환경은 Anthos-on-bare-metal 솔루션의 지원되는 OS 
 
 
 NOTE: 이 문서의 비디오 및 데모 섹션에서 Anthos의 Bare Metal 배포에 대한 데모 비디오를 볼 수 있습니다.
-
-link:a-w-n_overview_netapp.html["다음은 NetApp 스토리지 시스템 개요입니다."]

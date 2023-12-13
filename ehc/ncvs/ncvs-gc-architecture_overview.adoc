@@ -13,8 +13,6 @@ summary: 클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 �
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-security-considerations-and-attack-surfaces.html["이전: 보안 고려 사항 및 공격 표면"]
-
 [role="lead"]
 클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 방식을 이해하는 것입니다. 이 섹션에서는 Google의 Cloud Volumes Service 아키텍처의 다양한 측면을 다루어 데이터 보안 방식에 대한 잠재적 우려를 완화하고 가장 안전한 배포를 위해 추가 구성 단계가 필요할 수 있는 영역을 설명합니다.
 
@@ -33,5 +31,3 @@ Cloud Volumes Service의 제어 플레인은 Cloud Volumes Service 관리자와 
 Cloud Volumes Service의 데이터 계층에는 실제 데이터 볼륨과 전체 Cloud Volumes Service 구성(액세스 제어, Kerberos 인증 등)이 포함됩니다. 데이터 플레인은 전적으로 최종 사용자와 Cloud Volumes Service 플랫폼 소비자를 제어하는 것입니다.
 
 각 평면의 보안 및 관리 방법은 서로 다릅니다. 다음 섹션에서는 Cloud Volumes Service 아키텍처 개요부터 이러한 차이점에 대해 설명합니다.
-
-link:ncvs-gc-cloud-volumes-service-architecture.html["다음: Cloud Volumes Service 아키텍처."]

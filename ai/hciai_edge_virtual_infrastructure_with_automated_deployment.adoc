@@ -54,5 +54,3 @@ NDE에 대한 자세한 단계는 본 문서에서 다루지 않습니다.
 
 . NDE가 완료되면 vCenter에 로그인하여 ONTAP Select 및 애플리케이션에서 사용할 NFS 네트워크에 대한 분산 포트 그룹 NetApp HCI VDS 01-NFS_Network를 생성합니다.
 
-
-link:hciai_edge_netapp_h615cmanual_deployment.html["다음: NetApp H615c 구성(수동 구축)"]

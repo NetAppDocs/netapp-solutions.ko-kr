@@ -44,5 +44,3 @@ image:cvo_cloud_cost_comparision.png["오류: 그래픽 이미지가 없습니�
 이 문서의 그림에서는 CVO를 퍼블릭 클라우드의 타겟 스토리지 인스턴스로 보여 주지만, 이 솔루션은 AWS용 FSx ONTAP 스토리지 엔진의 새로운 릴리즈에서 완벽하게 검증되었습니다.
 
 솔루션 및 사용 사례를 직접 테스트하기 위해 https://labondemand.netapp.com/lod3/labtest/request?nodeid=68761&destination=lod3/testlabs[TL_AWS_004 HCoD:AWS-NW, SnapCenter(OnPrem)^]에서 NetApp Lab-On-Demand SL10680을 요청할 수 있습니다.
-
-link:hybrid_dbops_snapcenter_architecture.html["다음은 솔루션 아키텍처입니다."]

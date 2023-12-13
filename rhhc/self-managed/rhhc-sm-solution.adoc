@@ -27,3 +27,6 @@ image:rhhc-self-managed-aws.png[""]
 
 온프레미스 및 Google Cloud
 image:rhhc-self-managed-gcp.png[""]
+
+온프레미스 및 Azure Cloud
+image:rhhc-self-managed-azure.png[""]

@@ -33,5 +33,3 @@ image:redhat_openshift_image99.jpg["Astra Control Center에서 애플리케이�
 image:redhat_openshift_image100.jpg["Astra Control Center 애플리케이션을 사용할 수 있습니다"]
 
 
-
-link:rh-os-n_astra_protect.html["다음: 응용 프로그램을 보호합니다."]

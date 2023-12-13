@@ -19,4 +19,3 @@ NetApp VDS는 필요한 코드베이스에 따라 사용 가능한 설정 앱을
 을 참조하십시오 https://www.youtube.com/watch?v=Gp2DzWBc0Go&["이 비디오"^] 를 참조하십시오.
 
 video::Gp2DzWBc0Go[youtube]
-link:hcvdivds_hybrid_cloud_environment.html["다음: 하이브리드 클라우드 환경"]

@@ -13,8 +13,6 @@ summary: 이 섹션에서는 NetApp XCP를 사용하여 데이터를 마이그�
 :imagesdir: ./../media/
 
 
-link:xcp-bp-cifs-data-migration-with-acls-from-a-source-storage-box-to-ontap.html["이전: 소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션"]
-
 [role="lead"]
 * IMT에서 지원하는 XCP 클라이언트 운영 체제를 사용합니다. IMT 지원 클라이언트는 NetApp의 검증을 받았습니다.
 * Linux 운영 체제에서 루트 사용자로 xCP를 실행하여 마이그레이션을 수행합니다. sudo 사용자로 xCP 명령을 실행할 수 있지만 xCP에서는 지원되지 않습니다.
@@ -24,5 +22,3 @@ link:xcp-bp-cifs-data-migration-with-acls-from-a-source-storage-box-to-ontap.htm
 * 스냅샷 기반 마이그레이션을 수행하는 경우에는 컷오버가 완료될 때까지 스냅샷 기반 마이그레이션을 계속하는 것이 좋습니다.
 * 천만 개 이상의 파일이 있고 50% 이상의 증분 데이터 변경이 있는 경우 설치 및 관리 가이드에서 권장하는 최소 구성보다 더 많은 코어 수와 메모리를 사용하는 것이 좋습니다.
 
-
-link:xcp-bp-troubleshooting.html["다음: 문제 해결."]

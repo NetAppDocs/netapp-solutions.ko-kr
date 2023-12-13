@@ -13,8 +13,6 @@ summary: 이 섹션에서는 테스트된 구성, 네트워크 인프라, SR670 
 :imagesdir: ./../media/
 
 
-link:a400-thinksystem-test-results.html["이전: 테스트 결과."]
-
 [role="lead"]
 이 섹션에서는 테스트를 거친 구성, 네트워크 인프라, SR670 V2 서버 및 NetApp 스토리지 프로비저닝 세부 정보에 대해 설명합니다.
 
@@ -71,5 +69,3 @@ image:a400-thinksystem-image7.png["이 그래픽은 컴퓨팅 계층, Lenovo Thi
 |===
 
 NOTE: /a400-100g 폴더에는 ResNet 검증에 사용된 데이터 세트가 들어 있습니다.
-
-link:a400-thinksystem-test-procedure-and-detailed-results.html["다음: 테스트 절차 및 자세한 결과"]

@@ -34,5 +34,3 @@ summary: 서비스 공급자와 엔터프라이즈 가상 데스크톱 관리자
 * 원격 데스크톱 및 애플리케이션 요구를 지원하는 NetApp 파트너
 * 원격 데스크톱 및 애플리케이션 요구를 해결하려는 기존 NetApp HCI 고객
 
-
-link:hcvdivds_netapp_virtual_desktop_service_overview.html["다음으로, NetApp 가상 데스크탑 서비스 개요를 살펴보겠습니다"]

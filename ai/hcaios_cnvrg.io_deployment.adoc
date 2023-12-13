@@ -143,5 +143,3 @@ image:hcaios_image13.png["오류: 그래픽 이미지가 없습니다"]
 image:hcaios_image14.png["오류: 그래픽 이미지가 없습니다"]
 
 image:hcaios_image15.png["오류: 그래픽 이미지가 없습니다"]
-
-link:hcaios_conclusion.html["다음: 결론"]

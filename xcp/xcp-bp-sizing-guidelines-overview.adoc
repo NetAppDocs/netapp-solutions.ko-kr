@@ -13,8 +13,6 @@ summary: 이 섹션에서는 NFS용 100만 개의 다른 파일 크기로 XCP �
 :imagesdir: ./../media/
 
 
-link:xcp-bp-deployment-steps.html["이전: 배포 단계."]
-
 [role="lead"]
 이 섹션에서는 NFS용 100만 개의 다른 파일 크기로 XCP 복사 및 XCP 동기화 작업을 수행하는 대략적인 시간을 제공합니다.
 
@@ -63,5 +61,3 @@ image:xcp-bp_image13.png["오류: 그래픽 이미지가 없습니다"]
 xCP 1.7의 성능은 평균적으로 xCP 1.6.3에서 'xCP 동기화' 차등 증분 업데이트의 XCP 1.6.3과 비슷했습니다. 즉, 100만 개 파일의 1MB 크기로 이름 바꾸기, 추가, 링크 및 삭제 작업을 수행할 수 있었습니다.
 
 이러한 성능 검증을 기반으로 사내 및 클라우드에서 데이터 마이그레이션에 XCP 1.7을 사용하는 것이 좋습니다.
-
-link:xcp-bp-performance-tuning.html["다음: 성능 조정."]

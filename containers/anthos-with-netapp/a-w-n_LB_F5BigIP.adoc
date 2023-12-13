@@ -195,4 +195,3 @@ image:big-IP_config_12.PNG["BIG-IP 구성, 12부"]
     # (Optional) Run two LB VMs to achieve high availability (default: false)
     #   enableHA: false
 ----
-link:a-w-n_LB_MetalLB.html["다음: MetalLB 로드 밸런서 설치"]

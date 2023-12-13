@@ -17,5 +17,3 @@ summary:
 하루에 한 번 대화 기록을 CSV 파일에 덤프하면 BlueXP 복사본 및 동기화 를 활용하여 로그 파일을 로컬 스토리지에 다운로드할 수 있습니다. 다음 그림에서는 Jarvis가 온프레미스 및 퍼블릭 클라우드에 구축하면서 BlueXP Copy 및 Sync를 사용하여 Nemo 교육을 위한 대화 기록을 전송하는 아키텍처를 보여 줍니다. Nemo 교육에 대한 자세한 내용은 섹션을 참조하십시오 link:cainvidia_expand_intent_models_using_nemo_training.html["Nemo Training을 사용하여 Intent 모델을 확장합니다"].
 
 image:cainvidia_image5.png["오류: 그래픽 이미지가 없습니다"]
-
-link:cainvidia_expand_intent_models_using_nemo_training.html["다음: Nemo Training을 사용하여 Intent Models를 확장합니다"]

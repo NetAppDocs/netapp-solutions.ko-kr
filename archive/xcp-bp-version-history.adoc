@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: ai/osrunai_optimal_cluster_and_gpu_utilization_with_run_ai.html 
+permalink: xcp/xcp-bp-version-history.html 
 keywords:  
 summary:  
 ---
-= 실행 시 클러스터 및 GPU 활용률 최적화: AI
+= 버전 기록
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

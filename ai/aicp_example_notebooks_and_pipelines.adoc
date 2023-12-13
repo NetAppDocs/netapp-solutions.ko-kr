@@ -21,5 +21,3 @@ summary: Jupyter Notebooks 및 Kubeflow 파이프라인 예제
 
 
 을 참조하십시오 https://github.com/NetApp/netapp-data-science-toolkit/tree/main/Kubernetes/Examples/Kubeflow["Kubeflow 예"] Kubeflow 기반 툴킷 사용에 대한 자세한 내용은 NetApp Data Science Toolkit GitHub 리포지토리 를 참조하십시오.
-
-link:aicp_apache_airflow_deployment.html["다음: Apache Airflow Deployment"]

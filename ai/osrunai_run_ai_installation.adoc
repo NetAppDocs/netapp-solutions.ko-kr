@@ -42,5 +42,3 @@ kubectl apply -f runai-operator-<clustername>.yaml
 
 
 
-
-link:osrunai_run_ai_dashboards_and_views.html["다음: AI 대시보드 및 보기를 실행합니다"]

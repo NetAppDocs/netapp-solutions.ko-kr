@@ -46,5 +46,3 @@ entries:
     url: "/xcp/xcp-bp-troubleshooting.html"
   - title: 추가 정보를 찾을 수 있는 위치
     url: "/xcp/xcp-bp-where-to-find-additional-information.html"
-  - title: 버전 기록
-    url: "/xcp/xcp-bp-version-history.html"

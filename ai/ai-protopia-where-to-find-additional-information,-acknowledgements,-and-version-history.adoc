@@ -4,7 +4,7 @@ permalink: ai/ai-protopia-where-to-find-additional-information,-acknowledgements
 keywords:  
 summary:  
 ---
-= 추가 정보, 확인 및 버전 기록을 찾을 수 있는 위치
+= 추가 정보 및 승인 정보를 찾을 수 있는 위치
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -12,8 +12,6 @@ summary:
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-link:ai-protopia-conclusion.html["이전: 결론."]
 
 [role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
@@ -64,14 +62,3 @@ https://github.com/zisianw/FaceBoxes.PyTorch["https://github.com/zisianw/FaceBox
 * NetApp 기술 마케팅 엔지니어 Sufian Ahmad
 * Hadi Esmaeilzadeh, 최고 기술 책임자 및 Protopia AI 교수
 
-
-
-
-== 버전 기록
-
-|===
-| 버전 | 날짜 | 문서 버전 기록 
-
-
-| 버전 1.0 | 2022년 5월 | 최초 릴리스. 
-|===

@@ -37,5 +37,3 @@ NVIDIA DeepOps를 사용하여 Kubernetes 클러스터를 구축하고 구성하
 . 의 지침에 따라 NVIDIA DeepOps를 다운로드합니다 https://github.com/NVIDIA/deepops/tree/master/docs["시작 페이지"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
 . 의 지침에 따라 클러스터에 Kubernetes를 배포합니다 https://github.com/NVIDIA/deepops/tree/master/docs/k8s-cluster["Kubernetes 배포 가이드 페이지"^] NVIDIA DeepOps GitHub 사이트에서 다운로드할 수 있습니다.
 
-
-link:aicp_netapp_trident_deployment_and_configuration_overview.html["다음으로, NetApp Trident 구축 및 구성 개요 를 참조하십시오."]

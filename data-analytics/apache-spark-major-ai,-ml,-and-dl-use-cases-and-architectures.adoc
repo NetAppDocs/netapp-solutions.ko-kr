@@ -13,8 +13,6 @@ summary: 이 페이지에서는 주요 AI, ML 및 DL 사용 사례 및 아키텍
 :imagesdir: ./../media/
 
 
-link:apache-spark-use-cases-summary.html["이전: 사용 사례 요약"]
-
 [role="lead"]
 주요 AI, ML 및 DL 사용 사례 및 방법론을 다음 절로 나눌 수 있습니다.
 
@@ -98,5 +96,3 @@ DCN 외에도 CTR 예측을 위해 기타 인기 있는 딥 러닝 모델도 테
 이러한 NetApp Spark 솔루션 검증을 위해 E5760, E5724, AFF-A800의 3가지 스토리지 컨트롤러를 사용했습니다. E-Series 스토리지 컨트롤러는 12Gbps SAS로 연결된 5개의 데이터 노드에 연결되었습니다. AFF HA 쌍 스토리지 컨트롤러는 10GbE 연결을 통해 Hadoop 작업자 노드에 내보낸 NFS 볼륨을 제공합니다. Hadoop 클러스터 멤버는 E-Series, AFF 및 StorageGRID 하둡 솔루션에서 10GbE 연결을 통해 연결했습니다.
 
 image:apache-spark-image10.png["검증에 사용된 아키텍처"]
-
-link:apache-spark-testing-results.html["다음: 테스트 결과."]

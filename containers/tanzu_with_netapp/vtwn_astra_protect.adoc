@@ -95,5 +95,3 @@ image:vtwn_image23.jpg["Astra Control Center 복구"]
 image:vtwn_image24.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
 
 
-
-link:vtwn_videos_and_demos.html["다음: NetApp의 비디오 및 데모: VMware Tanzu"]

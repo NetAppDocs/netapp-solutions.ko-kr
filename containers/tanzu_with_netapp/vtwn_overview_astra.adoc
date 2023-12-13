@@ -240,5 +240,3 @@ image:redhat_openshift_image90.jpg["Astra Control Center에서 라이센스를 �
 NOTE: NetApp Astra Control Center의 설치 또는 구성 관련 문제가 발생할 경우 알려진 문제에 대한 기술 자료를 이용할 수 있습니다 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra["여기"^].
 
 
-
-link:vtwn_astra_register.html["다음: Tanzu Kubernetes 클러스터를 등록하십시오."]

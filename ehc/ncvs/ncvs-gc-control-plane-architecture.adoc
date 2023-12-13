@@ -13,8 +13,6 @@ summary: Cloud Volumes Service에 대한 모든 관리 작업은 API를 통해 �
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-cloud-volumes-service-architecture.html["이전: Cloud Volumes Service 아키텍처."]
-
 [role="lead"]
 Cloud Volumes Service에 대한 모든 관리 작업은 API를 통해 수행됩니다. GCP 클라우드 콘솔에 통합된 Cloud Volumes Service 관리도 Cloud Volumes Service API를 사용합니다.
 
@@ -72,5 +70,3 @@ API에 대한 인증은 JWT 베어러 토큰을 사용하여 수행됩니다 (ht
 == 로깅 감사
 
 현재 사용자가 액세스할 수 있는 컨트롤 플레인 감사 로그를 사용할 수 없습니다.
-
-link:ncvs-gc-data-plane-architecture.html["다음: 데이터 플레인 아키텍처."]

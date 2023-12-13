@@ -13,8 +13,6 @@ summary: 이 섹션에서는 XCP 작업의 성능을 향상시키는 데 도움�
 :imagesdir: ./../media/
 
 
-link:xcp-bp-sizing-guidelines-overview.html["이전: 사이징 지침"]
-
 [role="lead"]
 이 섹션에서는 XCP 작업의 성능을 향상시키는 데 도움이 되는 튜닝 매개 변수 몇 가지를 제공합니다.
 
@@ -38,5 +36,3 @@ link:xcp-bp-sizing-guidelines-overview.html["이전: 사이징 지침"]
 | 성능 설명 | 표준 성능: TB당 1,000 IOPS(16K I/O) 및 16MBps/TB | 프리미엄 성능 – TB당 4,000 IOPS(16k I/O) 및 TB당 64MBps | 탁월한 성능: TB당 8,000 IOPS(16k I/O) 및 128MBps/TB 
 |===
 처리량 및 워크로드 유형에 따라 적합한 서비스 수준을 선택해야 합니다. 대부분의 고객은 프리미엄 레벨에서 시작하고 워크로드에 따라 서비스 수준을 변경합니다.
-
-link:xcp-bp-customer-scenarios-overview.html["다음은 고객 시나리오입니다."]

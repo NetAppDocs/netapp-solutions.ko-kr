@@ -36,5 +36,3 @@ image::redhat_openshift_image84.jpg[노드를 관찰합니다]
 image::redhat_openshift_image85.jpg[클러스터 관찰]
 
 
-
-link:rh-os-n_use_case_advanced_cluster_management_features_create_resources.html["다음: 기능 - 리소스 생성"]

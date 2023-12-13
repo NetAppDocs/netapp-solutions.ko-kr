@@ -13,9 +13,9 @@ summary: 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리
 :imagesdir: ./../media/
 
 
-link:stgr-splunkss-introduction.html["이전: 소개."]
-
 [role="lead"]
+이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.
+
 * * 성능. * Splunk SmartStore와 NetApp StorageGRID를 함께 사용하면 오브젝트 스토리지를 사용하여 핫 버킷과 웜 버킷 간에 데이터를 빠르게 마이그레이션할 수 있습니다. StorageGRID은 대규모 오브젝트 워크로드를 위한 빠른 성능을 제공하여 마이그레이션 프로세스를 강력하게 지원합니다.
 * * 멀티 사이트 지원 * StorageGRID 분산 아키텍처를 사용하면 Splunk SmartStore에서 단일 글로벌 네임스페이스를 통해 단일 및 여러 사이트에 걸쳐 구축을 확장할 수 있습니다. 단일 글로벌 네임스페이스를 통해 데이터가 어디에 있든 모든 사이트에서 데이터에 액세스할 수 있습니다.
 * * 확장성 향상 * 컴퓨팅 리소스와 별개로 스토리지 리소스를 확장하여 Splunk 환경의 변화하는 요구 사항과 수요를 충족함으로써 TCO를 개선합니다.
@@ -24,5 +24,3 @@ link:stgr-splunkss-introduction.html["이전: 소개."]
 
 
 로컬(핫)과 원격(웜) 스토리지 간의 버킷 복사본 전송을 처리하는 인덱서의 구성 요소인 SmartStore 캐시를 사용하여 성능을 높입니다. 이 솔루션을 위한 Splunk 사이징은 을 기반으로 합니다 https://docs.splunk.com/Documentation/Splunk/8.0.5/Capacity/Summaryofperformancerecommendations["Splunk에서 제공하는 지침"^]. 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리소스를 추가하여 사용자 수나 단일 사이트 및 다중 사이트 구축 시 수집 속도 측면에서 증가하는 수요를 충족할 수 있습니다.
-
-link:stgr-splunkss-intelligent-tiering-and-cost-savings.html["다음 단계: 지능형 계층화 및 비용 절감."]

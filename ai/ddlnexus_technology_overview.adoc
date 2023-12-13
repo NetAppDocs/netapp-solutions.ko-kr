@@ -13,8 +13,6 @@ summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우�
 :imagesdir: ./../media/
 
 
-link:ddlnexus_introduction.html["이전: 소개."]
-
 
 
 == Domino 데이터 랩
@@ -108,5 +106,3 @@ Kubernetes는 Google에서 원래 설계한 개방형 소스, 분산형 컨테�
 == Amazon Elastic Kubernetes Service(EKS)
 
 Amazon EKS(Amazon Elastic Kubernetes Service)는 AWS 클라우드의 관리형 Kubernetes 서비스입니다. Amazon EKS는 컨테이너 예약, 애플리케이션 가용성 관리, 클러스터 데이터 저장 및 기타 주요 작업을 담당하는 Kubernetes 컨트롤 플레인 노드의 가용성과 확장성을 자동으로 관리합니다. Amazon EKS를 사용하면 AWS 인프라의 모든 성능, 확장성, 안정성 및 가용성과 AWS 네트워킹 및 보안 서비스와의 통합을 활용할 수 있습니다.
-
-link:ddlnexus_architecture.html["다음: 아키텍처."]

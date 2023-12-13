@@ -13,9 +13,7 @@ summary: 이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이�
 :imagesdir: ./../media/
 
 
-link:ai-protopia-inferencing-accuracy-comparison.html["이전: 추론 정확도 비교."]
-
 [role="lead"]
-이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이미지에 5회 적용하고 난독 처리 단계가 매번 완료되는 데 걸리는 시간을 측정했습니다. 난독 처리를 적용하기 위해 단일 NVIDIA V100 GPU에서 실행되는 PyTorch를 사용했고 실행 간에 GPU 캐시를 지웠습니다. 난독화 단계는 5회 실행에서 각각 5.47ms, 5.27ms, 4.54ms, 5.24ms, 4.84ms를 완료하는 데 각각 걸렸습니다. 평균 속도는 5.072ms였습니다.
+이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이미지에 5회 적용하고 난독 처리 단계가 매번 완료되는 데 걸리는 시간을 측정했습니다.
 
-link:ai-protopia-conclusion.html["다음: 결론."]
+난독 처리를 적용하기 위해 단일 NVIDIA V100 GPU에서 실행되는 PyTorch를 사용했고 실행 간에 GPU 캐시를 지웠습니다. 난독화 단계는 5회 실행에서 각각 5.47ms, 5.27ms, 4.54ms, 5.24ms, 4.84ms를 완료하는 데 각각 걸렸습니다. 평균 속도는 5.072ms였습니다.

@@ -22,5 +22,3 @@ image::redhat_openshift_image44.jpg[OpenShift 가상화]
 NetApp ONTAP에서 지원하는 ACstra Trident의 도움을 받아 실시간 VM 마이그레이션, VM 디스크 클로닝, VM 스냅샷 등의 특정 기능도 OpenShift Virtualization에서 지원됩니다. 이러한 각 워크플로의 예는 이 문서의 뒷부분에서 해당 섹션에서 설명합니다.
 
 Red Hat OpenShift Virtualization에 대한 자세한 내용은 설명서를 참조하십시오 https://www.openshift.com/learn/topics/virtualization/["여기"].
-
-link:rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html["다음: 배포 전제 조건."]

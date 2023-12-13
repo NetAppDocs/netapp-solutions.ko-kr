@@ -47,7 +47,7 @@ image:rhhc-on-premises.png[""]
 
 
 
-== 시나리오 2: ACC를 사용해 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션:
+== 시나리오 2: ACC를 사용하여 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션
 
 온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지** AWS 클라우드: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**
 
@@ -63,7 +63,7 @@ image:rhhc-self-managed-aws.png[""]
 
 
 
-== 시나리오 3: 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션:
+== 시나리오 3: 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션
 
 ** 온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**** AWS Cloud: 공급자 관리 OpenShift 클러스터(Rosa) 및 공급자 관리 스토리지(FSxN)**
 
@@ -79,7 +79,7 @@ image:rhhc-rosa-with-fsxn.png[""]
 
 
 
-=== 시나리오 4: ACC를 사용하여 온프레미스 환경에서 GCP 환경으로의 데이터 보호 및 마이그레이션:
+=== 시나리오 4: ACC를 사용하여 온프레미스 환경에서 GCP 환경으로 데이터 보호 및 마이그레이션
 
 ** 온프레미스: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
 ** Google Cloud: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
@@ -89,5 +89,20 @@ image:rhhc-rosa-with-fsxn.png[""]
 
 
 image:rhhc-self-managed-gcp.png[""]
+
+MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].
+
+
+
+=== 시나리오 5: ACC를 사용하여 온프레미스 환경에서 Azure 환경으로 데이터 보호 및 마이그레이션
+
+** 온프레미스: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
+** Azure Cloud: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
+
+* ACC를 사용하여 데이터 보호를 위한 백업 및 복원을 수행합니다.
+* ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
+
+
+image:rhhc-self-managed-azure.png[""]
 
 MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].

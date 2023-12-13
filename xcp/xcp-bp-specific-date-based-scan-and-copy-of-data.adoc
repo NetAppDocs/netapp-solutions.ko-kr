@@ -13,8 +13,6 @@ summary: 이 솔루션은 특정 날짜를 기준으로 데이터를 복사해�
 :imagesdir: ./../media/
 
 
-link:xcp-bp-duplicate-files.html["이전: 파일을 복제합니다."]
-
 [role="lead"]
 이 솔루션은 특정 날짜를 기준으로 데이터를 복사해야 하는 고객을 기반으로 합니다. 다음 세부 정보를 확인합니다.
 
@@ -78,4 +76,3 @@ c:\XCP>dir Z:\dest_karthik\karthik_test
  
 c:\XCP>
 ....
-link:xcp-bp-creating-a-csv-file-from-smb-cifs-share.html["다음: SMB/CIFS 공유에서 CSV 파일 생성"]

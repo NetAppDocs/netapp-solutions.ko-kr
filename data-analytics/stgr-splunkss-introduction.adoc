@@ -70,5 +70,3 @@ Splunk SmartStore는 다음과 같이 조직에 중요한 가치를 제공합니
 * 스토리지와 컴퓨팅을 분리하여 원활한 확장
 * 복원력을 갖춘 클라우드 네이티브 스토리지를 활용하여 비즈니스 연속성을 단순화합니다
 
-
-link:stgr-splunkss-benefits-of-this-solution.html["다음: 이 솔루션의 이점"]

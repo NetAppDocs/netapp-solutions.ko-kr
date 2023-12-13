@@ -228,5 +228,3 @@ $ kubectl get pods
 No resources found.
 ....
 
-
-link:aicp_performance_testing.html["다음: 성능 테스트."]

@@ -50,5 +50,3 @@ $ runai submit d-2-gg -i gcr.io/run-ai-demo/quickstart -g 2 -p team-d$ runai sub
 | 팀 d | 8월 8일 | 없음 
 |===
 섹션을 참조하십시오 link:osrunai_basic_resource_allocation_fairness.html["기본 자원 할당 공정성"] 진행 중인 테스트 시나리오에 대한 논의.
-
-link:osrunai_testing_details_for_section_4.10.html["다음: 섹션 4.10의 테스트 세부 정보"]

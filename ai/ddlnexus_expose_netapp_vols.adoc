@@ -13,8 +13,6 @@ summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우�
 :imagesdir: ./../media/
 
 
-link:ddlnexus_initial_setup.html["이전: 초기 설정."]
-
 [role="lead"]
 이 섹션에서는 기존 NetApp ONTAP NFS 볼륨을 Domino MLOps 플랫폼에 노출하기 위해 수행해야 하는 작업에 대해 설명합니다. 이와 같은 단계는 온프레미스와 AWS 모두에 적용됩니다.
 
@@ -73,5 +71,3 @@ Astra Trident에 의해 볼륨을 프로비저닝한 경우 해당 볼륨에 해
 === Domino에서 외부 데이터 볼륨을 등록합니다
 
 그런 다음 Domino에 외부 데이터 볼륨을 등록해야 합니다. 외부 데이터 볼륨을 등록하려면 을 참조하십시오 link:https://docs.dominodatalab.com/en/latest/admin_guide/9c3564/register-external-data-volumes/["지침"] Domino 관리 가이드 볼륨을 등록할 때 'Volume Type(볼륨 유형)' 드롭다운 메뉴에서 "Generic(일반)"을 선택해야 합니다. "Generic(일반)"을 선택하면 'Available Volumes(사용 가능한 볼륨)' 목록에 PVC가 표시됩니다.
-
-link:ddlnexus_access_data_hybrid.html["다음: 여러 환경에서 동일한 데이터에 액세스합니다."]

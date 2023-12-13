@@ -258,5 +258,3 @@ imagePullSecrets:
 
 
 
-
-link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]

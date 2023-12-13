@@ -13,8 +13,6 @@ summary: NetApp NFS에 스토리지 계층이 마운트된 Kafka 클러스터가
 :imagesdir: ./../media/
 
 
-link:kafka-nfs-performance-overview-and-validation-in-aws.html["이전:AWS - Cloud Volume ONTAP에서 성능 개요 및 검증"]
-
 [role="lead"]
 NetApp NFS에 스토리지 계층이 마운트된 Kafka 클러스터가 NetApp ONTAP용 AWS FSx의 성능을 벤치마킹했습니다. 벤치마킹 예는 다음 섹션에 설명되어 있습니다.
 
@@ -265,5 +263,3 @@ image:aws-fsxn-2gb-4gb-scale.png["이 이미지는 2GB/sec 및 4GB/sec의 스케
 아래 차트는 NetApp ONTAP용 EC2 인스턴스와 FSx 간의 성능을 보여줍니다(Kafka 복제 계수: 3).
 
 image:aws-fsxn-ec2-fsxn-comparition.png["이 이미지는 RF3에서 EC2와 FSxN의 성능을 비교한 것입니다."]
-
-link:kafka-nfs-performance-overview-and-validation-with-aff-on-premises.html["다음: AFF 온-프레미스를 사용한 성능 개요 및 검증."]

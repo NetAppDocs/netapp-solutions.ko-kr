@@ -13,7 +13,8 @@ summary: 이 페이지에서는 NetApp StorageGRID, Splunk Enterprise, Splunk Sm
 :imagesdir: ./../media/
 
 
-link:stgr-splunkss-intelligent-tiering-and-cost-savings.html["이전: 지능형 계층화 및 비용 절감."]
+[role="lead"]
+이 페이지에서는 NetApp StorageGRID, Splunk Enterprise, Splunk SmartStore를 비롯하여 이 솔루션을 완료하는 데 사용되는 구성요소를 설명합니다.
 
 
 
@@ -46,5 +47,3 @@ SmartStore는 S3 프로토콜 및 캐시 관리자를 사용하여 원격 스토
 SmartStore를 사용하면 대부분의 데이터가 원격 스토리지 계층에 상주하므로 인덱서 스토리지 공간을 최소한으로 줄이고 I/O에 최적화된 컴퓨팅 리소스를 선택할 수 있습니다. 인덱서를 사용하면 로컬 캐시가 유지되므로 요청되고 예측된 결과를 반환하는 데 필요한 최소한의 데이터가 표시됩니다. 로컬 캐시에는 핫 버킷, 활성 또는 최근 검색에 사용되는 웜 버킷의 복사본 및 버킷 메타데이터가 포함됩니다.
 
 고객은 Splunk SmartStore와 StorageGRID를 함께 사용하여 고성능 및 비용 효율적인 원격 스토리지를 통해 환경을 증분 확장하는 동시에 전체 솔루션에 높은 수준의 탄력성을 제공할 수 있습니다. 따라서 고객은 더 많은 인덱서와 데이터 보존 변경, 운영 중단 없이 수집 속도를 향상하든 관계없이 언제든지 특정 시간에 모든 구성요소(핫 스토리지 및/또는 웜 S3 스토리지)를 추가할 수 있습니다.
-
-link:stgr-splunkss-flexible-storagegrid-features-for-splunk-smartstore.html["그 다음: Splunk SmartStore를 위한 유연한 StorageGRID 기능"]

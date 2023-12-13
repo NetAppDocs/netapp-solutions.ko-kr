@@ -89,5 +89,3 @@ image:redhat_openshift_image28.png["오류: 그래픽 이미지가 없습니다"
 image:redhat_openshift_image29.png["오류: 그래픽 이미지가 없습니다"]
 
 
-
-link:rh-os-n_videos_and_demos.html["다음: 비디오 및 데모."]

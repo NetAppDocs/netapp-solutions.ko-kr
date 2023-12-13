@@ -13,8 +13,6 @@ summary: 데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서
 :imagesdir: ./../media/
 
 
-link:cdm-fod-solution-technology.html["이전: 솔루션 기술."]
-
 [role="lead"]
 데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서 액세스할 수 있습니다.
 
@@ -851,5 +849,3 @@ INFO:sagemaker:Deleting endpoint with name: blazingtext-2023-02-16-20-41-33
 -100
 ....
 
-
-link:cdm-fod-conclusion.html["다음: 결론."]

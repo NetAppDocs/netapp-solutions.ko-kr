@@ -13,8 +13,6 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 초기 설정
 :imagesdir: ./../media/
 
 
-link:nvaie_architecture.html["이전: 아키텍처."]
-
 [role="lead"]
 이 섹션에서는 NetApp 및 VMware에서 NVIDIA AI Enterprise를 활용하기 위해 수행해야 하는 초기 설정 작업에 대해 설명합니다.
 
@@ -29,5 +27,3 @@ link:nvaie_architecture.html["이전: 아키텍처."]
 == NVIDIA AI Enterprise Host Software를 설치합니다
 
 NVIDIA AI Entraprise 호스트 소프트웨어를 설치하려면 의 섹션 1-4에 설명된 지침을 따르십시오 link:https://docs.nvidia.com/ai-enterprise/latest/quick-start-guide/index.html["NVIDIA AI Enterprise 빠른 시작 가이드 를 참조하십시오"].
-
-link:nvaie_ngc.html["다음: NVIDIA NGC 소프트웨어를 활용합니다."]

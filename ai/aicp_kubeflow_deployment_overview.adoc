@@ -236,5 +236,3 @@ mysql-pv-claim   Bound    pvc-b2429afd-d028-11e9-9b9d-00505681a82d   20Gi       
 
 
 image:aicp_image8.png["오류: 그래픽 이미지가 없습니다"]
-
-link:aicp_example_kubeflow_operations_and_tasks_overview.html["다음: Kubeflow 작업 및 작업 예"]

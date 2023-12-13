@@ -13,8 +13,6 @@ summary:
 :imagesdir: ./../media/
 
 
-link:aks-anf_where_to_find_additional_information.html["Previous(이전): 추가 정보를 찾을 위치."]
-
 |===
 | 버전 | 날짜 | 문서 버전 기록 
 

@@ -20,5 +20,3 @@ summary:
 * https://www.yelp.com/fusion["Yelp Fusion API를 참조하십시오"^]: 지정된 위치에서 가장 가까운 매장 정보를 반환합니다.
 * https://github.com/timotheus/ebaysdk-python["eBay Python SDK"^]: 지정된 항목의 가격을 반환합니다.
 
-
-link:cainvidia_netapp_retail_assistant_demonstration.html["다음: NetApp Retail Assistant 데모"]

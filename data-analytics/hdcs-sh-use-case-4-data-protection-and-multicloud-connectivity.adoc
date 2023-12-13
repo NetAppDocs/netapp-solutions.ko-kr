@@ -13,8 +13,6 @@ summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-use-case-3-enabling-devtest-on-existing-hadoop-data.html["이전: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest 설정"]
-
 [role="lead"]
 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 멀티 클라우드 연결을 제공하는 클라우드 서비스 파트너와 관련이 있습니다.
 
@@ -49,5 +47,3 @@ image:hdcs-sh-image12.png["오류: 그래픽 이미지가 없습니다"]
 따라서 사내 스토리지와 NPS 스토리지 모두 ONTAP 소프트웨어를 실행하므로 SnapMirror는 사내 클러스터에 NPS 데이터를 미러링하여 사내 및 여러 클라우드에 하이브리드 클라우드 분석을 제공할 수 있습니다.
 
 최적의 성능을 위해 일반적으로 여러 네트워크 인터페이스 및 직접 연결/빠른 경로를 사용하여 클라우드 인스턴스에서 데이터에 액세스할 것을 권장합니다.
-
-link:hdcs-sh-use-case-5-accelerate-analytic-workloads.html["다음: 사용 사례 5 - 분석 워크로드 가속화"]

@@ -5,12 +5,13 @@ keywords: OpenShift, deploy, baremetal, private cloud, virtual
 summary: Red Hat OpenShift Container Platform은 온프레미스 인프라와 하이브리드 클라우드 인프라 전반에서 개발 및 IT 운영을 단일 플랫폼에서 통합하여 애플리케이션을 일관되게 개발, 배포 및 관리합니다. Red Hat OpenShift는 컨테이너 기반 워크로드를 위해 설계된 선도적인 엔터프라이즈 Linux 배포판인 Kubernetes 및 Red Hat Enterprise Linux CoreOS를 비롯한 오픈 소스 혁신 및 업계 표준을 기반으로 합니다. 
 ---
 = OpenShift 개요
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
-
-
-
-== OpenShift 개요
 
 [role="lead"]
 Red Hat OpenShift Container Platform은 온프레미스 인프라와 하이브리드 클라우드 인프라 전반에서 개발 및 IT 운영을 단일 플랫폼에서 통합하여 애플리케이션을 일관되게 개발, 배포 및 관리합니다. Red Hat OpenShift는 컨테이너 기반 워크로드를 위해 설계된 세계 최고의 엔터프라이즈 Linux 배포판인 Kubernetes 및 Red Hat Enterprise Linux CoreOS를 비롯한 오픈 소스 혁신과 업계 표준을 기반으로 구축되었습니다. OpenShift는 CNCF(Cloud Native Computing Foundation) 인증 Kubernetes 프로그램의 일부로, 컨테이너 워크로드의 이동성과 상호 운용성을 제공합니다.
@@ -72,5 +73,3 @@ NetApp은 다음과 같은 각 데이터 센터 환경에서 IPI(Installer provi
 * link:rh-os-n_openshift_RHV.html["Red Hat Virtualization의 OpenShift"]
 * link:rh-os-n_openshift_VMW.html["VMware vSphere의 OpenShift입니다"]
 
-
-link:rh-os-n_overview_netapp.html["다음은 NetApp 스토리지 개요입니다."]

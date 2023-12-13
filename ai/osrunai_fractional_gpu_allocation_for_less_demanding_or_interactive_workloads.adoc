@@ -23,5 +23,3 @@ summary:
 다음 그림에서 PROJECT 팀 d에 속한 Frac05 작업에 대해 할당된 GPU 수가 0.50인 것을 알 수 있다. 이는 컨테이너에 사용 가능한 GPU 메모리가 DGX-1 노드의 V100 GPU당 32GB의 절반 인 16,255MB임을 보여 주는 'NVIDIA-SMI' 명령으로 더욱 검증되었습니다.
 
 image:osrunai_image7.png["오류: 그래픽 이미지가 없습니다"]
-
-link:osrunai_achieving_high_cluster_utilization_with_over-uota_gpu_allocation.html["다음으로, 초과 할당 GPU 할당을 사용하여 높은 클러스터 사용률을 달성하십시오"]

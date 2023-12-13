@@ -13,8 +13,6 @@ summary: 'NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경�
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-solution-overview.html["이전: 솔루션 개요"]
-
 [role="lead"]
 NetApp이 제공하는 Data Fabric은 클라우드 및 사내 환경에서 데이터 관리를 단순화하고 통합하여 디지털 전환을 가속합니다.
 
@@ -86,5 +84,3 @@ image:hdcs-sh-image3.png["오류: 그래픽 이미지가 없습니다"]
 * * 클라우드 서비스 공급자 * 이러한 공급자에는 AWS, Microsoft Azure, Google Cloud 및 IBM Cloud가 포함됩니다.
 * * PaaS. * AWS의 EMR(Amazon Elastic MapReduce) 및 Databricks와 같은 클라우드 기반 분석 서비스와 Microsoft Azure HDInsight 및 Azure Databricks
 
-
-link:hdcs-sh-hadoop-data-protection-and-netapp.html["이제 Hadoop 데이터 보호와 NetApp이 모두 필요합니다."]

@@ -13,8 +13,6 @@ summary: 이 페이지에는 이 솔루션에 필요한 소프트웨어 요구 �
 :imagesdir: ./../media/
 
 
-link:aks-anf_technology_overview.html["이전: 기술 개요"]
-
 [role="lead"]
 다음 표에는 이 솔루션에 필요한 소프트웨어 요구 사항이 나열되어 있습니다.
 
@@ -33,4 +31,3 @@ link:aks-anf_technology_overview.html["이전: 기술 개요"]
 
 | 헬름 | 3.0.0 
 |===
-link:aks-anf_cloud_resource_requirements.html["다음으로, 클라우드 리소스 요구사항을 살펴보겠습니다."]

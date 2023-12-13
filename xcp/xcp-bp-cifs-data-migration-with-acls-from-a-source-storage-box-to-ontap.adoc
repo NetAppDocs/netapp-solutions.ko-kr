@@ -13,8 +13,6 @@ summary: 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 �
 :imagesdir: ./../media/
 
 
-link:xcp-bp-data-migration-from-7-mode-to-ontap.html["이전: 7-Mode에서 ONTAP로 데이터 마이그레이션"]
-
 [role="lead"]
 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 정보가 포함된 CIFS 데이터를 마이그레이션하는 단계별 절차에 대해 설명합니다.
 
@@ -486,5 +484,3 @@ XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to XXX [NetApp Inc] until Mon Dec 3
 C:\WRSHDNT>
 ....
 
-
-link:xcp-bp-best-practice-guidelines-and-recommendations.html["다음: 모범 사례 지침 및 권장 사항"]

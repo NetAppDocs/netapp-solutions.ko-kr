@@ -137,5 +137,3 @@ image:a-w-n_use_case_deploy_app-01.png["Type loadbalancer에 대한 패치 서�
 공개적으로 연결할 수 있는 IP 주소를 사용하여 응용 프로그램을 노출했으므로 브라우저를 사용하여 WordPress 인스턴스를 방문할 수 있습니다.
 
 image:a-w-n_use_case_deploy_app-00.png["브라우저의 WordPress"]
-
-link:a-w-n_videos_and_demos.html["다음: 비디오 및 데모."]

@@ -22,5 +22,3 @@ summary: 이 섹션에서는 NetApp 배포를 통해 Red Hat OpenShift를 사용
 * link:rh-os-n_LB_MetalLB.html["메탈리스"]
 * link:rh-os-n_LB_F5BigIP.html["F5 BIG-IP"]
 
-
-link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]

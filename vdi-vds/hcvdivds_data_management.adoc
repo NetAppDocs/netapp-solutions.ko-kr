@@ -92,5 +92,3 @@ image:hcvdivds_image14.png["오류: 그래픽 이미지가 없습니다"]
 Microsoft Office 365 데이터 보호 데모를 보려면 을 참조하십시오 https://www.youtube.com/watch?v=MRPBSu8RaC0&ab_channel=NetApp["이 비디오"^].
 
 Salesforce 데이터 보호 데모를 보려면 를 참조하십시오 https://www.youtube.com/watch?v=1j1l3Qwo9nw&ab_channel=NetApp["이 비디오"^].
-
-link:hcvdivds_operation_management.html["다음: 작업 관리"]

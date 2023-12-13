@@ -32,5 +32,3 @@ image::vtwn_image16.jpg[Astra Control Center에서 애플리케이션을 관리�
 image::vtwn_image17.jpg[Astra Control Center 애플리케이션을 사용할 수 있습니다]
 
 
-
-link:vtwn_astra_protect.html["다음: 응용 프로그램을 보호합니다."]

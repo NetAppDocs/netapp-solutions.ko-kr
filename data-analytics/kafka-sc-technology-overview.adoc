@@ -13,8 +13,6 @@ summary: 이 페이지에서는 이 솔루션에 사용된 기술에 대해 설�
 :imagesdir: ./../media/
 
 
-link:kafka-sc-solution.html["이전: 해결책."]
-
 [role="lead"]
 이 섹션에서는 이 솔루션에 사용된 기술에 대해 설명합니다.
 
@@ -155,5 +153,3 @@ Confluent Platform의 핵심은 입니다 https://kafka.apache.org/["카프카"^
 * * Confluent MQTT proxy. * 중간에 MQTT 브로커가 없어도 MQTT 장치 및 게이트웨이에서 Kafka에 직접 데이터를 게시할 수 있는 방법을 제공합니다.
 * * Confluent 보안 플러그인 * Confluent 보안 플러그인은 다양한 Confluent 플랫폼 도구 및 제품에 보안 기능을 추가하는 데 사용됩니다. 현재 Confluent REST 프록시에 사용할 수 있는 플러그인이 있어 수신 요청을 인증하고 인증된 보안 주체를 Kafka에 요청에 전파할 수 있습니다. 이렇게 하면 Confluent REST 프록시 클라이언트가 Kafka 브로커의 멀티테넌트 보안 기능을 활용할 수 있습니다.
 
-
-link:kafka-sc-confluent-performance-validation.html["다음: Confluent Performance validation."]

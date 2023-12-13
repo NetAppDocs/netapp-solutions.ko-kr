@@ -15,5 +15,3 @@ summary:
 
 [role="lead"]
 이 섹션에서는 Virtual Retail Assistant 구현에 대해 자세히 설명합니다.
-
-link:cainvidia_jarvis_deployment.html["다음: Jarvis 배포"]

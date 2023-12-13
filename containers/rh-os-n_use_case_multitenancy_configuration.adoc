@@ -53,4 +53,3 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 
 | 프로젝트, 리소스 할당량 및 StorageClasses를 보거나 편집하려면 액세스 유효성을 검사합니다 
 |===
-link:rh-os-n_use_case_multitenancy_configuration_prerequisites.html["다음: 필수 구성 요소."]

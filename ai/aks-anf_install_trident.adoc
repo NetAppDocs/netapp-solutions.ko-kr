@@ -13,8 +13,6 @@ summary:
 :imagesdir: ./../media/
 
 
-link:aks-anf_peer_aks_vnet_and_azure_netapp_files_vnet.html["이전: 피어 AKS VNET 및 Azure NetApp Files VNET"]
-
 [role="lead"]
 Hrom을 사용하여 Trident를 설치하려면 다음 단계를 완료하십시오.
 
@@ -141,5 +139,3 @@ kubectl get sc azurenetappfiles
 
 
 image:aks-anf_image9.png["오류: 그래픽 이미지가 없습니다"]
-
-link:aks-anf_set_up_dask_with_rapids_deployment_on_aks_using_helm.html["다음: 헬름으로 AKS에서 RAPIDS를 사용하여 Dask를 설정합니다."]

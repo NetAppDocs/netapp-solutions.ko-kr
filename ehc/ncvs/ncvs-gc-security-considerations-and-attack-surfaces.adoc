@@ -13,10 +13,10 @@ summary: 데이터를 보호하는 방법을 이해하기 위한 첫 번째 단�
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-how-cloud-volumes-service-in-google-cloud-secures-your-data.html["이전: Google Cloud의 Cloud Volumes Service로 데이터를 보호하는 방법"]
-
 [role="lead"]
-데이터를 보호하는 방법을 이해하기 위한 첫 번째 단계는 위험 및 잠재적 공격 경로를 식별하는 것입니다. 여기에는 다음이 포함됩니다(이에 국한되지 않음).
+데이터를 보호하는 방법을 이해하기 위한 첫 번째 단계는 위험 및 잠재적 공격 경로를 식별하는 것입니다.
+
+여기에는 다음이 포함됩니다(이에 국한되지 않음).
 
 * 관리 및 로그인
 * 사용되지 않는 데이터
@@ -177,5 +177,3 @@ Cloud Volumes Service 백업은 Cloud Volumes Service에 옵션으로 내장되�
 Cloud Volumes Service 버킷에서 GCS로 데이터를 전송하는 경우 HTTPS 및 TLS1.2가 포함된 서비스 내부 Google 네트워크를 사용합니다. 데이터는 Google에서 관리하는 키로 유휴 상태로 암호화됩니다.
 
 Cloud Volumes Service 백업(백업 생성, 삭제 및 복원)을 관리하려면 사용자에게 이 있어야 합니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["역할/netappcloudvolumes.admin"^] 역할.
-
-link:ncvs-gc-architecture_overview.html["다음: 아키텍처 개요"]

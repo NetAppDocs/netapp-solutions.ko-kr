@@ -261,5 +261,3 @@ NOTE: kubeadmin 사용자를 사용하여 개인 레지스트리에 로그인하
 
 
 
-
-link:rh-os-n_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]

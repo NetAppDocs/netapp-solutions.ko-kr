@@ -160,5 +160,3 @@ https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUI
 
 
 NOTE: Anthos는 각 개별 'cluster.yAML' 파일에 구성 옵션을 사용하여 사용자 환경의 ESXi 호스트 수에 따라 활성화 또는 비활성화할 수 있는 노드 선호도 규칙을 자동으로 생성합니다.
-
-link:a-w-n_anthos_BM.html["다음: 베어 메탈(Bare Metal)의 Anthos."]

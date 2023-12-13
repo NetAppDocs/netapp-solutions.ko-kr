@@ -53,5 +53,3 @@ VMware vSphere에서 생성된 VM 템플릿은 VDS에서 프로비저닝 컬렉�
 
 
 각 배포에는 활성 사용자, 고정, 서버 로드 또는 사용자 수를 기준으로 클라우드 리소스 할당에 대한 VM 리소스 기본값이 있습니다.
-
-link:hcvdivds_single_server_load_test_with_login_vsi.html["다음: Login VSI를 사용한 단일 서버 로드 테스트"]

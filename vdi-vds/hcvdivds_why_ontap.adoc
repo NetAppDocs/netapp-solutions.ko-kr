@@ -42,5 +42,3 @@ ActiveIQ Unified Manager는 vSphere 환경에서 완벽한 스토리지 네트�
 * * 멀티 프로토콜 지원. * ONTAP는 블록(iSCSI, FC, FCoE 및 NVMe/FC), 파일(NFSv3, NFSv4.1, SMB2.x, SMB3.x) 및 오브젝트(S3) 스토리지 프로토콜
 * * 자동화 지원. * ONTAP는 VDS 관리 포털을 통해 작업을 자동화하는 REST API, Ansible 및 PowerShell 모듈을 제공합니다.
 
-
-link:hcvdivds_data_management.html["다음: 데이터 관리"]

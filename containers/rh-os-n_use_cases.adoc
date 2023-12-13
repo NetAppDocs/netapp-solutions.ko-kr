@@ -20,5 +20,3 @@ summary:
 * link:rh-os-n_use_case_openshift_virtualization_overview.html["NetApp ONTAP 기반의 Red Hat OpenShift 가상화"]
 * link:rh-os-n_use_case_advanced_cluster_management_overview.html["NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리"]
 
-
-link:rh-os-n_videos_and_demos.html["다음: 비디오 및 데모."]

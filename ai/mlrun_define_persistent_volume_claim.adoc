@@ -59,5 +59,3 @@ JSON 형식으로 Trident 백 엔드 구성 파일을 생성한 후 다음을 �
 tridentctl create backend -f <backend-file>
 ....
 image:mlrun_image11.png["오류: 그래픽 이미지가 없습니다"]
-
-link:mlrun_deploying_the_application.html["다음: 응용 프로그램 배포"]

@@ -61,5 +61,3 @@ $ runai submit a-3-gg -i gcr.io/run-ai-demo/quickstart -g 2 -p team-a$ runai sub
 $ runai delete -p team-d d-1-gggg d-2-gg d-3-gg
 ....
 섹션을 참조하십시오 link:osrunai_over-quota_fairness.html["할당량 초과 공정성"]를 참조하십시오.
-
-link:osrunai_where_to_find_additional_information.html["다음: 추가 정보를 찾을 위치"]

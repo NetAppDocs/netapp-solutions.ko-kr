@@ -13,8 +13,6 @@ summary: 이 섹션에서는 테스트된 구성, 네트워크 인프라, SE350 
 :imagesdir: ./../media/
 
 
-link:ai-edge-test-plan.html["이전: 테스트 계획."]
-
 [role="lead"]
 다음 그림은 테스트 구성을 보여 줍니다. NetApp AFF C190 스토리지 시스템과 Lenovo ThinkSystem SE350 서버 2대(각각 NVIDIA T4 가속기 1대)를 사용했습니다. 이러한 구성요소는 10GbE 네트워크 스위치를 통해 연결됩니다. 네트워크 스토리지는 검증/테스트 데이터 세트와 사전 교육 모델을 보유하고 있습니다. 서버는 컴퓨팅 기능을 제공하며 스토리지는 NFS 프로토콜을 통해 액세스됩니다.
 
@@ -73,5 +71,3 @@ image:ai-edge-image10.png["오류: 그래픽 이미지가 없습니다"]
 | 컨트롤러 2 |  | 볼륨 2 | 8.42TiB |  | SE350-2를 iSCSI LUN 1로 설정합니다 
 |===
 image:ai-edge-image11.png["오류: 그래픽 이미지가 없습니다"]
-
-link:ai-edge-test-procedure.html["다음: 테스트 절차"]

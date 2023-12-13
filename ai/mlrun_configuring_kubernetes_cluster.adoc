@@ -41,5 +41,3 @@ image:mlrun_image5.png["오류: 그래픽 이미지가 없습니다"]
 == 온프레미스 구축 Kubernetes 구성
 
 NetApp Trident의 사내 설치에 대한 자세한 내용은 을 참조하십시오 https://www.netapp.com/us/media/tr-4798.pdf["TR-4798"^] 를 참조하십시오. Kubernetes 클러스터를 구성하고 NetApp Trident를 설치한 후 Trident를 Iguazio 클러스터에 연결하여 데이터 및 모델의 Snapshot 복사본 생성 등의 NetApp 데이터 관리 기능을 사용할 수 있습니다.
-
-link:mlrun_define_persistent_volume_claim.html["Next(다음): 영구 볼륨 클레임을 정의합니다"]

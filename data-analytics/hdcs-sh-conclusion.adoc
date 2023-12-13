@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-analytics/hdcs-sh-conclusion.html 
-keywords: conclusion, summary, data protection, hadoop, more information, Acknowledgements, version history 
+keywords: conclusion, summary, data protection, hadoop, more information, Acknowledgements 
 summary: 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 충족하기 위해 NetApp에서 제공하는 사용 사례 및 솔루션을 요약합니다. 
 ---
 = 결론
@@ -12,8 +12,6 @@ summary: 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 �
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-link:hdcs-sh-use-case-5--accelerate-analytic-workloads.html["이전: 사용 사례 5 - 분석 워크로드 가속화"]
 
 [role="lead"]
 이 섹션에서는 다양한 Hadoop 데이터 보호 요구사항을 충족하기 위해 NetApp에서 제공하는 사용 사례 및 솔루션을 요약합니다. 고객은 NetApp이 제공하는 Data Fabric을 사용하여 다음을 수행할 수 있습니다.

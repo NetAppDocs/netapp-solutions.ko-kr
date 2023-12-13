@@ -31,5 +31,3 @@ NetApp Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_
 * link:vtwn_overview_astra.html["NetApp Astra Control Center를 참조하십시오"]
 * link:vtwn_overview_trident.html["NetApp Astra Trident"]
 
-
-link:vtwn_overview_astra.html["다음: NetApp Astra Control 개요"]

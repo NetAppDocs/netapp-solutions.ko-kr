@@ -25,5 +25,3 @@ Mike Oglesby, NetApp에서 직접 지원합니다
 NetApp AI Control Plane은 데이터 과학자 및 데이터 엔지니어를 대상으로 하므로 최소한의 NetApp 또는 NetApp ONTAP ® 전문 지식이 필요합니다. 이 솔루션에서는 단순하고 친숙한 툴과 인터페이스를 사용하여 데이터 관리 기능을 실행할 수 있습니다. 귀사 환경에 NetApp 스토리지가 이미 구축되어 있다면 지금 바로 NetApp AI Control Plane을 시험 구동할 수 있습니다. 솔루션을 시험하고 싶지만 NetApp 스토리지가 없는 경우, 를 방문하십시오 http://cloud.netapp.com/["cloud.netapp.com"^]클라우드 기반 NetApp 스토리지 솔루션을 사용하여 몇 분 이내에 시스템을 구축하고 실행할 수 있습니다. 다음 그림은 솔루션을 시각적으로 보여 줍니다.
 
 image:aicp_image1.png["오류: 그래픽 이미지가 없습니다"]
-
-link:aicp_concepts_and_components.html["다음: 개념 및 구성 요소."]

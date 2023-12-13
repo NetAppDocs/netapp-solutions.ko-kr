@@ -76,3 +76,31 @@ VMware ESXi, 8.0.2, 22380479
 
 | * Cloud Volumes ONTAP * | 단일 AZ, 단일 노드, 9.14.0 
 |===
+솔루션의 시나리오 5는 아래 표에 표시된 버전을 사용하여 검증되었습니다.
+
+[cols="25%, 75%"]
+|===
+
+
+| * 구성 요소 * | * 버전 * 
+
+
+| * VMware * | vSphere Client 버전 8.0.2.00000
+VMware ESXi, 8.0.2, 22380479 
+
+
+| * 소스 및 대상 클러스터 * | OpenShift 4.13.25
+데이터를 더 많이 활용하십시오 
+
+
+| * NetApp Astra Trident * | Trident Server, Client 및 Astra Control Provisioner 23.10.0 을 참조하십시오 
+
+
+| * NetApp Astra Control Center * 에서 확인할 수 있습니다 | ACC 23.10 
+
+
+| * NetApp ONTAP * | ONTAP 9.12.1 
+
+
+| * Cloud Volumes ONTAP * | 단일 AZ, 단일 노드, 9.14.0 
+|===

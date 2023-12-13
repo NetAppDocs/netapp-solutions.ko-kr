@@ -13,7 +13,8 @@ summary: 이 페이지에서는 주요 정의, Splunk 분산 구축, Splunk Smar
 :imagesdir: ./../media/
 
 
-link:stgr-splunkss-flexible-storagegrid-features-for-splunk-smartstore.html["이전: Splunk SmartStore를 위한 유연한 StorageGRID 기능"]
+[role="lead"]
+이 섹션에서는 Splunk 아키텍처와 관련한 주요 정의, Splunk 분산 구축, Splunk SmartStore, 데이터 흐름, 하드웨어/소프트웨어 요구사항, 단일 및 다중 사이트 요구사항 등
 
 
 
@@ -349,4 +350,3 @@ image:stgr-splunkss-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 | 모니터링 콘솔 및 라이센스 마스터 | 전체 Splunk 구축을 중앙 집중식으로 모니터링하고 Splunk 라이센스를 관리합니다 | 1 | 16개 코어 | 32GB RAM | CentOS 8.1 
 |===
-link:stgr-splunkss-single-site-smartstore-performance.html["다음: 단일 사이트 SmartStore 성능."]

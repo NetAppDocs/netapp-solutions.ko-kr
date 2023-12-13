@@ -13,8 +13,6 @@ summary: 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 �
 :imagesdir: ./../media/
 
 
-link:bda-ai-business-benefits.html["이전: 비즈니스 혜택."]
-
 [role="lead"]
 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 데이터를 이동하는 데 필요한 세부 단계를 제공합니다.
 
@@ -806,5 +804,3 @@ drwxrwxrwx   7 nobody      nobody              4.0K Nov 11 12:14 catalog
 [root@hdp2 mnt]#
 ....
 
-
-link:bda-ai-mapr-fs-to-ontap-nfs.html["다음: MapR-FS에서 ONTAP NFS로"]

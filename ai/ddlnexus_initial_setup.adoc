@@ -13,8 +13,6 @@ summary: Domino Data Lab 및 NetApp이 지원되는 하이브리드 멀티 클�
 :imagesdir: ./../media/
 
 
-link:ddlnexus_architecture.html["이전: 아키텍처."]
-
 [role="lead"]
 이 섹션에서는 사내 데이터 센터와 AWS가 통합된 하이브리드 환경에서 Domino Nexus와 NetApp 데이터 서비스를 활용하기 위해 수행해야 하는 초기 설정 작업에 대해 설명합니다.
 
@@ -56,5 +54,3 @@ NOTE: link:https://www.netapp.com/media/79922-tr-4952.pdf["기술 보고서 TR-4
 == 온프레미스 데이터 센터에 Domino Data Plane을 구축하십시오
 
 그런 다음 사내 데이터 센터에 Domino Data Plane을 구축해야 합니다. 이전에 프로비저닝한 온프레미스 Kubernetes 클러스터에 이 데이터 플레인을 구축해야 합니다. 또한 NetApp Astra Trident가 이 Kubernetes 클러스터에 이미 설치되어 구성되어 있어야 합니다. 을 참조하십시오 link:https://docs.dominodatalab.com/en/latest/admin_guide/5781ea/data-planes/["Domino 관리 가이드"] 를 참조하십시오.
-
-link:ddlnexus_expose_netapp_vols.html["다음: 기존 NetApp 볼륨을 Domino에 노출합니다."]

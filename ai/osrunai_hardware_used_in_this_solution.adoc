@@ -30,4 +30,3 @@ summary:
 
 | Nexus 3232C 스위치 | 2 
 |===
-link:osrunai_software_requirements.html["다음: 소프트웨어 요구 사항"].

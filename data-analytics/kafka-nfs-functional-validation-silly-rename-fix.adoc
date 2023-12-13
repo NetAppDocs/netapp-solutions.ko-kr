@@ -13,8 +13,6 @@ summary: 기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스
 :imagesdir: ./../media/
 
 
-link:kafka-nfs-netapp-solution-for-silly-rename-issue-in-nfs-to-kafka-workload.html["이전: NFS에서 Kafka 워크로드로 이름 바꾸기 인한 어리석은 문제를 위한 NetApp 솔루션"]
-
 [role="lead"]
 기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스터가 파티션 재배포와 같은 Kafka 작업을 수행하지 않는 반면, 수정 사항이 있는 NFSv4에 마운트된 또 다른 클러스터는 중단 없이 동일한 작업을 수행할 수 있음을 보여주었습니다.
 
@@ -140,5 +138,3 @@ image:kafka-nfs-image6.png["이 스크린샷은 Cluster 2 충돌에 대한 로�
 image:kafka-nfs-image7.png["이 스크린샷은 클러스터 1에 대한 클린 파티션 할당에 대한 로그 출력을 보여 주는 반면"]
 
 
-
-link:kafka-nfs-why-netapp-nfs-for-kafka-workloads.html["다음으로, Kafka 워크로드를 위한 NetApp NFS를 선택해야 하는 이유"]

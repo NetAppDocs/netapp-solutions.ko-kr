@@ -128,5 +128,3 @@ $ kubectl get pods
 No resources found.
 ....
 
-
-link:aicp_execute_a_synchronous_distributed_ai_workload.html["다음: 동기 분산 AI 워크로드 실행"]

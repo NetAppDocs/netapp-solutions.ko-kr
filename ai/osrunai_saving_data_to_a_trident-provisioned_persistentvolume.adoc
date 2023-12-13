@@ -40,5 +40,3 @@ $ runai bash pvc-test -p team-a
 그런 다음 마운트된 볼륨을 확인하고 컨테이너 내의 데이터에 액세스할 수 있습니다.
 
 PVC를 재사용할 수 있는 이 기능은 NetApp FlexVol 볼륨 및 NetApp ONTAP FlexGroup 볼륨과 함께 작동하여 데이터 엔지니어가 보다 유연하고 강력한 데이터 관리 옵션을 통해 NetApp이 제공하는 Data Fabric을 활용할 수 있도록 지원합니다.
-
-link:osrunai_conclusion.html["다음: 결론"]

@@ -49,5 +49,3 @@ image::vtwn_image13.jpg[Astra Control Center 백엔드를 사용할 수 있습�
 image::vtwn_image14.jpg[Astra Control Center는 버킷을 만듭니다]
 
 
-
-link:vtwn_astra_applications.html["다음: 보호할 응용 프로그램을 선택합니다."]

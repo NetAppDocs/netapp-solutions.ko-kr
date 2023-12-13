@@ -13,8 +13,6 @@ summary: Domino Data Lab 및 NetApp이 포함된 하이브리드 멀티 클라�
 :imagesdir: ./../media/
 
 
-link:ddlnexus_expose_netapp_vols.html["이전: 기존 NetApp 볼륨을 Domino에 표시합니다."]
-
 [role="lead"]
 이 섹션에서는 다양한 컴퓨팅 환경에서 동일한 데이터에 액세스하기 위해 수행해야 하는 작업에 대해 설명합니다. Domino MLOps 플랫폼에서 컴퓨팅 환경을 "데이터 플레인"이라고 합니다. 데이터가 한 데이터 플레인의 NetApp 볼륨에 있지만 다른 데이터 플레인에서 데이터에 액세스해야 하는 경우 이 섹션에 요약된 작업을 따르십시오. 이러한 유형의 시나리오를 "버스팅(bursting)" 또는 대상 환경이 클라우드인 경우 "클라우드 버스팅(Cloud Bursting)"이라고 합니다. 이 기능은 제한되거나 초과 할당된 컴퓨팅 리소스를 처리할 때 필요한 경우가 많습니다. 예를 들어, 온프레미스 컴퓨팅 클러스터가 초과 할당된 경우 워크로드를 즉시 시작할 수 있는 클라우드로 워크로드를 예약할 수 있습니다.
 
@@ -134,5 +132,3 @@ image:ddlnexus_image4.png["오류: 그래픽 이미지가 없습니다"]
 ==== Domino에 대상 볼륨을 노출한 후
 
 image:ddlnexus_image5.png["오류: 그래픽 이미지가 없습니다"]
-
-link:ddlnexus_additional_information.html["다음: 추가 정보."]

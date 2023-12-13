@@ -31,4 +31,3 @@ summary: 우리는 이 솔루션 작성의 일부로 간단한 성능 비교를 
 
 | 동기식 분산 2노드 TensorFlow | ImageNet | 12,941.69125 | 12,881.33875 
 |===
-link:aicp_conclusion.html["다음: 결론."]

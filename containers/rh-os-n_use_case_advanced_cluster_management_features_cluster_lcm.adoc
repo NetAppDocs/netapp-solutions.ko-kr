@@ -45,5 +45,3 @@ image::redhat_openshift_image77.jpg[기존 클러스터 가져오기]
 
 . 여러 클러스터를 생성하고 가져온 후에는 단일 콘솔에서 클러스터를 모니터링하고 관리할 수 있습니다.
 
-
-link:rh-os-n_use_case_advanced_cluster_management_features_application_lcm.html["다음: 기능 - 응용 프로그램 수명 주기 관리"]

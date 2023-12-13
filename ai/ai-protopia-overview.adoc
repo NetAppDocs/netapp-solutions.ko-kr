@@ -55,5 +55,3 @@ AI에 대한 조직의 의사 결정이 내려질수록 데이터에 대한 개�
 image:ai-protopia-image1.png["오류: 그래픽 이미지가 없습니다"]
 
 Protopia 난독 처리 소프트웨어는 NetApp DataOps Toolkit에서 원활하게 실행되며 스토리지 서버를 떠나기 전에 데이터를 변환합니다.
-
-link:ai-protopia-solution-areas.html["다음: 솔루션 영역."]

@@ -13,8 +13,6 @@ summary: 이 지원 센터 솔루션의 아키텍처는 NVIDIA의 사전 구축�
 :imagesdir: ./../media/
 
 
-link:ai-sent-use-cases.html["이전: 사용 사례."]
-
 [role="lead"]
 이 지원 센터 솔루션의 아키텍처는 NVIDIA의 사전 구축된 툴과 NetApp DataOps 툴킷을 중심으로 돌아가고 있습니다. NVIDIA의 도구는 사전 구축된 모델 및 파이프라인을 사용하여 고성능 AI 솔루션을 신속하게 배포하는 데 사용됩니다. NetApp DataOps 툴킷은 다양한 데이터 관리 작업을 단순화하여 개발 속도를 높여줍니다.
 
@@ -244,5 +242,3 @@ image:ai-sent-image6.png["오류: 그래픽 이미지가 없습니다"]
 image:ai-sent-image8.png["오류: 그래픽 이미지가 없습니다"]
 
 TAO 툴키트의 텍스트 음성 및 정서 분석에 비슷한 파이프라인이 사용됩니다. 주요 차이점은 모델의 미세 조정에 필요한 라벨 사용입니다. TAO 툴킷 파이프라인은 데이터 파일 처리부터 시작합니다. 그런 다음 미리 훈련된 모델(에서 제공)을 사용합니다 https://ngc.nvidia.com/catalog["NVIDIA NGC 카탈로그"^])는 지원 센터 데이터를 사용하여 미세 조정됩니다. 미세 조정된 모델은 해당 성능 메트릭을 기준으로 평가되며, 사전 훈련된 모델보다 성능 기준에 더 적합한 경우 Riva 서버에 배포됩니다.
-
-link:ai-sent-design-considerations.html["다음: 설계 고려 사항."]

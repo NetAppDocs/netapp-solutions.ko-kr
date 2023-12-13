@@ -13,8 +13,6 @@ summary: 이 섹션에서는 검증을 완료하는 데 필요한 작업에 대�
 :imagesdir: ./../media/
 
 
-link:ai-protopia-test-configuration.html["이전: 구성을 테스트합니다."]
-
 [role="lead"]
 이 섹션에서는 검증을 완료하는 데 필요한 작업에 대해 설명합니다.
 
@@ -409,5 +407,3 @@ for (x1, y1, x2, y2, s) in noisy_outputs[0]:
     cv2.rectangle(noisy_reconstruction, (x1, y1), (x2, y2), (0, 0, 255), 4)
 ....
 
-
-link:ai-protopia-inferencing-accuracy-comparison.html["다음: 추론 정확도 비교."]

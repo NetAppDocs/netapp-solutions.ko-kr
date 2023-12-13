@@ -17,6 +17,8 @@ indexpage:
       url: "/rhhc-resources.html"
     - title: 비디오 및 데모
       url: "../videos.html#rhhc"
+    - title: 블로그
+      url: "../blogs.html#rhhc"
   - title: 높지 않습니다
     links:
     - title: 온프레미스 솔루션

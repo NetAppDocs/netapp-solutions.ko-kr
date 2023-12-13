@@ -32,5 +32,3 @@ NOTE: NetApp 포트폴리오의 각 스토리지 시스템은 데이터가 애�
 
 * link:vtwn_netapp_ontap.html["NetApp ONTAP를 참조하십시오"]
 
-
-link:vtwn_overview_storint.html["다음은 NetApp 스토리지 통합 개요입니다."]

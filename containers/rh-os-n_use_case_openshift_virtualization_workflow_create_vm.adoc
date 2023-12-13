@@ -39,5 +39,3 @@ image::redhat_openshift_image54.JPG[VM을 생성합니다]
 
 
 URL이나 레지스트리에서 템플릿이나 운영 체제에 대해 부트 소스를 구성하면 OpenShift-virtualization-OS-images' 프로젝트에서 PVC를 생성하고 KVM 게스트 이미지를 PVC로 다운로드합니다. 템플릿 PVC에 해당 OS에 대한 KVM 게스트 이미지를 수용할 수 있는 충분한 공간이 있는지 확인해야 합니다. 그런 다음 이러한 PVC는 프로젝트의 각 템플릿을 사용하여 생성될 때 가상 머신에 루트디스크로 복제되고 첨부됩니다.
-
-link:rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html["다음: 워크플로: VM 실시간 마이그레이션."]

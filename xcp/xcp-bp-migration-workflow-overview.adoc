@@ -13,8 +13,6 @@ summary: 마이그레이션은 마이그레이션 계획 및 완료를 위해 �
 :imagesdir: ./../media/
 
 
-link:xcp-bp-netapp-xcp-overview.html["그 전에 NetApp XCP가 있습니다."]
-
 [role="lead"]
 마이그레이션은 마이그레이션 계획 및 완료를 위해 따라야 할 단계가 다릅니다. NetApp XCP를 사용하여 타사 NAS 스토리지나 직접 연결된 NAS 내보낸 스토리지에서 데이터를 마이그레이션하려면 이 섹션에 제공된 마이그레이션 지침을 따르십시오.
 
@@ -53,5 +51,3 @@ image:xcp-bp_image4.png["오류: 그래픽 이미지가 없습니다"]
 image:xcp-bp_image5.png["오류: 그래픽 이미지가 없습니다"]
 
 다양한 클라우드 서비스 공급자의 각 구성 요소와 함께 유사한 아키텍처를 사용할 수 있습니다.
-
-link:xcp-bp-file-analytics.html["다음: 파일 분석."]

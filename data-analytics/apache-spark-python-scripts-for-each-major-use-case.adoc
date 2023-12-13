@@ -13,8 +13,6 @@ summary:
 :imagesdir: ./,,/media/
 
 
-link:apache-spark-hybrid-cloud-solution.html["이전: 하이브리드 클라우드 솔루션"]
-
 [role="lead"]
 다음 세 가지 Python 스크립트는 테스트를 거친 세 가지 주요 사용 사례에 해당합니다. 첫 번째는 'sentiment_analysis_sparklp.py'입니다.
 
@@ -728,4 +726,3 @@ if __name__ == "__main__":
     print("test LogLoss", round(log_loss(pd.to_numeric(test.select(target).toPandas()).values, pred_ans), 4))
     print("test AUC", round(roc_auc_score(pd.to_numeric(test.select(target).toPandas()).values, pred_ans), 4))
 ....
-link:apache-spark-conclusion.html["다음: 결론."]

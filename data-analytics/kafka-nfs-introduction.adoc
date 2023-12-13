@@ -61,5 +61,3 @@ NetApp NFS 구현은 프로토콜의 골드 표준으로 간주되며 수많은 
 
 
 
-
-link:kafka-nfs-netapp-solution-for-silly-rename-issue-in-nfs-to-kafka-workload.html["다음은 NFS의 이름 바꾸기 문제를 Kafka 워크로드로 하는 어리석은 문제를 해결하기 위한 NetApp 솔루션입니다."]

@@ -13,13 +13,9 @@ summary: 이 섹션에서는 이 기술 보고서와 관련된 Jupyter 노트북
 :imagesdir: ./../media/
 
 
-link:aks-anf_dataset_and_model_versioning_using_netapp_dataops_toolkit.html["이전: NetApp DataOps 툴킷을 사용하여 데이터 세트 및 모델 버전 관리"]
-
 [role="lead"]
 이 기술 보고서와 관련하여 2개의 Jupyter 노트북이 있습니다.
 
 * link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/CTR-PandasRF-collated.ipynb["* CTR-PandasRF-Collated.ipynb. *"] 이 노트북은 Criteo Terabyte Click Logs 데이터 세트에서 15일을 로드하고 Pandas DataFrame으로 데이터를 처리 및 포맷하고 Scikit-Learn 무작위 포리스트 모델을 교육하며 예측을 수행하고 정확도를 계산합니다.
 * link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/criteo_dask_RF.ipynb["criteo_dask_rf.ipynb. * 를 사용합니다"] 이 전자 필기장은 Criteo Terabyte Click Logs 데이터 집합에서 15일을 로드하고, 데이터를 처리하여 Dask cuDF로 서식을 지정하고, Dask cuML 임의 포리스트 모델을 교육하고, 예측을 수행하고, 정확도를 계산합니다. GPU에 여러 작업자 노드를 활용함으로써 이러한 분산 데이터 및 모델 처리 및 교육 접근 방식이 매우 효율적입니다. 처리하는 데이터가 많을수록 기존 ML 방식에 비해 시간 절감 효과가 더 커집니다. 네트워킹 설정을 통해 데이터 및 모델 배포를 자유롭게 이동할 수 있는 한, 이 메모장을 클라우드, 온프레미스 또는 Kubernetes 클러스터에 다른 위치의 컴퓨팅 및 스토리지가 포함된 하이브리드 환경에 배포할 수 있습니다.
 
-
-link:aks-anf_conclusion.html["다음: 결론."]

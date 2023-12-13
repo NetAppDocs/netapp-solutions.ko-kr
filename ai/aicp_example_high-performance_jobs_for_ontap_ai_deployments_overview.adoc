@@ -15,5 +15,3 @@ summary: 이 섹션에는 Kubernetes를 ONTAP AI Pod에 구축할 때 실행할 
 
 [role="lead"]
 이 섹션에는 Kubernetes를 ONTAP AI Pod에 구축할 때 실행할 수 있는 다양한 고성능 작업의 예가 포함되어 있습니다.
-
-link:aicp_execute_a_single-node_ai_workload.html["다음: 단일 노드 AI 워크로드 실행"]

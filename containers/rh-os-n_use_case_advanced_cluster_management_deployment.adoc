@@ -53,5 +53,3 @@ image::redhat_openshift_image73.jpg[멀티클러스터 허브가 준비되었습
 image::redhat_openshift_image74.jpg[ACM 콘솔 경로]
 
 
-
-link:rh-os-n_use_case_advanced_cluster_management_features_cluster_lcm.html["다음: 기능 - 클러스터 수명 주기 관리"]

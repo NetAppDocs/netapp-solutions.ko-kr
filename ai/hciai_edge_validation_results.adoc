@@ -33,5 +33,3 @@ image:hciaiedge_image24.png["오류: 그래픽 이미지가 없습니다"]
 이 추론 요청은 이미지 인식에 사용되는 resnet50_netdef 모델을 호출합니다. 다른 클라이언트는 유사한 접근 방식을 따르고 적절한 모델을 호출하여 추론 요청을 동시에 보낼 수도 있습니다.
 
 
-
-link:hciai_edge_additional_information.html["다음: 추가 정보를 찾을 위치"]

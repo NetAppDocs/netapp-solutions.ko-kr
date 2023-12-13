@@ -13,10 +13,10 @@ summary: '이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR �
 :imagesdir: ./../media/
 
 
-link:bda-ai-gpfs-to-netapp-ontap-nfs.html["이전: GPFS에서 NetApp ONTAP NFS로,"]
-
 [role="lead"]
-이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다. xCP는 비동기 스레드 및 HDFS C API 호출을 사용하여 MapR-FS 및 HDFS에서 데이터를 통신 및 전송합니다. 아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.
+이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR 클러스터 데이터에서 ONTAP NFS로 데이터 마이그레이션을 검증했습니다. MapR-FS 및 HDFS에 데이터가 상주했습니다. NetApp XCP는 HDFS 및 MapR-FS와 같은 분산 파일 시스템에서 ONTAP NFS로 데이터를 직접 마이그레이션하는 새로운 기능을 소개했습니다. xCP는 비동기 스레드 및 HDFS C API 호출을 사용하여 MapR-FS 및 HDFS에서 데이터를 통신 및 전송합니다.
+
+아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.
 
 image:bda-ai-image6.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -40,5 +40,3 @@ Cloudera 및 Hortonworks와 같은 Hadoop 배포 대부분은 HDFS 및 MapR 배�
 초기 테스트에 따르면 20Gbps의 처리량을 확보했으며 일일 2PB의 데이터를 전송할 수 있었습니다.
 
 HDFS를 NFS로 내보내지 않고 HDFS 데이터 마이그레이션에 대한 자세한 내용은 의 "배포 단계 - NAS" 섹션을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/xcp/xcp-bp-deployment-steps.html["TR-4863: NetApp XCP-Data Mover, 파일 마이그레이션 및 분석에 대한 모범 사례 지침 - 4863"^].
-
-link:bda-ai-business-benefits.html["다음: 비즈니스 혜택."]

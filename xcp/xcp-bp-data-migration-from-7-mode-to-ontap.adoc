@@ -13,8 +13,6 @@ summary: 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 O
 :imagesdir: ./../media/
 
 
-link:xcp-bp-creating-a-csv-file-from-smb-cifs-share.html["이전: SMB/CIFS 공유에서 CSV 파일 생성"]
-
 [role="lead"]
 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 ONTAP로 데이터를 마이그레이션하기 위한 자세한 단계를 제공합니다.
 
@@ -1387,5 +1385,3 @@ XCP SMB 1.6; (c) 2020 NetApp, Inc.; Licensed to xxxx xxxx[NetApp Inc] until Mon 
 7,898 compared, 7,898 same, 0 different, 0 missing, 1m45s,cifs
 ....
 
-
-link:xcp-bp-cifs-data-migration-with-acls-from-a-source-storage-box-to-ontap.html["다음: 소스 스토리지 상자에서 ONTAP로 ACL을 사용한 CIFS 데이터 마이그레이션"]

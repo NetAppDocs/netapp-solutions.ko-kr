@@ -47,5 +47,3 @@ image:a400-thinksystem-image2.png["이 이미지는 관리 서버에 둘러싸�
 * 데이터 손실 없이 낮은 RPO(복구 시점 목표) 및 RTO(복구 시간 목표)를 충족하는 강력한 데이터 보호
 * 스냅샷 및 클론을 통해 데이터 관리를 최적화하여 개발 워크플로우를 간소화합니다
 
-
-link:a400-thinksystem-technology-overview.html["다음: 기술 개요"]

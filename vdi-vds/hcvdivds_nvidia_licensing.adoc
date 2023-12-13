@@ -50,5 +50,3 @@ Grid vApps는 RDSH(Remote Desktop Session Host) 또는 기타 애플리케이션
 
 
 NOTE: Quadro vDWS 라이센스를 사용하면 GRID vPC 및 NVIDIA vComputeServer를 사용할 수 있습니다.
-
-link:hcvdivds_deployment.html["다음: 배포"]

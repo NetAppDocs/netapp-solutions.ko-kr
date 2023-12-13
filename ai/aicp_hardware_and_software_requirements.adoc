@@ -63,5 +63,3 @@ NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속되지 않
 == 지원
 
 NetApp은 Apache Airflow, Docker, Kubeflow, Kubernetes 또는 NVIDIA DeepOps에 대한 엔터프라이즈 지원을 제공하지 않습니다. NetApp AI Control Plane 솔루션과 유사한 기능을 갖춘 완벽한 지원 솔루션을 원하는 경우, link:https://www.netapp.com/us/contact-us/index.aspx?for_cr=us["NetApp에 문의하십시오"] NetApp이 파트너와 공동으로 제공하는 완전 지원되는 AI/ML 솔루션 정보
-
-link:aicp_kubernetes_deployment.html["다음: Kubernetes 배포."]

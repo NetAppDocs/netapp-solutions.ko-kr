@@ -13,9 +13,5 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA
 :imagesdir: ./../media/
 
 
-link:nvaie_initial_setup.html["이전: 초기 설정."]
-
 [role="lead"]
 이 섹션에서는 NVIDIA AI 엔터프라이즈 환경에서 NVIDIA NGC 엔터프라이즈 소프트웨어를 활용하기 위해 수행해야 하는 작업에 대해 설명합니다.
-
-link:nvaie_ngc_setup.html["다음: 설정."]

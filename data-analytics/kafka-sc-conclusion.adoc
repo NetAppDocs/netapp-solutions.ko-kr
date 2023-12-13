@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-analytics/kafka-sc-conclusion.html 
-keywords: conclusion, where to find additional information, version history 
+keywords: conclusion, where to find additional information 
 summary: 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러를 사용하는 Confluent에서 31.74GBps의 계층화 처리량에 도달했습니다. 
 ---
 = 결론
@@ -12,8 +12,6 @@ summary: 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러를 사�
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-link:kafka-sc-performance-best-practice-guidelines.html["이전: 성능 모범 사례 지침."]
 
 [role="lead"]
 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러에 유창한 confluent에서 31.74GBps의 계층화 처리량에 도달했습니다.
@@ -49,14 +47,3 @@ https://docs.netapp.com/us-en/ontap/s3-config/s3-support-concept.html["https://d
 https://www.netapp.com/support-and-training/documentation/["https://www.netapp.com/support-and-training/documentation/"^]
 
 
-
-
-
-== 버전 기록
-
-|===
-| 버전 | 날짜 | 문서 버전 기록 
-
-
-| 버전 1.0 | 2022년 9월 | 최초 릴리스. 
-|===

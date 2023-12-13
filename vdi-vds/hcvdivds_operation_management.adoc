@@ -39,5 +39,3 @@ NetApp Cloud Insights는 NetApp 및 기타 타사 인프라 구성 요소에서 
 image:hcvdivds_image15.png["오류: 그래픽 이미지가 없습니다"]
 
 NetApp Cloud Insights에 대한 자세한 내용은 를 참조하십시오 https://www.youtube.com/watch?v=AVQ-a-du664&ab_channel=NetApp["이 비디오"^].
-
-link:hcvdivds_tools_and_logs.html["다음: 도구 및 로그"]

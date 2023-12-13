@@ -59,5 +59,3 @@ Trident 백엔드를 구성한 후 다음 단계는 StorageClasses를 구성하�
 스토리지 클래스는 이름이 같은 리소스가 아니므로 다른 네임스페이스나 프로젝트의 Pod를 통해 한 프로젝트의 스토리지 클래스에 대한 스토리지 클레임이 거부되도록 하려면 어떻게 해야 합니까? 리소스 할당량을 사용하면 됩니다. ResourceQuotas 는 프로젝트당 리소스의 총 사용량을 제어하는 개체입니다. 프로젝트의 개체에서 사용할 수 있는 총 리소스 양뿐만 아니라 수를 제한할 수 있습니다. 리소스 할당량을 사용하면 프로젝트의 거의 모든 리소스를 제한할 수 있으며, 이러한 리소스를 효율적으로 사용하면 리소스 오버 프로비저닝 또는 과소비로 인한 비용 및 운영 중단을 줄일 수 있습니다. 설명서를 참조하십시오 https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html["여기"^] 를 참조하십시오.
 
 이 활용 사례에서는 특정 프로젝트의 포드를 해당 프로젝트 전용이 아닌 스토리지 클래스에서 스토리지를 청구하는 것을 제한해야 합니다. 이렇게 하려면 "<storage-class-name>.storageclass.storage.k8s.io/persistentvolumeclaims"를 0으로 설정하여 다른 스토리지 클래스에 대한 영구 볼륨 클레임을 제한해야 합니다. 또한 클러스터 관리자는 프로젝트의 개발자가 리소스 할당량을 수정할 수 있는 액세스 권한이 없어야 합니다.
-
-link:rh-os-n_use_case_multitenancy_configuration.html["다음: 구성."]

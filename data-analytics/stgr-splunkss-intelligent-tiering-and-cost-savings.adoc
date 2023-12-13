@@ -13,8 +13,6 @@ summary: 고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용�
 :imagesdir: ./../media/
 
 
-link:stgr-splunkss-benefits-of-this-solution.html["이전: 이 솔루션의 이점"]
-
 [role="lead"]
 고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용할 수 있다는 것을 알게 되므로 당연히 계속해서 증가하는 데이터를 인덱싱하기를 원합니다. 데이터의 양이 증가할수록 서비스를 제공하는 데 필요한 컴퓨팅 및 스토리지 인프라도 증가합니다. 오래된 데이터를 자주 참조하지 않기 때문에 동일한 양의 컴퓨팅 리소스를 커밋하고 값비싼 기본 스토리지를 사용하는 것은 점점 비효율적입니다. 고객은 규모에 맞게 운영하는 데 필요한 데이터를 보다 비용 효율적인 계층으로 이동하여 사용 빈도가 높은 데이터를 위한 컴퓨팅과 운영 스토리지를 확보함으로써 이점을 누릴 수 있습니다.
 
@@ -25,5 +23,3 @@ StorageGRID를 포함한 Splunk SmartStore는 확장 가능하고 성능 기준�
 image:stgr-splunkss-image2.png["오류: 그래픽 이미지가 없습니다"]
 
 업계 최고 수준의 Splunk SmartStore와 NetApp StorageGRID를 결합하여 전체 스택 솔루션을 통해 분리 아키텍처의 이점을 제공합니다.
-
-link:stgr-splunkss-solution-overview.html["다음: 솔루션 개요"]

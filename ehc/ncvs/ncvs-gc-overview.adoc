@@ -48,4 +48,3 @@ Oliver Krause, Justin Parisi, NetApp
 
 | PSA |  
 |===
-link:ncvs-gc-how-cloud-volumes-service-in-google-cloud-secures-your-data.html["다음: Google Cloud의 Cloud Volumes Service로 데이터를 보호하는 방법"]

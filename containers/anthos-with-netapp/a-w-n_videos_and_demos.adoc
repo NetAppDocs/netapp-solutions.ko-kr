@@ -20,4 +20,3 @@ summary: 이 페이지에서 에 연결된 비디오는 이 문서에 설명되�
 video::a9e5fd88-6bdc-4d23-a4b5-b01200effc06[panopto,width=360]
 .Anthos 1.14 클러스터에 Trident 구축
 video::8ea4c03a-85e9-4d90-bf3c-afb6011b051c[panopto,width=360]
-link:a-w-n_additional_information.html["다음: 추가 정보를 찾을 위치."]

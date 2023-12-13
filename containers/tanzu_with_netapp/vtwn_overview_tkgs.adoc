@@ -44,4 +44,3 @@ roleRef:
   name: psp:vmware-system-privileged
   apiGroup: rbac.authorization.k8s.io
 ----
-link:vtwn_overview_netapp.html["다음은 NetApp 스토리지 시스템 개요입니다."]

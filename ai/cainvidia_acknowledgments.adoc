@@ -17,5 +17,3 @@ summary:
 저자는 NVIDIA의 존경받는 동료 Davide Onofrio, Alex Qi, Sicong Ji, Marty Jain 및 Robert Sohigian이 이 백서에 기여한 바를 진심으로 인정합니다. 또한 NetApp의 주요 팀원 중 Santosh Rao, David Arnette, Michael Oglesby, Brent Davis, Andy Sayare의 기여에 대해 인정하고자 합니다. Erik Mulder와 Mike McNamara가 함께 합니다.
 
 본 문서를 작성하는 데 큰 도움이 되는 통찰과 전문 지식을 제공해주신 모든 분에게 진심으로 감사합니다.
-
-link:cainvidia_where_to_find_additional_information.html["다음: 추가 정보를 찾을 위치"]

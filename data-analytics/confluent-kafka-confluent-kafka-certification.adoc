@@ -13,8 +13,6 @@ summary: NetApp StorageGRID의 계층형 스토리지를 위해 Kafka와 Conflue
 :imagesdir: ./../media/
 
 
-link:confluent-kafka-technology-overview.html["이전: 기술 개요"]
-
 [role="lead"]
 NetApp StorageGRID에서 Confluent Platform 6.2 계층형 스토리지를 사용하여 검증을 수행했습니다. NetApp과 Confluent 팀은 이 검증을 함께 수행하여 검증에 필요한 테스트 사례를 실행했습니다.
 
@@ -95,5 +93,3 @@ image:confluent-kafka-image8.png["오류: 그래픽 이미지가 없습니다"]
 === 보존 워크로드 벤치마크
 
 이 테스트에서는 무거운 주제 보존 워크로드 하에서 오브젝트 저장소의 삭제 성능을 검사했습니다. 보존 워크로드는 테스트 주제와 동시에 많은 메시지를 생성하는 테스트 스크립트를 사용하여 생성되었습니다. 테스트 주제는 공격적인 크기 기반 및 시간 기반 보존 설정으로 구성되었으며, 이로 인해 이벤트 스트림이 개체 저장소에서 지속적으로 제거됩니다. 그런 다음 세그먼트가 아카이브되었습니다. 이로 인해 오브젝트 저장소 삭제 작업의 수행 중개 및 컬렉션에 의해 오브젝트 저장소에서 많은 삭제가 수행되었습니다.
-
-link:confluent-kafka-performance-tests-with-scalability.html["다음: 확장성의 성능 테스트."]

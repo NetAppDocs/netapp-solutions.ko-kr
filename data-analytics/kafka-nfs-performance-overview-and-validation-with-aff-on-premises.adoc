@@ -13,8 +13,6 @@ summary: 사내에서 NetApp AFF A900 스토리지 컨트롤러와 ONTAP 9.12.1 
 :imagesdir: ./../media/
 
 
-link:kafka-nfs-performance-overview-and-validation-in-aws.html["이전: AWS에서의 성능 개요 및 검증"]
-
 [role="lead"]
 사내에서 NetApp AFF A900 스토리지 컨트롤러와 ONTAP 9.12.1 RC1을 사용하여 Kafka 클러스터의 성능 및 확장성을 검증했습니다. ONTAP 및 AFF의 이전 계층형 스토리지 모범 사례와 동일한 테스트 베드를 사용했습니다.
 
@@ -190,4 +188,3 @@ max(t[cluster]) <= max(t[storage]) * #brokers/r
 
 | 1 | 10.2 
 |===
-link:kafka-nfs-conclusion.html["다음: 결론."]

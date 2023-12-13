@@ -61,5 +61,3 @@ Iguazio Data Science Platform은 완전히 통합되고 안전한 PaaS(Data Scie
 
 
 image:mlrun_image7.png["오류: 그래픽 이미지가 없습니다"]
-
-link:mlrun_software_and_hardware_requirements.html["다음: 소프트웨어 및 하드웨어 요구 사항"]

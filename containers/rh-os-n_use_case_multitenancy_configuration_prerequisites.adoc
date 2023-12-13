@@ -26,5 +26,3 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 * 클러스터가 ID 공급자와 통합됩니다
 * ID 공급자는 서로 다른 팀의 사용자를 효율적으로 구분하도록 구성되어 있습니다
 
-
-link:rh-os-n_use_case_multitenancy_cluster_admin_tasks.html["다음: 클러스터 관리자 작업."]

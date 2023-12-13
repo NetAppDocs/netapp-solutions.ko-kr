@@ -13,8 +13,6 @@ summary: 이 문서에서는 Confluent Kafka 인증 테스트, 성능 결과, �
 :imagesdir: ./../media/
 
 
-link:confluent-kafka-sizing.html["이전: 사이징."]
-
 [role="lead"]
 이 문서에서는 검증 테스트, 계층형 스토리지 성능 결과, 튜닝, Confluent S3 커넥터 및 셀프 밸런싱 기능을 포함하여 NetApp 스토리지와 함께 Contuent Tiered Storage를 사용하기 위한 모범 사례 지침을 제공합니다. ILM 정책, 검증을 위한 다양한 성능 테스트 및 산업 표준 S3 API를 통한 유창한 성능을 고려할 때 NetApp StorageGRID 오브젝트 스토리지는 유창한 계층형 스토리지를 위한 최적의 선택입니다.
 
@@ -72,14 +70,3 @@ https://www.confluent.io/blog/self-balancing-kafka-clusters-in-confluent-platfor
 https://www.confluent.io/blog/confluent-platform-6-0-delivers-the-most-powerful-event-streaming-platform-to-date/["https://www.confluent.io/blog/confluent-platform-6-0-delivers-the-most-powerful-event-streaming-platform-to-date/"^]
 
 
-
-
-
-== 버전 기록
-
-|===
-| 버전 | 날짜 | 문서 버전 기록 
-
-
-| 버전 1.0 | 2021년 12월 | 최초 릴리스. 
-|===

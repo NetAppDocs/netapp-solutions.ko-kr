@@ -13,8 +13,6 @@ summary: 이 섹션에서는 NetApp XCP를 사용하여 MapR-FS 데이터를 ONT
 :imagesdir: ./../media/
 
 
-link:bda-ai-gpfs-to-nfs-detailed-steps.html["이전: GPFS에서 NFS로 - 세부 단계."]
-
 [role="lead"]
 이 섹션에서는 NetApp XCP를 사용하여 MapR-FS 데이터를 ONTAP NFS로 이동하는 데 필요한 자세한 단계를 제공합니다.
 
@@ -320,5 +318,3 @@ Hadoop-AFF8080: nic_common.e9b: 12/6/2019 15:55:07
 
 
 
-
-link:bda-ai-where-to-find-additional-information.html["다음: 추가 정보를 찾을 위치."]

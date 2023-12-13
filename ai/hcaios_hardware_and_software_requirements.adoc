@@ -59,5 +59,3 @@ image:hcaios_image6.png["오류: 그래픽 이미지가 없습니다"]
 | NetApp ONTAP를 참조하십시오 | 9.6P4 
 |===
 이 솔루션 검증에서 Kubernetes는 DGX-1 시스템에서 단일 노드 클러스터로 구축되었습니다. 대규모 배포의 경우 관리 서비스의 고가용성을 제공하고 ML 및 DL 워크로드에 대한 중요한 DGX 리소스를 예약하려면 독립 Kubernetes 마스터 노드를 구축해야 합니다.
-
-link:hcaios_solution_deployment_and_validation_details.html["다음: 솔루션 배포 및 검증 세부 정보"]

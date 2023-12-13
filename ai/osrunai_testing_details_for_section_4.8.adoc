@@ -102,5 +102,3 @@ $ runai submit d-1-gggg -i gcr.io/run-ai-demo/quickstart -g 4 -p team-d
 | 팀 d | 8월 4일 | 없음 
 |===
 섹션을 참조하십시오 link:osrunai_achieving_high_cluster_utilization_with_over-uota_gpu_allocation.html["Over-uota GPU 할당을 통한 높은 클러스터 활용률 달성"] 진행 중인 테스트 시나리오에 대한 논의.
-
-link:osrunai_testing_details_for_section_4.9.html["다음: 섹션 4.9의 테스트 세부 정보"]

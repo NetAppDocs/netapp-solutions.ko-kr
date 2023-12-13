@@ -463,5 +463,3 @@ f5-demo-test-57c46f6f98-cl2m8   1/1     Running   0          27s
 image:redhat_openshift_image121.jpg["해당 서비스 유형 로드 밸런싱 장치에 대한 BIG-IP 가상 서버 생성을 확인합니다"]
 
 
-
-link:rh-os-n_use_cases.html["다음으로: 솔루션 검증/사용 사례: NetApp 및 Red Hat OpenShift"]

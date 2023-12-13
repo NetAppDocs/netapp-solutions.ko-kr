@@ -13,8 +13,6 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 기술 개요
 :imagesdir: ./../media/
 
 
-link:nvaie_introduction.html["이전: 소개."]
-
 
 
 == NVIDIA AI 엔터프라이즈
@@ -89,5 +87,3 @@ NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원
 * 백업 및/또는 추적 가능성/베이스라인 기능을 위해 고용량 JupyterLab 작업 공간의 스냅샷을 거의 동시에 저장합니다.
 * 대용량 고성능 데이터 볼륨을 거의 동시에 프로비저닝, 복제 및 스냅샷으로 제공합니다.
 
-
-link:nvaie_architecture.html["다음: 아키텍처."]

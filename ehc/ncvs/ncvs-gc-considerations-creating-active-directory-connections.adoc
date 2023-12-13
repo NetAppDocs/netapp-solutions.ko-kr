@@ -13,8 +13,6 @@ summary: Cloud Volumes Service를 사용하면 Cloud Volumes Service 인스턴�
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-dual-protocol-multiprotocol.html["이전: 이중 프로토콜/멀티프로토콜"]
-
 [role="lead"]
 Cloud Volumes Service를 사용하면 Cloud Volumes Service 인스턴스를 외부 Active Directory 서버에 연결하여 SMB 및 UNIX 사용자 모두의 ID 관리를 수행할 수 있습니다. Cloud Volumes Service에서 SMB를 사용하려면 Active Directory 연결을 생성해야 합니다.
 
@@ -152,5 +150,3 @@ Cloud Volumes Service가 Active Directory에 SMB 컴퓨터 계정을 추가하�
 SMB 시스템 계정에 대해 AES 암호화를 활성화하려면 Active Directory 연결을 생성할 때 AD 인증에 AES 암호화 사용 을 클릭합니다.
 
 NFS Kerberos에서 AES 암호화를 사용하도록 설정하려면 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/creating-nfs-volumes["Cloud Volumes Service 설명서를 참조하십시오"^].
-
-link:ncvs-gc-other-nas-infrastructure-service-dependencies.html["다음: 기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)"]

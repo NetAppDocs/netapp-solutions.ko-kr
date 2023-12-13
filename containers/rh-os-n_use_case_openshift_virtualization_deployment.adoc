@@ -46,5 +46,3 @@ image::redhat_openshift_image50.JPG[OpenShift Virtualization Operator - 하이�
 image::redhat_openshift_image51.JPG[OpenShift Virtualization Operator 설치가 완료되었습니다]
 
 
-
-link:rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html["다음: 워크플로우: VM을 생성합니다."]

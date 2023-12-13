@@ -94,5 +94,3 @@ image:redhat_openshift_image139.jpg["Astra Control Center 복구"]
 image:redhat_openshift_image140.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
 
 
-
-link:rh-os-n_use_cases.html["다음으로 솔루션 검증/사용 사례를 살펴보겠습니다."]

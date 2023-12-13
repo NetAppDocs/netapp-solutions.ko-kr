@@ -13,8 +13,6 @@ summary: 이 사용 사례는 클라우드 기반 분석 데이터를 사내 데
 :imagesdir: ./../media/
 
 
-link:hdcs-sh-use-case-1-backing-up-hadoop-data.html["이전: 활용 사례 1 - Hadoop 데이터 백업"]
-
 [role="lead"]
 이 사용 사례는 아래 그림과 같이 클라우드 기반 분석 데이터를 사내 데이터 센터에 백업해야 하는 브로드캐스트 고객을 기반으로 합니다.
 
@@ -50,5 +48,3 @@ NFS 공유가 생성된 후 HDFS EBS 스토리지의 데이터를 ONTAP NFS 공�
 이 이미지는 클라우드에서 사내 솔루션으로 백업 및 재해 복구를 보여줍니다.
 
 image:hdcs-sh-image10.png["오류: 그래픽 이미지가 없습니다"]
-
-link:hdcs-sh-use-case-3-enabling-devtest-on-existing-hadoop-data.html["다음: 사용 사례 3 - 기존 Hadoop 데이터에 대해 DevTest를 설정합니다."]

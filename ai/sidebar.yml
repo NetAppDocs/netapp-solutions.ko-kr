@@ -195,7 +195,7 @@ entries:
       url: "/ai/ai-protopia-obfuscation-speed.html"
     - title: 결론
       url: "/ai/ai-protopia-conclusion.html"
-    - title: 추가 정보, 확인 및 버전 기록을 찾을 수 있는 위치
+    - title: 추가 정보 및 승인 정보를 찾을 수 있는 위치
       url: "/ai/ai-protopia-where-to-find-additional-information,-acknowledgements,-and-version-history.html"
   - title: NetApp AI를 통한 감정 분석
     entries:
@@ -266,8 +266,6 @@ entries:
       url: "/ai/aks-anf_conclusion.html"
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/aks-anf_where_to_find_additional_information.html"
-    - title: 버전 기록
-      url: "/ai/aks-anf_version_history.html"
   - title: 분산된 Azure 교육 - 차선 감지
     url: "/ai/runai-ld_executive_summary.html"
     entries:
@@ -301,8 +299,6 @@ entries:
         url: "/ai/hcaios_cnvrg.io_deployment.html"
     - title: 결론
       url: "/ai/hcaios_conclusion.html"
-    - title: 감사의 말
-      url: "/ai/hcaios_acknowledgments.html"
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/hcaios_where_to_find_additional_information.html"
   - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동

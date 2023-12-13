@@ -42,5 +42,3 @@ Astra Control Center에는 프로그래밍 방식의 액세스를 위한 완전�
 Astra Control REST API와 상호 작용하기 위해 미리 만들어진 소프트웨어 개발 툴킷을 원할 경우, NetApp에서 다운로드할 수 있는 Astra Control Python SDK 툴킷을 제공합니다 link:https://github.com/NetApp/netapp-astra-toolkits/["여기"^].
 
 프로그래밍이 현재 상황에 고유하지 않고 구성 관리 툴을 사용하려는 경우 NetApp이 게시하는 Ansible 플레이북을 클론 복제 및 실행할 수 있습니다 link:https://github.com/NetApp-Automation/na_astra_control_suite["여기"^].
-
-link:dwn_use_cases_overview.html["다음: 사용 사례 검증: NetApp Astra를 사용한 DevOps"]

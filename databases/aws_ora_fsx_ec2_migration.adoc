@@ -14,8 +14,6 @@ keywords: HA, DR, database, Oracle, RDS, AWS, SnapCenter
 :imagesdir: ./../media/
 
 
-link:aws_ora_fsx_ec2_mgmt.html["이전: 데이터베이스 관리."]
-
 [role="lead"]
 데이터베이스 마이그레이션은 어떤 방법으로든 어려운 작업입니다. Oracle 데이터베이스를 사내에서 클라우드로 마이그레이션하는 경우도 예외는 아닙니다.
 

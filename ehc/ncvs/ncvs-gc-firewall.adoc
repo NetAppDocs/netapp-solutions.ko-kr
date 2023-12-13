@@ -13,8 +13,6 @@ summary: Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여�
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-data-encryption-at-rest.html["이전: 저장된 데이터 암호화."]
-
 [role="lead"]
 Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP 포트를 노출합니다.
 
@@ -27,5 +25,3 @@ Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP �
 Cloud Volumes Service는 와 함께 할당된 CIDR 범위의 IP 주소를 사용하여 에 도달합니다 `gcloud compute address` 명령을 실행하는 동안 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en_US["Cloud Volumes Service에 대한 온보딩"^]. 이 CIDR을 소스 주소로 사용하여 Active Directory 도메인 컨트롤러에 대한 인바운드 방화벽을 구성할 수 있습니다.
 
 Active Directory 도메인 컨트롤러가 필요합니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["여기에 설명된 대로 Cloud Volumes Service CIDR에 포트를 노출합니다"^].
-
-link:ncvs-gc-nas-protocols_overview.html["다음: NAS 프로토콜 개요"]

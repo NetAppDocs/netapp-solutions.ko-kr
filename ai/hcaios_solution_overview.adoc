@@ -55,5 +55,3 @@ image:hcaios_image3.png["오류: 그래픽 이미지가 없습니다"]
 cnvrg.io 플랫폼은 특정 시간 동안 사용되지 않은 오래된 데이터 세트를 자동으로 감지하여 캐시에서 데이터를 제거하므로 자주 사용하는 데이터 세트에 대해 사용 가능한 NFS 캐시 공간을 유지합니다. ONTAP의 데이터 세트 캐싱은 클라우드와 사내에서 이루어지므로 최대한의 유연성을 제공하는 것이 중요합니다.
 
 image:hcaios_image4.png["오류: 그래픽 이미지가 없습니다"]
-
-link:hcaios_concepts_and_components.html["다음: 개념 및 구성 요소"]

@@ -13,8 +13,6 @@ summary: 이 섹션에서는 이 솔루션의 내용에 관심이 있는 사용�
 :imagesdir: ./../media/
 
 
-link:apache-spark-solution-overview.html["이전: 솔루션 개요"]
-
 [role="lead"]
 분석 및 데이터 과학의 세계는 IT와 비즈니스의 여러 분야를 아우릅니다.
 
@@ -26,5 +24,3 @@ link:apache-spark-solution-overview.html["이전: 솔루션 개요"]
 
 
 이 기술 보고서에서는 NetApp AFF, E-Series, StorageGRID, NFS 직접 액세스, Apache Spark가 어떤 식으로 Horovod와 Keras는 이러한 각 역할이 비즈니스에 가치를 제공하는 데 도움을 줍니다.
-
-link:apache-spark-solution-technology.html["다음은 솔루션 기술입니다."]

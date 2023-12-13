@@ -13,8 +13,6 @@ summary: 이 페이지에서는 Azure NetApp Files에 대해 위임된 서브넷
 :imagesdir: ./../media/
 
 
-link:aks-anf_install_and_set_up_the_aks_cluster.html["이전: AKS 클러스터를 설치하고 설정합니다."]
-
 [role="lead"]
 Azure NetApp Files에 대해 위임된 서브넷을 만들려면 다음 단계를 수행하십시오.
 
@@ -41,5 +39,3 @@ Azure NetApp Files 볼륨은 애플리케이션 클러스터에 할당되며 Kub
 * 사용자가 Azure NetApp Files 볼륨에 대량의 데이터를 저장할 수 있도록 지원
 * 대규모 파일 세트에서 모델을 실행할 때 Azure NetApp Files 볼륨의 성능 이점을 사용합니다.
 
-
-link:aks-anf_peer_aks_vnet_and_azure_netapp_files_vnet.html["다음: 피어 AKS VNET 및 Azure NetApp Files VNET"]

@@ -20,5 +20,3 @@ NetApp Astra를 사용하여 DevOps에서 검증된 사용 사례는 다음과 �
 * link:dwn_use_case_postmortem_with_restore.html["Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 용이하게 합니다"]
 * link:dwn_use_case_flexclone.html["NetApp FlexClone으로 소프트웨어 개발 가속화"]
 
-
-link:dwn_videos_and_demos.html["다음: 비디오 및 데모 - NetApp Astra의 DevOps"]

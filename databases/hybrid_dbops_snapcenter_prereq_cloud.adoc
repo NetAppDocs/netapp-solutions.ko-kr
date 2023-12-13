@@ -14,8 +14,6 @@ keywords: prerequisites, aws, azure, gcp, cloud central, cloud volumes ontap
 :imagesdir: ./../media/
 
 
-link:hybrid_dbops_snapcenter_prereq_onprem.html["이전: 사전 요구 사항 온-프레미스."]
-
 [role="lead"]
 Cloud Manager 커넥터와 Cloud Volumes ONTAP를 설치하고 SnapMirror를 구성하기 전에 먼저 클라우드 환경에 대한 몇 가지 준비를 수행해야 합니다. 이 페이지에서는 수행해야 하는 작업과 Cloud Volumes ONTAP를 구축할 때의 고려 사항에 대해 설명합니다.
 
@@ -70,5 +68,3 @@ Cloud Volumes ONTAP를 배포할 때 미리 정의된 패키지 또는 사용자
 DR 사용 사례 또는 개발 및 테스트를 위한 임시 스토리지 회전 시 갑작스러운 조널 또는 인프라 중단의 영향이 더 낮기 때문에 단일 노드가 일반적인 경우가 많습니다. 그러나 모든 운영 사용 사례에서 데이터가 단일 위치에만 있거나 데이터 세트에 더 많은 이중화 및 가용성이 필요할 경우 고가용성을 사용하는 것이 좋습니다.
 
 각 클라우드 버전의 고가용성 아키텍처에 대한 자세한 내용은 의 설명서를 참조하십시오 https://docs.netapp.com/us-en/occm/concept_ha.html["설치하고"^], https://docs.netapp.com/us-en/occm/concept_ha_azure.html["Azure를 지원합니다"^] 및 https://docs.netapp.com/us-en/occm/concept_ha_google_cloud.html["GCP"^].
-
-link:hybrid_dbops_snapcenter_getting_started.html["다음: 시작하기 개요"]

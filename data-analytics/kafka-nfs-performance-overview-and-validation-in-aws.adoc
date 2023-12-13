@@ -13,8 +13,6 @@ summary: NetApp NFS에 스토리지 계층이 마운트된 Kafka 클러스터가
 :imagesdir: ./../media/
 
 
-link:kafka-nfs-why-netapp-nfs-for-kafka-workloads.html["이전: Kafka 워크로드를 위한 NetApp NFS를 선택해야 하는 이유"]
-
 [role="lead"]
 NetApp NFS에 스토리지 계층이 마운트된 Kafka 클러스터가 AWS 클라우드의 성능을 벤치마킹했습니다. 벤치마킹 예는 다음 섹션에 설명되어 있습니다.
 
@@ -369,5 +367,3 @@ image:kafka-nfs-image30.png["여기에 네 개의 서로 다른 그래프가 표
 처리량 또는 동기화 드라이버 벤치마킹 수행 시 스토리지 처리량을 확인하십시오.
 
 image:kafka-nfs-image31.png["이 그래프는 지연 시간, IOPS 및 처리량의 성능을 보여 줍니다."]
-
-link:kafka-nfs-performance-overview-and-validation-in-aws-FSxN.html["다음: AWS FSxN NetApp ONTAP에서 성능 개요 및 검증."]

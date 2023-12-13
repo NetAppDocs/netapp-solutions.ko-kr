@@ -13,8 +13,6 @@ summary: Cloud Volumes Service 팀은 Google Cloud에서 백엔드 서비스를 
 :imagesdir: ./../../media/
 
 
-link:ncvs-gc-other-nas-infrastructure-service-dependencies.html["이전: 기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP, DNS)"]
-
 [role="lead"]
 Cloud Volumes Service 팀은 Google Cloud에서 백엔드 서비스를 관리하고 여러 전략을 사용하여 플랫폼을 보호하고 원치 않는 액세스를 방지합니다.
 
@@ -73,5 +71,3 @@ Cloud Volumes Services for Google Cloud는 현재 ISO/IEC 27001:2013 및 ISO/IEC
 == GDPR을 참조하십시오
 
 개인 정보 보호 및 GDPR 준수에 대한 NetApp의 약속은 당사의 다양한 규정으로 제공됩니다  https://www.netapp.com/how-to-buy/sales-terms-and-conditions%22%20/o%20%22SEO%20-%20Sales%20Terms%20and%20Conditions["고객 계약"^]있습니다 https://netapp.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCqPPgcufskl_71q-FelD4DHz5EMJVOkqqT0iiORT10DlfZnZeMpDrse5W6K9LEw6o*["고객 데이터 처리 부록"^]를 포함합니다  https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en["표준 계약 조항"^] 유럽 위원회에서 제공. 또한 NetApp은 개인 정보 보호 정책에 이러한 의무를 이행하며, 이는 기업 행동 강령에 명시된 핵심 가치를 기반으로 합니다.
-
-link:ncvs-gc-additional-information.html["다음: 추가 정보, 버전 기록 및 연락처 정보"]

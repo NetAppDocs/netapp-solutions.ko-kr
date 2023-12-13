@@ -31,5 +31,3 @@ NOTE: NetApp 포트폴리오의 각 스토리지 시스템은 온프레미스 �
 * link:rh-os-n_netapp_ontap.html["NetApp ONTAP를 참조하십시오"]
 * link:rh-os-n_netapp_element.html["NetApp Element"]
 
-
-link:rh-os-n_overview_storint.html["다음으로, NetApp 스토리지 통합 개요를 살펴보겠습니다"]

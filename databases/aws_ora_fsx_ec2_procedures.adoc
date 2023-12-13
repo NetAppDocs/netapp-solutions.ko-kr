@@ -14,7 +14,8 @@ keywords: AWS, Oracle, RDS, HA, DR, database
 :imagesdir: ./../media/
 
 
-link:aws_ora_fsx_ec2_factors.html["이전: 솔루션 아키텍처."]
+[role="lead"]
+이 섹션에서는 FSx 스토리지와 함께 Oracle RDS 사용자 지정 데이터베이스를 구축하는 구축 절차를 설명합니다.
 
 
 
@@ -497,5 +498,3 @@ SnapCenter의 데이터베이스 백업은 사용자가 구성할 수 있으며 
 다음 이미지는 Oracle 데이터베이스를 백업하도록 설정된 리소스 그룹의 예입니다.
 
 image:aws_rds_custom_deploy_snp_09.PNG["오류: 그래픽 이미지가 없습니다"]
-
-link:aws_ora_fsx_ec2_mgmt.html["다음: 데이터베이스 관리."]
