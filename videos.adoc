@@ -24,6 +24,8 @@ NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소
 * link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7n1sWK-QGq4QMI1VBJS-ZZW["MLOps를 참조하십시오"^]
 
 
+.DataOps Toolkit과 Astra Control Center 클라우드 버스트로 DevOps 가속
+video::e87773e3-dc53-4195-83ed-b0d50100a788[panopto,width=360]
 ====
 .엔터프라이즈 애플리케이션 및 데이터베이스
 [#db%collapsible]
