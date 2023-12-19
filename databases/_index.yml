@@ -3,6 +3,8 @@ indexpage:
   tiles:
   - title: 오라클
     links:
+    - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
+      url: "/automation_ora_aws-fsx_iscsi.html"
     - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하고 자가 관리형 Oracle을 제공합니다
       url: "/aws_ora_fsx_vmc_guestmount.html"
     - title: AWS FSx ONTAP을 통해 Oracle Active Data Guard 비용 절감
