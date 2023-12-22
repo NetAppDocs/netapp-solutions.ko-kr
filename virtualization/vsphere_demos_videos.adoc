@@ -78,6 +78,14 @@ video::ed41002e-585c-445d-a60c-b01200fb1188[panopto,width=360]
 .SnapCenter - SQL 복원 워크플로
 video::8df4ad1f-83ad-448b-9405-b01200fb2567[panopto,width=360]
 ====
+.3-2-1 데이터 보호 솔루션
+[%collapsible]
+====
+3-2-1 데이터 보호 솔루션은 SnapMirror 기술을 사용하여 온프레미스 운영 및 보조 백업과 BlueXP 백업 및 복구를 사용하여 오브젝트 스토리지에 복제된 복사본을 결합합니다.
+
+.VMware vSphere용 SnapCenter 플러그인을 사용한 VMFS 데이터 저장소의 3-2-1 데이터 보호 및 가상 머신용 BlueXP 백업 및 복구
+video::7c21f3fc-4025-4d8f-b54c-b0e001504c76[panopto,width=360]
+====
 .NetApp과 VMware Tanzu
 [%collapsible]
 ====
@@ -91,4 +99,12 @@ video::ZtbXeOJKhrc[youtube,width=360]
 video::FVRKjWH7AoE[youtube,width=360]
 .NetApp 및 VMware Tanzu Basic에서 VVOL을 사용하는 방법, 3부
 video::Y-34SUtTTtU[youtube,width=360]
+====
+.NetApp Cloud Insights를 참조하십시오
+[%collapsible]
+====
+NetApp Cloud Insights는 온프레미스 및 클라우드 인프라에 대한 가시성과 제어를 제공하도록 설계된 포괄적인 모니터링 및 분석 플랫폼입니다.
+
+.NetApp Cloud Insights - 최신 데이터 센터에 대한 가시성
+video::1e4da521-3104-4d51-8cde-b0e001502d3d[panopto,width=360]
 ====
