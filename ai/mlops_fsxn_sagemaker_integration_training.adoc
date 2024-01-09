@@ -1,0 +1,360 @@
+---
+sidebar: sidebar 
+permalink: ai/mlops_fsxn_sagemaker_integration_training.html 
+keywords: FSxN, AWS S3, SageMaker, MLOps, NetApp ONTAP 
+summary: '이 문서는 특히 타이어 품질 분류 프로젝트를 위해 SageMaker에서 PyTorch 모델을 훈련하기 위해 AWS FSx for NetApp ONTAP(FSxN)를 사용하는 방법에 대한 자습서입니다.' 
+---
+= 2부 - AWS FSx for NetApp ONTAP(FSxN)를 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:highlighter: rouge
+:imagesdir: ./../media/
+
+
+[role="lead"]
+* 작성자: *
+Ken Jian, NetApp 수석 데이터 겸 응용 과학자
+
+
+
+== 소개
+
+이 자습서는 SageMaker 환경 내에서 FSxN을 데이터 소스로 사용하는 ML 모델을 직접 구축하는 경험을 제공하는 컴퓨터 비전 분류 프로젝트의 실제 예를 제공합니다. 이 프로젝트는 딥 러닝 프레임워크인 PyTorch를 사용하여 타이어 이미지를 기준으로 타이어 품질을 분류하는 데 초점을 맞추고 있습니다. FSxN을 Amazon SageMaker의 데이터 원본으로 사용하는 머신 러닝 모델의 개발을 강조합니다.
+
+
+
+== FSxN이란
+
+Amazon FSx for NetApp ONTAP은 AWS에서 제공하는 완전 관리형 스토리지 솔루션입니다. NetApp의 ONTAP 파일 시스템을 활용하여 안정적인 고성능 스토리지를 제공합니다. NFS, SMB, iSCSI와 같은 프로토콜을 지원하여 다양한 컴퓨팅 인스턴스 및 컨테이너에서 원활하게 액세스할 수 있습니다. 이 서비스는 뛰어난 성능을 제공하여 빠르고 효율적인 데이터 운영을 보장하도록 설계되었습니다. 또한 높은 가용성과 내구성을 제공하여 데이터에 계속 액세스하고 보호할 수 있습니다. 또한 Amazon FSx for NetApp ONTAP의 스토리지 용량은 확장되므로 필요에 따라 쉽게 조정할 수 있습니다.
+
+
+
+== 필수 구성 요소
+
+
+
+=== 네트워크 환경
+
+image:mlops_fsxn_sagemaker_integration_training_0.png["오류: 네트워크 환경"]
+
+FSxN(Amazon FSx for NetApp ONTAP)은 AWS 스토리지 서비스입니다. NetApp ONTAP 시스템에서 실행 중인 파일 시스템과 이 시스템에 연결하는 AWS 관리형 SVM(시스템 가상 머신)이 포함됩니다. 제공된 다이어그램에서 AWS가 관리하는 NetApp ONTAP 서버는 VPC 외부에 있습니다. SVM은 SageMaker와 NetApp ONTAP 시스템 간의 매개 변수 역할을 하여 SageMaker로부터 작업 요청을 받아 기본 스토리지로 전달합니다. FSxN에 액세스하려면 SageMaker를 FSxN 구축과 동일한 VPC 내에 배치해야 합니다. 이 구성은 SageMaker와 FSxN 간의 통신 및 데이터 액세스를 보장합니다.
+
+
+
+=== 데이터 액세스
+
+실제 시나리오에서 데이터 과학자는 일반적으로 FSxN에 저장된 기존 데이터를 활용하여 머신 러닝 모델을 구축합니다. 그러나 데모용으로 FSxN 파일 시스템은 생성 후 처음 비어 있으므로 교육 데이터를 수동으로 업로드해야 합니다. FSxN을 SageMaker에 볼륨으로 마운트하면 이 작업을 수행할 수 있습니다. 파일 시스템이 성공적으로 마운트되면 데이터 세트를 마운트된 위치에 업로드하여 SageMaker 환경 내에서 모델을 교육하기 위해 액세스할 수 있습니다. 이러한 접근 방식을 통해 FSxN의 스토리지 용량과 기능을 활용하는 동시에 SageMaker와 협력하여 모델 개발 및 교육을 수행할 수 있습니다.
+
+데이터 읽기 프로세스에는 FSxN을 전용 S3 버킷으로 구성하는 작업이 포함됩니다. 자세한 구성 지침은 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/ai/mlops_fsxn_s3_integration.html["1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"]
+
+
+
+== 통합 개요
+
+image:mlops_fsxn_sagemaker_integration_training_1.png["오류: 교육 워크플로우"]
+
+FSxN의 교육 데이터를 사용하여 SageMaker에서 딥 러닝 모델을 구축하는 워크플로는 데이터 로더 정의, 모델 교육 및 배포의 세 가지 주요 단계로 요약할 수 있습니다. 개략적으로 보면 이러한 단계는 MLOps 파이프라인의 토대가 됩니다. 그러나 각 단계에는 포괄적인 구현을 위한 몇 가지 세부 하위 단계가 포함됩니다. 이러한 하위 단계에는 데이터 전처리, 데이터 세트 분할, 모델 구성, 하이퍼파라미터 조정, 모델 평가, 모델 구축을 지원합니다. 이러한 단계를 통해 SageMaker 환경 내에서 FSxN의 교육 데이터를 사용하여 딥 러닝 모델을 구축 및 배포할 수 있는 완벽하고 효과적인 프로세스를 보장할 수 있습니다.
+
+
+
+== 단계별 통합
+
+
+
+=== 데이터 로더
+
+데이터를 사용하여 PyTorch 딥 러닝 네트워크를 훈련하기 위해 데이터 피드를 용이하게 하기 위한 데이터 로더가 생성됩니다. 데이터 로더는 배치 크기를 정의할 뿐만 아니라 배치 내에서 각 레코드를 읽고 사전 처리하는 절차를 결정합니다. 데이터 로더를 구성하면 데이터 처리를 일괄 처리할 수 있어 딥 러닝 네트워크에 대한 교육이 가능합니다.
+
+데이터 로더는 세 부분으로 구성됩니다.
+
+
+
+==== 전처리 기능
+
+[source, python]
+----
+from torchvision import transforms
+
+preprocess = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((224,224)),
+    transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+    )
+])
+----
+위의 코드 조각은 * torchvision.transforms * 모듈을 사용한 이미지 전처리 변환의 정의를 보여 줍니다. 이 튜토리얼에서는 일련의 변환을 적용하기 위해 전처리 개체가 만들어집니다. 첫째, * ToTensor() * 변환은 이미지를 텐서 표현으로 변환합니다. 그 후 * 크기 조정((224,224) * 변환은 고정 크기 224x224 픽셀로 이미지 크기를 조정합니다. 마지막으로 * 정규화() * 변환은 평균을 빼고 각 채널을 따라 표준 편차로 나누어 텐서 값을 정규화합니다. 정규화에 사용되는 평균 및 표준 편차 값은 일반적으로 사전 훈련된 신경망 모델에 사용됩니다. 전반적으로 이 코드는 이미지 데이터를 텐서로 변환하고 크기를 조정하며 픽셀 값을 정규화함으로써 사전 훈련된 모델로 추가 처리 또는 입력을 위해 준비합니다.
+
+
+
+==== PyTorch 데이터 집합 클래스
+
+[source, python]
+----
+import torch
+from io import BytesIO
+from PIL import Image
+
+
+class FSxNImageDataset(torch.utils.data.Dataset):
+    def __init__(self, bucket, prefix='', preprocess=None):
+        self.image_keys = [
+            s3_obj.key
+            for s3_obj in list(bucket.objects.filter(Prefix=prefix).all())
+        ]
+        self.preprocess = preprocess
+
+    def __len__(self):
+        return len(self.image_keys)
+
+    def __getitem__(self, index):
+        key = self.image_keys[index]
+        response = bucket.Object(key)
+
+        label = 1 if key[13:].startswith('defective') else 0
+
+        image_bytes = response.get()['Body'].read()
+        image = Image.open(BytesIO(image_bytes))
+        if image.mode == 'L':
+            image = image.convert('RGB')
+
+        if self.preprocess is not None:
+            image = self.preprocess(image)
+        return image, label
+----
+이 클래스는 데이터 집합의 총 레코드 수를 가져오는 기능을 제공하며 각 레코드에 대한 데이터를 읽는 방법을 정의합니다. __GetItem_* 함수 내에서 코드는 boto3 S3 Bucket 객체를 사용하여 FSxN에서 이진 데이터를 검색합니다. FSxN에서 데이터에 액세스하기 위한 코드 스타일은 Amazon S3에서 데이터를 읽는 것과 비슷합니다. 다음 설명은 전용 S3 객체 * Bucket * 의 생성 프로세스에 대해 자세히 설명합니다.
+
+
+
+==== FSxN은 프라이빗 S3 저장소로 사용됩니다
+
+[source, python]
+----
+seed = 77                                                   # Random seed
+bucket_name = '<Your ONTAP bucket name>'                    # The bucket name in ONTAP
+aws_access_key_id = '<Your ONTAP bucket key id>'            # Please get this credential from ONTAP
+aws_secret_access_key = '<Your ONTAP bucket access key>'    # Please get this credential from ONTAP
+fsx_endpoint_ip = '<Your FSxN IP address>'                  # Please get this IP address from FSXN
+----
+[source, python]
+----
+import boto3
+
+# Get session info
+region_name = boto3.session.Session().region_name
+
+# Initialize Fsxn S3 bucket object
+# --- Start integrating SageMaker with FSXN ---
+# This is the only code change we need to incorporate SageMaker with FSXN
+s3_client: boto3.client = boto3.resource(
+    's3',
+    region_name=region_name,
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    use_ssl=False,
+    endpoint_url=f'http://{fsx_endpoint_ip}',
+    config=boto3.session.Config(
+        signature_version='s3v4',
+        s3={'addressing_style': 'path'}
+    )
+)
+# s3_client = boto3.resource('s3')
+bucket = s3_client.Bucket(bucket_name)
+# --- End integrating SageMaker with FSXN ---
+----
+SageMaker에서 FSxN의 데이터를 읽으려면 S3 프로토콜을 사용하여 FSxN 스토리지를 가리키는 처리기가 만들어집니다. 따라서 FSxN을 전용 S3 버킷으로 처리할 수 있습니다. 핸들러 구성에는 FSxN SVM의 IP 주소, 버킷 이름 및 필요한 자격 증명을 지정하는 작업이 포함됩니다. 이러한 구성 항목을 얻는 방법에 대한 자세한 설명은 의 문서를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/ai/mlops_fsxn_s3_integration.html["1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"].
+
+위에서 언급한 예제에서 버킷 객체는 PyTorch 데이터 집합 객체를 인스턴스화하는 데 사용됩니다. 데이터세트 객체에 대해서는 다음 섹션에서 자세히 설명합니다.
+
+
+
+==== PyTorch 데이터 로더
+
+[source, python]
+----
+from torch.utils.data import DataLoader
+torch.manual_seed(seed)
+
+# 1. Hyperparameters
+batch_size = 64
+
+# 2. Preparing for the dataset
+dataset = FSxNImageDataset(bucket, 'dataset/tyre', preprocess=preprocess)
+
+train, test = torch.utils.data.random_split(dataset, [1500, 356])
+
+data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+----
+제공된 예에서는 배치 크기가 64로 지정되어 각 배치에 64개의 레코드가 포함됨을 나타냅니다. PyTorch * Dataset * 클래스, 전처리 기능 및 훈련 배치 크기를 결합하여 훈련을 위한 데이터 로더를 얻습니다. 이 데이터 로더는 교육 단계에서 데이터 세트를 일괄적으로 반복하는 프로세스를 지원합니다.
+
+
+
+=== 모델 교육
+
+[source, python]
+----
+from torch import nn
+
+
+class TyreQualityClassifier(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3,32,(3,3)),
+            nn.ReLU(),
+            nn.Conv2d(32,32,(3,3)),
+            nn.ReLU(),
+            nn.Conv2d(32,64,(3,3)),
+            nn.ReLU(),
+            nn.Flatten(),
+            nn.Linear(64*(224-6)*(224-6),2)
+        )
+    def forward(self, x):
+        return self.model(x)
+----
+[source, python]
+----
+import datetime
+
+num_epochs = 2
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+model = TyreQualityClassifier()
+fn_loss = torch.nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+
+model.to(device)
+for epoch in range(num_epochs):
+    for idx, (X, y) in enumerate(data_loader):
+        X = X.to(device)
+        y = y.to(device)
+
+        y_hat = model(X)
+
+        loss = fn_loss(y_hat, y)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"Current Time: {current_time} - Epoch [{epoch+1}/{num_epochs}]- Batch [{idx + 1}] - Loss: {loss}", end='\r')
+----
+이 코드는 표준 PyTorch 교육 프로세스를 구현합니다. 타이어의 품질을 분류하기 위해 선형과 선층을 사용하여 * TireQualityClassifier * 라는 신경망 모델을 정의합니다. 훈련 루프는 데이터 배치를 반복하고 손실을 계산하며 역전파와 최적화를 사용하여 모델의 파라미터를 업데이트합니다. 또한 모니터링을 위해 현재 시간, 에포치, 배치 및 손실을 인쇄합니다.
+
+
+
+=== 모델 구축
+
+
+
+==== 구축
+
+[source, python]
+----
+import io
+import os
+import tarfile
+import sagemaker
+
+# 1. Save the PyTorch model to memory
+buffer_model = io.BytesIO()
+traced_model = torch.jit.script(model)
+torch.jit.save(traced_model, buffer_model)
+
+# 2. Upload to AWS S3
+sagemaker_session = sagemaker.Session()
+bucket_name_default = sagemaker_session.default_bucket()
+model_name = f'tyre_quality_classifier.pth'
+
+# 2.1. Zip PyTorch model into tar.gz file
+buffer_zip = io.BytesIO()
+with tarfile.open(fileobj=buffer_zip, mode="w:gz") as tar:
+    # Add PyTorch pt file
+    file_name = os.path.basename(model_name)
+    file_name_with_extension = os.path.split(file_name)[-1]
+    tarinfo = tarfile.TarInfo(file_name_with_extension)
+    tarinfo.size = len(buffer_model.getbuffer())
+    buffer_model.seek(0)
+    tar.addfile(tarinfo, buffer_model)
+
+# 2.2. Upload the tar.gz file to S3 bucket
+buffer_zip.seek(0)
+boto3.resource('s3') \
+    .Bucket(bucket_name_default) \
+    .Object(f'pytorch/{model_name}.tar.gz') \
+    .put(Body=buffer_zip.getvalue())
+----
+SageMaker는 배포를 위해 모델을 S3에 저장해야 하기 때문에 코드는 PyTorch 모델을 * Amazon S3 * 에 저장합니다. 모델을 * Amazon S3 * 에 업로드하면 SageMaker에 액세스할 수 있으므로 배포된 모델에 대한 구축 및 추론이 가능합니다.
+
+[source, python]
+----
+import time
+from sagemaker.pytorch import PyTorchModel
+from sagemaker.predictor import Predictor
+from sagemaker.serializers import IdentitySerializer
+from sagemaker.deserializers import JSONDeserializer
+
+
+class TyreQualitySerializer(IdentitySerializer):
+    CONTENT_TYPE = 'application/x-torch'
+
+    def serialize(self, data):
+        transformed_image = preprocess(data)
+        tensor_image = torch.Tensor(transformed_image)
+
+        serialized_data = io.BytesIO()
+        torch.save(tensor_image, serialized_data)
+        serialized_data.seek(0)
+        serialized_data = serialized_data.read()
+
+        return serialized_data
+
+
+class TyreQualityPredictor(Predictor):
+    def __init__(self, endpoint_name, sagemaker_session):
+        super().__init__(
+            endpoint_name,
+            sagemaker_session=sagemaker_session,
+            serializer=TyreQualitySerializer(),
+            deserializer=JSONDeserializer(),
+        )
+
+sagemaker_model = PyTorchModel(
+    model_data=f's3://{bucket_name_default}/pytorch/{model_name}.tar.gz',
+    role=sagemaker.get_execution_role(),
+    framework_version='2.0.1',
+    py_version='py310',
+    predictor_cls=TyreQualityPredictor,
+    entry_point='inference.py',
+    source_dir='code',
+)
+
+timestamp = int(time.time())
+pytorch_endpoint_name = '{}-{}-{}'.format('tyre-quality-classifier', 'pt', timestamp)
+sagemaker_predictor = sagemaker_model.deploy(
+    initial_instance_count=1,
+    instance_type='ml.p3.2xlarge',
+    endpoint_name=pytorch_endpoint_name
+)
+----
+이 코드를 사용하면 SageMaker에서 PyTorch 모델을 쉽게 배포할 수 있습니다. 또한 입력 데이터를 PyTorch 텐서로 미리 처리하고 serialize하는 사용자 지정 serializer * TireQualitySerializer * 를 정의합니다. TireQualityPredictor* 클래스는 정의된 serializer와 * JSONDeserializer*를 사용하는 사용자 지정 예측자입니다. 또한 이 코드는 * PyTorchModel * 개체를 만들어 모델의 S3 위치, IAM 역할, 프레임워크 버전 및 추론을 위한 진입점을 지정합니다. 이 코드에서는 타임스탬프를 생성하고 모델 및 타임스탬프를 기반으로 끝점 이름을 생성합니다. 마지막으로, 모델은 Deploy 메서드를 사용하여 배포되며 인스턴스 수, 인스턴스 유형 및 생성된 끝점 이름을 지정합니다. 이를 통해 PyTorch 모델을 구축하고 SageMaker에서 추론을 위해 액세스할 수 있습니다.
+
+
+
+==== 추론
+
+[source, python]
+----
+image_object = list(bucket.objects.filter('dataset/tyre'))[0].get()
+image_bytes = image_object['Body'].read()
+
+with Image.open(with Image.open(BytesIO(image_bytes)) as image:
+    predicted_classes = sagemaker_predictor.predict(image)
+
+    print(predicted_classes)
+----
+다음은 배포된 끝점을 사용하여 추론을 수행하는 예제입니다.

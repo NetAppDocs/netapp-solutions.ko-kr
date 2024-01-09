@@ -52,6 +52,14 @@ entries:
     url: "/ai/tr-4815.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
+  - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
+    entries:
+    - title: 1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
+      url: "/ai/mlops_fsxn_s3_integration.html"
+    - title: 2부 - AWS FSx for NetApp ONTAP(FSxN)를 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용
+      url: "/ai/mlops_fsxn_sagemaker_integration_training.html"
+    - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
+      url: "/ai/mlops_fsxn_cictcd.html"
   - title: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
     entries:
     - title: 소개
