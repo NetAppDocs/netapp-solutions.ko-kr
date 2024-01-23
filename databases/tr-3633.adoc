@@ -1,20 +1,9 @@
 ---
 sidebar: sidebar 
 permalink: databases/tr-3633.html 
-keywords:  
-summary:  
+redirect: ontap-apps-dbs/oracle/oracle-overview.html 
 ---
-= TR-3633: ONTAP 기반 Oracle 데이터베이스
-:hardbreaks:
+= 
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
 
-Jeffrey Steiner, NetApp
-
-을 참조하십시오 link:https://imt.netapp.com/matrix/#welcome["상호 운용성 매트릭스 툴(IMT)"^] TR-3633에 지정된 환경, 구성 및 버전이 사용자 환경을 지원하는지 확인하려면
-
-link:https://www.netapp.com/pdf.html?item=/media/8744-tr3633.pdf["TR-3633: ONTAP 기반 Oracle 데이터베이스"^]

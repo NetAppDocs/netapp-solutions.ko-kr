@@ -16,7 +16,7 @@ indexpage:
   - title: 시작하기
     links:
     - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
-      url: "/vsphere_admin_introduction.html"
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
     - title: 비디오
       url: "/vsphere_demos_videos.html"
     - title: 블로그
@@ -24,9 +24,9 @@ indexpage:
   - title: 모범 사례 및 지원
     links:
     - title: ONTAP를 사용하는 VMware vSphere 모범 사례
-      url: "/vsphere_ontap_ontap_for_vsphere.html"
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
     - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
-      url: "/vvols-overview.html"
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html
     - title: NetApp 상호 운용성 매트릭스 툴
       url: https://mysupport.netapp.com/matrix/#welcome
     - title: VMware 하드웨어 호환성 가이드 를 참조하십시오
@@ -74,9 +74,9 @@ indexpage:
   - title: 보안 데이터 보호
     links:
     - title: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자(SRM
-      url: "/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html
     - title: VMware vSphere용 ONTAP 툴 - 제품 보안
-      url: "/tools-vmware-secure-development-activities.html"
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-tools.html
     - title: VMware vSphere용 NetApp SnapCenter 플러그인
       url: "/vmware-scv-overview.html"
     - title: 하이브리드 멀티 클라우드용 NetApp 데이터 보호 솔루션

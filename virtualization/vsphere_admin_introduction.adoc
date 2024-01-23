@@ -1,37 +1,9 @@
 ---
 sidebar: sidebar 
 permalink: virtualization/vsphere_admin_introduction.html 
-keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, BlueXP Copy and Sync, FabricPool, ONTAP 
-summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 솔루션을 구축하는 모범 사례를 설명합니다. 
+redirect: ontap-apps-dbs/vmware/vmware-vsphere-overview.html 
 ---
-= vSphere 관리자를 위한 ONTAP 소개
-:hardbreaks:
+= 
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
-
-
-
-== ONTAP for vSphere를 선택해야 하는 이유
-
-NetApp ONTAP는 스토리지 및 데이터 관리 운영을 간소화하고 사내 또는 클라우드에 관계없이 VMware 환경을 분명하게 보완합니다. 수많은 고객들이 vSphere 구축을 위해 ONTAP를 스토리지 솔루션으로 선택한 이유로는 NetApp의 동급 최고의 데이터 보호, 스토리지 효율성 혁신, SAN 기반 및 NAS 기반 VMware 아키텍처 모두에서 뛰어난 성능이 있습니다.
-
-NetApp은 가상화 환경 관리와 관련된 고유한 당면 과제를 해결하는 고객을 지원하기 위해 다양한 VMware 제품의 수많은 VMware 플러그인, 검증 및 자격을 제공합니다. NetApp은 VMware가 가상화를 위해 수행하는 스토리지 및 데이터 관리를 위해 하므로 고객이 물리적 스토리지 관리보다 핵심 역량에 집중할 수 있습니다. VMware와 NetApp은 20년에 가까운 파트너 관계를 유지하고 있으며, VMware Cloud Foundation 및 Tanzu와 같은 새로운 기술이 등장하면서 vSphere의 기반을 지속적으로 지원하는 등 고객 가치를 지속해서 개선하고 있습니다.
-
-고객이 중요하게 고려하는 요소는 다음과 같습니다.
-
-* * 유니파이드 스토리지 *
-* * 스토리지 효율성 *
-* * 가상 볼륨 및 스토리지 정책 기반 관리 *
-* * 하이브리드 클라우드 *
-
-
-지원되는 NetApp 및 VMware 솔루션에 대한 자세한 내용은 다음 리소스를 참조하십시오.
-
-* https://mysupport.netapp.com/matrix/#welcome["NetApp 상호 운용성 매트릭스 툴"^] (IMT). IMT에는 FC/FCoE, iSCSI, NFS 및 CIFS 구성을 구축하는 데 사용할 수 있는 검증된 구성 요소와 버전이 정의되어 있습니다.
-* https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware 호환성 가이드 를 참조하십시오"^]. VMware 호환성 가이드 에는 VMware Infrastructure 및 소프트웨어 제품과의 시스템, I/O, 스토리지/SAN 및 백업 호환성 목록이 나와 있습니다
-* https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/["VMware용 NetApp ONTAP 툴"^]. VMware vSphere용 ONTAP 툴은 VSC, VASA 공급자, SRA(스토리지 복제 어댑터) 확장을 포함한 단일 vCenter Server 플러그인입니다.
 

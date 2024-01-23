@@ -3,94 +3,29 @@ section: virtualization
 title: 포함되었습니다
 url: "/virtualization/index.html"
 entries:
-- title: VMware 가상화를 위한 새로운 기능
-  url: https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_vmware_virtualization.html
-- title: VMware vSphere용 ONTAP 툴 - 제품 보안
-  url: "/virtualization/tools-vmware-secure-development-activities.html"
 - title: ONTAP용 VMware 가상화
+  url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
+- title: VMware vSphere 자동화
+  url: "/virtualization/vsphere_auto_introduction.html"
   entries:
-  - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
+  - title: 기존 블록 스토리지 용량 할당
+    url: "/virtualization/vsphere_ontap_auto_block.html"
     entries:
-    - title: 소개
-      url: "/virtualization/vsphere_admin_introduction.html"
-    - title: 유니파이드 스토리지
-      url: "/virtualization/vsphere_admin_unified_storage.html"
-    - title: 스토리지 효율성
-      url: "/virtualization/vsphere_admin_storage_efficiencies.html"
-    - title: 가상 볼륨 및 스토리지 정책 기반 관리
-      url: "/virtualization/vsphere_admin_vvols_and_spbm.html"
-    - title: 하이브리드 클라우드
-      url: "/virtualization/vsphere_admin_hybrid_cloud.html"
-  - title: ONTAP를 사용하는 VMware vSphere 모범 사례
-    url: "/virtualization/vsphere_ontap_ontap_for_vsphere.html"
+    - title: VMFS - Fibre Channel
+      url: "/virtualization/vsphere_ontap_auto_block_fc.html"
+    - title: VMFS - Fibre Channel over Ethernet
+      url: "/virtualization/vsphere_ontap_auto_block_fcoe.html"
+    - title: VMFS-iSCSI
+      url: "/virtualization/vsphere_ontap_auto_block_iscsi.html"
+    - title: VMFS-NVMe over Fabric을 참조하십시오
+      url: "/virtualization/vsphere_ontap_auto_block_nvmeof.html"
+  - title: 기존 파일 스토리지 용량 할당
+    url: "/virtualization/vsphere_ontap_auto_file.html"
     entries:
-    - title: vSphere를 위한 ONTAP 기능
-      url: "/virtualization/vsphere_ontap_ontap_capabilities_for_vsphere.html"
-    - title: 데이터 저장소 및 프로토콜
-      url: "/virtualization/vsphere_ontap_best_practices.html"
-    - title: 기타 vSphere 기능
-      url: "/virtualization/vsphere_ontap_other_capabilities_for_vsphere.html"
-    - title: ONTAP 및 vSphere 릴리즈별 정보입니다
-      url: "/virtualization/vsphere_ontap_ontap_and_vsphere_release-specific_information.html"
-    - title: 권장되는 ESXi 호스트 및 기타 ONTAP 설정
-      url: "/virtualization/vsphere_ontap_recommended_esxi_host_and_other_ontap_settings.html"
-    - title: 추가 정보를 찾을 수 있는 위치
-      url: "/virtualization/vsphere_ontap_where_to_find_additional_information.html"
-    - title: 문의하기
-      url: "/virtualization/vsphere_ontap_contact_us.html"
-  - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
-    url: "/virtualization/vvols-overview.html"
-    entries:
-    - title: ONTAP에서 VVOL 사용
-      url: "/virtualization/vvols-ontap.html"
-    - title: VVOL 스토리지 구축
-      url: "/virtualization/vvols-deploy.html"
-    - title: VVOL 보호
-      url: "/virtualization/vvols-protect.html"
-    - title: 문제 해결
-      url: "/virtualization/vvols-resources.html"
-  - title: NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자
-    url: "/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html"
-    entries:
-    - title: SRM 및 ONTAP 도구의 새로운 기능
-      url: "/virtualization/vsrm-ontap9_new_features_with_srm_and_ontap_tools.html"
-    - title: 배포 모범 사례
-      url: "/virtualization/vsrm-ontap9_deployment_best_practices.html"
-    - title: 운영 모범 사례
-      url: "/virtualization/vsrm-ontap9_operational_best_practices.html"
-    - title: 복제 토폴로지
-      url: "/virtualization/vsrm-ontap9_replication_topologies.html"
-    - title: VVOL 복제 사용 시 SRM 문제 해결
-      url: "/virtualization/vsrm-ontap9_appendix_a__troubleshooting_srm_when_using_vvols_replication.html"
-    - title: 결론
-      url: "/virtualization/vsrm-ontap9_conclusion.html"
-    - title: 추가 정보
-      url: "/virtualization/vsrm-ontap9_additional_information.html"
-  - title: VMware vSphere용 ONTAP 툴 - 제품 보안
-    url: "/virtualization/tools-vmware-secure-development-activities.html"
-  - title: SnapCenter 플러그인 VMware vSphere - 제품 보안
-    url: "/virtualization/scvmware-security-secure-development-activities.html"
-  - title: VMware vSphere 자동화
-    url: "/virtualization/vsphere_auto_introduction.html"
-    entries:
-    - title: 기존 블록 스토리지 용량 할당
-      url: "/virtualization/vsphere_ontap_auto_block.html"
-      entries:
-      - title: VMFS - Fibre Channel
-        url: "/virtualization/vsphere_ontap_auto_block_fc.html"
-      - title: VMFS - Fibre Channel over Ethernet
-        url: "/virtualization/vsphere_ontap_auto_block_fcoe.html"
-      - title: VMFS-iSCSI
-        url: "/virtualization/vsphere_ontap_auto_block_iscsi.html"
-      - title: VMFS-NVMe over Fabric을 참조하십시오
-        url: "/virtualization/vsphere_ontap_auto_block_nvmeof.html"
-    - title: 기존 파일 스토리지 용량 할당
-      url: "/virtualization/vsphere_ontap_auto_file.html"
-      entries:
-      - title: NFS-v3
-        url: "/virtualization/vsphere_ontap_auto_file_nfs.html"
-      - title: NFS-v4.1
-        url: "/virtualization/vsphere_ontap_auto_file_nfs41.html"
+    - title: NFS-v3
+      url: "/virtualization/vsphere_ontap_auto_file_nfs.html"
+    - title: NFS-v4.1
+      url: "/virtualization/vsphere_ontap_auto_file_nfs41.html"
 - title: VMware - 퍼블릭 클라우드
   url: "/ehc/index.html"
 - title: VMware 하이브리드 멀티 클라우드 사용 사례

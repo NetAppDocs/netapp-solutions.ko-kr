@@ -47,8 +47,8 @@ indexpage:
       url: "/hybrid_dbops_snapcenter_usecases.html"
     - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
       url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
-    - title: NetApp ONTAP에 Oracle 데이터베이스 구축
-      url: https://www.netapp.com/pdf.html?item=/media/8744-tr3633.pdf
+    - title: ONTAP에 Oracle 데이터베이스를 구현합니다
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html
     - title: Oracle Databases on NetApp EF-Series 를 참조하십시오
       url: https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf
     - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
