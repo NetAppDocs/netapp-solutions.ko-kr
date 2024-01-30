@@ -53,6 +53,7 @@ entries:
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
   - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
+    url: "/ai/mlops_fsxn_intro.html"
     entries:
     - title: 1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
       url: "/ai/mlops_fsxn_s3_integration.html"
