@@ -46,7 +46,7 @@ terraform {
   required_providers {
     netapp-cloudmanager = {
       source = "NetApp/netapp-cloudmanager"
-      version = "20.10.0"
+      version = ">= 23.0.0"
     }
   }
 }
@@ -650,6 +650,9 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 | * az_NetApp_vol_storage_quota * | 문자열 | (필수) 파일 시스템에 허용되는 최대 스토리지 할당량(GB)입니다. 
 |===
+
+NOTE: 권장 사항에 따라 이 스크립트는 를 사용합니다 `prevent_destroy` 구성 파일에서 실수로 데이터가 손실될 가능성을 줄이기 위한 수명 주기 인수입니다. 에 대한 자세한 내용은 를 참조하십시오 `prevent_destroy` 문서 수정 상태 인수 Terraform 문서를 참조하십시오. https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle#prevent-resource-deletion[].
+
 --
 .ANF 데이터 보호
 --
@@ -803,6 +806,9 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 | * az_DP_replication_frequency * | 문자열 | (필수) 복제 빈도 지원되는 값은 10분, 시간별, 일일 값이며 대/소문자를 구분합니다. 
 |===
+
+NOTE: 권장 사항에 따라 이 스크립트는 를 사용합니다 `prevent_destroy` 구성 파일에서 실수로 데이터가 손실될 가능성을 줄이기 위한 수명 주기 인수입니다. 에 대한 자세한 내용은 를 참조하십시오 `prevent_destroy` 문서 수정 상태 인수 Terraform 문서를 참조하십시오. https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle#prevent-resource-deletion[].
+
 --
 .ANF 듀얼 프로토콜
 --
@@ -932,6 +938,9 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 | * az_smb_dns_servers * | 문자열 | (필수) DNS 서버 IP를 사용하여 ActiveDirectory 개체를 생성합니다. 
 |===
+
+NOTE: 권장 사항에 따라 이 스크립트는 를 사용합니다 `prevent_destroy` 구성 파일에서 실수로 데이터가 손실될 가능성을 줄이기 위한 수명 주기 인수입니다. 에 대한 자세한 내용은 를 참조하십시오 `prevent_destroy` 문서 수정 상태 인수 Terraform 문서를 참조하십시오. https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle#prevent-resource-deletion[].
+
 --
 .스냅샷의 ANF 볼륨
 --
@@ -1050,6 +1059,9 @@ NOTE: "VNET_creation_bool" 및 "subnet_creation_bool" 값을 false로 설정하�
 
 | az_snapshot_id * | 문자열 | (필수) 생성할 새 ANF 볼륨을 사용하는 스냅샷 ID입니다. 
 |===
+
+NOTE: 권장 사항에 따라 이 스크립트는 를 사용합니다 `prevent_destroy` 구성 파일에서 실수로 데이터가 손실될 가능성을 줄이기 위한 수명 주기 인수입니다. 에 대한 자세한 내용은 를 참조하십시오 `prevent_destroy` 문서 수정 상태 인수 Terraform 문서를 참조하십시오. https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle#prevent-resource-deletion[].
+
 --
 .CVO 단일 노드 구축
 --
