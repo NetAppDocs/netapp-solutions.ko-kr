@@ -4,7 +4,7 @@ permalink: databases/automation_ora_aws-fsx_iscsi.html
 keywords: Database, Oracle, AWS, FSx, ONTAP, Automation 
 summary: 이 솔루션은 Oracle ASM을 볼륨 관리자로 사용하여 독립 실행형 재시작으로 구성된 iSCSI 프로토콜 및 Oracle 데이터베이스를 사용하는 운영 데이터베이스 스토리지로 Amazon FSx ONTAP의 자동화된 Oracle 구현 및 보호에 대한 개요와 세부 정보를 제공합니다. 
 ---
-= Amazon FSx ONTAP에서 iSCSI를 사용하여 Oracle을 간편하고 자동으로 배포합니다
+= TR-4986: iSCSI를 지원하는 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 배포
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -276,7 +276,7 @@ memory_limit: 8192
 
 [%collapsible]
 ====
-자동화 툴킷에는 총 5개의 플레이북이 있습니다. 각 작업 블록은 서로 다른 작업 블록을 수행하며 서로 다른 용도로 사용됩니다.
+자동화 툴킷에는 총 6개의 플레이북이 있습니다. 각 작업 블록은 서로 다른 작업 블록을 수행하며 서로 다른 용도로 사용됩니다.
 
 ....
 0-all_playbook.yml - execute playbooks from 1-4 in one playbook run.
@@ -288,7 +288,7 @@ memory_limit: 8192
 ....
 다음 명령을 사용하여 플레이북을 실행할 수 있는 세 가지 옵션이 있습니다.
 
-. 한 번의 실행으로 모든 플레이북을 실행합니다.
+. 모든 구현 플레이북을 하나의 실행 방식으로 실행합니다.
 +
 [source, cli]
 ----

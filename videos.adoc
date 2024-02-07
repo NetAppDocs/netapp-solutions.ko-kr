@@ -36,6 +36,8 @@ video::e87773e3-dc53-4195-83ed-b0d50100a788[panopto,width=360]
 video::c381b887-8c8b-4d7d-8b0f-b0c0010c5c04[panopto,width=360]
 [밑줄]# * Oracle 데이터베이스용 비디오 * #
 
+.NFS를 사용하여 Azure NetApp Files에 Oracle을 간편하게 자동으로 구현합니다
+video::d1c859b6-e45a-44c7-8361-b10f012fc89b[panopto,width=360]
 .iSCSI를 사용하여 Amazon FSx ONTAP에서 Oracle을 간편하고 자동으로 배포합니다
 video::81e389a0-d9b8-495c-883b-b0d701710847[panopto,width=360]
 .iSCSI를 사용하여 NetApp ASA에서 Oracle을 간편하고 자동으로 구현합니다

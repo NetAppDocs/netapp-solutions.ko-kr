@@ -119,7 +119,7 @@ alter session set container=ncdb;
 
 == PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 Azure로 마이그레이션합니다
 
-Maximum-availability 옵션을 사용하는 Oracle PDB 재배치에서는 PDB 핫 클론 기술을 사용합니다. 이 기술을 사용하면 PDB가 타겟으로 복제되는 동안 소스 PDB를 사용할 수 있습니다. 전환 시 세션 및 연결이 대상 PDB로 자동으로 리디렉션됩니다. 따라서 재배치되는 PDB의 크기와 관계없이 가동 중지 시간이 최소화됩니다. NetApp은 마이그레이션 절차를 자동화하는 Ansible 기반 툴킷을 제공합니다.
+Maximum-availability 옵션이 있는 Oracle PDB 재배치에는 PDB 핫 클론 기술이 적용되어 PDB가 타겟으로 복제되는 동안 소스 PDB 가용성이 가능합니다. 전환 시 사용자 연결은 대상 PDB로 자동 리디렉션됩니다. 따라서 다운타임은 PDB 크기와 무관하게 최소화됩니다. NetApp은 마이그레이션 절차를 자동화하는 Ansible 기반 툴킷을 제공합니다.
 
 . 동일한 버전 및 패치 수준을 가진 Azure VM의 Azure 퍼블릭 클라우드에서 CDB를 생성합니다.
 . Ansible 컨트롤러에서 자동화 툴킷 복사본을 복제합니다.
