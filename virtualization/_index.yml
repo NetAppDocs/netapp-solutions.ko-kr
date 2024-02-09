@@ -38,29 +38,39 @@ indexpage:
     - title: VMware vSphere 8의 새로운 기능
       url: "/vmware-vsphere8-intro.html"
     - title: VMware vSphere용 ONTAP 툴
-      url: "/vvols-overview.html"
-    - title: NetApp 상호 운용성 매트릭스 툴
-      url: https://mysupport.netapp.com/matrix/#welcome
-    - title: VMware 하드웨어 호환성 가이드 를 참조하십시오
-      url: https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc
-  - title: vSphere 8 및 vSphere+
-    links:
-    - title: vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
-      url: "/netapp-vsphere8.html"
-    - title: VMware vSphere 8의 새로운 기능
-      url: "/vmware-vsphere8-intro.html"
-    - title: VMware vSphere용 ONTAP 툴
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
   - title: VMware 클라우드 서비스
     links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
       url: "/../ehc/index.html"
     - title: AWS VMware Cloud(VMC) 기반 NetApp
-      url: "/../ehc/aws/aws-vmc.html"
+      url: "/../ehc/aws-vmc.html"
     - title: Azure 기반 NetApp VMware Solution(AVS)
-      url: "/../ehc/azure/azure-avs.html"
+      url: "/../ehc/azure-avs.html"
     - title: Google Cloud VMware Engine의 NetApp(GCVE)
-      url: "/../ehc/gcp/gcp-gcve.html"
+      url: "/../ehc/gcp-gcve.html"
+  - title: VMware 소프트웨어 정의 데이터 센터
+    links:
+    - title: NetApp 스토리지 및 VMware Cloud Foundation
+      url: "/vmware-vcf-overview.html"
+    - title: ONTAP 툴을 위한 VMware 클라우드 기반 구축 모드입니다
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html
+    - title: VMware Cloud Foundation으로 FlexPod 하이브리드 클라우드를 확장하십시오
+      url: https://www.netapp.com/blog/expanding-flexpod-hybrid-cloud-with-vmware-cloud-foundation/
+    - title: VMware Cloud Foundation용 FlexPod 설계 가이드
+      url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt0_general-table0=vmware%20cloud%20foundation
+  - title: 컨테이너 및 Kubernetes
+    links:
+    - title: VMware vSphere 기반 Kubernetes
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634
+    - title: NetApp의 VMware Tanzu
+      url: "../containers/vtwn_solution_overview.html"
+    - title: NetApp의 Red Hat OpenShift
+      url: "../containers/rh-os-n_solution_overview.html"
+    - title: NetApp의 Anthos
+      url: "../containers/a-w-n_solution_overview.html"
+    - title: NetApp Astra와 DevOps
+      url: "../containers/dwn_solution_overview.html"
   - title: VMware 소프트웨어 정의 데이터 센터
     links:
     - title: NetApp 스토리지 및 VMware Cloud Foundation

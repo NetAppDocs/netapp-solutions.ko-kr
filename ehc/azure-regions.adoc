@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: ehc/azure-regions.html 
+keywords: NetApp Solutions, azure, avs, regions 
+summary:  
+---
+= 지역 가용성 – ANF용 보조 NFS 데이터 저장소
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Azure/AVS에서 보조 NFS 데이터 저장소의 가용성은 Microsoft에서 정의합니다. 먼저 AVS와 ANF를 특정 지역에서 모두 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 ANF 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.
+
+* AVS 및 ANF의 가용성을 확인하십시오 link:https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp,azure-vmware&regions=all["여기"].
+* ANF 보조 NFS 데이터 저장소의 가용성을 확인합니다 link:https://docs.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal#supported-regions["여기"].
+

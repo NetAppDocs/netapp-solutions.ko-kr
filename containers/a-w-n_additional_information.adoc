@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: containers/a-w-n_additional_information.html 
+keywords:  
+summary:  
+---
+= 추가 정보를 찾을 수 있는 위치
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.
+
+* NetApp 문서
++
+https://docs.netapp.com/["https://docs.netapp.com/"^]
+
+* NetApp Astra Trident 문서
++
+https://docs.netapp.com/us-en/trident/index.html["https://docs.netapp.com/us-en/trident/index.html"]
+
+* NetApp Astra Control Center 문서
++
+https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
+
+* VMware 문서의 Anthos 클러스터
++
+https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview["https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview"^]
+
+* Anthos의 Bare Metal Documentation
++
+https://cloud.google.com/anthos/clusters/docs/bare-metal/latest["https://cloud.google.com/anthos/clusters/docs/bare-metal/latest"]
+
+* VMware vSphere 설명서
++
+https://docs.vmware.com["https://docs.vmware.com/"^]
+
+

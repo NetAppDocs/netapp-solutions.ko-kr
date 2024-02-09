@@ -18,36 +18,36 @@ entries:
   url: "/rhhc/rhhc-overview.html"
   entries:
   - title: 솔루션 개요
-    url: "/rhhc/on-premises/rhhc-op-solution.html"
+    url: "/rhhc/rhhc-op-solution.html"
   - title: VMware에서 Red Hat OpenShift Container 워크로드를 구성합니다
-    url: "/rhhc/on-premises/rhhc-op-setup.html"
+    url: "/rhhc/rhhc-op-setup.html"
   - title: VMware에서 컨테이너 워크로드를 보호합니다
-    url: "/rhhc/on-premises/rhhc-op-data-protection.html"
+    url: "/rhhc/rhhc-op-data-protection.html"
   - title: VMware에서 컨테이너 워크로드를 마이그레이션합니다
-    url: "/rhhc/on-premises/rhhc-op-data-migration.html"
+    url: "/rhhc/rhhc-op-data-migration.html"
 - title: 자체 관리형 구성요소(온프레미스/AWS/GCP/Azure)를 포함하는 하이브리드 클라우드
   url: "/rhhc/rhhc-overview.html"
   entries:
   - title: 솔루션 개요
-    url: "/rhhc/self-managed/rhhc-sm-solution.html"
+    url: "/rhhc/rhhc-sm-solution.html"
   - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
-    url: "/rhhc/self-managed/rhhc-sm-setup.html"
+    url: "/rhhc/rhhc-sm-setup.html"
   - title: GCP에서 Red Hat OpenShift Container 워크로드를 구성합니다
-    url: "/rhhc/self-managed/rhhc-sm-gcp-setup.html"
+    url: "/rhhc/rhhc-sm-gcp-setup.html"
   - title: Azure에서 Red Hat OpenShift Container 워크로드를 구성합니다
-    url: "/rhhc/self-managed/rhhc-sm-azure-setup.html"
+    url: "/rhhc/rhhc-sm-azure-setup.html"
   - title: AWS/GCP/Azure에서 컨테이너 워크로드 보호
-    url: "/rhhc/self-managed/rhhc-sm-data-protection.html"
+    url: "/rhhc/rhhc-sm-data-protection.html"
   - title: 컨테이너 워크로드를 AWS/GCP/Azure로 마이그레이션
-    url: "/rhhc/self-managed/rhhc-sm-data-migration.html"
+    url: "/rhhc/rhhc-sm-data-migration.html"
 - title: 공급자 관리 구성 요소를 지원하는 하이브리드 클라우드
   url: "/rhhc/rhhc-overview.html"
   entries:
   - title: 솔루션 개요
-    url: "/rhhc/provider-managed/rhhc-pm-solution.html"
+    url: "/rhhc/rhhc-pm-solution.html"
   - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
-    url: "/rhhc/provider-managed/rhhc-pm-setup.html"
+    url: "/rhhc/rhhc-pm-setup.html"
   - title: AWS에서 컨테이너 워크로드를 보호합니다
-    url: "/rhhc/provider-managed/rhhc-pm-data-protection.html"
+    url: "/rhhc/rhhc-pm-data-protection.html"
   - title: AWS에서 컨테이너 워크로드를 마이그레이션합니다
-    url: "/rhhc/provider-managed/rhhc-pm-data-migration.html"
+    url: "/rhhc/rhhc-pm-data-migration.html"

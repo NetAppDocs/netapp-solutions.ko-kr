@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: ehc/ncvs-gc-dual-protocol-multiprotocol.html 
+keywords: access control, user mapping, permission model 
+summary: Cloud Volumes Service는 적절한 액세스 권한을 유지하면서 동일한 데이터 세트를 SMB 및 NFS 클라이언트 모두에 공유할 수 있는 기능을 제공합니다. 이중 프로토콜 이는 프로토콜 간 ID 매핑을 조정하고 중앙 집중식 백엔드 LDAP 서버를 사용하여 Cloud Volumes Service에 UNIX ID를 제공하는 방식으로 수행됩니다. Windows Active Directory를 사용하여 Windows 및 UNIX 사용자를 모두 편리하게 제공할 수 있습니다. 
+---
+= 이중 프로토콜/멀티프로토콜
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Cloud Volumes Service는 적절한 액세스 권한을 유지하면서 동일한 데이터 세트를 SMB 및 NFS 클라이언트 모두에 공유할 수 있는 기능을 제공합니다 (https://cloud.google.com/architecture/partners/netapp-cloud-volumes/managing-dual-protocol-access["이중 프로토콜"^])를 클릭합니다. 이는 프로토콜 간 ID 매핑을 조정하고 중앙 집중식 백엔드 LDAP 서버를 사용하여 Cloud Volumes Service에 UNIX ID를 제공하는 방식으로 수행됩니다. Windows Active Directory를 사용하여 Windows 및 UNIX 사용자를 모두 편리하게 제공할 수 있습니다.
+
+
+
+== 액세스 제어
+
+* * 공유 액세스 제어. * NAS 공유에 액세스할 수 있는 클라이언트 및/또는 사용자 및 그룹을 결정합니다. NFS의 경우 엑스포트 정책과 규칙을 사용하여 클라이언트 엑스포트 액세스를 제어합니다. NFS 내보내기는 Cloud Volumes Service 인스턴스에서 관리됩니다. SMB는 CIFS/SMB 공유를 사용하고 ACL을 공유하여 사용자 및 그룹 레벨에서 보다 세부적인 제어를 제공합니다. 을 사용하여 SMB 클라이언트의 공유 레벨 ACL만 구성할 수 있습니다 https://library.netapp.com/ecmdocs/ECMP1401220/html/GUID-C1772CDF-8AEE-422B-AB87-CFCB7E50FF94.html["MMC/컴퓨터 관리"^] Cloud Volumes Service 인스턴스에 대한 관리자 권한이 있는 계정(섹션 참조) link:ncvs-gc-smb.html#accounts-with-local/builtin-administrator/backup-rights[""로컬/BUILTIN 관리자/백업 권한이 있는 계정.""])를 클릭합니다.
+* * 파일 액세스 제어. * 파일 또는 폴더 수준에서 권한을 제어하고 항상 NAS 클라이언트에서 관리합니다. NFS 클라이언트는 기존 모드 비트(rwx) 또는 NFSv4 ACL을 사용할 수 있습니다. SMB 클라이언트는 NTFS 권한을 활용합니다.
+
+
+NFS와 SMB 모두에 데이터를 제공하는 볼륨의 액세스 제어는 사용 중인 프로토콜에 따라 다릅니다. 이중 프로토콜의 사용 권한에 대한 자세한 내용은 “ 절을 참조하십시오<<권한 모델>>.”
+
+
+
+== 사용자 매핑
+
+클라이언트가 볼륨에 액세스하면 Cloud Volumes Service는 들어오는 사용자를 반대 방향으로 유효한 사용자에게 매핑하려고 시도합니다. 이는 프로토콜 간에 적절한 액세스를 결정하고 액세스를 요청하는 사용자가 실제로 자신이 주장하는 사용자인지 확인하기 위해 필요합니다.
+
+예를 들어, "joe"라는 Windows 사용자가 SMB를 통해 UNIX 사용 권한이 있는 볼륨에 액세스하려고 하면 Cloud Volumes Service는 검색을 수행하여 "joe"라는 해당 UNIX 사용자를 찾습니다. 이 파일이 있으면 Windows 사용자 Joe로 SMB 공유에 기록되는 파일이 NFS 클라이언트의 UNIX 사용자 Joe로 나타납니다.
+
+또는 UNIX 사용자인 "Joe"가 Windows 사용 권한이 있는 Cloud Volumes Service 볼륨에 대한 액세스를 시도할 경우 UNIX 사용자는 유효한 Windows 사용자에게 매핑할 수 있어야 합니다. 그렇지 않으면 볼륨에 대한 액세스가 거부됩니다.
+
+현재 LDAP를 사용하는 외부 UNIX ID 관리에는 Active Directory만 지원됩니다. 이 서비스에 대한 액세스 구성에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/creating-smb-volumes["AD 연결을 생성하는 중입니다"^].
+
+
+
+== 권한 모델
+
+이중 프로토콜 설정을 사용하는 경우 Cloud Volumes Service는 볼륨에 대한 보안 스타일을 사용하여 ACL 유형을 결정합니다. 이러한 보안 스타일은 지정된 NAS 프로토콜을 기반으로 설정되거나, 이중 프로토콜의 경우 Cloud Volumes Service 볼륨 생성 시 선택하는 것입니다.
+
+* NFS만 사용하는 경우 Cloud Volumes Service 볼륨은 UNIX 사용 권한을 사용합니다.
+* SMB만 사용하는 경우 Cloud Volumes Service 볼륨은 NTFS 권한을 사용합니다.
+
+
+이중 프로토콜 볼륨을 생성하는 경우 볼륨 생성 시 ACL 스타일을 선택할 수 있습니다. 이 결정은 원하는 권한 관리를 기반으로 해야 합니다. 사용자가 Windows/SMB 클라이언트의 권한을 관리하는 경우 NTFS 를 선택합니다. 사용자가 NFS 클라이언트 및 chmod/chown을 사용하려는 경우 UNIX 보안 스타일을 사용합니다.

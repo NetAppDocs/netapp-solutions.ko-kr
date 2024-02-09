@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ehc/ncvs-gc-nas-protocols_overview.html 
+keywords: nas, nfs, smb, cifs 
+summary: 'NAS 프로토콜에는 NFS(v3 및 v4.1) 및 SMB/CIFS(2.x 및 3.x)가 포함됩니다. 이러한 프로토콜은 CVS에서 여러 NAS 클라이언트 간에 데이터에 대한 공유 액세스를 허용하는 방법입니다. 또한 Cloud Volumes Service는 NFS 및 SMB/CIFS 클라이언트(이중 프로토콜)에 대한 액세스를 동시에 제공하는 동시에 NAS 공유의 파일 및 폴더에 대한 모든 ID 및 권한 설정을 존중할 수 있습니다.' 
+---
+= NAS 프로토콜 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NAS 프로토콜에는 NFS(v3 및 v4.1) 및 SMB/CIFS(2.x 및 3.x)가 포함됩니다. 이러한 프로토콜은 CVS에서 여러 NAS 클라이언트 간에 데이터에 대한 공유 액세스를 허용하는 방법입니다. 또한 Cloud Volumes Service는 NFS 및 SMB/CIFS 클라이언트(이중 프로토콜)에 대한 액세스를 동시에 제공하는 동시에 NAS 공유의 파일 및 폴더에 대한 모든 ID 및 권한 설정을 존중할 수 있습니다. Cloud Volumes Service는 가장 높은 데이터 전송 보안을 유지하기 위해 SMB 암호화 및 NFS Kerberos 5p를 사용하여 전송 중인 프로토콜 암호화를 지원합니다.
+
+
+NOTE: 이중 프로토콜은 CVS에서 사용할 수 있습니다. - 성능만 지원됩니다.

@@ -45,7 +45,7 @@ keywords: 'netapp, solutions, hybrid cloud, private cloud, virtualization, vdi, 
 2+| * 컨테이너 * 
 
 
-| link:containers/devops_with_netapp/dwn_solution_overview.html["NetApp Astra와 DevOps"] | link:containers/rh-os-n_videos_astra_control_flexclone.html["비디오: Astra Control 및 NetApp FlexClone 기술로 소프트웨어 개발을 가속화하십시오"] 
+| link:containers/dwn_solution_overview.html["NetApp Astra와 DevOps"] | link:containers/rh-os-n_videos_astra_control_flexclone.html["비디오: Astra Control 및 NetApp FlexClone 기술로 소프트웨어 개발을 가속화하십시오"] 
 
 
 | link:containers/rh-os-n_overview_astra.html["Ansible을 통해 Astra Control Center의 자동 설치"] | link:containers/rh-os-n_videos_clone_for_postmortem_and_restore.html["비디오: NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다"] 

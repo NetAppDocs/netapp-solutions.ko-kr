@@ -10,7 +10,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../../media/
+:imagesdir: ./../media/
 
 
 [role="lead"]
@@ -29,24 +29,24 @@ VMware에서는 데이터 보호 솔루션을 다음 세 가지 범주 중 하�
 ====
 .NetApp for AWS/VMC
 --
-* link:../ehc/aws/aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
-* link:../ehc/aws/aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 복구. ONTAP용 FSx로 VMC에서 복원"]
-* link:../ehc/dro/aws-dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
+* link:../ehc/aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
+* link:../ehc/aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 복구. ONTAP용 FSx로 VMC에서 복원"]
+* link:../ehc/aws-dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
 
 
 --
 .NetApp for Azure/AVS
 --
-* link:../ehc/azure/azure-native-dr-jetstream.html["ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)"]
-* link:../ehc/azure/azure-guest-dr-cvo.html["ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구"]
-* link:../ehc/dro/azure-dro-overview.html["ANF 및 AVS를 통한 재해 복구(DRO"]
+* link:../ehc/azure-native-dr-jetstream.html["ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)"]
+* link:../ehc/azure-guest-dr-cvo.html["ANF 및 CVO(게스트 연결 스토리지)를 사용한 재해 복구"]
+* link:../ehc/azure-dro-overview.html["ANF 및 AVS를 통한 재해 복구(DRO"]
 
 
 --
 .NetApp for GCP/GCVE
 --
-* link:../ehc/gcp/gcp-app-dr-sc-cvo-veeam.html["SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구"]
-* link:../ehc/gcp/gcp-app-dr-sc-cvs-veeam.html["NetApp SnapCenter를 사용한 애플리케이션 정합성 보장 재해 복구 및 NetApp CVS에 Veeam 복제 GCVE"]
+* link:../ehc/gcp-app-dr-sc-cvo-veeam.html["SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구"]
+* link:../ehc/gcp-app-dr-sc-cvs-veeam.html["NetApp SnapCenter를 사용한 애플리케이션 정합성 보장 재해 복구 및 NetApp CVS에 Veeam 복제 GCVE"]
 
 
 --

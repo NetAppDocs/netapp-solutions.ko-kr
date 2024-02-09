@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: ehc/gcp-app-dr-sc-cvo-veeam.html 
+keywords: gcp, gcve, snapcenter, cvo, iscsi, guest connect, dr, disaster recovery 
+summary: 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Google Cloud에서 실행 중인 NetApp Cloud Volumes ONTAP로 복제할 수 있습니다. 
+---
+= SnapCenter, Cloud Volumes ONTAP, Veeam 복제를 통한 애플리케이션 재해 복구
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+저자: NetApp Suesh Thoppay
+
+
+
+== 개요
+
+클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Google Cloud에서 실행 중인 NetApp Cloud Volumes ONTAP로 복제할 수 있습니다. 여기에는 애플리케이션 데이터가 포함됩니다. 하지만 실제 VM 자체는 어떻습니까? 재해 복구는 가상 머신, VMDK, 애플리케이션 데이터 등을 비롯한 모든 종속 구성 요소를 포함해야 합니다. 이를 위해 Veeam과 함께 SnapMirror를 사용하여 VM VMDK에 vSAN 스토리지를 사용하면서 사내에서 Cloud Volumes ONTAP로 복제된 워크로드를 원활하게 복구할 수 있습니다.
+
+이 문서에서는 NetApp SnapMirror, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
+
+image:dr-cvo-gcve-image1.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+== 가정
+
+이 문서에서는 애플리케이션 데이터(게스트 연결)를 위한 게스트 내 스토리지에 초점을 두고 사내 환경에서 애플리케이션 정합성 보장 백업을 위해 SnapCenter를 사용하고 있다고 가정합니다.
+
+
+NOTE: 이 문서는 타사 백업 또는 복구 솔루션에 적용됩니다. 환경에 사용된 솔루션에 따라 Best Practice를 따라 조직 SLA를 충족하는 백업 정책을 생성합니다.
+
+온프레미스 환경과 Google Cloud 네트워크 간의 연결을 위해 전용 상호 연결 또는 Cloud VPN과 같은 연결 옵션을 사용합니다. 세그먼트는 사내 VLAN 설계를 기반으로 생성해야 합니다.
+
+
+NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에는 여러 가지가 있으며, 이로 인해 NetApp에서 이 문서의 특정 워크플로우를 개괄적으로 설명하지 못하게 됩니다. 적절한 온프레미스-Google 연결 방법은 Google Cloud 설명서를 참조하십시오.
+
+
+
+== DR 솔루션 구축
+
+
+
+=== 솔루션 구축 개요
+
+. 필요한 RPO 요구 사항에 따라 SnapCenter를 사용하여 애플리케이션 데이터를 백업했는지 확인합니다.
+. 적절한 서브스크립션 및 가상 네트워크 내에서 Cloud Manager를 사용하여 올바른 인스턴스 크기로 Cloud Volumes ONTAP를 프로비저닝합니다.
++
+.. 관련 애플리케이션 볼륨에 대해 SnapMirror를 구성합니다.
+.. 예약된 작업 후 SnapMirror 업데이트를 트리거하도록 SnapCenter의 백업 정책을 업데이트합니다.
+
+
+. Veeam 소프트웨어를 설치하고 Google Cloud VMware Engine 인스턴스에 가상 머신 복제를 시작합니다.
+. 재해 발생 시 Cloud Manager를 사용하여 SnapMirror 관계를 맺고 Veeam으로 가상 시스템의 페일오버를 트리거하십시오.
++
+.. 애플리케이션 VM에 대한 iSCSI LUN 및 NFS 마운트를 다시 연결합니다.
+.. 애플리케이션을 온라인으로 전환합니다.
+
+
+. 운영 사이트가 복구된 후 SnapMirror를 다시 동기화하여 보호 사이트에 대한 페일백을 호출합니다.
+
+
+
+
+=== 배포 세부 정보
+
+.Google Cloud에서 CVO를 구성하고 볼륨을 CVO로 복제합니다
+[%collapsible]
+====
+첫 번째 단계는 Google Cloud에서 Cloud Volumes ONTAP를 구성하는 것입니다 (https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-guest.html["CVO"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
+
+image:dr-cvo-gcve-image2.png["오류: 그래픽 이미지가 없습니다"]
+
+SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-guest-dr-overview.html#config-snapmirror["SnapCenter를 사용하여 복제를 설정합니다"]
+
+.SnapCenter를 사용하여 복제를 설정합니다
+video::395e33db-0d63-4e48-8898-b01200f006ca[panopto]
+====
+.GCVE 호스트 및 CVO 데이터 액세스를 구성합니다
+[%collapsible]
+====
+SDDC를 배포할 때 고려해야 할 두 가지 중요한 요소는 GCVE 솔루션의 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간 입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.
+
+모든 VPC 및 GCVE에 Cloud Volumes ONTAP를 구축할 수 있습니다. VM이 iSCSI LUN에 접속하려면 해당 VPC에 대한 전용 연결이 있어야 합니다.
+
+GCVE SDDC를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-setup.html["Google Cloud Platform(GCP)에서 가상화 환경 구축 및 구성"^]. 먼저 GCVE 호스트에 상주하는 게스트 VM이 연결이 설정된 후 Cloud Volumes ONTAP의 데이터를 사용할 수 있는지 확인합니다.
+
+Cloud Volumes ONTAP 및 GCVE가 올바르게 구성된 후에는 Veeam 복제 기능을 사용하고 Cloud Volumes ONTAP에 애플리케이션 볼륨 복사본에 SnapMirror를 활용하여 사내 워크로드(게스트 내 스토리지가 있는 애플리케이션 VMDK 및 VM이 있는 VM)를 GCVE로 자동 복구하도록 Veeam 구성을 시작하십시오.
+
+====
+.Veeam 구성 요소를 설치합니다
+[%collapsible]
+====
+Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.https://helpcenter.veeam.com/docs/backup/qsg_vsphere/deployment_scenarios.html["설치 절차는 Veeam 설명서를 참조하십시오"]
+
+====
+.Veeam으로 VM 복제를 설정합니다
+[%collapsible]
+====
+사내 vCenter와 GCVE vCenter를 모두 Veeam에 등록해야 합니다. https://helpcenter.veeam.com/docs/backup/qsg_vsphere/replication_job.html["vSphere VM 복제 작업을 설정합니다"] 마법사의 게스트 처리 단계에서 애플리케이션 인식 백업 및 복구를 위해 SnapCenter를 활용할 예정이므로 애플리케이션 처리 비활성화 를 선택합니다.
+
+.vSphere VM 복제 작업을 설정합니다
+video::8b7e4a9b-7de1-4d48-a8e2-b01200f00692[panopto]
+====
+.Microsoft SQL Server VM의 페일오버
+[%collapsible]
+====
+.Microsoft SQL Server VM의 페일오버
+video::9762dc99-081b-41a2-ac68-b01200f00ac0[panopto]
+====
+
+
+== 이 솔루션의 이점
+
+* SnapMirror의 효율적이고 복원력이 뛰어난 복제를 사용합니다.
+* ONTAP 스냅샷 보존을 사용하여 사용 가능한 모든 시점 복구
+* 스토리지, 컴퓨팅, 네트워크 및 애플리케이션 검증 단계에서 수백 또는 수천 개의 VM을 복구하는 데 필요한 모든 단계에서 완전한 자동화가 가능합니다.
+* SnapCenter는 복제된 볼륨을 변경하지 않는 클론 생성 메커니즘을 사용합니다.
++
+** 이렇게 하면 볼륨 및 스냅숏에 대한 데이터 손상 위험이 방지됩니다.
+** DR 테스트 워크플로우 중에 복제 중단 방지
+** 개발/테스트, 보안 테스트, 패치 및 업그레이드 테스트, 수정 테스트 등 DR 이외의 워크플로우에 DR 데이터를 활용합니다.
+
+
+* Veeam Replication을 사용하면 DR 사이트에서 VM IP 주소를 변경할 수 있습니다.
+

@@ -1,0 +1,331 @@
+---
+sidebar: sidebar 
+permalink: ehc/gcp-migrate-vmware-hcx.html 
+keywords: gcp, gcve, hybrid multicloud, migrate, vmware hcx, hcx, google cloud, enterprise, hybrid, cloud, migration 
+summary:  
+---
+= VMware HCX-Quickstart 가이드를 사용하여 Google Cloud VMware Engine에서 NetApp Cloud Volume Service 데이터 저장소로 워크로드를 마이그레이션합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+저자: NetApp 솔루션 엔지니어링
+
+
+
+== 개요: VMware HCX, NetApp Cloud Volume Service 데이터 저장소 및 Google Cloud VMware Engine(GCVE)을 사용하여 가상 머신 마이그레이션
+
+Google Cloud VMware Engine 및 Cloud Volume Service 데이터 저장소의 가장 일반적인 사용 사례 중 하나는 VMware 워크로드 마이그레이션입니다. VMware HCX는 선호되는 옵션이며 사내 VM(가상 머신)과 데이터를 Cloud Volume Service NFS 데이터 저장소로 이동하는 다양한 마이그레이션 메커니즘을 제공합니다.
+
+VMware HCX는 주로 클라우드 전반에서 애플리케이션 마이그레이션, 워크로드 재조정 및 비즈니스 연속성을 간소화하도록 설계된 마이그레이션 플랫폼입니다. 이 제품은 Google Cloud VMware Engine 프라이빗 클라우드의 일부로 포함되어 있으며 워크로드를 마이그레이션할 수 있는 다양한 방법을 제공하므로 재해 복구(DR) 작업에 사용할 수 있습니다.
+
+이 문서에서는 Cloud Volume Service 데이터 저장소를 프로비저닝하기 위한 단계별 지침을 제공하고, 온프레미스 및 Google Cloud VMware Engine 측에 있는 모든 주요 구성 요소(상호 연결, 네트워크 확장, 다양한 VM 마이그레이션 메커니즘을 지원하기 위한 WAN 최적화 포함)를 포함하여 VMware HCX를 다운로드, 구축 및 구성하는 방법을 설명합니다.
+
+
+NOTE: VMware HCX는 마이그레이션이 VM 레벨에 있으므로 모든 데이터 저장소 유형과 함께 작동합니다. 따라서 이 문서는 비용 효율적인 VMware 클라우드 구축을 위해 Google Cloud VMware Engine과 함께 Cloud Volume Service를 구축하려는 기존 NetApp 고객 및 타사 고객에게 적용됩니다.
+
+.높은 수준의 단계
+[%collapsible]
+====
+이 목록은 HCX Connector On-Premises에서 Google Cloud VMware Engine의 HCX Cloud Manager로 VM을 페어링 및 마이그레이션하는 데 필요한 고급 단계를 제공합니다.
+
+. Google VMware Engine 포털을 통해 HCX를 준비합니다.
+. 사내 VMware vCenter Server에서 HCX Connector OVA(Open Virtualization Appliance) 설치 프로그램을 다운로드하여 구축합니다.
+. 라이센스 키를 사용하여 HCX를 활성화합니다.
+. 온프레미스 VMware HCX Connector를 Google Cloud VMware Engine HCX Cloud Manager와 페어링합니다.
+. 네트워크 프로파일, 컴퓨팅 프로파일 및 서비스 메시를 구성합니다.
+. (선택 사항) 마이그레이션 중에 재IP를 방지하기 위해 네트워크 확장을 수행합니다.
+. 어플라이언스 상태를 확인하고 마이그레이션이 가능한지 확인합니다.
+. VM 워크로드를 마이그레이션합니다.
+
+
+====
+.필수 구성 요소
+[%collapsible]
+====
+시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 다음을 참조하십시오 https://cloud.google.com/vmware-engine/docs/workloads/howto-migrate-vms-using-hcx["링크"^]. 연결을 포함한 필수 구성 요소가 구축된 후에는 Google Cloud VMware Engine 포털에서 HCX 라이센스 키를 다운로드하십시오. OVA 설치 프로그램을 다운로드한 후 아래 설명된 대로 설치 프로세스를 진행합니다.
+
+
+NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지원 티켓을 통해 제공되며 추가 비용 없이 지원됩니다. 을 참조하십시오 https://cloud.google.com/blog/products/compute/whats-new-with-google-cloud-vmware-engine["이 링크"^]
+
+* 기존 Google Cloud VMware Engine SDDC(소프트웨어 정의 데이터 센터)를 사용하거나 이를 사용하여 프라이빗 클라우드를 생성합니다 https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-setup.html["NetApp 링크"^] 또는 이 https://cloud.google.com/vmware-engine/docs/create-private-cloud["Google 링크"^].
+* 사내 VMware vSphere 지원 데이터 센터에서 VM 및 관련 데이터를 마이그레이션하려면 데이터 센터에서 SDDC 환경으로 네트워크를 연결해야 합니다. 워크로드를 마이그레이션하기 전에 https://cloud.google.com/vmware-engine/docs/networking/howto-connect-to-onpremises["Cloud VPN 또는 Cloud Interconnect 연결을 설정합니다"^] 데이터 관리 및 보호
+* 사내 VMware vCenter Server 환경에서 Google Cloud로 연결되는 네트워크 경로 VMware Engine 프라이빗 클라우드는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
+* 필수 를 확인하십시오 https://ports.esp.vmware.com/home/VMware-HCX["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다.
+* Cloud Volume Service NFS 볼륨은 Google Cloud VMware Engine에서 데이터 저장소로 마운트되어야 합니다. 이에 설명된 단계를 따릅니다 https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-cloud-volumes-service-datastores["링크"^] Google Cloud VMware Engine 호스트에 Cloud Volume Service 데이터 저장소를 연결하려면 다음을 수행합니다.
+
+
+====
+.고급 아키텍처
+[%collapsible]
+====
+테스트 목적으로, 이 검증에 사용된 온프레미스 연구소 환경이 Cloud VPN을 통해 연결되어 Google Cloud VPC에 사내 연결을 가능하게 했습니다.
+
+image:gcpd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다."]
+
+HCX에 대한 자세한 다이어그램은 을 참조하십시오 https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vmw-google-cloud-vmware-engine-logical-design-poster-for-workload-mobility.pdf["VMware 링크"^]
+
+====
+
+
+== 솔루션 구축
+
+이 솔루션의 배포를 완료하려면 다음 단계를 따르십시오.
+
+.1단계: Google VMware Engine Portal을 통해 HCX를 준비합니다
+[%collapsible]
+====
+VMware Engine을 사용하여 프라이빗 클라우드를 프로비저닝할 때 HCX Cloud Manager 구성 요소가 자동으로 설치됩니다. 사이트 페어링을 준비하려면 다음 단계를 완료하십시오.
+
+. Google VMware Engine Portal에 로그인하고 HCX Cloud Manager에 로그인합니다.
++
+HCX 버전 링크를 클릭하여 HCX 콘솔에 로그인할 수 있습니다image:gcpd-hcx-image2.png["GCVE 리소스에 대한 링크가 있는 HCX 콘솔 액세스"]또는 vSphere Management Network 탭에서 HCX FQDN을 클릭합니다.image:gcpd-hcx-image3.png["FQDN 링크를 사용하여 HCX 콘솔 액세스"]
+
+. HCX Cloud Manager에서 * 관리 > 시스템 업데이트 * 로 이동합니다.
+. 다운로드 요청 링크 * 를 클릭하고 OVA 파일을 다운로드합니다.image:gcpd-hcx-image4.png["다운로드 링크를 요청합니다"]
+. HCX Cloud Manager를 HCX Cloud Manager UI에서 사용 가능한 최신 버전으로 업데이트합니다.
+
+
+====
+.2단계: 온-프레미스 vCenter Server에 설치 관리자 OVA를 구축합니다
+[%collapsible]
+====
+온프레미스 커넥터가 Google Cloud VMware Engine의 HCX Manager에 연결하려면 적절한 방화벽 포트가 사내 환경에서 열려 있는지 확인합니다.
+
+온-프레미스 vCenter Server에서 HCX Connector를 다운로드하여 설치하려면 다음 단계를 수행하십시오.
+
+. 이전 단계에서 설명한 대로 Google Cloud VMware Engine의 HCX 콘솔에서 OVA를 다운로드하도록 합니다.
+. OVA를 다운로드한 후 * Deploy OVF Template * 옵션을 사용하여 온프레미스 VMware vSphere 환경에 구축합니다.
++
+image:gcpd-hcx-image5.png["오류: 올바른 OVA 템플릿을 선택하기 위한 스크린샷."]
+
+. OVA 배포에 필요한 모든 정보를 입력하고 * Next * 를 클릭한 다음 * Finish * 를 클릭하여 VMware HCX 커넥터 OVA를 배포합니다.
++
+
+NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
+
+
+
+단계별 지침은 를 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-47774FEA-6BDA-48E5-9D5F-ABEAD64FDDF7.html["VMware HCX 사용자 가이드"^].
+
+====
+.3단계: 라이센스 키로 HCX 커넥터를 활성화합니다
+[%collapsible]
+====
+VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스를 시작한 후 다음 단계를 수행하여 HCX 커넥터를 활성화하십시오. Google Cloud VMware Engine 포털에서 라이센스 키를 생성하고 VMware HCX Manager에서 활성화합니다.
+
+. VMware Engine 포털에서 리소스를 클릭하고 프라이빗 클라우드를 선택한 다음 * HCX Manager Cloud Version * 에서 다운로드 아이콘을 클릭합니다.image:gcpd-hcx-image6.png["HCX 라이센스를 다운로드합니다"]다운로드한 파일을 열고 라이센스 키 문자열을 복사합니다.
+. 사내 VMware HCX Manager()에 로그인합니다 https://hcxmanagerIP:9443["https://hcxmanagerIP:9443"^] 관리자 자격 증명을 사용합니다.
++
+
+NOTE: OVA 배포 중에 정의된 hcxmanageIP 및 암호를 사용합니다.
+
+. 라이센스에서 3단계에서 복사한 키를 입력하고 * Activate * 를 클릭합니다.
++
+
+NOTE: 온프레미스 HCX 커넥터는 인터넷에 연결되어 있어야 합니다.
+
+. 데이터 센터 위치 * 에서 VMware HCX Manager를 사내에 설치할 수 있는 가장 가까운 위치를 제공합니다. 계속 * 을 클릭합니다.
+. 시스템 이름 * 에서 이름을 업데이트하고 * 계속 * 을 클릭합니다.
+. 예, 계속 * 을 클릭합니다.
+. vCenter * 연결 아래에서 vCenter Server의 FQDN(정규화된 도메인 이름) 또는 IP 주소와 해당 자격 증명을 입력하고 * 계속 * 을 클릭합니다.
++
+
+NOTE: 나중에 연결 문제를 방지하려면 FQDN을 사용합니다.
+
+. SSO/PSC * 구성 아래에서 플랫폼 서비스 컨트롤러(PSC) FQDN 또는 IP 주소를 제공하고 * 계속 * 을 클릭합니다.
++
+
+NOTE: Embedded PSC의 경우 VMware vCenter Server FQDN 또는 IP 주소를 입력합니다.
+
+. 입력한 정보가 올바른지 확인하고 * Restart * (재시작 *)를 클릭합니다.
+. 서비스를 다시 시작하면 표시되는 페이지에 vCenter Server가 녹색으로 표시됩니다. vCenter Server와 SSO 모두 적절한 구성 매개 변수를 가져야 하며, 이는 이전 페이지와 동일해야 합니다.
++
+
+NOTE: 이 프로세스는 약 10~20분 정도 소요되며 플러그인이 vCenter Server에 추가되어야 합니다.
+
++
+image:gcpd-hcx-image7.png["완료된 프로세스를 보여 주는 스크린샷"]
+
+
+
+====
+.4단계: 온프레미스 VMware HCX Connector를 Google Cloud VMware Engine HCX Cloud Manager와 페어링합니다
+[%collapsible]
+====
+HCX Connector를 사내 vCenter에 구축 및 구성한 후 페어링을 추가하여 Cloud Manager에 연결합니다. 사이트 페어링을 구성하려면 다음 단계를 수행하십시오.
+
+. 온-프레미스 vCenter 환경과 Google Cloud VMware Engine SDDC 간에 사이트 쌍을 생성하려면 온-프레미스 vCenter Server에 로그인하고 새 HCX vSphere Web Client 플러그인에 액세스합니다.
++
+image:gcpd-hcx-image8.png["HCX vSphere Web Client 플러그인의 스크린샷"]
+
+. 인프라 에서 * 사이트 페어링 추가 * 를 클릭합니다.
++
+
+NOTE: Google Cloud VMware Engine HCX Cloud Manager URL 또는 IP 주소와 Cloud-Owner-Role 권한이 있는 사용자의 자격 증명을 입력하여 프라이빗 클라우드에 액세스합니다.
+
++
+image:gcpd-hcx-image9.png["CloudOwner 역할의 스크린샷 URL 또는 IP 주소 및 자격 증명."]
+
+. 연결 * 을 클릭합니다.
++
+
+NOTE: VMware HCX Connector는 포트 443을 통해 HCX Cloud Manager IP로 라우팅할 수 있어야 합니다.
+
+. 페어링이 생성된 후에는 새로 구성된 사이트 페어링을 HCX 대시보드에서 사용할 수 있습니다.
++
+image:gcpd-hcx-image10.png["HCX 대시보드의 완료된 프로세스 스크린샷"]
+
+
+
+====
+.5단계: 네트워크 프로파일, 컴퓨팅 프로파일 및 서비스 메시를 구성합니다
+[%collapsible]
+====
+VMware HCX Interconnect 서비스 어플라이언스는 인터넷을 통해 복제 및 vMotion 기반 마이그레이션 기능과 타겟 사이트에 대한 프라이빗 연결을 제공합니다. 상호 연결은 암호화, 트래픽 엔지니어링 및 VM 이동성을 제공합니다. 상호 연결 서비스 어플라이언스를 생성하려면 다음 단계를 수행하십시오.
+
+. 인프라 아래에서 * 상호 연결 > 멀티 사이트 서비스 메시 > 컴퓨팅 프로파일 > 컴퓨팅 프로파일 생성 * 을 선택합니다.
++
+
+NOTE: 컴퓨팅 프로필은 구축된 어플라이언스와 HCX 서비스에서 액세스할 수 있는 VMware 데이터 센터 부분을 포함하여 구축 매개 변수를 정의합니다.
+
++
+image:gcpd-hcx-image11.png["vSphere Client Interconnect 페이지의 스크린샷."]
+
+. 컴퓨팅 프로파일을 만든 후 * 다중 사이트 서비스 메시 > 네트워크 프로파일 > 네트워크 프로파일 만들기 * 를 선택하여 네트워크 프로파일을 만듭니다.
++
+네트워크 프로파일은 HCX가 가상 어플라이언스에 사용하는 IP 주소 및 네트워크의 범위를 정의합니다.
+
++
+
+NOTE: 이 단계에서는 두 개 이상의 IP 주소가 필요합니다. 이러한 IP 주소는 관리 네트워크에서 상호 연결 어플라이언스로 할당됩니다.
+
++
+image:gcpd-hcx-image12.png["네트워크 프로필 스크린샷."]
+
+. 현재 컴퓨팅 및 네트워크 프로파일이 성공적으로 생성되었습니다.
+. 상호 연결 * 옵션 내에서 * 서비스 메시 * 탭을 선택하고 온-프레미스 및 GCVE SDDC 사이트를 선택하여 서비스 메시를 생성합니다.
+. 서비스 메시는 로컬 및 원격 계산 및 네트워크 프로파일 쌍을 지정합니다.
++
+
+NOTE: 이 프로세스의 일환으로 안전한 전송 패브릭을 생성하기 위해 소스 사이트와 타겟 사이트 모두에 HCX 어플라이언스를 구축하고 자동으로 구성합니다.
+
++
+image:gcpd-hcx-image13.png["vSphere Client Interconnect 페이지의 Service Mesh 탭 스크린샷"]
+
+. 이 단계는 구성의 마지막 단계입니다. 구축을 완료하는 데 약 30분이 소요됩니다. 서비스 메시가 구성된 후 작업 부하 VM을 마이그레이션하도록 IPsec 터널이 성공적으로 생성된 환경이 준비됩니다.
++
+image:gcpd-hcx-image14.png["vSphere Client Interconnect 페이지의 HCX 어플라이언스 스크린샷"]
+
+
+
+====
+.6단계: 워크로드 마이그레이션
+[%collapsible]
+====
+다양한 VMware HCX 마이그레이션 기술을 사용하여 온프레미스 및 GCVE SDDC 간에 워크로드를 양방향으로 마이그레이션할 수 있습니다. VM은 HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 여러 마이그레이션 기술을 사용하여 VMware HCX 활성 엔터티로 또는 VMware에서 이동할 수 있습니다.
+
+다양한 HCX 마이그레이션 메커니즘에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["VMware HCX 마이그레이션 유형"^].
+
+HCX-IX 어플라이언스는 Mobility Agent 서비스를 사용하여 vMotion, Cold 및 RAV(Replication Assisted vMotion) 마이그레이션을 수행합니다.
+
+
+NOTE: HCX-IX 어플라이언스는 vCenter Server에서 Mobility Agent 서비스를 호스트 개체로 추가합니다. 이 개체에 표시되는 프로세서, 메모리, 스토리지 및 네트워킹 리소스는 IX 어플라이언스를 호스팅하는 물리적 하이퍼바이저의 실제 소비량을 나타내지 않습니다.
+
+* HCX vMotion *
+
+이 섹션에서는 HCX vMotion 메커니즘을 설명합니다. 이 마이그레이션 기술은 VMware vMotion 프로토콜을 사용하여 VM을 GCVE로 마이그레이션합니다. vMotion 마이그레이션 옵션은 한 번에 하나의 VM의 VM 상태를 마이그레이션하는 데 사용됩니다. 이 마이그레이션 방법 중에는 서비스가 중단되지 않습니다.
+
+
+NOTE: IP 주소를 변경할 필요 없이 VM을 마이그레이션하려면 네트워크 확장이 있어야 합니다(VM이 연결된 포트 그룹의 경우).
+
+. 온-프레미스 vSphere Client에서 Inventory로 이동하여 마이그레이션할 VM을 마우스 오른쪽 버튼으로 클릭하고 HCX Actions > Migrate to HCX Target Site를 선택합니다.
++
+image:gcpd-hcx-image15.png["오류: 그래픽 이미지가 없습니다"]
+
+. 가상 컴퓨터 마이그레이션 마법사에서 원격 사이트 연결(대상 GCVE)을 선택합니다.
++
+image:gcpd-hcx-image16.png["오류: 그래픽 이미지가 없습니다"]
+
+. 필수 필드(클러스터, 스토리지 및 대상 네트워크)를 업데이트하고 검증 을 클릭합니다.
++
+image:gcpd-hcx-image17.png["오류: 그래픽 이미지가 없습니다"]
+
+. 유효성 검사가 완료된 후 이동을 클릭하여 마이그레이션을 시작합니다.
++
+
+NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다. HCX vMotion의 요구 사항 및 제한 사항에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-517866F6-AF06-4EFC-8FAE-DA067418D584.html["VMware HCX vMotion 및 콜드 마이그레이션 이해"^].
+
+. HCX > 마이그레이션 대시보드에서 vMotion의 진행 상황과 완료 상태를 모니터링할 수 있습니다.
++
+image:gcpd-hcx-image18.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
+NOTE: 타겟 CVS NFS 데이터 저장소에 마이그레이션을 처리할 충분한 공간이 있어야 합니다.
+
+====
+
+
+== 결론
+
+클라우드 볼륨 서비스 및 HCX는 온프레미스(On-Premises)의 모든 유형/공급업체 스토리지에 있는 모든 클라우드 또는 하이브리드 클라우드 및 데이터를 대상으로 하는 모든 환경에서 애플리케이션 워크로드를 배포 및 마이그레이션하는 동시에 데이터 요구 사항을 애플리케이션 계층으로 원활하게 만들어 TCO를 절감하는 탁월한 옵션을 제공합니다. 어떤 사용 사례에서든 Cloud Volume Service와 함께 Google Cloud VMware Engine을 사용하면 사내 및 멀티 클라우드 전체의 클라우드 이점, 일관된 인프라 및 운영을 신속하게 실현하고, 워크로드의 양방향 이동성을 제공하며, 엔터프라이즈급 용량과 성능을 실현할 수 있습니다. VMware vSphere Replication, VMware vMotion 또는 NFC(네트워크 파일 복사)를 사용하여 스토리지를 연결하고 VM을 마이그레이션하는 데 사용되는 익숙한 프로세스와 절차가 동일합니다.
+
+
+
+== 이점
+
+이 문서의 핵심 사항은 다음과 같습니다.
+
+* 이제 Cloud Volume Service를 Google Cloud VMware Engine SDDC에서 데이터 저장소로 사용할 수 있습니다.
+* 온프레미스에서 Cloud Volume Service 데이터 저장소로 데이터를 쉽게 마이그레이션할 수 있습니다.
+* 마이그레이션 작업 중에 용량 및 성능 요구사항을 충족하기 위해 Cloud Volume Service 데이터 저장소를 쉽게 확장 및 축소할 수 있습니다.
+
+
+
+
+== Google 및 VMware의 비디오를 참조하십시오
+
+.Google에서
+[%collapsible]
+====
+* link:https://www.youtube.com/watch?v=xZOtqiHY5Uw["GCVE를 사용하여 HCX Connector를 배포합니다"]
+* link:https://youtu.be/2ObPvekMlqA["GCVE로 HCX ServiceMesh를 구성합니다"]
+* link:https://youtu.be/zQSGq4STX1s["HCX를 사용하는 VM을 GCVE로 마이그레이션합니다"]
+
+
+====
+.수 있습니다
+[%collapsible]
+====
+* link:https://youtu.be/EFE5ZYFit3M["GCVE에 대한 HCX Connector 배포"]
+* link:https://youtu.be/uwRFFqbezIE["GCVE에 대한 HCX ServiceMesh 구성"]
+* link:https://youtu.be/4KqL0Rxa3kM["GCVE로 HCX 워크로드 마이그레이션"]
+
+
+====
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 웹 사이트 링크를 참조하십시오.
+
+* Google Cloud VMware Engine 설명서
++
+https://cloud.google.com/vmware-engine/docs/overview/["https://cloud.google.com/vmware-engine/docs/overview"^]
+
+* Cloud Volume Service 설명서
++
+https://cloud.google.com/architecture/partners/netapp-cloud-volumes["https://cloud.google.com/architecture/partners/netapp-cloud-volumes"^]
+
+* VMware HCX 사용자 가이드
++
+https://docs.vmware.com/en/VMware-HCX/index.html["https://docs.vmware.com/en/VMware-HCX/index.html"^]
+
+

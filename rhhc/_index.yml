@@ -22,30 +22,30 @@ indexpage:
   - title: 높지 않습니다
     links:
     - title: 온프레미스 솔루션
-      url: "/on-premises/rhhc-op-solution.html"
+      url: "/rhhc-op-solution.html"
     - title: 환경을 구성합니다
-      url: "/on-premises/rhhc-op-setup.html"
+      url: "/rhhc-op-setup.html"
     - title: ACC를 사용한 데이터 보호
-      url: "/on-premises/rhhc-op-data-protection.html"
+      url: "/rhhc-op-data-protection.html"
     - title: ACC를 사용한 데이터 마이그레이션
-      url: "/on-premises/rhhc-op-data-migration.html"
+      url: "/rhhc-op-data-migration.html"
   - title: 하이브리드 클라우드 워크로드(자가 관리 구성 요소)
     links:
     - title: 자체 관리되는 구성 요소가 포함된 하이브리드 클라우드 솔루션
-      url: "/self-managed/rhhc-sm-solution.html"
+      url: "/rhhc-sm-solution.html"
     - title: 환경을 구성합니다
-      url: "/self-managed/rhhc-sm-setup.html"
+      url: "/rhhc-sm-setup.html"
     - title: ACC를 사용한 데이터 보호
-      url: "/self-managed/rhhc-sm-data-protection.html"
+      url: "/rhhc-sm-data-protection.html"
     - title: ACC를 사용한 데이터 마이그레이션
-      url: "/self-managed/rhhc-sm-data-migration.html"
+      url: "/rhhc-sm-data-migration.html"
   - title: 하이브리드 클라우드 워크로드(공급자 관리 구성 요소)
     links:
     - title: 공급자 관리 구성요소를 사용한 하이브리드 클라우드 솔루션
-      url: "/provider-managed/rhhc-pm-solution.html"
+      url: "/rhhc-pm-solution.html"
     - title: 환경을 구성합니다
-      url: "/provider-managed/rhhc-pm-setup.html"
+      url: "/rhhc-pm-setup.html"
     - title: ACS를 사용한 데이터 보호
-      url: "/provider-managed/rhhc-pm-data-protection.html"
+      url: "/rhhc-pm-data-protection.html"
     - title: BlueXP를 사용한 데이터 마이그레이션
-      url: "/provider-managed/rhhc-pm-data-migration.html"
+      url: "/rhhc-pm-data-migration.html"

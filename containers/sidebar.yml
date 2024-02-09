@@ -4,82 +4,82 @@ title: 컨테이너
 url: "/containers/index.html"
 entries:
 - title: NetApp의 Anthos
-  url: "/containers/anthos-with-netapp/a-w-n_solution_overview.html"
+  url: "/containers/a-w-n_solution_overview.html"
   entries:
   - title: Anthos 개요
-    url: "/containers/anthos-with-netapp/a-w-n_overview_anthos.html"
+    url: "/containers/a-w-n_overview_anthos.html"
     entries:
     - title: VMware 기반 Anthos 클러스터
-      url: "/containers/anthos-with-netapp/a-w-n_anthos_VMW.html"
+      url: "/containers/a-w-n_anthos_VMW.html"
     - title: Anthos의 Bare Metal
-      url: "/containers/anthos-with-netapp/a-w-n_anthos_BM.html"
+      url: "/containers/a-w-n_anthos_BM.html"
   - title: NetApp 스토리지 시스템 개요
     pdf-filename: Anthos용 NetApp 스토리지 시스템 개요
-    url: "/containers/anthos-with-netapp/a-w-n_overview_netapp.html"
+    url: "/containers/a-w-n_overview_netapp.html"
     entries:
     - title: NetApp ONTAP를 참조하십시오
-      url: "/containers/anthos-with-netapp/a-w-n_netapp_ontap.html"
+      url: "/containers/a-w-n_netapp_ontap.html"
   - title: NetApp 스토리지 통합 개요
     pdf-filename: Anthos용 NetApp 스토리지 통합 개요
-    url: "/containers/anthos-with-netapp/a-w-n_overview_storint.html"
+    url: "/containers/a-w-n_overview_storint.html"
     entries:
     - title: NetApp Astra Trident 개요
       pdf-filename: Anthos용 NetApp Astra Trident 개요
-      url: "/containers/anthos-with-netapp/a-w-n_overview_trident.html"
+      url: "/containers/a-w-n_overview_trident.html"
   - title: 고급 구성 옵션
     pdf-filename: Anthos를 위한 고급 구성 옵션
-    url: "/containers/anthos-with-netapp/a-w-n_overview_advanced.html"
+    url: "/containers/a-w-n_overview_advanced.html"
     entries:
     - title: 로드 밸런서 옵션 탐색
       pdf-filename: Anthos용 로드 밸런서 옵션 살펴보기
-      url: "/containers/anthos-with-netapp/a-w-n_load_balancers.html"
+      url: "/containers/a-w-n_load_balancers.html"
       entries:
       - title: F5 BIG-IP 로드 밸런서 설치
-        url: "/containers/anthos-with-netapp/a-w-n_LB_F5BigIP.html"
+        url: "/containers/a-w-n_LB_F5BigIP.html"
       - title: MetalLB 로드 밸런서 설치
-        url: "/containers/anthos-with-netapp/a-w-n_LB_MetalLB.html"
+        url: "/containers/a-w-n_LB_MetalLB.html"
       - title: 시소 부하 밸런서 설치
-        url: "/containers/anthos-with-netapp/a-w-n_LB_SeeSaw.html"
+        url: "/containers/a-w-n_LB_SeeSaw.html"
   - title: 솔루션 검증 및 사용 사례
-    url: "/containers/anthos-with-netapp/a-w-n_use_cases.html"
+    url: "/containers/a-w-n_use_cases.html"
   - title: 비디오/데모
-    url: "/containers/anthos-with-netapp/a-w-n_videos_and_demos.html"
+    url: "/containers/a-w-n_videos_and_demos.html"
   - title: 추가 정보
-    url: "/containers/anthos-with-netapp/a-w-n_additional_information.html"
+    url: "/containers/a-w-n_additional_information.html"
 - title: NetApp Astra와 DevOps
-  url: "/containers/devops_with_netapp/dwn_solution_overview.html"
+  url: "/containers/dwn_solution_overview.html"
   entries:
   - title: DevOps 개요
-    url: "/containers/devops_with_netapp/dwn_overview_devops.html"
+    url: "/containers/dwn_overview_devops.html"
   - title: NetApp 스토리지 시스템 개요
     pdf-filename: DevOps를 위한 NetApp 스토리지 시스템 개요
-    url: "/containers/devops_with_netapp/dwn_overview_netapp.html"
+    url: "/containers/dwn_overview_netapp.html"
     entries:
     - title: NetApp ONTAP를 참조하십시오
-      url: "/containers/devops_with_netapp/dwn_netapp_ontap.html"
+      url: "/containers/dwn_netapp_ontap.html"
   - title: NetApp 스토리지 통합 개요
     pdf-filename: DevOps를 위한 NetApp 스토리지 통합 개요
-    url: "/containers/devops_with_netapp/dwn_overview_storint.html"
+    url: "/containers/dwn_overview_storint.html"
     entries:
     - title: NetApp Astra Control Center 개요
       pdf-filename: DevOps를 위한 NetApp Astra Control Center 개요
-      url: "/containers/devops_with_netapp/dwn_overview_astra.html"
+      url: "/containers/dwn_overview_astra.html"
     - title: NetApp Astra Trident 개요
       pdf-filename: DevOps를 위한 NetApp Astra Trident 개요
-      url: "/containers/devops_with_netapp/dwn_overview_trident.html"
+      url: "/containers/dwn_overview_trident.html"
   - title: 사용 사례 검증
-    url: "/containers/devops_with_netapp/dwn_use_cases_overview.html"
+    url: "/containers/dwn_use_cases_overview.html"
     entries:
     - title: NetApp Astra Control을 통해 CI/CD 파이프라인에 보호 기능을 통합합니다
-      url: "/containers/devops_with_netapp/dwn_use_case_integrated_data_protection.html"
+      url: "/containers/dwn_use_case_integrated_data_protection.html"
     - title: Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 용이하게 합니다
-      url: "/containers/devops_with_netapp/dwn_use_case_postmortem_with_restore.html"
+      url: "/containers/dwn_use_case_postmortem_with_restore.html"
     - title: NetApp FlexClone으로 소프트웨어 개발 가속화
-      url: "/containers/devops_with_netapp/dwn_use_case_flexclone.html"
+      url: "/containers/dwn_use_case_flexclone.html"
   - title: 비디오/데모
-    url: "/containers/devops_with_netapp/dwn_videos_and_demos.html"
+    url: "/containers/dwn_videos_and_demos.html"
   - title: 추가 정보
-    url: "/containers/devops_with_netapp/dwn_additional_information.html"
+    url: "/containers/dwn_additional_information.html"
 - title: NetApp의 Red Hat OpenShift
   url: "/containers/rh-os-n_solution_overview.html"
   entries:
@@ -210,49 +210,49 @@ entries:
   - title: 추가 정보
     url: "/containers/rh-os-n_additional_information.html"
 - title: NetApp의 VMware Tanzu
-  url: "/containers/tanzu_with_netapp/vtwn_solution_overview.html"
+  url: "/containers/vtwn_solution_overview.html"
   entries:
   - title: VMware Tanzu 개요
-    url: "/containers/tanzu_with_netapp/vtwn_overview_vmware_tanzu.html"
+    url: "/containers/vtwn_overview_vmware_tanzu.html"
     entries:
     - title: VMware TKG(Tanzu Kubernetes Grid) 개요
-      url: "/containers/tanzu_with_netapp/vtwn_overview_tkg.html"
+      url: "/containers/vtwn_overview_tkg.html"
     - title: VMware TKGS(Tanzu Kubernetes Grid Service) 개요
-      url: "/containers/tanzu_with_netapp/vtwn_overview_tkgs.html"
+      url: "/containers/vtwn_overview_tkgs.html"
     - title: VMware TKGI(Tanzu Kubernetes Grid Integrated Edition) 개요
-      url: "/containers/tanzu_with_netapp/vtwn_overview_tkgi.html"
+      url: "/containers/vtwn_overview_tkgi.html"
   - title: NetApp 스토리지 시스템 개요
     pdf-filename: Tanzu용 NetApp 스토리지 시스템 개요
-    url: "/containers/tanzu_with_netapp/vtwn_overview_netapp.html"
+    url: "/containers/vtwn_overview_netapp.html"
     entries:
     - title: NetApp ONTAP를 참조하십시오
-      url: "/containers/tanzu_with_netapp/vtwn_netapp_ontap.html"
+      url: "/containers/vtwn_netapp_ontap.html"
   - title: NetApp 스토리지 통합 개요
     pdf-filename: Tanzu용 NetApp 스토리지 통합 개요
-    url: "/containers/tanzu_with_netapp/vtwn_overview_storint.html"
+    url: "/containers/vtwn_overview_storint.html"
     entries:
     - title: NetApp Astra Control Center 개요
       pdf-filename: NetApp Astra Control Center Tanzu 개요
-      url: "/containers/tanzu_with_netapp/vtwn_overview_astra.html"
+      url: "/containers/vtwn_overview_astra.html"
       entries:
       - title: Tanzu Kubernetes 클러스터를 등록합니다
-        url: "/containers/tanzu_with_netapp/vtwn_astra_register.html"
+        url: "/containers/vtwn_astra_register.html"
       - title: 보호할 응용 프로그램을 선택합니다
-        url: "/containers/tanzu_with_netapp/vtwn_astra_applications.html"
+        url: "/containers/vtwn_astra_applications.html"
       - title: 애플리케이션 보호
-        url: "/containers/tanzu_with_netapp/vtwn_astra_protect.html"
+        url: "/containers/vtwn_astra_protect.html"
     - title: NetApp Astra Trident 개요
       pdf-filename: Tanzu에 대한 NetApp Astra Trident 개요
-      url: "/containers/tanzu_with_netapp/vtwn_overview_trident.html"
+      url: "/containers/vtwn_overview_trident.html"
       entries:
       - title: NetApp ONTAP NFS 를 참조하십시오
-        url: "/containers/tanzu_with_netapp/vtwn_trident_ontap_nfs.html"
+        url: "/containers/vtwn_trident_ontap_nfs.html"
       - title: NetApp ONTAP iSCSI를 참조하십시오
-        url: "/containers/tanzu_with_netapp/vtwn_trident_ontap_iscsi.html"
+        url: "/containers/vtwn_trident_ontap_iscsi.html"
   - title: 비디오/데모
-    url: "/containers/tanzu_with_netapp/vtwn_videos_and_demos.html"
+    url: "/containers/vtwn_videos_and_demos.html"
   - title: 추가 정보
-    url: "/containers/tanzu_with_netapp/vtwn_additional_information.html"
+    url: "/containers/vtwn_additional_information.html"
 - title: 아카이빙 솔루션
   entries:
   - title: Anthos의 Bare Metal

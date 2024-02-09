@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: rhhc/rhhc-sm-gcp-setup.html 
+keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMware, customer managed storage, ONTAP, Google Cloud Platform, Google Cloud, GCP 
+summary:  
+---
+= GCP에서 Red Hat OpenShift Container 플랫폼을 구축하고 구성합니다
+:allow-uri-read: 
+
+
+
+
+== GCP에서 Red Hat OpenShift Container 플랫폼을 구축하고 구성합니다
+
+[role="lead"]
+이 섹션에서는 GCP에서 OpenShift 클러스터를 설정 및 관리하고 이러한 클러스터에 상태 저장 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. 또한, 영구 볼륨을 제공하는 Astra Trident의 도움을 받아 NetApp Cloud Volumes ONTAP 스토리지를 사용하는 모습을 보여 줍니다. 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 Astra Control Center를 사용하는 방법에 대한 세부 정보가 제공됩니다.
+
+다음은 GCP에 구축되고 VPN을 사용하여 데이터 센터에 연결된 클러스터를 보여 주는 다이어그램입니다.
+
+image:rhhc-self-managed-gcp.png[""]
+
+
+NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하는 방법에는 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 있습니다 link:../rhhc-resources.html["리소스 섹션을 참조하십시오"].
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+.CLI에서 GCP에 OCP 클러스터를 설치합니다.
+[%collapsible]
+====
+* 명시된 모든 사전 요구 사항을 충족했는지 확인합니다 link:https://docs.openshift.com/container-platform/4.13/installing/installing_gcp/installing-gcp-default.html["여기"].
+* 온프레미스와 GCP 간 VPN 연결을 위해 pfSense VM을 생성 및 구성했습니다. 자세한 내용은 을 참조하십시오 https://docs.netgate.com/pfsense/en/latest/recipes/ipsec-s2s-psk.html["여기"].
++
+** pfSense의 원격 게이트웨이 주소는 Google Cloud Platform에서 VPN 게이트웨이를 생성한 후에만 구성할 수 있습니다.
+** 2단계의 원격 네트워크 IP 주소는 OpenShift 클러스터 설치 프로그램이 실행되고 클러스터의 인프라 구성 요소를 생성한 후에만 구성할 수 있습니다.
+** Google Cloud의 VPN은 설치 프로그램에서 클러스터의 인프라 구성 요소를 생성한 후에만 구성할 수 있습니다.
+
+
+* 이제 GCP에 OpenShift 클러스터를 설치합니다.
++
+** 설치 프로그램 및 풀 암호를 확인하고 설명서에 제공된 단계에 따라 클러스터를 구축합니다 https://docs.openshift.com/container-platform/4.13/installing/installing_gcp/installing-gcp-default.html["여기"].
+** 설치 시 Google Cloud Platform에 VPC 네트워크가 생성됩니다. 또한 Cloud DNS에서 개인 영역을 만들고 레코드를 추가합니다.
++
+*** VPC 네트워크의 CIDR 블록 주소를 사용하여 pfSense를 구성하고 VPN 연결을 설정합니다. 방화벽이 올바르게 설정되었는지 확인합니다.
+*** Google Cloud DNS의 A 레코드에 있는 IP 주소를 사용하여 온-프레미스 환경의 DNS에 레코드를 추가합니다.
+
+
+** 클러스터 설치가 완료되고 kubeconfig 파일과 사용자 이름 및 암호를 제공하여 클러스터의 콘솔에 로그인합니다.
+
+
+
+
+====
+.BlueXP를 사용하여 GCP에 Cloud Volumes ONTAP을 구축합니다.
+[%collapsible]
+====
+* Google Cloud에 커넥터를 설치합니다. 지침을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-bluexp-gcloud.html["여기"].
+* 커넥터를 사용하여 Google Cloud에 CVO 인스턴스를 배포합니다. 여기 에서 지침을 참조하십시오. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html[]
+
+
+====
+.GCP의 OCP 클러스터에 Astra Trident를 설치합니다
+[%collapsible]
+====
+* 그림과 같이 Astra Trident를 구축하는 방법은 여러 가지가 있습니다 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["여기"].
+* 이 프로젝트의 경우 지침에 따라 Astra Trident Operator를 수동으로 구축하여 Astra Trident를 설치했습니다 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"].
+* 백엔드 및 스토리지 클래스를 생성합니다. 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"].
+
+
+====
+.GCP의 OCP 클러스터를 Astra Control Center에 추가합니다.
+[%collapsible]
+====
+* Astra Control에서 관리하는 클러스터를 관리하는 데 필요한 최소 권한이 포함된 클러스터 역할을 사용하여 별도의 KubeConfig 파일을 생성합니다. 지침을 찾을 수 있습니다
+link:https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html#create-a-cluster-role-kubeconfig["여기"].
+* 지침에 따라 Astra Control Center에 클러스터를 추가합니다
+link:https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html#add-cluster["여기"]
+
+
+====
+.멀티 존 아키텍처용 Trident의 CSI 토폴로지 기능 사용
+현재 클라우드 공급자는 Kubernetes/OpenShift 클러스터 관리자가 영역 기반 클러스터의 노드를 생성할 수 있도록 지원합니다. 노드는 지역 내 또는 여러 지역의 여러 가용성 영역에 위치할 수 있습니다. Astra Trident는 다중 영역 아키텍처에서 워크로드용 볼륨 프로비저닝을 지원하기 위해 CSI 토폴로지를 사용합니다. CSI 토폴로지 기능을 사용하면 지역 및 가용성 영역에 따라 볼륨에 대한 액세스가 노드의 하위 집합으로 제한될 수 있습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html["여기"] 를 참조하십시오.
+
+
+NOTE: Kubernetes는 두 가지 볼륨 바인딩 모드를 지원합니다. -**_VolumeBindingMode_가 _immediate_** (기본값)로 설정되어 있으면 Astra Trident가 토폴로지 인식 없이 볼륨을 생성합니다. 영구 볼륨은 요청 포드의 예약 요구 사항에 의존하지 않고 생성됩니다. -**_VolumeBindingMode_set to_WaitForFirstConsumer_** 경우 PVC를 사용하는 POD가 예약 및 생성될 때까지 PVC에 대한 영구 볼륨의 생성 및 바인딩이 지연됩니다. 이렇게 하면 토폴로지 요구 사항에 따라 적용되는 일정 제한을 충족하기 위해 볼륨이 생성됩니다. Astra Trident 스토리지 백엔드는 가용성 영역(토폴로지 인식 백엔드)을 기반으로 볼륨을 선택적으로 프로비저닝하도록 설계할 수 있습니다. 이러한 백엔드를 사용하는 StorageClasses의 경우 지원되는 영역/영역에서 예약된 애플리케이션에서 요청하는 경우에만 볼륨이 생성됩니다. (Topology-Aware StorageClass) 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html["여기"] 를 참조하십시오.
+
+[밑줄]# * 데모 비디오 * #
+
+.Google Cloud Platform에 OpenShift Cluster 설치
+video::4efc68f1-d37f-4cdd-874a-b09700e71da9[panopto,width=360]
+.OpenShift 클러스터를 Astra Control Center로 가져오기
+video::57b63822-6bf0-4d7b-b844-b09700eac6ac[panopto,width=360]

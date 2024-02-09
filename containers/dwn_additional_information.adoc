@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: containers/dwn_additional_information.html 
+keywords:  
+summary:  
+---
+= 추가 정보: NetApp Astra를 통한 DevOps
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.
+
+* NetApp 문서
++
+https://docs.netapp.com/["https://docs.netapp.com/"^]
+
+* Astra Trident 문서
++
+https://docs.netapp.com/us-en/trident/["https://docs.netapp.com/us-en/trident/"^]
+
+* NetApp Astra Control Center 문서
++
+https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
+
+* Ansible 설명서
++
+https://docs.ansible.com/["https://docs.ansible.com/"^]
+
+* Red Hat OpenShift 설명서
++
+https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/["https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/"^]
+
+* Rancher 문서
++
+https://rancher.com/docs/["https://rancher.com/docs/"^]
+
+* Kubernetes 문서
++
+https://kubernetes.io/docs/home/["https://kubernetes.io/docs/home/"^]
+
+

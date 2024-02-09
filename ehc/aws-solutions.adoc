@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: ehc/aws-solutions.html 
+keywords: NetApp Solutions, amazon, vmc, vmware managed cloud, enterprise, hybrid, cloud, migrate, migration, disaster recovery, dr 
+summary:  
+---
+= Amazon VMC(VMware Managed Cloud)를 위한 NetApp 솔루션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp이 AWS에 제공하는 솔루션에 대해 자세히 알아보십시오.
+
+VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 정의합니다.
+
+* 보호(재해 복구 및 백업/복원 모두 포함)
+* 마이그레이션
+* 확장
+
+
+다음 섹션에서 사용 가능한 솔루션을 찾아봅니다.
+
+[role="tabbed-block"]
+====
+.보호
+--
+* link:aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
+* link:aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 복구. ONTAP용 FSx로 VMC에서 복원"]
+* link:aws-dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
+* link:veeam-fsxn-dr-to-vmc.html["Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구"]
+
+
+--
+.마이그레이션
+--
+* link:aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSxN 데이터 저장소로 마이그레이션합니다"]
+
+
+--
+.확장
+--
+곧 출시 예정!!
+
+--
+====

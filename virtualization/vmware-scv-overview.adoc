@@ -30,7 +30,7 @@ VMware vSphere용 SnapCenter 플러그인은 VM(가상 머신), 데이터 저장
 
 VMware vSphere용 SnapCenter 플러그인 과 VM용 BlueXP 백업 및 복구를 제공하는 다음 3-2-1 백업 솔루션을 참조하십시오.
 
-기술 보고서: link:../ehc/bxp/bxp-scv-hybrid-solution.html["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"]
+기술 보고서: link:../ehc/bxp-scv-hybrid-solution.html["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"]
 
 Tech OnTap 블로그: link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-backup-and/ba-p/446180["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"]
 

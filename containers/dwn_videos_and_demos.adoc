@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: containers/dwn_videos_and_demos.html 
+keywords: video, demonstration, deployment 
+summary:  
+---
+= 비디오 및 데모: NetApp Astra를 사용한 DevOps
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.
+
+.Astra Control Center를 통해 CI/CD 파이프라인에서 데이터 보호
+video::a6400379-52ff-4c8f-867f-b01200fa4a5e[panopto,width=360]
+.NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다
+video::3ae8eb53-eda3-410b-99e8-b01200fa30a8[panopto,width=360]
+.Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오
+video::26b7ea00-9eda-4864-80ab-b01200fa13ac[panopto,width=360]

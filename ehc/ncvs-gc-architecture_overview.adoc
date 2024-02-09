@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ehc/ncvs-gc-architecture_overview.html 
+keywords: architecture overview, control plane, data plane 
+summary: 클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 방식을 이해하는 것입니다. 이 섹션에서는 Google의 Cloud Volumes Service 아키텍처의 다양한 측면을 다루어 데이터 보안 방식에 대한 잠재적 우려를 완화하고 가장 안전한 배포를 위해 추가 구성 단계가 필요할 수 있는 영역을 설명합니다. 
+---
+= 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+클라우드 솔루션을 신뢰하는 것은 아키텍처와 보안 방식을 이해하는 것입니다. 이 섹션에서는 Google의 Cloud Volumes Service 아키텍처의 다양한 측면을 다루어 데이터 보안 방식에 대한 잠재적 우려를 완화하고 가장 안전한 배포를 위해 추가 구성 단계가 필요할 수 있는 영역을 설명합니다.
+
+Cloud Volumes Service의 일반 아키텍처는 컨트롤 플레인과 데이터 플레인의 두 가지 주요 구성 요소로 나눌 수 있습니다.
+
+
+
+== 컨트롤 플레인
+
+Cloud Volumes Service의 제어 플레인은 Cloud Volumes Service 관리자와 NetApp 기본 자동화 소프트웨어가 관리하는 백엔드 인프라입니다. 이 방식은 최종 사용자에게 전혀 영향을 미치지 않으며 네트워킹, 스토리지 하드웨어, 소프트웨어 업데이트 등을 포함하여 Cloud Volumes Service와 같은 클라우드 상주 솔루션에 가치를 제공하는 데 도움을 줍니다.
+
+
+
+== 데이터 플레인
+
+Cloud Volumes Service의 데이터 계층에는 실제 데이터 볼륨과 전체 Cloud Volumes Service 구성(액세스 제어, Kerberos 인증 등)이 포함됩니다. 데이터 플레인은 전적으로 최종 사용자와 Cloud Volumes Service 플랫폼 소비자를 제어하는 것입니다.
+
+각 평면의 보안 및 관리 방법은 서로 다릅니다. 다음 섹션에서는 Cloud Volumes Service 아키텍처 개요부터 이러한 차이점에 대해 설명합니다.

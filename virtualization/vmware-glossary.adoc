@@ -72,9 +72,9 @@ HCX는 둘 이상의 서로 다른 환경 간에 서비스를 제공합니다. �
 
 image::vmware-hcx.png[VMWare 하드웨어]
 
-* link:../ehc/aws/aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다"]
-* link:../ehc/azure/azure-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]
-* link:../ehc/gcp/gcp-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Google Cloud VMware Engine의 NetApp Cloud Volume Service 데이터 저장소로 마이그레이션합니다"]
+* link:../ehc/aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다"]
+* link:../ehc/azure-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]
+* link:../ehc/gcp-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Google Cloud VMware Engine의 NetApp Cloud Volume Service 데이터 저장소로 마이그레이션합니다"]
 
 
 
@@ -86,7 +86,7 @@ image::vmware-hcx.png[VMWare 하드웨어]
 vSphere with Tanzu는 컨테이너식 애플리케이션을 위한 차세대 vSphere입니다. 이 간소화된 단일 솔루션은 온프레미스와 퍼블릭 클라우드 모두에서 최신 클라우드 네이티브 애플리케이션을 위한 새로운 종류의 인프라를 통해 IT 운영과 개발자 간의 격차를 해소합니다.
 
 * link:https://www.netapp.com/hybrid-cloud/vmware/what-is-vmware-tanzu/["VMware Tanzu를 이용한 Kubernetes 관리"]
-* link:../containers/tanzu_with_netapp/vtwn_solution_overview.html["VMware Tanzu용 NetApp 솔루션"]
+* link:../containers/vtwn_solution_overview.html["VMware Tanzu용 NetApp 솔루션"]
 
 
 
@@ -156,7 +156,7 @@ SRM(Site Recovery Manager)은 재해 발생 시 가동 중지 시간을 최소�
 NetApp은 이러한 클라우드 가상화 환경에 맞는 완벽한 솔루션 세트를 제공합니다.
 
 * link:../ehc/index.html["클라우드 가상화 환경을 위한 NetApp 솔루션을 제공합니다"]
-* link:../ehc/aws/index.html["AWS VMware 클라우드용 NetApp 솔루션(VMC)"]
-* link:../ehc/azure/index.html["Azure VMware 솔루션용 NetApp 솔루션(AVS)"]
-* link:../ehc/gcp/index.html["Google Cloud VMware Engine용 NetApp 솔루션(GCVE)"]
+* link:../ehc/index.html["AWS VMware 클라우드용 NetApp 솔루션(VMC)"]
+* link:../ehc/index.html["Azure VMware 솔루션용 NetApp 솔루션(AVS)"]
+* link:../ehc/index.html["Google Cloud VMware Engine용 NetApp 솔루션(GCVE)"]
 

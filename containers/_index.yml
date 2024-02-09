@@ -4,15 +4,15 @@ indexpage:
   - title: NetApp의 Anthos
     links:
     - title: 솔루션 개요
-      url: "/anthos-with-netapp/a-w-n_solution_overview.html"
+      url: a-w-n_solution_overview.html
     - title: Anthos 개요
-      url: "/anthos-with-netapp/a-w-n_overview_anthos.html"
+      url: a-w-n_overview_anthos.html
     - title: NetApp 스토리지 통합
-      url: "/anthos-with-netapp/a-w-n_overview_storint.html"
+      url: a-w-n_overview_storint.html
     - title: 사용 사례
-      url: "/anthos-with-netapp/a-w-n_use_cases.html"
+      url: a-w-n_use_cases.html
     - title: 비디오 및 데모
-      url: "/anthos-with-netapp/a-w-n_videos_and_demos.html"
+      url: a-w-n_videos_and_demos.html
   - title: NetApp의 Red Hat OpenShift
     links:
     - title: 솔루션 개요
@@ -28,25 +28,25 @@ indexpage:
   - title: NetApp의 VMware Tanzu
     links:
     - title: 솔루션 개요
-      url: "/tanzu_with_netapp/vtwn_solution_overview.html"
+      url: vtwn_solution_overview.html
     - title: VMware Tanzu 개요
-      url: "/tanzu_with_netapp/vtwn_overview_vmware_tanzu.html"
+      url: vtwn_overview_vmware_tanzu.html
     - title: NetApp 스토리지 통합
-      url: "/tanzu_with_netapp/vtwn_overview_storint.html"
+      url: vtwn_overview_storint.html
     - title: 비디오 및 데모
-      url: "/tanzu_with_netapp/vtwn_videos_and_demos.html"
+      url: vtwn_videos_and_demos.html
   - title: NetApp을 통한 DevOps
     links:
     - title: 솔루션 개요
-      url: "/devops_with_netapp/dwn_solution_overview.html"
+      url: dwn_solution_overview.html
     - title: DevOps 개요
-      url: "/devops_with_netapp/dwn_overview_devops.html"
+      url: dwn_overview_devops.html
     - title: NetApp 스토리지 통합
-      url: "/devops_with_netapp/dwn_overview_storint.html"
+      url: dwn_overview_storint.html
     - title: 사용 사례
-      url: "/devops_with_netapp/dwn_use_cases_overview.html"
+      url: dwn_use_cases_overview.html
     - title: 비디오 및 데모
-      url: "/devops_with_netapp/dwn_videos_and_demos.html"
+      url: dwn_videos_and_demos.html
   - title: 컨테이너를 위한 리소스
     links:
     - title: NetApp Astra Control Center를 참조하십시오

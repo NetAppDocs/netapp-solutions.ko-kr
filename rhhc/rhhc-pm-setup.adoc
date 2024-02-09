@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: rhhc/rhhc-pm-setup.html 
+keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMware, customer managed storage, ONTAP, ROSA, ROSA clusters 
+summary:  
+---
+= AWS에서 관리되는 Red Hat OpenShift Container 플랫폼을 배포하고 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 AWS(Rosa)에서 관리되는 Red Hat OpenShift 클러스터를 설정하는 고급 워크플로우를 설명합니다. 또한 영구 볼륨을 제공하기 위해 Astra Trident가 NetApp FSx for NetApp ONTAP(FSxN)를 스토리지 백엔드로 사용하는 것을 보여 줍니다. BlueXP를 사용하는 AWS에서 FSxN을 배포하는 방법에 대한 자세한 정보가 제공됩니다. 또한 Rosa 클러스터의 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 BlueXP 및 OpenShift GitOps(Argo CD)를 사용하는 방법에 대한 세부 정보도 제공됩니다.
+
+다음은 AWS에 배포되고 FSxN을 백엔드 스토리지로 사용하는 Rosa 클러스터를 보여 주는 다이어그램입니다.
+
+image:rhhc-rosa-with-fsxn.png[""]
+
+
+NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터를 사용하여 검증되었습니다. 각 Rosa 클러스터는 Astra Trident를 사용하여 FSxN과 통합되었습니다. AWS에서 Rosa 클러스터와 FSxN을 구축하는 방법은 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 있습니다 link:../rhhc-resources.html["리소스 섹션을 참조하십시오"].
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+.Rosa 클러스터를 설치합니다
+[%collapsible]
+====
+* 2개의 VPC를 생성하고 VPC 간 VPC 피어링 연결을 설정합니다.
+* 을 참조하십시오 link:https://docs.openshift.com/rosa/welcome/index.html["여기"] Rosa 클러스터를 설치하는 지침은 를 참조하십시오.
+
+
+====
+.FSxN을 설치합니다
+[%collapsible]
+====
+* BlueXP에서 VPC에 FSxN을 설치합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"] BlueXP 계정 생성 및 시작 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/index.html["여기"] FSxN 설치용. 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"] FSxN을 관리하기 위해 AWS에 커넥터를 생성하는 데 사용됩니다.
+* AWS를 사용하여 FSxN을 구축합니다. 을 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["여기"] AWS 콘솔을 사용하여 구축
+
+
+====
+.Rosa 클러스터에 Trident 설치(제어 차트 사용)
+[%collapsible]
+====
+* 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 제어 차트 URL: https://netapp.github.io/trident-helm-chart[]
+
+
+.FSxN과 Astra Trident for Rosa 클러스터의 통합
+video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto]
+
+NOTE: OpenShift GitOps를 사용하면 ApplicationSet을 사용하여 ArgoCD에 등록될 때 모든 관리 클러스터에 Astra Trident CSI를 배포할 수 있습니다.
+
+image:rhhc-trident-helm.png[""]
+
+====
+.Trident(FSxN용)를 사용하여 백엔드 및 스토리지 클래스 생성
+[%collapsible]
+====
+* 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"] 백엔드 및 스토리지 클래스 생성에 대한 자세한 내용은 을 참조하십시오.
+* OpenShift Console에서 Trident CSI로 FsxN에 대해 생성한 스토리지 클래스를 기본값으로 설정합니다. 아래 스크린샷을 참조하십시오.
+
+
+image:rhhc-default-storage-class.png[""]
+
+====
+.OpenShift GitOps(Argo CD)를 사용하여 애플리케이션 배포
+[%collapsible]
+====
+* 클러스터에 OpenShift GitOps 운영자를 설치합니다. 지침을 참조하십시오 link:https://docs.openshift.com/container-platform/4.10/cicd/gitops/installing-openshift-gitops.html["여기"].
+* 클러스터에 대한 새 Argo CD 인스턴스를 설정합니다. 지침을 참조하십시오 link:https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html["여기"].
+
+
+Argo CD 콘솔을 열고 앱을 배포합니다. 예를 들어, Argo CD와 H제어 차트를 사용하여 Jenkins 앱을 배포할 수 있습니다. 응용 프로그램을 생성할 때 다음과 같은 세부 정보가 제공됩니다. Project: 기본 클러스터: https://kubernetes.default.svc[]네임스페이스: Jenkins 제어 차트의 URL: https://charts.bitnami.com/bitnami[]
+
+Helm Parameters:global.storageClass:fsxn-nas
+
+====

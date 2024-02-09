@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: containers/vtwn_overview_trident.html 
+keywords: Trident, Astra Trident, Helm, Operator, iSCSI, NFS, Tanzu, VMware Tanzu with NetApp Trident 
+summary: Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다. 
+---
+= Astra Trident 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+:k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud, Rancher etc
+
+
+[role="normal"]
+Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 완전 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
+
+관리자는 특정 수준의 성능을 보장하는 압축, 특정 디스크 유형 또는 QoS 수준을 비롯한 고급 스토리지 기능을 지원하는 스토리지 시스템 모델과 프로젝트 요구사항에 따라 여러 스토리지 백엔드를 구성할 수 있습니다. 이러한 백엔드를 정의한 후, 개발자는 프로젝트의 이러한 백엔드를 사용하여 지속적인 PVC(Volume Claim)를 생성하고 필요에 따라 컨테이너에 영구 저장소를 연결할 수 있습니다.
+
+image:redhat_openshift_image2.png["오류: 그래픽 이미지가 없습니다"]
+
+Astra Trident는 빠른 개발 주기를 제공하며 Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.
+
+Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포를 찾을 수 있는 Trident의 버전에 대한 지원 매트릭스입니다 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"].
+
+20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod의 자동 복구를 포함하여 추가 지원을 제공합니다.
+
+21.01 릴리즈를 통해 Trident Operator의 설치를 용이하게 하는 제어 차트를 사용할 수 있게 되었습니다.
+
+
+
+== Helm을 사용하여 Trident 연산자를 배포합니다
+
+. 먼저 사용자 클러스터의 "kubecononfig" 파일 위치를 환경 변수로 설정하여 Trident에 이 파일을 전달할 수 있는 옵션이 없으므로 참조할 필요가 없습니다.
++
+[listing]
+----
+<<<<<<< HEAD
+[netapp-user@rhel7]$ export KUBECONFIG=~/tanzu-install/auth/kubeconfig
+=======
+[netapp-user@rhel7]$ export KUBECONFIG=~/Tanzu-install/auth/kubeconfig
+>>>>>>> eba1007b77b1ef6011dadd158f1df991acc5299f
+----
+. NetApp Astra Trident Helm 저장소를 추가합니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ helm repo add netapp-trident https://netapp.github.io/trident-helm-chart
+"netapp-trident" has been added to your repositories
+----
+. Helm 리포지토리를 업데이트합니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "netapp-trident" chart repository
+...Successfully got an update from the "bitnami" chart repository
+Update Complete. ⎈Happy Helming!⎈
+----
+. Trident를 설치할 새 네임스페이스를 만듭니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ kubetcl create ns trident
+----
+. DockerHub 자격 증명으로 암호를 만들어 Astra Trident 이미지를 다운로드합니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ kubectl create secret docker-registry docker-registry-cred --docker-server=docker.io --docker-username=netapp-solutions-tme --docker-password=xxxxxx -n trident
+----
+. 관리 클러스터 구축이 포함된 TKGS(Tanzu가 설치된 vSphere) 또는 TKG에서 관리하는 사용자 또는 워크로드 클러스터의 경우 다음 절차에 따라 Astra Trident를 설치합니다.
++
+.. 로그인한 사용자에게 삼중임 네임스페이스에서 서비스 계정을 만들 수 있는 권한이 있는지, 삼중임 네임스페이스의 서비스 계정에 POD를 만들 수 있는 권한이 있는지 확인합니다.
+.. 생성된 네임스페이스에 Trident 연산자를 설치하려면 아래 helm 명령을 실행합니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ helm install trident netapp-trident/trident-operator -n trident --set imagePullSecrets[0]=docker-registry-cred
+----
+
+
+. TKGI 배포가 관리하는 사용자 또는 워크로드 클러스터의 경우 다음 helm 명령을 실행하여 생성된 네임스페이스에 Trident 연산자를 설치합니다.
++
+[listing]
+----
+[netapp-user@rhel7]$ helm install trident netapp-trident/trident-operator -n trident --set imagePullSecrets[0]=docker-registry-cred,kubeletDir="/var/vcap/data/kubelet"
+----
+. Trident Pod가 가동되어 실행 중인지 확인합니다.
++
+[listing]
+----
+NAME                                READY   STATUS    RESTARTS        AGE
+trident-csi-6vv62                   2/2     Running   0               14m
+trident-csi-cfd844bcc-sqhcg         6/6     Running   0               12m
+trident-csi-dfcmz                   2/2     Running   0               14m
+trident-csi-pb2n7                   2/2     Running   0               14m
+trident-csi-qsw6z                   2/2     Running   0               14m
+trident-operator-67c94c4768-xw978   1/1     Running   0               14m
+
+[netapp-user@rhel7]$ ./tridentctl -n trident version
++----------------+----------------+
+| SERVER VERSION | CLIENT VERSION |
++----------------+----------------+
+| 22.04.0          | 22.04.0          |
++----------------+----------------+
+----
+
+
+
+
+== 스토리지 시스템 백엔드를 생성합니다
+
+Astra Trident Operator 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Astra Trident의 설정 및 구성을 계속하려면 아래 링크를 따라가십시오.
+
+* link:vtwn_trident_ontap_nfs.html["NetApp ONTAP NFS 를 참조하십시오"]
+* link:vtwn_trident_ontap_iscsi.html["NetApp ONTAP iSCSI를 참조하십시오"]
+

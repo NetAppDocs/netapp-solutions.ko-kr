@@ -19,18 +19,6 @@ indexpage:
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
     - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
       url: "/azure_ora_nfile_usecase.html"
-    - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
-      url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
-    - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
-      url: https://www.netapp.com/us/media/tr-4250.pdf
-    - title: NetApp ONTAP에 Oracle 데이터베이스 구축
-      url: https://www.netapp.com/pdf.html?item=/media/8744-tr3633.pdf
-    - title: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
-      url: "/marketing_overview.html"
-    - title: 자동화된 Oracle 데이터 보호
-      url: "/db_protection_overview.html"
-    - title: Oracle Databases on NetApp EF-Series 를 참조하십시오
-      url: https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf
   - title: SQL 서버
     links:
     - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
