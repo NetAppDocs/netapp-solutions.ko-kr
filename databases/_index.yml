@@ -15,6 +15,18 @@ indexpage:
       url: "/aws_ora_fsx_ec2_inc_merge.html"
     - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
       url: "/aws_ora_fsx_ec2_nfs_asm.html"
+    - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
+      url: "/automation_ora_anf_nfs.html"
+    - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
+      url: "/automation_ora_aws-fsx_iscsi.html"
+    - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하고 자가 관리형 Oracle을 제공합니다
+      url: "/aws_ora_fsx_vmc_guestmount.html"
+    - title: AWS FSx ONTAP을 통해 Oracle Active Data Guard 비용 절감
+      url: "/aws_ora_fsx_ec2_data_guard.html"
+    - title: AWS FSx ONTAP의 증분 병합을 사용하여 Oracle VLDB의 빠른 복구 및 복제
+      url: "/aws_ora_fsx_ec2_inc_merge.html"
+    - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
+      url: "/aws_ora_fsx_ec2_nfs_asm.html"
     - title: iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
     - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
@@ -63,10 +75,12 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/16423-tr-4722pdf.pdf
   - title: 데이터베이스용 SnapCenter
     links:
+    - title: SnapCenter를 사용하여 ANF에서 Oracle 데이터베이스 백업, 복구 및 클론 생성
+      url: "/snapctr_ora_azure_anf.html"
     - title: SnapCenter 서비스를 사용한 Oracle 백업, 복원 및 복제 - Azure
       url: "/snapctr_svcs_ora_azure.html"
     - title: SnapCenter 서비스를 사용한 Oracle 백업, 복원 및 복제 - AWS
-      url: "/snapctr_svcs_ora_aws.html"
+      url: "/snapctr_svcs_ora.html"
     - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
       url: "/hybrid_dbops_snapcenter_usecases.html"
   - title: DB Automation 툴킷

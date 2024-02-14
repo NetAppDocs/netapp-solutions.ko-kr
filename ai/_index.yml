@@ -24,7 +24,7 @@ indexpage:
   - title: 데이터 레이크 및 데이터 파이프라인
     links:
     - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
-      url: mlops_fsxn_s3_integration.html
+      url: mlops_fsxn_intro.html
     - title: 자율 주행 워크로드를 위한 StorageGRID 데이터 레이크
       url: tr-4851.html
     - title: E-Series 및 BeeGFS for AI로 데이터 이동

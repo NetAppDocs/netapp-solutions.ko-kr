@@ -111,6 +111,8 @@ entries:
     url: "/databases/tr-4722.html"
 - title: 데이터베이스용 SnapCenter
   entries:
+  - title: ANF에서 Oracle Database 백업, 복구 및 클론
+    url: "/databases/snapctr_ora_azure_anf.html"
   - title: Oracle-Azure용 BlueXP SaaS
     url: "/databases/snapctr_svcs_ora_azure.html"
   - title: Oracle-AWS용 BlueXP SaaS

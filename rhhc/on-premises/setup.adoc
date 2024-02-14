@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: rhhc/on-premises/setup.html 
+keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMware, customer managed storage, ONTAP 
+summary:  
+---
+= VMware에서 Red Hat OpenShift Container 플랫폼을 배포하고 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+[role="lead"]
+이 섹션에서는 OpenShift 클러스터를 설정 및 관리하고 이를 기반으로 상태 저장 애플리케이션을 관리하는 방법에 대한 고급 워크플로우를 설명합니다. 또한, 영구 볼륨을 제공하는 Astra Trident의 도움을 받아 NetApp ONTAP 스토리지 어레이를 사용하는 모습을 보여 줍니다. 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 Astra Control Center를 사용하는 방법에 대한 세부 정보가 제공됩니다.
+
+
+NOTE: Red Hat OpenShift Container 플랫폼 클러스터를 배포하는 방법에는 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 있습니다 link:../rhhc-resources.html["리소스 섹션을 참조하십시오"].
+
+다음은 데이터 센터의 VMware에 구축된 클러스터를 보여 주는 다이어그램입니다.
+
+image:rhhc-on-premises.png[""]
+
+설치 프로세스는 다음 단계로 나눌 수 있습니다.
+
+.CentOS VM 배포 및 구성
+[%collapsible]
+====
+* VMware vSphere 환경에 구축됩니다.
+* 이 VM은 NetApp Astra Trident 및 NetApp Astra Control Center와 같은 일부 구성요소를 구축하는 데 사용됩니다.
+* 설치 중에 이 VM에 루트 사용자가 구성됩니다.
+
+
+====
+.VMware vSphere(허브 클러스터)에서 OpenShift Container Platform 클러스터 배포 및 구성
+[%collapsible]
+====
+의 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html/assisted_installer_for_openshift_container_platform/installing-on-vsphere#doc-wrapper/["보조 배포"] OCP 클러스터 구축 방법
+
+
+TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성하여 설치 프로그램에 제공합니다. 이러한 키는 필요한 경우 마스터 및 작업자 노드에 로그인하는 데 사용됩니다. - 지원되는 설치 프로그램에서 설치 프로그램을 다운로드합니다. 이 프로그램은 마스터 노드와 작업자 노드에 대해 VMware vSphere 환경에서 생성한 VM을 부팅하는 데 사용됩니다. VM에는 최소 CPU, 메모리 및 하드 디스크 요구 사항이 있어야 합니다. (에서 VM create 명령을 참조하십시오 link:https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html/assisted_installer_for_openshift_container_platform/installing-on-vsphere#doc-wrapper/["여기"] 마스터 및 이 정보를 제공하는 작업자 노드에 대한 페이지) - 모든 VM에서 diskUUID를 활성화해야 합니다. - 마스터에 대해 최소 3개의 노드를 만들고 작업자에 대해 3개의 노드를 만듭니다. 설치 관리자가 검색한 후 VMware vSphere 통합 전환 버튼을 설정합니다.
+
+====
+.허브 클러스터에 고급 클러스터 관리를 설치합니다
+[%collapsible]
+====
+허브 클러스터의 고급 클러스터 관리 운영자를 사용하여 설치됩니다. 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.7/html/install/installing#doc-wrapper["여기"].
+
+====
+.허브 클러스터에 내부 Red Hat Quay 레지스트리를 설치합니다.
+[%collapsible]
+====
+* Astra 이미지를 푸시하려면 내부 레지스트리가 필요합니다. 키 내부 레지스트리는 허브 클러스터의 오퍼레이터를 사용하여 설치됩니다.
+* 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/red_hat_quay/2.9/html-single/deploy_red_hat_quay_on_openshift/index#installing_red_hat_quay_on_openshift["여기"]
+
+
+====
+.추가 OCP 클러스터 2개 설치(소스 및 대상)
+[%collapsible]
+====
+* 허브 클러스터의 ACM을 사용하여 추가 클러스터를 구축할 수 있습니다.
+* 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.7/html/clusters/cluster_mce_overview#vsphere_prerequisites["여기"].
+
+
+====
+.NetApp ONTAP 스토리지를 구성합니다
+[%collapsible]
+====
+* VMware 환경에서 OCP VM에 연결된 ONTAP 클러스터를 설치합니다.
+* SVM을 생성합니다.
+* SVM에서 스토리지에 액세스할 수 있도록 NAS 데이터 거짓을 구성합니다.
+
+
+====
+.OCP 클러스터에 NetApp Trident를 설치합니다
+[%collapsible]
+====
+* 허브, 소스, 타겟 클러스터의 3개 클러스터 모두에 NetApp Trident를 설치합니다
+* 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"].
+* ONTAP-NAS에 대한 스토리지 백엔드를 생성합니다.
+* ONTAP-NAS의 스토리지 클래스를 생성합니다.
+* 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"].
+
+
+====
+.NetApp Astra Control Center를 설치합니다
+[%collapsible]
+====
+* NetApp Astra Control Center는 허브 클러스터의 Astra Operator를 사용하여 설치됩니다.
+* 지침을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/get-started/acc_operatorhub_install.html["여기"].
+
+
+기억하십시오. * 지원 사이트에서 NetApp Astra Control Center 이미지를 다운로드하십시오. * 이미지를 내부 레지스트리로 푸시합니다. * 여기 에서 지침을 참조하십시오.
+
+====
+.소스 클러스터에 애플리케이션을 배포합니다
+[%collapsible]
+====
+OpenShift GitOps를 사용하여 애플리케이션을 배포합니다. (예: Postgres, 고스트)
+
+====
+.Astra Control Center에 소스 및 대상 클러스터를 추가합니다.
+[%collapsible]
+====
+Astra Control 관리에 클러스터를 추가한 후 클러스터(Astra Control 외부)에 앱을 설치한 다음 Astra Control의 애플리케이션 페이지로 이동하여 앱과 리소스를 정의할 수 있습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/use/manage-apps.html["Astra Control Center의 앱 관리 섹션을 시작합니다"].
+
+====
+다음 단계는 데이터 보호 및 데이터 마이그레이션을 위한 Astra Control Center를 소스에서 타겟 클러스터로 마이그레이션하는 것입니다.

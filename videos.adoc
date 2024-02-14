@@ -36,6 +36,8 @@ video::e87773e3-dc53-4195-83ed-b0d50100a788[panopto,width=360]
 video::c381b887-8c8b-4d7d-8b0f-b0c0010c5c04[panopto,width=360]
 [밑줄]# * Oracle 데이터베이스용 비디오 * #
 
+.SnapCenter를 사용하여 ANF에서 Oracle 데이터베이스 백업, 복구 및 클론 생성
+video::960fb370-c6e0-4406-b6d5-b110014130e8[panopto,width=360]
 .NFS를 사용하여 Azure NetApp Files에 Oracle을 간편하게 자동으로 구현합니다
 video::d1c859b6-e45a-44c7-8361-b10f012fc89b[panopto,width=360]
 .iSCSI를 사용하여 Amazon FSx ONTAP에서 Oracle을 간편하고 자동으로 배포합니다
@@ -75,20 +77,6 @@ video::VcQMJIRzhoY[youtube,width=360]
 ====
 [underline]# * AWS/VMC * #에 대한 동영상
 
-.iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
-video::0d03e040-634f-4086-8cb5-b01200fb8515[panopto,width=360]
-.NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지
-video::c3befe1b-4f32-4839-a031-b01200fb6d60[panopto,width=360]
-. NetApp ONTAP용 Amazon FSx를 통해 AWS에서 VMware Cloud를 TCO로 절감할 수 있습니다
-video::f0fedec5-dc17-47af-8821-b01200f00e08[panopto,width=360]
-.NetApp ONTAP용 Amazon FSx를 사용하는 AWS 보조 데이터 저장소의 VMware Cloud
-video::2065dcc1-f31a-4e71-a7d5-b01200f01171[panopto,width=360]
-.VMC를 위한 VMware HCX 구축 및 구성 설정
-video::6132c921-a44c-4c81-aab7-b01200fb5d29[panopto,width=360]
-.VMC 및 FSxN용 VMware HCX와 함께 vMotion 마이그레이션 데모
-video::52661f10-3f90-4f3d-865a-b01200f06d31[panopto,width=360]
-.VMC 및 FSxN용 VMware HCX와 함께 콜드 마이그레이션 데모
-video::685c0dc2-9d8a-42ff-b46d-b01200f056b0[panopto,width=360]
 .iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
 video::0d03e040-634f-4086-8cb5-b01200fb8515[panopto,width=360]
 .NFS를 사용하는 FSx ONTAP가 있는 Linux 게스트 연결 스토리지

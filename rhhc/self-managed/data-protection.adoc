@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: rhhc/self-managed/data-protection.html 
+keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMware, customer managed storage, ONTAP 
+summary:  
+---
+= Astra Control Center를 사용하여 데이터를 보호합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+[role="lead"]
+이 페이지에는 Astra Control Center(ACC)를 사용하여 VMware vSphere에서 실행되는 Red Hat OpenShift Container 기반 애플리케이션에 대한 데이터 보호 옵션이 나와 있습니다.
+
+사용자가 Red Hat OpenShift를 사용하여 애플리케이션을 현대화하는 과정에서 실수로 인한 삭제나 기타 인적 오류로부터 애플리케이션을 보호하기 위한 데이터 보호 전략이 마련되어야 합니다. 규정 또는 규정 준수 목적으로도 데이터 마스터를 보호하기 위해 보호 전략이 필요한 경우가 많습니다.
+
+데이터 보호 요구 사항은 사람의 개입 없이 시점 복사본으로 되돌려서 다른 장애 도메인으로 자동 페일오버하는 것에서부터 다릅니다. 많은 고객들이 멀티 테넌시, 멀티 프로토콜, 고성능 및 용량 제공 기능, 멀티 사이트 위치의 복제 및 캐싱, 보안, 유연성 등과 같은 다양한 기능 때문에 Kubernetes 애플리케이션을 위한 기본 스토리지 플랫폼으로 ONTAP를 선택하고 있습니다.
+
+고객은 클라우드 환경을 데이터 센터로 확장할 수 있으므로 클라우드의 이점을 활용하고 나중에 워크로드를 이동할 수 있습니다. 이러한 고객은 OpenShift 애플리케이션과 데이터를 클라우드 환경으로 백업하는 것이 불가피한 선택이라고 할 수 있습니다. 그런 다음 애플리케이션과 관련 데이터를 클라우드의 OpenShift 클러스터나 데이터 센터에 복원할 수 있습니다.
+
+
+
+== ACC를 사용한 백업 및 복구
+
+애플리케이션 소유자는 ACC에서 검색된 응용 프로그램을 검토하고 업데이트할 수 있습니다. ACC는 CSI를 사용하여 스냅샷 복사본을 생성하고 시점 스냅샷 복사본을 사용하여 백업을 수행할 수 있습니다. 백업 대상은 클라우드 환경에서 오브젝트 저장소로 사용할 수 있습니다. 예약된 백업과 유지할 백업 버전 수에 대해 보호 정책을 구성할 수 있습니다. 최소 RPO는 1시간입니다.
+
+
+
+=== ACC를 사용하여 백업에서 애플리케이션 복구
+
+image:rhhc-onprem-dp-br.png["Astra Control Center 복구 옵션"]
+
+
+
+== 응용 프로그램별 실행 후크
+
+스토리지 레벨 데이터 보호 기능을 사용할 수 있지만 백업 및 복구 애플리케이션의 정합성을 유지하기 위해 추가 단계가 필요한 경우가 많습니다. 앱별 추가 단계는 다음과 같습니다. - 스냅샷 복사본 생성 이전 또는 이후에 - 백업을 생성하기 전이나 후에 - 스냅샷 복사본 또는 백업에서 복원한 후 Astra Control은 실행 후크라고 하는 사용자 정의 스크립트로 코드화된 이러한 앱 관련 단계를 실행할 수 있습니다.
+
+NetApp의 link:https://github.com/NetApp/Verda["오픈 소스 프로젝트 Verda"] 널리 사용되는 클라우드 네이티브 애플리케이션을 위한 실행 후크를 제공하여 애플리케이션을 간편하고, 강력하고, 쉽게 조정할 수 있도록 합니다. 리포지토리에 없는 응용 프로그램에 대한 충분한 정보가 있는 경우 해당 프로젝트에 자유롭게 참여할 수 있습니다.
+
+
+
+== redis 애플리케이션의 사전 스냅샷을 위한 샘플 실행 후크
+
+image::rhhc-onprem-dp-br-hook.png[Astra Control Center 실행 후크]
+
+
+
+== ACC를 통한 복제
+
+지역 보호를 위해 또는 낮은 RPO 및 RTO 솔루션을 위해 애플리케이션을 다른 지역의 가급적이면 다른 지역에서 실행되는 다른 Kubernetes 인스턴스로 복제할 수 있습니다. ACC는 5분 이내에 ONTAP 비동기식 SnapMirror를 사용합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/use/replicate_snapmirror.html["여기"] SnapMirror 설정 지침을 보려면
+
+
+
+=== ACC가 장착된 SnapMirror
+
+image::rhhc-onprem-dp-rep.png[Astra Control Center 복제]
+
+
+NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능을 지원하지 않습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/get-started/requirements.html#astra-trident-requirements["여기"] 를 참조하십시오.
+
+
+
+=== 데모 비디오:
+
+link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["백업을 사용하는 Astra Control Center를 사용한 재해 복구 시연 비디오"]
+
+Astra Control Center 데이터 보호 기능에 대한 자세한 내용을 확인할 수 있습니다 link:https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html["여기"]
+
+
+
+== ACC를 사용한 재해 복구(복제를 사용한 페일오버 및 페일백
+
+[밑줄]# * 데모 비디오 * #
+
+.애플리케이션 장애 조치 및 장애 복구를 위해 Astra Control을 사용합니다
+video::4e550e59-369e-4607-88ec-b0d60142c584[panopto,width=360]

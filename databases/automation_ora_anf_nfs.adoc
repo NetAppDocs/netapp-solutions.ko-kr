@@ -596,7 +596,7 @@ image::automation_ora_anf_nfs_em_02.png[이 이미지는 Oracle Enterprise Manag
 
 [%collapsible]
 ====
-NetApp는 SnapCenter UI 툴을 사용하여 Azure 클라우드에 구축된 Oracle 데이터베이스를 관리하는 것이 좋습니다. 자세한 솔루션 문서가 곧 제공될 예정입니다.
+NetApp는 SnapCenter UI 툴을 사용하여 Azure 클라우드에 구축된 Oracle 데이터베이스를 관리하는 것이 좋습니다. 자세한 내용은 TR-4988: link:https://docs.netapp.com/us-en/netapp-solutions/databases/snapctr_ora_azure_anf.html["SnapCenter를 사용하여 ANF에서 Oracle 데이터베이스 백업, 복구 및 클론 생성"^] 를 참조하십시오.
 
 ====
 
@@ -604,6 +604,10 @@ NetApp는 SnapCenter UI 툴을 사용하여 Azure 클라우드에 구축된 Orac
 == 추가 정보를 찾을 수 있는 위치
 
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* SnapCenter를 사용하여 ANF에서 Oracle 데이터베이스 백업, 복구 및 클론 생성
++
+link:https://docs.netapp.com/us-en/netapp-solutions/databases/snapctr_ora_azure_anf.html["SnapCenter를 사용하여 ANF에서 Oracle 데이터베이스 백업, 복구 및 클론 생성"^]
 
 * Azure NetApp Files
 +
@@ -616,9 +620,5 @@ link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/deployi
 * 응답 파일을 사용하여 Oracle 데이터베이스 설치 및 구성
 +
 link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7"^]
-
-* ONTAP와 함께 Red Hat Enterprise Linux 8.2를 사용하십시오
-+
-link:https://docs.netapp.com/us-en/ontap-sanhost/hu_rhel_82.html#all-san-array-configurations["https://docs.netapp.com/us-en/ontap-sanhost/hu_rhel_82.html#all-san-array-configurations"^]
 
 

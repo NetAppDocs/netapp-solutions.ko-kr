@@ -93,6 +93,28 @@ indexpage:
       url: "../containers/anthos-with-netapp/a-w-n_solution_overview.html"
     - title: NetApp Astra와 DevOps
       url: "../containers/devops_with_netapp/dwn_solution_overview.html"
+  - title: VMware 소프트웨어 정의 데이터 센터
+    links:
+    - title: NetApp 스토리지 및 VMware Cloud Foundation
+      url: "/vmware-vcf-overview.html"
+    - title: ONTAP 툴을 위한 VMware 클라우드 기반 구축 모드입니다
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html
+    - title: VMware Cloud Foundation으로 FlexPod 하이브리드 클라우드를 확장하십시오
+      url: https://www.netapp.com/blog/expanding-flexpod-hybrid-cloud-with-vmware-cloud-foundation/
+    - title: VMware Cloud Foundation용 FlexPod 설계 가이드
+      url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt0_general-table0=vmware%20cloud%20foundation
+  - title: 컨테이너 및 Kubernetes
+    links:
+    - title: VMware vSphere 기반 Kubernetes
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634
+    - title: NetApp의 VMware Tanzu
+      url: "../containers/tanzu_with_netapp/vtwn_solution_overview.html"
+    - title: NetApp의 Red Hat OpenShift
+      url: "../containers/rh-os-n_solution_overview.html"
+    - title: NetApp의 Anthos
+      url: "../containers/anthos-with-netapp/a-w-n_solution_overview.html"
+    - title: NetApp Astra와 DevOps
+      url: "../containers/devops_with_netapp/dwn_solution_overview.html"
   - title: 보안 데이터 보호
     links:
     - title: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자(SRM
