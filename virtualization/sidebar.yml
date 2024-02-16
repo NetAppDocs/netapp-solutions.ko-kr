@@ -89,6 +89,13 @@ entries:
       url: "/virtualization/tr-4792.html"
   - title: FlexPod 데스크톱 가상화 솔루션
     url: "/virtualization/flex-virtual-solutions.html"
+- title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
+  url: "/virtualization/vsphere_ontap_asa_overview.html"
+  entries:
+  - title: VMware vSphere용 ONTAP 툴
+    url: "/virtualization/vsphere_ontap_asa_otv.html"
+  - title: Cloud Insights
+    url: "/virtualization/vsphere_ontap_asa_insights.html"
 - title: 데모 및 자습서
   entries:
   - title: 비디오

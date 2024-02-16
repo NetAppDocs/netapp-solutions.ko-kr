@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ehc/gcp-migrate-veeam.html 
+permalink: ehc/gcp/gcp-migrate-veeam.html 
 keywords: gcp, gcve, cvs, migrate , dr, disaster recovery, veeam, replication, proxy, re-ip 
 summary: 현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은 이 솔루션을 사용하여 워크로드를 GCVE로 마이그레이션하고 NetApp Cloud Volume Service NFS 데이터 저장소의 이점을 계속 누릴 수 있습니다. 
 ---
@@ -10,7 +10,7 @@ summary: 현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ./../../media/
 
 
 

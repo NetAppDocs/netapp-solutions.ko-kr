@@ -45,7 +45,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리�
 ** vSphere 7.0 이상
 
 
-* iSCSI VMkernel 어댑터 IP 정보
+* iSCSI VMkernel 어댑터 IP 정보입니다
 * 네트워크 스위치
 +
 ** ONTAP 시스템 네트워크 데이터 포트 및 연결된 vSphere 호스트를 사용합니다
