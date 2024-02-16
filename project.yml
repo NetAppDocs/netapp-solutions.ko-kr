@@ -1,7 +1,6 @@
 ---
 settings:
   name: NetApp Solutions
-  harmony_integration: maestro
   internal:
     pdf_enabled: false
   prod:
@@ -36,4 +35,4 @@ sidebar:
   - title: NetApp 솔루션 정보
     url: about.html
   - title: 법적 고지
-    url: legal-notices.html
+    url: "/legal-notices.html"

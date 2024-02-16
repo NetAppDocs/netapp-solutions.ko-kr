@@ -1,7 +1,19 @@
 ---
 indexpage:
   tiles:
-  - title: 시작/모범 사례
+  - title: 'VMware와 NetApp: 협력의 시너지 효과'
+    links:
+    - title: VMware와 NetApp를 선택해야 하는 이유
+      url: "/vmware-netapp.html"
+    - title: VMware용 NetApp 솔루션
+      url: "/vmware-on-netapp.html"
+    - title: 고객 사례
+      url: "/vmware-customer-stories.html"
+    - title: VMware Explore의 NetApp 세션
+      url: https://www.vmware.com/explore/video-library.html#text=%22netapp%22&year=2022
+    - title: NetApp TV VMware 세션
+      url: https://www.netapp.tv/search/vmware?mcid=46355890193282798301464636355760311038
+  - title: 시작하기
     links:
     - title: VMware vSphere 관리자를 위한 NetApp ONTAP의 이점
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
