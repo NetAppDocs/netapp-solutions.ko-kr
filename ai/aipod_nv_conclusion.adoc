@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: ai/aipod_nv_conclusion.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
+summary: NVIDIA DGX 시스템 기반 NetApp AI Pod - 결론 
+---
+= NVIDIA DGX 시스템 기반 NetApp AI Pod - 결론
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aipod_nv_storage.html["이전: NVIDIA DGX 시스템 지원 NetApp AI Pod - 스토리지 시스템 설계 및 사이징 지침"]
+
+
+
+== 결론
+
+차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합할 경우, AFF A250 스토리지 시스템과 단일 DGX A100에서 24노드 AFF A800 클러스터의 최대 48개 DGX A100 시스템까지 거의 모든 규모로 이 아키텍처를 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
+
+link:aipod_nv_additional_information.html["다음: NVIDIA DGX 시스템 지원 NetApp AI Pod - 추가 정보."]

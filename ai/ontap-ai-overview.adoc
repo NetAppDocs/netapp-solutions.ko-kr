@@ -4,7 +4,7 @@ permalink: ai/ontap-ai-overview.html
 keywords: ONTAP AI, converged infrastructure, AI, ML, DL, artificial intelligence, machine learning, deep learning 
 summary:  
 ---
-= NVIDIA를 통한 NetApp ONTAP AI
+= NVIDIA에서 NetApp AI를 사용하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,13 @@ summary:
 
 [role="lead"]
 NetApp과 NVIDIA의 ONTAP AI 통합 인프라 솔루션 개요
+
+
+
+== NVIDIA DGX 시스템 기반 NetApp AI Pod
+
+* link:ai/aipod_nv_intro.html["NVIDIA DGX 시스템 기반 NetApp AI Pod"]
+
 
 
 

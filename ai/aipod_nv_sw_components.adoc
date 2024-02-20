@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: ai/aipod_nv_sw_components.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
+summary: NVIDIA DGX 시스템 지원 NetApp AI Pod - 소프트웨어 구성요소 
+---
+= NVIDIA DGX 시스템 지원 NetApp AI Pod - 소프트웨어 구성요소
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aipod_nv_hw_components.html["이전: ONTAP AI 하드웨어 구성요소"]
+
+
+
+== NVIDIA 소프트웨어
+
+
+
+=== NVIDIA Base 명령
+
+NVIDIA Base Command & #8482;(그림 2)는 모든 DGX BasePOD에 전력을 공급하여 조직이 최고의 NVIDIA 소프트웨어 혁신을 활용하도록 지원합니다. 기업은 엔터프라이즈급 오케스트레이션 및 클러스터 관리, 컴퓨팅 속도를 높이는 라이브러리, 스토리지 및 네트워크 인프라, AI 워크로드에 최적화된 운영 체제(OS)를 포함하는 검증된 플랫폼을 통해 투자의 잠재력을 모두 활용할 수 있습니다.
+
+image:oai_BaseCommand.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+=== NGC(NVIDIA GPU Cloud)
+
+NVIDIA NGC ™ (그림 3)는 다양한 수준의 AI 전문 지식을 갖춘 데이터 과학자, 개발자 및 연구자의 요구를 충족하는 소프트웨어를 제공합니다. NGC에서 호스팅되는 소프트웨어는 종합적인 CVE(Common Vulnerability and Exposure), 암호화 및 개인 키 집합을 검사합니다. 테스트를 거쳐 여러 GPU로 확장하고, 대부분의 경우 다중 노드로 확장하여 사용자가 DGX 시스템에 대한 투자를 극대화할 수 있도록 설계되었습니다.
+
+image:oai_ngc.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+=== NVIDIA AI 엔터프라이즈
+
+NVIDIA AI Enterprise는 AI 개발 및 배포에 최적화된 AI 및 데이터 분석 소프트웨어 제품군입니다. NVIDIA AI Enterprise는 DGX 시스템에서 실행되도록 인증 및 지원되는 NVIDIA Rapids ™, NVIDIA TAO 툴킷, NVIDIA TensorRT ™, NVIDIA Triton Inference Server와 같은 검증된 오픈 소스 컨테이너 및 프레임워크를 포함합니다. NVIDIA AI Enterprise는 DGX 시스템에 포함되어 있으며 NVIDIA Base Command 및 NVIDIA NGC와 함께 사용됩니다.
+
+
+
+== NetApp 소프트웨어
+
+
+
+=== NetApp ONTAP를 참조하십시오
+
+NetApp의 최신 세대 스토리지 관리 소프트웨어인 ONTAP 9는 기업이 인프라를 현대화하고 클라우드 지원 데이터 센터로 전환할 수 있도록 지원합니다. ONTAP는 업계 최고 수준의 데이터 관리 기능을 활용하여 데이터가 상주하는 위치와 상관없이 단일 툴셋으로 데이터를 관리하고 보호할 수 있습니다. 필요에 따라 에지, 코어, 클라우드 등 어느 위치로도 데이터를 자유롭게 이동할 수 있습니다. ONTAP 9에는 데이터 관리를 단순화하고, 중요 데이터를 더 빨리 처리하고, 보호하며, 하이브리드 클라우드 아키텍처 전체에서 차세대 인프라 기능을 지원하는 다양한 기능이 포함되어 있습니다.
+
+
+
+==== 데이터 관리를 단순화하십시오
+
+데이터 관리는 AI 애플리케이션에 적합한 리소스를 사용하고 AI/ML 데이터 세트를 교육할 수 있도록 엔터프라이즈 IT 운영 및 데이터 과학자에게 매우 중요합니다. NetApp 기술에 대한 다음 추가 정보는 이 검증의 범위에 포함되지 않지만, 배포에 따라 달라질 수 있습니다.
+
+ONTAP 데이터 관리 소프트웨어에는 운영을 간소화 및 단순화하고 총 운영 비용을 절감하는 다음과 같은 기능이 있습니다.
+
+* 인라인 데이터 컴팩션 및 확대된 중복제거: 데이터 컴팩션은 스토리지 블록 내부의 낭비되는 공간을 줄이고, 중복제거는 실제 용량을 상당히 늘려줍니다. 이는 로컬에 저장된 데이터와 클라우드로 계층화된 데이터에 적용됩니다.
+* 최소, 최대 및 적응형 서비스 품질(AQoS): 세부적인 서비스 품질(QoS) 제어로 고도의 공유 환경에서 중요 애플리케이션의 성능 수준을 유지할 수 있습니다.
+* NetApp FabricPool를 참조하십시오. AWS(Amazon Web Services), Azure, NetApp StorageGRID 스토리지 솔루션을 포함한 퍼블릭 클라우드 및 프라이빗 클라우드 스토리지에 콜드 데이터를 자동으로 계층화합니다. FabricPool에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598: FabricPool 모범 사례"^].
+* NetApp FlexCache 를 참조하십시오. 파일 배포를 간소화하고 WAN 대기 시간을 줄이며 WAN 대역폭 비용을 절감하는 원격 볼륨 캐싱 기능을 제공합니다. FlexCache를 사용하면 여러 사이트에 분산된 제품 개발을 지원하고, 원격지에서 기업 데이터 세트에 더 빠르게 액세스할 수 있습니다.
+
+
+
+
+==== 데이터 가속화 및 보호
+
+ONTAP는 탁월한 수준의 성능과 데이터 보호를 제공하며 다음과 같은 방법으로 이러한 기능을 확장합니다.
+
+* 성능 및 짧은 지연 시간: ONTAP은 RDMA 기반 NFS를 사용하는 NVIDIA GPUDirect Storage(GDS)를 지원하는 등, 최저 지연 시간으로 가장 높은 처리량을 제공합니다.
+* 데이터 보호: ONTAP는 모든 플랫폼에서 공통 관리를 지원하는 내장 데이터 보호 기능을 제공합니다.
+* NVE(NetApp 볼륨 암호화). ONTAP는 온보드 및 외부 키 관리를 모두 지원하는 기본 볼륨 레벨 암호화를 제공합니다.
+* 멀티테넌시 및 다단계 인증. ONTAP를 사용하면 인프라 리소스를 최고 수준의 보안으로 공유할 수 있습니다.
+
+
+
+
+==== 미래 지향형 인프라
+
+ONTAP은 다음과 같은 기능을 통해 끊임없이 변화하는 까다로운 비즈니스 요구사항을 충족할 수 있도록 지원합니다.
+
+* 원활한 확장 및 무중단 운영: ONTAP은 운영 중단 없이 기존 컨트롤러 및 스케일아웃 클러스터에 용량을 추가할 수 있도록 지원합니다. 고객은 고비용이 따르는 데이터 마이그레이션이나 운영 중단 없이 NVMe 및 32Gb FC와 같은 최신 기술로 업그레이드할 수 있습니다.
+* 클라우드 연결: ONTAP은 클라우드에 가장 많이 연결된 스토리지 관리 소프트웨어로, 모든 퍼블릭 클라우드에서 ONTAP Select(소프트웨어 정의 스토리지) 및 NetApp Cloud Volumes Service(클라우드 네이티브 인스턴스)에 대한 옵션을 제공합니다.
+* 새로운 애플리케이션과 통합: ONTAP은 기존 엔터프라이즈 앱을 지원하는 인프라와 동일한 인프라를 사용하여 자율주행 차량, 스마트 시티, Industry 4.0과 같은 차세대 플랫폼 및 애플리케이션을 위한 엔터프라이즈급 데이터 서비스를 제공합니다.
+
+
+
+
+=== NetApp DataOps 툴킷
+
+NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원하는 개발/교육 작업 공간 및 추론 서버의 관리를 단순화하는 Python 기반 툴입니다. DataOps 툴킷은 독립 실행형 유틸리티로 작동할 수 있으며, NetApp Astra Trident를 활용하여 스토리지 운영을 자동화하는 Kubernetes 환경에서 더 효과적입니다. 주요 기능은 다음과 같습니다.
+
+* 고성능 스케일아웃 NetApp 스토리지를 기반으로 하는 새로운 고용량 JupyterLab 작업 공간을 빠르게 프로비저닝합니다.
+* 엔터프라이즈급 NetApp 스토리지를 통해 지원되는 새로운 NVIDIA Triton Inference Server 인스턴스를 빠르게 프로비저닝합니다.
+* 실험 또는 신속한 반복을 위해 고용량 JupyterLab 작업 공간을 거의 동시에 복제합니다.
+* 백업 및/또는 추적 가능성/베이스라인 기능을 위해 고용량 JupyterLab 작업 공간의 스냅샷을 거의 동시에 저장합니다.
+* 대용량 고성능 데이터 볼륨을 거의 동시에 프로비저닝, 복제 및 스냅샷으로 제공합니다.
+
+
+
+
+=== NetApp Astra Trident
+
+Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP를 비롯한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
+
+link:aipod_nv_architecture.html["다음은 NVIDIA DGX 시스템 기반 NetApp AI Pod - 아키텍처."]
