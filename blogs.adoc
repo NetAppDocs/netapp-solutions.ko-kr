@@ -87,5 +87,6 @@ keywords: netapp, solutions, blogs
 
 == Red Hat OpenShift Container 워크로드를 지원하는 NetApp 하이브리드 멀티 클라우드
 
-* link:++https://community.netapp.com/t5/Tech-ONTAP-Blogs/NetApp-ONTAP-doubles-up-as-storage-for-logs-in-Red-Hat-OpenShift-Container/ba-p/449280["NetApp ONTAP은 Red Hat OpenShift Container Platform에서 로그용 스토리지로도 사용됩니다 "]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/NetApp-ONTAP-doubles-up-as-storage-for-logs-in-Red-Hat-OpenShift-Container/ba-p/449280["NetApp ONTAP은 Red Hat OpenShift Container Platform에서 로그용 스토리지로도 사용됩니다 "]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Using-Astra-Control-Service-for-data-management-of-apps-on-ROSA-clusters-with/ba-p/450903["Amazon FSx 스토리지가 탑재된 Rosa 클러스터에서 앱의 데이터를 관리하는 데 Astra Control Service를 사용합니다 "]
 

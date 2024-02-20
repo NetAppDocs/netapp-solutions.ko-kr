@@ -107,6 +107,8 @@ video::255640f5-4dff-438c-8d50-b01200f017d1[panopto,width=360]
 .Red Hat OpenShift를 사용한 하이브리드 멀티 클라우드
 [#rhhc%collapsible]
 ====
+.Amazon FSx for NetApp ONTAP 스토리지를 사용하는 AWS(ROSA) 기반 Red Hat OpenShift Service의 애플리케이션을 위한 스냅샷/복원
+video::36ecf505-5d1d-4e99-a6f8-b11c00341793[panopto,width=360]
 .Astra Control Service를 사용한 Rosa DR
 video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto,width=360]
 .FSxN과 Astra Trident의 통합
