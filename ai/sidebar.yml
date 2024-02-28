@@ -26,29 +26,6 @@ entries:
   - title: NVIDIA와 함께 ONTAP AI
     url: "/ai/ontap-ai-overview.html"
     entries:
-    - title: NVIDIA DGX 시스템 및 NetApp AI Pod
-      url: "/ai/aipod_nv_intro.html"
-      entries:
-      - title: 소개
-        url: "/ai/aipod_nv_intro.html"
-      - title: 하드웨어 구성 요소
-        url: "/ai/aipod_nv_hw_components.html"
-      - title: 소프트웨어 구성 요소
-        url: "/ai/aipod_nv_sw_components.html"
-      - title: 있습니다
-        url: "/ai/aipod_nv_architecture.html"
-      - title: 스토리지
-        url: "/ai/aipod_nv_storage.html"
-      - title: 결론
-        url: "/ai/aipod_nv_conclusion.html"
-      - title: 추가 정보
-        url: "/ai/aipod_nv_additional_information.html"
-    - title: 기존 NetApp 볼륨을 Domino에 표시합니다
-      url: "/ai/ddlnexus_expose_netapp_vols.html"
-    - title: 서로 다른 환경에서 동일한 데이터에 액세스합니다
-      url: "/ai/ddlnexus_access_data_hybrid.html"
-    - title: 추가 정보를 찾을 수 있는 위치
-      url: "/ai/ddlnexus_additional_information.html"
     - title: NVIDIA DGX A100 시스템 설계 가이드를 지원하는 ONTAP AI
       url: "/ai/nva-1151-design.html"
     - title: NVIDIA DGX A100 시스템 탑재 ONTAP AI 구축 가이드

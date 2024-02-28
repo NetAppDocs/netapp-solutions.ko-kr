@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: ai/aipod_nv_conclusion_add_info.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
+summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 수 있는 곳 
+---
+= NVIDIA DGX 시스템 및 NetApp AIPod - 결론 및 추가 정보
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:aipod_nv_validation_sizing.html["이전: NVIDIA DGX 시스템 및 NetApp AIPod - 솔루션 검증 및 사이징 지침"]
+
+
+
+== 결론
+
+차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합하면 AIPod 아키텍처를 NetApp AFF A250 스토리지 시스템과 쌍을 이루는 OEM 서버의 단일 GPU에서 24노드 AFF A900 클러스터의 최대 48개 DGX H100 시스템까지 거의 모든 규모로 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
+
+
+
+== 추가 정보
+
+본 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* NetApp ONTAP 데이터 관리 소프트웨어 - ONTAP 정보 라이브러리
++
+https://docs.netapp.com/us-en/ontap-family/["https://docs.netapp.com/us-en/ontap-family/"^]
+
+* NetApp AFF A900 스토리지 시스템 -
++
+https://www.netapp.com/data-storage/aff-a-series/aff-a900/["https://www.netapp.com/data-storage/aff-a-series/aff-a900/"]
+
+* NetApp ONTAP RDMA 정보 -
++
+link:https://docs.netapp.com/us-en/ontap/nfs-rdma/index.html["https://docs.netapp.com/us-en/ontap/nfs-rdma/index.html"]
+
+* NetApp DataOps 툴킷
++
+https://github.com/NetApp/netapp-dataops-toolkit["https://github.com/NetApp/netapp-dataops-toolkit"^]
+
+* NetApp Astra Trident
++
+https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_overview_trident.html["https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_overview_trident.html"^]
+
+* NVIDIA DGX A100 시스템의 ONTAP AI-NetApp 검증 아키텍처
++
+https://docs.netapp.com/us-en/netapp-solutions/ai/ontap-ai-overview.html["https://docs.netapp.com/us-en/netapp-solutions/ai/ontap-ai-overview.html"^]
+
+* NVIDIA BasePOD
++
+https://www.nvidia.com/en-us/data-center/dgx-basepod/["https://www.nvidia.com/en-us/data-center/dgx-basepod/"^]
+
+* NVIDIA DGX A100 시스템
++
+https://www.nvidia.com/en-us/data-center/dgx-a100/["https://www.nvidia.com/en-us/data-center/dgx-a100/"^]
+
+* NVIDIA 네트워킹
++
+https://www.nvidia.com/en-us/networking/["https://www.nvidia.com/en-us/networking/"^]
+
+* NVIDIA AI 엔터프라이즈
++
+https://www.nvidia.com/en-us/data-center/products/ai-enterprise/["https://www.nvidia.com/en-us/data-center/products/ai-enterprise/"^]
+
+
+
+
+
+== 감사의 말
+
+이 문서는 NetApp 솔루션 및 ONTAP 엔지니어링 팀의 작업이며, David Arnette, Olga Kornievskaia, Dustin Fischer, Srikanth Kaligotla, Mohit Kumar 및 Rajeev Badrinath입니다. 저자는 또한 NVIDIA와 BasePOD 엔지니어링 팀에게 지속적인 지원에 대해 감사의 말씀을 드립니다.

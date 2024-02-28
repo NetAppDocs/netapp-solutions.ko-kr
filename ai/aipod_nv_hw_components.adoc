@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai/aipod_nv_hw_components.html 
 keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
-summary: NVIDIA DGX 시스템 기반 NetApp AI Pod - 하드웨어 구성 요소 
+summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 하드웨어 구성 요소 
 ---
-= NVIDIA DGX 시스템 기반 NetApp AI Pod - 하드웨어 구성 요소
+= NVIDIA DGX 시스템 지원 NetApp AIPod - 하드웨어 구성 요소
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,7 +13,7 @@ summary: NVIDIA DGX 시스템 기반 NetApp AI Pod - 하드웨어 구성 요소
 :imagesdir: ./../media/
 
 
-link:aipod_nv_intro.html["이전: NVIDIA DGX 시스템 지원 NetApp AI Pod - 소개"]
+link:aipod_nv_intro.html["이전: NVIDIA DGX 시스템 지원 NetApp AIPod - 소개"]
 
 
 
@@ -23,23 +23,35 @@ NetApp AFF 최첨단 스토리지 시스템을 사용하면 IT 부서에서 업�
 
 
 
-=== AFF A-Series 스토리지 시스템
+=== AFF A900 스토리지 시스템
 
-A900이 업데이트되었습니다.!!
+NetApp ONTAP 데이터 관리 소프트웨어 기반의 NetApp AFF A900은 기본 데이터 보호, 선택적 랜섬웨어 방지 기능, 가장 중요한 비즈니스 워크로드를 지원하는 데 필요한 고성능 및 복원력을 제공합니다. 또한 미션 크리티컬 운영의 중단을 제거하고 성능 조정을 최소화하며 랜섬웨어 공격으로부터 데이터를 보호합니다. 다음과 같은 이점을 제공합니다.
+• 업계 최고의 성능
+• 타협 없는 데이터 보안
+• 단순화된 무중단 업그레이드
 
-NetApp AFF A800 시스템은 업계 최초의 엔드 투 엔드 NVMe 솔루션입니다. NAS 워크로드의 경우 단일 AFF A800 시스템은 연속 읽기의 경우 25GBps의 처리량과 작은 랜덤 읽기의 경우 500µs 미만 지연 시간에 100만 IOPS를 지원합니다.
+image:aipod_nv_A900.png["오류: 그래픽 이미지가 없습니다"]
 
-image:oai_A800_3D.png["오류: 그래픽 이미지가 없습니다"]
 
-AFF A800 시스템은 다음 기능을 지원합니다.
-* 24노드 클러스터에서 최대 300GBps의 방대한 처리량 및 1140만 IOPS입니다
-* 100GbE 및 32Gb FC 연결
-* 멀티스트림 쓰기를 지원하는 최대 30TB SSD(Solid State Drive
-* 2U 드라이브 쉘프에서 고밀도 2PB 제공
-* 200TB(컨트롤러 2개)에서 9.6PB(24개 컨트롤러)로 확장
-* NetApp ONTAP에는 업계 최고의 데이터 관리를 위한 완벽한 데이터 보호 및 복제 기능이 포함되어 있습니다
 
-대규모 구축의 경우 AFF A900 시스템은 더 높은 성능 및 용량 옵션을 제공하는 반면 AFF A700, AFF A400, AFF A250과 같은 다른 NetApp 스토리지 시스템은 더 저렴한 비용으로 소규모 구축에 필요한 옵션을 제공합니다.
+==== 업계 최고의 성능
+
+AFF A900은 딥 러닝, AI, 고속 분석과 같은 차세대 워크로드와 Oracle, SAP HANA, Microsoft SQL Server, 가상 애플리케이션과 같은 기존 엔터프라이즈 데이터베이스를 손쉽게 관리합니다. 이 솔루션은 HA 쌍당 최대 2.4M IOPS와 지연 시간을 100µs의 낮은 속도로 비즈니스 크리티컬 애플리케이션을 최고 수준으로 실행하는 동시에, 이전 NetApp 모델에 비해 성능을 최대 50%까지 향상합니다. NFS over RDMA, pNFS 및 Session Trunking을 사용하면 기존 데이터센터 네트워킹 인프라를 사용하여 차세대 애플리케이션에 필요한 높은 수준의 네트워크 성능을 달성할 수 있습니다.
+또한 SAN, NAS 및 오브젝트 스토리지에 대한 통합 멀티 프로토콜 지원을 통해 확장하고 확장 및 성장을 도모하며 통합 단일 ONTAP 데이터 관리 소프트웨어 로 사내 또는 클라우드 데이터에 대한 최대 유연성을 제공할 수 있습니다. 또한 Active IQ과 Cloud Insights이 제공하는 AI 기반 예측 분석으로 시스템 상태를 최적화할 수 있습니다.
+
+
+
+==== 타협 없는 데이터 보안
+
+AFF A900 시스템에는 NetApp 통합 및 애플리케이션 정합성을 보장하는 데이터 보호 소프트웨어의 전체 제품군이 포함되어 있습니다. 선점 및 공격 후 복구를 위한 내장 데이터 보호 및 최첨단 랜섬웨어 방지 솔루션을 제공합니다. 악성 파일이 디스크에 기록되는 것을 차단하고 저장소 문제를 모니터링하여 통찰력을 얻을 수 있습니다.
+
+
+
+==== 단순화된 무중단 업그레이드
+
+AFF A900은 기존 A700 고객을 위한 무중단 섀시 내 업그레이드로 사용할 수 있습니다. NetApp은 우수한 안정성, 가용성, 서비스 가능성 및 관리성(RASM) 기능을 통해 간단히 업데이트하고 미션 크리티컬 운영 중단을 제거합니다. 또한 ONTAP 소프트웨어가 펌웨어 업데이트를 자동으로 적용하므로 운영 효율성을 높이고 IT 팀의 일상적인 활동을 단순화할 수 있습니다.
+
+대규모 구축의 경우 AFF A900 시스템은 최고의 성능과 용량 옵션을 제공하는 반면 AFF A800, AFF A400, AFF A250과 같은 다른 NetApp 스토리지 시스템은 더 낮은 비용으로 소규모 구축에 필요한 옵션을 제공합니다.
 
 
 
@@ -47,50 +59,27 @@ AFF A800 시스템은 다음 기능을 지원합니다.
 
 DGX BasePOD는 NVIDIA 하드웨어 및 소프트웨어 구성 요소, MLOps 솔루션 및 타사 스토리지로 구성된 통합 솔루션입니다. 고객은 NVIDIA 제품과 검증된 파트너 솔루션으로 스케일아웃 시스템 설계의 모범 사례를 활용하여 AI 개발을 위한 효율적이고 관리하기 쉬운 플랫폼을 구축할 수 있습니다. 그림 1은 NVIDIA DGX BasePOD의 다양한 구성 요소를 보여줍니다.
 
-image:oai_basepod_layers.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_basepod_layers.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
 === NVIDIA DGX H100 시스템
 
-DGX & #8482; H100 시스템은 NVIDIA H100 GPU의 획기적인 성능으로 가속되는 DGX Systems와 AI Powerhouse의 최신 버전입니다.
+DGX H100 시스템은 DGX Systems의 최신 버전이며 NVIDIA H100 GPU의 획기적인 성능에 의해 가속되는 AI 파워하우스입니다.
 
-image:oai_H100_3D.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_H100_3D.png["오류: 그래픽 이미지가 없습니다"]
 
 DGX H100 시스템의 주요 사양은 다음과 같습니다.
-* NVIDIA H100 GPU 8개.
-* 80GB GPU 메모리.
-* 4개의 NVIDIA NVSwitch ™ 칩.
-* PCIe 5.0을 지원하는 듀얼 56코어 4세대 인텔 ® 제온 ® 지원 프로세서.
-* 2TB의 DDR5 시스템 메모리.
-* 단일 포트 NVIDIA ConnectX-7 VPI 8개, 듀얼 포트 NVIDIA ConnectX-7 VPI 3개를 지원하는 OSFP 포트 4개.
-* DGX OS용 1.92TB M.2 NVMe 드라이브 2개, 스토리지/캐시용 3.84TB U.2 NVMe 드라이브 8개
-* 11.3kW 최대 출력.
+• 8개의 NVIDIA H100 GPU.
+• 80GB GPU 메모리.
+• NVIDIA NVSwitch ™ 칩 4개
+• PCIe 5.0을 지원하는 듀얼 56코어 4세대 인텔 ® 제온 ® 지원 프로세서.
+• 2TB의 DDR5 시스템 메모리.
+• 단일 포트 NVIDIA ConnectX-7 VPI 8개, 듀얼 포트 NVIDIA ConnectX-7 VPI 3개를 지원하는 OSFP 포트 4개
+• DGX OS용 1.92TB M.2 NVMe 드라이브 2개, 스토리지/캐시용 3.84TB U.2 NVMe 드라이브 8개
+• 11.3kW 최대 출력.
 DGX H100 CPU 트레이의 후면 포트는 그림 7에 나와 있습니다. OSFP 포트 4개는 InfiniBand 컴퓨팅 패브릭에 8개의 ConnectX-7 HCA를 지원합니다. 각 듀얼 포트 ConnectX-7 HCA 쌍은 스토리지 및 관리 패브릭에 대한 병렬 경로를 제공합니다. 대역외 포트는 BMC 액세스에 사용됩니다.
-image:oai_H100_rear.png["오류: 그래픽 이미지가 없습니다"]
-
-
-
-=== NVIDIA DGX A100 시스템
-
-NVIDIA DGX A100 시스템은 세계 최초의 5페타플롭 AI 시스템에서 전례 없는 컴퓨팅 밀도, 성능, 유연성을 제공합니다.
-
-image:oai_A100_3D.png["오류: 그래픽 이미지가 없습니다"]
-
-DGX A100 시스템의 주요 사양은 다음과 같습니다.
-* NVIDIA A100 Tensor Core GPU 8개
-* 40GB 또는 80GB GPU 메모리 옵션.
-* NVIDIA NVSwitch ™ 칩 6개.
-* 듀얼 AMD EPYC ™ 7742 CPU, 총 코어 128개, 2.25GHz(기본), 3.4GHz(최대 부스트).
-* 최대 2TB의 시스템 메모리.
-* NVIDIA ConnectX-6 또는 ConnectX-7 InfiniBand HCA 8개.
-* DGX OS용 1.92TB M.2 NVMe 드라이브 2개, 스토리지/캐시용 3.84TB U.2 NVMe 드라이브 8개
-* 6.5kW 최대 출력.
-
-DGX A100 시스템에 대해 자세히 알아보십시오 link:https://www.nvidia.com/en-us/data-center/dgx-a100/["여기"].
-
-DGX A100 CPU 트레이의 후면 포트는 그림 5에 나와 있습니다. InfiniBand 컴퓨팅 패브릭에는 단일 포트 HCA 4개가 사용됩니다. 각 이중 포트 HCA 쌍은 스토리지 및 관리 패브릭에 대한 병렬 경로를 제공합니다. 대역외 포트는 BMC 액세스에 사용됩니다.
-image:oai_A100_rear.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_H100_rear.png["오류: 그래픽 이미지가 없습니다"]
 
 
 
@@ -100,24 +89,16 @@ image:oai_A100_rear.png["오류: 그래픽 이미지가 없습니다"]
 
 ==== NVIDIA QM9700 스위치
 
-image:oai_QM9700.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_QM9700.png["오류: 그래픽 이미지가 없습니다"]
 
 NDR InfiniBand 연결 기능이 있는 NVIDIA QM9700 스위치는 NDR BasePOD 구성의 컴퓨팅 패브릭을 지원합니다. ConnectX-7 단일 포트 어댑터는 InfiniBand 컴퓨팅 패브릭에 사용됩니다. 각 NVIDIA DGX 시스템은 각 QM9700 스위치에 대한 이중 연결을 갖추고 있어, 둘 사이의 짧은 지연 시간과 대역폭을 여러 개 제공하는 경로를 제공합니다
 있습니다.
 
 
 
-==== NVIDIA QM8700 스위치
-
-image:oai_QM8700.png["오류: 그래픽 이미지가 없습니다"]
-
-HDR InfiniBand 연결 기능이 있는 NVIDIA QM8700 스위치는 HDR BasePOD 구성의 컴퓨팅 패브릭을 강화합니다. ConnectX-6 단일 포트 어댑터는 InfiniBand 컴퓨팅 패브릭에 사용됩니다. 각 NVIDIA DGX 시스템은 각 QM8700 스위치에 대한 이중 연결을 통해 시스템 간에 대역폭이 높고 지연 시간이 짧은 경로를 여러 개 제공합니다.
-
-
-
 ==== NVIDIA SN4600 스위치
 
-image:oai_SN4600.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_SN4600.png["오류: 그래픽 이미지가 없습니다"]
 
 NVIDIA SN4600 스위치는 총 128개의 포트(스위치당 64개)를 제공하여 DGX BasePOD의 대역 내 관리를 위한 이중화 연결을 제공합니다. NVIDIA SN4600 스위치는 1GbE 및 200GbE 사이의 속도를 제공할 수 있습니다. 이더넷을 통해 연결된 스토리지 어플라이언스의 경우 NVIDIA SN4600 스위치도 사용됩니다. NVIDIA DGX 이중 포트 HCA의 포트는 대역 내 관리 및 스토리지 연결에 모두 사용됩니다.
 
@@ -125,7 +106,7 @@ NVIDIA SN4600 스위치는 총 128개의 포트(스위치당 64개)를 제공하
 
 ==== NVIDIA SN2201 스위치
 
-image:oai_SN2201.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_SN2201.png["오류: 그래픽 이미지가 없습니다"]
 
 NVIDIA SN2201 스위치는 대역 외 관리를 위한 연결을 제공하는 48개의 포트를 제공합니다. 대역 외 관리는 BasePOD의 모든 구성 요소에 대한 통합 관리 연결을 제공합니다.
 
@@ -133,16 +114,8 @@ NVIDIA SN2201 스위치는 대역 외 관리를 위한 연결을 제공하는 48
 
 ==== NVIDIA Connect - X 7 HCA
 
-image:oai_CX7.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_CX7.png["오류: 그래픽 이미지가 없습니다"]
 
 ConnectX-7 HCA는 최신 ConnectX HCA 라인입니다. 25/50/100/200/400G의 처리량을 제공할 수 있습니다. NVIDIA DGX 시스템은 단일 및 이중 포트 ConnectX-7 HCA를 모두 사용하여 NDR이 포함된 DGX BasePOD 구축에 유연성을 제공합니다. 추가 사양은 여기 에서 확인할 수 있습니다.
 
-
-
-==== NVIDIA Connect - X 6 HCA
-
-image:oai_CX6.png["오류: 그래픽 이미지가 없습니다"]
-
-ConnectX-6 HCA는 10/25/40/50/100/200g의 처리량을 제공할 수 있습니다. NVIDIA DGX 시스템은 단일 및 이중 포트 ConnectX-6 HCA를 모두 사용하여 HDR을 사용하는 DGX BasePOD 구축에 유연성을 제공합니다.
-
-link:aipod_nv_sw_components.html["다음: NVIDIA DGX 시스템 지원 NetApp AI Pod - 소프트웨어 구성요소"]
+link:aipod_nv_sw_components.html["다음: NVIDIA DGX 시스템 지원 NetApp AIPod - 소프트웨어 구성요소"]
