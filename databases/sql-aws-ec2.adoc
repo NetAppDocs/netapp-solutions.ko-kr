@@ -173,7 +173,7 @@ image:sql-awsec2-image3.png["오류: 그래픽 이미지가 없습니다"]
 
 
 ....
-Vol create -vserver svm001 -volume vol_awssqlprod01_data -aggregate aggr1 -size 800GB -state online -tiering-policy snapshot-only -percent-snapshot-space 0 -autosize-mode grow -snapshot-policy none -security-style ntfs -aggregate aggr1
+vol create -vserver svm001 -volume vol_awssqlprod01_data -aggregate aggr1 -size 800GB -state online -tiering-policy snapshot-only -percent-snapshot-space 0 -autosize-mode grow -snapshot-policy none -security-style ntfs
 volume modify -vserver svm001 -volume vol_awssqlprod01_data -fractional-reserve 0
 volume modify -vserver svm001 -volume vol_awssqlprod01_data -space-mgmt-try-first vol_grow
 volume snapshot autodelete modify -vserver svm001 -volume vol_awssqlprod01_data -delete-order oldest_first
@@ -209,7 +209,7 @@ igroup create -igroup igrp_ws2019sql1 -protocol iscsi -ostype windows -initiator
 
 
 ....
-lun create -path /vol/vol_awssqlprod01_data/lun_awssqlprod01_data -size 700GB -ostype windows_2008 -space-reserve enabled -space-allocation enabled lun create -path /vol/vol_awssqlprod01_log/lun_awssqlprod01_log -size 100GB -ostype windows_2008 -space-reserve enabled -space-allocation enabled
+lun create -path /vol/vol_awssqlprod01_data/lun_awssqlprod01_data -size 700GB -ostype windows_2008 -space-allocation enabled lun create -path /vol/vol_awssqlprod01_log/lun_awssqlprod01_log -size 100GB -ostype windows_2008 -space-allocation enabled
 ....
 image:sql-awsec2-image5.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -249,15 +249,15 @@ foreach ($TargetPortal in $TargetPortals) {New-IscsiTargetPortal -TargetPortalAd
 ....
 image:sql-awsec2-image10.png["오류: 그래픽 이미지가 없습니다"]
 
-를 누릅니다
 * 모범 사례 *
 
-를 누릅니다
-* 최적의 성능을 위해 대상 인터페이스당 5개의 iSCSI 세션을 구성합니다.
-*전체 iSCSI 성능을 최대화하려면 라운드 로빈 정책을 구성합니다.
-* LUN을 포맷할 때 파티션의 할당 단위 크기가 64K로 설정되어 있는지 확인하십시오
+* 최적의 성능을 위해 타겟 인터페이스당 5개의 iSCSI 세션을 구성합니다.
+* 최상의 전체 iSCSI 성능을 위해 라운드 로빈 정책을 구성합니다.
+* LUN을 포맷할 때 할당 유닛 크기가 파티션의 64K로 설정되어 있는지 확인합니다
++
+.. 다음 PowerShell 명령을 실행하여 iSCSI 세션이 유지되는지 확인합니다.
 
-. 다음 PowerShell 명령을 실행하여 iSCSI 세션이 유지되는지 확인합니다.
+
 
 
 ....
@@ -414,13 +414,16 @@ NOTE: SnapCenter는 호스트 로그 디렉토리를 사용하여 트랜잭션 �
 
 * tempdb 데이터베이스를 포함하지 않는 시스템 데이터베이스 백업입니다
 * 10% LUN 오버헤드 공간 전용 볼륨 또는 LUN에 호스트 로그 디렉토리를 저장합니다. 호스트 로그 디렉토리의 데이터 양은 백업 크기 및 백업 보존 일수에 따라 달라집니다.
-
-
++
 image:sql-awsec2-image17.png["오류: 그래픽 이미지가 없습니다"]
 
++
 LUN이 이미 용량 할당된 경우 호스트 로그 디렉토리를 나타내는 마운트 지점을 선택할 수 있습니다.
 
++
 image:sql-awsec2-image18.png["오류: 그래픽 이미지가 없습니다"]
+
+
 
 ====
 이제 SQL Server에 대한 백업, 복원 및 클론 작업을 수행할 준비가 되었습니다.
@@ -437,31 +440,28 @@ image:sql-awsec2-image18.png["오류: 그래픽 이미지가 없습니다"]
 * 스냅샷 최적화 및 관리할 작업 수를 위한 백업 구성에 리소스 그룹을 사용합니다.
 +
 .. Resources * 를 선택한 다음 왼쪽 상단의 드롭다운 메뉴에서 * Microsoft SQL Server * 를 선택합니다. 리소스 새로 고침 * 을 선택합니다.
-
-
-
-
++
 image:sql-awsec2-image19.png["오류: 그래픽 이미지가 없습니다"]
 
-. 백업할 데이터베이스를 선택한 다음 * Next * 및 (**)를 선택하여 정책을 만들지 않은 경우 추가합니다. 새 SQL Server 백업 정책 * 에 따라 새 정책을 만듭니다.
-
-
+.. 백업할 데이터베이스를 선택한 다음 * Next * 및 (**)를 선택하여 정책을 만들지 않은 경우 추가합니다. 새 SQL Server 백업 정책 * 에 따라 새 정책을 만듭니다.
++
 image:sql-awsec2-image20.png["오류: 그래픽 이미지가 없습니다"]
 
-. 필요한 경우 검증 서버를 선택합니다. 이 서버는 전체 백업이 생성된 후 SnapCenter가 DBCC CHECKDB를 실행하는 서버입니다. 알림을 보려면 * 다음 * 을 클릭하고 검토하려면 * 요약 * 을 선택합니다. 검토 후 * 마침 * 을 클릭합니다.
-
-
+.. 필요한 경우 검증 서버를 선택합니다. 이 서버는 전체 백업이 생성된 후 SnapCenter가 DBCC CHECKDB를 실행하는 서버입니다. 알림을 보려면 * 다음 * 을 클릭하고 검토하려면 * 요약 * 을 선택합니다. 검토 후 * 마침 * 을 클릭합니다.
++
 image:sql-awsec2-image21.png["오류: 그래픽 이미지가 없습니다"]
 
-. 백업을 테스트하려면 * 지금 백업 * 을 클릭합니다. 팝업 창에서 * 백업 * 을 선택합니다.
-
-
+.. 백업을 테스트하려면 * 지금 백업 * 을 클릭합니다. 팝업 창에서 * 백업 * 을 선택합니다.
++
 image:sql-awsec2-image22.png["오류: 그래픽 이미지가 없습니다"]
 
-. 백업이 완료되었는지 확인하려면 * Monitor * 를 선택합니다.
-
-
+.. 백업이 완료되었는지 확인하려면 * Monitor * 를 선택합니다.
++
 image:sql-awsec2-image23.png["오류: 그래픽 이미지가 없습니다"]
+
+
+
+
 
 * 모범 사례 *
 
