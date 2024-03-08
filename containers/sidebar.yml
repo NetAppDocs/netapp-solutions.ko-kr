@@ -183,6 +183,8 @@ entries:
             url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
           - title: 스냅샷으로부터 VM을 생성하십시오
             url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
+          - title: VMware에서 OpenShift 가상화로 VM 마이그레이션
+            url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html"
     - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
       entries:
       - title: 개요
