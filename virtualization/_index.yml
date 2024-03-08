@@ -37,6 +37,8 @@ indexpage:
       url: "/netapp-vsphere8.html"
     - title: VMware vSphere 8의 새로운 기능
       url: "/vmware-vsphere8-intro.html"
+    - title: NetApp 및 VMware와 기능을 연결합니다
+      url: "/vmware-vsphere8-nfsv3-nconnect.html"
     - title: VMware vSphere용 ONTAP 툴
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
   - title: VMware 클라우드 서비스
