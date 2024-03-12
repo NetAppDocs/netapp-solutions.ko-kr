@@ -236,8 +236,7 @@ image:sql-awsec2-image8.png["오류: 그래픽 이미지가 없습니다"]
 
 . SVM에서 두 번째 iSCSI IP에 대해 12단계를 반복합니다.
 . Targets * 탭을 선택하고 * Connect * 를 선택한 다음 * Enable Muti-path * 를 선택합니다.
-
-
++
 image:sql-awsec2-image9.png["오류: 그래픽 이미지가 없습니다"]
 
 . 최상의 성능을 얻으려면 세션을 더 추가하고 5개의 iSCSI 세션을 생성하는 것이 좋습니다. 속성 * > * 세션 추가 * > * 고급 * 을 선택하고 12단계를 반복합니다.
