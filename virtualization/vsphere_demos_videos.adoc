@@ -20,7 +20,7 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 [%collapsible]
 ====
 .VMware용 ONTAP 툴 - 개요
-video::d2ac19ba-28c4-4c07-8724-b01200f99845[panopto]
+video::e8071955-f6f1-45a0-a868-b12a010bba44[panopto]
 .ONTAP를 사용한 VMware iSCSI 데이터 저장소 용량 할당
 video::5c047271-aecc-437c-a444-b01200f9671a[panopto]
 .ONTAP를 사용한 VMware NFS 데이터 저장소 용량 할당
