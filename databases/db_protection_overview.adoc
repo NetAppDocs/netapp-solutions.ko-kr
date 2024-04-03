@@ -52,20 +52,4 @@ NetApp은 고객에게 검증된 Ansible 모듈과 역할을 제공하여 Oracle
 * 대상에서 Oracle DB를 복원하고 데이터베이스를 온라인 상태로 전환합니다
 
 
-자세한 내용을 보거나 시작하려면 아래의 개요 비디오를 참조하십시오.
-
-
-
-=== AWX/타워 배포
-
-* 1부: TBD
-+
-비디오::
-
-
-* 2부: TBD
-+
-비디오:: 준비가 되면 를 클릭합니다 link:db_protection_getting_started.html["여기 에서 솔루션 시작 을 확인하십시오"].
-
-
-
+준비가 되면 를 클릭합니다 link:db_protection_getting_started.html["여기 에서 솔루션 시작 을 확인하십시오"].

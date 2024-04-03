@@ -5,6 +5,8 @@ url: "/databases/index.html"
 entries:
 - title: Oracle 데이터베이스
   entries:
+  - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
+    url: "/databases/azure_ora_anf_inc_merge.html"
   - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
     url: "/databases/automation_ora_anf_nfs.html"
   - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
@@ -67,15 +69,13 @@ entries:
         url: "/databases/awx_automation.html"
       - title: 자동화된 Oracle 19c CLI 구축
         url: "/databases/cli_automation.html"
-  - title: Oracle 데이터베이스 데이터 보호
+  - title: 자동화된 Oracle 데이터 보호
+    url: "/databases/db_protection_overview.html"
     entries:
-    - title: 자동화된 Oracle 데이터 보호
-      url: "/databases/db_protection_overview.html"
-      entries:
-      - title: 시작하기 및 요구 사항
-        url: "/databases/db_protection_getting_started.html"
-      - title: AWX/Tower를 위한 자동화된 Oracle 데이터 보호
-        url: "/databases/db_protection_awx_automation.html"
+    - title: 시작하기 및 요구 사항
+      url: "/databases/db_protection_getting_started.html"
+    - title: AWX/Tower를 위한 자동화된 Oracle 데이터 보호
+      url: "/databases/db_protection_awx_automation.html"
   - title: Oracle Databases on NetApp EF-Series 를 참조하십시오
     url: "/databases/tr-4794.html"
 - title: Microsoft SQL Server를 참조하십시오
