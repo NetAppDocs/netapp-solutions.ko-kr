@@ -9,6 +9,8 @@ indexpage:
       url: "/../blogs.html#ai"
   - title: AI 워크로드를 위한 통합 인프라
     links:
+    - title: NVIDIA DGX 시스템 및 NetApp AIPod
+      url: aipod_nv_intro.html
     - title: NVIDIA와 함께 ONTAP AI
       url: ontap-ai-overview.html
     - title: NVIDIA를 통한 EF-Series AI

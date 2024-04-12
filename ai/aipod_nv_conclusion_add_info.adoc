@@ -19,7 +19,7 @@ link:aipod_nv_validation_sizing.html["이전: NVIDIA DGX 시스템 및 NetApp AI
 
 == 결론
 
-차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합하면 AIPod 아키텍처를 NetApp AFF A250 스토리지 시스템과 쌍을 이루는 OEM 서버의 단일 GPU에서 24노드 AFF A900 클러스터의 최대 48개 DGX H100 시스템까지 거의 모든 규모로 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
+차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합할 경우, NetApp AIPod와 DGX 시스템 아키텍처를 사용하면 24노드 AFF A900 클러스터에서 최대 48개 DGX H100 시스템까지 거의 모든 규모로 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
 
 
 
@@ -47,21 +47,33 @@ https://github.com/NetApp/netapp-dataops-toolkit["https://github.com/NetApp/neta
 +
 https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_overview_trident.html["https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_overview_trident.html"^]
 
-* NVIDIA DGX A100 시스템의 ONTAP AI-NetApp 검증 아키텍처
+* NetApp GPUDirect 스토리지 블로그 -
 +
-https://docs.netapp.com/us-en/netapp-solutions/ai/ontap-ai-overview.html["https://docs.netapp.com/us-en/netapp-solutions/ai/ontap-ai-overview.html"^]
+https://www.netapp.com/blog/ontap-reaches-171-gpudirect-storage/["https://www.netapp.com/blog/ontap-reaches-171-gpudirect-storage/"]
 
-* NVIDIA BasePOD
+* NVIDIA DGX 베이스POD
 +
 https://www.nvidia.com/en-us/data-center/dgx-basepod/["https://www.nvidia.com/en-us/data-center/dgx-basepod/"^]
 
-* NVIDIA DGX A100 시스템
+* NVIDIA DGX H100 시스템
 +
-https://www.nvidia.com/en-us/data-center/dgx-a100/["https://www.nvidia.com/en-us/data-center/dgx-a100/"^]
+https://www.nvidia.com/en-us/data-center/dgx-h100/["https://www.nvidia.com/en-us/data-center/dgx-h100/"^]
 
 * NVIDIA 네트워킹
 +
 https://www.nvidia.com/en-us/networking/["https://www.nvidia.com/en-us/networking/"^]
+
+* NVIDIA Magnum IO GPUDirect 스토리지
++
+https://docs.nvidia.com/gpudirect-storage["https://docs.nvidia.com/gpudirect-storage"]
+
+* NVIDIA Base 명령
++
+https://www.nvidia.com/en-us/data-center/base-command/["https://www.nvidia.com/en-us/data-center/base-command/"]
+
+* NVIDIA Base Command Manager
++
+https://www.nvidia.com/en-us/data-center/base-command/manager["https://www.nvidia.com/en-us/data-center/base-command/manager"]
 
 * NVIDIA AI 엔터프라이즈
 +
@@ -73,4 +85,4 @@ https://www.nvidia.com/en-us/data-center/products/ai-enterprise/["https://www.nv
 
 == 감사의 말
 
-이 문서는 NetApp 솔루션 및 ONTAP 엔지니어링 팀의 작업이며, David Arnette, Olga Kornievskaia, Dustin Fischer, Srikanth Kaligotla, Mohit Kumar 및 Rajeev Badrinath입니다. 저자는 또한 NVIDIA와 BasePOD 엔지니어링 팀에게 지속적인 지원에 대해 감사의 말씀을 드립니다.
+이 문서는 NetApp 솔루션 및 ONTAP 엔지니어링 팀의 작업이며, David Arnette, Olga Kornievskaia, Dustin Fischer, Srikanth Kaligotla, Mohit Kumar 및 Rajeev Badrinath입니다. 저자는 지속적인 지원에 대해 NVIDIA 및 NVIDIA DGX BasePOD 엔지니어링 팀에 감사의 말을 전합니다.

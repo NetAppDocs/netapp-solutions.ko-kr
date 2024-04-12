@@ -18,6 +18,13 @@ NetApp과 NVIDIA의 ONTAP AI 통합 인프라 솔루션 개요
 
 
 
+== NVIDIA DGX 시스템 및 NetApp AIPod
+
+* link:aipod_nv_intro.html["NVIDIA DGX 시스템 기반 NetApp AI Pod"]
+
+
+
+
 == NVIDIA DGX A100 시스템을 지원하는 NetApp ONTAP AI
 
 * link:https://www.netapp.com/pdf.html?item=/media/19432-nva-1151-design.pdf["설계 가이드"]
