@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_dataprotection_restore.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization, OADP operator, Openshift Data Protection Application operator, velero 
+summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
+---
+= 백업에서 VM 복원
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 필수 구성 요소
+
+백업에서 복원하기 위해 가상 시스템이 있던 네임스페이스가 실수로 삭제되었다고 가정합니다.
+
+
+
+== 복원을 수행하는 단계
+
+방금 만든 백업에서 복원하려면 CR(사용자 지정 리소스 복원)을 만들어야 합니다. 이름을 지정하고 복원할 백업 이름을 지정한 다음 restorePV를 true로 설정해야 합니다.
+에 표시된 대로 추가 매개변수를 설정할 수 있습니다 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/backing_up_and_restoring/restoring-applications.html["문서화"]. 생성 버튼을 클릭합니다.
+
+image::redhat_openshift_OADP_restore_image1.jpg[복원 CR을 생성합니다]
+
+....
+apiVersion: velero.io/v1
+kind: Restore
+metadata:
+  name: restore1
+  namespace: openshift-adp
+spec:
+  backupName: backup1
+  restorePVs: true
+....
+이 단계가 완료됨으로 표시되면 가상 시스템이 복구된 것을 볼 수 있습니다
+스냅샷을 생성한 상태로 되돌립니다. (VM이 실행 중일 때 백업이 생성된 경우 백업에서 VM을 복원하면 복원된 VM이 시작되고 실행 중 상태로 전환됩니다.)
+
+image::redhat_openshift_OADP_restore_image2.jpg[복원 CR이 생성됩니다]

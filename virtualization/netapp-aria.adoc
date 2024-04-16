@@ -47,7 +47,7 @@ link:https://github.com/NetApp-Automation/DRO-Azure["재해 복구 오케스트�
 link:https://github.com/NetApp-Automation/SnapCenter-Plug-in-for-VMware-vSphere["Ansible을 사용하는 VMware vSphere 배포용 SnapCenter 플러그인"]
 link:https://docs.spot.io/api/["Spot API를 참조하십시오"]
 link:https://www.instaclustr.com/support/api-integrations/api-reference/provisioning-api/["Instaclustr 프로비저닝 API"]
-link:https://www.instaclustr.com/support/api-integrations/api-reference/monitoring-api/["Instaclustr 모니터링 API"]
+link:https://www.instaclustr.com/support/api-integrations/api-reference/monitoring-api/["Instacluster 모니터링 API"]
 
 VMware Aria는 인프라스트럭처에 대한 실시간 가시성을 제공하여 관리자가 운영 관련 작업을 수행할 수 있도록 지원합니다. NetApp FAS/AFF용 VMware Aria 관리 팩은 VMware Aria Operations용 내장 어댑터입니다. 이와 같은 통합을 통해 분석 및 인프라에 대한 최신 정보를 얻을 수 있으므로 문제가 발생하거나 발생 가능성이 있는 경우 신속하게 파악할 수 있습니다.
 
