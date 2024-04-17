@@ -1,16 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ai/aipod_nv_hw_components.html 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
+summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 하드웨어 구성 요소 
+---
 = NVIDIA DGX 시스템 지원 NetApp AIPod - 하드웨어 구성 요소
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
-
-'''
-사이드바: 사이드바
-퍼머링크: ai/aipod_nv_hw_components.html
-키워드: NetApp AI, AI, 인공 지능, ML, 머신 러닝, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX
-요약: NVIDIA DGX 시스템 및 NetApp AIPod - 하드웨어 구성요소
-
-
-
-= NVIDIA DGX 시스템 지원 NetApp AIPod - 하드웨어 구성 요소
 
 link:aipod_nv_intro.html["이전: NVIDIA DGX 시스템 지원 NetApp AIPod - 소개"]
 
