@@ -111,6 +111,8 @@ entries:
     url: "/databases/tr-4722.html"
 - title: 데이터베이스용 SnapCenter
   entries:
+  - title: SnapCenter Oracle 클론 수명주기
+    url: "/databases/automation_ora_clone_lifecycle.html"
   - title: ANF에서 Oracle Database 백업, 복구 및 클론
     url: "/databases/snapctr_ora_azure_anf.html"
   - title: Oracle-Azure용 BlueXP SaaS
@@ -145,6 +147,8 @@ entries:
       url: "/databases/hybrid_dbops_snapcenter_dr.html"
 - title: DB Automation 툴킷
   entries:
+  - title: SnapCenter Oracle 클론 수명주기
+    url: "/databases/automation_ora_clone_lifecycle.html"
   - title: Oracle 마이그레이션
     url: "/databases/automation_ora_migration.html"
   - title: AWS FSx ONTAP을 사용한 Oracle HA/DR

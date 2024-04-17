@@ -1,0 +1,207 @@
+---
+sidebar: sidebar 
+permalink: databases/automation_ora_clone_lifecycle.html 
+keywords: Oracle, AWS, FSx ONTAP, Database, Oracle 19c, HA, DR 
+summary: '이 솔루션은 AWS FSx ONTAP을 Oracle 데이터베이스 스토리지로, EC2 인스턴스를 AWS의 컴퓨팅 인스턴스로 사용하여 Oracle 데이터베이스 HA/DR(고가용성 및 재해 복구)을 구성하기 위한 Ansible 기반 자동화 툴킷을 제공합니다.' 
+---
+= SnapCenter Oracle 클론 라이프사이클 자동화
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Allen Cao, Niyaz Mohamed, NetApp
+
+
+
+== 목적
+
+고객은 데이터베이스를 위해 NetApp ONTAP 스토리지의 FlexClone 기능을 적극 활용하여 스토리지 비용을 대폭 절감할 수 있었습니다. 이 Ansible 기반 툴킷은 간소화된 라이프사이클 관리를 위한 NetApp SnapCenter 명령줄 유틸리티를 사용하여 클론 복제된 Oracle 데이터베이스의 설정, 클론 복제 및 업데이트를 일정에 따라 자동화합니다. 이 툴킷은 ONTAP 스토리지에 프리세일즈스나 퍼블릭 클라우드에 구축되고 NetApp SnapCenter UI 툴을 통해 관리되는 Oracle 데이터베이스에 적용됩니다.
+
+이 솔루션은 다음과 같은 사용 사례를 해결합니다.
+
+* Oracle 데이터베이스 클론 사양 구성 파일을 설정합니다.
+* 사용자 정의 일정에 따라 클론 Oracle 데이터베이스 생성 및 업데이트
+
+
+
+
+== 대상
+
+이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
+
+* SnapCenter을 통해 Oracle 데이터베이스를 관리하는 DBA입니다.
+* SnapCenter를 통해 ONTAP 스토리지를 관리하는 스토리지 관리자
+* SnapCenter UI에 액세스할 수 있는 애플리케이션 소유자
+
+
+
+
+== 라이센스
+
+이 GitHub 리포지토리의 콘텐츠를 액세스, 다운로드, 설치 또는 사용하면 에 설명된 사용권 조항에 동의하는 것입니다 link:https://github.com/NetApp/na_ora_hadr_failover_resync/blob/master/LICENSE.TXT["라이센스 파일"^].
+
+
+NOTE: 이 GitHub 저장소의 컨텐츠와 파생 저작물을 제작 및/또는 공유하는 데는 일정한 제한이 있습니다. 콘텐츠를 사용하기 전에 라이센스 약관을 읽었는지 확인하십시오. 모든 약관에 동의하지 않는 경우 이 리포지토리에 있는 콘텐츠에 액세스하거나 다운로드하거나 사용하지 마십시오.
+
+
+
+== 솔루션 구축
+
+
+
+=== 배포를 위한 사전 요구 사항
+
+[%collapsible]
+====
+배포에는 다음과 같은 사전 요구 사항이 필요합니다.
+
+....
+Ansible controller:
+  Ansible v.2.10 and higher
+  ONTAP collection 21.19.1
+  Python 3
+  Python libraries:
+    netapp-lib
+    xmltodict
+    jmespath
+....
+....
+SnapCenter server:
+  version 5.0
+  backup policy configured
+  Source database protected with a backup policy
+....
+....
+Oracle servers:
+  Source server managed by SnapCenter
+  Target server managed by SnapCenter
+  Target server with identical Oracle software stack as source server installed and configured
+....
+====
+
+
+=== 툴킷을 다운로드합니다
+
+[%collapsible]
+====
+[source, cli]
+----
+git clone https://bitbucket.ngage.netapp.com/scm/ns-bb/na_oracle_clone_lifecycle.git
+----
+====
+
+
+=== Ansible 타겟 호스트 파일 구성
+
+[%collapsible]
+====
+이 툴킷에는 Ansible 플레이북이 실행되는 타겟을 정의하는 HOSTS 파일이 포함되어 있습니다. 일반적으로 대상 Oracle 클론 호스트입니다. 다음은 예제 파일입니다. 호스트 항목에는 타겟 호스트 IP 주소와 관리자 사용자가 호스트에 액세스하여 클론 또는 새로 고침 명령을 실행하기 위한 ssh 키가 포함됩니다.
+
+oracle 클론 호스트 수
+
+....
+[clone_1]
+ora_04.cie.netapp.com ansible_host=10.61.180.29 ansible_ssh_private_key_file=ora_04.pem
+....
+ [clone_2]
+ [clone_3]
+====
+
+
+=== 글로벌 변수 설정
+
+[%collapsible]
+====
+Ansible 플레이북은 여러 가변 파일에서 다양한 입력을 사용합니다. 다음은 전역 변수 파일 vars.yml의 예입니다.
+
+ # ONTAP specific config variables
+ # SnapCtr specific config variables
+....
+snapctr_usr: xxxxxxxx
+snapctr_pwd: 'xxxxxxxx'
+....
+ backup_policy: 'Oracle Full offline Backup'
+ # Linux specific config variables
+ # Oracle specific config variables
+====
+
+
+=== 호스트 변수 구성
+
+[%collapsible]
+====
+호스트 변수는 이름이 {{host_name}}.yml인 host_vars 디렉토리에 정의됩니다. 다음은 일반적인 구성을 보여 주는 대상 Oracle 호스트 변수 파일 ora_04.cie.netapp.com.yml 예입니다.
+
+ # User configurable Oracle clone db host specific parameters
+....
+# Source database to clone from
+source_db_sid: NTAP1
+source_db_host: ora_03.cie.netapp.com
+....
+....
+# Clone database
+clone_db_sid: NTAP1DEV
+....
+ snapctr_obj_id: '{{ source_db_host }}\{{ source_db_sid }}'
+====
+
+
+=== 추가 클론 대상 Oracle 서버 구성
+
+[%collapsible]
+====
+클론 대상 Oracle 서버는 소스 Oracle 서버와 동일한 Oracle 소프트웨어 스택을 설치 및 패치해야 합니다. Oracle user.bash_profile에 $ORACLE_BASE 및 $ORACLE_HOME이 구성되어 있습니다. 또한 $ORACLE_HOME 변수는 소스 Oracle 서버 설정과 일치해야 합니다. 다음은 예제입니다.
+
+ # .bash_profile
+....
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+....
+....
+# User specific environment and startup programs
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=/u01/app/oracle/product/19.0.0/NTAP1
+....
+====
+
+
+=== 플레이북 실행
+
+[%collapsible]
+====
+SnapCenter CLI 유틸리티를 사용하여 Oracle 데이터베이스 클론 라이프사이클을 실행하기 위한 플레이북은 총 3개입니다.
+
+. Ansible 컨트롤러 사전 요구사항 설치 - 한 번만.
++
+[source, cli]
+----
+ansible-playbook -i hosts ansible_requirements.yml
+----
+. 클론 설정 지정 파일 - 한 번만.
++
+[source, cli]
+----
+ansible-playbook -i hosts clone_1_setup.yml -u admin -e @vars/vars.yml
+----
+. crontab에서 정기적으로 클론 데이터베이스를 생성하고 업데이트하여 셸 스크립트를 사용하여 업데이트 플레이북을 호출합니다.
++
+[source, cli]
+----
+0 */4 * * * /home/admin/na_oracle_clone_lifecycle/clone_1_refresh.sh
+----
+
+
+추가 클론 데이터베이스의 경우 별도의 clone_n_setup.yml 및 clone_n_refresh.yml 및 clone_n_refresh.sh를 생성합니다. 이에 따라 host_vars 디렉토리에 Ansible 타겟 호스트와 hostname.yml 파일을 구성합니다.
+
+====
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+NetApp 솔루션 자동화에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/automation/automation_introduction.html["NetApp 솔루션 자동화"^]
