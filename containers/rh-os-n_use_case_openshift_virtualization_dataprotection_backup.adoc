@@ -4,7 +4,7 @@ permalink: containers/rh-os-n_use_case_openshift_virtualization_dataprotection_b
 keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization, OADP operator, Openshift Data Protection Application operator, velero 
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
-= OpenShift 가상화에서 VM에 대한 주문형 백업 생성
+= OpenShift Virtualization에서 VM에 대한 주문형 백업 생성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 전체 VM(VM 메타데이터 및 VM 디스크)의 주문형 백업을 생성하려면 ** Backup** 탭을 클릭합니다. 그러면 백업 사용자 지정 리소스(CR)가 생성됩니다. Backup CR을 생성하기 위한 샘플 YAML이 제공됩니다. 이 YAML을 사용하면 지정된 네임스페이스의 VM 및 해당 디스크가 백업됩니다. 에 표시된 대로 추가 매개변수를 설정할 수 있습니다 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/backing_up_and_restoring/oadp-creating-backup-cr.html["문서화"].
 
-디스크를 지원하는 영구 볼륨의 스냅숏이 CSI에 의해 생성되고 YAML에 제공된 개체 저장소 위치로 이동합니다. 백업은 TTL에 지정된 대로 30일 동안 시스템에 유지됩니다.
+디스크를 지원하는 영구 볼륨의 스냅샷이 CSI에 의해 생성됩니다. VM의 백업과 해당 디스크의 스냅샷이 생성되어 YAML에 지정된 백업 위치에 저장됩니다. 백업은 TTL에 지정된 대로 30일 동안 시스템에 유지됩니다.
 
 ....
 apiVersion: velero.io/v1
@@ -31,7 +31,8 @@ spec:
   includedNamespaces:
   - virtual-machines-demo
   snapshotVolumes: true
-  storageLocation: velero-demo-1
+  storageLocation: velero-demo-1 //this is the backupStorageLocation previously created
+                                 //when Velero is configured.
   ttl: 720h0m0s
 ....
 백업이 완료되면 해당 단계가 완료된 것으로 표시됩니다.
@@ -40,13 +41,17 @@ image::redhat_openshift_OADP_backup_image1.jpg[백업이 완료되었습니다]
 
 S3 브라우저 애플리케이션을 사용하여 오브젝트 스토리지에서 백업을 검사할 수 있습니다. 백업 경로가 구성된 버킷에 접두사 이름(velero/demobBackup)과 함께 표시됩니다. 백업 컨텐츠에는 볼륨 스냅샷, 로그 및 가상 머신의 기타 메타데이터가 포함됩니다.
 
+
+NOTE: StorageGRID에서는 테넌트 관리자에서 사용할 수 있는 S3 콘솔을 사용하여 백업 개체를 볼 수도 있습니다.
+
 image::redhat_openshift_OADP_backup_image2.jpg[S3의 백업 객체]
 
 
 
-== OpenShift 가상화에서 VM에 대한 예약된 백업 생성
+== OpenShift Virtualization에서 VM에 대한 예약된 백업 생성
 
-일정에 따라 백업을 생성하려면 사용자 지정 리소스 예약을 생성해야 합니다.
+일정에 따라 백업을 생성하려면 예약 CR을 생성해야 합니다.
+
 스케줄은 단순히 cron 표현식일 뿐이므로 백업을 생성할 시간을 지정할 수 있습니다. 일정 CR을 생성하기 위한 샘플 YAML
 
 ....
@@ -66,12 +71,10 @@ spec:
     ttl: 720h0m0s
 ....
 Cron 표현식 0 7 * * * * 은 매일 7:00에 백업이 생성됨을 의미합니다.
-백업에 포함할 네임스페이스와 백업에 대한 스토리지 위치도 지정됩니다. 따라서 Backup CR 대신 Schedule CR을 사용하여 지정된 시간과 빈도로 백업을 생성합니다.
+백업에 포함할 네임스페이스와 백업에 대한 스토리지 위치도 지정됩니다. 따라서 Backup CR 대신 Schedule CR을 사용하여 지정된 시간과 빈도에 백업을 생성합니다.
 
 스케줄이 생성되면 Enabled(활성화) 가 됩니다.
-
-image::redhat_openshift_OADP_backup_image3.jpg[일정이 생성되었습니다]
+이미지: redhat_openshift_OADP_backup_image3.jpg[Schedule 생성됨]
 
 백업은 이 일정에 따라 생성되며 백업 탭에서 볼 수 있습니다.
-
-image::redhat_openshift_OADP_backup_image4.jpg[일정이 생성되었습니다]
+이미지: redhat_openshift_OADP_backup_image4.jpg[Schedule 생성됨]
