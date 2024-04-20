@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization, cloud Insights 
+summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용하여 모니터링 
+---
+= Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용하여 모니터링
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+저자: 바누 선다, NetApp
+
+[role="lead"]
+참조 문서의 이 섹션에서는 NetApp Cloud Insights를 Red Hat OpenShift Cluster와 통합하여 OpenShift 가상화 VM을 모니터링하는 방법에 대해 자세히 설명합니다.
+
+NetApp Cloud Insights는 전체 인프라에 대한 가시성을 제공하는 클라우드 인프라 모니터링 툴입니다. Cloud Insights을 사용하면 퍼블릭 클라우드 및 프라이빗 데이터 센터를 비롯한 모든 리소스에 대한 모니터링, 문제 해결 및 최적화 등이 가능합니다. NetApp Cloud Insights에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/cloudinsights["Cloud Insights 설명서"].
+
+Cloud Insights를 사용하려면 NetApp BlueXP 포털에 등록해야 합니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/cloudinsights/task_cloud_insights_onboarding_1.html["Cloud Insights 온보딩"]
+
+Cloud Insights에는 데이터를 빠르고 쉽게 찾고, 문제를 해결하고, 환경에 대한 인사이트를 제공할 수 있는 여러 기능이 있습니다. 강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드의 데이터를 시각화하고, 설정한 데이터 임계값에 대한 전자 메일 알림을 보낼 수 있습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/cloudinsights/concept_feature_tutorials.html#introduction["비디오 자습서"] 이러한 기능을 이해하는 데 도움이 됩니다.
+
+Cloud Insights에서 데이터 수집을 시작하려면 다음이 필요합니다
+
+** 데이터 수집기**
+데이터 수집기에는 3가지 유형이 있습니다.
+* 인프라(스토리지 장치, 네트워크 스위치, 컴퓨팅 인프라)
+* 운영 체제(예: VMware 또는 Windows)
+* 서비스(예: Kafka)
+
+데이터 수집기는 ONTAP 스토리지 디바이스(인프라스트럭처 데이터 수집기)와 같은 데이터 소스에서 정보를 검색합니다. 수집된 정보는 분석, 검증, 모니터링 및 문제 해결에 사용됩니다.
+
+** 획득 장치**
+인프라 데이터 수집기를 사용하는 경우 Cloud Insights에 데이터를 주입하려면 획득 장치도 필요합니다. Acquisition Unit은 데이터 수집기를 호스팅하는 전용 컴퓨터이며, 일반적으로 가상 머신입니다. 이 컴퓨터는 일반적으로 모니터링되는 항목과 동일한 데이터 센터/VPC에 있습니다.
+
+** Telegraf 상담원**
+Cloud Insights는 또한 통합 데이터 수집을 위한 에이전트로 Telegraf를 지원합니다. Telegraf는 메트릭, 이벤트 및 로그를 수집 및 보고하는 데 사용할 수 있는 플러그인 기반 서버 에이전트입니다.
+
+Cloud Insights 아키텍처
+
+image::redhat_openshift_ci_overview_image1.jpg[Cloud Insights 아키텍처]

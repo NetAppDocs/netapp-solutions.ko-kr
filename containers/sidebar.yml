@@ -197,6 +197,14 @@ entries:
           url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_restore.html"
         - title: 백업 및 복원을 삭제합니다
           url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_delete.html"
+      - title: Cloud Insights를 사용한 모니터링
+        entries:
+        - title: 개요
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html"
+        - title: Cloud Insights와의 통합
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
+        - title: 샘플 모니터링 기능
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
     - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
       entries:
       - title: 개요

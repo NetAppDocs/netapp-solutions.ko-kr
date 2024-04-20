@@ -192,5 +192,4 @@ DataProtectionApplication 이 만들어지고 상태가 Reconciled 인지 확인
 이미지::redhat_openshift_OADP_install_image11.jpg[DataProtectionApplication 개체가 생성되었습니다.]
 
 OADP 운영자가 해당 BackupStorageLocation을 생성합니다. 이 값은 백업을 생성할 때 사용됩니다.
-
-image::redhat_openshift_OADP_install_image12.jpg[BackupStorageLocation이 생성되었습니다]
+이미지: redhat_openshift_OADP_install_image12.jpg[BackupStorageLocation 만들었습니다.]

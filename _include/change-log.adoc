@@ -7,10 +7,13 @@
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
-| 2024년 4월 17일 | 데이터베이스 | SnapCenter Oracle 클론 라이프사이클 자동화 
+| 2024년 4월 19일 | Red Hat OpenShift Virtualization | OpenShift Virtualization에서 VM을 위한 CI 통합에 대한 새 콘텐츠가 추가되었습니다 
 
 
 | 2024년 4월 16일 | Red Hat OpenShift Virtualization | OpenShift Virtualization에서 VM의 데이터 보호를 위한 새로운 콘텐츠가 추가되었습니다 
+
+
+| 2024년 4월 17일 | 데이터베이스 | SnapCenter Oracle 클론 라이프사이클 자동화 
 
 
 | 2024년 4월 3일 | 데이터베이스 | 새로운 TR-4990: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구 

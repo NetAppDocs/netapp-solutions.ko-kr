@@ -65,4 +65,4 @@ spec:
 ....
 단계가 완료됨으로 표시되면 가상 시스템이 스냅샷을 생성한 상태로 복구되었음을 알 수 있습니다. (VM이 실행 중일 때 백업이 생성된 경우 백업에서 VM을 복원하면 복원된 VM이 시작되고 실행 중 상태가 됩니다.) VM은 YAML에 지정된 다른 네임스페이스로 복원됩니다.
 
-이미지::redhat_openshift_OADP_restore_image3.jpg[Restore 새 네임스페이스가 완료되었습니다.]%
+image::redhat_openshift_OADP_restore_image3.jpg[새 네임스페이스로 복원이 완료되었습니다]
