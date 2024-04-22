@@ -83,14 +83,17 @@ image::redhat_openshift_OADP_install_image4.jpg[S3 사용자 자격 증명의 �
 image::redhat_openshift_OADP_install_image5.jpg[S3 사용자 자격 증명에 대한 암호를 생성합니다]
 
 CLI에서 sg-s3-credentials라는 암호를 생성하려면 다음 명령을 사용할 수 있습니다.
-이미지: redhat_openshift_OADP_install_image6.jpg[Create CLI를 사용한 S3 사용자 자격 증명의 암호]
+
+image::redhat_openshift_OADP_install_image6.jpg[CLI를 사용하여 S3 사용자 자격 증명에 대한 Secret을 생성합니다]
 
 * 그런 다음 Velero를 구성하려면 Operators(오퍼레이터) 아래의 메뉴 항목에서 Installed Operators(설치된 운영자) 를 선택하고 OADP operator(OADP 운영자) 를 클릭한 다음 DataProtectionApplication(DataProtectionApplication) 탭을 선택합니다.
-이미지: redhat_openshift_OADP_install_image7.jpg[DataProtectionApplication]
 
+
+image::redhat_openshift_OADP_install_image7.jpg[DataProtectionApplication 을 참조하십시오]
 
 Create DataProtectionApplication을 클릭합니다. 폼 보기에서 DataProtection 응용 프로그램의 이름을 제공하거나 기본 이름을 사용합니다.
-이미지: redhat_openshift_OADP_install_image8.jpg[Create DataProtectionApplication]
+
+image::redhat_openshift_OADP_install_image8.jpg[DataProtectionApplication을 만듭니다]
 
 이제 YAML 보기로 이동하여 아래의 YAML 파일 예제에 표시된 사양 정보를 대체합니다.
 
@@ -157,7 +160,7 @@ spec:
         - aws
         - kubevirt
 ....
-위의 YAML 파일에는 위의 예와 유사하게 구성된 스펙의 다음 섹션이 있습니다
+YAML 파일의 SPEC 섹션은 위의 예와 유사한 다음 매개 변수에 맞게 구성해야 합니다
 
 **backupLocations**
 ONTAP S3 또는 StorageGRID S3(YAML에 표시된 자격 증명 및 기타 정보 포함)는 velero의 기본 BackupLocation으로 구성됩니다.
@@ -165,7 +168,8 @@ ONTAP S3 또는 StorageGRID S3(YAML에 표시된 자격 증명 및 기타 정보
 ** 스냅샷 위치**
 CSI(Container Storage Interface) 스냅샷을 사용하는 경우, CSI 드라이버를 등록하기 위해 VolumeSnapshotClass CR을 생성하므로 스냅샷 위치를 지정할 필요가 없습니다. 이 예에서는 Astra Trident CSI를 사용하며 이전에 Trident CSI 드라이버를 사용하여 VolumeSnapShotClass CR을 생성한 적이 있습니다.
 
-** CSI를 활성화합니다**
+** CSI 플러그인 활성화**
+
 CSI 스냅샷을 사용하여 영구 볼륨을 백업하려면 Velero용 기본 플러그인에 CSI를 추가합니다.
 CSI 백업 PVC를 백업하기 위한 Velero CSI 플러그인은 **velero.io/csi-volumesnapshot-class** 라벨이 설정된 클러스터에서 VolumeSnapshotClass를 선택합니다. 이를 위해
 
@@ -189,7 +193,9 @@ deletionPolicy: Retain
 image::redhat_openshift_OADP_install_image10.jpg[VolumeSnapshotClass 삭제 정책은 보존으로 설정해야 합니다]
 
 DataProtectionApplication 이 만들어지고 상태가 Reconciled 인지 확인합니다.
-이미지::redhat_openshift_OADP_install_image11.jpg[DataProtectionApplication 개체가 생성되었습니다.]
+
+image::redhat_openshift_OADP_install_image11.jpg[DataProtectionApplication 개체가 만들어집니다]
 
 OADP 운영자가 해당 BackupStorageLocation을 생성합니다. 이 값은 백업을 생성할 때 사용됩니다.
-이미지: redhat_openshift_OADP_install_image12.jpg[BackupStorageLocation 만들었습니다.]
+
+image::redhat_openshift_OADP_install_image12.jpg[BackupStorageLocation이 생성되었습니다]
