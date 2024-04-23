@@ -13,8 +13,6 @@ summary: NVIDIA DGX 시스템 및 NetApp AIPod - 소프트웨어 구성 요소
 :imagesdir: ./../media/
 
 
-link:aipod_nv_hw_components.html["이전: NVIDIA DGX 시스템 및 NetApp AIPod - 하드웨어 구성요소"]
-
 
 
 == NVIDIA 소프트웨어
@@ -111,5 +109,3 @@ NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원
 === NetApp Astra Trident
 
 Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP를 비롯한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS, NVMe/TCP, iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
-
-link:aipod_nv_architecture.html["다음으로, NVIDIA DGX 시스템을 지원하는 NetApp AIPod - 솔루션 아키텍처"]

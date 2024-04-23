@@ -326,7 +326,7 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/hcaios_where_to_find_additional_information.html"
   - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동
-    url: https://www.netapp.com/media/17082-tr4732.pdf
+    url: "/data-analytics/bda-ai-introduction.html"
   - title: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론 - 솔루션 설계
     entries:
     - title: 소개

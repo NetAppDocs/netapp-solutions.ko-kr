@@ -16,4 +16,4 @@ indexpage:
     - title: 개요
       url: "/sc-overview.html"
     - title: 개체 저장소 확장으로 사용되는 StorageGRID
-      url: "/sc-use-cases.html#StorageGRID"
+      url: "/sc-use-cases.html#storageGRID"
