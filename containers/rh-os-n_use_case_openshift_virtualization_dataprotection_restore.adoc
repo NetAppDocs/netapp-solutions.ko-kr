@@ -19,10 +19,9 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 백업에서 복원하기 위해 가상 시스템이 있던 네임스페이스가 실수로 삭제되었다고 가정합니다.
 
-
-
-== 동일한 네임스페이스로 복원합니다
-
+.동일한 네임스페이스로 복원합니다
+[%collapsible]
+====
 방금 만든 백업에서 복원하려면 CR(사용자 지정 리소스 복원)을 만들어야 합니다. 이름을 지정하고 복원할 백업 이름을 지정한 다음 restorePV를 true로 설정해야 합니다. 에 표시된 대로 추가 매개변수를 설정할 수 있습니다 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/backing_up_and_restoring/restoring-applications.html["문서화"]. 생성 버튼을 클릭합니다.
 
 image::redhat_openshift_OADP_restore_image1.jpg[복원 CR을 생성합니다]
@@ -41,10 +40,10 @@ spec:
 
 image::redhat_openshift_OADP_restore_image2.jpg[복원이 완료되었습니다]
 
-
-
-== 다른 네임스페이스로 복원합니다
-
+====
+.다른 네임스페이스로 복원합니다
+[%collapsible]
+====
 VM을 다른 네임스페이스로 복원하려면 Restore CR의 YAML 정의에 namespaceMapping을 제공할 수 있습니다.
 
 다음 샘플 YAML 파일은 가상 머신 네임스페이스로 백업이 수행되었을 때 가상 머신 데모 네임스페이스에서 VM 및 해당 디스크를 복원하는 Restore CR을 생성합니다.
@@ -66,3 +65,62 @@ spec:
 단계가 완료됨으로 표시되면 가상 시스템이 스냅샷을 생성한 상태로 복구되었음을 알 수 있습니다. (VM이 실행 중일 때 백업이 생성된 경우 백업에서 VM을 복원하면 복원된 VM이 시작되고 실행 중 상태가 됩니다.) VM은 YAML에 지정된 다른 네임스페이스로 복원됩니다.
 
 image::redhat_openshift_OADP_restore_image3.jpg[새 네임스페이스로 복원이 완료되었습니다]
+
+====
+.다른 저장소 클래스로 복원합니다
+[%collapsible]
+====
+Velero는 복구 중에 json 패치를 지정하여 리소스를 수정할 수 있는 일반 기능을 제공합니다. json 패치는 복구되기 전에 리소스에 적용됩니다. json 패치는 configmap에 지정되고 configmap은 restore 명령에서 참조됩니다. 이 기능을 사용하면 다른 저장소 클래스를 사용하여 복원할 수 있습니다.
+
+아래 예에서 가상 머신은 생성 중 ONTAP-NAS를 디스크의 스토리지 클래스로 사용합니다. backup1이라는 이름의 가상 머신의 백업이 생성됩니다.
+
+image::redhat_openshift_OADP_restore_image4.jpg[VM에 대한 최신 정보를 제공합니다]
+
+image::redhat_openshift_OADP_restore_image5.jpg[VM 백업 ONTAP-NAS]
+
+VM을 삭제하여 VM의 손실을 시뮬레이션합니다.
+
+다른 스토리지 클래스(예: ONTAP-NAS-eco 스토리지 클래스)를 사용하여 VM을 복원하려면 다음 두 단계를 수행해야 합니다.
+
+** 1단계**
+
+OpenShift-ADP 네임스페이스에서 다음과 같이 구성 맵(콘솔)을 생성합니다.
+스크린샷에 표시된 대로 세부 정보를 입력합니다.
+네임스페이스: OpenShift-ADP를 선택합니다
+이름: change-storage-class-config(모든 이름 사용 가능)
+키: change-storage-class-config.yaml:
+값:
+
+....
+version: v1
+    resourceModifierRules:
+    - conditions:
+         groupResource: persistentvolumeclaims
+         resourceNameRegex: "^rhel*"
+         namespaces:
+         - virtual-machines-demo
+      patches:
+      - operation: replace
+        path: "/spec/storageClassName"
+        value: "ontap-nas-eco"
+....
+image::redhat_openshift_OADP_restore_image6.jpg[구성 맵 UI]
+
+결과 구성 맵 객체는 다음과 같습니다(CLI).
+
+image::redhat_openshift_OADP_restore_image7.jpg[구성 맵 CLI]
+
+이 구성 맵은 복구가 생성될 때 리소스 한정자 규칙을 적용합니다. rhel로 시작하는 모든 영구 볼륨 클레임에 대해 스토리지 클래스 이름을 ONTAP-nas-eco로 대체하는 패치가 적용됩니다.
+
+** 2단계**
+
+VM을 복원하려면 Velero CLI에서 다음 명령을 사용합니다.
+
+....
+#velero restore create restore1 --from-backup backup1 --resource-modifier-configmap change-storage-class-config -n openshift-adp
+....
+VM은 ONTAP-nas-eco 스토리지 클래스를 사용하여 생성된 디스크를 사용하여 동일한 네임스페이스에서 복원됩니다.
+
+image::redhat_openshift_OADP_restore_image8.jpg[VM 복원 ONTAP - NAS-eco]
+
+====
