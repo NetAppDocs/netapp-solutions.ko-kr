@@ -220,7 +220,7 @@ entries:
     - title: 결론
       url: "/ai/ai-protopia-conclusion.html"
     - title: 추가 정보 및 승인 정보를 찾을 수 있는 위치
-      url: "/ai/ai-protopia-where-to-find-additional-information,-acknowledgements,-and-version-history.html"
+      url: "/ai/ai-protopia-where-to-find-additional-information-acknowledgements-and-version-history.html"
   - title: NetApp AI를 통한 감정 분석
     entries:
     - title: 소개
@@ -320,7 +320,7 @@ entries:
       - title: Kubernetes 구축
         url: "/ai/hcaios_kubernetes_deployment.html"
       - title: cnvrg.io 배포
-        url: "/ai/hcaios_cnvrg.io_deployment.html"
+        url: "/ai/hcaios_cnvrg_io_deployment.html"
     - title: 결론
       url: "/ai/hcaios_conclusion.html"
     - title: 추가 정보를 찾을 수 있는 위치
@@ -353,7 +353,7 @@ entries:
     - title: 솔루션 기술
       url: "/ai/cainvidia_solution_technology.html"
     - title: Jarvis, BlueXP Copy and Sync, Nemo를 사용하여 가상 어시스턴트를 구축합니다
-      url: "/ai/cainvidia_build_a_virtual_assistant_using_jarvis,_cloud_sync,_and_nemo_overview.html"
+      url: "/ai/cainvidia_build_a_virtual_assistant_using_jarvis_cloud_sync_and_nemo_overview.html"
       entries:
       - title: Jarvis 배포
         url: "/ai/cainvidia_jarvis_deployment.html"
@@ -406,11 +406,11 @@ entries:
     - title: 결론
       url: "/ai/osrunai_conclusion.html"
     - title: 섹션 4.8의 테스트 세부 사항
-      url: "/ai/osrunai_testing_details_for_section_4.8.html"
+      url: "/ai/osrunai_testing_details_for_section_48.html"
     - title: 섹션 4.9의 테스트 세부 정보
-      url: "/ai/osrunai_testing_details_for_section_4.9.html"
+      url: "/ai/osrunai_testing_details_for_section_49.html"
     - title: 섹션 4.10에 대한 테스트 세부 정보
-      url: "/ai/osrunai_testing_details_for_section_4.10.html"
+      url: "/ai/osrunai_testing_details_for_section_410.html"
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/osrunai_where_to_find_additional_information.html"
   - title: 자율 주행 워크로드를 위한 NetApp ONTAP AI 솔루션 설계

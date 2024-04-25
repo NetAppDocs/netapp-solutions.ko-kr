@@ -62,7 +62,7 @@ entries:
   - title: 사용 사례 요약
     url: "/data-analytics/apache-spark-use-cases-summary.html"
   - title: 주요 AI, ML 및 DL 사용 사례 및 아키텍처
-    url: "/data-analytics/apache-spark-major-ai,-ml,-and-dl-use-cases-and-architectures.html"
+    url: "/data-analytics/apache-spark-major-ai-ml-and-dl-use-cases-and-architectures.html"
   - title: 테스트 결과
     url: "/data-analytics/apache-spark-testing-results.html"
   - title: 하이브리드 클라우드 솔루션

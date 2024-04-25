@@ -1,5 +1,8 @@
 ---
 indexpage:
+  title: 가상화를 위한 NetApp 솔루션
+  summary: NetApp은 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 다수의 모범 사례와 솔루션을 제공합니다.
+  lead: NetApp은 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 다수의 모범 사례와 솔루션을 제공합니다.
   tiles:
   - title: 'VMware와 NetApp: 협력의 시너지 효과'
     links:
@@ -94,4 +97,4 @@ indexpage:
     - title: NetApp AIQ를 참조하십시오
       url: https://docs.netapp.com/us-en/active-iq/
     - title: NetApp BlueXP
-      url: https://docs.netapp.com/us-en/bluexp-family/concept-overview.html
+      url: https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html

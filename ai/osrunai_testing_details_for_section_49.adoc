@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: ai/osrunai_testing_details_for_section_49.html 
+keywords:  
+summary:  
+---
+= 섹션 4.9의 테스트 세부 정보
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 섹션에 대한 테스트 세부 정보를 다룹니다 link:osrunai_basic_resource_allocation_fairness.html["기본 자원 할당 공정성"].
+
+다음 순서로 작업을 제출합니다.
+
+|===
+| 프로젝트 | GPU 수 | 합계 | 설명 
+
+
+| 팀 d | 2 | 6/8 | 팀-b/c 워크로드가 일시 중지되고 "보류 중"으로 이동합니다. 
+
+
+| 팀 d | 2 | 8월 8일 | 다른 팀(b/c)의 워크로드는 일시 중지되고 "보류 중"으로 이동합니다. 
+|===
+다음 실행된 명령 시퀀스를 참조하십시오.
+
+....
+$ runai submit d-2-gg -i gcr.io/run-ai-demo/quickstart -g 2 -p team-d$ runai submit d-3-gg -i gcr.io/run-ai-demo/quickstart -g 2 -p team-d
+....
+이때 다음과 같은 상태가 있어야 합니다.
+
+|===
+| 프로젝트 | GPU가 할당되었습니다 | 작업 로드 대기 중 
+
+
+| 팀-A | 4월 4일 | 없음 
+
+
+| 팀-b | 2월 2일 | 없음 
+
+
+| 팀 - c | 2월 2일 | 없음 
+
+
+| 팀 d | 8월 8일 | 없음 
+|===
+섹션을 참조하십시오 link:osrunai_basic_resource_allocation_fairness.html["기본 자원 할당 공정성"] 진행 중인 테스트 시나리오에 대한 논의.
