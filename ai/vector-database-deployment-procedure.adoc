@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-deployment-procedure.html 
+keywords: vector database, vector-database-deployment-procedure 
+summary: NetApp용 vector-database-deployment-procedure-vector 데이터베이스 솔루션입니다 
+---
+= 구현 절차
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 구현 절차
+
+이 배포 섹션에서는 아래와 같이 랩 설정을 위해 Kubernetes와 함께 milvus 벡터 데이터베이스를 사용했습니다.
+
+image:Deployment_architecture.png["오류: 그래픽 이미지가 없습니다"]
+
+NetApp 스토리지는 클러스터에서 고객 데이터를 유지하고 클러스터 데이터를 Milvus로 유지할 수 있도록 스토리지를 제공합니다.
+
+
+
+=== NetApp 스토리지 설정 – ONTAP
+
+* 스토리지 시스템 초기화
+* 스토리지 가상 시스템(SVM) 생성
+* 논리적 네트워크 인터페이스 할당
+* NFS, S3 구성 및 라이센스
+
+
+NFS(네트워크 파일 시스템)에 대해 아래 단계를 따르십시오.
+
+. NFSv4용 FlexGroup 볼륨을 생성합니다. 이 검증을 위한 설정에서는 48개의 SSD, 컨트롤러의 루트 볼륨 전용 SSD 1개, NFSv4에 분산된 SSD 47개]]를 사용했습니다. FlexGroup 볼륨에 대한 NFS 엑스포트 정책이 Kubernetes(K8) 노드 네트워크에 대한 읽기/쓰기 권한이 있는지 확인하십시오. 이러한 권한이 없는 경우 K8s 노드 네트워크에 대한 읽기/쓰기(RW) 권한을 부여합니다.
+. 모든 K8 노드에서 폴더를 생성하고 각 K8 노드의 LIF(논리 인터페이스)를 통해 FlexGroup 볼륨을 이 폴더에 마운트합니다.
+
+
+NAS S3(Network Attached Storage Simple Storage Service)에 대해 아래 단계를 따르십시오.
+
+. NFS에 대한 FlexGroup 볼륨을 생성합니다.
+. "vserver object-store-server create" 명령을 사용하여 HTTP가 활성화되고 admin 상태가 'up'으로 설정된 Object-store-server를 설정하십시오. HTTPS를 활성화하고 사용자 지정 수신기 포트를 설정할 수 있습니다.
+. "vserver object-store-server user create-user <username>" 명령을 사용하여 object-store-server 사용자를 생성합니다.
+. 액세스 키와 비밀 키를 얻으려면 "set diag; vserver object-store-server user show -user <username>" 명령을 실행할 수 있습니다. 그러나 앞으로 이러한 키는 사용자 생성 프로세스 중에 제공되거나 REST API 호출을 사용하여 검색할 수 있습니다.
+. 2단계에서 만든 사용자를 사용하여 object-store-server 그룹을 설정하고 액세스 권한을 부여합니다. 이 예에서는 "FullAccess"를 제공합니다.
+. 유형을 "nas"로 설정하고 NFSv3 볼륨에 대한 경로를 제공하여 NAS 버킷을 생성합니다. 또한 이 용도로 S3 버킷을 사용할 수도 있습니다.
+
+
+
+
+=== NetApp 스토리지 설정 – StorageGRID
+
+. StorageGRID 소프트웨어를 설치합니다.
+. 테넌트와 버킷을 생성합니다.
+. 필요한 권한이 있는 사용자를 생성합니다.
+
+
+자세한 내용은 에서 확인하십시오 https://docs.netapp.com/us-en/storagegrid-116/primer/index.html[]

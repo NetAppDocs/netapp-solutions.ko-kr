@@ -197,6 +197,46 @@ entries:
     url: https://github.com/NetApp/netapp-dataops-toolkit
   - title: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
     url: "/ai/tr-4915.html"
+  - title: NetApp를 사용한 벡터 데이터베이스 솔루션
+    url: "/ai/vector-database-solution-with-netapp.html"
+    entries:
+    - title: 소개
+      url: "/ai/vector-database-introduction.html"
+    - title: 솔루션 개요
+      url: "/ai/vector-database-solution-overview.html"
+    - title: 벡터 데이터베이스
+      url: "/ai/vector-database-vector-database.html"
+    - title: 기술 요구 사항
+      url: "/ai/vector-database-technology-requirement.html"
+    - title: 구현 절차
+      url: "/ai/vector-database-deployment-procedure.html"
+    - title: 솔루션 검증 개요
+      url: "/ai/vector-database-solution-verification-overview.html"
+      entries:
+      - title: 온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정
+        url: "/ai/vector-database-milvus-cluster-setup.html"
+      - title: NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화
+        url: "/ai/vector-database-milvus-with-Amazon-FSxN-for-NetApp-ONTAP.html"
+      - title: NetApp SnapCenter를 사용한 벡터 데이터베이스 보호
+        url: "/ai/vector-database-protection-using-snapcenter.html"
+      - title: NetApp SnapMirror를 사용한 재해 복구
+        url: "/ai/vector-database-disaster-recovery-using-netapp-snapmirror.html"
+      - title: 성능 검증
+        url: "/ai/vector-database-performance-validation.html"
+    - title: PostgreSQL:pgvector를 사용한 Instaclustr 벡터 데이터베이스
+      url: "/ai/vector-database-instaclustr-with-pgvector.html"
+    - title: Vector Database 사용 사례
+      url: "/ai/vector-database-use-cases.html"
+    - title: 결론
+      url: "/ai/vector-database-conclusion.html"
+    - title: '부록 A: Values.YAML'
+      url: "/ai/vector-database-values-yaml.html"
+    - title: '부록 B: prepare_data_netapp_new_py'
+      url: "/ai/vector-database-prepare-data-netapp-new-py.html"
+    - title: '부록 C: verify_data_netapp.py'
+      url: "/ai/vector-database-verify-data-netapp-py.html"
+    - title: '부록 D: docker_composition.yml'
+      url: "/ai/vector-database-docker-compose-xml.html"
 - title: 사용 사례
   entries:
   - title: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환

@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-use-cases.html 
+keywords: vector database 
+summary: NetApp용 사용 사례 벡터 데이터베이스 솔루션 
+---
+= Vector Database 사용 사례
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Vector Database 사용 사례
+
+이 섹션에서는 대규모 언어 모델을 사용한 검색 증강 세대 및 NetApp IT 챗봇과 같은 두 가지 사용 사례에 대해 설명합니다.
+
+
+
+=== 대형 언어 모델(LLM)을 사용한 검색 증강 생성(RAG)
+
+....
+Retrieval-augmented generation, or RAG, is a technique for enhancing the accuracy and reliability of Large Language Models, or LLMs, by augmenting prompts with facts fetched from external sources. In a traditional RAG deployment, vector embeddings are generated from an existing dataset and then stored in a vector database, often referred to as a knowledgebase. Whenever a user submits a prompt to the LLM, a vector embedding representation of the prompt is generated, and the vector database is searched using that embedding as the search query. This search operation returns similar vectors from the knowledgebase, which are then fed to the LLM as context alongside the original user prompt. In this way, an LLM can be augmented with additional information that was not part of its original training dataset.
+....
+NVIDIA Enterprise RAG LLM Operator는 기업에서 RAG를 구현하는 데 유용한 도구입니다. 이 작업자는 전체 래그 파이프라인을 배포하는 데 사용할 수 있습니다. RAG 파이프라인은 Milvus 또는 pgvecto를 지식 기반 임베딩을 저장하기 위한 벡터 데이터베이스로 사용하도록 사용자 정의할 수 있습니다. 자세한 내용은 설명서를 참조하십시오.
+
+....
+NetApp has validated an enterprise RAG architecture powered by the NVIDIA Enterprise RAG LLM Operator alongside NetApp storage. Refer to our blog post for more information and to see a demo. Figure 1 provides an overview of this architecture.
+....
+그림 1) NVIDIA Nemo 마이크로서비스 및 NetApp 기반 엔터프라이즈 RAG
+
+image:RAG_nvidia_nemo.png["오류. 그래픽 이미지가 없습니다"]
+
+
+
+=== NetApp IT 챗봇 사용 사례
+
+NetApp의 챗봇은 벡터 데이터베이스를 위한 또 다른 실시간 사용 사례 역할을 합니다. 이 경우 NetApp Private OpenAI Sandbox는 NetApp 내부 사용자의 쿼리를 관리하는 효과적이고 안전하며 효율적인 플랫폼을 제공합니다. 엄격한 보안 프로토콜, 효율적인 데이터 관리 시스템 및 정교한 AI 처리 기능을 통합하여 SSO 인증을 통해 조직 내 역할과 책임에 따라 사용자에 대한 고품질의 정확한 응답을 보장합니다. 이 아키텍처는 고급 기술을 병합하여 사용자 중심의 지능형 시스템을 만들 수 있는 가능성을 강조합니다.
+
+image:netapp_chatbot.png["오류: 그래픽 이미지가 없습니다"]
+
+활용 사례는 네 가지 주요 섹션으로 나눌 수 있습니다.
+
+
+
+==== 사용자 인증 및 확인:
+
+* 사용자 쿼리는 먼저 NetApp SSO(Single Sign-On) 프로세스를 통해 사용자의 신원을 확인합니다.
+* 인증에 성공하면 시스템이 VPN 연결을 확인하여 안전한 데이터 전송을 보장합니다.
+
+
+
+
+==== 데이터 전송 및 처리:
+
+* VPN이 검증되면 NetAIChat 또는 NetAICreate 웹 애플리케이션을 통해 MariaDB로 데이터가 전송됩니다. MariaDB는 사용자 데이터를 관리하고 저장하는 데 사용되는 빠르고 효율적인 데이터베이스 시스템입니다.
+* 그런 다음 MariaDB는 NetApp Azure 인스턴스로 정보를 전송하여 사용자 데이터를 AI 처리 유닛에 연결합니다.
+
+
+
+
+==== OpenAI 및 콘텐츠 필터링과의 상호 작용:
+
+* Azure 인스턴스는 사용자의 질문을 콘텐츠 필터링 시스템으로 보냅니다. 이 시스템은 쿼리를 정리하고 처리할 수 있도록 준비합니다.
+* 그런 다음 정리된 입력이 Azure OpenAI 기본 모델로 전송되고, 이 모델에서는 입력을 기반으로 응답을 생성합니다.
+
+
+
+
+==== 응답 생성 및 조정:
+
+* 기본 모델의 응답을 먼저 점검하여 정확하고 콘텐츠 표준을 충족하는지 확인합니다.
+* 확인을 통과하면 사용자에게 응답이 다시 전송됩니다. 이 프로세스를 통해 사용자는 자신의 쿼리에 대해 명확하고 정확하며 적절한 답변을 받을 수 있습니다.
+

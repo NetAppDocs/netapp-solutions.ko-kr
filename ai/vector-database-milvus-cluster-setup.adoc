@@ -1,0 +1,222 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-milvus-cluster-setup.html 
+keywords: vector database 
+summary: NetApp용 Milvus 클러스터 설정 벡터 데이터베이스 솔루션입니다 
+---
+= 온프레미스에서 Kubernetes를 사용한 Milvus 클러스터 설정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정
+
+고객의 당면 과제: 스토리지와 컴퓨팅, 효과적인 인프라 관리 및 데이터 관리
+Kubernetes와 벡터 데이터베이스는 함께 대규모 데이터 작업 관리를 위한 강력하고 확장 가능한 솔루션을 형성합니다. Kubernetes는 리소스를 최적화하고 컨테이너를 관리하는 한편, 벡터 데이터베이스는 고밀도 데이터 및 유사성 검색을 효율적으로 처리합니다. 이 결합을 사용하면 대규모 데이터 세트에서 복잡한 쿼리를 신속하게 처리할 수 있고 증가하는 데이터 볼륨으로 원활하게 확장할 수 있으므로 빅데이터 애플리케이션과 AI 워크로드에 이상적입니다.
+
+. 이 섹션에서는 클러스터 데이터 및 고객 데이터 모두에 NetApp 스토리지 컨트롤러를 활용하여 Kubernetes에 Milvus 클러스터를 설치하는 프로세스를 자세히 설명합니다.
+. Milvus 클러스터를 설치하려면 다양한 Milvus 클러스터 구성 요소의 데이터를 저장하기 위해 영구 볼륨(PVS)이 필요합니다. 이러한 구성 요소에는 etcd(3개 인스턴스), Pulsar-bookie-journal(3개 인스턴스), Pulsar-bookie-ledgers(3개 인스턴스), Pulsar-zookeeper-data(3개 인스턴스) 등이 있습니다.
+. 우리는 NetApp ONTAP에서 단일 NFS 볼륨을 생성하고 각각 250GB의 스토리지를 가진 12개의 영구 볼륨을 생성했습니다. 스토리지 크기는 클러스터 크기에 따라 다를 수 있습니다. 예를 들어 각 PV에 50GB가 있는 또 다른 클러스터가 있습니다. 자세한 내용은 아래 PV YAML 파일 중 하나를 참조하십시오. 총 12개의 파일이 있습니다. 각 파일에서 storageClassName은 'default'로 설정되고 스토리지 및 경로는 각 PV에 대해 고유합니다.
++
+[source, yaml]
+----
+root@node2:~# cat sai_nfs_to_default_pv1.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: karthik-pv1
+spec:
+  capacity:
+    storage: 250Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: default
+  local:
+    path: /vectordbsc/milvus/milvus1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - node2
+          - node3
+          - node4
+          - node5
+          - node6
+root@node2:~#
+----
+. 각 PV YAML 파일에 대해 'kubectl apply' 명령을 실행하여 영구 볼륨을 생성한 다음 'kubectl get PV'를 사용하여 생성된 볼륨을 확인합니다
++
+[source, bash]
+----
+root@node2:~# for i in $( seq 1 12 ); do kubectl apply -f sai_nfs_to_default_pv$i.yaml; done
+persistentvolume/karthik-pv1 created
+persistentvolume/karthik-pv2 created
+persistentvolume/karthik-pv3 created
+persistentvolume/karthik-pv4 created
+persistentvolume/karthik-pv5 created
+persistentvolume/karthik-pv6 created
+persistentvolume/karthik-pv7 created
+persistentvolume/karthik-pv8 created
+persistentvolume/karthik-pv9 created
+persistentvolume/karthik-pv10 created
+persistentvolume/karthik-pv11 created
+persistentvolume/karthik-pv12 created
+root@node2:~#
+----
+. 고객 데이터 저장을 위해 Milvus는 MinIO, Azure Blob 및 S3와 같은 오브젝트 스토리지 솔루션을 지원합니다. 이 가이드에서는 S3를 활용합니다. 다음 단계는 ONTAP S3 및 StorageGRID 오브젝트 저장소 모두에 적용됩니다. 우리는 Helm을 사용하여 Milvus 클러스터를 구축합니다. Milvus 다운로드 위치에서 구성 파일 Values.yaml을 다운로드합니다. 이 문서에서 사용한 .yaml 값 파일은 부록을 참조하십시오.
+. 로그, etcd, zookeeper 및 bookkeeper를 포함하여 각 섹션에서 'storageClass'가 'default'로 설정되어 있는지 확인합니다.
+. MinIO 섹션에서 MinIO를 비활성화합니다.
+. ONTAP 또는 StorageGRID 오브젝트 스토리지에서 NAS 버킷을 생성하고 오브젝트 스토리지 자격 증명을 사용하여 외부 S3에 포함합니다.
++
+[source, yaml]
+----
+###################################
+# External S3
+# - these configs are only used when `externalS3.enabled` is true
+###################################
+externalS3:
+  enabled: true
+  host: "192.168.150.167"
+  port: "80"
+  accessKey: "24G4C1316APP2BIPDE5S"
+  secretKey: "Zd28p43rgZaU44PX_ftT279z9nt4jBSro97j87Bx"
+  useSSL: false
+  bucketName: "milvusdbvol1"
+  rootPath: ""
+  useIAM: false
+  cloudProvider: "aws"
+  iamEndpoint: ""
+  region: ""
+  useVirtualHost: false
+
+----
+. Milvus 클러스터를 생성하기 전에 PVC(PersistentVolumeClaim)에 기존 리소스가 없는지 확인하십시오.
++
+[source, bash]
+----
+root@node2:~# kubectl get pvc
+No resources found in default namespace.
+root@node2:~#
+----
+. Helm 및 value.yaml 구성 파일을 사용하여 Milvus 클러스터를 설치하고 시작합니다.
++
+[source, bash]
+----
+root@node2:~# helm upgrade --install my-release milvus/milvus --set global.storageClass=default  -f values.yaml
+Release "my-release" does not exist. Installing it now.
+NAME: my-release
+LAST DEPLOYED: Thu Mar 14 15:00:07 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+root@node2:~#
+----
+. PersistentVolumeClaims(PVC)의 상태를 확인합니다.
++
+[source, bash]
+----
+root@node2:~# kubectl get pvc
+NAME                                                             STATUS   VOLUME         CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-my-release-etcd-0                                           Bound    karthik-pv8    250Gi      RWO            default        3s
+data-my-release-etcd-1                                           Bound    karthik-pv5    250Gi      RWO            default        2s
+data-my-release-etcd-2                                           Bound    karthik-pv4    250Gi      RWO            default        3s
+my-release-pulsar-bookie-journal-my-release-pulsar-bookie-0      Bound    karthik-pv10   250Gi      RWO            default        3s
+my-release-pulsar-bookie-journal-my-release-pulsar-bookie-1      Bound    karthik-pv3    250Gi      RWO            default        3s
+my-release-pulsar-bookie-journal-my-release-pulsar-bookie-2      Bound    karthik-pv1    250Gi      RWO            default        3s
+my-release-pulsar-bookie-ledgers-my-release-pulsar-bookie-0      Bound    karthik-pv2    250Gi      RWO            default        3s
+my-release-pulsar-bookie-ledgers-my-release-pulsar-bookie-1      Bound    karthik-pv9    250Gi      RWO            default        3s
+my-release-pulsar-bookie-ledgers-my-release-pulsar-bookie-2      Bound    karthik-pv11   250Gi      RWO            default        3s
+my-release-pulsar-zookeeper-data-my-release-pulsar-zookeeper-0   Bound    karthik-pv7    250Gi      RWO            default        3s
+root@node2:~#
+----
+. Pod의 상태를 확인합니다.
++
+[source, bash]
+----
+root@node2:~# kubectl get pods -o wide
+NAME                                            READY   STATUS      RESTARTS        AGE    IP              NODE    NOMINATED NODE   READINESS GATES
+<content removed to save page space>
+----
++
+Pod 상태가 '실행 중'이고 예상대로 작동하는지 확인하십시오
+
+. Milvus 및 NetApp 오브젝트 스토리지에서 데이터 쓰기 및 읽기를 테스트합니다.
++
+** "prepare_data_netapp_new.py" Python 프로그램을 사용하여 데이터를 작성합니다.
++
+[source, python]
+----
+root@node2:~# date;python3 prepare_data_netapp_new.py ;date
+Thu Apr  4 04:15:35 PM UTC 2024
+=== start connecting to Milvus     ===
+=== Milvus host: localhost         ===
+Does collection hello_milvus_ntapnew_update2_sc exist in Milvus: False
+=== Drop collection - hello_milvus_ntapnew_update2_sc ===
+=== Drop collection - hello_milvus_ntapnew_update2_sc2 ===
+=== Create collection `hello_milvus_ntapnew_update2_sc` ===
+=== Start inserting entities       ===
+Number of entities in hello_milvus_ntapnew_update2_sc: 3000
+Thu Apr  4 04:18:01 PM UTC 2024
+root@node2:~#
+----
+** "verify_data_netapp.py" Python 파일을 사용하여 데이터를 읽습니다.
++
+....
+root@node2:~# python3 verify_data_netapp.py
+=== start connecting to Milvus     ===
+=== Milvus host: localhost         ===
+
+Does collection hello_milvus_ntapnew_update2_sc exist in Milvus: True
+{'auto_id': False, 'description': 'hello_milvus_ntapnew_update2_sc', 'fields': [{'name': 'pk', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': False}, {'name': 'random', 'description': '', 'type': <DataType.DOUBLE: 11>}, {'name': 'var', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'embeddings', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 16}}]}
+Number of entities in Milvus: hello_milvus_ntapnew_update2_sc : 3000
+
+=== Start Creating index IVF_FLAT  ===
+
+=== Start loading                  ===
+
+=== Start searching based on vector similarity ===
+
+hit: id: 2998, distance: 0.0, entity: {'random': 0.9728033590489911}, random field: 0.9728033590489911
+hit: id: 2600, distance: 0.602496862411499, entity: {'random': 0.3098157043984633}, random field: 0.3098157043984633
+hit: id: 1831, distance: 0.6797959804534912, entity: {'random': 0.6331477114129169}, random field: 0.6331477114129169
+hit: id: 2999, distance: 0.0, entity: {'random': 0.02316334456872482}, random field: 0.02316334456872482
+hit: id: 2524, distance: 0.5918987989425659, entity: {'random': 0.285283165889066}, random field: 0.285283165889066
+hit: id: 264, distance: 0.7254047393798828, entity: {'random': 0.3329096143562196}, random field: 0.3329096143562196
+search latency = 0.4533s
+
+=== Start querying with `random > 0.5` ===
+
+query result:
+-{'random': 0.6378742006852851, 'embeddings': [0.20963514, 0.39746657, 0.12019053, 0.6947492, 0.9535575, 0.5454552, 0.82360446, 0.21096309, 0.52323616, 0.8035404, 0.77824664, 0.80369574, 0.4914803, 0.8265614, 0.6145269, 0.80234545], 'pk': 0}
+search latency = 0.4476s
+
+=== Start hybrid searching with `random > 0.5` ===
+
+hit: id: 2998, distance: 0.0, entity: {'random': 0.9728033590489911}, random field: 0.9728033590489911
+hit: id: 1831, distance: 0.6797959804534912, entity: {'random': 0.6331477114129169}, random field: 0.6331477114129169
+hit: id: 678, distance: 0.7351570129394531, entity: {'random': 0.5195484662306603}, random field: 0.5195484662306603
+hit: id: 2644, distance: 0.8620758056640625, entity: {'random': 0.9785952878381153}, random field: 0.9785952878381153
+hit: id: 1960, distance: 0.9083120226860046, entity: {'random': 0.6376039340439571}, random field: 0.6376039340439571
+hit: id: 106, distance: 0.9792704582214355, entity: {'random': 0.9679994241326673}, random field: 0.9679994241326673
+search latency = 0.1232s
+Does collection hello_milvus_ntapnew_update2_sc2 exist in Milvus: True
+{'auto_id': True, 'description': 'hello_milvus_ntapnew_update2_sc2', 'fields': [{'name': 'pk', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': True}, {'name': 'random', 'description': '', 'type': <DataType.DOUBLE: 11>}, {'name': 'var', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'embeddings', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 16}}]}
+....
++
+NetApp 스토리지 컨트롤러를 사용하여 Kubernetes에 Milvus 클러스터를 구축하여 설명한 대로 위의 검증을 기반으로 Kubernetes와 벡터 데이터베이스를 통합하면 대규모 데이터 운영 관리를 위한 강력하고 확장 가능하며 효율적인 솔루션을 고객에게 제공합니다. 이 설정은 고객이 높은 차원 데이터를 처리하고 복잡한 쿼리를 신속하고 효율적으로 실행할 수 있도록 하여 빅 데이터 애플리케이션 및 AI 워크로드에 이상적인 솔루션입니다. 다양한 클러스터 구성 요소에 PVS(영구 볼륨)를 사용하고 NetApp ONTAP에서 단일 NFS 볼륨을 생성하면 최적의 리소스 활용도와 데이터 관리가 보장됩니다. PersistentVolumeClaims(PVC) 및 Pod의 상태를 확인하고 데이터 쓰기 및 읽기 테스트를 통해 고객은 안정적이고 일관된 데이터 작업을 보장할 수 있습니다. ONTAP 또는 StorageGRID 오브젝트 스토리지를 고객 데이터에 사용하면 데이터 접근성과 보안이 더욱 강화됩니다. 이 설정을 통해 고객은 증가하는 데이터 요구사항에 맞춰 원활하게 확장할 수 있는 복원력을 갖춘 고성능 데이터 관리 솔루션을 확보할 수 있습니다.
+
+
+
+

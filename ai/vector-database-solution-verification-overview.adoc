@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-solution-verification-overview.html 
+keywords: Solution Overview vector database 
+summary: 솔루션 검증 개요 - NetApp용 벡터 데이터베이스 솔루션 
+---
+= 솔루션 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+당사는 5가지 주요 영역에 중점을 두고 포괄적인 솔루션 검증을 수행했으며, 자세한 내용은 아래에 나와 있습니다. 각 섹션에서는 고객이 직면한 과제, NetApp에서 제공하는 솔루션, 그리고 고객이 누릴 수 있는 이점에 대해 알아봅니다.
+
+. link:./vector-database-milvus-cluster-setup.html["온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정"]
+스토리지와 컴퓨팅, 효과적인 인프라 관리 및 데이터 관리에 대해 독립적으로 확장해야 하는 고객의 당면 과제 이 섹션에서는 클러스터 데이터 및 고객 데이터 모두에 NetApp 스토리지 컨트롤러를 활용하여 Kubernetes에 Milvus 클러스터를 설치하는 프로세스를 자세히 설명합니다.
+. link:./vector-database-milvus-with-Amazon-FSxN-for-NetApp-ONTAP.html["NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화"]
+이 섹션에서는 클라우드에 벡터 데이터베이스를 배포해야 하는 이유와 Docker 컨테이너 내의 Amazon FSxN for NetApp ONTAP에 벡터 데이터베이스(milvus 독립형)를 배포하는 단계를 설명합니다.
+. link:./vector-database-protection-using-snapcenter.html["NetApp SnapCenter를 사용한 벡터 데이터베이스 보호."]
+이 섹션에서는 SnapCenter가 ONTAP에 상주하는 벡터 데이터베이스 데이터와 Milvus 데이터를 보호하는 방법을 알아봅니다. 이 예에서는 고객 데이터에 NFS ONTAP 볼륨(vol1)에서 파생된 NAS 버킷(milvusdbvol1)을 활용하고 Milvus 클러스터 구성 데이터에 별도의 NFS 볼륨(vectordbpv)을 사용했습니다.
+. link:./vector-database-disaster-recovery-using-netapp-snapmirror.html["NetApp SnapMirror를 사용한 재해 복구"]
+이 섹션에서는 벡터 데이터베이스에 대한 DR(재해 복구)의 중요성과 NetApp 재해 복구 제품 SnapMirror가 벡터 데이터베이스에 DR 솔루션을 제공하는 방법에 대해 설명합니다.
+. link:./vector-database-performance-validation.html["성능 검증"]
+이 섹션에서는 Milvus 및 pgvecto.RS와 같은 벡터 데이터베이스의 성능 검증을 자세히 살펴보고, LLM 수명주기 내의 RAG 및 추론 워크로드를 지원하는 I/O 프로필 및 NetApp 스토리지 컨트롤러 같은 스토리지 성능 특성에 초점을 맞추고자 합니다. 이들 데이터베이스가 ONTAP 스토리지 솔루션과 결합될 때 성능 차별화 요소를 평가하고 식별합니다. 당사의 분석은 QPS(초당 처리된 쿼리 수)와 같은 주요 성능 지표를 기반으로 합니다.
+

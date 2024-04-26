@@ -36,6 +36,8 @@ indexpage:
       url: tr-4915.html
     - title: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI
       url: hcaios_executive_summary.html
+    - title: NetApp를 사용한 벡터 데이터베이스 솔루션
+      url: vector-database-solution-with-netapp.html
   - title: 마름 및 관리
     links:
     - title: NetApp DataOps 툴킷

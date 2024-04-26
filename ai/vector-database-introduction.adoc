@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-introduction.html 
+keywords: vector database 
+summary: NetApp용 벡터 데이터베이스 솔루션 소개 
+---
+= 소개
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 소개
+
+벡터 데이터베이스는 대규모 언어 모델(LLM) 및 세대 인공 지능(AI)에서 의미 검색의 복잡성을 처리하도록 설계된 문제를 효과적으로 해결합니다. 기존의 데이터 관리 시스템과 달리 벡터 데이터베이스는 이미지, 비디오, 텍스트, 오디오, 비디오, 비디오, 오디오, 비디오 등 다양한 유형의 데이터를 처리 및 검색할 수 있습니다. 데이터 자체의 내용을 레이블이나 태그 대신 사용하여 다른 형태의 비정형 데이터를 만들 수 있습니다.
+
+RDBMS(Relational Database Management Systems)의 한계는 쉽게 문서화되어 있으며, 특히 AI 애플리케이션에서 일반적으로 나타나는 구조화되지 않은 데이터를 다루는 데 어려움을 겪고 있습니다. RDBMS는 데이터를 관리 가능한 구조로 변환하는 데 시간이 많이 걸리고 오류가 발생하기 쉬운 프로세스를 필요로 하기 때문에 검색이 지연되고 비효율성이 초래되는 경우가 많습니다. 그러나 벡터 데이터베이스는 이러한 문제를 회피하도록 설계되었으므로 복잡하고 높은 차원 데이터를 관리하고 검색하여 AI 애플리케이션의 발전을 촉진할 수 있는 보다 효율적이고 정확한 솔루션을 제공합니다.
+
+이 문서는 벡터 데이터베이스를 현재 사용 중이거나 사용할 계획이 있는 고객을 위한 포괄적인 가이드 역할을 하며 NetApp ONTAP, NetApp StorageGRID, Amazon FSxN for NetApp ONTAP 및 SnapCenter 등과 같은 플랫폼에서 벡터 데이터베이스를 활용하는 모범 사례를 자세히 설명합니다. 여기에 제공된 내용은 다음과 같은 다양한 주제를 다룹니다.
+
+* NetApp ONTAP 및 StorageGRID 오브젝트 스토리지를 통해 NetApp 스토리지가 제공하는 Milvus와 같은 벡터 데이터베이스에 대한 인프라 지침
+* 파일 및 오브젝트 저장소를 통해 AWS FSx for NetApp ONTAP의 Milvus 데이터베이스 검증
+* NetApp의 파일 오브젝트 이중성을 자세히 살펴보고 벡터 데이터베이스와 기타 애플리케이션의 데이터에 대한 유틸리티를 보여줍니다.
+* NetApp의 데이터 보호 관리 제품인 SnapCenter이 벡터 데이터베이스 데이터에 대한 백업 및 복원 기능을 제공하는 방법
+* NetApp의 하이브리드 클라우드가 어떻게 사내 및 클라우드 환경 전반의 데이터 복제와 보호를 제공하는지 소개합니다.
+* NetApp ONTAP 기반 Milvus 및 pgvector와 같은 벡터 데이터베이스의 성능 검증에 대한 통찰력을 제공합니다.
+* 두 가지 구체적인 사용 사례로는 LLM(대형 언어 모델)을 사용한 수집 증강 생성(RAG)과 NetApp IT 팀의 ChatAI를 통해 간략히 설명된 개념과 관행의 실질적인 예를 제공합니다.
+

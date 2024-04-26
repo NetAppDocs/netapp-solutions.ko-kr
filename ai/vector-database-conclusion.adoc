@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: ai/vector-database-conclusion.html 
+keywords: vector database, conclusion 
+summary: NetApp용 결론 벡터 데이터베이스 솔루션 
+---
+= 결론
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 결론
+
+결론적으로 이 문서에서는 NetApp 스토리지 솔루션에 Milvus 및 pgvector 같은 벡터 데이터베이스의 구축 및 관리에 대한 포괄적인 개요를 제공합니다. 또한 NetApp ONTAP 및 StorageGRID 오브젝트 스토리지를 활용하기 위한 인프라 지침을 논의하고 파일 및 오브젝트 저장소를 통해 AWS FSx for NetApp ONTAP의 Milvus 데이터베이스를 검증했습니다.
+
+NetApp의 파일 오브젝트 이중성을 살펴보면서 벡터 데이터베이스의 데이터뿐만 아니라 다른 애플리케이션에도 유용성을 입증했습니다. 또한 NetApp의 엔터프라이즈 관리 제품인 SnapCenter이 벡터 데이터베이스 데이터에 대한 백업, 복원 및 클론 복제 기능을 제공하여 데이터 무결성과 가용성을 보장하는 방법에 대해서도 설명했습니다.
+
+이 문서에서는 NetApp의 하이브리드 클라우드 솔루션이 사내 및 클라우드 환경 전반에서 데이터 복제 및 보호 기능을 제공하여 원활하고 안전한 데이터 관리 경험을 제공하는 방법에 대해서도 설명합니다. NetApp ONTAP에서 Milvus 및 pgvecto와 같은 벡터 데이터베이스의 성능 검증에 대한 통찰력을 제공하여 효율성과 확장성에 대한 중요한 정보를 제공했습니다.
+
+마지막으로, LLM을 사용한 RAG와 NetApp의 내부 ChatAI라는 두 가지 세대 AI 사용 사례에 대해 논의했습니다. 이러한 실제 사례는 실제 적용 사례 및 이 문서에 설명된 개념과 관행의 이점을 강조합니다. 본 문서는 벡터 데이터베이스 관리를 위한 NetApp의 강력한 스토리지 솔루션을 활용하려는 모든 사용자에게 포괄적인 가이드입니다.
+
+
+
+=== 감사의 말
+
+저자는 이 문서를 NetApp 고객 및 NetApp 분야에서 유용하게 활용할 수 있도록 아래 기고자와 의견을 제공해 주신 분들께 진심으로 감사드립니다.
+
+. Sathish Thyagarajan, NetApp, ONTAP AI & Analytics 기술 마케팅 엔지니어
+. NetApp 기술 마케팅 엔지니어 Mike Olesby
+. AJ Mahajan, 선임 이사, NetApp
+. Joe Scott, NetApp 워크로드 성능 엔지니어링 담당 매니저
+. Puneet Dhawan, 제품 관리 FSX, NetApp 수석 이사
+. Yuval Kalderon, NetApp FSx 제품 팀 선임 제품 매니저
+
+
+
+
+=== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
+
+* Milvus 설명서 - https://milvus.io/docs/overview.md[]
+* Milvus 독립형 설명서 - https://milvus.io/docs/v2.0.x/install_standalone-docker.md[]
+* NetApp 제품 설명서
+https://www.netapp.com/support-and-training/documentation/[]
+* Instaclustr - link:https://www.instaclustr.com/support/documentation/?_bt=&_bk=&_bm=&_bn=x&_bg=&utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=1467100120&hsa_cam=20766399079&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjw26KxBhBDEiwAu6KXtzOZhN0dl0H1smOMcj9nsC0qBQphdMqFR7IrVQqeG2Y4aHWydUMj2BoCdFwQAvD_BwE["instalclustr 설명서"]
+
+
+
+
+=== 버전 기록
+
+|===
+
+
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2024년 4월 | 최초 릴리스 
+|===
