@@ -10,6 +10,8 @@ indexpage:
       url: "/vmware-netapp.html"
     - title: VMware용 NetApp 솔루션
       url: "/vmware-on-netapp.html"
+    - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
+      url: "/migrate-vms-to-ontap-datastore.html"
     - title: 고객 사례
       url: "/vmware-customer-stories.html"
     - title: VMware Explore의 NetApp 세션
