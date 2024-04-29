@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: rhhc/provider-managed/data-protection.html 
+keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMWare, provider managed storage, ONTAP, AWS FSxN, Astra Control Service 
+summary:  
+---
+= 데이터 보호
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../../media/
+
+
+[role="lead"]
+이 페이지에는 Astra Control Service를 사용하는 AWS(Rosa)의 관리형 Red Hat OpenShift에 대한 데이터 보호 옵션이 나와 있습니다.
+
+
+
+== AWS 기반 Red Hat OpenShift Service를 위한 FSX NetApp ONTAP(Rosa)
+
+다음 비디오에서는 한 지역에서 실행되고 다른 지역으로 복원되는 Rosa 응용 프로그램의 백업을 보여 줍니다.
+
+.AWS 기반 FSx NetApp ONTAP for Red Hat OpenShift Service
+video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto]

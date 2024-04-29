@@ -16,6 +16,8 @@ summary:
 [role="lead"]
 다음 비디오는 이 문서에 설명되어 있는 몇 가지 기능을 보여 줍니다.
 
+.OpenShift 가상화와의 Cloud Insights 통합
+video::29ed6938-eeaf-4e70-ae7b-b15d011d75ff[panopto,width=360]
 .Red Hat MTV를 사용하여 NetApp ONTAP 스토리지를 통해 VM을 OpenShift 가상화로 마이그레이션합니다
 video::bac58645-dd75-4e92-b5fe-b12b015dc199[panopto,width=360]
 .NetApp 기반 Red Hat OpenShift인 Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발 속도를 높입니다
