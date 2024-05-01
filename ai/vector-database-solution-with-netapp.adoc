@@ -26,6 +26,14 @@ summary: NetApp를 사용하는 벡터 datbase 솔루션에 대한 요약 페이
 . link:./vector-database-technology-requirement.html["기술 요구 사항"]
 . link:./vector-database-deployment-procedure.html["구현 절차"]
 . link:./vector-database-solution-verification-overview.html["솔루션 검증 개요"]
++
+** link:./vector-database-milvus-cluster-setup.html["온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정"]
+** link:./vector-database-milvus-with-Amazon-FSxN-for-NetApp-ONTAP.html["NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화"]
+** link:./vector-database-protection-using-snapcenter.html["NetApp SnapCenter를 사용한 벡터 데이터베이스 보호."]
+** link:./vector-database-disaster-recovery-using-netapp-snapmirror.html["NetApp SnapMirror를 사용한 재해 복구"]
+** link:./vector-database-performance-validation.html["성능 검증"]
+
+
 . link:./vector-database-instaclustr-with-pgvector.html["PostgreSQL:pgvector를 사용한 Instaclustr 벡터 데이터베이스"]
 . link:./vector-database-use-cases.html["Vector Database 사용 사례"]
 . link:./vector-database-conclusion.html["결론"]
