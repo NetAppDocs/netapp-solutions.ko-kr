@@ -265,7 +265,7 @@ ONTAP-Dest::> cluster peer show
 ====
 다음 단계는 SnapMirror 관계에 있는 볼륨을 포함하는 소스 스토리지 가상 시스템과 타겟 스토리지 가상 시스템 간에 SVM 관계를 설정하는 것입니다.
 
-. 소스 FSx 클러스터에서 CLI에서 다음 명령을 사용하여 SVM 피어 관계를 생성합니다.
+. 대상 ONTAP 클러스터에서 CLI에서 다음 명령을 사용하여 SVM 피어 관계를 생성합니다.
 +
 ....
 ONTAP-Dest::> vserver peer create -vserver DestSVM -peer-vserver Backup -peer-cluster OnPremSourceSVM -applications snapmirror

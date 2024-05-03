@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: virtualization/vmware_vcf_aff_principal_nfs.html 
+keywords: netapp, vmware, cloud, foundation, vcf, aff, all-flash, nfs, vvol, vvols, array, ontap tools, otv, sddc 
+summary:  
+---
+= VI 워크로드 도메인의 주요 스토리지로 사용되는 NFS입니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+저자: 라비 BCB, 조시 파월
+
+
+
+== VI 워크로드 도메인의 주요 스토리지로 사용되는 NFS입니다
+
+
+
+=== 시나리오 개요
+
+이 시나리오에서는 VCF에서 VI 워크로드 도메인을 구축할 때 NFS 데이터 저장소를 주 스토리지로 구성하는 방법을 보여 줍니다. 필요한 경우 VCF의 SDDC Manager에서 수행해야 하는 단계에 대한 외부 설명서를 참조하고 스토리지 구성 부분에 해당하는 단계를 설명합니다.
+
+이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
+
+* ONTAP SVM(스토리지 가상 머신)에 대한 네트워킹과 NFS 트래픽을 전달하는 논리 인터페이스(LIF)가 있는지 확인합니다.
+* ESXi 호스트가 NFS 볼륨에 액세스할 수 있도록 내보내기 정책을 생성합니다.
+* ONTAP 스토리지 시스템에 NFS 볼륨을 생성합니다.
+* SDDC Manager에서 NFS 및 vMotion 트래픽에 대한 네트워크 풀을 생성합니다.
+* VI 워크로드 도메인에서 사용할 VCF의 커미션 호스트
+* NFS 데이터 저장소를 기본 스토리지로 사용하여 VCF에 VI 워크로드 도메인을 구축합니다.
+* VMware VAAI용 NetApp NFS 플러그인을 설치합니다
+
+
+
+
+=== 필수 구성 요소
+
+이 시나리오에는 다음과 같은 구성 요소 및 구성이 필요합니다.
+
+* NetApp AFF 트래픽을 허용하도록 구성된 SVM(Storage Virtual Machine)이 있는 스토리지 시스템입니다.
+* IP 네트워크에서 NFS 트래픽을 전달하는 논리 인터페이스(LIF)가 생성되었으며 SVM과 연결됩니다.
+* VCF 관리 도메인 배포가 완료되었으며 SDDC Manager 인터페이스에 액세스할 수 있습니다.
+* VCF 관리 네트워크에서 통신을 위해 구성된 ESXi 호스트 4개
+* VLAN 또는 네트워크 세그먼트에서 vMotion 및 NFS 스토리지 트래픽용으로 예약된 IP 주소입니다.
+
+
+
+NOTE: VI 워크로드 도메인을 구축할 때 VCF는 NFS 서버에 대한 접속을 검증합니다. 이 작업은 NFS IP 주소로 vmkernel 어댑터를 추가하기 전에 ESXi 호스트에서 관리 어댑터를 사용하여 수행됩니다. 그러므로 1) 관리 네트워크를 NFS Server로 라우팅할 수 있거나 2) 관리 네트워크용 LIF가 NFS 데이터 저장소 볼륨을 호스팅하는 SVM에 추가되어 검증을 진행할 수 있는지 확인해야 합니다.
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"].
+
+
+
+=== 배포 단계
+
+NFS 데이터 저장소를 기본 스토리지로 사용하여 VI 워크로드 도메인을 구축하려면 다음 단계를 완료하십시오.
+
+.ONTAP SVM에 대한 네트워킹 확인
+[%collapsible]
+====
+ONTAP 스토리지 클러스터와 VI 워크로드 도메인 간에 NFS 트래픽을 전달하는 네트워크에 필요한 논리 인터페이스가 설정되었는지 확인합니다.
+
+. ONTAP System Manager에서 왼쪽 메뉴의 * Storage VM * 으로 이동하여 NFS 트래픽에 사용할 SVM을 클릭합니다. 개요 * 탭의 * 네트워크 IP 인터페이스 * 에서 * nfs * 의 오른쪽에 있는 숫자를 클릭합니다. 목록에서 필요한 LIF IP 주소가 나열되어 있는지 확인합니다.
++
+image:vmware-vcf-aff-image03.png["SVM용 LIF 확인"]
+
+
+
+또는 다음 명령을 사용하여 ONTAP CLI에서 SVM과 연결된 LIF를 확인합니다.
+
+[source, cli]
+----
+network interface show -vserver <SVM_NAME>
+----
+. ESXi 호스트가 ONTAP NFS 서버와 통신할 수 있는지 확인합니다. SSH를 통해 ESXi 호스트에 로그인하고 SVM LIF를 ping합니다.
+
+
+[source, cli]
+----
+vmkping <IP Address>
+----
+
+NOTE: VI 워크로드 도메인을 구축할 때 VCF는 NFS 서버에 대한 접속을 검증합니다. 이 작업은 NFS IP 주소로 vmkernel 어댑터를 추가하기 전에 ESXi 호스트에서 관리 어댑터를 사용하여 수행됩니다. 그러므로 1) 관리 네트워크를 NFS Server로 라우팅할 수 있거나 2) 관리 네트워크용 LIF가 NFS 데이터 저장소 볼륨을 호스팅하는 SVM에 추가되어 검증을 진행할 수 있는지 확인해야 합니다.
+
+====
+.NFS 볼륨을 공유하기 위한 엑스포트 정책을 생성합니다
+[%collapsible]
+====
+ONTAP System Manager에서 엑스포트 정책을 생성하여 NFS 볼륨에 대한 액세스 제어를 정의합니다.
+
+. ONTAP System Manager의 왼쪽 메뉴에서 * Storage VM * 을 클릭하고 목록에서 SVM을 선택합니다.
+. Settings * 탭에서 * Export Policies * 를 찾아 화살표를 클릭하여 액세스합니다.
++
+image:vmware-vcf-aff-image06.png["내보내기 정책에 액세스합니다"]
+
++
+{nbsp}
+
+. 새 내보내기 정책 * 창에서 정책 이름을 추가하고 * 새 규칙 추가 * 버튼을 클릭한 다음 * + 추가 * 버튼을 클릭하여 새 규칙 추가를 시작합니다.
++
+image:vmware-vcf-aff-image07.png["새 엑스포트 정책"]
+
++
+{nbsp}
+
+. 규칙에 포함할 IP 주소, IP 주소 범위 또는 네트워크를 입력합니다. smb/cifs * 및 * FlexCache * 상자의 선택을 취소하고 아래의 액세스 세부 정보를 선택합니다. UNIX 상자를 선택하면 ESXi 호스트를 액세스할 수 있습니다.
++
+image:vmware-vcf-aff-image08.png["새 규칙을 저장합니다"]
+
++
+
+NOTE: VI 워크로드 도메인을 구축할 때 VCF는 NFS 서버에 대한 접속을 검증합니다. 이 작업은 NFS IP 주소로 vmkernel 어댑터를 추가하기 전에 ESXi 호스트에서 관리 어댑터를 사용하여 수행됩니다. 따라서 유효성 검사를 진행하려면 내보내기 정책에 VCF 관리 네트워크가 포함되어 있는지 확인해야 합니다.
+
+. 모든 규칙을 입력한 후 * Save * 버튼을 클릭하여 새 수출 정책을 저장합니다.
+. 또는 ONTAP CLI에서 엑스포트 정책과 규칙을 생성할 수 있습니다. ONTAP 설명서의 내보내기 정책 생성 및 규칙 추가를 위한 단계를 참조하십시오.
++
+** 에 ONTAP CLI를 사용합니다 link:https://docs.netapp.com/us-en/ontap/nfs-config/create-export-policy-task.html["엑스포트 정책을 생성합니다"].
+** 에 ONTAP CLI를 사용합니다 link:https://docs.netapp.com/us-en/ontap/nfs-config/add-rule-export-policy-task.html["엑스포트 정책에 규칙 추가"].
+
+
+
+
+====
+.NFS 볼륨을 생성합니다
+[%collapsible]
+====
+ONTAP 스토리지 시스템에서 워크로드 도메인 구축 시 데이터 저장소로 사용할 NFS 볼륨을 생성합니다.
+
+. ONTAP System Manager에서 왼쪽 메뉴에서 * 스토리지 > 볼륨 * 으로 이동하고 * + 추가 * 를 클릭하여 새 볼륨을 생성합니다.
++
+image:vmware-vcf-aff-image09.png["새 볼륨을 추가합니다"]
+
++
+{nbsp}
+
+. 볼륨 이름을 추가하고 원하는 용량을 입력한 다음 볼륨을 호스팅할 스토리지 VM을 선택합니다. 계속하려면 * 추가 옵션 * 을 클릭하십시오.
++
+image:vmware-vcf-aff-image10.png["볼륨 세부 정보를 추가합니다"]
+
++
+{nbsp}
+
+. Access Permissions(액세스 권한) 에서 NFS Server 및 NFS 트래픽 유효성 검사에 사용할 VCF 관리 네트워크 또는 IP 주소와 NFS 네트워크 IP 주소를 포함하는 Export Policy(내보내기 정책) 를 선택합니다.
++
+image:vmware-vcf-aff-image11.png["볼륨 세부 정보를 추가합니다"]
+
++
+를 누릅니다
+{nbsp}
+
++
+
+NOTE: VI 워크로드 도메인을 구축할 때 VCF는 NFS 서버에 대한 접속을 검증합니다. 이 작업은 NFS IP 주소로 vmkernel 어댑터를 추가하기 전에 ESXi 호스트에서 관리 어댑터를 사용하여 수행됩니다. 그러므로 1) 관리 네트워크를 NFS Server로 라우팅할 수 있거나 2) 관리 네트워크용 LIF가 NFS 데이터 저장소 볼륨을 호스팅하는 SVM에 추가되어 검증을 진행할 수 있는지 확인해야 합니다.
+
+. 또는 ONTAP CLI에서 ONTAP 볼륨을 생성할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-cli-9141//lun-create.html["LUN 생성"] ONTAP 명령 설명서의 명령입니다.
+
+
+====
+.SDDC Manager에서 네트워크 풀을 생성합니다
+[%collapsible]
+====
+VI 워크로드 도메인에 ESXi 호스트를 구축하기 위한 준비로서 ESXi 호스트를 위임하기 전에 SDDC Manager에서 ANetwork 풀을 생성해야 합니다. 네트워크 풀에는 NFS 서버와의 통신에 사용할 VMkernel 어댑터의 네트워크 정보 및 IP 주소 범위가 포함되어야 합니다.
+
+. SDDC Manager 웹 인터페이스에서 왼쪽 메뉴의 * Network Settings * 로 이동한 후 * + Create Network Pool * 버튼을 클릭합니다.
++
+image:vmware-vcf-aff-image04.png["네트워크 풀을 생성합니다"]
+
++
+{nbsp}
+
+. 네트워크 풀 이름을 입력하고 NFS 확인란을 선택한 다음 모든 네트워킹 세부 정보를 입력합니다. vMotion 네트워크 정보에 대해 이 과정을 반복합니다.
++
+image:vmware-vcf-aff-image05.png["네트워크 풀 구성"]
+
++
+{nbsp}
+
+. 저장 * 버튼을 클릭하여 네트워크 풀 생성을 완료합니다.
+
+
+====
+.위탁수수료 호스트
+[%collapsible]
+====
+ESXi 호스트를 워크로드 도메인으로 구축하려면 먼저 SDDC Manager 인벤토리에 추가해야 합니다. 여기에는 필요한 정보를 제공하고, 검증을 통과하고, 시운전 프로세스를 시작하는 작업이 포함됩니다.
+
+자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-admin/GUID-45A77DE0-A38D-4655-85E2-BB8969C6993F.html["위탁수수료 호스트"] VCF 관리 가이드 를 참조하십시오.
+
+. SDDC Manager 인터페이스에서 왼쪽 메뉴의 * Hosts * 로 이동한 후 * Commission Hosts * 버튼을 클릭합니다.
++
+image:vmware-vcf-aff-image16.png["커미션 호스트를 시작합니다"]
+
++
+{nbsp}
+
+. 첫 번째 페이지는 필수 구성 요소 체크리스트입니다. 모든 필수 구성 요소를 두 번 선택하고 모든 확인란을 선택하여 계속 진행합니다.
++
+image:vmware-vcf-aff-image17.png["필수 구성 요소를 확인합니다"]
+
++
+{nbsp}
+
+. Host Addition and Validation * 창에서 * Host FQDN *, * Storage Type *, 워크로드 도메인에 사용할 vMotion 및 NFS 스토리지 IP 주소가 포함된 * Network Pool * 이름, ESXi 호스트에 액세스하기 위한 자격 증명을 입력합니다. Add * 를 클릭하여 확인할 호스트 그룹에 호스트를 추가합니다.
++
+image:vmware-vcf-aff-image18.png["Host Addition and Validation(호스트 추가 및 검증) 창"]
+
++
+{nbsp}
+
+. 검증될 모든 호스트가 추가되었으면 * Validate All * 버튼을 클릭하여 계속합니다.
+. 모든 호스트가 검증되었다고 가정하고 계속하려면 * Next * 를 클릭하십시오.
++
+image:vmware-vcf-aff-image19.png["모두 유효성을 검사하고 Next를 클릭합니다"]
+
++
+{nbsp}
+
+. 위임할 호스트 목록을 검토하고 * Commission * 버튼을 클릭하여 프로세스를 시작합니다. SDDC 관리자의 작업 창에서 위탁 프로세스를 모니터링합니다.
++
+image:vmware-vcf-aff-image20.png["모두 유효성을 검사하고 Next를 클릭합니다"]
+
+
+
+====
+.VI 워크로드 도메인을 구축합니다
+[%collapsible]
+====
+VI 워크로드 도메인 구축은 VCF Cloud Manager 인터페이스를 사용하여 수행됩니다. 스토리지 구성과 관련된 단계만 여기에 표시됩니다.
+
+VI 워크로드 도메인 구축에 대한 단계별 지침은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-admin/GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8.html#GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8["SDDC Manager UI를 사용하여 VI 워크로드 도메인을 구축합니다"].
+
+. SDDC Manager 대시보드에서 오른쪽 상단에 있는 * + Workload Domain * 을 클릭하여 새 워크로드 도메인을 생성합니다.
++
+image:vmware-vcf-aff-image12.png["새 워크로드 도메인을 생성합니다"]
+
++
+{nbsp}
+
+. VI 구성 마법사에서 필요에 따라 * General Info, Cluster, Compute, Networking * 및 * Host Selection * 에 대한 섹션을 입력합니다.
+
+
+VI 구성 마법사에 필요한 정보를 입력하는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-admin/GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8.html#GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8["SDDC Manager UI를 사용하여 VI 워크로드 도메인을 구축합니다"].
+
+를 누릅니다
+image:vmware-vcf-aff-image13.png["VI 구성 마법사"]
+
+. NFS 스토리지 섹션에서 데이터 저장소 이름, NFS 볼륨의 폴더 마운트 지점 및 ONTAP NFS 스토리지 VM LIF의 IP 주소를 입력합니다.
++
+image:vmware-vcf-aff-image14.png["NFS 스토리지 정보를 추가합니다"]
+
++
+{nbsp}
+
+. VI 구성 마법사에서 스위치 구성 및 라이센스 단계를 완료한 다음 * 마침 * 을 클릭하여 워크로드 도메인 생성 프로세스를 시작합니다.
++
+image:vmware-vcf-aff-image15.png["VI 구성 마법사를 완료합니다"]
+
++
+{nbsp}
+
+. 프로세스를 모니터링하고 프로세스 중에 발생하는 모든 유효성 검사 문제를 해결합니다.
+
+
+====
+.VMware VAAI용 NetApp NFS 플러그인을 설치합니다
+[%collapsible]
+====
+VMware VAAI용 NetApp NFS 플러그인은 ESXi 호스트에 설치된 VMware 가상 디스크 라이브러리를 통합하고 빠른 속도로 완료할 수 있는 고성능 클론 생성 작업을 제공합니다. ONTAP 스토리지 시스템을 VMware vSphere와 함께 사용할 때 권장되는 절차입니다.
+
+의 지침에 따라 VMware VAAI용 NetApp NFS 플러그인을 구축하는 방법에 대한 단계별 지침을 확인할 수 있습니다 link:https://docs.netapp.com/us-en/nfs-plugin-vmware-vaai/task-install-netapp-nfs-plugin-for-vmware-vaai.html["VMware VAAI용 NetApp NFS 플러그인을 설치합니다"].
+
+====

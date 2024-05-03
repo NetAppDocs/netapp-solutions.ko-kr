@@ -1059,7 +1059,7 @@ alter database open;
 
 === 자동화된 구축 옵션
 
-NetApp은 이 솔루션 구현을 지원하기 위해 Ansible과 함께 완전 자동화된 솔루션 배포 툴킷을 릴리즈할 것입니다. 도구 키트의 가용성을 다시 확인하십시오. 릴리스 후 링크가 여기에 게시됩니다.
+을 참조하십시오 link:automation_ora_aws-fsx_iscsi.html["TR-4986: iSCSI를 지원하는 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 배포"^] 를 참조하십시오.
 
 
 

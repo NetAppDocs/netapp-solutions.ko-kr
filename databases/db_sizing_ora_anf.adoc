@@ -1,0 +1,177 @@
+---
+sidebar: sidebar 
+permalink: databases/db_sizing_ora_anf.html 
+keywords: ONTAP, Azure, ANF, Sizing 
+summary: 이 솔루션은 Azure 클라우드의 ANF에서 Oracle 구축에 필요한 컴퓨팅 및 스토리지의 크기를 조정하는 데 유용한 툴킷이 제공됩니다 
+---
+= Azure NetApp Files를 위한 Oracle 사이징 지침
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Allen Cao, Niyaz Mohamed, NetApp
+
+
+
+== 목적
+
+기존 Oracle 워크로드를 온프레미스에서 퍼블릭 클라우드로 전환하는 것과 같이 한 플랫폼에서 다른 플랫폼으로 이동하려면 대상 플랫폼에서 성능 및 서비스 수준 요구 사항을 충족하기 위해 컴퓨팅 및 스토리지 크기를 조정해야 합니다. 이 문서에서는 이러한 목표를 달성하기 위한 간단한 툴킷을 보여 줍니다.
+
+시간이 지남에 따라 증가할 수 있는 새로운 데이터베이스 애플리케이션과 달리, 기존 Oracle 워크로드는 컴퓨팅 및 스토리지 요구사항에 워크로드 패턴을 설정했으며 이는 Oracle 워크로드 저장소 또는 AWR에 기록됩니다. 이 툴킷은 HTML 파서를 사용하여 Oracle AWR에서 관련 정보를 검색합니다. Oracle 데이터베이스를 재배치할 때 의미 있는 컴퓨팅 및 스토리지 지침을 제공하기 위해 SQL 스크립트를 통해 데이터베이스에 대해 얻은 추가 사이징 정보를 통해 결과가 보완됩니다.
+
+이 솔루션은 다음과 같은 사용 사례를 해결합니다.
+
+* 데이터베이스를 온프레미스에서 Microsoft Azure 클라우드로 재배치할 때 Oracle 데이터베이스 서버 컴퓨팅에 대한 사이징 지침을 제공합니다.
+* 데이터베이스를 온프레미스에서 Microsoft Azure NetApp Files로 재배치할 때 Oracle 데이터베이스 서버 스토리지에 대한 사이징 지침을 제공합니다.
+
+
+
+
+== 대상
+
+이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
+
+* 온프레미스 프라이빗 데이터 센터 또는 Microsoft Azure 클라우드 환경에서 Oracle 데이터베이스를 관리하는 DBA입니다.
+* 온프레미스 스토리지 또는 Oracle 데이터베이스를 지원하는 Microsoft Azure NetApp Files 스토리지를 관리하는 스토리지 관리자
+* Oracle 데이터베이스를 온프레미스에서 Microsoft Azure 클라우드로 마이그레이션하려는 애플리케이션 소유자
+
+
+
+
+== 라이센스
+
+이 툴킷 리포지토리의 콘텐츠를 액세스, 다운로드, 설치 또는 사용하면 에 설명된 사용권 조항에 동의하는 것입니다 link:https://netapp.sharepoint.com/sites/CIEBuilt-OnsTeam-DatabasesandApps/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCIEBuilt%2DOnsTeam%2DDatabasesandApps%2FShared%20Documents%2FDatabases%20and%20Apps%2FDatabase%20Solutions%2FDB%20Sizing%20Toolkits%2FOracle%20Sizing%20Guidance%20for%20ANF%2FLICENSE%2ETXT&parent=%2Fsites%2FCIEBuilt%2DOnsTeam%2DDatabasesandApps%2FShared%20Documents%2FDatabases%20and%20Apps%2FDatabase%20Solutions%2FDB%20Sizing%20Toolkits%2FOracle%20Sizing%20Guidance%20for%20ANF["라이센스 파일"^].
+
+
+NOTE: 이 툴킷 저장소의 컨텐츠와 파생 저작물을 제작 및/또는 공유하는 데는 일정한 제한이 있습니다. 콘텐츠를 사용하기 전에 라이센스 약관을 읽었는지 확인하십시오. 모든 약관에 동의하지 않는 경우 이 리포지토리에 있는 콘텐츠에 액세스하거나 다운로드하거나 사용하지 마십시오.
+
+
+
+== 솔루션 구축
+
+
+
+=== 배포를 위한 사전 요구 사항
+
+[%collapsible]
+====
+배포에는 다음과 같은 사전 요구 사항이 필요합니다.
+
+* Oracle AWR 보고서는 최대 애플리케이션 작업 부하에서 데이터베이스 활동의 스냅샷을 캡처합니다.
+* Oracle 데이터베이스에 액세스하여 DBA 권한으로 SQL 스크립트를 실행할 수 있습니다.
+
+
+====
+
+
+=== 툴킷을 다운로드합니다
+
+[%collapsible]
+====
+리포지토리에서 툴킷을 검색합니다 link:https://netapp.sharepoint.com/sites/CIEBuilt-OnsTeam-DatabasesandApps/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=uJYdVB&CID=bec786b6%2Dccaa%2D42e3%2Db47d%2Ddf0dcb0ce0ef&RootFolder=%2Fsites%2FCIEBuilt%2DOnsTeam%2DDatabasesandApps%2FShared%20Documents%2FDatabases%20and%20Apps%2FDatabase%20Solutions%2FDB%20Sizing%20Toolkits%2FOracle%20Sizing%20Guidance%20for%20ANF&FolderCTID=0x01200006E27E44A468B3479EA2D52BCD950351["ANF를 위한 Oracle 사이징 지침"^]
+
+====
+
+
+=== 툴킷을 사용하는 방법은 무엇입니까?
+
+[%collapsible]
+====
+이 툴킷은 Oracle 데이터베이스 정보를 수집하는 웹 기반 HTML 파서와 두 개의 SQL 스크립트로 구성됩니다. 그런 다음 출력은 Excel 템플릿에 입력되어 Oracle 데이터베이스 서버의 컴퓨팅 및 스토리지에 대한 크기 조정 지침을 생성합니다.
+
+* 를 사용합니다 link:https://app.atroposs.com/#/awr-module["HTML 파서"^] AWR 보고서에서 현재 Oracle 데이터베이스의 사이징 정보를 검색하기 위한 AWR 모듈
+* DBA로 ora_db_data_szie.sql을 실행하여 데이터베이스에서 물리적 Oracle 데이터 파일 크기를 검색합니다.
+* 원하는 아카이브 로그 보존 기간(일)을 사용하여 Oracle 아카이브 로그 크기를 검색하는 DBA로서 ora_db_logs_size.sql을 실행합니다.
+* 위에서 얻은 사이징 정보를 Excel 템플릿 파일 oracle_db_sizing_template_anf.xlsx 에 입력하여 Oracle DB 서버용 컴퓨팅 및 스토리지에 대한 사이징 지침을 생성합니다.
+
+
+====
+
+
+=== 툴킷 사용 데모
+
+[%collapsible]
+====
+. HTML 파서 AWR 모듈을 엽니다.
++
+image::db_sizing_ora_parser_01.png[이 이미지는 Oracle 사이징을 위한 HTML 파서 화면을 제공합니다]
+
+. 출력 형식을 .csv로 확인하고 를 클릭합니다 `Upload files` AWR 보고서를 업로드합니다. 이 파서는 에서 output.csv 파일과 표 요약이 포함된 HTML 페이지로 결과를 반환합니다 `Download` 폴더.
++
+image::db_sizing_ora_parser_02.png[이 이미지는 Oracle 사이징을 위한 HTML 파서 화면을 제공합니다]
+
+. Excel 템플릿 파일을 열고 CSV 콘텐츠를 복사하여 A 열과 1 셀에 붙여 넣어 DB 서버 사이징 정보를 생성합니다.
++
+image::db_sizing_ora_parser_03_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
+. 열 A와 필드 1과 2를 강조 표시하고 을 클릭합니다 `Data`그런 다음 `Text to Columns` 텍스트 마법사를 엽니다. 을 선택합니다 `Delimited`그런 다음 `Next` 다음 화면으로 이동합니다.
++
+image::db_sizing_ora_parser_04_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
+. 확인합니다 `Other`그런 다음 '='를 입력합니다 `Delimiters`. 을 클릭합니다 `Next` 다음 화면으로 이동합니다.
++
+image::db_sizing_ora_parser_05_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
+. 을 클릭합니다 `Finish` 읽을 수 있는 열 형식으로 문자열 변환을 완료합니다. VM 및 ANF 사이징 필드는 Oracle AWR 보고서에서 검색된 데이터로 채워집니다.
++
+image::db_sizing_ora_parser_06_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
++
+image::db_sizing_ora_parser_07_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
+. sqlplus에서 DBA로서 ora_db_data_size.sql 스크립트를 실행하여 보존 기간 일수로 기존 Oracle 데이터베이스 데이터 크기와 보관된 로그 크기를 검색합니다.
++
+....
+
+[oracle@ora_01 ~]$ sqlplus / as sysdba
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Tue Mar 5 15:25:27 2024
+Version 19.18.0.0.0
+
+Copyright (c) 1982, 2022, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.18.0.0.0
+
+
+SQL> @/home/oracle/ora_db_data_size.sql;
+
+Aggregate DB File Size, GiB Aggregate DB File RW, GiB Aggregate DB File RO, GiB
+--------------------------- ------------------------- -------------------------
+                     159.05                    159.05                         0
+
+SQL> @/home/oracle/ora_db_logs_size.sql;
+Enter value for archivelog_retention_days: 14
+old   6:       where first_time >= sysdate - &archivelog_retention_days
+new   6:       where first_time >= sysdate - 14
+
+Log Size, GiB
+-------------
+        93.83
+
+SQL>
+
+....
++
+
+NOTE: 위의 스크립트를 사용하여 검색된 데이터베이스 크기 조정 정보는 모든 물리적 데이터베이스 데이터 파일 또는 로그 파일의 실제 크기를 합한 것입니다. 각 데이터 파일 내에서 사용할 수 있는 여유 공간은 고려하지 않습니다.
+
+. 결과를 Excel 파일에 입력하여 크기 조정 지침 출력을 완료합니다.
++
+image::db_sizing_ora_parser_08_anf.png[이 이미지는 Oracle 사이징을 위한 Excel 템플릿 스크린샷을 제공합니다]
+
+. ANF는 3계층 서비스 수준(Standard, Premium, Ultra)을 사용하여 데이터베이스 볼륨 처리량 제한을 관리합니다. 을 참조하십시오 link:https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["Azure NetApp Files의 서비스 레벨"^] 를 참조하십시오. 사이징 가이드 출력을 기반으로 데이터베이스의 요구사항을 충족하는 처리량을 제공하는 ANF 서비스 수준을 선택합니다.
+
+
+====
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+NetApp 데이터베이스 솔루션에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오 link:index.html["NetApp 엔터프라이즈 데이터베이스 솔루션"^]

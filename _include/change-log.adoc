@@ -7,6 +7,9 @@
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2024년 5월 1일 | 데이터베이스 | Azure NetApp Files를 위한 새로운 Oracle 사이징 지침 
+
+
 | 2024년 4월 19일 | Red Hat OpenShift Virtualization | OpenShift Virtualization에서 VM을 위한 CI 통합에 대한 새 콘텐츠가 추가되었습니다 
 
 
