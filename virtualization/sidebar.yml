@@ -18,6 +18,13 @@ entries:
       url: "/virtualization/vmware_vcf_asa_supp_wkld_nvme.html"
     - title: VMware vSphere용 SnapCenter 플러그인을 사용하여 워크로드 도메인을 보호하십시오
       url: "/virtualization/vmware_vcf_asa_scv_wkld.html"
+  - title: NetApp AFF 어레이가 있는 VCF
+    url: "/virtualization/vmware_vcf_aff_overview.html"
+    entries:
+    - title: 워크로드 도메인의 기본 스토리지로서 NFS입니다
+      url: "/virtualization/vmware_vcf_aff_principal_nfs.html"
+    - title: 워크로드 도메인의 보조 스토리지로서 NFS 및 VVOL이 사용됩니다
+      url: "/virtualization/vmware_vcf_aff_supp_wkld_nfs.html"
 - title: VMware vSphere 자동화
   url: "/virtualization/vsphere_auto_introduction.html"
   entries:

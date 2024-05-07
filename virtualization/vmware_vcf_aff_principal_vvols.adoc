@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-저자: 라비 BCB, 조시 파월
+저자: Josh Powell, Ravi BCB
 
 
 

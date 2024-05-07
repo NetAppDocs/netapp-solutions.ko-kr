@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-저자: 조시 파월
+저자: Josh Powell, Ravi BCB
 
 
 
@@ -33,7 +33,7 @@ VCF(VMware Cloud Foundation)는 하이브리드 클라우드 환경에서 엔터
 * 프라이빗 클라우드와 퍼블릭 클라우드 모두에서 동일한 환경을 원하는 고객에게 알맞은 스토리지 옵션 제공
 * 워크로드 도메인을 위한 가상 인프라 구축을 위한 자동화된 솔루션입니다.
 * 컴퓨팅 리소스 요구사항에 직접 부합하지 않는 경우에도 변화하는 요구사항에 맞춰 조정할 수 있는 확장 가능한 스토리지 솔루션입니다.
-* ONTAP을 주요 스토리지(NFS, VVOL)로 사용하여 VCF VI 워크로드 도메인을 구축합니다.
+* ONTAP를 기본 스토리지로 사용하여 VCF VI 워크로드 도메인을 구축합니다.
 * VMware vSphere용 ONTAP 툴을 사용하여 VI 워크로드 도메인에 보조 스토리지를 구축합니다.
 
 
@@ -127,7 +127,6 @@ NetApp ONTAP 도구에 대한 자세한 내용은 를 참조하십시오 link:ht
 
 이 설명서에서 다루는 시나리오:
 
-* * VI 워크로드 도메인 구축 시 NFS 데이터 저장소를 기본 스토리지로 구성 및 사용합니다. * 클릭 link:https://review.docs.netapp.com/us-en/netapp-solutions_vcf_asa_aff/virtualization/vsphere_ontap_auto_block_fc.html["* 여기 *"] 배포 단계를 참조하십시오. 을 클릭합니다 link:https://review.docs.netapp.com/us-en/netapp-solutions_vcf_asa_aff/virtualization/vsphere_ontap_auto_block_fc.html["* 여기 *"]
-* * VI 워크로드 도메인 구축 시 VVOL 데이터 저장소를 기본 스토리지로 구성 및 사용합니다. * 링크 클릭:
-* * ONTAP 툴을 사용하여 VI 워크로드 도메인의 보조 스토리지로 NFS 데이터 저장소를 구성 및 마운트하는 방법을 설치 및 시연합니다. * 클릭 link:link:https://review.docs.netapp.com/us-en/netapp-solutions_vcf_asa_aff/virtualization/vsphere_ontap_auto_block_fc.html["* 여기 *"]
+* * VI 워크로드 도메인 구축 시 NFS 데이터 저장소를 기본 스토리지로 구성 및 사용합니다. * 클릭 https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_ontap_auto_block_fc.html["* 여기 *"] 배포 단계를 참조하십시오.
+* * ONTAP 툴을 사용하여 VI 워크로드 도메인의 보조 스토리지로 NFS 데이터 저장소를 구성 및 마운트하는 방법을 설치 및 시연합니다. * 클릭 https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_ontap_auto_block_fc.html["* 여기 *"] 배포 단계를 참조하십시오.
 
