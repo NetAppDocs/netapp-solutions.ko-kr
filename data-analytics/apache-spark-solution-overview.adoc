@@ -95,7 +95,7 @@ NetApp NFS 직접 액세스를 사용할 때의 주요 이점은 다음과 같�
 * 동적 다중 스레드 기능을 활용하여 백업 시간 단축
 
 
-을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/data-analytics/hdcs-sh-solution-overview.html["TR-4657: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop"^] Hadoop 데이터, 클라우드에서 사내로 백업 및 재해 복구, 기존 Hadoop 데이터에 대한 DevTest, 데이터 보호 및 멀티 클라우드 연결, 분석 워크로드 가속화 등을 지원합니다.
+을 참조하십시오 link:hdcs-sh-solution-overview.html["TR-4657: NetApp 하이브리드 클라우드 데이터 솔루션 - 고객 사용 사례를 기반으로 Spark 및 Hadoop"^] Hadoop 데이터, 클라우드에서 사내로 백업 및 재해 복구, 기존 Hadoop 데이터에 대한 DevTest, 데이터 보호 및 멀티 클라우드 연결, 분석 워크로드 가속화 등을 지원합니다.
 
 다음 섹션에서는 Spark 고객에게 중요한 스토리지 기능에 대해 설명합니다.
 

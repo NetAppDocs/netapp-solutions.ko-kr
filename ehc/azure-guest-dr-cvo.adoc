@@ -71,7 +71,7 @@ NOTE: 온프레미스 데이터 센터를 Azure에 연결하는 여러 가지 �
 .Azure에서 CVO를 구성하고 볼륨을 CVO로 복제합니다
 [%collapsible]
 ====
-첫 번째 단계는 Azure에서 Cloud Volumes ONTAP를 구성하는 것입니다 (https://docs.netapp.com/us-en/netapp-solutions/ehc/azure-guest.html["링크"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
+첫 번째 단계는 Cloud Volumes ONTAP Azure(link:azure-guest.html["링크"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
 
 image:dr-cvo-avs-image2.png["오류: 그래픽 이미지가 없습니다"]
 
@@ -85,7 +85,7 @@ AVS 클러스터의 구축 결정은 주로 RPO/RTO 요구 사항을 기반으�
 
 가장 일반적인 구축 옵션은 SDDC를 상시 작동, 파일럿 라이트 모드로 실행하는 것입니다. 이 옵션은 항상 사용 가능한 호스트 세 개로 구성된 작은 공간을 제공하며 시뮬레이션 활동 및 규정 준수 검사를 위한 실행 기준을 제공하여 복구 작업 속도를 높이고 운영 사이트와 DR 사이트 간의 운영 드리프트가 발생하지 않도록 합니다. 실제 DR 이벤트를 처리하는 데 필요한 경우 파일럿 라이트 클러스터를 원하는 레벨로 신속하게 확장할 수 있습니다.
 
-AVS SDDC를 구성하려면(온디맨드 또는 파일럿 라이트 모드여야 함) 을 참조하십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/azure-setup.html["Azure에서 가상화 환경을 구축하고 구성합니다"^]. 사전 요구 사항으로, 연결이 설정된 후 AVS 호스트에 상주하는 게스트 VM이 Cloud Volumes ONTAP의 데이터를 사용할 수 있는지 확인합니다.
+AVS SDDC를 구성하려면(온디맨드 또는 파일럿 라이트 모드여야 함) 을 참조하십시오 link:azure-setup.html["Azure에서 가상화 환경을 구축하고 구성합니다"^]. 사전 요구 사항으로, 연결이 설정된 후 AVS 호스트에 상주하는 게스트 VM이 Cloud Volumes ONTAP의 데이터를 사용할 수 있는지 확인합니다.
 
 Cloud Volumes ONTAP 및 AVS를 올바르게 구성한 후에는 VAIO 메커니즘을 사용하고 Cloud Volumes ONTAP에 애플리케이션 볼륨 복사본을 위한 SnapMirror를 활용하여 Jetstream을 구성하여 온프레미스 워크로드를 AVS(게스트 내 스토리지가 있는 응용 프로그램 VMDK 및 VM이 있는 VM)로 자동으로 복구합니다.
 

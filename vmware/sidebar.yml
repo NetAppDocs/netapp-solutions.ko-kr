@@ -1,0 +1,122 @@
+---
+section: vmware
+title: VMware를 통한 가상화
+url: "/vmware/index.html"
+entries:
+- title: ONTAP용 VMware 가상화
+  url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
+- title: VMware 클라우드 기반
+  entries:
+  - title: NetApp ASA 어레이가 있는 VCF
+    url: "/vmware/vmware_vcf_asa_overview.html"
+    entries:
+    - title: 관리 도메인의 보조 스토리지로서 iSCSI
+      url: "/vmware/vmware_vcf_asa_supp_mgmt_iscsi.html"
+    - title: VVOL을 워크로드 도메인의 보조 스토리지로 사용할 수 있습니다
+      url: "/vmware/vmware_vcf_asa_supp_wkld_vvols.html"
+    - title: 워크로드 도메인을 위한 보조 스토리지로서의 NVMe/TCP
+      url: "/vmware/vmware_vcf_asa_supp_wkld_nvme.html"
+    - title: VMware vSphere용 SnapCenter 플러그인을 사용하여 워크로드 도메인을 보호하십시오
+      url: "/vmware/vmware_vcf_asa_scv_wkld.html"
+  - title: NetApp AFF 어레이가 있는 VCF
+    url: "/vmware/vmware_vcf_aff_overview.html"
+    entries:
+    - title: 워크로드 도메인의 기본 스토리지로서 NFS입니다
+      url: "/vmware/vmware_vcf_aff_principal_nfs.html"
+    - title: 워크로드 도메인의 보조 스토리지로서 NFS 및 VVOL이 사용됩니다
+      url: "/vmware/vmware_vcf_aff_supp_wkld"
+- title: VMware vSphere 자동화
+  url: "/vmware/vsphere_auto_introduction.html"
+  entries:
+  - title: 기존 블록 스토리지 용량 할당
+    url: "/vmware/vsphere_ontap_auto_block.html"
+    entries:
+    - title: VMFS - Fibre Channel
+      url: "/vmware/vsphere_ontap_auto_block_fc.html"
+    - title: VMFS - Fibre Channel over Ethernet
+      url: "/vmware/vsphere_ontap_auto_block_fcoe.html"
+    - title: VMFS-iSCSI
+      url: "/vmware/vsphere_ontap_auto_block_iscsi.html"
+    - title: VMFS-NVMe over Fabric을 참조하십시오
+      url: "/vmware/vsphere_ontap_auto_block_nvmeof.html"
+  - title: 기존 파일 스토리지 용량 할당
+    url: "/vmware/vsphere_ontap_auto_file.html"
+    entries:
+    - title: NFS-v3
+      url: "/vmware/vsphere_ontap_auto_file_nfs.html"
+    - title: NFS-v4.1
+      url: "/vmware/vsphere_ontap_auto_file_nfs41.html"
+- title: VMware - 퍼블릭 클라우드
+  url: "/ehc/index.html"
+- title: VMware 하이브리드 멀티 클라우드 사용 사례
+  entries:
+  - title: 사용 사례 개요
+    url: "/ehc/ehc-use-cases.html"
+- title: 가상 데스크톱
+  entries:
+  - title: VDS(가상 데스크톱 서비스)
+    entries:
+    - title: NetApp 가상 데스크톱 서비스 기반의 하이브리드 클라우드 VDI
+      url: "/vdi-vds/hcvdivds_hybrid_cloud_vdi_with_virtual_desktop_service.html"
+      entries:
+      - title: 사용 사례
+        url: "/vdi-vds/hcvdivds_use_cases.html"
+      - title: NetApp 가상 데스크톱 서비스 개요
+        url: "/vdi-vds/hcvdivds_netapp_virtual_desktop_service_overview.html"
+      - title: NetApp HCI 개요
+        url: "/vdi-vds/hcvdivds_netapp_hci_overview.html"
+      - title: NVIDIA 라이센싱
+        url: "/vdi-vds/hcvdivds_nvidia_licensing.html"
+      - title: VDS 배포
+        url: "/vdi-vds/hcvdivds_deployment.html"
+      - title: 하이브리드 클라우드 환경
+        url: "/vdi-vds/hcvdivds_hybrid_cloud_environment.html"
+      - title: Login VSI를 사용한 단일 서버 로드 테스트
+        url: "/vdi-vds/hcvdivds_single_server_load_test_with_login_vsi.html"
+      - title: 관리 포털
+        url: "/vdi-vds/hcvdivds_management_portal.html"
+      - title: 사용자 관리
+        url: "/vdi-vds/hcvdivds_user_management.html"
+      - title: 작업 영역 관리
+        url: "/vdi-vds/hcvdivds_workspace_management.html"
+      - title: 애플리케이션 관리
+        url: "/vdi-vds/hcvdivds_application_management.html"
+      - title: 가상 데스크톱 서비스용 ONTAP 기능
+        url: "/vdi-vds/hcvdivds_why_ontap.html"
+      - title: 데이터 관리
+        url: "/vdi-vds/hcvdivds_data_management.html"
+      - title: 운영 관리
+        url: "/vdi-vds/hcvdivds_operation_management.html"
+      - title: 도구 및 로그
+        url: "/vdi-vds/hcvdivds_tools_and_logs.html"
+      - title: GPU 고려 사항
+        url: "/vdi-vds/hcvdivds_gpu_considerations.html"
+      - title: 솔루션을 제공합니다
+        url: "/vdi-vds/hcvdivds_solutions_for_industry.html"
+      - title: 결론
+        url: "/vdi-vds/hcvdivds_conclusion.html"
+      - title: 추가 정보를 찾을 수 있는 위치
+        url: "/vdi-vds/hcvdivds_where_to_find_additional_information.html"
+  - title: VMware Horizon을 참조하십시오
+    entries:
+    - title: VMware를 통한 최종 사용자 컴퓨팅(설계 가이드)
+      url: "/vmware/nva-1132-design.html"
+    - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(설계 가이드)
+      url: "/vmware/nva-1129-design.html"
+    - title: VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)
+      url: "/vmware/nva-1129-deploy.html"
+    - title: 3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅
+      url: "/vmware/tr-4792.html"
+  - title: FlexPod 데스크톱 가상화 솔루션
+    url: "/vmware/flex-virtual-solutions.html"
+- title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
+  url: "/vmware/vsphere_ontap_asa_overview.html"
+  entries:
+  - title: VMware vSphere용 ONTAP 툴
+    url: "/vmware/vsphere_ontap_asa_otv.html"
+  - title: Cloud Insights
+    url: "/vmware/vsphere_ontap_asa_insights.html"
+- title: 데모 및 자습서
+  entries:
+  - title: 비디오
+    url: "/vmware/vsphere_demos_videos.html"

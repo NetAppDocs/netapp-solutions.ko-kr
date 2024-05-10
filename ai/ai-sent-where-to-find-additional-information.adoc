@@ -46,7 +46,7 @@ https://www.netapp.com/pdf.html?item=/media/7395-tr4811.pdf["https://www.netapp.
 
 * 소매 분야 AI: NVIDIA Riva를 통한 NetApp의 대화형 AI
 +
-https://docs.netapp.com/us-en/netapp-solutions/ai/cainvidia_executive_summary.html["https://docs.netapp.com/us-en/netapp-solutions/ai/cainvidia_executive_summary.html"^]
+link:cainvidia_executive_summary.html["핵심 요약"]
 
 * NetApp ONTAP AI 솔루션 개요
 +

@@ -27,7 +27,9 @@ summary:
 * ** 복제**
 
 
-을 참조하십시오 link:../data-protection["데이터 보호 섹션을 참조하십시오"] 복제 및 백업 및 복구** 옵션에 대해 설명합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/use/clone-apps.html["여기"] ** 복제** 에 대한 자세한 내용을 확인하십시오.
+을 참조하십시오 link:rhhc-sm-data-protection.html["데이터 보호 섹션을 참조하십시오"] 복제 및 백업 및 복구** 옵션에 대해 설명합니다.
+
+을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/use/clone-apps.html["여기"] ** 복제** 에 대한 자세한 내용을 확인하십시오.
 
 
 NOTE: Astra Replication 기능은 Trident CSI(Container Storage Interface)에서만 지원됩니다. 그러나 NAS – 이코노미 및 SAN – 이코노미 동인은 복제를 지원하지 않습니다.

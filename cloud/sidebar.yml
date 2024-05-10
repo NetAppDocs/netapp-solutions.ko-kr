@@ -1,0 +1,7 @@
+---
+section: cloud
+title: 퍼블릭 및 하이브리드 클라우드
+entries:
+- section: ehc
+- section: vmw-sc
+- section: rhhc

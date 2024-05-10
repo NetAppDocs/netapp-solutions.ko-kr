@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vmware/vsphere_ontap_auto_file.html 
+keywords: vSphere, NFS, NFS4.1, NAS, ONTAP tools, VLAN, network interface 
+summary: 이 페이지에서는 VMware vSphere 환경에서 NFS 데이터 저장소를 지원합니다. 
+---
+= ONTAP를 사용한 vSphere 기존 파일 스토리지 용량 할당
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+:scriptsdir: ./../scripts/
+:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
+:firstname: Suresh
+:authorinitials: STT
+:middlename: Thoppay,
+:lastname: TME - Hybrid Cloud Solutions
+:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
+
+
+[role="lead"]
+VMware vSphere는 다음 NFS 프로토콜을 지원하며 두 프로토콜 모두 ONTAP를 지원합니다.
+
+* link:vsphere_ontap_auto_file_nfs.html["NFS 버전 3"]
+* link:vsphere_ontap_auto_file_nfs41.html["NFS 버전 4.1"]
+
+
+올바른 vSphere NFS 버전을 선택하는 데 도움이 필요한 경우 을(를) 확인하십시오 link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8A929FE4-1207-4CC5-A086-7016D73C328F.html++["이 비교 내용은 NFS 클라이언트 버전입니다"].
+
+.참조하십시오
+link:https://docs/netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["vSphere 데이터 저장소 및 프로토콜 기능: NFS"]

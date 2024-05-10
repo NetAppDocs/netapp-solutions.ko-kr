@@ -451,8 +451,6 @@ FSx ONTAP에 미러링된 애플리케이션 데이터를 복구하려면 먼저
 . 복구된 가상 머신과 통신이 다시 설정되었는지 확인합니다.
 
 
-이러한 단계를 완료하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 link:aws-guest-dr-failover.html#snapcenter-database-restore-process["SnapCenter 데이터베이스 복원 프로세스"].
-
 ====
 .2차 Veeam Backup & amp; Replication Server를 구축합니다
 [#deploy-secondary-veeam%collapsible]
@@ -964,9 +962,9 @@ AWS 기반 ONTAP용 FSX는 SnapCenter 및 SyncMirror와 원활하게 통합되�
 
 * 솔루션 설명서 링크
 +
-https://docs.netapp.com/us-en/netapp-solutions/ehc/index.html["VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드"]
+link:index.html["VMware 솔루션을 사용하는 NetApp 하이브리드 멀티 클라우드"]
 
 +
-https://docs.netapp.com/us-en/netapp-solutions/index.html["NetApp 솔루션"]
+link:../index.html["NetApp 솔루션"]
 
 

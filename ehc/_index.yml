@@ -25,7 +25,7 @@ indexpage:
   - title: AWS 기반 NetApp(VMC)
     links:
     - title: VMC를 위한 VMware로 NetApp 하이브리드 멀티 클라우드 실행
-      url: "/index.html"
+      url: "/aws-vmc.html"
     - title: 가상화 환경을 구성합니다
       url: "/aws-setup.html"
     - title: '보충 NFS 데이터 저장소로서의 FSX ONTAP: 개요'
@@ -41,7 +41,7 @@ indexpage:
   - title: Azure 기반 NetApp(AVS)
     links:
     - title: AVS용 VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
-      url: "/index.html"
+      url: "/azure-avs.html"
     - title: 가상화 환경을 구성합니다
       url: "/azure-setup.html"
     - title: '보조 NFS 데이터 저장소로서의 ANF: 개요'
@@ -57,7 +57,7 @@ indexpage:
   - title: Google Cloud Platform의 NetApp(GCVE)
     links:
     - title: GCVE를 위한 VMware의 NetApp 하이브리드 멀티 클라우드
-      url: "/index.html"
+      url: "/gcp-gcve.html"
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
     - title: NetApp CVS를 보조 NFS 데이터 저장소로서 소개합니다

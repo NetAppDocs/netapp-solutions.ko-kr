@@ -70,6 +70,7 @@ keywords: netapp, solutions, blogs
 
 == 컨테이너
 
+[[containers-osv]]
 * OpenShift 가상화:
 +
 ** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/A-Backup-and-Restore-option-for-VM-data-protection-in-OpenShift-Virtualization/ba-p/452279["OpenShift Virtualization의 VM 데이터 보호를 위한 백업 및 복원 옵션"]

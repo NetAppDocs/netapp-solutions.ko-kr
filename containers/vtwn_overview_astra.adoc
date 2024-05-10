@@ -71,7 +71,7 @@ NOTE: 사이트에 각 Tanzu Kubernetes를 설치하여 영구 스토리지용 �
 
 이 솔루션은 Ansible 플레이북을 사용하여 Astra Control Center를 설치하는 자동화된 절차를 설명합니다. Astra Control Center를 설치하기 위한 수동 절차를 찾고 있는 경우 자세한 설치 및 작동 설명서를 따르십시오 link:https://docs.netapp.com/us-en/astra-control-center/index.html["여기"^].
 
-. Astra Control Center를 배포하는 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 있어야 합니다. 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/getting-started.html["여기"] Ubuntu 및 RHEL의 경우
+. Astra Control Center를 배포하는 Ansible 플레이북을 사용하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 있어야 합니다. 절차를 따르십시오 link:../automation/getting-started.html["여기"] Ubuntu 및 RHEL의 경우
 . Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
 +
 [source, cli]

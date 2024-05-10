@@ -88,4 +88,7 @@ image::dwn_image14.jpg[Prod 앱을 복원했습니다]
 
 
 
-이 두 가지 작업을 함께 수행할 경우 일반 비즈니스 운영으로 더 빠르게 되돌릴 수 있습니다. 이 사용 사례를 실제 작동 중인 경우 비디오를 시청하십시오 link:dwn_videos_clone_for_postmortem_and_restore.html["여기"^].
+이 두 가지 작업을 함께 수행할 경우 일반 비즈니스 운영으로 더 빠르게 되돌릴 수 있습니다. 이 사용 사례를 확인하려면 아래 비디오를 시청하십시오.
+
+.NetApp Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 수행합니다
+video::3ae8eb53-eda3-410b-99e8-b01200fa30a8[panopto,width=360]

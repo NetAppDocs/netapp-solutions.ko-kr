@@ -142,7 +142,7 @@ image::automation_ora_asa_iscsi_archit.png[이 이미지는 iSCSI 및 ASM을 사
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
 . NetApp ASA 스토리지 시스템이 설치 및 구성된 것으로 가정합니다. 여기에는 iSCSI 브로드캐스트 도메인, 두 컨트롤러 노드의 LACP 인터페이스 그룹 a0a, 두 컨트롤러 노드의 iSCSI VLAN 포트(a0a-<iscsi-a-vlan-id>, a0a-<iscsi-b-vlan-id>)가 포함됩니다. 다음 링크는 도움이 필요한 경우 자세한 단계별 지침을 제공합니다. link:https://docs.netapp.com/us-en/ontap-systems/asa400/install-detailed-guide.html["자세한 가이드 - ASA A400"^]
-. 최신 버전의 Ansible 및 Git가 설치된 Ansible 컨트롤러 노드로 Linux VM을 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:https://docs.netapp.com/us-en/netapp-solutions/automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^] 섹션 - `Setup the Ansible Control Node for CLI deployments on RHEL / CentOS` 또는 `Setup the Ansible Control Node for CLI deployments on Ubuntu / Debian`.
+. 최신 버전의 Ansible 및 Git가 설치된 Ansible 컨트롤러 노드로 Linux VM을 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:../automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^] 섹션 - `Setup the Ansible Control Node for CLI deployments on RHEL / CentOS` 또는 `Setup the Ansible Control Node for CLI deployments on Ubuntu / Debian`.
 . NetApp Oracle Deployment Automation Toolkit for iSCSI의 복제본을 복제합니다.
 +
 [source, cli]
@@ -496,7 +496,7 @@ image::automation_ora_asa_em_03.png[이 이미지는 Oracle Enterprise Manager E
 
 [%collapsible]
 ====
-TR-4979를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_vmc_guestmount.html#oracle-backup-restore-and-clone-with-snapcenter["게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하게 자가 관리 가능한 Oracle"^] 섹션을 참조하십시오 `Oracle backup, restore, and clone with SnapCenter` SnapCenter 설정 및 데이터베이스 백업, 복원 및 클론 워크플로우의 실행에 대한 자세한 내용을 참조하십시오.
+TR-4979를 참조하십시오 link:aws_ora_fsx_vmc_guestmount.html#oracle-backup-restore-and-clone-with-snapcenter["게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하게 자가 관리 가능한 Oracle"^] 섹션을 참조하십시오 `Oracle backup, restore, and clone with SnapCenter` SnapCenter 설정 및 데이터베이스 백업, 복원 및 클론 워크플로우의 실행에 대한 자세한 내용을 참조하십시오.
 
 ====
 

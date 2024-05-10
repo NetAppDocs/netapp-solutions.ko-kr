@@ -211,7 +211,7 @@ image:aws-fsx-kafka-arch1.png["이 이미지는 FSxN 기반 Kafka 클러스터�
 ==== Openmessage 벤치마킹 구성.
 
 NetApp Cloud Volumes ONTAP에 사용된 것과 동일한 구성을 사용했으며 세부 정보는 다음과 같습니다.
-https://docs.netapp.com/us-en/netapp-solutions/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws.html#architectural-setup[]
+link:kafka-nfs-performance-overview-and-validation-in-AWS.html#constructural-setup
 
 
 

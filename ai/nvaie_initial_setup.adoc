@@ -20,7 +20,7 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 초기 설정
 
 == 필수 구성 요소
 
-이 섹션에 요약된 단계를 수행하기 전에 이미 VMware vSphere 및 NetApp ONTAP를 구축했다고 가정합니다. 을 참조하십시오 link:https://docs.nvidia.com/ai-enterprise/latest/product-support-matrix/index.html["NVIDIA AI 엔터프라이즈 제품 지원 매트릭스"] 지원되는 vSphere 버전에 대한 자세한 내용은 를 참조하십시오. 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/netapp-vmware.html["NetApp 및 VMware 솔루션 설명서"] NetApp ONTAP와 함께 VMware vSphere를 구축하는 방법에 대한 자세한 내용은 를 참조하십시오.
+이 섹션에 요약된 단계를 수행하기 전에 이미 VMware vSphere 및 NetApp ONTAP를 구축했다고 가정합니다. 을 참조하십시오 link:https://docs.nvidia.com/ai-enterprise/latest/product-support-matrix/index.html["NVIDIA AI 엔터프라이즈 제품 지원 매트릭스"] 지원되는 vSphere 버전에 대한 자세한 내용은 를 참조하십시오. 을 참조하십시오 link:../vmware/vmware-on-netapp.html["NetApp 및 VMware 솔루션 설명서"] NetApp ONTAP와 함께 VMware vSphere를 구축하는 방법에 대한 자세한 내용은 를 참조하십시오.
 
 
 

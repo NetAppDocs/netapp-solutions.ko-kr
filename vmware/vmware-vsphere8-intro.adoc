@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmware-vsphere8-intro.html 
+keywords: vSphere, vSphere 8, vSphere 8u1, ONTAP 9.12, interoperability, VMware compatibility 
+summary:  
+---
+= VMware vSphere 8의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+저자: NetApp 솔루션 엔지니어링 Chris Reno
+
+NetApp과 VMware의 기술 통합은 20년 동안 수천 시간의 엔지니어링 시간을 아우르는 오랜 경험을 가지고 있습니다. vSphere 8과 ONTAP 9.12가 등장하면서 두 회사는 가장 까다로운 고객 워크로드도 충족할 수 있는 제품을 공급하고 있습니다. 이러한 제품을 함께 사용하는 솔루션은 사내 또는 퍼블릭 클라우드에서 모두 해결할 수 있는 실질적인 고객 과제를 안고 있습니다. 이러한 제품을 함께 사용하는 경우, 온프레미스 또는 퍼블릭 클라우드에서 고객의 실질적인 문제가 해결됩니다.
+
+제품, 프로토콜, 운영 체제 등의 지원 능력을 확인할 수 있도록 아래 리소스를 검토하십시오.
+
+* 를 클릭합니다 https://mysupport.netapp.com/matrix/#welcome["NetApp 상호 운용성 매트릭스 툴"] (IMT). IMT에는 FC/FCoE, iSCSI, NFS 및 CIFS 구성을 구축하는 데 사용할 수 있는 검증된 구성 요소와 버전이 정의되어 있으며, 추가 플러그인 및 소프트웨어 오퍼링과의 통합도 가능합니다.
+* 를 클릭합니다 https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware 호환성 가이드 를 참조하십시오"]. VMware 호환성 가이드 에는 VMware Infrastructure 및 소프트웨어 제품과의 시스템, I/O, 스토리지/SAN, 백업 호환성 등이 나와 있습니다.
+* https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/"["VMware용 NetApp ONTAP 툴"]. VMware vSphere용 ONTAP 툴은 VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터) 확장을 포함하는 단일 vCenter Server 플러그인입니다. VMware vSphere 8을 완벽하게 지원하는 OTV 9.12는 고객에게 매일 진정한 가치를 제공합니다.
+
+
+
+
+== NetApp ONTAP 및 VMware 지원 릴리즈
+
+
+NOTE: 아래 표에서 링크를 선택할 때 페이지가 구축되도록 하십시오.
+
+[cols="20%, 20%, 20%, 20%, 20%"]
+|===
+
+
+| * VMware vSphere 릴리즈 * | * SAN * | * NFS * | * OTV * | * SnapCenter * 
+
+
+| * vSphere 8 * | https://imt.netapp.com/matrix/imt.jsp?components=105985;&solution=1&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=105985;&solution=976&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=105986;&solution=1777&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=105985;&solution=1517&isHWU&src=IMT["링크"] 
+
+
+| * vSphere 8u1 * | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=1&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=976&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=1777&isHWU&src=IMT["링크"] | https://imt.netapp.com/matrix/imt.jsp?components=110521;&solution=1517&isHWU&src=IMT["링크"] 
+|===
+[cols="20%, 20%, 20%, 20%, 20%"]
+|===
+
+
+| * VMware vSphere 릴리즈 * | * 스토리지 시스템/프로토콜 * | * OTV-SRA * | * OTV – VASA 공급자 * | * VMware vSphere * 용 SnapCenter 플러그인 
+
+
+| * vSphere 8 * | https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&releases=589&FirmwareVersion=ONTAP%209.0,ONTAP%209.1,ONTAP%209.10.1,ONTAP%209.11.1,ONTAP%209.12.1,ONTAP%209.2,ONTAP%209.3,ONTAP%209.4,ONTAP%209.5,ONTAP%209.6,ONTAP%209.7,ONTAP%209.8,ONTAP%209.9,ONTAP%209.9.1%20P3,ONTAP%209.%6012.1&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["링크"] | https://www.vmware.com/resources/compatibility/search.php?deviceCategory=sra&details=1&partner=64&sraName=587&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["링크"] | https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=wcp&productid=55380&vcl=true["링크"] | https://www.vmware.com/resources/compatibility/search.php?deviceCategory=vvols&details=1&partner=64&releases=589&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["링크"] 
+
+
+| * vSphere 8u1 * | https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&releases=652&FirmwareVersion=ONTAP%209.0,ONTAP%209.1,ONTAP%209.10.1,ONTAP%209.11.1,ONTAP%209.12.1,ONTAP%209.2,ONTAP%209.3,ONTAP%209.4,ONTAP%209.5,ONTAP%209.6,ONTAP%209.7,ONTAP%209.8,ONTAP%209.9,ONTAP%209.9.1%20P3,ONTAP%209.%6012.1&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["링크"] | https://www.vmware.com/resources/compatibility/search.php?deviceCategory=sra&details=1&partner=64&sraName=587&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["링크"] | https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=wcp&productid=55380&vcl=true["링크"] | https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=wcp&productid=55380&vcl=true["링크"] 
+|===

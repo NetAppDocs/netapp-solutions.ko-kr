@@ -178,7 +178,7 @@ image:mlops_fsxn_s3_integration_20.png["오류: 새 Jupyter 노트북을 엽니�
 
 . FSxN 프라이빗 S3 버킷에 파일을 업로드하는 해결 방법으로 아래 코드를 사용하십시오.
 포괄적인 코드 예제는 이 노트북을 참조하십시오.
-link:./../media/mlops_fsxn_s3_integration_0.ipynb["fsxn_demo.ipynb 를 참조하십시오"]
+link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/mlops_fsxn_s3_integration_0.ipynb["fsxn_demo.ipynb 를 참조하십시오"]
 +
 [source, python]
 ----

@@ -53,7 +53,7 @@ NOTE: VMware HCX는 마이그레이션이 VM 레벨에 있으므로 모든 데�
 
 NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지원 티켓을 통해 제공되며 추가 비용 없이 지원됩니다.
 
-* 기존 Azure VMware 솔루션 SDDC(소프트웨어 정의 데이터 센터)를 사용하거나 이를 사용하여 프라이빗 클라우드를 생성합니다 https://docs.netapp.com/us-en/netapp-solutions/ehc/azure-setup.html["NetApp 링크"^] 또는 이 https://docs.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal["Microsoft 링크"^].
+* 기존 Azure VMware 솔루션 SDDC(소프트웨어 정의 데이터 센터)를 사용하거나 이를 사용하여 프라이빗 클라우드를 생성합니다 link:azure-setup.html["NetApp 링크"^] 또는 이 https://docs.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal["Microsoft 링크"^].
 * 사내 VMware vSphere 지원 데이터 센터에서 VM 및 관련 데이터를 마이그레이션하려면 데이터 센터에서 SDDC 환경으로 네트워크를 연결해야 합니다. 워크로드를 마이그레이션하기 전에 https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud["사이트 간 VPN 또는 Express 라우트 전역 연결 연결을 설정합니다"^] 데이터 관리 및 보호
 * 사내 VMware vCenter Server 환경에서 Azure VMware Solution 프라이빗 클라우드로 가는 네트워크 경로는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
 * 필수 를 확인하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다. 프라이빗 클라우드에서 vMotion 네트워크의 라우팅은 기본적으로 구성됩니다.

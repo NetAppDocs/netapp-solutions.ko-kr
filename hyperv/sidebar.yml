@@ -1,0 +1,17 @@
+---
+section: hyperv
+title: Hyper-V 가상화
+url: "/hyperv/index.html"
+entries:
+- title: 시작하기
+  entries:
+  - title: 여기에 제목을 입력합니다
+    url: "../about.html"
+- title: Hyper-V 가상화
+  entries:
+  - title: NetApp 스토리지에 Microsoft Hyper-V 구축
+    url: hyperv-deploy.html
+- title: 추가 리소스
+  entries:
+  - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례
+    url: https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html

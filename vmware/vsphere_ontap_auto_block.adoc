@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: vmware/vsphere_ontap_auto_block.html 
+keywords: vSphere, datastore, VMFS, FC, NVMe/FC, iSER, iSCSI, FCoE,SAN, ONTAP tools 
+summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP 스토리지 iSCSI VMFS 데이터 저장소를 구축하는 단계를 제공합니다. 
+---
+= ONTAP를 사용한 vSphere 기존 블록 스토리지 프로비저닝
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+:scriptsdir: ./../scripts/
+:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
+:firstname: Suresh
+:authorinitials: STT
+:middlename: Thoppay,
+:lastname: TME - Hybrid Cloud Solutions
+:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
+
+
+[role="lead"]
+VMware vSphere는 ONTAP SAN 프로토콜이 지원되는 다음 VMFS 데이터 저장소 옵션을 지원합니다.
+
+[cols="70%, 30%"]
+|===
+| VMFS 데이터 저장소 옵션 | ONTAP SAN 프로토콜 지원 
+
+
+ a| 
+link:vsphere_ontap_auto_block_fc.html["파이버 채널(FC)"]
+| 예 
+
+
+ a| 
+link:vsphere_ontap_auto_block_fcoe.html["FCoE(Fibre Channel over Ethernet)"]
+| 예 
+
+
+ a| 
+link:vsphere_ontap_auto_block_iscsi.html["iSCSI"]
+| 예 
+
+
+| RDMA용 iSCSI 확장(iSER) | 아니요 
+
+
+ a| 
+link:vsphere_ontap_auto_block_nvmeof.html["NVMe over Fabric 및 FC(NVMe/FC)"]
+| 예 
+
+
+| RDMA over Converged Ethernet(NVMe/RoCE)을 통한 NVMe over Fabric | 아니요 
+|===
+
+NOTE: iSER 또는 NVMe/RoCE VMFS가 필요한 경우 SANtricity 기반 스토리지 시스템을 확인하십시오.

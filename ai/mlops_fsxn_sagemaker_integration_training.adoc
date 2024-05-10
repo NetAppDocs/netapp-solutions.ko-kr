@@ -166,7 +166,7 @@ s3_client: boto3.client = boto3.resource(
 bucket = s3_client.Bucket(bucket_name)
 # --- End integrating SageMaker with FSXN ---
 ----
-SageMaker에서 FSxN의 데이터를 읽으려면 S3 프로토콜을 사용하여 FSxN 스토리지를 가리키는 처리기가 만들어집니다. 따라서 FSxN을 전용 S3 버킷으로 처리할 수 있습니다. 핸들러 구성에는 FSxN SVM의 IP 주소, 버킷 이름 및 필요한 자격 증명을 지정하는 작업이 포함됩니다. 이러한 구성 항목을 얻는 방법에 대한 자세한 설명은 의 문서를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/ai/mlops_fsxn_s3_integration.html["1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"].
+SageMaker에서 FSxN의 데이터를 읽으려면 S3 프로토콜을 사용하여 FSxN 스토리지를 가리키는 처리기가 만들어집니다. 따라서 FSxN을 전용 S3 버킷으로 처리할 수 있습니다. 핸들러 구성에는 FSxN SVM의 IP 주소, 버킷 이름 및 필요한 자격 증명을 지정하는 작업이 포함됩니다. 이러한 구성 항목을 얻는 방법에 대한 자세한 설명은 의 문서를 참조하십시오 link:mlops_fsxn_s3_integration.html["1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"].
 
 위에서 언급한 예제에서 버킷 객체는 PyTorch 데이터 집합 객체를 인스턴스화하는 데 사용됩니다. 데이터세트 객체에 대해서는 다음 섹션에서 자세히 설명합니다.
 

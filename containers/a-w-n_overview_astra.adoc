@@ -279,7 +279,7 @@ image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
 --
 .자동화 [Ansible]
 --
-. Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 절차를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/automation/getting-started.html["여기"] Ubuntu 및 RHEL의 경우
+. Ansible 플레이북을 사용하여 Astra Control Center를 배포하려면 Ansible이 설치된 Ubuntu/RHEL 시스템이 필요합니다. 절차를 따르십시오 link:../automation/getting-started.html["여기"] Ubuntu 및 RHEL의 경우
 . Ansible 콘텐츠를 호스팅하는 GitHub 저장소의 클론을 생성합니다.
 +
 [source, cli]

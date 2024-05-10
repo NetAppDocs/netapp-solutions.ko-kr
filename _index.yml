@@ -18,26 +18,34 @@ indexpage:
       url: videos.html
     - title: 법적 고지
       url: legal-notices.html
-  - title: 솔루션 랜딩 페이지
+  - title: 가상화 솔루션
     links:
-    - title: 인공 지능
-      url: ai/index.html
-    - title: 컨테이너
-      url: containers/index.html
-    - title: 엔터프라이즈 데이터베이스
-      url: databases/index.html
-    - title: 최신 데이터 분석
-      url: data-analytics/index.html
+    - title: VMware 가상화
+      url: vmware/index.html
+    - title: Hyper-V 가상화
+      url: hyperv/index.html
+    - title: OpenShift 가상화
+      url: osv/index.html
+  - title: 클라우드 및 하이브리드 클라우드 솔루션
+    links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
       url: ehc/index.html
     - title: Red Hat을 사용하는 NetApp 하이브리드 멀티 클라우드
       url: rhhc/index.html
     - title: VMware Sovereign 클라우드
       url: vmw-sc/index.html
+  - title: AI 및 코어 인프라 솔루션
+    links:
+    - title: 인공 지능
+      url: ai/index.html
+    - title: 최신 데이터 분석
+      url: data-analytics/index.html
+    - title: 컨테이너
+      url: containers/index.html
+    - title: 데이터베이스를 지원합니다
+      url: databases/index.html
     - title: SAP 및 SAP HANA
       url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
-    - title: 포함되었습니다
-      url: virtualization/index.html
   - title: 솔루션 자동화
     links:
     - title: 소개

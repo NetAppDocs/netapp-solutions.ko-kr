@@ -65,8 +65,8 @@ AWS S3를 데이터베이스 이동 및 마이그레이션을 위한 스테이�
 
 먼저, 사내에서 마이그레이션할 PDB를 호스팅할 충분한 스토리지를 가진 AWS FSx/EC2에서 CDB를 생성합니다. 여러 온프레미스 PDB를 한 번에 하나씩 재배치할 수 있습니다.
 
-. 멀티 테넌트 PDB/CDB 모델이 아닌 단일 인스턴스에 온-프레미스 데이터베이스가 배포된 경우 의 지침을 따릅니다 link:https://docs.netapp.com/us-en/netapp-solutions/databases/azure_ora_nfile_migration.html#converting-a-single-instance-non-cdb-to-a-pdb-in-a-multitenant-cdb["멀티 테넌트 CDB에서 단일 인스턴스 비 CDB를 PDB로 변환합니다"^] 단일 인스턴스를 멀티 테넌트 PDB/CDB로 변환합니다. 그런 다음 다음 다음 단계에 따라 변환된 PDB를 AWS FSx/EC2에서 CDB로 마이그레이션합니다.
-. 멀티 테넌트 PDB/CDB 모델에 온-프레미스 데이터베이스가 이미 배포된 경우 의 지침을 따릅니다 link:https://docs.netapp.com/us-en/netapp-solutions/databases/azure_ora_nfile_migration.html#migrate-on-premises-oracle-databases-to-azure-with-pdb-relocation["PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 클라우드로 마이그레이션합니다"^] 마이그레이션을 수행합니다.
+. 멀티 테넌트 PDB/CDB 모델이 아닌 단일 인스턴스에 온-프레미스 데이터베이스가 배포된 경우 의 지침을 따릅니다 link:azure_ora_nfile_migration.html#converting-a-single-instance-non-cdb-to-a-pdb-in-a-multitenant-cdb["멀티 테넌트 CDB에서 단일 인스턴스 비 CDB를 PDB로 변환합니다"^] 단일 인스턴스를 멀티 테넌트 PDB/CDB로 변환합니다. 그런 다음 다음 다음 단계에 따라 변환된 PDB를 AWS FSx/EC2에서 CDB로 마이그레이션합니다.
+. 멀티 테넌트 PDB/CDB 모델에 온-프레미스 데이터베이스가 이미 배포된 경우 의 지침을 따릅니다 link:azure_ora_nfile_migration.html#migrate-on-premises-oracle-databases-to-azure-with-pdb-relocation["PDB 재배치를 통해 온프레미스 Oracle 데이터베이스를 클라우드로 마이그레이션합니다"^] 마이그레이션을 수행합니다.
 
 
 다음 비디오에서는 최대 가용성과 함께 PDB 재배치를 사용하여 Oracle 데이터베이스(PDB)를 FSx/EC2로 마이그레이션하는 방법을 보여 줍니다.

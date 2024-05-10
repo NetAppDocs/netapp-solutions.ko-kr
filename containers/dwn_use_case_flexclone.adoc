@@ -129,4 +129,7 @@ image::Astra-DevOps-UC3-ClonedApp.png[복제된 앱 이미지]
 . 그런 다음, 사용자가 애플리케이션이 배포된 Kubernetes 환경에 로그인하여 애플리케이션이 새 IP 주소로 표시되는지 확인하고 개발 작업을 시작할 수 있습니다.
 
 
-이 사용 사례 데모와 응용 프로그램 업그레이드 예제는 를 참조하십시오 link:dwn_videos_astra_control_flexclone.html["여기"^].
+이 사용 사례에 대한 데모와 응용 프로그램 업그레이드의 예는 아래 비디오를 참조하십시오.
+
+.Astra Control과 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오
+video::26b7ea00-9eda-4864-80ab-b01200fa13ac[panopto,width=360]

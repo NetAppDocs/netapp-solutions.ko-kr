@@ -29,4 +29,4 @@ Oracle 데이터베이스 구현 및 데이터 보호에 대한 테스트 검증
 
 image:db_ora_azure_anf_architecture2.PNG["이 이미지는 VNET 피어링을 사용하는 단일 Azure VM의 구성을 보여 주어 두 개의 개별 가상 네트워크를 만듭니다."]
 
-Azure Oracle 환경은 데이터베이스 구축, 백업, 복구 및 데이터베이스 마이그레이션을 위해 NetApp에서 제공하는 툴 키트를 사용하여 자동화를 위해 Ansible 컨트롤러 노드를 사용하여 관리할 수 있습니다. Oracle Azure VM 인스턴스 운영 체제 커널 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 수행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 툴킷을 손쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 수행할 수 있습니다. CLI Ansible 컨트롤러를 설정하는 데 도움이 필요한 경우 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/automation/automation_introduction.html["NetApp 솔루션 자동화"^] 시작하십시오.
+Azure Oracle 환경은 데이터베이스 구축, 백업, 복구 및 데이터베이스 마이그레이션을 위해 NetApp에서 제공하는 툴 키트를 사용하여 자동화를 위해 Ansible 컨트롤러 노드를 사용하여 관리할 수 있습니다. Oracle Azure VM 인스턴스 운영 체제 커널 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 수행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 툴킷을 손쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 수행할 수 있습니다. CLI Ansible 컨트롤러를 설정하는 데 도움이 필요한 경우 을 참조하십시오 link:../automation/automation_introduction.html["NetApp 솔루션 자동화"^] 시작하십시오.

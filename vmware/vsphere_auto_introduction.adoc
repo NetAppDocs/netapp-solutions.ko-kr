@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: vmware/vsphere_auto_introduction.html 
+keywords: vSphere, cloud, hybrid cloud, AWS, Azure, Google cloud, snapmirror cloud, cloud backup service, BlueXP Copy and Sync, FabricPool, ONTAP 
+summary: 이 페이지에서는 VMware vSphere 환경에서 기본 ONTAP 기능을 자동화할 때의 이점에 대해 설명합니다. 
+---
+= ONTAP 및 vSphere 자동화 소개
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== VMware 자동화
+
+자동화는 VMware ESX의 첫 날부터 VMware 환경을 관리하는 데 있어 필수적인 요소입니다. 코드로 인프라를 구축하고 프라이빗 클라우드 운영으로 사례를 확장하는 기능은 확장, 유연성, 셀프 프로비저닝 및 효율성에 관한 문제를 해결하는 데 도움이 됩니다.
+
+자동화는 다음 범주로 구성할 수 있습니다.
+
+* * 가상 인프라 구축 *
+* * 게스트 시스템 작동 *
+* * 클라우드 운영 *
+
+
+관리자는 인프라 자동화와 관련하여 다양한 옵션을 사용할 수 있습니다. 호스트 프로필 등의 기본 vSphere 기능 또는 가상 머신에 대한 사용자 지정 사양을 VMware 소프트웨어 구성 요소, 운영 체제 및 NetApp 스토리지 시스템의 사용 가능한 API에 사용할 수 있는지 여부와 관계없이, 관련 설명서와 지침을 참조할 수 있습니다.
+
+Data ONTAP 8.0.1 이상은 ESX 호스트가 ESX 4.1 이상을 실행하는 경우 VAAI(VMware vSphere APIs for Array Integration) 기능을 지원합니다. VAAI는 VMware vSphere ESXi 호스트와 스토리지 디바이스 간의 통신을 지원하는 API 세트입니다. 이러한 기능은 ESX 호스트에서 스토리지 시스템으로 작업을 오프로드하고 네트워크 처리량을 늘리는 데 도움이 됩니다. ESX 호스트는 올바른 환경에서 자동으로 기능을 활성화합니다. VAAI 카운터에 포함된 통계를 확인하여 시스템에서 VAAI 기능을 사용하는 범위를 결정할 수 있습니다.
+
+VMware 환경 구축을 자동화하는 가장 일반적인 시작 지점은 프로비저닝 블록 또는 파일 기반 데이터 저장소입니다. 해당 자동화를 개발하기 전에 실제 작업의 요구 사항을 매핑하는 것이 중요합니다.
+
+VMware 환경 자동화에 대한 자세한 내용은 다음 리소스를 참조하십시오.
+
+* https://netapp.io/configuration-management-and-automation/["NetApp 펍"^]. NetApp 구성 관리 및 자동화:
+* https://galaxy.ansible.com/community/vmware["VMware용 Ansible Galaxy 커뮤니티"^]. VMware를 위한 Ansible 리소스 모음입니다.
+* https://code.vmware.com/resources["VMware {code} 리소스"^]. 포럼, 설계 표준, 샘플 코드 및 개발자 도구를 비롯하여 소프트웨어 정의 데이터 센터를 위한 솔루션을 설계하는 데 필요한 리소스입니다.
+

@@ -1,0 +1,22 @@
+---
+indexpage:
+  title: NetApp Hyper-V 가상화 솔루션
+  summary: NetApp Hyper-V 가상화 솔루션은 Hyper-V를 기반으로 가상화를 위한 NetApp 스토리지의 기능을 보여 주는 전략적
+    및 기술 기능 집합입니다
+  lead: NetApp Hyper-V 가상화 솔루션은 Hyper-V를 기반으로 가상화를 위한 NetApp 스토리지의 기능을 보여 주는 전략적 및
+    기술 기능 집합입니다
+  tiles:
+  - title: 시작하기
+    links:
+    - title: Windows 10의 Hyper-V 소개
+      url: https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
+    - title: Hyper-V 기술 개요
+      url: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview
+  - title: Hyper-V 가상화
+    links:
+    - title: NetApp 스토리지에 Microsoft Hyper-V 구축
+      url: hyperv-deploy.html
+  - title: 추가 리소스
+    links:
+    - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html

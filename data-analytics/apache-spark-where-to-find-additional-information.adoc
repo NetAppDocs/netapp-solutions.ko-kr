@@ -52,13 +52,11 @@ https://www.infoq.com/articles/apache-spark-streaming["https://www.infoq.com/art
 +
 https://www.netapp.com/media/16420-tr-3969.pdf["https://www.netapp.com/media/16420-tr-3969.pdf"^]
 
-* NetApp AI와 고객 커뮤니케이션을 통한 감정 분석
-+
-https://docs.netapp.com/us-en/netapp-solutions/pdfs/sidebar/Sentiment_analysis_with_NetApp_AI.pdf["https://docs.netapp.com/us-en/netapp-solutions/pdfs/sidebar/Sentiment_analysis_with_NetApp_AI.pdf"^]
+
 
 * NetApp의 최신 데이터 분석 솔루션
 +
-https://docs.netapp.com/us-en/netapp-solutions/data-analytics/index.html["https://docs.netapp.com/us-en/netapp-solutions/data-analytics/index.html"^]
+link:index.html["데이터 분석 솔루션"]
 
 * SnapMirror를 참조하십시오
 +

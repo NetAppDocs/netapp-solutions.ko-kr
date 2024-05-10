@@ -51,10 +51,10 @@ VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 
 
 HCX 활성화 및 배포를 진행하기 전에 다음 설치 단계를 완료해야 합니다.
 
-. 기존 VMC SDDC를 사용하거나 다음 새 SDDC를 생성합니다 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-setup.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-EF198D55-03E3-44D1-AC48-6E2ABA31FF02.html["VMware 링크"^].
+. 기존 VMC SDDC를 사용하거나 다음 새 SDDC를 생성합니다 link:aws-setup.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-EF198D55-03E3-44D1-AC48-6E2ABA31FF02.html["VMware 링크"^].
 . 사내 vCenter 환경에서 VMC SDDC로의 네트워크 경로는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
 . 필수 를 확인하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다.
-. ONTAP NFS 볼륨용 FSx는 VMC SDDC에 보조 데이터 저장소로 마운트되어야 합니다.  NFS 데이터 저장소를 적절한 클러스터에 연결하려면 여기에 설명된 단계를 따르십시오 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-native-overview.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware 링크"^].
+. ONTAP NFS 볼륨용 FSx는 VMC SDDC에 보조 데이터 저장소로 마운트되어야 합니다.  NFS 데이터 저장소를 적절한 클러스터에 연결하려면 여기에 설명된 단계를 따르십시오 link:aws-native-overview.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware 링크"^].
 
 
 ====

@@ -103,8 +103,8 @@ image::azure_ora_anf_vldb_architecture.png[이 이미지는 ANF를 사용한 Azu
 
 VNet 내의 Azure 클라우드 환경에 Oracle VLDB를 이미 구축한 것으로 가정합니다. Azure에서의 Oracle 구축에 대한 도움이 필요한 경우 다음 기술 보고서를 참조하여 도움을 받으십시오.
 
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/automation_ora_anf_nfs.html["NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축"^]
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/azure_ora_nfile_usecase.html#overview["Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호"^]
+* link:automation_ora_anf_nfs.html["NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축"^]
+* link:azure_ora_nfile_usecase.html#overview["Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호"^]
 
 
 Oracle VLDB는 ANF 스토리지 또는 Azure 클라우드 에코시스템 내에서 선택한 다른 스토리지에서 실행될 수 있습니다. 다음 섹션에서는 ANF 스토리지에서 NFS 마운트에 스테이징하는 Oracle VLDB의 이미지 복사본에 RMAN 증분 병합을 설정하기 위한 단계별 구축 절차를 제공합니다.

@@ -50,7 +50,7 @@ entries:
   - title: GCP/GCVE용 솔루션
     url: "/ehc/gcp-solutions.html"
 - title: NetApp for AWS/VMC
-  url: "/ehc/index.html"
+  url: "/ehc/aws-vmc.html"
   entries:
   - title: AWS/VMC에서 워크로드 보호
     entries:
@@ -69,7 +69,7 @@ entries:
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/aws-regions.html"
 - title: NetApp for Azure/AVS
-  url: "/ehc/index.html"
+  url: "/ehc/azure-avs.html"
   entries:
   - title: Azure/AVS에서 워크로드 보호
     entries:
@@ -89,7 +89,7 @@ entries:
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/azure-regions.html"
 - title: NetApp for GCP/GCVE
-  url: "/ehc/index.html"
+  url: "/ehc/gcp-gcve.html"
   entries:
   - title: GCP/GCVE에서 워크로드 보호
     entries:

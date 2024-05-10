@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmware-on-netapp.html 
+keywords: netapp, vmware, getting, started 
+summary:  
+---
+= NetApp 기반의 VMware: 모든 워크로드, 애플리케이션, 장소 등 유형에 구애받지 않습니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp ONTAP은 온프레미스 및 퍼블릭 클라우드 환경 모두에서 주요 VMware 제품을 지원합니다.
+
+
+
+== VMware용 NetApp 솔루션
+
+NetApp는 NetApp와 VMware의 통합을 강조하는 다양한 솔루션을 제공합니다.  VMware 제품을 클릭하여 해당 제품에 대한 NetApp 솔루션을 살펴보십시오.
+
+[cols="33%, 33%, 33%"]
+|===
+
+
+| link:vmware-glossary.html#vsphere["* VMware *"]
+* vSphere * | link:vmware-glossary.html#vmc["* VMware *"]
+* 클라우드 서비스 * | link:vmware-glossary.html#tanzu["* VMware *"]
+* 탄주 * 
+
+
+| link:vmware-glossary.html#aria["* VMware *"]
+* 아리아 * | link:vmware-glossary.html#vvols["* VMware *"]
+* 가상 볼륨 *
+* (VVOL) * | link:vmware-glossary.html#vcf["* VMware *"]
+* 클라우드 기반 * 
+
+
+| link:vmware-glossary.html#srm["* VMware *"]
+* 사이트 복구 *
+* 관리자 * | image:NTAP_BIG.png["너비 = 120"] | link:vmware-glossary.html#hcx["* VMware *"]
+* HCX * 
+|===

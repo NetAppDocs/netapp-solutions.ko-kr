@@ -77,7 +77,7 @@ E-Series와 StorageGRID 검증 모두에 Hadoop 복제 계수 2를 사용했습�
 
 == 재무 정서 분석
 
-발표했습니다 https://docs.netapp.com/us-en/netapp-solutions/ai/ai-sent-support-center-analytics.html["TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석"^]즉, 포괄적인 대화형 AI 파이프라인은 를 사용하여 구축되었습니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^], AFF 스토리지 및 NVIDIA DGX 시스템. 파이프라인은 DataOps 툴킷을 활용하여 배치 오디오 신호 처리, 자동 음성 인식(ASR), 전송 학습 및 정서 분석을 수행합니다. https://developer.nvidia.com/riva["NVIDIA Riva SDK를 참조하십시오"^], 및 https://developer.nvidia.com/tao["Tao 프레임워크"^]. 정서 분석 활용 사례를 금융 서비스 산업으로 확대하면서 스파르크LP 워크플로를 구축하고, 명명된 엔터티 인식 등의 다양한 NLP 작업을 위한 BERT 모델을 3개 로드했으며, NASDAQ 상위 10개 기업의 분기별 수익 통화에 대해 문장 수준의 감정을 얻었습니다.
+발표했습니다 link:../ai/ai-sent-support-center-analytics.html["TR-4910: NetApp AI를 통한 고객 커뮤니케이션의 감정 분석"^]즉, 포괄적인 대화형 AI 파이프라인은 를 사용하여 구축되었습니다 https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^], AFF 스토리지 및 NVIDIA DGX 시스템. 파이프라인은 DataOps 툴킷을 활용하여 배치 오디오 신호 처리, 자동 음성 인식(ASR), 전송 학습 및 정서 분석을 수행합니다. https://developer.nvidia.com/riva["NVIDIA Riva SDK를 참조하십시오"^], 및 https://developer.nvidia.com/tao["Tao 프레임워크"^]. 정서 분석 활용 사례를 금융 서비스 산업으로 확대하면서 스파르크LP 워크플로를 구축하고, 명명된 엔터티 인식 등의 다양한 NLP 작업을 위한 BERT 모델을 3개 로드했으며, NASDAQ 상위 10개 기업의 분기별 수익 통화에 대해 문장 수준의 감정을 얻었습니다.
 
 다음 스크립트의 entiment_analysis_spark. py는 다음 표와 같이 FinBERT 모델을 사용하여 HDFS에서 전사체를 처리하고 양의, 중성적이고, 부정적인 정서 수를 산출합니다.
 

@@ -123,9 +123,9 @@ image::aws_ora_fsx_data_guard_architecture.png[이 이미지는 FSxN이 포함�
 
 Data Guard를 설정하기 위한 시작점으로 VPC 내의 AWS EC2 환경에 기본 Oracle 데이터베이스가 이미 구축되어 있다고 가정합니다. 기본 데이터베이스는 스토리지 관리를 위해 Oracle ASM을 사용하여 구축됩니다.  Oracle 데이터 파일, 로그 파일 및 제어 파일 등을 위해 2개의 ASM 디스크 그룹 - + 데이터 및 + 로그가 생성됩니다 AWS에서 ASM을 사용한 Oracle 배포에 대한 자세한 내용은 다음 기술 보고서를 참조하십시오.
 
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_deploy_intro.html["EC2 및 FSx Best Practices에 Oracle Database 구축"^]
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_iscsi_asm.html["iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^]
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_nfs_asm.html["NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c"^]
+* link:aws_ora_fsx_ec2_deploy_intro.html["EC2 및 FSx Best Practices에 Oracle Database 구축"^]
+* link:aws_ora_fsx_ec2_iscsi_asm.html["iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^]
+* link:aws_ora_fsx_ec2_nfs_asm.html["NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c"^]
 
 
 기본 Oracle 데이터베이스는 FSx ONTAP 또는 AWS EC2 에코시스템 내의 선택한 다른 스토리지에서 실행될 수 있습니다. 다음 섹션에서는 ASM 스토리지가 있는 기본 EC2 DB 인스턴스와 ASM 스토리지가 있는 대기 EC2 DB 인스턴스 간에 Oracle Data Guard를 설정하는 단계별 구축 절차를 제공합니다.
@@ -406,7 +406,7 @@ srvctl start database -d db1
 Oracle Data Guard를 사용하려면 운영 EC2 DB 인스턴스와 일치하도록 대기 EC2 DB 인스턴스의 패치 세트를 포함한 Oracle 소프트웨어 스택과 OS 커널 구성이 필요합니다. 손쉬운 관리와 간소화를 위해 대기 EC2 DB 인스턴스 데이터베이스 스토리지 구성은 ASM 디스크 그룹의 이름, 수 및 크기 등 기본 EC2 DB 인스턴스와 이상적으로 일치해야 합니다. 다음은 Data Guard용 Standby EC2 DB 인스턴스를 설정하는 세부 절차입니다. 모든 명령은 Oracle 소유자 사용자 ID로 실행해야 합니다.
 
 . 먼저 운영 EC2 인스턴스에서 운영 데이터베이스의 구성을 검토합니다. 이 데모에서는 독립 실행형 재시작 구성에서 두 개의 ASM 디스크 그룹 + 데이터 및 + 로그를 사용하여 운영 EC2 DB 인스턴스에 db1이라는 기본 Oracle 데이터베이스를 설정했습니다. 기본 ASM 디스크 그룹은 EC2 에코시스템 내의 모든 유형의 스토리지에 있을 수 있습니다.
-. 문서의 절차를 따릅니다 link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_iscsi_asm.html["TR-4965: iSCSI/ASM을 사용하는 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^] 기본 데이터베이스와 일치하도록 대기 EC2 DB 인스턴스에 그리드 및 Oracle을 설치하고 구성합니다. 데이터베이스 스토리지는 스토리지 용량이 운영 EC2 DB 인스턴스와 동일한 FSx ONTAP의 대기 EC2 DB 인스턴스에 프로비저닝하고 할당해야 합니다.
+. 문서의 절차를 따릅니다 link:aws_ora_fsx_ec2_iscsi_asm.html["TR-4965: iSCSI/ASM을 사용하는 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^] 기본 데이터베이스와 일치하도록 대기 EC2 DB 인스턴스에 그리드 및 Oracle을 설치하고 구성합니다. 데이터베이스 스토리지는 스토리지 용량이 운영 EC2 DB 인스턴스와 동일한 FSx ONTAP의 대기 EC2 DB 인스턴스에 프로비저닝하고 할당해야 합니다.
 +
 
 NOTE: 의 10단계에서 멈춥니다 `Oracle database installation` 섹션을 참조하십시오. 대기 데이터베이스는 dbca 데이터베이스 복제 기능을 사용하여 기본 데이터베이스에서 인스턴스화됩니다.
@@ -800,7 +800,7 @@ DGMGRL>
 ====
 Data Guard의 AWS FSx ONTAP에서 대기 데이터베이스를 스테이징할 때의 주요 이점은 최소한의 추가 스토리지 투자로 다른 많은 사용 사례를 지원할 수 있도록 FlexCloned를 사용할 수 있다는 것입니다. 다음 섹션에서는 개발, 테스트, 보고서 등과 같은 다른 목적으로 FSx ONTAP에서 마운트된 복구 대기 데이터베이스 볼륨을 스냅샷하고 복제하는 방법을 보여 줍니다. NetApp SnapCenter 도구를 사용합니다.
 
-다음은 SnapCenter를 사용하여 Data Guard의 관리되는 물리적 대기 데이터베이스에서 읽기/쓰기 데이터베이스를 복제하는 고급 절차입니다. SnapCenter 설정 및 구성 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/databases/hybrid_dbops_snapcenter_usecases.html["SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션"^] Oracle 섹션 재지정.
+다음은 SnapCenter를 사용하여 Data Guard의 관리되는 물리적 대기 데이터베이스에서 읽기/쓰기 데이터베이스를 복제하는 고급 절차입니다. SnapCenter 설정 및 구성 방법에 대한 자세한 내용은 을 참조하십시오 link:hybrid_dbops_snapcenter_usecases.html["SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션"^] Oracle 섹션 재지정.
 
 . 먼저 테스트 테이블을 만들고 기본 데이터베이스의 테스트 테이블에 행을 삽입합니다. 그런 다음 트랜잭션이 대기 상태로 전환되는지 확인하고 마지막으로 클론을 생성합니다.
 +
@@ -993,7 +993,7 @@ link:https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/index.h
 
 * WP-7357: EC2에서 Oracle 데이터베이스 구축 및 FSx 모범 사례
 +
-link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_deploy_intro.html["https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_deploy_intro.html"^]
+link:aws_ora_fsx_ec2_deploy_intro.html["소개"]
 
 * NetApp ONTAP용 Amazon FSx
 +

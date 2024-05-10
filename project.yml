@@ -14,23 +14,15 @@ sidebar:
   - title: NetApp 솔루션 설명서
     url: index.html
   - section: ai
-  - section: containers
-  - section: data-access
-  - title: 엔터프라이즈 애플리케이션
-    entries:
-    - title: SAP SAP HANA를 참조하십시오
-      url: https://docs.netapp.com/us-en/netapp-solutions-sap/
-  - section: databases
   - section: data-analytics
-  - section: ehc
-  - section: vmw-sc
-  - section: rhhc
+  - section: cloud
   - section: virtualization
-  - section: automation
+  - section: containers
+  - section: databases
+  - title: SAP SAP HANA를 참조하십시오
+    url: https://docs.netapp.com/us-en/netapp-solutions-sap/
   - title: FlexPod 솔루션
     url: https://docs.netapp.com/us-en/flexpod/
-  - title: 레거시 NetApp HCI 솔루션
-    url: https://docs.netapp.com/us-en/hci-solutions/
   - title: Change Log(로그 변경)
     url: change-log-display.html
   - title: NetApp 솔루션 정보

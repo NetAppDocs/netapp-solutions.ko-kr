@@ -107,9 +107,9 @@ image::aws_ora_fsx_ec2_vldb_architecture.png[이 이미지는 FSxN을 사용하�
 
 VPC 내에서 AWS EC2 환경에 Oracle VLDB를 이미 구축한 것으로 가정합니다. AWS에서의 Oracle 구축에 대한 도움이 필요한 경우 다음 기술 보고서에서 도움말을 참조하십시오.
 
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_deploy_intro.html["EC2 및 FSx Best Practices에 Oracle Database 구축"^]
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_iscsi_asm.html["iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^]
-* link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_ora_fsx_ec2_nfs_asm.html["NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c"^]
+* link:aws_ora_fsx_ec2_deploy_intro.html["EC2 및 FSx Best Practices에 Oracle Database 구축"^]
+* link:aws_ora_fsx_ec2_iscsi_asm.html["iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호"^]
+* link:aws_ora_fsx_ec2_nfs_asm.html["NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c"^]
 
 
 Oracle VLDB는 FSx ONTAP 또는 AWS EC2 에코시스템 내에서 선택 가능한 다른 스토리지에서 실행될 수 있습니다. 다음 섹션에서는 AWS FSx ONTAP 스토리지에서 NFS 마운트에 스테이징되는 Oracle VLDB의 이미지 복제본에 RMAN 증분 병합을 설정하는 단계별 구축 절차를 제공합니다.
@@ -999,7 +999,7 @@ RMAN> @rman_bkup_merge.cmd
 . AWS EC2 콘솔을 통해 OS와 버전이 동일한 새 EC2 DB 인스턴스 호스트 ora_02 를 사용합니다. 운영 EC2 DB 서버 호스트와 동일한 패치를 사용하여 운영 체제 커널 을 구성하고, Oracle은 RPM을 사전 설치하고, 호스트에 스왑 공간을 추가합니다. 소프트웨어만 제공하는 운영 EC2 DB 서버 호스트와 동일한 버전의 Oracle 패치를 설치합니다. 아래 링크에서 제공되는 NetApp 자동화 툴킷을 사용하여 이러한 작업을 자동화할 수 있습니다.
 +
 툴킷: link:https://github.com/NetApp-Automation/na_oracle19c_deploy["NA_oracle19c_deploy 를 선택합니다"^]
-설명서: link:https://docs.netapp.com/us-en/netapp-solutions/databases/marketing_overview.html#awxtower-deployments["NFS에서 ONTAP용 Oracle19c의 자동 배포"^]
+설명서: link:marketing_overview.html#awxtower-deployments["NFS에서 ONTAP용 Oracle19c의 자동 배포"^]
 
 . oratab, oraInst.loc 및 Oracle user.bash_profile과 같은 Oracle 환경을 운영 EC2 DB 인스턴스 호스트 ora_01에 맞게 구성합니다. 이러한 파일을 FSxN NFS 마운트 지점에 백업하는 것이 좋습니다.
 . FSxN NFS 마운트의 Oracle 데이터베이스 백업 이미지 복사본은 이중화, 고가용성 및 고성능을 위해 AWS 가용성 영역을 확장하는 FSx 클러스터에 저장됩니다. 네트워킹에 연결할 수 있는 한 NFS 파일 시스템을 새 서버에 쉽게 마운트할 수 있습니다. 다음 절차에서는 복구를 위해 Oracle VLDB 백업의 이미지 복제본을 새로 프로장된 EC2 DB 인스턴스 호스트에 마운트합니다.
