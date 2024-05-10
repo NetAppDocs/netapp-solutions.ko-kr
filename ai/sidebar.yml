@@ -114,54 +114,46 @@ entries:
       url: "/ai/nvaie_additional_information.html"
   - title: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
     url: "/ai/tr-4851.html"
-  - title: NetApp AI Control Plane
+  - title: 오픈 소스 MLOps 및 NetApp
     entries:
     - title: 소개
       url: "/ai/aicp_introduction.html"
-    - title: 개념 및 구성 요소
+    - title: 기술 개요
       url: "/ai/aicp_concepts_and_components.html"
-    - title: 하드웨어 및 소프트웨어 요구 사항
+    - title: 있습니다
       url: "/ai/aicp_hardware_and_software_requirements.html"
-    - title: Kubernetes 구축
-      url: "/ai/aicp_kubernetes_deployment.html"
-    - title: NetApp Trident 구축 및 구성
+    - title: NetApp Astra Trident 구성
       entries:
-      - title: Trident 구축
-        url: "/ai/aicp_netapp_trident_deployment_and_configuration_overview.html"
-      - title: ONTAP AI 배포에 대한 Trident 백엔드 예
+      - title: NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예
         url: "/ai/aicp_example_trident_backends_for_ontap_ai_deployments.html"
-      - title: ONTAP AI 구축을 위한 Kubernetes StorageClasses의 예
+      - title: NetApp AIPod 구축을 위한 Kubernetes StorageClasses 예
         url: "/ai/aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html"
-    - title: Kubeflow 구축
-      url: "/ai/aicp_kubeflow_deployment_overview.html"
-    - title: Kubeflow 작업 및 작업 예
-      url: "/ai/aicp_example_kubeflow_operations_and_tasks_overview.html"
+    - title: Kubeflow
       entries:
-      - title: 개요
-        url: "/ai/aicp_example_kubeflow_operations_and_tasks_overview.html"
-      - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
-        url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
-      - title: 예제 전자 필기장 및 파이프라인
-        url: "/ai/aicp_example_notebooks_and_pipelines.html"
-    - title: Apache Airflow Deployment
-      url: "/ai/aicp_apache_airflow_deployment.html"
-    - title: Apache Airflow 워크플로의 예
-      url: "/ai/aicp_example_apache_airflow_workflows_overview.html"
-    - title: Trident 작업의 예
+      - title: Kubeflow 구축
+        url: "/ai/aicp_kubeflow_deployment_overview.html"
+      - title: Kubeflow 작업 및 작업 예
+        entries:
+        - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
+          url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
+        - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
+          url: "/ai/aicp_example_notebooks_and_pipelines.html"
+        - title: 워크플로 예 - 이미지 인식 모델 교육
+          url: "/ai/aicp_kubeflow_train_image_recognition.html"
+    - title: 아파치 기류
+      entries:
+      - title: Apache Airflow Deployment
+        url: "/ai/aicp_apache_airflow_deployment.html"
+      - title: NetApp DataOps 툴킷을 공기 흐름과 함께 사용하십시오
+        url: "/ai/aicp_example_apache_airflow_workflows_overview.html"
+    - title: Astra Trident 운영의 예
       url: "/ai/aicp_example_trident_operations_overview.html"
-    - title: ONTAP AI 배포에 대한 고성능 작업 예
-      url: "/ai/aicp_example_high-performance_jobs_for_ontap_ai_deployments_overview.html"
+    - title: AIPod 구축을 위한 고성능 작업의 예
       entries:
-      - title: 개요
-        url: "/ai/aicp_example_high-performance_jobs_for_ontap_ai_deployments_overview.html"
       - title: 단일 노드 AI 워크로드 실행
         url: "/ai/aicp_execute_a_single-node_ai_workload.html"
       - title: 동기식 분산 AI 워크로드 실행
         url: "/ai/aicp_execute_a_synchronous_distributed_ai_workload.html"
-    - title: 성능 테스트
-      url: "/ai/aicp_performance_testing.html"
-    - title: 결론
-      url: "/ai/aicp_conclusion.html"
   - title: Iguazio를 사용한 MLRun 파이프라인
     entries:
     - title: 소개

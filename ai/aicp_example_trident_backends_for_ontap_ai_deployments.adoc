@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai/aicp_example_trident_backends_for_ontap_ai_deployments.html 
 keywords: ONTAP, Trident, AI, Deployment, 
-summary: Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Trident 백엔드를 생성해야 합니다. 이 페이지의 예는 ONTAP AI Pod에 NetApp AI Control Plane 솔루션을 구축할 경우 생성할 수 있는 다양한 유형의 백엔드를 나타냅니다. 
+summary: NetApp를 지원하는 오픈 소스 MLOps - NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예 
 ---
-= ONTAP AI 배포에 대한 Trident 백엔드 예
+= NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,22 +14,22 @@ summary: Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 
 
 
 [role="lead"]
-Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Trident 백엔드를 생성해야 합니다. 다음 예는 ONTAP AI 포드에 NetApp AI Control Plane 솔루션을 구축할 경우 생성할 수 있는 다양한 유형의 백엔드를 보여줍니다. 백엔드에 대한 자세한 내용은 을 참조하십시오 https://netapp-trident.readthedocs.io/["Trident 문서"^].
+Astra Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Trident 백엔드를 생성해야 합니다. 다음 예제는 에서 이 솔루션의 구성 요소를 배포할 때 만들 수 있는 여러 가지 유형의 백엔드를 나타냅니다 link:https://docs.netapp.com/us-en/netapp-solutions/ai/aipod_nv_intro.html["NetApp AIPod"]. 백엔드에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"].
 
-. NetApp AFF 시스템에서 사용할 각 데이터 LIF(데이터 액세스를 제공하는 논리적 네트워크 인터페이스)에 대해 FlexGroup 지원 Trident 백엔드를 생성하는 것이 좋습니다. LIF 간 볼륨 마운트의 균형을 조정할 수 있습니다
+. NetApp은 AIPod에 대해 FlexGroup 지원 Trident 백엔드를 생성할 것을 권장합니다.
 +
-다음 명령 예는 동일한 ONTAP 스토리지 가상 시스템(SVM)과 연관된 2개의 서로 다른 데이터 LIF에 대해 2개의 FlexGroup 지원 Trident 백엔드를 생성하는 것을 보여줍니다. 이러한 백엔드는 'ONTAP-NAS-Flexgroup' 스토리지 드라이버를 사용합니다. ONTAP는 FlexVol와 FlexGroup의 두 가지 기본 데이터 볼륨 유형을 지원합니다. FlexVol 볼륨의 크기는 제한되어 있습니다(이 쓰기 작업 시 최대 크기는 특정 구축에 따라 다름). 반면 FlexGroup 볼륨은 최대 20PB 및 4천억 개 파일까지 선형적으로 확장할 수 있으므로 데이터 관리를 크게 간소화하는 단일 네임스페이스를 제공합니다. 따라서 FlexGroup 볼륨은 대량의 데이터를 사용하는 AI 및 ML 워크로드에 최적화되어 있습니다.
+다음 명령은 AIPod 스토리지 가상 머신(SVM)에 대한 FlexGroup 지원 Trident 백엔드의 생성을 보여줍니다. 이 백엔드는 를 사용합니다 `ontap-nas-flexgroup` 스토리지 드라이버. ONTAP는 FlexVol와 FlexGroup의 두 가지 기본 데이터 볼륨 유형을 지원합니다. FlexVol 볼륨의 크기는 제한되어 있습니다(이 쓰기 작업 시 최대 크기는 특정 구축에 따라 다름). 반면 FlexGroup 볼륨은 최대 20PB 및 4천억 개 파일까지 선형적으로 확장할 수 있으므로 데이터 관리를 크게 간소화하는 단일 네임스페이스를 제공합니다. 따라서 FlexGroup 볼륨은 대량의 데이터를 사용하는 AI 및 ML 워크로드에 최적화되어 있습니다.
 
 +
 소량의 데이터로 작업하고 FlexGroup 볼륨 대신 FlexVol 볼륨을 사용하려는 경우, ONTAP-NAS-Flexgroup 스토리지 드라이버 대신 'ONTAP-NAS' 스토리지 드라이버를 사용하는 Trident 백엔드를 생성할 수 있습니다.
 
 +
 ....
-$ cat << EOF > ./trident-backend-ontap-ai-flexgroups-iface1.json
+$ cat << EOF > ./trident-backend-aipod-flexgroups-iface1.json
 {
     "version": 1,
     "storageDriverName": "ontap-nas-flexgroup",
-    "backendName": "ontap-ai-flexgroups-iface1",
+    "backendName": "aipod-flexgroups-iface1",
     "managementLIF": "10.61.218.100",
     "dataLIF": "192.168.11.11",
     "svm": "ontapai_nfs",
@@ -37,47 +37,28 @@ $ cat << EOF > ./trident-backend-ontap-ai-flexgroups-iface1.json
     "password": "ontapai"
 }
 EOF
-$ tridentctl create backend -f ./trident-backend-ontap-ai-flexgroups-iface1.json -n trident
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-|            NAME            |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-| ontap-ai-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-$ cat << EOF > ./trident-backend-ontap-ai-flexgroups-iface2.json
-{
-    "version": 1,
-    "storageDriverName": "ontap-nas-flexgroup",
-    "backendName": "ontap-ai-flexgroups-iface2",
-    "managementLIF": "10.61.218.100",
-    "dataLIF": "192.168.12.12",
-    "svm": "ontapai_nfs",
-    "username": "admin",
-    "password": "ontapai"
-}
-EOF
-$ tridentctl create backend -f ./trident-backend-ontap-ai-flexgroups-iface2.json -n trident
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-|            NAME            |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-| ontap-ai-flexgroups-iface2 | ontap-nas-flexgroup | 61814d48-c770-436b-9cb4-cf7ee661274d | online |       0 |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
+$ tridentctl create backend -f ./trident-backend-aipod-flexgroups-iface1.json -n trident
++-------------------------+---------------------+--------------------------------------+--------+---------+
+|            NAME         |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
++-------------------------+---------------------+--------------------------------------+--------+---------+
+| aipod-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
++-------------------------+---------------------+--------------------------------------+--------+---------+
 $ tridentctl get backend -n trident
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-|            NAME            |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-| ontap-ai-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
-| ontap-ai-flexgroups-iface2 | ontap-nas-flexgroup | 61814d48-c770-436b-9cb4-cf7ee661274d | online |       0 |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
++-------------------------+---------------------+--------------------------------------+--------+---------+
+|            NAME         |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
++-------------------------+---------------------+--------------------------------------+--------+---------+
+| aipod-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
++-------------------------+---------------------+--------------------------------------+--------+---------+
 ....
-. 또한 하나 이상의 FlexVol 지원 Trident 백엔드를 생성하는 것이 좋습니다. 데이터 세트 스토리지를 훈련하는 데 FlexGroup 볼륨을 사용하는 경우 FlexVol 볼륨을 사용하여 결과, 출력, 디버그 정보 등을 저장할 수 있습니다. FlexVol 볼륨을 사용하려면 하나 이상의 FlexVol 지원 Trident 백엔드를 생성해야 합니다. 다음 명령의 예는 단일 데이터 LIF를 사용하는 단일 FlexVol 지원 Trident 백엔드를 생성하는 것입니다.
+. 또한 NetApp은 FlexVol 지원 Trident 백엔드를 생성할 것을 권장합니다. 영구 응용 프로그램 호스팅, 결과 저장, 출력, 디버그 정보 등을 위해 FlexVol 볼륨을 사용할 수 있습니다. FlexVol 볼륨을 사용하려면 하나 이상의 FlexVol 지원 Trident 백엔드를 생성해야 합니다. 다음 명령의 예는 단일 FlexVol 지원 Trident 백엔드의 생성을 보여줍니다.
 
 
 ....
-$ cat << EOF > ./trident-backend-ontap-ai-flexvols.json
+$ cat << EOF > ./trident-backend-aipod-flexvols.json
 {
     "version": 1,
     "storageDriverName": "ontap-nas",
-    "backendName": "ontap-ai-flexvols",
+    "backendName": "aipod-flexvols",
     "managementLIF": "10.61.218.100",
     "dataLIF": "192.168.11.11",
     "svm": "ontapai_nfs",
@@ -85,18 +66,17 @@ $ cat << EOF > ./trident-backend-ontap-ai-flexvols.json
     "password": "ontapai"
 }
 EOF
-$ tridentctl create backend -f ./trident-backend-ontap-ai-flexvols.json -n trident
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-|            NAME            |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-| ontap-ai-flexvols          | ontap-nas           | 52bdb3b1-13a5-4513-a9c1-52a69657fabe | online |       0 |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
+$ tridentctl create backend -f ./trident-backend-aipod-flexvols.json -n trident
++-------------------------+---------------------+--------------------------------------+--------+---------+
+|            NAME         |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
++-------------------------+---------------------+--------------------------------------+--------+---------+
+| aipod-flexvols          | ontap-nas           | 52bdb3b1-13a5-4513-a9c1-52a69657fabe | online |       0 |
++-------------------------+---------------------+--------------------------------------+--------+---------+
 $ tridentctl get backend -n trident
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-|            NAME            |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
-| ontap-ai-flexvols          | ontap-nas           | 52bdb3b1-13a5-4513-a9c1-52a69657fabe | online |       0 |
-| ontap-ai-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
-| ontap-ai-flexgroups-iface2 | ontap-nas-flexgroup | 61814d48-c770-436b-9cb4-cf7ee661274d | online |       0 |
-+----------------------------+---------------------+--------------------------------------+--------+---------+
++-------------------------+---------------------+--------------------------------------+--------+---------+
+|            NAME         |   STORAGE DRIVER    |                 UUID                 | STATE  | VOLUMES |
++-------------------------+---------------------+--------------------------------------+--------+---------+
+| aipod-flexvols          | ontap-nas           | 52bdb3b1-13a5-4513-a9c1-52a69657fabe | online |       0 |
+| aipod-flexgroups-iface1 | ontap-nas-flexgroup | b74cbddb-e0b8-40b7-b263-b6da6dec0bdd | online |       0 |
++-------------------------+---------------------+--------------------------------------+--------+---------+
 ....

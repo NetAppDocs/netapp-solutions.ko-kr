@@ -46,7 +46,7 @@ indexpage:
       url: ddlnexus_introduction.html
     - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
       url: nvaie_introduction.html
-    - title: AI 파이프라인 및 밤공간 관리를 위한 NetApp AI 컨트롤 플레인
+    - title: 오픈 소스 MLOps 및 NetApp
       url: aicp_introduction.html
     - title: Iguazio를 사용한 MLRun 파이프라인
       url: mlrun_introduction.html

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai/aicp_hardware_and_software_requirements.html 
 keywords: Hardware, Software, Requirements, Trident, DeepOps, ONTAP, Ubuntu 
-summary: NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속되지 않습니다. 
+summary: 오픈 소스 MLOps 및 NetApp-아키텍처 
 ---
-= 하드웨어 및 소프트웨어 요구 사항
+= 있습니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,26 +14,8 @@ summary: NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속�
 
 
 [role="lead"]
-NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속되지 않습니다. 이 솔루션은 Trident에서 지원하는 모든 NetApp 물리적 스토리지 어플라이언스, 소프트웨어 정의 인스턴스 또는 클라우드 서비스와 호환됩니다. 예를 들어 NetApp AFF 스토리지 시스템, Azure NetApp Files, NetApp Cloud Volumes Service, NetApp ONTAP Select 소프트웨어 정의 스토리지 인스턴스 또는 NetApp Cloud Volumes ONTAP 인스턴스가 있습니다. 또한, 사용된 Kubernetes 버전이 Kubeflow 및 NetApp Trident에서 지원하는 경우 모든 Kubernetes 클러스터에서 구현할 수 있습니다. Kubeflow에서 지원하는 Kubernetes 버전 목록은 를 참조하십시오 https://www.kubeflow.org/docs/started/getting-started/["Kubeflow 공식 문서"^]. Trident에서 지원하는 Kubernetes 버전 목록은 를 참조하십시오 https://netapp-trident.readthedocs.io/["Trident 문서"^]. 솔루션을 검증하는 데 사용된 환경에 대한 자세한 내용은 다음 표를 참조하십시오.
+이 솔루션은 특정 하드웨어에 종속되지 않습니다. 이 솔루션은 Trident에서 지원하는 모든 NetApp 물리적 스토리지 어플라이언스, 소프트웨어 정의 인스턴스 또는 클라우드 서비스와 호환됩니다. NetApp AFF 스토리지 시스템, Amazon FSx for NetApp ONTAP, Azure NetApp Files 또는 NetApp Cloud Volumes ONTAP 인스턴스가 여기에 포함됩니다. 또한 사용되는 Kubernetes 버전이 Kubeflow 및 NetApp Astra Trident에서 지원되는 경우 모든 Kubernetes 클러스터에서 솔루션을 구현할 수 있습니다. Kubeflow에서 지원하는 Kubernetes 버전 목록은 를 참조하십시오 https://www.kubeflow.org/docs/started/getting-started/["Kubeflow 공식 문서"^]. Trident에서 지원하는 Kubernetes 버전 목록은 를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["Trident 문서"^]. 솔루션을 검증하는 데 사용된 환경에 대한 자세한 내용은 다음 표를 참조하십시오.
 
-|===
-| 인프라 구성 요소 | 수량 | 세부 정보 | 운영 체제 
-
-
-| 배포 점프 호스트 | 1 | VM | Ubuntu 20.04.2 LTS 
-
-
-| Kubernetes 마스터 노드 | 1 | VM | Ubuntu 20.04.2 LTS 
-
-
-| Kubernetes 작업자 노드 | 2 | VM | Ubuntu 20.04.2 LTS 
-
-
-| Kubernetes GPU 작업자 노드 | 2 | NVIDIA DGX-1(베어 메탈) | NVIDIA DGX OS 4.0.5(Ubuntu 18.04.2 LTS 기준) 
-
-
-| 스토리지 | 1개의 HA 쌍 | NetApp AFF A220을 참조하십시오 | NetApp ONTAP 9.7 P6 
-|===
 |===
 | 소프트웨어 구성 요소 | 버전 
 
@@ -44,22 +26,16 @@ NetApp AI Control Plane 솔루션은 이 특정 하드웨어에 종속되지 않
 | Apache Airflow Helm Chart(Apache Airflow 제어 차트 | 8.0.8 
 
 
-| Docker 를 참조하십시오 | 2012년 3월 19일 
+| Kubeflow | 1.7, 를 통해 배포 link:https://www.deploykf.org["구축KF"] 0.1.1 
 
 
-| Kubeflow | 1.2 
+| 쿠버네티스 | 1.26 
 
 
-| 쿠버네티스 | 1.18.9 
-
-
-| NetApp 트라이던트 | 21.01.2 
-
-
-| NVIDIA DeepOps | 커밋 시 마스터 분기의 Trident 배포 기능 link:https://github.com/NVIDIA/deepops/tree/61898cdfdaa0c59c07e9fabf3022945a905b148e/docs/k8s-cluster["61898cdfda"]버전 21.03의 다른 모든 기능 
+| NetApp Astra Trident | 2007년 3월 
 |===
 
 
 == 지원
 
-NetApp은 Apache Airflow, Docker, Kubeflow, Kubernetes 또는 NVIDIA DeepOps에 대한 엔터프라이즈 지원을 제공하지 않습니다. NetApp AI Control Plane 솔루션과 유사한 기능을 갖춘 완벽한 지원 솔루션을 원하는 경우, link:https://www.netapp.com/us/contact-us/index.aspx?for_cr=us["NetApp에 문의하십시오"] NetApp이 파트너와 공동으로 제공하는 완전 지원되는 AI/ML 솔루션 정보
+NetApp은 Apache Airflow, Kubeflow 또는 Kubernetes에 대한 엔터프라이즈 지원을 제공하지 않습니다. 완전히 지원되는 MLOps 플랫폼에 관심이 있다면 link:https://www.netapp.com/us/contact-us/index.aspx?for_cr=us["NetApp에 문의하십시오"] NetApp이 파트너와 공동으로 제공하는 모든 MLOps 솔루션에 대해 설명합니다.

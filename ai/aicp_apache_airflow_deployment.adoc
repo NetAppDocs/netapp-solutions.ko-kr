@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ai/aicp_apache_airflow_deployment.html 
 keywords: AI, control plane, apache, airflow 
-summary: 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축하기 위해 완료해야 하는 작업에 대해 설명합니다. 
+summary: NetApp를 사용한 오픈 소스 MLOps - Apache Airflow Deployment 
 ---
 = Apache Airflow Deployment
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축�
 
 
 [role="lead"]
-Kubernetes에서 Apache Airflow를 실행하는 것이 좋습니다. 이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축하기 위해 완료해야 하는 작업에 대해 설명합니다.
+이 섹션에서는 Kubernetes 클러스터에 공기 흐름을 구축하기 위해 완료해야 하는 작업에 대해 설명합니다.
 
 
 NOTE: Kubernetes 이외의 플랫폼에 공기 흐름을 배포할 수 있습니다. Kubernetes가 아닌 다른 플랫폼에 공기 흐름을 배포하는 것은 이 솔루션의 범위를 벗어납니다.
@@ -26,7 +26,7 @@ NOTE: Kubernetes 이외의 플랫폼에 공기 흐름을 배포할 수 있습니
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
 . Kubernetes 클러스터 작업이 이미 진행 중입니다.
-. "NetApp Trident 배포 및 구성" 섹션에 설명된 대로 Kubernetes 클러스터에 NetApp Trident를 이미 설치 및 구성했습니다.
+. Kubernetes 클러스터에 NetApp Astra Trident를 이미 설치하고 구성했습니다. Astra Trident에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"].
 
 
 
@@ -39,7 +39,7 @@ Kubernetes의 유명 패키지 매니저인 Helm을 사용하여 공기 흐름�
 
 == 기본 Kubernetes StorageClass를 설정합니다
 
-공기 흐름을 구축하기 전에 Kubernetes 클러스터 내에서 기본 StorageClass를 지정해야 합니다. Airflow 배포 프로세스는 기본 StorageClass를 사용하여 새 영구 볼륨의 프로비저닝을 시도합니다. 기본 StorageClass로 지정된 StorageClass가 없으면 배포가 실패합니다. 클러스터 내에서 기본 StorageClass를 지정하려면 섹션에 설명된 지침을 따르십시오 link:aicp_kubeflow_deployment_overview.html["Kubeflow 구축"]. 클러스터 내에서 기본 StorageClass를 이미 지정한 경우에는 이 단계를 건너뛸 수 있습니다.
+공기 흐름을 구축하기 전에 Kubernetes 클러스터 내에서 기본 StorageClass를 지정해야 합니다. Airflow 배포 프로세스는 기본 StorageClass를 사용하여 새 영구 볼륨의 프로비저닝을 시도합니다. 기본 StorageClass로 지정된 StorageClass가 없으면 배포가 실패합니다. 클러스터 내에서 기본 StorageClass를 지정하려면 에 설명된 지침을 따릅니다 link:aicp_kubeflow_deployment_overview.html["Kubeflow 구축"] 섹션을 참조하십시오. 클러스터 내에서 기본 StorageClass를 이미 지정한 경우에는 이 단계를 건너뛸 수 있습니다.
 
 
 
