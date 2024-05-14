@@ -71,9 +71,9 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 === NetApp 스토리지 통합
 
-NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되어 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.
+NetApp Astra Control은 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 온프레미스 환경에 구축되고 상태 저장형 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다.
 
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
+자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/astra-family/["여기"].
 
 Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다.
 
@@ -95,26 +95,20 @@ Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배�
 | 제공합니다 | 목적 | 소프트웨어 버전 
 
 
-| NetApp ONTAP를 참조하십시오 | 스토리지 | 9.8, 9.9.1 
+| NetApp ONTAP를 참조하십시오 | 스토리지 | 9.8, 9.9.1, 9.12.1입니다 
 
 
 | NetApp Element | 스토리지 | 12.3 
 
 
-| NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 21.12.60 
+| NetApp Astra Control | 애플리케이션 인식 데이터 관리 | 21.12.60, 23.04, 23.07, 23.10, 24.02 
 
 
-| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.01.0 
+| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.01.0, 23.04, 23.07, 23.10, 24.02 
 
 
-| Red Hat OpenShift | 컨테이너 오케스트레이션 | 4.6 EUS, 4.7, 4.8 
+| Red Hat OpenShift | 컨테이너 오케스트레이션 | 4.6 EUS, 4.7, 4.8, 4.10, 4.11, 4.12, 4.13, 4.14 
 
 
-| Red Hat OpenStack 플랫폼 | 프라이빗 클라우드 인프라 | 16.1 
-
-
-| Red Hat 가상화 | 데이터 센터 가상화 | 4.4 
-
-
-| VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 6.7U3 
+| VMware vSphere를 참조하십시오 | 데이터 센터 가상화 | 7.0, 8.0.2 를 참조하십시오 
 |===
