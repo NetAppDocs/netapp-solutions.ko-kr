@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: hyperv/hyperv-deploy-conclusion.html 
+keywords: hyperv, hyper-v, deploy, netapp, virtualization 
+summary: 이 솔루션은 NetApp 스토리지에 Hyper-V를 구축하는 데 필요한 단계를 제공합니다 
+---
+= NetApp 스토리지에 Microsoft Hyper-V 배포: 결론
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+ONTAP는 다양한 IT 워크로드를 구축할 수 있는 최적의 공유 스토리지 기반입니다. ONTAP AFF 또는 ASA 플랫폼은 여러 사용 사례 및 애플리케이션을 위해 유연하고 확장성이 뛰어납니다. 이 문서에서 사용되는 Windows Server 2022 및 Hyper-V는 가상화 솔루션의 일반적인 사용 사례로서, 이 가이드에 설명되어 있습니다. ONTAP 스토리지 및 관련 기능의 유연성 및 확장성을 통해 고객은 변화하는 비즈니스 요구사항에 맞춰 확장 및 조정할 수 있는 적절한 규모의 스토리지 계층을 먼저 확보할 수 있습니다. 현재 시장 조건에서 Hyper-V는 VMware에서 제공하는 대부분의 기능을 제공하는 완벽한 대체 하이퍼바이저 옵션을 제공합니다.

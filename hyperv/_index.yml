@@ -12,10 +12,20 @@ indexpage:
       url: https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
     - title: Hyper-V 기술 개요
       url: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview
-  - title: Hyper-V 가상화
+  - title: NetApp 스토리지에 Microsoft Hyper-V 구축
     links:
-    - title: NetApp 스토리지에 Microsoft Hyper-V 구축
+    - title: 개요
       url: hyperv-deploy.html
+    - title: 구축을 위한 사전 요구 사항
+      url: hyperv-deploy-prereqs.html
+    - title: 배포 고려 사항
+      url: hyperv-deploy-considerations.html
+    - title: 데이터 보호
+      url: hyperv-deploy-data-protection.html
+    - title: 결론
+      url: hyperv-deploy-conclusion.html
+    - title: FlexClone 및 Powershell을 사용한 마이그레이션
+      url: hyperv-deploy-script.html
   - title: 추가 리소스
     links:
     - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례

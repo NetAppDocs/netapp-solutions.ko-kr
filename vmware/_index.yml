@@ -42,6 +42,8 @@ indexpage:
       url: "/vmware-customer-stories.html"
     - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
       url: "/migrate-vms-to-ontap-datastore.html"
+    - title: FSxN을 사용하여 VM을 EC2로 마이그레이션합니다
+      url: "/migrate-vms-to-ec2-fsxn.html"
   - title: VMware 포트폴리오에 대한 NetApp 지원
     links:
     - title: 비디오

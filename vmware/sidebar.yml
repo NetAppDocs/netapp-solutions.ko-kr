@@ -25,6 +25,26 @@ entries:
       url: "/vmware/vmware_vcf_aff_principal_nfs.html"
     - title: 워크로드 도메인의 보조 스토리지로서 NFS 및 VVOL이 사용됩니다
       url: "/vmware/vmware_vcf_aff_supp_wkld"
+- title: VM 마이그레이션
+  entries:
+  - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
+    url: "/vmware/migrate-vms-to-ontap-datastore.html"
+  - title: FSxN을 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+    entries:
+    - title: 개요
+      url: "/vmware/migrate-vms-to-ec2-fsxn.html"
+    - title: 아키텍처 및 사전 요구 사항
+      url: "/vmware/migrate-vms-to-ec2-fsxn-arch.html"
+    - title: 구현 절차
+      url: "/vmware/migrate-vms-to-ec2-fsxn-deploy.html"
+    - title: 결론
+      url: "/vmware/migrate-vms-to-ec2-fsxn-wrapup.html"
+- title: VMware - 퍼블릭 클라우드
+  url: "/ehc/index.html"
+- title: VMware 하이브리드 멀티 클라우드 사용 사례
+  entries:
+  - title: 사용 사례 개요
+    url: "/ehc/ehc-use-cases.html"
 - title: VMware vSphere 자동화
   url: "/vmware/vsphere_auto_introduction.html"
   entries:
@@ -46,12 +66,6 @@ entries:
       url: "/vmware/vsphere_ontap_auto_file_nfs.html"
     - title: NFS-v4.1
       url: "/vmware/vsphere_ontap_auto_file_nfs41.html"
-- title: VMware - 퍼블릭 클라우드
-  url: "/ehc/index.html"
-- title: VMware 하이브리드 멀티 클라우드 사용 사례
-  entries:
-  - title: 사용 사례 개요
-    url: "/ehc/ehc-use-cases.html"
 - title: 가상 데스크톱
   entries:
   - title: VDS(가상 데스크톱 서비스)
