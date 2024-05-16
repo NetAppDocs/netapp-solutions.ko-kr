@@ -13,6 +13,9 @@ summary: NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST
 :imagesdir: ./../media/
 
 
+[role="lead"]
+NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST API, AI 정보에 기반한 예측 분석 및 수정 조치, 무중단 하드웨어 업그레이드, 교차 스토리지 가져오기 등의 기능을 갖춘 강력한 스토리지 소프트웨어 툴입니다.
+
 [role="normal"]
 NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST API, AI 정보에 기반한 예측 분석 및 수정 조치, 무중단 하드웨어 업그레이드, 교차 스토리지 가져오기 등의 기능을 갖춘 강력한 스토리지 소프트웨어 툴입니다.
 

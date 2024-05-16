@@ -13,6 +13,9 @@ summary: NetApp용 SnapCenter-Vector 데이터베이스 솔루션을 사용한 �
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp SnapCenter를 사용하여 벡터 데이터베이스에 대한 데이터 보호를 제공하는 방법에 대해 설명합니다.
+
 
 
 == NetApp SnapCenter를 사용한 벡터 데이터베이스 보호.

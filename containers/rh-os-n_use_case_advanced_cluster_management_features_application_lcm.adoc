@@ -4,19 +4,15 @@ permalink: containers/rh-os-n_use_case_advanced_cluster_management_features_appl
 keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, ONTAP, Trident, Red Hat OpenShift, Advanced Cluster Management, Advanced Cluster Management for Kubernetes 
 summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
 ---
-= 기능: NetApp OpenShift에서 Kubernetes용 고급 클러스터 관리
-:hardbreaks:
+= 애플리케이션 라이프사이클 관리
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
 
 
 
 == 애플리케이션 라이프사이클 관리
 
+[role="lead"]
 애플리케이션을 생성하고 클러스터 세트 전반에서 관리하려면,
 
 . 측면 표시줄에서 애플리케이션 관리 로 이동하고 애플리케이션 생성 을 클릭합니다. 만들려는 응용 프로그램의 세부 정보를 입력하고 저장 을 클릭합니다.

@@ -15,6 +15,9 @@ summary: 이 솔루션은 FSx ONTAP에 NFS 마운트를 사용하여 AWS EC2 컴
 
 Allen Cao, Niyaz Mohamed, NetApp
 
+[role="lead"]
+이 솔루션은 FSx ONTAP의 NFS 마운트를 통해 AWS EC2 컴퓨팅 인스턴스에 구축된 Oracle VLDB를 빠른 복구와 복제하여 대기 데이터 파일 복사본을 RMAN을 통해 지속적으로 증분식으로 병합하는 데 필요한 간략한 개요를 제공합니다.
+
 
 
 == 목적
@@ -48,7 +51,7 @@ VLDB에 대한 SLA에 관심이 있고 Oracle 데이터베이스를 AWS와 같�
 
 == 솔루션 테스트 및 검증 환경
 
-이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx ONTAP 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <<Key Factors for Deployment Consideration>>.
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx ONTAP 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <<구축 시 고려해야 할 주요 요소>>.
 
 
 

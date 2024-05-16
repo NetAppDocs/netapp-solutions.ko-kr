@@ -13,6 +13,9 @@ summary: NetApp용 vector-database-deployment-procedure-vector 데이터베이�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp용 벡터 데이터베이스 솔루션의 배포 절차를 설명합니다.
+
 
 
 == 구현 절차

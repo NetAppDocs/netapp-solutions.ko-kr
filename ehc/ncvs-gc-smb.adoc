@@ -24,7 +24,7 @@ Cloud Volumes Service는 SMB 2.1 및 3.x 버전의 프로토콜을 지원합니�
 
 * Windows 사용자 이름이 Cloud Volumes Service 볼륨에 대한 액세스를 요청하면 Cloud Volumes Service는 Cloud Volumes Service 관리자가 구성한 방법을 사용하여 UNIX 사용자 이름을 찾습니다.
 * 외부 UNIX ID 공급자(LDAP)가 구성되어 있고 Windows/UNIX 사용자 이름이 동일한 경우 Windows 사용자 이름은 추가 구성 없이 1:1을 UNIX 사용자 이름으로 매핑합니다. LDAP가 설정되면 Active Directory를 사용하여 사용자 및 그룹 객체에 대한 UNIX 속성을 호스팅합니다.
-* Windows 이름과 UNIX 이름이 동일하게 일치하지 않으면 Cloud Volumes Service에서 LDAP 이름 매핑 구성을 사용할 수 있도록 LDAP를 구성해야 합니다(섹션 참조) link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#ldap#using-ldap-for-asymmetric-name-mapping[""비대칭 이름 매핑에 LDAP 사용""])를 클릭합니다.
+* Windows 이름과 UNIX 이름이 동일하게 일치하지 않으면 Cloud Volumes Service에서 LDAP 이름 매핑 구성을 사용할 수 있도록 LDAP를 구성해야 합니다(섹션 참조) link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#using-ldap-for-asymmetric-name-mapping[""비대칭 이름 매핑에 LDAP 사용""])를 클릭합니다.
 * LDAP를 사용하지 않는 경우 Windows SMB 사용자는 Cloud Volumes Service의 기본 로컬 UNIX 사용자 "pcuser"로 매핑됩니다. 즉, 멀티프로토콜 NAS 환경에서 pcuser로 매핑되는 사용자가 Windows에서 작성한 파일이 UNIX 소유권을 pcuser로 표시합니다. 여기에 있는 'pcuser'는 사실상 리눅스 환경(UID 65534)의 'nobody' 사용자입니다.
 
 
@@ -322,7 +322,7 @@ Cloud Volumes Service의 SMB 서버는 Kerberos 클록 편중, 티켓 사용 기
 | 수신 CIFS 트래픽에 SMB 암호화 필요 | 모든 공유에 SMB 암호화가 필요합니다. 이 기능은 Cloud Volumes Service에서 사용되지 않으며 대신 볼륨별로 암호화를 설정합니다(“ 절 참조)<<SMB는 보안 기능을 공유합니다>>"). | 거짓 | 아니요 
 
 
-| 클라이언트 세션 보안 | LDAP 통신에 대한 서명 및/또는 봉인을 설정합니다. 이 설정은 현재 Cloud Volumes Service에 설정되어 있지 않지만 향후 릴리즈에서 필요할 수 있습니다. Windows 패치로 인한 LDAP 인증 문제에 대한 해결 방법은 섹션에서 설명합니다 link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#ldap#ldap-channel-binding["“LDAP 채널 바인딩.”"]. | 없음 | 아니요 
+| 클라이언트 세션 보안 | LDAP 통신에 대한 서명 및/또는 봉인을 설정합니다. 이 설정은 현재 Cloud Volumes Service에 설정되어 있지 않지만 향후 릴리즈에서 필요할 수 있습니다. Windows 패치로 인한 LDAP 인증 문제에 대한 해결 방법은 섹션에서 설명합니다 link:ncvs-gc-other-nas-infrastructure-service-dependencies.html#ldap-channel-binding["“LDAP 채널 바인딩.”"]. | 없음 | 아니요 
 
 
 | SMB2가 DC 연결에 대해 설정됩니다 | DC 연결에 SMB2를 사용합니다. 기본적으로 사용됩니다. | System - 기본값입니다 | 아니요 

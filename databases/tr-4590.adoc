@@ -15,6 +15,7 @@ summary:
 
 마노하르 쿨카르니와 팻 신쓰산(NetApp)
 
+[role="lead"]
 이 문서에서는 NetApp ONTAP ® 소프트웨어를 실행하는 NetApp 스토리지 시스템에 SQL Server를 구축하기 위한 설계 고려사항과 모범 사례를 설명하고, 효과적이고 효율적인 스토리지 구축과 엔드 투 엔드 데이터 보호 및 보존 계획을 달성한다는 목표를 제공합니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/8585-tr4590.pdf["TR-4560: ONTAP 탑재 Microsoft SQL Server를 위한 모범 사례 가이드"^]

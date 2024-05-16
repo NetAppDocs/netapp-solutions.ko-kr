@@ -13,6 +13,9 @@ summary: Google Cloud Console을 사용하여 온프레미스 Anthos GKE 클러�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 Google Cloud Console을 사용하여 온프레미스의 Anthos GKE 클러스터에 애플리케이션을 배포하는 방법을 자세히 설명합니다.
+
 
 
 == 필수 구성 요소

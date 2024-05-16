@@ -14,6 +14,9 @@ summary: Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 
 :k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud, Rancher etc
 
 
+[role="lead"]
+Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.
+
 [role="normal"]
 Astra Trident는 컨테이너 및 Kubernetes 배포용 {k8s_distribution_name}의 완전 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP 및 Element 스토리지 시스템을 포함한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS 및 iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
 
@@ -37,11 +40,7 @@ Astra Trident의 최신 버전은 2022년 4월 22.04입니다. Kubernetes 배포
 +
 [listing]
 ----
-<<<<<<< HEAD
 [netapp-user@rhel7]$ export KUBECONFIG=~/tanzu-install/auth/kubeconfig
-=======
-[netapp-user@rhel7]$ export KUBECONFIG=~/Tanzu-install/auth/kubeconfig
->>>>>>> eba1007b77b1ef6011dadd158f1df991acc5299f
 ----
 . NetApp Astra Trident Helm 저장소를 추가합니다.
 +

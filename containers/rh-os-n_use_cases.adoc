@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 페이지에서 제공되는 예는 NetApp 기반의 Red Hat OpenShift에 대한 솔루션 검증 및 사용 사례입니다.
 
 * link:rh-os-n_use_case_pipeline["영구 스토리지로 Jenkins CI/CD 파이프라인을 구축합니다"]

@@ -13,6 +13,9 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp 탑재 Red Hat OpenShift에서 Kubernetes의 고급 클러스터 관리에 대해 설명합니다.
+
 
 
 == 필수 구성 요소

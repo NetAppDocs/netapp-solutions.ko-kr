@@ -13,6 +13,9 @@ summary: 이 페이지에서는 NetApp ONTAP 스토리지에 Oracle19c를 구축
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 페이지에서는 NetApp ONTAP 스토리지에 Oracle19c를 구축하는 자동화된 방법에 대해 설명합니다.
+
 
 
 == NFS에서 ONTAP용 Oracle19c의 자동 배포

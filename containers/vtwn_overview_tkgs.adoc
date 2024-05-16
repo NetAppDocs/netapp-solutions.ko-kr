@@ -13,6 +13,7 @@ summary: 'VMware Tanzu Kubernetes Grid Service(Tanzu 및 vSphere라고도 함)�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 VMware Tanzu Kubernetes Grid Service(Tanzu 및 vSphere라고도 함)를 사용하면 vSphere에서 기본적으로 Tanzu Kubernetes 클러스터를 생성하고 작동할 수 있을 뿐만 아니라 ESXi 호스트에서 일부 소규모 워크로드를 직접 실행할 수 있습니다. 이를 통해 vSphere를 하이퍼바이저 계층에서 기본적으로 컨테이너화된 워크로드를 실행하는 플랫폼으로 전환할 수 있습니다. Tanzu Kubernetes Grid Service는 작업 부하에 필요한 클러스터를 구축하고 운영하는 설정된 경우 vSphere에 감독자 클러스터를 구축합니다. vSphere 7과 기본적으로 통합되며 vCenter SSO, Content Library, vSphere 네트워킹, vSphere 스토리지, vSphere HA 및 DRS, vSphere 보안 등 안정적인 여러 vSphere 기능을 활용하여 Kubernetes를 더욱 원활하게 사용할 수 있습니다.
 
 vSphere with Tanzu는 컨테이너나 VM에서 애플리케이션 구성 요소를 실행할 수 있는 하이브리드 애플리케이션 환경을 위한 단일 플랫폼을 제공하므로 개발자, DevOps 엔지니어 및 vSphere 관리자에게 더 나은 가시성과 운영 용이성을 제공합니다. VMware TKGS는 vSphere 7 환경에서만 지원되며, ESXi 호스트에서 POD를 직접 실행할 수 있는 Tanzu Kubernetes 운영 포트폴리오에서 유일한 제품입니다.

@@ -22,7 +22,7 @@ Google Cloud의 Cloud Volumes Service는 기본적으로 데이터를 보호할 
 
 Cloud Volumes Service는 서로 다른 엔드포인트에 걸쳐 서비스 관리(컨트롤 플레인)와 데이터 액세스(데이터 플레인)를 세분화하여 Google Cloud의 보안 아키텍처를 제공하므로 다른 엔드포인트에 영향을 미치지 않습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html["“Cloud Volumes Service 아키텍처”"])를 클릭합니다. Google을 사용합니다 https://cloud.google.com/vpc/docs/private-services-access?hl=en_US["프라이빗 서비스 액세스"^] (PSA) 프레임워크를 사용하여 서비스를 제공합니다. 이 프레임워크는 NetApp에서 제공하고 운영하는 서비스 생산자와 고객 프로젝트에서 VPC(가상 프라이빗 클라우드)인 서비스 소비자 간의 차이를 구별하며, Cloud Volumes Service 파일 공유에 액세스할 클라이언트를 호스팅합니다.
 
-이 아키텍처에서 테넌트는 섹션을 참조하십시오 link:ncvs-gc-cloud-volumes-service-architecture.html#tenancy-model[""임차 모델""])는 사용자가 명시적으로 연결하지 않는 한 서로 완전히 격리된 Google Cloud 프로젝트로 정의됩니다. 테넌트를 통해 Cloud Volumes Service 볼륨 플랫폼을 사용하는 다른 테넌트에서 데이터 볼륨, 외부 이름 서비스 및 기타 필수 요소를 완벽하게 격리할 수 있습니다. Cloud Volumes Service 플랫폼은 VPC 피어링을 통해 연결되므로 이러한 격리가 적용됩니다. 공유 VPC를 사용하여 여러 프로젝트 간에 Cloud Volumes Service 볼륨을 공유할 수 있습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html#tenancy-model#shared-vpcs["“공유 VPC”"])를 클릭합니다. SMB 공유 및 NFS 내보내기에 액세스 제어를 적용하여 데이터 세트를 보거나 수정할 수 있는 사용자 또는 항목을 제한할 수 있습니다.
+이 아키텍처에서 테넌트는 섹션을 참조하십시오 link:ncvs-gc-cloud-volumes-service-architecture.html#tenancy-model[""임차 모델""])는 사용자가 명시적으로 연결하지 않는 한 서로 완전히 격리된 Google Cloud 프로젝트로 정의됩니다. 테넌트를 통해 Cloud Volumes Service 볼륨 플랫폼을 사용하는 다른 테넌트에서 데이터 볼륨, 외부 이름 서비스 및 기타 필수 요소를 완벽하게 격리할 수 있습니다. Cloud Volumes Service 플랫폼은 VPC 피어링을 통해 연결되므로 이러한 격리가 적용됩니다. 공유 VPC를 사용하여 여러 프로젝트 간에 Cloud Volumes Service 볼륨을 공유할 수 있습니다(섹션 참조) link:ncvs-gc-cloud-volumes-service-architecture.html#shared-vpcs["“공유 VPC”"])를 클릭합니다. SMB 공유 및 NFS 내보내기에 액세스 제어를 적용하여 데이터 세트를 보거나 수정할 수 있는 사용자 또는 항목을 제한할 수 있습니다.
 
 
 
@@ -59,16 +59,16 @@ Google Cloud에서 실행되는 Cloud Volumes Service는 "신뢰, 모든 것을 
 
 == 암호화
 
-유휴 데이터 암호화(섹션 참조 link:ncvs-gc-data-encryption-at-rest.html["“저장된 데이터 암호화”"]) XTS-AES-256 암호를 NetApp Volume Encryption(NVE)과 함께 사용하고 를 사용하여 전송 중입니다 link:ncvs-gc-data-encryption-in-transit.html#nas-protocols#smb-encryption[""SMB 암호화""] 또는 NFS Kerberos 5p를 지원합니다. TLS 1.2 암호화로 지역 간 복제 전송이 보호되므로 안심하십시오(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#detection,-prevention-and-mitigation-of-ransomeware,-malware,-and-viruses#cross-region-replication["“지역 간 복제”"])를 클릭합니다. 또한 Google 네트워킹은 암호화된 통신도 제공합니다(섹션 참조) link:ncvs-gc-data-encryption-in-transit.html["“전송 중인 데이터 암호화”"])를 사용하여 공격에 대한 보호 계층을 추가합니다. 전송 암호화에 대한 자세한 내용은 섹션을 참조하십시오 link:ncvs-gc-data-encryption-in-transit.html#google-cloud-network[""Google Cloud 네트워크""].
+유휴 데이터 암호화(섹션 참조 link:ncvs-gc-data-encryption-at-rest.html["“저장된 데이터 암호화”"]) XTS-AES-256 암호를 NetApp Volume Encryption(NVE)과 함께 사용하고 를 사용하여 전송 중입니다 link:ncvs-gc-data-encryption-in-transit.html#smb-encryption[""SMB 암호화""] 또는 NFS Kerberos 5p를 지원합니다. 지역 간 복제 전송은 TLS 1.2 암호화로 보호됩니다(링크: ncvs-gc-security-considerations-and-attack-surface.html#랜섬웨어, 맬웨어 및 바이러스의 감지, 방지 및 완화 #지역 간 복제 ["지역 간 복제"] 참조). 또한 Google 네트워킹은 암호화된 통신도 제공합니다(섹션 참조) link:ncvs-gc-data-encryption-in-transit.html["“전송 중인 데이터 암호화”"])를 사용하여 공격에 대한 보호 계층을 추가합니다. 전송 암호화에 대한 자세한 내용은 섹션을 참조하십시오 link:ncvs-gc-data-encryption-in-transit.html#google-cloud-network[""Google Cloud 네트워크""].
 
 
 
 == 데이터 보호 및 백업
 
-보안은 단순한 공격 방지에 관한 것이 아닙니다. 또한 공격이 발생할 경우 또는 발생할 때 공격을 어떻게 복구하는지도 다룹니다. 이 전략에는 데이터 보호 및 백업이 포함됩니다. Cloud Volumes Service는 정전 발생 시 다른 지역으로 복제할 수 있는 방법을 제공합니다(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#detection,-prevention-and-mitigation-of-ransomeware,-malware,-and-viruses#cross-region-replication["“지역 간 복제”"]) 또는 데이터 세트가 랜섬웨어 공격의 영향을 받는 경우 또한 을 사용하여 Cloud Volumes Service 인스턴스 외부의 위치에 데이터를 비동기식으로 백업할 수도 있습니다 link:ncvs-gc-security-considerations-and-attack-surfaces.html#detection,-prevention-and-mitigation-of-ransomeware,-malware,-and-viruses#cloud-volumes-service-backup["Cloud Volumes Service 백업"]. 정기적인 백업을 사용하면 보안 이벤트를 완화하는데 소요되는 시간을 줄이고 비용을 절감하고 관리자에게 불안감을 줄 수 있습니다.
+보안은 단순한 공격 방지에 관한 것이 아닙니다. 또한 공격이 발생할 경우 또는 발생할 때 공격을 어떻게 복구하는지도 다룹니다. 이 전략에는 데이터 보호 및 백업이 포함됩니다. Cloud Volumes Service는 정전 발생 시 다른 지역으로 복제할 수 있는 방법을 제공합니다(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#cross-region-replication["“지역 간 복제”"]) 또는 데이터 세트가 랜섬웨어 공격의 영향을 받는 경우 또한 을 사용하여 Cloud Volumes Service 인스턴스 외부의 위치에 데이터를 비동기식으로 백업할 수도 있습니다 link:ncvs-gc-security-considerations-and-attack-surfaces.html#cloud-volumes-service-backup["Cloud Volumes Service 백업"]. 정기적인 백업을 사용하면 보안 이벤트를 완화하는데 소요되는 시간을 줄이고 비용을 절감하고 관리자에게 불안감을 줄 수 있습니다.
 
 
 
 == 업계 최고 수준의 Snapshot 복사본으로 랜섬웨어에 신속하게 대응
 
-Cloud Volumes Service은 데이터 보호 및 백업 외에도 변경 불가능한 스냅샷 복사본에 대한 지원을 제공합니다(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#detection,-prevention-and-mitigation-of-ransomeware,-malware,-and-viruses#immutable-snapshot-copies["“변경 불가능한 Snapshot 복사본”"]랜섬웨어 공격으로부터 복구할 수 있는 볼륨(섹션 참조 link:ncvs-gc-service-operation.html["“서비스 운영”"]) 문제를 발견하는 후 몇 초 이내에 운영 중단을 최소화하십시오. 복구 시간과 효과는 스냅샷 일정에 따라 다르지만 랜섬웨어 공격의 경우 한 시간 차이만큼 작은 스냅샷 복사본을 생성할 수 있습니다. 스냅샷 복사본은 성능 및 용량 사용에 거의 영향을 주지 않고, 데이터 세트를 보호하는 데 있어 위험이 낮은 하이 보상 접근 방식입니다.
+Cloud Volumes Service은 데이터 보호 및 백업 외에도 변경 불가능한 스냅샷 복사본에 대한 지원을 제공합니다(섹션 참조) link:ncvs-gc-security-considerations-and-attack-surfaces.html#immutable-snapshot-copies["“변경 불가능한 Snapshot 복사본”"]랜섬웨어 공격으로부터 복구할 수 있는 볼륨(섹션 참조 link:ncvs-gc-service-operation.html["“서비스 운영”"]) 문제를 발견하는 후 몇 초 이내에 운영 중단을 최소화하십시오. 복구 시간과 효과는 스냅샷 일정에 따라 다르지만 랜섬웨어 공격의 경우 한 시간 차이만큼 작은 스냅샷 복사본을 생성할 수 있습니다. 스냅샷 복사본은 성능 및 용량 사용에 거의 영향을 주지 않고, 데이터 세트를 보호하는 데 있어 위험이 낮은 하이 보상 접근 방식입니다.

@@ -13,6 +13,7 @@ summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 OpenShift Virtualization에서 VM에 대한 데이터 수집을 시작하려면 다음을 설치해야 합니다.
 
 . Kubernetes 데이터를 수집하기 위한 Kubernetes 모니터링 운영자 및 데이터 수집기

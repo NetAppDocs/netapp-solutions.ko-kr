@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
+Azure VMware 솔루션 및 Azure NetApp Files 데이터 저장소의 가장 일반적인 사용 사례 중 하나는 VMware 워크로드 마이그레이션입니다. VMware HCX가 선호되는 옵션이며, 온프레미스 VM(가상 머신)과 데이터를 Azure NetApp Files 데이터 저장소로 이동하는 다양한 마이그레이션 메커니즘을 제공합니다.
+
 저자: NetApp 솔루션 엔지니어링
 
 
 
 == 개요: VMware HCX, Azure NetApp Files 데이터 저장소 및 Azure VMware 솔루션을 사용하여 가상 시스템 마이그레이션
-
-Azure VMware 솔루션 및 Azure NetApp Files 데이터 저장소의 가장 일반적인 사용 사례 중 하나는 VMware 워크로드 마이그레이션입니다. VMware HCX가 선호되는 옵션이며, 온프레미스 VM(가상 머신)과 데이터를 Azure NetApp Files 데이터 저장소로 이동하는 다양한 마이그레이션 메커니즘을 제공합니다.
 
 VMware HCX는 주로 클라우드 전반에서 애플리케이션 마이그레이션, 워크로드 재조정 및 비즈니스 연속성을 간소화하도록 설계된 마이그레이션 플랫폼입니다. Azure VMware Solution 프라이빗 클라우드의 일부로 포함되어 있으며 다양한 방법으로 워크로드를 마이그레이션하여 DR(재해 복구) 작업에 사용할 수 있습니다.
 

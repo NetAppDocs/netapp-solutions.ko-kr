@@ -13,6 +13,7 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp ONTAP에서 지원하는 Red Hat OpenShift 및 Astra Trident는 기본적으로 워크로드 간 격리를 제공하지 않지만 멀티 테넌시를 구성하는 데 사용할 수 있는 다양한 기능을 제공합니다. NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터에서 멀티테넌트 솔루션을 설계하는 방법을 잘 이해하기 위해 일련의 요구 사항이 있는 예제를 고려하고 이 솔루션에 대한 구성을 개략적으로 설명합니다.
 
 한 조직이 Red Hat OpenShift 클러스터에서 두 개의 다른 팀이 진행 중인 두 프로젝트의 일부로 두 개의 워크로드를 실행하는 것으로 가정해 보겠습니다. 이러한 워크로드의 데이터는 NetApp ONTAP NAS 백엔드의 Astra Trident가 동적으로 프로비저닝한 PVC에 있습니다. 조직은 이러한 두 워크로드를 위한 멀티테넌트 솔루션을 설계하고 이러한 프로젝트에 사용되는 리소스를 격리하여 보안 및 성능이 유지되도록 해야 합니다. 이러한 애플리케이션은 주로 해당 애플리케이션을 지원하는 데이터에 초점을 맞춥니다.

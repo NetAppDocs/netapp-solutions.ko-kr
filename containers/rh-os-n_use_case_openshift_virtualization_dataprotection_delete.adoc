@@ -13,6 +13,9 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 Velero를 사용하여 OpenShift Virtualization에서 VM에 대한 백업 및 복원을 삭제하는 방법에 대해 간략하게 설명합니다.
+
 
 
 == 백업을 삭제하는 중입니다

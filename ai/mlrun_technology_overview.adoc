@@ -13,6 +13,9 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 기사에서는 NetApp ONTAP AI, NetApp AI Control Plane, NetApp Cloud Volumes 소프트웨어 및 Iguazio 데이터 과학 플랫폼을 사용한 MLRun 파이프라인에 대한 결속을 개괄적으로 설명합니다.
+
 
 
 == NetApp 개요

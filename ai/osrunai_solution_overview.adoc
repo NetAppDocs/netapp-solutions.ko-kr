@@ -13,6 +13,9 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 ONTAP AI용 실행:AI 솔루션에 대한 솔루션 개요를 제공합니다.
+
 
 
 == NetApp ONTAP AI 및 AI 제어 플레인

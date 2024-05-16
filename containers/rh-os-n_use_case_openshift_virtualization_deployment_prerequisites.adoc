@@ -13,6 +13,9 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp ONTAP를 사용하여 Red Hat OpenShift Virtualization을 배포하는 방법에 대해 자세히 설명합니다.
+
 
 
 == 필수 구성 요소

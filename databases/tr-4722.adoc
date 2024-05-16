@@ -15,6 +15,7 @@ summary:
 
 Anup Bharti, Manohar Kulkarni, Jeffrey Steiner NetApp
 
+[role="lead"]
 MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템부터 수천 개의 데이터베이스 인스턴스가 포함된 SMB 호스팅 시스템에 이르기까지 다양합니다. 이 문서는 NetApp ® ONTAP ® 데이터 관리 소프트웨어에서 MySQL을 구축하기 위한 구성 요구 사항을 설명하고 조정 및 스토리지 구성을 조정하는 방법에 대한 지침을 제공합니다. 본 보고서에 명시된 환경, 구성, 버전이 현재 사용하는 환경을 지원하는지 확인하려면 상호 운용성 매트릭스 툴(IMT)을 참조하십시오.
 
 link:https://www.netapp.com/pdf.html?item=/media/16423-tr-4722pdf.pdf["TR-4722: NetApp ONTAP 모범 사례 기반 MySQL 데이터베이스"^]

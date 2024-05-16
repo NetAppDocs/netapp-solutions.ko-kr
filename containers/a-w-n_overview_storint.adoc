@@ -13,6 +13,9 @@ summary: NetApp은 Anthos와 같은 컨테이너 기반 환경에서 고객이 �
 :imagesdir: ./../media/
 
 
+[role="lead"]
+NetApp은 Anthos와 같은 컨테이너 기반 환경에서 고객이 영구 데이터를 오케스트레이션하고 관리하도록 지원하는 다양한 제품을 제공합니다.
+
 
 
 == Anthos Ready 스토리지 파트너 프로그램.

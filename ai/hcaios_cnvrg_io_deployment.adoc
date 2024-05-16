@@ -13,6 +13,9 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 Helm 차트를 사용하여 cnvrg core를 배포하는 방법에 대해 자세히 설명합니다.
+
 
 
 == 제어 장치를 사용하여 cnvrg 코어를 배포합니다

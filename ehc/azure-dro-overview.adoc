@@ -14,13 +14,15 @@ summary:
 
 
 [role="lead"]
+클라우드 내 영역 간의 블록 레벨 복제를 사용하는 재해 복구는 사이트 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다.
+
 저자: Niyaz Mohamed, NetApp 솔루션 엔지니어링
 
 
 
 == 개요
 
-클라우드 내 영역 간의 블록 레벨 복제를 사용하는 재해 복구는 사이트 중단 및 데이터 손상 이벤트(예: 랜섬웨어)로부터 워크로드를 보호하는 복원력이 있고 비용 효율적인 방법입니다. ANF(Azure NetApp Files) 교차 지역 볼륨 복제를 사용하면 Azure NetApp Files 볼륨을 기본 AVS 사이트의 NFS 데이터 저장소로 사용하는 AVS(Azure VMware Solution) SDDC 사이트에서 실행되는 VMware 워크로드를 대상 복구 영역의 지정된 보조 AVS 사이트로 복제할 수 있습니다.
+ANF(Azure NetApp Files) 교차 지역 볼륨 복제를 사용하면 Azure NetApp Files 볼륨을 기본 AVS 사이트의 NFS 데이터 저장소로 사용하는 AVS(Azure VMware Solution) SDDC 사이트에서 실행되는 VMware 워크로드를 대상 복구 영역의 지정된 보조 AVS 사이트로 복제할 수 있습니다.
 
 DRO(재해 복구 오케스트레이터)(UI가 포함된 스크립팅된 솔루션)를 사용하여 AVS SDDC 간에 복제된 워크로드를 원활하게 복구할 수 있습니다. DRO는 복제 피어링을 끊은 다음 AVS에 VM 등록을 통해 대상 볼륨을 데이터 저장소로 마운트하고 NSX-T(모든 AVS 프라이빗 클라우드에 포함)에서 직접 네트워크 매핑을 실행하여 복구를 자동화합니다.
 

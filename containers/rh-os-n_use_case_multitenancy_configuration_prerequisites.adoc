@@ -13,6 +13,9 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 :imagesdir: ./../media/
 
 
+[role="lead"]
+다음은 NetApp를 사용하는 Red Hat OpenShift에서 다중 테넌시를 구성하기 위한 전제 조건입니다.
+
 
 
 == 필수 구성 요소

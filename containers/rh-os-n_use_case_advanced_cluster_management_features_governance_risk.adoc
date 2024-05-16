@@ -4,7 +4,7 @@ permalink: containers/rh-os-n_use_case_advanced_cluster_management_features_gove
 keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, ONTAP, Trident, Red Hat OpenShift, Advanced Cluster Management, Advanced Cluster Management for Kubernetes 
 summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
 ---
-= 기능: NetApp OpenShift에서 Kubernetes용 고급 클러스터 관리
+= 기대치를 설정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,10 +13,7 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 :imagesdir: ./../media/
 
 
-
-
-== 기대치를 설정합니다
-
+[role="lead"]
 이 기능을 사용하면 여러 클러스터에 대한 규정 준수 정책을 정의하고 클러스터가 규정을 준수하도록 할 수 있습니다. 규칙 위반 또는 위반 사항을 알리거나 수정하기 위해 정책을 구성할 수 있습니다.
 
 . 측면 표시줄에서 거버넌스 및 위험 으로 이동합니다.

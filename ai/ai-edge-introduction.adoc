@@ -15,6 +15,9 @@ summary: '이 문서에서는 새로운 애플리케이션 시나리오를 충�
 
 Sathish Thyagarajan, NetApp Miroslav Hodak, Lenovo
 
+[role="lead"]
+이 문서에서는 새로운 애플리케이션 시나리오를 충족하는 에지 환경에서 NetApp 스토리지 컨트롤러 및 Lenovo ThinkSystem 서버에 GPU 기반 인공 지능(AI) 추론을 배포하기 위한 컴퓨팅 및 스토리지 아키텍처에 대해 설명합니다.
+
 
 
 == 요약

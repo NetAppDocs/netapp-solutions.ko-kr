@@ -15,6 +15,9 @@ summary: 이 솔루션은 Azure 클라우드의 ANF에서 Oracle 구축에 필�
 
 Allen Cao, Niyaz Mohamed, NetApp
 
+[role="lead"]
+이 솔루션은 Azure 클라우드의 ANF에서 Oracle 구축에 필요한 컴퓨팅 및 스토리지의 크기를 조정하는 데 유용한 툴킷이 제공됩니다.
+
 
 
 == 목적

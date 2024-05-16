@@ -13,6 +13,7 @@ summary: NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 영구 데이터를 오케스트레이션하고 관리하는 데 도움이 되는 다양한 제품을 제공합니다.
 
 image:redhat_openshift_image108.jpg["오류: 그래픽 이미지가 없습니다"]

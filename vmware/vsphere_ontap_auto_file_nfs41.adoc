@@ -23,13 +23,8 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 :authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
-
-
-== 이 작업에 대해
-
+[role="lead"]
 이 섹션에서는 ONTAP NAS 스토리지를 사용하여 NFS 버전 4.1 데이터 저장소를 생성하는 방법을 설명합니다.
-
-자동 프로비저닝의 경우 다음 스크립트 중 하나를 사용합니다. <<PowerShell>>, <<Ansible>>, 또는 <<Terraform(Terraform>>.
 
 
 

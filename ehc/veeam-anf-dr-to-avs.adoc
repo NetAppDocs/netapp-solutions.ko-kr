@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
+Azure NetApp Files(ANF) 데이터 저장소는 스토리지를 컴퓨팅에서 분리하여 모든 조직에 워크로드를 클라우드로 전환하는 데 필요한 유연성을 제공합니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 스토리지 인프라를 고객에게 제공합니다. Azure NetApp Files 데이터 저장소는 Azure VMware Solution(AVS)과 함께 온프레미스 VMware 환경을 위한 재해 복구 사이트인 구축을 간소화하고 최적화합니다.
+
 저자: Niyaz Mohamed-NetApp Solutions Engineering
 
 
 
 == 개요
-
-Azure NetApp Files(ANF) 데이터 저장소는 스토리지를 컴퓨팅에서 분리하여 모든 조직에 워크로드를 클라우드로 전환하는 데 필요한 유연성을 제공합니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 스토리지 인프라를 고객에게 제공합니다. Azure NetApp Files 데이터 저장소는 Azure VMware Solution(AVS)과 함께 온프레미스 VMware 환경을 위한 재해 복구 사이트인 구축을 간소화하고 최적화합니다.
 
 Azure NetApp Files(ANF) 볼륨 기반 NFS 데이터 저장소를 사용하여 VM 복제 기능을 제공하는 검증된 타사 솔루션을 사용하여 사내에서 데이터를 복제할 수 있습니다. Azure NetApp Files 데이터 저장소를 추가하면 스토리지를 수용할 수 있는 엄청난 양의 ESXi 호스트를 포함하는 Azure VMware Solution SDDC를 구축하는 것보다 비용 최적화된 배포를 실현할 수 있습니다. 이러한 접근 방식을 "파일럿 라이트 클러스터"라고 합니다. 파일럿 라이트 클러스터는 Azure NetApp Files 데이터 저장소 용량과 함께 최소 AVS 호스트 구성(AVS 노드 3개)입니다.
 

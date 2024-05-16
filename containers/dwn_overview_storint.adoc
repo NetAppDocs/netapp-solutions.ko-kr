@@ -17,6 +17,9 @@ summary: NetApp은 컨테이너 기반 환경에서 영구 데이터를 오케�
 :trident_overview_page_link: dwn_overview_trident.html
 
 
+[role="lead"]
+NetApp은 컨테이너 기반 환경에서 영구 데이터를 오케스트레이션하고 관리하는 데 도움이 되는 다양한 제품을 제공합니다.
+
 [role="normal"]
 NetApp은 상태 저장 컨테이너 애플리케이션 및 데이터를 오케스트레이션, 관리, 보호 및 마이그레이션하는 데 유용한 다양한 제품을 제공합니다.
 

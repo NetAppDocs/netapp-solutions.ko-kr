@@ -13,6 +13,9 @@ summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 �
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NVIDIA DGX 시스템 기반 NetApp AIPod에 대한 추가 정보의 참조 자료를 제공합니다.
+
 
 
 == 결론

@@ -13,6 +13,9 @@ summary: 오픈 소스 MLOps with NetApp - 기술 개요
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 OpenSource MLOps 및 NetApp의 기술 개요를 중점적으로 다룹니다.
+
 
 
 == 인공 지능

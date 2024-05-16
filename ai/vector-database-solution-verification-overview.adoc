@@ -13,6 +13,7 @@ summary: 솔루션 검증 개요 - NetApp용 벡터 데이터베이스 솔루션
 :imagesdir: ./../media/
 
 
+[role="lead"]
 당사는 5가지 주요 영역에 중점을 두고 포괄적인 솔루션 검증을 수행했으며, 자세한 내용은 아래에 나와 있습니다. 각 섹션에서는 고객이 직면한 과제, NetApp에서 제공하는 솔루션, 그리고 고객이 누릴 수 있는 이점에 대해 알아봅니다.
 
 . link:./vector-database-milvus-cluster-setup.html["온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정"]

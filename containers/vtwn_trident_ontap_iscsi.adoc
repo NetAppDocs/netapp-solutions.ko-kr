@@ -13,6 +13,7 @@ summary: iSCSI를 통해 영구 볼륨의 NetApp ONTAP 스토리지 시스템을
 :imagesdir: ./../media/
 
 
+[role="lead"]
 iSCSI를 통해 영구 볼륨의 NetApp ONTAP 스토리지 시스템을 VMware Tanzu Kubernetes 클러스터와 통합하여 각 노드에 로그인하고 iSCSI 볼륨을 마운트하는 iSCSI 유틸리티 또는 패키지를 구성하여 노드를 준비합니다. 이렇게 하려면 여기에 설명된 절차를 따르십시오 link:https://docs.netapp.com/us-en/trident/trident-use/worker-node-prep.html#iscsi-volumes["링크"^].
 
 

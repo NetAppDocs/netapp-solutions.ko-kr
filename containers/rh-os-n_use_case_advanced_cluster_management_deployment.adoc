@@ -13,6 +13,7 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 :imagesdir: ./../media/
 
 
+[role="lead"]
 OpenShift 클러스터에 Kubernetes용 Advanced Cluster Management를 설치하려면 다음 단계를 완료하십시오.
 
 . 허브 클러스터로 OpenShift 클러스터를 선택하고 클러스터 관리자 권한으로 로그인합니다.

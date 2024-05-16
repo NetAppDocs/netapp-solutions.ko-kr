@@ -4,8 +4,7 @@ permalink: containers/rh-os-n_use_case_advanced_cluster_management_features_clus
 keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, ONTAP, Trident, Red Hat OpenShift, Advanced Cluster Management, Advanced Cluster Management for Kubernetes 
 summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
 ---
-= 기능: NetApp OpenShift에서 Kubernetes용 고급 클러스터 관리
-:hardbreaks:
+= 클러스터 라이프사이클 관리
 :allow-uri-read: 
 :nofooter: 
 :icons: font
@@ -13,10 +12,7 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 :imagesdir: ./../media/
 
 
-
-
-== 클러스터 라이프사이클 관리
-
+[role="lead"]
 다양한 OpenShift 클러스터를 관리하기 위해 클러스터를 생성하거나 Advanced Cluster Management로 가져올 수 있습니다.
 
 . 먼저 인프라 > 클러스터를 자동화하십시오.

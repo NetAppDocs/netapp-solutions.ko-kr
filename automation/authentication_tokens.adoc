@@ -14,6 +14,9 @@ keywords: netapp, solutions, automation, ansible
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 페이지에서는 NetApp Cloud Manager를 통해 CVO 및 Cloud Manager Connector 구축에 필요한 업데이트 토큰 및 액세스/비밀 키를 수집하는 데 필요한 자세한 정보를 제공합니다.
+
 
 
 == NetApp Cloud Manager를 사용하여 CVO 및 Connector의 AWS 인증 요구사항

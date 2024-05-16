@@ -13,6 +13,7 @@ summary: NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NFS를 통해 NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 스토리지 시스템과의 통신을 지원하는 백엔드를 생성해야 합니다. 이 솔루션에 기본 백엔드를 구성하지만, 보다 맞춤화된 옵션을 원할 경우 설명서를 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-use/ontap-nas.html["여기"^].
 
 

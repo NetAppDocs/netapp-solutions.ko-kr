@@ -13,6 +13,9 @@ summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용한 모니터링에 대해 설명합니다.
+
 
 
 == ** 이벤트 기반 모니터링 및 경고 만들기**

@@ -15,6 +15,8 @@ summary: 이 기술 보고서에서는 컨테이너식 애플리케이션을 사
 
 
 [role="lead"]
+이 기술 보고서에서는 컨테이너식 애플리케이션을 사용하여 NetApp에서 DevOps 사용 사례를 간편하고 효율적으로 활용하는 방법을 간략하게 설명합니다. 먼저, Astra 포트폴리오를 사용하여 NetApp 스토리지 시스템과 Kubernetes 플랫폼과의 통합에 대해 자세히 설명합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
+
 NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
 
 

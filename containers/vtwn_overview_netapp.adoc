@@ -15,6 +15,9 @@ summary: NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 
 :ontap_page_link: vtwn_netapp_ontap.html
 
 
+[role="lead"]
+NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격을 갖춘 여러 스토리지 플랫폼을 보유하고 있으므로 DevOps 처리량을 정의하고 극대화하는 데 도움이 됩니다.
+
 [role="normal"]
 NetApp은 컨테이너화된 애플리케이션을 위해 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격이 있는 여러 스토리지 플랫폼을 제공합니다.
 

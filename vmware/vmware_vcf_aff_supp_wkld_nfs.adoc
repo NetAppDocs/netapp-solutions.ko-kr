@@ -14,6 +14,10 @@ summary:
 
 
 [role="lead"]
+이 시나리오에서는 VCF 워크로드 도메인에 * NFS 데이터 저장소 * 와 * VVol 데이터 저장소 * 를 모두 구성하기 위해 VMware vSphere(OTV)용 ONTAP 도구를 배포하고 사용하는 방법을 보여 줍니다.
+
+* NFS * 는 VVol 데이터 저장소의 스토리지 프로토콜로 사용됩니다.
+
 저자: Josh Powell, Ravi BCB
 
 
@@ -23,10 +27,6 @@ summary:
 
 
 === 시나리오 개요
-
-이 시나리오에서는 VCF 워크로드 도메인에 * NFS 데이터 저장소 * 와 * VVol 데이터 저장소 * 를 모두 구성하기 위해 VMware vSphere(OTV)용 ONTAP 도구를 배포하고 사용하는 방법을 보여 줍니다.
-
-* NFS * 는 VVol 데이터 저장소의 스토리지 프로토콜로 사용됩니다.
 
 이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
 

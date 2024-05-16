@@ -13,6 +13,7 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Red Hat OpenShift cluster-admin은 다음과 같은 작업을 수행합니다.
 
 . Red Hat OpenShift 클러스터에 cluster-admin으로 로그인합니다.

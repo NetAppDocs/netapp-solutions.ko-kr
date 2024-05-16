@@ -15,6 +15,8 @@ summary: 이 게시물에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 
 
 
 [role="lead"]
+이 섹션에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 버킷으로 구성하는 방법에 대해 설명합니다.
+
 * 작성자: *
 Jian Jian(Ken), NetApp 수석 데이터 및 응용 과학자
 

@@ -13,6 +13,9 @@ summary: NetApp용 Values-xml-vector 데이터베이스 솔루션입니다
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp 벡터 데이터베이스 솔루션에 사용된 값에 대한 샘플 YAML 코드를 제공합니다.
+
 
 
 == 부록 A: Values.YAML

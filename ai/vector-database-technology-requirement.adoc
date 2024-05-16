@@ -13,6 +13,9 @@ summary: 기술 요구 사항 - NetApp용 벡터 데이터베이스 솔루션
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션은 NetApp 벡터 데이터베이스 솔루션의 요구 사항을 간략하게 설명합니다.
+
 
 
 == 기술 요구 사항

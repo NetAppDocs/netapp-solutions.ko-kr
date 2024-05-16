@@ -13,9 +13,9 @@ summary:
 :imagesdir: ./../media/
 
 
-[role="lead"]
 저자: Niyaz Mohammed, Carine Ngwekwe - NetApp 솔루션 엔지니어링
 
+[role="lead"]
 이 문서에서는 ONTAP with SnapCenter용 AWS FSx에서 Microsoft SQL Server에 대한 백업 및 복구를 수행하는 데 필요한 단계에 대해 설명합니다. 여기에는 다음 정보가 포함됩니다.
 
 * NetApp SnapCenter 구성

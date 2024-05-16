@@ -15,6 +15,9 @@ summary: 이 솔루션은 NFS 프로토콜을 사용하는 기본 데이터베�
 
 Allen Cao, Niyaz Mohamed, NetApp
 
+[role="lead"]
+이 솔루션은 NFS 프로토콜을 사용하는 기본 데이터베이스 스토리지로서 Microsoft Azure NetApp Files에 자동화된 Oracle을 구축하는 데 대한 개요와 세부 정보를 제공하며, Oracle 데이터베이스는 dNFS를 사용하는 컨테이너 데이터베이스로 구축됩니다.
+
 
 
 == 목적
@@ -45,7 +48,7 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 == 솔루션 테스트 및 검증 환경
 
-이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 랩 설정에서 수행되었습니다. 섹션을 참조하십시오 <<Key Factors for Deployment Consideration>> 를 참조하십시오.
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 랩 설정에서 수행되었습니다. 섹션을 참조하십시오 <<구축 시 고려해야 할 주요 요소>> 를 참조하십시오.
 
 
 

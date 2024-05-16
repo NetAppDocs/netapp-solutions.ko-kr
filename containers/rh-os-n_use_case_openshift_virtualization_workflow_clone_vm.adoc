@@ -13,6 +13,9 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 Red Hat OpenShift Virtualization을 사용하여 가상 머신을 복제하는 방법에 대해 설명합니다.
+
 
 
 == VM 클로닝

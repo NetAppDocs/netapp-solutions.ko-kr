@@ -13,6 +13,7 @@ keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astr
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Astra Control Center에서 애플리케이션 워크로드를 관리하고 나면 해당 워크로드에 대한 보호 설정을 구성할 수 있습니다.
 
 

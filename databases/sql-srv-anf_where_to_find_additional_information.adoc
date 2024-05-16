@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 웹 사이트 링크를 참조하십시오.
 
 * Azure NetApp Files를 사용하는 솔루션 아키텍처

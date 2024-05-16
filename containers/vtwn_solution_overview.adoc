@@ -15,6 +15,7 @@ summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터
 
 NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
 
+[role="lead"]
 이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템과의 스토리지 통합 및 영구 스토리지를 위한 Astra Trident 스토리지 오케스트레이터와 해당 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 복제를 위한 Astra Control Center에 대해 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
 
 

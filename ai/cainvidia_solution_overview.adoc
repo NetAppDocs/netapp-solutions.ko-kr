@@ -13,6 +13,9 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 문서는 ONTAP AI 및 NVIDIA DGX에 대한 대화형 AI 모델을 개략적으로 설명합니다.
+
 
 
 == NetApp ONTAP AI 및 BlueXP Copy and Sync 를 참조하십시오

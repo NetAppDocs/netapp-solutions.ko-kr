@@ -13,6 +13,9 @@ summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션은 Domino Data Lab 및 NetApp가 탑재된 하이브리드 멀티 클라우드 MLOps에 대한 기술 개요를 제공합니다.
+
 
 
 == Domino 데이터 랩

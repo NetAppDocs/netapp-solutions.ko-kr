@@ -19,3 +19,20 @@ NetApp, Suresh Thoppay
 TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프트웨어로 구동되는 VMware Horizon 환경에서 NetApp H615C 컴퓨팅 노드를 사용하여 3D 그래픽 워크로드를 처리하는 방법에 대한 지침을 제공합니다. 또한 H615C에 대한 SPECviewperf 13의 예비 테스트에서 얻은 결과를 제공합니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/7125-tr4792.pdf["VMware Horizon 7을 지원하는 NetApp HCI for Virtual Desktop Infrastructure - 3D 그래픽을 통해 파워 유저의 역량을 강화하십시오"^]
+--
+사이드바: 사이드바
+Permalink: VMware/tr-4792.html 를 참조하십시오
+키워드: 디자인, HCI, 컴퓨팅, VMware, 클라우드, 그래픽, 가상화
+요약: "TR-4792는 NVIDIA 그래픽 처리 장치(GPU) 및 가상화 소프트웨어 기반의 VMware Horizon 환경에서 NetApp HCI 615C를 사용하여 3D 그래픽 워크로드를 처리하는 지침을 제공합니다."
+--
+
+
+
+= VMware Horizon 7을 지원하는 NetApp HCI for Virtual Desktop Infrastructure - 3D 그래픽을 통해 파워 유저의 역량을 강화하십시오
+
+NetApp, Suresh Thoppay
+
+[role="lead"]
+TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프트웨어로 구동되는 VMware Horizon 환경에서 NetApp H615C 컴퓨팅 노드를 사용하여 3D 그래픽 워크로드를 처리하는 방법에 대한 지침을 제공합니다. 또한 H615C에 대한 SPECviewperf 13의 예비 테스트에서 얻은 결과를 제공합니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/7125-tr4792.pdf["VMware Horizon 7을 지원하는 NetApp HCI for Virtual Desktop Infrastructure - 3D 그래픽을 통해 파워 유저의 역량을 강화하십시오"^]

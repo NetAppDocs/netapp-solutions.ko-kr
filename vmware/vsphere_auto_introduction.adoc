@@ -13,6 +13,9 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 기본 ONTAP 기능�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 페이지에서는 VMware vSphere 환경에서 기본 ONTAP 기능을 자동화할 때의 이점에 대해 설명합니다.
+
 
 
 == VMware 자동화

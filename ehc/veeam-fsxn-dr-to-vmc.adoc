@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
+Amazon FSx for NetApp ONTAP와 AWS의 VMware Cloud의 통합은 SDDC의 클러스터에 연결할 수 있는 NetApp ONTAP 파일 시스템 기반의 AWS 관리형 외부 NFS 데이터 저장소입니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 가상화 스토리지 인프라를 고객에게 제공합니다.
+
 저자: Niyaz Mohamed-NetApp Solutions Engineering
 
 
 
 == 개요
-
-Amazon FSx for NetApp ONTAP와 AWS의 VMware Cloud의 통합은 SDDC의 클러스터에 연결할 수 있는 NetApp ONTAP 파일 시스템 기반의 AWS 관리형 외부 NFS 데이터 저장소입니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 가상화 스토리지 인프라를 고객에게 제공합니다.
 
 AWS SDDC 기반 VMware Cloud를 재해 복구 타겟으로 사용하려는 고객은 VM 복제 기능을 제공하는 검증된 타사 솔루션을 사용하여 온프레미스에서 데이터를 복제하는 데 FSx for ONTAP 데이터 저장소를 사용할 수 있습니다. FSx for ONTAP 데이터 저장소를 추가하면 스토리지를 수용하기 위해 엄청난 양의 ESXi 호스트를 사용하여 AWS SDDC에 VMware 클라우드를 구축하는 것보다 비용 최적화된 배포를 실현할 수 있습니다.
 

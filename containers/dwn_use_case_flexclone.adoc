@@ -13,6 +13,9 @@ summary: FlexClone 기술을 사용하여 빠르게 구축합니다
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp FlexClone 기술을 사용하여 솔루션을 빠르게 구축하는 방법을 간략하게 설명합니다.
+
 
 
 == 개요

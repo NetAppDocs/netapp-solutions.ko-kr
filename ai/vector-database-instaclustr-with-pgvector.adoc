@@ -13,6 +13,9 @@ summary: NetApp용 pgvector-vector 데이터베이스 솔루션을 사용한 ins
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp용 벡터 데이터베이스 솔루션에서 instaclustr 제품이 PostgreSQL on pgvector 기능과 통합되는 방법에 대해 자세히 설명합니다.
+
 
 
 == PostgreSQL:pgvector를 사용한 Instaclustr 벡터 데이터베이스

@@ -20,7 +20,7 @@ Cloud Volumes Service는 적절한 액세스 권한을 유지하면서 동일한
 
 == 액세스 제어
 
-* * 공유 액세스 제어. * NAS 공유에 액세스할 수 있는 클라이언트 및/또는 사용자 및 그룹을 결정합니다. NFS의 경우 엑스포트 정책과 규칙을 사용하여 클라이언트 엑스포트 액세스를 제어합니다. NFS 내보내기는 Cloud Volumes Service 인스턴스에서 관리됩니다. SMB는 CIFS/SMB 공유를 사용하고 ACL을 공유하여 사용자 및 그룹 레벨에서 보다 세부적인 제어를 제공합니다. 을 사용하여 SMB 클라이언트의 공유 레벨 ACL만 구성할 수 있습니다 https://library.netapp.com/ecmdocs/ECMP1401220/html/GUID-C1772CDF-8AEE-422B-AB87-CFCB7E50FF94.html["MMC/컴퓨터 관리"^] Cloud Volumes Service 인스턴스에 대한 관리자 권한이 있는 계정(섹션 참조) link:ncvs-gc-smb.html#accounts-with-local/builtin-administrator/backup-rights[""로컬/BUILTIN 관리자/백업 권한이 있는 계정.""])를 클릭합니다.
+* * 공유 액세스 제어. * NAS 공유에 액세스할 수 있는 클라이언트 및/또는 사용자 및 그룹을 결정합니다. NFS의 경우 엑스포트 정책과 규칙을 사용하여 클라이언트 엑스포트 액세스를 제어합니다. NFS 내보내기는 Cloud Volumes Service 인스턴스에서 관리됩니다. SMB는 CIFS/SMB 공유를 사용하고 ACL을 공유하여 사용자 및 그룹 레벨에서 보다 세부적인 제어를 제공합니다. Cloud Volumes Service 인스턴스에 대한 관리자 권한이 있는 계정과 함께 https://library.netapp.com/ecmdocs/ECMP1401220/html/GUID-C1772CDF-8AEE-422B-AB87-CFCB7E50FF94.html[MMC/Computer 관리 를 사용하여 SMB 클라이언트에서 공유 수준 ACL을 구성할 수 있습니다(ncvs-gc-smb.html#로컬/BUILTIN 관리자/백업 권한이 있는 계정" 섹션 참조).
 * * 파일 액세스 제어. * 파일 또는 폴더 수준에서 권한을 제어하고 항상 NAS 클라이언트에서 관리합니다. NFS 클라이언트는 기존 모드 비트(rwx) 또는 NFSv4 ACL을 사용할 수 있습니다. SMB 클라이언트는 NTFS 권한을 활용합니다.
 
 

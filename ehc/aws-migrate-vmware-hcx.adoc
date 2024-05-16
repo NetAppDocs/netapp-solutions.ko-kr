@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
+AWS(Amazon Web Services)의 VMware 클라우드(VMC)에 대한 일반적인 사용 사례로서, NetApp ONTAP용 Amazon FSx의 보조 NFS 데이터 저장소가 포함된 VMware 워크로드를 마이그레이션합니다. VMware HCX가 선호되는 옵션이며, VMware에서 지원하는 모든 데이터 저장소에서 실행되는 사내 VM(가상 머신)과 해당 데이터를 ONTAP용 FSx의 보조 NFS 데이터 저장소를 포함하는 VMC 데이터 저장소로 이동하는 다양한 마이그레이션 방법을 제공합니다.
+
 저자: NetApp 솔루션 엔지니어링
 
 
 
 == 개요: VMware HCX, FSx ONTAP 보조 데이터 저장소 및 VMware Cloud를 사용하여 가상 시스템 마이그레이션
-
-AWS(Amazon Web Services)의 VMware 클라우드(VMC)에 대한 일반적인 사용 사례로서, NetApp ONTAP용 Amazon FSx의 보조 NFS 데이터 저장소가 포함된 VMware 워크로드를 마이그레이션합니다. VMware HCX가 선호되는 옵션이며, VMware에서 지원하는 모든 데이터 저장소에서 실행되는 사내 VM(가상 머신)과 해당 데이터를 ONTAP용 FSx의 보조 NFS 데이터 저장소를 포함하는 VMC 데이터 저장소로 이동하는 다양한 마이그레이션 방법을 제공합니다.
 
 VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 워크로드 재조정 및 비즈니스 연속성을 간소화하도록 설계된 모바일 플랫폼입니다. 이 제품은 AWS 기반 VMware Cloud의 일부로 포함되어 있으며 워크로드를 다양한 방법으로 마이그레이션하여 DR(재해 복구) 작업에 사용할 수 있습니다.
 

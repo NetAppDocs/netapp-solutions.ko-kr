@@ -13,6 +13,9 @@ summary: NetApp용 docker-compose.xml 벡터 데이터베이스 솔루션입니�
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에는 NetApp용 벡터 데이터베이스 솔루션에 대한 샘플 YAML 코드가 포함되어 있습니다.
+
 
 
 == 부록 D: docker-composition.yml

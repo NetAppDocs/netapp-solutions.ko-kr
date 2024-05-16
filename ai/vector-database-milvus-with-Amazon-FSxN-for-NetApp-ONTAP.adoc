@@ -13,6 +13,9 @@ summary: NetApp용 NetApp ONTAP-벡터 데이터베이스 솔루션용 Amazon FS
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NetApp용 벡터 데이터베이스 솔루션에 대한 Amazon FSxN을 사용한 milvus 클러스터 설정에 대해 설명합니다.
+
 
 
 === NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화

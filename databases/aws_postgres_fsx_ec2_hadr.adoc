@@ -15,6 +15,9 @@ summary: 이 솔루션은 PostgreSQL 데이터베이스 구축 및 HA/DR 설정,
 
 Allen Cao, Niyaz Mohamed, NetApp
 
+[role="lead"]
+이 솔루션은 FSx ONTAP 스토리지 오퍼링에 내장된 NetApp SnapMirror 기술 및 AWS의 NetApp Ansible 자동화 툴킷에 기반한 PostgreSQL 데이터베이스 구축과 HA/DR 설정, 페일오버, 재동기화에 대한 개요와 세부 정보를 제공합니다.
+
 
 
 == 목적
@@ -48,7 +51,7 @@ PostgreSQL은 에서 가장 많이 사용되는 데이터베이스 엔진 10개 
 
 == 솔루션 테스트 및 검증 환경
 
-이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <<Key Factors for Deployment Consideration>>.
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 AWS FSx 및 EC2 환경에서 수행되었습니다. 자세한 내용은 섹션을 참조하십시오 <<구축 시 고려해야 할 주요 요소>>.
 
 
 

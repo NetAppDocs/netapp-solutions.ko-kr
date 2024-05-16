@@ -13,6 +13,7 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 :imagesdir: ./../media/
 
 
+[role="lead"]
 이전 단계에서 구성한 멀티테넌트 아키텍처를 확인하려면 다음 단계를 수행하십시오.
 
 

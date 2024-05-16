@@ -14,6 +14,9 @@ keywords: netapp, solutions, automation, ansible, terraform
 :imagesdir: ./media/
 
 
+[role="lead"]
+NetApp 솔루션 자동화를 통해 고객은 많은 일반 인프라 및 애플리케이션 작업의 구축, 구성 및 실행을 자동화할 수 있습니다.
+
 
 
 == 소개

@@ -13,6 +13,9 @@ summary: NVIDIA DGX 시스템 및 NetApp AIPod - 소프트웨어 구성 요소
 :imagesdir: ./../media/
 
 
+[role="lead"]
+이 섹션에서는 NVIDIA DGX 시스템이 지원되는 NetApp AIPod의 소프트웨어 구성요소에 대해 중점적으로 다룹니다.
+
 
 
 == NVIDIA 소프트웨어

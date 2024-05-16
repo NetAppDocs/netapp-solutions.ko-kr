@@ -14,6 +14,11 @@ summary:
 
 
 [role="lead"]
+GCP, GCVE 및 CVS에 대한 글로벌 지역 지원에 대해 자세히 알아보십시오.
+
+
+NOTE: NFS 데이터 저장소는 두 서비스(GCVE 및 CVS 성능)를 모두 사용할 수 있는 지역에서 사용할 수 있습니다.
+
 GCVE용 보조 NFS 데이터 저장소는 NetApp 클라우드 볼륨 서비스에서 지원됩니다.
 
 

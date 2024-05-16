@@ -14,13 +14,13 @@ summary:
 
 
 [role="lead"]
+Google Cloud VMware Engine 및 Cloud Volume Service 데이터 저장소의 가장 일반적인 사용 사례 중 하나는 VMware 워크로드 마이그레이션입니다. VMware HCX는 선호되는 옵션이며 사내 VM(가상 머신)과 데이터를 Cloud Volume Service NFS 데이터 저장소로 이동하는 다양한 마이그레이션 메커니즘을 제공합니다.
+
 저자: NetApp 솔루션 엔지니어링
 
 
 
 == 개요: VMware HCX, NetApp Cloud Volume Service 데이터 저장소 및 Google Cloud VMware Engine(GCVE)을 사용하여 가상 머신 마이그레이션
-
-Google Cloud VMware Engine 및 Cloud Volume Service 데이터 저장소의 가장 일반적인 사용 사례 중 하나는 VMware 워크로드 마이그레이션입니다. VMware HCX는 선호되는 옵션이며 사내 VM(가상 머신)과 데이터를 Cloud Volume Service NFS 데이터 저장소로 이동하는 다양한 마이그레이션 메커니즘을 제공합니다.
 
 VMware HCX는 주로 클라우드 전반에서 애플리케이션 마이그레이션, 워크로드 재조정 및 비즈니스 연속성을 간소화하도록 설계된 마이그레이션 플랫폼입니다. 이 제품은 Google Cloud VMware Engine 프라이빗 클라우드의 일부로 포함되어 있으며 워크로드를 마이그레이션할 수 있는 다양한 방법을 제공하므로 재해 복구(DR) 작업에 사용할 수 있습니다.
 

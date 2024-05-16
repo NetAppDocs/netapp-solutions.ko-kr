@@ -13,6 +13,7 @@ keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astr
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Red Hat OpenShift 클러스터를 등록하면 Astra Control Center를 통해 배포 및 관리하는 애플리케이션을 검색할 수 있습니다.
 
 
