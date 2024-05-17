@@ -16,9 +16,6 @@ summary: 이 솔루션은 Azure 클라우드에서 BlueXP 콘솔을 사용하여
 [role="lead"]
 이 솔루션은 Azure 클라우드에서 BlueXP 콘솔을 사용하여 NetApp SnapCenter SaaS를 사용하여 Oracle 데이터베이스 백업, 복원 및 클론에 대한 개요와 세부 정보를 제공합니다.
 
-[role="lead"]
-이 솔루션은 Azure 클라우드에서 BlueXP 콘솔을 사용하여 NetApp SnapCenter SaaS를 사용하여 Oracle 데이터베이스 백업, 복원 및 클론에 대한 개요와 세부 정보를 제공합니다.
-
 Allen Cao, Niyaz Mohamed, NetApp
 
 
