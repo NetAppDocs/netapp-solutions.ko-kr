@@ -123,7 +123,7 @@ image:fsx-hcx-image7.png["오류: 그래픽 이미지가 없습니다"]
 
 NOTE: 사내에 구축된 각 HCX Connector에는 별도의 키가 필요합니다.
 
-. 사내 VMware HCX Connector 에 로그인합니다 https://hcxconnectorIP:9443["https://hcxconnectorIP:9443"^] 관리자 자격 증명을 사용합니다.
+. 사내 VMware HCX Connector 에 로그인합니다 `"https://hcxconnectorIP:9443"` 관리자 자격 증명을 사용합니다.
 +
 
 NOTE: OVA 배포 중에 정의된 암호를 사용합니다.

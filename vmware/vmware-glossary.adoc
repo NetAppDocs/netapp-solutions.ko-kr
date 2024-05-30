@@ -43,7 +43,7 @@ VMware는 스토리지를 기존 스토리지와 소프트웨어 정의 스토�
 
 데이터 저장소는 파일 시스템과 유사한 논리적 컨테이너로, 물리적 스토리지의 구체적인 내용을 숨기고 가상 머신 파일을 저장하는 일관된 모델을 제공합니다. ISO 이미지, 가상 시스템 템플릿 및 플로피 이미지를 저장하는 데도 데이터 저장소를 사용할 수 있습니다.
 
-* link:https://docs.netapp/com/us-en/vontap-apps-dbs/vmware/vmware-vsphere-overview.html["NetApp ONTAP는 모든 스토리지 프로토콜을 지원합니다"]
+* link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["NetApp ONTAP는 모든 스토리지 프로토콜을 지원합니다"]
 
 
 * FlexPod란 무엇입니까? *
@@ -114,7 +114,7 @@ Aria는 운영 관련 작업을 수행할 수 있을 뿐 아니라 관리자가 
 VMware VVOL은 데이터 저장소를 생성하는 데 사용되는 기존 LUN과 마찬가지로 스토리지 어레이 레벨에서 작업을 지원하는 가상 머신을 위한 저수준 스토리지입니다. 기존의 VMFS 파일 시스템을 사용하는 대신 스토리지 배열은 스토리지 시스템을 사용하여 VM에 대한 액세스를 제공하고 데이터를 구성하는 방법을 정의합니다.
 
 * link:https://www.netapp.tv/details/29476["VMware VVOL이 NetApp에서 어떤 일을 하는지 알아보십시오"]
-* link:https://docs.netapp/com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html["VVol 기술 문서"]
+* link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html["VVol 기술 문서"]
 
 
 

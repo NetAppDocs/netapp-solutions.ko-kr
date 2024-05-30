@@ -120,7 +120,7 @@ NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
 VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스를 시작한 후 다음 단계를 수행하여 HCX 커넥터를 활성화하십시오. Google Cloud VMware Engine 포털에서 라이센스 키를 생성하고 VMware HCX Manager에서 활성화합니다.
 
 . VMware Engine 포털에서 리소스를 클릭하고 프라이빗 클라우드를 선택한 다음 * HCX Manager Cloud Version * 에서 다운로드 아이콘을 클릭합니다.image:gcpd-hcx-image6.png["HCX 라이센스를 다운로드합니다"]다운로드한 파일을 열고 라이센스 키 문자열을 복사합니다.
-. 사내 VMware HCX Manager()에 로그인합니다 https://hcxmanagerIP:9443["https://hcxmanagerIP:9443"^] 관리자 자격 증명을 사용합니다.
+. 사내 VMware HCX Manager()에 로그인합니다 `"https://hcxmanagerIP:9443"` 관리자 자격 증명을 사용합니다.
 +
 
 NOTE: OVA 배포 중에 정의된 hcxmanageIP 및 암호를 사용합니다.

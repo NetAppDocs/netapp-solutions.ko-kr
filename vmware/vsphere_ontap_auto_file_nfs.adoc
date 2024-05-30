@@ -86,7 +86,7 @@ link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-nfs-vaai/GUID-D7
 
 == 참조하십시오
 
-link:https://docs/netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["vSphere 데이터 저장소 및 프로토콜 기능: NFS"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["vSphere 데이터 저장소 및 프로토콜 기능: NFS"]
 
 
 
