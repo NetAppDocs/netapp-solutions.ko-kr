@@ -140,7 +140,7 @@ VMware Cloud Foundation(VCF)은 기존 엔터프라이즈와 최신 애플리케
 
 SRM(Site Recovery Manager)은 재해 발생 시 가동 중지 시간을 최소화하도록 설계된 업계 최고의 재해 복구(DR) 관리 솔루션입니다. 정책 기반 관리, 자동화된 오케스트레이션 및 중앙 집중식 복구 계획의 무중단 테스트를 제공합니다.
 
-* link:https://docs.netapp.com/us-en/ntap-apps-dbs/vmware/vmware-srm-overview.html["NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자"]
+* link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["NetApp ONTAP 9가 포함된 VMware 사이트 복구 관리자"]
 
 
 
