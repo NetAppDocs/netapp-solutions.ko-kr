@@ -55,6 +55,8 @@ entries:
         url: "/databases/azure_ora_nfile_migration.html"
   - title: 온프레미스/하이브리드 클라우드
     entries:
+    - title: NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축
+      url: "/databases/automation_ora_c-series_nfs.html"
     - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
       url: "/databases/automation_ora_asa_iscsi.html"
     - title: FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c

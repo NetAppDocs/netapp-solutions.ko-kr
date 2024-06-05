@@ -44,6 +44,8 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf
   - title: 하이브리드 클라우드 데이터베이스 솔루션
     links:
+    - title: NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축
+      url: "/automation_ora_c-series_nfs.html"
     - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
       url: "/automation_ora_asa_iscsi.html"
     - title: EC2/FSx 모범 사례에 기반한 Oracle 데이터베이스 구축
