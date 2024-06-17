@@ -14,7 +14,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 
 [role="lead"]
-이 섹션에서는 Red Hat OpenShift Virtualization 마이그레이션 툴킷을 사용하는 클러스터 간에 가상 머신을 마이그레이션하는 방법에 대해 설명합니다.
+이 섹션에서는 Red Hat OpenShift Virtualization 마이그레이션 툴킷을 사용하여 VMware에서 OpenShift Cluster로 가상 머신을 마이그레이션하는 방법에 대해 설명합니다.
 
 
 
@@ -22,7 +22,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 이 섹션에서는 MTV(Migration Toolkit for Virtualization)를 사용하여 가상 머신을 VMware에서 OpenShift Container 플랫폼에서 실행되고 Astra Trident를 사용하여 NetApp ONTAP 스토리지와 통합된 OpenShift 가상화로 마이그레이션하는 방법을 알아봅니다.
 
-다음 비디오에서는 영구 스토리지를 위해 ONTAP-SAN을 사용하여 RHEL VM을 VMware에서 OpenShift Virtualization으로 마이그레이션하는 데모를 보여줍니다.
+다음 비디오에서는 영구 스토리지를 위해 ONTAP-SAN 스토리지 클래스를 사용하여 RHEL VM을 VMware에서 OpenShift Virtualization으로 마이그레이션하는 과정을 보여 줍니다.
 
 .Red Hat MTV를 사용하여 NetApp ONTAP 스토리지를 통해 VM을 OpenShift 가상화로 마이그레이션합니다
 video::bac58645-dd75-4e92-b5fe-b12b015dc199[panopto,width=360]

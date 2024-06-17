@@ -22,7 +22,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 OpenShift에서 기존 VM의 복제는 Astra Trident의 Volume CSI 클로닝 기능을 통해 이루어집니다. CSI 볼륨 클로닝은 기존 PVC를 PV를 복제하여 데이터 소스로 사용하여 새로운 PVC를 생성할 수 있습니다. 새 PVC가 생성된 후, 별도의 요소로 작동하며 원본 PVC에 대한 링크 또는 종속성 없이 작동합니다.
 
-image::redhat_openshift_image57.jpg[VM 클로닝 아키텍처]
+image::redhat_openshift_image57.png[VM 클로닝 아키텍처]
 
 CSI 볼륨 클로닝에는 다음과 같은 몇 가지 제한 사항이 있습니다.
 
