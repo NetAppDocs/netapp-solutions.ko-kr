@@ -39,6 +39,6 @@ VM 마이그레이션이 * 보류 * 에서 * 예약 * 으로 전환되고 * 성�
 
 NOTE: devictionStrategy 가 LiveMigrate 로 설정된 경우 원래 노드를 유지 관리 모드로 전환하면 OpenShift 클러스터의 VM 인스턴스가 다른 노드로 자동 마이그레이션됩니다.
 
-image::rh-os-n_use_case_vm_live_migrate_1[VM 실시간 마이그레이션이 시작됩니다]
+image::rh-os-n_use_case_vm_live_migrate_1.png[VM 실시간 마이그레이션이 시작됩니다]
 
-image::rh-os-n_use_case_vm_live_migrate_2[VM 라이브 마이그레이션 성공]
+image::rh-os-n_use_case_vm_live_migrate_2.png[VM 라이브 마이그레이션 성공]
