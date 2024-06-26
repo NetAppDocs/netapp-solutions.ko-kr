@@ -16,7 +16,7 @@ indexpage:
       url: aipod_nv_intro.html
     - title: NVIDIA와 함께 ONTAP AI
       url: ontap-ai-overview.html
-    - title: NVIDIA를 통한 EF-Series AI
+    - title: NVIDIA SuperPOD 및 NetApp EF-Series
       url: ef-series-ai-overview.html
     - title: NetApp E-Series 스토리지를 통한 IBM Spectrum Scale
       url: tr-4859.html
@@ -26,6 +26,8 @@ indexpage:
       url: a400-thinksystem-introduction.html
     - title: AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
       url: tr-4815.html
+    - title: NVIDIA DGX SuperPOD 및 NetApp AIPod
+      url: ai-dgx-superpod.html
   - title: 데이터 레이크 및 데이터 파이프라인
     links:
     - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN

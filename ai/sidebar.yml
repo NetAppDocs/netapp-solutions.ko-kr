@@ -53,6 +53,8 @@ entries:
   - title: NVIDIA를 통한 EF-Series AI
     url: "/ai/ef-series-ai-overview.html"
     entries:
+    - title: NVIDIA DGX SuperPOD 및 NetApp EF-series
+      url: "/ai/ai-dgx-superpod.html"
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 설계를 지원하는 EF-Series AI
       url: "/ai/nva-1156-design.html"
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 구축이 포함된 EF-Series AI
