@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: ai/rag_nemo_deployment.html 
+keywords: RAG, Retrieval Augmented Generation, NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NeMo, NIM, NIMS, Hybrid, Hybrid Cloud, Hybrid Multicloud, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+summary: NetApp-Nemo 마이크로서비스 구축을 통한 엔터프라이즈 RAG 
+---
+= Nemo 마이크로서비스 배포
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 NetApp 스토리지와 함께 NVIDIA Nemo 마이크로서비스를 구축하기 위해 수행해야 하는 작업에 대해 설명합니다. NVIDIA Nemo 마이크로서비스는 를 사용하여 배포됩니다 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/index.html["NVIDIA Enterprise RAG LLM 연산자"].
+
+
+
+== 필수 구성 요소
+
+이 섹션에서 설명하는 단계를 수행하기 전에 다음 작업을 이미 수행한 것으로 가정합니다.
+
+* 이미 작동 중인 Kubernetes 클러스터가 있으며 NVIDIA Enterprise rag LLM Operator가 지원하는 Kubernetes 버전을 실행 중입니다. 지원되는 Kubernetes 버전 목록은 을 참조하십시오 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/platform-support.html["RAG LLM 작업자 설명서."] 이 Kubernetes 클러스터는 온프레미스 또는 클라우드에 저장될 수 있습니다.
+* Kubernetes 클러스터에는 NVIDIA Enterprise rag LLM Operator가 지원하는 3개 이상의 GPU가 포함되어 있습니다. 지원되는 GPU 목록은 을 참조하십시오 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/platform-support.html["RAG LLM 작업자 설명서."]
+* Kubernetes 클러스터에 NetApp Astra Trident를 이미 설치하고 구성했습니다. Astra Trident에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"]. 이 솔루션은 Trident에서 지원하는 모든 NetApp 물리적 스토리지 어플라이언스, 소프트웨어 정의 인스턴스 또는 클라우드 서비스와 호환됩니다.
+
+
+
+
+== NVIDIA Enterprise rag LLM Operator를 사용하여 NVIDIA Nemo 마이크로서비스를 배포합니다
+
+. NVIDIA GPU Operator가 Kubernetes 클러스터에 이미 설치되어 있지 않은 경우 에 설명된 지침에 따라 NVIDIA GPU Operator를 설치합니다 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/install.html#install-the-nvidia-gpu-operator["RAG LLM 작업자 설명서."]
+. 에 설명된 지침에 따라 NVIDIA Enterprise rag LLM Operator를 설치합니다 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/install.html#install-the-rag-llm-operator["RAG LLM 작업자 설명서."]
+. 에 나와 있는 지침에 따라 NVIDIA Enterprise rag LLM Operator를 사용하여 RAG 파이프라인을 생성합니다 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/pipelines.html["RAG LLM 작업자 설명서."]
++
+** StorageClass 를 지정할 때 Astra Trident를 활용하는 StorageClass 를 지정해야 합니다.
+** 기본적으로, rag 파이프라인은 rag 배포를 위한 벡터 저장소/기술 자료 역할을 하는 새 pgvector 데이터베이스를 배포합니다. 기존 pgvector 또는 Milvus 인스턴스를 대신 사용하려면 에 설명된 지침을 따르십시오 link:https://docs.nvidia.com/ai-enterprise/rag-llm-operator/0.4.1/vector-database.html["RAG LLM 작업자 설명서."] NetApp를 사용하여 벡터 데이터베이스를 실행하는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/ai/vector-database-solution-with-netapp.html["NetApp 벡터 데이터베이스 솔루션 설명서"]
+
+
+

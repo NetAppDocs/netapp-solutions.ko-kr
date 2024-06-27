@@ -6,51 +6,51 @@ entries:
 - title: 개요
   entries:
   - title: Red Hat OpenShift Virtualization
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_overview.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
   - title: NetApp 스토리지 시스템
-    url: "../containers/rh-os-n_overview_netapp.html"
+    url: "/containers/rh-os-n_overview_netapp.html"
   - title: NetApp 스토리지 통합
-    url: "../containers/rh-os-n_overview_storint.html"
+    url: "/containers/rh-os-n_overview_storint.html"
   - title: 블로그
-    url: "../blogs.html#containers-osv"
+    url: "/blogs.html#containers-osv"
   - title: 비디오
-    url: "../containers/rh-os-n_videos_and_demos.html"
+    url: "/containers/rh-os-n_videos_and_demos.html"
 - title: 구축
   entries:
   - title: 개요
-    url: ".../containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
   - title: OpenShift 가상화 설치
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
   - title: VM 생성
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
   - title: VMware에서 VM 마이그레이션
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html"
   - title: VM 실시간 마이그레이션
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
   - title: VM 클로닝
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
   - title: 스냅샷에서 VM 생성
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
 - title: 데이터 보호
   entries:
   - title: 개요
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"
   - title: OADP 설치
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_installation.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_installation.html"
   - title: Velero를 사용하여 백업합니다
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_backup.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_backup.html"
   - title: Velero를 사용하여 복원합니다
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_restore.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_restore.html"
   - title: 백업 및 복구 삭제
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_delete.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_delete.html"
 - title: 모니터링
   entries:
   - title: 개요
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html"
   - title: Cloud Insights 통합
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
   - title: 샘플 모니터링
-    url: "../containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
 - title: 추가 리소스
   entries:
   - title: Red Hat OpenShift Virtualization

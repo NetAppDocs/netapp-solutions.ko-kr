@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: ai/rag_nemo_ingest_netapp_data.html 
+keywords: RAG, Retrieval Augmented Generation, NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NeMo, NIM, NIMS, Hybrid, Hybrid Cloud, Hybrid Multicloud, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+summary: NetApp를 사용한 엔터프라이즈 RAG - Nemo Retriever를 사용하여 기존 NetApp 데이터를 수집합니다 
+---
+= Nemo Retriever로 기존 NetApp 데이터를 수집합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NVIDIA Nemo Retriever의 일부인 Nemo Embedding 마이크로서비스를 사용하여 데이터를 RAG 벡터 저장소/기술 자료에 수집할 수 있습니다. 이 섹션에서는 기존 NetApp 데이터 소스에서 데이터를 수집하기 위해 수행해야 하는 작업에 대해 설명합니다.
+
+
+
+== NVIDIA 샘플 채팅 봇을 사용하여 데이터 수집
+
+NVIDIA Enterprise RAG LLM 운영자가 배포한 샘플 채팅 봇 웹 애플리케이션을 사용하여 기존 파일을 수집할 수 있습니다. 채팅 봇 웹 애플리케이션을 사용하여 기존 파일을 수집하는 과정은 여기에 요약되어 있습니다 link:https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f718b504-d89b-497e-bd25-b13400d0bfbf&start=57["데모 비디오."]
+
+
+
+== 프로그래밍 방식으로 데이터 수집
+
+NVIDIA Enterprise rag LLM Operator가 배포한 rag 쿼리 서버를 사용하여 프로그래밍 방식으로 많은 양의 데이터를 수집할 수 있습니다.
+
+다음 명령의 출력과 같이 RAG 쿼리 서버의 API는 Kubernetes 서비스를 통해 자동으로 노출됩니다.
+
+[source]
+----
+$ kubectl -n rag-sample get service chain-server
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+chain-server   ClusterIP   10.233.28.129   <none>        8081/TCP   59d
+----
+기본적으로 서비스 유형은 ClusterIP이므로 API 엔드포인트는 Kubernetes 클러스터 내에서만 액세스할 수 있습니다. 서비스 유형은 을 수정하여 변경할 수 있습니다 `query.service.type` 필드(예: helmpipeline_app.yaml)를 입력합니다.
+
+API 서버 Swagger 스키마는 에서 액세스할 수 있습니다 `<chain_server_url>:<chain_server_api_port>/docs``.
