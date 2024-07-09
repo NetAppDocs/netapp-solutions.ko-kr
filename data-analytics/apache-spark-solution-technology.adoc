@@ -18,7 +18,7 @@ Apache Spark는 HDFS(Hadoop Distributed File System)와 직접 연동되는 Hado
 
 모든 Spark 응용 프로그램에는 Spark 드라이버가 있습니다. YARN-Client 모드에서 드라이버는 클라이언트에서 로컬로 실행됩니다. YARN-Cluster 모드에서는 드라이버가 애플리케이션 마스터의 클러스터에서 실행됩니다. 클러스터 모드에서는 클라이언트의 연결이 끊기더라도 애플리케이션이 계속 실행됩니다.
 
-image:apache-spark-image3.png["오류: 그래픽 이미지가 없습니다"]
+image:apache-spark-image3.png[""]
 
 세 가지 클러스터 관리자가 있습니다.
 

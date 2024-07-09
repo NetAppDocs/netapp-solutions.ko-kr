@@ -23,4 +23,4 @@ $ runai submit netapp1 -i netapp/tensorflow-tf1-py3:20.01.0 --local-image --larg
 
 다음 그림은 97%의 GPU 사용률과 16개의 사용 가능한 GPU가 할당된 시스템 개요 대시보드를 보여 줍니다. GPU/프로젝트 막대 차트에서 각 팀에 할당된 GPU 수를 쉽게 확인할 수 있습니다. 실행 중인 작업 창에는 현재 실행 중인 작업 이름, 프로젝트, 사용자, 유형, 노드, GPU 사용량, 실행 시간, 진행률 및 활용률 세부 정보 대기 시간이 있는 대기열의 워크로드 목록이 보류 중인 작업에 표시됩니다. 마지막으로, 노드 상자는 클러스터의 개별 DGX-1 노드에 대한 GPU 수와 활용률을 제공합니다.
 
-image:osrunai_image6.png["오류: 그래픽 이미지가 없습니다"]
+image:osrunai_image6.png[""]

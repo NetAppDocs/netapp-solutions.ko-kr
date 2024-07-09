@@ -27,7 +27,9 @@ summary: 벡터 데이터베이스 성능 검증 - NetApp용 벡터 데이터베
 아래 Milvus에 사용되는 방법론과 진행 상황을 확인하십시오.
 
 |===
-| 세부 정보 | Milvus(독립 실행형 및 클러스터) | Postgres(pgvecto.rs) 
+
+
+| 세부 정보 | Milvus(독립 실행형 및 클러스터) | Postgres(pgvecto.rs) # 
 
 
 | 버전 | 2.3.2 | 0.2.0 
@@ -43,6 +45,9 @@ summary: 벡터 데이터베이스 성능 검증 - NetApp용 벡터 데이터베
 * 10,000,000개의 침구
 * 768 치수
 * ~ 300GB 데이터 세트 크기 |  
+
+
+| 스토리지 컨트롤러 | AFF 800 * 버전 – 9.14.1 * 4 x 100GbE – Milvus용, postgres * iSCSI용 100GbE 2개 |  
 |===
 
 
@@ -51,7 +56,7 @@ summary: 벡터 데이터베이스 성능 검증 - NetApp용 벡터 데이터베
 vectorDB-Bench를 사용하는 milvus 독립 실행형 클러스터에 대해 다음과 같은 성능 검증을 수행했습니다.
 milvus 독립 실행형 클러스터의 네트워크 및 서버 연결은 다음과 같습니다.
 
-image:./perf_mivus_standalone.png["오류. 그래픽 이미지가 없습니다"]
+image:perf_mivus_standalone.png[""]
 
 이 섹션에서는 Milvus 독립 실행형 데이터베이스 테스트의 관찰 결과 및 결과를 공유합니다.
 .	이러한 테스트의 인덱스 유형으로 DiskANN을 선택했습니다.
@@ -93,7 +98,7 @@ image:./perf_mivus_standalone.png["오류. 그래픽 이미지가 없습니다"]
 |===
 vectorDB-bench 결과는 다음과 같습니다.
 
-image:vector_db_result_standalone.png["오류: 그래픽 이미지가 없습니다"]
+image:vector_db_result_standalone.png[""]
 
 독립 실행형 Milvus 인스턴스의 성능 검증을 통해 현재 설정이 치수 1536의 5백만 벡터로 구성된 데이터 세트를 지원하기에는 불충분하다는 것을 알 수 있습니다. 스토리지에 적절한 리소스가 있으며 시스템에 병목 현상이 발생하지 않는 것으로 확인되었습니다.
 
@@ -105,19 +110,18 @@ image:vector_db_result_standalone.png["오류: 그래픽 이미지가 없습니�
 
 VMware vSphere 및 Kubernetes 구축에 대한 자세한 내용은 다음 섹션에서 설명합니다.
 
-image:milvus_vmware_perf.png["오류: 그래픽 이미지가 없습니다"]
-image:milvus_cluster_perf.png["오류: 그래픽 이미지가 없습니다"]
+image:milvus_vmware_perf.png[""] image:milvus_cluster_perf.png[""]
 
 이 섹션에서는 Milvus 데이터베이스 테스트에서 얻은 관찰 내용과 결과를 설명합니다.
 *사용된 인덱스 유형은 DiskANN입니다.
 *아래 표는 1536의 치수에서 5백만 벡터로 작업할 때 독립형 배포와 클러스터 배포를 비교한 것입니다. 우리는 데이터 수집 및 삽입 후 최적화에 걸리는 시간이 클러스터 구축에서 더 낮은 것으로 확인되었습니다. 독립 실행형 설정에 비해 클러스터 구축 시 쿼리의 99번째 백분위수 지연 시간이 6배 감소했습니다.
 *클러스터 배포에서 QPS(Queries per Second) 비율이 높았지만 원하는 수준에서는 그렇지 않았습니다.
 
-image:milvus_standalone_cluster_perf.png["오류: 그래픽 이미지가 없습니다"]
+image:milvus_standalone_cluster_perf.png[""]
 
 아래 이미지는 스토리지 클러스터 지연 시간 및 총 IOPS(초당 입출력 작업 수)를 포함한 다양한 스토리지 메트릭을 보여 줍니다.
 
-image:storagecluster_latency_iops_milcus.png["오류: 그래픽 이미지가 없습니다"]
+image:storagecluster_latency_iops_milcus.png[""]
 
 다음 섹션에서는 주요 스토리지 성능 메트릭에 대해 설명합니다.
 
@@ -161,7 +165,7 @@ image:storagecluster_latency_iops_milcus.png["오류: 그래픽 이미지가 없
 VectorDB-Bench를 사용하여 PostgreSQL(pgvecto.rs)에 대해 다음 작업을 수행했습니다.
 PostgreSQL(특히 pgvecto.rs)의 네트워크 및 서버 연결에 대한 세부 정보는 다음과 같습니다.
 
-image:pgvecto_perf_network_connectivity.png["오류: 그래픽 이미지가 없습니다"]
+image:pgvecto_perf_network_connectivity.png[""]
 
 이 섹션에서는 특히 pgvecto.rs를 사용하여 PostgreSQL 데이터베이스를 테스트한 결과 및 관찰 결과를 공유합니다.
 * 테스트 당시 DiskANN은 pgvecto.RS에 사용할 수 없었기 때문에 이러한 테스트의 인덱스 유형으로 HNSW를 선택했습니다.
@@ -170,16 +174,16 @@ image:pgvecto_perf_network_connectivity.png["오류: 그래픽 이미지가 없�
 
 아래 이미지는 스토리지 클러스터 지연 시간 총 IOPS(초당 입출력 작업 수)를 포함한 다양한 스토리지 메트릭을 보여 줍니다.
 
-image:pgvecto_storage_iops_latency.png["오류: 그래픽 이미지가 없습니다"]
+image:pgvecto_storage_iops_latency.png[""]
 
  The following section presents the key storage performance metrics.
-image:pgvecto_storage_perf_metrics.png["오류: 그래픽 이미지가 없습니다"]
+image:pgvecto_storage_perf_metrics.png[""]
 
 
 
 === 벡터 DB 벤치의 밀버스와 포스트그레스의 성능 비교
 
-image:perf_comp_milvus_postgres.png["오류: 그래픽 이미지가 없습니다"]
+image:perf_comp_milvus_postgres.png[""]
 
 VectorDBBench를 사용한 Milvus 및 PostgreSQL의 성능 검증을 토대로 다음과 같은 점을 관찰했습니다.
 

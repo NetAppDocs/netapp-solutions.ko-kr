@@ -122,11 +122,11 @@ image:anfd-hcx-image4.png["HCX OVA 파일을 다운로드하기 위한 Azure 포
 NOTE: OVA에 대한 링크를 다운로드하거나 복사하여 브라우저에 붙여 넣으면 온-프레미스 vCenter Server에 구축할 VMware HCX Connector OVA 파일의 다운로드 프로세스가 시작됩니다.
 
 +
-image:anfd-hcx-image5.png["오류: OVA 다운로드 링크의 스크린샷"]
+image:anfd-hcx-image5.png["OVA 다운로드 링크의 스크린샷."]
 
 . OVA를 다운로드한 후 * Deploy OVF Template * 옵션을 사용하여 온프레미스 VMware vSphere 환경에 구축합니다.
 +
-image:anfd-hcx-image6.png["오류: 올바른 OVA 템플릿을 선택하기 위한 스크린샷."]
+image:anfd-hcx-image6.png["올바른 OVA 템플릿을 선택하는 스크린샷"]
 
 . OVA 배포에 필요한 모든 정보를 입력하고 * Next * 를 클릭한 다음 * Finish * 를 클릭하여 VMware HCX 커넥터 OVA를 배포합니다.
 +
@@ -292,7 +292,7 @@ NOTE: 이 마이그레이션 중에 소스 VM 디스크의 데이터를 자리 �
 . 마이그레이션이 완료된 후 대상 SDDC vCenter에 액세스하여 동일한 검증을 수행합니다.
 
 
-image:anfd-hcx-image19.png["오류: 그래픽 이미지가 없습니다"]
+image:anfd-hcx-image19.png[""]
 
 다양한 마이그레이션 옵션과 HCX를 사용하여 워크로드를 온프레미스에서 Azure VMware 솔루션으로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-14D48C15-3D75-485B-850F-C5FCB96B5637.html["VMware HCX 사용자 가이드"^].
 
@@ -302,7 +302,7 @@ image:anfd-hcx-image19.png["오류: 그래픽 이미지가 없습니다"]
 video::255640f5-4dff-438c-8d50-b01200f017d1[panopto]
 다음은 HCX vMotion 옵션의 스크린샷입니다.
 
-image:anfd-hcx-image20.png["오류: 그래픽 이미지가 없습니다"]
+image:anfd-hcx-image20.png[""]
 
 이 프로세스에 대해 자세히 알아보려면 다음 비디오를 시청하십시오.
 

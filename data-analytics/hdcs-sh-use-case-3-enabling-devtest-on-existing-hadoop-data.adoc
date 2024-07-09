@@ -46,4 +46,4 @@ NetApp System Manager 또는 스토리지 관리 프롬프트 내의 Snapshot �
 
 이 이미지는 DevTest용 Hadoop 클러스터를 보여 줍니다.
 
-image:hdcs-sh-image11.png["오류: 그래픽 이미지가 없습니다"]
+image:hdcs-sh-image11.png[""]

@@ -35,7 +35,7 @@ AWX/Tower 환경의 경우 ONTAP 클러스터 관리 및 Oracle 서버(IP 및 �
 
 [role="tabbed-block"]
 ====
-.strong class="big">온프레미스</strong><strong>|</strong>
+.<strong class="big"> 온프레미스 </strong>
 --
 [cols="3, 9"]
 |===

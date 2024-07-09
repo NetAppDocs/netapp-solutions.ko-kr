@@ -16,7 +16,7 @@ summary: NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 
 [role="lead"]
 NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 영구 데이터를 오케스트레이션하고 관리하는 데 도움이 되는 다양한 제품을 제공합니다.
 
-image:redhat_openshift_image108.jpg["오류: 그래픽 이미지가 없습니다"]
+image:redhat_openshift_image108.jpg[""]
 
 NetApp Astra Control은 NetApp 데이터 보호 기술을 기반으로 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다. Astra Control Service는 클라우드 네이티브 Kubernetes 구축에서 상태 저장 워크로드를 지원할 수 있습니다. Astra Control Center는 Red Hat OpenShift와 같은 온프레미스 배포에서 상태 저장 워크로드를 지원할 수 있습니다. 자세한 내용은 NetApp Astra Control 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 

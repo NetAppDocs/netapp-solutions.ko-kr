@@ -44,9 +44,9 @@ OpenShift Bare-Metal IPI 배포의 경우 별도의 네트워크에 네트워크
 
 다음 이미지는 IPI 배포 중 및 배포 완료 후 환경을 보여줍니다.
 
-image:redhat_openshift_image36.png["오류: 그래픽 이미지가 없습니다"]
+image:redhat_openshift_image36.png[""]
 
-image:redhat_openshift_image37.png["오류: 그래픽 이미지가 없습니다"]
+image:redhat_openshift_image37.png[""]
 
 
 

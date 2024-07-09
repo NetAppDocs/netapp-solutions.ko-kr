@@ -25,7 +25,7 @@ VMware에 Anthos 클러스터를 구축하는 경우 다음과 같은 구성 요
 
 다음 그림은 Anthos-cluster-on-VMware 배포에 대한 설명입니다.
 
-image:a-w-n_anthos_controlplanev2_vm_architecture.png["오류: 그래픽 이미지가 없습니다"]
+image:a-w-n_anthos_controlplanev2_vm_architecture.png[""]
 
 
 
@@ -120,7 +120,7 @@ NetApp과 NetApp의 파트너 엔지니어는 완벽하게 검증된 솔루션�
 |===
 NetApp에서 실시한 Anthos Ready 플랫폼 검증 중에 연구소 환경은 다음 다이어그램을 기반으로 구축되었으며, 다양한 NetApp ONTAP 스토리지 백엔드를 사용하여 여러 시나리오를 테스트할 수 있게 되었습니다.
 
-image:a-w-n_anthos-128-vsphere8_validation.png["오류: 그래픽 이미지가 없습니다"]
+image:a-w-n_anthos-128-vsphere8_validation.png[""]
 
 
 

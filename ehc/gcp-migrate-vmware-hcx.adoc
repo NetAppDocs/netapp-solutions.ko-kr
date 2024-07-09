@@ -102,7 +102,7 @@ HCX 버전 링크를 클릭하여 HCX 콘솔에 로그인할 수 있습니다ima
 . 이전 단계에서 설명한 대로 Google Cloud VMware Engine의 HCX 콘솔에서 OVA를 다운로드하도록 합니다.
 . OVA를 다운로드한 후 * Deploy OVF Template * 옵션을 사용하여 온프레미스 VMware vSphere 환경에 구축합니다.
 +
-image:gcpd-hcx-image5.png["오류: 올바른 OVA 템플릿을 선택하기 위한 스크린샷."]
+image:gcpd-hcx-image5.png["올바른 OVA 템플릿을 선택하는 스크린샷"]
 
 . OVA 배포에 필요한 모든 정보를 입력하고 * Next * 를 클릭한 다음 * Finish * 를 클릭하여 VMware HCX 커넥터 OVA를 배포합니다.
 +
@@ -246,15 +246,15 @@ NOTE: IP 주소를 변경할 필요 없이 VM을 마이그레이션하려면 네
 
 . 온-프레미스 vSphere Client에서 Inventory로 이동하여 마이그레이션할 VM을 마우스 오른쪽 버튼으로 클릭하고 HCX Actions > Migrate to HCX Target Site를 선택합니다.
 +
-image:gcpd-hcx-image15.png["오류: 그래픽 이미지가 없습니다"]
+image:gcpd-hcx-image15.png[""]
 
 . 가상 컴퓨터 마이그레이션 마법사에서 원격 사이트 연결(대상 GCVE)을 선택합니다.
 +
-image:gcpd-hcx-image16.png["오류: 그래픽 이미지가 없습니다"]
+image:gcpd-hcx-image16.png[""]
 
 . 필수 필드(클러스터, 스토리지 및 대상 네트워크)를 업데이트하고 검증 을 클릭합니다.
 +
-image:gcpd-hcx-image17.png["오류: 그래픽 이미지가 없습니다"]
+image:gcpd-hcx-image17.png[""]
 
 . 유효성 검사가 완료된 후 이동을 클릭하여 마이그레이션을 시작합니다.
 +
@@ -263,7 +263,7 @@ NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC �
 
 . HCX > 마이그레이션 대시보드에서 vMotion의 진행 상황과 완료 상태를 모니터링할 수 있습니다.
 +
-image:gcpd-hcx-image18.png["오류: 그래픽 이미지가 없습니다"]
+image:gcpd-hcx-image18.png[""]
 
 
 

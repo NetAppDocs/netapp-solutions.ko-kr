@@ -26,7 +26,7 @@ NetApp은 오랫동안 VMware와 통합해왔습니다. 수만 명의 고객이 
 
 게스트 연결 스토리지에서 게스트 VMDK는 VMware 프로비저닝된 데이터 저장소에 구축되고 애플리케이션 데이터는 iSCSI 또는 NFS에 보관되며 VM에 직접 매핑됩니다. 다음 그림과 같이 Oracle 및 MS SQL 애플리케이션을 사용하여 DR 시나리오를 보여 줍니다.
 
-image:dr-vmc-aws-image1.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image1.png[""]
 
 
 
@@ -66,7 +66,7 @@ NOTE: 을 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/O
 
 . ONTAP System Manager에서 네트워크 개요 페이지로 이동하여 FSx가 설치된 AWS VPC와 통신하도록 구성된 Type:Intercluster의 IP 주소를 검색합니다.
 +
-image:dr-vmc-aws-image10.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image10.png[""]
 
 . FSx의 Intercluster IP 주소를 검색하려면 CLI에 로그인하여 다음 명령을 실행합니다.
 +
@@ -74,7 +74,7 @@ image:dr-vmc-aws-image10.png["오류: 그래픽 이미지가 없습니다"]
 FSx-Dest::> network interface show -role intercluster
 ....
 +
-image:dr-vmc-aws-image11.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image11.png[""]
 
 
 
@@ -93,7 +93,7 @@ Confirm the passphrase:
 ....
 . 소스 클러스터에서 ONTAP System Manager 또는 CLI를 사용하여 클러스터 피어 관계를 설정할 수 있습니다. ONTAP 시스템 관리자에서 보호 > 개요 로 이동하고 피어 클러스터 를 선택합니다.
 +
-image:dr-vmc-aws-image12.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image12.png[""]
 
 . 피어 클러스터 대화 상자에서 필요한 정보를 입력합니다.
 +
@@ -102,7 +102,7 @@ image:dr-vmc-aws-image12.png["오류: 그래픽 이미지가 없습니다"]
 .. 대상 FSx 클러스터의 인터클러스터 LIF IP 주소를 입력합니다.
 .. 클러스터 피어링 시작 을 클릭하여 프로세스를 마칩니다.
 +
-image:dr-vmc-aws-image13.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image13.png[""]
 
 
 
@@ -112,7 +112,7 @@ image:dr-vmc-aws-image13.png["오류: 그래픽 이미지가 없습니다"]
 FSx-Dest::> cluster peer show
 ....
 +
-image:dr-vmc-aws-image14.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image14.png[""]
 
 
 
@@ -130,7 +130,7 @@ FSx-Dest::> vserver peer create -vserver DestSVM -peer-vserver Backup -peer-clus
 . 소스 ONTAP 클러스터에서 ONTAP System Manager 또는 CLI와 피어링 관계를 수락합니다.
 . ONTAP 시스템 관리자에서 보호 > 개요 로 이동하고 스토리지 VM 피어 아래에서 피어 스토리지 VM 을 선택합니다.
 +
-image:dr-vmc-aws-image15.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image15.png[""]
 
 . 피어 스토리지 VM 대화 상자에서 필수 필드를 입력합니다.
 +
@@ -138,7 +138,7 @@ image:dr-vmc-aws-image15.png["오류: 그래픽 이미지가 없습니다"]
 ** 타겟 클러스터
 ** 대상 스토리지 VM입니다
 +
-image:dr-vmc-aws-image16.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image16.png[""]
 
 
 
@@ -158,7 +158,7 @@ NOTE: 보조 스토리지에서 이러한 레이블은 스냅샷 보존을 적�
 
 다음 예제는 SQL Server 데이터베이스 및 로그 볼륨의 일일 백업에 사용되는 정책의 일부로 생성된 모든 스냅샷에 존재하는 SnapMirror 레이블을 보여줍니다.
 
-image:dr-vmc-aws-image17.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image17.png[""]
 
 SQL Server 데이터베이스에 대한 SnapCenter 정책을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
 
@@ -240,15 +240,15 @@ SnapCenter에 스토리지 컨트롤러를 추가하려면 다음 단계를 수�
 
 . 왼쪽 메뉴에서 스토리지 시스템 을 선택한 다음 새로 만들기 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.
 +
-image:dr-vmc-aws-image18.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image18.png[""]
 
 . 스토리지 시스템 추가 대화 상자에서 로컬 온-프레미스 ONTAP 클러스터의 관리 IP 주소와 사용자 이름 및 암호를 추가합니다. 그런 다음 제출 을 클릭하여 스토리지 시스템 검색을 시작합니다.
 +
-image:dr-vmc-aws-image19.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image19.png[""]
 
 . 이 과정을 반복하여 FSx ONTAP 시스템을 SnapCenter에 추가합니다. 이 경우 Add Storage System 창의 아래쪽에 있는 More Options 를 선택하고 Secondary 의 확인란을 클릭하여 FSx 시스템을 SnapMirror 복사본 또는 기본 백업 스냅샷으로 업데이트된 보조 스토리지 시스템으로 지정합니다.
 +
-image:dr-vmc-aws-image20.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image20.png[""]
 
 
 
@@ -263,11 +263,11 @@ SnapCenter에 스토리지 시스템을 추가하는 방법에 대한 자세한 
 . 왼쪽 메뉴에서 호스트 를 선택한 다음 추가 를 클릭하여 스토리지 컨트롤러를 SnapCenter에 추가하는 프로세스를 시작합니다.
 . 호스트 추가 창에서 호스트 유형, 호스트 이름 및 호스트 시스템 자격 증명을 추가합니다. 플러그인 유형을 선택합니다. SQL Server의 경우 Microsoft Windows 및 Microsoft SQL Server 플러그인을 선택합니다.
 +
-image:dr-vmc-aws-image21.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image21.png[""]
 
 . Oracle의 경우 호스트 추가 대화 상자에서 필수 필드를 입력하고 Oracle Database 플러그인의 확인란을 선택합니다. 그런 다음 제출 을 클릭하여 검색 프로세스를 시작하고 호스트를 SnapCenter에 추가합니다.
 +
-image:dr-vmc-aws-image22.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image22.png[""]
 
 
 
@@ -279,7 +279,7 @@ image:dr-vmc-aws-image22.png["오류: 그래픽 이미지가 없습니다"]
 
 SnapCenter 웹 클라이언트의 설정 섹션에서 정책에 액세스할 수 있습니다.
 
-image:dr-vmc-aws-image23.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image23.png[""]
 
 SQL Server 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
 
@@ -294,7 +294,7 @@ Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용
 
 다음 이미지는 이전 옵션과 백업 정책 마법사에서 이러한 옵션이 표시되는 방식을 보여 줍니다.
 
-image:dr-vmc-aws-image24.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image24.png[""]
 
 ====
 .SnapCenter 리소스 그룹을 생성합니다
@@ -306,7 +306,7 @@ image:dr-vmc-aws-image24.png["오류: 그래픽 이미지가 없습니다"]
 . 창 위쪽에서 작업할 리소스 유형(이 경우 Microsoft SQL Server)을 선택한 다음 새 리소스 그룹을 클릭합니다.
 
 
-image:dr-vmc-aws-image25.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image25.png[""]
 
 SnapCenter 설명서는 SQL Server 및 Oracle 데이터베이스 모두에 대한 리소스 그룹을 생성하는 단계별 세부 정보를 제공합니다.
 
@@ -339,32 +339,32 @@ Veeam 백업 및 복제 소프트웨어는 Veeam 스케일 아웃 백업 저장�
 
 . Veeam 콘솔을 열고 로그인합니다. Storage Infrastructure로 이동한 다음 Add Storage를 선택합니다.
 +
-image:dr-vmc-aws-image26.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image26.png[""]
 
 . 스토리지 추가 마법사에서 NetApp을 스토리지 공급업체로 선택한 다음 Data ONTAP를 선택합니다.
 . 관리 IP 주소를 입력하고 NAS Filer 상자를 선택합니다. 다음 을 클릭합니다.
 +
-image:dr-vmc-aws-image27.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image27.png[""]
 
 . 자격 증명을 추가하여 ONTAP 클러스터에 액세스합니다.
 +
-image:dr-vmc-aws-image28.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image28.png[""]
 
 . NAS Filer 페이지에서 검사할 프로토콜을 선택하고 Next 를 선택합니다.
 +
-image:dr-vmc-aws-image29.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image29.png[""]
 
 . 마법사의 적용 및 요약 페이지를 완료하고 마침 을 클릭하여 스토리지 검색 프로세스를 시작합니다. 검사가 완료되면 ONTAP 클러스터가 NAS 파일러와 함께 사용 가능한 리소스로 추가됩니다.
 +
-image:dr-vmc-aws-image30.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image30.png[""]
 
 . 새로 검색된 NAS 공유를 사용하여 백업 리포지토리를 생성합니다. Backup Infrastructure에서 Backup Repositories를 선택하고 Add Repository 메뉴 항목을 클릭합니다.
 +
-image:dr-vmc-aws-image31.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image31.png[""]
 
 . 새 백업 저장소 마법사의 모든 단계를 수행하여 리포지토리를 생성합니다. Veeam Backup Repositories 생성에 대한 자세한 내용은 를 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html["Veeam 문서를 참조하십시오"^].
 +
-image:dr-vmc-aws-image32.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image32.png[""]
 
 
 
@@ -376,16 +376,16 @@ image:dr-vmc-aws-image32.png["오류: 그래픽 이미지가 없습니다"]
 
 . Backup Infrastructure > Backup Repositories 로 이동합니다. 리포지토리 추가 를 클릭합니다.
 +
-image:dr-vmc-aws-image33.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image33.png[""]
 
 . 백업 저장소 추가 마법사에서 오브젝트 스토리지 를 선택한 다음 Amazon S3를 선택합니다. 그러면 New Object Storage Repository 마법사가 시작됩니다.
 +
-image:dr-vmc-aws-image34.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image34.png[""]
 
 . 오브젝트 스토리지 저장소의 이름을 입력하고 Next를 클릭합니다.
 . 다음 섹션에서 자격 증명을 입력합니다. AWS 액세스 키와 비밀 키가 필요합니다.
 +
-image:dr-vmc-aws-image35.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image35.png[""]
 
 . Amazon 구성이 로드되면 데이터 센터, 버킷 및 폴더를 선택하고 적용 을 클릭합니다. 마지막으로 마침을 클릭하여 마법사를 닫습니다.
 
@@ -398,17 +398,17 @@ image:dr-vmc-aws-image35.png["오류: 그래픽 이미지가 없습니다"]
 
 . 백업 인프라 에서 스케일 아웃 리포지토리 를 선택한 다음 스케일 아웃 리포지토리 추가 메뉴 항목을 클릭합니다.
 +
-image:dr-vmc-aws-image37.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image37.png[""]
 
 . 새 스케일 아웃 백업 리포지토리에서 SOBR의 이름을 제공하고 다음을 클릭합니다.
 . 성능 계층의 경우 로컬 ONTAP 클러스터에 상주하는 SMB 공유가 포함된 백업 저장소를 선택합니다.
 +
-image:dr-vmc-aws-image38.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image38.png[""]
 
 . 배치 정책의 경우 데이터 인접성 또는 요구 사항에 따른 성능 을 선택합니다. 다음을 선택합니다.
 . 용량 계층의 경우 Amazon S3 오브젝트 스토리지로 SOBR을 확장합니다. 재해 복구를 위해, 2차 백업을 적시에 제공할 수 있도록 백업이 생성되는 즉시 Copy Backups to Object Storage 를 선택합니다.
 +
-image:dr-vmc-aws-image39.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image39.png[""]
 
 . 마지막으로 적용 및 마침 을 선택하여 SOBR 생성을 마칩니다.
 
@@ -520,19 +520,19 @@ Swagger 페이지로 이동한 후 인증 토큰을 검색하여 데이터베이
 
 . https://<SnapCenter 서버 IP >:8146/swagger/_에서 SnapCenter Swagger API 웹 페이지에 액세스합니다.
 +
-image:dr-vmc-aws-image40.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image40.png[""]
 
 . 인증 섹션을 확장하고 시험 사용 을 클릭합니다.
 +
-image:dr-vmc-aws-image41.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image41.png[""]
 
 . UserOperationContext 영역에서 SnapCenter 자격 증명 및 역할을 입력하고 실행 을 클릭합니다.
 +
-image:dr-vmc-aws-image42.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image42.png[""]
 
 . 아래의 응답 본문에서 토큰을 볼 수 있습니다. 백업 프로세스를 실행할 때 인증을 위해 토큰 텍스트를 복사합니다.
 +
-image:dr-vmc-aws-image43.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image43.png[""]
 
 
 
@@ -544,11 +544,11 @@ image:dr-vmc-aws-image43.png["오류: 그래픽 이미지가 없습니다"]
 
 . 재해 복구 영역을 클릭하여 확장합니다.
 +
-image:dr-vmc-aws-image44.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image44.png[""]
 
 . '/4.6/disasterrecovery/server/backup' 섹션을 확장하고 try it을 클릭합니다.
 +
-image:dr-vmc-aws-image45.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image45.png[""]
 
 . SmDRBackupRequest 섹션에서 올바른 로컬 대상 경로를 추가하고 Execute 를 선택하여 SnapCenter 데이터베이스 및 구성의 백업을 시작합니다.
 +
@@ -556,7 +556,7 @@ image:dr-vmc-aws-image45.png["오류: 그래픽 이미지가 없습니다"]
 NOTE: 백업 프로세스에서는 NFS 또는 CIFS 파일 공유에 직접 백업할 수 없습니다.
 
 +
-image:dr-vmc-aws-image46.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image46.png[""]
 
 
 
@@ -566,7 +566,7 @@ image:dr-vmc-aws-image46.png["오류: 그래픽 이미지가 없습니다"]
 =====
 데이터베이스 복원 프로세스를 시작할 때 SnapCenter에 로그인하여 로그 파일을 검토합니다. 모니터 섹션에서 SnapCenter 서버 재해 복구 백업의 세부 정보를 볼 수 있습니다.
 
-image:dr-vmc-aws-image47.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image47.png[""]
 
 =====
 .XCOPY 유틸리티를 사용하여 SMB 공유에 데이터베이스 백업 파일을 복사합니다
@@ -619,19 +619,19 @@ SnapCenter는 MySQL 데이터베이스 및 구성 파일의 백업 및 복원을
 . 보조 SnapCenter 서버의 Swagger API 웹 페이지로 이동하고 이전 지침에 따라 인증 토큰을 얻습니다.
 . Swagger 페이지의 Disaster Recovery 섹션으로 이동하여 "/4.6/disasterrecovery/server/restore"를 선택하고 Try It Out을 클릭합니다.
 +
-image:dr-vmc-aws-image48.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image48.png[""]
 
 . 인증 토큰을 붙여 넣고 SmDRResterRequest 섹션에서 백업 이름과 보조 SnapCenter 서버의 로컬 디렉터리를 붙여 넣습니다.
 +
-image:dr-vmc-aws-image49.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image49.png[""]
 
 . 실행 버튼을 선택하여 복원 프로세스를 시작합니다.
 . SnapCenter에서 모니터 섹션으로 이동하여 복구 작업의 진행률을 확인합니다.
 +
-image:dr-vmc-aws-image50.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image50.png[""]
 
 +
-image:dr-vmc-aws-image51.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image51.png[""]
 
 . 보조 스토리지에서 SQL Server 복원을 사용하려면 SnapCenter 데이터베이스를 재해 복구 모드로 전환해야 합니다. 이 작업은 별도의 작업으로 수행되며 Swagger API 웹 페이지에서 시작됩니다.
 +
@@ -640,7 +640,7 @@ image:dr-vmc-aws-image51.png["오류: 그래픽 이미지가 없습니다"]
 .. SmSetDisasterRecoverySettingsRequest 섹션에서 EnableDisasterRecover 를 true 로 변경합니다.
 .. 실행 을 클릭하여 SQL Server에 대한 재해 복구 모드를 활성화합니다.
 +
-image:dr-vmc-aws-image52.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image52.png[""]
 
 +
 
@@ -664,23 +664,23 @@ NOTE: 추가 절차에 대한 설명을 참조하십시오.
 
 . 백업 리포지토리 로 이동하고 상단 메뉴에서 리포지토리 추가 를 클릭하여 백업 리포지토리 추가 마법사를 시작합니다. 마법사의 첫 번째 페이지에서 백업 저장소 유형으로 오브젝트 스토리지 를 선택합니다.
 +
-image:dr-vmc-aws-image53.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image53.png[""]
 
 . 오브젝트 스토리지 유형으로 Amazon S3를 선택합니다.
 +
-image:dr-vmc-aws-image54.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image54.png[""]
 
 . Amazon Cloud Storage Services 목록에서 Amazon S3를 선택합니다.
 +
-image:dr-vmc-aws-image55.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image55.png[""]
 
 . 드롭다운 목록에서 미리 입력한 자격 증명을 선택하거나 클라우드 스토리지 리소스에 액세스하기 위한 새 자격 증명을 추가합니다. 다음을 클릭하여 계속합니다.
 +
-image:dr-vmc-aws-image56.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image56.png[""]
 
 . 버킷 페이지에서 데이터 센터, 버킷, 폴더 및 원하는 옵션을 입력합니다. 적용 을 클릭합니다.
 +
-image:dr-vmc-aws-image57.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image57.png[""]
 
 . 마지막으로 마침 을 선택하여 프로세스를 완료하고 리포지토리를 추가합니다.
 
@@ -693,15 +693,15 @@ image:dr-vmc-aws-image57.png["오류: 그래픽 이미지가 없습니다"]
 
 . S3 백업 리포지토리에서 백업 가져오기 를 선택하여 백업 가져오기 마법사를 시작합니다.
 +
-image:dr-vmc-aws-image58.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image58.png[""]
 
 . 가져오기에 대한 데이터베이스 레코드가 생성된 후 요약 화면에서 다음 을 선택한 다음 마침 을 선택하여 가져오기 프로세스를 시작합니다.
 +
-image:dr-vmc-aws-image59.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image59.png[""]
 
 . 가져오기가 완료되면 VM을 VMware Cloud 클러스터로 복구할 수 있습니다.
 +
-image:dr-vmc-aws-image60.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image60.png[""]
 
 
 
@@ -713,30 +713,30 @@ SQL 및 Oracle 가상 머신을 AWS 워크로드 도메인/클러스터의 VMwar
 
 . Veeam Home 페이지에서 가져온 백업이 포함된 객체 스토리지를 선택하고 복구할 VM을 선택한 다음 마우스 오른쪽 버튼을 클릭하고 Restore Entire VM을 선택합니다.
 +
-image:dr-vmc-aws-image61.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image61.png[""]
 
 . 전체 VM 복원 마법사의 첫 페이지에서 원하는 경우 백업할 VM을 수정하고 다음을 선택합니다.
 +
-image:dr-vmc-aws-image62.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image62.png[""]
 
 . 복원 모드 페이지에서 새 위치로 복원 또는 다른 설정으로 복원 을 선택합니다.
 +
-image:dr-vmc-aws-image63.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image63.png[""]
 
 . 호스트 페이지에서 VM을 복구할 타겟 ESXi 호스트 또는 클러스터를 선택합니다.
 +
-image:dr-vmc-aws-image64.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image64.png[""]
 
 . Datastores 페이지에서 구성 파일과 하드 디스크 모두에 대한 타겟 데이터 저장소 위치를 선택합니다.
 +
-image:dr-vmc-aws-image65.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image65.png[""]
 
 . 네트워크 페이지에서 VM의 원래 네트워크를 새 대상 위치의 네트워크에 매핑합니다.
 +
-image:dr-vmc-aws-image66.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image66.png[""]
 
 +
-image:dr-vmc-aws-image67.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image67.png[""]
 
 . 복원된 VM에서 맬웨어를 검사할지 여부를 선택하고 요약 페이지를 검토한 다음 마침 을 클릭하여 복원을 시작합니다.
 
@@ -802,22 +802,22 @@ FSx-Dest::> lun mapping create -vserver DestSVM -path LUNPath igroup igroupName
 . iSCSI 초기자 등록 정보 유틸리티를 열고 검색, 즐겨찾기 대상 및 대상 탭에서 이전 연결 설정을 지웁니다.
 . FSx 인스턴스/클러스터에서 iSCSI 논리 인터페이스에 액세스하기 위한 IP 주소를 찾습니다. AWS 콘솔의 Amazon FSx > ONTAP > Storage Virtual Machines에서 찾을 수 있습니다.
 +
-image:dr-vmc-aws-image68.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image68.png[""]
 
 . 검색 탭에서 포털 검색 을 클릭하고 FSx iSCSI 대상의 IP 주소를 입력합니다.
 +
-image:dr-vmc-aws-image69.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image69.png[""]
 
 +
-image:dr-vmc-aws-image70.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image70.png[""]
 
 . 대상 탭에서 연결을 클릭하고 구성에 적합한 경우 다중 경로 사용을 선택한 다음 확인을 클릭하여 대상에 연결합니다.
 +
-image:dr-vmc-aws-image71.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image71.png[""]
 
 . 컴퓨터 관리 유틸리티를 열고 디스크를 온라인 상태로 전환합니다. 이전에 사용했던 것과 동일한 드라이브 문자가 유지되는지 확인합니다.
 +
-image:dr-vmc-aws-image72.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image72.png[""]
 
 
 
@@ -827,16 +827,16 @@ image:dr-vmc-aws-image72.png["오류: 그래픽 이미지가 없습니다"]
 ====
 . SQL Server VM에서 Microsoft SQL Server Management Studio를 열고 연결 을 선택하여 데이터베이스에 연결하는 프로세스를 시작합니다.
 +
-image:dr-vmc-aws-image73.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image73.png[""]
 
 . 추가 를 클릭하고 SQL Server 기본 데이터베이스 파일이 들어 있는 폴더로 이동한 다음 해당 파일을 선택하고 확인 을 클릭합니다.
 +
-image:dr-vmc-aws-image74.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image74.png[""]
 
 . 트랜잭션 로그가 별도의 드라이브에 있는 경우 트랜잭션 로그가 포함된 폴더를 선택합니다.
 . 완료되면 확인 을 클릭하여 데이터베이스를 연결합니다.
 +
-image:dr-vmc-aws-image75.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image75.png[""]
 
 
 
@@ -854,7 +854,7 @@ SnapCenter 데이터베이스가 이전 상태로 복원되면 SQL Server 호스
 
 SnapCenter가 재해 복구 모드에 있는지 확인하려면 SnapCenter 웹 클라이언트 내에서 설정 으로 이동합니다. 글로벌 설정 탭으로 이동한 다음 재해 복구 를 클릭합니다. 재해 복구 활성화 확인란이 활성화되어 있는지 확인합니다.
 
-image:dr-vmc-aws-image76.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image76.png[""]
 
 ====
 
@@ -880,7 +880,7 @@ FSxN 인스턴스에서 호스팅되는 보조 스토리지 볼륨을 Oracle 서
 FSx-Dest::> volume show -volume VolumeName*
 ....
 +
-image:dr-vmc-aws-image77.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image77.png[""]
 
 . 다음 명령을 실행하여 기존 SnapMirror 관계를 중단하십시오.
 +
@@ -888,15 +888,15 @@ image:dr-vmc-aws-image77.png["오류: 그래픽 이미지가 없습니다"]
 FSx-Dest::> snapmirror break -destination-path DestSVM:DestVolName
 ....
 +
-image:dr-vmc-aws-image78.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image78.png[""]
 
 . Amazon FSx 웹 클라이언트에서 junction-path를 업데이트합니다.
 +
-image:dr-vmc-aws-image79.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image79.png[""]
 
 . 접합 경로 이름을 추가하고 업데이트 를 클릭합니다. Oracle 서버에서 NFS 볼륨을 마운트할 때 이 연결 경로를 지정합니다.
 +
-image:dr-vmc-aws-image80.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image80.png[""]
 
 
 
@@ -908,14 +908,14 @@ Cloud Manager에서 Oracle 데이터베이스 파일 및 로그가 포함된 NFS
 
 . Cloud Manager에서 FSx 클러스터의 볼륨 목록에 액세스합니다.
 +
-image:dr-vmc-aws-image81.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image81.png[""]
 
 . 작업 메뉴에서 마운트 명령을 선택하여 Oracle Linux 서버에서 사용할 마운트 명령을 보고 복사합니다.
 +
-image:dr-vmc-aws-image82.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image82.png[""]
 
 +
-image:dr-vmc-aws-image83.png["오류: 그래픽 이미지가 없습니다"]
+image:dr-vmc-aws-image83.png[""]
 
 . Oracle Linux Server에 NFS 파일 시스템을 마운트합니다. NFS 공유를 마운트하는 디렉토리가 Oracle Linux 호스트에 이미 있습니다.
 . Oracle Linux 서버에서 mount 명령을 사용하여 NFS 볼륨을 마운트합니다.

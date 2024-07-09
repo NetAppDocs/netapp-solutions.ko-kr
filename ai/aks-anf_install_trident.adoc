@@ -116,7 +116,7 @@ $az ad sp create-for-rbac --name ""
 $tridentctl create backend -f anf-backend.json -n trident
 ....
 +
-image:aks-anf_image8.png["오류: 그래픽 이미지가 없습니다"]
+image:aks-anf_image8.png[""]
 
 . 스토리지 클래스를 생성합니다. Kubernetes 사용자는 이름으로 스토리지 클래스를 지정하는 PVC를 사용하여 볼륨을 프로비저닝합니다. K8s에게 이전 단계에서 만든 Trident 백엔드를 참조하는 스토리지 클래스 "azurenetappfiles"를 생성하도록 지시합니다.
 . 스토리지 클래스 및 복사본을 위한 YAML('anf-storage-class.yAML') 파일을 생성합니다.
@@ -138,4 +138,4 @@ kubectl get sc azurenetappfiles
 ....
 
 
-image:aks-anf_image9.png["오류: 그래픽 이미지가 없습니다"]
+image:aks-anf_image9.png[""]

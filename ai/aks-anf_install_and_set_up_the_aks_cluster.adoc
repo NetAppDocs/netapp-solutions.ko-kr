@@ -21,7 +21,7 @@ AKS 클러스터를 설치 및 설정하려면 웹 페이지를 참조하십시�
 .. 기본 시스템 노드는 표준 DS2v2('agentpool' 기본 3개 노드)여야 합니다.
 .. 그런 다음 이름이 "gpupool"인 사용자 그룹(GPU 노드의 경우)에 대해 작업자 노드 Standard_NC6s_v3 풀(최소 3개 노드)을 추가합니다.
 +
-image:aks-anf_image3.png["오류: 그래픽 이미지가 없습니다"]
+image:aks-anf_image3.png[""]
 
 
 
@@ -43,4 +43,4 @@ aks get-credentials --resource-group resourcegroup --name aksclustername
 . 다음 예와 같이 6개 노드가 모두 가동되어 실행 중인 경우 AKS 클러스터가 로컬 환경에 준비 및 연결됩니다
 
 
-image:aks-anf_image4.png["오류: 그래픽 이미지가 없습니다"]
+image:aks-anf_image4.png[""]

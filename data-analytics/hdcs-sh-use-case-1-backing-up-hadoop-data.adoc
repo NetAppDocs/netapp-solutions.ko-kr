@@ -39,7 +39,7 @@ summary: 이 시나리오에서는 고객이 대규모 사내 Hadoop 저장소�
 
 아래 그림은 원래 Hadoop 네이티브 백업 솔루션을 보여 줍니다.
 
-image:hdcs-sh-image5.png["오류: 그래픽 이미지가 없습니다"]
+image:hdcs-sh-image5.png[""]
 
 운영 데이터는 중간 백업 클러스터를 통해 테이프로 보호됩니다.
 
@@ -73,7 +73,7 @@ image:hdcs-sh-image5.png["오류: 그래픽 이미지가 없습니다"]
 
 솔루션 A에서 백업 Hadoop 클러스터는 보조 백업을 NetApp NFS 스토리지 시스템으로 전송하므로 아래 그림과 같이 테이프 요구 사항이 해소됩니다.
 
-image:hdcs-sh-image6.png["오류: 그래픽 이미지가 없습니다"]
+image:hdcs-sh-image6.png[""]
 
 솔루션 A에 대한 자세한 작업은 다음과 같습니다.
 
@@ -118,7 +118,7 @@ NOTE: SnapMirror 기술을 사용하여 Hadoop 데이터를 클라우드뿐 아�
 
 솔루션 B는 아래 그림과 같이 NFS 볼륨을 운영 Hadoop 클러스터에 추가하므로 백업 Hadoop 클러스터가 필요하지 않습니다.
 
-image:hdcs-sh-image7.png["오류: 그래픽 이미지가 없습니다"]
+image:hdcs-sh-image7.png[""]
 
 솔루션 B에 대한 자세한 작업은 다음과 같습니다.
 
@@ -145,7 +145,7 @@ Hadoop의 기본 구성 `hadoop distcp` 명령은 운영 클러스터 HDFS에서
 
 솔루션 C에서는 아래 그림과 같이 NetApp SAN 볼륨을 HDFS 스토리지용 Hadoop 운영 클러스터에 직접 프로비저닝합니다.
 
-image:hdcs-sh-image8.png["오류: 그래픽 이미지가 없습니다"]
+image:hdcs-sh-image8.png[""]
 
 솔루션 C에 대한 자세한 단계는 다음과 같습니다.
 

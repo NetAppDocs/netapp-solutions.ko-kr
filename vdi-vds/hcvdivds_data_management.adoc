@@ -22,7 +22,7 @@ summary: 배포의 일부로 파일 서비스 방법을 선택하여 사용자 �
 
 사용자가 글로벌 네임스페이스 내의 여러 사이트에 분산되어 있는 경우 글로벌 파일 캐시를 사용하면 자주 액세스하는 데이터의 지연 시간을 줄일 수 있습니다. 글로벌 파일 캐시 구축은 프로비저닝 수집 및 스크립트 기반 이벤트를 사용하여 자동화할 수 있습니다. 글로벌 파일 캐시는 읽기 및 쓰기 캐시를 로컬에서 처리하며 여러 위치에 걸쳐 파일 잠금을 유지합니다. 글로벌 파일 캐시는 Azure NetApp Files를 비롯한 모든 SMB 파일 서버에서 사용할 수 있습니다.
 
-image:hcvdivds_image13.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image13.png[""]
 
 글로벌 파일 캐시를 사용하려면 다음이 필요합니다.
 
@@ -37,47 +37,47 @@ image:hcvdivds_image13.png["오류: 그래픽 이미지가 없습니다"]
 
 . 라이센스 구성 섹션에서 여기를 클릭 링크를 사용하여 라이센스 활성화를 완료합니다. 그런 다음 코어를 등록합니다.
 +
-image:hcvdivds_image27.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image27.png[""]
 
 . 글로벌 파일 캐시에 사용할 서비스 계정을 제공합니다. 이 계정에 필요한 사용 권한은 를 참조하십시오 https://docs.netapp.com/us-en/occm/download_gfc_resources.html#download-required-resources["GFC 설명서"^].
 +
-image:hcvdivds_image28.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image28.png[""]
 
 . 새 백엔드 파일 서버를 추가하고 파일 서버 이름 또는 IP를 제공합니다.
 +
-image:hcvdivds_image29.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image29.png[""]
 
 . 가장자리에서 캐시 드라이브에는 드라이브 문자 D가 있어야 합니다 그렇지 않으면 diskpart.exe 를 사용하여 볼륨을 선택하고 드라이브 문자를 변경합니다. 라이센스 서버에 Edge로 등록합니다.
 +
-image:hcvdivds_image30.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image30.png[""]
 
 
 
 코어 자동 구성이 활성화된 경우 라이센스 관리 서버에서 핵심 정보가 자동으로 검색됩니다.
 
-image:hcvdivds_image31.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image31.png[""]
 
 클라이언트 컴퓨터에서 파일 서버의 공유에 액세스하는 데 사용한 관리자는 UNC 경로 "\\<edge server name>\FASTDATA\<core server name>\<backend file server name>\<share name>"을 사용하여 GFC 에지를 사용하여 액세스할 수 있습니다. 관리자는 에지 위치에서 사용자 드라이브 매핑을 위한 사용자 로그로ontscript 또는 GPO에 이 경로를 포함할 수 있습니다.
 
 전 세계 사용자에게 투명한 액세스를 제공하기 위해 관리자는 파일 서버 공유 및 에지 위치를 가리키는 링크를 사용하여 DFS(Microsoft Distributed Filesystem)를 설정할 수 있습니다.
 
-image:hcvdivds_image32.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image32.png[""]
 
 사용자가 사이트에 연결된 서브넷을 기반으로 Active Directory 자격 증명을 사용하여 로그인하면 DFS 클라이언트가 해당 링크를 사용하여 데이터에 액세스합니다.
 
-image:hcvdivds_image33.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image33.png[""]
 
 파일 아이콘은 파일이 캐시되었는지 여부에 따라 달라집니다. 캐시되지 않은 파일은 아이콘의 왼쪽 아래 모서리에 회색 X가 표시됩니다. 에지 위치의 사용자가 파일에 액세스하면 해당 파일이 캐시되고 아이콘이 변경됩니다.
 
-image:hcvdivds_image34.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image34.png[""]
 
 파일이 열려 있고 다른 사용자가 모서리 위치에서 같은 파일을 열려고 하면 다음과 같은 선택 메시지가 표시됩니다.
 
-image:hcvdivds_image35.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image35.png[""]
 
 사용자가 원본 사본을 사용할 수 있을 때 알림을 받는 옵션을 선택하면 사용자에게 다음과 같은 알림이 표시됩니다.
 
-image:hcvdivds_image36.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image36.png[""]
 
 자세한 내용은 다음을 참조하십시오 https://www.youtube.com/watch?v=91LKb1qsLIM["Talon 및 Azure NetApp Files 배포에 대한 비디오"^].
 
@@ -87,7 +87,7 @@ image:hcvdivds_image36.png["오류: 그래픽 이미지가 없습니다"]
 
 NetApp VDS는 Exchange, SharePoint 및 Microsoft OneDrive를 포함하여 Salesforce 및 Microsoft Office 365에 대한 데이터 보호를 제공합니다. 다음 그림은 NetApp VDS가 이러한 데이터 서비스에 SaaS Backup을 제공하는 방식을 보여줍니다.
 
-image:hcvdivds_image14.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image14.png[""]
 
 Microsoft Office 365 데이터 보호 데모를 보려면 을 참조하십시오 https://www.youtube.com/watch?v=MRPBSu8RaC0&ab_channel=NetApp["이 비디오"^].
 

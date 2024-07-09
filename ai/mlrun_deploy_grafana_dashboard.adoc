@@ -20,7 +20,7 @@ summary:
 
 . Grafana 서비스가 실행 중인지 확인하려면 서비스 아래를 살펴보십시오.
 +
-image:mlrun_image22.png["오류: 그래픽 이미지가 없습니다"]
+image:mlrun_image22.png[""]
 
 . 이 인스턴스가 없으면 서비스 섹션에서 인스턴스를 배포합니다.
 +
@@ -35,16 +35,16 @@ image:mlrun_image22.png["오류: 그래픽 이미지가 없습니다"]
 
 . 대시보드를 배포하려면 Jupyter 인터페이스를 통해 NetopsPredictions-Dashboard.json 파일을 다운로드합니다.
 +
-image:mlrun_image23.png["오류: 그래픽 이미지가 없습니다"]
+image:mlrun_image23.png[""]
 
 . 서비스 섹션에서 Grafana를 열고 대시보드를 가져옵니다.
 +
-image:mlrun_image24.png["오류: 그래픽 이미지가 없습니다"]
+image:mlrun_image24.png[""]
 
 . Upload(*.json) File을 클릭하고 앞서 다운로드한 파일('NetopsPredictions - Dashboard.json')을 선택한다. 업로드가 완료되면 대시보드가 표시됩니다.
 
 
-image:mlrun_image25.png["오류: 그래픽 이미지가 없습니다"]
+image:mlrun_image25.png[""]
 
 
 

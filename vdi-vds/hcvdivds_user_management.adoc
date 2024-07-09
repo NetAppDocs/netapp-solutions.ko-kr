@@ -20,11 +20,11 @@ NetApp VDS는 ID 인증을 위해 Azure Active Directory를 사용하고 NTLM/Ke
 
 다음 그림은 NetApp VDS의 사용자 관리를 보여 줍니다.
 
-image:hcvdivds_image10.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image10.png[""]
 
 각 작업 영역은 다음 그림과 같이 Cloud Workspace OU 아래의 고유한 Active Directory 조직 단위(OU)에 있습니다.
 
-image:hcvdivds_image11.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image11.png[""]
 
 자세한 내용은 을 참조하십시오 https://youtu.be/RftG7v9n8hw["이 비디오"^] NetApp VDS의 사용자 권한 및 사용자 관리
 
@@ -32,4 +32,4 @@ image:hcvdivds_image11.png["오류: 그래픽 이미지가 없습니다"]
 
 VDI User Enabled(VDI 사용자 활성화) 가 선택된 경우 VDS는 해당 사용자 전용의 단일 세션 RDS 시스템을 생성합니다. 프로비저닝할 템플릿과 데이터 저장소를 묻는 메시지가 표시됩니다.
 
-image:hcvdivds_image26.png["오류: 그래픽 이미지가 없습니다"]
+image:hcvdivds_image26.png[""]

@@ -41,7 +41,7 @@ $ runai list
 * '러닝'입니다. 작업이 실행 중입니다.
 
 
-image:osrunai_image5.png["오류: 그래픽 이미지가 없습니다"]
+image:osrunai_image5.png[""]
 
 작업에 대한 추가 상태를 가져오려면 다음 명령을 실행합니다.
 

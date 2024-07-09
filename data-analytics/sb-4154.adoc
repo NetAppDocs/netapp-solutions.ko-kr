@@ -14,6 +14,6 @@ summary:
 
 
 [role="lead"]
-이 백서에서는 NetApp의 최신 데이터 분석 솔루션 전략을 설명합니다. 비즈니스 성과, 고객 과제, 기술 동향, 경쟁 레거시 아키텍처, 최신 워크플로우, 사용 사례, 산업, 클라우드, 기술 파트너, Data Mover, NetApp Active IQ, NetApp DataOps 툴킷, Hadoop~Spark, NetApp Astra Control, 컨테이너, 엔터프라이즈 데이터 관리, 아카이빙, 계층화를 지원하는 소프트웨어 정의 스토리지, AI 및 분석 목표를 달성하는 방법, NetApp과 고객이 함께 데이터 아키텍처를 현대화하는 방법을 알아봅니다.
+이 백서에서는 NetApp의 최신 데이터 분석 솔루션 전략을 설명합니다. 비즈니스 결과, 고객 과제, 기술 동향, 기존 경쟁 아키텍처, 최신 워크플로, 사용 사례, 산업, 클라우드, 기술 파트너, 데이터 이동, NetApp Active IQ Digital Advisor(Digital Advisor라고도 함), NetApp DataOps 툴킷, Hadoop to Spark, NetApp Astra Control, 컨테이너, 엔터프라이즈 데이터 관리, 아카이빙 및 계층화를 지원하는 소프트웨어 정의 스토리지, AI 및 분석 목표를 달성하고 NetApp과 고객이 함께 데이터 아키텍처를 현대화하는 방법을 알아봅니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/58015-sb-4154.pdf["최신 데이터 분석 - 다양한 분석 전략을 위한 다양한 솔루션"^]

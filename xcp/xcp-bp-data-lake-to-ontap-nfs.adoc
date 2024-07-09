@@ -35,7 +35,7 @@ summary: '이 사용 사례는 우리가 수행한 가장 큰 재무 고객 개�
 
 다음 그림은 XCP를 사용하는 MapR 클러스터용 NetApp Data Mover 솔루션을 보여 줍니다.
 
-image:xcp-bp_image30.png["오류: 그래픽 이미지가 없습니다"]
+image:xcp-bp_image30.png[""]
 
 고객 사용 사례, 녹화된 데모 및 테스트 결과에 대한 자세한 내용은 를 참조하십시오 https://blog.netapp.com/data-migration-xcp["XCP를 사용하여 데이터 레이크와 고성능 컴퓨팅에서 ONTAP NFS로 데이터를 이동합니다"^] 블로그:
 

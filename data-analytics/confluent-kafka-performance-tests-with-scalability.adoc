@@ -19,9 +19,9 @@ NetApp StorageGRID 설정을 통해 생산자 및 소비자 워크로드를 위�
 * 스토리지 노드의 수가 증가했을 때 생산 및 소비자 작업을 완료하는 데 걸리는 시간이 선형적으로 감소했습니다.
 
 
-image:confluent-kafka-image9.png["오류: 그래픽 이미지가 없습니다"]
+image:confluent-kafka-image9.png[""]
 
 * S3 검색 작업의 성능은 StorageGRID 노드 수에 따라 선형으로 증가합니다. StorageGRID는 최대 200개의 StorgeGRID 노드를 지원합니다.
 
 
-image:confluent-kafka-image10.png["오류: 그래픽 이미지가 없습니다"]
+image:confluent-kafka-image10.png[""]

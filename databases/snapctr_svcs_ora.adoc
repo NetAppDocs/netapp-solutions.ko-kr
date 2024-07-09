@@ -404,34 +404,34 @@ image:snapctr_svcs_restore_04.png["GUI에서 이 단계를 보여 주는 스크�
 . 올바른 데이터베이스 백업 복사본을 선택하고 세 개의 점을 클릭하여 메뉴를 표시한 다음 * Clone * 옵션을 선택합니다.
 
 
-image:snapctr_svcs_clone_02.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_02.png[""]
 
 . 복제된 데이터베이스 매개 변수를 변경할 필요가 없으면 * Basic * 옵션을 선택합니다.
 
 
-image:snapctr_svcs_clone_03.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_03.png[""]
 
 . 또는 * Specification file * 을 선택하여 현재 init 파일을 다운로드하고, 변경한 다음 다시 작업에 업로드할 수 있습니다.
 
 
-image:snapctr_svcs_clone_03_1.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_03_1.png[""]
 
 . 작업을 검토하고 시작합니다.
 
 
-image:snapctr_svcs_clone_04.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_04.png[""]
 
 . Job Monitoring* 탭에서 클론 생성 작업 상태를 모니터링합니다.
 
 
-image:snapctr_svcs_clone_07-status.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_07-status.png[""]
 
 . EC2 인스턴스 호스트에서 클론 복제된 데이터베이스를 확인합니다.
 
 
-image:snapctr_svcs_clone_08-crs.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_08-crs.png[""]
 
-image:snapctr_svcs_clone_08-db.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_08-db.png[""]
 
 ====
 

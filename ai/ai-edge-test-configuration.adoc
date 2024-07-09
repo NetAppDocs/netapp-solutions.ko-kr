@@ -42,7 +42,7 @@ summary: 이 섹션에서는 테스트된 구성, 네트워크 인프라, SE350 
 
 
 |===
-image:ai-edge-image10.png["오류: 그래픽 이미지가 없습니다"]
+image:ai-edge-image10.png[""]
 
 다음 표에는 스토리지 구성이 2RU, 24개 드라이브 슬롯이 포함된 AFF C190에 나와 있습니다.
 
@@ -70,4 +70,4 @@ image:ai-edge-image10.png["오류: 그래픽 이미지가 없습니다"]
 
 | 컨트롤러 2 |  | 볼륨 2 | 8.42TiB |  | SE350-2를 iSCSI LUN 1로 설정합니다 
 |===
-image:ai-edge-image11.png["오류: 그래픽 이미지가 없습니다"]
+image:ai-edge-image11.png[""]

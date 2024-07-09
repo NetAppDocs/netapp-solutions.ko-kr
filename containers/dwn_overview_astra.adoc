@@ -20,7 +20,7 @@ NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 �
 [role="normal"]
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
 
-image:redhat_openshift_image44.png["오류: 그래픽 이미지가 없습니다"]
+image:redhat_openshift_image44.png[""]
 
 NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 사용하여 구축 및 구성된 Astra Trident 스토리지 오케스트레이터가 있는 {k8s_distribution_name} 클러스터에 설치할 수 있습니다.
 
@@ -28,7 +28,7 @@ Astra Trident에 대한 자세한 내용은 을 참조하십시오 link:dwn_over
 
 클라우드 연결 환경에서 Astra Control Center는 Cloud Insights를 사용하여 고급 모니터링 및 원격 측정 기능을 제공합니다. Cloud Insights 연결이 없을 경우 제한된 모니터링 및 원격 측정(7일 메트릭)을 사용할 수 있으며 개방형 메트릭 엔드포인트를 통해 Kubernetes 기본 모니터링 툴(Prometheus 및 Grafana)으로 내보낼 수 있습니다.
 
-Astra Control Center는 NetApp AutoSupport 및 Active IQ 에코시스템에 완전히 통합되어 사용자를 지원하고, 문제 해결을 지원하며, 사용 통계를 표시합니다.
+Astra Control Center는 NetApp AutoSupport 및 Active IQ Digital Advisor(Digital Advisor라고도 함) 에코시스템에 완벽하게 통합되어 사용자를 지원하고, 문제 해결을 지원하며, 사용 통계를 표시합니다.
 
 Astra Control Center의 유료 버전 외에 90일 평가판 라이센스도 제공됩니다. 평가판 버전은 이메일과 Community Slack 채널을 통해 지원됩니다. 고객은 제품 내 지원 대시보드에서 이러한 리소스, 기타 기술 자료 문서 및 문서를 사용할 수 있습니다.
 

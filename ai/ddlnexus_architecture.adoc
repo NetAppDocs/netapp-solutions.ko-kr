@@ -37,4 +37,4 @@ summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드
 
 | 클라우드 데이터 플랫폼 | link:https://aws.amazon.com/fsx/netapp-ontap/["NetApp ONTAP용 Amazon FSx"] | 설치하고 
 |===
-image:ddlnexus_image1.png["오류: 그래픽 이미지가 없습니다"]
+image:ddlnexus_image1.png[""]

@@ -21,7 +21,7 @@ NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 프로비
 [role="normal"]
 NetApp은 컨테이너화된 애플리케이션을 위해 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격이 있는 여러 스토리지 플랫폼을 제공합니다.
 
-image:redhat_openshift_image43.png["오류: 그래픽 이미지가 없습니다"]
+image:redhat_openshift_image43.png[""]
 
 * AFF 및 FAS 시스템에서 NetApp ONTAP를 실행하고 파일 기반(NFS) 및 블록 기반(iSCSI) 사용 사례에 대한 스토리지를 제공합니다.
 * Cloud Volumes ONTAP와 ONTAP Select는 각각 클라우드 및 가상 공간에서도 동일한 이점을 제공합니다.

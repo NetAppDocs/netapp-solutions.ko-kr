@@ -143,7 +143,7 @@ SmartStore를 사용하면 인덱서 스토리지 공간을 최소한으로 줄�
 
 다음 이미지는 Splunk SmartStore 데이터 흐름을 보여줍니다.
 
-image:stgr-splunkss-image5.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image5.png[""]
 
 인덱서의 캐시 관리자는 SmartStore 데이터 흐름의 핵심입니다. 검색 요청을 처리하는 데 필요한 경우 원격 저장소에서 버킷 복사본을 가져옵니다. 또한 검색에 참여할 가능성이 시간이 지남에 따라 줄어들기 때문에 캐시에서 버킷 복사본이 오래되거나 적게 검색됩니다.
 
@@ -202,11 +202,11 @@ Splunk Enterprise 분산 구축의 다음과 같은 이점을 알아보십시오
 |===
 이 그림은 단일 사이트 분산 배포의 예를 보여 줍니다.
 
-image:stgr-splunkss-image6.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image6.png[""]
 
 이 그림은 다중 사이트 분산 구축의 예를 보여 줍니다.
 
-image:stgr-splunkss-image7.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image7.png[""]
 
 
 
@@ -258,7 +258,7 @@ SG1000 어플라이언스는 다음과 같은 기능을 제공합니다.
 
 다음 이미지는 SG1000 게이트웨이 서비스 어플라이언스를 나타냅니다.
 
-image:stgr-splunkss-image8.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image8.png[""]
 
 
 
@@ -276,7 +276,7 @@ StorageGRID SG6060 어플라이언스에는 2개의 스토리지 컨트롤러와
 
 다음 이미지는 SG6060 어플라이언스를 나타냅니다.
 
-image:stgr-splunkss-image9.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image9.png[""]
 
 
 

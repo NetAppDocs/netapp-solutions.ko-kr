@@ -139,4 +139,4 @@ $ echo http://$NODE_IP:$NODE_PORT/
 . Airflow 웹 서비스에 액세스할 수 있는지 확인합니다.
 
 
-image:aicp_imageaa1.png["오류: 그래픽 이미지가 없습니다"]
+image:aicp_imageaa1.png[""]

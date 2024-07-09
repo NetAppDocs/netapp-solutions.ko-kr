@@ -31,7 +31,7 @@ Oracle, SQL Server, SAP HANA 등 많은 엔터프라이즈 데이터베이스 �
 
 NetApp의 용량 기반 CVO 라이센스 모델은 잠재적인 데이터베이스 라이센스 비용 절감 외에도, 고객이 경쟁 스토리지 서비스에서 제공되지 않는 높은 수준의 데이터베이스 관리 효율성을 통해 GB당 스토리지 비용을 절감할 수 있도록 지원합니다. 다음 차트에는 퍼블릭 클라우드에서 사용 가능한 주요 스토리지 서비스의 스토리지 비용 비교가 나와 있습니다.
 
-image:cvo_cloud_cost_comparision.png["오류: 그래픽 이미지가 없습니다"]
+image:cvo_cloud_cost_comparision.png[""]
 
 이 솔루션은 SnapCenter GUI 기반 소프트웨어 툴과 NetApp SnapMirror 기술을 사용하여 하이브리드 클라우드 데이터베이스 운영을 쉽게 설정, 구현, 운영할 수 있다는 것을 보여 줍니다.
 

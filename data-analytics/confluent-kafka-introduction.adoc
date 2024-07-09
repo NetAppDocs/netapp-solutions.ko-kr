@@ -49,8 +49,8 @@ Confluent를 위한 계층형 스토리지 솔루션은 두 가지 요소를 고
 
 계층형 스토리지를 사용하면 스트리밍 데이터의 지연 시간이 짧은 읽기 및 쓰기 작업에 고성능 플랫폼을 사용할 수 있으며, 처리량이 높은 내역 읽기를 위해 NetApp StorageGRID와 같은 경제적이고 확장 가능한 오브젝트 저장소를 사용할 수도 있습니다. NetApp은 Spark with NetApp 스토리지 컨트롤러 및 세부 정보를 위한 기술 솔루션도 갖추고 있습니다. 다음 그림은 Kafka가 실시간 분석 파이프라인에 어떻게 부합하는지를 보여줍니다.
 
-image:confluent-kafka-image2.png["오류: 그래픽 이미지가 없습니다"]
+image:confluent-kafka-image2.png[""]
 
 다음 그림은 NetApp StorageGRID가 Confluent Kafka의 오브젝트 스토리지 계층으로 적합한 방식을 보여줍니다.
 
-image:confluent-kafka-image3.png["오류: 그래픽 이미지가 없습니다"]
+image:confluent-kafka-image3.png[""]

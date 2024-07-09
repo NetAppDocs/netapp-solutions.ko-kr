@@ -384,35 +384,35 @@ NOTE: Azure NetApp 파일 스토리지에 클론 복제된 데이터베이스를
 
 . 응용 프로그램*에서 복제할 특정 데이터베이스에 대한 세 개의 점 드롭다운 메뉴를 클릭한 다음 * 복원 * 을 클릭하여 클론 워크플로를 시작합니다.
 +
-image:snapctr_svcs_restore_01-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_restore_01-azure.png[""]
 
 . 복원 지점 * 을 선택하고 * 대체 위치로 복원 * 을 선택합니다.
 +
-image:snapctr_svcs_clone_01-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_01-azure.png[""]
 
 . 다음 * 구성 * 페이지에서 대체 * 호스트 *, 새 데이터베이스 * SID * 및 * Oracle Home * 을 대체 Azure VM에 구성된 대로 설정합니다.
 +
-image:snapctr_svcs_clone_02-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_02-azure.png[""]
 
 . Review * General * 페이지에는 SID, 대체 호스트, 데이터 파일 위치, 복구 범위 등과 같은 복제된 데이터베이스의 세부 정보가 표시됩니다
 +
-image:snapctr_svcs_clone_03-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_03-azure.png[""]
 
 . review * Database parameters * 페이지에는 복제된 데이터베이스 구성 및 일부 데이터베이스 매개 변수 설정에 대한 세부 정보가 표시됩니다.
 +
-image:snapctr_svcs_clone_04-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_04-azure.png[""]
 
 . Job Monitoring * 탭에서 클론 작업 상태를 모니터링하면 1.6TiB Oracle 데이터베이스를 복제하는 데 8분이 걸린다는 것을 확인했습니다.
 +
-image:snapctr_svcs_clone_05-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_05-azure.png[""]
 
 . 클론 복제된 데이터베이스가 BlueXP에 즉시 등록되었음을 나타내는 BlueXP * 애플리케이션 * 페이지에서 클론 복제된 데이터베이스를 검증합니다.
 +
-image:snapctr_svcs_clone_06-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_06-azure.png[""]
 
 . 복제된 데이터베이스가 예상대로 실행 중임을 나타내는 Oracle Azure VM에서 복제된 데이터베이스를 검증합니다.
 +
-image:snapctr_svcs_clone_07-azure.png["오류: 그래픽 이미지가 없습니다"]
+image:snapctr_svcs_clone_07-azure.png[""]
 
 
 

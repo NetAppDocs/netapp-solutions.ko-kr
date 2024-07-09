@@ -20,6 +20,6 @@ StorageGRID를 포함한 Splunk SmartStore는 확장 가능하고 성능 기준�
 
 다음 그림은 Splunk 및 StorageGRID 계층화를 보여줍니다.
 
-image:stgr-splunkss-image2.png["오류: 그래픽 이미지가 없습니다"]
+image:stgr-splunkss-image2.png[""]
 
 업계 최고 수준의 Splunk SmartStore와 NetApp StorageGRID를 결합하여 전체 스택 솔루션을 통해 분리 아키텍처의 이점을 제공합니다.
