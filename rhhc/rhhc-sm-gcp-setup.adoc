@@ -20,7 +20,7 @@ summary:
 image:rhhc-self-managed-gcp.png[""]
 
 
-NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하는 방법에는 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 있습니다 link:../rhhc-resources.html["리소스 섹션을 참조하십시오"].
+NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하는 방법에는 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 link:rhhc-resources.html["리소스 섹션을 참조하십시오"]있습니다.
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
