@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: rhhc/rhhc-dp-velero-backup.html 
+keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OADP operator, Openshift Data Protection Application operator, Velero 
+summary: NetApp ONTAP를 사용한 Red Hat OpenShift Container 애플리케이션 데이터 보호 
+---
+= OpenShift Container Platform에서 앱에 대한 주문형 백업 생성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 OpenShift Virtualization에서 VM에 대한 주문형 백업을 생성하는 방법에 대해 간략하게 설명합니다.
+
+
+
+== 앱 백업을 생성하는 단계입니다
+
+앱의 주문형 백업(앱 메타데이터 및 앱의 영구 볼륨)을 생성하려면 ** 백업** 탭을 클릭하여 백업 맞춤형 리소스(CR)를 생성합니다. Backup CR을 생성하기 위한 샘플 YAML이 제공됩니다. 이 YAML을 사용하면 지정된 네임스페이스의 앱과 영구 저장소가 백업됩니다. 에 표시된 대로 추가 매개변수를 설정할 수 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/backing_up_and_restoring/oadp-creating-backup-cr.html["문서화"]있습니다.
+
+지정된 네임스페이스의 영구 볼륨 및 앱 리소스 스냅샷이 CSI에 의해 생성됩니다. 이 스냅샷은 YAML에 지정된 백업 위치에 저장됩니다. 백업은 TTL에 지정된 대로 30일 동안 시스템에 유지됩니다.
+
+....
+spec:
+  csiSnapshotTimeout: 10m0s
+  defaultVolumesToFsBackup: false
+  includedNamespaces:
+    - postgresql ->namespace of the app
+  itemOperationTimeout: 4h0m0s
+  snapshotMoveData: false
+  storageLocation: velero-container-backup-ontap-1 -->this is the backupStorageLocation previously created when Velero is configured.
+  ttl: 720h0m0s
+....
+백업이 완료되면 해당 단계가 완료된 것으로 표시됩니다.
+
+image::redhat_openshift_OADP_backup_image1.png[백업이 완료되었습니다]
+
+S3 브라우저 애플리케이션을 사용하여 오브젝트 스토리지에서 백업을 검사할 수 있습니다. 백업 경로가 구성된 버킷에 접두사 이름(velero/container-demo-backup)과 함께 표시됩니다. 백업 컨텐츠에는 볼륨 스냅샷, 로그 및 애플리케이션의 기타 메타데이터가 포함됩니다.
+
+
+NOTE: StorageGRID에서는 테넌트 관리자에서 사용할 수 있는 S3 콘솔을 사용하여 백업 개체를 볼 수도 있습니다.
+
+image::redhat_openshift_OADP_backup_image2.png[S3의 백업 객체]
+
+
+
+== 애플리케이션에 대한 예약된 백업을 생성합니다
+
+일정에 따라 백업을 생성하려면 예약 CR을 생성해야 합니다. 스케줄은 단순히 cron 표현식일 뿐이므로 백업을 생성할 시간을 지정할 수 있습니다. 예약 CR을 생성하는 샘플 YAML이 아래에 나와 있습니다.
+
+....
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  name: schedule1
+  namespace: openshift-adp
+spec:
+  schedule: 0 7 * * *
+  template:
+    includedNamespaces:
+      - postgresql
+    storageLocation: velero-container-backup-ontap-1
+....
+Cron 표현식 0 7 * * * * 은 매일 7:00에 백업이 생성됨을 의미합니다.
+백업에 포함할 네임스페이스와 백업에 대한 스토리지 위치도 지정됩니다. 따라서 Backup CR 대신 Schedule CR을 사용하여 지정된 시간과 빈도에 백업을 생성합니다.
+
+스케줄이 생성되면 Enabled(활성화) 가 됩니다.
+
+image::redhat_openshift_OADP_backup_image3.png[일정이 생성되었습니다]
+
+백업은 이 일정에 따라 생성되며 백업 탭에서 볼 수 있습니다.
+
+image::redhat_openshift_OADP_backup_image4.png[예약된 백업이 완료되었습니다]

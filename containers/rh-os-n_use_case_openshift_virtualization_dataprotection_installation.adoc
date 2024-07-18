@@ -81,13 +81,13 @@ S3 호환 객체 스토리지를 사용하도록 Velero를 구성할 수 있습�
 웹 콘솔에서 암호를 생성하려면 비밀 을 선택한 다음 키/값 비밀 을 클릭합니다. 그림과 같이 자격 증명 이름, 키 및 값을 입력합니다. S3 사용자의 액세스 키 ID와 비밀 액세스 키를 사용해야 합니다. 암호의 이름을 적절하게 지정합니다. 아래 샘플에서 ontap-s3-credentials라는 ONTAP S3 사용자 자격 증명으로 구성된 암호가 생성됩니다.
 
 
-image::redhat_openshift_OADP_install_image4.jpg[S3 사용자 자격 증명의 암호]
+image::redhat_openshift_OADP_install_image4.png[S3 사용자 자격 증명의 암호]
 
-image::redhat_openshift_OADP_install_image5.jpg[S3 사용자 자격 증명에 대한 암호를 생성합니다]
+image::redhat_openshift_OADP_install_image5.png[S3 사용자 자격 증명에 대한 암호를 생성합니다]
 
 CLI에서 sg-s3-credentials라는 암호를 생성하려면 다음 명령을 사용할 수 있습니다.
 
-image::redhat_openshift_OADP_install_image6.jpg[CLI를 사용하여 S3 사용자 자격 증명에 대한 Secret을 생성합니다]
+image::redhat_openshift_OADP_install_image6.png[CLI를 사용하여 S3 사용자 자격 증명에 대한 Secret을 생성합니다]
 
 * 그런 다음 Velero를 구성하려면 Operators(오퍼레이터) 아래의 메뉴 항목에서 Installed Operators(설치된 운영자) 를 선택하고 OADP operator(OADP 운영자) 를 클릭한 다음 DataProtectionApplication(DataProtectionApplication) 탭을 선택합니다.
 
@@ -107,11 +107,11 @@ spec:
   backupLocations:
     - velero:
         config:
-          insecureSkipTLSVerify: 'true' ->use this for https communication with ONTAP S3
+          insecureSkipTLSVerify: 'false' ->use this for https communication with ONTAP S3
           profile: default
-          region: us-east
+          region: us-east-1
           s3ForcePathStyle: 'True' ->This allows use of IP in s3URL
-          s3Url: 'https://10.xx.xx.xx' ->Ensure TLS certificate for S3 is configured
+          s3Url: 'https://10.xx.xx.xx' ->LIF to access S3. Ensure TLS certificate for S3 is configured
         credential:
           key: cloud
           name: ontap-s3-credentials ->previously created secret

@@ -51,3 +51,16 @@ entries:
     url: "/rhhc/rhhc-pm-data-protection.html"
   - title: AWS에서 컨테이너 워크로드를 마이그레이션합니다
     url: "/rhhc/rhhc-pm-data-migration.html"
+- title: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
+  url: "/rhhc/rhhc-dp-velero-solution.html"
+  entries:
+  - title: 개요
+    url: "/rhhc/rhhc-dp-velero-solution.html"
+  - title: OADP 설치
+    url: "/rhhc/rhhc-dp-velero-installation.html"
+  - title: Velero를 사용한 컨테이너 애플리케이션 백업
+    url: "/rhhc/rhhc-dp-velero-backup.html"
+  - title: Velero를 사용하여 백업에서 복원합니다
+    url: "/rhhc/rhhc-dp-velero-restore.html"
+  - title: 백업 및 복원을 삭제합니다
+    url: "/rhhc/rhhc-dp-velero-delete.html"

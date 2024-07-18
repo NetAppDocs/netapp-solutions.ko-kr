@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_velero.html 
+keywords: data protection, DP, Velero, 3rd party tools 
+summary:  
+---
+= 타사 툴을 사용하여 컨테이너 애플리케이션 및 VM에 대한 데이터 보호
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 솔루션은 Red Hat OpenShift Container Platform에서 OADP 운영자와 통합된 Velero를 사용하여 컨테이너 및 VM에 대한 데이터 보호 작업을 수행하는 방법을 보여 줍니다.
+
+. OpenShift Container Platform의 컨테이너 애플리케이션에 대한 백업을 생성 및 복원하는 방법에 대한 자세한 내용은 을 참조하십시오 link:../rhhc/rhhc-dp-velero-solution.html["여기"].
+. OpenShift Container 플랫폼에 배포된 OpenShift Virtualization에서 VM용 백업을 생성 및 복원하는 방법에 대한 자세한 내용은 을 참조하십시오 link:rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html["여기"].
+
