@@ -21,19 +21,19 @@ GPU는 일반적으로 반복적인 산술 계산을 수행하여 그래픽 시�
 
 NOTE: NVIDIA 라이센스는 NV 시리즈에 포함됩니다.
 
-image:hcvdivds_image37.png[""]
+image::hcvdivds_image37.png[hcvdivds 이미지37입니다]
 
 NetApp HCI 사용 시 H615C GPU에는 NVIDIA Tesla T4 카드 3개가 포함되어 있습니다. 각 NVIDIA Tesla T4 카드에는 16GB GDDR6 메모리가 탑재된 Touring 기반 GPU가 있습니다. VMware vSphere 환경에서 사용할 경우 가상 머신은 전용 프레임 버퍼 메모리가 있는 각 VM과 GPU를 공유할 수 있습니다. NetApp HCI H615C의 GPU에서 광선 트레이싱을 사용하여 빛 반사를 포함한 사실적인 이미지를 생성할 수 있습니다. GPU 기능에 대한 라이센스가 있는 NVIDIA 라이센스 서버가 필요합니다.
 
-image:hcvdivds_image38.png[""]
+image::hcvdivds_image38.png[hcvdivds 이미지38]
 
 GPU를 사용하려면 NVIDIA 라이센스 포털에서 다운로드할 수 있는 적절한 드라이버를 설치해야 합니다. Azure 환경에서는 NVIDIA 드라이버를 GPU 드라이버 확장으로 사용할 수 있습니다. 다음으로, 원격 데스크톱 서비스 세션에 GPU 하드웨어를 사용하려면 다음 스크린샷의 그룹 정책을 업데이트해야 합니다. H.264 그래픽 모드의 우선 순위를 지정하고 인코더 기능을 활성화해야 합니다.
 
-image:hcvdivds_image39.png[""]
+image::hcvdivds_image39.png[hcvdivds 이미지39]
 
 WebGL 샘플을 실행할 때 작업 관리자 또는 NVIDIA-SMI CLI를 사용하여 GPU 성능 모니터링을 검증합니다. GPU, 메모리 및 인코더 리소스가 사용되고 있는지 확인합니다.
 
-image:hcvdivds_image40.png[""]
+image::hcvdivds_image40.png[hcvdivds 이미지40입니다]
 
 가상 데스크톱 서비스를 통해 NetApp HCI H615C에 가상 머신을 배포하려면 H615C 호스트가 있는 vCenter 클러스터 리소스를 사용하여 사이트를 정의합니다. VM 템플릿에는 필요한 vGPU 프로필이 첨부되어 있어야 합니다.
 

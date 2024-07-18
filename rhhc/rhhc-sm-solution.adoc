@@ -22,11 +22,8 @@ NetApp Cloud Volumes ONTAP 스토리지는 AWS, Azure 및 Google Cloud의 컨테
 
 == Astra Control Center를 사용하는 하이브리드 클라우드의 OpenShift Container 워크로드를 위한 데이터 보호 및 마이그레이션 솔루션
 
-온프레미스 및 AWS
-image:rhhc-self-managed-aws.png[""]
+온-프레미스 및 AWS 이미지::rhhc-self-managed-AWS.png[]
 
-온프레미스 및 Google Cloud
-image:rhhc-self-managed-gcp.png[""]
+온프레미스 및 Google Cloud 이미지::rhhc-self-managed-gpc.png[]
 
-온프레미스 및 Azure Cloud
-image:rhhc-self-managed-azure.png[""]
+온프레미스 및 Azure Cloud 이미지::rhhc-self-managed-Azure.png[]

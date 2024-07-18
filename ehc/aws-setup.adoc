@@ -58,18 +58,24 @@ VMware 계정을 구성하고 적절한 사이징을 수행한 후에는 AWS에�
 
 . 기존 또는 새로 생성한 VMware 자격 증명을 사용하여 VMware Cloud Console에 로그인합니다.
 +
-image:aws-config-1.png[""]
+image::aws-config-1.png[AWS 구성 1]
 
 . AWS 지역, 구축 및 호스트 유형과 SDDC 이름을 구성합니다.
 +
-image:aws-config-2.png[""]
+image::aws-config-2.png[AWS 구성 2]
 
 . 원하는 AWS 계정에 연결하고 AWS Cloud 포메이션 스택을 실행합니다.
 +
-image:aws-config-3.png[""]
-image:aws-config-4.png[""]
-image:aws-config-5.png[""]
-image:aws-config-6.png[""]
+image::aws-config-3.png[AWS 구성 3]
+
++
+image::aws-config-4.png[AWS 구성 4]
+
++
+image::aws-config-5.png[AWS 구성 5]
+
++
+image::aws-config-6.png[AWS 구성 6]
 
 +
 
@@ -77,25 +83,25 @@ NOTE: 이 검증에는 단일 호스트 구성이 사용됩니다.
 
 . 원하는 AWS VPC를 선택하여 VMC 환경을 에 연결합니다.
 +
-image:aws-config-7.png[""]
+image::aws-config-7.png[AWS 구성 7]
 
 . VMC 관리 서브넷을 구성합니다. 이 서브넷에는 vCenter, NSX 등과 같은 VMC 관리 서비스가 포함됩니다. SDDC 환경에 대한 연결이 필요한 다른 네트워크와 겹치는 주소 공간을 선택하지 마십시오. 마지막으로 아래에 기입된 CIDR 크기에 대한 권장 사항을 따르십시오.
 +
-image:aws-config-8.png[""]
+image::aws-config-8.png[AWS 구성 8]
 
 . SDDC 구성을 검토 및 확인한 다음 SDDC 구축 을 클릭합니다.
 +
-image:aws-config-9.png[""]
+image::aws-config-9.png[AWS 구성 9]
 
 +
 일반적으로 구축 프로세스를 완료하는 데 약 2시간이 소요됩니다.
 
 +
-image:aws-config-10.png[""]
+image::aws-config-10.png[AWS 구성 10]
 
 . 완료되면 SDDC를 사용할 수 있습니다.
 +
-image:aws-config-11.png[""]
+image::aws-config-11.png[AWS 구성 11]
 
 
 
@@ -110,34 +116,42 @@ VMware Cloud를 FSx ONTAP에 연결하려면 다음 단계를 수행하십시오
 
 . VMware 클라우드 구축이 완료되고 AWS VPC에 연결되면 NetApp ONTAP용 Amazon FSx를 원래 연결된 VPC가 아닌 새 VPC에 구축해야 합니다(아래 스크린샷 참조). 연결된 VPC에 FSX(NFS 및 SMB 부동 IP)를 구축하면 FSX에 액세스할 수 없습니다. Cloud Volumes ONTAP와 같은 iSCSI 엔드포인트는 연결된 VPC에서 정상적으로 작동합니다.
 +
-image:aws-connect-fsx-1.png[""]
+image::aws-connect-fsx-1.png[AWS Connect FSx 1]
 
 . 동일한 지역에 추가 VPC를 구축한 다음 NetApp ONTAP용 Amazon FSx를 새 VPC에 구축합니다.
 +
 VMware Cloud Console에서 SDDC 그룹을 구성하면 FSx가 구축된 새 VPC에 연결하는 데 필요한 네트워킹 구성 옵션을 사용할 수 있습니다. 3단계에서 "그룹에 대한 VMware Transit Connect 구성 시 첨부 파일 및 데이터 전송당 비용이 청구됨"이 선택되어 있는지 확인한 다음 그룹 생성 을 선택합니다. 이 프로세스를 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
 +
-image:aws-connect-fsx-2.png[""]
-image:aws-connect-fsx-3.png[""]
-image:aws-connect-fsx-4.png[""]
+image::aws-connect-fsx-2.png[AWS Connect FSx 2]
+
++
+image::aws-connect-fsx-3.png[AWS Connect FSx 3]
+
++
+image::aws-connect-fsx-4.png[AWS Connect FSx 4]
 
 . 새로 생성된 VPC를 방금 생성된 SDDC 그룹에 연결합니다. External VPC 탭을 선택하고 에 따릅니다 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-A3D03968-350E-4A34-A53E-C0097F5F26A9.html["외부 VPC 연결 지침"] 그룹에. 이 프로세스를 완료하는 데 10-15분 정도 걸릴 수 있습니다.
 +
-image:aws-connect-fsx-5.png[""]
-image:aws-connect-fsx-6.png[""]
+image::aws-connect-fsx-5.png[AWS Connect FSx 5]
+
++
+image::aws-connect-fsx-6.png[AWS Connect FSx 6]
 
 . 외부 VPC 프로세스의 일환으로, 리소스 액세스 관리자를 통해 AWS 콘솔을 통해 새 공유 리소스에 대한 메시지가 표시됩니다. 공유 리소스는 입니다 link:https://aws.amazon.com/transit-gateway["AWS Transit Gateway를 참조하십시오"] VMware Transit Connect에서 관리합니다.
 +
-image:aws-connect-fsx-7.png[""]
-image:aws-connect-fsx-8.png[""]
+image::aws-connect-fsx-7.png[AWS Connect FSx 7]
+
++
+image::aws-connect-fsx-8.png[AWS Connect FSx 8]
 
 . Transit Gateway Attachment를 생성합니다.
 +
-image:aws-connect-fsx-9.png[""]
+image::aws-connect-fsx-9.png[AWS Connect FSx 9]
 
 . VMC 콘솔에서 VPC 첨부 파일을 수락합니다. 이 프로세스를 완료하는 데 약 10분 정도 걸릴 수 있습니다.
 +
-image:aws-connect-fsx-10.png[""]
+image::aws-connect-fsx-10.png[AWS Connect FSx 10]
 
 . External VPC 탭에서 Routes 열의 편집 아이콘을 클릭하고 다음과 같은 필수 경로를 추가합니다.
 +
@@ -145,17 +159,17 @@ image:aws-connect-fsx-10.png[""]
 ** Cloud Volumes ONTAP의 부동 IP 범위에 대한 라우트입니다(해당하는 경우).
 ** 새로 생성된 외부 VPC 주소 공간의 경로입니다.
 +
-image:aws-connect-fsx-11.png[""]
+image::aws-connect-fsx-11.png[AWS Connect FSx 11]
 
 
 
 . 마지막으로 양방향 트래픽을 허용합니다 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-DE330202-D63D-408A-AECF-7CDC6ADF7EAC.html["방화벽 규칙"] FSx/CVO에 액세스하기 위한 것입니다. 다음 사항을 따르십시오 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-DE330202-D63D-408A-AECF-7CDC6ADF7EAC.html["세부 단계"] SDDC 워크로드 연결을 위한 컴퓨팅 게이트웨이 방화벽 규칙의 경우
 +
-image:aws-connect-fsx-12.png[""]
+image::aws-connect-fsx-12.png[AWS Connect FSx 12]
 
 . 방화벽 그룹이 관리 및 컴퓨팅 게이트웨이 모두에 대해 구성된 후에는 다음과 같이 vCenter에 액세스할 수 있습니다.
 +
-image:aws-connect-fsx-13.png[""]
+image::aws-connect-fsx-13.png[AWS Connect FSx 13]
 
 
 

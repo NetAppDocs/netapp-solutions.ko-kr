@@ -215,7 +215,7 @@ SnapMirror 관계를 설정하는 데 필요한 모든 단계는 System Manager 
 
 . ONTAP System Manager에서 네트워크 개요 페이지로 이동하여 FSx가 설치된 AWS VPC와 통신하도록 구성된 Type:Intercluster의 IP 주소를 검색합니다.
 +
-image:dr-vmc-aws-image10.png[""]
+image::dr-vmc-aws-image10.png[DR VMC AWS 이미지10]
 
 . CLI를 사용하여 Intercluster IP 주소를 검색하려면 다음 명령을 실행합니다.
 +
@@ -239,7 +239,7 @@ Confirm the passphrase:
 ....
 . 소스 클러스터에서 ONTAP System Manager 또는 CLI를 사용하여 클러스터 피어 관계를 설정할 수 있습니다. ONTAP 시스템 관리자에서 보호 > 개요 로 이동하고 피어 클러스터 를 선택합니다.
 +
-image:dr-vmc-aws-image12.png[""]
+image::dr-vmc-aws-image12.png[DR VMC AWS 이미지12]
 
 . 피어 클러스터 대화 상자에서 필요한 정보를 입력합니다.
 +
@@ -248,7 +248,7 @@ image:dr-vmc-aws-image12.png[""]
 .. 대상 ONTAP 클러스터의 인터클러스터 LIF IP 주소를 입력합니다.
 .. 클러스터 피어링 시작 을 클릭하여 프로세스를 마칩니다.
 +
-image:dr-vmc-aws-image13.png[""]
+image::dr-vmc-aws-image13.png[DR VMC AWS 이미지13]
 
 
 
@@ -273,7 +273,7 @@ ONTAP-Dest::> vserver peer create -vserver DestSVM -peer-vserver Backup -peer-cl
 . 소스 ONTAP 클러스터에서 ONTAP System Manager 또는 CLI와 피어링 관계를 수락합니다.
 . ONTAP 시스템 관리자에서 보호 > 개요 로 이동하고 스토리지 VM 피어 아래에서 피어 스토리지 VM 을 선택합니다.
 +
-image:dr-vmc-aws-image15.png[""]
+image::dr-vmc-aws-image15.png[DR VMC AWS 이미지15]
 
 . 피어 스토리지 VM 대화 상자에서 필수 필드를 입력합니다.
 +
@@ -281,7 +281,7 @@ image:dr-vmc-aws-image15.png[""]
 ** 타겟 클러스터
 ** 대상 스토리지 VM입니다
 +
-image:dr-vmc-aws-image16.png[""]
+image::dr-vmc-aws-image16.png[DR VMC AWS 이미지 16]
 
 
 
@@ -301,7 +301,7 @@ NOTE: 보조 스토리지에서 이러한 레이블은 스냅샷 보존을 적�
 
 다음 예제는 SQL Server 데이터베이스 및 로그 볼륨의 일일 백업에 사용되는 정책의 일부로 생성된 모든 스냅샷에 존재하는 SnapMirror 레이블을 보여줍니다.
 
-image:dr-vmc-aws-image17.png[""]
+image::dr-vmc-aws-image17.png[DR VMC AWS 이미지17]
 
 SQL Server 데이터베이스에 대한 SnapCenter 정책을 만드는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html["SnapCenter 설명서"^].
 

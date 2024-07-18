@@ -59,7 +59,7 @@ summary: 이제 Kafka를 사용하는 NFS 스토리지에 이름 바꾸기 관�
 
 이 테스트 사례에 사용된 벤치마킹 툴은 입니다 https://openmessaging.cloud/["OpenMessaging"^] 프레임워크: OpenMessaging은 공급업체에 구애받지 않고 언어와 독립적입니다. 금융, 전자 상거래, IoT 및 빅 데이터에 대한 업계 지침을 제공하며 이기종 시스템 및 플랫폼에서 메시징 및 스트리밍 애플리케이션을 개발하는 데 도움이 됩니다. 다음 그림에서는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여 줍니다.
 
-image:kafka-nfs-image8.png["이 이미지는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여줍니다."]
+image::kafka-nfs-image8.png[이 이미지는 OpenMessaging 클라이언트와 Kafka 클러스터의 상호 작용을 보여줍니다.]
 
 * * Compute. * 3노드 Kafka 클러스터와 전용 서버에서 실행되는 3노드 zookeeper 앙상블이 사용되었습니다. 각 브로커는 전용 LIF를 통해 NetApp CVO 인스턴스의 단일 볼륨에 대한 NFSv4.1 마운트 지점을 2개 가지고 있었습니다.
 * * 모니터링. * Prometheus-Grafana 조합에 두 개의 노드를 사용했습니다. 워크로드를 생성하기 위해 Kafka 클러스터에 대해 생성하고 사용할 수 있는 별도의 3노드 클러스터가 있습니다.
@@ -71,12 +71,12 @@ image:kafka-nfs-image8.png["이 이미지는 OpenMessaging 클라이언트와 Ka
 
 
 
-image:kafka-nfs-image9.png["이 이미지는 Kafka 브로커에 대해 선택한 사양을 보여줍니다."]
+image::kafka-nfs-image9.png[이 이미지는 Kafka 브로커에 대해 선택한 사양을 보여줍니다.]
 
 * * OMB(OpenMessaging 벤치마크) 워크로드 구성 * 다음 사양이 제공됩니다. 아래에 강조 표시된 목표 생산자 비율을 지정했습니다.
 
 
-image:kafka-nfs-image10.png["이 이미지는 OpenMessaging 벤치마크 워크로드 구성에 대해 선택한 사양을 보여 줍니다."]
+image::kafka-nfs-image10.png[이 이미지는 OpenMessaging 벤치마크 워크로드 구성에 대해 선택한 사양을 보여 줍니다.]
 
 
 
@@ -113,15 +113,15 @@ NetApp NFS 스토리지와 Kafka를 함께 사용하면 다음과 같은 두 가
 * * 더 높은 생산률에서 CPU 사용률 편차가 3배 감소했습니다. * 예상대로 생산률이 증가할수록 CPU 활용률이 증가하기 때문에 상승률이 나타났습니다. 그러나 DAS를 사용하는 Kafka 브로커의 CPU 활용률은 낮은 생산률의 31%에서 높은 생산률의 70%로 39% 증가했습니다. 하지만 NFS 스토리지 백엔드를 사용할 경우 CPU 활용률이 26%에서 38%로 12% 증가했습니다.
 
 
-image:kafka-nfs-image11.png["이 그래프는 DAS 기반 클러스터의 동작을 보여 줍니다."]
+image::kafka-nfs-image11.png[이 그래프는 DAS 기반 클러스터의 동작을 보여 줍니다.]
 
-image:kafka-nfs-image12.png["이 그래프는 NFS 기반 클러스터의 동작을 보여 줍니다."]
+image::kafka-nfs-image12.png[이 그래프는 NFS 기반 클러스터의 동작을 보여 줍니다.]
 
 또한, 100,000 메시지에서 DAS는 NFS 클러스터보다 CPU 사용률이 더 높습니다.
 
-image:kafka-nfs-image13.png["이 그래프는 100,000개의 메시지에서 DAS 기반 클러스터의 동작을 보여 줍니다."]
+image::kafka-nfs-image13.png[이 그래프는 100,000개의 메시지에서 DAS 기반 클러스터의 동작을 보여 줍니다.]
 
-image:kafka-nfs-image14.png["이 그래프는 100,000개의 메시지에서 NFS 기반 클러스터의 동작을 보여 줍니다."]
+image::kafka-nfs-image14.png[이 그래프는 100,000개의 메시지에서 NFS 기반 클러스터의 동작을 보여 줍니다.]
 
 
 
@@ -156,7 +156,7 @@ Kafka 브로커가 공유 NetApp NFS 스토리지를 사용할 때 더 빨리 �
 |===
 다음 그림에서는 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다.
 
-image:kafka-nfs-image8.png["이 그림은 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다."]
+image::kafka-nfs-image8.png[이 그림은 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다.]
 
 * * Compute. * 전용 서버에서 3노드 zookeeper 앙상블이 실행되는 3노드 Kafka 클러스터. 각 브로커는 전용 LIF를 통해 NetApp CVO 인스턴스의 단일 볼륨에 대한 NFS 마운트 지점을 2개 가집니다.
 * * 모니터링. * Prometheus-Grafana 조합에 대한 두 개의 노드. 워크로드를 생성하는 경우 이 Kafka 클러스터를 생성하고 사용할 수 있는 별도의 3노드 클러스터를 사용합니다.
@@ -164,7 +164,7 @@ image:kafka-nfs-image8.png["이 그림은 NAS 기반 Kafka 클러스터의 아�
 * * 브로커 구성. * 이 테스트 사례에서 구성 가능한 한 가지 요소는 Kafka 브로커입니다. Kafka 브로커에 대해 다음과 같은 사양이 선택되었습니다. 를 클릭합니다 `replica.lag.time.mx.ms` ISR 목록에서 특정 노드를 얼마나 빨리 제외할지 결정하므로 값이 높게 설정됩니다. 불량 노드와 정상 노드 간에 전환할 때 ISR 목록에서 브로커 ID를 제외하지 않도록 합니다.
 
 
-image:kafka-nfs-image15.png["이 이미지는 Kafka 브로커에 대해 선택한 사양을 보여줍니다."]
+image::kafka-nfs-image15.png[이 이미지는 Kafka 브로커에 대해 선택한 사양을 보여줍니다.]
 
 
 
@@ -182,7 +182,7 @@ image:kafka-nfs-image15.png["이 이미지는 Kafka 브로커에 대해 선택�
 ** * EC2 기반 클러스터 * Kafka 브로커 데이터 디렉토리가 에 매핑되어 있습니다 `/mnt/data-2` (다음 그림에서 cluster1 의 Broker-1 [왼쪽 터미널]).
 ** * NetApp NFS 기반 클러스터 * Kafka 브로커 데이터 디렉토리가 NFS 지점에 마운트됩니다 `/mnt/data` (다음 그림에서 클러스터2의 브로커-1[오른쪽 터미널])
 +
-image:kafka-nfs-image16.png["이 이미지는 두 개의 터미널 화면을 보여줍니다."]
+image::kafka-nfs-image16.png[이 이미지는 두 개의 터미널 화면을 보여줍니다.]
 
 
 
@@ -215,11 +215,11 @@ EC2 기반 클러스터는 새로운 브로커 노드에서 110GB의 데이터�
 
 . 백업 노드는 08:55:53,730에 시작되었습니다.
 +
-image:kafka-nfs-image17.png["이 이미지는 DAS 기반 클러스터에 대한 로그 출력을 보여 줍니다."]
+image::kafka-nfs-image17.png[이 이미지는 DAS 기반 클러스터에 대한 로그 출력을 보여 줍니다.]
 
 . 데이터 리빌딩 프로세스는 09:05:24,860으로 끝났습니다. 110GB의 데이터를 처리하는 데 약 10분이 소요됩니다.
 +
-image:kafka-nfs-image18.png["이 이미지는 DAS 기반 클러스터에 대한 로그 출력을 보여 줍니다."]
+image::kafka-nfs-image18.png[이 이미지는 DAS 기반 클러스터에 대한 로그 출력을 보여 줍니다.]
 
 
 
@@ -229,17 +229,17 @@ image:kafka-nfs-image18.png["이 이미지는 DAS 기반 클러스터에 대한 
 
 . 백업 노드는 09:39:17,213에 시작되었습니다. 시작 로그 항목이 아래에 강조 표시됩니다.
 +
-image:kafka-nfs-image19.png["이 이미지는 NFS 기반 클러스터에 대한 로그 출력을 보여 줍니다."]
+image::kafka-nfs-image19.png[이 이미지는 NFS 기반 클러스터에 대한 로그 출력을 보여 줍니다.]
 
 . 데이터 리빌드 프로세스는 09:42:29,115로 종료되었습니다. 110GB의 데이터를 처리하는 데 약 3분이 소요됩니다.
 +
-image:kafka-nfs-image20.png["이 이미지는 NFS 기반 클러스터에 대한 로그 출력을 보여 줍니다."]
+image::kafka-nfs-image20.png[이 이미지는 NFS 기반 클러스터에 대한 로그 출력을 보여 줍니다.]
 
 +
 이 테스트는 약 1TB 데이터를 포함하는 브로커에 대해 반복되었으며 DAS의 경우 약 48분, NFS의 경우 약 3분이 소요됩니다. 결과는 다음 그래프에 나와 있습니다.
 
 +
-image:kafka-nfs-image21.png["이 그래프에는 DAS 기반 클러스터 또는 NFS 기반 클러스터에 대해 브로커에 로드된 데이터 양에 따라 브로커 복구에 걸리는 시간이 나와 있습니다."]
+image::kafka-nfs-image21.png[이 그래프에는 DAS 기반 클러스터 또는 NFS 기반 클러스터에 대해 브로커에 로드된 데이터 양에 따라 브로커 복구에 걸리는 시간이 나와 있습니다.]
 
 
 
@@ -275,7 +275,7 @@ Kafka 클러스터의 스토리지 계층은 NetApp ONTAP를 통해 프로비저
 |===
 다음 그림에서는 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다.
 
-image:kafka-nfs-image8.png["이 그림은 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다."]
+image::kafka-nfs-image8.png[이 그림은 NAS 기반 Kafka 클러스터의 아키텍처를 보여 줍니다.]
 
 * * Compute. * 3노드 Kafka 클러스터와 전용 서버에서 실행되는 3노드 zookeeper 앙상블이 사용되었습니다. 각 브로커는 전용 LIF를 통해 NetApp CVO 인스턴스의 단일 볼륨에 대한 NFS 마운트 지점을 2개 가지고 있었습니다.
 * * 모니터링. * Prometheus-Grafana 조합에 두 개의 노드를 사용했습니다. 워크로드를 생성하는데 이 Kafka 클러스터를 생성하고 사용할 수 있는 별도의 3노드 클러스터를 사용했습니다.
@@ -300,8 +300,8 @@ image:kafka-nfs-image8.png["이 그림은 NAS 기반 Kafka 클러스터의 아�
 
 OMB 툴을 사용하여 생성한 데이터의 경우, 스토리지 효율성 비율이 1.70:1인 33%까지 절약되었습니다. 다음 그림에서 볼 수 있듯이, 생성된 데이터에 사용된 논리적 공간은 420.3GB였으며 데이터를 저장하는 데 사용된 물리적 공간은 281.7GB였습니다.
 
-image:kafka-nfs-image22.png["이 이미지는 VMDISK의 공간 절약 효과를 보여 줍니다."]
+image::kafka-nfs-image22.png[이 이미지는 VMDISK의 공간 절약 효과를 보여 줍니다.]
 
-image:kafka-nfs-image23.png["스크린샷"]
+image::kafka-nfs-image23.png[스크린샷]
 
-image:kafka-nfs-image24.png["스크린샷"]
+image::kafka-nfs-image24.png[스크린샷]

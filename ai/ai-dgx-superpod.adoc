@@ -12,7 +12,7 @@ summary: 이 NetApp 검증 아키텍처에서는 NetApp ® BeeGFS 구성 요소�
 
 == NVIDIA DGX SuperPOD with NetApp - 설계 가이드 를 참조하십시오
 
-image:NVIDIAlogo.png["200,200"]
+image::NVIDIAlogo.png[200]
 
 아민 벤나니, 데이비드 아네트 및 사티시 티아가라잔, NetApp
 
@@ -48,7 +48,7 @@ NetApp EF600 All-Flash 어레이를 NVIDIA DGX SuperPOD의 기반으로 활용�
 
 
 
-_ 솔루션에 대한 고급 보기 _ image:EF_SuperPOD_HighLevel.png[""]
+_이미지::EF_SuperPOD_highlevel.png[]
 
 * NetApp BeeGFS 구성 요소는 2개의 NetApp EF600 어레이와 2개의 x86 서버로 구성되어 있습니다.
 +
@@ -60,7 +60,7 @@ _ 솔루션에 대한 고급 보기 _ image:EF_SuperPOD_HighLevel.png[""]
 * NVIDIA SuperPOD SUS와 NetApp BeeGFS 구성 요소의 조합은 컴퓨팅 또는 스토리지를 쉽고 원활하게 확장할 수 있는 민첩한 AI 솔루션을 제공합니다.
 
 
-_NetApp BeeGFS 구성 요소 _ image:EF_SuperPOD_buildingblock.png[""]
+_NetApp BeeGFS 구성 요소_이미지::EF_SuperPOD_buildingblock.png[]
 
 
 

@@ -25,7 +25,7 @@ BlueXP에서 NetApp Cloud Volumes ONTAP을 생성하여 ML 데이터를 저장�
 
 다음 그림은 솔루션의 기술 구성요소를 보여 줍니다.
 
-image:cdm-fod-image1.png["이 그림은 솔루션의 기술 구성요소를 보여 줍니다."]
+image::cdm-fod-image1.png[이 그림은 솔루션의 기술 구성요소를 보여 줍니다.]
 
 
 

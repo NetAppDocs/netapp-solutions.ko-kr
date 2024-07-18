@@ -89,10 +89,10 @@ image::vtwn_image18.jpg[Astra Control Center 클론 버튼]
 
 . 새 네임스페이스의 세부 정보를 입력하고 복제할 클러스터를 선택한 다음 기존 스냅샷, 백업 또는 애플리케이션의 현재 상태에서 클론을 생성할지 여부를 선택합니다. 세부 정보를 검토한 후 다음 을 클릭하고 검토 창에서 복제 를 클릭합니다.
 +
-image:vtwn_image23.jpg["Astra Control Center 복구"]
+image::vtwn_image23.jpg[Astra Control Center 복구]
 
 . 새 애플리케이션은 검색 상태로 전환되지만, Astra Control Center는 선택한 클러스터에 애플리케이션을 생성합니다. 응용 프로그램의 모든 리소스가 Astra에 의해 설치 및 감지되면 응용 프로그램은 사용 가능 상태로 전환됩니다.
 +
-image:vtwn_image24.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
+image::vtwn_image24.jpg[Astra Control Center에서 새로운 앱이 검색되었습니다]
 
 

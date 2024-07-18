@@ -24,11 +24,11 @@ xCP 복사 및 동기화 작업에 대한 테스트에서는 구축에 사용된
 
 다음 그림에서는 xCP 복사 작업의 결과를 보여 줍니다.
 
-image:xcp-bp_image10.png[""]
+image::xcp-bp_image10.png[XCP BP 이미지10]
 
 다음 그림에서는 xCP Sync 이름 바꾸기 및 링크 작업의 결과를 보여 줍니다.
 
-image:xcp-bp_image8.png[""]
+image::xcp-bp_image8.png[XCP BP 이미지8]
 
 파일 크기는 이름이 바뀐 소스 파일을 전송하는 xCP 동기화 완료 시간과 일치하지 않으며, 그래프가 선형입니다.
 
@@ -36,7 +36,7 @@ image:xcp-bp_image8.png[""]
 
 다음 그림은 XCP 동기화 추가 및 삭제 작업의 결과를 보여 줍니다.
 
-image:xcp-bp_image9.png[""]
+image::xcp-bp_image9.png[XCP BP 이미지9]
 
 추가 및 삭제 작업의 경우 작은 파일 크기에 비해 파일 크기가 크면 시간이 더 오래 걸립니다. 작업을 완료하는 데 걸리는 시간은 추가 및 삭제 변경 비율에 비례합니다.
 
@@ -48,15 +48,15 @@ image:xcp-bp_image9.png[""]
 
 다음 그림은 XCP 1.6.3의 XCP 동기화 성능과 1.7(100만 개 파일의 8K 크기)의 결과를 보여 줍니다.
 
-image:xcp-bp_image11.png[""]
+image::xcp-bp_image11.png[XCP BP 이미지11]
 
 다음 그림은 XCP 1.6.1 및 1.5의 XCP 동기화 성능(1백만 개 파일의 16K 크기)의 결과를 보여 줍니다.
 
-image:xcp-bp_image12.png[""]
+image::xcp-bp_image12.png[XCP BP 이미지12]
 
 다음 그림은 XCP 1.6.1에 대한 XCP 동기화 성능 결과와 1백만 개 파일의 1MB 크기의 1.5를 비교한 결과를 보여 줍니다.
 
-image:xcp-bp_image13.png[""]
+image::xcp-bp_image13.png[XCP BP 이미지13]
 
 xCP 1.7의 성능은 평균적으로 xCP 1.6.3에서 'xCP 동기화' 차등 증분 업데이트의 XCP 1.6.3과 비슷했습니다. 즉, 100만 개 파일의 1MB 크기로 이름 바꾸기, 추가, 링크 및 삭제 작업을 수행할 수 있었습니다.
 

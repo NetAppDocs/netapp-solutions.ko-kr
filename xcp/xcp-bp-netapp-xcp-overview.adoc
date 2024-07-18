@@ -31,7 +31,7 @@ NetApp XCP는 모든 NAS에서 NetApp NAS로 데이터를 전송합니다. 이 �
 
 다음 그림에서는 xCP 데이터 마이그레이션 및 복제 작업을 보여 줍니다.
 
-image:xcp-bp_image1.png[""]
+image::xcp-bp_image1.png[XCP BP 이미지1]
 
 
 
@@ -48,7 +48,7 @@ NetApp XCP는 기본적으로 비정형 데이터를 식별, 조사 및 분석�
 
 다음 그림에서는 GUI에서 제공되는 NetApp XCP 파일 분석 통신을 보여 줍니다.
 
-image:xcp-bp_image2.png[""]
+image::xcp-bp_image2.png[XCP BP 이미지2]
 
 
 

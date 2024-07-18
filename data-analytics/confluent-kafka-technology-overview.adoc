@@ -32,7 +32,7 @@ StorageGRID는 분산된 노드 기반 그리드 아키텍처를 사용하여 �
 
 StorageGRID 그리드 관리자는 브라우저 기반의 그래픽 인터페이스로, 단일 창에서 전세계에 분산된 위치에 걸쳐 StorageGRID 시스템을 구성, 관리 및 모니터링할 수 있습니다.
 
-image:confluent-kafka-image4.png[""]
+image::confluent-kafka-image4.png[통합된 Kafka 이미지4]
 
 StorageGRID 그리드 관리자 인터페이스를 사용하여 다음 작업을 수행할 수 있습니다.
 
@@ -74,7 +74,7 @@ StorageGRID에는 QoS 기능이 내장되어 있습니다. 트래픽 분류 정�
 
 Apache Kafka는 Java 및 Scala로 작성된 스트림 처리를 사용하는 소프트웨어 버스의 프레임워크입니다. 이 제품은 실시간 데이터 피드 처리를 위한 높은 처리량의 짧은 대기 시간을 갖춘 통합 플랫폼을 제공하기 위해 마련되었습니다. Kafka는 데이터 내보내기 및 가져오기를 위해 Kafka Connect를 통해 외부 시스템에 연결할 수 있으며 Java 스트림 처리 라이브러리인 Kafka 스트림을 제공합니다. Kafka는 효율성을 위해 최적화된 바이너리 TCP 기반 프로토콜을 사용하며, 네트워크를 통한 왕복 작업의 오버헤드를 줄이기 위해 자연스럽게 메시지를 그룹화하는 "메시지 세트" 추상화에 의존합니다. 이렇게 하면 순차 디스크 작업, 더 큰 네트워크 패킷 및 연속 메모리 블록이 증가하므로 Kafka는 랜덤 메시지 쓰기의 폭주 스트림을 선형 쓰기로 전환할 수 있습니다. 다음 그림은 Apache Kafka의 기본 데이터 흐름을 보여 줍니다.
 
-image:confluent-kafka-image5.png[""]
+image::confluent-kafka-image5.png[통합된 Kafka 이미지5]
 
 Kafka는 생산자라는 임의의 수의 프로세스에서 가져온 키 값 메시지를 저장합니다. 데이터는 여러 주제 내의 서로 다른 파티션으로 분할될 수 있습니다. 파티션 내에서 메시지는 해당 오프셋(파티션 내의 메시지 위치)에 의해 엄격하게 정렬되고 타임 스탬프와 함께 인덱싱되고 저장됩니다. 소비자라고 하는 다른 프로세스는 파티션에서 메시지를 읽을 수 있습니다. 스트림 처리를 위해 Kafka는 Kafka의 데이터를 사용하는 Java 애플리케이션을 작성하고 결과를 Kafka에 다시 쓸 수 있는 스트림 API를 제공합니다. Apache Kafka는 Apache Apex, Apache Flink, Apache Spark, Apache Storm, Apache nifi 등의 외부 스트림 처리 시스템과도 작동합니다.
 
@@ -128,7 +128,7 @@ Confluent Platform을 사용하면 데이터가 다른 시스템 간에 어떻�
 
 다음 그림에서는 Confluent Kafka 플랫폼 구성 요소를 보여 줍니다.
 
-image:confluent-kafka-image6.png[""]
+image::confluent-kafka-image6.png[통합된 Kafka 이미지6]
 
 
 

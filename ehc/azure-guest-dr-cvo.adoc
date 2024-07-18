@@ -25,7 +25,7 @@ summary: 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중�
  This covers application data; however, what about the actual VMs themselves. Disaster recovery should cover all dependent components, including virtual machines, VMDKs, application data, and more. To accomplish this, SnapMirror along with Jetstream can be used to seamlessly recover workloads replicated from on-premises to Cloud Volumes ONTAP while using vSAN storage for VM VMDKs.
 이 문서에서는 NetApp SnapMirror, Jetstream 및 AVS(Azure VMware Solution)를 사용하여 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
 
-image:dr-cvo-avs-image1.png[""]
+image::dr-cvo-avs-image1.png[DR cvo 영상1]
 
 
 
@@ -75,7 +75,7 @@ NOTE: 온프레미스 데이터 센터를 Azure에 연결하는 여러 가지 �
 ====
 첫 번째 단계는 Cloud Volumes ONTAP Azure(link:azure-guest.html["링크"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
 
-image:dr-cvo-avs-image2.png[""]
+image::dr-cvo-avs-image2.png[DR cvo 영상 2]
 
 ====
 .AVS 호스트 및 CVO 데이터 액세스를 구성합니다
@@ -104,17 +104,17 @@ Jetstream DR 소프트웨어는 Jetstream DR Management Server Virtual Appliance
 . MSA에 vCenter Server를 등록합니다.
 . Jetstream DR MSA를 구축하고 vCenter Server를 등록한 후 vSphere Web Client를 사용하여 Jetstream DR 플러그인으로 이동합니다. 이 작업은 데이터 센터 > 구성 > Jetstream DR로 이동하여 수행할 수 있습니다.
 +
-image:dr-cvo-avs-image3.png[""]
+image::dr-cvo-avs-image3.png[DR cvo 영상 3]
 
 . Jetstream DR 인터페이스에서 다음 작업을 완료합니다.
 +
 .. I/O 필터 패키지를 사용하여 클러스터를 구성합니다.
 +
-image:dr-cvo-avs-image4.png[""]
+image::dr-cvo-avs-image4.png[DR cvo 영상 4]
 
 .. 복구 사이트에 있는 Azure Blob 저장소를 추가합니다.
 +
-image:dr-cvo-avs-image5.png[""]
+image::dr-cvo-avs-image5.png[DR cvo 영상 5]
 
 
 
@@ -124,21 +124,21 @@ image:dr-cvo-avs-image5.png[""]
 NOTE: 용량 계획 툴을 사용하여 필요한 DRVA의 수를 추정합니다.
 
 +
-image:dr-cvo-avs-image6.png[""]
+image::dr-cvo-avs-image6.png[DR cvo 영상 6]
 
 +
-image:dr-cvo-avs-image7.png[""]
+image::dr-cvo-avs-image7.png[DR cvo의 평균 영상7]
 
 . 사용 가능한 데이터 저장소 또는 독립 공유 iSCSI 스토리지 풀에서 VMDK를 사용하여 각 DRVA에 대한 복제 로그 볼륨을 생성합니다.
 +
-image:dr-cvo-avs-image8.png[""]
+image::dr-cvo-avs-image8.png[DR cvo 영상 8]
 
 . 보호 도메인 탭에서 Azure Blob 저장소 사이트, DRVA 인스턴스 및 복제 로그에 대한 정보를 사용하여 필요한 수의 보호된 도메인을 만듭니다. 보호 도메인은 함께 보호되고 장애 조치/장애 복구 작업에 우선 순위 순서를 할당하는 클러스터 내의 특정 VM 또는 애플리케이션 VM 세트를 정의합니다.
 +
-image:dr-cvo-avs-image9.png[""]
+image::dr-cvo-avs-image9.png[DR cvo 영상 9]
 
 +
-image:dr-cvo-avs-image10.png[""]
+image::dr-cvo-avs-image10.png[DR cvo 영상 10]
 
 . 보호할 VM을 선택하고 종속성을 기반으로 VM을 애플리케이션 그룹으로 그룹화합니다. 애플리케이션 정의를 사용하면 VM 세트를 부팅 순서, 부팅 지연 및 복구 시 실행할 수 있는 선택적 애플리케이션 검증을 포함하는 논리 그룹으로 그룹화할 수 있습니다.
 +
@@ -150,19 +150,19 @@ NOTE: 보호 도메인의 모든 VM에 동일한 보호 모드가 사용되는�
 NOTE: VMDK(Write-Back) 모드는 더 높은 성능을 제공합니다.
 
 +
-image:dr-cvo-avs-image11.png[""]
+image::dr-cvo-avs-image11.png[DR cvo의 영상 11]
 
 . 복제 로그 볼륨이 고성능 스토리지에 배치되었는지 확인합니다.
 +
-image:dr-cvo-avs-image12.png[""]
+image::dr-cvo-avs-image12.png[DR cvo의 평균 영상12]
 
 . 작업을 완료한 후 보호 도메인에 대한 보호 시작 을 클릭합니다. 그러면 선택한 VM에 대한 데이터 복제가 지정된 Blob 저장소로 시작됩니다.
 +
-image:dr-cvo-avs-image13.png[""]
+image::dr-cvo-avs-image13.png[DR cvo의 평균 영상13]
 
 . 복제가 완료되면 VM 보호 상태가 복구 가능으로 표시됩니다.
 +
-image:dr-cvo-avs-image14.png[""]
+image::dr-cvo-avs-image14.png[DR cvo의 영상14]
 
 +
 
@@ -170,7 +170,7 @@ NOTE: 페일오버 런북은 VM(복구 그룹이라고 함)을 그룹화하고 �
 
 . 설정 을 클릭한 다음 Runbook 구성 링크를 클릭하여 Runbook 그룹을 구성합니다.
 +
-image:dr-cvo-avs-image15.png[""]
+image::dr-cvo-avs-image15.png[DR cvo의 평균 영상 15]
 
 . 새 Runbook 그룹을 생성하려면 Create Group 버튼을 클릭합니다.
 +
@@ -178,22 +178,22 @@ image:dr-cvo-avs-image15.png[""]
 NOTE: 필요한 경우 화면 아래쪽에 사용자 지정 사전 스크립트 및 사후 스크립트를 적용하여 Runbook 그룹의 작업 전후에 자동으로 실행합니다. Runbook 스크립트가 관리 서버에 있는지 확인합니다.
 
 +
-image:dr-cvo-avs-image16.png[""]
+image::dr-cvo-avs-image16.png[DR cvo의 평균 영상16]
 
 . 필요에 따라 VM 설정을 편집합니다. 부팅 순서, 부팅 지연(초 단위로 지정), CPU 수 및 할당할 메모리 양을 포함하여 VM을 복구하기 위한 매개 변수를 지정합니다. 위쪽 또는 아래쪽 화살표를 클릭하여 VM의 부팅 순서를 변경합니다. MAC를 유지하기 위한 옵션도 제공됩니다.
 +
-image:dr-cvo-avs-image17.png[""]
+image::dr-cvo-avs-image17.png[DR cvo의 평균 영상17]
 
 . 정적 IP 주소는 그룹의 개별 VM에 대해 수동으로 구성할 수 있습니다. VM의 NIC View 링크를 클릭하여 IP 주소 설정을 수동으로 구성합니다.
 +
-image:dr-cvo-avs-image18.png[""]
+image::dr-cvo-avs-image18.png[DR cvo의 평균 영상18]
 
 . 구성 버튼을 클릭하여 해당 VM에 대한 NIC 설정을 저장합니다.
 +
-image:dr-cvo-avs-image19.png[""]
+image::dr-cvo-avs-image19.png[DR cvo의 평균 이미지19]
 
 +
-image:dr-cvo-avs-image20.png[""]
+image::dr-cvo-avs-image20.png[DR cvo의 평균 영상20]
 
 
 
@@ -227,24 +227,24 @@ NOTE: Azure VMware 솔루션의 기본 CloudAdmin 사용자는 AVS용 Jetstream 
 다음 스크린샷은 DHCP 기반 IP 주소를 사용한 설치를 보여 줍니다.
 
 +
-image:dr-cvo-avs-image21.png[""]
+image::dr-cvo-avs-image21.png[DR cvo 영상 21]
 
 . AVS 설치를 위한 Jetstream DR이 완료되면 브라우저를 새로 고칩니다. Jetstream DR UI에 액세스하려면 SDDC 데이터 센터 > 구성 > Jetstream DR로 이동하십시오.
 +
-image:dr-cvo-avs-image22.png[""]
+image::dr-cvo-avs-image22.png[DR cvo의 평균 이미지22]
 
 . Jetstream DR 인터페이스에서 다음 작업을 완료합니다.
 +
 .. 온-프레미스 클러스터를 저장소 사이트로 보호하는 데 사용된 Azure Blob 저장소 계정을 추가한 다음 도메인 검사 옵션을 실행합니다.
 .. 나타나는 팝업 대화 상자에서 가져올 보호된 도메인을 선택한 다음 해당 가져오기 링크를 클릭합니다.
 +
-image:dr-cvo-avs-image23.png[""]
+image::dr-cvo-avs-image23.png[DR cvo의 평균 영상23]
 
 
 
 . 복구를 위해 도메인을 가져옵니다. 보호 도메인 탭으로 이동하여 원하는 도메인이 선택되었는지 확인하거나 보호 도메인 선택 메뉴에서 원하는 도메인을 선택합니다. 보호된 도메인에 있는 복구 가능한 VM 목록이 표시됩니다.
 +
-image:dr-cvo-avs-image24.png[""]
+image::dr-cvo-avs-image24.png[DR cvo의 평균 영상24]
 
 . 보호된 도메인을 가져온 후 DRVA 어플라이언스를 구축합니다.
 +
@@ -254,7 +254,7 @@ NOTE: CPT 생성 계획을 사용하여 이러한 단계를 자동화할 수도 
 . 사용 가능한 vSAN 또는 ANF 데이터 저장소를 사용하여 복제 로그 볼륨을 생성합니다.
 . 보호된 도메인을 가져오고 VM 배치에 ANF 데이터 저장소를 사용하도록 복구 VA를 구성합니다.
 +
-image:dr-cvo-avs-image25.png[""]
+image::dr-cvo-avs-image25.png[DR cvo 영상 25]
 
 +
 
@@ -266,7 +266,7 @@ NOTE: 선택한 세그먼트에서 DHCP가 활성화되어 있고 사용 가능�
 NOTE: 연속 페일오버 모드와 페일오버 모드는 구성이 수행될 때 다르지만, 두 페일오버 모드는 동일한 단계를 사용하여 구성됩니다. 장애 조치 단계는 재해 이벤트에 따라 함께 구성 및 수행됩니다. 지속적인 페일오버는 언제든지 구성할 수 있으며, 이후 정상적인 시스템 작동 중에 백그라운드에서 실행될 수 있습니다. 재해 이벤트가 발생한 후 지속적인 페일오버가 완료되어 보호된 VM의 소유권을 복구 사이트로 즉시 전송합니다(제로급 RTO).
 
 +
-image:dr-cvo-avs-image26.png[""]
+image::dr-cvo-avs-image26.png[DR cvo의 영상 26]
 
 
 
@@ -278,10 +278,10 @@ image:dr-cvo-avs-image26.png[""]
 ====
 . 사내 환경의 보호된 클러스터에서 재해가 발생한 후(일부 또는 전체 장애) 해당 애플리케이션 볼륨에 대한 SnapMirror 관계를 끊은 후 Jetstream을 사용하여 VM에 대한 페일오버를 트리거할 수 있습니다.
 +
-image:dr-cvo-avs-image27.png[""]
+image::dr-cvo-avs-image27.png[DR cvo의 평균 영상 27]
 
 +
-image:dr-cvo-avs-image28.png[""]
+image::dr-cvo-avs-image28.png[DR cvo의 평균 영상 28]
 
 +
 
@@ -292,19 +292,19 @@ NOTE: 이 단계는 복구 프로세스를 용이하게 하기 위해 쉽게 자
 페일오버를 완료할 때 나타나는 대화 상자에서 페일오버 작업을 계획대로 지정하거나 강제 작업으로 가정할 수 있습니다.
 
 +
-image:dr-cvo-avs-image29.png[""]
+image::dr-cvo-avs-image29.png[DR cvo의 평균 영상29]
 
 +
-image:dr-cvo-avs-image30.png[""]
+image::dr-cvo-avs-image30.png[DR cvo의 평균 이미지30]
 
 +
 강제 대체 작동 에서는 운영 사이트에 더 이상 액세스할 수 없으며 보호 도메인의 소유권이 복구 사이트에 의해 직접 가정되어야 한다고 가정합니다.
 
 +
-image:dr-cvo-avs-image31.png[""]
+image::dr-cvo-avs-image31.png[DR cvo의 평균 영상31입니다]
 
 +
-image:dr-cvo-avs-image32.png[""]
+image::dr-cvo-avs-image32.png[DR cvo의 평균 영상32입니다]
 
 . 연속 페일오버가 완료되면 작업 완료를 확인하는 메시지가 나타납니다. 작업이 완료되면 복구된 VM에 액세스하여 iSCSI 또는 NFS 세션을 구성합니다.
 +
@@ -316,20 +316,20 @@ NOTE: 페일오버 모드가 페일오버에서 실행 중으로 변경되고 VM
 NOTE: 장애 조치 구성 및 인프라를 확인하기 위해 Jetstream DR을 테스트 모드(장애 조치 테스트 옵션)로 작동하여 가상 시스템 및 해당 데이터가 개체 저장소에서 테스트 복구 환경으로 복구되는 것을 관찰할 수 있습니다. 테스트 모드에서 페일오버 절차를 실행하면 실제 페일오버 프로세스와 비슷합니다.
 
 +
-image:dr-cvo-avs-image33.png[""]
+image::dr-cvo-avs-image33.png[DR cvo의 평균 영상33입니다]
 
 . 가상 머신이 복구된 후 게스트 내 스토리지에 스토리지 재해 복구를 사용합니다. 이 프로세스를 시연하기 위해 이 예에서는 SQL Server가 사용됩니다.
 . AVS SDDC에서 복구된 SnapCenter VM에 로그인하고 DR 모드를 활성화합니다.
 +
 .. browserN을 사용하여 SnapCenter UI에 액세스합니다.
 +
-image:dr-cvo-avs-image34.png[""]
+image::dr-cvo-avs-image34.png[DR cvo의 평균 영상34]
 
 .. 설정 페이지에서 설정 > 글로벌 설정 > 재해 복구 로 이동합니다.
 .. 재해 복구 활성화 를 선택합니다.
 .. 적용 을 클릭합니다.
 +
-image:dr-cvo-avs-image35.png[""]
+image::dr-cvo-avs-image35.png[DR cvo의 평균 영상35입니다]
 
 .. 모니터 > 작업 을 클릭하여 DR 작업이 활성화되었는지 확인합니다.
 +
@@ -340,27 +340,27 @@ NOTE: 스토리지 재해 복구에 NetApp SnapCenter 4.6 이상을 사용해야
 
 . SnapMirror 관계가 끊어져 있는지 확인합니다.
 +
-image:dr-cvo-avs-image36.png[""]
+image::dr-cvo-avs-image36.png[DR cvo의 평균 영상36입니다]
 
 . Cloud Volumes ONTAP의 LUN을 동일한 드라이브 문자로 복구된 SQL 게스트 VM에 연결합니다.
 +
-image:dr-cvo-avs-image37.png[""]
+image::dr-cvo-avs-image37.png[DR cvo의 평균 영상37입니다]
 
 . iSCSI 초기자를 열고, 이전에 연결이 끊긴 세션을 지우고, 복제된 Cloud Volumes ONTAP 볼륨에 대한 다중 경로와 함께 새 대상을 추가합니다.
 +
-image:dr-cvo-avs-image38.png[""]
+image::dr-cvo-avs-image38.png[DR cvo의 평균 영상38]
 
 . DR 이전에 사용한 드라이브 문자와 동일한 드라이브 문자를 사용하여 모든 디스크가 연결되어 있는지 확인합니다.
 +
-image:dr-cvo-avs-image39.png[""]
+image::dr-cvo-avs-image39.png[DR cvo의 평균 영상39]
 
 . MSSQL 서버 서비스를 다시 시작합니다.
 +
-image:dr-cvo-avs-image40.png[""]
+image::dr-cvo-avs-image40.png[DR cvo의 평균 영상40입니다]
 
 . SQL 리소스가 다시 온라인 상태인지 확인합니다.
 +
-image:dr-cvo-avs-image41.png[""]
+image::dr-cvo-avs-image41.png[DR cvo의 평균 영상41]
 
 +
 
@@ -384,30 +384,30 @@ NOTE: NSX-T 엔드에서는 페일오버 시나리오를 시뮬레이션하기 �
 NOTE: CPT에서 생성한 페일백 계획을 사용하여 VM과 해당 데이터를 오브젝트 저장소에서 원래 VMware 환경으로 되돌릴 수도 있습니다.
 
 +
-image:dr-cvo-avs-image42.png[""]
+image::dr-cvo-avs-image42.png[DR cvo의 평균 이미지 42]
 
 +
 
 NOTE: 복구 사이트에서 VM을 일시 중지하고 보호 사이트에서 다시 시작한 후 최대 지연 시간을 지정합니다. 이 프로세스를 완료하는 데 필요한 시간은 장애 조치 VM을 중지한 후 복제 완료, 복구 사이트를 청소하는 데 필요한 시간, 보호 사이트에서 VM을 다시 만드는 데 필요한 시간 등을 포함합니다. 10분을 권장합니다.
 
 +
-image:dr-cvo-avs-image43.png[""]
+image::dr-cvo-avs-image43.png[DR cvo의 평균 이미지43]
 
 . 페일백 프로세스를 완료한 다음 VM 보호 및 데이터 정합성 재개를 확인합니다.
 +
-image:dr-cvo-avs-image44.png[""]
+image::dr-cvo-avs-image44.png[DR cvo의 평균 이미지44]
 
 . VM이 복구된 후 호스트에서 보조 스토리지를 분리하고 운영 스토리지에 접속합니다.
 +
-image:dr-cvo-avs-image45.png[""]
+image::dr-cvo-avs-image45.png[DR cvo의 평균 영상45]
 
 +
-image:dr-cvo-avs-image46.png[""]
+image::dr-cvo-avs-image46.png[DR cvo의 평균 영상46]
 
 . MSSQL 서버 서비스를 다시 시작합니다.
 . SQL 리소스가 다시 온라인 상태인지 확인합니다.
 +
-image:dr-cvo-avs-image47.png[""]
+image::dr-cvo-avs-image47.png[DR cvo의 평균 영상47]
 
 +
 

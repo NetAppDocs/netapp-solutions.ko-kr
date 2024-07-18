@@ -26,11 +26,11 @@ summary: 이 섹션에서는 Azure NetApp Files SMB 볼륨을 사용하는 AOAG 
 
 NOTE: Azure NetApp Files 공유를 통해 Azure 가상 시스템에서 SQL Server와 FCI를 배포하면 데이터의 단일 복사본을 통해 비용 효율적인 모델을 제공할 수 있습니다. 이 솔루션은 파일 경로가 보조 복제본과 다를 경우 추가 파일 작업 문제를 방지할 수 있습니다.
 
-image:sql-srv-anf_image5.png[""]
+image::sql-srv-anf_image5.png[SQL SRV 관리 이미지5]
 
 다음 이미지는 노드에 분산된 AOAG 내의 데이터베이스를 보여 줍니다.
 
-image:sql-srv-anf_image6.png[""]
+image::sql-srv-anf_image6.png[SQL SRV 관리 이미지6]
 
 
 
@@ -109,7 +109,7 @@ Azure NetApp Files는 Azure Monitor와 통합되어 시계열 데이터를 제�
 
 이 HLD에서 ScienceLogic은 적절한 서비스 보안 주체를 사용하여 메트릭을 노출하여 Azure NetApp Files를 모니터링하는 데 사용됩니다. 다음 그림은 Azure NetApp Files 메트릭 옵션의 예입니다.
 
-image:sql-srv-anf_image8.png[""]
+image::sql-srv-anf_image8.png[SQL SRV 관리 이미지8]
 
 
 

@@ -66,7 +66,7 @@ NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지�
 ====
 테스트 목적으로, 이 검증에 사용된 온프레미스 랩 환경은 Azure VMware 솔루션에 대한 온프레미스 연결을 허용하는 사이트 간 VPN을 통해 연결되었습니다.
 
-image:anfd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다."]
+image::anfd-hcx-image1.png[이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다.]
 
 ====
 
@@ -84,7 +84,7 @@ image:anfd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 �
 . 적절한 프라이빗 클라우드를 선택하고 애드온 에 액세스합니다. 이 작업은 * 관리 > 추가 기능 * 으로 이동하여 수행할 수 있습니다.
 . HCX 워크로드 이동성 섹션에서 * 시작하기 * 를 클릭합니다.
 +
-image:anfd-hcx-image2.png["HCX 워크로드 이동성 섹션의 스크린샷."]
+image::anfd-hcx-image2.png[HCX 워크로드 이동성 섹션의 스크린샷.]
 
 . 이용 약관에 동의함 * 옵션을 선택하고 * 사용 및 배포 * 를 클릭합니다.
 +
@@ -96,7 +96,7 @@ NOTE: 기본 배포는 HCX Advanced입니다. Enterprise 버전을 사용하도�
 NOTE: 배포에는 약 25~30분이 소요됩니다.
 
 +
-image:anfd-hcx-image3.png["HCX 워크로드 이동성 섹션의 완료 스크린샷"]
+image::anfd-hcx-image3.png[HCX 워크로드 이동성 섹션의 완료 스크린샷]
 
 
 
@@ -114,7 +114,7 @@ image:anfd-hcx-image3.png["HCX 워크로드 이동성 섹션의 완료 스크린
 NOTE: 기본 CloudAdmin 사용자 자격 증명을 사용하여 HCX 포털에 액세스합니다.
 
 +
-image:anfd-hcx-image4.png["HCX OVA 파일을 다운로드하기 위한 Azure 포털의 스크린샷"]
+image::anfd-hcx-image4.png[HCX OVA 파일을 다운로드하기 위한 Azure 포털의 스크린샷]
 
 . jumphost를 사용하여 mailto:cloudadmin@vsphere.loca l[cloudadmin@vsphere.loca l^]으로 HCX 포털에 액세스한 후 * 관리 > 시스템 업데이트 * 로 이동하여 * 다운로드 링크 요청 * 을 클릭합니다.
 +
@@ -122,11 +122,11 @@ image:anfd-hcx-image4.png["HCX OVA 파일을 다운로드하기 위한 Azure 포
 NOTE: OVA에 대한 링크를 다운로드하거나 복사하여 브라우저에 붙여 넣으면 온-프레미스 vCenter Server에 구축할 VMware HCX Connector OVA 파일의 다운로드 프로세스가 시작됩니다.
 
 +
-image:anfd-hcx-image5.png["OVA 다운로드 링크의 스크린샷."]
+image::anfd-hcx-image5.png[OVA 다운로드 링크의 스크린샷.]
 
 . OVA를 다운로드한 후 * Deploy OVF Template * 옵션을 사용하여 온프레미스 VMware vSphere 환경에 구축합니다.
 +
-image:anfd-hcx-image6.png["올바른 OVA 템플릿을 선택하는 스크린샷"]
+image::anfd-hcx-image6.png[올바른 OVA 템플릿을 선택하는 스크린샷]
 
 . OVA 배포에 필요한 모든 정보를 입력하고 * Next * 를 클릭한 다음 * Finish * 를 클릭하여 VMware HCX 커넥터 OVA를 배포합니다.
 +
@@ -146,7 +146,7 @@ VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스�
 . Azure 포털에서 Azure VMware 솔루션으로 이동하여 프라이빗 클라우드를 선택하고 * 관리 > 추가 기능 > HCX * 를 사용한 마이그레이션 을 선택합니다.
 . HCX 키를 사용하여 온-프레미스로 연결 * 에서 * 추가 * 를 클릭하고 활성화 키를 복사합니다.
 +
-image:anfd-hcx-image7.png["HCX 키 추가 스크린샷."]
+image::anfd-hcx-image7.png[HCX 키 추가 스크린샷.]
 
 +
 
@@ -182,7 +182,7 @@ NOTE: VMware vCenter Server FQDN 또는 IP 주소를 입력합니다.
 NOTE: 이 프로세스는 약 10~20분 정도 소요되며 플러그인이 vCenter Server에 추가되어야 합니다.
 
 +
-image:anfd-hcx-image8.png["완료된 프로세스를 보여 주는 스크린샷"]
+image::anfd-hcx-image8.png[완료된 프로세스를 보여 주는 스크린샷]
 
 
 
@@ -195,7 +195,7 @@ HCX Connector를 온프레미스 및 Azure VMware 솔루션에 설치한 후 페
 . 온-프레미스 vCenter 환경과 Azure VMware Solution SDDC 간에 사이트 쌍을 생성하려면 온-프레미스 vCenter Server에 로그인하고 새 HCX vSphere Web Client 플러그인에 액세스합니다.
 
 
-image:anfd-hcx-image9.png["HCX vSphere Web Client 플러그인의 스크린샷"]
+image::anfd-hcx-image9.png[HCX vSphere Web Client 플러그인의 스크린샷]
 
 . 인프라 에서 * 사이트 페어링 추가 * 를 클릭합니다.
 
@@ -203,7 +203,7 @@ image:anfd-hcx-image9.png["HCX vSphere Web Client 플러그인의 스크린샷"]
 
 NOTE: Azure VMware 솔루션 HCX Cloud Manager URL 또는 IP 주소와 프라이빗 클라우드에 액세스하기 위한 CloudAdmin 역할의 자격 증명을 입력합니다.
 
-image:anfd-hcx-image10.png["CloudAdmin 역할의 스크린샷 URL 또는 IP 주소 및 자격 증명."]
+image::anfd-hcx-image10.png[CloudAdmin 역할의 스크린샷 URL 또는 IP 주소 및 자격 증명.]
 
 . 연결 * 을 클릭합니다.
 
@@ -214,7 +214,7 @@ NOTE: VMware HCX Connector는 포트 443을 통해 HCX Cloud Manager IP로 라�
 . 페어링이 생성된 후에는 새로 구성된 사이트 페어링을 HCX 대시보드에서 사용할 수 있습니다.
 
 
-image:anfd-hcx-image11.png["HCX 대시보드의 완료된 프로세스 스크린샷"]
+image::anfd-hcx-image11.png[HCX 대시보드의 완료된 프로세스 스크린샷]
 
 ====
 .5단계: 네트워크 프로파일, 컴퓨팅 프로파일 및 서비스 메시를 구성합니다
@@ -228,7 +228,7 @@ VMware HCX Interconnect 서비스 어플라이언스는 인터넷을 통해 복�
 
 NOTE: 컴퓨팅 프로필은 구축된 어플라이언스와 HCX 서비스에서 액세스할 수 있는 VMware 데이터 센터 부분을 포함하여 구축 매개 변수를 정의합니다.
 
-image:anfd-hcx-image12.png["vSphere Client Interconnect 페이지의 스크린샷."]
+image::anfd-hcx-image12.png[vSphere Client Interconnect 페이지의 스크린샷.]
 
 . 컴퓨팅 프로파일을 만든 후 * 다중 사이트 서비스 메시 > 네트워크 프로파일 > 네트워크 프로파일 만들기 * 를 선택하여 네트워크 프로파일을 만듭니다.
 
@@ -238,7 +238,7 @@ image:anfd-hcx-image12.png["vSphere Client Interconnect 페이지의 스크린�
 
 NOTE: 이 단계에서는 두 개 이상의 IP 주소가 필요합니다. 이러한 IP 주소는 관리 네트워크에서 상호 연결 어플라이언스로 할당됩니다.
 
-image:anfd-hcx-image13.png["vSphere Client Interconnect 페이지에 IP 주소를 추가하는 스크린샷"]
+image::anfd-hcx-image13.png[vSphere Client Interconnect 페이지에 IP 주소를 추가하는 스크린샷]
 
 . 현재 컴퓨팅 및 네트워크 프로파일이 성공적으로 생성되었습니다.
 . Interconnect * 옵션 내에서 * Service Mesh * 탭을 선택하고 온프레미스 및 Azure SDDC 사이트를 선택하여 Service Mesh를 생성합니다.
@@ -248,12 +248,12 @@ image:anfd-hcx-image13.png["vSphere Client Interconnect 페이지에 IP 주소�
 
 NOTE: 이 프로세스의 일환으로 안전한 전송 패브릭을 생성하기 위해 소스 사이트와 타겟 사이트 모두에 HCX 어플라이언스를 구축하고 자동으로 구성합니다.
 
-image:anfd-hcx-image14.png["vSphere Client Interconnect 페이지의 Service Mesh 탭 스크린샷"]
+image::anfd-hcx-image14.png[vSphere Client Interconnect 페이지의 Service Mesh 탭 스크린샷]
 
 . 이 단계는 구성의 마지막 단계입니다. 구축을 완료하는 데 약 30분이 소요됩니다. 서비스 메시가 구성된 후 작업 부하 VM을 마이그레이션하도록 IPsec 터널이 성공적으로 생성된 환경이 준비됩니다.
 
 
-image:anfd-hcx-image15.png["vSphere Client Interconnect 페이지에 완료된 프로세스의 스크린샷"]
+image::anfd-hcx-image15.png[vSphere Client Interconnect 페이지에 완료된 프로세스의 스크린샷]
 
 ====
 .6단계: 워크로드 마이그레이션
@@ -272,19 +272,19 @@ image:anfd-hcx-image15.png["vSphere Client Interconnect 페이지에 완료된 �
 . 서비스 > 마이그레이션 * 에서 * 마이그레이션 * 탭에 액세스합니다.
 
 
-image:anfd-hcx-image16.png["vSphere Client의 마이그레이션 섹션 스크린샷"]
+image::anfd-hcx-image16.png[vSphere Client의 마이그레이션 섹션 스크린샷]
 
 . 원격 사이트 연결 * 에서 원격 사이트 연결을 선택하고 소스 및 대상을 선택합니다. 이 예에서 대상은 Azure VMware Solution SDDC HCX 엔드포인트입니다.
 . 마이그레이션을 위한 VM 선택 * 을 클릭합니다. 이 목록에는 모든 온-프레미스 VM 목록이 표시됩니다. match:value 식을 기준으로 VM을 선택하고 * Add * 를 클릭합니다.
 . Transfer and Placement * 섹션에서 마이그레이션 프로파일을 포함하여 필수 필드(* Cluster *, * Storage *, * Destination * 및 * Network *)를 업데이트하고 * Validate * 를 클릭합니다.
 
 
-image:anfd-hcx-image17.png["vSphere Client의 Transfer and Placement 섹션 스크린샷"]
+image::anfd-hcx-image17.png[vSphere Client의 Transfer and Placement 섹션 스크린샷]
 
 . 유효성 검사가 완료된 후 * GO * 를 클릭하여 마이그레이션을 시작합니다.
 
 
-image:anfd-hcx-image18.png["마이그레이션 시작 스크린샷."]
+image::anfd-hcx-image18.png[마이그레이션 시작 스크린샷.]
 
 
 NOTE: 이 마이그레이션 중에 소스 VM 디스크의 데이터를 자리 표시자 디스크로 복제할 수 있도록 대상 vCenter 내의 지정된 Azure NetApp Files 데이터 저장소에 자리 표시자 디스크가 생성됩니다. HBR은 타겟에 대한 전체 동기화를 위해 트리거되며, 기준선이 완료되면 RPO(복구 시점 목표) 주기에 따라 증가분 동기화가 수행됩니다. 전체/증분 동기화가 완료되면 특정 일정이 설정되지 않으면 전환이 자동으로 트리거됩니다.
@@ -292,7 +292,7 @@ NOTE: 이 마이그레이션 중에 소스 VM 디스크의 데이터를 자리 �
 . 마이그레이션이 완료된 후 대상 SDDC vCenter에 액세스하여 동일한 검증을 수행합니다.
 
 
-image:anfd-hcx-image19.png[""]
+image::anfd-hcx-image19.png[anfd hcx 이미지19]
 
 다양한 마이그레이션 옵션과 HCX를 사용하여 워크로드를 온프레미스에서 Azure VMware 솔루션으로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-14D48C15-3D75-485B-850F-C5FCB96B5637.html["VMware HCX 사용자 가이드"^].
 
@@ -302,7 +302,7 @@ image:anfd-hcx-image19.png[""]
 video::255640f5-4dff-438c-8d50-b01200f017d1[panopto]
 다음은 HCX vMotion 옵션의 스크린샷입니다.
 
-image:anfd-hcx-image20.png[""]
+image::anfd-hcx-image20.png[anfd hcx 이미지20]
 
 이 프로세스에 대해 자세히 알아보려면 다음 비디오를 시청하십시오.
 

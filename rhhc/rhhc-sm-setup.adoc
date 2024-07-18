@@ -21,7 +21,7 @@ NOTE: AWS에서 Red Hat OpenShift Container 플랫폼 클러스터를 배포하�
 
 이 다이어그램은 AWS에 구축되고 VPN을 사용하여 데이터 센터에 연결된 클러스터를 보여 줍니다.
 
-image:rhhc-self-managed-aws.png[""]
+image::rhhc-self-managed-aws.png[rhc 자가 관리형 AWS]
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 

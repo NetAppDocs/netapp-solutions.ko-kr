@@ -22,7 +22,7 @@ StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하
 
 Grid Manager는 브라우저 기반의 그래픽 인터페이스로, 다음 이미지와 같이 전 세계적으로 분산된 단일 창에서 StorageGRID 시스템을 구성, 관리 및 모니터링할 수 있습니다.
 
-image:stgr-splunkss-image3.png[""]
+image::stgr-splunkss-image3.png[stgr splunkss 이미지3]
 
 Grid Manager 인터페이스를 사용하여 다음 작업을 수행합니다.
 
@@ -40,7 +40,7 @@ Splunk용 NetApp StorageGRID 앱은 Splunk Enterprise용 애플리케이션입�
 
 다음 그림은 Splunk용 StorageGRID 앱을 보여줍니다.
 
-image:stgr-splunkss-image4.png[""]
+image::stgr-splunkss-image4.png[stgr splunkss 이미지 4]
 
 
 

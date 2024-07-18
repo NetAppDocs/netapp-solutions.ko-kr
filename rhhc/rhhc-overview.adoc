@@ -46,7 +46,7 @@ NetApp은 기존 엔터프라이즈 애플리케이션을 현대화하고 Kubern
 
 
 
-image:rhhc-ontap-features.png[""]
+image::rhhc-ontap-features.png[rhc ONTAP 기능]
 
 ** NetApp BlueXP** - 단일 제어 플레인/인터페이스에서 모든 스토리지 및 데이터 자산을 관리할 수 있습니다.
 
@@ -54,7 +54,7 @@ BlueXP를 사용하여 클라우드 스토리지(예: Cloud Volumes ONTAP 및 Az
 
 ** NetApp Astra Trident**는 CSI 규정 준수 스토리지 오케스트레이터로서, 위에서 언급한 다양한 NetApp 스토리지 옵션을 통해 영구 스토리지를 빠르고 쉽게 사용할 수 있습니다. NetApp에서 관리 및 지원하는 오픈 소스 소프트웨어입니다.
 
-image:rhhc-trident-features.png[""]
+image::rhhc-trident-features.png[rhc 트라이덴트 기능]
 
 비즈니스 크리티컬 컨테이너 워크로드에는 영구 볼륨 이상의 용량이 필요합니다. 이들의 데이터 관리 요구사항에 따라 애플리케이션 Kubernetes 객체의 보호 및 마이그레이션이 필요합니다.
 

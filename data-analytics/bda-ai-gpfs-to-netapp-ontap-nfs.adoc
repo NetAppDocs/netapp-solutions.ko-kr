@@ -16,7 +16,7 @@ summary: '이 검증에서 4대의 서버를 NSD(Network Shared Disk) 서버로 
 [role="lead"]
 이 검증에서 4대의 서버를 NSD(Network Shared Disk) 서버로 사용하여 GPFS에 물리적 디스크를 제공했습니다. GPFS는 NSD 디스크 위에 생성되어 NFS 내보내기로 내보내므로 NFS 클라이언트가 아래 그림과 같이 액세스할 수 있습니다. XCP를 사용하여 GPFS로 내보낸 NFS의 데이터를 NetApp NFS 볼륨으로 복사했습니다.
 
-image:bda-ai-image5.png[""]
+image::bda-ai-image5.png[BDA ai 이미지5]
 
 
 

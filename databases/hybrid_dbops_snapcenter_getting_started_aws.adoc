@@ -50,31 +50,31 @@ NOTE: Cloud Manager와 Cloud Volumes ONTAP를 구축하는 방법은 매우 간�
 
 . 로 이동합니다 https://cloud.netapp.com/cloud-manager["NetApp Cloud Central에서"^] 로그인 또는 가입
 +
-image:cloud_central_login_page.PNG[""]
+image::cloud_central_login_page.PNG[Cloud Central 로그인 페이지]
 
 . 로그인한 후 Canvas로 옮겨야 합니다.
 +
-image:cloud_central_canvas_page.PNG[""]
+image::cloud_central_canvas_page.PNG[Cloud central canvas 페이지]
 
 . "작업 환경 추가"를 클릭하고 AWS에서 Cloud Volumes ONTAP를 선택합니다. 단일 노드 시스템을 배포할지 고가용성 쌍을 구축할지를 선택할 수도 있습니다. 고가용성 쌍을 구축하기로 선택했습니다.
 +
-image:cloud_central_add_we.PNG[""]
+image::cloud_central_add_we.PNG[Cloud Central이 우리를 추가합니다]
 
 . 커넥터가 작성되지 않은 경우 커넥터를 작성하라는 팝업 메시지가 나타납니다.
 +
-image:cloud_central_add_conn_1.PNG[""]
+image::cloud_central_add_conn_1.PNG[Cloud central 추가 conn 1]
 
 . 시작 을 클릭한 다음 AWS 를 선택합니다.
 +
-image:cloud_central_add_conn_3.PNG[""]
+image::cloud_central_add_conn_3.PNG[Cloud central 추가 연결 3]
 
 . 암호 키와 액세스 키를 입력합니다. 사용자에게 에 설명된 올바른 권한이 있는지 확인합니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["NetApp 정책 페이지를 참조하십시오"^].
 +
-image:cloud_central_add_conn_4.PNG[""]
+image::cloud_central_add_conn_4.PNG[Cloud central 추가 연결 4]
 
 . 커넥터에 이름을 지정하고 에 설명된 대로 미리 정의된 역할을 사용합니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["NetApp 정책 페이지를 참조하십시오"^] 또는 Cloud Manager에게 역할을 맡도록 요청하십시오.
 +
-image:cloud_central_add_conn_5.PNG[""]
+image::cloud_central_add_conn_5.PNG[Cloud central 추가 conn 5]
 
 . 커넥터를 배포하는 데 필요한 네트워킹 정보를 제공합니다. 다음과 같은 방법으로 아웃바운드 인터넷 액세스가 활성화되었는지 확인합니다.
 +
@@ -82,25 +82,25 @@ image:cloud_central_add_conn_5.PNG[""]
 .. 커넥터를 통해 작업할 프록시를 제공합니다
 .. 인터넷 게이트웨이를 통해 공용 인터넷에 연결되는 경로를 커넥터에 제공합니다
 +
-image:cloud_central_add_conn_6.PNG[""]
+image::cloud_central_add_conn_6.PNG[Cloud central 추가 conn 6]
 
 
 
 . 보안 그룹을 제공하거나 새 보안 그룹을 생성하여 SSH, HTTP 및 HTTPS를 통해 커넥터와 통신할 수 있습니다. IP 주소에서만 커넥터에 대한 액세스를 활성화했습니다.
 +
-image:cloud_central_add_conn_7.PNG[""]
+image::cloud_central_add_conn_7.PNG[Cloud central 추가 conn 7]
 
 . 요약 페이지의 정보를 검토하고 추가 를 클릭하여 커넥터를 배포합니다.
 +
-image:cloud_central_add_conn_8.PNG[""]
+image::cloud_central_add_conn_8.PNG[Cloud central 추가 conn 8]
 
 . 이제 커넥터는 클라우드 형성 스택을 사용하여 전개됩니다. Cloud Manager에서 또는 AWS를 통해 진행률을 모니터링할 수 있습니다.
 +
-image:cloud_central_add_conn_9.PNG[""]
+image::cloud_central_add_conn_9.PNG[Cloud central 추가 conn 9]
 
 . 배포가 완료되면 성공 페이지가 나타납니다.
 +
-image:cloud_central_add_conn_10.PNG[""]
+image::cloud_central_add_conn_10.PNG[Cloud central 추가 conn 10]
 
 
 
@@ -110,39 +110,39 @@ image:cloud_central_add_conn_10.PNG[""]
 
 . 요구사항에 따라 AWS 및 구축 유형을 선택하십시오.
 +
-image:cloud_central_add_we_1.PNG[""]
+image::cloud_central_add_we_1.PNG[Cloud central 추가 1]
 
 . 구독이 할당되지 않은 상태에서 PAYGO를 사용하여 구매하려는 경우 자격 증명 편집 을 선택합니다.
 +
-image:cloud_central_add_we_2.PNG[""]
+image::cloud_central_add_we_2.PNG[클라우드 중심 추가 2]
 
 . 구독 추가 를 선택합니다.
 +
-image:cloud_central_add_we_3.PNG[""]
+image::cloud_central_add_we_3.PNG[클라우드 중심 추가 3]
 
 . 가입하려는 계약 유형을 선택합니다. 나는 선불 종량제 를 선택했습니다.
 +
-image:cloud_central_add_we_4.PNG[""]
+image::cloud_central_add_we_4.PNG[클라우드 중심 추가 4]
 
 . AWS로 리디렉션됩니다. 구독으로 계속 을 선택합니다.
 +
-image:cloud_central_add_we_5.PNG[""]
+image::cloud_central_add_we_5.PNG[클라우드 중심 추가 5]
 
 . 구독하면 NetApp Cloud Central로 리디렉션됩니다. 이미 가입되어 있고 리디렉션되지 않는 경우 "여기를 클릭" 링크를 선택하십시오.
 +
-image:cloud_central_add_we_6.PNG[""]
+image::cloud_central_add_we_6.PNG[클라우드 중심 추가 6]
 
 . 구독의 이름을 지정하고 Cloud Central 계정에 할당해야 하는 Cloud Central로 리디렉션됩니다.
 +
-image:cloud_central_add_we_7.PNG[""]
+image::cloud_central_add_we_7.PNG[클라우드 중심 추가 7]
 
 . 성공하면 확인 표시 페이지가 나타납니다. Cloud Manager 탭으로 다시 이동합니다.
 +
-image:cloud_central_add_we_8.PNG[""]
+image::cloud_central_add_we_8.PNG[클라우드 중심 추가 8]
 
 . 이제 Cloud Central에 구독이 나타납니다. 계속하려면 적용을 클릭하십시오.
 +
-image:cloud_central_add_we_9.PNG[""]
+image::cloud_central_add_we_9.PNG[클라우드 중심 추가 9]
 
 . 다음과 같은 작업 환경 세부 정보를 입력합니다.
 +
@@ -150,25 +150,25 @@ image:cloud_central_add_we_9.PNG[""]
 .. 클러스터 암호입니다
 .. AWS 태그(선택 사항)
 +
-image:cloud_central_add_we_10.PNG[""]
+image::cloud_central_add_we_10.PNG[클라우드 중심 추가 10]
 
 
 
 . 구축할 추가 서비스를 선택하십시오. 이러한 서비스에 대한 자세한 내용은 를 참조하십시오 https://cloud.netapp.com["NetApp Cloud 홈 페이지"^].
 +
-image:cloud_central_add_we_11.PNG[""]
+image::cloud_central_add_we_11.PNG[클라우드 중심 추가 11]
 
 . 여러 가용성 영역(각각 다른 AZ에 있는 3개의 서브넷이 필요함) 또는 단일 가용성 영역에 구축할지 선택합니다. 여러 개의 AZs를 선택했습니다.
 +
-image:cloud_central_add_we_12.PNG[""]
+image::cloud_central_add_we_12.PNG[클라우드 중심부가 우리를 추가합니다 12]
 
 . 구축할 클러스터의 지역, VPC 및 보안 그룹을 선택합니다. 이 섹션에서는 노드별(및 중재자) 가용성 영역과 해당 영역이 차지하는 서브넷도 할당합니다.
 +
-image:cloud_central_add_we_13.PNG[""]
+image::cloud_central_add_we_13.PNG[클라우드 중심 추가 13]
 
 . 노드 및 중재자의 연결 방법을 선택합니다.
 +
-image:cloud_central_add_we_14.PNG[""]
+image::cloud_central_add_we_14.PNG[클라우드 중심 추가 14]
 
 
 
@@ -177,47 +177,47 @@ TIP: 중재자가 AWS API와 통신해야 합니다. 중재자 EC2 인스턴스�
 
 . 부동 IP 주소는 클러스터 관리 및 데이터 서비스 IP를 포함하여 Cloud Volumes ONTAP가 사용하는 다양한 IP 주소에 대한 액세스를 허용하는 데 사용됩니다. 이러한 주소는 네트워크 내에서 아직 라우팅할 수 없는 주소여야 하며 AWS 환경의 라우팅 테이블에 추가됩니다. 이러한 주소는 페일오버 중에 HA 쌍의 일관된 IP 주소를 지원하는 데 필요합니다. 부동 IP 주소에 대한 자세한 내용은 에서 찾을 수 있습니다 https://docs.netapp.com/us-en/occm/reference_networking_aws.html#requirements-for-ha-pairs-in-multiple-azs["NetApp 클라우드 문서화"^].
 +
-image:cloud_central_add_we_15.PNG[""]
+image::cloud_central_add_we_15.PNG[클라우드 중심 추가 15]
 
 . 부동 IP 주소를 추가할 라우팅 테이블을 선택합니다. 이러한 라우팅 테이블은 클라이언트가 Cloud Volumes ONTAP와 통신하는 데 사용됩니다.
 +
-image:cloud_central_add_we_16.PNG[""]
+image::cloud_central_add_we_16.PNG[클라우드 중심부가 우리 16을 추가합니다]
 
 . ONTAP 루트, 부팅 및 데이터 디스크를 암호화하기 위해 AWS 관리 암호화를 사용할지 AWS KMS를 사용할지 여부를 선택합니다.
 +
-image:cloud_central_add_we_17.PNG[""]
+image::cloud_central_add_we_17.PNG[클라우드 중심부는 우리가 17]
 
 . 라이센스 모델을 선택합니다. 선택할 항목을 모르는 경우 NetApp 담당자에게 문의하십시오.
 +
-image:cloud_central_add_we_18.PNG[""]
+image::cloud_central_add_we_18.PNG[클라우드 중심 추가 18]
 
 . 사용 사례에 가장 적합한 구성을 선택하십시오. 이는 사전 요구 사항 페이지에서 다룬 크기 조정 고려 사항과 관련이 있습니다.
 +
-image:cloud_central_add_we_19.PNG[""]
+image::cloud_central_add_we_19.PNG[클라우드 중심 추가 19]
 
 . 필요에 따라 볼륨을 생성합니다. 다음 단계에서는 SnapMirror를 사용하고, 이로 인해 볼륨이 생성되므로 필요하지 않습니다.
 +
-image:cloud_central_add_we_20.PNG[""]
+image::cloud_central_add_we_20.PNG[클라우드 중심 추가 20]
 
 . 선택 사항을 검토하고 상자를 선택하여 Cloud Manager가 AWS 환경에 리소스를 구축함을 이해했는지 확인합니다. 준비가 되면 이동 을 클릭합니다.
 +
-image:cloud_central_add_we_21.PNG[""]
+image::cloud_central_add_we_21.PNG[클라우드 중심 추가 21]
 
 . 이제 Cloud Volumes ONTAP가 배포 프로세스를 시작합니다. Cloud Manager는 AWS API 및 클라우드 형성 스택을 사용하여 Cloud Volumes ONTAP를 구축합니다. 그런 다음 시스템을 사양에 맞게 구성하여 즉시 활용할 수 있는 즉시 사용 가능한 시스템을 제공합니다. 이 프로세스의 타이밍은 선택한 항목에 따라 달라집니다.
 +
-image:cloud_central_add_we_22.PNG[""]
+image::cloud_central_add_we_22.PNG[클라우드 중심 추가 22]
 
 . 타임라인으로 이동하여 진행 상황을 모니터링할 수 있습니다.
 +
-image:cloud_central_add_we_23.PNG[""]
+image::cloud_central_add_we_23.PNG[클라우드 중심 추가 23]
 
 . 타임라인은 Cloud Manager에서 수행된 모든 작업에 대한 감사 역할을 합니다. AWS와 ONTAP 클러스터 모두에 설정하는 동안 Cloud Manager에서 수행하는 모든 API 호출을 볼 수 있습니다. 또한 이 기능을 사용하면 발생하는 모든 문제를 효과적으로 해결할 수 있습니다.
 +
-image:cloud_central_add_we_24.PNG[""]
+image::cloud_central_add_we_24.PNG[클라우드 중심 추가 24]
 
 . 구축이 완료되면 CVO 클러스터가 현재 용량인 Canvas에 표시됩니다. 현재 상태의 ONTAP 클러스터는 즉시 사용 가능한 진정한 환경을 제공할 수 있도록 완전히 구성되어 있습니다.
 +
-image:cloud_central_add_we_25.PNG[""]
+image::cloud_central_add_we_25.PNG[Cloud Central 추가 25]
 
 
 
@@ -231,62 +231,62 @@ SnapMirror용 호환 ONTAP 버전에 대한 지침은 를 참조하십시오 htt
 
 . 소스 ONTAP 시스템(온-프레미스)을 클릭하고 대상을 끌어다 놓고 복제 > 활성화 를 선택하거나 복제 > 메뉴 > 복제 를 선택합니다.
 +
-image:cloud_central_replication_1.png[""]
+image::cloud_central_replication_1.png[클라우드 중앙 복제 1]
 
 +
 사용을 선택합니다.
 
 +
-image:cloud_central_replication_2.png[""]
+image::cloud_central_replication_2.png[클라우드 중앙 복제 2]
 
 +
 또는 옵션 을 선택합니다.
 
 +
-image:cloud_central_replication_3.png[""]
+image::cloud_central_replication_3.png[클라우드 중앙 복제 3]
 
 +
 복제.
 
 +
-image:cloud_central_replication_4.png[""]
+image::cloud_central_replication_4.png[클라우드 중앙 복제 4]
 
 . 끌어서 놓기를 하지 않은 경우 복제할 대상 클러스터를 선택합니다.
 +
-image:cloud_central_replication_5.png[""]
+image::cloud_central_replication_5.png[클라우드 중앙 복제 5]
 
 . 복제할 볼륨을 선택합니다. 데이터와 모든 로그 볼륨을 복제했습니다.
 +
-image:cloud_central_replication_6.png[""]
+image::cloud_central_replication_6.png[클라우드 중앙 복제 6]
 
 . 대상 디스크 유형 및 계층화 정책을 선택합니다. 재해 복구를 위해 디스크 유형으로 SSD를 사용하고 데이터 계층화를 유지하는 것이 좋습니다. 데이터 계층화는 미러링된 데이터를 저비용 오브젝트 스토리지로 계층화하여 로컬 디스크의 비용을 절감합니다. 관계를 끊거나 볼륨을 클론하면 데이터에 빠른 로컬 스토리지가 사용됩니다.
 +
-image:cloud_central_replication_7.png[""]
+image::cloud_central_replication_7.png[클라우드 중앙 복제 7]
 
 . 대상 볼륨 이름 선택: '[source_volume_name]_dr'을 선택했습니다.
 +
-image:cloud_central_replication_8.png[""]
+image::cloud_central_replication_8.png[클라우드 중앙 복제 8]
 
 . 복제에 대한 최대 전송 속도를 선택합니다. 따라서 VPN과 같이 클라우드에 대역폭이 낮은 경우 대역폭을 절약할 수 있습니다.
 +
-image:cloud_central_replication_9.png[""]
+image::cloud_central_replication_9.png[클라우드 중앙 복제 9]
 
 . 복제 정책을 정의합니다. 우리는 미러를 선택했습니다. 이 미러는 최신 데이터 세트를 가져와 타겟 볼륨에 복제합니다. 요구 사항에 따라 다른 정책을 선택할 수도 있습니다.
 +
-image:cloud_central_replication_10.png[""]
+image::cloud_central_replication_10.png[클라우드 중앙 복제 10]
 
 . 복제를 트리거할 스케줄을 선택합니다. 요구사항에 따라 변경할 수 있지만 데이터 볼륨에 대한 "일별" 스케줄과 로그 볼륨에 대한 "시간별" 스케줄을 설정하는 것이 좋습니다.
 +
-image:cloud_central_replication_11.png[""]
+image::cloud_central_replication_11.png[클라우드 중앙 복제 11]
 
 . 입력한 정보를 검토하고 이동을 클릭하여 클러스터 피어와 SVM 피어를 트리거한 다음(두 클러스터 간에 처음 복제하는 경우) SnapMirror 관계를 구축하고 초기화합니다.
 +
-image:cloud_central_replication_12.png[""]
+image::cloud_central_replication_12.png[클라우드 중앙 복제 12]
 
 . 데이터 볼륨 및 로그 볼륨에 대해 이 프로세스를 계속합니다.
 . 모든 관계를 확인하려면 Cloud Manager 내의 Replication 탭으로 이동합니다. 여기에서 관계를 관리하고 상태를 확인할 수 있습니다.
 +
-image:cloud_central_replication_13.png[""]
+image::cloud_central_replication_13.png[클라우드 중앙 복제 13]
 
 . 모든 볼륨이 복제된 후에는 안정적 상태가 되며 재해 복구 및 개발/테스트 워크플로우로 이동할 준비가 된 것입니다.
 

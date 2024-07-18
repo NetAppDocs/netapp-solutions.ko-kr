@@ -21,7 +21,7 @@ NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 �
 [role="normal"]
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
 
-image:redhat_openshift_image44.png[""]
+image::redhat_openshift_image44.png[RedHat OpenShift 이미지44]
 
 NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 사용하여 구축 및 구성된 Astra Trident 스토리지 오케스트레이터가 있는 {k8s_distribution_name} 클러스터에 설치할 수 있습니다.
 
@@ -220,23 +220,23 @@ traefik                                    LoadBalancer   172.30.99.142    10.61
 ----
 . Astra Control Center CRD 파일에서 제공하는 FQDN을 가리키는 DNS 서버의 entry를 traefik 서비스의 'external-ip'에 추가한다.
 +
-image:redhat_openshift_image122.jpg["ACC GUI에 대한 DNS 항목을 추가합니다"]
+image::redhat_openshift_image122.jpg[ACC GUI에 대한 DNS 항목을 추가합니다]
 
 . FQDN을 검색하여 Astra Control Center GUI에 로그인합니다.
 +
-image:redhat_openshift_image87.jpg["Astra Control Center 로그인"]
+image::redhat_openshift_image87.jpg[Astra Control Center 로그인]
 
 . CRD에 제공된 관리자 이메일 주소를 사용하여 처음으로 Astra Control Center GUI에 로그인할 경우 비밀번호를 변경해야 합니다.
 +
-image:redhat_openshift_image88.jpg["Astra Control Center 필수 암호 변경"]
+image::redhat_openshift_image88.jpg[Astra Control Center 필수 암호 변경]
 
 . Astra Control Center에 사용자를 추가하려면 계정 > 사용자 로 이동하여 추가 를 클릭하고 사용자 세부 정보를 입력한 다음 추가 를 클릭합니다.
 +
-image:redhat_openshift_image89.jpg["Astra Control Center에서 사용자를 생성합니다"]
+image::redhat_openshift_image89.jpg[Astra Control Center에서 사용자를 생성합니다]
 
 . Astra Control Center를 사용하려면 모든 기능을 사용할 수 있는 라이센스가 필요합니다. 라이센스를 추가하려면 계정 > 라이센스 로 이동하고 라이센스 추가 를 클릭한 다음 라이센스 파일을 업로드합니다.
 +
-image:redhat_openshift_image90.jpg["Astra Control Center에서 라이센스를 추가합니다"]
+image::redhat_openshift_image90.jpg[Astra Control Center에서 라이센스를 추가합니다]
 
 +
 

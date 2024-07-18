@@ -37,7 +37,7 @@ StorageGRID는 비정형 데이터를 대규모로 저장할 수 있는 안전�
 
 StorageGRID 시스템은 전세계적으로 분산된 중복 노드로 구성되며, 기존 및 차세대 클라이언트 애플리케이션과 모두 통합될 수 있습니다.
 
-image:stgr-splunkss-image1.png[""]
+image::stgr-splunkss-image1.png[stgr splunkss 이미지1]
 
 IDC MarketScape가 최근 보고서, IDC MarketScape: Worldwide Object-based Storage 2019 Vendor Assessment 에서 NetApp을 리더로 선정했습니다. 가장 까다로운 업계에서 20년 가까이 운영 및 배포 작업을 진행 중인 StorageGRID는 비정형 데이터 부문에서 인정받는 선두 기업입니다.
 

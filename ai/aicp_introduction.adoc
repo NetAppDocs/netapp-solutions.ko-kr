@@ -27,4 +27,4 @@ Mike Oglesby, NetApp에서 직접 지원합니다
 * link:https://www.kubeflow.org["Kubeflow"]
 
 
-image:aicp_image1.png[""]
+image::aicp_image1.png[aicp 영상1]

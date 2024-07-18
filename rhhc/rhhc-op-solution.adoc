@@ -26,4 +26,4 @@ VMware vSphere를 통해 NetApp ONTAP 툴은 데이터 저장소 프로비저닝
 
 == Astra Control Center를 사용하는 OpenShift Container 워크로드를 위한 데이터 보호 및 마이그레이션 솔루션
 
-image:rhhc-on-premises.png[""]
+image::rhhc-on-premises.png[구내 rhc]

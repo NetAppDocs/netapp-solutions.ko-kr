@@ -97,7 +97,7 @@ video::36ecf505-5d1d-4e99-a6f8-b11c00341793[panopto]
 
 명령은 다음과 같은 출력을 제공합니다. 를 사용하여 클러스터에 로그인합니다 `oc login` 출력에 제공된 명령입니다.
 
-image:rhhc-rosa-cluster-admin-create.png[""]
+image::rhhc-rosa-cluster-admin-create.png[rhc Rosa 클러스터 관리자 생성]
 
 
 NOTE: 토큰을 사용하여 클러스터에 로그인할 수도 있습니다. 클러스터 생성 시 이미 관리자 사용자를 생성한 경우 Red Hat OpenShift Hybrid Cloud 콘솔에서 관리자 자격 증명을 사용하여 클러스터에 로그인할 수 있습니다. 그런 다음, 로그인한 사용자의 이름을 표시하는 오른쪽 상단 모서리를 클릭하여 를 얻을 수 있습니다 `oc login` 명령줄에 대한 명령(토큰 로그인)입니다.
@@ -114,16 +114,17 @@ NOTE: 토큰을 사용하여 클러스터에 로그인할 수도 있습니다. �
 
 Rosa 클러스터에 Astra Trident(최신 버전)를 설치합니다. 이렇게 하려면 주어진 절차 중 하나를 따를 수 있습니다 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["여기"]. 클러스터 콘솔에서 Helm을 사용하여 Trident를 설치하려면 먼저 Trident라는 프로젝트를 생성합니다.
 
-image:rhhc-trident-project-create.png[""]
+image::rhhc-trident-project-create.png[rhc trident 프로젝트 생성]
 
 그런 다음 개발자 보기에서 Helm 차트 리포지토리를 만듭니다. URL 필드에 을 사용합니다 `'https://netapp.github.io/trident-helm-chart'`. 그런 다음 Trident 운영자에 대한 Helm 릴리즈를 작성합니다.
 
-image:rhhc-helm-repo-create.png[""]
-image:rhhc-helm-release-create.png[""]
+image::rhhc-helm-repo-create.png[rhc helm repo create 를 참조하십시오]
+
+image::rhhc-helm-release-create.png[rhc helm release create 를 참조하십시오]
 
 콘솔의 관리자 보기로 돌아가 트라이덴트 프로젝트에서 Pod를 선택하여 모든 트라이덴트 포드가 실행 중인지 확인합니다.
 
-image:rhhc-trident-installed.png[""]
+image::rhhc-trident-installed.png[rhc 트라이덴트가 설치되었습니다]
 
 
 
@@ -134,7 +135,7 @@ image:rhhc-trident-installed.png[""]
 
 NOTE: 명령줄을 사용하여 개체를 만들거나 하이브리드 클라우드 콘솔에서 YAML 파일을 사용하여 개체를 만들 수 있습니다.
 
-image:rhhc-fsx-details.png[""]
+image::rhhc-fsx-details.png[rhc FSX 세부 정보]
 
 ** Trident 백엔드 구성**
 
@@ -191,13 +192,13 @@ deletionPolicy: Delete
 ----
 아래 표시된 명령을 실행하여 백엔드, 스토리지 클래스 및 trident-snapshotclass 객체가 생성되었는지 확인합니다.
 
-image:rhhc-tbc-sc-verify.png[""]
+image::rhhc-tbc-sc-verify.png[rhc tbc sc 확인]
 
 현재 중요한 수정 사항은 나중에 구축하는 PostgreSQL 앱에서 기본 스토리지 클래스를 사용할 수 있도록 ONTAP-NAS를 GP3이 아닌 기본 스토리지 클래스로 설정하는 것입니다. 클러스터의 OpenShift 콘솔의 Storage에서 StorageClasses를 선택합니다. 현재 기본 클래스의 주석을 false로 편집하고 ONTAP-NAS 스토리지 클래스에 대해 주석 storageclass.cubernetes/is-default-class 세트를 true로 추가하십시오.
 
-image:rhhc-change-default-sc.png[""]
+image::rhhc-change-default-sc.png[rhc 기본 SC 변경]
 
-image:rhhc-default-sc.png[""]
+image::rhhc-default-sc.png[rhc 기본 sc]
 
 
 
@@ -207,25 +208,22 @@ image:rhhc-default-sc.png[""]
 
 `helm install postgresql bitnami/postgresql -n postgresql --create-namespace`
 
-image:rhhc-postgres-install.png[""]
+image::rhhc-postgres-install.png[rhc postgres 설치]
 
 
-NOTE: 응용 프로그램 포드가 실행되고 있지 않으면 보안 컨텍스트 제약 때문에 발생한 오류가 있을 수 있습니다.
-image:rhhc-scc-error.png[""]
-을 편집하여 오류를 수정하십시오 `runAsUser` 및 `fsGroup` 의 필드 `statefuleset.apps/postgresql` 의 출력에 있는 uid 를 가진 개체입니다 `oc get project` 명령을 사용합니다.
-image:rhhc-scc-fix.png[""]
+NOTE: 응용 프로그램 포드가 실행되고 있지 않으면 보안 컨텍스트 제약 때문에 발생한 오류가 있을 수 있습니다. 이미지::rhc-scc-error.png[] 아래 그림과 같이 명령의 출력에 있는 uid를 사용하여 객체의 및 필드를 편집하여 오류를 `runAsUser` `fsGroup` `statefuleset.apps/postgresql` `oc get project` 수정합니다. 이미지:: rhc-scc-fix.png[]
 
 PostgreSQL 앱은 Amazon FSx for NetApp ONTAP 스토리지에서 지원하는 영구 볼륨을 실행하고 사용해야 합니다.
 
-image:rhhc-postgres-running.png[""]
+image::rhhc-postgres-running.png[rhc postgres 러닝]
 
-image:rhhc-postgres-pvc.png[""]
+image::rhhc-postgres-pvc.png[rhc 후추 PVC]
 
 
 
 ==== ** 6. 데이터베이스를 만들고 레코드를 추가합니다**
 
-image:rhhc-postgres-db-create.png[""]
+image::rhhc-postgres-db-create.png[rhc postgres db create입니다]
 
 
 
@@ -233,11 +231,11 @@ image:rhhc-postgres-db-create.png[""]
 
 ACS에 로그인합니다. 클러스터를 선택하고 Add를 클릭합니다. 기타 를 선택하고 kubeconfig 파일을 업로드하거나 붙여 넣습니다.
 
-image:rhhc-acs-add-1.png[""]
+image::rhhc-acs-add-1.png[rhc ACS 추가 1]
 
 Next * 를 클릭하고 ACS의 기본 스토리지 클래스로 ONTAP-NAS 를 선택합니다. Next * 를 클릭하고 세부 정보를 검토한 후 * Add * the cluster를 클릭합니다.
 
-image:rhhc-acs-add-2.png[""]
+image::rhhc-acs-add-2.png[rhc ACS 추가 2]
 
 
 
@@ -245,7 +243,7 @@ image:rhhc-acs-add-2.png[""]
 
 ACS에서 PostgreSQL 애플리케이션을 정의합니다. 시작 페이지에서 * 응용 프로그램 *, * 정의 * 를 선택하고 적절한 세부 정보를 입력합니다. 다음 * 을 두 번 클릭하고 세부 정보를 검토한 후 * 정의 * 를 클릭합니다. 응용 프로그램이 ACS에 추가됩니다.
 
-image:rhhc-acs-add-2.png[""]
+image::rhhc-acs-add-2.png[rhc ACS 추가 2]
 
 
 
@@ -255,9 +253,9 @@ ACS에서 스냅샷을 생성하는 방법은 여러 가지가 있습니다. 응
 
 스냅샷 생성 * 을 클릭하고 이름을 입력하고 세부 정보를 검토한 후 * 스냅샷 * 을 클릭하여 주문형 스냅샷을 생성합니다. 작업이 완료되면 스냅샷 상태가 정상으로 변경됩니다.
 
-image:rhhc-snapshot-create.png[""]
+image::rhhc-snapshot-create.png[rhc 스냅샷 생성]
 
-image:rhhc-snapshot-on-demand.png[""]
+image::rhhc-snapshot-on-demand.png[요청 시 rhc 스냅샷 생성]
 
 
 
@@ -265,7 +263,7 @@ image:rhhc-snapshot-on-demand.png[""]
 
 PostgreSQL에 다시 로그인하고 사용 가능한 데이터베이스를 나열한 다음 이전에 만든 데이터베이스를 삭제하고 다시 나열하여 데이터베이스가 삭제되었는지 확인합니다.
 
-image:rhhc-postgres-db-delete.png[""]
+image::rhhc-postgres-db-delete.png[rhc postgres db delete입니다]
 
 
 
@@ -273,11 +271,11 @@ image:rhhc-postgres-db-delete.png[""]
 
 스냅샷에서 애플리케이션을 복원하려면 ACS UI 시작 페이지로 이동하여 애플리케이션을 선택하고 Restore(복원) 를 선택합니다. 복원할 스냅샷 또는 백업을 선택해야 합니다. (일반적으로 구성한 정책에 따라 여러 개의 를 생성할 수 있습니다.) 다음 두 화면에서 적절한 항목을 선택한 다음 * Restore * 를 클릭합니다. 스냅샷에서 복구된 후 애플리케이션 상태가 복원 중 에서 사용 가능 으로 이동합니다.
 
-image:rhhc-app-restore-1.png[""]
+image::rhhc-app-restore-1.png[rhc 앱 복원 1]
 
-image:rhhc-app-restore-2.png[""]
+image::rhhc-app-restore-2.png[rhc 앱 복원 2]
 
-image:rhhc-app-restore-3.png[""]
+image::rhhc-app-restore-3.png[rhc 앱 복원 3]
 
 
 
@@ -285,4 +283,4 @@ image:rhhc-app-restore-3.png[""]
 
 PostgreSQL 클라이언트에 로그인하면 이전에 사용했던 테이블과 레코드가 테이블에 표시됩니다.  이상입니다. 버튼을 클릭하기만 하면 프로그램이 이전 상태로 복원됩니다. Astra Control을 사용하는 고객은 이렇게 손쉽게 이용할 수 있습니다.
 
-image:rhhc-app-restore-verify.png[""]
+image::rhhc-app-restore-verify.png[rhc 앱 복원 확인]

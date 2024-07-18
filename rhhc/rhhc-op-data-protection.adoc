@@ -48,7 +48,7 @@ image::rhhc-onprem-dp-snap.png[Astra Control Center 스냅샷 뷰]
 
 ACC는 백업이 저장되는 S3 버킷에서 애플리케이션을 복구합니다.
 
-image:rhhc-onprem-dp-br.png["Astra Control Center 복구 옵션"]
+image::rhhc-onprem-dp-br.png[Astra Control Center 복구 옵션]
 
 
 
@@ -104,7 +104,7 @@ video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
 
 MetroCluster 솔루션은 두 오류 도메인에서 동일한 네트워크 주소에 액세스하려면 계층 2 네트워크 확장 또는 기능이 필요합니다. MetroCluster 구성이 완료되면 MetroCluster svm의 모든 볼륨이 보호되고 SyncMirror(제로 RPO)의 이점을 얻을 수 있으므로 애플리케이션 소유자는 솔루션을 투명하게 사용할 수 있습니다.
 
-image:rhhc-onprem-dp-bc.png["MetroCluster를 사용한 비즈니스 연속성 솔루션"]
+image::rhhc-onprem-dp-bc.png[MetroCluster를 사용한 비즈니스 연속성 솔루션]
 
 
 TIP: Trident 백엔드 구성(TBC)의 경우 MetroCluster 구성을 사용할 때 데이터 LIF 및 SVM을 지정하지 마십시오. 관리 LIF에 SVM 관리 IP를 지정하고 vsadmin 역할 자격 증명을 사용합니다.

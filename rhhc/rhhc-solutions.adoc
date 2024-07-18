@@ -43,7 +43,7 @@ summary:
 
 === 시나리오 1
 
-image:rhhc-on-premises.png[""]
+image::rhhc-on-premises.png[구내 rhc]
 
 
 
@@ -59,7 +59,7 @@ image:rhhc-on-premises.png[""]
 
 === 시나리오 2
 
-image:rhhc-self-managed-aws.png[""]
+image::rhhc-self-managed-aws.png[rhc 자가 관리형 AWS]
 
 
 
@@ -75,7 +75,7 @@ image:rhhc-self-managed-aws.png[""]
 
 === 시나리오 3
 
-image:rhhc-rosa-with-fsxn.png[""]
+image::rhhc-rosa-with-fsxn.png[rhc ROSA와 fsxn]
 
 
 
@@ -88,7 +88,7 @@ image:rhhc-rosa-with-fsxn.png[""]
 * ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
 
 
-image:rhhc-self-managed-gcp.png[""]
+image::rhhc-self-managed-gcp.png[rhc 자가 관리 GCP]
 
 MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].
 
@@ -103,6 +103,6 @@ MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조�
 * ACC를 사용하여 컨테이너 애플리케이션의 SnapMirror 복제를 수행하십시오.
 
 
-image:rhhc-self-managed-azure.png[""]
+image::rhhc-self-managed-azure.png[rhc 자가 관리형 Azure]
 
 MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/concept_considerations_when_using_ontap_in_a_mcc_configuration.html["여기"].

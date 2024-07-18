@@ -31,7 +31,7 @@ NetApp ONTAP 데이터 관리 소프트웨어 기반의 NetApp AFF A900은 기�
 • 타협 없는 데이터 보안
 • 단순화된 무중단 업그레이드
 
-_NetApp AFF A900 스토리지 시스템 _ image:aipod_nv_A900.png[""]
+_NetApp AFF A900 스토리지 시스템_이미지::aipod_NV_A900.png[]
 
 
 
@@ -59,7 +59,7 @@ AFF A900은 기존 A700 고객을 위한 무중단 섀시 내 업그레이드로
 
 NVIDIA DGX BasePOD는 NVIDIA 하드웨어 및 소프트웨어 구성 요소, MLOps 솔루션, 타사 스토리지로 구성된 통합 솔루션입니다. 고객은 NVIDIA 제품과 검증된 파트너 솔루션으로 스케일아웃 시스템 설계의 모범 사례를 활용하여 AI 개발을 위한 효율적이고 관리하기 쉬운 플랫폼을 구축할 수 있습니다. 그림 1은 NVIDIA DGX BasePOD의 다양한 구성 요소를 보여줍니다.
 
-_NVIDIA DGX BasePOD 솔루션_ image:aipod_nv_basepod_layers.png[""]
+_nVIDIA DGX BasePOD 솔루션_이미지::aipod_nv_basepod_layers.png [ ]
 
 
 
@@ -67,7 +67,7 @@ _NVIDIA DGX BasePOD 솔루션_ image:aipod_nv_basepod_layers.png[""]
 
 NVIDIA DGX H100 및 #8482; 시스템은 NVIDIA H100 Tensor 코어 GPU의 획기적인 성능을 통해 가속화된 AI 파워하우스입니다.
 
-_NVIDIA DGX H100 시스템 _ image:aipod_nv_H100_3D.png[""]
+_nVIDIA DGX H100 시스템_이미지::aipod_NV_H100_3d.png[]
 
 DGX H100 시스템의 주요 사양은 다음과 같습니다.
 • 8개의 NVIDIA H100 GPU.
@@ -80,7 +80,7 @@ GPU당 • 80GB GPU 메모리, 총 640GB
 • 10.2kW 최대 출력.
 DGX H100 CPU 트레이의 후면 포트는 아래에 나와 있습니다. OSFP 포트 4개는 InfiniBand 컴퓨팅 패브릭에 8개의 ConnectX-7 어댑터를 제공합니다. 각 듀얼 포트 ConnectX-7 어댑터 쌍은 스토리지 및 관리 패브릭에 대한 병렬 경로를 제공합니다. 대역외 포트는 BMC 액세스에 사용됩니다.
 
-_NVIDIA DGX H100 후면 패널 _ image:aipod_nv_H100_rear.png[""]
+_NVIDIA DGX H100 후면 패널_이미지::aipod_NV_H100_REAR.png[]
 
 
 
@@ -90,7 +90,7 @@ _NVIDIA DGX H100 후면 패널 _ image:aipod_nv_H100_rear.png[""]
 
 ==== NVIDIA Quantum-2 QM9700 스위치
 
-_NVIDIA Quantum-2 QM9700 InfiniBand 스위치 _ image:aipod_nv_QM9700.png[""]
+_nVidia Quantum-2 QM9700 InfiniBand 스위치_이미지::aipod_NV_QM9700.png[]
 
 NVIDIA Quantum-2 QM9700 스위치는 400GB/s InfiniBand 연결 기능을 갖추고 있으며 NVIDIA Quantum-2 InfiniBand BasePOD 구성의 컴퓨팅 패브릭에 전력을 공급합니다. ConnectX-7 단일 포트 어댑터는 InfiniBand 컴퓨팅 패브릭에 사용됩니다. 각 NVIDIA DGX 시스템은 각 QM9700 스위치에 대한 이중 연결을 제공하므로 시스템 간에 대역폭이 높고 지연 시간이 짧은 경로를 여러 개 제공합니다.
 
@@ -98,7 +98,7 @@ NVIDIA Quantum-2 QM9700 스위치는 400GB/s InfiniBand 연결 기능을 갖추�
 
 ==== NVIDIA Spectrum-3 SN4600 스위치
 
-_NVIDIA Spectrum-3 SN4600 스위치 _ image:aipod_nv_SN4600_hires_smallest.png[""]
+_NVIDIA Spectrum-3 SN4600 스위치_이미지::aipod_NV_SN4600_hires_smallest.png[]
 
 NVIDIA Spectrum-3 SN4600 스위치는 총 128개의 포트(스위치당 64개)를 제공하여 DGX BasePOD의 대역 내 관리를 위한 이중화 연결을 제공합니다. NVIDIA SN4600 스위치는 1GbE 및 200GbE 사이의 속도를 제공할 수 있습니다. 이더넷을 통해 연결된 스토리지 어플라이언스의 경우 NVIDIA SN4600 스위치도 사용됩니다. NVIDIA DGX 이중 포트 ConnectX-7 어댑터의 포트는 대역 내 관리 및 스토리지 연결에 모두 사용됩니다.
 
@@ -106,7 +106,7 @@ NVIDIA Spectrum-3 SN4600 스위치는 총 128개의 포트(스위치당 64개)�
 
 ==== NVIDIA Spectrum SN2201 스위치
 
-_NVIDIA Spectrum SN2201 스위치 _ image:aipod_nv_SN2201.png[""]
+_NVIDIA Spectrum SN2201 스위치_이미지::aipod_NV_SN2201.png[]
 
 NVIDIA Spectrum SN2201 스위치는 대역 외 관리를 위한 연결을 제공하는 48개의 포트를 제공합니다. 대역 외 관리는 DGX BasePOD의 모든 구성 요소에 대한 통합 관리 연결을 제공합니다.
 
@@ -114,6 +114,6 @@ NVIDIA Spectrum SN2201 스위치는 대역 외 관리를 위한 연결을 제공
 
 ==== NVIDIA ConnectX-7 어댑터
 
-_NVIDIA ConnectX-7 어댑터 _ image:aipod_nv_CX7.png[""]
+_NVIDIA ConnectX-7 어댑터_이미지::aipod_NV_CX7.png[]
 
 NVIDIA ConnectX-7 어댑터는 25/50/100/200/400G의 처리량을 제공할 수 있습니다. NVIDIA DGX 시스템은 단일 포트 및 이중 포트 ConnectX-7 어댑터를 모두 사용하여 400GB/s InfiniBand 및 100/200Gb 이더넷을 포함한 DGX BasePOD 구축에 유연성을 제공합니다.

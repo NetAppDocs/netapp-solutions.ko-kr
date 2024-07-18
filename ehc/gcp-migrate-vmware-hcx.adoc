@@ -66,7 +66,7 @@ NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지�
 ====
 테스트 목적으로, 이 검증에 사용된 온프레미스 연구소 환경이 Cloud VPN을 통해 연결되어 Google Cloud VPC에 사내 연결을 가능하게 했습니다.
 
-image:gcpd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다."]
+image::gcpd-hcx-image1.png[이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다.]
 
 HCX에 대한 자세한 다이어그램은 을 참조하십시오 https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vmw-google-cloud-vmware-engine-logical-design-poster-for-workload-mobility.pdf["VMware 링크"^]
 
@@ -84,10 +84,10 @@ VMware Engine을 사용하여 프라이빗 클라우드를 프로비저닝할 �
 
 . Google VMware Engine Portal에 로그인하고 HCX Cloud Manager에 로그인합니다.
 +
-HCX 버전 링크를 클릭하여 HCX 콘솔에 로그인할 수 있습니다image:gcpd-hcx-image2.png["GCVE 리소스에 대한 링크가 있는 HCX 콘솔 액세스"]또는 vSphere Management Network 탭에서 HCX FQDN을 클릭합니다.image:gcpd-hcx-image3.png["FQDN 링크를 사용하여 HCX 콘솔 액세스"]
+HCX 버전 링크 이미지:gcpd-hcx-image2.png[GCVE 리소스에 대한 링크를 사용한 HCX 콘솔 액세스]를 클릭하거나 vSphere Management Network 탭에서 HCX FQDN을 클릭하여 HCX 콘솔에 로그인할 수 있습니다. 이미지:: gcpd-hcx-image3.png[FQDN 링크를 사용한 HCX 콘솔 액세스]
 
 . HCX Cloud Manager에서 * 관리 > 시스템 업데이트 * 로 이동합니다.
-. 다운로드 요청 링크 * 를 클릭하고 OVA 파일을 다운로드합니다.image:gcpd-hcx-image4.png["다운로드 링크를 요청합니다"]
+. 다운로드 요청 링크 * 를 클릭하고 OVA 파일을 다운로드합니다. 이미지: gcpd-hcx-image4.png [다운로드 링크 요청]
 . HCX Cloud Manager를 HCX Cloud Manager UI에서 사용 가능한 최신 버전으로 업데이트합니다.
 
 
@@ -102,7 +102,7 @@ HCX 버전 링크를 클릭하여 HCX 콘솔에 로그인할 수 있습니다ima
 . 이전 단계에서 설명한 대로 Google Cloud VMware Engine의 HCX 콘솔에서 OVA를 다운로드하도록 합니다.
 . OVA를 다운로드한 후 * Deploy OVF Template * 옵션을 사용하여 온프레미스 VMware vSphere 환경에 구축합니다.
 +
-image:gcpd-hcx-image5.png["올바른 OVA 템플릿을 선택하는 스크린샷"]
+image::gcpd-hcx-image5.png[올바른 OVA 템플릿을 선택하는 스크린샷]
 
 . OVA 배포에 필요한 모든 정보를 입력하고 * Next * 를 클릭한 다음 * Finish * 를 클릭하여 VMware HCX 커넥터 OVA를 배포합니다.
 +
@@ -119,7 +119,7 @@ NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
 ====
 VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스를 시작한 후 다음 단계를 수행하여 HCX 커넥터를 활성화하십시오. Google Cloud VMware Engine 포털에서 라이센스 키를 생성하고 VMware HCX Manager에서 활성화합니다.
 
-. VMware Engine 포털에서 리소스를 클릭하고 프라이빗 클라우드를 선택한 다음 * HCX Manager Cloud Version * 에서 다운로드 아이콘을 클릭합니다.image:gcpd-hcx-image6.png["HCX 라이센스를 다운로드합니다"]다운로드한 파일을 열고 라이센스 키 문자열을 복사합니다.
+. VMware Engine 포털에서 리소스를 클릭하고 프라이빗 클라우드를 선택한 다음 * HCX Manager Cloud 버전 * 에서 다운로드 아이콘을 클릭합니다. 이미지:: gcpd-hcx-image6.png[HCX 라이센스 다운로드] 다운로드한 파일을 열고 라이센스 키 문자열을 복사합니다.
 . 사내 VMware HCX Manager()에 로그인합니다 `"https://hcxmanagerIP:9443"` 관리자 자격 증명을 사용합니다.
 +
 
@@ -150,7 +150,7 @@ NOTE: Embedded PSC의 경우 VMware vCenter Server FQDN 또는 IP 주소를 입�
 NOTE: 이 프로세스는 약 10~20분 정도 소요되며 플러그인이 vCenter Server에 추가되어야 합니다.
 
 +
-image:gcpd-hcx-image7.png["완료된 프로세스를 보여 주는 스크린샷"]
+image::gcpd-hcx-image7.png[완료된 프로세스를 보여 주는 스크린샷]
 
 
 
@@ -162,7 +162,7 @@ HCX Connector를 사내 vCenter에 구축 및 구성한 후 페어링을 추가�
 
 . 온-프레미스 vCenter 환경과 Google Cloud VMware Engine SDDC 간에 사이트 쌍을 생성하려면 온-프레미스 vCenter Server에 로그인하고 새 HCX vSphere Web Client 플러그인에 액세스합니다.
 +
-image:gcpd-hcx-image8.png["HCX vSphere Web Client 플러그인의 스크린샷"]
+image::gcpd-hcx-image8.png[HCX vSphere Web Client 플러그인의 스크린샷]
 
 . 인프라 에서 * 사이트 페어링 추가 * 를 클릭합니다.
 +
@@ -170,7 +170,7 @@ image:gcpd-hcx-image8.png["HCX vSphere Web Client 플러그인의 스크린샷"]
 NOTE: Google Cloud VMware Engine HCX Cloud Manager URL 또는 IP 주소와 Cloud-Owner-Role 권한이 있는 사용자의 자격 증명을 입력하여 프라이빗 클라우드에 액세스합니다.
 
 +
-image:gcpd-hcx-image9.png["CloudOwner 역할의 스크린샷 URL 또는 IP 주소 및 자격 증명."]
+image::gcpd-hcx-image9.png[CloudOwner 역할의 스크린샷 URL 또는 IP 주소 및 자격 증명.]
 
 . 연결 * 을 클릭합니다.
 +
@@ -179,7 +179,7 @@ NOTE: VMware HCX Connector는 포트 443을 통해 HCX Cloud Manager IP로 라�
 
 . 페어링이 생성된 후에는 새로 구성된 사이트 페어링을 HCX 대시보드에서 사용할 수 있습니다.
 +
-image:gcpd-hcx-image10.png["HCX 대시보드의 완료된 프로세스 스크린샷"]
+image::gcpd-hcx-image10.png[HCX 대시보드의 완료된 프로세스 스크린샷]
 
 
 
@@ -195,7 +195,7 @@ VMware HCX Interconnect 서비스 어플라이언스는 인터넷을 통해 복�
 NOTE: 컴퓨팅 프로필은 구축된 어플라이언스와 HCX 서비스에서 액세스할 수 있는 VMware 데이터 센터 부분을 포함하여 구축 매개 변수를 정의합니다.
 
 +
-image:gcpd-hcx-image11.png["vSphere Client Interconnect 페이지의 스크린샷."]
+image::gcpd-hcx-image11.png[vSphere Client Interconnect 페이지의 스크린샷.]
 
 . 컴퓨팅 프로파일을 만든 후 * 다중 사이트 서비스 메시 > 네트워크 프로파일 > 네트워크 프로파일 만들기 * 를 선택하여 네트워크 프로파일을 만듭니다.
 +
@@ -206,7 +206,7 @@ image:gcpd-hcx-image11.png["vSphere Client Interconnect 페이지의 스크린�
 NOTE: 이 단계에서는 두 개 이상의 IP 주소가 필요합니다. 이러한 IP 주소는 관리 네트워크에서 상호 연결 어플라이언스로 할당됩니다.
 
 +
-image:gcpd-hcx-image12.png["네트워크 프로필 스크린샷."]
+image::gcpd-hcx-image12.png[네트워크 프로필 스크린샷.]
 
 . 현재 컴퓨팅 및 네트워크 프로파일이 성공적으로 생성되었습니다.
 . 상호 연결 * 옵션 내에서 * 서비스 메시 * 탭을 선택하고 온-프레미스 및 GCVE SDDC 사이트를 선택하여 서비스 메시를 생성합니다.
@@ -216,11 +216,11 @@ image:gcpd-hcx-image12.png["네트워크 프로필 스크린샷."]
 NOTE: 이 프로세스의 일환으로 안전한 전송 패브릭을 생성하기 위해 소스 사이트와 타겟 사이트 모두에 HCX 어플라이언스를 구축하고 자동으로 구성합니다.
 
 +
-image:gcpd-hcx-image13.png["vSphere Client Interconnect 페이지의 Service Mesh 탭 스크린샷"]
+image::gcpd-hcx-image13.png[vSphere Client Interconnect 페이지의 Service Mesh 탭 스크린샷]
 
 . 이 단계는 구성의 마지막 단계입니다. 구축을 완료하는 데 약 30분이 소요됩니다. 서비스 메시가 구성된 후 작업 부하 VM을 마이그레이션하도록 IPsec 터널이 성공적으로 생성된 환경이 준비됩니다.
 +
-image:gcpd-hcx-image14.png["vSphere Client Interconnect 페이지의 HCX 어플라이언스 스크린샷"]
+image::gcpd-hcx-image14.png[vSphere Client Interconnect 페이지의 HCX 어플라이언스 스크린샷]
 
 
 
@@ -246,15 +246,15 @@ NOTE: IP 주소를 변경할 필요 없이 VM을 마이그레이션하려면 네
 
 . 온-프레미스 vSphere Client에서 Inventory로 이동하여 마이그레이션할 VM을 마우스 오른쪽 버튼으로 클릭하고 HCX Actions > Migrate to HCX Target Site를 선택합니다.
 +
-image:gcpd-hcx-image15.png[""]
+image::gcpd-hcx-image15.png[gcpd hcx image15 를 참조하십시오]
 
 . 가상 컴퓨터 마이그레이션 마법사에서 원격 사이트 연결(대상 GCVE)을 선택합니다.
 +
-image:gcpd-hcx-image16.png[""]
+image::gcpd-hcx-image16.png[gcpd hcx 이미지16]
 
 . 필수 필드(클러스터, 스토리지 및 대상 네트워크)를 업데이트하고 검증 을 클릭합니다.
 +
-image:gcpd-hcx-image17.png[""]
+image::gcpd-hcx-image17.png[gcpd hcx 이미지17]
 
 . 유효성 검사가 완료된 후 이동을 클릭하여 마이그레이션을 시작합니다.
 +
@@ -263,7 +263,7 @@ NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC �
 
 . HCX > 마이그레이션 대시보드에서 vMotion의 진행 상황과 완료 상태를 모니터링할 수 있습니다.
 +
-image:gcpd-hcx-image18.png[""]
+image::gcpd-hcx-image18.png[gcpd hcx 이미지18]
 
 
 

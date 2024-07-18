@@ -153,43 +153,43 @@ video::48adf2d8-3f5e-4ab3-b25c-b04a014635ac[panopto]
 ====
 . BlueXP 콘솔에 로그인합니다.
 +
-image:snapctr_svcs_connector_02-canvas.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_02-canvas.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 커넥터 * 드롭다운 화살표 및 * 커넥터 추가 * 를 클릭하여 커넥터 프로비저닝 워크플로를 시작합니다.
 +
-image:snapctr_svcs_connector_03-addc.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_03-addc.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 클라우드 공급자를 선택합니다(이 경우 * Microsoft Azure *).
 +
-image:snapctr_svcs_connector_04-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_04-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Azure 계정에 이미 설정된 경우 * 권한 *, * 인증 * 및 * 네트워킹 * 단계를 건너뜁니다. 그렇지 않은 경우 계속하기 전에 이러한 구성을 수행해야 합니다. 여기에서 이전 섹션에서 참조된 Azure 정책에 대한 사용 권한을 검색할 수도 있습니다."<<BlueXP 준비 과정>>있습니다."
 +
-image:snapctr_svcs_connector_05-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_05-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 커넥터를 구성하려면 * 배포로 건너뛰기 * 를 클릭하십시오 * 가상 머신 인증 *. 커넥터 OS 인증을 위한 BlueXP 준비 과정에서 Azure 리소스 그룹에서 생성한 SSH 키 쌍을 추가합니다.
 +
-image:snapctr_svcs_connector_06-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_06-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 커넥터 인스턴스의 이름을 입력하고 * 생성 * 을 선택하고 * 세부 정보 * 아래에서 기본 * 역할 이름 * 을 수락한 다음 Azure 계정 구독을 선택합니다.
 +
-image:snapctr_svcs_connector_07-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_07-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 적절한 * VNet *, * Subnet * 로 네트워킹을 구성하고 * Public IP * 를 비활성화하되, Azure 환경에서 커넥터에 인터넷 액세스가 있는지 확인하십시오.
 +
-image:snapctr_svcs_connector_08-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_08-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . HTTP, HTTPS 및 SSH 액세스를 허용하는 커넥터에 대한 * 보안 그룹 * 을 구성합니다.
 +
-image:snapctr_svcs_connector_09-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_09-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 요약 페이지를 검토하고 커넥터 생성을 시작하려면 * 추가 * 를 클릭합니다. 일반적으로 배포를 완료하는 데 약 10분이 소요됩니다. 완료되면 커넥터 인스턴스 VM이 Azure 포털에 나타납니다.
 +
-image:snapctr_svcs_connector_10-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_10-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 커넥터가 배포되면 새로 만든 커넥터가 * 커넥터 * 드롭다운 아래에 나타납니다.
 +
-image:snapctr_svcs_connector_11-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_11-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 
 
@@ -202,20 +202,18 @@ image:snapctr_svcs_connector_11-azure.png["GUI에서 이 단계를 보여 주는
 ====
 . BlueXP 콘솔 오른쪽 위의 설정 아이콘을 클릭하여 * 계정 자격 증명 * 페이지를 열고 * 자격 증명 추가 * 를 클릭하여 자격 증명 구성 워크플로우를 시작합니다.
 +
-image:snapctr_svcs_credential_01-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_credential_01-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 자격 증명 위치를 - * Microsoft Azure-BlueXP * 로 선택합니다.
 +
-image:snapctr_svcs_credential_02-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_credential_02-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 이전 BlueXP 온보딩 프로세스에서 수집되어야 하는 적절한 * 클라이언트 암호 *, * 클라이언트 ID * 및 * 테넌트 ID * 를 사용하여 Azure 자격 증명을 정의합니다.
 +
-image:snapctr_svcs_credential_03-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_credential_03-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
-. 검토 및 * 추가 *.
-image:snapctr_svcs_credential_04-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
-. 마켓플레이스 구독 * 을 자격 증명과 연결해야 할 수도 있습니다.
-image:snapctr_svcs_credential_05-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+. 검토 및 * 추가 *. 이미지:: snapctr_svcs_credential_04-Azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+. 마켓플레이스 구독 * 을 자격 증명과 연결해야 할 수도 있습니다. 이미지:: snapctr_svcs_credential_05-Azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
 
 
 ====
@@ -229,52 +227,54 @@ Azure 자격 증명이 구성되어 있으면 이제 다음 절차에 따라 Sna
 
 . Canvas 페이지로 돌아가 * 내 작업 환경 * 에서 * 작업 환경 추가 * 를 클릭하여 Azure에 배포된 Azure NetApp Files를 검색합니다.
 +
-image:snapctr_svcs_connector_11-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_connector_11-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 위치로 * Microsoft Azure * 를 선택하고 * 검색 * 을 클릭합니다.
 +
-image:snapctr_svcs_setup_02-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_02-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 이름 * 작업 환경 * 을 입력하고 * 이전 섹션에서 만든 자격 증명 이름 * 을 선택한 다음 * 계속 * 을 클릭합니다.
 +
-image:snapctr_svcs_setup_03-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_03-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . BlueXP 콘솔이 * 내 작업 환경 * 으로 돌아가고 Azure에서 검색된 Azure NetApp Files가 이제 * Canvas * 에 표시됩니다.
 +
-image:snapctr_svcs_setup_04-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_04-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Azure NetApp Files * 아이콘을 클릭한 다음 * 작업 환경 입력 * 을 클릭하여 Azure NetApp Files 스토리지에 구축된 Oracle 데이터베이스 볼륨을 확인합니다.
 +
-image:snapctr_svcs_setup_05-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_05-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 콘솔의 왼쪽 사이드바에서 보호 아이콘 위로 마우스를 가져간 다음 * 보호 * > * 응용 프로그램 * 을 클릭하여 응용 프로그램 시작 페이지를 엽니다. 응용 프로그램 검색 * 을 클릭합니다.
 +
-image:snapctr_svcs_setup_09-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_09-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 애플리케이션 소스 유형으로 * Cloud Native * 를 선택합니다.
 +
-image:snapctr_svcs_setup_10-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_10-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 애플리케이션 유형으로 * Oracle * 을 선택하고 * 다음 * 을 클릭하여 호스트 세부 정보 페이지를 엽니다.
 +
-image:snapctr_svcs_setup_13-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_13-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Using SSH * 를 선택하고 * IP 주소 *, * 커넥터 *, Azure VM 관리 * 사용자 이름 * 등의 Oracle Azure VM 세부 정보를 제공합니다(예: azureuser). Add SSH Private Key * 를 클릭하여 Oracle Azure VM을 구축하는 데 사용한 SSH 키 쌍을 붙여 넣습니다. 또한 지문을 확인하라는 메시지가 표시됩니다.
 +
-image:snapctr_svcs_setup_15-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
-image:snapctr_svcs_setup_16-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_15-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
+
++
+image::snapctr_svcs_setup_16-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Oracle Azure VM에서 sudoer 액세스를 설정하려면 다음 * 구성 * 페이지로 이동하십시오.
 +
-image:snapctr_svcs_setup_17-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_17-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 검토 후 * 애플리케이션 검색 * 을 클릭하여 Oracle Azure VM에 플러그인을 설치하고 한 번에 VM에서 Oracle 데이터베이스를 검색할 수 있습니다.
 +
-image:snapctr_svcs_setup_18-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_18-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Azure VM에서 검색된 Oracle 데이터베이스가 * 애플리케이션 * 에 추가되고 * 애플리케이션 * 페이지에는 환경 내의 호스트 및 Oracle 데이터베이스 수가 나열됩니다. 데이터베이스 * 보호 상태 * 는 처음에 * 보호되지 않음 * 으로 표시됩니다.
 +
-image:snapctr_svcs_setup_19-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_setup_19-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 
 
@@ -313,27 +313,27 @@ tmpfs                      1.6G     0  1.6G   0% /run/user/1000
 ....
 . 데이터베이스를 보호하려면 데이터베이스 * 보호 상태 * 옆에 있는 점 3개를 클릭한 다음 * 정책 할당 * 을 클릭하여 Oracle 데이터베이스에 적용할 수 있는 기본 사전 로드 또는 사용자 정의 데이터베이스 보호 정책을 봅니다. Settings * - * Policies * 아래에서 사용자 지정된 백업 빈도와 백업 데이터 보존 기간을 사용하여 고유한 정책을 만들 수 있습니다.
 +
-image:snapctr_svcs_bkup_01-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_01-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 정책 구성에 만족하면 데이터베이스를 보호하기 위해 선택한 정책을 * 할당 * 할 수 있습니다.
 +
-image:snapctr_svcs_bkup_02-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_02-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 정책이 적용되면 데이터베이스 보호 상태가 녹색 확인 표시와 함께 * Protected * 로 변경됩니다. BlueXP는 정의된 일정에 따라 스냅샷 백업을 실행합니다. 또한 아래 그림과 같이 3점 드롭다운 메뉴에서 * On-Demand Backup * 을 사용할 수 있습니다.
 +
-image:snapctr_svcs_bkup_03-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_03-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 작업 모니터링 * 탭에서 백업 작업 세부 정보를 볼 수 있습니다. 이 테스트 결과에 따르면 Oracle 데이터베이스 백업에는 약 1.6TiB가 걸린 것으로 나타났습니다.
 +
-image:snapctr_svcs_bkup_04-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_04-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 3점 드롭다운 메뉴 * 세부 정보 보기 * 에서 스냅샷 백업에서 생성된 백업 세트를 볼 수 있습니다.
 +
-image:snapctr_svcs_bkup_05-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_05-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 데이터베이스 백업 세부 정보에는 * 백업 이름 *, * 백업 유형 *, * SCN *, * RMAN 카탈로그 * 및 * 백업 시간 * 이 포함됩니다. 백업 세트에는 각각 데이터 볼륨과 로그 볼륨에 대한 애플리케이션 정합성이 보장되는 스냅샷이 포함됩니다. 로그 볼륨 스냅숏은 데이터베이스 데이터 볼륨 스냅숏 직후 발생합니다. 백업 목록에서 특정 백업을 찾는 경우 필터를 적용할 수 있습니다.
 +
-image:snapctr_svcs_bkup_06-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_bkup_06-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 
 
@@ -346,27 +346,27 @@ image:snapctr_svcs_bkup_06-azure.png["GUI에서 이 단계를 보여 주는 스�
 ====
 . 데이터베이스 복원의 경우 * 응용 프로그램 * 에서 복원할 특정 데이터베이스에 대한 세 개의 점 드롭다운 메뉴를 클릭한 다음 * 복원 * 을 클릭하여 데이터베이스 복원 및 복구 워크플로우를 시작합니다.
 +
-image:snapctr_svcs_restore_01-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_01-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 타임 스탬프별 * 복원 지점 * 을 선택합니다. 목록의 각 타임스탬프는 사용 가능한 데이터베이스 백업 세트를 나타냅니다.
 +
-image:snapctr_svcs_restore_02-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_02-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Oracle 데이터베이스를 원래 위치 * 로 복원 및 복구하려면 * 복원 위치 * 를 선택하십시오.
 +
-image:snapctr_svcs_restore_03-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_03-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 복원 범위 * 및 * 복구 범위 * 를 정의합니다. 모든 로그는 현재 로그를 포함하여 최신 상태의 전체 복구를 의미합니다.
 +
-image:snapctr_svcs_restore_04-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_04-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . 데이터베이스 복원 및 복구를 시작하려면 * 복원 * 을 검토하십시오.
 +
-image:snapctr_svcs_restore_05-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_05-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 . Job Monitoring * 탭에서 전체 데이터베이스 복원 및 복구를 최신 상태로 실행하는 데 2분이 걸렸음을 확인했습니다.
 +
-image:snapctr_svcs_restore_06-azure.png["GUI에서 이 단계를 보여 주는 스크린샷"]
+image::snapctr_svcs_restore_06-azure.png[GUI에서 이 단계를 보여 주는 스크린샷]
 
 
 
@@ -384,35 +384,35 @@ NOTE: Azure NetApp 파일 스토리지에 클론 복제된 데이터베이스를
 
 . 응용 프로그램*에서 복제할 특정 데이터베이스에 대한 세 개의 점 드롭다운 메뉴를 클릭한 다음 * 복원 * 을 클릭하여 클론 워크플로를 시작합니다.
 +
-image:snapctr_svcs_restore_01-azure.png[""]
+image::snapctr_svcs_restore_01-azure.png[snapctr svcs restore 01 Azure 를 참조하십시오]
 
 . 복원 지점 * 을 선택하고 * 대체 위치로 복원 * 을 선택합니다.
 +
-image:snapctr_svcs_clone_01-azure.png[""]
+image::snapctr_svcs_clone_01-azure.png[snapctr svcs clone 01 Azure 를 참조하십시오]
 
 . 다음 * 구성 * 페이지에서 대체 * 호스트 *, 새 데이터베이스 * SID * 및 * Oracle Home * 을 대체 Azure VM에 구성된 대로 설정합니다.
 +
-image:snapctr_svcs_clone_02-azure.png[""]
+image::snapctr_svcs_clone_02-azure.png[snapctr svcs clone 02 Azure]
 
 . Review * General * 페이지에는 SID, 대체 호스트, 데이터 파일 위치, 복구 범위 등과 같은 복제된 데이터베이스의 세부 정보가 표시됩니다
 +
-image:snapctr_svcs_clone_03-azure.png[""]
+image::snapctr_svcs_clone_03-azure.png[snapctr svcs clone 03 Azure]
 
 . review * Database parameters * 페이지에는 복제된 데이터베이스 구성 및 일부 데이터베이스 매개 변수 설정에 대한 세부 정보가 표시됩니다.
 +
-image:snapctr_svcs_clone_04-azure.png[""]
+image::snapctr_svcs_clone_04-azure.png[snapctr svcs clone 04 Azure]
 
 . Job Monitoring * 탭에서 클론 작업 상태를 모니터링하면 1.6TiB Oracle 데이터베이스를 복제하는 데 8분이 걸린다는 것을 확인했습니다.
 +
-image:snapctr_svcs_clone_05-azure.png[""]
+image::snapctr_svcs_clone_05-azure.png[snapctr svcs clone 05 Azure 를 참조하십시오]
 
 . 클론 복제된 데이터베이스가 BlueXP에 즉시 등록되었음을 나타내는 BlueXP * 애플리케이션 * 페이지에서 클론 복제된 데이터베이스를 검증합니다.
 +
-image:snapctr_svcs_clone_06-azure.png[""]
+image::snapctr_svcs_clone_06-azure.png[snapctr svcs clone 06 Azure 를 참조하십시오]
 
 . 복제된 데이터베이스가 예상대로 실행 중임을 나타내는 Oracle Azure VM에서 복제된 데이터베이스를 검증합니다.
 +
-image:snapctr_svcs_clone_07-azure.png[""]
+image::snapctr_svcs_clone_07-azure.png[snapctr svcs clone 07 Azure 를 참조하십시오]
 
 
 

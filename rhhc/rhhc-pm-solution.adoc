@@ -26,4 +26,4 @@ NOTE: 파일 시스템의 AZ(Preferred Availability Zone)에서 Amazon FSx 파�
 
 == OpenShift Container 워크로드를 위한 데이터 보호 및 마이그레이션 솔루션
 
-image:rhhc-rosa-with-fsxn.png[""]
+image::rhhc-rosa-with-fsxn.png[rhc ROSA와 fsxn]

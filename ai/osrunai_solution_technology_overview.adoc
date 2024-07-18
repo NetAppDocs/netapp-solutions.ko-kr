@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 이 솔루션은 NetApp AFF A800 시스템 1대, DGX-1 서버 2대, Cisco Nexus 3232C 100GbE 스위치 2개를 사용하여 구축했습니다. RoCE(RDMA over Converged Ethernet)를 통한 원격 직접 메모리 액세스(RDMA)를 사용하여 각 DGX-1 서버는 GPU 간 통신에 사용되는 4개의 100GbE 연결을 통해 Nexus 스위치에 연결합니다. NFS 스토리지 액세스를 위한 기존 IP 통신도 이 링크에서 발생합니다. 4개의 100GbE 링크를 사용하여 각 스토리지 컨트롤러를 네트워크 스위치에 연결합니다. 다음 그림은 모든 테스트 시나리오에 대해 이 기술 보고서에 사용된 ONTAP AI 솔루션 아키텍처를 보여줍니다.
 
-image:osrunai_image2.png[""]
+image::osrunai_image2.png[osrunai 이미지2]
 
 
 

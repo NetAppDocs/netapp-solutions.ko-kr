@@ -20,11 +20,11 @@ S3 검색 작업에 대한 성능은 Confluent 브로커 노드의 수에 따라
 
 다음 그래프에는 브로커 노드 5개 또는 8개가 결합된 S3 계층화 트래픽이 나와 있습니다. AFF A900 단일 HA Pair 성능을 극대화했습니다.
 
-image:kafka-sc-image9.png["이 데이터 그래프는 5개 또는 8개의 브로커 노드와 결합된 S3 계층화 트래픽을 보여 줍니다."]
+image::kafka-sc-image9.png[이 데이터 그래프는 5개 또는 8개의 브로커 노드와 결합된 S3 계층화 트래픽을 보여 줍니다.]
 
 다음 그래프는 약 31.74GBps의 Kafka 처리량을 보여 줍니다.
 
-image:kafka-sc-image10.png["이 데이터 그래프는 약 31.74GBps의 Kafka 처리량을 보여 줍니다."]
+image::kafka-sc-image10.png[이 데이터 그래프는 약 31.74GBps의 Kafka 처리량을 보여 줍니다.]
 
 또한 ONTAP 스토리지 컨트롤러 'perfstat' 보고서에서 유사한 처리량도 관찰되었습니다.
 

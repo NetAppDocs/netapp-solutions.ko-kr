@@ -42,7 +42,7 @@ NOTE: AWS 기반 VMware Cloud는 ONTAP용 FSx의 다중 AZ 및 단일 AZ 구축�
 
 이 섹션에서는 고속 접속 아키텍처와 추가 호스트 추가 없이 SDDC 클러스터의 스토리지를 확장하는 솔루션을 구축하는 데 필요한 단계에 대해 설명합니다.
 
-image:fsx-nfs-image1.png[""]
+image::fsx-nfs-image1.png[FSx NFS 이미지 1]
 
 고급 배포 단계는 다음과 같습니다.
 

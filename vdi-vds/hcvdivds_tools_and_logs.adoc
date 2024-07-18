@@ -22,13 +22,13 @@ summary: 이 페이지에서는 DCConfig Tool, TestVdc Tools 및 로그 파일�
 
 DCCconfig 도구는 사이트를 추가하기 위해 다음과 같은 하이퍼바이저 옵션을 지원합니다.
 
-image:hcvdivds_image16.png[""]
+image::hcvdivds_image16.png[hcvdivds 이미지16]
 
-image:hcvdivds_image17.png[""]
+image::hcvdivds_image17.png[hcvdivds 이미지17]
 
 공유 데이터에 대한 작업 영역별 드라이브 문자 매핑은 GPO를 사용하여 처리할 수 있습니다. Professional Services 또는 지원 팀은 고급 탭을 사용하여 Active Directory OU 이름, FSLogix 배포를 설정하거나 해제하는 옵션, 다양한 시간 초과 값 등의 설정을 사용자 지정할 수 있습니다.
 
-image:hcvdivds_image18.png[""]
+image::hcvdivds_image18.png[hcvdivds 이미지18]
 
 
 
@@ -41,15 +41,17 @@ Command Center 및 필요한 역할을 시작하려면 을 참조하십시오 li
 * 작업 영역의 SMB 경로를 변경합니다.
 
 
-image:hcvdivds_image19.png[""]
+image::hcvdivds_image19.png[hcvdivds 이미지19]
 
 * 컬렉션 프로비저닝을 위해 사이트를 변경합니다.
 
 
-image:hcvdivds_image20.png[""]
+image::hcvdivds_image20.png[hcvdivds 이미지20]
 
 
 
 == 로그 파일
 
-image:hcvdivds_image21.png[""]link:https://docs.netapp.com/us-en/virtual-desktop-service/Troubleshooting.reviewing_vds_logs.html["자동화 로그"] 자세한 내용은 확인하십시오.
+image::hcvdivds_image21.png[hcvdivds 이미지21]
+
+link:https://docs.netapp.com/us-en/virtual-desktop-service/Troubleshooting.reviewing_vds_logs.html["자동화 로그"]자세한 내용은 확인하십시오.

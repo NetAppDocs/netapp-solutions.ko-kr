@@ -152,4 +152,4 @@ NOTE: 스토리지 계획 및 사이징과 필요한 호스트 수에 대해서�
 
 개략적인 관점에서 볼 때 이 아키텍처(아래 그림에 표시)에서는 NetApp Cloud Volumes ONTAP, Cloud Volumes Service for Google Cloud 및 Azure NetApp Files를 추가 게스트 스토리지 옵션으로 사용하여 여러 클라우드 공급자 간에 하이브리드 멀티 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다.
 
-image:ehc-architecture.png["엔터프라이즈 하이브리드 클라우드 아키텍처"]
+image::ehc-architecture.png[엔터프라이즈 하이브리드 클라우드 아키텍처]

@@ -46,4 +46,4 @@ video::e9a07d79-42a1-4480-86be-b01200fa62f5[panopto]
 
 === OpenShift Container 워크로드를 위한 데이터 보호 및 마이그레이션 솔루션
 
-image:rhhc-rosa-with-fsxn.png[""]
+image::rhhc-rosa-with-fsxn.png[rhc ROSA와 fsxn]

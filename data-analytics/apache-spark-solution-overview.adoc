@@ -74,7 +74,7 @@ NetApp은 다음과 같은 방법으로 Spark 경험을 개선할 수 있습니�
 * 더 나은 데이터 수집 성능:
 
 
-image:apache-spark-image1.png["대체 Apache Spark 구성"]
+image::apache-spark-image1.png[대체 Apache Spark 구성]
 
 예를 들어, 금융 및 의료 부문에서 데이터를 한 위치에서 다른 위치로 이동하는 것은 쉬운 일이 아닌 법적 의무를 준수해야 합니다. 이 시나리오에서는 NetApp NFS 직접 액세스가 원래의 위치에서 재무 및 의료 데이터를 분석합니다. 또 다른 주요 이점은 NetApp NFS 직접 액세스를 통해 기본 Hadoop 명령을 사용하여 Hadoop 데이터를 간편하게 보호하고 NetApp의 강력한 데이터 관리 포트폴리오를 통해 데이터 보호 워크플로우를 구축할 수 있다는 것입니다.
 
@@ -109,7 +109,7 @@ NetApp AFF 스토리지 컨트롤러에서 Hadoop 스토리지 계층화를 검�
 
 다음 그림은 Hadoop SSD를 위한 NetApp 솔루션의 성능을 보여줍니다.
 
-image:apache-spark-image2.png["1TB의 데이터를 정렬할 시간입니다."]
+image::apache-spark-image2.png[1TB의 데이터를 정렬할 시간입니다.]
 
 * 기본 NL-SAS 구성에는 8개의 컴퓨팅 노드와 96개의 NL-SAS 드라이브가 사용되었습니다. 이 구성에서는 4분 38초 내에 1TB의 데이터가 생성되었습니다.  을 참조하십시오 https://www.netapp.com/pdf.html?item=/media/16462-tr-3969.pdf["TR-3969 Hadoop용 NetApp E-Series 솔루션"^] 클러스터 및 스토리지 구성에 대한 자세한 내용은 를 참조하십시오.
 * TeraGen을 사용하면 SSD 구성에서 NL-SAS 구성보다 1TB의 데이터가 15.66x 더 빠르게 생성됩니다. 또한 SSD 구성에서는 컴퓨팅 노드 수의 절반과 디스크 드라이브 수의 절반을 사용했습니다(총 24개의 SSD 드라이브). 작업 완료 시간을 기준으로 할 때 NL-SAS 구성의 속도는 약 2배였습니다.

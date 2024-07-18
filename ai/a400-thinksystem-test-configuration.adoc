@@ -50,7 +50,7 @@ ImageNet은 자주 사용되는 이미지 데이터 세트입니다. 총 144GB �
 
 다음 그림은 테스트된 구성의 네트워크 토폴로지를 나타낸 것입니다.
 
-image:a400-thinksystem-image7.png["이 그래픽은 컴퓨팅 계층, Lenovo ThinkSystem SR670 V2, 네트워크 계층, Lenovo 이더넷 스위치, 스토리지 계층, NetApp AFF A400 스토리지 컨트롤러를 보여줍니다. 모든 네트워크 연결이 포함됩니다."]
+image::a400-thinksystem-image7.png[이 그래픽은 컴퓨팅 계층, Lenovo ThinkSystem SR670 V2, 네트워크 계층, Lenovo 이더넷 스위치, 스토리지 계층, NetApp AFF A400 스토리지 컨트롤러를 보여줍니다. 모든 네트워크 연결이 포함됩니다.]
 
 
 

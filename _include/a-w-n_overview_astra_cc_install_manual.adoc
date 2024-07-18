@@ -163,27 +163,27 @@ secret/astra-registry-cred created
 . 원근 표시 드롭다운에서 관리자 를 선택합니다.
 . Operators > OperatorHub 로 이동하여 Astra 를 검색합니다.
 +
-image:redhat_openshift_image45.JPG["OpenShift Operator Hub를 참조하십시오"]
+image::redhat_openshift_image45.JPG[OpenShift Operator Hub를 참조하십시오]
 
 . 'NetApp-acc-operator' 타일을 선택하고 설치 를 클릭합니다.
 +
-image:redhat_openshift_image123.jpg["ACC 운전자 타일"]
+image::redhat_openshift_image123.jpg[ACC 운전자 타일]
 
 . Install Operator(설치 작업자) 화면에서 모든 기본 매개변수를 적용하고 Install(설치)을 클릭합니다.
 +
-image:redhat_openshift_image124.jpg["ACC 운전자 세부 정보"]
+image::redhat_openshift_image124.jpg[ACC 운전자 세부 정보]
 
 . 작업자 설치가 완료될 때까지 기다립니다.
 +
-image:redhat_openshift_image125.jpg["ACC 작업자가 설치를 기다립니다"]
+image::redhat_openshift_image125.jpg[ACC 작업자가 설치를 기다립니다]
 
 . 작업자 설치가 완료되면 View Operator(작업자 보기) 로 이동합니다.
 +
-image:redhat_openshift_image126.jpg["ACC 운전자 설치가 완료되었습니다"]
+image::redhat_openshift_image126.jpg[ACC 운전자 설치가 완료되었습니다]
 
 . 그런 다음, 운영자의 Astra Control Center 타일에서 인스턴스 생성을 클릭합니다.
 +
-image:redhat_openshift_image127.jpg["ACC 인스턴스 생성"]
+image::redhat_openshift_image127.jpg[ACC 인스턴스 생성]
 
 . Create AstraControlCenter 양식 필드에 내용을 입력하고 Create를 클릭합니다.
 +
@@ -199,10 +199,10 @@ image:redhat_openshift_image127.jpg["ACC 인스턴스 생성"]
 .. 기본이 아닌 저장 클래스에 PVC를 배치하려면 보관 클래스 이름을 입력합니다.
 .. CRD 처리 기본 설정을 정의합니다.
 +
-image:redhat_openshift_image128.jpg["ACC 인스턴스 생성"]
+image::redhat_openshift_image128.jpg[ACC 인스턴스 생성]
 
 +
-image:redhat_openshift_image129.jpg["ACC 인스턴스 생성"]
+image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
 
 
 

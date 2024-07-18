@@ -22,7 +22,7 @@ summary: NetApp용 vector-database-deployment-procedure-vector 데이터베이�
 
 이 배포 섹션에서는 아래와 같이 랩 설정을 위해 Kubernetes와 함께 milvus 벡터 데이터베이스를 사용했습니다.
 
-image:Deployment_architecture.png[""]
+image::Deployment_architecture.png[구축 아키텍처]
 
 NetApp 스토리지는 클러스터에서 고객 데이터를 유지하고 클러스터 데이터를 Milvus로 유지할 수 있도록 스토리지를 제공합니다.
 

@@ -45,7 +45,7 @@ EC2 및 FSx 서비스에서 Oracle 환경을 실행하는 데 필요한 리소�
 
 아키텍처 다이어그램에 표시된 Oracle 고가용성 구성의 경우 한 지역에서 최소 4개의 가용성 영역을 활성화해야 합니다. 여러 가용성 영역을 여러 지역에 배치하여 재해 복구에 필요한 거리를 충족할 수도 있습니다.
 
-image:aws_ora_fsx_ec2_inst_01.PNG[""]
+image::aws_ora_fsx_ec2_inst_01.PNG[AWS ora FSx EC2 inst 01]
 
 
 
@@ -66,35 +66,38 @@ image:aws_ora_fsx_ec2_inst_01.PNG[""]
 
 . EC2 대시보드에서 노란색 Launch Instance 버튼을 클릭하여 EC2 인스턴스 구축 워크플로우를 시작합니다.
 +
-image:aws_ora_fsx_ec2_inst_02.PNG[""]
+image::aws_ora_fsx_ec2_inst_02.PNG[AWS ora FSx EC2 inst 02]
 
 . 1단계에서 "Red Hat Enterprise Linux 8(HVM), SSD 볼륨 유형 - AMI-0b0af3577fe5e3532(64비트 x86)/AMI-01fc429821bf1f4b4(64비트 ARM)"를 선택합니다.
 +
-image:aws_ora_fsx_ec2_inst_03.PNG[""]
+image::aws_ora_fsx_ec2_inst_03.PNG[AWS ora FSx EC2 Inst 03]
 
 . 2단계에서 Oracle 데이터베이스 작업 부하에 따라 적절한 CPU 및 메모리 할당이 있는 M5 인스턴스 유형을 선택합니다. "다음: 인스턴스 세부 정보 구성"을 클릭합니다.
 +
-image:aws_ora_fsx_ec2_inst_04.PNG[""]
+image::aws_ora_fsx_ec2_inst_04.PNG[AWS ora FSx EC2 Inst 04]
 
 . 3단계에서 인스턴스를 배치할 VPC 및 서브넷을 선택하고 공용 IP 할당을 활성화합니다. "다음: 스토리지 추가"를 클릭합니다.
 +
-image:aws_ora_fsx_ec2_inst_05.PNG[""]
+image::aws_ora_fsx_ec2_inst_05.PNG[AWS ora FSx EC2 Inst 05]
 
 . 4단계에서 루트 디스크에 충분한 공간을 할당합니다. 스왑을 추가하려면 공간이 필요할 수 있습니다. 기본적으로 EC2 인스턴스는 0 스왑 공간을 할당하며, 이 공간은 Oracle 실행에 최적화되어 있지 않습니다.
 +
-image:aws_ora_fsx_ec2_inst_06.PNG[""]
+image::aws_ora_fsx_ec2_inst_06.PNG[AWS ora FSx EC2 Inst 06]
 
 . 5단계에서 필요한 경우 인스턴스 식별용 태그를 추가합니다.
 +
-image:aws_ora_fsx_ec2_inst_07.PNG[""]
+image::aws_ora_fsx_ec2_inst_07.PNG[AWS ora FSx EC2 Inst 07]
 
 . 6단계에서 기존 보안 그룹을 선택하거나 인스턴스에 대해 원하는 인바운드 및 아웃바운드 정책을 사용하여 새 보안 그룹을 생성합니다.
 +
-image:aws_ora_fsx_ec2_inst_08.PNG[""]
+image::aws_ora_fsx_ec2_inst_08.PNG[AWS ora FSx EC2 inst 08]
 
 . 7단계에서 인스턴스 구성 요약을 검토하고 시작을 클릭하여 인스턴스 배포를 시작합니다. 인스턴스에 액세스하기 위해 키 쌍을 생성하거나 키 쌍을 선택하라는 메시지가 표시됩니다.
 +
-image:aws_ora_fsx_ec2_inst_09.PNG[""] image:aws_ora_fsx_ec2_inst_09_1.PNG[""]
+image::aws_ora_fsx_ec2_inst_09.PNG[AWS ora FSx EC2 Inst 09]
+
++
+image::aws_ora_fsx_ec2_inst_09_1.PNG[AWS ora FSx EC2 Inst 09 1]
 
 . SSH 키 쌍을 사용하여 EC2 인스턴스에 로그인합니다. 필요에 따라 키 이름과 인스턴스 IP 주소를 변경합니다.
 +
@@ -127,7 +130,7 @@ EC2 인스턴스 구축은 운영 체제에 EBS 루트 볼륨을 할당합니다
 * 백업 및 유지 관리. 자동 일일 백업을 사용하지 않도록 설정합니다. 데이터베이스 스토리지 백업은 SnapCenter 일정을 통해 실행됩니다.
 * SVM 세부 정보 페이지에서 SVM 관리 IP 주소와 프로토콜별 액세스 주소를 검색합니다. FSx 구성 자동화에 필요합니다.
 +
-image:aws_rds_custom_deploy_fsx_01.PNG[""]
+image::aws_rds_custom_deploy_fsx_01.PNG[AWS RDS 맞춤형 배포 FSx 01]
 
 
 
@@ -135,35 +138,35 @@ image:aws_rds_custom_deploy_fsx_01.PNG[""]
 
 . FSx 콘솔에서 파일 시스템 생성 을 클릭하여 FSx 프로비저닝 워크플로우를 시작합니다.
 +
-image:aws_ora_fsx_ec2_stor_01.PNG[""]
+image::aws_ora_fsx_ec2_stor_01.PNG[AWS ora FSx EC2 저장소 01]
 
 . NetApp ONTAP용 Amazon FSx 를 선택합니다. 다음 을 클릭합니다.
 +
-image:aws_ora_fsx_ec2_stor_02.PNG[""]
+image::aws_ora_fsx_ec2_stor_02.PNG[AWS ora FSx EC2 저장소 02]
 
 . Standard Create를 선택하고 File System Details에서 파일 시스템의 이름을 Multi-AZ HA로 지정합니다. 데이터베이스 워크로드에 따라 자동 또는 사용자 프로비저닝 IOPS 최대 80,000 SSD IOPS를 선택합니다. FSX 스토리지는 백엔드에서 최대 2TiB NVMe 캐싱과 함께 제공되므로 더욱 높은 측정 IOPS를 제공할 수 있습니다.
 +
-image:aws_ora_fsx_ec2_stor_03.PNG[""]
+image::aws_ora_fsx_ec2_stor_03.PNG[AWS ora FSx EC2 저장소 03]
 
 . 네트워크 및 보안 섹션에서 VPC, 보안 그룹 및 서브넷을 선택합니다. FSx 배포 전에 만들어야 합니다. FSx 클러스터(기본 또는 대기)의 역할에 따라 FSx 스토리지 노드를 적절한 영역에 배치합니다.
 +
-image:aws_ora_fsx_ec2_stor_04.PNG[""]
+image::aws_ora_fsx_ec2_stor_04.PNG[AWS ora FSx EC2 저장소 04]
 
 . 보안 및 암호화 섹션에서 기본값을 적용하고 fsxadmin 암호를 입력합니다.
 +
-image:aws_ora_fsx_ec2_stor_05.PNG[""]
+image::aws_ora_fsx_ec2_stor_05.PNG[AWS ora FSx EC2 저장소 05]
 
 . SVM 이름과 vsadmin 암호를 입력합니다.
 +
-image:aws_ora_fsx_ec2_stor_06.PNG[""]
+image::aws_ora_fsx_ec2_stor_06.PNG[AWS ora FSx EC2 저장소 06]
 
 . 볼륨 구성은 비워 둡니다. 이 시점에서는 볼륨을 생성할 필요가 없습니다.
 +
-image:aws_ora_fsx_ec2_stor_07.PNG[""]
+image::aws_ora_fsx_ec2_stor_07.PNG[AWS ora FSx EC2 저장소 07]
 
 . Summary 페이지를 검토하고 Create File System을 클릭하여 FSx 파일 시스템 프로비저닝을 완료합니다.
 +
-image:aws_ora_fsx_ec2_stor_08.PNG[""]
+image::aws_ora_fsx_ec2_stor_08.PNG[AWS ora FSx EC2 저장소 08]
 
 
 
@@ -187,7 +190,11 @@ image:aws_ora_fsx_ec2_stor_08.PNG[""]
 
 AWS FSx 콘솔에서 Oracle 데이터베이스 파일 스토리지용 볼륨 3개를 생성할 수 있습니다. 하나는 Oracle 바이너리용이고, 다른 하나는 Oracle 데이터용이고, 다른 하나는 Oracle 로그용입니다. 볼륨 이름이 올바른 식별을 위해 Oracle 호스트 이름(자동화 툴킷의 hosts 파일에 정의되어 있음)과 일치하는지 확인하십시오. 이 예에서는 EC2 인스턴스의 일반적인 IP 주소 기반 호스트 이름 대신 db1을 EC2 Oracle 호스트 이름으로 사용합니다.
 
-image:aws_ora_fsx_ec2_stor_09.PNG[""] image:aws_ora_fsx_ec2_stor_10.PNG[""] image:aws_ora_fsx_ec2_stor_11.PNG[""]
+image::aws_ora_fsx_ec2_stor_09.PNG[AWS ora FSx EC2 저장소 09]
+
+image::aws_ora_fsx_ec2_stor_10.PNG[AWS ora FSx EC2 저장소 10]
+
+image::aws_ora_fsx_ec2_stor_11.PNG[AWS ora FSx EC2 저장소 11]
 
 
 NOTE: iSCSI LUN 생성은 현재 FSx 콘솔에서 지원되지 않습니다. Oracle용 iSCSI LUN 구축의 경우 NetApp 자동화 툴킷을 통해 ONTAP용 자동화 를 사용하여 볼륨 및 LUN을 생성할 수 있습니다.
@@ -283,7 +290,7 @@ vserver peer create -vserver primary_vserver_name -peer-vserver standby_vserver_
 ----
 . 클러스터 및 SVM 발길이 올바르게 설정되었는지 확인합니다.
 +
-image:aws_ora_fsx_ec2_stor_14.PNG[""]
+image::aws_ora_fsx_ec2_stor_14.PNG[AWS ora FSx EC2 저장소 14]
 
 . 기본 FSx 클러스터의 각 소스 볼륨에 대해 스탠바이 FSx 클러스터에서 타겟 NFS 볼륨을 생성합니다. 환경에 맞게 볼륨 이름을 바꿉니다.
 +
@@ -416,16 +423,16 @@ NOTE: Oracle 바이너리를 기본 클러스터에서 대기 클러스터로 �
 
 . 자동화된 SnapCenter 설치 후 SnapCenter 서버가 설치된 Windows 호스트의 관리 사용자로 SnapCenter에 로그인합니다.
 +
-image:aws_rds_custom_deploy_snp_01.PNG[""]
+image::aws_rds_custom_deploy_snp_01.PNG[AWS RDS 맞춤형 배포 SNP 01]
 
 . 왼쪽 메뉴에서 설정, 자격 증명 및 새로 만들기 를 차례로 클릭하여 SnapCenter 플러그인 설치를 위한 EC2 사용자 자격 증명을 추가합니다.
 +
-image:aws_rds_custom_deploy_snp_02.PNG[""]
+image::aws_rds_custom_deploy_snp_02.PNG[AWS RDS 맞춤형 배포 SNP 02]
 
 . EC2 인스턴스 호스트에서 '/etc/ssh/sshd_config' 파일을 편집하여 EC2-user 암호를 재설정하고 암호 SSH 인증을 활성화합니다.
 . "Sudo 권한 사용" 확인란이 선택되어 있는지 확인합니다. 이전 단계에서 EC2-user 암호를 재설정했습니다.
 +
-image:aws_rds_custom_deploy_snp_03.PNG[""]
+image::aws_rds_custom_deploy_snp_03.PNG[AWS RDS 맞춤형 배포 SNP 03]
 
 . 이름 확인을 위해 SnapCenter 서버 이름과 IP 주소를 EC2 인스턴스 호스트 파일에 추가합니다.
 +
@@ -445,31 +452,31 @@ image:aws_rds_custom_deploy_snp_03.PNG[""]
 ----
 . 왼쪽 메뉴에서 호스트 > 관리 호스트 를 선택한 다음 추가 를 클릭하여 EC2 인스턴스 호스트를 SnapCenter에 추가합니다.
 +
-image:aws_rds_custom_deploy_snp_04.PNG[""]
+image::aws_rds_custom_deploy_snp_04.PNG[AWS RDS 맞춤형 배포 SNP 04]
 
 +
 Oracle Database를 선택하고 제출하기 전에 기타 옵션을 클릭합니다.
 
 +
-image:aws_rds_custom_deploy_snp_05.PNG[""]
+image::aws_rds_custom_deploy_snp_05.PNG[AWS RDS 맞춤형 배포 SNP 05]
 
 +
 사전 설치 검사 건너뛰기 를 선택합니다. Preinstall Checks(사전 설치 검사)를 건너뛰는지 확인한 다음 Save(저장) 후 Submit(제출)을 클릭합니다.
 
 +
-image:aws_rds_custom_deploy_snp_06.PNG[""]
+image::aws_rds_custom_deploy_snp_06.PNG[AWS RDS 맞춤형 배포 SNP 06]
 
 +
 지문 확인 메시지가 표시되면 확인 및 제출 을 클릭합니다.
 
 +
-image:aws_rds_custom_deploy_snp_07.PNG[""]
+image::aws_rds_custom_deploy_snp_07.PNG[AWS RDS 맞춤형 배포 SNP 07]
 
 +
 플러그인 구성이 성공적으로 완료되면 관리 호스트의 전체 상태가 실행 중 으로 표시됩니다.
 
 +
-image:aws_rds_custom_deploy_snp_08.PNG[""]
+image::aws_rds_custom_deploy_snp_08.PNG[AWS RDS 맞춤형 배포 SNP 08]
 
 
 
@@ -494,4 +501,4 @@ SnapCenter의 데이터베이스 백업은 사용자가 구성할 수 있으며 
 
 다음 이미지는 Oracle 데이터베이스를 백업하도록 설정된 리소스 그룹의 예입니다.
 
-image:aws_rds_custom_deploy_snp_09.PNG[""]
+image::aws_rds_custom_deploy_snp_09.PNG[AWS RDS 맞춤형 배포 SNP 09]

@@ -33,7 +33,7 @@ Swingbench SOE(Sales Order Entry) 모듈을 사용하여 OLTP 유형의 워크�
 
 우리는 8vCPU, 32G RAM, 10Gps 네트워크 대역폭을 갖춘 EC2 M5 인스턴스를 구축했습니다.
 
-image:aws_ora_fsx_ec2_inst_10.PNG[""]
+image::aws_ora_fsx_ec2_inst_10.PNG[AWS ora FSx EC2 투자 10]
 
 
 
@@ -48,7 +48,7 @@ image:aws_ora_fsx_ec2_inst_10.PNG[""]
 
 이중화를 위해 중요한 제어 파일의 복사본 2개를 보관했습니다.
 
-image:aws_ora_fsx_ec2_stor_15.PNG[""]
+image::aws_ora_fsx_ec2_stor_15.PNG[AWS ora FSx EC2 저장소 15]
 
 FSx 파일 시스템은 80,000 IOPS 용량과 2GiBps 입출력 처리량으로 구성됩니다.
 
@@ -60,7 +60,7 @@ Oracle 버전 19c와 RU 패치 19.8을 설치했습니다. 서버에서 dNFS가 
 
 이 데이터베이스는 PDB 3개가 포함된 컨테이너형 데이터베이스로 배포되었습니다. 성능 테스트에 하나의 PDB 인스턴스를 사용했습니다. 다음 그림에서는 NFS 마운트 지점의 Oracle 스토리지 사이징을 보여 줍니다.
 
-image:aws_ora_fsx_ec2_inst_11.PNG[""]
+image::aws_ora_fsx_ec2_inst_11.PNG[AWS ora FSx EC2 Inst 11]
 
 
 
@@ -72,7 +72,7 @@ Windows 호스트에 8vCPU 및 32G RAM이 있는 Swingbench 2.6(최신 버전)�
 
 다음 스크린 샷에서는 Swingbench Windows UI의 워크로드 프로필과 일반적인 트랜잭션 실행 메트릭을 보여 줍니다.
 
-image:aws_ora_fsx_ec2_swin_01.PNG[""]
+image::aws_ora_fsx_ec2_swin_01.PNG[AWS ora FSx EC2 swin 01]
 
 이 그래프에서 알 수 있듯이 테스트 실행 동안 트랜잭션 수준은 동일한 수준으로 유지되었습니다.
 
@@ -88,16 +88,18 @@ Oracle 서버 엔드에서 Oracle AWR 보고서를 구문 분석하여 사용자
 
 트랜잭션 실행 중 동시 사용자 수에 대한 사용자 트랜잭션 볼륨, 사용자 응답 시간 및 Oracle 상위 대기 이벤트를 차트로 작성하였습니다. 결과는 다음과 같습니다.
 
-image:aws_ora_fsx_ec2_swin_02.PNG[""]
+image::aws_ora_fsx_ec2_swin_02.PNG[AWS ora FSx EC2 swin 02]
 
 이러한 결과는 지속적으로 낮은 I/O 지연 시간과 사용자 응답 시간을 유지하면서 동시 사용자 수가 증가하는 사용자 트랜잭션 볼륨을 꾸준히 늘릴 수 있다는 것을 나타냅니다. 이는 Oracle 애플리케이션에 적합한 성능입니다.
 
 128명의 동시 사용자에 도달하면 I/O 지연 시간과 사용자 응답 시간이 다소 증가하기 시작했습니다. 다음 다이어그램과 같이 EC2 인스턴스가 전체 서버 용량에 거의 도달하므로 이 작업이 필요합니다.
 
-image:aws_ora_fsx_ec2_swin_03.PNG[""]
+image::aws_ora_fsx_ec2_swin_03.PNG[AWS ora FSx EC2 swin 03]
 
 마찬가지로 다음 다이어그램은 해당 시점의 사용자 트랜잭션 볼륨을 충족하는 동시에 해당 FSx IOPS 및 처리량을 보여 줍니다.
 
-image:aws_ora_fsx_ec2_swin_04.PNG[""] image:aws_ora_fsx_ec2_swin_05.PNG[""]
+image::aws_ora_fsx_ec2_swin_04.PNG[AWS ora FSx EC2 swin 04]
+
+image::aws_ora_fsx_ec2_swin_05.PNG[AWS ora FSx EC2 swin 05]
 
 Oracle 서버 EC2 인스턴스가 제한 요소가 되었을 때 IOPS 또는 처리량으로 프로비저닝된 FSx 스토리지 용량에 도달하지 않았습니다. 따라서 섹션에 나와 있는 것처럼 사용자 애플리케이션 레벨 트랜잭션 볼륨에 따라 컴퓨팅 및 스토리지의 크기를 적절하게 지정해야 합니다 link:aws_ora_fsx_ec2_factors.html["Oracle 데이터베이스 구축에 고려해야 할 요인"]

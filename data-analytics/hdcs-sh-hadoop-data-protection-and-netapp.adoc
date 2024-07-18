@@ -18,4 +18,4 @@ Hadoop DistCp는 대규모 클러스터 간 및 클러스터 간 복제에 사�
 
 NetApp NFS 직접 액세스를 통해 고객은 NFS를 Hadoop DistCp 툴의 타겟 타겟으로 설정하여 MapReduce를 통해 HDFS 소스에서 NFS 공유로 데이터를 복사할 수 있습니다. NetApp NFS 직접 액세스는 DistCp 툴을 위한 NFS 드라이버 역할을 합니다.
 
-image:hdcs-sh-image4.png[""]
+image::hdcs-sh-image4.png[hdcs sh image4 를 참조하십시오]

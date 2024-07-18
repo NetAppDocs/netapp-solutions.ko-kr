@@ -256,7 +256,7 @@ Cloud Volumes Service는 현재 LDAP 조회에서 도메인 접두사를 사용�
 
 다음 그림에서는 LDAP 특성이 Windows 서버에서 어떻게 표시되는지 보여 줍니다.
 
-image:ncvs-gc-image20.png[""]
+image::ncvs-gc-image20.png[ncvs GC 영상20]
 
 NFS 클라이언트에서 UNIX 이름을 쿼리할 수 있지만 Windows 이름은 쿼리할 수 없습니다.
 

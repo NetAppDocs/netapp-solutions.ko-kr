@@ -21,7 +21,7 @@ summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOp
 
 아래 다이어그램은 CMC MigrateOps를 사용하여 VMware에서 VMDK(Virtual Machine Disk) 데이터를 AWS로 마이그레이션하는 상위 수준 아키텍처를 보여 줍니다.
 
-image:migrate-ec2-fsxn-image01.png["FSxN 아키텍처 다이어그램을 사용하여 VM을 Amazon EC2로 마이그레이션"]
+image::migrate-ec2-fsxn-image01.png[FSxN 아키텍처 다이어그램을 사용하여 VM을 Amazon EC2로 마이그레이션]
 
 
 

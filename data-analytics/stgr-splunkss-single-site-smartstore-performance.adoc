@@ -16,11 +16,11 @@ summary: 이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartS
 [role="lead"]
 이 섹션에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. Splunk SmartStore는 웜 데이터를 원격 스토리지로 이동합니다. 이 경우 성능 검증을 위한 StorageGRID 오브젝트 스토리지가 사용됩니다.
 
-image:stgr-splunkss-image10.png[""]
+image::stgr-splunkss-image10.png[stgr splunkss 이미지10]
 
 NetApp은 핫/캐시 스토리지에 EF600을 사용하고 원격 스토리지에 StorageGRID 6060을 사용했습니다. 성능 검증을 위해 다음 아키텍처를 사용했습니다. 당사는 2개의 검색 헤드, 4개의 무거운 전달자를 사용하여 데이터를 인덱서에 전달했으며, 7개의 Splunk Event Generator(Eventgens)를 사용하여 실시간 데이터를 생성하고 18개의 인덱서(indexers)를 사용하여 데이터를 저장했습니다.
 
-image:stgr-splunkss-image11.png[""]
+image::stgr-splunkss-image11.png[stgr splunkss 이미지11]
 
 
 
@@ -57,7 +57,7 @@ image:stgr-splunkss-image11.png[""]
 
 이 이미지는 하루 만에 수집된 데이터를 보여 줍니다.
 
-image:stgr-splunkss-image12.png[""]
+image::stgr-splunkss-image12.png[stgr splunkss 이미지12]
 
 클러스터 마스터에서 다음 명령을 실행했습니다. 인덱스 이름은 eventgen-test입니다. 그런 다음 SmartStore 모니터링 콘솔 대시보드를 통해 인스턴스당 최대 및 평균 업로드 처리량과 배포 전체를 캡처했습니다.
 
@@ -140,15 +140,15 @@ rtp-cm01:~ #
 ....
 성능 매트릭스를 수집하기 위해 검색 헤드에서 다음 검색 쿼리를 실행했습니다.
 
-image:stgr-splunkss-image13.png[""]
+image::stgr-splunkss-image13.png[stgr splunkss 이미지13]
 
 클러스터 마스터에서 성능 정보를 수집했습니다. 최고 성능은 61.34GBps였습니다.
 
-image:stgr-splunkss-image14.png[""]
+image::stgr-splunkss-image14.png[stgr splunkss 이미지14]
 
 평균 성능은 약 29GBps였습니다.
 
-image:stgr-splunkss-image15.png[""]
+image::stgr-splunkss-image15.png[stgr splunkss image15 를 참조하십시오]
 
 
 
@@ -159,11 +159,11 @@ SmartStore 성능은 대량의 데이터에서 특정 패턴 및 문자열을 �
 
 NOTE: 녹색은 적중 데이터를 표시하고 주황색은 누락된 데이터를 표시합니다.
 
-image:stgr-splunkss-image16.png[""]
+image::stgr-splunkss-image16.png[stgr splunkss 이미지16]
 
 StorageGRID에서 검색을 위해 쿼리를 실행하면 StorageGRID에서 S3 검색 속도에 대한 시간이 다음 이미지에 표시됩니다.
 
-image:stgr-splunkss-image17.png[""]
+image::stgr-splunkss-image17.png[stgr splunkss 이미지17]
 
 
 
@@ -171,7 +171,7 @@ image:stgr-splunkss-image17.png[""]
 
 StorageGRID 인스턴스에는 로드 밸런서 1개와 StorageGRID 컨트롤러 3개가 있습니다. 3개 컨트롤러 모두의 CPU 활용률은 75%에서 100%입니다.
 
-image:stgr-splunkss-image18.png[""]
+image::stgr-splunkss-image18.png[stgr splunkss 이미지18]
 
 
 

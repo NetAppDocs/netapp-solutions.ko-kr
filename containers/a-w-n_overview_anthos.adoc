@@ -33,7 +33,7 @@ Anthos는 다음과 같은 기능을 제공합니다.
 * * 클라우드 인스턴스의 로깅 및 모니터링을 위해 Google에서 제공하는 Stackdriver. * 관리 서비스입니다.
 
 
-image:a-w-n_anthos_architecture.png[""]
+image::a-w-n_anthos_architecture.png[앤도스 아키텍처]
 
 
 

@@ -34,7 +34,7 @@ Red Hat OpenShift Container Platform은 온프레미스 인프라와 하이브�
 * * 보안 및 컨테이너 카탈로그 * OpenShift는 컨테이너를 격리하고 보호하기 위해 SELinux(Security-Enhanced Linux), CGroups 및 seccomp(Secure Computing Mode)와 함께 설정된 보안을 사용하여 다중 테넌시를 제공하고 유해한 코드 실행으로부터 사용자를 보호합니다. 또한 다양한 하위 시스템에 대한 TLS 인증서를 통한 암호화 및 Red Hat 인증 컨테이너(access.redhat.com/containers 액세스할 수 있습니다. 이 컨테이너는 보안 강화, 신뢰 및 보안 애플리케이션 컨테이너를 최종 사용자에게 제공하기 위해 스캔 및 등급이 정해졌습니다.
 
 
-image:redhat_openshift_image4.png[""]
+image::redhat_openshift_image4.png[RedHat OpenShift 이미지4]
 
 
 
@@ -53,11 +53,11 @@ OpenShift의 설치 관리자 프로비저닝 인프라(IPI) 배포에는 다음
 . Red Hat OpenShift를 방문하십시오 link:https://www.openshift.com["웹 사이트"^] SSO 자격 증명을 사용하여 로그인합니다.
 . Red Hat OpenShift를 배포할 환경을 선택하십시오.
 +
-image:redhat_openshift_image8.jpeg[""]
+image::redhat_openshift_image8.jpeg[RedHat OpenShift 이미지8]
 
 . 다음 화면에서 설치 관리자, 고유한 풀 암호 및 관리용 CLI 툴을 다운로드합니다.
 +
-image:redhat_openshift_image9.jpeg[""]
+image::redhat_openshift_image9.jpeg[RedHat OpenShift 이미지9]
 
 . 를 따릅니다 link:https://docs.openshift.com/container-platform/4.7/installing/index.html["설치 지침"] Red Hat이 선택한 환경에 배포할 수 있도록 제공합니다.
 

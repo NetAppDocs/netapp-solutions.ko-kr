@@ -26,7 +26,7 @@ NetApp HCI는 다음 기능을 처리합니다.
 * NetApp Cloud Services를 온프레미스로 확장하여 하이브리드 클라우드 인프라를 지원합니다. 다음 그림은 HCI 구성 요소를 보여줍니다.
 
 
-image:hcvdivds_image5.png[""]
+image::hcvdivds_image5.png[hcvdivds 이미지5]
 
 
 
@@ -45,7 +45,7 @@ NOTE: NetApp은 에 나열된 모든 컴퓨팅 서버에 연결된 스토리지�
 
 컴퓨팅 노드는 반폭, 전폭 및 2개의 랙 유닛 크기로 제공됩니다. NetApp HCI H410C 및 H610C는 확장 가능한 인텔 Skylake 프로세서를 기반으로 합니다. H615C는 확장 가능한 2세대 인텔 Cascade Lake 프로세서를 기반으로 합니다. GPU를 포함하는 두 가지 컴퓨팅 모델이 있습니다. H610C에는 NVIDIA M10 카드 2개가 포함되어 있으며 H615C에는 NVIDIA T4 카드 3개가 포함되어 있습니다.
 
-image:hcvdivds_image6.png[""]
+image::hcvdivds_image6.png[hcvdivds 이미지6]
 
 NVIDIA T4에는 실시간 광선 추적을 제공하는 데 필요한 계산 능력을 제공하는 40개의 RT 코어가 있습니다. 이제 디자이너와 엔지니어가 사용하는 동일한 서버 모델을 사용하여 실제 작업에서와 마찬가지로 표면에서 가볍게 튀어 나오는 실사적 이미지를 만들 수 있습니다. 이 RTX 가능 GPU는 초당 최대 5기가파이의 실시간 광선 추적 성능을 제공합니다. NVIDIA T4를 Quadro vDWS(Quadro Virtual Data Center Workstation) 소프트웨어와 함께 사용하면 아티스트가 위치와 상관없이 모든 장치에서 정확한 그림자, 반사 및 굴절 기능을 갖춘 실사적 설계를 만들 수 있습니다.
 
@@ -53,7 +53,7 @@ Tensor 코어를 사용하여 딥 러닝 추론 워크로드를 실행할 수 �
 
 다음 그림은 NVIDIA GPU 카드를 나열하고 이러한 카드를 비교합니다.
 
-image:hcvdivds_image7.png[""]
+image::hcvdivds_image7.png[hcvdivds 이미지7]
 
 M10 GPU는 지식 근로자 사용 사례에 가장 적합한 TCO 솔루션입니다. 하지만 가상 워크스테이션, 그래픽 성능, 실시간 대화형 렌더링, 추론 등 다양한 사용 사례에서 사용할 수 있는 GPU로 표준화가 필요한 경우 T4를 사용하면 좋습니다. T4를 사용하면 IT 부서는 동일한 GPU 리소스를 활용하여 혼합 워크로드를 실행할 수 있습니다. 예를 들어, 낮 동안에는 VDI를 실행하고 야간에는 컴퓨팅 워크로드를 실행하기 위해 리소스를 다른 용도로 재활용할 수 있습니다.
 

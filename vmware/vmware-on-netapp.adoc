@@ -41,6 +41,6 @@ NetApp는 NetApp와 VMware의 통합을 강조하는 다양한 솔루션을 제�
 
 | link:vmware-glossary.html#srm["* VMware *"]
 * 사이트 복구 *
-* 관리자 * | image:NTAP_BIG.png["너비 = 120"] | link:vmware-glossary.html#hcx["* VMware *"]
+* 관리자 * | 이미지: ntap_big.png[width=120] | link:vmware-glossary.html#hcx["* VMware *"]
 * HCX * 
 |===

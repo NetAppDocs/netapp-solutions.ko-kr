@@ -45,7 +45,7 @@ NOTE: PTR 항목을 작성하려면 Cloud Volumes Service 인스턴스 IP 주소
 
 Active Directory에서는 Cloud Volumes Service에서 생성한 SPN 항목이 다음과 같습니다.
 
-image:ncvs-gc-image6.png[""]
+image::ncvs-gc-image6.png[ncvs GC 영상6]
 
 DNS 정방향/역방향 조회 결과입니다.
 
@@ -71,7 +71,7 @@ Address:  10. xxx.0. x
 
 SMB 공유 경로에 대한 별칭을 만들려는 경우 DNS에서 CNAME 레코드로 알려진 별칭을 활용할 수 있습니다. 예를 들어 이름이 \\cvs-east-433d.cvssdemo.local이 아닌 공유에 액세스하기 위해 \\cifs"를 사용하되 Kerberos 인증을 계속 사용하려면 기존 A/AAAA 레코드를 가리키는 DNS의 CNAME과 기존 컴퓨터 계정에 추가된 추가 SPN이 Kerberos 액세스를 제공합니다.
 
-image:ncvs-gc-image7.png[""]
+image::ncvs-gc-image7.png[ncvs GC 영상7]
 
 CNAME을 추가한 후 생성되는 DNS 정방향 조회 결과입니다.
 
@@ -85,11 +85,11 @@ Aliases:  cifs.cvsdemo.local
 ....
 새 SPN을 추가한 후 생성되는 SPN 쿼리입니다.
 
-image:ncvs-gc-image8.png[""]
+image::ncvs-gc-image8.png[ncvs GC 영상8]
 
 패킷 캡처에서는 CNAME에 연결된 SPN을 사용하여 세션 설정 요청을 볼 수 있습니다.
 
-image:ncvs-gc-image9.png[""]
+image::ncvs-gc-image9.png[ncvs GC 영상9]
 
 
 
@@ -148,9 +148,9 @@ NFS 내보내기 정책 규칙은 IP 주소 또는 호스트 이름과 같은 �
 
 예를 들어, 사용자가 Cloud Volumes Service 볼륨 파일 ACL에 대한 읽기 액세스만 허용되는 경우 다음 그림과 같이 공유 ACL이 모든 권한이 있는 사용자로 설정되어 있어도 파일 및 폴더 생성에 대한 액세스가 거부됩니다.
 
-image:ncvs-gc-image10.png[""]
+image::ncvs-gc-image10.png[ncvs GC 영상10]
 
-image:ncvs-gc-image11.png[""]
+image::ncvs-gc-image11.png[ncvs GC 영상11]
 
 최상의 보안 결과를 얻으려면 다음을 수행하십시오.
 
@@ -172,7 +172,7 @@ Cloud Volumes Service에서 SMB 액세스가 가능한 볼륨을 처음 생성�
 * * 스냅샷 디렉토리를 표시합니다(CVS - 성능 및 CVS - SW 모두에서 사용 가능). * 이 옵션은 SMB 클라이언트가 SMB 공유의 스냅샷 디렉토리에 액세스할 수 있는지 여부를 제어합니다('\\server\share\~snapshot' 및/또는 Previous Versions 탭). 기본 설정은 선택되지 않습니다. 즉, 볼륨이 기본적으로 `~snapshot' 디렉토리에 대한 액세스를 숨기거나 허용하지 않으며 볼륨의 이전 버전 탭에 스냅샷 복사본이 나타나지 않습니다.
 
 
-image:ncvs-gc-image12.png[""]
+image::ncvs-gc-image12.png[ncvs GC 영상12]
 
 보안 상의 이유, 성능상의 이유(AV 스캔에서 이러한 폴더 숨기기) 또는 기본 설정을 위해 최종 사용자로부터 스냅샷 복사본을 숨기는 것이 좋습니다. Cloud Volumes Service 스냅샷은 읽기 전용이므로 이러한 스냅샷이 표시되는 경우에도 최종 사용자는 스냅샷 디렉토리의 파일을 삭제하거나 수정할 수 없습니다. 스냅샷 복사본이 생성된 시점의 파일 또는 폴더에 대한 파일 권한이 적용됩니다. 파일 또는 폴더의 사용 권한이 Snapshot 복사본 간에 변경되면 변경 내용이 Snapshot 디렉토리의 파일 또는 폴더에도 적용됩니다. 사용자 및 그룹은 권한에 따라 이러한 파일 또는 폴더에 액세스할 수 있습니다. 스냅샷 디렉토리에서 파일을 삭제하거나 수정할 수는 없지만 스냅샷 디렉토리에서 파일 또는 폴더를 복사할 수는 있습니다.
 
@@ -202,11 +202,11 @@ Cloud Volumes Service SMB 서버는 일부 도메인 사용자 및 그룹에 액
 
 사용자를 보안 권한 사용자 에 추가하면 사용자에게 SeSecurityPrivilege 가 부여되며, 이 권한은 와 같은 일부 응용 프로그램 사용 사례에 유용합니다 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/add-sesecurityprivilege-user-account-task.html["SMB 공유의 SQL Server"^].
 
-image:ncvs-gc-image13.png[""]
+image::ncvs-gc-image13.png[ncvs GC 영상13]
 
 적절한 권한이 있는 MMC를 통해 Cloud Volumes Service 로컬 그룹 구성원 자격을 볼 수 있습니다. 다음 그림에서는 Cloud Volumes Service 콘솔을 사용하여 추가된 사용자를 보여 줍니다.
 
-image:ncvs-gc-image14.png[""]
+image::ncvs-gc-image14.png[ncvs GC 영상14]
 
 다음 표에서는 기본 BUILTIN 그룹 목록과 기본적으로 추가되는 사용자/그룹을 보여 줍니다.
 
@@ -232,9 +232,9 @@ image:ncvs-gc-image14.png[""]
 
 MMC 창에서 로컬 사용자 및 그룹(및 그룹 구성원)을 볼 수 있지만 개체를 추가 또는 삭제하거나 이 콘솔에서 그룹 구성원을 변경할 수는 없습니다. 기본적으로 도메인 관리자 그룹 및 관리자만 Cloud Volumes Service의 BUILTIN\Administrators 그룹에 추가됩니다. 현재 수정할 수 없습니다.
 
-image:ncvs-gc-image15.png[""]
+image::ncvs-gc-image15.png[ncvs GC 영상15]
 
-image:ncvs-gc-image16.png[""]
+image::ncvs-gc-image16.png[ncvs GC 영상16]
 
 
 
@@ -250,9 +250,9 @@ SMB 서버에 연결하려면 컴퓨터 관리를 열고 컴퓨터 관리를 마
 
 지역당 하나의 Active Directory 연결만 허용됩니다.
 
-image:ncvs-gc-image17.png[""]
+image::ncvs-gc-image17.png[ncvs GC 영상17]
 
-image:ncvs-gc-image18.png[""]
+image::ncvs-gc-image18.png[ncvs GC 영상18]
 
 다음 표에는 MMC에서 지원/지원되지 않는 기능 목록이 나와 있습니다.
 

@@ -55,7 +55,7 @@ summary: '이 아키텍처에서 초점은 AI 또는 머신 러닝(ML) 분산 �
 
 여기에 언급된 모든 요소에 대한 링크는 에 나와 있습니다 link:runai-ld_additional_information.html["추가 정보"] 섹션을 참조하십시오.
 
-image:runai-ld_image2.png[""]
+image::runai-ld_image2.png[runai ld 이미지2]
 
 
 

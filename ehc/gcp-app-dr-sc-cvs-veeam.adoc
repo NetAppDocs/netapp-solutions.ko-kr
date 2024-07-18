@@ -30,7 +30,7 @@ SQL VM의 애플리케이션 정합성이 보장되는 복제 및 RTO를 줄이�
 
 이 문서에서는 NetApp SnapMirror, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
 
-image:dr-cvs-gcve-veeam-image1.png["애플리케이션 VM 복제 아키텍처"]
+image::dr-cvs-gcve-veeam-image1.png[애플리케이션 VM 복제 아키텍처]
 
 
 
@@ -80,7 +80,7 @@ NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에
 ====
 첫 번째 단계는 Cloud Volumes ONTAP Google Cloud(link:gcp-guest.html["CVO"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
 
-image:dr-cvo-gcve-image2.png[""]
+image::dr-cvo-gcve-image2.png[DR cvo gcve image2]
 
 SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조하십시오 link:aws-guest-dr-solution-overview.html#config-snapmirror["SnapCenter를 사용하여 복제를 설정합니다"]
 

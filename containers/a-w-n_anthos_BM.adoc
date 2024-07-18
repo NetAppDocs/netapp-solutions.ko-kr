@@ -113,9 +113,9 @@ Anthos-on-bare-metal 노드는 고객이 선택한 여러 가지 Linux 배포판
 |===
 NetApp과 WWT(World Wide Technology)의 파트너 팀에서 실시한 Anthos Ready 플랫폼 검증 중에 랩 환경은 다음 다이어그램을 기반으로 구축되었으며, 이를 통해 각 서버 유형, 운영 체제, 네트워크 장치의 기능을 테스트할 수 있었습니다. 및 스토리지 시스템을 구축할 수 있습니다.
 
-image:a-w-n_anthos_baremetal_validation.png["Anthos 베어메탈 물리적 하드웨어 다이어그램"]
+image::a-w-n_anthos_baremetal_validation.png[Anthos 베어메탈 물리적 하드웨어 다이어그램]
 
-image:a-w-n_anthos_baremetal_logical_topology.png["Anthos 베어메탈 논리적 네트워크 다이어그램"]
+image::a-w-n_anthos_baremetal_logical_topology.png[Anthos 베어메탈 논리적 네트워크 다이어그램]
 
 
 NOTE: 이 멀티 OS 환경은 Anthos-on-bare-metal 솔루션의 지원되는 OS 버전과의 상호 운용성을 보여줍니다. 우리는 고객이 구축을 위해 하나 또는 일부 운영 체제를 표준화할 것으로 예상하고 있습니다.

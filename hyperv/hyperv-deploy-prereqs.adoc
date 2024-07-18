@@ -194,7 +194,7 @@ Get-IscsiTarget | Connect-IscsiTarget -IsPersistent $true -IsMultipathEnabled $t
 New-Cluster -Name <cluster_name> -Node <hostnames> -NoStorage -StaticAddress <cluster_ip_address>
 ----
 +
-image:hyperv-deploy-image01.png["클러스터 관리 인터페이스를 보여 주는 이미지"]
+image::hyperv-deploy-image01.png[클러스터 관리 인터페이스를 보여 주는 이미지]
 
 . 실시간 마이그레이션에 적합한 클러스터 네트워크를 선택합니다.
 . CSV 네트워크를 지정합니다.
@@ -213,7 +213,7 @@ start-ClusterGroup "Available Storage"| Move-ClusterGroup -Node $env:COMPUTERNAM
 ----
 .. Failover Cluster Manager에서 를 선택합니다 `Configure Cluster Quorum Settings`.
 +
-image:hyperv-deploy-image02.png["클러스터 쿼럼 구성 설정 이미지"]
+image::hyperv-deploy-image02.png[클러스터 쿼럼 구성 설정 이미지]
 
 .. 시작 페이지에서 다음 을 클릭합니다.
 .. quorum witness를 선택하고 Next를 클릭합니다.

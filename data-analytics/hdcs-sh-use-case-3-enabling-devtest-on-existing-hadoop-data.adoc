@@ -46,4 +46,4 @@ NetApp System Manager 또는 스토리지 관리 프롬프트 내의 Snapshot �
 
 이 이미지는 DevTest용 Hadoop 클러스터를 보여 줍니다.
 
-image:hdcs-sh-image11.png[""]
+image::hdcs-sh-image11.png[hdcs sh image11 을 참조하십시오]

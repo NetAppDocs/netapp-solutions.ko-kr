@@ -22,7 +22,7 @@ summary: NVIDIA DGX 시스템이 지원되는 NetApp AIPod - 아키텍처
 
 이 참조 아키텍처는 컴퓨팅 노드 간의 400GB/s InfiniBand(IB) 연결을 통해 컴퓨팅 클러스터 인터커넥트 및 스토리지 액세스를 위해 별도의 패브릭을 활용합니다. 아래의 그림은 DGX H100 시스템이 장착된 NetApp AIPod의 전반적인 솔루션 토폴로지를 보여줍니다.
 
-_NetApp AIPOD 솔루션 토폴로지 _ image:aipod_nv_a900topo.png[""]
+_NetApp AIPOD 솔루션 토폴로지_이미지::aipod_NV_a900topo.png[]
 
 
 
@@ -52,7 +52,7 @@ _NetApp AIPOD 솔루션 토폴로지 _ image:aipod_nv_a900topo.png[""]
 
 관리 SVM에는 단일 LIF만 필요하며, 각 컨트롤러에 구성된 2포트 인터페이스 그룹에 호스팅됩니다. 다른 FlexGroup 볼륨은 관리 SVM에 프로비저닝되어 클러스터 노드 이미지, 시스템 모니터링 내역 데이터, 최종 사용자 홈 디렉토리 같은 클러스터 관리 아티팩트를 저장합니다. 아래 그림은 스토리지 시스템의 논리적 구성을 보여 줍니다.
 
-_NetApp A900 스토리지 클러스터 논리적 구성 _ image:aipod_nv_A900logical.png[""]
+_NetApp A900 스토리지 클러스터 논리적 구성_이미지::aipod_NV_A900logical.png[]
 
 
 

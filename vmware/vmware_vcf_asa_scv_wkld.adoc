@@ -57,7 +57,7 @@ iSCSI VMFS 데이터 저장소를 보조 스토리지로 구성하는 방법에 
 
 TIP: SCV를 사용하여 수행된 백업을 2차 스토리지로 복제할 뿐만 아니라, VM용 NetApp BlueXP 백업 및 복구를 사용하여 3대 업계 선두 클라우드 공급자 중 하나의 오브젝트 스토리지로 오프사이트 데이터 복사본을 생성할 수 있습니다. 자세한 내용은 솔루션을 참조하십시오 link:../ehc/bxp-scv-hybrid-solution.html["VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호"].
 
-image:vmware-vcf-asa-image108.png["3-2-1 백업 전략"]
+image::vmware-vcf-asa-image108.png[3-2-1 백업 전략]
 
 
 
@@ -81,14 +81,14 @@ vCenter 클라이언트에서 다음 단계를 완료하여 SCV를 VI 워크로�
 . NetApp Support 사이트의 다운로드 영역에서 SCV 배포를 위한 OVA 파일을 다운로드합니다 link:https://mysupport.netapp.com/site/products/all/details/scv/downloads-tab["* 여기 *"].
 . 관리 도메인 vCenter Client에서 * Deploy OVF Template... * 을 선택합니다.
 +
-image:vmware-vcf-asa-image46.png["OVF 템플릿 배포..."]
+image::vmware-vcf-asa-image46.png[OVF 템플릿 배포...]
 
 +
 {nbsp}
 
 . Deploy OVF Template * 마법사에서 * Local file * 라디오 버튼을 클릭한 다음 이전에 다운로드한 OVF 템플릿을 업로드하도록 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image47.png["OVF template 를 선택합니다"]
+image::vmware-vcf-asa-image47.png[OVF template 를 선택합니다]
 
 +
 {nbsp}
@@ -98,14 +98,14 @@ image:vmware-vcf-asa-image47.png["OVF template 를 선택합니다"]
 . 검토 세부 정보 * 페이지에서 OVF 템플릿에 관한 정보를 검토하고 * 라이센스 계약 * 페이지의 라이센스 조건에 동의합니다.
 . Select storage * 페이지에서 VM이 설치될 데이터 저장소를 선택하고 * 가상 디스크 형식 * 및 * VM Storage Policy * 를 선택합니다. 이 솔루션에서 VM은 이전에 이 설명서의 별도의 섹션에 구축된 것처럼 ONTAP 스토리지 시스템에 있는 iSCSI VMFS 데이터 저장소에 설치됩니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image48.png["OVF template 를 선택합니다"]
+image::vmware-vcf-asa-image48.png[OVF template 를 선택합니다]
 
 +
 {nbsp}
 
 . Select network * 페이지에서 워크로드 도메인 vCenter 어플라이언스 및 기본 및 보조 ONTAP 스토리지 시스템과 통신할 수 있는 관리 네트워크를 선택합니다.
 +
-image:vmware-vcf-asa-image49.png["관리 네트워크를 선택합니다"]
+image::vmware-vcf-asa-image49.png[관리 네트워크를 선택합니다]
 
 +
 {nbsp}
@@ -121,13 +121,13 @@ image:vmware-vcf-asa-image49.png["관리 네트워크를 선택합니다"]
 계속하려면 * 다음 * 을 클릭하십시오.
 
 +
-image:vmware-vcf-asa-image50.png["관리 네트워크를 선택합니다"]
+image::vmware-vcf-asa-image50.png[관리 네트워크를 선택합니다]
 
 +
-image:vmware-vcf-asa-image51.png["관리 네트워크를 선택합니다"]
+image::vmware-vcf-asa-image51.png[관리 네트워크를 선택합니다]
 
 +
-image:vmware-vcf-asa-image52.png["관리 네트워크를 선택합니다"]
+image::vmware-vcf-asa-image52.png[관리 네트워크를 선택합니다]
 
 +
 {nbsp}
@@ -145,28 +145,28 @@ SnapCenter 플러그인이 설치되면 다음 단계를 완료하여 SCV에 스
 
 . vSphere Client의 기본 메뉴에서 SCV에 액세스할 수 있습니다.
 +
-image:vmware-vcf-asa-image53.png["SnapCenter 플러그인을 엽니다"]
+image::vmware-vcf-asa-image53.png[SnapCenter 플러그인을 엽니다]
 
 +
 {nbsp}
 
 . SCV UI 인터페이스 상단에서 보호할 vSphere 클러스터와 일치하는 올바른 SCV 인스턴스를 선택합니다.
 +
-image:vmware-vcf-asa-image54.png["올바른 인스턴스를 선택하십시오"]
+image::vmware-vcf-asa-image54.png[올바른 인스턴스를 선택하십시오]
 
 +
 {nbsp}
 
 . 왼쪽 메뉴에서 * Storage Systems * 로 이동한 후 * Add * 를 클릭하여 시작합니다.
 +
-image:vmware-vcf-asa-image55.png["새 스토리지 시스템을 추가합니다"]
+image::vmware-vcf-asa-image55.png[새 스토리지 시스템을 추가합니다]
 
 +
 {nbsp}
 
 . 스토리지 시스템 추가 * 양식에서 추가할 ONTAP 스토리지 시스템의 IP 주소와 자격 증명을 입력하고 * 추가 * 를 클릭하여 작업을 완료합니다.
 +
-image:vmware-vcf-asa-image56.png["스토리지 시스템 자격 증명을 제공합니다"]
+image::vmware-vcf-asa-image56.png[스토리지 시스템 자격 증명을 제공합니다]
 
 +
 {nbsp}
@@ -184,7 +184,7 @@ SCV 백업 정책 생성에 대한 자세한 내용은 을 참조하십시오 li
 
 . 왼쪽 메뉴에서 * Policies * 를 선택하고 * Create * 를 클릭하여 시작합니다.
 +
-image:vmware-vcf-asa-image57.png["새 정책을 생성합니다"]
+image::vmware-vcf-asa-image57.png[새 정책을 생성합니다]
 
 +
 {nbsp}
@@ -204,7 +204,7 @@ TIP: SnapMirror 및 SnapVault 복제는 모두 ONTAP SnapMirror 기술을 사용
 추가 고급 옵션을 선택하고 * 추가 * 를 클릭하여 정책을 생성합니다.
 
 +
-image:vmware-vcf-asa-image58.png["정책 세부 정보를 입력합니다"]
+image::vmware-vcf-asa-image58.png[정책 세부 정보를 입력합니다]
 
 
 
@@ -218,7 +218,7 @@ SCV 리소스 그룹 생성에 대한 자세한 내용은 을 참조하십시오
 
 . 왼쪽 메뉴에서 * Resource Groups * 를 선택하고 * Create * 를 클릭하여 시작합니다.
 +
-image:vmware-vcf-asa-image59.png["새 리소스 그룹을 생성합니다"]
+image::vmware-vcf-asa-image59.png[새 리소스 그룹을 생성합니다]
 
 +
 {nbsp}
@@ -230,49 +230,49 @@ image:vmware-vcf-asa-image59.png["새 리소스 그룹을 생성합니다"]
 TIP: 특정 VM만 선택한 경우에도 전체 데이터 저장소가 항상 백업됩니다. 이는 ONTAP가 데이터 저장소를 호스팅하는 볼륨의 스냅샷을 생성하기 때문입니다. 그러나 백업을 위해 특정 VM만 선택하면 해당 VM에만 복원할 수 있는 기능이 제한됩니다.
 
 +
-image:vmware-vcf-asa-image60.png["백업할 리소스를 선택합니다"]
+image::vmware-vcf-asa-image60.png[백업할 리소스를 선택합니다]
 
 +
 {nbsp}
 
 . 스패닝 디스크 * 페이지에서 여러 데이터 저장소에 걸쳐 있는 VMDK가 있는 VM을 처리하는 방법에 대한 옵션을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image61.png["스패닝 데이터 저장소 옵션을 선택합니다"]
+image::vmware-vcf-asa-image61.png[스패닝 데이터 저장소 옵션을 선택합니다]
 
 +
 {nbsp}
 
 . Policies * 페이지에서 이전에 만든 정책이나 이 리소스 그룹에 사용할 여러 정책을 선택합니다.  계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image62.png["정책을 선택합니다"]
+image::vmware-vcf-asa-image62.png[정책을 선택합니다]
 
 +
 {nbsp}
 
 . Schedules * 페이지에서 반복 및 시간을 구성하여 백업을 실행할 시간을 설정합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image63.png["스케줄 을 선택합니다 "]
+image::vmware-vcf-asa-image63.png[스케줄 을 선택합니다]
 
 +
 {nbsp}
 
 . 마지막으로 * 요약 * 을 검토하고 * 마침 * 을 클릭하여 리소스 그룹을 생성합니다.
 +
-image:vmware-vcf-asa-image64.png["요약을 검토하고 자원 그룹을 생성합니다 "]
+image::vmware-vcf-asa-image64.png[요약을 검토하고 자원 그룹을 생성합니다]
 
 +
 {nbsp}
 
 . 리소스 그룹이 생성된 상태에서 * 지금 실행 * 버튼을 클릭하여 첫 번째 백업을 실행합니다.
 +
-image:vmware-vcf-asa-image65.png["요약을 검토하고 자원 그룹을 생성합니다"]
+image::vmware-vcf-asa-image65.png[요약을 검토하고 자원 그룹을 생성합니다]
 
 +
 {nbsp}
 
 . 대시보드 * 로 이동하고 * 최근 작업 활동 * 에서 * 작업 ID * 옆의 번호를 클릭하여 작업 모니터를 열고 실행 중인 작업의 진행 상황을 확인합니다.
 +
-image:vmware-vcf-asa-image66.png["백업 작업 진행률을 봅니다"]
+image::vmware-vcf-asa-image66.png[백업 작업 진행률을 봅니다]
 
 
 
@@ -302,21 +302,21 @@ SCV를 사용하여 VM을 복원하려면 다음 단계를 완료합니다.
 
 . vSphere 클라이언트에서 복구할 VM으로 이동하여 마우스 오른쪽 버튼을 클릭하고 * SnapCenter Plug-in for VMware vSphere * 로 이동합니다.  하위 메뉴에서 * Restore * 를 선택합니다.
 +
-image:vmware-vcf-asa-image67.png["VM을 복원하려면 선택합니다"]
+image::vmware-vcf-asa-image67.png[VM을 복원하려면 선택합니다]
 
 +
 
 TIP: 또는 인벤토리에서 데이터 저장소로 이동한 다음 * 구성 * 탭에서 * SnapCenter Plug-in for VMware vSphere > Backups * 로 이동하는 방법도 있습니다. 선택한 백업에서 복원할 VM을 선택합니다.
 
 +
-image:vmware-vcf-asa-image68.png["데이터 저장소에서 백업을 탐색합니다"]
+image::vmware-vcf-asa-image68.png[데이터 저장소에서 백업을 탐색합니다]
 
 +
 {nbsp}
 
 . Restore * 마법사에서 사용할 백업을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image69.png["사용할 백업을 선택합니다"]
+image::vmware-vcf-asa-image69.png[사용할 백업을 선택합니다]
 
 +
 {nbsp}
@@ -333,7 +333,7 @@ image:vmware-vcf-asa-image69.png["사용할 백업을 선택합니다"]
 *** * 복원 후 VM 이름 *
 *** * 데이터 저장소를 선택하십시오. *
 +
-image:vmware-vcf-asa-image70.png["복구 범위 옵션을 선택합니다"]
+image::vmware-vcf-asa-image70.png[복구 범위 옵션을 선택합니다]
 
 +
 {nbsp}
@@ -347,21 +347,21 @@ image:vmware-vcf-asa-image70.png["복구 범위 옵션을 선택합니다"]
 
 . 위치 선택 * 페이지에서 기본 또는 보조 ONTAP 스토리지 시스템에서 VM을 복원하도록 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image71.png["저장 위치를 선택합니다"]
+image::vmware-vcf-asa-image71.png[저장 위치를 선택합니다]
 
 +
 {nbsp}
 
 . 마지막으로 * Summary * 를 검토하고 * Finish * 를 클릭하여 복원 작업을 시작합니다.
 +
-image:vmware-vcf-asa-image72.png["마침 을 클릭하여 복원 작업을 시작합니다"]
+image::vmware-vcf-asa-image72.png[마침 을 클릭하여 복원 작업을 시작합니다]
 
 +
 {nbsp}
 
 . 복구 작업 진행률은 vSphere Client의 * Recent Tasks * 창과 SCV의 작업 모니터에서 모니터링할 수 있습니다.
 +
-image:vmware-vcf-asa-image73.png["복원 작업을 모니터링합니다"]
+image::vmware-vcf-asa-image73.png[복원 작업을 모니터링합니다]
 
 
 
@@ -375,21 +375,21 @@ ONTAP 툴을 사용하면 VMDK를 원래 위치로 전체 복구하거나 VMDK�
 
 . vSphere Client에서 VM으로 이동한 후 * Actions * 메뉴에서 * SnapCenter Plug-in for VMware vSphere > Attach Virtual Disk(s) * 를 선택합니다.
 +
-image:vmware-vcf-asa-image80.png["Attach Virtual Disks(s)(가상 디스크 연결) 를 선택합니다"]
+image::vmware-vcf-asa-image80.png[Attach Virtual Disks(s)(가상 디스크 연결) 를 선택합니다]
 
 +
 {nbsp}
 
 . 가상 디스크 연결 * 마법사에서 사용할 백업 인스턴스와 연결할 특정 VMDK를 선택합니다.
 +
-image:vmware-vcf-asa-image81.png["Attach virtual disk settings 를 선택합니다"]
+image::vmware-vcf-asa-image81.png[Attach virtual disk settings 를 선택합니다]
 
 +
 
 TIP: 필터 옵션을 사용하여 백업을 찾고 운영 스토리지 시스템과 보조 스토리지 시스템 모두에서 백업을 표시할 수 있습니다.
 
 +
-image:vmware-vcf-asa-image82.png["가상 디스크 필터를 연결합니다"]
+image::vmware-vcf-asa-image82.png[가상 디스크 필터를 연결합니다]
 
 +
 {nbsp}
@@ -397,7 +397,7 @@ image:vmware-vcf-asa-image82.png["가상 디스크 필터를 연결합니다"]
 . 모든 옵션을 선택한 후 * Attach * 버튼을 클릭하여 복구 프로세스를 시작하고 VMDK를 호스트에 연결합니다.
 . 연결 절차가 완료되면 호스트 시스템의 OS에서 디스크에 액세스할 수 있습니다. 이 경우 SCV는 NTFS 파일 시스템과 디스크를 Windows SQL Server의 E: 드라이브에 연결했으며 파일 시스템의 SQL 데이터베이스 파일은 파일 탐색기를 통해 액세스할 수 있습니다.
 +
-image:vmware-vcf-asa-image83.png["Windows 파일 시스템에 액세스합니다"]
+image::vmware-vcf-asa-image83.png[Windows 파일 시스템에 액세스합니다]
 
 
 
@@ -413,20 +413,19 @@ Windows 시스템에 대한 게스트 파일 시스템 복원을 수행하려면
 
 . 첫 번째 단계는 Windows 호스트 시스템에 대한 액세스를 제공하기 위해 Run as 자격 증명을 생성하는 것입니다. vSphere Client에서 CSV 플러그인 인터페이스로 이동한 다음 주 메뉴에서 * Guest File Restore * 를 클릭합니다.
 +
-image:vmware-vcf-asa-image84.png["게스트 파일 복원을 엽니다"]
+image::vmware-vcf-asa-image84.png[게스트 파일 복원을 엽니다]
 
 +
 {nbsp}
 
 . Run as Credentials * 에서 * + * 아이콘을 클릭하여 * Run as Credentials * 창을 엽니다.
-. Windows 시스템의 자격 증명 레코드 이름, 관리자 사용자 이름 및 암호를 입력한 다음 * Select VM * 버튼을 클릭하여 복구에 사용할 프록시 VM을 선택합니다.
-image:vmware-vcf-asa-image85.png["자격 증명으로 실행 창"]
+. Windows 시스템의 자격 증명 레코드 이름, 관리자 사용자 이름 및 암호를 입력한 다음 * Select VM * 버튼을 클릭하여 복구에 사용할 프록시 VM을 선택합니다. 이미지: vmware-vcf-asa-image85.png[자격 증명 창으로 실행]
 +
 {nbsp}
 
 . 프록시 VM 페이지에서 VM의 이름을 입력하고 ESXi 호스트 또는 이름으로 검색하여 찾습니다. 선택한 후 * 저장 * 을 클릭합니다.
 +
-image:vmware-vcf-asa-image86.png["프록시 VM 페이지에서 VM을 찾습니다"]
+image::vmware-vcf-asa-image86.png[프록시 VM 페이지에서 VM을 찾습니다]
 
 +
 {nbsp}
@@ -434,21 +433,21 @@ image:vmware-vcf-asa-image86.png["프록시 VM 페이지에서 VM을 찾습니�
 . Run as Credentials * 창에서 * Save * 를 다시 클릭하여 레코드 저장을 완료합니다.
 . 그런 다음 인벤토리에서 VM으로 이동합니다. Actions * 메뉴에서 또는 VM을 마우스 오른쪽 버튼으로 클릭하여 * SnapCenter Plug-in for VMware vSphere > 게스트 파일 복원 * 을 선택합니다.
 +
-image:vmware-vcf-asa-image87.png["게스트 파일 복원 마법사를 엽니다"]
+image::vmware-vcf-asa-image87.png[게스트 파일 복원 마법사를 엽니다]
 
 +
 {nbsp}
 
 . 게스트 파일 복원 * 마법사의 * 복구 범위 * 페이지에서 복원할 백업, 특정 VMDK 및 VMDK를 복원할 위치(기본 또는 보조)를 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image88.png["게스트 파일 복구 범위"]
+image::vmware-vcf-asa-image88.png[게스트 파일 복구 범위]
 
 +
 {nbsp}
 
 . Guest Details * 페이지에서 * Guest VM * 또는 * Use Gues File Restore proxy VM * 을 복구에 사용하도록 선택합니다. 원하는 경우 여기에 이메일 알림 설정을 입력합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image:vmware-vcf-asa-image89.png["게스트 파일 세부 정보입니다"]
+image::vmware-vcf-asa-image89.png[게스트 파일 세부 정보입니다]
 
 +
 {nbsp}
@@ -456,17 +455,17 @@ image:vmware-vcf-asa-image89.png["게스트 파일 세부 정보입니다"]
 . 마지막으로 * Summary * 페이지를 검토하고 * Finish * 를 클릭하여 게스트 파일 시스템 복원 세션을 시작합니다.
 . SnapCenter 플러그인 인터페이스로 돌아가 * 게스트 파일 복원 * 으로 다시 이동하여 * 게스트 세션 모니터 * 에서 실행 중인 세션을 확인합니다. 계속하려면 * 파일 찾아보기 * 아래에 있는 아이콘을 클릭하십시오.
 +
-image:vmware-vcf-asa-image90.png["게스트 세션 모니터"]
+image::vmware-vcf-asa-image90.png[게스트 세션 모니터]
 
 +
 {nbsp}
 
 . 게스트 파일 찾아보기 * 마법사에서 복원할 폴더 또는 파일과 복원할 파일 시스템 위치를 선택합니다. 마지막으로 * 복원 * 을 클릭하여 * 복원 * 프로세스를 시작합니다.
 +
-image:vmware-vcf-asa-image91.png["게스트 파일 찾아보기 1"]
+image::vmware-vcf-asa-image91.png[게스트 파일 찾아보기 1]
 
 +
-image:vmware-vcf-asa-image92.png["게스트 파일 찾아보기 2"]
+image::vmware-vcf-asa-image92.png[게스트 파일 찾아보기 2]
 
 +
 {nbsp}

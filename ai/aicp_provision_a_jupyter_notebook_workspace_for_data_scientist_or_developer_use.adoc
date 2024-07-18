@@ -16,4 +16,4 @@ summary: NetApp를 사용한 오픈 소스 MLOps - 데이터 과학자 또는 �
 [role="lead"]
 Kubeflow는 새로운 Jupyter Notebook 서버를 신속하게 프로비저닝하여 데이터 과학자 작업 공간 역할을 할 수 있습니다. Kubeflow 컨텍스트 내의 Jupyter Notebooks에 대한 자세한 내용은 를 참조하십시오 https://www.kubeflow.org/docs/components/notebooks/["Kubeflow 공식 문서"^].
 
-image:aicp_image9.png[""]
+image::aicp_image9.png[aicp 영상9]

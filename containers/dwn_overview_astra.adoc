@@ -20,7 +20,7 @@ NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 �
 [role="normal"]
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
 
-image:redhat_openshift_image44.png[""]
+image::redhat_openshift_image44.png[RedHat OpenShift 이미지44]
 
 NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 사용하여 구축 및 구성된 Astra Trident 스토리지 오케스트레이터가 있는 {k8s_distribution_name} 클러스터에 설치할 수 있습니다.
 

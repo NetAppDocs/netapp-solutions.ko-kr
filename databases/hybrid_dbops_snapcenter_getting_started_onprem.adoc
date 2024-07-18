@@ -36,7 +36,7 @@ NetApp SnapCenter 툴은 RBAC(역할 기반 액세스 제어)를 사용하여 �
 . 설정 및 사용자 아래의 액세스 탭으로 이동하고 추가 를 클릭하여 새 사용자를 추가합니다. 새 사용자 ID는 1단계에서 Windows Active Directory에서 만든 관리자 사용자에게 연결됩니다. . 필요에 따라 사용자에게 적절한 역할을 할당합니다. 필요에 따라 admin 사용자에게 리소스를 할당합니다.
 
 
-image:snapctr_admin_users.PNG[""]
+image::snapctr_admin_users.PNG[snapctr 관리자]
 
 
 
@@ -84,7 +84,7 @@ NOTE: 클라우드 DB 서버 인스턴스에 SnapCenter 플러그인을 설치�
 
 설정 > 전역 설정 으로 이동합니다. 하이퍼바이저 설정 에서 "VM에 모든 호스트에 대한 iSCSI 직접 연결 디스크 또는 NFS가 있음"을 선택하고 업데이트 를 클릭합니다.
 
-image:snapctr_vmware_global.PNG[""]
+image::snapctr_vmware_global.PNG[snapctr VMware global입니다]
 
 
 
@@ -94,23 +94,23 @@ image:snapctr_vmware_global.PNG[""]
 . 왼쪽 메뉴에서 호스트 탭을 클릭한 다음 추가를 클릭하여 호스트 추가 워크플로우를 엽니다.
 . 호스트 유형에 Windows를 선택합니다. 호스트 이름은 호스트 이름 또는 IP 주소일 수 있습니다. 호스트 이름은 SnapCenter 호스트에서 올바른 호스트 IP 주소로 확인되어야 합니다. 2단계에서 생성한 호스트 자격 증명을 선택합니다. 설치할 플러그인 패키지로 Microsoft Windows 및 Microsoft SQL Server를 선택합니다.
 +
-image:snapctr_add_windows_host_01.PNG[""]
+image::snapctr_add_windows_host_01.PNG[snapctr Windows 호스트 01을 추가합니다]
 
 . Windows 호스트에 플러그인을 설치하면 전체 상태가 "Configure log directory"로 표시됩니다.
 +
-image:snapctr_add_windows_host_02.PNG[""]
+image::snapctr_add_windows_host_02.PNG[snapctr Windows 호스트 02를 추가합니다]
 
 . 호스트 이름을 클릭하여 SQL Server 로그 디렉토리 구성을 엽니다.
 +
-image:snapctr_add_windows_host_03.PNG[""]
+image::snapctr_add_windows_host_03.PNG[snapctr Windows 호스트 03을 추가합니다]
 
 . "로그 디렉토리 구성"을 클릭하여 "SQL Server용 플러그인 구성"을 엽니다.
 +
-image:snapctr_add_windows_host_04.PNG[""]
+image::snapctr_add_windows_host_04.PNG[snapctr Windows 호스트 04 추가]
 
 . 찾아보기 를 클릭하여 로그 디렉토리를 설정할 수 있도록 NetApp 스토리지를 검색합니다. SnapCenter는 이 로그 디렉토리를 사용하여 SQL Server 트랜잭션 로그 파일을 롤업합니다. 저장을 클릭합니다.
 +
-image:snapctr_add_windows_host_05.PNG[""]
+image::snapctr_add_windows_host_05.PNG[snapctr Windows 호스트 05를 추가합니다]
 
 +
 
@@ -118,14 +118,14 @@ NOTE: DB 호스트에 프로비저닝된 NetApp 스토리지의 경우 CVO의 6�
 
 . 로그 디렉토리가 구성된 후 Windows 호스트 플러그인 전체 상태가 실행 중 으로 변경됩니다.
 +
-image:snapctr_add_windows_host_06.PNG[""]
+image::snapctr_add_windows_host_06.PNG[snapctr Windows 호스트 06 을 추가합니다]
 
 . 데이터베이스를 관리하는 사용자 ID에 호스트를 할당하려면 설정 및 사용자 아래의 액세스 탭으로 이동하고 데이터베이스 관리 사용자 ID(호스트를 할당해야 하는 sqlldba인 경우)를 클릭한 다음 저장 을 클릭하여 호스트 리소스 할당을 완료합니다.
 +
-image:snapctr_add_windows_host_07.PNG[""]
+image::snapctr_add_windows_host_07.PNG[snapctr Windows 호스트 07을 추가합니다]
 
 +
-image:snapctr_add_windows_host_08.PNG[""]
+image::snapctr_add_windows_host_08.PNG[snapctr Windows 호스트 08을 추가합니다]
 
 
 
@@ -137,26 +137,26 @@ image:snapctr_add_windows_host_08.PNG[""]
 . 왼쪽 메뉴에서 호스트 탭을 클릭하고 추가 를 클릭하여 호스트 추가 워크플로우를 엽니다.
 . 호스트 유형으로 Linux를 선택합니다. 호스트 이름은 호스트 이름 또는 IP 주소일 수 있습니다. 그러나 SnapCenter 호스트에서 호스트 IP 주소를 수정하려면 호스트 이름을 확인해야 합니다. 2단계에서 만든 호스트 자격 증명을 선택합니다. 호스트 자격 증명에는 sudo 권한이 필요합니다. Oracle Database를 설치할 플러그인으로 선택하여 Oracle 및 Linux 호스트 플러그인을 모두 설치합니다.
 +
-image:snapctr_add_linux_host_01.PNG[""]
+image::snapctr_add_linux_host_01.PNG[snapctr 추가 Linux 호스트 01]
 
 . 기타 옵션 을 클릭하고 "설치 전 검사 건너뛰기"를 선택합니다. 사전 설치 검사를 건너뛰는 것을 확인하는 메시지가 표시됩니다. 예 를 클릭한 다음 저장 을 클릭합니다.
 +
-image:snapctr_add_linux_host_02.PNG[""]
+image::snapctr_add_linux_host_02.PNG[snapctr Linux host 02 를 추가합니다]
 
 . 제출 을 클릭하여 플러그인 설치를 시작합니다. 아래와 같이 지문을 확인하라는 메시지가 표시됩니다.
 +
-image:snapctr_add_linux_host_03.PNG[""]
+image::snapctr_add_linux_host_03.PNG[snapctr 추가 Linux 호스트 03]
 
 . SnapCenter는 호스트 검증 및 등록을 수행한 다음 Linux 호스트에 플러그인을 설치합니다. 상태가 플러그인 설치 에서 실행 중 으로 변경됩니다.
 +
-image:snapctr_add_linux_host_04.PNG[""]
+image::snapctr_add_linux_host_04.PNG[snapctr 추가 Linux 호스트 04]
 
 . 새로 추가된 호스트를 적절한 데이터베이스 관리 사용자 ID(여기서는 oradba)에 할당합니다.
 +
-image:snapctr_add_linux_host_05.PNG[""]
+image::snapctr_add_linux_host_05.PNG[snapctr Linux host 05 를 추가합니다]
 
 +
-image:snapctr_add_linux_host_06.PNG[""]
+image::snapctr_add_linux_host_06.PNG[snapctr 추가 Linux 호스트 06]
 
 
 
@@ -166,23 +166,23 @@ image:snapctr_add_linux_host_06.PNG[""]
 
 플러그인 설치가 완료되면 호스트의 데이터베이스 리소스를 즉시 검색할 수 있습니다. 왼쪽 메뉴에서 리소스 탭을 클릭합니다. 데이터베이스 플랫폼 유형에 따라 데이터베이스, 리소스 그룹 등과 같은 다양한 보기를 사용할 수 있습니다. 호스트의 리소스가 검색되지 않고 표시되지 않으면 리소스 새로 고침 탭을 클릭해야 할 수도 있습니다.
 
-image:snapctr_resources_ora.PNG[""]
+image::snapctr_resources_ora.PNG[snapctr 리소스 ora]
 
 데이터베이스가 처음 검색되면 전체 상태가 "보호되지 않음"으로 표시됩니다. 이전 스크린샷은 아직 백업 정책에 의해 보호되지 않은 Oracle 데이터베이스를 보여 줍니다.
 
 백업 구성 또는 정책을 설정하고 백업을 실행한 경우 데이터베이스의 전체 상태는 백업 상태를 "Backup Succeeded"로 표시하고 마지막 백업의 타임스탬프를 표시합니다. 다음 스크린샷은 SQL Server 사용자 데이터베이스의 백업 상태를 보여 줍니다.
 
-image:snapctr_resources_sql.PNG[""]
+image::snapctr_resources_sql.PNG[snapctr 리소스 sql]
 
 데이터베이스 액세스 자격 증명이 제대로 설정되어 있지 않으면 빨간색 잠금 단추가 데이터베이스에 액세스할 수 없음을 나타냅니다. 예를 들어, Windows 자격 증명에 데이터베이스 인스턴스에 대한 sysadmin 액세스 권한이 없는 경우 데이터베이스 자격 증명을 다시 구성하여 빨간색 잠금을 해제해야 합니다.
 
-image:snapctr_add_windows_host_09.PNG[""]
+image::snapctr_add_windows_host_09.PNG[snapctr Windows 호스트 09를 추가합니다]
 
-image:snapctr_add_windows_host_10.PNG[""]
+image::snapctr_add_windows_host_10.PNG[snapctr Windows 호스트 10을 추가합니다]
 
 Windows 수준 또는 데이터베이스 수준에서 적절한 자격 증명이 구성되면 빨간색 잠금이 사라지고 SQL Server 유형 정보가 수집 및 검토됩니다.
 
-image:snapctr_add_windows_host_11.PNG[""]
+image::snapctr_add_windows_host_11.PNG[snapctr Windows 호스트 11 추가]
 
 
 
@@ -195,13 +195,13 @@ image:snapctr_add_windows_host_11.PNG[""]
 사내 클러스터:
 
 +
-image:snapctr_cluster_replication_01.PNG[""]
+image::snapctr_cluster_replication_01.PNG[snapctr 클러스터 복제 01]
 
 +
 타겟 CVO 클러스터:
 
 +
-image:snapctr_cluster_replication_02.PNG[""]
+image::snapctr_cluster_replication_02.PNG[snapctr 클러스터 복제 02]
 
 . 인터클러스터 LIF가 구성된 경우 NetApp Cloud Manager의 끌어서 놓기를 사용하여 클러스터 피어링을 설정하고 볼륨 복제를 설정할 수 있습니다. 을 참조하십시오 link:hybrid_dbops_snapcenter_getting_started_aws.html#aws-public-cloud["시작하기 - AWS 퍼블릭 클라우드"] 를 참조하십시오.
 +
@@ -209,19 +209,19 @@ image:snapctr_cluster_replication_02.PNG[""]
 
 . ONTAP 시스템 관리자에 로그인합니다. 클러스터 > 설정 으로 이동하고 피어 클러스터 를 클릭하여 클라우드의 CVO 인스턴스로 클러스터 피어링을 설정합니다.
 +
-image:snapctr_vol_snapmirror_00.PNG[""]
+image::snapctr_vol_snapmirror_00.PNG[snapctr vol SnapMirror 00 을 참조하십시오]
 
 . 볼륨 탭으로 이동합니다. 복제할 데이터베이스 볼륨을 선택하고 보호 를 클릭합니다.
 +
-image:snapctr_vol_snapmirror_01.PNG[""]
+image::snapctr_vol_snapmirror_01.PNG[snapctr vol SnapMirror 01 을 참조하십시오]
 
 . 보호 정책을 Asynchronous로 설정합니다. 대상 클러스터와 스토리지 SVM을 선택합니다.
 +
-image:snapctr_vol_snapmirror_02.PNG[""]
+image::snapctr_vol_snapmirror_02.PNG[snapctr vol SnapMirror 02]
 
 . 볼륨이 소스와 타겟 간에 동기화되고 복제 관계가 정상 상태인지 확인합니다.
 +
-image:snapctr_vol_snapmirror_03.PNG[""]
+image::snapctr_vol_snapmirror_03.PNG[snapctr vol SnapMirror 03]
 
 
 
@@ -232,15 +232,15 @@ image:snapctr_vol_snapmirror_03.PNG[""]
 . SnapCenter에 SnapCenterAdmin 권한으로 사용자 ID를 사용하여 로그인합니다.
 . 메뉴에서 스토리지 시스템 탭을 클릭한 다음 새로 만들기를 클릭하여 복제된 타겟 데이터베이스 볼륨을 SnapCenter에 호스팅하는 CVO 스토리지 SVM을 추가합니다. 스토리지 시스템 필드에 클러스터 관리 IP를 입력하고 적절한 사용자 이름과 암호를 입력합니다.
 +
-image:snapctr_add_cvo_svm_01.PNG[""]
+image::snapctr_add_cvo_svm_01.PNG[snapctr cvo svm 01 을 추가합니다]
 
 . 추가 옵션을 클릭하여 추가 스토리지 구성 옵션을 엽니다. 플랫폼 필드에서 Cloud Volumes ONTAP 를 선택하고 보조 를 선택한 다음 저장 을 클릭합니다.
 +
-image:snapctr_add_cvo_svm_02.PNG[""]
+image::snapctr_add_cvo_svm_02.PNG[snapctr cvo svm 02 를 추가합니다]
 
 . 에 나와 있는 대로 스토리지 시스템을 SnapCenter 데이터베이스 관리 사용자 ID에 할당합니다 <<3.SnapCenter 호스트 플러그인 설치>>.
 +
-image:snapctr_add_cvo_svm_03.PNG[""]
+image::snapctr_add_cvo_svm_03.PNG[snapctr cvo svm 03 을 추가합니다]
 
 
 
@@ -256,35 +256,35 @@ image:snapctr_add_cvo_svm_03.PNG[""]
 
 . SnapCenter에 데이터베이스 관리 사용자 ID로 로그인하고 설정을 클릭한 다음 정책을 클릭합니다.
 +
-image:snapctr_ora_policy_data_01.PNG[""]
+image::snapctr_ora_policy_data_01.PNG[snapctora 정책 데이터 01]
 
 . New(새로 만들기) 를 클릭하여 새 백업 정책 생성 워크플로우를 시작하거나 수정할 기존 정책을 선택합니다.
 +
-image:snapctr_ora_policy_data_02.PNG[""]
+image::snapctr_ora_policy_data_02.PNG[snapctora 정책 데이터 02]
 
 . 백업 유형 및 스케줄 빈도를 선택합니다.
 +
-image:snapctr_ora_policy_data_03.PNG[""]
+image::snapctr_ora_policy_data_03.PNG[snapctora 정책 데이터 03]
 
 . 백업 보존 설정을 지정합니다. 이 경우 보관할 전체 데이터베이스 백업 복사본 수가 정의됩니다.
 +
-image:snapctr_ora_policy_data_04.PNG[""]
+image::snapctr_ora_policy_data_04.PNG[snapctr ora 정책 데이터 04]
 
 . 클라우드의 2차 위치에 복제할 로컬 기본 스냅샷 백업을 푸시할 2차 복제 옵션을 선택합니다.
 +
-image:snapctr_ora_policy_data_05.PNG[""]
+image::snapctr_ora_policy_data_05.PNG[snapctr ora 정책 데이터 05]
 
 . 백업 실행 전후에 실행할 선택적 스크립트를 지정합니다.
 +
-image:snapctr_ora_policy_data_06.PNG[""]
+image::snapctr_ora_policy_data_06.PNG[snapctora 정책 데이터 06]
 
 . 필요한 경우 백업 검증을 실행합니다.
 +
-image:snapctr_ora_policy_data_07.PNG[""]
+image::snapctr_ora_policy_data_07.PNG[snapctora 정책 데이터 07]
 
 . 요약.
 +
-image:snapctr_ora_policy_data_08.PNG[""]
+image::snapctr_ora_policy_data_08.PNG[snapctora 정책 데이터 08]
 
 
 
@@ -295,31 +295,31 @@ image:snapctr_ora_policy_data_08.PNG[""]
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 설정을 클릭한 다음 정책을 클릭합니다.
 . 새로 만들기 를 클릭하여 새 백업 정책 생성 워크플로우를 시작하거나 수정할 기존 정책을 선택합니다.
 +
-image:snapctr_ora_policy_log_01.PNG[""]
+image::snapctr_ora_policy_log_01.PNG[snapctr ora 정책 로그 01]
 
 . 백업 유형 및 스케줄 빈도를 선택합니다.
 +
-image:snapctr_ora_policy_log_02.PNG[""]
+image::snapctr_ora_policy_log_02.PNG[snapctr ora 정책 로그 02]
 
 . 로그 보존 기간을 설정합니다.
 +
-image:snapctr_ora_policy_log_03.PNG[""]
+image::snapctr_ora_policy_log_03.PNG[snapctr ora 정책 로그 03]
 
 . 퍼블릭 클라우드의 2차 위치에 복제
 +
-image:snapctr_ora_policy_log_04.PNG[""]
+image::snapctr_ora_policy_log_04.PNG[snapctr ora 정책 로그 04]
 
 . 로그 백업 전후에 실행할 선택적 스크립트를 지정합니다.
 +
-image:snapctr_ora_policy_log_05.PNG[""]
+image::snapctr_ora_policy_log_05.PNG[snapctr ora 정책 로그 05]
 
 . 백업 검증 스크립트를 지정합니다.
 +
-image:snapctr_ora_policy_log_06.PNG[""]
+image::snapctr_ora_policy_log_06.PNG[snapctr ora 정책 로그 06]
 
 . 요약.
 +
-image:snapctr_ora_policy_log_07.PNG[""]
+image::snapctr_ora_policy_log_07.PNG[snapctr ora 정책 로그 07]
 
 
 
@@ -329,35 +329,35 @@ image:snapctr_ora_policy_log_07.PNG[""]
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 설정을 클릭한 다음 정책을 클릭합니다.
 +
-image:snapctr_sql_policy_data_01.PNG[""]
+image::snapctr_sql_policy_data_01.PNG[snapctr SQL 정책 데이터 01]
 
 . 새로 만들기 를 클릭하여 새 백업 정책 생성 워크플로우를 시작하거나 수정할 기존 정책을 선택합니다.
 +
-image:snapctr_sql_policy_data_02.PNG[""]
+image::snapctr_sql_policy_data_02.PNG[snapctr SQL 정책 데이터 02]
 
 . 백업 옵션 및 예약 빈도를 정의합니다. 가용성 그룹으로 구성된 SQL Server의 경우 기본 백업 복제본을 설정할 수 있습니다.
 +
-image:snapctr_sql_policy_data_03.PNG[""]
+image::snapctr_sql_policy_data_03.PNG[snapctr SQL 정책 데이터 03]
 
 . 백업 보존 기간을 설정합니다.
 +
-image:snapctr_sql_policy_data_04.PNG[""]
+image::snapctr_sql_policy_data_04.PNG[snapctr SQL 정책 데이터 04]
 
 . 클라우드의 2차 위치에 백업 복사본을 복제할 수 있습니다.
 +
-image:snapctr_sql_policy_data_05.PNG[""]
+image::snapctr_sql_policy_data_05.PNG[snapctr SQL 정책 데이터 05]
 
 . 백업 작업 전후에 실행할 선택적 스크립트를 지정합니다.
 +
-image:snapctr_sql_policy_data_06.PNG[""]
+image::snapctr_sql_policy_data_06.PNG[snapctr SQL 정책 데이터 06]
 
 . 백업 확인을 실행할 옵션을 지정합니다.
 +
-image:snapctr_sql_policy_data_07.PNG[""]
+image::snapctr_sql_policy_data_07.PNG[snapctr SQL 정책 데이터 07]
 
 . 요약.
 +
-image:snapctr_sql_policy_data_08.PNG[""]
+image::snapctr_sql_policy_data_08.PNG[snapctr SQL 정책 데이터 08]
 
 
 
@@ -367,27 +367,27 @@ image:snapctr_sql_policy_data_08.PNG[""]
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 설정 > 정책 을 클릭한 다음 새로 만들기 를 클릭하여 새 정책 생성 워크플로를 시작합니다.
 +
-image:snapctr_sql_policy_log_01.PNG[""]
+image::snapctr_sql_policy_log_01.PNG[snapctr SQL 정책 로그 01]
 
 . 로그 백업 옵션 및 스케줄 빈도를 정의합니다. 가용성 그룹으로 구성된 SQL Server의 경우 기본 백업 복제본을 설정할 수 있습니다.
 +
-image:snapctr_sql_policy_log_02.PNG[""]
+image::snapctr_sql_policy_log_02.PNG[snapctr SQL 정책 로그 02]
 
 . SQL Server 데이터 백업 정책은 로그 백업 보존을 정의합니다. 여기서 기본값을 사용합니다.
 +
-image:snapctr_sql_policy_log_03.PNG[""]
+image::snapctr_sql_policy_log_03.PNG[snapctr SQL 정책 로그 03]
 
 . 클라우드의 2차 사이트에 로그 백업 복제를 설정합니다.
 +
-image:snapctr_sql_policy_log_04.PNG[""]
+image::snapctr_sql_policy_log_04.PNG[snapctr SQL 정책 로그 04]
 
 . 백업 작업 전후에 실행할 선택적 스크립트를 지정합니다.
 +
-image:snapctr_sql_policy_log_05.PNG[""]
+image::snapctr_sql_policy_log_05.PNG[snapctr SQL 정책 로그 05]
 
 . 요약.
 +
-image:snapctr_sql_policy_log_06.PNG[""]
+image::snapctr_sql_policy_log_06.PNG[snapctr SQL 정책 로그 06]
 
 
 
@@ -403,35 +403,35 @@ SnapCenter는 리소스 그룹을 사용하여 서버에서 호스팅되는 여�
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 리소스 탭으로 이동합니다. 보기 드롭다운 목록에서 데이터베이스 또는 리소스 그룹을 선택하여 리소스 그룹 만들기 워크플로를 시작합니다.
 +
-image:snapctr_ora_rgroup_full_01.PNG[""]
+image::snapctr_ora_rgroup_full_01.PNG[snapctr ora rgroup full 01]
 
 . 리소스 그룹의 이름과 태그를 입력합니다. 스냅샷 복사본의 명명 형식을 정의하고 구성된 경우 중복 아카이브 로그 대상을 건너뛸 수 있습니다.
 +
-image:snapctr_ora_rgroup_full_02.PNG[""]
+image::snapctr_ora_rgroup_full_02.PNG[snapctr ora rgroup full 02]
 
 . 리소스 그룹에 데이터베이스 리소스를 추가합니다.
 +
-image:snapctr_ora_rgroup_full_03.PNG[""]
+image::snapctr_ora_rgroup_full_03.PNG[snapctr ora rgroup full 03]
 
 . 드롭다운 목록에서 섹션 7에 생성된 전체 백업 정책을 선택합니다.
 +
-image:snapctr_ora_rgroup_full_04.PNG[""]
+image::snapctr_ora_rgroup_full_04.PNG[snapctr ora rgroup full 04]
 
 . (+) 기호를 클릭하여 원하는 백업 일정을 구성합니다.
 +
-image:snapctr_ora_rgroup_full_05.PNG[""]
+image::snapctr_ora_rgroup_full_05.PNG[snapctr ora rgroup full 05]
 
 . Load Locators(로케이터 로드) 를 클릭하여 소스 및 대상 볼륨을 로드합니다.
 +
-image:snapctr_ora_rgroup_full_06.PNG[""]
+image::snapctr_ora_rgroup_full_06.PNG[snapctr ora rgroup full 06]
 
 . 필요한 경우 이메일 알림에 사용할 SMTP 서버를 구성합니다.
 +
-image:snapctr_ora_rgroup_full_07.PNG[""]
+image::snapctr_ora_rgroup_full_07.PNG[snapctr ora rgroup full 07]
 
 . 요약.
 +
-image:snapctr_ora_rgroup_full_08.PNG[""]
+image::snapctr_ora_rgroup_full_08.PNG[snapctr ora rgroup full 08]
 
 
 
@@ -441,35 +441,35 @@ image:snapctr_ora_rgroup_full_08.PNG[""]
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 리소스 탭으로 이동합니다. 보기 드롭다운 목록에서 데이터베이스 또는 리소스 그룹을 선택하여 리소스 그룹 만들기 워크플로를 시작합니다.
 +
-image:snapctr_ora_rgroup_log_01.PNG[""]
+image::snapctr_ora_rgroup_log_01.PNG[snapctr ora rgroup 로그 01]
 
 . 리소스 그룹의 이름과 태그를 입력합니다. 스냅샷 복사본의 명명 형식을 정의하고 구성된 경우 중복 아카이브 로그 대상을 건너뛸 수 있습니다.
 +
-image:snapctr_ora_rgroup_log_02.PNG[""]
+image::snapctr_ora_rgroup_log_02.PNG[snapctr ora rgroup 로그 02]
 
 . 리소스 그룹에 데이터베이스 리소스를 추가합니다.
 +
-image:snapctr_ora_rgroup_log_03.PNG[""]
+image::snapctr_ora_rgroup_log_03.PNG[snapctr ora rgroup 로그 03]
 
 . 드롭다운 목록에서 섹션 7에 생성된 로그 백업 정책을 선택합니다.
 +
-image:snapctr_ora_rgroup_log_04.PNG[""]
+image::snapctr_ora_rgroup_log_04.PNG[snapctr ora rgroup 로그 04]
 
 . (+) 기호를 클릭하여 원하는 백업 일정을 구성합니다.
 +
-image:snapctr_ora_rgroup_log_05.PNG[""]
+image::snapctr_ora_rgroup_log_05.PNG[snapctr ora rgroup log 05]
 
 . 백업 검증이 구성된 경우 여기에 표시됩니다.
 +
-image:snapctr_ora_rgroup_log_06.PNG[""]
+image::snapctr_ora_rgroup_log_06.PNG[snapctr ora rgroup 로그 06]
 
 . 필요한 경우 e-메일 알림을 위한 SMTP 서버를 구성합니다.
 +
-image:snapctr_ora_rgroup_log_07.PNG[""]
+image::snapctr_ora_rgroup_log_07.PNG[snapctr ora rgroup 로그 07]
 
 . 요약.
 +
-image:snapctr_ora_rgroup_log_08.PNG[""]
+image::snapctr_ora_rgroup_log_08.PNG[snapctr ora rgroup 로그 08]
 
 
 
@@ -479,31 +479,31 @@ image:snapctr_ora_rgroup_log_08.PNG[""]
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 리소스 탭으로 이동합니다. 보기 드롭다운 목록에서 데이터베이스 또는 리소스 그룹을 선택하여 리소스 그룹 만들기 워크플로를 시작합니다. 리소스 그룹의 이름과 태그를 입력합니다. 스냅샷 복사본의 명명 형식을 정의할 수 있습니다.
 +
-image:snapctr_sql_rgroup_full_01.PNG[""]
+image::snapctr_sql_rgroup_full_01.PNG[snapctr sql rgroup full 01]
 
 . 백업할 데이터베이스 리소스를 선택합니다.
 +
-image:snapctr_sql_rgroup_full_02.PNG[""]
+image::snapctr_sql_rgroup_full_02.PNG[snapctr sql rgroup full 02]
 
 . 섹션 7에서 생성한 전체 SQL 백업 정책을 선택합니다.
 +
-image:snapctr_sql_rgroup_full_03.PNG[""]
+image::snapctr_sql_rgroup_full_03.PNG[snapctr sql rgroup full 03]
 
 . 백업 빈도와 정확한 백업 시간을 추가합니다.
 +
-image:snapctr_sql_rgroup_full_04.PNG[""]
+image::snapctr_sql_rgroup_full_04.PNG[snapctr sql rgroup full 04]
 
 . 백업 확인을 수행할 경우 보조 백업에 대한 검증 서버를 선택합니다. Load Locator를 클릭하여 보조 스토리지 위치를 채웁니다.
 +
-image:snapctr_sql_rgroup_full_05.PNG[""]
+image::snapctr_sql_rgroup_full_05.PNG[snapctr SQL rgroup full 05]
 
 . 필요한 경우 이메일 알림에 사용할 SMTP 서버를 구성합니다.
 +
-image:snapctr_sql_rgroup_full_06.PNG[""]
+image::snapctr_sql_rgroup_full_06.PNG[snapctr sql rgroup full 06]
 
 . 요약.
 +
-image:snapctr_sql_rgroup_full_07.PNG[""]
+image::snapctr_sql_rgroup_full_07.PNG[snapctr sql rgroup full 07]
 
 
 
@@ -513,31 +513,31 @@ image:snapctr_sql_rgroup_full_07.PNG[""]
 
 . 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인하고 리소스 탭으로 이동합니다. 보기 드롭다운 목록에서 데이터베이스 또는 리소스 그룹을 선택하여 리소스 그룹 만들기 워크플로를 시작합니다. 리소스 그룹의 이름과 태그를 입력합니다. 스냅샷 복사본의 명명 형식을 정의할 수 있습니다.
 +
-image:snapctr_sql_rgroup_log_01.PNG[""]
+image::snapctr_sql_rgroup_log_01.PNG[snapctr SQL rgroup 로그 01]
 
 . 백업할 데이터베이스 리소스를 선택합니다.
 +
-image:snapctr_sql_rgroup_log_02.PNG[""]
+image::snapctr_sql_rgroup_log_02.PNG[snapctr SQL rgroup 로그 02]
 
 . 섹션 7에서 생성한 SQL 로그 백업 정책을 선택합니다.
 +
-image:snapctr_sql_rgroup_log_03.PNG[""]
+image::snapctr_sql_rgroup_log_03.PNG[snapctr SQL rgroup 로그 03]
 
 . 백업 빈도와 정확한 백업 시간을 추가합니다.
 +
-image:snapctr_sql_rgroup_log_04.PNG[""]
+image::snapctr_sql_rgroup_log_04.PNG[snapctr SQL rgroup 로그 04]
 
 . 백업 확인을 수행할 경우 보조 백업에 대한 검증 서버를 선택합니다. Load Locator를 클릭하여 보조 스토리지 위치를 채웁니다.
 +
-image:snapctr_sql_rgroup_log_05.PNG[""]
+image::snapctr_sql_rgroup_log_05.PNG[snapctr SQL rgroup 로그 05]
 
 . 필요한 경우 이메일 알림에 사용할 SMTP 서버를 구성합니다.
 +
-image:snapctr_sql_rgroup_log_06.PNG[""]
+image::snapctr_sql_rgroup_log_06.PNG[snapctr SQL rgroup 로그 06]
 
 . 요약.
 +
-image:snapctr_sql_rgroup_log_07.PNG[""]
+image::snapctr_sql_rgroup_log_07.PNG[snapctr SQL rgroup 로그 07]
 
 
 
@@ -547,10 +547,10 @@ image:snapctr_sql_rgroup_log_07.PNG[""]
 
 데이터베이스 리소스 보호를 위해 데이터베이스 백업 리소스 그룹을 생성한 후에는 미리 정의된 일정에 따라 백업 작업이 실행됩니다. Monitor 탭에서 작업 실행 상태를 확인합니다.
 
-image:snapctr_job_status_sql.PNG[""]
+image::snapctr_job_status_sql.PNG[snapctr 작업 상태 sql]
 
 리소스 탭으로 이동하고 데이터베이스 이름을 클릭하여 데이터베이스 백업에 대한 세부 정보를 확인하고, 로컬 복사본과 미러 복사본 간에 전환하여 스냅샷 백업이 퍼블릭 클라우드의 2차 위치에 복제되었는지 확인합니다.
 
-image:snapctr_job_status_ora.PNG[""]
+image::snapctr_job_status_ora.PNG[snapctr 작업 상태 ora]
 
 이때 운영 장애가 발생할 경우 클라우드의 데이터베이스 백업 복사본을 클론 복제하여 개발/테스트 프로세스를 실행하거나 재해 복구를 수행할 수 있습니다.
