@@ -3,7 +3,7 @@ section: virtualization
 title: 포함되었습니다
 entries:
 - title: 가상화 개요
-  url: https://www.netapp.com/hybrid-cloud/what-is-data-center-virtualization/
+  url: "/virtualization/virt-overview.html"
 - section: vmware
 - section: hyperv
 - section: osv
