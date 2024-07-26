@@ -65,5 +65,7 @@ indexpage:
       url: "/rhhc-dp-velero-backup.html"
     - title: Velero를 사용하여 백업에서 복원합니다
       url: "/rhhc-dp-velero-restore.html"
+    - title: 앱 마이그레이션
+      url: "/rhhc-dp-velero-migrate.html"
     - title: 백업 및 복원을 삭제합니다
       url: "/rhhc-dp-velero-delete.html"

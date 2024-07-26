@@ -60,6 +60,8 @@ entries:
     url: "/rhhc/rhhc-dp-velero-installation.html"
   - title: Velero를 사용한 컨테이너 애플리케이션 백업
     url: "/rhhc/rhhc-dp-velero-backup.html"
+  - title: 앱 마이그레이션
+    url: "/rhhc/rhhc-dp-velero-migrate.html"
   - title: Velero를 사용하여 백업에서 복원합니다
     url: "/rhhc/rhhc-dp-velero-restore.html"
   - title: 백업 및 복원을 삭제합니다
