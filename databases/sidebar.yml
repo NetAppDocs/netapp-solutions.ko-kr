@@ -55,6 +55,8 @@ entries:
         url: "/databases/azure_ora_nfile_migration.html"
   - title: 온프레미스/하이브리드 클라우드
     entries:
+    - title: VVol을 통한 VCF의 Oracle SI 배포 및 보호
+      url: "/databases/vcf_ora_si_vvol.html"
     - title: NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축
       url: "/databases/automation_ora_c-series_nfs.html"
     - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
