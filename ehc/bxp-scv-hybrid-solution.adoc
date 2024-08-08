@@ -533,8 +533,9 @@ image::bxp-scv-hybrid-21.png[SCV 및 vCenter 정보를 입력합니다]
 image::bxp-scv-hybrid-22.png[작업 진행 상황을 봅니다]
 
 . 검색이 완료되면 검색된 모든 SCV 어플라이언스에 걸쳐 데이터 저장소 및 가상 머신을 볼 수 있습니다.
- 를 누릅니다
-이미지: bxp-scv-hybrid-23.png [사용 가능한 리소스 보기]
++
+image::bxp-scv-hybrid-23.png[사용 가능한 리소스를 봅니다]
+
 
 
 ====
