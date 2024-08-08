@@ -1,13 +1,8 @@
 = 
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
 
-로그 복제 플레이북 예약
+[.밑줄] * 로그 복제 플레이북 예약 *
 
 * 작업 템플릿을 구성하고 시작합니다. *
 

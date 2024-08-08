@@ -1,13 +1,8 @@
 = 
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./../media/
 
 
-ONTAP 및 CVO 설정
+[.밑줄] * ONTAP 및 CVO 설정 *
 
 * 작업 템플릿을 구성하고 시작합니다. *
 
