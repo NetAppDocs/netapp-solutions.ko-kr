@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_jupyterhub_deployment.html 
+keywords: AI, control plane, MLOps, JupyterHub 
+summary: NetApp-JupyterHub를 사용한 오픈 소스 MLOps 구축 
+---
+= JupyterHub 배포
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+이 섹션에서는 Kubernetes 클러스터에 JupyterHub를 구축하기 위해 완료해야 하는 작업에 대해 설명합니다.
+
+
+NOTE: Kubernetes 이외의 플랫폼에 JupyterHub를 배포할 수 있습니다. Kubernetes 이외의 플랫폼에 JupyterHub를 구축하는 것은 이 솔루션의 범위를 벗어납니다.
+
+
+
+== 필수 구성 요소
+
+이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
+
+. Kubernetes 클러스터 작업이 이미 진행 중입니다.
+. Kubernetes 클러스터에 NetApp Astra Trident를 이미 설치하고 구성했습니다. Astra Trident에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"^]참조하십시오.
+
+
+
+
+== 제어 장치를 설치합니다
+
+JupyterHub는 Kubernetes의 인기 패키지 매니저인 Helm을 사용하여 배포됩니다. JupyterHub를 배포하기 전에 Kubernetes 제어 노드에 Helm을 설치해야 합니다. Helm을 설치하려면 공식 Helm 설명서의 를 https://helm.sh/docs/intro/install/["설치 지침"^] 따르십시오.
+
+
+
+== 기본 Kubernetes StorageClass를 설정합니다
+
+JupyterHub를 배포하기 전에 Kubernetes 클러스터 내에 기본 StorageClass를 지정해야 합니다. 클러스터 내에서 기본 StorageClass를 지정하려면 섹션에 설명된 지침을 link:aicp_kubeflow_deployment_overview.html["Kubeflow 구축"] 따릅니다. 클러스터 내에서 기본 StorageClass를 이미 지정한 경우에는 이 단계를 건너뛸 수 있습니다.
+
+
+
+== JupyterHub를 배포합니다
+
+위의 단계를 완료한 후 JupyterHub를 배포할 준비가 되었습니다. JupyterHub 배포에는 다음 단계가 필요합니다.
+
+
+
+=== JupyterHub 배포 구성
+
+배포하기 전에 각 환경에 맞게 JupyterHub 배포를 최적화하는 것이 좋습니다. config.yaml* 파일을 만들고 Helm 차트를 사용하여 배포 중에 활용할 수 있습니다.
+
+예제 * config.yaml * 파일은 에서 찾을 수 있습니다  https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml[]
+
+
+NOTE: 이 config.yaml 파일에서 NetApp Trident StorageClass에 대한 * (singleuser.storage.dynamic.storageClass) * 매개 변수를 설정할 수 있습니다. 개별 사용자 작업 공간에 대한 볼륨을 프로비저닝하는 데 사용되는 스토리지 클래스입니다.
+
+
+
+=== 공유 볼륨을 추가하는 중입니다
+
+모든 JupyterHub 사용자에 대해 공유 볼륨을 사용하려면 * config.yaml * 을 적절하게 조정할 수 있습니다. 예를 들어 jupyterhub-shared-volume이라는 공유 PersistentVolumeClaim이 있는 경우 다음과 같이 모든 사용자 포드에서 /home/shared로 마운트할 수 있습니다.
+
+[source, shell]
+----
+singleuser:
+  storage:
+    extraVolumes:
+      - name: jupyterhub-shared
+        persistentVolumeClaim:
+          claimName: jupyterhub-shared-volume
+    extraVolumeMounts:
+      - name: jupyterhub-shared
+        mountPath: /home/shared
+----
+
+NOTE: 이 단계는 선택 사항이므로 필요에 따라 이러한 매개변수를 조정할 수 있습니다.
+
+
+
+=== Helm Chart로 JupyterHub를 배포합니다
+
+Helm이 JupyterHub Helm 차트 리포지토리를 인식하도록 합니다.
+
+[source, shell]
+----
+helm repo add jupyterhub https://hub.jupyter.org/helm-chart/
+helm repo update
+----
+다음과 같이 출력이 표시됩니다.
+
+[source, shell]
+----
+Hang tight while we grab the latest from your chart repositories...
+...Skip local chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jupyterhub" chart repository
+Update Complete. ⎈ Happy Helming!⎈
+----
+이제 config.yaml이 포함된 디렉터리에서 이 명령을 실행하여 config.yaml로 구성된 차트를 설치합니다.
+
+[source, shell]
+----
+helm upgrade --cleanup-on-fail \
+  --install my-jupyterhub jupyterhub/jupyterhub \
+  --namespace my-namespace \
+  --create-namespace \
+  --values config.yaml
+----
+
+NOTE: 이 예에서
+
+<helm-release-name>는 내-jupyterhub로 설정되어 있으며, 이것은 당신의 JupyterHub 릴리스의 이름입니다. <k8s-namespace> 는 JupyterHub 를 설치할 네임스페이스인 my-namespace 로 설정됩니다. --create-namespace 플래그는 네임스페이스가 없는 경우 이 네임스페이스를 만드는 데 사용됩니다. 값 플래그는 원하는 구성 옵션이 포함된 config.yaml 파일을 지정합니다.
+
+
+
+=== 배포를 확인합니다
+
+2단계가 실행되는 동안 다음 명령을 통해 Pod가 생성되는 것을 볼 수 있습니다.
+
+[source, shell]
+----
+kubectl get pod --namespace <k8s-namespace>
+----
+허브 및 프록시 포드가 실행 상태로 전환될 때까지 기다립니다.
+
+[source, shell]
+----
+NAME                    READY     STATUS    RESTARTS   AGE
+hub-5d4ffd57cf-k68z8    1/1       Running   0          37s
+proxy-7cb9bc4cc-9bdlp   1/1       Running   0          37s
+----
+
+
+=== JupyterHub에 액세스합니다
+
+JupyterHub에 액세스하는 데 사용할 수 있는 IP를 찾습니다. 예제 출력과 같이 프록시 공용 서비스의 external-IP를 사용할 수 있을 때까지 다음 명령을 실행합니다.
+
+
+NOTE: 우리는 우리의 config.yaml 파일에서 NodePort 서비스를 사용, 당신은 당신의 설정에 따라 환경에 맞게 조정 할 수 있습니다 (예: 로드 밸런서).
+
+[source, shell]
+----
+kubectl --namespace <k8s-namespace> get service proxy-public
+----
+[source, shell]
+----
+NAME           TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+proxy-public   NodePort   10.51.248.230   104.196.41.97   80:30000/TCP   1m
+----
+JupyterHub를 사용하려면 브라우저에 프록시 공용 서비스의 외부 IP를 입력합니다.

@@ -14,17 +14,17 @@ summary: NetApp를 지원하는 오픈 소스 MLOps - NetApp AIPod 구축을 위
 
 
 [role="lead"]
-Astra Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Kubernetes StorageClasses를 생성해야 합니다. 다음 예제는 에서 이 솔루션의 구성 요소를 배포할 때 만들 수 있는 다양한 유형의 StorageClasses를 나타냅니다 link:https://docs.netapp.com/us-en/netapp-solutions/ai/aipod_nv_intro.html["NetApp AIPod"]. StorageClasses에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"].
+Astra Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Kubernetes StorageClasses를 생성해야 합니다. 다음 예제는 에서 이 솔루션의 구성 요소를 배포할 때 만들 수 있는 다양한 유형의 StorageClasses를 나타냅니다 link:https://docs.netapp.com/us-en/netapp-solutions/ai/aipod_nv_intro.html["NetApp AIPod"^]. StorageClasses에 대한 자세한 내용과 다른 플랫폼/환경에 대한 StorageClasses에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"^].
 
 . NetApp은 섹션에서 생성한 FlexGroup 지원 Trident 백엔드에 대한 StorageClass를 생성할 것을 권장합니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예"], 1단계. 다음 예제 명령은 섹션에서 만든 두 예제 백엔드에 해당하는 여러 StorageClasses를 만드는 방법을 보여 줍니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예"], 단계 1 - 를 활용하는 단계 link:https://docs.netapp.com/us-en/ontap/nfs-rdma/["RDMA 상의 NFS"] 그리고 그렇지 않은 것.
 +
 영구 볼륨은 해당 PersistentVolumeClaim(PVC)이 삭제되어도 삭제되지 않도록 다음 예에서는 "Retain"의 "reclaimPolicy" 값을 사용합니다. '청구 정책' 필드에 대한 자세한 내용은 공식 을 참조하십시오 https://kubernetes.io/docs/concepts/storage/storage-classes/["Kubernetes 문서"^].
 
 +
-참고: 다음 예제 StorageClasses는 최대 전송 크기인 262144를 사용합니다. 이 최대 전송 크기를 사용하려면 그에 따라 ONTAP 시스템에서 최대 전송 크기를 구성해야 합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap/nfs-admin/nfsv3-nfsv4-performance-tcp-transfer-size-concept.html["ONTAP 설명서"] 를 참조하십시오.
+참고: 다음 예제 StorageClasses는 최대 전송 크기인 262144를 사용합니다. 이 최대 전송 크기를 사용하려면 그에 따라 ONTAP 시스템에서 최대 전송 크기를 구성해야 합니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap/nfs-admin/nfsv3-nfsv4-performance-tcp-transfer-size-concept.html["ONTAP 설명서"^] 참조하십시오.
 
 +
-참고: RDMA를 통해 NFS를 사용하려면 ONTAP 시스템에서 NFS over RDMA를 구성해야 합니다. 자세한 내용은 https://docs.netapp.com/us-en/ontap/nfs-rdma/[ONTAP documentation] 링크를 참조하십시오.
+참고: RDMA를 통해 NFS를 사용하려면 ONTAP 시스템에서 NFS over RDMA를 구성해야 합니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap/nfs-rdma/["ONTAP 설명서"^] 참조하십시오.
 
 +
 참고: 다음 예제에서 StorageClass 정의 파일의 StoragePool 필드에 특정 백엔드가 지정되지 않았습니다.
