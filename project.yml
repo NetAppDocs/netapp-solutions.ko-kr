@@ -19,6 +19,8 @@ sidebar:
   - section: virtualization
   - section: containers
   - section: databases
+  - section: data-access
+  - section: automation
   - title: SAP SAP HANA를 참조하십시오
     url: https://docs.netapp.com/us-en/netapp-solutions-sap/
   - title: FlexPod 솔루션
