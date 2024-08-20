@@ -92,7 +92,13 @@ indexpage:
       url: https://netapp-automation.github.io/DRaaS_Simulator/?0.1
     - title: BlueXP - VM을 위한 백업 및 복구 시뮬레이터
       url: https://netapp-automation.github.io/Backup_and_Recovery_for_VMs_Simulator/?0.1
-  - title: BlueXP 백업 및 복구
+  - title: BlueXP  재해 복구
     links:
     - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
       url: "/bxp-scv-hybrid-solution.html"
+    - title: BlueXP  DRaaS를 사용한 재해 복구 - 개요
+      url: "/dr-draas-overview.html"
+    - title: NFS 데이터 저장소용 BlueXP  DRaaS를 사용하는 DR
+      url: "/dr-draas-nfs.html"
+    - title: VMFS 데이터 저장소에 BlueXP  DRaaS를 사용한 DR
+      url: "/dr-draas-vmfs.html"

@@ -7,6 +7,8 @@ entries:
   url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
 - title: VMware 클라우드 기반
   entries:
+  - title: NetApp 스토리지 및 VMware Cloud Foundation
+    url: "/vmware/vmware-vcf-overview.html"
   - title: NetApp ASA 어레이가 있는 VCF
     url: "/vmware/vmware_vcf_asa_overview.html"
     entries:
