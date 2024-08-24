@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이 시나리오에서는 VMware vSphere용 ONTAP 툴(OTV)을 배포하고 사용하여 VCF 워크로드 도메인에 * VVols 데이터 저장소 * 를 구성하는 방법을 보여 줍니다.
+이 시나리오에서는 VMware vSphere용 ONTAP 툴을 배포하고 사용하여 VCF 워크로드 도메인에 * VVols 데이터 저장소 * 를 구성하는 방법을 보여 줍니다.
 
 * iSCSI * 는 VVol 데이터 저장소의 스토리지 프로토콜로 사용됩니다.
 
@@ -213,16 +213,16 @@ image::vmware-vcf-asa-image34.png[VMkernel 선택 사항을 검토합니다]
 
 ==== ONTAP 툴을 구축하고 사용하여 스토리지를 구성합니다
 
-다음 단계는 vSphere 클라이언트를 사용하여 VCF 관리 도메인 클러스터에서 수행되며, OTV 구축, VVols iSCSI 데이터 저장소 생성, 관리 VM을 새 데이터 저장소로 마이그레이션하는 작업과 관련됩니다.
+다음 단계는 vSphere 클라이언트를 사용하여 VCF 관리 도메인 클러스터에서 수행되며 ONTAP 도구 구축, VVol iSCSI 데이터 저장소 생성, 관리 VM을 새 데이터 저장소로 마이그레이션하는 작업과 관련됩니다.
 
-VI 워크로드 도메인의 경우 VCF 관리 클러스터에 OTV가 설치되지만 VI 워크로드 도메인과 연결된 vCenter에 등록됩니다.
+VI 워크로드 도메인의 경우 ONTAP 툴이 VCF 관리 클러스터에 설치되지만 VI 워크로드 도메인과 연결된 vCenter에 등록됩니다.
 
 여러 vCenter 환경에서 ONTAP 툴을 구축하고 사용하는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html["여러 vCenter Server 환경에서 ONTAP 툴을 등록하기 위한 요구 사항"].
 
 .VMware vSphere용 ONTAP 툴을 구축합니다
 [%collapsible]
 ====
-OTV(VMware vSphere)용 ONTAP 툴은 VM 어플라이언스로 구축되며, ONTAP 스토리지 관리를 위한 통합 vCenter UI를 제공합니다.
+VMware vSphere용 ONTAP 툴은 VM 어플라이언스로 구축되며, ONTAP 스토리지 관리를 위한 통합 vCenter UI를 제공합니다.
 
 VMware vSphere용 ONTAP 툴을 구축하려면 다음을 완료하십시오.
 
@@ -259,10 +259,10 @@ image::vmware-vcf-aff-image24.png[네트워크를 선택합니다]
 
 . 템플릿 사용자 지정 페이지에서 필요한 모든 정보를 입력합니다.
 +
-** OTV에 대한 관리 액세스에 사용할 암호입니다.
+** ONTAP 도구에 대한 관리 액세스에 사용할 암호입니다.
 ** NTP 서버 IP 주소입니다.
-** OTV 유지 관리 계정 암호.
-** OTV Derby DB 암호.
+** ONTAP 도구 유지 관리 계정 암호
+** ONTAP 도구 더비 DB 암호.
 ** VCF(VMware Cloud Foundation) 활성화 * 확인란을 선택하지 마십시오. VCF 모드는 추가 스토리지를 구축하는 데 필요하지 않습니다.
 ** VI 워크로드 도메인 * 에 대한 vCenter 어플라이언스의 FQDN 또는 IP 주소입니다
 ** VI 워크로드 도메인 * 의 vCenter 어플라이언스에 대한 자격 증명
@@ -281,7 +281,7 @@ image::vmware-vcf-asa-image35.png[OTV 템플릿 사용자 지정 2]
 
 
 
-. 완료 준비 페이지에서 모든 정보를 검토하고 마침 을 클릭하여 OTV 어플라이언스 배포를 시작합니다.
+. 완료 준비 페이지에서 모든 정보를 검토하고 마침 을 클릭하여 ONTAP 도구 어플라이언스 배포를 시작합니다.
 
 
 ====
@@ -295,7 +295,7 @@ image::vmware-asa-image6.png[NetApp ONTAP 도구]
 +
 {nbsp}
 
-. ONTAP 도구 인터페이스의 * 인스턴스 * 드롭다운 메뉴에서 관리할 워크로드 도메인과 연결된 OTV 인스턴스를 선택합니다.
+. ONTAP 도구 인터페이스의 * 인스턴스 * 드롭다운 메뉴에서 관리할 워크로드 도메인과 연결된 ONTAP 도구 인스턴스를 선택합니다.
 +
 image::vmware-vcf-asa-image36.png[OTV 인스턴스를 선택합니다]
 

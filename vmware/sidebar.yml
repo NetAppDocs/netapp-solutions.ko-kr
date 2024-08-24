@@ -5,6 +5,32 @@ url: "/vmware/index.html"
 entries:
 - title: ONTAP용 VMware 가상화
   url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
+- title: VMware vSphere 기반
+  entries:
+  - title: vSphere 8용 NFS 참조 가이드
+    url: "/vmware/vmware_nfs_overview.html"
+    entries:
+    - title: NetApp 및 VMware의 NFS nConnect 기능
+      url: "/vmware/vmware-vsphere8-nfs-nconnect.html"
+    - title: OTV 10을 사용하여 NFS 데이터 저장소를 관리합니다
+      url: "/vmware/vmware_nfs_otv10.html"
+    - title: VMware Site Recovery Manager를 사용한 NFS 데이터 저장소 재해 복구
+      url: "/vmware/vmware_nfs_vlsr.html"
+    - title: NFS 스토리지에 대한 자율적인 랜섬웨어 방어
+      url: "/vmware/vmware_nfs_arp.html"
+  - title: vSphere 8용 VVOL 참조 가이드
+    url: "/vmware/vmware-vvol-overview.html"
+  - title: vSphere 8용 VMFS 구축 가이드
+    url: "/vmware/vmfs-deployment.html"
+  - title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
+    url: "/vmware/vsphere_ontap_asa_overview.html"
+    entries:
+    - title: VMware vSphere용 ONTAP 툴
+      url: "/vmware/vsphere_ontap_asa_otv.html"
+    - title: Cloud Insights
+      url: "/vmware/vsphere_ontap_asa_insights.html"
+    - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
+      url: "/vmware/vmware-vmsc-with-smas.html"
 - title: VMware 클라우드 기반
   entries:
   - title: NetApp 스토리지 및 VMware Cloud Foundation
@@ -125,13 +151,6 @@ entries:
       url: "/vmware/tr-4792.html"
   - title: FlexPod 데스크톱 가상화 솔루션
     url: "/vmware/flex-virtual-solutions.html"
-- title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
-  url: "/vmware/vsphere_ontap_asa_overview.html"
-  entries:
-  - title: VMware vSphere용 ONTAP 툴
-    url: "/vmware/vsphere_ontap_asa_otv.html"
-  - title: Cloud Insights
-    url: "/vmware/vsphere_ontap_asa_insights.html"
 - title: 데모 및 자습서
   entries:
   - title: 비디오

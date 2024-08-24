@@ -10,10 +10,14 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
     - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html
+    - title: ONTAP 툴을 이용한 VVOL(VMware vSphere 가상 볼륨
+      url: "/vmware-vvol-overview.html"
     - title: vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
       url: "/netapp-vsphere8.html"
     - title: VMware vSphere 8의 새로운 기능
       url: "/vmware-vsphere8-intro.html"
+    - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
+      url: "/vmware-vmsc-with-smas.html"
   - title: VMware 클라우드 기반
     links:
     - title: NetApp 스토리지 및 VMware Cloud Foundation
