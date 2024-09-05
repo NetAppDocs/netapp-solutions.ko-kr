@@ -13,10 +13,6 @@ summary:
 :imagesdir: ./../media/
 
 
-
-
-== NFS 데이터 저장소의 재해 복구에 VMware Site Recovery Manager를 사용합니다
-
 [role="lead"]
 VMware SRM(Site Recovery Manager)과 함께 VMware vSphere 10용 ONTAP 툴 및 SRA(Site Replication Adapter)를 활용하면 재해 복구 작업에 큰 가치를 제공할 수 있습니다. ONTAP 툴 10은 VASA Provider를 위한 기본 고가용성 및 확장성을 포함하여 강력한 스토리지 기능을 제공하며, iSCSI 및 NFS VVOL을 지원합니다. 따라서 데이터 가용성이 보장되고 여러 VMware vCenter Server 및 ONTAP 클러스터의 관리가 간소화됩니다. VMware Site Recovery Manager와 함께 SRA를 사용하면 사이트 간에 가상 시스템과 데이터를 원활하게 복제 및 장애 조치할 수 있으므로 효율적인 재해 복구 프로세스를 구현할 수 있습니다. ONTAP 툴과 SRA를 함께 사용하면 기업이 중요한 워크로드를 보호하고 다운타임을 최소화하며 예기치 못한 사건이나 재해가 발생해도 비즈니스 연속성을 유지할 수 있습니다.
 
@@ -28,7 +24,7 @@ SRA는 SRM과 함께 사용되어 기존 VMFS 및 NFS 데이터 저장소의 프
 
 
 
-=== 시나리오 개요
+== 시나리오 개요
 
 이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
 
@@ -42,7 +38,7 @@ SRA는 SRM과 함께 사용되어 기존 VMFS 및 NFS 데이터 저장소의 프
 
 
 
-=== 있습니다
+== 있습니다
 
 다음 다이어그램은 3노드 고가용성 구성으로 구성된 VMware vSphere 10용 ONTAP 툴을 사용하는 일반적인 VMware 사이트 복구 아키텍처를 보여 줍니다.
 
@@ -52,7 +48,7 @@ image::vmware-nfs-srm-image05.png[어플라이언스를 구성합니다]
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 시나리오에는 다음과 같은 구성 요소 및 구성이 필요합니다.
 
@@ -76,13 +72,13 @@ VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설�
 
 
 
-=== 배포 단계
+== 배포 단계
 
 다음 섹션에서는 ONTAP 스토리지 시스템을 사용하여 VMware Site Recovery Manager 구성을 구현하고 테스트하는 구축 단계를 간략히 설명합니다.
 
 
 
-==== ONTAP 스토리지 시스템 간에 SnapMirror 관계를 생성합니다
+=== ONTAP 스토리지 시스템 간에 SnapMirror 관계를 생성합니다
 
 데이터 저장소 볼륨을 보호하려면 소스 및 대상 ONTAP 스토리지 시스템 간에 SnapMirror 관계를 설정해야 합니다.
 
@@ -92,7 +88,7 @@ VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설�
 
 
 
-==== SRM 어플라이언스를 구성합니다
+=== SRM 어플라이언스를 구성합니다
 
 SRM 어플라이언스 및 SRA 어댑터를 구성하려면 다음 단계를 완료하십시오.
 
@@ -101,7 +97,7 @@ SRM 어플라이언스 및 SRA 어댑터를 구성하려면 다음 단계를 완
 ====
 운영 사이트와 보조 사이트 모두에 대해 다음 단계를 완료해야 합니다.
 
-. 웹 브라우저에서 로 이동하고 https://<SRM_appliance_IP>:5480[] 로그인합니다. * Configure Appliance * 를 클릭하여 시작합니다.
+. 웹 브라우저에서 로 이동하고 https://<SRM_appliance_IP>:5480*[] 로그인합니다. * Configure Appliance * 를 클릭하여 시작합니다.
 +
 image::vmware-nfs-srm-image01.png[어플라이언스를 구성합니다]
 
@@ -146,7 +142,7 @@ image::vmware-nfs-srm-image04.png[새 SRM 어댑터를 추가합니다]
 ====
 
 
-==== SRM에 대한 사이트 복구를 구성합니다
+=== SRM에 대한 사이트 복구를 구성합니다
 
 사이트 페어링을 구성하고 보호 그룹을 생성하려면 다음 단계를 완료하십시오.
 
@@ -328,7 +324,7 @@ image::vmware-nfs-srm-image26.png[네트워크를 테스트합니다]
 ====
 
 
-=== SRM을 사용한 재해 복구 작업
+== SRM을 사용한 재해 복구 작업
 
 이 섹션에서는 장애 조치 테스트, 장애 조치 수행, 재보호 수행 및 장애 복구를 비롯하여 SRM에서 재해 복구를 사용하는 다양한 기능에 대해 설명합니다.
 
@@ -394,7 +390,7 @@ image::vmware-nfs-srm-image32.png[Filover가 완료되었습니다]
 
 
 
-=== 추가 정보
+== 추가 정보
 
 VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설명서는 을 참조하십시오 https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html#why-use-ontap-with-srm["ONTAP를 사용하는 VMware 사이트 복구 관리자"]
 

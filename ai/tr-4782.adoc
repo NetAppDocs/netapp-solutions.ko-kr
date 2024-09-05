@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: ai/tr-4782.html 
+keywords:  
+summary:  
+---
+= TR-4782: NetApp E-Series 참조 아키텍처를 사용하는 BeeGFS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+E-Series 스토리지 및 NetApp 기반 BeeGFS는 가장 까다로운 워크로드에서도 보조를 맞추는 단순하고 안정적이고 확장 가능하며 비용 효율적인 HPC 인프라를 갖춘 검증된 통합 솔루션입니다.
+
+link:https://www.netapp.com/us/media/tr-4782.pdf["BeeGFS 및 NetApp E-Series 참조 아키텍처"^]

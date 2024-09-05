@@ -4,8 +4,6 @@ title: 솔루션 자동화
 entries:
 - title: 소개
   url: "/automation/automation_introduction.html"
-- title: NetApp 솔루션 자동화 및 Ansible 시작하기
-  url: https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible/
 - title: 자동화 환경 설정
   url: "/automation/getting-started.html"
 - title: CVO 및 Connector 구축을 위한 사전 요구 사항을 수집합니다
@@ -14,5 +12,3 @@ entries:
   url: "/automation/cloud_volumes_terraform.html"
 - title: ONTAP용 FSX 모니터링 및 자동 리사이징은 AWS Lambda 함수를 사용합니다
   url: "/automation/fsxn_monitoring_resizing_automation.html"
-- title: 요청 자동화
-  url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20<request_title>

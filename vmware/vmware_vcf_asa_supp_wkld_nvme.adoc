@@ -20,11 +20,7 @@ summary:
 
 
 
-== VCF 워크로드 도메인에 대한 NVMe/TCP 보조 스토리지를 구성합니다
-
-
-
-=== 시나리오 개요
+== 시나리오 개요
 
 이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
 
@@ -37,7 +33,7 @@ summary:
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 시나리오에는 다음과 같은 구성 요소 및 구성이 필요합니다.
 
@@ -58,13 +54,13 @@ ONTAP 스토리지 시스템의 NVMe 설계 고려사항에 대한 자세한 내
 
 
 
-=== 배포 단계
+== 배포 단계
 
 NVMe/TCP를 사용하여 VCF 워크로드 도메인에 VMFS 데이터 저장소를 생성하려면 다음 단계를 완료합니다.
 
 
 
-==== ONTAP 스토리지 시스템에 SVM, LIF 및 NVMe 네임스페이스를 생성합니다
+=== ONTAP 스토리지 시스템에 SVM, LIF 및 NVMe 네임스페이스를 생성합니다
 
 다음 단계는 ONTAP System Manager에서 수행합니다.
 
@@ -144,7 +140,7 @@ image::vmware-vcf-asa-image93.png[추가 를 클릭하여 NVMe 네임스페이�
 ====
 
 
-==== ESXi 호스트에서 네트워킹 및 NVMe 소프트웨어 어댑터를 설정합니다
+=== ESXi 호스트에서 네트워킹 및 NVMe 소프트웨어 어댑터를 설정합니다
 
 vSphere Client를 사용하여 VI 워크로드 도메인 클러스터에서 다음 단계를 수행합니다. 이 경우 vCenter Single Sign-On이 사용되므로 vSphere Client는 관리 도메인과 워크로드 도메인 모두에 공통적으로 사용됩니다.
 
@@ -334,7 +330,7 @@ image::vmware-vcf-asa-image107.png[데이터 저장소에 접속된 호스트입
 ====
 
 
-=== 추가 정보
+== 추가 정보
 
 ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
 

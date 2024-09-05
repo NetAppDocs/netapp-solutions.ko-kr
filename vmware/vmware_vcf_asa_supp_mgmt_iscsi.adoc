@@ -20,11 +20,7 @@ summary:
 
 
 
-== ONTAP 툴을 사용하여 VCF 관리 도메인에 대한 추가 스토리지를 구성합니다
-
-
-
-=== 시나리오 개요
+== 시나리오 개요
 
 이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
 
@@ -37,7 +33,7 @@ summary:
 
 
 
-=== 필수 구성 요소
+== 필수 구성 요소
 
 이 시나리오에는 다음과 같은 구성 요소 및 구성이 필요합니다.
 
@@ -62,13 +58,13 @@ TIP: 여러 VMkernel 어댑터가 동일한 IP 네트워크에 구성되어 있�
 
 
 
-=== 배포 단계
+== 배포 단계
 
 ONTAP 툴을 구축하고 이 툴을 사용하여 VCF 관리 도메인에 VMFS 데이터 저장소를 생성하려면 다음 단계를 완료합니다.
 
 
 
-==== ONTAP 스토리지 시스템에서 SVM 및 LIF를 생성합니다
+=== ONTAP 스토리지 시스템에서 SVM 및 LIF를 생성합니다
 
 다음 단계는 ONTAP System Manager에서 수행합니다.
 
@@ -105,7 +101,7 @@ image::vmware-vcf-asa-image04.png[SVM 계정을 사용하고 Finish를 사용합
 ====
 
 
-==== ESXi 호스트에서 iSCSI에 대한 네트워킹을 설정합니다
+=== ESXi 호스트에서 iSCSI에 대한 네트워킹을 설정합니다
 
 다음 단계는 vSphere Client를 사용하여 VCF 관리 도메인 클러스터에서 수행됩니다.
 
@@ -202,7 +198,7 @@ image::vmware-vcf-asa-image12.png[VMkernel 선택 사항을 검토합니다]
 ====
 
 
-==== ONTAP 툴을 구축하고 사용하여 스토리지를 구성합니다
+=== ONTAP 툴을 구축하고 사용하여 스토리지를 구성합니다
 
 다음 단계는 vSphere 클라이언트를 사용하여 VCF 관리 도메인 클러스터에서 수행되며, OTV 구축, VMFS iSCSI 데이터 저장소 생성, 관리 VM을 새 데이터 저장소로 마이그레이션하는 작업이 포함됩니다.
 
@@ -340,7 +336,7 @@ image::vmware-vcf-asa-image21.png[vSphere Client 최근 작업 창]
 ====
 
 
-=== 추가 정보
+== 추가 정보
 
 ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
 
@@ -348,7 +344,7 @@ VCF 구성에 대한 자세한 내용은 을 참조하십시오 link:https://doc
 
 
 
-=== 이 솔루션에 대한 비디오 데모입니다
+== 이 솔루션에 대한 비디오 데모입니다
 
 .VCF 관리 도메인에 대한 보조 스토리지로서의 iSCSI 데이터 저장소
 video::1d0e1af1-40ae-483a-be6f-b156015507cc[panopto,width=360]

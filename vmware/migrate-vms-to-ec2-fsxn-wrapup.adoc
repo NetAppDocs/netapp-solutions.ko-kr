@@ -5,12 +5,13 @@ keywords: netapp, vmware, amazon, ec2, fsxn, migration, iscsi,
 summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOps "코드형 이동성" 기능을 사용하여 FSx for ONTAP iSCSI LUN에 배치된 데이터 디스크를 사용하여 온프레미스 VMware vSphere VM을 Amazon EC2 인스턴스로 마이그레이션하는 방법을 설명합니다.' 
 ---
 = FSxN: 기타 가능성 및 결론 을 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
-
-
-
-== FSxN: 기타 가능성 및 결론 을 사용하여 VM을 Amazon EC2로 마이그레이션합니다
 
 [role="lead"]
 이 문서에서는 이 마이그레이션 솔루션의 다른 가능성을 강조하고 주제를 마무리합니다.

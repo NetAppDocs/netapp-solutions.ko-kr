@@ -4,7 +4,7 @@ title: VMware를 통한 가상화
 url: "/vmware/index.html"
 entries:
 - title: ONTAP용 VMware 가상화
-  url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
+  url: "/vmware/vmware-for-ontap.html"
 - title: VMware vSphere 기반
   entries:
   - title: vSphere 8용 NFS 참조 가이드

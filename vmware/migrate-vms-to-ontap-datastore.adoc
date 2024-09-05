@@ -5,12 +5,13 @@ keywords: netapp, vmware, ontap, datastore, migration, svmotion, hcx, xvmotion, 
 summary:  
 ---
 = VM을 ONTAP 데이터 저장소로 마이그레이션
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
 
-
-
-
-== VM을 ONTAP 데이터 저장소로 마이그레이션
 
 저자: Suresh Thoppay
 

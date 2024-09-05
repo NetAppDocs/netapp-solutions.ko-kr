@@ -11,13 +11,6 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 NFS 데이터 저장
 :icons: font
 :linkattrs: 
 :imagesdir: ./../media/
-:scriptsdir: ./../scripts/
-:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
-:firstname: Suresh
-:authorinitials: STT
-:middlename: Thoppay,
-:lastname: TME - Hybrid Cloud Solutions
-:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
 [role="lead"]

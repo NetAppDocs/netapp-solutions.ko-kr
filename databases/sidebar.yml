@@ -71,7 +71,7 @@ entries:
     - title: Oracle Database 구축
       entries:
       - title: NetApp ONTAP에 Oracle 데이터베이스 구축
-        url: https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html
+        url: "/../../../ontap-apps-dbs/oracle/oracle-overview.html"
       - title: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
         url: "/databases/marketing_overview.html"
         entries:

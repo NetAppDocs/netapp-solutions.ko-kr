@@ -11,16 +11,6 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 :icons: font
 :linkattrs: 
 :imagesdir: ./../media/
-:scriptsdir: ./../scripts/
-:author: Suresh Thoppay, TME - Hybrid Cloud Solutions
-:ontap_version: ONTAP 9.8 or later
-:vsphere_version: vSphere 7.0 or later
-:includesdir: ./../
-:firstname: Suresh
-:authorinitials: STT
-:middlename: Thoppay,
-:lastname: TME - Hybrid Cloud Solutions
-:authors: Suresh Thoppay, TME - Hybrid Cloud Solutions
 
 
 [role="lead"]
@@ -31,7 +21,7 @@ ONTAP NAS 스토리지를 사용하여 NFS 버전 3 데이터 저장소를 생�
 == 필요한 것
 
 * vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술입니다.
-* ONTAP 9.8 이상을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/Cloud Volume Service/Azure NetApp Files
+* {ONTAP_version}을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/클라우드 볼륨 서비스/Azure NetApp Files
 * ONTAP 자격 증명(SVM 이름, userID, 암호)
 * NFS용 ONTAP 네트워크 포트, SVM 및 LUN 정보
 +
@@ -39,7 +29,7 @@ ONTAP NAS 스토리지를 사용하여 NFS 버전 3 데이터 저장소를 생�
 
 
 * vCenter Server 자격 증명
-* vSphere 7.0 이상에 대한 vSphere 호스트 정보입니다
+* {vSphere_version}에 대한 vSphere 호스트 정보입니다
 * NFS VMkernel 어댑터 IP 정보입니다
 * 네트워크 스위치
 +

@@ -18,15 +18,11 @@ VCF(VMware Cloud Foundation)는 하이브리드 클라우드 환경에서 엔터
 
 저자: Josh Powell, Ravi BCB
 
-
-
-== NetApp AFF 스토리지 어레이를 포함한 VMware 클라우드 기반
-
 이 문서에서는 NetApp All-Flash AFF 스토리지 시스템을 사용하여 VMware Cloud Foundation에서 사용할 수 있는 스토리지 옵션에 대해 설명합니다. 지원되는 스토리지 옵션에는 NFS 및 VVOL 데이터 저장소를 운영 스토리지로 사용하는 워크로드 도메인을 생성하는 구체적인 지침과 다양한 보충 스토리지 옵션이 포함되어 있습니다.
 
 
 
-=== 사용 사례
+== 사용 사례
 
 이 문서에서 다루는 사용 사례:
 
@@ -39,7 +35,7 @@ VCF(VMware Cloud Foundation)는 하이브리드 클라우드 환경에서 엔터
 
 
 
-=== 대상
+== 대상
 
 이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
 

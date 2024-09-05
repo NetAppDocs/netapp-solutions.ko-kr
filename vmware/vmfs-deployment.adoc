@@ -312,15 +312,12 @@ image::vmfs-deploy-image27.png[VMFS 배포 이미지 27]
 +
 image::vmfs-deploy-image28.png[VMFS 배포 이미지 28]
 
-+
-.. 적절한 선택을 했으면 마침 을 클릭합니다.
+. 적절한 선택을 했으면 마침 을 클릭합니다.
 +
 그러면 새 리소스 그룹이 생성되고 리소스 그룹 목록에 추가됩니다.
 
 +
 image::vmfs-deploy-image29.png[VMFS 배포 이미지29]
-
-
 
 
 

@@ -52,12 +52,4 @@ entries:
   - title: 샘플 모니터링
     url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
 - title: 추가 리소스
-  entries:
-  - title: Red Hat OpenShift Virtualization
-    url: https://www.redhat.com/en/technologies/cloud-computing/openshift/virtualization
-  - title: 'OpenShift Virtualization: 가상 환경의 강력한 기능 활용'
-    url: https://www.redhat.com/en/blog/openshift-virtualization-unleashing-the-power-of-cloud-native-virtual-environments
-  - title: Red Hat OpenShift 설명서
-    url: https://docs.openshift.com/container-platform/4.15/virt/about_virt/about-virt.html
-  - title: Red Hat 블로그
-    url: https://www.redhat.com/en/blog/products
+  url: "/containers/additional-resources.html"

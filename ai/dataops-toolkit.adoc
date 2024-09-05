@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: ai/dataops-toolkit.html 
+keywords:  
+summary:  
+---
+= NetApp DataOps 툴킷
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원하는 개발/교육 작업 공간 및 추론 서버의 관리를 단순화하는 Python 기반 툴입니다. 주요 기능은 다음과 같습니다.
+
+* 고성능 스케일아웃 NetApp 스토리지를 기반으로 하는 새로운 고용량 JupyterLab 작업 공간을 빠르게 프로비저닝합니다.
+* 엔터프라이즈급 NetApp 스토리지를 통해 지원되는 새로운 NVIDIA Triton Inference Server 인스턴스를 빠르게 프로비저닝합니다.
+* 실험이나 신속한 반복을 위해 거의 즉각적으로 고용량 JupyterLab 작업 공간을 클론 복제합니다.
+* 백업 및/또는 추적 가능성/기준선 설정을 위한 대용량 JupyterLab 작업 공간의 스냅샷을 거의 즉각적으로 저장합니다.
+* 거의 즉각적인 용량, 클론 및 스냅샷 고성능 데이터 볼륨을 제공합니다.
+
+
+link:https://github.com/NetApp/netapp-dataops-toolkit["NetApp DataOps 툴킷"^]
