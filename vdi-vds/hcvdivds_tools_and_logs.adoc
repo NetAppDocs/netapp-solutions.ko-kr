@@ -10,7 +10,7 @@ summary: 이 페이지에서는 DCConfig Tool, TestVdc Tools 및 로그 파일�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

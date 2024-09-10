@@ -10,7 +10,7 @@ summary: 이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

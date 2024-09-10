@@ -10,7 +10,7 @@ summary: iSCSI를 통해 영구 볼륨의 NetApp ONTAP 스토리지 시스템을
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

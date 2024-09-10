@@ -10,7 +10,7 @@ summary: DevOps 및 이 기술 보고서의 잠재적 사용 사례에 대한 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud etc.
 
 
@@ -21,7 +21,7 @@ summary: DevOps 및 이 기술 보고서의 잠재적 사용 사례에 대한 �
 
 == DevOps 사용 사례
 
-DevOps는 보편적으로 수락되는 단일한 정의를 가지고 있지 않지만, DevOps 교정기를 위한 솔루션은 일반적으로 규모에 따라 쉽게 구현, 반복 및 관리할 수 있는 유사한 구성이나 이념을 포함합니다. 다음 섹션에서는 NetApp 솔루션이 지원하는 DevOps 워크플로우의 잠재적 사용 사례를 설명합니다.
+DevOps에는 보편적으로 허용되는 단일 정의가 없지만 DevOps 실무자를 위한 솔루션은 일반적으로 간편하게 구현, 반복 및 관리할 수 있는 유사한 구성요소 또는 이념을 포함하고 있습니다. 다음 섹션에서는 NetApp 솔루션이 지원하는 DevOps 워크플로우의 잠재적 사용 사례를 설명합니다.
 
 
 

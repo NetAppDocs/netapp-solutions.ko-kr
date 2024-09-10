@@ -10,7 +10,7 @@ summary: 이 페이지에서는 NetApp ONTAP 스토리지에서 Oracle19c의 자
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

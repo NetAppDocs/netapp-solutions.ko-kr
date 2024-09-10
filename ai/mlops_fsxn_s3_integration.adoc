@@ -10,7 +10,7 @@ summary: 이 게시물에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

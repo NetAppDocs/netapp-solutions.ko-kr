@@ -10,7 +10,7 @@ summary: '이 솔루션은 인공 지능 워크로드에 최적화된 NetApp 스
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 사티야라잔, 데이비드 아네트, NetApp 미르세아 트로aca, Lenovo

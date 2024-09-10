@@ -10,7 +10,7 @@ summary: Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

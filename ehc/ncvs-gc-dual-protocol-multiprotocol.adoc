@@ -10,7 +10,7 @@ summary: Cloud Volumes Service는 적절한 액세스 권한을 유지하면서 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

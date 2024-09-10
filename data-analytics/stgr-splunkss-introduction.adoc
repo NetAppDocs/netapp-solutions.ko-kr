@@ -10,7 +10,7 @@ summary: 이 기술 보고서에서는 NetApp이 Splunk SmartStore 솔루션에 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 카르티키안 나가링감, 바비 오먼스, 조셉 칸다틸파람빌

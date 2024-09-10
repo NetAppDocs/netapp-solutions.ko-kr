@@ -10,7 +10,7 @@ summary: 이 페이지에는 이 문서에 설명된 일부 기능을 시연하�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 솔루션의 주요 구성 요소에 대해 자
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -106,7 +106,7 @@ FlexGroup 볼륨(다음 그림)은 여러 개의 구성 멤버 볼륨으로 이�
 * CPU, 노드, 애그리게이트 및 구성 FlexVol 볼륨에서 NAS 워크로드에 병렬 작업을 수행합니다
 
 
-이미지: a400-thinksystem-image5.png["이 이미지는 FlexGroup 내에 기본 파일이 있는 많은 볼륨을 포함하는 스토리지 컨트롤러의 HA 쌍을 보여 줍니다.]"
+image::a400-thinksystem-image5.png[이 이미지는 FlexGroup 내에 기본 파일이 있는 많은 볼륨이 포함된 HA 쌍의 스토리지 컨트롤러를 보여줍니다.]
 
 
 

@@ -10,7 +10,7 @@ summary: 오픈 소스 MLOps with NetApp - NetApp 및 MLflow를 통한 데이터
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

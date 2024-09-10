@@ -10,7 +10,7 @@ summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

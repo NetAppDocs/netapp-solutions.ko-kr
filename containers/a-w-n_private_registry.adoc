@@ -10,7 +10,7 @@ summary: 이 섹션은 Astra Trident에서 제공하는 영구 저장소를 사�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

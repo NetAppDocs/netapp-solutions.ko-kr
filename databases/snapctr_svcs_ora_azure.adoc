@@ -10,7 +10,7 @@ summary: 이 솔루션은 BlueXP 콘솔을 사용하여 NetApp SnapCenter SaaS�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

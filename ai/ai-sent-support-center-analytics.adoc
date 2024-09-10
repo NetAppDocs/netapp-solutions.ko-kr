@@ -10,7 +10,7 @@ summary: 이 기술 보고서에서는 이전 학습 및 대화형 AI를 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Rick Huang, Sathish Thyagarajan, David Arnette, NetApp Diego Sosa-Coba, SFL Scientific

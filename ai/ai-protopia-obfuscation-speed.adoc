@@ -10,7 +10,7 @@ summary: 이 검증을 위해 Protopia 난독 처리를 1920 x 1080 픽셀 이�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

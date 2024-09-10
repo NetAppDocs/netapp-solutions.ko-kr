@@ -10,7 +10,7 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise - 기술 개요
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

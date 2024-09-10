@@ -10,7 +10,7 @@ summary: NetApp용 벡터 데이터베이스 솔루션을 위한 데이터 준�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

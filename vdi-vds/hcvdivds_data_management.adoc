@@ -10,7 +10,7 @@ summary: 배포의 일부로 파일 서비스 방법을 선택하여 사용자 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

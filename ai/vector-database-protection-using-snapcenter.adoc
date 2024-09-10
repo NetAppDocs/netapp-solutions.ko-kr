@@ -10,7 +10,7 @@ summary: NetApp용 SnapCenter-Vector 데이터베이스 솔루션을 사용한 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

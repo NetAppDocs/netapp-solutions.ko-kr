@@ -10,7 +10,7 @@ summary: 이 섹션에서는 nfs 서버 및 NFS 클라이언트가 이 문제를
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

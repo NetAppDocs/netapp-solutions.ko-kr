@@ -10,7 +10,7 @@ summary: 이 시나리오에서는 고객이 대규모 사내 Hadoop 저장소�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

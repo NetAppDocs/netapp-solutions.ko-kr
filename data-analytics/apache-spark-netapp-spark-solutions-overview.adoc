@@ -10,7 +10,7 @@ summary: 'NetApp은 FAS/AFF, E-Series, Cloud Volumes ONTAP의 3가지 스토리�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

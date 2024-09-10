@@ -10,7 +10,7 @@ summary: Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubern
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Hadoop DistCp는 대규모 클러스터 간 및 클러스터 간 복제
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

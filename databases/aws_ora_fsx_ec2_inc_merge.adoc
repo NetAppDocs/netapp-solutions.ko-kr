@@ -10,7 +10,7 @@ summary: 이 솔루션은 FSx ONTAP에 NFS 마운트를 사용하여 AWS EC2 컴
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

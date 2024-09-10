@@ -10,7 +10,7 @@ summary: NetApp용 NetApp ONTAP-벡터 데이터베이스 솔루션용 Amazon FS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

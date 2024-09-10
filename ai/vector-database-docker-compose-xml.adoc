@@ -10,7 +10,7 @@ summary: NetApp용 docker-compose.xml 벡터 데이터베이스 솔루션입니�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 섹션에서는 NetApp 배포를 통해 Red Hat OpenShift를 사용
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

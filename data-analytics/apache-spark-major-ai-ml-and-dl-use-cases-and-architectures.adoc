@@ -10,7 +10,7 @@ summary: 이 페이지에서는 주요 AI, ML 및 DL 사용 사례 및 아키텍
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

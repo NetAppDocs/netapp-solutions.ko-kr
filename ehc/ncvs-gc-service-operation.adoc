@@ -10,7 +10,7 @@ summary: Cloud Volumes Service 팀은 Google Cloud에서 백엔드 서비스를 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

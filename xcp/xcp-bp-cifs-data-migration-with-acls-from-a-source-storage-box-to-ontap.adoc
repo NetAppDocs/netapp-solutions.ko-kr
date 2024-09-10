@@ -10,7 +10,7 @@ summary: 이 섹션에서는 소스에서 타겟 ONTAP 시스템으로 보안 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

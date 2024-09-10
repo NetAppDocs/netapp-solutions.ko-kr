@@ -10,7 +10,7 @@ summary: 이 검증에서는 일련의 원시 이미지를 사용하여 이미�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

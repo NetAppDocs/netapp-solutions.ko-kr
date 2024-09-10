@@ -10,7 +10,7 @@ summary: 사내에서 NetApp AFF A900 스토리지 컨트롤러와 ONTAP 9.12.1 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

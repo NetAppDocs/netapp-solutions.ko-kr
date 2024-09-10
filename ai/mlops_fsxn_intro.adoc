@@ -10,7 +10,7 @@ summary: FSxN MLOps 섹션의 소개 페이지입니다.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

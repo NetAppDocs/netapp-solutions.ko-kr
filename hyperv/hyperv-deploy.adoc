@@ -10,7 +10,7 @@ summary: 이 솔루션은 NetApp 스토리지에 Hyper-V를 구축하는 데 필
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

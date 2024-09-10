@@ -10,7 +10,7 @@ summary: 베어 메탈 기반 Anthos의 하드웨어 독립적 기능을 통해 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

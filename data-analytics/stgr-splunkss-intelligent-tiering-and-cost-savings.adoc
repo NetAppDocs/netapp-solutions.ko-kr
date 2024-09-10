@@ -10,7 +10,7 @@ summary: 고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

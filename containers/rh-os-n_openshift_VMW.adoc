@@ -10,7 +10,7 @@ summary: VMware vSphere는 ESXi 하이퍼바이저에서 실행되는 다수의 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

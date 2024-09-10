@@ -10,7 +10,7 @@ summary: Docker, Kubernetes 등의 오케스트레이션 툴과 통합된 Azure 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

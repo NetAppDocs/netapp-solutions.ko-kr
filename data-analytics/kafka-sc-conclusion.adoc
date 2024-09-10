@@ -10,7 +10,7 @@ summary: 이 검증 테스트는 NetApp ONTAP 스토리지 컨트롤러를 사�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

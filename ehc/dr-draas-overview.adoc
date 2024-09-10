@@ -10,7 +10,7 @@ summary: 이 섹션에서는 다른 지정된 사이트에 대한 온프레미�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

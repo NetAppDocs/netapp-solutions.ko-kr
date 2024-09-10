@@ -10,7 +10,7 @@ summary: 작업 공간은 온프레미스 또는 모든 지원 클라우드 환�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

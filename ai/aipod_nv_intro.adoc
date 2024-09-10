@@ -10,7 +10,7 @@ summary: NVIDIA DGX 시스템이 포함된 NetApp AIPod는 NetApp ONTAP AFF 스�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

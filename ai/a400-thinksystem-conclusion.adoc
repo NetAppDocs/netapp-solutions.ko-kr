@@ -10,7 +10,7 @@ summary: 이 NetApp 및 Lenovo 솔루션은 미드레인지 엔터프라이즈 A
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

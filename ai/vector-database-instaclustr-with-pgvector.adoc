@@ -10,7 +10,7 @@ summary: NetApp용 pgvector-vector 데이터베이스 솔루션을 사용한 ins
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

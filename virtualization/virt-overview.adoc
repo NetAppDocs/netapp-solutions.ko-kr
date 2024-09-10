@@ -10,7 +10,7 @@ summary: 이 문서에서는 컴퓨팅, 네트워크 및 스토리지의 관점�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

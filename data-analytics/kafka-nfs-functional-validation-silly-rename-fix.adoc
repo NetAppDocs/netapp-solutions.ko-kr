@@ -10,7 +10,7 @@ summary: 기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

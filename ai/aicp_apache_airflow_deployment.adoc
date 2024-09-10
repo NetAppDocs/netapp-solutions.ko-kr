@@ -10,7 +10,7 @@ summary: NetApp를 사용한 오픈 소스 MLOps - Apache Airflow Deployment
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

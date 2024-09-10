@@ -10,7 +10,7 @@ summary: 이 시나리오에서는 NetApp NFS 스토리지 솔루션을 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

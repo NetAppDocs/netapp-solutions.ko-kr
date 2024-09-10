@@ -10,7 +10,7 @@ summary: 이 페이지에서는 Azure NetApp Files에 대해 위임된 서브넷
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

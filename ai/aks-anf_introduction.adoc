@@ -10,7 +10,7 @@ summary: '이 솔루션은 AI/ML 애플리케이션의 라이프사이클 뒤에
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Rick Huang, Verron Martina, Muneer Ahmad, NetApp

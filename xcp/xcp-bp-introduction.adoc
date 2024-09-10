@@ -10,7 +10,7 @@ summary: 이 문서에서는 NetApp XCP 모범 사례 지침과 테스트 시나
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp의 Karthikeyan Nagalingam입니다

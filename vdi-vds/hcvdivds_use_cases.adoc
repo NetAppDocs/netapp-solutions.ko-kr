@@ -10,7 +10,7 @@ summary: 서비스 공급자와 엔터프라이즈 가상 데스크톱 관리자
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

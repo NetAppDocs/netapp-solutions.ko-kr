@@ -10,7 +10,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

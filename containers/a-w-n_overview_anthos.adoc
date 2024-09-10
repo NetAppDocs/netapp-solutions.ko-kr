@@ -10,7 +10,7 @@ summary: Anthos는 단일 플랫폼에서 개발과 IT 운영을 통합하여 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

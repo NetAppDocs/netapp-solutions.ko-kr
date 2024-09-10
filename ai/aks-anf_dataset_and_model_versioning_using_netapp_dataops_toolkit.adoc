@@ -10,7 +10,7 @@ summary: Kubernetes용 NetApp DataOps 툴킷은 스토리지 리소스와 Kubern
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 오픈 소스 MLOps 및 NetApp - MLflow 배포
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

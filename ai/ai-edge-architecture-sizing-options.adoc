@@ -10,7 +10,7 @@ summary: 다른 사용 사례에 맞게 검증에 사용된 설정을 조정할 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

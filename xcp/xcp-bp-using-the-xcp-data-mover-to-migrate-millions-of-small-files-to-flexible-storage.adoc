@@ -10,7 +10,7 @@ summary: 이 사용 사례는 수백만 개의 소규모 사내 파일을 클라
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 솔루션은 Oracle ASM을 볼륨 관리자로 사용하여 독립 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

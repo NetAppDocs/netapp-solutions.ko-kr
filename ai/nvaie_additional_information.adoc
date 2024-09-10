@@ -10,7 +10,7 @@ summary: 'NVIDIA AI Enterprise with NetApp and VMware - Where to Find Additional
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

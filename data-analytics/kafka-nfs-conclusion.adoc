@@ -10,7 +10,7 @@ summary: 이름 바꾸기 비용이 저렴하다는 어리석은 문제를 위�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

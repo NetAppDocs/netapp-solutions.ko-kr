@@ -10,7 +10,7 @@ summary: Google Cloud Console을 사용하여 온프레미스 Anthos GKE 클러�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

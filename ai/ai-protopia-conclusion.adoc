@@ -10,7 +10,7 @@ summary: 데이터는 사용되지 않는 상태, 전송 중 상태, 컴퓨팅 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

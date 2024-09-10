@@ -10,7 +10,7 @@ summary: NetApp를 지원하는 오픈 소스 MLOps - NetApp AIPod 구축을 위
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

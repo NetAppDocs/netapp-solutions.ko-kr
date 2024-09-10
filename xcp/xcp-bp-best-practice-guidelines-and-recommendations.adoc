@@ -10,7 +10,7 @@ summary: 이 섹션에서는 NetApp XCP를 사용하여 데이터를 마이그�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

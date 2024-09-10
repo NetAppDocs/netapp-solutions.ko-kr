@@ -10,7 +10,7 @@ summary: 이 검증 결과에 따라 데이터 과학자와 엔지니어는 NetA
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

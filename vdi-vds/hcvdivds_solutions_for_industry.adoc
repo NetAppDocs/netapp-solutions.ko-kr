@@ -10,7 +10,7 @@ summary: 그래픽 워크스테이션은 일반적으로 제조, 의료, 에너�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

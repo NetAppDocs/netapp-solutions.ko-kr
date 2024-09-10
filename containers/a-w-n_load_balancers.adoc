@@ -10,7 +10,7 @@ summary: 이 섹션에서는 NetApp 구축의 Anthos를 사용자 지정하려�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

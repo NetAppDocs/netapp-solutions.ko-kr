@@ -10,7 +10,7 @@ summary: NetApp를 사용하는 벡터 datbase 솔루션에 대한 요약 페이
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 카르티키안 나가링감(Karthikean Nagalingam)과 로드리고 나시멘토(NetApp)

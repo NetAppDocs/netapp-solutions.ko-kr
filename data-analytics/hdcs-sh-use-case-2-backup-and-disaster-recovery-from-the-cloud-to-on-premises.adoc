@@ -10,7 +10,7 @@ summary: 이 사용 사례는 클라우드 기반 분석 데이터를 사내 데
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

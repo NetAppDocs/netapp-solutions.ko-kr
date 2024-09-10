@@ -10,7 +10,7 @@ summary: 벡터 데이터베이스 성능 검증 - NetApp용 벡터 데이터베
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

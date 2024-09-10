@@ -10,7 +10,7 @@ summary: 이 기술 보고서에서 제안된 솔루션은 이러한 탁월한 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

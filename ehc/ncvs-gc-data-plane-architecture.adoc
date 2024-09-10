@@ -10,7 +10,7 @@ summary: Cloud Volumes Service for Google Cloud는 Google Cloud 프라이빗 서
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

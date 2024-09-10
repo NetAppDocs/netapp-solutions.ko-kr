@@ -10,7 +10,7 @@ summary: Cloud Volumes Service를 사용하면 Cloud Volumes Service 인스턴�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

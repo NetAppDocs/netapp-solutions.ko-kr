@@ -10,7 +10,7 @@ summary: '이 문서에서는 새로운 애플리케이션 시나리오를 충�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Sathish Thyagarajan, NetApp Miroslav Hodak, Lenovo

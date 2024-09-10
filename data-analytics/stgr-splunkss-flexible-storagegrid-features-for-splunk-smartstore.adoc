@@ -10,7 +10,7 @@ summary: 'StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

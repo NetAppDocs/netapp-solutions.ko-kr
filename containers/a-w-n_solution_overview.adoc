@@ -10,7 +10,7 @@ summary: 이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Banu Sundhar와 NetApp의 Suresh Thoppay가 있습니다

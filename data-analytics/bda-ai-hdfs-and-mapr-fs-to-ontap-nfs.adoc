@@ -10,7 +10,7 @@ summary: '이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

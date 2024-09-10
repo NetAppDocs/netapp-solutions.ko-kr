@@ -10,7 +10,7 @@ summary: 이 섹션에서는 Pandas에서 Criteo Click Logs day 15를 로드하�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

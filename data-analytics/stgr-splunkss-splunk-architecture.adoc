@@ -10,7 +10,7 @@ summary: 이 페이지에서는 주요 정의, Splunk 분산 구축, Splunk Smar
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

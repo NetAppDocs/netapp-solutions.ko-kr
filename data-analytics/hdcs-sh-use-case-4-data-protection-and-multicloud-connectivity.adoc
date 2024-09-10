@@ -10,7 +10,7 @@ summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

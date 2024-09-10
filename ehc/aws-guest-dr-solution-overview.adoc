@@ -10,7 +10,7 @@ summary: '조직에서는 중대한 운영 중단이 발생할 경우 비즈니�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud, Rancher etc
 
 

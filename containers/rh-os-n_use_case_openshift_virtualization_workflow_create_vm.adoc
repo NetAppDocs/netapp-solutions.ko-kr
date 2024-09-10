@@ -10,7 +10,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

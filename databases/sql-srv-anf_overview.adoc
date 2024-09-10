@@ -10,7 +10,7 @@ summary: '이 문서에서는 Azure 가상 시스템을 활용하는 Azure NetAp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

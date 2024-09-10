@@ -10,7 +10,7 @@ summary: 이 페이지에 제공된 예는 NetApp Anthos의 솔루션 검증 및
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

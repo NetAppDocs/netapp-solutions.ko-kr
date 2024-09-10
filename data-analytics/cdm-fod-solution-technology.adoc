@@ -10,7 +10,7 @@ summary: NFS 및 S3의 이중 프로토콜 액세스 사용 사례는 머신 러
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

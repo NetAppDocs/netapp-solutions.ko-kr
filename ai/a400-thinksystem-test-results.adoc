@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 솔루션의 테스트 결과를 요약합니�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

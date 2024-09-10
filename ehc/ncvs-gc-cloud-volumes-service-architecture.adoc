@@ -10,7 +10,7 @@ summary: 'CloudSQL, GCVE(Google Cloud VMware Engine) 및 파일 저장소와 같
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

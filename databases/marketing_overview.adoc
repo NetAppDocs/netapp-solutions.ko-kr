@@ -10,7 +10,7 @@ summary: 이 페이지에서는 NetApp ONTAP 스토리지에 Oracle19c를 구축
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

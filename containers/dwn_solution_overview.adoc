@@ -10,7 +10,7 @@ summary: 이 기술 보고서에서는 컨테이너식 애플리케이션을 사
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :k8s_distribution_name: Red Hat OpenShift, VMware Tanzu, Anthos by Google Cloud etc.
 
 

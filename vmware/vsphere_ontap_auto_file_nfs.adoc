@@ -10,7 +10,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 설정에서는 Kafka S3 싱크 커넥터를 사용하여 바로 Ka
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

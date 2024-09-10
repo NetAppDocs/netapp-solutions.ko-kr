@@ -10,7 +10,7 @@ summary: 오픈 소스 MLOps with NetApp - 기술 개요
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

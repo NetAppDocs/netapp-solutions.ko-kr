@@ -10,7 +10,7 @@ summary: NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :solution_name: VMware Tanzu with NetApp
 :ontap_page_link: vtwn_netapp_ontap.html
 

@@ -10,7 +10,7 @@ summary: NetApp용 Milvus 클러스터 설정 벡터 데이터베이스 솔루�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

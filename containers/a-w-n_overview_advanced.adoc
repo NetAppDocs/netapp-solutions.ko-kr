@@ -10,7 +10,7 @@ summary: '이 섹션에서는 실제 사용자가 이 솔루션을 운영 환경
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

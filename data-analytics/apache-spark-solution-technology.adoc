@@ -10,7 +10,7 @@ summary: 이 섹션에서는 Apache Spark의 특성 및 구성 요소와 이러�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

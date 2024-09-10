@@ -10,7 +10,7 @@ summary: 이전 섹션에서 언급한 바와 같이, 두 개 이상의 기계 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

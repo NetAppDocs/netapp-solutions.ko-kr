@@ -10,7 +10,7 @@ summary: 이 문서에서는 NetApp 스토리지 컨트롤러에서 Kafka를 사
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Karthkeyan Nagalingam, Joseph Kandatillarambil, NetApp Rankesh Kumar, Confluent

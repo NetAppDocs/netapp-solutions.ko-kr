@@ -10,7 +10,7 @@ summary: 이 솔루션은 RMAN을 통해 지속적으로 증분 병합되는 대
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

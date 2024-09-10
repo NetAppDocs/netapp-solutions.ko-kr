@@ -10,7 +10,7 @@ summary: Domino Nexus는 모든 클라우드, 지역 또는 온프레미스의 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Mike Oglesby, NetApp에서 직접 지원합니다

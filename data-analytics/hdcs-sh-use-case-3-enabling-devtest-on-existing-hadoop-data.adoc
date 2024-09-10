@@ -10,7 +10,7 @@ summary: 이 사용 사례에서 고객은 DevTest와 보고 목적으로 동일
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 확장 데이터베이스가 있는 All-Cloud 또는 하이브리드 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

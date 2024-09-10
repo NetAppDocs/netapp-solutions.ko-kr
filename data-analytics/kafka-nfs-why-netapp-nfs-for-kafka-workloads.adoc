@@ -10,7 +10,7 @@ summary: 이제 Kafka를 사용하는 NFS 스토리지에 이름 바꾸기 관�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

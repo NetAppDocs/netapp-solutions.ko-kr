@@ -10,7 +10,7 @@ summary: NetApp-JupyterHub를 사용한 오픈 소스 MLOps 구축
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

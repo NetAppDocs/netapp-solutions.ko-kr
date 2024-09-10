@@ -10,7 +10,7 @@ summary: 이 솔루션에서 SnapCenter는 SQL Server 및 Oracle 애플리케이
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

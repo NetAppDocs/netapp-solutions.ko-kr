@@ -10,7 +10,7 @@ summary: 이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

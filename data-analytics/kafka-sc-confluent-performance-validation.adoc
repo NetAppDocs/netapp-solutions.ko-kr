@@ -10,7 +10,7 @@ summary: 이 페이지에서는 이 솔루션의 매개 변수 내에서 Conflue
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

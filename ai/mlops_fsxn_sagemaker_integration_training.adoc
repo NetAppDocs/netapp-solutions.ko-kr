@@ -10,7 +10,7 @@ summary: '이 문서는 특히 타이어 품질 분류 프로젝트를 위해 Sa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

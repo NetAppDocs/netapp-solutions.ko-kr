@@ -10,7 +10,7 @@ summary: 이 섹션에서는 AKS VNET를 Azure NetApp Files VNET와 피어로 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

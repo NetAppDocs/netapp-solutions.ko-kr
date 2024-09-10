@@ -10,7 +10,7 @@ summary: 전송 중인 데이터는 NAS 프로토콜 계층에서 암호화할 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 솔루션은 PostgreSQL 데이터베이스 구축 및 HA/DR 설정,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

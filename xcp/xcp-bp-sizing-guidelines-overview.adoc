@@ -10,7 +10,7 @@ summary: 이 섹션에서는 NFS용 100만 개의 다른 파일 크기로 XCP �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

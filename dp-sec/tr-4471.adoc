@@ -10,7 +10,7 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Akash Gupta, NetApp Shawn W대신하여(미주), Stefan Renner(EMEA), Michael Cade(성능), Veeam을 지원합니다

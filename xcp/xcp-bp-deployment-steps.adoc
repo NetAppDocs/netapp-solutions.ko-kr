@@ -10,7 +10,7 @@ summary: 이 섹션에서는 NetApp XCP 데이터 전송을 위한 구축 단계
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

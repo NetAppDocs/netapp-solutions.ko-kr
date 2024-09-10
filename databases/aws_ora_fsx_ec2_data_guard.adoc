@@ -10,7 +10,7 @@ summary: 이 솔루션은 AWS FSx ONTAP을 대기 사이트 Oracle 데이터베�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

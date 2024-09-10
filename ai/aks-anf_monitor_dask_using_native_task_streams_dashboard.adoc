@@ -10,7 +10,7 @@ summary: 이 페이지에서는 기본 작업 스트림 대시보드를 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 섹션에서는 Jupyter Notebooks와 이 솔루션에 유용한 기
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexClone 기술을 사용하여 빠르게 구축합니다
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

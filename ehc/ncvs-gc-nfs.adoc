@@ -10,7 +10,7 @@ summary: 'NFS는 RFC(Request for Comments)에 정의된 공개 IETF 표준인 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

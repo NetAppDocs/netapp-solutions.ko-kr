@@ -10,7 +10,7 @@ summary: SMB는 이더넷 네트워크를 통해 여러 SMB 클라이언트에 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 페이지에서는 Pandas 및 Dask DataFrames를 사용하여 Crite
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

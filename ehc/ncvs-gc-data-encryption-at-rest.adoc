@@ -10,7 +10,7 @@ summary: Cloud Volumes Service의 모든 볼륨은 AES-256 암호화를 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

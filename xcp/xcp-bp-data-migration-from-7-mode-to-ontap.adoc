@@ -10,7 +10,7 @@ summary: 이 섹션에서는 7-Mode에서 작동하는 NetApp Data ONTAP에서 O
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

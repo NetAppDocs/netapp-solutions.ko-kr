@@ -10,7 +10,7 @@ summary: 이 문서에서는 Apache Spark 아키텍처, 고객 사용 사례 및
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Rick Huang, Karthikeyan Nagalingam, NetApp

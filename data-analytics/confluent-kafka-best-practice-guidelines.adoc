@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 인증에서 얻은 교훈을 설명합니다.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

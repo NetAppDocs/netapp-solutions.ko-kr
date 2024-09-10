@@ -10,7 +10,7 @@ summary: NetApp ONTAP는 직관적인 GUI, 자동화 통합을 지원하는 REST
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

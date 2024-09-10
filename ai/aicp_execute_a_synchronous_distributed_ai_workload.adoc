@@ -10,7 +10,7 @@ summary: NetApp를 사용한 오픈 소스 MLOps - 동기식 분산 AI 워크로
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

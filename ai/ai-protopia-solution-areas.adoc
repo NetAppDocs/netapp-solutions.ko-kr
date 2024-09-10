@@ -10,7 +10,7 @@ summary: 디지털 이미지 프로세싱은 많은 이점을 제공하므로 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

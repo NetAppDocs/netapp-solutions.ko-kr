@@ -10,7 +10,7 @@ summary: 빅데이터 클러스터에서 데이터는 MapR-FS, Windows Azure Sto
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

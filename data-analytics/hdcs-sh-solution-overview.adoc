@@ -10,7 +10,7 @@ summary: 본 문서는 NetApp AFF 및 FAS 스토리지 시스템, NetApp Cloud V
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp의 Karthikeyan Nagalingam 및 Sathish Thyagarajan

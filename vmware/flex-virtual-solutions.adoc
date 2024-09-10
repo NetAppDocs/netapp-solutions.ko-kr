@@ -10,7 +10,7 @@ summary: FlexPod 설계 가이드를 검토하여 FlexPod 가상화 솔루션에
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

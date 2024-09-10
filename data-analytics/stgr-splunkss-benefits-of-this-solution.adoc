@@ -10,7 +10,7 @@ summary: 이 솔루션을 사용하면 컴퓨팅, 핫 스토리지 또는 S3 리
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

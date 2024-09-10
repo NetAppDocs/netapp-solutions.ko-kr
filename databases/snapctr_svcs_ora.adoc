@@ -10,7 +10,7 @@ summary: 이 솔루션은 Azure 클라우드에서 BlueXP 콘솔을 사용하여
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

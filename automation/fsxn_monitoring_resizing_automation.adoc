@@ -10,7 +10,7 @@ summary: 이 페이지에서는 AWS FSxN 모니터링 및 임계값에 따른 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

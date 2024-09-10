@@ -10,7 +10,7 @@ summary: 모든 것이 배포된 후 새 데이터에 대한 추론을 실행합
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

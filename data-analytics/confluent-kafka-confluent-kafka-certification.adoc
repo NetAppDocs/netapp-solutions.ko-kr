@@ -10,7 +10,7 @@ summary: NetApp StorageGRID의 계층형 스토리지를 위해 Kafka와 Conflue
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

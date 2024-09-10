@@ -10,7 +10,7 @@ summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

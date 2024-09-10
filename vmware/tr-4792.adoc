@@ -10,7 +10,7 @@ summary: 'TR-4792는 NVIDIA GPU(Graphics Processing Unit) 및 가상화 소프�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp, Suresh Thoppay

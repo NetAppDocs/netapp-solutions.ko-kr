@@ -10,7 +10,7 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

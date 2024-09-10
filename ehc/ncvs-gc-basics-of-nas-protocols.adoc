@@ -10,7 +10,7 @@ summary: NAS 프로토콜은 여러 클라이언트의 네트워크 상에서 Cl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

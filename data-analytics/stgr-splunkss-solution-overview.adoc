@@ -10,7 +10,7 @@ summary: 이 페이지에서는 NetApp StorageGRID, Splunk Enterprise, Splunk Sm
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

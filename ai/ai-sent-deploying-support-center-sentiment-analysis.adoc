@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 솔루션을 배포하는 데 필요한 세부 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 솔루션은 NetApp AFF C-Series에서 NFS 프로토콜을 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

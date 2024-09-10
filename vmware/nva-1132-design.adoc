@@ -10,7 +10,7 @@ summary: NetApp HCI를 사용하는 VMware 최종 사용자 컴퓨팅은 사전 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp, Suresh Thoppay

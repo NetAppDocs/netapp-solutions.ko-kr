@@ -10,7 +10,7 @@ summary: 'RHV는 RHEL(Red Hat Enterprise Linux)에서 실행되고 KVM 하이퍼
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 솔루션은 FSx ONTAP 클러스터 및 EC2 컴퓨팅 인스턴스�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 솔루션 엔지니어링 팀

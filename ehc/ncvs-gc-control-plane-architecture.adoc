@@ -10,7 +10,7 @@ summary: Cloud Volumes Service에 대한 모든 관리 작업은 API를 통해 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

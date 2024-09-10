@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 솔루션의 다양한 구성 요소에 대한 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

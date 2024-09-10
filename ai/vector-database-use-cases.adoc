@@ -10,7 +10,7 @@ summary: NetApp용 사용 사례 벡터 데이터베이스 솔루션
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

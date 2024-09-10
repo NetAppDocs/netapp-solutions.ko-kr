@@ -10,7 +10,7 @@ summary: 'AFF A900 HA 쌍 NetApp 스토리지 컨트롤러 1개를 사용하여 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

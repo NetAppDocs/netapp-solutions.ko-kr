@@ -10,7 +10,7 @@ summary: 이 섹션은 GPFS를 구성하고 NetApp XCP를 사용하여 NFS로 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

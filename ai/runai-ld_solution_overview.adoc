@@ -10,7 +10,7 @@ summary: '이 아키텍처에서 초점은 AI 또는 머신 러닝(ML) 분산 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

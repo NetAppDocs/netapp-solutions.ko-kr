@@ -10,7 +10,7 @@ summary: NetApp용 Values-xml-vector 데이터베이스 솔루션입니다
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

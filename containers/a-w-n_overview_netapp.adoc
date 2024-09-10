@@ -10,7 +10,7 @@ summary: NetApp은 Trident Storage Orchestrator를 사용하여 Anthos에 구축
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

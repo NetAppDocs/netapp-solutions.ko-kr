@@ -10,7 +10,7 @@ summary: Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

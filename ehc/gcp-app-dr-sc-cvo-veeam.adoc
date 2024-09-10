@@ -10,7 +10,7 @@ summary: 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

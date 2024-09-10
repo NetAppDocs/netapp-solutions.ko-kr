@@ -10,7 +10,7 @@ summary: NAS 공유에 Cloud Volumes Service를 사용하는 경우 적절한 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

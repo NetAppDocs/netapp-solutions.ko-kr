@@ -10,7 +10,7 @@ summary: NetApp은 NetApp StorageGRID 설정을 통해 생산 및 소비자 워�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 섹션에서는 클라우드에서 SQL Server와 함께 Azure NetAp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 이 솔루션은 MLOps 워크플로에 통합할 수 있는 여러 가�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 마이크 오글즈비, NetApp 수피안 아흐마드, NetApp 릭 황, NetApp 모한 아차리아, NetApp

@@ -10,7 +10,7 @@ summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

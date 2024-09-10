@@ -10,7 +10,7 @@ summary: 이 문서에서는 계층형 스토리지 벤치마킹 키트를 사�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Karthikeyan Nagalingam, Joe Scott, NetApp Rankesh Kumar, Confluent

@@ -10,7 +10,7 @@ summary: 'NetApp HCI는 스토리지 노드와 컴퓨팅 노드의 혼합으로 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

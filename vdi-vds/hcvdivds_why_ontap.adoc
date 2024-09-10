@@ -10,7 +10,7 @@ summary: 가상 데스크톱 서비스용 ONTAP 기능.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

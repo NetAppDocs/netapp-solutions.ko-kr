@@ -10,7 +10,7 @@ summary: NetApp 및 VMware-Architecture를 지원하는 NVIDIA AI Enterprise
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

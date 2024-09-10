@@ -10,7 +10,7 @@ summary: NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

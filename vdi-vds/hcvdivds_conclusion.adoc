@@ -10,7 +10,7 @@ summary: NetApp 가상 데스크톱 서비스는 비즈니스 과제를 해결�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

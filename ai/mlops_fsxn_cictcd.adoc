@@ -10,7 +10,7 @@ summary: 이 기사에서는 자동화된 모델 재교육, 구축 및 비용 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

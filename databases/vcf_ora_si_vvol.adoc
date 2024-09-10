@@ -10,7 +10,7 @@ summary: '이 솔루션은 VVol(vSphere Virtual Volumes)을 운영 데이터베�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

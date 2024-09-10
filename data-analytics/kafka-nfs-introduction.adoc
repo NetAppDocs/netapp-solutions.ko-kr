@@ -10,7 +10,7 @@ summary: 이 문서에서는 다음과 같은 주제, 이름 바꾸기 방식의
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Shantanu Chakole, Karthikeyan Nagalingam 및 NetApp의 Joe Scott입니다

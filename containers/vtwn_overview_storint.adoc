@@ -10,7 +10,7 @@ summary: NetApp은 컨테이너 기반 환경에서 영구 데이터를 오케�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :k8s_distribution_name: Red Hat OpenShift, Rancher, VMware Tanzu etc
 :solution_name: VMware Tanzu with NetApp
 :astra_control_overview_page_link: vtwn_overview_astra.html

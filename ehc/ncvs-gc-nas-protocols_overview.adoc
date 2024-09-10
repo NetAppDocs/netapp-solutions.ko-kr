@@ -10,7 +10,7 @@ summary: 'NAS 프로토콜에는 NFS(v3 및 v4.1) 및 SMB/CIFS(2.x 및 3.x)가 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

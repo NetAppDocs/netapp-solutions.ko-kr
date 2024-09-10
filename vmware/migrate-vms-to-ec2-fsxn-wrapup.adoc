@@ -10,7 +10,7 @@ summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

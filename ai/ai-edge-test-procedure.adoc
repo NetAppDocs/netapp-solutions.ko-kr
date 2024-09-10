@@ -10,7 +10,7 @@ summary: 이 섹션에서는 이 솔루션을 검증하는 데 사용되는 테�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

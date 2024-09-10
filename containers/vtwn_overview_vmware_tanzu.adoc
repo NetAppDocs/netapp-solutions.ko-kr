@@ -10,7 +10,7 @@ summary: VMware Tanzu는 기업이 애플리케이션과 인프라를 현대화�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

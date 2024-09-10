@@ -10,7 +10,7 @@ summary: 이 솔루션은 iSCSI 프로토콜을 사용하는 기본 데이터베
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

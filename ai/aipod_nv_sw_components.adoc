@@ -10,7 +10,7 @@ summary: NVIDIA DGX 시스템 및 NetApp AIPod - 소프트웨어 구성 요소
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

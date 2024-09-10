@@ -10,7 +10,7 @@ summary: NetApp NFS에 스토리지 계층이 마운트된 Kafka 클러스터가
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

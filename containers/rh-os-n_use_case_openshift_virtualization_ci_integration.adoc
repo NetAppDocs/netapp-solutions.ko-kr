@@ -10,7 +10,7 @@ summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

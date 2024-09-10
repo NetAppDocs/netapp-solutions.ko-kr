@@ -10,7 +10,7 @@ summary: 이 페이지에는 이 솔루션에 필요한 소프트웨어 요구 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

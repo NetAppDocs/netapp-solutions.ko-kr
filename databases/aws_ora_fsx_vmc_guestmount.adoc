@@ -10,7 +10,7 @@ summary: 이 솔루션은 FSx ONTAP을 운영 데이터베이스 스토리지로
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Allen Cao, Niyaz Mohamed, NetApp

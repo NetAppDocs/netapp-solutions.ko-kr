@@ -10,7 +10,7 @@ summary: NetApp용 vector-database-deployment-procedure-vector 데이터베이�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

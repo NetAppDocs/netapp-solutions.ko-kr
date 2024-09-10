@@ -10,7 +10,7 @@ summary: 이 지원 센터 솔루션의 아키텍처는 NVIDIA의 사전 구축�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

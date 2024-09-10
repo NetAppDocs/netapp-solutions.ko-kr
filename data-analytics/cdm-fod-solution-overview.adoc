@@ -10,7 +10,7 @@ summary: 데이터 과학자와 엔지니어는 NFS 형식으로 저장된 데�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp의 Karthikeyan Nagalingam입니다

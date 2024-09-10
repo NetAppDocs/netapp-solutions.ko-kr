@@ -10,7 +10,7 @@ summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

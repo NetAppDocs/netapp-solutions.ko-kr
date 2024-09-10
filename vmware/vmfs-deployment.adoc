@@ -10,7 +10,7 @@ summary: 이 솔루션은 ONTAP SAN 기술과 OFFTAP 툴을 사용하여 현재�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

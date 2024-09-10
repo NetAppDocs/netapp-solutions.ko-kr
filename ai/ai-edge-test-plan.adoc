@@ -10,7 +10,7 @@ summary: 이 문서는 MLPerf Inference v0.7 코드, MLPerf Inference v1.1 코�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

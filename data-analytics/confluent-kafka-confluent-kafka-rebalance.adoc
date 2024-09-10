@@ -10,7 +10,7 @@ summary: 이 테스트는 클러스터 토폴로지 변경 또는 불균등한 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

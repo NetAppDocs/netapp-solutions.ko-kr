@@ -10,7 +10,7 @@ summary: 특히, 인프라가 스토리지 관리자의 제어 범위를 벗어�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Oliver Krause, Justin Parisi, NetApp

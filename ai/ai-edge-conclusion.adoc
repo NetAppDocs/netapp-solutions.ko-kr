@@ -10,7 +10,7 @@ summary: AI 기반 자동화 및 에지 컴퓨팅은 비즈니스 조직이 디�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

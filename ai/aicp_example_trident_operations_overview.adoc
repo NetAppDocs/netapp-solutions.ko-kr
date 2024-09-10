@@ -10,7 +10,7 @@ summary: NetApp를 지원하는 오픈 소스 MLOps - Astra Trident 운영의 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

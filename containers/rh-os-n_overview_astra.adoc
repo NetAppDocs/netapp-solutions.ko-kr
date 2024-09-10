@@ -10,7 +10,7 @@ summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 :k8s_usercluster_name: OpenShift
 
 

@@ -10,7 +10,7 @@ summary: 데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
