@@ -41,7 +41,7 @@ NOTE: 스토리지의 계획 및 사이징, 필요한 호스트 수를 결정하
 
 개략적으로 보면, 이 아키텍처는 온프레미스 환경과 Azure에서 하이브리드 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다. 또한 Azure NetApp Files를 보조 NFS 데이터 저장소로 사용하거나 Azure VMware 솔루션에서 호스팅되는 게스트 가상 머신을 위한 게스트 내 스토리지 옵션으로 사용하는 방법에 대해서도 설명합니다.
 
-image::vmware-dr-image1.png[VMware DR 이미지1]
+image:vmware-dr-image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -151,12 +151,12 @@ az extension add --name vmware
 . Azure Portal에 로그인하고 Azure NetApp Files에 액세스합니다. az provider register"--namespace Microsoft.NetApp –wait 명령을 사용하여 Azure NetApp Files 서비스에 대한 액세스를 확인하고 Azure NetApp Files 리소스 공급자를 등록합니다. 등록 후 NetApp 계정을 만드십시오. 이를 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["링크"^] 를 참조하십시오.
 
 
-image::vmware-dr-image2.png[VMware DR 이미지2]
+image:vmware-dr-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . NetApp 계정을 생성한 후 필요한 서비스 수준 및 크기의 용량 풀을 설정합니다. 자세한 내용은 이를 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["링크"^].
 
 
-image::vmware-dr-image3.png[VMware DR 이미지3]
+image:vmware-dr-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 |===
 | 기억해야 할 사항 
@@ -172,7 +172,7 @@ image::vmware-dr-image3.png[VMware DR 이미지3]
 . 용량 풀 블레이드 아래에 있는 볼륨 블레이드를 사용하여 데이터 저장소에 대한 NFS 볼륨을 추가합니다.
 
 
-image::vmware-dr-image4.png[VMware DR 이미지4]
+image:vmware-dr-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 크기 또는 할당량별 Azure NetApp Files 볼륨 성능에 대한 자세한 내용은 을 참조하십시오 link:https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-performance-considerations["Azure NetApp Files에 대한 성능 고려 사항"^].
 
@@ -212,7 +212,7 @@ c:\Users\niyaz>VMware 데이터 저장소 목록 -- resource-group anfavsval2--c
 . 필요한 접속이 구성된 후에는 볼륨이 데이터 저장소로 마운트됩니다.
 
 
-image::vmware-dr-image5.png[VMware DR 이미지5]
+image:vmware-dr-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ====
 
@@ -226,7 +226,7 @@ Azure NetApp Files는 Standard(테라바이트당 16MBps), Premium(테라바이�
 * 용량 풀의 서비스 품질(QoS) 유형(자동 또는 수동
 
 
-image::vmware-dr-image6.png[VMware DR 이미지6]
+image:vmware-dr-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["Azure NetApp Files의 서비스 레벨"^].
 
@@ -319,7 +319,7 @@ NOTE: ANF 데이터 저장소를 사용하면 새 볼륨으로 복원 옵션을 
 
 NOTE: Azure NetApp Files 스냅샷 기술을 사용하면 백업 및 복원 속도가 매우 빨라집니다.
 
-image::vmware-dr-image7.png[VMware DR 이미지7]
+image:vmware-dr-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
 .Azure NetApp Files, Jetstream DR 및 Azure VMware 솔루션을 사용한 재해 복구

@@ -20,30 +20,30 @@ OpenShift 가상화를 설치하려면 다음 단계를 완료하십시오.
 . 원근 표시 드롭다운에서 관리자 를 선택합니다.
 . Operators > OperatorHub로 이동하여 OpenShift Virtualization을 검색합니다.
 +
-image::redhat_openshift_image45.JPG[OpenShift Operator Hub를 참조하십시오]
+image:redhat_openshift_image45.JPG["OpenShift Operator Hub를 참조하십시오"]
 
 . OpenShift Virtualization 타일을 선택하고 Install을 클릭합니다.
 +
-image::redhat_openshift_image46.JPG[OpenShift Virtualization Operator Tile]
+image:redhat_openshift_image46.JPG["OpenShift Virtualization Operator Tile"]
 
 . Install Operator(사용자 설치) 화면에서 모든 기본 매개변수를 그대로 두고 Install(설치) 을 클릭합니다.
 +
-image::redhat_openshift_image47.JPG[OpenShift 가상화 운영자 세부 정보]
+image:redhat_openshift_image47.JPG["OpenShift 가상화 운영자 세부 정보"]
 
 . 작업자 설치가 완료될 때까지 기다립니다.
 +
-image::redhat_openshift_image48.JPG[OpenShift Virtualization Operator 설치]
+image:redhat_openshift_image48.JPG["OpenShift Virtualization Operator 설치"]
 
 . 운영자가 설치되면 HyperConverged 생성 을 클릭합니다.
 +
-image::redhat_openshift_image49.JPG[OpenShift Virtualization Operator - Hyperconverged를 만듭니다]
+image:redhat_openshift_image49.JPG["OpenShift Virtualization Operator - Hyperconverged를 만듭니다"]
 
 . Create HyperConverged(HyperConverged 생성) 화면에서 Create(생성) 를 클릭하여 모든 기본 매개 변수를 수락합니다. 이 단계에서는 OpenShift Virtualization 설치를 시작합니다.
 +
-image::redhat_openshift_image50.JPG[OpenShift Virtualization Operator - 하이퍼컨버지드 세부 정보]
+image:redhat_openshift_image50.JPG["OpenShift Virtualization Operator - 하이퍼컨버지드 세부 정보"]
 
 . 모든 Pod가 OpenShift-CNV 네임스페이스에서 실행 상태로 이동하고 OpenShift Virtualization 연산자가 SUCEEDED 상태가 되면 운영자를 사용할 준비가 된 것입니다. 이제 OpenShift 클러스터에서 VM을 생성할 수 있습니다.
 +
-image::redhat_openshift_image51.JPG[OpenShift Virtualization Operator 설치가 완료되었습니다]
+image:redhat_openshift_image51.JPG["OpenShift Virtualization Operator 설치가 완료되었습니다"]
 
 

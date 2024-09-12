@@ -36,7 +36,7 @@ NetApp has validated an enterprise RAG architecture powered by the NVIDIA Enterp
 ....
 그림 1) NVIDIA Nemo 마이크로서비스 및 NetApp 기반 엔터프라이즈 RAG
 
-image::RAG_nvidia_nemo.png[RAG NVIDIA Nemo 를 참조하십시오]
+image:RAG_nvidia_nemo.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -44,7 +44,7 @@ image::RAG_nvidia_nemo.png[RAG NVIDIA Nemo 를 참조하십시오]
 
 NetApp의 챗봇은 벡터 데이터베이스를 위한 또 다른 실시간 사용 사례 역할을 합니다. 이 경우 NetApp Private OpenAI Sandbox는 NetApp 내부 사용자의 쿼리를 관리하는 효과적이고 안전하며 효율적인 플랫폼을 제공합니다. 엄격한 보안 프로토콜, 효율적인 데이터 관리 시스템 및 정교한 AI 처리 기능을 통합하여 SSO 인증을 통해 조직 내 역할과 책임에 따라 사용자에 대한 고품질의 정확한 응답을 보장합니다. 이 아키텍처는 고급 기술을 병합하여 사용자 중심의 지능형 시스템을 만들 수 있는 가능성을 강조합니다.
 
-image::netapp_chatbot.png[NetApp 챗봇]
+image:netapp_chatbot.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 활용 사례는 네 가지 주요 섹션으로 나눌 수 있습니다.
 

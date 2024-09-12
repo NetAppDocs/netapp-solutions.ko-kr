@@ -43,7 +43,7 @@ summary: 기능 검증을 위해 NFSv3 마운트를 사용하는 Kafka 클러스
 |===
 다음 그림에서는 이 솔루션의 아키텍처 구성을 보여 줍니다.
 
-image::kafka-nfs-image1.png[이 이미지는 각각 프로듀서 Swarm, Kafka 클러스터 및 CVO 인스턴스가 있는 3개의 전용 서브넷이 포함된 VPC를 포함하는 AWS 토폴로지를 보여줍니다.]
+image:kafka-nfs-image1.png["이 이미지는 각각 프로듀서 Swarm, Kafka 클러스터 및 CVO 인스턴스가 있는 3개의 전용 서브넷이 포함된 VPC를 포함하는 AWS 토폴로지를 보여줍니다."]
 
 
 
@@ -78,13 +78,13 @@ aws-shantanclastrecall-aws::*> volume create -vserver kafka_svm -volume kafka_fg
 클러스터 1:
 
 +
-image::kafka-nfs-image2.png[이 스크린샷은 클러스터 1에서 생성된 데모 항목을 보여 줍니다.]
+image:kafka-nfs-image2.png["이 스크린샷은 클러스터 1에서 생성된 데모 항목을 보여 줍니다."]
 
 +
 클러스터 2:
 
 +
-image::kafka-nfs-image3.png[이 스크린샷은 클러스터 2에서 생성된 데모 항목을 보여 줍니다.]
+image:kafka-nfs-image3.png["이 스크린샷은 클러스터 2에서 생성된 데모 항목을 보여 줍니다."]
 
 . 두 클러스터에 대해 새로 생성된 이러한 항목에 데이터가 로드되었습니다. 이 작업은 기본 Kafka 패키지에 포함된 프로듀서-perf-test 툴킷을 사용하여 수행되었습니다.
 +
@@ -99,7 +99,7 @@ image::kafka-nfs-image3.png[이 스크린샷은 클러스터 2에서 생성된 �
 두 클러스터 모두에서 브로커의 상태 점검이 성공적으로 완료된 경우 다음 스크린샷에 나와 있습니다.
 
 +
-image::kafka-nfs-image4.png[이 스크린샷은 두 브로커에 대한 성공적인 상태 점검을 위한 정보를 보여줍니다.]
+image:kafka-nfs-image4.png["이 스크린샷은 두 브로커에 대한 성공적인 상태 점검을 위한 정보를 보여줍니다."]
 
 
 
@@ -120,7 +120,7 @@ kafka-reassign-partitions --bootstrap-server=172.30.0.198:9092,172.30.0.163:9092
 
 . 재할당이 완료되고 몇 분 후에 브로커에 대한 또 다른 상태 점검 결과, NFSv3 스토리지 볼륨을 사용하는 클러스터가 이름이 바보 같은 문제로 실행되고 충돌이 발생했던 반면, NetApp ONTAP NFSv4.1 스토리지 볼륨을 사용하는 클러스터 1은 수정 작업을 중단 없이 계속했습니다.
 +
-image::kafka-nfs-image5.png[이 스크린샷은 충돌한 브로커의 출력을 보여줍니다.]
+image:kafka-nfs-image5.png["이 스크린샷은 충돌한 브로커의 출력을 보여줍니다."]
 
 +
 ** cluster1-Broker-1이 활성 상태입니다.
@@ -129,12 +129,12 @@ image::kafka-nfs-image5.png[이 스크린샷은 충돌한 브로커의 출력을
 
 . Kafka 로그 디렉토리를 확인했을 때 수정하여 NetApp ONTAP NFSv4.1 스토리지 볼륨을 사용하는 클러스터 1에서 파티션을 클린 할당했다는 것이 분명했지만, 일반 NFSv3 스토리지를 사용하는 클러스터 2에서는 이름 변경 문제가 우스꽝스러운 이유로 발생하지 않아 충돌이 발생하지 않았습니다. 다음 그림에서는 클러스터 2의 파티션 재조정을 보여 주며, NFSv3 스토리지에서 이름 바꾸기 문제가 우스꽝스러운 것으로 나타났습니다.
 +
-image::kafka-nfs-image6.png[이 스크린샷은 Cluster 2 충돌에 대한 로그 출력을 보여 줍니다.]
+image:kafka-nfs-image6.png["이 스크린샷은 Cluster 2 충돌에 대한 로그 출력을 보여 줍니다."]
 
 +
 다음 그림은 NetApp NFSv4.1 스토리지를 사용하여 클러스터 1의 파티션을 완전히 재조정하는 방법을 보여줍니다.
 
 +
-image::kafka-nfs-image7.png[이 스크린샷은 클러스터 1에 대한 클린 파티션 할당에 대한 로그 출력을 보여 주는 반면]
+image:kafka-nfs-image7.png["이 스크린샷은 클러스터 1에 대한 클린 파티션 할당에 대한 로그 출력을 보여 주는 반면"]
 
 

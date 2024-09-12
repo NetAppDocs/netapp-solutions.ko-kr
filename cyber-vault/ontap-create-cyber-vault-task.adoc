@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP 
+permalink: /cyber-vault/ontap-create-cyber-vault-task.html 
+summary: 이 페이지에 포함된 단계는 ONTAP 기반 사이버 볼트 솔루션을 만드는 데 도움이 됩니다 
+---
+= ONTAP과 함께 사이버 소산 작성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음 단계는 ONTAP를 사용하여 사이버 볼트를 생성하는 데 도움이 됩니다.
+
+.시작하기 전에
+* 소스 클러스터에서 ONTAP 9 이상이 실행 중이어야 합니다.
+* 소스 및 타겟 애그리게이트는 64비트여야 합니다.
+* 피어링된 SVM이 있는 클러스터에서 소스 및 타겟 볼륨을 생성해야 합니다. 자세한 내용은 을 link:../../ontap-sm-classic/peering/index.html["클러스터 피어링"^]참조하십시오.
+* 볼륨 자동 확장 기능을 사용하지 않는 경우 대상 볼륨의 여유 공간은 소스 볼륨의 사용된 공간보다 최소 5% 이상 커야 합니다.
+
+
+.이 작업에 대해
+다음 그림에서는 SnapLock Compliance 볼트 관계를 초기화하는 절차를 보여 줍니다.
+
+image::ontap-cyber-vault-air-gap.png[NetApp ONTAP를 사용한 에어갭 사이버 소산]
+
+.단계
+. 대상 어레이를 식별하여 장애된 데이터를 수신할 사이버 보관소가 될 수 있습니다.
+. 대상 어레이에서, 사이버 볼트를 준비하기 위해link:../../ontap/system-admin/install-license-task.html["ONTAP One 라이센스를 설치합니다"^], link:../../ontap/snaplock/initialize-complianceclock-task.html["준수 시계를 초기화합니다"^]그리고 9.10.1 이전 버전의 ONTAP 릴리스를 사용하는 경우link:../../ontap/snaplock/create-snaplock-aggregate-task.html["SnapLock Compliance 애그리게이트를 생성합니다"^].
+. 대상 어레이에서 DP 유형의 SnapLock Compliance 대상 볼륨을 생성합니다.
++
+`volume create -vserver SVM_name -volume volume_name -aggregate aggregate_name -snaplock-type compliance|enterprise -type DP -size size`
+
+. ONTAP 9.10.1부터 SnapLock 및 비 SnapLock 볼륨은 동일한 애그리게이트에 존재할 수 있으므로, ONTAP 9.10.1을 사용하는 경우 더 이상 별도의 SnapLock 애그리게이트를 생성할 필요가 없습니다. 볼륨 `-snaplock-type` 옵션을 사용하여 준수 유형을 지정합니다. ONTAP 9.10.1 이전 버전의 ONTAP 릴리즈에서는 SnapLock 모드 규정 준수가 집계에서 상속됩니다. 버전에 상관없이 유연한 타겟 볼륨이 지원되지 않습니다. 대상 볼륨의 언어 설정은 소스 볼륨의 언어 설정과 일치해야 합니다.
++
+다음 명령을 실행하면 `dstvolB` `SVM2` 애그리게이트에 이라는 2GB SnapLock Compliance 볼륨이 생성됩니다 `node01_aggr`.
+
++
+`cluster2::> volume create -vserver SVM2 -volume dstvolB -aggregate node01_aggr -snaplock-type compliance -type DP -size 2GG`
+
+. 대상 클러스터에서 Airgap을 생성하려면 에 설명된 대로 기본 보존 기간을 link:../../ontap/snaplock/set-default-retention-period-task.html["기본 보존 기간을 설정합니다"^]설정합니다. 볼트 대상인 SnapLock 볼륨에 기본 보존 기간이 할당되어 있습니다. 이 기간의 값은 SnapLock Compliance 볼륨의 경우 처음에는 최소 0년, 최대 30년으로 설정됩니다. 각 NetApp 스냅샷 복사본은 처음에 이 기본 보존 기간을 사용하여 커밋됩니다. 기본 보존 기간을 변경해야 합니다. 보존 기간은 나중에 필요할 경우 연장할 수 있지만 줄일 수는 없습니다. 자세한 내용은 을 link:../../ontap/snaplock/set-retention-period-task.html["보존 시간 개요를 설정합니다"^]참조하십시오.
+. link:../../ontap/data-protection/create-replication-relationship-task.html["새 복제 관계를 생성합니다"^] 비 SnapLock 소스와 3단계에서 만든 새 SnapLock 대상 간
++
+이 예에서는 매일 및 매주 레이블이 지정된 스냅샷 복사본을 시간별 일정에 따라 보관하기 위해 XDPDefault 정책을 사용하여 대상 SnapLock 볼륨 dstvolB와 새로운 SnapMirror 관계를 생성합니다.
+
++
+`cluster2::> snapmirror create -source-path SVM1:srcvolA -destination-path SVM2:dstvolB -vserver SVM2 -policy XDPDefault -schedule hourly`
+
++
+link:../../ontap/data-protection/create-custom-replication-policy-concept.html["사용자 지정 복제 정책을 생성합니다"^] 또는 link:../../ontap/data-protection/create-replication-job-schedule-task.html["사용자 지정 일정"^]사용 가능한 기본값이 적합하지 않은 경우 a를 선택합니다.
+
+. 대상 SVM에서 5단계에서 생성한 SnapVault 관계를 초기화합니다.
++
+`snapmirror initialize -destination-path destination_path`
+
+. 다음 명령을 실행하면 SVM1의 소스 볼륨 srcvolA와 SVM2의 대상 볼륨 dstvolB 간의 관계가 초기화됩니다.
++
+`cluster2::> snapmirror initialize -destination-path SVM2:dstvolB`
+
+. 관계가 초기화되고 유휴 상태가 되면 타겟에서 snapshot show 명령을 사용하여 복제된 스냅샷 복사본에 적용되는 SnapLock 만료 시간을 확인하십시오.
++
+이 예에서는 SnapMirror 레이블과 SnapLock 만료 날짜가 있는 볼륨 dstvolB의 스냅샷 복제본을 보여 줍니다.
+
++
+`cluster2::> snapshot show -vserver SVM2 -volume dstvolB -fields snapmirror-label, snaplock-expiry-time`
+
+

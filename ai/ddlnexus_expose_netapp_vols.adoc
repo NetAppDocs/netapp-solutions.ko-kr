@@ -49,7 +49,7 @@ NOTE: 온프레미스 볼륨의 경우 온프레미스 Kubernetes 클러스터�
 
 그런 다음 Domino에 외부 데이터 볼륨을 등록해야 합니다. 외부 데이터 볼륨을 등록하려면 을 참조하십시오 link:https://docs.dominodatalab.com/en/latest/admin_guide/9c3564/register-external-data-volumes/["지침"] Domino 관리 가이드 볼륨을 등록할 때 'Volume Type(볼륨 유형)' 드롭다운 메뉴에서 "NFS"를 선택해야 합니다. "NFS"를 선택하면 '사용 가능한 볼륨' 목록에 PVC가 표시됩니다.
 
-image::ddlnexus_image3.png[ddlnexus 이미지3]
+image:ddlnexus_image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

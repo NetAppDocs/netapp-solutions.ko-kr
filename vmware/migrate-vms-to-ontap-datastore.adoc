@@ -38,11 +38,11 @@ ONTAP 데이터 저장소가 접속 구성, 내결함성 및 성능 향상을 �
 
 vSphere 호스트 간의 VM 마이그레이션도 vSphere 호스트의 VMkernel 인터페이스에 의해 처리됩니다. 핫 마이그레이션(전원이 켜진 VM)의 경우 vMotion 사용 서비스가 포함된 VMkernel 인터페이스가 사용되며 콜드 마이그레이션(전원이 꺼진 VM)의 경우 프로비저닝 서비스가 설정된 VMkernel 인터페이스가 데이터를 이동하는 데 사용됩니다. 유효한 인터페이스를 찾지 못한 경우 관리 인터페이스를 사용하여 데이터를 이동하며, 이는 특정 사용 사례에는 적합하지 않을 수 있습니다.
 
-image::migrate-vms-to-ontap-image02.png[활성화된 서비스가 있는 VMkernel]
+image:migrate-vms-to-ontap-image02.png["활성화된 서비스가 있는 VMkernel"]
 
 VMkernel 인터페이스를 편집할 때 필요한 서비스를 활성화하는 옵션이 있습니다.
 
-image::migrate-vms-to-ontap-image01.png[VMkernel 서비스 옵션]
+image:migrate-vms-to-ontap-image01.png["VMkernel 서비스 옵션"]
 
 
 TIP: vMotion 및 Provisioning VMkernel 인터페이스에서 사용하는 포트 그룹에 대해 2개 이상의 고속 활성 업링크 NIC를 사용할 수 있는지 확인합니다.
@@ -64,23 +64,23 @@ UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 
 
 . vSphere Web Client의 경우 스토리지 인벤토리에서 데이터 저장소를 선택하고 VMS 탭을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image03.png[특정 데이터 저장소에 있는 VM입니다]
+image:migrate-vms-to-ontap-image03.png["특정 데이터 저장소에 있는 VM입니다"]
 
 . 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 마이그레이션 옵션을 선택합니다.
 +
-image::migrate-vms-to-ontap-image04.png[마이그레이션할 VM입니다]
+image:migrate-vms-to-ontap-image04.png["마이그레이션할 VM입니다"]
 
 . 스토리지만 변경하는 옵션을 선택하고 Next를 클릭합니다
 +
-image::migrate-vms-to-ontap-image05.png[저장만 변경]
+image:migrate-vms-to-ontap-image05.png["저장만 변경"]
 
 . 원하는 VM 스토리지 정책을 선택하고 호환되는 데이터 저장소를 선택합니다. 다음 을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image06.png[VM 스토리지 정책을 충족하는 데이터 저장소입니다]
+image:migrate-vms-to-ontap-image06.png["VM 스토리지 정책을 충족하는 데이터 저장소입니다"]
 
 . 검토 후 Finish(마침) 를 클릭합니다.
 +
-image::migrate-vms-to-ontap-image07.png[스토리지 마이그레이션 검토]
+image:migrate-vms-to-ontap-image07.png["스토리지 마이그레이션 검토"]
 
 
 
@@ -117,23 +117,23 @@ UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 
 
 . vSphere Web Client를 사용하는 경우 호스트 및 클러스터 인벤토리에서 클러스터를 선택하고 VM 탭을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image08.png[특정 클러스터의 VM]
+image:migrate-vms-to-ontap-image08.png["특정 클러스터의 VM"]
 
 . 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 마이그레이션 옵션을 선택합니다.
 +
-image::migrate-vms-to-ontap-image04.png[마이그레이션할 VM입니다]
+image:migrate-vms-to-ontap-image04.png["마이그레이션할 VM입니다"]
 
 . 스토리지만 변경하는 옵션을 선택하고 Next를 클릭합니다
 +
-image::migrate-vms-to-ontap-image05.png[저장만 변경]
+image:migrate-vms-to-ontap-image05.png["저장만 변경"]
 
 . 원하는 VM 스토리지 정책을 선택하고 호환되는 데이터 저장소를 선택합니다. 다음 을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image06.png[VM 스토리지 정책을 충족하는 데이터 저장소입니다]
+image:migrate-vms-to-ontap-image06.png["VM 스토리지 정책을 충족하는 데이터 저장소입니다"]
 
 . 검토 후 Finish(마침) 를 클릭합니다.
 +
-image::migrate-vms-to-ontap-image07.png[스토리지 마이그레이션 검토]
+image:migrate-vms-to-ontap-image07.png["스토리지 마이그레이션 검토"]
 
 
 
@@ -176,35 +176,35 @@ UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 
 
 . vSphere Web Client를 사용하는 경우 호스트 및 클러스터 인벤토리에서 클러스터를 선택하고 VM 탭을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image08.png[특정 클러스터의 VM]
+image:migrate-vms-to-ontap-image08.png["특정 클러스터의 VM"]
 
 . 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 마이그레이션 옵션을 선택합니다.
 +
-image::migrate-vms-to-ontap-image04.png[마이그레이션할 VM입니다]
+image:migrate-vms-to-ontap-image04.png["마이그레이션할 VM입니다"]
 
 . 컴퓨팅 리소스 및 스토리지를 변경하는 옵션을 선택하고 Next를 클릭합니다
 +
-image::migrate-vms-to-ontap-image09.png[컴퓨팅과 스토리지를 모두 변경합니다]
+image:migrate-vms-to-ontap-image09.png["컴퓨팅과 스토리지를 모두 변경합니다"]
 
 . 마이그레이션할 올바른 클러스터를 탐색하고 선택합니다.
 +
-image::migrate-vms-to-ontap-image12.png[타겟 클러스터를 선택합니다]
+image:migrate-vms-to-ontap-image12.png["타겟 클러스터를 선택합니다"]
 
 . 원하는 VM 스토리지 정책을 선택하고 호환되는 데이터 저장소를 선택합니다. 다음 을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image13.png[VM 스토리지 정책을 충족하는 데이터 저장소입니다]
+image:migrate-vms-to-ontap-image13.png["VM 스토리지 정책을 충족하는 데이터 저장소입니다"]
 
 . 타겟 VM을 배치할 VM 폴더를 선택합니다.
 +
-image::migrate-vms-to-ontap-image14.png[대상 VM 폴더 선택]
+image:migrate-vms-to-ontap-image14.png["대상 VM 폴더 선택"]
 
 . 타겟 포트 그룹을 선택합니다.
 +
-image::migrate-vms-to-ontap-image15.png[타겟 포트 그룹 선택]
+image:migrate-vms-to-ontap-image15.png["타겟 포트 그룹 선택"]
 
 . 검토 후 Finish(마침) 를 클릭합니다.
 +
-image::migrate-vms-to-ontap-image07.png[스토리지 마이그레이션 검토]
+image:migrate-vms-to-ontap-image07.png["스토리지 마이그레이션 검토"]
 
 
 
@@ -247,35 +247,35 @@ NOTE: 소스 및 타겟 vCenter 버전 등과 같은 추가 요구 사항은 을
 
 . vSphere Web Client를 사용하는 경우 호스트 및 클러스터 인벤토리에서 클러스터를 선택하고 VM 탭을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image08.png[특정 클러스터의 VM]
+image:migrate-vms-to-ontap-image08.png["특정 클러스터의 VM"]
 
 . 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 마이그레이션 옵션을 선택합니다.
 +
-image::migrate-vms-to-ontap-image04.png[마이그레이션할 VM입니다]
+image:migrate-vms-to-ontap-image04.png["마이그레이션할 VM입니다"]
 
 . 컴퓨팅 리소스 및 스토리지를 변경하는 옵션을 선택하고 Next를 클릭합니다
 +
-image::migrate-vms-to-ontap-image09.png[컴퓨팅과 스토리지를 모두 변경합니다]
+image:migrate-vms-to-ontap-image09.png["컴퓨팅과 스토리지를 모두 변경합니다"]
 
 . 타겟 vCenter Server에서 타겟 클러스터를 선택합니다.
 +
-image::migrate-vms-to-ontap-image12.png[타겟 클러스터를 선택합니다]
+image:migrate-vms-to-ontap-image12.png["타겟 클러스터를 선택합니다"]
 
 . 원하는 VM 스토리지 정책을 선택하고 호환되는 데이터 저장소를 선택합니다. 다음 을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image13.png[VM 스토리지 정책을 충족하는 데이터 저장소입니다]
+image:migrate-vms-to-ontap-image13.png["VM 스토리지 정책을 충족하는 데이터 저장소입니다"]
 
 . 타겟 VM을 배치할 VM 폴더를 선택합니다.
 +
-image::migrate-vms-to-ontap-image14.png[대상 VM 폴더 선택]
+image:migrate-vms-to-ontap-image14.png["대상 VM 폴더 선택"]
 
 . 타겟 포트 그룹을 선택합니다.
 +
-image::migrate-vms-to-ontap-image15.png[타겟 포트 그룹 선택]
+image:migrate-vms-to-ontap-image15.png["타겟 포트 그룹 선택"]
 
 . 마이그레이션 옵션을 검토하고 Finish를 클릭합니다.
 +
-image::migrate-vms-to-ontap-image07.png[스토리지 마이그레이션 검토]
+image:migrate-vms-to-ontap-image07.png["스토리지 마이그레이션 검토"]
 
 
 
@@ -318,15 +318,15 @@ UI를 사용하여 VM을 다른 vCenter Server로 마이그레이션하려면 �
 
 . vSphere Web Client에서 소스 vCenter Server를 선택하고 VMS 탭을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image10.png[소스 vCenter의 VM입니다]
+image:migrate-vms-to-ontap-image10.png["소스 vCenter의 VM입니다"]
 
 . 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 마이그레이션 옵션을 선택합니다.
 +
-image::migrate-vms-to-ontap-image04.png[마이그레이션할 VM입니다]
+image:migrate-vms-to-ontap-image04.png["마이그레이션할 VM입니다"]
 
 . Cross vCenter Server export 옵션을 선택하고 Next를 클릭합니다
 +
-image::migrate-vms-to-ontap-image11.png[vCenter Server 간 내보내기]
+image:migrate-vms-to-ontap-image11.png["vCenter Server 간 내보내기"]
 
 +
 
@@ -334,31 +334,31 @@ TIP: 타겟 vCenter Server에서 VM을 가져올 수도 있습니다. 이 절차
 
 . vCenter 자격 증명 세부 정보를 제공하고 Login 을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image23.png[vCenter 자격 증명입니다]
+image:migrate-vms-to-ontap-image23.png["vCenter 자격 증명입니다"]
 
 . vCenter Server의 SSL 인증서 지문을 확인하고 수락합니다
 +
-image::migrate-vms-to-ontap-image24.png[SSL 지문]
+image:migrate-vms-to-ontap-image24.png["SSL 지문"]
 
 . 타겟 vCenter를 확장하고 타겟 컴퓨팅 클러스터를 선택합니다.
 +
-image::migrate-vms-to-ontap-image25.png[대상 컴퓨팅 클러스터를 선택합니다]
+image:migrate-vms-to-ontap-image25.png["대상 컴퓨팅 클러스터를 선택합니다"]
 
 . VM 스토리지 정책을 기반으로 타겟 데이터 저장소를 선택합니다.
 +
-image::migrate-vms-to-ontap-image26.png[타겟 데이터 저장소를 선택합니다]
+image:migrate-vms-to-ontap-image26.png["타겟 데이터 저장소를 선택합니다"]
 
 . 대상 VM 폴더를 선택합니다.
 +
-image::migrate-vms-to-ontap-image27.png[대상 VM 폴더를 선택합니다]
+image:migrate-vms-to-ontap-image27.png["대상 VM 폴더를 선택합니다"]
 
 . 각 네트워크 인터페이스 카드 매핑에 대해 VM 포트 그룹을 선택합니다.
 +
-image::migrate-vms-to-ontap-image28.png[대상 포트 그룹을 선택합니다]
+image:migrate-vms-to-ontap-image28.png["대상 포트 그룹을 선택합니다"]
 
 . 검토 후 Finish를 클릭하여 vCenter 서버에서 vMotion을 시작합니다.
 +
-image::migrate-vms-to-ontap-image29.png[vMotion 간 작업 검토]
+image:migrate-vms-to-ontap-image29.png["vMotion 간 작업 검토"]
 
 
 
@@ -438,7 +438,7 @@ VM 템플릿은 vCenter Server 또는 컨텐츠 라이브러리를 통해 관리
 ====
 . vSphere Web Client에서 VM and Templates 폴더 보기 아래의 VM 템플릿을 마우스 오른쪽 버튼으로 클릭하고 옵션을 선택하여 VM으로 변환합니다.
 +
-image::migrate-vms-to-ontap-image16.png[VM 템플릿을 VM으로 변환합니다]
+image:migrate-vms-to-ontap-image16.png["VM 템플릿을 VM으로 변환합니다"]
 
 . VM으로 변환되면 VM 마이그레이션 옵션을 따릅니다.
 
@@ -449,12 +449,12 @@ image::migrate-vms-to-ontap-image16.png[VM 템플릿을 VM으로 변환합니다
 ====
 . vSphere Web Client에서 Content Libraries를 선택합니다
 +
-image::migrate-vms-to-ontap-image17.png[콘텐츠 라이브러리 선택]
+image:migrate-vms-to-ontap-image17.png["콘텐츠 라이브러리 선택"]
 
 . 복제할 항목이 있는 콘텐츠 라이브러리를 선택합니다
 . 항목을 마우스 오른쪽 버튼으로 클릭하고 Clone Item을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image18.png[콘텐츠 라이브러리 항목을 복제합니다]
+image:migrate-vms-to-ontap-image18.png["콘텐츠 라이브러리 항목을 복제합니다"]
 
 +
 
@@ -462,11 +462,11 @@ WARNING: 작업 메뉴를 사용하는 경우 작업을 수행하기 위해 올�
 
 . 대상 콘텐츠 라이브러리를 선택하고 확인을 클릭합니다.
 +
-image::migrate-vms-to-ontap-image19.png[대상 콘텐츠 라이브러리 선택]
+image:migrate-vms-to-ontap-image19.png["대상 콘텐츠 라이브러리 선택"]
 
 . 대상 콘텐츠 라이브러리에서 항목을 사용할 수 있는지 확인합니다.
 +
-image::migrate-vms-to-ontap-image20.png[클론 항목을 확인합니다]
+image:migrate-vms-to-ontap-image20.png["클론 항목을 확인합니다"]
 
 
 
@@ -487,7 +487,7 @@ Get-ContentLibaryItem -ContentLibary (Get-ContentLibary 'CL01' -Server $sourcevc
 ====
 . vSphere Web Client에서 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 Clone as Template in Library를 선택합니다
 +
-image::migrate-vms-to-ontap-image21.png[라이브러리의 템플릿으로 VM 클론 생성]
+image:migrate-vms-to-ontap-image21.png["라이브러리의 템플릿으로 VM 클론 생성"]
 
 +
 
@@ -495,7 +495,7 @@ TIP: 라이브러리에 클론을 생성하도록 VM 템플릿을 선택한 경�
 
 . 템플릿 유형이 VM 템플릿으로 선택되었는지 확인하고 마법사에 응답하여 작업을 완료합니다.
 +
-image::migrate-vms-to-ontap-image22.png[템플릿 유형 선택]
+image:migrate-vms-to-ontap-image22.png["템플릿 유형 선택"]
 
 +
 

@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
+permalink: /cyber-vault/ontap-cyber-vault-interoperability.html 
+summary: 사이버 볼트 상호 운용성 
+---
+= 사이버 볼트 상호 운용성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 하드웨어 및 소프트웨어를 사용하여 사이버 소산 구성을 만들 수 있습니다.
+
+
+
+== ONTAP 하드웨어 권장 사항
+
+사이버 소산 구현에 ONTAP 유니파이드 물리적 어레이를 모두 사용할 수 있습니다.
+
+* FAS 하이브리드 스토리지 는 가장 비용 효율적인 솔루션을 제공합니다.
+* AFF C 시리즈는 가장 효율적인 전력 소비량과 집적도를 제공합니다.
+* AFF A-Series는 최상의 RTO를 제공하는 최고 성능의 플랫폼입니다. 최근 NetApp의 최신 AFF A-Series 발표가 이루어지면서 이 플랫폼은 성능 저하 없이 최고의 스토리지 효율성을 제공합니다.
+
+
+
+
+== ONTAP 소프트웨어 권장 사항
+
+ONTAP 9.14.1부터는 SnapMirror 관계의 SnapMirror 정책에서 특정 SnapMirror 레이블에 대한 보존 기간을 지정할 수 있으므로 소스에서 타겟 볼륨으로의 복제된 스냅샷 복사본이 규칙에 지정된 보존 기간 동안 유지되도록 할 수 있습니다. 보존 기간을 지정하지 않으면 대상 볼륨의 기본 보존 기간이 사용됩니다.
+
+ONTAP 9.13.1부터는 SnapLock-type 옵션이 "non-SnapLock"로 설정된 FlexClone를 생성하고 볼륨 클론 생성 작업을 실행할 때 스냅샷 복사본을 "상위-스냅샷"으로 지정하여 SnapLock 소산 관계의 대상 SnapLock 볼륨에서 잠긴 스냅샷 복사본을 즉시 복원할 수 있습니다. 에 대해 자세히 link:../../ontap/volumes/create-flexclone-task.html?q=volume+clone["SnapLock 형식으로 FlexClone 볼륨 생성"^]알아보십시오.
+
+
+
+== MetroCluster 구성
+
+MetroCluster 구성의 경우 다음 사항에 유의해야 합니다.
+
+* 동기식 소스 SVM과 동기식-타겟 SVM 간에는 동기식-소스 SVM 사이만이 아니라 SnapVault 관계를 생성할 수 있습니다.
+* 동기화 소스 SVM의 볼륨에서 데이터 지원 SVM으로 SnapVault 관계를 생성할 수 있습니다.
+* 데이터 지원 SVM의 볼륨에서 동기화 소스 SVM의 DP 볼륨으로 SnapVault 관계를 생성할 수 있습니다.
+

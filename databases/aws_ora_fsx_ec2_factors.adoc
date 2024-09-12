@@ -36,11 +36,11 @@ keywords: HA, DR, database, Oracle, RDS, AWS, SnapCenter
 
 * NFS 스토리지의 경우 권장되는 볼륨 레이아웃은 세 개의 볼륨입니다. 하나는 Oracle 바이너리용이고, 다른 하나는 Oracle 데이터 및 중복 제어 파일용이며, 다른 하나는 Oracle 액티브 로그, 아카이브 로그 및 제어 파일용입니다.
 +
-image::aws_ora_fsx_ec2_stor_12.PNG[AWS ora FSx EC2 저장소 12]
+image:aws_ora_fsx_ec2_stor_12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 * iSCSI 스토리지의 경우 권장되는 볼륨 레이아웃은 Oracle 바이너리용 볼륨 1개, Oracle 데이터 및 중복 제어 파일용 볼륨 1개, Oracle 액티브 로그, 아카이브 로그 및 제어 파일용 볼륨 3개입니다. 그러나 각 데이터 및 로그 볼륨에는 4개의 LUN이 포함되어 있어야 합니다. LUN은 HA 클러스터 노드에서 균형을 유지하는 것이 이상적입니다.
 +
-image::aws_ora_fsx_ec2_stor_13.PNG[AWS ora FSx EC2 저장소 13]
+image:aws_ora_fsx_ec2_stor_13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 * 스토리지 IOPS 및 처리량의 경우 FSx 스토리지 클러스터의 프로비저닝된 IOPS 및 처리량에 대한 임계값을 선택할 수 있으며, 워크로드가 변경될 때마다 이러한 매개 변수를 즉석에서 조정할 수 있습니다.
 +
@@ -73,7 +73,7 @@ sysctl -a | grep tcp.*.slot_table
 ----
 * 다음 표에는 Linux NFSv3 - 단일 인스턴스에 대한 권장 NFS 마운트 옵션이 나와 있습니다.
 +
-image::aws_ora_fsx_ec2_nfs_01.PNG[AWS ora FSx EC2 NFS 01]
+image:aws_ora_fsx_ec2_nfs_01.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

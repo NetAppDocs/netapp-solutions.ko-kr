@@ -55,7 +55,7 @@ ASM(Automatic Storage Management)은 많은 Oracle 설치에 사용되는 일반
 
 === 있습니다
 
-image::aws_ora_fsx_ec2_iscsi_asm_architecture.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+image:aws_ora_fsx_ec2_iscsi_asm_architecture.png["이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다."]
 
 
 

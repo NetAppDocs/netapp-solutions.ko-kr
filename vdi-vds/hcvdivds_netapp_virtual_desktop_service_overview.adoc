@@ -28,7 +28,7 @@ Microsoft는 Azure에서 Windows Virtual Desktop 환경에서만 Windows 10에 �
 
 다음 그림에 샘플 구축 토폴로지가 나와 있습니다.
 
-image::hcvdivds_image1.png[hcvdivds 이미지1]
+image:hcvdivds_image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 각 배포는 Active Directory 도메인과 연결되며 작업 영역 및 응용 프로그램에 대한 액세스 진입점을 클라이언트에 제공합니다. Active Directory 도메인이 여러 개인 서비스 공급자 또는 엔터프라이즈에는 일반적으로 더 많은 구축이 있습니다. 여러 지역에 걸쳐 있는 단일 Active Directory 도메인에는 일반적으로 여러 사이트를 포함하는 단일 배포가 있습니다.
 
@@ -36,19 +36,19 @@ Azure의 WVD에 대해 Microsoft는 NetApp VDS에서 소비되는 서비스형 �
 
 각 배포에는 Cloud Workspace Manager(REST API 엔드포인트), HTML 5 게이트웨이(VDS 관리 포털에서 VM에 연결), RDS 게이트웨이(클라이언트의 액세스 지점) 및 도메인 컨트롤러로 구성된 자체 플랫폼 서비스가 있습니다. 다음 그림은 RDS 구현을 위한 VDS Control Plane 아키텍처를 보여 줍니다.
 
-image::hcvdivds_image2.png[hcvdivds 이미지2]
+image:hcvdivds_image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 RDS 구현의 경우 NetApp VDS는 고객 로고 및 이미지를 포함하도록 커스터마이징할 수 있는 클라이언트 소프트웨어를 사용하여 Windows 및 브라우저에서 쉽게 액세스할 수 있습니다. 사용자 자격 증명을 기반으로 승인된 작업 공간 및 애플리케이션에 대한 사용자 액세스를 제공합니다. 게이트웨이 세부 정보를 구성할 필요가 없습니다.
 
 다음 그림은 NetApp VDS 클라이언트를 보여 줍니다.
 
-image::hcvdivds_image3.png[hcvdivds 이미지3]
+image:hcvdivds_image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Azure WVD 구현에서 Microsoft는 클라이언트의 액세스 진입점을 처리하며 다양한 OS에 기본적으로 제공되는 Microsoft WVD 클라이언트에서 사용할 수 있습니다. 웹 기반 포털에서 액세스할 수도 있습니다. 클라이언트 소프트웨어의 구성은 GPO(그룹 정책 개체)나 고객이 선호하는 다른 방법으로 처리해야 합니다.
 
 다음 그림은 Azure WVD 구현을 위한 VDS Control Plane 아키텍처를 보여 줍니다.
 
-image::hcvdivds_image4.png[hcvdivds 이미지4]
+image:hcvdivds_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NetApp VDS는 필요한 구성 요소의 배포 및 구성 외에도 사용자 관리, 응용 프로그램 관리, 리소스 확장 및 최적화를 처리합니다.
 

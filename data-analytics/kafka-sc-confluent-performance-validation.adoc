@@ -24,7 +24,7 @@ NetApp ONTAP의 계층형 스토리지를 위한 Confluent Platform을 사용하
 
 다음 그림에서는 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다.
 
-image::kafka-sc-image7.png[이 그래픽은 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다.]
+image:kafka-sc-image7.png["이 그래픽은 계층형 스토리지 검증에 사용된 구성의 네트워크 토폴로지를 보여 줍니다."]
 
 도구 서버는 Confluent 노드로 이벤트를 보내거나 받는 응용 프로그램 클라이언트로 작동합니다.
 
@@ -73,7 +73,7 @@ consumer.timeout.sec=3600
 
 검증을 위해 ONTAP에서 단일 HA 쌍 구성을 구성했습니다.
 
-image::kafka-sc-image8.png[이 그래픽은 환경이 검증을 위한 단일 HA 쌍으로 구성된 방식을 보여 줍니다.]
+image:kafka-sc-image8.png["이 그래픽은 환경이 검증을 위한 단일 HA 쌍으로 구성된 방식을 보여 줍니다."]
 
 
 

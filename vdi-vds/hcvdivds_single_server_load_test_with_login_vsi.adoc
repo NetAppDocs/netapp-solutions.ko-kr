@@ -67,16 +67,16 @@ Login VSI 테스트 결과는 다음과 같습니다.
 
 H610C에서는 RDP 프로토콜을 사용하여 사용자 세션에 연결하는 10개의 시작 관리자 VM을 사용했습니다. 다음 그림에서는 Login VSI 연결 정보를 보여 줍니다.
 
-image::hcvdivds_image22.png[hcvdivds 이미지22]
+image:hcvdivds_image22.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 그림에서는 H610C의 활성 세션과 Login VSI 응답 시간을 비교하여 보여 줍니다.
 
-image::hcvdivds_image23.png[hcvdivds 이미지23]
+image:hcvdivds_image23.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 그림에서는 H615C에 대한 Login VSI 응답 시간과 활성 세션을 비교하여 보여 줍니다.
 
-image::hcvdivds_image24.png[hcvdivds 이미지24]
+image:hcvdivds_image24.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 그림에서는 H615C vSphere 호스트 및 VM에 대한 Login VSI 테스트 중에 Cloud Insights의 성능 메트릭을 보여 줍니다.
 
-image::hcvdivds_image25.png[hcvdivds 이미지25]
+image:hcvdivds_image25.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

@@ -70,7 +70,7 @@ VMware HCX는 애플리케이션 마이그레이션을 간소화하고, 워크�
 
 HCX는 둘 이상의 서로 다른 환경 간에 서비스를 제공합니다. 환경은 기존 vSphere를 실행 중이거나 최신 vSphere SDDC를 실행 중일 수 있으며 VMware 기반 퍼블릭 클라우드 인스턴스일 수도 있습니다.
 
-image::vmware-hcx.png[VMWare 하드웨어]
+image:vmware-hcx.png["너비 = 600"]
 
 * link:../ehc/aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다"]
 * link:../ehc/azure-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]

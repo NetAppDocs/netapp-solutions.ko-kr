@@ -4,6 +4,7 @@ title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
 url: "/ehc/index.html"
 entries:
 - title: VMware - 퍼블릭 클라우드
+  pdf-filename: NetApp 기반 퍼블릭 클라우드용 VMware
   entries:
   - title: 개요
     url: "/ehc/ehc-overview.html"
@@ -12,8 +13,9 @@ entries:
   - title: 지원되는 구성
     url: "/ehc/ehc-support-configs.html"
   - title: 하이퍼스케일 구성의 VMware
-    url: "/ehc/ehc-config-vmware-intro.html"
     entries:
+    - title: 소개
+      url: "/ehc/ehc-config-vmware-intro.html"
     - title: AWS용 VMC를 구성합니다
       url: "/ehc/aws-setup.html"
     - title: Azure용 AVS를 구성합니다
@@ -21,8 +23,9 @@ entries:
     - title: GCP에 대한 GCVE를 구성합니다
       url: "/ehc/gcp-setup.html"
   - title: 하이퍼스케일러 클라우드의 NetApp 스토리지
-    url: "/ehc/ehc-datastore-intro.html"
     entries:
+    - title: 소개
+      url: "/ehc/ehc-datastore-intro.html"
     - title: VMC용 보조 NFS 데이터 저장소입니다
       url: "/ehc/aws-native-overview.html"
     - title: VMC를 위한 게스트 연결 스토리지
@@ -40,6 +43,7 @@ entries:
   - title: 요약 및 결론
     url: "/ehc/ehc-summary.html"
 - title: VMware 하이브리드 클라우드 사용 사례
+  pdf-filename: VMware 하이브리드 클라우드 사용 사례
   entries:
   - title: 사용 사례 개요
     url: "/ehc/ehc-use-cases.html"
@@ -50,8 +54,10 @@ entries:
   - title: GCP/GCVE용 솔루션
     url: "/ehc/gcp-solutions.html"
 - title: NetApp for AWS/VMC
-  url: "/ehc/aws-vmc.html"
+  pdf-filename: Amazon VMware 클라우드용 NetApp
   entries:
+  - title: 개요
+    url: "/ehc/aws-vmc.html"
   - title: AWS/VMC에서 워크로드 보호
     entries:
     - title: AWS에서 VMC를 사용한 재해 복구(게스트 연결)
@@ -69,8 +75,10 @@ entries:
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/aws-regions.html"
 - title: NetApp for Azure/AVS
-  url: "/ehc/azure-avs.html"
+  pdf-filename: NetApp for Azure 가상화 서비스
   entries:
+  - title: 개요
+    url: "/ehc/azure-avs.html"
   - title: Azure/AVS에서 워크로드 보호
     entries:
     - title: ANF 및 Jetstream을 사용한 재해 복구(보조 NFS 데이터 저장소)
@@ -89,8 +97,10 @@ entries:
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/azure-regions.html"
 - title: NetApp for GCP/GCVE
-  url: "/ehc/gcp-gcve.html"
+  pdf-filename: Google 클라우드 가상화 엔진용 NetApp
   entries:
+  - title: 개요
+    url: "/ehc/gcp-gcve.html"
   - title: GCP/GCVE에서 워크로드 보호
     entries:
     - title: Veeam을 통한 재해 복구(보충 NFS 데이터 저장소)
@@ -154,6 +164,7 @@ entries:
   - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
     url: "/ehc/bxp-scv-hybrid-solution.html"
   - title: BlueXP  DRaaS를 사용한 DR
+    pdf-filename: BlueXP  DRaaS를 사용한 재해 복구
     entries:
     - title: 개요
       url: "/ehc/dr-draas-overview.html"

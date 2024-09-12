@@ -3,11 +3,8 @@ section: hyperv
 title: Hyper-V 가상화
 url: "/hyperv/index.html"
 entries:
-- title: 시작하기
-  entries:
-  - title: 여기에 제목을 입력합니다
-    url: "../about.html"
 - title: NetApp 스토리지에 Microsoft Hyper-V 구축
+  pdf-filename: NetApp 스토리지에 Hyper-V 구축
   entries:
   - title: 개요
     url: "/hyperv/hyperv-deploy.html"

@@ -44,9 +44,9 @@ OpenShift Bare-Metal IPI 배포의 경우 별도의 네트워크에 네트워크
 
 다음 이미지는 IPI 배포 중 및 배포 완료 후 환경을 보여줍니다.
 
-image::redhat_openshift_image36.png[RedHat OpenShift 이미지36]
+image:redhat_openshift_image36.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::redhat_openshift_image37.png[Redhat OpenShift 이미지37]
+image:redhat_openshift_image37.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

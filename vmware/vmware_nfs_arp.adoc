@@ -18,7 +18,7 @@ summary:
 
 위에서 언급한 기능이 VMware와 함께 작동하여 랜섬웨어로부터 데이터를 보호하고 복구하는 방법을 살펴보겠습니다. 공격으로부터 vSphere 및 게스트 VM을 보호하려면 엔드포인트에 대한 EDR/XDR/SIEM 분리, 보안 업데이트 설치, 적절한 강화 지침 준수 등 여러 가지 조치를 취해야 합니다. 데이터 저장소에 상주하는 각 가상 머신도 표준 운영 체제를 호스팅합니다. 엔터프라이즈 서버 맬웨어 방지 제품군이 설치되어 있고 정기적으로 업데이트되도록 하십시오. 이는 다계층 랜섬웨어 방어 전략의 필수 구성 요소입니다. 이와 함께 데이터 저장소를 지원하는 NFS 볼륨에서 ARP(Autonomous Ransomware Protection)를 활성화하십시오. ARP는 볼륨 워크로드 활동과 데이터 엔트로피를 조사하여 랜섬웨어를 자동으로 탐지하는 온박스 ML을 활용합니다. ARP는 ONTAP 내장 관리 인터페이스 또는 시스템 관리자를 통해 구성할 수 있으며 볼륨별로 활성화됩니다.
 
-image::nfs-arp-image1.png[NFS ARP 이미지1]
+image:nfs-arp-image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 NOTE: 현재 기술 미리 보기에 있는 새로운 NetApp ARP/AI를 사용하면 학습 모드가 필요하지 않습니다. 대신 AI 기반 랜섬웨어 감지 기능을 통해 바로 액티브 모드로 전환할 수 있습니다.
@@ -28,7 +28,7 @@ NOTE: ONTAP One을 사용하면 이러한 모든 기능 세트가 완전히 무�
 
 활성 모드로 전환하면 랜섬웨어가 될 수 있는 비정상적인 볼륨 활동을 찾아내기 시작합니다. 비정상적인 활동이 감지되면 스냅샷 자동 복사본이 즉시 생성되고, 파일 감염에 가장 가까운 복원 지점을 제공합니다. ARP는 암호화된 볼륨에 새 확장자가 추가되거나 파일 확장자가 수정될 때 VM 외부에 있는 NFS 볼륨에서 VM별 파일 확장자의 변경을 감지할 수 있습니다.
 
-image::nfs-arp-image2.png[NFS ARP 이미지2]
+image:nfs-arp-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 랜섬웨어 공격이 가상 머신(VM)을 대상으로 하고 VM 외부에서 변경하지 않고 VM 내의 파일을 변경하는 경우, VM의 기본 엔트로피(예: .txt, .docx 또는 .mp4 파일)가 낮은 경우에도 ARP(Advanced Ransomware Protection)가 위협을 감지합니다. ARP는 이 시나리오에서 보호 스냅샷을 생성하지만 VM 외부의 파일 확장자가 변조되지 않았기 때문에 위협 경고를 생성하지 않습니다. 이러한 시나리오에서는 초기 방어 계층이 이상 현상을 식별하지만 ARP는 엔트로피를 기반으로 스냅샷을 생성하는 데 도움이 됩니다.
 
@@ -36,11 +36,11 @@ image::nfs-arp-image2.png[NFS ARP 이미지2]
 
 파일에서 백업 데이터로 이동하는 랜섬웨어 공격은 파일 암호화를 시작하기 전에 삭제를 시도하여 백업 및 스냅샷 복구 지점을 점점 더 많이 타겟으로 삼습니다. 그러나 ONTAP를 사용하면 를 사용하여 기본 또는 보조 시스템에서 변조 방지 스냅샷을 생성하여 이 문제를 방지할 수 link:https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html["NetApp Snapshot ™ 복사본 잠금"]있습니다.
 
-image::nfs-arp-image3.png[NFS ARP 이미지3]
+image:nfs-arp-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 이러한 스냅샷 복사본은 랜섬웨어 공격자나 악성 관리자가 삭제하거나 변경할 수 없으므로 공격 후에도 사용할 수 있습니다. 데이터 저장소 또는 특정 가상 머신이 영향을 받는 경우 SnapCenter는 몇 초 만에 가상 머신 데이터를 복구하여 조직의 다운타임을 최소화할 수 있습니다.
 
-image::nfs-arp-image4.png[NFS ARP 이미지4]
+image:nfs-arp-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 위의 내용은 ONTAP 스토리지가 기존 기술에 레이어를 추가하여 환경의 미래 대비를 강화하는 방법을 보여줍니다.
 
@@ -50,25 +50,25 @@ image::nfs-arp-image4.png[NFS ARP 이미지4]
 
 이 예에서는 NFS 데이터 저장소 "SRC_NFS_DS04"가 BlueXP  랜섬웨어 보호를 사용하여 보호됩니다.
 
-image::nfs-arp-image5.png[NFS ARP 이미지5]
+image:nfs-arp-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::nfs-arp-image6.png[NFS ARP 이미지6]
+image:nfs-arp-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 BlueXP  랜섬웨어 보호를 구성하는 방법에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-setup.html["BlueXP  랜섬웨어 방어 설정"]및 를  참조하십시오link:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html#add-amazon-web-services-as-a-backup-destination["BlueXP 랜섬웨어 보호 설정을 구성합니다"].
 
 예를 들어 살펴보겠습니다. 이 연습에서는 데이터 저장소 "SRC_NFS_DS04"가 영향을 받습니다.
 
-image::nfs-arp-image7.png[NFS ARP 이미지7]
+image:nfs-arp-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ARP가 감지될 때 즉시 볼륨에 대한 스냅샷을 트리거했습니다.
 
-image::nfs-arp-image8.png[NFS ARP 이미지8]
+image:nfs-arp-image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::nfs-arp-image9.png[NFS ARP 이미지9]
+image:nfs-arp-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 포렌식 분석이 완료되면 SnapCenter 또는 BlueXP  랜섬웨어 보호를 사용하여 복원을 빠르고 원활하게 수행할 수 있습니다. SnapCenter를 사용하여 영향을 받는 가상 머신으로 이동하고 복구할 적절한 스냅샷을 선택합니다.
 
-image::nfs-arp-image10.png[NFS ARP 이미지10]
+image:nfs-arp-image10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 이 섹션에서는 BlueXP  랜섬웨어 방어가 VM 파일이 암호화된 랜섬웨어 인시던트에서 복구를 오케스트레이션하는 방법에 대해 알아봅니다.
 
@@ -78,11 +78,11 @@ NOTE: VM이 SnapCenter에 의해 관리되는 경우 BlueXP  랜섬웨어 방�
 . BlueXP  랜섬웨어 방어에 액세스하면 BlueXP  랜섬웨어 보호 대시보드에 경고가 표시됩니다.
 . 경고를 클릭하여 생성된 경고에 대한 특정 볼륨의 인시던트를 검토합니다
 +
-image::nfs-arp-image11.png[NFS ARP 이미지11]
+image:nfs-arp-image11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . "복원 필요함"을 선택하여 랜섬웨어 인시던트를 복구 준비(인시던트가 해소된 후)로 표시합니다.
 +
-image::nfs-arp-image12.png[NFS ARP 이미지12]
+image:nfs-arp-image12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 
@@ -90,19 +90,19 @@ NOTE: 사고가 거짓 긍정인 것으로 판명되면 경고를 무시할 수 
 
 . 복구 탭으로 이동하여 복구 페이지에서 워크로드 정보를 검토하고 "복구 필요" 상태의 데이터 저장소 볼륨을 선택하고 복구 를 선택합니다.
 +
-image::nfs-arp-image13.png[NFS ARP 이미지13]
+image:nfs-arp-image13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 이 경우 복구 범위는 "VM별"입니다(VM용 SnapCenter의 경우 복구 범위는 "VM별"임).
 +
-image::nfs-arp-image14.png[NFS ARP 이미지14]
+image:nfs-arp-image14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 데이터를 복원하는 데 사용할 복원 지점을 선택하고 대상 을 선택한 다음 복원 을 클릭합니다.
 +
-image::nfs-arp-image15.png[NFS ARP 이미지15]
+image:nfs-arp-image15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 상단 메뉴에서 복구 를 선택하여 작업 상태가 상태로 이동하는 복구 페이지에서 작업 부하를 검토합니다. 복원이 완료되면 VM 파일이 아래와 같이 복원됩니다.
 +
-image::nfs-arp-image16.png[NFS ARP 이미지16]
+image:nfs-arp-image16.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

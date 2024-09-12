@@ -33,7 +33,7 @@ NetApp ONTAP 데이터 관리 소프트웨어 기반의 NetApp AFF A900은 기�
 
 _NetApp AFF A900 스토리지 시스템 _
 
-image::aipod_nv_A900.png[Aipod NV A900]
+image:aipod_nv_A900.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -63,7 +63,7 @@ NVIDIA DGX BasePOD는 NVIDIA 하드웨어 및 소프트웨어 구성 요소, MLO
 
 _NVIDIA DGX BasePOD 솔루션_
 
-image::aipod_nv_basepod_layers.png[AiPOD NV 기저창 레이어]
+image:aipod_nv_basepod_layers.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -73,7 +73,7 @@ NVIDIA DGX H100 및 #8482; 시스템은 NVIDIA H100 Tensor 코어 GPU의 획기�
 
 _NVIDIA DGX H100 시스템 _
 
-image::aipod_nv_H100_3D.png[Aipod NV H100 3D]
+image:aipod_nv_H100_3D.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 DGX H100 시스템의 주요 사양은 다음과 같습니다.
 • 8개의 NVIDIA H100 GPU.
@@ -88,7 +88,7 @@ DGX H100 CPU 트레이의 후면 포트는 아래에 나와 있습니다. OSFP �
 
 _NVIDIA DGX H100 후면 패널 _
 
-image::aipod_nv_H100_rear.png[Aipod NV H100 후면]
+image:aipod_nv_H100_rear.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -100,7 +100,7 @@ image::aipod_nv_H100_rear.png[Aipod NV H100 후면]
 
 _NVIDIA Quantum-2 QM9700 InfiniBand 스위치 _
 
-image::aipod_nv_QM9700.png[아이팟 NV QM9700]
+image:aipod_nv_QM9700.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NVIDIA Quantum-2 QM9700 스위치는 400GB/s InfiniBand 연결 기능을 갖추고 있으며 NVIDIA Quantum-2 InfiniBand BasePOD 구성의 컴퓨팅 패브릭에 전력을 공급합니다. ConnectX-7 단일 포트 어댑터는 InfiniBand 컴퓨팅 패브릭에 사용됩니다. 각 NVIDIA DGX 시스템은 각 QM9700 스위치에 대한 이중 연결을 제공하므로 시스템 간에 대역폭이 높고 지연 시간이 짧은 경로를 여러 개 제공합니다.
 
@@ -110,7 +110,7 @@ NVIDIA Quantum-2 QM9700 스위치는 400GB/s InfiniBand 연결 기능을 갖추�
 
 _NVIDIA Spectrum-3 SN4600 스위치 _
 
-image::aipod_nv_SN4600_hires_smallest.png[Aipod NV SN4600 최소 고용]
+image:aipod_nv_SN4600_hires_smallest.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NVIDIA Spectrum-3 SN4600 스위치는 총 128개의 포트(스위치당 64개)를 제공하여 DGX BasePOD의 대역 내 관리를 위한 이중화 연결을 제공합니다. NVIDIA SN4600 스위치는 1GbE 및 200GbE 사이의 속도를 제공할 수 있습니다. 이더넷을 통해 연결된 스토리지 어플라이언스의 경우 NVIDIA SN4600 스위치도 사용됩니다. NVIDIA DGX 이중 포트 ConnectX-7 어댑터의 포트는 대역 내 관리 및 스토리지 연결에 모두 사용됩니다.
 
@@ -120,7 +120,7 @@ NVIDIA Spectrum-3 SN4600 스위치는 총 128개의 포트(스위치당 64개)�
 
 _NVIDIA Spectrum SN2201 스위치 _
 
-image::aipod_nv_SN2201.png[아이팟 NV SN2201]
+image:aipod_nv_SN2201.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NVIDIA Spectrum SN2201 스위치는 대역 외 관리를 위한 연결을 제공하는 48개의 포트를 제공합니다. 대역 외 관리는 DGX BasePOD의 모든 구성 요소에 대한 통합 관리 연결을 제공합니다.
 
@@ -130,6 +130,6 @@ NVIDIA Spectrum SN2201 스위치는 대역 외 관리를 위한 연결을 제공
 
 _NVIDIA ConnectX-7 어댑터 _
 
-image::aipod_nv_CX7.png[아이팟 NV CX7]
+image:aipod_nv_CX7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NVIDIA ConnectX-7 어댑터는 25/50/100/200/400G의 처리량을 제공할 수 있습니다. NVIDIA DGX 시스템은 단일 포트 및 이중 포트 ConnectX-7 어댑터를 모두 사용하여 400GB/s InfiniBand 및 100/200Gb 이더넷을 포함한 DGX BasePOD 구축에 유연성을 제공합니다.

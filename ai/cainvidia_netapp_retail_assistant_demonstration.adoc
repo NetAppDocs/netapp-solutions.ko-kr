@@ -22,4 +22,4 @@ NetApp Retail Assistant(Nara)의 데모 비디오를 녹화했습니다.
 
 .나라 동영상 데모
 video::b4aae689-31b5-440c-8dde-ac050140ece7[panopto]
-image::cainvidia_image4.png[Cainvidia 영상4]
+image:cainvidia_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

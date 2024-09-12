@@ -72,4 +72,4 @@ NetApp은 DGX BasePOD 인증을 성공적으로 완료했으며, 테스트 결�
 
 _NetApp 스토리지 시스템 사이징 지침 _
 
-image::aipod_nv_sizing_new.png[Aipod NV 크기 조정 NEW]
+image:aipod_nv_sizing_new.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

@@ -26,7 +26,7 @@ ANF(Azure NetApp Files) 교차 지역 볼륨 복제를 사용하면 Azure NetApp
 
 DRO(재해 복구 오케스트레이터)(UI가 포함된 스크립팅된 솔루션)를 사용하여 AVS SDDC 간에 복제된 워크로드를 원활하게 복구할 수 있습니다. DRO는 복제 피어링을 끊은 다음 AVS에 VM 등록을 통해 대상 볼륨을 데이터 저장소로 마운트하고 NSX-T(모든 AVS 프라이빗 클라우드에 포함)에서 직접 네트워크 매핑을 실행하여 복구를 자동화합니다.
 
-image::azure-dro-image1.png[Azure 데모 이미지1]
+image:azure-dro-image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -69,7 +69,7 @@ https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-in
 
 첫 번째 단계는 AVS 기본 사이트에서 AVS 보조 사이트로 원하는 데이터 저장소 볼륨에 대한 교차 지역 복제를 적절한 빈도와 보존 기능으로 설정하는 것입니다.
 
-image::azure-dro-image2.png[Azure 볼륨 이미지2]
+image:azure-dro-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 이 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-create-peering["링크"^] 복제 피어링을 생성하여 지역 간 복제를 설정합니다. 대상 용량 풀의 서비스 수준은 소스 용량 풀의 서비스 수준과 일치할 수 있습니다. 그러나 이러한 특정 사용 사례에서 표준 서비스 수준을 선택한 다음 https://learn.microsoft.com/en-us/azure/azure-netapp-files/dynamic-change-volume-service-level["서비스 수준을 수정합니다"^] 실제 재해 또는 DR 시뮬레이션이 발생하는 경우
 
@@ -123,7 +123,7 @@ sudo sh deploy.sh
 ** 사용자 이름: `admin`
 ** 암호: `admin`
 +
-image::azure-dro-image3.png[Azure 볼륨 이미지3]
+image:azure-dro-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -156,7 +156,7 @@ AD 응용 프로그램을 만들 때 이 정보를 캡처해야 합니다.
 
 . 새 자격 증명에 대한 세부 정보를 확인하고 자격 증명 추가 를 클릭합니다.
 +
-image::azure-dro-image4.png[Azure 데모 이미지4]
+image:azure-dro-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 자격 증명을 추가한 후에는 운영 및 보조 AVS 사이트(vCenter 및 Azure NetApp Files 스토리지 계정 모두)를 검색하고 DRO에 추가해야 합니다. 소스 및 대상 사이트를 추가하려면 다음 단계를 수행하십시오.
@@ -174,7 +174,7 @@ image::azure-dro-image4.png[Azure 데모 이미지4]
 ** SDDC vCenter
 ** Azure NetApp Files 스토리지 계정입니다
 +
-image::azure-dro-image5.png[Azure 데모 이미지5]
+image:azure-dro-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -187,18 +187,18 @@ NOTE: 데모용으로 소스 사이트 추가는 이 문서에서 다룹니다.
 . DRO는 해당 지역 내에서 사용 가능한 모든 DC를 나열합니다. 드롭다운에서 지정된 사설 클라우드 URL을 선택합니다.
 . 를 입력합니다 `cloudadmin@vsphere.local` 사용자 자격 증명. 이 기능은 Azure Portal에서 액세스할 수 있습니다. 여기에 설명된 단계를 따릅니다 https://learn.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud["링크"^]. 완료되면 * Continue * 를 클릭합니다.
 +
-image::azure-dro-image6.png[Azure 기간 이미지6]
+image:azure-dro-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Azure Resource 그룹과 NetApp 계정을 선택하여 Source Storge 세부 정보(ANF)를 선택합니다.
 . Create Site * 를 클릭합니다.
 +
-image::azure-dro-image7.png[Azure 볼륨 이미지7]
+image:azure-dro-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
 DRO가 추가되면 자동 검색을 수행하고 소스 사이트에서 대상 사이트로 해당 지역 간 복제본이 있는 VM을 표시합니다. DRO는 VM에서 사용하는 네트워크와 세그먼트를 자동으로 감지하여 채웁니다.
 
-image::azure-dro-image8.png[Azure 볼륨 이미지8]
+image:azure-dro-image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 단계는 필요한 VM을 자원 그룹으로 그룹화하는 것입니다.
 
@@ -212,7 +212,7 @@ image::azure-dro-image8.png[Azure 볼륨 이미지8]
 
 . Resource 그룹 * PS에 액세스하고 * Create New Resource Group * 을 클릭합니다.
 +
-image::azure-dro-image9.png[Azure 도 이미지9]
+image:azure-dro-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 새 리소스 그룹 아래의 드롭다운에서 소스 사이트를 선택하고 * 만들기 * 를 클릭합니다.
 . 리소스 그룹 세부 정보를 입력하고 * Continue * 를 클릭합니다.
@@ -223,13 +223,13 @@ image::azure-dro-image9.png[Azure 도 이미지9]
 ** 기본값
 ** 전원을 켤 마지막 가상 컴퓨터
 +
-image::azure-dro-image10.png[Azure 도 이미지10]
+image:azure-dro-image10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
 . 리소스 그룹 만들기 * 를 클릭합니다.
 +
-image::azure-dro-image11.png[Azure 그림 11]
+image:azure-dro-image11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -243,15 +243,15 @@ image::azure-dro-image11.png[Azure 그림 11]
 
 . Replication Plans * 로 이동하고 * Create New Replication Plan * 을 클릭합니다.
 +
-image::azure-dro-image12.png[Azure 그림 12]
+image:azure-dro-image12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 새 복제 계획 * 에서 소스 사이트, 연결된 vCenter, 대상 사이트 및 연결된 vCenter를 선택하여 계획의 이름을 제공하고 복구 매핑을 추가합니다.
 +
-image::azure-dro-image13.png[Azure 데모 이미지13]
+image:azure-dro-image13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 복구 매핑이 완료되면 * 클러스터 매핑 * 을 선택합니다.
 +
-image::azure-dro-image14.png[Azure 데모 이미지14]
+image:azure-dro-image14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 리소스 그룹 세부 정보 * 를 선택하고 * 계속 * 을 클릭합니다.
 . 리소스 그룹의 실행 순서를 설정합니다. 이 옵션을 사용하면 여러 리소스 그룹이 있을 때 작업 순서를 선택할 수 있습니다.
@@ -262,39 +262,39 @@ image::azure-dro-image14.png[Azure 데모 이미지14]
 NOTE: CRR(교차 지역 복제)이 볼륨 레벨에 있습니다. 따라서 해당 볼륨에 상주하는 모든 VM이 CRR 대상에 복제됩니다. 복제 계획에 포함된 가상 머신만 처리되므로 데이터 저장소의 일부인 모든 VM을 선택해야 합니다.
 
 +
-image::azure-dro-image15.png[Azure 데모 이미지15]
+image:azure-dro-image15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . VM 세부 정보 아래에서 VM CPU 및 RAM 매개 변수의 크기를 선택적으로 조정할 수 있습니다. 이 기능은 대규모 환경을 소규모 타겟 클러스터로 복구하거나 일대일 물리적 VMware 인프라를 프로비저닝하지 않고 DR 테스트를 수행할 때 매우 유용합니다. 또한 리소스 그룹에서 선택한 모든 VM에 대한 부팅 순서 및 부팅 지연(초)을 수정합니다. 리소스 그룹 부팅 순서를 선택하는 동안 선택한 항목에서 변경이 필요한 경우 부팅 순서를 수정하는 추가 옵션이 있습니다. 기본적으로 리소스 그룹을 선택하는 동안 선택한 부팅 순서가 사용되지만 이 단계에서는 모든 수정 작업을 수행할 수 있습니다.
 +
-image::azure-dro-image16.png[Azure 그림 16]
+image:azure-dro-image16.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Create Replication Plan * 을 클릭합니다. 복제 계획이 생성되면 요구 사항에 따라 장애 조치, 테스트 대체 작동 또는 마이그레이션 옵션을 실행할 수 있습니다.
 +
-image::azure-dro-image17.png[Azure 도 이미지17]
+image:azure-dro-image17.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
 페일오버 및 테스트 페일오버 옵션 중에 최신 스냅샷이 사용되거나 특정 시점 스냅샷에서 특정 스냅샷을 선택할 수 있습니다. 가장 최근의 복제본이 이미 손상 또는 암호화된 상태에서 랜섬웨어와 같은 손상 이벤트가 발생할 경우 시점 옵션이 매우 유용할 수 있습니다. DRO는 사용 가능한 모든 시점을 표시합니다.
 
-image::azure-dro-image18.png[Azure 그림 18]
+image:azure-dro-image18.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 복제 계획에 지정된 구성으로 대체 작동을 트리거하거나 테스트 대체 작동을 트리거하려면 * 장애 조치 * 또는 * 테스트 장애 조치 * 를 클릭합니다. 작업 메뉴에서 복제 계획을 모니터링할 수 있습니다.
 
-image::azure-dro-image19.png[Azure 도 이미지19]
+image:azure-dro-image19.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 페일오버가 트리거된 후 보조 사이트 AVS SDDC vCenter(VM, 네트워크 및 데이터 저장소)에서 복구된 항목을 볼 수 있습니다. 기본적으로 VM은 Workload 폴더로 복구됩니다.
 
-image::azure-dro-image20.png[Azure 볼륨 이미지20]
+image:azure-dro-image20.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 페일백은 복제 계획 레벨에서 트리거될 수 있습니다. 테스트 대체 작동의 경우, tear down 옵션을 사용하여 변경 사항을 롤백하고 새로 생성된 볼륨을 제거할 수 있습니다. 장애 조치와 관련된 장애 복구는 2단계 프로세스입니다. 복제 계획을 선택하고 * Reverse Data sync * 를 선택합니다.
 
-image::azure-dro-image21.png[Azure 도 이미지21]
+image:azure-dro-image21.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 이 단계가 완료된 후 페일백을 트리거하여 기본 AVS 사이트로 다시 이동합니다.
 
-image::azure-dro-image22.png[Azure 도 이미지22]
+image:azure-dro-image22.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::azure-dro-image23.png[Azure 도 이미지23]
+image:azure-dro-image23.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Azure 포털에서 보조 사이트 AVS SDDC에 읽기/쓰기 볼륨으로 매핑된 적절한 볼륨에 대한 복제 상태가 끊어진 것을 확인할 수 있습니다. 테스트 페일오버 중에 DRO는 대상 또는 복제본 볼륨을 매핑하지 않습니다. 대신 필요한 교차 지역 복제 스냅샷의 새 볼륨을 생성하고 볼륨을 데이터 저장소로 노출합니다. 그러면 용량 풀의 추가 물리적 용량을 사용하고 소스 볼륨이 수정되지 않습니다. 특히, DR 테스트 또는 선별적 워크플로우 중에도 복제 작업을 계속할 수 있습니다. 또한 이 프로세스를 통해 오류가 발생하거나 손상된 데이터가 복구되면 복제본이 손상될 위험 없이 복구를 정리할 수 있습니다.
 

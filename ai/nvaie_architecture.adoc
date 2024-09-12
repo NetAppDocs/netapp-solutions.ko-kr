@@ -31,4 +31,4 @@ summary: NetApp 및 VMware-Architecture를 지원하는 NVIDIA AI Enterprise
 
 | 데이터 관리 플랫폼 | link:https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP를 참조하십시오"] 
 |===
-image::nvaie_image2.png[nvaie 이미지2]
+image:nvaie_image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

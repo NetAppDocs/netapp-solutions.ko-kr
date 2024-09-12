@@ -28,7 +28,7 @@ NVIDIA Base Command & #8482; 는 모든 DGX BasePOD를 지원하므로 조직이
 
 _NVIDIA BaseCommand 솔루션 _
 
-image::aipod_nv_BaseCommand_new.png[AiPOD NV BaseCommand NEW]
+image:aipod_nv_BaseCommand_new.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -38,7 +38,7 @@ NVIDIA NGC ™ 는 다양한 수준의 AI 전문 지식을 갖춘 데이터 과�
 
 _NVIDIA GPU 클라우드 _
 
-image::aipod_nv_ngc.png[AiPOD NV NGC]
+image:aipod_nv_ngc.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

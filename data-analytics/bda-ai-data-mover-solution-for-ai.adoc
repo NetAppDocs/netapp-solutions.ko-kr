@@ -18,7 +18,7 @@ AI용 Data Mover 솔루션은 AI 작업에서 Hadoop 데이터를 처리해야 �
 
 다음 다이어그램에서는 Data Mover 솔루션 세부 정보를 보여 줍니다.
 
-image::bda-ai-image4.png[BDA ai 이미지4]
+image:bda-ai-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Data Mover 솔루션을 구축하려면 다음 단계가 필요합니다.
 

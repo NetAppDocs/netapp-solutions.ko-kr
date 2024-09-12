@@ -22,7 +22,7 @@ summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용�
 
 다음은 OpenShift Virtualization에서 VM이 포함된 네임스페이스가 이벤트를 기반으로 모니터링되는 샘플입니다. 이 예제에서 모니터는 클러스터의 지정된 네임스페이스에 대한 ** logs.Kubernetes**.event를 기반으로 만들어집니다.
 
-image::redhat_openshift_ci_samples_image1.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image1.jpg["Cloud Insights 샘플"]
 
 이 쿼리는 네임스페이스에서 가상 머신에 대한 모든 이벤트를 제공합니다. (네임스페이스에는 가상 머신이 하나만 있습니다.) 고급 쿼리는 이유가 "실패" 또는 "FailedMount"인 이벤트를 기준으로 필터링하도록 구성할 수도 있습니다. 이러한 이벤트는 일반적으로 PV를 생성하거나 동적 프로비저닝자에서 영구 생성을 위한 문제를 나타내는 Pod에 PV를 마운트하는 데 문제가 있을 때 생성됩니다 VM에 대한 볼륨입니다.
 위와 같이 경고 모니터를 생성하는 동안 수신자에게 알림을 구성할 수도 있습니다. 오류를 해결하는 데 유용한 수정 조치 또는 추가 정보를 제공할 수도 있습니다. 위의 예에서는 문제를 해결하기 위한 Trident 백엔드 구성 및 스토리지 클래스 정의를 살펴보는 추가 정보가 있을 수 있습니다.
@@ -33,13 +33,13 @@ image::redhat_openshift_ci_samples_image1.jpg[Cloud Insights 샘플]
 
 Change Analytics를 사용하면 문제 해결에 도움이 될 수 있는 변경 사항을 변경한 사람을 비롯하여 클러스터 상태에서 무엇이 변경되었는지 확인할 수 있습니다.
 
-image::redhat_openshift_ci_samples_image2.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image2.jpg["Cloud Insights 샘플"]
 
 위의 예에서 변경 분석은 OpenShift Virtualization VM이 포함된 네임스페이스에 대해 OpenShift 클러스터에 구성되어 있습니다. 대시보드에는 타임라인에 대한 변경 내용이 표시됩니다. 드릴다운하여 변경된 내용을 확인하고 모든 변경 사항 차이를 클릭하여 매니페스트의 차이점을 확인할 수 있습니다. 매니페스트에서 영구 디스크의 새 백업이 생성되었음을 확인할 수 있습니다.
 
-image::redhat_openshift_ci_samples_image3.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image3.jpg["Cloud Insights 샘플"]
 
-image::redhat_openshift_ci_samples_image4.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image4.jpg["Cloud Insights 샘플"]
 
 
 
@@ -47,18 +47,18 @@ image::redhat_openshift_ci_samples_image4.jpg[Cloud Insights 샘플]
 
 Cloud Insights를 사용하면 VM 디스크의 백엔드 스토리지와 PVC에 대한 여러 통계를 쉽게 볼 수 있습니다.
 
-image::redhat_openshift_ci_samples_image5.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image5.jpg["Cloud Insights 샘플"]
 
 백엔드 열 아래의 링크를 클릭하면 백엔드 ONTAP 스토리지에서 데이터를 직접 가져올 수 있습니다.
 
-image::redhat_openshift_ci_samples_image6.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image6.jpg["Cloud Insights 샘플"]
 
 모든 Pod와 스토리지 매핑을 확인하는 또 다른 방법은 탐색 의 관측성 메뉴에서 모든 메트릭 쿼리를 생성하는 것입니다.
 
-image::redhat_openshift_ci_samples_image7.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image7.jpg["Cloud Insights 샘플"]
 
 링크를 클릭하면 ONTP 스토리지에서 해당하는 세부 정보가 표시됩니다. 예를 들어, storageVirtualMachine 열에서 SVM 이름을 클릭하면 ONTAP에서 SVM에 대한 세부 정보를 가져올 수 있습니다. 내부 볼륨 이름을 클릭하면 ONTAP의 볼륨에 대한 세부 정보가 표시됩니다.
 
-image::redhat_openshift_ci_samples_image8.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image8.jpg["Cloud Insights 샘플"]
 
-image::redhat_openshift_ci_samples_image9.jpg[Cloud Insights 샘플]
+image:redhat_openshift_ci_samples_image9.jpg["Cloud Insights 샘플"]

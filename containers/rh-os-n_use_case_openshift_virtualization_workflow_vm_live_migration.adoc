@@ -24,7 +24,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 따라서 라이브 마이그레이션이 성공하려면 ONTAP-NAS 또는 ONTAP-SAN(볼륨 모드: 블록) 스토리지 클래스를 사용하는 PVC를 통해 디스크(부팅 디스크 및 추가 핫 플러그 디스크)를 사용하여 VM을 프로비저닝해야 합니다. PVC가 생성되면 Trident는 NFS 지원 또는 iSCSI가 활성화된 SVM에 ONTAP 볼륨을 생성합니다.
 
-image::redhat_openshift_image55.png[VM 실시간 마이그레이션 아키텍처]
+image:redhat_openshift_image55.png["VM 실시간 마이그레이션 아키텍처"]
 
 이전에 생성되었으며 실행 중인 VM의 실시간 마이그레이션을 수행하려면 다음 단계를 수행하십시오.
 
@@ -40,6 +40,6 @@ VM 마이그레이션이 * 보류 * 에서 * 예약 * 으로 전환되고 * 성�
 
 NOTE: devictionStrategy 가 LiveMigrate 로 설정된 경우 원래 노드를 유지 관리 모드로 전환하면 OpenShift 클러스터의 VM 인스턴스가 다른 노드로 자동 마이그레이션됩니다.
 
-image::rh-os-n_use_case_vm_live_migrate_1.png[VM 실시간 마이그레이션이 시작됩니다]
+image:rh-os-n_use_case_vm_live_migrate_1.png["VM 실시간 마이그레이션이 시작됩니다"]
 
-image::rh-os-n_use_case_vm_live_migrate_2.png[VM 라이브 마이그레이션 성공]
+image:rh-os-n_use_case_vm_live_migrate_2.png["VM 라이브 마이그레이션 성공"]

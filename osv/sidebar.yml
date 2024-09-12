@@ -4,6 +4,7 @@ title: OpenShift 가상화
 url: "/osv/index.html"
 entries:
 - title: 개요
+  pdf-filename: Red Hat OpenShift Virtualization 개요
   entries:
   - title: Red Hat OpenShift Virtualization
     url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
@@ -16,6 +17,7 @@ entries:
   - title: 비디오
     url: "/containers/rh-os-n_videos_and_demos.html"
 - title: 구축
+  pdf-filename: Red Hat OpenShift 배포
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
@@ -32,6 +34,7 @@ entries:
   - title: 스냅샷에서 VM 생성
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
 - title: 데이터 보호
+  pdf-filename: Red Hat OpenShift Virtualization Data Protection의 약어입니다
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"
@@ -44,6 +47,7 @@ entries:
   - title: 백업 및 복구 삭제
     url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_delete.html"
 - title: 모니터링
+  pdf-filename: Red Hat OpenShift Virtualization Monitoring의 약어입니다
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html"

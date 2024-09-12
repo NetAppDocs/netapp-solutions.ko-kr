@@ -22,4 +22,4 @@ Domino Data Lab의 Domino Nexus는 통합 MLOps 제어 플레인으로서, 클�
 
 이 솔루션은 온프레미스 Kubernetes 클러스터와 AWS(Amazon Web Services)에서 실행되는 EKS(Elastic Kubernetes Service) 클러스터를 통합하는 통합 MLOps 컨트롤 플레인을 배포하는 것을 보여줍니다.
 
-image::ddlnexus_image1.png[ddlnexus 이미지1]
+image:ddlnexus_image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

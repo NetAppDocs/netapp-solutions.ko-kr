@@ -72,14 +72,14 @@ NFS 트래픽용 여러 LIF와 함께 SVM을 생성하려면 다음 단계를 �
 
 . ONTAP 시스템 관리자에서 왼쪽 메뉴의 * 스토리지 VM * 으로 이동한 다음 * + 추가 * 를 클릭하여 시작합니다.
 +
-image::vmware-vcf-asa-image01.png[Add를 클릭하여 SVM 생성을 시작합니다]
+image:vmware-vcf-asa-image01.png["Add를 클릭하여 SVM 생성을 시작합니다"]
 
 +
 {nbsp}
 
 . 스토리지 VM 추가 * 마법사에서 SVM에 * 이름 * 을 입력하고 * IP 공간 * 을 선택한 다음 * 액세스 프로토콜 * 에서 * SMB/CIFS, NFS, S3 * 탭을 클릭하고 * NFS * 활성화 확인란을 선택합니다.
 +
-image::vmware-vcf-aff-image35.png[스토리지 VM 추가 마법사 - NFS를 설정합니다]
+image:vmware-vcf-aff-image35.png["스토리지 VM 추가 마법사 - NFS를 설정합니다"]
 
 +
 
@@ -88,14 +88,14 @@ TIP: 데이터 저장소 구축 프로세스를 자동화하는 데 VMware vSphe
 
 . 네트워크 인터페이스 * 섹션에서 첫 번째 LIF에 대한 * IP 주소 *, * 서브넷 마스크 * 및 * 브로드캐스트 도메인 및 포트 * 를 입력합니다. 이후 LIF의 경우 나머지 모든 LIF에 공통 설정을 사용하거나 별도의 설정을 사용하도록 확인란을 설정할 수 있습니다.
 +
-image::vmware-vcf-aff-image36.png[LIF에 대한 네트워크 정보를 입력합니다]
+image:vmware-vcf-aff-image36.png["LIF에 대한 네트워크 정보를 입력합니다"]
 
 +
 {nbsp}
 
 . 스토리지 VM 관리 계정(멀티 테넌시 환경의 경우)의 활성화 여부를 선택하고 * Save * 를 클릭하여 SVM을 생성합니다.
 +
-image::vmware-vcf-asa-image04.png[SVM 계정을 사용하고 Finish를 사용합니다]
+image:vmware-vcf-asa-image04.png["SVM 계정을 사용하고 Finish를 사용합니다"]
 
 
 
@@ -113,7 +113,7 @@ NFS 트래픽을 전달하는 네트워크에 대한 새 분산 포트 그룹을
 
 . vSphere 클라이언트에서 워크로드 도메인에 대한 * Inventory > Networking * 으로 이동합니다. 기존 분산 스위치로 이동하여 * 새 분산 포트 그룹... * 을 만들 작업을 선택합니다.
 +
-image::vmware-vcf-asa-image22.png[새 포트 그룹을 생성하도록 선택합니다]
+image:vmware-vcf-asa-image22.png["새 포트 그룹을 생성하도록 선택합니다"]
 
 +
 {nbsp}
@@ -121,7 +121,7 @@ image::vmware-vcf-asa-image22.png[새 포트 그룹을 생성하도록 선택합
 . 새 분산 포트 그룹* 마법사에서 새 포트 그룹의 이름을 입력하고 * 다음 * 을 클릭하여 계속합니다.
 . 설정 구성 * 페이지에서 모든 설정을 입력합니다. VLAN을 사용하는 경우 올바른 VLAN ID를 제공해야 합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-vcf-asa-image23.png[VLAN ID를 입력합니다]
+image:vmware-vcf-asa-image23.png["VLAN ID를 입력합니다"]
 
 +
 {nbsp}
@@ -129,14 +129,14 @@ image::vmware-vcf-asa-image23.png[VLAN ID를 입력합니다]
 . 완료 준비 * 페이지에서 변경 사항을 검토하고 * 마침 * 을 클릭하여 새 분산 포트 그룹을 생성합니다.
 . 포트 그룹이 생성되면 포트 그룹으로 이동하고 * 설정 편집... * 작업을 선택합니다.
 +
-image::vmware-vcf-aff-image37.png[DPG - 설정을 편집합니다]
+image:vmware-vcf-aff-image37.png["DPG - 설정을 편집합니다"]
 
 +
 {nbsp}
 
 . Distributed Port Group - Edit Settings * 페이지에서 왼쪽 메뉴의 * Teaming and Failover * 로 이동합니다. 활성 업링크 * 영역에서 함께 구성되어 있는지 확인하여 NFS 트래픽에 사용할 업링크에 대한 팀 구성을 활성화합니다. 사용하지 않는 업링크를 * 사용되지 않은 업링크 * 로 아래로 이동합니다.
 +
-image::vmware-vcf-aff-image38.png[DPG 팀 업링크]
+image:vmware-vcf-aff-image38.png["DPG 팀 업링크"]
 
 +
 {nbsp}
@@ -152,21 +152,21 @@ image::vmware-vcf-aff-image38.png[DPG 팀 업링크]
 
 . vSphere Client에서 워크로드 도메인 인벤토리에 있는 ESXi 호스트 중 하나로 이동합니다. Configure * 탭에서 * VMkernel Adapters * 를 선택하고 * Add Networking... * 을 클릭하여 시작합니다.
 +
-image::vmware-vcf-asa-image30.png[네트워킹 추가 마법사를 시작합니다]
+image:vmware-vcf-asa-image30.png["네트워킹 추가 마법사를 시작합니다"]
 
 +
 {nbsp}
 
 . Select connection type * 창에서 * VMkernel Network Adapter * 를 선택하고 * Next * 를 클릭하여 계속합니다.
 +
-image::vmware-vcf-asa-image08.png[VMkernel Network Adapter를 선택합니다]
+image:vmware-vcf-asa-image08.png["VMkernel Network Adapter를 선택합니다"]
 
 +
 {nbsp}
 
 . Select target device * 페이지에서 이전에 생성된 NFS에 대한 분산 포트 그룹 중 하나를 선택합니다.
 +
-image::vmware-vcf-aff-image39.png[대상 포트 그룹을 선택합니다]
+image:vmware-vcf-aff-image39.png["대상 포트 그룹을 선택합니다"]
 
 +
 {nbsp}
@@ -174,14 +174,14 @@ image::vmware-vcf-aff-image39.png[대상 포트 그룹을 선택합니다]
 . Port properties * 페이지에서 기본값(활성화된 서비스 없음)을 유지하고 * Next * 를 클릭하여 계속합니다.
 . IPv4 설정 * 페이지에서 * IP 주소 *, * 서브넷 마스크 * 를 입력하고 새 게이트웨이 IP 주소를 입력합니다(필요한 경우에만 해당). 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-vcf-aff-image40.png[VMkernel IPv4 설정]
+image:vmware-vcf-aff-image40.png["VMkernel IPv4 설정"]
 
 +
 {nbsp}
 
 . Ready to Complete * 페이지에서 선택 사항을 검토하고 * Finish * 를 클릭하여 VMkernel 어댑터를 생성합니다.
 +
-image::vmware-vcf-aff-image41.png[VMkernel 선택 사항을 검토합니다]
+image:vmware-vcf-aff-image41.png["VMkernel 선택 사항을 검토합니다"]
 
 
 
@@ -207,14 +207,14 @@ VMware vSphere용 ONTAP 툴을 구축하려면 다음을 완료하십시오.
 . VCF 관리 도메인의 vCenter 어플라이언스에 로그인합니다.
 . vCenter 어플라이언스 인터페이스에서 관리 클러스터를 마우스 오른쪽 버튼으로 클릭하고 * Deploy OVF Template ....를 선택합니다
 +
-image::vmware-vcf-aff-image21.png[OVF 템플릿 배포...]
+image:vmware-vcf-aff-image21.png["OVF 템플릿 배포..."]
 
 +
 {nbsp}
 
 . Deploy OVF Template * 마법사에서 * Local file * 라디오 버튼을 클릭하고 이전 단계에서 다운로드한 ONTAP tools OVA 파일을 선택합니다.
 +
-image::vmware-vcf-aff-image22.png[OVA 파일을 선택합니다]
+image:vmware-vcf-aff-image22.png["OVA 파일을 선택합니다"]
 
 +
 {nbsp}
@@ -222,14 +222,14 @@ image::vmware-vcf-aff-image22.png[OVA 파일을 선택합니다]
 . 마법사의 2-5단계에서 VM의 이름과 폴더를 선택하고 컴퓨팅 리소스를 선택하고 세부 정보를 검토한 후 라이센스 계약에 동의합니다.
 . 구성 및 디스크 파일의 스토리지 위치로 VCF 관리 도메인 클러스터의 vSAN 데이터 저장소를 선택합니다.
 +
-image::vmware-vcf-aff-image23.png[OVA 파일을 선택합니다]
+image:vmware-vcf-aff-image23.png["OVA 파일을 선택합니다"]
 
 +
 {nbsp}
 
 . 네트워크 선택 페이지에서 관리 트래픽에 사용되는 네트워크를 선택합니다.
 +
-image::vmware-vcf-aff-image24.png[네트워크를 선택합니다]
+image:vmware-vcf-aff-image24.png["네트워크를 선택합니다"]
 
 +
 {nbsp}
@@ -248,10 +248,10 @@ image::vmware-vcf-aff-image24.png[네트워크를 선택합니다]
 계속하려면 * 다음 * 을 클릭하십시오.
 
 +
-image::vmware-vcf-aff-image25.png[OTV 템플릿 사용자 지정 1]
+image:vmware-vcf-aff-image25.png["OTV 템플릿 사용자 지정 1"]
 
 +
-image::vmware-vcf-asa-image35.png[OTV 템플릿 사용자 지정 2]
+image:vmware-vcf-asa-image35.png["OTV 템플릿 사용자 지정 2"]
 
 +
 {nbsp}
@@ -267,28 +267,28 @@ image::vmware-vcf-asa-image35.png[OTV 템플릿 사용자 지정 2]
 ====
 . vSphere Client의 기본 메뉴에서 NetApp ONTAP 툴을 선택하여 액세스합니다.
 +
-image::vmware-asa-image6.png[NetApp ONTAP 도구]
+image:vmware-asa-image6.png["NetApp ONTAP 도구"]
 
 +
 {nbsp}
 
 . ONTAP 도구 인터페이스의 * 인스턴스 * 드롭다운 메뉴에서 관리할 워크로드 도메인과 연결된 OTV 인스턴스를 선택합니다.
 +
-image::vmware-vcf-asa-image36.png[OTV 인스턴스를 선택합니다]
+image:vmware-vcf-asa-image36.png["OTV 인스턴스를 선택합니다"]
 
 +
 {nbsp}
 
 . ONTAP 도구의 왼쪽 메뉴에서 * 스토리지 시스템 * 을 선택한 다음 * 추가 * 를 누릅니다.
 +
-image::vmware-vcf-asa-image37.png[스토리지 시스템을 추가합니다]
+image:vmware-vcf-asa-image37.png["스토리지 시스템을 추가합니다"]
 
 +
 {nbsp}
 
 . 스토리지 시스템의 IP 주소, 자격 증명 및 포트 번호를 입력합니다. 검색 프로세스를 시작하려면 * 추가 * 를 클릭합니다.
 +
-image::vmware-vcf-asa-image38.png[스토리지 시스템 자격 증명을 제공합니다]
+image:vmware-vcf-asa-image38.png["스토리지 시스템 자격 증명을 제공합니다"]
 
 
 
@@ -300,7 +300,7 @@ ONTAP 툴을 사용하여 NFS에서 실행되는 ONTAP 데이터 저장소를 �
 
 . ONTAP Tools에서 * Overview * 를 선택하고 * Getting Started * 탭에서 * Provision * 을 클릭하여 마법사를 시작합니다.
 +
-image::vmware-vcf-asa-image41.png[데이터 저장소를 프로비저닝합니다]
+image:vmware-vcf-asa-image41.png["데이터 저장소를 프로비저닝합니다"]
 
 +
 {nbsp}
@@ -310,28 +310,28 @@ image::vmware-vcf-asa-image41.png[데이터 저장소를 프로비저닝합니�
 참고: * 클러스터 전체에 데이터 저장소 데이터를 배포하도록 * 선택하면 기본 볼륨이 FlexGroup 볼륨으로 생성되며, 이 경우 스토리지 기능 프로파일 사용이 금지됩니다. 을 참조하십시오 https://docs.netapp.com/us-en/ontap/flexgroup/supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다"] FlexGroup 볼륨 사용에 대한 자세한 내용은
 
 +
-image::vmware-vcf-aff-image42.png[일반 페이지]
+image:vmware-vcf-aff-image42.png["일반 페이지"]
 
 +
 {nbsp}
 
 . 스토리지 시스템 * 페이지에서 스토리지 기능 프로파일, 스토리지 시스템 및 SVM을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-vcf-aff-image43.png[수행할 수 있습니다]
+image:vmware-vcf-aff-image43.png["수행할 수 있습니다"]
 
 +
 {nbsp}
 
 . Storage attributes * 페이지에서 사용할 집계를 선택한 후 * Next * 를 클릭하여 계속합니다.
 +
-image::vmware-vcf-aff-image44.png[스토리지 특성]
+image:vmware-vcf-aff-image44.png["스토리지 특성"]
 
 +
 {nbsp}
 
 . 마지막으로 * Summary * 를 검토하고 Finish를 클릭하여 NFS 데이터 저장소 생성을 시작합니다.
 +
-image::vmware-vcf-aff-image45.png[요약을 검토하고 마칩니다]
+image:vmware-vcf-aff-image45.png["요약을 검토하고 마칩니다"]
 
 
 
@@ -343,26 +343,26 @@ ONTAP 도구에서 VVOL 데이터 저장소를 생성하려면 다음 단계를 
 
 . ONTAP Tools에서 * Overview * 를 선택하고 * Getting Started * 탭에서 * Provision * 을 클릭하여 마법사를 시작합니다.
 +
-image::vmware-vcf-asa-image41.png[데이터 저장소를 프로비저닝합니다]
+image:vmware-vcf-asa-image41.png["데이터 저장소를 프로비저닝합니다"]
 
 . New Datastore 마법사의 * General * 페이지에서 vSphere DataCenter 또는 클러스터 대상을 선택합니다. 데이터 저장소 유형으로 * vVols * 를 선택하고 데이터 저장소의 이름을 입력한 다음 프로토콜로 * nfs * 를 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-vcf-aff-image46.png[일반 페이지]
+image:vmware-vcf-aff-image46.png["일반 페이지"]
 
 . 스토리지 시스템 * 페이지에서 스토리지 기능 프로파일, 스토리지 시스템 및 SVM을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-vcf-aff-image43.png[수행할 수 있습니다]
+image:vmware-vcf-aff-image43.png["수행할 수 있습니다"]
 
 . 스토리지 속성 * 페이지에서 데이터 저장소에 대한 새 볼륨을 생성하고 생성할 볼륨의 스토리지 속성을 채우도록 선택합니다. Add * 를 클릭하여 볼륨을 생성한 후 * Next * 를 클릭하여 계속합니다.
 +
-image::vmware-vcf-aff-image47.png[스토리지 특성]
+image:vmware-vcf-aff-image47.png["스토리지 특성"]
 
 +
-image::vmware-vcf-aff-image48.png[스토리지 속성 - 다음]
+image:vmware-vcf-aff-image48.png["스토리지 속성 - 다음"]
 
 . 마지막으로 * Summary * 를 검토하고 * Finish * 를 클릭하여 VVol 데이터스토어 생성 프로세스를 시작합니다.
 +
-image::vmware-vcf-aff-image49.png[요약 페이지]
+image:vmware-vcf-aff-image49.png["요약 페이지"]
 
 
 

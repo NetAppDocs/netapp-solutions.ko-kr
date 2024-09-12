@@ -42,4 +42,4 @@ Cloud Insights는 또한 통합 데이터 수집을 위한 에이전트로 Teleg
 
 Cloud Insights 아키텍처
 
-image::redhat_openshift_ci_overview_image1.jpg[Cloud Insights 아키텍처]
+image:redhat_openshift_ci_overview_image1.jpg["Cloud Insights 아키텍처"]

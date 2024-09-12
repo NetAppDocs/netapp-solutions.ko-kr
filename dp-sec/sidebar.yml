@@ -2,6 +2,22 @@
 section: data-access
 title: 데이터 마이그레이션 및 데이터 보호
 entries:
+- title: ONTAP 사이버 소산
+  entries:
+  - title: ONTAP 사이버 소산 개요
+    url: "/cyber-vault/ontap-cyber-vault-overview.html"
+  - title: 사이버 볼트 용어
+    url: "/cyber-vault/ontap-cyber-vault-terminology.html"
+  - title: ONTAP를 위한 사이버 소산 크기 조정
+    url: "/cyber-vault/ontap-cyber-vault-sizing.html"
+  - title: 사이버 볼트를 작성합니다
+    url: "/cyber-vault/ontap-create-cyber-vault-task.html"
+  - title: 사이버 소산 강화
+    url: "/cyber-vault/ontap-cyber-vault-hardening.html"
+  - title: 사이버 볼트 상호 운용성
+    url: "/cyber-vault/ontap-cyber-vault-interoperability.html"
+  - title: 사이버 소산 리소스
+    url: "/cyber-vault/ontap-cyber-vault-resources.html"
 - title: 데이터 마이그레이션
   entries:
   - title: NetApp XCP의 모범 사례 지침

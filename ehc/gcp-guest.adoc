@@ -44,45 +44,45 @@ NOTE: 사용 link:https://cloud.netapp.com/cvo-sizer["Cloud Volumes ONTAP Sizer"
 
 . NetApp Cloud Central에 로그인 - 패브릭 보기 화면이 표시됩니다. Cloud Volumes ONTAP 탭을 찾아 Cloud Manager로 이동 을 선택합니다. 로그인하면 Canvas 화면이 표시됩니다.
 +
-image::gcve-cvo-guest-1.png[gcve cvo 게스트 1]
+image:gcve-cvo-guest-1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Cloud Manager Canvas 탭에서 작업 환경 추가를 클릭한 다음 Google Cloud Platform을 클라우드로 선택하고 시스템 구성 유형을 선택합니다. 다음 을 클릭합니다.
 +
-image::gcve-cvo-guest-2.png[gcve cvo 게스트 2]
+image:gcve-cvo-guest-2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 환경 이름 및 관리자 자격 증명을 비롯하여 생성할 환경에 대한 세부 정보를 제공합니다. 작업을 마친 후 계속 을 클릭합니다.
 +
-image::gcve-cvo-guest-3.png[gcve cvo 게스트 3]
+image:gcve-cvo-guest-3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 데이터 감지 및 규정 준수, 클라우드 백업 등 Cloud Volumes ONTAP 구축을 위한 추가 서비스 를 선택하거나 선택 취소합니다. 그런 다음 계속 을 클릭합니다.
 +
 힌트: 추가 서비스를 비활성화할 때 확인 팝업 메시지가 표시됩니다. 추가 서비스는 CVO 배포 후 추가/제거할 수 있습니다. 비용을 피하기 위해 처음부터 필요하지 않은 경우 선택을 취소하십시오.
 
 +
-image::gcve-cvo-guest-4.png[gcve cvo 게스트 4]
+image:gcve-cvo-guest-4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 위치를 선택하고 방화벽 정책을 선택한 다음 확인란을 선택하여 Google Cloud 스토리지에 대한 네트워크 연결을 확인합니다.
 +
-image::gcve-cvo-guest-5.png[gcve cvo 게스트 5]
+image:gcve-cvo-guest-5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 라이센스 옵션 선택: 사용한 만큼만 지불 또는 BYOL 방식으로 기존 라이센스 사용 이 예제에서는 Freemium 옵션을 사용합니다. 그런 다음 계속 을 클릭합니다.
 +
-image::gcve-cvo-guest-6.png[gcve cvo 게스트 6]
+image:gcve-cvo-guest-6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . AWS SDDC 기반 VMware 클라우드에서 실행되는 VM에 구축할 워크로드의 유형에 따라 사용할 수 있는 사전 구성된 패키지 몇 개 중 하나를 선택합니다.
 +
 힌트: 타일 위로 마우스를 가져가 세부 정보를 보거나 구성 변경 을 클릭하여 CVO 구성 요소 및 ONTAP 버전을 사용자 지정합니다.
 
 +
-image::gcve-cvo-guest-7.png[gcve cvo 게스트 7]
+image:gcve-cvo-guest-7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 검토 및 승인 페이지에서 선택 항목을 검토하고 확인합니다. Cloud Volumes ONTAP 인스턴스를 만들려면 이동을 클릭합니다.
 +
-image::gcve-cvo-guest-8.png[gcve cvo 게스트 8]
+image:gcve-cvo-guest-8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Cloud Volumes ONTAP를 프로비저닝하면 Canvas 페이지의 작업 환경에 나열됩니다.
 +
-image::gcve-cvo-guest-9.png[gcve cvo 게스트 9]
+image:gcve-cvo-guest-9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -95,32 +95,32 @@ image::gcve-cvo-guest-9.png[gcve cvo 게스트 9]
 힌트: 메뉴 아이콘( º)을 클릭하고 고급을 선택하여 더 많은 옵션을 표시하고 CIFS 설정을 선택합니다.
 
 +
-image::gcve-cvo-guest-10.png[gcve cvo 게스트 10]
+image:gcve-cvo-guest-10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . SMB 볼륨을 생성하는 것은 쉬운 프로세스입니다. Canvas에서 Cloud Volumes ONTAP 작업 환경을 두 번 클릭하여 볼륨을 생성 및 관리하고 볼륨 생성 옵션을 클릭합니다. 적절한 크기를 선택하고 클라우드 관리자가 포함하는 애그리게이트를 선택하거나, 고급 할당 메커니즘을 사용하여 특정 애그리게이트에 배치할 수 있습니다. 이 데모에서는 CIFS/SMB가 프로토콜로 선택됩니다.
 +
-image::gcve-cvo-guest-11.png[gcve cvo 게스트 11]
+image:gcve-cvo-guest-11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨 용량 할당 후 볼륨 창 아래에서 사용할 수 있습니다. CIFS 공유가 프로비저닝되므로 사용자 또는 그룹에 파일 및 폴더에 대한 권한을 제공하고 해당 사용자가 공유를 액세스하고 파일을 생성할 수 있는지 확인합니다. 파일 및 폴더 권한이 모두 SnapMirror 복제의 일부로 유지되므로 볼륨이 사내 환경에서 복제된 경우에는 이 단계가 필요하지 않습니다.
 +
 힌트: 볼륨 메뉴(º)를 클릭하여 옵션을 표시합니다.
 
 +
-image::gcve-cvo-guest-12.png[gcve cvo 게스트 12]
+image:gcve-cvo-guest-12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨을 생성한 후 mount 명령을 사용하여 볼륨 연결 지침을 표시한 다음 Google Cloud VMware Engine의 VM에서 공유에 연결합니다.
 +
-image::gcve-cvo-guest-13.png[gcve cvo 게스트 13]
+image:gcve-cvo-guest-13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 다음 경로를 복사하고 네트워크 드라이브 매핑 옵션을 사용하여 Google Cloud VMware Engine에서 실행 중인 VM에 볼륨을 마운트합니다.
 +
-image::gcve-cvo-guest-14.png[gcve cvo 게스트 14]
+image:gcve-cvo-guest-14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 매핑되면 쉽게 액세스할 수 있으며 NTFS 권한을 적절하게 설정할 수 있습니다.
 
 +
-image::gcve-cvo-guest-15.png[gcve cvo 게스트 15]
+image:gcve-cvo-guest-15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -133,10 +133,7 @@ Cloud Volumes ONTAP LUN을 호스트에 연결하려면 다음 단계를 수행�
 . Canvas 페이지에서 Cloud Volumes ONTAP 작업 환경을 두 번 클릭하여 볼륨을 생성하고 관리합니다.
 . 볼륨 추가 > 새 볼륨 을 클릭하고 iSCSI 를 선택한 다음 이니시에이터 그룹 생성 을 클릭합니다. 계속 을 클릭합니다.
 +
-image::gcve-cvo-guest-16.png[gcve cvo 게스트 16]
-
-+
-image::gcve-cvo-guest-17.png[gcve cvo 게스트 17]
+image:gcve-cvo-guest-16.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"] image:gcve-cvo-guest-17.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨이 프로비저닝되면 볼륨 메뉴( º)를 선택한 다음 대상 IQN을 클릭합니다. IQN(iSCSI Qualified Name)을 복사하려면 Copy(복사)를 클릭합니다. 호스트에서 LUN으로의 iSCSI 접속을 설정합니다.
 
@@ -153,7 +150,7 @@ Google Cloud VMware Engine에 상주하는 호스트에 대해 동일한 작업�
 NOTE: Windows 호스트에는 클러스터의 각 노드에 대한 iSCSI 연결이 있어야 합니다. 기본 DSM은 가장 적합한 경로를 선택합니다.
 
 +
-image::gcve-cvo-guest-18.png[gcve cvo 게스트 18]
+image:gcve-cvo-guest-18.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 SVM(스토리지 가상 머신)의 LUN은 Windows 호스트에 디스크로 표시됩니다. 추가된 새 디스크는 호스트에서 자동으로 검색되지 않습니다. 수동 재검색을 트리거하여 다음 단계를 수행하여 디스크를 검색합니다.
@@ -164,7 +161,7 @@ SVM(스토리지 가상 머신)의 LUN은 Windows 호스트에 디스크로 표�
 .. 디스크 관리를 클릭합니다.
 .. 작업 > 디스크 다시 검사 를 클릭합니다.
 +
-image::gcve-cvo-guest-19.png[gcve cvo 게스트 19]
+image:gcve-cvo-guest-19.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 Windows 호스트에서 새 LUN을 처음 액세스할 때 파티션이나 파일 시스템이 없습니다. LUN을 초기화하고 필요에 따라 다음 단계를 완료하여 파일 시스템으로 LUN을 포맷합니다.
@@ -176,13 +173,11 @@ Windows 호스트에서 새 LUN을 처음 액세스할 때 파티션이나 파�
 
 
 
-image::gcve-cvo-guest-20.png[gcve cvo 게스트 20]
+image:gcve-cvo-guest-20.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Linux 클라이언트에서 iSCSI 데몬이 실행되고 있는지 확인합니다. LUN을 프로비저닝한 후에는 여기에서 Ubuntu를 사용한 iSCSI 구성에 대한 자세한 지침을 참조하십시오. 확인하려면 셸에서 lsblk cmd 를 실행합니다.
 
-image::gcve-cvo-guest-21.png[gcve cvo 게스트 21]
-
-image::gcve-cvo-guest-22.png[gcve cvo 게스트 22]
+image:gcve-cvo-guest-21.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"] image:gcve-cvo-guest-22.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ====
 .Linux 클라이언트에 Cloud Volumes ONTAP NFS 볼륨을 마운트합니다
@@ -195,11 +190,11 @@ Google Cloud VMware Engine 내의 VM에서 DIY(Cloud Volumes ONTAP) 파일 시�
 . 볼륨 탭에서 새 볼륨 생성 을 클릭합니다.
 . 새 볼륨 생성 페이지에서 볼륨 유형을 선택합니다.
 +
-image::gcve-cvo-guest-23.png[gcve cvo 게스트 23]
+image:gcve-cvo-guest-23.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨 탭에서 마우스 커서를 볼륨 위에 놓고 메뉴 아이콘( º)을 선택한 다음 Mount Command를 클릭합니다.
 +
-image::gcve-cvo-guest-24.png[gcve cvo 게스트 24]
+image:gcve-cvo-guest-24.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 복사를 클릭합니다.
 . 지정된 Linux 인스턴스에 연결합니다.
@@ -208,16 +203,13 @@ image::gcve-cvo-guest-24.png[gcve cvo 게스트 24]
 +
  $ sudo mkdir /cvogcvetst
 +
-image::gcve-cvo-guest-25.png[gcve cvo 게스트 25]
+image:gcve-cvo-guest-25.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 이전 단계에서 생성한 디렉토리에 Cloud Volumes ONTAP NFS 볼륨을 마운트합니다.
 +
  sudo mount 10.0.6.251:/cvogcvenfsvol01 /cvogcvetst
 +
-image::gcve-cvo-guest-26.png[gcve cvo 게스트 26]
-
-+
-image::gcve-cvo-guest-27.png[gcve cvo 게스트 27]
+image:gcve-cvo-guest-26.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"] image:gcve-cvo-guest-27.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -251,49 +243,49 @@ NFS 볼륨을 생성 및 마운트하려면 다음 단계를 수행하십시오.
 
 . Google 클라우드 콘솔 내의 파트너 솔루션에서 Cloud Volumes에 액세스합니다.
 +
-image::gcve-cvs-guest-1.png[gcve cvs 게스트 1]
+image:gcve-cvs-guest-1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Cloud Volumes Console에서 Volumes 페이지로 이동하고 Create를 클릭합니다.
 +
-image::gcve-cvs-guest-2.png[gcve cvs 게스트 2]
+image:gcve-cvs-guest-2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 파일 시스템 생성 페이지에서 차지백 메커니즘에 필요한 볼륨 이름 및 청구 레이블을 지정합니다.
 +
-image::gcve-cvs-guest-3.png[gcve cvs 게스트 3]
+image:gcve-cvs-guest-3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 적절한 서비스를 선택합니다. GCVE의 경우 애플리케이션 워크로드 요구 사항에 따라 지연 시간 및 성능 향상을 위해 CVS 성능 및 원하는 서비스 수준을 선택합니다.
 +
-image::gcve-cvs-guest-4.png[gcve cvs 게스트 4]
+image:gcve-cvs-guest-4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨 및 볼륨 경로에 대해 Google Cloud 영역을 지정합니다. 볼륨 경로는 프로젝트의 모든 클라우드 볼륨에서 고유해야 합니다.
 +
-image::gcve-cvs-guest-5.png[gcve cvs 게스트 5]
+image:gcve-cvs-guest-5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨의 성능 수준을 선택합니다.
 +
-image::gcve-cvs-guest-6.png[gcve cvs 게스트 6]
+image:gcve-cvs-guest-6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨의 크기와 프로토콜 유형을 지정합니다. 이 테스트에서는 NFSv3을 사용합니다.
 +
-image::gcve-cvs-guest-7.png[gcve cvs 게스트 7]
+image:gcve-cvs-guest-7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 이 단계에서는 볼륨에 액세스할 수 있는 VPC 네트워크를 선택합니다. VPC 피어링을 제자리에 배치했는지 확인합니다.
 +
 힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Cloud Volumes Service 생산자와 동종합니다. 사전에 VPC 피어링을 준비하려는 경우 다음 지침을 참조하십시오.
 
 +
-image::gcve-cvs-guest-8.png[gcve cvs 게스트 8]
+image:gcve-cvs-guest-8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 적절한 규칙을 추가하여 엑스포트 정책 규칙을 관리하고 해당 NFS 버전의 확인란을 선택합니다.
 +
 참고: 내보내기 정책을 추가하지 않으면 NFS 볼륨에 액세스할 수 없습니다.
 
 +
-image::gcve-cvs-guest-9.png[gcve cvs 게스트 9]
+image:gcve-cvs-guest-9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Save(저장) 를 클릭하여 볼륨을 생성합니다.
 +
-image::gcve-cvs-guest-10.png[gcve cvs 게스트 10]
+image:gcve-cvs-guest-10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -328,16 +320,13 @@ VMware VM의 게스트 OS 내에서 마운트 프로세스를 수행하려면 �
 +
  sudo mkdir /nimCVSNFSol01
 +
-image::gcve-cvs-guest-20.png[gcve cvs 게스트 20]
+image:gcve-cvs-guest-20.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 적절한 명령을 사용하여 볼륨을 마운트합니다. 실습의 명령 예는 다음과 같습니다.
 +
  sudo mount -t nfs -o rw,hard,rsize=65536,wsize=65536,vers=3,tcp 10.53.0.4:/nimCVSNFSol01 /nimCVSNFSol01
 +
-image::gcve-cvs-guest-21.png[gcve cvs 게스트 21]
-
-+
-image::gcve-cvs-guest-22.png[gcve cvs 게스트 22]
+image:gcve-cvs-guest-21.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"] image:gcve-cvs-guest-22.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -347,41 +336,41 @@ image::gcve-cvs-guest-22.png[gcve cvs 게스트 22]
 ====
 SMB 볼륨의 경우 SMB 볼륨을 생성하기 전에 Active Directory 연결이 구성되어 있는지 확인합니다.
 
-image::gcve-cvs-guest-30.png[gcve cvs 게스트 30]
+image:gcve-cvs-guest-30.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 AD 연결이 설정되면 원하는 서비스 수준으로 볼륨을 생성합니다. 단계는 적절한 프로토콜을 선택하는 경우를 제외하고 NFS 볼륨을 생성하는 것과 같습니다.
 
 . Cloud Volumes Console에서 Volumes 페이지로 이동하고 Create를 클릭합니다.
 . 파일 시스템 생성 페이지에서 차지백 메커니즘에 필요한 볼륨 이름 및 청구 레이블을 지정합니다.
 +
-image::gcve-cvs-guest-31.png[gcve cvs 게스트 31]
+image:gcve-cvs-guest-31.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 적절한 서비스를 선택합니다. GCVE의 경우 워크로드 요구 사항에 따라 지연 시간을 개선하고 성능을 향상시키하려면 CVS 성능 및 원하는 서비스 수준을 선택합니다.
 +
-image::gcve-cvs-guest-32.png[gcve cvs 게스트 32]
+image:gcve-cvs-guest-32.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨 및 볼륨 경로에 대해 Google Cloud 영역을 지정합니다. 볼륨 경로는 프로젝트의 모든 클라우드 볼륨에서 고유해야 합니다.
 +
-image::gcve-cvs-guest-33.png[gcve cvs 게스트 33]
+image:gcve-cvs-guest-33.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨의 성능 수준을 선택합니다.
 +
-image::gcve-cvs-guest-34.png[gcve cvs 게스트 34]
+image:gcve-cvs-guest-34.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 볼륨의 크기와 프로토콜 유형을 지정합니다. 이 테스트에서는 SMB가 사용됩니다.
 +
-image::gcve-cvs-guest-35.png[gcve cvs 게스트 35]
+image:gcve-cvs-guest-35.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 이 단계에서는 볼륨에 액세스할 수 있는 VPC 네트워크를 선택합니다. VPC 피어링을 제자리에 배치했는지 확인합니다.
 +
 힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Cloud Volumes Service 생산자와 동종합니다. 미리 VPC 피어링을 준비하려는 경우 이를 참조하십시오 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en["지침"].
 
 +
-image::gcve-cvs-guest-36.png[gcve cvs 게스트 36]
+image:gcve-cvs-guest-36.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Save(저장) 를 클릭하여 볼륨을 생성합니다.
 +
-image::gcve-cvs-guest-37.png[gcve cvs 게스트 37]
+image:gcve-cvs-guest-37.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -402,14 +391,14 @@ VMware VM의 Windows 게스트 OS 내에서 마운트 프로세스를 수행하�
 +
  \\nimsmb-3830.nimgcveval.com\nimCVSMBvol01
 +
-image::gcve-cvs-guest-38.png[gcve cvs 게스트 38]
+image:gcve-cvs-guest-38.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 컴퓨터에 로그온할 때마다 연결하려면 로그인할 때 다시 연결 확인란을 선택합니다.
 
 . 마침 을 클릭합니다.
 +
-image::gcve-cvs-guest-39.png[gcve cvs 게스트 39]
+image:gcve-cvs-guest-39.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

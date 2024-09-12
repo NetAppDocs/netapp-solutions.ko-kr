@@ -69,13 +69,13 @@ NOTE: Amazon FSx for NetApp ONTAP에서는 System Manager를 사용할 수 없�
 
 ==== FlexCache 볼륨을 생성하기 전에
 
-image::ddlnexus_image4.png[ddlnexus 이미지4]
+image:ddlnexus_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
 ==== 도미노에 FlexCache 볼륨을 노출 한 후
 
-image::ddlnexus_image5.png[ddlnexus 이미지5]
+image:ddlnexus_image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -125,10 +125,10 @@ BlueXP를 사용하지 않으려는 경우 ONTAP System Manager 또는 ONTAP CLI
 
 ==== SnapMirror 관계를 생성하기 전에
 
-image::ddlnexus_image4.png[ddlnexus 이미지4]
+image:ddlnexus_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
 ==== Domino에 대상 볼륨을 노출한 후
 
-image::ddlnexus_image5.png[ddlnexus 이미지5]
+image:ddlnexus_image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

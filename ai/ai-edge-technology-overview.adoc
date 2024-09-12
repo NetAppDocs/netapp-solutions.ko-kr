@@ -26,7 +26,7 @@ summary: 이 섹션에서는 AI 솔루션의 기술 기반에 대해 설명합�
 * HA 구성의 컨트롤러 2개
 
 
-image::ai-edge-image5.png[AI 에지 이미지5]
+image:ai-edge-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NetApp 엔트리 레벨 AFF C190 스토리지 시스템은 다음 기능을 지원합니다.
 
@@ -75,7 +75,7 @@ EF-Series는 엔트리 레벨 및 미드레인지 All-Flash SAN 스토리지 어
 
 다음 그림에서는 NetApp EF280 스토리지 시스템을 보여 줍니다.
 
-image::ai-edge-image7.png[AI 에지 이미지7]
+image:ai-edge-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -203,9 +203,9 @@ AI 분야에서 Lenovo는 기업들이 워크로드에 대한 ML 및 AI의 이�
 
 에지 AI 워크로드에 대한 가속화를 지원할 수 있는 유연성을 갖춘 인텔 제온 D 프로세서를 장착한 SE350은 데이터 센터 외부의 다양한 환경에서 서버 배포의 과제를 해결하기 위해 특별히 제작되었습니다.
 
-image::ai-edge-image8.png[AI 에지 이미지8]
+image:ai-edge-image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::ai-edge-image9.png[AI 에지 이미지9]
+image:ai-edge-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

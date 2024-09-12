@@ -18,7 +18,7 @@ Astra Trident는 Red Hat OpenShift를 포함하여 컨테이너 및 Kubernetes �
 
 관리자는 특정 수준의 성능을 보장하는 압축, 특정 디스크 유형 또는 QoS 수준을 비롯한 고급 스토리지 기능을 지원하는 스토리지 시스템 모델과 프로젝트 요구사항에 따라 여러 스토리지 백엔드를 구성할 수 있습니다. 이러한 백엔드를 정의한 후, 개발자는 프로젝트의 이러한 백엔드를 사용하여 지속적인 PVC(Volume Claim)를 생성하고 필요에 따라 컨테이너에 영구 저장소를 연결할 수 있습니다.
 
-image::redhat_openshift_image2.png[RedHat OpenShift 이미지2]
+image:redhat_openshift_image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Astra Trident는 빠른 개발 주기를 제공하며, Kubernetes와 마찬가지로 1년에 4회 릴리즈됩니다.
 

@@ -34,7 +34,7 @@ summary: 이 시나리오에서는 NetApp NFS 스토리지 솔루션을 사용�
 
 고객은 기존 Spark 솔루션에 대한 JBOD를 가지고 있었습니다. 그런 다음 NetApp ONTAP, NetApp StorageGRID 및 MinIO Gateway to NFS를 활용하여 잠재적인 이익과 위험을 평가하는 투자 모델에 대한 시뮬레이션 및 분석을 실행하는 금융 그룹의 정량적 대기 시간을 줄였습니다. 이 이미지는 NetApp 스토리지의 Spark 솔루션을 보여줍니다.
 
-image::hdcs-sh-image13.png[hdcs sh image13 을 참조하십시오]
+image:hdcs-sh-image13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 위 그림과 같이 StorageGRID A800, A700 시스템 및 AFF는 Spark가 있는 6노드 Hadoop 클러스터 및 데이터 분석 작업을 위한 YARN 및 Hive 메타데이터 서비스의 NFS 및 S3 프로토콜을 통해 쪽모이 세공 파일에 액세스하기 위해 구축되었습니다.
 

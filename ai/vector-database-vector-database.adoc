@@ -120,7 +120,7 @@ Milvus는 PyTorch 및 TensorFlow와의 호환성 덕분에 머신 러닝 워크�
 
 ==== Milvus 아키텍처 개요
 
-image::milvus_architecture_with_netapp.png[NetApp를 사용한 Milvus 아키텍처]
+image:milvus_architecture_with_netapp.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 이 섹션에서는 Milvus 아키텍처에 사용되는 더 높은 레버 구성 요소 및 서비스를 제공합니다.
 * 액세스 계층 – 상태 비저장 프록시의 그룹으로 구성되어 있으며 시스템의 프런트 레이어와 사용자에게 엔드포인트의 역할을 합니다.

@@ -25,16 +25,17 @@ NetApp Cloud Manager를 통해 Iguazio Kubernetes 클러스터 연결을 정의�
 . 액세스를 설정하려면 Iguazio 노드 중 하나에서 Kubernetes 구성 파일을 가져옵니다. 이 파일은 `/home/Iguazio/.kube/config.' 아래에 있습니다 이 파일을 바탕 화면에 다운로드합니다.
 . 구성할 클러스터 검색 으로 이동합니다.
 +
-image::mlrun_image9.png[mlrun 이미지9]
+image:mlrun_image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Kubernetes 구성 파일을 업로드합니다. 다음 이미지를 참조하십시오.
 +
-image::mlrun_image10.PNG[mlrun 이미지10]
+image:mlrun_image10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Trident를 구축하고 클러스터와 볼륨을 연결합니다. Iguazio 클러스터에 영구 볼륨 정의 및 할당에 대한 다음 이미지를 참조하십시오. 이 프로세스는 Iguazio의 Kubernetes 클러스터에 영구 볼륨(PV)을 만듭니다. 이를 사용하려면 먼저 영구 볼륨 클레임(PVC)을 정의해야 합니다.
++
+image:mlrun_image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
-image::mlrun_image5.png[mlrun 이미지5]
 
 
 

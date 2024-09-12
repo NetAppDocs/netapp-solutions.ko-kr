@@ -24,11 +24,11 @@ Astra Control Center에서 애플리케이션 워크로드를 관리하고 나�
 
 . 응용 프로그램의 스냅샷을 만들려면 앱 > 관리 탭으로 이동하여 스냅샷 복사본을 만들 응용 프로그램을 클릭합니다. 응용 프로그램 이름 옆의 드롭다운 메뉴를 클릭하고 스냅샷 을 클릭합니다.
 +
-image::vtwn_image18.jpg[Astra Control Center 스냅샷 버튼]
+image:vtwn_image18.jpg["Astra Control Center 스냅샷 버튼"]
 
 . 스냅샷 세부 정보를 입력하고 다음 을 클릭한 다음 스냅샷 을 클릭합니다. 스냅샷을 생성하는 데 약 1분이 소요되며 스냅샷이 성공적으로 생성된 후 상태를 사용할 수 있습니다.
 +
-image::vtwn_image19.jpg[Astra Control Center에서 스냅샷을 생성합니다]
+image:vtwn_image19.jpg["Astra Control Center에서 스냅샷을 생성합니다"]
 
 
 
@@ -47,12 +47,12 @@ ONTAP::> export-policy rule modify -policyname default -ruleindex 1 -anon 65534 
 ----
 . Astra Control Center에서 관리 대상 응용 프로그램의 백업을 생성하려면 Apps > Managed 탭으로 이동하여 백업할 응용 프로그램을 클릭합니다. 응용 프로그램 이름 옆의 드롭다운 메뉴를 클릭하고 백업을 클릭합니다.
 +
-image::vtwn_image18.jpg[Astra Control Center 백업 버튼]
+image:vtwn_image18.jpg["Astra Control Center 백업 버튼"]
 
 . 백업 세부 정보를 입력하고 백업 파일을 보관할 객체 스토리지 버킷을 선택한 후 다음 을 클릭하고 세부 정보를 검토한 후 백업 을 클릭합니다. 애플리케이션 및 데이터의 크기에 따라 백업이 몇 분 정도 걸릴 수 있으며 백업이 성공적으로 완료된 후 백업 상태를 사용할 수 있게 됩니다.
 
 
-image::vtwn_image20.jpg[Astra Control Center에서 백업을 생성합니다]
+image:vtwn_image20.jpg["Astra Control Center에서 백업을 생성합니다"]
 
 
 
@@ -62,20 +62,20 @@ image::vtwn_image20.jpg[Astra Control Center에서 백업을 생성합니다]
 
 . 응용 프로그램을 복원하려면 앱 > 관리 탭으로 이동하여 해당 앱을 클릭합니다. 응용 프로그램 이름 옆의 드롭다운 메뉴를 클릭하고 복원 을 클릭합니다.
 +
-image::vtwn_image18.jpg[Astra Control Center 클론 버튼]
+image:vtwn_image18.jpg["Astra Control Center 클론 버튼"]
 
 . 복원 네임스페이스의 이름을 입력하고 복원할 클러스터를 선택한 다음 기존 스냅샷이나 응용 프로그램 백업에서 복원할지 여부를 선택합니다. 다음 을 클릭합니다.
 +
-image::vtwn_image21.jpg[Astra Control Center 복구]
+image:vtwn_image21.jpg["Astra Control Center 복구"]
 
 . 검토 창에서 Restore를 입력하고 세부 정보를 검토한 후 Restore를 클릭합니다.
 +
-image::vtwn_image22.jpg[Astra Control Center 복원 검토]
+image:vtwn_image22.jpg["Astra Control Center 복원 검토"]
 
 . 새 애플리케이션은 Restoring 상태로, Astra Control Center는 선택한 클러스터의 애플리케이션을 복구합니다. 응용 프로그램의 모든 리소스가 Astra에 의해 설치 및 감지되면 응용 프로그램은 사용 가능 상태로 전환됩니다.
 
 
-image::vtwn_image17.jpg[Astra Control Center에서 새로운 앱이 검색되었습니다]
+image:vtwn_image17.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
 
 
 
@@ -85,14 +85,14 @@ image::vtwn_image17.jpg[Astra Control Center에서 새로운 앱이 검색되었
 
 . 응용 프로그램을 복제하려면 앱 > 관리 탭으로 이동하고 해당 앱을 클릭합니다. 애플리케이션 이름 옆의 드롭다운 메뉴를 클릭하고 클론 을 클릭합니다.
 +
-image::vtwn_image18.jpg[Astra Control Center 클론 버튼]
+image:vtwn_image18.jpg["Astra Control Center 클론 버튼"]
 
 . 새 네임스페이스의 세부 정보를 입력하고 복제할 클러스터를 선택한 다음 기존 스냅샷, 백업 또는 애플리케이션의 현재 상태에서 클론을 생성할지 여부를 선택합니다. 세부 정보를 검토한 후 다음 을 클릭하고 검토 창에서 복제 를 클릭합니다.
 +
-image::vtwn_image23.jpg[Astra Control Center 복구]
+image:vtwn_image23.jpg["Astra Control Center 복구"]
 
 . 새 애플리케이션은 검색 상태로 전환되지만, Astra Control Center는 선택한 클러스터에 애플리케이션을 생성합니다. 응용 프로그램의 모든 리소스가 Astra에 의해 설치 및 감지되면 응용 프로그램은 사용 가능 상태로 전환됩니다.
 +
-image::vtwn_image24.jpg[Astra Control Center에서 새로운 앱이 검색되었습니다]
+image:vtwn_image24.jpg["Astra Control Center에서 새로운 앱이 검색되었습니다"]
 
 

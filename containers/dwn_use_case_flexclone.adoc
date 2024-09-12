@@ -28,7 +28,7 @@ Kubernetes 클러스터에 배포된 애플리케이션을 클론 복제하는 �
 
 NetApp FlexClone 기술은 NetApp FlexVol의 쓰기 가능한 시점 스냅샷 기반 복사본입니다. 이러한 데이터는 거의 즉각적으로 프로비저닝되고 소스 볼륨의 모든 데이터를 포함하며 새 볼륨의 데이터가 소스에서 전환되기 전까지 추가 스토리지 공간을 사용하지 않습니다. 여러 데이터 복사본이 스테이징 목적으로 유용하고 스토리지 시스템에 이러한 볼륨 프로비저닝을 위한 리소스가 제한적인 경우, 이러한 리소스는 개발 또는 템플릿 기반 환경에서 주로 사용됩니다. 데이터를 여러 번 복사해야 하는 기존 스토리지 시스템과 비교하여 상당한 스토리지 공간과 시간을 소모하는 NetApp FlexClone 기술은 스토리지에 따른 작업을 가속화합니다.
 
-image::Astra-DevOps-UC3-FlexClone.png[FlexClone 이미지]
+image:Astra-DevOps-UC3-FlexClone.png["FlexClone 이미지"]
 
 NetApp FlexClone 기술에 대한 자세한 내용은 의 페이지를 참조하십시오 https://docs.netapp.com/us-en/ontap/concepts/flexclone-volumes-files-luns-concept.html["NetApp 문서"].
 
@@ -49,7 +49,7 @@ NetApp FlexClone 기술에 대한 자세한 내용은 의 페이지를 참조하
 
 이 사용 사례에서는 다음과 같은 워크플로를 시각화합니다.
 
-image::Astra-DevOps-UC3-Workflow.png[워크플로 이미지]
+image:Astra-DevOps-UC3-Workflow.png["워크플로 이미지"]
 
 . 사용자가 Ansible 플레이북을 실행하여 새로운 스테이징 환경을 구축합니다.
 . Ansible은 URI-API 모듈을 사용하여 Astra Control을 호출하여 클론 생성 작업을 실행합니다.
@@ -70,7 +70,7 @@ NOTE: 이 두 프로세스는 모두 자동화할 수 있습니다.
 
 여기서 제시하는 사용 사례는 복제할 특정 환경 또는 애플리케이션에 대한 골드 템플릿이 있는지 여부에 따라 달라집니다. 저희 환경에서는 Wordpress 배포, Magento 배포, DevTools이라는 제목의 Gitea가 있는 Jenkins CI/CD 환경 등 세 개의 템플릿을 만들었습니다.
 
-image::Astra-DevOps-UC3-Templates.png[템플릿 이미지]
+image:Astra-DevOps-UC3-Templates.png["템플릿 이미지"]
 
 각 환경은 NetApp Astra Control을 통해 관리되며, NetApp Astra Trident가 제공하는 NFS 백엔드와 함께 NetApp ONTAP 스토리지 시스템에 현재 저장된 영구 볼륨이 있습니다.
 
@@ -98,7 +98,7 @@ astra_control_api_token: "xxxxx"
 NOTE: 입력해야 하는 글로벌 환경 값은 API 액세스 메뉴 아래의 NetApp Astra Control의 사용자 프로필 아이콘 아래에서 확인할 수 있습니다.
 
 +
-image::Astra-DevOps-UC3-APIAccess.png[API 액세스 이미지]
+image:Astra-DevOps-UC3-APIAccess.png["API 액세스 이미지"]
 
 . 글로벌 변수가 완료된 경우 복제할 특정 애플리케이션의 값을 선택할 수 있습니다. devtools 환경을 Alan-devtools라고 하는 개인 환경으로 복제하려면 다음을 수행합니다.
 +
@@ -127,7 +127,7 @@ NOTE: 기록된 Playbook은 루트 사용자 또는 sudo 프로세스를 통해 
 
 . Playbook의 실행이 완료되면 복제된 애플리케이션이 Astra Control Center 콘솔에서 사용 가능한 것으로 표시됩니다.
 +
-image::Astra-DevOps-UC3-ClonedApp.png[복제된 앱 이미지]
+image:Astra-DevOps-UC3-ClonedApp.png["복제된 앱 이미지"]
 
 . 그런 다음, 사용자가 애플리케이션이 배포된 Kubernetes 환경에 로그인하여 애플리케이션이 새 IP 주소로 표시되는지 확인하고 개발 작업을 시작할 수 있습니다.
 

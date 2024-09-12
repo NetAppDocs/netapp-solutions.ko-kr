@@ -55,7 +55,7 @@ VVol(VMware vSphere Virtual Volumes)은 가상 디스크를 네이티브 스토�
 
 === 있습니다
 
-image::vcf_ora_si_vvols_architecture.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+image:vcf_ora_si_vvols_architecture.png["이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다."]
 
 
 

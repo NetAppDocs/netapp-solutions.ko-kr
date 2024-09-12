@@ -58,4 +58,4 @@ Rick Huang, Verron Martina, Muneer Ahmad, NetApp
 
 Azure NetApp Files는 다양한 성능 계층을 제공합니다. 고객은 표준 계층으로 시작하여 데이터를 이동하지 않고도 고성능 계층으로 스케일아웃 및 스케일업할 수 있습니다. 이 기능을 통해 데이터 과학자는 성능 문제 없이 규모에 맞게 모델을 교육할 수 있으므로 아래 그림과 같이 클러스터 전체에서 데이터 사일로를 피할 수 있습니다.
 
-image::aks-anf_image1.png[AKS anf 이미지1]
+image:aks-anf_image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

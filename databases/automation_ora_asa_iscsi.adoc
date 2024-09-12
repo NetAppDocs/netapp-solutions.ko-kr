@@ -55,7 +55,7 @@ NetApp ASA 시스템은 SAN 인프라에 최신 솔루션을 제공합니다. �
 
 === 있습니다
 
-image::automation_ora_asa_iscsi_archit.png[이 이미지는 iSCSI 및 ASM을 사용하는 NetApp ASA 시스템의 Oracle 배포 구성을 자세히 보여 줍니다.]
+image:automation_ora_asa_iscsi_archit.png["이 이미지는 iSCSI 및 ASM을 사용하는 NetApp ASA 시스템의 Oracle 배포 구성을 자세히 보여 줍니다."]
 
 
 
@@ -448,10 +448,7 @@ ASMCMD>
 ....
 . Oracle Enterprise Manager Express에 로그인하여 데이터베이스를 검증합니다.
 +
-image::automation_ora_asa_em_01.png[이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다]
-
-+
-image::automation_ora_asa_em_02.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
+image:automation_ora_asa_em_01.png["이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다"] image:automation_ora_asa_em_02.png["이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다"]
 
 +
 ....
@@ -488,7 +485,7 @@ DBMS_XDB_CONFIG.GETHTTPSPORT()
 login to NTAP1_PDB1 from port 5501.
 ....
 +
-image::automation_ora_asa_em_03.png[이 이미지는 Oracle Enterprise Manager Express의 PDB 데이터베이스 보기를 제공합니다]
+image:automation_ora_asa_em_03.png["이 이미지는 Oracle Enterprise Manager Express의 PDB 데이터베이스 보기를 제공합니다"]
 
 
 

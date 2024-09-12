@@ -18,7 +18,7 @@ VMware Aria는 애플리케이션, 인프라 및 플랫폼 서비스를 일관�
 
 VMware Aria를 사용하면 관리자가 단일 플랫폼 및 공통 데이터 모델을 통해 프라이빗, 하이브리드 및 여러 클라우드에서 환경을 제어할 수 있습니다. VMware Aria Automation을 사용하면 프로비저닝 중에도 자동화를 수행할 수 있을 뿐만 아니라 가상 머신 애플리케이션 또는 Kubernetes 기반 애플리케이션의 전체 라이프사이클을 관리할 수 있습니다.
 
-image::netapp-aria-image01.png[NetApp ONTAP와 VMware Aria 통합 옵션]
+image:netapp-aria-image01.png["NetApp ONTAP와 VMware Aria 통합 옵션"]
 
 VMware Aria는 RESTful API, Python, PowerShell, Node.js, Ansible, Puppet, Chef, Salt, Terraform 등 vSphere 데이터 저장소 프로비저닝 워크플로우의 경우 수행할 작업 수가 줄어들면 ONTAP Tools RESTful API 사용을 고려해 보십시오.
 

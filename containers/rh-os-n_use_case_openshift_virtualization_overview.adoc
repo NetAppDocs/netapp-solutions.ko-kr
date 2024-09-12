@@ -18,7 +18,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 이러한 과제를 해결하기 위해 Red Hat은 OpenShift 버전 4.6부터 OpenShift Virtualization(이전의 컨테이너 네이티브 가상화)을 도입했습니다. OpenShift Virtualization 기능을 사용하면 동일한 OpenShift Container Platform 설치에서 컨테이너와 함께 가상 시스템을 실행 및 관리할 수 있으므로, 하이브리드 관리 기능을 통해 운영자를 통해 VM의 배포 및 관리를 자동화할 수 있습니다. OpenShift에서 VM을 생성하는 것 외에도 Red Hat은 OpenShift 가상화를 통해 VMware vSphere, Red Hat 가상화 및 Red Hat OpenStack Platform 배포에서 VM 가져오기를 지원합니다.
 
-image::redhat_openshift_image44.jpg[OpenShift 가상화]
+image:redhat_openshift_image44.jpg["OpenShift 가상화"]
 
 NetApp ONTAP에서 지원하는 ACstra Trident의 도움을 받아 실시간 VM 마이그레이션, VM 디스크 클로닝, VM 스냅샷 등의 특정 기능도 OpenShift Virtualization에서 지원됩니다. 이러한 각 워크플로의 예는 이 문서의 뒷부분에서 해당 섹션에서 설명합니다.
 

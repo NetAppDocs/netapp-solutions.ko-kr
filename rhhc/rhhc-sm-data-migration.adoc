@@ -38,4 +38,4 @@ NOTE: Astra Replication 기능은 Trident CSI(Container Storage Interface)에서
 
 === ACC를 사용하여 데이터 복제 수행
 
-image::rhhc-onprem-dp-rep.png[Astra Control Center 복제]
+image:rhhc-onprem-dp-rep.png["Astra Control Center 복제"]

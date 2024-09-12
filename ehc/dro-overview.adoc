@@ -24,7 +24,7 @@ Niyaz Mohamed, NetApp
 
 DRO(재해 복구 오케스트레이터, UI를 포함한 스크립팅된 솔루션)를 사용하여 사내에서 ONTAP용 FSx로 복제된 워크로드를 원활하게 복구할 수 있습니다. DRO는 VM 등록을 통해 SnapMirror 레벨에서 VMC로 복구를 자동화하고 NSX-T에서 직접 네트워크 매핑을 수행합니다 이 기능은 모든 VMC 환경에 포함되어 있습니다.
 
-image::dro-vmc-image1.png[이 그래픽은 사내 데이터 센터, AWS SDDC 기반 VMware 클라우드 인스턴스, NetApp ONTAP용 Amazon FSx 간의 구조 및 상호 연결을 보여 줍니다. 여기에는 SnapMirror 복제, DRaaS Ops 트래픽, 인터넷 또는 직접 연결, VMware Transit Connect가 포함됩니다.]
+image:dro-vmc-image1.png["이 그래픽은 사내 데이터 센터, AWS SDDC 기반 VMware 클라우드 인스턴스, NetApp ONTAP용 Amazon FSx 간의 구조 및 상호 연결을 보여 줍니다. 여기에는 SnapMirror 복제, DRaaS Ops 트래픽, 인터넷 또는 직접 연결, VMware Transit Connect가 포함됩니다."]
 
 
 
@@ -51,7 +51,7 @@ NetApp ONTAP용 Amazon FSx는 널리 사용되는 NetApp ONTAP 파일 시스템�
 
 다음 단계는 NetApp BlueXP를 사용하고 AWS에서 ONTAP용 프로비저닝된 FSx 인스턴스를 검색하고 적절한 빈도와 NetApp 스냅샷 복사본 보존을 사용하여 원하는 데이터 저장소 볼륨을 사내 환경에서 ONTAP용 FSx로 복제하는 것입니다.
 
-image::dro-vmc-image2.png[이 그래픽은 활성화된 서비스 간의 다양한 상호 작용을 보여 주는 BlueXP Canvas 관계 맵을 보여 줍니다.]
+image:dro-vmc-image2.png["이 그래픽은 활성화된 서비스 간의 다양한 상호 작용을 보여 주는 BlueXP Canvas 관계 맵을 보여 줍니다."]
 
 이 링크의 단계에 따라 BlueXP를 구성합니다. NetApp ONTAP CLI를 사용하여 이 링크 이후의 복제를 예약할 수도 있습니다.
 
@@ -138,7 +138,7 @@ Password: admin
 
 NOTE: 암호는 "암호 변경" 옵션을 사용하여 변경할 수 있습니다.
 
-image::dro-vmc-image3.png[재해 복구 오케스트레이터 로그인 화면]
+image:dro-vmc-image3.png["재해 복구 오케스트레이터 로그인 화면"]
 
 
 
@@ -164,13 +164,13 @@ ONTAP용 FSx가 구축된 AWS 및 동일한 VPC에 DRO 에이전트를 구축하
 
 
 
-image::dro-vmc-image4.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image4.png["임시 자리 표시자 이미지 설명입니다."]
 
-image::dro-vmc-image5.png[소스 및 대상 사이트가 포함된 DRO 사이트 개요 페이지]
+image:dro-vmc-image5.png["소스 및 대상 사이트가 포함된 DRO 사이트 개요 페이지"]
 
 추가된 DRO는 자동 검색을 수행하고 소스 스토리지에서 ONTAP용 FSx로 해당 SnapMirror 복제본이 있는 VM을 표시합니다. DRO는 VM에서 사용하는 네트워크 및 포트 그룹을 자동으로 감지하여 채웁니다.
 
-image::dro-vmc-image6.png[219개의 VM과 10개의 데이터 저장소가 포함된 자동 검색 화면]
+image:dro-vmc-image6.png["219개의 VM과 10개의 데이터 저장소가 포함된 자동 검색 화면"]
 
 다음 단계는 필요한 VM을 기능 그룹으로 그룹화하여 리소스 그룹 역할을 하는 것입니다.
 
@@ -196,7 +196,7 @@ image::dro-vmc-image6.png[219개의 VM과 10개의 데이터 저장소가 포함
 . 리소스 그룹 만들기 * 를 클릭합니다.
 
 
-image::dro-vmc-image7.png[테스트 및 DemoRG1의 두 항목이 포함된 자원 그룹 목록의 스크린샷.]
+image:dro-vmc-image7.png["테스트 및 DemoRG1의 두 항목이 포함된 자원 그룹 목록의 스크린샷."]
 
 
 
@@ -208,15 +208,15 @@ image::dro-vmc-image7.png[테스트 및 DemoRG1의 두 항목이 포함된 자�
 
 . Replication Plans * 에 액세스하여 * Create New Replication Plan * 을 클릭합니다.
 +
-image::dro-vmc-image8.png[DemoRP라는 하나의 계획이 포함된 복제 계획 화면의 스크린샷]
+image:dro-vmc-image8.png["DemoRP라는 하나의 계획이 포함된 복제 계획 화면의 스크린샷"]
 
 . 새 복제 계획 * 에서 소스 사이트, 연결된 vCenter, 대상 사이트 및 연결된 vCenter를 선택하여 계획 이름을 제공하고 복구 매핑을 추가합니다.
 +
-image::dro-vmc-image9.png[복구 매핑을 포함한 복제 계획 세부 정보의 스크린샷]
+image:dro-vmc-image9.png["복구 매핑을 포함한 복제 계획 세부 정보의 스크린샷"]
 
 . 복구 매핑이 완료되면 클러스터 매핑을 선택합니다.
 +
-image::dro-vmc-image10.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image10.png["임시 자리 표시자 이미지 설명입니다."]
 
 . 리소스 그룹 세부 정보 * 를 선택하고 * 계속 * 을 클릭합니다.
 . 리소스 그룹의 실행 순서를 설정합니다. 이 옵션을 사용하면 여러 리소스 그룹이 있을 때 작업 순서를 선택할 수 있습니다.
@@ -227,47 +227,41 @@ image::dro-vmc-image10.png[임시 자리 표시자 이미지 설명입니다.]
 NOTE: SnapMirror가 볼륨 레벨에 있습니다. 따라서 모든 VM이 복제 대상에 복제됩니다. 데이터 저장소에 속한 모든 VM을 선택해야 합니다. 이 옵션을 선택하지 않으면 복제 계획에 포함된 VM만 처리됩니다.
 
 +
-image::dro-vmc-image11.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image11.png["임시 자리 표시자 이미지 설명입니다."]
 
 . VM 세부 정보 아래에서 VM의 CPU 및 RAM 매개 변수의 크기를 선택적으로 조정할 수 있습니다. 이는 대규모 환경을 소규모 타겟 클러스터로 복구하거나 일대일 물리적 VMware 인프라를 프로비저닝하지 않고도 DR 테스트를 수행할 때 매우 유용합니다. 또한 리소스 그룹에서 선택한 모든 VM에 대한 부팅 순서 및 부팅 지연(초)을 수정할 수 있습니다. 리소스 그룹 부팅 순서 선택 중에 선택한 변경 사항에서 필요한 변경 사항이 있는 경우 부팅 순서를 수정하는 추가 옵션이 있습니다. 기본적으로 리소스 그룹을 선택하는 동안 선택한 부팅 순서가 사용되지만 이 단계에서는 모든 수정 작업을 수행할 수 있습니다.
 +
-image::dro-vmc-image12.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image12.png["임시 자리 표시자 이미지 설명입니다."]
 
 . Create Replication Plan * 을 클릭합니다.
 +
-image::dro-vmc-image13.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image13.png["임시 자리 표시자 이미지 설명입니다."]
 
 
 
 복제 계획이 생성되면 요구 사항에 따라 페일오버 옵션, 테스트 페일오버 옵션 또는 마이그레이션 옵션을 사용할 수 있습니다. 페일오버 및 테스트 페일오버 옵션 중에 최신 SnapMirror 스냅샷 복사본이 사용되거나, SnapMirror의 보존 정책에 따라 특정 시점의 Snapshot 복사본에서 특정 스냅샷 복사본을 선택할 수 있습니다. 가장 최근의 복제본이 이미 손상 또는 암호화된 상태에서 랜섬웨어와 같은 손상 이벤트가 발생할 경우 시점 옵션이 매우 유용할 수 있습니다. DRO는 사용 가능한 모든 시점을 표시합니다. 복제 계획에 지정된 구성으로 대체 작동을 트리거하거나 테스트 대체 작동을 트리거하려면 * 장애 조치 * 또는 * 테스트 대체 작동 * 을 클릭합니다.
 
-image::dro-vmc-image14.png[임시 자리 표시자 이미지 설명입니다.]
-
-image::dro-vmc-image15.png[이 화면에서는 볼륨 스냅샷 세부 정보가 제공되며 최신 스냅샷을 사용하고 특정 스냅샷을 선택할 수 있습니다.]
+image:dro-vmc-image14.png["임시 자리 표시자 이미지 설명입니다."] image:dro-vmc-image15.png["이 화면에서는 볼륨 스냅샷 세부 정보가 제공되며 최신 스냅샷을 사용하고 특정 스냅샷을 선택할 수 있습니다."]
 
 복제 계획은 작업 메뉴에서 모니터링할 수 있습니다.
 
-image::dro-vmc-image16.png[작업 메뉴에는 복제 계획에 대한 모든 작업 및 옵션이 표시되며 로그를 볼 수도 있습니다.]
+image:dro-vmc-image16.png["작업 메뉴에는 복제 계획에 대한 모든 작업 및 옵션이 표시되며 로그를 볼 수도 있습니다."]
 
 페일오버가 트리거된 후 복구된 항목이 VMC vCenter(VM, 네트워크, 데이터 저장소)에서 표시될 수 있습니다. 기본적으로 VM은 Workload 폴더로 복구됩니다.
 
-image::dro-vmc-image17.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image17.png["임시 자리 표시자 이미지 설명입니다."]
 
 페일백은 복제 계획 레벨에서 트리거될 수 있습니다. 테스트 페일오버의 경우 최분해 옵션을 사용하여 변경 사항을 롤백하고 FlexClone 관계를 제거할 수 있습니다. 페일오버와 관련된 페일백은 2단계 프로세스입니다. 복제 계획을 선택하고 * Reverse data sync * 를 선택합니다.
 
-image::dro-vmc-image18.png[역방향 데이터 동기화 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷]
-
-image::dro-vmc-image19.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image18.png["역방향 데이터 동기화 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷"] image:dro-vmc-image19.png["임시 자리 표시자 이미지 설명입니다."]
 
 완료되면 페일백을 트리거하여 원래 운영 사이트로 다시 이동할 수 있습니다.
 
-image::dro-vmc-image20.png[페일백 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷]
-
-image::dro-vmc-image21.png[원본 프로덕션 사이트가 가동되어 실행 중인 DRO 요약 페이지의 스크린샷.]
+image:dro-vmc-image20.png["페일백 옵션이 포함된 드롭다운이 있는 복제 계획 개요 스크린샷"] image:dro-vmc-image21.png["원본 프로덕션 사이트가 가동되어 실행 중인 DRO 요약 페이지의 스크린샷."]
 
 NetApp BlueXP에서는 복제 상태가 적절한 볼륨(VMC에 읽기-쓰기 볼륨으로 매핑된 볼륨)에 대해 끊어지는 것을 볼 수 있습니다. 테스트 페일오버 중에 DRO는 대상 또는 복제본 볼륨을 매핑하지 않습니다. 대신 필요한 SnapMirror(또는 Snapshot) 인스턴스의 FlexClone 복사본을 만들고 FlexClone 인스턴스를 노출합니다. FlexClone 인스턴스는 ONTAP용 FSx의 추가 물리적 용량을 소비하지 않습니다. 이 프로세스를 통해 DR 테스트 또는 분류 워크플로우 중에도 볼륨을 수정하지 않고 복제 작업을 계속할 수 있습니다. 또한 이 프로세스를 통해 오류가 발생하거나 손상된 데이터가 복구되면 복제본을 제거할 위험 없이 복구를 정리할 수 있습니다.
 
-image::dro-vmc-image22.png[임시 자리 표시자 이미지 설명입니다.]
+image:dro-vmc-image22.png["임시 자리 표시자 이미지 설명입니다."]
 
 
 

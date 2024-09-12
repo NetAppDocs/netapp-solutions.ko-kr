@@ -40,7 +40,7 @@ summary: 이 사용 사례는 고객의 빅데이터 분석 데이터를 위한 
 
 이 이미지는 데이터 보호 및 멀티 클라우드 연결 솔루션을 보여줍니다.
 
-image::hdcs-sh-image12.png[hdcs sh image12 를 참조하십시오]
+image:hdcs-sh-image12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 위 그림과 같이 센서의 데이터가 스트리밍되어 Kafka를 통해 AWS Spark 클러스터로 수집됩니다. 이 데이터는 Equinix 데이터 센터 내의 클라우드 공급자 외부에 있는 NPS에 있는 NFS 공유에 저장됩니다. NetApp NPS는 Direct Connect 및 Express Route 연결을 통해 Amazon AWS 및 Microsoft Azure에 연결되므로 고객은 Amazon 및 AWS 분석 클러스터 모두에서 NFS 데이터에 액세스할 수 있습니다. 이 접근 방식은 여러 하이퍼 스케일러의 클라우드 분석 문제를 해결합니다.
 

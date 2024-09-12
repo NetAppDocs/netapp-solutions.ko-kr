@@ -20,7 +20,7 @@ NetApp ONTAP에서 지원하는 Red Hat OpenShift 및 Astra Trident는 기본적
 
 다음 그림은 NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터의 멀티 테넌트 솔루션을 보여줍니다.
 
-image::redhat_openshift_image40.jpg[NetApp ONTAP에서 지원하는 Astra Trident와 Red Hat OpenShift 클러스터의 멀티 테넌시]
+image:redhat_openshift_image40.jpg["NetApp ONTAP에서 지원하는 Astra Trident와 Red Hat OpenShift 클러스터의 멀티 테넌시"]
 
 
 

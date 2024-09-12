@@ -57,7 +57,7 @@ VLDB에 대한 SLA에 관심이 있고 Oracle 데이터베이스를 AWS와 같�
 
 === 있습니다
 
-image::aws_ora_fsx_ec2_vldb_architecture.png[이 이미지는 FSxN을 사용하는 AWS 퍼블릭 클라우드에서 Oracle VLDB 증분 병합 구현을 자세히 보여 줍니다.]
+image:aws_ora_fsx_ec2_vldb_architecture.png["이 이미지는 FSxN을 사용하는 AWS 퍼블릭 클라우드에서 Oracle VLDB 증분 병합 구현을 자세히 보여 줍니다."]
 
 
 
@@ -161,7 +161,7 @@ vol create -volume ora_01_copy -aggregate aggr1 -size 100G -state online -type R
 ----
 . 또는 AWS FSx 콘솔 UI에서 스토리지 효율성 옵션을 사용하여 볼륨을 프로비저닝할 수 있습니다 `Enabled`, 보안 스타일 `Unix` , 스냅샷 정책 `None`스토리지 계층화를 지원합니다 `Snapshot Only` 아래 그림과 같이 표시됩니다.
 +
-image::aws_ora_fsx_ec2_vldb_vol.png[AWS ora FSx EC2 VLDB 볼륨]
+image:aws_ora_fsx_ec2_vldb_vol.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 일별 스케줄과 30일 보존 기간을 사용하여 Oracle 데이터베이스에 대한 사용자 지정된 스냅샷 정책을 생성합니다. 스냅샷 빈도 및 보존 기간 측면에서 특정 요구에 맞게 정책을 조정해야 합니다.
 +

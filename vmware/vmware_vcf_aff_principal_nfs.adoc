@@ -66,7 +66,7 @@ ONTAP 스토리지 클러스터와 VI 워크로드 도메인 간에 NFS 트래�
 
 . ONTAP System Manager에서 왼쪽 메뉴의 * Storage VM * 으로 이동하여 NFS 트래픽에 사용할 SVM을 클릭합니다. 개요 * 탭의 * 네트워크 IP 인터페이스 * 에서 * nfs * 의 오른쪽에 있는 숫자를 클릭합니다. 목록에서 필요한 LIF IP 주소가 나열되어 있는지 확인합니다.
 +
-image::vmware-vcf-aff-image03.png[SVM용 LIF 확인]
+image:vmware-vcf-aff-image03.png["SVM용 LIF 확인"]
 
 
 
@@ -95,21 +95,21 @@ ONTAP System Manager에서 엑스포트 정책을 생성하여 NFS 볼륨에 대
 . ONTAP System Manager의 왼쪽 메뉴에서 * Storage VM * 을 클릭하고 목록에서 SVM을 선택합니다.
 . Settings * 탭에서 * Export Policies * 를 찾아 화살표를 클릭하여 액세스합니다.
 +
-image::vmware-vcf-aff-image06.png[내보내기 정책에 액세스합니다]
+image:vmware-vcf-aff-image06.png["내보내기 정책에 액세스합니다"]
 
 +
 {nbsp}
 
 . 새 내보내기 정책 * 창에서 정책 이름을 추가하고 * 새 규칙 추가 * 버튼을 클릭한 다음 * + 추가 * 버튼을 클릭하여 새 규칙 추가를 시작합니다.
 +
-image::vmware-vcf-aff-image07.png[새 엑스포트 정책]
+image:vmware-vcf-aff-image07.png["새 엑스포트 정책"]
 
 +
 {nbsp}
 
 . 규칙에 포함할 IP 주소, IP 주소 범위 또는 네트워크를 입력합니다. smb/cifs * 및 * FlexCache * 상자의 선택을 취소하고 아래의 액세스 세부 정보를 선택합니다. UNIX 상자를 선택하면 ESXi 호스트를 액세스할 수 있습니다.
 +
-image::vmware-vcf-aff-image08.png[새 규칙을 저장합니다]
+image:vmware-vcf-aff-image08.png["새 규칙을 저장합니다"]
 
 +
 
@@ -132,21 +132,21 @@ ONTAP 스토리지 시스템에서 워크로드 도메인 구축 시 데이터 �
 
 . ONTAP System Manager에서 왼쪽 메뉴에서 * 스토리지 > 볼륨 * 으로 이동하고 * + 추가 * 를 클릭하여 새 볼륨을 생성합니다.
 +
-image::vmware-vcf-aff-image09.png[새 볼륨을 추가합니다]
+image:vmware-vcf-aff-image09.png["새 볼륨을 추가합니다"]
 
 +
 {nbsp}
 
 . 볼륨 이름을 추가하고 원하는 용량을 입력한 다음 볼륨을 호스팅할 스토리지 VM을 선택합니다. 계속하려면 * 추가 옵션 * 을 클릭하십시오.
 +
-image::vmware-vcf-aff-image10.png[볼륨 세부 정보를 추가합니다]
+image:vmware-vcf-aff-image10.png["볼륨 세부 정보를 추가합니다"]
 
 +
 {nbsp}
 
 . Access Permissions(액세스 권한) 에서 NFS Server 및 NFS 트래픽 유효성 검사에 사용할 VCF 관리 네트워크 또는 IP 주소와 NFS 네트워크 IP 주소를 포함하는 Export Policy(내보내기 정책) 를 선택합니다.
 +
-image::vmware-vcf-aff-image11.png[볼륨 세부 정보를 추가합니다]
+image:vmware-vcf-aff-image11.png["볼륨 세부 정보를 추가합니다"]
 
 +
 를 누릅니다
@@ -167,14 +167,14 @@ VI 워크로드 도메인에 ESXi 호스트를 구축하기 위한 준비로서 
 
 . SDDC Manager 웹 인터페이스에서 왼쪽 메뉴의 * Network Settings * 로 이동한 후 * + Create Network Pool * 버튼을 클릭합니다.
 +
-image::vmware-vcf-aff-image04.png[네트워크 풀을 생성합니다]
+image:vmware-vcf-aff-image04.png["네트워크 풀을 생성합니다"]
 
 +
 {nbsp}
 
 . 네트워크 풀 이름을 입력하고 NFS 확인란을 선택한 다음 모든 네트워킹 세부 정보를 입력합니다. vMotion 네트워크 정보에 대해 이 과정을 반복합니다.
 +
-image::vmware-vcf-aff-image05.png[네트워크 풀 구성]
+image:vmware-vcf-aff-image05.png["네트워크 풀 구성"]
 
 +
 {nbsp}
@@ -192,21 +192,21 @@ ESXi 호스트를 워크로드 도메인으로 구축하려면 먼저 SDDC Manag
 
 . SDDC Manager 인터페이스에서 왼쪽 메뉴의 * Hosts * 로 이동한 후 * Commission Hosts * 버튼을 클릭합니다.
 +
-image::vmware-vcf-aff-image16.png[커미션 호스트를 시작합니다]
+image:vmware-vcf-aff-image16.png["커미션 호스트를 시작합니다"]
 
 +
 {nbsp}
 
 . 첫 번째 페이지는 필수 구성 요소 체크리스트입니다. 모든 필수 구성 요소를 두 번 선택하고 모든 확인란을 선택하여 계속 진행합니다.
 +
-image::vmware-vcf-aff-image17.png[필수 구성 요소를 확인합니다]
+image:vmware-vcf-aff-image17.png["필수 구성 요소를 확인합니다"]
 
 +
 {nbsp}
 
 . Host Addition and Validation * 창에서 * Host FQDN *, * Storage Type *, 워크로드 도메인에 사용할 vMotion 및 NFS 스토리지 IP 주소가 포함된 * Network Pool * 이름, ESXi 호스트에 액세스하기 위한 자격 증명을 입력합니다. Add * 를 클릭하여 확인할 호스트 그룹에 호스트를 추가합니다.
 +
-image::vmware-vcf-aff-image18.png[Host Addition and Validation(호스트 추가 및 검증) 창]
+image:vmware-vcf-aff-image18.png["Host Addition and Validation(호스트 추가 및 검증) 창"]
 
 +
 {nbsp}
@@ -214,14 +214,14 @@ image::vmware-vcf-aff-image18.png[Host Addition and Validation(호스트 추가 
 . 검증될 모든 호스트가 추가되었으면 * Validate All * 버튼을 클릭하여 계속합니다.
 . 모든 호스트가 검증되었다고 가정하고 계속하려면 * Next * 를 클릭하십시오.
 +
-image::vmware-vcf-aff-image19.png[모두 유효성을 검사하고 Next를 클릭합니다]
+image:vmware-vcf-aff-image19.png["모두 유효성을 검사하고 Next를 클릭합니다"]
 
 +
 {nbsp}
 
 . 위임할 호스트 목록을 검토하고 * Commission * 버튼을 클릭하여 프로세스를 시작합니다. SDDC 관리자의 작업 창에서 위탁 프로세스를 모니터링합니다.
 +
-image::vmware-vcf-aff-image20.png[모두 유효성을 검사하고 Next를 클릭합니다]
+image:vmware-vcf-aff-image20.png["모두 유효성을 검사하고 Next를 클릭합니다"]
 
 
 
@@ -235,7 +235,7 @@ VI 워크로드 도메인 구축에 대한 단계별 지침은 을 참조하십�
 
 . SDDC Manager 대시보드에서 오른쪽 상단에 있는 * + Workload Domain * 을 클릭하여 새 워크로드 도메인을 생성합니다.
 +
-image::vmware-vcf-aff-image12.png[새 워크로드 도메인을 생성합니다]
+image:vmware-vcf-aff-image12.png["새 워크로드 도메인을 생성합니다"]
 
 +
 {nbsp}
@@ -245,18 +245,18 @@ image::vmware-vcf-aff-image12.png[새 워크로드 도메인을 생성합니다]
 
 VI 구성 마법사에 필요한 정보를 입력하는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-admin/GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8.html#GUID-E64CEFDD-DCA2-4D19-B5C5-D8ABE66407B8["SDDC Manager UI를 사용하여 VI 워크로드 도메인을 구축합니다"].
 
-+ 이미지::vmware-vcf-aff-image13.png[VI 구성 마법사]
++ image:vmware-vcf-aff-image13.png["VI 구성 마법사"]
 
 . NFS 스토리지 섹션에서 데이터 저장소 이름, NFS 볼륨의 폴더 마운트 지점 및 ONTAP NFS 스토리지 VM LIF의 IP 주소를 입력합니다.
 +
-image::vmware-vcf-aff-image14.png[NFS 스토리지 정보를 추가합니다]
+image:vmware-vcf-aff-image14.png["NFS 스토리지 정보를 추가합니다"]
 
 +
 {nbsp}
 
 . VI 구성 마법사에서 스위치 구성 및 라이센스 단계를 완료한 다음 * 마침 * 을 클릭하여 워크로드 도메인 생성 프로세스를 시작합니다.
 +
-image::vmware-vcf-aff-image15.png[VI 구성 마법사를 완료합니다]
+image:vmware-vcf-aff-image15.png["VI 구성 마법사를 완료합니다"]
 
 +
 {nbsp}

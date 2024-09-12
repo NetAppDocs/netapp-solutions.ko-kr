@@ -18,7 +18,7 @@ TKG라고도 하는 VMware Tanzu Kubernetes Grid를 사용하면 하이브리드
 
 Tanzu Kubernetes Grid는 몇몇 유망한 업스트림 커뮤니티 프로젝트를 기반으로 구축되고 VMware에서 개발, 마케팅 및 지원하는 Kubernetes 플랫폼을 제공합니다. Kubernetes 배포 외에도 Tanzu Kubernetes Grid는 레지스트리, 로드 밸런싱, 인증 등과 같은 필수 운영 수준 서비스인 추가 기능을 제공합니다. 관리 클러스터를 사용하는 VMware TKG는 vSphere 6.7 환경에서 널리 사용되고 있으며, TKGS는 vSphere 7과 기본 통합 기능을 갖추고 있으므로 이를 지원하더라도 vSphere 7 환경에 구축하는 것은 권장되지 않습니다.
 
-image::vtwn_image02.png[관리 클러스터가 포함된 VMware Tanzu Kubernetes Grid]
+image:vtwn_image02.png["관리 클러스터가 포함된 VMware Tanzu Kubernetes Grid"]
 
 Tanzu Kubernetes Grid에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-release-notes.html["여기"^].
 

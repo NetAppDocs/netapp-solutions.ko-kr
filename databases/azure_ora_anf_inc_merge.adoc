@@ -55,7 +55,7 @@ VLDB에 대한 SLA에 관심이 있고 Oracle 데이터베이스를 Azure와 같
 
 === 있습니다
 
-image::azure_ora_anf_vldb_architecture.png[이 이미지는 ANF를 사용한 Azure 퍼블릭 클라우드의 Oracle VLDB 증분 병합 구현에 대한 자세한 그림을 제공합니다.]
+image:azure_ora_anf_vldb_architecture.png["이 이미지는 ANF를 사용한 Azure 퍼블릭 클라우드의 Oracle VLDB 증분 병합 구현에 대한 자세한 그림을 제공합니다."]
 
 
 
@@ -139,27 +139,27 @@ NOTE: Oracle 설치 파일을 스테이징할 수 있는 충분한 공간을 확
 
 . 먼저 Azure 포털 콘솔에서 Oracle VLDB 이미지 복사본을 스테이징하는 데 사용되는 ANF 용량 풀로 이동합니다.
 +
-image::azure_ora_anf_vldb_vol_01.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_01.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . 선택한 용량 풀에서 - `database`를 클릭합니다 `Volumes` 그런 다음 `Add volume` 볼륨 추가 워크플로우를 시작합니다.
 +
-image::azure_ora_anf_vldb_vol_02.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_02.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . 내용을 입력합니다 `Volume name`, `Quota`, `Virtual network`, 및 `Delegated subnet` 로 이동합니다 `Protocol` 페이지.
 +
-image::azure_ora_anf_vldb_vol_03.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_03.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . 파일 경로를 기록해 두고 허용된 클라이언트 CIDR 범위를 입력한 후 활성화합니다 `Root Access` 볼륨을 선택합니다.
 +
-image::azure_ora_anf_vldb_vol_04.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_04.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . 필요한 경우 볼륨 태그를 추가합니다.
 +
-image::azure_ora_anf_vldb_vol_05.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_05.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . 볼륨을 검토하고 생성합니다.
 +
-image::azure_ora_anf_vldb_vol_06.png[이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다]
+image:azure_ora_anf_vldb_vol_06.png["이 이미지는 Azure 포털 콘솔을 사용하여 ANF 볼륨 프로비저닝 화면을 제공합니다"]
 
 . sudo 권한을 가진 사용자로 운영 Oracle VLDB 서버에 로그인하고 ANF 스토리지에서 내보낸 NFS 볼륨을 마운트합니다. 필요에 따라 ANF NFS 서버의 IP 주소와 파일 경로로 변경합니다. ANF NFS 서버의 IP 주소는 ANF 볼륨 콘솔 페이지에서 검색할 수 있습니다.
 +

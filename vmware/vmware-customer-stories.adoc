@@ -23,28 +23,16 @@ NetApp과 VMware의 파트너십은 단일 스토리지 시스템에서 VMware�
 
 
  a| 
-[link=#vmware-story1]
-image::vmware-story1.png[VMware 스토리1]
-
-vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
+image:vmware-story1.png["너비 = 100, 링크 = \"#vmware-story1\""] vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
  a| 
-[link=#vmware-story2]
-image::vmware-story2.png[VMware 스토리2]
-
-클라우드를 위한 최신 데이터 스토리지 - 스마트 VMware 인프라
+image:vmware-story2.png["너비 = 100, 링크 = \"#vmware-story2\""] 클라우드를 위한 최신 데이터 스토리지 - 스마트 VMware 인프라
 
 
 
  a| 
-[link=#vmware-story3]
-image::vmware-story3.png[VMware 스토리3]
-
-Kubernetes를 위한 최신 데이터 스토리지
+image:vmware-story3.png["너비 = 100, 링크 = \"#vmware-story3\""] Kubernetes를 위한 최신 데이터 스토리지
  a| 
-[link=#vmware-story4]
-image::vmware-story4.png[VMware 스토리4]
-
-하이브리드 및 멀티 클라우드 운영 
+image:vmware-story4.png["너비 = 100, 링크 = \"#vmware-story4\""] 하이브리드 및 멀티 클라우드 운영 
 
 |===
 
@@ -75,7 +63,7 @@ image::vmware-story4.png[VMware 스토리4]
 
 * 결과: * 하루 1억 8천만 건의 UPI(Unified Payment Interface) 트랜잭션(6M IOPS 및 45GB/s 처리량) SRM + SnapMirror 로 VM 및 데이터 복제 VM 백업 및 복구를 위한 SnapCenter + Commvault
 
-image::vmware-story2a.png[VMware 스토리 2a]
+image:vmware-story2a.png["너비 = 600"]
 
 * 국가 암호화 통화로 이동 *
 
@@ -91,7 +79,7 @@ VMware Cloud Foundation 및 NetApp ONTAP All-Flash 아키텍처는 비접촉식 
 
 * 결과: * 동일한 ONTAP 엔터프라이즈 스토리지 기능을 활용하는 GovCloud용 일관된 엔터프라이즈 Kubernetes 및 파일 서비스 스토리지
 
-image::vmware-story3a.png[VMware 스토리 3a]
+image:vmware-story3a.png["너비 = 600"]
 
 * 유연한 옵션, 일관된 단일 플랫폼 *
 

@@ -53,9 +53,9 @@ ADAS(Advanced Driver Assistance Systems), Industry 4.0, 스마트 시티 및 IoT
 
 이 Lenovo ThinkSystem 서버 및 NetApp ONTAP 또는 NetApp SANtricity 스토리지 솔루션은 기존 CPU와 함께 GPU의 처리 능력을 사용하여 대규모 데이터 세트에서 AI 추론을 처리하도록 설계되었습니다. 이 검증 방식은 다음 두 그림에 표시된 대로 단일 NetApp AFF 스토리지 시스템과 상호 연결된 단일 또는 다중 Lenovo SR350 에지 서버를 사용하는 아키텍처로 고성능 및 최적의 데이터 관리를 수행하는 것입니다.
 
-image::ai-edge-image2.jpg[AI 에지 이미지2]
+image:ai-edge-image2.jpg["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::ai-edge-image17.png[AI 에지 이미지17]
+image:ai-edge-image17.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 그림의 논리적 아키텍처 개요에서는 이 아키텍처의 컴퓨팅 및 스토리지 요소 역할을 보여 줍니다. 특히 다음과 같은 사항이 표시됩니다.
 
@@ -69,7 +69,7 @@ image::ai-edge-image17.png[AI 에지 이미지17]
 
 
 
-image::ai-edge-image3.png[AI 에지 이미지3]
+image:ai-edge-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 |===
 

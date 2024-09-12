@@ -55,7 +55,7 @@ Oracle ASM은 일반적으로 FC, iSCSI 스토리지 프로토콜 및 LUN에 원
 
 === 있습니다
 
-image::aws_ora_fsx_ec2_nfs_asm_architecture.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+image:aws_ora_fsx_ec2_nfs_asm_architecture.png["이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다."]
 
 
 

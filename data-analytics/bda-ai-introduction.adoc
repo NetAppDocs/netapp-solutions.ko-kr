@@ -38,7 +38,7 @@ IBM의 GPFS는 HDFS에 대한 대안을 제공하는 엔터프라이즈 파일 �
 
 === NetApp 데이터 이동 없는 분석 모듈
 
-NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 참조하십시오 https://www.netapp.com/us/media/tr-4382.pdf["TR-4382: NetApp 데이터 이동 없는 분석 모듈."^]
+NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 https://www.netapp.com/us/media/tr-4382.pdf[]참조하십시오.
 
 
 
@@ -46,7 +46,7 @@ NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위�
 
 Hadoop Distributed Copy(DistCp)는 대규모 클러스터 간 및 클러스터 내 대처 작업에 사용되는 분산 복사 툴입니다. 이 툴은 데이터 배포, 오류 처리 및 보고를 위해 MapReduce를 사용합니다. 파일 및 디렉토리 목록을 확장하고 소스 목록에서 데이터를 복사하기 위한 작업을 매핑하기 위해 파일 및 디렉토리 입력을 수행합니다. 아래 이미지는 HDFS 및 비 HDFS의 DistCp 작업을 보여 줍니다.
 
-image::bda-ai-image1.png[BDA ai 이미지1]
+image:bda-ai-image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Hadoop DistCp는 추가 드라이버를 사용하지 않고 두 HDFS 시스템 간에 데이터를 이동합니다. NetApp은 비 HDFS 시스템용 드라이버를 제공합니다. NFS 대상의 경우 NIPAM은 데이터를 복사할 때 Hadoop DistCp가 NFS 대상과 통신하는 데 사용하는 데이터를 복사하는 드라이버를 제공합니다.
 
@@ -62,7 +62,7 @@ NetApp Cloud Volumes Service는 최고의 성능을 제공하는 클라우드 �
 
 NetApp XCP는 NetApp 제품 간 및 NetApp 간 데이터 마이그레이션을 빠르고 안정적으로 수행할 수 있는 클라이언트 소프트웨어입니다. 이 툴은 대량의 비정형 NAS 데이터를 NAS 시스템에서 NetApp 스토리지 컨트롤러로 복사하도록 설계되었습니다. xCP 마이그레이션 툴은 데이터 마이그레이션, 파일 또는 디렉토리 목록, 공간 보고 등 여러 요청을 병렬로 처리할 수 있는 멀티코어 다중 채널 I/O 스트리밍 엔진을 사용합니다. 기본 NetApp 데이터 마이그레이션 툴입니다. XCP를 사용하여 Hadoop 클러스터 및 HPC에서 NetApp NFS 스토리지로 데이터를 복사할 수 있습니다. 아래 다이어그램에서는 XCP를 사용하여 Hadoop 및 HPC 클러스터에서 NetApp NFS 볼륨으로 데이터를 전송하는 방법을 보여 줍니다.
 
-image::bda-ai-image2.png[BDA ai 이미지2]
+image:bda-ai-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

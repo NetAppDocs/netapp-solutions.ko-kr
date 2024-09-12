@@ -85,14 +85,14 @@ VMware vSphere용 ONTAP 툴을 구축하려면 다음 단계를 수행하십시�
 . VCF 관리 도메인의 vCenter 어플라이언스에 로그인합니다.
 . vCenter 어플라이언스 인터페이스에서 관리 클러스터를 마우스 오른쪽 버튼으로 클릭하고 * Deploy OVF Template ....를 선택합니다
 +
-image::vmware-vcf-aff-image21.png[OVF 템플릿 배포...]
+image:vmware-vcf-aff-image21.png["OVF 템플릿 배포..."]
 
 +
 {nbsp}
 
 . Deploy OVF Template * 마법사에서 * Local file * 라디오 버튼을 클릭하고 이전 단계에서 다운로드한 ONTAP tools OVA 파일을 선택합니다.
 +
-image::vmware-vcf-aff-image22.png[OVA 파일을 선택합니다]
+image:vmware-vcf-aff-image22.png["OVA 파일을 선택합니다"]
 
 +
 {nbsp}
@@ -100,14 +100,14 @@ image::vmware-vcf-aff-image22.png[OVA 파일을 선택합니다]
 . 마법사의 2-5단계에서 VM의 이름과 폴더를 선택하고 컴퓨팅 리소스를 선택하고 세부 정보를 검토한 후 라이센스 계약에 동의합니다.
 . 구성 및 디스크 파일의 스토리지 위치로 VCF 관리 도메인 클러스터의 vSAN 데이터 저장소를 선택합니다.
 +
-image::vmware-vcf-aff-image23.png[OVA 파일을 선택합니다]
+image:vmware-vcf-aff-image23.png["OVA 파일을 선택합니다"]
 
 +
 {nbsp}
 
 . 네트워크 선택 페이지에서 관리 트래픽에 사용되는 네트워크를 선택합니다.
 +
-image::vmware-vcf-aff-image24.png[네트워크를 선택합니다]
+image:vmware-vcf-aff-image24.png["네트워크를 선택합니다"]
 
 +
 {nbsp}
@@ -125,10 +125,10 @@ image::vmware-vcf-aff-image24.png[네트워크를 선택합니다]
 완료되면 * 다음 * 을 클릭하여 계속합니다.
 
 +
-image::vmware-vcf-aff-image25.png[OTV 템플릿 사용자 지정 1]
+image:vmware-vcf-aff-image25.png["OTV 템플릿 사용자 지정 1"]
 
 +
-image::vmware-vcf-aff-image26.png[OTV 템플릿 사용자 지정 2]
+image:vmware-vcf-aff-image26.png["OTV 템플릿 사용자 지정 2"]
 
 +
 {nbsp}
@@ -147,16 +147,16 @@ Swagger-UI를 사용하여 여러 단계를 완료해야 합니다. 첫 번째�
 . 로 이동하여 Swagger 사용자 인터페이스에 액세스합니다 https://otv_ip:8143/api/rest/swagger-ui.html[] 웹 브라우저에서.
 . 아래로 스크롤하여 * 사용자 인증: 사용자 인증을 위한 API * 로 이동한 후 * Post/2.0/VCF/user/login * 을 선택합니다.
 +
-image::vmware-vcf-aff-image27.png[post/2.0/vcf/user/login]
+image:vmware-vcf-aff-image27.png["post/2.0/vcf/user/login"]
 
 . parameter content type * 아래에서 content type을 * application/json * 으로 전환합니다.
 . vcfLoginRequest * 아래에서 OTV 어플라이언스의 사용자 이름과 암호를 입력합니다.
 +
-image::vmware-vcf-aff-image28.png[OTV 사용자 이름과 암호를 입력합니다]
+image:vmware-vcf-aff-image28.png["OTV 사용자 이름과 암호를 입력합니다"]
 
 . Try it Out! * 버튼을 클릭하고 * Response Header * 아래에 * "authorization": * 텍스트 문자열을 복사합니다.
 +
-image::vmware-vcf-aff-image29.png[인증 응답 헤더를 복사합니다]
+image:vmware-vcf-aff-image29.png["인증 응답 헤더를 복사합니다"]
 
 
 
@@ -168,12 +168,12 @@ image::vmware-vcf-aff-image29.png[인증 응답 헤더를 복사합니다]
 
 . Swagger UI에서 * 보안: 인증서와 관련된 API * 를 찾고 * Get/3.0/security/certificates/{host}/server-certificate * 를 선택합니다.
 +
-image::vmware-vcf-aff-image30.png[/3.0/security/certificates/{host}/server-certificate를 가져옵니다]
+image:vmware-vcf-aff-image30.png["/3.0/security/certificates/{host}/server-certificate를 가져옵니다"]
 
 . appliance-api-token * 필드에서 이전 단계에서 얻은 텍스트 문자열을 붙여 넣습니다.
 . host * 필드에 공용 SSL 인증서를 가져올 ONTAP 스토리지 시스템의 IP 주소를 입력합니다.
 +
-image::vmware-vcf-aff-image31.png[공용 SSL 인증서를 복사합니다]
+image:vmware-vcf-aff-image31.png["공용 SSL 인증서를 복사합니다"]
 
 
 
@@ -187,7 +187,7 @@ VCF 어플라이언스 -api-token 및 ONTAP 공용 SSL 인증서를 사용하여
 . appliance-api-token 필드에 이전 단계에서 얻은 VCF 토큰을 입력합니다. 토큰은 결국 만료되므로 주기적으로 새 토큰을 얻어야 할 수 있습니다.
 . controllerRequest * 텍스트 상자에 이전 단계에서 얻은 ONTAP 스토리지 시스템 IP 주소, 사용자 이름, 암호 및 공용 SSL 인증서를 제공합니다.
 +
-image::vmware-vcf-aff-image32.png[스토리지 시스템을 추가하기 위한 정보를 제공합니다]
+image:vmware-vcf-aff-image32.png["스토리지 시스템을 추가하기 위한 정보를 제공합니다"]
 
 . 스토리지 시스템을 OTV에 추가하려면 * TREE It Out! * 버튼을 클릭하십시오.
 
@@ -200,7 +200,7 @@ image::vmware-vcf-aff-image32.png[스토리지 시스템을 추가하기 위한 
 
 . Swagger UI에서 Container:containers와 관련된 API로 스크롤하고 Post/2.0/admin/containers를 선택합니다.
 +
-image::vmware-vcf-aff-image33.png[/2.0/admin/containers]
+image:vmware-vcf-aff-image33.png["/2.0/admin/containers"]
 
 . 어플라이언스-API-토큰 * 필드에 이전 단계에서 얻은 VCF 토큰을 입력합니다. 토큰은 결국 만료되므로 주기적으로 새 토큰을 얻어야 할 수 있습니다.
 . ContainerRequest 상자에 다음 필수 필드를 입력합니다.
@@ -215,7 +215,7 @@ image::vmware-vcf-aff-image33.png[/2.0/admin/containers]
 
 
 
-image::vmware-vcf-aff-image34.png[VVol 컨테이너요청 양식입니다]
+image:vmware-vcf-aff-image34.png["VVol 컨테이너요청 양식입니다"]
 
 4 * Try it Out! * 을 클릭하여 명령을 실행하고 VVol 컨테이너를 생성합니다.
 

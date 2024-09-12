@@ -41,7 +41,7 @@ $ runai list
 * '러닝'입니다. 작업이 실행 중입니다.
 
 
-image::osrunai_image5.png[오스루나이 영상5]
+image:osrunai_image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 작업에 대한 추가 상태를 가져오려면 다음 명령을 실행합니다.
 

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
+permalink: /cyber-vault/ontap-cyber-vault-sizing.html 
+summary: ONTAP 사이버 레질리언스 공간의 크기를 파악하는 데 도움이 되는 지침을 제공합니다 
+---
+= ONTAP를 사용한 사이버 소산 크기 조정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+사이버 볼트를 사이징하려면 지정된 RTO(Recovery Time Objective)에서 복원해야 할 데이터의 양을 이해해야 합니다. 적절한 규모의 사이버 소산 솔루션을 제대로 설계하는 데는 많은 요소가 사용됩니다.
+
+
+
+== 사이징 고려 사항
+
+. 소스 플랫폼 모델(FAS v AFF A-Series v AFF C-Series)은 무엇입니까?
+. 소스와 사이버 소산 간의 대역폭과 지연 시간은 얼마입니까?
+. 파일 크기와 파일 수는 얼마입니까?
+. 복구 시간 목표는 무엇입니까?
+. RTO 내에서 얼마나 많은 데이터를 복구해야 합니까?
+. 사이버 레질리언스에서 SnapMirror의 팬인 관계는 몇 개나 수집됩니까?
+. 한 번 또는 여러 번의 복구가 동시에 수행됩니까?
+. 이러한 여러 번의 복구가 동일한 운영 환경에서 수행됩니까?
+. 볼트에서 복구하는 동안 SnapMirror가 볼트로 복제됩니까?
+

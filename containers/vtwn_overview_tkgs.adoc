@@ -18,7 +18,7 @@ VMware Tanzu Kubernetes Grid Service(Tanzu 및 vSphere라고도 함)를 사용�
 
 vSphere with Tanzu는 컨테이너나 VM에서 애플리케이션 구성 요소를 실행할 수 있는 하이브리드 애플리케이션 환경을 위한 단일 플랫폼을 제공하므로 개발자, DevOps 엔지니어 및 vSphere 관리자에게 더 나은 가시성과 운영 용이성을 제공합니다. VMware TKGS는 vSphere 7 환경에서만 지원되며, ESXi 호스트에서 POD를 직접 실행할 수 있는 Tanzu Kubernetes 운영 포트폴리오에서 유일한 제품입니다.
 
-image::vtwn_image03.png[VMware Tanzu Kubernetes 서비스]
+image:vtwn_image03.png["VMware Tanzu Kubernetes 서비스"]
 
 Tanzu Kubernetes Grid Service에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html["여기"^].
 

@@ -77,29 +77,29 @@ To access workspace, navigate to http://192.168.0.152:32721
 ....
 . 'jupyterlab 생성' 명령의 출력에 지정된 URL을 사용하여 JupyterLab 작업 영역에 액세스합니다. 데이터 디렉토리는 작업 공간에 마운트된 영구 볼륨을 나타냅니다.
 +
-image::ai-protopia-image3.png[AI 전립선 영상3]
+image:ai-protopia-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . "ata" 디렉토리를 열고 추론을 수행할 파일을 업로드합니다. 파일이 데이터 디렉토리에 업로드되면 작업 공간에 마운트된 영구 볼륨에 자동으로 저장됩니다. 파일을 업로드하려면 다음 이미지와 같이 파일 업로드 아이콘을 클릭합니다.
 +
-image::ai-protopia-image4.png[AI 전립선 영상4]
+image:ai-protopia-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 최상위 디렉토리로 돌아가서 새 전자 필기장을 만듭니다.
 +
-image::ai-protopia-image5.png[AI 전립선 영상5]
+image:ai-protopia-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 노트북에 추론 코드를 추가합니다. 다음 예에서는 이미지 감지 사용 사례에 대한 추론 코드를 보여 줍니다.
 +
-image::ai-protopia-image6.png[AI 전립선 영상6]
+image:ai-protopia-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::ai-protopia-image7.png[AI 전립선 영상7]
+image:ai-protopia-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 추론 코드에 Protopia 난독 처리를 추가합니다. Protopia는 고객과 직접 협력하여 사용 사례별 문서를 제공하며 이 기술 보고서의 범위를 벗어납니다. 다음 예제에서는 Protopia 난독 처리를 추가한 이미지 검색 사용 사례에 대한 추론 코드를 보여 줍니다.
 +
-image::ai-protopia-image8.png[AI 전립선 영상8]
+image:ai-protopia-image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::ai-protopia-image9.png[AI 전립선 영상9]
+image:ai-protopia-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -147,7 +147,7 @@ spec:
           medium: Memory
       containers:
       - name: inference
-        image:: netapp-protopia-inference:latest
+        image: netapp-protopia-inference:latest
         imagePullPolicy: IfNotPresent
         command: ["python3", "run-accuracy-measurement.py", "--dataset", "/data/netapp-face-detection/FDDB"]
         resources:
@@ -209,7 +209,7 @@ spec:
           medium: Memory
       containers:
       - name: inference
-        image:: netapp-protopia-inference:latest
+        image: netapp-protopia-inference:latest
         imagePullPolicy: IfNotPresent
         env:
         - name: ALPHA

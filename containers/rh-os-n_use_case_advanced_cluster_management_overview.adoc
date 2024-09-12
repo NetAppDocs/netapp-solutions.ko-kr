@@ -26,6 +26,6 @@ Kubernetes용 Red Hat Advanced Cluster Management를 사용하면 다음 작업�
 
 Kubernetes용 Red Hat Advanced Cluster Management는 Red Hat OpenShift 클러스터에 대한 애드온으로 설치되며, 모든 작업을 위한 중앙 컨트롤러로 이 클러스터를 사용합니다. 이 클러스터를 허브 클러스터라고 하며, 사용자가 고급 클러스터 관리에 연결할 수 있는 관리 영역을 노출합니다. Advanced Cluster Management 콘솔을 통해 가져오거나 생성되는 다른 모든 OpenShift 클러스터는 허브 클러스터에서 관리되며 관리되는 클러스터라고 합니다. 관리 대상 클러스터에 Klusterlet이라는 에이전트를 설치하여 허브 클러스터에 연결하고 클러스터 라이프사이클 관리, 애플리케이션 라이프사이클 관리, 관찰 가능성 및 보안 준수와 관련된 다양한 활동에 대한 요청을 처리합니다.
 
-image::redhat_openshift_image65.jpg[ACM 아키텍처]
+image:redhat_openshift_image65.jpg["ACM 아키텍처"]
 
 자세한 내용은 설명서를 참조하십시오 https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/["여기"].

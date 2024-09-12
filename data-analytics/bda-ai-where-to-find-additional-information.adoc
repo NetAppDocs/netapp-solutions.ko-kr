@@ -16,13 +16,9 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* NetApp 데이터 이동 없는 분석 모듈 모범 사례
-+
-https://www.netapp.com/us/media/tr-4382.pdf["https://www.netapp.com/us/media/tr-4382.pdf"^]
-
 * NetApp FlexGroup 볼륨 모범 사례 및 구현 가이드 를 참조하십시오
 +
-https://www.netapp.com/us/media/tr-4571.pdf["https://www.netapp.com/us/media/tr-4571.pdf"^]
+https://www.netapp.com/us/media/tr-4571.pdf[]
 
 * NetApp 제품 설명서
 +

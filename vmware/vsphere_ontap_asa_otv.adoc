@@ -79,15 +79,15 @@ ONTAP 도구에서 VVOL 데이터 저장소를 생성하려면 다음 단계를 
 ====
 . vSphere Client의 기본 메뉴에서 NetApp ONTAP 툴을 선택하여 액세스합니다.
 +
-image::vmware-asa-image6.png[NetApp ONTAP 도구]
+image:vmware-asa-image6.png["NetApp ONTAP 도구"]
 
 . ONTAP 도구의 왼쪽 메뉴에서 * 스토리지 시스템 * 을 선택한 다음 * 추가 * 를 누릅니다.
 +
-image::vmware-asa-image8.png[스토리지 시스템을 추가합니다]
+image:vmware-asa-image8.png["스토리지 시스템을 추가합니다"]
 
 . 스토리지 시스템의 IP 주소, 자격 증명 및 포트 번호를 입력합니다. 검색 프로세스를 시작하려면 * 추가 * 를 클릭합니다.
 +
-image::vmware-asa-image9.png[스토리지 시스템을 추가합니다]
+image:vmware-asa-image9.png["스토리지 시스템을 추가합니다"]
 
 
 
@@ -101,31 +101,31 @@ ONTAP 툴에서 스토리지 용량 프로필을 생성하려면 다음 단계�
 
 . ONTAP 도구의 왼쪽 메뉴에서 * Storage Capability profile * 을 선택한 다음 * Create * 를 누릅니다.
 +
-image::vmware-asa-image7.png[스토리지 용량 프로파일]
+image:vmware-asa-image7.png["스토리지 용량 프로파일"]
 
 . Create Storage Capability profile * 마법사에서 프로필의 이름과 설명을 입력하고 * Next * 를 클릭합니다.
 +
-image::vmware-asa-image10.png[SCP에 대한 이름을 추가합니다]
+image:vmware-asa-image10.png["SCP에 대한 이름을 추가합니다"]
 
 . 플랫폼 유형을 선택하고 스토리지 시스템이 All-Flash SAN 어레이 세트 * 비대칭 * 을 false 로 설정하도록 지정합니다.
 +
-image::vmware-asa-image11.png[SCP용 Platorm]
+image:vmware-asa-image11.png["SCP용 Platorm"]
 
 . 그런 다음 프로토콜 또는 * ANY * 를 선택하여 가능한 모든 프로토콜을 허용합니다. 계속하려면 * 다음 * 을 클릭합니다.
 +
-image::vmware-asa-image12.png[SCP를 위한 프로토콜]
+image:vmware-asa-image12.png["SCP를 위한 프로토콜"]
 
 . 성능 * 페이지에서는 허용되는 최소 및 최대 IOP 형태로 서비스 품질을 설정할 수 있습니다.
 +
-image::vmware-asa-image13.png[SCP에 대한 QoS]
+image:vmware-asa-image13.png["SCP에 대한 QoS"]
 
 . 필요에 따라 스토리지 효율성, 공간 예약, 암호화 및 계층화 정책을 선택하여 * 스토리지 속성 * 페이지를 완료하십시오.
 +
-image::vmware-asa-image14.png[SCP에 대한 속성입니다]
+image:vmware-asa-image14.png["SCP에 대한 속성입니다"]
 
 . 마지막으로 요약을 검토하고 Finish를 클릭하여 프로파일을 생성합니다.
 +
-image::vmware-asa-image15.png[SCP에 대한 요약입니다]
+image:vmware-asa-image15.png["SCP에 대한 요약입니다"]
 
 
 
@@ -137,23 +137,23 @@ ONTAP 도구에서 VVOL 데이터 저장소를 생성하려면 다음 단계를 
 
 . ONTAP Tools에서 * Overview * 를 선택하고 * Getting Started * 탭에서 * Provision * 을 클릭하여 마법사를 시작합니다.
 +
-image::vmware-asa-image16.png[데이터 저장소를 프로비저닝합니다]
+image:vmware-asa-image16.png["데이터 저장소를 프로비저닝합니다"]
 
 . New Datastore 마법사의 * General * 페이지에서 vSphere DataCenter 또는 클러스터 대상을 선택합니다. dastore 유형으로 * vVols * 를 선택하고 데이터 저장소의 이름을 입력한 다음 프로토콜을 선택합니다.
 +
-image::vmware-asa-image17.png[일반 페이지]
+image:vmware-asa-image17.png["일반 페이지"]
 
 . 스토리지 시스템 * 페이지에서 스토리지 기능 프로파일, 스토리지 시스템 및 SVM을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-asa-image18.png[수행할 수 있습니다]
+image:vmware-asa-image18.png["수행할 수 있습니다"]
 
 . 스토리지 속성 * 페이지에서 데이터 저장소에 대한 새 볼륨을 생성하고 생성할 볼륨의 스토리지 속성을 채우도록 선택합니다. Add * 를 클릭하여 볼륨을 생성한 후 * Next * 를 클릭하여 계속합니다.
 +
-image::vmware-asa-image19.png[스토리지 특성]
+image:vmware-asa-image19.png["스토리지 특성"]
 
 . 마지막으로 요약을 검토하고 * Finish * 를 클릭하여 VVol 데이터스토어 생성 프로세스를 시작합니다.
 +
-image::vmware-asa-image20.png[요약 페이지]
+image:vmware-asa-image20.png["요약 페이지"]
 
 
 
@@ -173,19 +173,19 @@ VM 저장소 정책을 생성하려면 다음 단계를 수행하십시오.
 
 . vSphere Client 기본 메뉴에서 * Policies and Profiles * 를 선택합니다.
 +
-image::vmware-asa-image21.png[정책 및 프로필을 참조하십시오]
+image:vmware-asa-image21.png["정책 및 프로필을 참조하십시오"]
 
 . Create VM Storage Policy * 마법사에서 먼저 정책의 이름과 설명을 입력하고 * Next * 를 클릭하여 계속합니다.
 +
-image::vmware-asa-image22.png[VM 스토리지 정책 마법사]
+image:vmware-asa-image22.png["VM 스토리지 정책 마법사"]
 
 . Policy structure * 페이지에서 NetApp clustered Data ONTAP vVol 스토리지에 대한 규칙을 활성화하고 * Next * 를 클릭합니다.
 +
-image::vmware-asa-image23.png[정책 구조]
+image:vmware-asa-image23.png["정책 구조"]
 
 . 선택한 정책 구조에 해당하는 다음 페이지에서 VM 스토리지 정책에 사용할 스토리지 시스템을 설명하는 스토리지 기능 프로필을 선택합니다. 계속하려면 * 다음 * 을 클릭하십시오.
 +
-image::vmware-asa-image24.png[정책 구조]
+image:vmware-asa-image24.png["정책 구조"]
 
 . 스토리지 호환성 * 페이지에서 이 정책과 일치하는 vSAN 데이터스토어 목록을 검토하고 * 다음 * 을 클릭합니다.
 . 마지막으로 구현할 정책을 검토하고 * Finish * 를 클릭하여 정책을 생성합니다.
@@ -207,22 +207,22 @@ VM 스토리지 정책은 가상 머신(VM) 데이터를 저장하고 관리하�
 
 . 새 가상 머신 * 마법사에서 * 새 가상 머신 생성 * 을 선택하고 * 다음 * 을 선택하여 계속합니다.
 +
-image::vmware-asa-image25.png[새 가상 머신]
+image:vmware-asa-image25.png["새 가상 머신"]
 
 . 이름을 입력하고 가상 머신의 위치를 선택한 후 * Next * 를 클릭합니다.
 . 컴퓨팅 리소스 선택 * 페이지에서 대상을 선택하고 * 다음 * 을 클릭합니다.
 +
-image::vmware-asa-image26.png[컴퓨팅 리소스]
+image:vmware-asa-image26.png["컴퓨팅 리소스"]
 
 . Select storage * 페이지에서 VM 스토리지 정책과 VM의 대상이 될 VVol 데이터 저장소를 선택합니다. 다음 * 을 클릭합니다.
 +
-image::vmware-asa-image27.png[스토리지를 선택합니다]
+image:vmware-asa-image27.png["스토리지를 선택합니다"]
 
 . Select Compatibility * 페이지에서 VM이 호환될 vSphere 버전을 선택합니다.
 . 새 VM에 대한 게스트 OS 제품군과 버전을 선택하고 * Next * 를 클릭합니다.
 . 하드웨어 사용자 정의 * 페이지를 작성합니다. 각 하드 디스크(VMDK 파일)에 대해 별도의 VM 저장소 정책을 선택할 수 있습니다.
 +
-image::vmware-asa-image28.png[스토리지를 선택합니다]
+image:vmware-asa-image28.png["스토리지를 선택합니다"]
 
 . 마지막으로 요약 페이지를 검토하고 * Finish * 를 클릭하여 VM을 생성합니다.
 

@@ -28,7 +28,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 video::bac58645-dd75-4e92-b5fe-b12b015dc199[panopto,width=360]
 다음 다이어그램은 VM을 VMware에서 Red Hat OpenShift Virtualization으로 마이그레이션하는 과정을 개략적으로 보여 줍니다.
 
-image::rh-os-n_use_case_vm_migration_using_mtv.png[MTV를 사용한 RH OS n 활용 사례 VM 마이그레이션]
+image:rh-os-n_use_case_vm_migration_using_mtv.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -200,7 +200,7 @@ VMware 소스 공급자를 생성하려면 다음이 필요합니다.
 
 샘플 소스 공급자 생성:
 
-image::rh-os-n_use_case_vm_migration_source_provider.png[RH OS n 활용 사례 VM 마이그레이션 소스 공급자]
+image:rh-os-n_use_case_vm_migration_source_provider.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 NOTE: MTV(Migration Toolkit for Virtualization)는 VMware VDDK(Virtual Disk Development Kit) SDK를 사용하여 VMware vSphere에서 가상 디스크를 빠르게 전송합니다. 따라서 선택 사항이지만 VDDK 이미지를 만드는 것이 좋습니다.
@@ -223,11 +223,11 @@ NOTE: MTV(Migration Toolkit for Virtualization)는 VMware VDDK(Virtual Disk Deve
 마이그레이션 계획이 생성되면 계획 상태가 * 준비 * 로 표시되고 계획을 * 시작 * 할 수 있습니다.
 
 
-image::rh-os-n_use_case_vm_migration_using_mtv_plan_ready.png[MTV plan ready를 사용한 RH OS n 활용 사례 VM 마이그레이션]
+image:rh-os-n_use_case_vm_migration_using_mtv_plan_ready.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 시작 * 을 클릭하면 일련의 단계를 거쳐 VM 마이그레이션을 완료합니다.
 
-image::rh-os-n_use_case_vm_migration_using_mtv_plan_complete.png[MTV 계획을 사용한 RH OS n 활용 사례 VM 마이그레이션 완료]
+image:rh-os-n_use_case_vm_migration_using_mtv_plan_complete.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 모든 단계가 완료되면 왼쪽 탐색 메뉴의 * Virtualization * 아래에서 * virtual machines * 를 클릭하여 마이그레이션된 VM을 볼 수 있습니다.
 가상 머신에 액세스하는 지침이 제공됩니다 link:https://docs.openshift.com/container-platform/4.13/virt/virtual_machines/virt-accessing-vm-consoles.html["여기"].

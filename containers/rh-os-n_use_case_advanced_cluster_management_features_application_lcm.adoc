@@ -17,11 +17,11 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 
 . 측면 표시줄에서 애플리케이션 관리 로 이동하고 애플리케이션 생성 을 클릭합니다. 만들려는 응용 프로그램의 세부 정보를 입력하고 저장 을 클릭합니다.
 +
-image::redhat_openshift_image78.jpg[응용 프로그램을 만듭니다]
+image:redhat_openshift_image78.jpg["응용 프로그램을 만듭니다"]
 
 . 응용 프로그램 구성 요소가 설치되면 응용 프로그램이 목록에 나타납니다.
 +
-image::redhat_openshift_image79.jpg[응용 프로그램 목록]
+image:redhat_openshift_image79.jpg["응용 프로그램 목록"]
 
 . 이제 콘솔에서 애플리케이션을 모니터링 및 관리할 수 있습니다.
 

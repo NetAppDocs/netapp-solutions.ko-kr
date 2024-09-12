@@ -54,7 +54,7 @@ NetApp AFF C-Series는 유니파이드 스토리지에 All-Flash를 보다 쉽�
 
 === 있습니다
 
-image::automation_ora_c-series_nfs_archit.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+image:automation_ora_c-series_nfs_archit.png["이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다."]
 
 
 
@@ -182,32 +182,23 @@ installer_archives:
 
 . ONTAP 시스템 관리자에 로그인하여 초기 ONTAP 클러스터 설치 후 브로드캐스트 도메인이 각 도메인에 올바르게 할당된 이더넷 포트로 구성되었는지 검토합니다. 일반적으로 클러스터에 대한 브로드캐스트 도메인, 관리를 위한 브로드캐스트 도메인, 데이터와 같은 워크로드를 위한 브로드캐스트 도메인이 있어야 합니다.
 +
-image::automation_ora_c-series_nfs_net_01.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_net_01.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . network-Ethernet Ports에서 을 클릭합니다 `Link Aggregate Group` 애그리게이트 그룹 포트의 구성원 포트 간에 로드 밸런싱과 페일오버를 제공하는 LACP 링크 애그리게이트 그룹 포트 a0a를 생성하려면 다음을 수행합니다. C400 컨트롤러에서 데이터 포트 e0e, e0f, e0g, e0h 4개를 사용할 수 있습니다.
 +
-image::automation_ora_c-series_nfs_net_02.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_net_02.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 그룹에서 이더넷 포트를 선택합니다. `LACP` 모드인 경우, 및 `Port` 부하 분산을 위해.
 +
-image::automation_ora_c-series_nfs_net_03.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_net_03.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 생성된 LACP 포트 a0a 및 브로드캐스트 도메인을 확인합니다 `Data` 이제 LACP 포트에서 작동 중입니다.
 +
-image::automation_ora_c-series_nfs_net_04.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_net_05.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_net_04.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"] image:automation_ora_c-series_nfs_net_05.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 보낸 사람 `Ethernet Ports`를 클릭합니다 `VLAN` NFS 프로토콜에서 Oracle 워크로드를 위해 각 컨트롤러 노드에 VLAN을 추가합니다.
 +
-image::automation_ora_c-series_nfs_net_06.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_net_07.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_net_08.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_net_06.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"] image:automation_ora_c-series_nfs_net_07.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"] image:automation_ora_c-series_nfs_net_08.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 클러스터 관리 IP에서 ssh를 통해 C-Series 컨트롤러에 로그인하여 네트워크 페일오버 그룹이 올바르게 구성되었는지 확인합니다. ONTAP은 페일오버 그룹을 자동으로 생성 및 관리합니다.
 +
@@ -238,42 +229,39 @@ HCG-NetApp-C400-E9U9
 ....
 . 보낸 사람 `STORAGE - Storage VMs`그런 다음 +Add를 클릭하여 Oracle용 SVM을 생성합니다.
 +
-image::automation_ora_c-series_nfs_svm_01.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_svm_01.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . Oracle SVM의 이름을 지정하고 확인합니다 `Enable NFS` 및 `Allow NFS client access`.
 +
-image::automation_ora_c-series_nfs_svm_02.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_svm_02.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . NFS 엑스포트 정책을 추가합니다 `Default` 규칙.
 +
-image::automation_ora_c-series_nfs_svm_03.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_svm_03.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 인치 `NETWORK INTERFACE`를 클릭하고 NFS lif 주소에 대한 각 노드의 IP 주소를 입력합니다.
 +
-image::automation_ora_c-series_nfs_svm_04.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_svm_04.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . Oracle용 SVM이 작동/실행 중이고 NFS LIFE 상태가 활성인지 확인합니다.
 +
-image::automation_ora_c-series_nfs_svm_05.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_svm_06.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_svm_05.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"] image:automation_ora_c-series_nfs_svm_06.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 보낸 사람 `STORAGE-Volumes` 탭을 클릭하여 Oracle 데이터베이스용 NFS 볼륨을 추가합니다.
 +
-image::automation_ora_c-series_nfs_vol_01.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_vol_01.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 볼륨 이름 지정, 용량 및 성능 수준을 할당합니다.
 +
-image::automation_ora_c-series_nfs_vol_02.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_vol_02.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 인치 `Access Permission`이전 단계에서 만든 기본 정책을 선택합니다. 선택을 취소합니다 `Enable Snapshot Copies` 마찬가지로, SnapCenter를 사용하여 애플리케이션 정합성을 보장하는 스냅샷을 생성하려고 합니다.
 +
-image::automation_ora_c-series_nfs_vol_03.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_vol_03.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 . 각 DB 서버에 대해 server_name_u01-binary, server_name_u02-data, server_name_u03-logs 3개의 DB 볼륨을 생성합니다.
 +
-image::automation_ora_c-series_nfs_vol_04.png[이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다]
+image:automation_ora_c-series_nfs_vol_04.png["이 이미지는 c 시리즈 컨트롤러 구성에 대한 스크린샷을 제공합니다"]
 
 +
 
@@ -665,13 +653,7 @@ DIRNAME
 ....
 . Oracle Enterprise Manager Express에 로그인하여 데이터베이스를 검증합니다.
 +
-image::automation_ora_c-series_nfs_em_01.png[이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_em_02.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
-
-+
-image::automation_ora_c-series_nfs_em_03.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
+image:automation_ora_c-series_nfs_em_01.png["이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다"] image:automation_ora_c-series_nfs_em_02.png["이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다"] image:automation_ora_c-series_nfs_em_03.png["이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다"]
 
 
 

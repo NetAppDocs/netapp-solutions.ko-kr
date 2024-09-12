@@ -18,17 +18,17 @@ Red Hat Open Shift 컨테이너를 VMware에서 실행하거나 하이퍼스케�
 
 다음 다이어그램은 NetApp Astra Trident를 사용하여 OpenShift 클러스터와 통합할 수 있는 다양한 백엔드 NetApp 스토리지를 보여 줍니다.
 
-image::a-w-n_astra_trident.png[Astra 3단]
+image:a-w-n_astra_trident.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ONTAP SVM(스토리지 가상 머신)은 안전한 멀티 테넌시를 제공합니다. 단일 OpenShift 클러스터는 단일 SVM이나 여러 SVM, 심지어 여러 ONTAP 클러스터에 연결할 수 있습니다. 스토리지 클래스는 매개 변수 또는 레이블을 기준으로 백엔드 스토리지를 필터링합니다. 스토리지 관리자는 삼중 백엔드 구성을 사용하여 스토리지 시스템에 접속할 매개 변수를 정의합니다. 접속 설정에 성공하면 트리덴트 백엔드를 생성하고 스토리지 클래스가 필터링할 수 있는 정보를 채웁니다.
 
 스토리지 플랫폼과 백엔드 간의 관계가 아래에 나와 있습니다.
 
-image::rhhc-storage-options-sc2ontap.png[스토리지 클래스와 ONTAP 간의 관계]
+image:rhhc-storage-options-sc2ontap.png["스토리지 클래스와 ONTAP 간의 관계"]
 
 애플리케이션 소유자가 스토리지 클래스를 사용하여 영구 볼륨을 요청합니다. 스토리지 클래스는 백엔드 스토리지를 필터링합니다. POD와 백엔드 스토리지 간의 관계가 아래에 나와 있습니다.
 
-image::rhhc_storage_opt_pod2vol.png[POD와 ONTAP 볼륨 간의 관계]
+image:rhhc_storage_opt_pod2vol.png["POD와 ONTAP 볼륨 간의 관계"]
 
 
 
@@ -58,6 +58,6 @@ vSphere 환경에서 고객은 VMware CSI 드라이버 및/또는 Astra Trident 
 
 VMware CSI 및 Astra Trident CSI 모두에서 ONTAP는 NFS 및 다중 경로, CHAP 인증 등에 대한 nconnect, 세션 트렁킹, Kerberos 등을 지원합니다.
 
-AWS에서 FSx for NetApp ONTAP(FSxN)는 AZ(단일 가용성 영역) 또는 AZ에 구축할 수 있습니다. 고가용성이 요구되는 운영 워크로드의 경우, Multi-AZ는 조널 레벨 내결함성을 제공하며 단일 AZ에 비해 더 나은 NVMe 읽기 캐시를 제공합니다. 자세한 내용은 을 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["AWS 성능 지침"]참조하십시오. 재해 복구 사이트의 비용을 절약하기 위해 단일 AZ FSx ONTAP를 활용할 수 있습니다. 이미지:: rhc_storage_options_fsxn_options.png["Multi-AZ와 Single-AZ 사이의 복제"]
+AWS에서 FSx for NetApp ONTAP(FSxN)는 AZ(단일 가용성 영역) 또는 AZ에 구축할 수 있습니다. 고가용성이 요구되는 운영 워크로드의 경우, Multi-AZ는 조널 레벨 내결함성을 제공하며 단일 AZ에 비해 더 나은 NVMe 읽기 캐시를 제공합니다. 자세한 내용은 을 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["AWS 성능 지침"]참조하십시오. 재해 복구 사이트의 비용을 절약하기 위해 단일 AZ FSx ONTAP를 활용할 수 있습니다. image:rhhc_storage_options_fsxn_options.png["Multi-AZ와 Single-AZ 간 복제"]
 
 FSx ONTAP에서 지원되는 SVM 수는 를 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["FSx ONTAP 스토리지 가상 머신 관리"]

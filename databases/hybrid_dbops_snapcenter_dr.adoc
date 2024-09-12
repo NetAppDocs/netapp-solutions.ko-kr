@@ -22,18 +22,18 @@ keywords: 'netapp, solutions, database, SnapCenter, DR, "business continuity", "
 
 . 마지막으로 사용 가능한 로그를 통해 클론 복구가 실행되는지 확인하기 위해 작은 테스트 테이블을 만들고 행을 삽입했습니다. 테스트 데이터는 마지막 사용 가능한 로그로 전체 복구 후 복구됩니다.
 +
-image::snapctr_ora_dr_01.PNG[DR 01 을 참조하십시오]
+image:snapctr_ora_dr_01.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . SnapCenter에 Oracle의 데이터베이스 관리 사용자 ID로 로그인합니다. 리소스 탭으로 이동하여 SnapCenter에서 보호 중인 Oracle 데이터베이스를 표시합니다.
 +
-image::snapctr_ora_dr_02.PNG[DR 02 구축]
+image:snapctr_ora_dr_02.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Oracle 로그 리소스 그룹을 선택하고 지금 백업 을 클릭하여 Oracle 로그 백업을 수동으로 실행하여 최신 트랜잭션을 클라우드의 대상으로 플러시합니다. 실제 DR 시나리오에서 복구할 수 있는 마지막 트랜잭션은 클라우드에 대한 데이터베이스 로그 볼륨 복제 빈도에 따라 달라지며, 이 빈도는 회사의 RTO 또는 RPO 정책에 따라 달라집니다.
 +
-image::snapctr_ora_dr_03.PNG[DR 03]
+image:snapctr_ora_dr_03.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::snapctr_ora_dr_04.PNG[DR 04]
+image:snapctr_ora_dr_04.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 
@@ -41,25 +41,25 @@ NOTE: 비동기식 SnapMirror는 재해 복구 시나리오에서 데이터베�
 
 . 보조 미러 백업에서 마지막 로그 백업을 선택하고 로그 백업을 마운트합니다.
 +
-image::snapctr_ora_dr_05.PNG[DR 05 를 참조하십시오]
+image:snapctr_ora_dr_05.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::snapctr_ora_dr_06.PNG[DR 06]
+image:snapctr_ora_dr_06.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 마지막 전체 데이터베이스 백업을 선택하고 클론 을 클릭하여 클론 워크플로우를 시작합니다.
 +
-image::snapctr_ora_dr_07.PNG[재해 복구 07]
+image:snapctr_ora_dr_07.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 호스트에서 고유한 클론 DB ID를 선택합니다.
 +
-image::snapctr_ora_dr_08.PNG[DR 08]
+image:snapctr_ora_dr_08.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 로그 볼륨을 프로비저닝하고 Oracle 플래시 복구 영역 및 온라인 로그에 대해 타겟 DR 서버에 마운트합니다.
 +
-image::snapctr_ora_dr_09.PNG[DR 09 를 참조하십시오]
+image:snapctr_ora_dr_09.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::snapctr_ora_dr_10.PNG[DR 10 을 참조하십시오]
+image:snapctr_ora_dr_10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
 
@@ -67,31 +67,31 @@ NOTE: Oracle 클론 절차에서는 복제 전에 DR 서버에 프로비저닝�
 
 . 타겟 클론 호스트 및 위치를 선택하여 데이터 파일, 제어 파일 및 재실행 로그를 배치합니다.
 +
-image::snapctr_ora_dr_11.PNG[DR 11 을 참조하십시오]
+image:snapctr_ora_dr_11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론의 자격 증명을 선택합니다. 대상 서버의 Oracle 홈 구성에 대한 세부 정보를 입력합니다.
 +
-image::snapctr_ora_dr_12.PNG[DR 12 를 참조하십시오]
+image:snapctr_ora_dr_12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론 생성 전에 실행할 스크립트를 지정합니다. 필요한 경우 데이터베이스 매개 변수를 조정할 수 있습니다.
 +
-image::snapctr_ora_dr_13.PNG[DR 13]
+image:snapctr_ora_dr_13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 사용 가능한 모든 아카이브 로그를 통해 복구를 실행하여 보조 클라우드 위치로 복제된 마지막 트랜잭션을 회복하려면 복구 옵션으로 취소 를 선택합니다.
 +
-image::snapctr_ora_dr_14.PNG[DR 14 를 참조하십시오]
+image:snapctr_ora_dr_14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 필요한 경우 e-메일 알림을 위해 SMTP 서버를 구성합니다.
 +
-image::snapctr_ora_dr_15.PNG[DR 15 를 참조하십시오]
+image:snapctr_ora_dr_15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . DR 클론 요약
 +
-image::snapctr_ora_dr_16.PNG[DR 16 을 참조하십시오]
+image:snapctr_ora_dr_16.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론 생성된 DB는 클론 생성 완료 후 즉시 SnapCenter에 등록되고 백업 보호에 사용할 수 있습니다.
 +
-image::snapctr_ora_dr_16_1.PNG[DR 16 1 을 참조하십시오]
+image:snapctr_ora_dr_16_1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -101,11 +101,11 @@ image::snapctr_ora_dr_16_1.PNG[DR 16 1 을 참조하십시오]
 
 . 클라우드의 DR 위치에서 플러시, 복제 및 복구된 마지막 테스트 트랜잭션을 검증합니다.
 +
-image::snapctr_ora_dr_17.PNG[DR 17 을 참조하십시오]
+image:snapctr_ora_dr_17.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 플래시 복구 영역을 구성합니다.
 +
-image::snapctr_ora_dr_18.PNG[DR 18 을 참조하십시오]
+image:snapctr_ora_dr_18.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 사용자 액세스를 위해 Oracle 수신기를 구성합니다.
 . 복제된 볼륨을 복제된 소스 볼륨에서 분리합니다.
@@ -121,42 +121,42 @@ NOTE: 클론 분할 시 일반 작업보다 훨씬 높은 임시 스토리지 �
 
 . 마찬가지로, SQL 클론 복구가 마지막 사용 가능한 로그를 통해 실행되었는지 확인하기 위해 작은 테스트 테이블을 만들고 행을 삽입했습니다. 테스트 데이터는 사용 가능한 마지막 로그로 전체 복구 후 복구됩니다.
 +
-image::snapctr_sql_dr_01.PNG[snapctr SQL DR 01 을 참조하십시오]
+image:snapctr_sql_dr_01.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . SQL Server의 데이터베이스 관리 사용자 ID를 사용하여 SnapCenter에 로그인합니다. SQL Server 보호 리소스 그룹을 보여 주는 리소스 탭으로 이동합니다.
 +
-image::snapctr_sql_dr_02.PNG[snapctr SQL DR 02 를 참조하십시오]
+image:snapctr_sql_dr_02.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 로그 백업을 수동으로 실행하여 퍼블릭 클라우드의 보조 스토리지에 복제할 마지막 트랜잭션을 플러시합니다.
 +
-image::snapctr_sql_dr_03.PNG[snapctr SQL DR 03]
+image:snapctr_sql_dr_03.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론에 대한 마지막 전체 SQL Server 백업을 선택합니다.
 +
-image::snapctr_sql_dr_04.PNG[snapctr SQL DR 04]
+image:snapctr_sql_dr_04.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론 서버, 클론 인스턴스, 클론 이름 및 마운트 옵션과 같은 클론 설정을 지정합니다. 클론 생성이 수행되는 보조 스토리지 위치는 자동으로 채워집니다.
 +
-image::snapctr_sql_dr_05.PNG[snapctr SQL DR 05]
+image:snapctr_sql_dr_05.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 적용할 모든 로그 백업을 선택합니다.
 +
-image::snapctr_sql_dr_06.PNG[snapctr SQL DR 06]
+image:snapctr_sql_dr_06.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 클론 생성 전후에 실행할 선택적 스크립트를 지정합니다.
 +
-image::snapctr_sql_dr_07.PNG[snapctr SQL DR 07 을 참조하십시오]
+image:snapctr_sql_dr_07.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . e-메일 알림을 원할 경우 SMTP 서버를 지정합니다.
 +
-image::snapctr_sql_dr_08.PNG[snapctr SQL DR 08]
+image:snapctr_sql_dr_08.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . DR 클론 요약 클론 생성된 데이터베이스는 SnapCenter에 즉시 등록되며 백업 보호에 사용할 수 있습니다.
 +
-image::snapctr_sql_dr_09.PNG[snapctr SQL DR 09]
+image:snapctr_sql_dr_09.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-image::snapctr_sql_dr_10.PNG[snapctr SQL DR 10]
+image:snapctr_sql_dr_10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -166,11 +166,11 @@ image::snapctr_sql_dr_10.PNG[snapctr SQL DR 10]
 
 . 클론 작업 상태를 모니터링합니다.
 +
-image::snapctr_sql_dr_11.PNG[snapctr SQL DR 11]
+image:snapctr_sql_dr_11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 모든 로그 파일 클론 및 복구를 사용하여 마지막 트랜잭션이 복제 및 복구되었는지 확인합니다.
 +
-image::snapctr_sql_dr_12.PNG[snapctr SQL DR 12]
+image:snapctr_sql_dr_12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . SQL Server 로그 백업을 위해 DR 서버에 새 SnapCenter 로그 디렉토리를 구성합니다.
 . 복제된 볼륨을 복제된 소스 볼륨에서 분리합니다.

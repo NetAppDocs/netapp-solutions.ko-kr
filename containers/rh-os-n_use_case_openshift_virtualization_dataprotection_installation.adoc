@@ -42,11 +42,11 @@ NOTE: VM이 실행 중인 상태일 때 VM을 백업하려면 해당 가상 머�
 . 클러스터의 운영자 허브로 이동하여 Red Hat OADP 연산자를 선택합니다. 설치 페이지에서 모든 기본 선택 항목을 사용하고 설치를 클릭합니다. 다음 페이지에서 모든 기본값을 사용하고 Install(설치) 을 클릭합니다. OADP 운영자는 OpenShift-ADP 네임스페이스에 설치됩니다.
 
 
-image::redhat_openshift_OADP_install_image1.jpg[Operator Hub의 OpenShift API for Data Protection]
+image:redhat_openshift_OADP_install_image1.jpg["Operator Hub의 OpenShift API for Data Protection"]
 
-image::redhat_openshift_OADP_install_image2.jpg[OpenShift API for Data Protection Operator 설치]
+image:redhat_openshift_OADP_install_image2.jpg["OpenShift API for Data Protection Operator 설치"]
 
-image::redhat_openshift_OADP_install_image3.jpg[OpenShift API for Data Protection Operator가 설치되었습니다]
+image:redhat_openshift_OADP_install_image3.jpg["OpenShift API for Data Protection Operator가 설치되었습니다"]
 
 
 
@@ -81,22 +81,22 @@ S3 호환 객체 스토리지를 사용하도록 Velero를 구성할 수 있습�
 웹 콘솔에서 암호를 생성하려면 비밀 을 선택한 다음 키/값 비밀 을 클릭합니다. 그림과 같이 자격 증명 이름, 키 및 값을 입력합니다. S3 사용자의 액세스 키 ID와 비밀 액세스 키를 사용해야 합니다. 암호의 이름을 적절하게 지정합니다. 아래 샘플에서 ontap-s3-credentials라는 ONTAP S3 사용자 자격 증명으로 구성된 암호가 생성됩니다.
 
 
-image::redhat_openshift_OADP_install_image4.png[S3 사용자 자격 증명의 암호]
+image:redhat_openshift_OADP_install_image4.png["S3 사용자 자격 증명의 암호"]
 
-image::redhat_openshift_OADP_install_image5.png[S3 사용자 자격 증명에 대한 암호를 생성합니다]
+image:redhat_openshift_OADP_install_image5.png["S3 사용자 자격 증명에 대한 암호를 생성합니다"]
 
 CLI에서 sg-s3-credentials라는 암호를 생성하려면 다음 명령을 사용할 수 있습니다.
 
-image::redhat_openshift_OADP_install_image6.png[CLI를 사용하여 S3 사용자 자격 증명에 대한 Secret을 생성합니다]
+image:redhat_openshift_OADP_install_image6.png["CLI를 사용하여 S3 사용자 자격 증명에 대한 Secret을 생성합니다"]
 
 * 그런 다음 Velero를 구성하려면 Operators(오퍼레이터) 아래의 메뉴 항목에서 Installed Operators(설치된 운영자) 를 선택하고 OADP operator(OADP 운영자) 를 클릭한 다음 DataProtectionApplication(DataProtectionApplication) 탭을 선택합니다.
 
 
-image::redhat_openshift_OADP_install_image7.jpg[DataProtectionApplication 을 참조하십시오]
+image:redhat_openshift_OADP_install_image7.jpg["DataProtectionApplication 을 참조하십시오"]
 
 Create DataProtectionApplication을 클릭합니다. 폼 보기에서 DataProtection 응용 프로그램의 이름을 제공하거나 기본 이름을 사용합니다.
 
-image::redhat_openshift_OADP_install_image8.jpg[DataProtectionApplication을 만듭니다]
+image:redhat_openshift_OADP_install_image8.jpg["DataProtectionApplication을 만듭니다"]
 
 이제 YAML 보기로 이동하여 아래의 YAML 파일 예제에 표시된 사양 정보를 대체합니다.
 
@@ -180,7 +180,7 @@ CSI 백업 PVC를 백업하기 위한 Velero CSI 플러그인은 **velero.io/csi
 **velero.io/csi-volumesnapshot-class=true** 아래 표시된 대로.
 
 
-image::redhat_openshift_OADP_install_image9.jpg[Trident 스냅샷 클래스 Label]
+image:redhat_openshift_OADP_install_image9.jpg["Trident 스냅샷 클래스 Label"]
 
 VolumeSnapshot 개체가 삭제된 경우에도 스냅샷이 유지될 수 있는지 확인하십시오. 이 작업은 * deletionPolicy * 를 보존하도록 설정하여 수행할 수 있습니다. 그렇지 않은 경우 네임스페이스를 삭제하면 해당 네임스페이스에 백업된 모든 PVC가 완전히 손실됩니다.
 
@@ -192,12 +192,12 @@ metadata:
 driver: csi.trident.netapp.io
 deletionPolicy: Retain
 ....
-image::redhat_openshift_OADP_install_image10.jpg[VolumeSnapshotClass 삭제 정책은 보존으로 설정해야 합니다]
+image:redhat_openshift_OADP_install_image10.jpg["VolumeSnapshotClass 삭제 정책은 보존으로 설정해야 합니다"]
 
 DataProtectionApplication 이 만들어지고 상태가 Reconciled 인지 확인합니다.
 
-image::redhat_openshift_OADP_install_image11.jpg[DataProtectionApplication 개체가 만들어집니다]
+image:redhat_openshift_OADP_install_image11.jpg["DataProtectionApplication 개체가 만들어집니다"]
 
 OADP 운영자가 해당 BackupStorageLocation을 생성합니다. 이 값은 백업을 생성할 때 사용됩니다.
 
-image::redhat_openshift_OADP_install_image12.jpg[BackupStorageLocation이 생성되었습니다]
+image:redhat_openshift_OADP_install_image12.jpg["BackupStorageLocation이 생성되었습니다"]

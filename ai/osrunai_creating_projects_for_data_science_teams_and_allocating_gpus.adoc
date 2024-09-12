@@ -29,4 +29,4 @@ summary:
 
 다음 그림에서는 네 개의 팀이 생성된 프로젝트 보기를 보여 줍니다. 각 팀에는 서로 다른 워크로드를 처리할 수 있는 서로 다른 수의 GPU가 할당되며, 총 GPU 수는 2개의 DGX-1로 구성된 클러스터에서 사용 가능한 총 GPU 수와 같습니다.
 
-image::osrunai_image4.png[osrunai 이미지4]
+image:osrunai_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

@@ -55,7 +55,7 @@ Amazon FSx for NetApp ONTAP은 AWS 클라우드에서 완전 관리형 NetApp ON
 
 === 있습니다
 
-image::automation_ora_aws-fsx_iscsi_archit.png[이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다.]
+image:automation_ora_aws-fsx_iscsi_archit.png["이 이미지는 iSCSI 및 ASM이 포함된 AWS 퍼블릭 클라우드의 Oracle 구축 구성에 대한 자세한 정보를 제공합니다."]
 
 
 
@@ -565,13 +565,7 @@ ASMCMD> exit
 ....
 . Oracle Enterprise Manager Express에 로그인하여 데이터베이스를 검증합니다.
 +
-image::automation_ora_aws-fsx_iscsi_em_01.png[이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다]
-
-+
-image::automation_ora_aws-fsx_iscsi_em_02.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
-
-+
-image::automation_ora_aws-fsx_iscsi_em_03.png[이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다]
+image:automation_ora_aws-fsx_iscsi_em_01.png["이 이미지는 Oracle Enterprise Manager Express의 로그인 화면을 제공합니다"] image:automation_ora_aws-fsx_iscsi_em_02.png["이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다"] image:automation_ora_aws-fsx_iscsi_em_03.png["이 이미지는 Oracle Enterprise Manager Express의 컨테이너 데이터베이스 뷰를 제공합니다"]
 
 
 

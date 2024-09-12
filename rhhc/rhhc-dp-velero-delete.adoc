@@ -22,7 +22,7 @@ summary: NetApp ONTAP를 사용한 Red Hat OpenShift Container 애플리케이�
 
 OC CLI 도구 또는 Velero CLI 도구를 사용하여 모든 백업 CRS를 나열할 수 있습니다. 의 지침에 따라 Velero CLI를 link:https://velero.io/docs/v1.3.0/basic-install/#install-the-cli["Velero 설명서"]다운로드합니다.
 
-image::redhat_openshift_OADP_delete_image1.png[백업 목록]
+image:redhat_openshift_OADP_delete_image1.png["백업 목록"]
 
 
 
@@ -30,11 +30,11 @@ image::redhat_openshift_OADP_delete_image1.png[백업 목록]
 
 OC CLI 도구를 사용하여 개체 저장소 데이터를 삭제하지 않고 백업 CR을 삭제할 수 있습니다. 백업이 CLI/콘솔 출력에서 제거됩니다. 그러나 해당 백업은 오브젝트 스토리지에서 제거되지 않으므로 CLI/콘솔 출력에 다시 표시됩니다.
 
-image::redhat_openshift_OADP_delete_image2.png[백업을 삭제합니다]
+image:redhat_openshift_OADP_delete_image2.png["백업을 삭제합니다"]
 
 ** Backup CR 및 관련 객체 스토리지 데이터를 삭제하려면 Velero CLI 도구를 사용하여 삭제할 수 있습니다.**
 
-image::redhat_openshift_OADP_delete_image3.png[백업 및 연결된 오브젝트 스토리지를 삭제합니다]
+image:redhat_openshift_OADP_delete_image3.png["백업 및 연결된 오브젝트 스토리지를 삭제합니다"]
 
 
 
@@ -42,4 +42,4 @@ image::redhat_openshift_OADP_delete_image3.png[백업 및 연결된 오브젝트
 
 OC CLI 또는 Velero CLI를 사용하여 Restore CR Object를 삭제할 수 있습니다
 
-image::redhat_openshift_OADP_delete_image4.png[복원 삭제]
+image:redhat_openshift_OADP_delete_image4.png["복원 삭제"]

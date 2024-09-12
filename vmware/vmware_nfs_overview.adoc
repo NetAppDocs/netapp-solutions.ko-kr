@@ -79,9 +79,7 @@ VF에 포함된 구성 요소에 대한 자세한 내용은 아키텍처 및 계
 
 VMware 스토리지 옵션은 일반적으로 기존 스토리지 및 소프트웨어 정의 스토리지 오퍼링으로 구성됩니다. 기존 스토리지 모델에는 로컬 및 네트워크 스토리지가 포함되며, 소프트웨어 정의 스토리지 모델에는 vSAN 및 VVol(VMware 가상 볼륨)이 포함됩니다.
 
-image::vmware-nfs-overview-image01.png[VM 스토리지 옵션]
-
-{nbsp}
+image:vmware-nfs-overview-image01.png["VM 스토리지 옵션"] {nbsp}
 
  https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F602EB17-8D24-400A-9B05-196CEA66464F.html["vSphere 환경에서의 스토리지 소개"]VMware vSphere Foundation에서 지원되는 스토리지 유형에 대한 자세한 내용은 을 참조하십시오.
 
@@ -113,13 +111,11 @@ AFF 제품군은 A-Series 모델과 C-Series 모델로 구성됩니다.
 
 NetApp A-Series All-NVMe 플래시 어레이는 고성능 워크로드를 위해 설계되었으며, 매우 낮은 지연 시간과 높은 복원력을 제공하여 미션 크리티컬 애플리케이션에 적합합니다.
 
-image::vmware-nfs-overview-image02.png[AFF 어레이]
-
-{nbsp}
+image:vmware-nfs-overview-image02.png["AFF 어레이"] {nbsp}
 
 C-Series QLC 플래시 어레이는 용량을 더 많이 사용하는 사례를 목표로 구축되었으며 하이브리드 플래시의 경제성과 플래시의 속도를 제공합니다.
 
-image::vmware-nfs-overview-image03.png[C 시리즈 어레이]
+image:vmware-nfs-overview-image03.png["C 시리즈 어레이"]
 
 
 

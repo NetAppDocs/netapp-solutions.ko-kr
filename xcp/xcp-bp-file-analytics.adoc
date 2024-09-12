@@ -18,7 +18,7 @@ NetApp XCP 파일 분석 GUI는 백엔드에서 XCP를 사용하여 파일 시�
 
 다음 그림에서는 xCP 파일 분석 흐름을 보여 줍니다.
 
-image::xcp-bp_image6.png[XCP BP 이미지6]
+image:xcp-bp_image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 NOTE: xCP 파일 분석의 상위 수준 아키텍처, 통계 보기와 같은 GUI 기반 대시보드 보기, 파일 배포 보기 세부 정보에 대한 자세한 내용은 블로그 게시물 을 참조하십시오 https://blog.netapp.com/xcp-data-migration-software["NetApp XCP 1.6은 개방형 파일 분석 및 인프라 개선을 제공합니다"^].
@@ -110,4 +110,4 @@ STATUS      : PASSED
 
 다음 보고서는 1년 전에 수정된 파일의 사용자 지정 예제 스캔입니다.
 
-image::xcp-bp_image7.png[XCP BP 이미지7]
+image:xcp-bp_image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

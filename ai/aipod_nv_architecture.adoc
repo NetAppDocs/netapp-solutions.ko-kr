@@ -24,7 +24,7 @@ summary: NVIDIA DGX 시스템이 지원되는 NetApp AIPod - 아키텍처
 
 _NetApp AIPOD 솔루션 토폴로지 _
 
-image::aipod_nv_a900topo.png[Aipod NV A900topo입니다]
+image:aipod_nv_a900topo.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -56,7 +56,7 @@ image::aipod_nv_a900topo.png[Aipod NV A900topo입니다]
 
 _NetApp A900 스토리지 클러스터 논리적 구성 _
 
-image::aipod_nv_A900logical.png[Aipod NV A900논리적]
+image:aipod_nv_A900logical.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

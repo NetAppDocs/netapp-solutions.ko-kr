@@ -36,6 +36,6 @@ NetApp Cloud Insights는 NetApp 및 기타 타사 인프라 구성 요소에서 
 
 다음 그림은 Cloud Insights VDS 대시보드를 보여 줍니다.
 
-image::hcvdivds_image15.png[hcvdivds 이미지15]
+image:hcvdivds_image15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NetApp Cloud Insights에 대한 자세한 내용은 를 참조하십시오 https://www.youtube.com/watch?v=AVQ-a-du664&ab_channel=NetApp["이 비디오"^].

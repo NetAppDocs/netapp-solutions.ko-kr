@@ -20,7 +20,7 @@ summary:
 
 Jupyter 터미널을 사용하여 GitHub에서 코드를 가져옵니다.
 
-image::mlrun_image12.png[mlrun 이미지12]
+image:mlrun_image12.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 Jupyter 터미널 프롬프트에서 프로젝트를 복제합니다.
 

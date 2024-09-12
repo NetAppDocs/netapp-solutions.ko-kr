@@ -27,7 +27,7 @@ RHV는 다음과 같은 기능을 제공합니다.
 * * 향상된 보안 * RHV, 보안 가상화(sVirt) 및 SELinux(보안 강화 Linux) 기술에서 상속된 RHV는 호스트 및 VM에 대한 향상된 보안 및 강화를 목적으로 사용합니다. 이러한 기능을 통해 얻을 수 있는 주요 이점은 VM과 관련 리소스의 논리적 격리가 있다는 것입니다.
 
 
-image::redhat_openshift_image3.png[RedHat OpenShift 이미지3]
+image:redhat_openshift_image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

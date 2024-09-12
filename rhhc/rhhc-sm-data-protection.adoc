@@ -32,7 +32,7 @@ summary:
 
 === ACC를 사용하여 백업에서 애플리케이션 복구
 
-image::rhhc-onprem-dp-br.png[Astra Control Center 복구 옵션]
+image:rhhc-onprem-dp-br.png["Astra Control Center 복구 옵션"]
 
 
 
@@ -46,7 +46,7 @@ NetApp의 link:https://github.com/NetApp/Verda["오픈 소스 프로젝트 Verda
 
 == redis 애플리케이션의 사전 스냅샷을 위한 샘플 실행 후크
 
-image::rhhc-onprem-dp-br-hook.png[Astra Control Center 실행 후크]
+image:rhhc-onprem-dp-br-hook.png["Astra Control Center 실행 후크"]
 
 
 
@@ -58,7 +58,7 @@ image::rhhc-onprem-dp-br-hook.png[Astra Control Center 실행 후크]
 
 === ACC가 장착된 SnapMirror
 
-image::rhhc-onprem-dp-rep.png[Astra Control Center 복제]
+image:rhhc-onprem-dp-rep.png["Astra Control Center 복제"]
 
 
 NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능을 지원하지 않습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/get-started/requirements.html#astra-trident-requirements["여기"] 를 참조하십시오.

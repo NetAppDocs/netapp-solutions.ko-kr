@@ -18,7 +18,7 @@ summary: '이 솔루션을 위해 NetApp은 데이터 레이크(HDFS) 및 MapR �
 
 아래 그림은 데이터 레이크(HDFS) 및 MapR-FS에서 ONTAP NFS로 데이터 마이그레이션을 보여 줍니다. 이 새로운 기능을 사용하면 소스를 NFS 공유로 내보낼 필요가 없습니다.
 
-image::bda-ai-image6.png[BDA ai 이미지6]
+image:bda-ai-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

@@ -22,14 +22,14 @@ Red Hat OpenShift 클러스터를 등록하면 Astra Control Center를 통해 �
 
 . OpenShift 클러스터와 ONTAP 백엔드가 Astra Control Center에 등록된 후, 컨트롤 센터는 지정된 ONTAP 백엔드로 구성된 스토리지 클래스 스토리지를 사용하는 모든 네임스페이스에서 애플리케이션을 자동으로 검색하기 시작합니다.
 +
-image::redhat_openshift_image98.jpg[Astra Control Center 애플리케이션이 검색되었습니다]
+image:redhat_openshift_image98.jpg["Astra Control Center 애플리케이션이 검색되었습니다"]
 
 . 앱 > 검색됨 으로 이동한 후 Astra를 사용하여 관리하려는 애플리케이션 옆에 있는 드롭다운 메뉴를 클릭합니다. 관리 를 클릭합니다.
 +
-image::redhat_openshift_image99.jpg[Astra Control Center에서 애플리케이션을 관리합니다]
+image:redhat_openshift_image99.jpg["Astra Control Center에서 애플리케이션을 관리합니다"]
 
 . 응용 프로그램이 사용 가능 상태로 전환되고 앱 섹션의 관리 탭에서 볼 수 있습니다.
 +
-image::redhat_openshift_image100.jpg[Astra Control Center 애플리케이션을 사용할 수 있습니다]
+image:redhat_openshift_image100.jpg["Astra Control Center 애플리케이션을 사용할 수 있습니다"]
 
 

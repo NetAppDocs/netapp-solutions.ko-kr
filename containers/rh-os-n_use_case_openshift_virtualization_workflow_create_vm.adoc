@@ -22,7 +22,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 VM은 운영 체제 및 데이터를 호스트하기 위해 볼륨이 필요한 상태 저장 배포입니다. CNV에서는 VM이 Pod로 실행되므로 Trident를 통해 NetApp ONTAP에서 호스팅되는 PVS를 통해 VM을 지원합니다. 이러한 볼륨은 디스크로 연결되며 VM의 부팅 소스를 비롯한 전체 파일 시스템을 저장합니다.
 
-image::redhat_openshift_image52.png[VM 아키텍처를 생성합니다]
+image:redhat_openshift_image52.png["VM 아키텍처를 생성합니다"]
 
 OpenShift 클러스터에서 가상 머신을 신속하게 생성하려면 다음 단계를 완료하십시오.
 
@@ -54,12 +54,12 @@ OS 템플릿을 선택한 후 가상 머신 생성을 사용자 지정하려면 
 
 NOTE: URL 또는 레지스트리에서 템플릿 또는 운영 체제에 대해 부트 소스가 구성된 경우 에 PVC가 생성됩니다 `openshift-virtualization-os-images` KVM 게스트 이미지를 PVC에 투영하고 다운로드합니다. 템플릿 PVC에 해당 OS에 대한 KVM 게스트 이미지를 수용할 수 있는 충분한 공간이 있는지 확인해야 합니다. 그런 다음 이러한 PVC는 모든 프로젝트에서 각 템플릿을 사용하여 생성될 때 가상 머신에 대한 루트디스크로 복제되고 연결됩니다.
 
-image::rh-os-n_use_case_vm_create_1.png[RH OS n 활용 사례 VM 생성 1]
+image:rh-os-n_use_case_vm_create_1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::rh-os-n_use_case_vm_create_2.png[RH OS n 활용 사례 VM 생성 2]
+image:rh-os-n_use_case_vm_create_2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::rh-os-n_use_case_vm_create_3.png[RH OS n 활용 사례 VM 생성 3]
+image:rh-os-n_use_case_vm_create_3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::rh-os-n_use_case_vm_create_4.png[RH OS n 활용 사례 VM 생성 4]
+image:rh-os-n_use_case_vm_create_4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-image::rh-os-n_use_case_vm_create_5.png[RH OS n 활용 사례 VM 생성 5]
+image:rh-os-n_use_case_vm_create_5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

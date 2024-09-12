@@ -18,7 +18,7 @@ link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.ht
 
 이 문서에서는 System Manager 및 ONTAP Tools를 활용하는 데 대한 vMSC 구현 세부 정보를 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync["SnapMirror 액티브 동기화(sm-as)"] 제공합니다. 또한 3차 사이트로 복제하여 VM을 보호하고 VMware vSphere용 SnapCenter 플러그인을 사용하여 관리하는 방법을 보여 줍니다.
 
-image::vmware-vmsc-with-smas-image01.png[SnapMirror Active Sync 아키텍처를 사용하는 vMSC]
+image:vmware-vmsc-with-smas-image01.png["SnapMirror Active Sync 아키텍처를 사용하는 vMSC"]
 
 SnapMirror Active Sync는 ASA, AFF 및 FAS 스토리지 시스템을 지원합니다. 두 장애 도메인 모두에서 동일한 유형(성능/용량 모델)을 사용하는 것이 좋습니다. 현재 FC, iSCSI와 같은 블록 프로토콜만 지원됩니다. 추가 지원 지침은 및 를 참조하십시오 link:https://imt.netapp.com/matrix/["상호 운용성 매트릭스 툴"] link:https://hwu.netapp.com/["Hardware Universe"]
 

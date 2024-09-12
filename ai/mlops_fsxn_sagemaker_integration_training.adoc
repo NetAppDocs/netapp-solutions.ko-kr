@@ -39,7 +39,7 @@ Amazon FSx for NetApp ONTAP은 AWS에서 제공하는 완전 관리형 스토리
 
 === 네트워크 환경
 
-image::mlops_fsxn_sagemaker_integration_training_0.png[네트워크 환경]
+image:mlops_fsxn_sagemaker_integration_training_0.png["네트워크 환경"]
 
 FSxN(Amazon FSx for NetApp ONTAP)은 AWS 스토리지 서비스입니다. NetApp ONTAP 시스템에서 실행 중인 파일 시스템과 이 시스템에 연결하는 AWS 관리형 SVM(시스템 가상 머신)이 포함됩니다. 제공된 다이어그램에서 AWS가 관리하는 NetApp ONTAP 서버는 VPC 외부에 있습니다. SVM은 SageMaker와 NetApp ONTAP 시스템 간의 매개 변수 역할을 하여 SageMaker로부터 작업 요청을 받아 기본 스토리지로 전달합니다. FSxN에 액세스하려면 SageMaker를 FSxN 구축과 동일한 VPC 내에 배치해야 합니다. 이 구성은 SageMaker와 FSxN 간의 통신 및 데이터 액세스를 보장합니다.
 
@@ -55,7 +55,7 @@ FSxN(Amazon FSx for NetApp ONTAP)은 AWS 스토리지 서비스입니다. NetApp
 
 == 통합 개요
 
-image::mlops_fsxn_sagemaker_integration_training_1.png[교육 워크플로우]
+image:mlops_fsxn_sagemaker_integration_training_1.png["교육 워크플로우"]
 
 FSxN의 교육 데이터를 사용하여 SageMaker에서 딥 러닝 모델을 구축하는 워크플로는 데이터 로더 정의, 모델 교육 및 배포의 세 가지 주요 단계로 요약할 수 있습니다. 개략적으로 보면 이러한 단계는 MLOps 파이프라인의 토대가 됩니다. 그러나 각 단계에는 포괄적인 구현을 위한 몇 가지 세부 하위 단계가 포함됩니다. 이러한 하위 단계에는 데이터 전처리, 데이터 세트 분할, 모델 구성, 하이퍼파라미터 조정, 모델 평가, 모델 구축을 지원합니다. 이러한 단계를 통해 SageMaker 환경 내에서 FSxN의 교육 데이터를 사용하여 딥 러닝 모델을 구축 및 배포할 수 있는 완벽하고 효과적인 프로세스를 보장할 수 있습니다.
 
@@ -353,7 +353,7 @@ sagemaker_predictor = sagemaker_model.deploy(
 image_object = list(bucket.objects.filter('dataset/tyre'))[0].get()
 image_bytes = image_object['Body'].read()
 
-with Image.open(with Image.open(BytesIO(image_bytes)) as image::
+with Image.open(with Image.open(BytesIO(image_bytes)) as image:
     predicted_classes = sagemaker_predictor.predict(image)
 
     print(predicted_classes)

@@ -26,7 +26,7 @@ VMware vSphere에서 실행되는 VM 워크로드는 Veeam Replication 기능을
 
 이 문서에서는 NetApp Cloud Volume Service, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 VM 마이그레이션을 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
 
-image::gcp_migration_veeam_01.png[Veeam VM 복제 아키텍처]
+image:gcp_migration_veeam_01.png["Veeam VM 복제 아키텍처"]
 
 
 

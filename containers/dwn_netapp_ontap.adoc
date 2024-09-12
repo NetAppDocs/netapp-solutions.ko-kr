@@ -45,7 +45,7 @@ ONTAP에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.c
 
 NOTE: NetApp ONTAP는 사내, 가상화 또는 클라우드에서 사용할 수 있습니다.
 
-image::redhat_openshift_image35.png[RedHat OpenShift 이미지35]
+image:redhat_openshift_image35.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

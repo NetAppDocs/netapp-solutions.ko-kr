@@ -38,7 +38,7 @@ summary: '이 솔루션은 인공 지능 워크로드에 최적화된 NetApp 스
 
 Lenovo ThinkSystem 서버와 NetApp ONTAP with AFF 스토리지가 포함된 이 솔루션은 기존 CPU와 함께 GPU의 처리 능력을 사용하는 대규모 데이터 세트에 대한 AI 교육을 처리하도록 설계되었습니다. 이러한 검증 방식은 단일 NetApp AFF A400 스토리지 시스템과 함께 1, 2 또는 4대의 Lenovo SR670 V2 서버를 사용하는 스케일아웃 아키텍처를 통해 뛰어난 성능과 최적의 데이터 관리를 구현하는 것으로 입증되었습니다. 다음 그림에서는 아키텍처 개요를 제공합니다.
 
-image::a400-thinksystem-image2.png[이 이미지는 관리 서버에 둘러싸인 이더넷 스위치를 보여 줍니다]
+image:a400-thinksystem-image2.png["이 이미지는 관리 서버에 둘러싸인 이더넷 스위치, 각각 8개의 GPU가 있는 SR670 V2s 4개 및 NetApp ONTAP 스토리지 시스템을 보여줍니다."]
 
 이 NetApp 및 Lenovo 솔루션은 다음과 같은 주요 이점을 제공합니다.
 

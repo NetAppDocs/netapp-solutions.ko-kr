@@ -40,7 +40,7 @@ ONTAP AI는 DGX A100 시스템과 NetApp AFF A800 스토리지 시스템을 최�
 
 다음 그림은 DGX A100 시스템과 ONTAP AI 솔루션 제품군의 다양한 변형을 보여줍니다. 최대 8개의 DGX A100 시스템에서 AFF A800 시스템 성능 검증 ONTAP 클러스터에 스토리지 컨트롤러 쌍을 추가하면 아키텍처를 여러 개의 랙으로 확장하여 선형 성능으로 많은 DGX A100 시스템과 페타바이트급 스토리지 용량을 지원할 수 있습니다. 이 접근 방식은 사용되는 DL 모델의 크기와 필요한 성능 메트릭을 기준으로 컴퓨팅 대 스토리지 비율을 독립적으로 변경할 수 있는 유연성을 제공합니다.
 
-image::ai-protopia-image2.png[AI 전립선 영상2]
+image:ai-protopia-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ONTAP AI에 대한 자세한 내용은 를 참조하십시오 https://www.netapp.com/pdf.html?item=/media/21793-nva-1153-design.pdf["NVA-1153: NVIDIA DGX A100 시스템 및 Mellanox Spectrum 이더넷 스위치를 포함하는 NetApp ONTAP AI"^]
 

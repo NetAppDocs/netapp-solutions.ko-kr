@@ -60,12 +60,12 @@ ML 파이프라인을 구축하는 데 필요한 모든 것이 Iguazio 플랫폼
 * "iguazio/NetApp. ML 작업을 처리하는 데 사용됩니다.
 
 
-image::mlrun_image13.png[mlrun 이미지13]
+image:mlrun_image13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 * 'NetApp/파이프라인' NetApp Snapshot 복사본을 처리하는 유틸리티를 포함합니다.
 
 
-image::mlrun_image14.png[mlrun 이미지14]
+image:mlrun_image14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -98,7 +98,7 @@ image::mlrun_image14.png[mlrun 이미지14]
 
 원하는 결과는 데이터의 스냅샷 복사본을 기반으로 모델을 교육하고 추론을 위해 모델을 구축하는 파이프라인입니다. 완료된 MLRun 파이프라인에 대한 블록 다이어그램이 다음 이미지에 나와 있습니다.
 
-image::mlrun_image15.png[mlrun 이미지15]
+image:mlrun_image15.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 
@@ -331,26 +331,26 @@ prep = data_prep.as_step(name='data-prep', handler='handler',params=params,
 |===
 pipeline.ipynb는 위에서 아래로 실행할 수 있다. 그런 다음 Iguazio 대시보드에서 Pipelines 탭으로 이동하여 Iguazio 대시보드 파이프라인 탭에 표시된 진행 상황을 모니터링할 수 있습니다.
 
-image::mlrun_image16.png[mlrun 이미지16]
+image:mlrun_image16.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 모든 러닝에서 훈련 단계의 정확성을 기록했기 때문에 훈련 정확도 기록에서도 볼 수 있듯이 각 실험마다 정확한 기록을 가지고 있습니다.
 
-image::mlrun_image17.png[mlrun 이미지17]
+image:mlrun_image17.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 스냅샷 단계를 선택하면 이 실험을 실행하는 데 사용된 스냅샷 복사본의 이름을 볼 수 있습니다.
 
-image::mlrun_image18.png[mlrun 이미지18]
+image:mlrun_image18.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 설명된 단계에는 우리가 사용한 지표를 탐색할 수 있는 시각적 인공물이 있습니다. 다음 이미지와 같이 전체 플롯을 보기 위해 확장할 수 있습니다.
 
-image::mlrun_image19.png[mlrun 이미지19]
+image:mlrun_image19.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 또한 MLRun API 데이터베이스는 프로젝트별로 구성된 각 실행의 입력, 출력 및 아티팩트를 추적합니다. 각 시리즈의 입력, 출력 및 아티팩트의 예는 다음 영상에서 확인할 수 있습니다.
 
-image::mlrun_image20.png[mlrun 이미지20]
+image:mlrun_image20.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 각 직무마다 추가 세부 정보를 저장합니다.
 
-image::mlrun_image21.png[mlrun 이미지21]
+image:mlrun_image21.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 MLRun에 대한 자세한 내용은 이 문서에서 다룰 수 있는 것보다 많습니다. 단계와 함수의 정의를 비롯한 Al 아티팩트는 API 데이터베이스에 저장하고 버전을 지정한 후 개별 또는 전체 프로젝트로 호출할 수 있습니다. 프로젝트를 저장하고 나중에 사용할 수 있도록 Git에 푸시할 수도 있습니다. 자세한 내용은 에서 확인하시기 바랍니다 https://github.com/mlrun/mlrun["MLRun GitHub 사이트"^].

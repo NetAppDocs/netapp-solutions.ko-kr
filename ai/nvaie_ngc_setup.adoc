@@ -89,4 +89,4 @@ Created config file: '/home/user/.netapp_dataops/config.json'.
 
 게스트 VM을 기반으로 VM 템플릿을 생성하려면 VMware vSphere에 로그인하고 게스트 VM 이름을 마우스 오른쪽 단추로 클릭한 다음 '클론'을 선택하고 '템플릿으로 클론 복제...'를 선택한 다음 마법사를 따릅니다.
 
-image::nvaie_image3.png[nvaie 이미지3]
+image:nvaie_image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

@@ -28,7 +28,7 @@ summary: NetApp 및 VMware를 사용하는 NVIDIA AI 엔터프라이즈 - NVIDIA
 
 먼저 이전 섹션에서 생성한 템플릿에서 새 게스트 VM을 생성해야 합니다. 템플릿에서 새 게스트 VM을 생성하려면 VMware vSphere에 로그인하고 템플릿 이름을 마우스 오른쪽 단추로 클릭한 다음 '이 템플릿에서 새 VM...'을 선택하고 마법사를 따릅니다.
 
-image::nvaie_image4.png[nvaie 이미지4]
+image:nvaie_image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

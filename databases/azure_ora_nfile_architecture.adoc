@@ -20,12 +20,12 @@ keywords: architecture, database, Oracle, Azure, Azure NetApp Files
 
 반면에 Oracle 데이터베이스 스토리지는 Azure 콘솔에서 사용 가능한 Azure NetApp Files 서비스와 함께 구축됩니다. 그런 다음 Oracle 바이너리, 데이터 또는 로그 볼륨이 제시되고 Azure VM 인스턴스 Linux 호스트에 마운트됩니다.
 
-image::db_ora_azure_anf_architecture.PNG[이 이미지는 기본 사이트, 대기 사이트 및 각 사이트의 VNET 피어링 간의 관계를 보여 줍니다. 이는 4개의 개별 가상 네트워크를 형성합니다.]
+image:db_ora_azure_anf_architecture.png["이 이미지는 기본 사이트, 대기 사이트 및 각 사이트의 VNET 피어링 간의 관계를 보여 줍니다. 이는 4개의 개별 가상 네트워크를 형성합니다."]
 
 여러 측면에서 Azure 클라우드에 Azure NetApp Files를 구현하는 것은 RAID 및 이중 컨트롤러와 같은 다양한 내장 이중화 기능을 갖춘 사내 ONTAP 데이터 스토리지 아키텍처와 매우 유사합니다. 재해 복구의 경우 대기 사이트를 여러 지역에서 설정할 수 있으며 애플리케이션 수준 복제(예: Oracle Data Guard)를 사용하여 데이터베이스를 기본 사이트와 동기화할 수 있습니다.
 
 Oracle 데이터베이스 구현 및 데이터 보호에 대한 테스트 검증에서 Oracle 데이터베이스는 다음 다이어그램에 표시된 대로 단일 Azure VM에 구축됩니다.
 
-image::db_ora_azure_anf_architecture2.PNG[이 이미지는 VNET 피어링을 사용하는 단일 Azure VM의 구성을 보여 주어 두 개의 개별 가상 네트워크를 만듭니다.]
+image:db_ora_azure_anf_architecture2.png["이 이미지는 VNET 피어링을 사용하는 단일 Azure VM의 구성을 보여 주어 두 개의 개별 가상 네트워크를 만듭니다."]
 
 Azure Oracle 환경은 데이터베이스 구축, 백업, 복구 및 데이터베이스 마이그레이션을 위해 NetApp에서 제공하는 툴 키트를 사용하여 자동화를 위해 Ansible 컨트롤러 노드를 사용하여 관리할 수 있습니다. Oracle Azure VM 인스턴스 운영 체제 커널 또는 Oracle 패칭에 대한 모든 업데이트를 병렬로 수행하여 운영 및 대기 상태를 동기화할 수 있습니다. 실제로 초기 툴킷을 손쉽게 확장하여 필요한 경우 일상적인 Oracle 작업을 수행할 수 있습니다. CLI Ansible 컨트롤러를 설정하는 데 도움이 필요한 경우 을 참조하십시오 link:../automation/automation_introduction.html["NetApp 솔루션 자동화"^] 시작하십시오.

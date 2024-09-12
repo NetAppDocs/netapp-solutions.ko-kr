@@ -61,7 +61,7 @@ VCF 솔루션은 기본 Kubernetes 및 가상 머신 기반 워크로드를 모�
 
 VCF는 단일 관리 도메인과 최대 24개의 VI 워크로드 도메인으로 구성되며, 각 도메인은 애플리케이션 지원 인프라 단위를 나타냅니다. 워크로드 도메인은 단일 vCenter 인스턴스에서 관리하는 하나 이상의 vSphere 클러스터로 구성됩니다.
 
-image::vmware-vcf-aff-image02.png[VCF 아키텍처]
+image:vmware-vcf-aff-image02.png["VCF 아키텍처"]
 
 VCF 아키텍처 및 계획에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-design/GUID-A550B597-463F-403F-BE9A-BFF3BECB9523.html["VMware Cloud Foundation의 아키텍처 모델 및 워크로드 도메인 유형"].
 
@@ -73,7 +73,7 @@ VCF 아키텍처 및 계획에 대한 자세한 내용은 을 참조하십시오
 
 VMware는 VCF에 대한 스토리지 옵션을 * principal * 및 * supplementary * 스토리지로 나눕니다. VCF 관리 도메인은 vSAN을 기본 스토리지로 사용해야 합니다. 하지만 관리 도메인을 위한 다양한 보조 스토리지 옵션과 VI 워크로드 도메인에 사용할 수 있는 주요 스토리지 및 보조 스토리지 옵션이 있습니다.
 
-image::vmware-vcf-aff-image01.png[VCF 스토리지 옵션]
+image:vmware-vcf-aff-image01.png["VCF 스토리지 옵션"]
 
 * 워크로드 도메인의 기본 저장소 *
 주 스토리지란 SDDC Manager 내의 설정 프로세스 중에 VI 워크로드 도메인에 직접 연결할 수 있는 모든 유형의 스토리지를 말합니다. 주 스토리지는 클러스터 생성 오케스트레이션의 일부로 SDDC 관리자를 통해 구축되며 워크로드 도메인에 대해 구성된 첫 번째 데이터 저장소입니다. 파이버 채널의 vSAN, VVOL(VMFS), NFS 및 VMFS가 포함됩니다.
@@ -97,11 +97,11 @@ ASA 제품군은 A-Series 모델과 C-Series 모델로 구성됩니다.
 
 NetApp A-Series All-NVMe 플래시 어레이는 고성능 워크로드를 위해 설계되었으며, 매우 낮은 지연 시간과 높은 복원력을 제공하여 미션 크리티컬 애플리케이션에 적합합니다.
 
-image::vmware-asa-image1.png[VMware ASA 이미지1]
+image:vmware-asa-image1.png["너비 = 800"]
 
 C-Series QLC 플래시 어레이는 용량을 더 많이 사용하는 사례를 목표로 구축되었으며 하이브리드 플래시의 경제성과 플래시의 속도를 제공합니다.
 
-image::vmware-asa-image2.png[VMware ASA 이미지2]
+image:vmware-asa-image2.png["너비 = 800"]
 
 자세한 내용은 를 참조하십시오 https://www.netapp.com/data-storage/all-flash-san-storage-array["NetApp ASA 랜딩 페이지"].
 {nbsp}

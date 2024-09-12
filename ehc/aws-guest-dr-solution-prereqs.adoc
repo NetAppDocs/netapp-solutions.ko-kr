@@ -199,7 +199,7 @@ VMware 및 ONTAP On-Premises와 VMware Cloud on AWS 및 FSx ONTAP를 사용하�
 ====
 VMware 가상 환경에는 다음 그림과 같이 ESXi 호스트, VMware vCenter Server, NSX 네트워킹 및 기타 구성 요소의 라이센스가 포함됩니다. 모든 구성 요소는 서로 다른 방식으로 라이센스가 부여되므로 기본 구성 요소가 사용 가능한 라이센스 용량을 어떻게 소비하는지 이해하는 것이 중요합니다.
 
-image::dr-vmc-aws-image2.png[DR VMC AWS 이미지2]
+image:dr-vmc-aws-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 .ESXi 호스트
 [%collapsible]
@@ -493,7 +493,7 @@ NOTE: IPSec VPN 터널이 기본 게이트웨이에 생성되지 않은 경우 �
 
 다음 그림에서는 일반적인 VPN 연결 옵션을 보여 줍니다.
 
-image::dr-vmc-aws-image3.png[DR VMC AWS 이미지3]
+image:dr-vmc-aws-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
 .직접 연결
@@ -505,7 +505,7 @@ Direct Connect는 AWS 네트워크에 대한 전용 링크를 제공합니다. �
 
 다음 그림은 Direct Connect 인터페이스 옵션을 보여 줍니다.
 
-image::dr-vmc-aws-image4.png[DR VMC AWS 이미지4]
+image:dr-vmc-aws-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
 .전송 게이트웨이
@@ -529,7 +529,7 @@ VMware Cloud SDDC는 단일 데이터 센터를 갖는 것과 같은 단일 가�
 
 데이터 전송 비용을 최소화하려면 VMware Cloud SDDC 및 AWS 인스턴스 또는 서비스를 동일한 가용성 영역에 유지해야 합니다. AWS는 가용성 영역에 부하를 분산하기 위해 계정별 AZ 주문 목록을 제공하므로 이름이 아닌 가용성 영역 ID와 일치시키는 것이 좋습니다. 예를 들어 계정(US-East-1a)은 AZ ID 1을 가리키지만 다른 계정(US-East-1c)은 AZ ID 1을 가리킬 수 있습니다. 가용성 영역 ID는 여러 가지 방법으로 검색할 수 있습니다. 다음 예에서는 VPC 서브넷에서 AZ ID를 검색했습니다.
 
-image::dr-vmc-aws-image5.png[DR VMC AWS 이미지5]
+image:dr-vmc-aws-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 VMware Cloud SDDC에서 네트워킹은 NSX를 통해 관리되며, 남북의 트래픽 업링크 포트를 처리하는 에지 게이트웨이(Tier-0 라우터)는 AWS VPC에 연결됩니다. 컴퓨팅 게이트웨이와 관리 게이트웨이(Tier-1 라우터)는 동서 트래픽을 처리합니다. 에지의 업링크 포트가 많이 사용되는 경우 트래픽 그룹을 생성하여 특정 호스트 IP 또는 서브넷과 연결할 수 있습니다. 트래픽 그룹을 생성하면 트래픽을 분리하기 위해 추가 에지 노드가 생성됩니다. 를 확인하십시오 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-networking-security/GUID-306D3EDC-F94E-4216-B306-413905A4A784.html["VMware 설명서"^] 다중 에지 설정을 사용하는 데 필요한 최소 vSphere 호스트 수
 
@@ -540,7 +540,7 @@ VMware Cloud SDDC를 프로비저닝할 경우 VMkernel 포트가 이미 구성�
 
 다음 그림에서는 호스트 VMkernel 정보의 예를 보여 줍니다.
 
-image::dr-vmc-aws-image6.png[DR VMC AWS 이미지6]
+image:dr-vmc-aws-image6.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
 .프로비저닝된 스토리지 네트워크(iSCSI, NFS)
@@ -573,7 +573,7 @@ NetApp AFF A-Series 시스템은 클라우드에서 다양한 엔터프라이즈
 
 다음 그림은 VMware 스토리지 옵션을 보여 줍니다.
 
-image::dr-vmc-aws-image7.png[DR VMC AWS 이미지7]
+image:dr-vmc-aws-image7.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ONTAP 볼륨은 애플리케이션 VM을 위한 iSCSI 및 NFS 게스트 연결 스토리지 모두에 사용되었습니다. 애플리케이션 데이터에 다음 스토리지 프로토콜을 사용했습니다.
 
@@ -622,7 +622,7 @@ FSx ONTAP를 배포한 후 온-프레미스 ONTAP 인스턴스를 FSx ONTAP로 �
 
 다음 그림은 FSx ONTAP 환경을 보여 줍니다.
 
-image::dr-vmc-aws-image8.png[DR VMC AWS 이미지8]
+image:dr-vmc-aws-image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
 .네트워크 인터페이스가 생성되었습니다
@@ -657,7 +657,7 @@ SQL Server 2019를 실행하는 10개의 Windows Server 2019 VM을 다양한 데
 ====
 VMware Cloud on AWS에 SDDC를 구축하고, 두 개의 호스트를 사용하여 운영 사이트에서 복구된 가상 머신을 실행할 수 있는 적절한 리소스를 제공했습니다.
 
-image::dr-vmc-aws-image9.png[DR VMC AWS 이미지9]
+image:dr-vmc-aws-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ====
 

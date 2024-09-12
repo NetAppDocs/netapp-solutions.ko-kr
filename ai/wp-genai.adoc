@@ -41,13 +41,13 @@ Generative AI는 콘텐츠 제작, 새로운 설계 개념 생성, 새로운 구
 
 그림 1: 생성 AI를 이끄는 사용 사례
 
-image::gen-ai-image1.png[그림 1: 생성 AI를 이끄는 사용 사례]
+image:gen-ai-image1.png["그림 1: 생성 AI를 이끄는 사용 사례"]
 
 생성 AI를 통한 자동화 채택의 증가는 많은 직업의 업무 활동의 공급과 수요도 변화시키고 있습니다. McKinsey에 따르면 미국 노동 시장(아래 다이어그램)은 AI의 영향을 고려할 때만 지속되는 급속한 전환을 겪었습니다.
 
 출처: McKinsey & Company
 
-image::gen-ai-image3.png[그림 2: 출처: McKinsey & Company]
+image:gen-ai-image3.png["그림 2: 출처: McKinsey  amp; Company"]
 
 
 
@@ -63,7 +63,7 @@ LLM은 주로 딥 러닝, GPU 및 컴퓨팅에 의존하고 있습니다. 하지
 
 그림 3: 문제 유형
 
-image::gen-ai-image4.png[그림 3: 문제 유형]
+image:gen-ai-image4.png["그림 3: 문제 유형"]
 
 
 
@@ -79,7 +79,7 @@ image::gen-ai-image4.png[그림 3: 문제 유형]
 
 출처: Microsoft Azure
 
-image::gen-ai-image5.png[출처: Microsoft Azure]
+image:gen-ai-image5.png["출처: Microsoft Azure"]
 
 
 
@@ -105,7 +105,7 @@ image::gen-ai-image5.png[출처: Microsoft Azure]
 
 그림 3: 기계 학습/대규모 언어 모델 워크플로
 
-image::gen-ai-image6.png[그림 3: 기계 학습/대규모 언어 모델 워크플로]
+image:gen-ai-image6.png["그림 3: 기계 학습/대규모 언어 모델 워크플로"]
 
 * 우리는 교육 또는 미세 조정 중입니까? * (a) LLM 모델을 처음부터 교육하거나, 사전 훈련된 FM을 미세 조정하거나, RAG를 사용하여 기초 모델 외부의 문서 저장소에서 데이터를 검색하고, 메시지를 보강할 수 있는지 여부 (b) 오픈 소스 LLM(예: Llama 2) 또는 독점 FMS(예: ChatGPT, Bard, AWS Bedrock)를 활용하는 것은 조직의 전략적 결정입니다. 각 접근 방식에는 비용 효율성, 데이터 부담, 운영, 모델 정확도 및 LLM 관리 간의 절충이 있습니다.
 
@@ -119,7 +119,7 @@ image::gen-ai-image6.png[그림 3: 기계 학습/대규모 언어 모델 워크�
 
 그림 4: Generative AI-LLM Data Pipeline
 
-image::gen-ai-image7.png[그림 4: Generative AI-LLM 데이터 파이프라인]
+image:gen-ai-image7.png["그림 4: Generative AI-LLM 데이터 파이프라인"]
 
 지능형 데이터 관리 소프트웨어를 기반으로 하는 NetApp의 스토리지 인프라, 데이터 및 클라우드 서비스 포트폴리오입니다.
 

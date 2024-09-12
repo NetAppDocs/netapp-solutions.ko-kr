@@ -16,7 +16,7 @@ summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터
 [role="lead"]
 NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 보호 기술을 기반으로 하는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다.
 
-image::redhat_openshift_image44.png[RedHat OpenShift 이미지44]
+image:redhat_openshift_image44.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 구축하고 구성하는 Astra Trident 스토리지 오케스트레이터가 구축된 Red Hat OpenShift 클러스터에 설치할 수 있습니다.
 
@@ -231,27 +231,27 @@ secret/astra-registry-cred created
 . 원근 표시 드롭다운에서 관리자 를 선택합니다.
 . Operators > OperatorHub 로 이동하여 Astra 를 검색합니다.
 +
-image::redhat_openshift_image45.JPG[OpenShift Operator Hub를 참조하십시오]
+image:redhat_openshift_image45.JPG["OpenShift Operator Hub를 참조하십시오"]
 
 . 'NetApp-acc-operator' 타일을 선택하고 '설치'를 클릭합니다.
 +
-image::redhat_openshift_image123.jpg[ACC 운전자 타일]
+image:redhat_openshift_image123.jpg["ACC 운전자 타일"]
 
 . Install Operator(사용자 설치) 화면에서 모든 기본 매개변수를 그대로 적용하고 Install(설치)을 클릭합니다.
 +
-image::redhat_openshift_image124.jpg[ACC 운전자 세부 정보]
+image:redhat_openshift_image124.jpg["ACC 운전자 세부 정보"]
 
 . 작업자 설치가 완료될 때까지 기다립니다.
 +
-image::redhat_openshift_image125.jpg[ACC 작업자가 설치를 기다립니다]
+image:redhat_openshift_image125.jpg["ACC 작업자가 설치를 기다립니다"]
 
 . 운용자 설치가 성공하면 View Operator를 클릭합니다.
 +
-image::redhat_openshift_image126.jpg[ACC 운전자 설치가 완료되었습니다]
+image:redhat_openshift_image126.jpg["ACC 운전자 설치가 완료되었습니다"]
 
 . 그런 다음 운용자의 Astra Control Center 타일에서 Create Instance를 클릭한다.
 +
-image::redhat_openshift_image127.jpg[ACC 인스턴스 생성]
+image:redhat_openshift_image127.jpg["ACC 인스턴스 생성"]
 
 . Create AstraControlCenter 양식 필드에 내용을 입력하고 Create를 클릭합니다.
 +
@@ -267,10 +267,10 @@ image::redhat_openshift_image127.jpg[ACC 인스턴스 생성]
 .. 기본이 아닌 저장 클래스에 PVC를 배치하려면 보관 클래스 이름을 입력합니다.
 .. CRD 처리 기본 설정을 정의합니다.
 +
-image::redhat_openshift_image128.jpg[ACC 인스턴스 생성]
+image:redhat_openshift_image128.jpg["ACC 인스턴스 생성"]
 
 +
-image::redhat_openshift_image129.jpg[ACC 인스턴스 생성]
+image:redhat_openshift_image129.jpg["ACC 인스턴스 생성"]
 
 
 
@@ -427,23 +427,23 @@ traefik                                    LoadBalancer   172.30.99.142    10.61
 ----
 . Astra Control Center CRD 파일에서 제공하는 FQDN을 가리키는 DNS 서버의 entry를 traefik 서비스의 'external-ip'에 추가한다.
 +
-image::redhat_openshift_image122.jpg[ACC GUI에 대한 DNS 항목을 추가합니다]
+image:redhat_openshift_image122.jpg["ACC GUI에 대한 DNS 항목을 추가합니다"]
 
 . FQDN을 검색하여 Astra Control Center GUI에 로그인합니다.
 +
-image::redhat_openshift_image87.jpg[Astra Control Center 로그인]
+image:redhat_openshift_image87.jpg["Astra Control Center 로그인"]
 
 . CRD에 제공된 관리자 이메일 주소를 사용하여 처음으로 Astra Control Center GUI에 로그인할 경우 비밀번호를 변경해야 합니다.
 +
-image::redhat_openshift_image88.jpg[Astra Control Center 필수 암호 변경]
+image:redhat_openshift_image88.jpg["Astra Control Center 필수 암호 변경"]
 
 . Astra Control Center에 사용자를 추가하려면 계정 > 사용자 로 이동하여 추가 를 클릭하고 사용자 세부 정보를 입력한 다음 추가 를 클릭합니다.
 +
-image::redhat_openshift_image89.jpg[Astra Control Center에서 사용자를 생성합니다]
+image:redhat_openshift_image89.jpg["Astra Control Center에서 사용자를 생성합니다"]
 
 . Astra Control Center를 사용하려면 모든 IT 기능에 대한 라이센스가 필요합니다. 라이센스를 추가하려면 계정 > 라이센스 로 이동하고 라이센스 추가 를 클릭한 다음 라이센스 파일을 업로드합니다.
 +
-image::redhat_openshift_image90.jpg[Astra Control Center에서 라이센스를 추가합니다]
+image:redhat_openshift_image90.jpg["Astra Control Center에서 라이센스를 추가합니다"]
 
 +
 

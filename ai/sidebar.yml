@@ -6,6 +6,7 @@ entries:
 - title: AI 통합 인프라
   entries:
   - title: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
+    pdf-filename: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
     entries:
     - title: 소개
       url: "/ai/a400-thinksystem-introduction.html"
@@ -24,8 +25,10 @@ entries:
     - title: 결론
       url: "/ai/a400-thinksystem-conclusion.html"
   - title: NVIDIA 지원 NetApp AIPod
-    url: "/ai/ontap-ai-overview.html"
+    pdf-filename: NVIDIA 지원 NetApp AIPod
     entries:
+    - title: 개요
+      url: "/ai/ontap-ai-overview.html"
     - title: NVIDIA DGX 시스템 및 NetApp AIPod
       url: "/ai/aipod_nv_intro.html"
       entries:
@@ -70,8 +73,10 @@ entries:
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
   - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
-    url: "/ai/mlops_fsxn_intro.html"
+    pdf-filename: MLOps용 AWS FSx for NetApp ONTAP(FSxN
     entries:
+    - title: 개요
+      url: "/ai/mlops_fsxn_intro.html"
     - title: 1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
       url: "/ai/mlops_fsxn_s3_integration.html"
     - title: 2부 - AWS FSx for NetApp ONTAP(FSxN)를 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용
@@ -79,6 +84,7 @@ entries:
     - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
       url: "/ai/mlops_fsxn_cictcd.html"
   - title: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
+    pdf-filename: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
     entries:
     - title: 소개
       url: "/ai/ddlnexus_introduction.html"
@@ -95,6 +101,7 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/ddlnexus_additional_information.html"
   - title: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
+    pdf-filename: NetApp 및 VMware를 사용하는 NVIDIA AI Enterprise
     entries:
     - title: 소개
       url: "/ai/nvaie_introduction.html"
@@ -117,6 +124,7 @@ entries:
   - title: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
     url: "/ai/tr-4851.html"
   - title: 오픈 소스 MLOps 및 NetApp
+    pdf-filename: 오픈 소스 MLOps 및 NetApp
     entries:
     - title: 소개
       url: "/ai/aicp_introduction.html"
@@ -169,6 +177,7 @@ entries:
       - title: 동기식 분산 AI 워크로드 실행
         url: "/ai/aicp_execute_a_synchronous_distributed_ai_workload.html"
   - title: Iguazio를 사용한 MLRun 파이프라인
+    pdf-filename: Iguazio를 사용한 MLRun 파이프라인
     entries:
     - title: 소개
       url: "/ai/mlrun_introduction.html"
@@ -204,8 +213,10 @@ entries:
   - title: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
     url: "/ai/tr-4915.html"
   - title: NetApp를 사용한 벡터 데이터베이스 솔루션
-    url: "/ai/vector-database-solution-with-netapp.html"
+    pdf-filename: NetApp를 사용한 벡터 데이터베이스 솔루션
     entries:
+    - title: 개요
+      url: "/ai/vector-database-solution-with-netapp.html"
     - title: 소개
       url: "/ai/vector-database-introduction.html"
     - title: 솔루션 개요
@@ -246,6 +257,7 @@ entries:
 - title: 사용 사례
   entries:
   - title: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
+    pdf-filename: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
     entries:
     - title: 개요
       url: "/ai/ai-protopia-overview.html"
@@ -268,6 +280,7 @@ entries:
     - title: 추가 정보 및 승인 정보를 찾을 수 있는 위치
       url: "/ai/ai-protopia-where-to-find-additional-information-acknowledgements-and-version-history.html"
   - title: NetApp AI를 통한 감정 분석
+    pdf-filename: NetApp AI를 통한 감정 분석
     entries:
     - title: 소개
       url: "/ai/ai-sent-support-center-analytics.html"
@@ -288,6 +301,7 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/ai-sent-where-to-find-additional-information.html"
   - title: Azure-Click-Through Rate Prediction의 분산 교육
+    pdf-filename: Azure-Click-Through Rate Prediction의 분산 교육
     entries:
     - title: 소개
       url: "/ai/aks-anf_introduction.html"
@@ -300,7 +314,6 @@ entries:
     - title: 클릭률 예측 사용 사례 요약
       url: "/ai/aks-anf_click-through_rate_prediction_use_case_summary.html"
     - title: 설정
-      pdf-filename: 설정 절차 를 참조하십시오
       entries:
       - title: AKS 클러스터를 설치하고 설정합니다
         url: "/ai/aks-anf_install_and_set_up_the_aks_cluster.html"
@@ -337,8 +350,10 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/aks-anf_where_to_find_additional_information.html"
   - title: 분산된 Azure 교육 - 차선 감지
-    url: "/ai/runai-ld_executive_summary.html"
+    pdf-filename: 분산된 Azure 교육 - 차선 감지
     entries:
+    - title: 핵심 요약
+      url: "/ai/runai-ld_executive_summary.html"
     - title: 솔루션 개요
       url: "/ai/runai-ld_solution_overview.html"
     - title: 차선 감지 – AI를 통한 분산된 교육
@@ -348,8 +363,10 @@ entries:
     - title: 추가 정보
       url: "/ai/runai-ld_additional_information.html"
   - title: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI 운영 체제
-    url: "/ai/hcaios_executive_summary.html"
+    pdf-filename: 데이터 캐싱을 지원하는 하이브리드 클라우드 AI 운영 체제
     entries:
+    - title: 핵심 요약
+      url: "/ai/hcaios_executive_summary.html"
     - title: 사용 사례 개요 및 문제 설명
       url: "/ai/hcaios_use_case_overview_and_problem_statement.html"
     - title: 솔루션 개요
@@ -374,6 +391,7 @@ entries:
   - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동
     url: "/data-analytics/bda-ai-introduction.html"
   - title: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론 - 솔루션 설계
+    pdf-filename: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론 - 솔루션 설계
     entries:
     - title: 소개
       url: "/ai/ai-edge-introduction.html"
@@ -392,8 +410,10 @@ entries:
     - title: 결론
       url: "/ai/ai-edge-conclusion.html"
   - title: NVIDIA를 통한 대화형 AI
-    url: "/ai/cainvidia_executive_summary.html"
+    pdf-filename: NVIDIA를 통한 대화형 AI
     entries:
+    - title: 핵심 요약
+      url: "/ai/cainvidia_executive_summary.html"
     - title: 솔루션 개요
       url: "/ai/cainvidia_solution_overview.html"
     - title: 솔루션 기술
@@ -420,8 +440,10 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/cainvidia_where_to_find_additional_information.html"
   - title: '실행 시 NetApp 오케스트레이션 솔루션: AI'
-    url: "/ai/osrunai_executive_summary.html"
+    pdf-filename: '실행 시 NetApp 오케스트레이션 솔루션: AI'
     entries:
+    - title: 핵심 요약
+      url: "/ai/osrunai_executive_summary.html"
     - title: 솔루션 개요
       url: "/ai/osrunai_solution_overview.html"
     - title: 솔루션 기술

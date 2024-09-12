@@ -24,11 +24,11 @@ summary: 볼륨에 대해 원하는 서비스 수준을 사용하는 다른 용�
 
 . 볼륨 페이지에서 서비스 수준을 변경할 볼륨을 마우스 오른쪽 단추로 클릭합니다. 풀 변경 을 선택합니다.
 +
-image::aks-anf_image10.png[AKS anf 이미지10]
+image:aks-anf_image10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . Change Pool 창에서 볼륨을 이동할 용량 풀을 선택합니다.
 +
-image::aks-anf_image11.png[AKS anf 이미지11]
+image:aks-anf_image11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 확인 을 클릭합니다.
 
