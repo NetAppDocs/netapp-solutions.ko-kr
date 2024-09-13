@@ -25,6 +25,9 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2024년 09월 13일 | Red Hat OpenShift Virtualization | OpenShift VM에 대한 모범 사례 가이드 추가 
+
+
 | 2024년 08월 23일 | 포함되었습니다 | VMFS 구축 가이드가 추가되었습니다 
 
 
@@ -644,6 +647,9 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 [cols="10%, 30%, 60%"]
 |===
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
+
+
+| 2024년 09월 13일 | Red Hat OpenShift Virtualization | OpenShift VM에 대한 모범 사례 가이드 추가 
 
 
 | 2024년 4월 19일 | Red Hat OpenShift Virtualization | OpenShift Virtualization에서 VM을 위한 CI 통합에 대한 새 콘텐츠가 추가되었습니다 

@@ -33,7 +33,7 @@ entries:
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
   - title: 스냅샷에서 VM 생성
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
-- title: 데이터 보호
+- title: 타사 도구를 사용한 데이터 보호
   pdf-filename: Red Hat OpenShift Virtualization Data Protection의 약어입니다
   entries:
   - title: 개요
@@ -55,5 +55,9 @@ entries:
     url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
   - title: 샘플 모니터링
     url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
+- title: 모범 사례 권장사항
+  entries:
+  - title: 모범 사례 가이드
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_bpg.html"
 - title: 추가 리소스
   url: "/containers/additional-resources.html"

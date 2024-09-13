@@ -1,0 +1,202 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_bpg.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: Red Hat OpenShift Virtualization의 VM에 대한 모범 사례 권장 사항 
+---
+= Red Hat OpenShift Virtualization의 VM에 대한 모범 사례 권장 사항
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+저자: 바누 선다, NetApp
+
+[role="lead"]
+이 섹션에서는 새 VM을 배포하거나 VMware 환경에서 OpenShift Container Platform의 OpenShift 가상화로 기존 VM을 가져올 때 고려해야 할 여러 가지 요소에 대해 설명합니다.
+
+
+
+== VM 성능
+
+OpenShift Virtualization에서 새 VM을 생성할 때 VM에서 실행되는 워크로드의 성능(IOPS 및 처리량) 요구 사항과 함께 액세스 패턴을 고려해야 합니다. 이는 OpenShift Container 플랫폼의 OpenShift Virtualization에서 실행해야 하는 VM 수와 VM 디스크에 사용해야 하는 스토리지 유형에 영향을 미칩니다.
+
+VM 디스크에 대해 선택할 스토리지 유형은 다음 요소의 영향을 받습니다.
+
+* 워크로드의 데이터 액세스에 필요한 프로토콜 액세스를 제공합니다
+* 필요한 액세스 모드(RWO 대 rwx)
+* 워크로드에 필요한 성능 특성
+
+
+자세한 내용은 스토리지 구성 섹션을 참조하십시오.
+
+
+
+== 고가용성 VM 워크로드
+
+OpenShift Virtualization은 VM의 실시간 마이그레이션을 지원합니다. 라이브 마이그레이션을 사용하면 실행 중인 VMI(Virtual Machine Instance)를 워크로드를 중단하지 않고 다른 노드로 이동할 수 있습니다. 마이그레이션은 클러스터 업그레이드 중에 또는 유지보수 또는 구성 변경을 위해 노드를 비워야 할 때마다 원활한 전환을 위해 유용할 수 있습니다. 실시간 마이그레이션에는 ReadWriteMany(rwx) 액세스 모드를 제공하는 공유 스토리지 솔루션을 사용해야 합니다. VM 디스크는 rwx 액세스 모드를 제공하는 스토리지 옵션을 통해 백업되어야 합니다. OpenShift Virtualization은 VMI가 **라이브 마이그레이션 가능**인지 확인합니다. 이 경우 **evictionStrategy**가 **LiveMigrate**로 설정됩니다. 자세한 내용은 을 link:https://docs.openshift.com/container-platform/latest/virt/live_migration/virt-about-live-migration.html["Red Hat 설명서의 실시간 마이그레이션 정보 섹션을 참조하십시오"] 참조하십시오.
+
+**rwx** 액세스 모드를 지원하는 드라이버를 사용하는 것이 중요합니다. rwx 액세스 모드를 지원하는 드라이버에 대한 자세한 내용은 스토리지 구성 섹션을 참조하십시오.
+
+
+
+== 스토리지 구성
+
+Trident CSI Provisioner는 NetApp 스토리지 옵션을 통한 스토리지 프로비저닝에 필요한 여러 가지 드라이버(NAS, NAS 경제, NAS-FlexGroup, SAN 및 SAN 경제)를 제공합니다. **사용된 프로토콜: ** NAS 드라이버는 NAS 프로토콜(NFS 및 SMB)을 사용합니다. * SAN 드라이버는 iSCSI 또는 NVMe/TCP 프로토콜을 사용합니다
+
+다음은 워크로드 요구 사항 및 스토리지 활용도를 기준으로 스토리지 구성 방식을 결정하는 데 도움이 됩니다.
+
+* NAS 드라이버는 하나의 FlexVolume에 하나의 영구 볼륨(PV)을 생성합니다.
+* NAS-Economy 드라이버는 공유 FlexVolume의 qtree에 PV를 하나 생성합니다. (200PVS당 FlexVolume 1개, 50 ~ 300개 구성 가능)
+* NAS-FlexGroup 드라이버는 하나의 FlexGroup에서 하나의 PV에 을 생성합니다
+* SAN 드라이버는 전용 FlexVolume의 LUN에 PV를 하나씩 생성합니다
+* SAN 경제형 드라이버가 공유 FlexVolume에서 LUN에 PV 1개 생성(100개 PVS당 FlexVolume 1개, 50개~200개 구성 가능)
+
+
+다음 다이어그램에서 이를 확인할 수 있습니다.
+
+image::redhat_openshift_bpg_image1.png[드라이버]
+
+또한 드라이버에서 지원하는 액세스 모드도 다릅니다.
+
+ONTAP NAS 드라이버 지원
+
+* 파일 시스템 액세스 및 RWO, ROX, rwx, RWOP 액세스 모드
+
+
+ONTAP SAN 드라이버는 원시 블록과 파일 시스템 모드를 지원합니다.
+
+* RAW 블록 모드에서는 RWO, ROX, rwx, RWOP 액세스 모드를 지원할 수 있습니다.
+* 파일 시스템 모드에서는 RWO, RWOP 액세스 모드만 허용됩니다.
+
+
+OpenShift Virtualization VM의 실시간 마이그레이션을 위해서는 디스크에 rwx 액세스 모드가 있어야 합니다. 따라서 ONTAP에서 지원하는 PVC 및 PVS를 생성하려면 원시 블록 볼륨 모드에서 NAS 드라이버 또는 SAN 드라이버를 선택하는 것이 중요합니다.
+
+
+
+== ** 스토리지 구성 모범 사례**
+
+
+
+=== ** 전용 SVM(스토리지 가상 머신)**
+
+SVM(스토리지 가상 시스템)은 ONTAP 시스템의 테넌트 간에 격리하고 관리를 제공합니다. OpenShift 컨테이너 및 OpenShift 가상화 VM에 대한 전용 SVM을 사용하면 Privileges를 위임할 수 있으며 리소스 소비를 제한하는 모범 사례를 적용할 수 있습니다.
+
+
+
+=== ** SVM에서 최대 볼륨 수를 제한합니다**
+
+Trident가 스토리지 시스템에서 사용 가능한 모든 볼륨을 사용하지 않도록 하려면 SVM에 제한을 설정해야 합니다. 이 작업은 명령줄에서 수행할 수 있습니다.
+
+[source, cli]
+----
+vserver modify -vserver <svm_name> -max-volumes <num_of_volumes>
+----
+max-volumes 값은 개별 ONTAP 노드가 아니라 ONTAP 클러스터의 모든 노드에 걸쳐 프로비저닝된 총 볼륨입니다. 결과적으로, ONTAP 클러스터 노드에 다른 노드보다 훨씬 더 많은 Trident 프로비저닝 볼륨이 있을 수 있는 몇 가지 조건이 발생할 수 있습니다. 이를 방지하려면 클러스터의 각 노드와 Trident에서 사용하는 SVM에 동일한 수의 애그리게이트를 할당해야 합니다.
+
+
+
+=== ** Trident에서 생성된 볼륨의 최대 크기를 제한합니다**
+
+ONTAP에서 SVM별로 최대 볼륨 크기 제한을 설정할 수 있습니다.
+
+. 다음 vserver create 명령으로 SVM을 생성하고 스토리지 한계를 설정합니다.
+
+
+[source, cli]
+----
+vserver create -vserver vserver_name -aggregate aggregate_name -rootvolume root_volume_name -rootvolume-security-style {unix|ntfs|mixed} -storage-limit value
+----
+. 기존 SVM에서 스토리지 제한을 수정하려면 다음을 수행합니다.
++
+[source, cli]
+----
+vserver modify -vserver vserver_name -storage-limit value -storage-limit-threshold-alert percentage
+----
+
+
+
+NOTE: 데이터 보호 볼륨, SnapMirror 관계의 볼륨 또는 MetroCluster 구성이 포함된 SVM에는 스토리지 제한을 구성할 수 없습니다.
+
+스토리지 어레이에서 볼륨 크기를 제어하는 것 외에도 Kubernetes 기능을 활용해야 합니다.
+
+. Trident에서 생성할 수 있는 볼륨의 최대 크기를 구성하려면 backend.json 정의에서 ** limitVolumeSize** 매개변수를 사용하십시오.
+. ONTAP-SAN-Economy 및 ONTAP-NAS-Economy 드라이버의 풀로 사용되는 FlexVols의 최대 크기를 구성하려면 backend.json 정의에서 ** limitVolumePoolSize** 매개변수를 사용하십시오.
+
+
+
+
+=== ** SVM QoS 정책 사용**
+
+SVM에 QoS(서비스 품질) 정책을 적용하여 Trident 프로비저닝된 볼륨에서 사용할 수 있는 IOPS 수를 제한합니다. 따라서 Trident 프로비저닝된 스토리지를 사용하는 워크로드가 Trident SVM 외부 워크로드에 영향을 주지 않도록 할 수 있습니다.
+
+ONTAP QoS 정책 그룹은 볼륨에 대한 QoS 옵션을 제공하며 사용자가 하나 이상의 워크로드에 대한 처리량 한도를 정의할 수 있도록 합니다. QoS 정책 그룹에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-cli/index.html["ONTAP 9.15 QoS 명령"]
+
+
+
+=== ** 스토리지 리소스 액세스를 Kubernetes 클러스터 멤버에 제한**
+
+** Namespaces 사용** Trident에서 생성한 NFS 볼륨 및 iSCSI LUN에 대한 액세스를 제한하는 것은 Kubernetes 배포를 위한 보안 환경의 중요한 구성 요소입니다. 이렇게 하면 Kubernetes 클러스터의 일부가 아닌 호스트가 볼륨에 액세스하고 예기치 않게 데이터를 수정하는 것을 방지할 수 있습니다.
+
+또한 컨테이너의 프로세스는 호스트에 마운트된 스토리지를 액세스할 수 있지만 컨테이너용이 아닙니다. Namespaces를 사용하여 리소스에 대한 논리적 경계를 제공하면 이 문제를 방지할 수 있습니다. 그러나
+
+네임스페이스가 Kubernetes의 리소스에 대한 논리적 경계라는 것을 이해하는 것이 중요합니다. 따라서 적절한 경우 별칭을 제공하기 위해 네임스페이스를 사용하는 것이 중요합니다. 그러나 권한 있는 컨테이너는 정상보다 훨씬 더 많은 호스트 수준 권한으로 실행됩니다. 따라서 을 사용하여 이 기능을 사용하지 않도록 link:https://kubernetes.io/docs/concepts/policy/pod-security-policy/["POD 보안 정책"]설정하십시오.
+
+** 전용 내보내기 정책 사용** 전용 인프라 노드 또는 사용자 응용 프로그램을 예약할 수 없는 다른 노드가 있는 OpenShift 배포의 경우 별도의 내보내기 정책을 사용하여 스토리지 리소스에 대한 액세스를 추가로 제한해야 합니다. 여기에는 해당 인프라 노드에 배포된 서비스(예: OpenShift Metrics 및 Logging 서비스)에 대한 엑스포트 정책과 비인프라 노드에 배포되는 표준 애플리케이션이 포함됩니다.
+
+Trident는 엑스포트 정책을 자동으로 생성하고 관리할 수 있습니다. 이러한 방법으로 Trident는 Kubernetes 클러스터의 노드에 프로비저닝되는 볼륨에 대한 액세스를 제한하고 노드 추가/삭제를 단순화합니다.
+
+그러나 내보내기 정책을 수동으로 생성하기로 선택한 경우 각 노드 액세스 요청을 처리하는 하나 이상의 내보내기 규칙으로 해당 정책을 채웁니다.
+
+** 애플리케이션 SVM에 대해 showmount 사용 안 함** Kubernetes 클러스터에 배포된 Pod는 데이터 LIF에 대해 showmount -e 명령을 실행하고 액세스 권한이 없는 마운트를 포함하여 사용 가능한 마운트 목록을 받을 수 있습니다. 이를 방지하려면 다음 CLI를 사용하여 showmount 기능을 비활성화합니다.
+
+[source, cli]
+----
+vserver nfs modify -vserver <svm_name> -showmount disabled
+----
+
+NOTE: 스토리지 구성 및 Trident 사용에 대한 모범 사례 에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/["Trident 문서"]
+
+
+
+== ** OpenShift 가상화 - 튜닝 및 확장 가이드**
+
+Red Hat이 문서화되어 있습니다.link:https://docs.openshift.com/container-platform/latest/scalability_and_performance/recommended-performance-scale-practices/recommended-control-plane-practices.html["OpenShift 클러스터 확장 권장 사항 및 제한 사항"]
+
+또한link:https://access.redhat.com/articles/6994974]["OpenShift Virtualization 튜닝 가이드"], 및 도 문서화되어 link:https://access.redhat.com/articles/6571671["OpenShift Virtualization 4.x에 대해 지원되는 제한 사항"]있습니다.
+
+
+NOTE: 위 내용에 액세스하려면 유효한 Red Hat 서브스크립션이 필요합니다.
+
+튜닝 설명서에는 다음과 같은 다양한 튜닝 매개변수에 대한 정보가 포함되어 있습니다.
+
+* 매개 변수를 튜닝하여 한 번에 여러 VM을 생성하거나 여러 VM을 대규모로 일괄 생성합니다
+* VM의 실시간 마이그레이션
+* link:https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-dedicated-network-live-migration.htm["라이브 마이그레이션을 위한 전용 네트워크 구성"]
+* 워크로드 유형을 포함하여 VM 템플릿 사용자 지정
+
+
+OpenShift에서 VM을 실행할 때 지원되는 한도에 따라 테스트된 객체 최대값이 문서화됩니다
+
+** 가상 머신 최대 ** 포함
+
+* VM당 최대 가상 CPU 수
+* VM당 최대 및 최소 메모리
+* VM당 최대 단일 디스크 크기
+* VM당 최대 핫 플러그 가능 디스크 수입니다
+
+
+** * * 동시 라이브 마이그레이션 포함(노드 및 클러스터별) 최대 호스트
+
+** 정의된 최대 VM 수** * * * 포함 클러스터 최대값
+
+
+
+=== ** VMware 환경에서 VM 마이그레이션**
+
+VMware 환경에서 VM을 마이그레이션하는 방법에 대한 자세한 내용은 에서 확인할 수 있습니다 link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["워크플로 및 GT, NetApp ONTAP를 사용한 Red Hat OpenShift Virtualization"]
+
+동일한 마이그레이션 계획의 ESXi 호스트에서 10개 이상의 VM을 마이그레이션하는 경우 호스트의 NFC 서비스 메모리를 늘려야 합니다. 그렇지 않으면 NFC 서비스 메모리가 10개의 병렬 연결로 제한되어 마이그레이션이 실패합니다. 자세한 내용은 Red Hat 설명서를 참조하십시오. link: https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.6/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites_mtv#increasing-nfc-memory-vmware-host_mtv[Increasing ESXi 호스트의 NFC 서비스 메모리]

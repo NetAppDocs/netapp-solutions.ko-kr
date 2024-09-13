@@ -205,6 +205,10 @@ entries:
           url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
         - title: 샘플 모니터링 기능
           url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
+      - title: 모범 사례 권장 사항
+        entries:
+        - title: 모범 사례 가이드
+          url: "/containers/rh-os-n_use_case_openshift_virtualization_bpg.html"
     - title: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
       entries:
       - title: 개요

@@ -14,6 +14,8 @@ indexpage:
       url: "../containers/rh-os-n_overview_netapp.html"
     - title: NetApp 스토리지 통합
       url: "../containers/rh-os-n_overview_storint.html"
+    - title: 모범 사례 권장 사항
+      url: "../containers/rh-os-n_use_case_openshift_virtualization_bpg.html"
     - title: 블로그
       url: "../blogs.html#containers-osv"
     - title: 비디오
@@ -34,7 +36,7 @@ indexpage:
       url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
     - title: 스냅샷에서 VM 생성
       url: "../containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
-  - title: 데이터 보호
+  - title: 타사를 사용한 데이터 보호
     links:
     - title: 개요
       url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"

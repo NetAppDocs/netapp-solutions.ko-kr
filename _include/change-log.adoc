@@ -7,6 +7,9 @@
 | * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
 
 
+| 2024년 09월 13일 | Red Hat OpenShift Virtualization | OpenShift VM에 대한 모범 사례 가이드 추가 
+
+
 | 2024년 08월 23일 | 포함되었습니다 | VMFS 구축 가이드가 추가되었습니다 
 
 
