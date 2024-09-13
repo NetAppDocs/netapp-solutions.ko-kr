@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP 
-permalink: /cyber-vault/ontap-cyber-vault-resources.html 
+permalink: cyber-vault/ontap-cyber-vault-resources.html 
 summary: ONTAP 사이버 보관소에 대한 추가 리소스 
 ---
 = 사이버 소산 리소스
@@ -19,10 +19,10 @@ summary: ONTAP 사이버 보관소에 대한 추가 리소스
 * link:https://www.netapp.com/pdf.html?item=/media/108397-sb-4289-netapp-cyber-vaulting.pdf["NetApp 사이버 보관: 다계층 데이터 보호 솔루션 개요"^]
 * link:https://www.netapp.com/newsroom/press-releases/news-rel-20240626-477898/["NetApp, 업계 최초의 AI 기반 온박스 랜섬웨어 감지 솔루션에서 AAA 등급 획득"^]
 * link:https://www.netapp.com/blog/unified-data-storage-for-the-ai-era/#article3["지구 상의 가장 안전한 스토리지로 사이버 레질리언스를 높일 수 있습니다"^]
-* link:../../ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 보안 강화 가이드 를 참조하십시오"^]
-* link:../../ontap/zero-trust/zero-trust-overview.html["NetApp 제로 트러스트"^]
+* link:https://docs.netapp.com/us-en/ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 보안 강화 가이드 를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap/zero-trust/zero-trust-overview.html["NetApp 제로 트러스트"^]
 * link:https://www.netapp.com/cyber-resilience/["NetApp 사이버 복원력"^]
 * link:https://www.netapp.com/cyber-resilience/data-protection/["NetApp 데이터 보호"^]
-* link:../../ontap/peering/index.html["CLI를 통한 클러스터 및 SVM 피어링 개요"^]
-* link:../../ontap/concepts/snapvault-archiving-concept.html["SnapVault 아카이빙"^]
+* link:https://docs.netapp.com/us-en/ontap/peering/index.html["CLI를 통한 클러스터 및 SVM 피어링 개요"^]
+* link:https://docs.netapp.com/us-en/ontap/concepts/snapvault-archiving-concept.html["SnapVault 아카이빙"^]
 

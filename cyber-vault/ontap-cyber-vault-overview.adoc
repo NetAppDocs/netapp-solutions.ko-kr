@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP 
-permalink: /cyber-vault/ontap-cyber-vault-overview.html 
+permalink: cyber-vault/ontap-cyber-vault-overview.html 
 summary: SnapLock Compliance에서 제공하는 NetApp ONTAP 사이버 소산 솔루션에 대한 개요입니다. 
 ---
 = ONTAP 사이버 소산 개요
@@ -41,7 +41,7 @@ NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐�
 * 빠른 데이터 복원 기능
 
 
-ONTAP와 함께 NetApp 스토리지를 활용하여 기민한 사이버 저장소로 사용할 수 있습니다.link:../../ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapLock Compliance-WORM 보호 스냅샷 복사본"^] Cyber Vault에서 모든 기본 SnapLock Compliance 작업을 수행할 수 있습니다. 구성한 후에는 사이버 소산 볼륨이 자동으로 보호되므로 스냅샷 복사본을 WORM에 수동으로 커밋할 필요가 없습니다. 논리적 에어 캡핑에 대한 자세한 내용은 이 문서에서 찾을 수 있습니다 link:https://www.netapp.com/blog/ransomware-protection-snaplock/["블로그"^]
+ONTAP와 함께 NetApp 스토리지를 활용하여 기민한 사이버 저장소로 사용할 수 있습니다.link:https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapLock Compliance-WORM 보호 스냅샷 복사본"^] Cyber Vault에서 모든 기본 SnapLock Compliance 작업을 수행할 수 있습니다. 구성한 후에는 사이버 소산 볼륨이 자동으로 보호되므로 스냅샷 복사본을 WORM에 수동으로 커밋할 필요가 없습니다. 논리적 에어 캡핑에 대한 자세한 내용은 이 문서에서 찾을 수 있습니다 link:https://www.netapp.com/blog/ransomware-protection-snaplock/["블로그"^]
 
 SnapLock Compliance는 금융 및 금융 규정 SEC 70-A-4(f), FINRA 4511(c) 및 CFTC 1.31(c)-(d)을 준수하는 데 사용됩니다. Cohasset Associates는 이러한 규정을 준수한다는 인증을 받았습니다(요청 시 감사 보고서를 사용할 수 있음). 이 인증과 함께 SnapLock Compliance를 사용하면 전 세계 최대 금융 기관이 금융 기록의 보존 및 검색을 모두 보장하기 위해 사용하는 데이터를 안전하게 보호할 수 있는 메커니즘을 확보할 수 있습니다.
 

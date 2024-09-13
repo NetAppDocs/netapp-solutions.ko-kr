@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
-permalink: /cyber-vault/ontap-cyber-vault-terminology.html 
+permalink: cyber-vault/ontap-cyber-vault-terminology.html 
 summary: ONTAP 용어를 사용하는 사이버 소산 
 ---
 = Cyber Vault ONTAP 용어
@@ -16,9 +16,9 @@ summary: ONTAP 용어를 사용하는 사이버 소산
 [role="lead"]
 다음은 사이버 볼트 아키텍처에서 일반적으로 사용되는 용어입니다.
 
-* 자율적 랜섬웨어 방어(ARP) * - 자율적 랜섬웨어 방어(ARP) 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 사전에 실시간으로 랜섬웨어 공격을 나타낼 수 있는 비정상적인 활동을 감지하고 경고합니다. 공격이 의심되면 ARP는 예약된 Snapshot 복제본으로부터 기존 보호 기능 외에 새 Snapshot 복제본도 생성합니다. 자세한 내용은 를 참조하십시오 link:../../ontap/anti-ransomware/index.html["자율적 랜섬웨어 방어에 관한 ONTAP 문서"^]
+* 자율적 랜섬웨어 방어(ARP) * - 자율적 랜섬웨어 방어(ARP) 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 사전에 실시간으로 랜섬웨어 공격을 나타낼 수 있는 비정상적인 활동을 감지하고 경고합니다. 공격이 의심되면 ARP는 예약된 Snapshot 복제본으로부터 기존 보호 기능 외에 새 Snapshot 복제본도 생성합니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["자율적 랜섬웨어 방어에 관한 ONTAP 문서"^]
 
-* Airgap (논리적) * - ONTAP를 활용하여 NetApp 스토리지를 장애인용 사이버 저장소로 구성할 수 있습니다 link:../../ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapLock Compliance-WORM 보호 스냅샷 복사본"^]
+* Airgap (논리적) * - ONTAP를 활용하여 NetApp 스토리지를 장애인용 사이버 저장소로 구성할 수 있습니다 link:https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapLock Compliance-WORM 보호 스냅샷 복사본"^]
 
 * Airgap(물리적) * - 물리적 Airgapped 시스템은 네트워크에 연결되지 않습니다. 테이프 백업을 사용하여 이미지를 다른 위치로 이동할 수 있습니다. SnapLock Compliance 논리적 공기 갭은 물리적 에어갭 시스템만큼 견고합니다.
 
@@ -28,10 +28,10 @@ summary: ONTAP 용어를 사용하는 사이버 소산
 
 * 지울 수 없는 스냅샷 복사본 * - 예외 없이 삭제할 수 없는 스냅샷 복사본(지원 조직 또는 스토리지 시스템의 낮은 레벨 형식 포함)
 
-* 변조 방지 스냅샷 복사본 * - 변조 방지 스냅샷 복사본은 SnapLock Compliance 클록 기능을 사용하여 지정된 기간 동안 스냅샷 복사본을 잠급니다. 이러한 잠긴 스냅샷은 사용자 또는 NetApp 지원 부서에서 삭제할 수 없습니다. 볼륨이 랜섬웨어 공격, 맬웨어, 해커, 사기성 관리자 또는 실수로 인한 삭제로 인해 손상된 경우 잠긴 스냅샷 복사본을 사용하여 데이터를 복구할 수 있습니다. 자세한 내용은 를 참조하십시오 link:../../ontap/snaplock/snapshot-lock-concept.html["변조 방지 스냅샷 복사본에 대한 ONTAP 문서"^]
+* 변조 방지 스냅샷 복사본 * - 변조 방지 스냅샷 복사본은 SnapLock Compliance 클록 기능을 사용하여 지정된 기간 동안 스냅샷 복사본을 잠급니다. 이러한 잠긴 스냅샷은 사용자 또는 NetApp 지원 부서에서 삭제할 수 없습니다. 볼륨이 랜섬웨어 공격, 맬웨어, 해커, 사기성 관리자 또는 실수로 인한 삭제로 인해 손상된 경우 잠긴 스냅샷 복사본을 사용하여 데이터를 복구할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html["변조 방지 스냅샷 복사본에 대한 ONTAP 문서"^]
 
-* SnapLock * - SnapLock는 WORM 스토리지를 사용하여 규정 및 거버넌스 목적으로 수정되지 않은 형태로 파일을 보존하는 조직을 위한 고성능 규정 준수 솔루션입니다. 자세한 내용은 를 link:../../ontap/snaplock/["SnapLock에 대한 ONTAP 설명서"^]참조하십시오.
+* SnapLock * - SnapLock는 WORM 스토리지를 사용하여 규정 및 거버넌스 목적으로 수정되지 않은 형태로 파일을 보존하는 조직을 위한 고성능 규정 준수 솔루션입니다. 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap/snaplock/["SnapLock에 대한 ONTAP 설명서"^]참조하십시오.
 
-* SnapMirror * - SnapMirror는 데이터를 효율적으로 복제하도록 설계된 재해 복구 복제 기술입니다. SnapMirror은 온프레미스 또는 클라우드에서 미러(또는 데이터의 정확한 복사본), 소산(스냅샷 복사본 보존 기간이 더 긴 데이터의 복사본) 또는 2차 시스템 모두를 생성할 수 있습니다. 이러한 사본은 재해, 클라우드 또는 사이버 소산(소산 정책을 사용하고 볼트를 잠그는 경우)과 같은 다양한 용도로 사용할 수 있습니다. 자세한 내용은 를 참조하십시오 link:../../ontap/concepts/snapmirror-disaster-recovery-data-transfer-concept.html["SnapMirror에 대한 ONTAP 설명서"^]
+* SnapMirror * - SnapMirror는 데이터를 효율적으로 복제하도록 설계된 재해 복구 복제 기술입니다. SnapMirror은 온프레미스 또는 클라우드에서 미러(또는 데이터의 정확한 복사본), 소산(스냅샷 복사본 보존 기간이 더 긴 데이터의 복사본) 또는 2차 시스템 모두를 생성할 수 있습니다. 이러한 사본은 재해, 클라우드 또는 사이버 소산(소산 정책을 사용하고 볼트를 잠그는 경우)과 같은 다양한 용도로 사용할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-disaster-recovery-data-transfer-concept.html["SnapMirror에 대한 ONTAP 설명서"^]
 
-* SnapVault * -In ONTAP 9 .3 SnapVault는 볼트 또는 미러 볼트 정책을 사용하여 SnapMirror를 구성하기 위해 더 이상 사용되지 않습니다. 이 용어는 여전히 사용되지만 감가상각되었습니다. 자세한 내용은 를 link:../../ontap/concepts/snapvault-archiving-concept.html["SnapVault에 대한 ONTAP 설명서"^]참조하십시오.
+* SnapVault * -In ONTAP 9 .3 SnapVault는 볼트 또는 미러 볼트 정책을 사용하여 SnapMirror를 구성하기 위해 더 이상 사용되지 않습니다. 이 용어는 여전히 사용되지만 감가상각되었습니다. 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap/concepts/snapvault-archiving-concept.html["SnapVault에 대한 ONTAP 설명서"^]참조하십시오.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
-permalink: /cyber-vault/ontap-cyber-vault-interoperability.html 
+permalink: cyber-vault/ontap-cyber-vault-interoperability.html 
 summary: 사이버 볼트 상호 운용성 
 ---
 = 사이버 볼트 상호 운용성
@@ -33,7 +33,7 @@ ONTAP 하드웨어 및 소프트웨어를 사용하여 사이버 소산 구성�
 
 ONTAP 9.14.1부터는 SnapMirror 관계의 SnapMirror 정책에서 특정 SnapMirror 레이블에 대한 보존 기간을 지정할 수 있으므로 소스에서 타겟 볼륨으로의 복제된 스냅샷 복사본이 규칙에 지정된 보존 기간 동안 유지되도록 할 수 있습니다. 보존 기간을 지정하지 않으면 대상 볼륨의 기본 보존 기간이 사용됩니다.
 
-ONTAP 9.13.1부터는 SnapLock-type 옵션이 "non-SnapLock"로 설정된 FlexClone를 생성하고 볼륨 클론 생성 작업을 실행할 때 스냅샷 복사본을 "상위-스냅샷"으로 지정하여 SnapLock 소산 관계의 대상 SnapLock 볼륨에서 잠긴 스냅샷 복사본을 즉시 복원할 수 있습니다. 에 대해 자세히 link:../../ontap/volumes/create-flexclone-task.html?q=volume+clone["SnapLock 형식으로 FlexClone 볼륨 생성"^]알아보십시오.
+ONTAP 9.13.1부터는 SnapLock-type 옵션이 "non-SnapLock"로 설정된 FlexClone를 생성하고 볼륨 클론 생성 작업을 실행할 때 스냅샷 복사본을 "상위-스냅샷"으로 지정하여 SnapLock 소산 관계의 대상 SnapLock 볼륨에서 잠긴 스냅샷 복사본을 즉시 복원할 수 있습니다. 에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/volumes/create-flexclone-task.html?q=volume+clone["SnapLock 형식으로 FlexClone 볼륨 생성"^]알아보십시오.
 
 
 

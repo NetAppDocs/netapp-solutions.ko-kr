@@ -54,7 +54,7 @@ image:token_authentication.png["토큰 새로 고침"]
 . 로그인 시 사용자 이름/암호가 필요한 경우 나타나는 인증 창에서 일반 액세스에서 클라이언트 ID를 복사합니다. SSO를 사용하는 페더레이션 사용자는 "토큰 새로 고침 탭"에서 클라이언트 ID를 복사해야 합니다.
 
 
-image:client_id.JPG["클라이언트 ID입니다"]
+image:client_id.jpg["클라이언트 ID입니다"]
 
 
 
@@ -72,4 +72,4 @@ image:key_pair.png["키 쌍"]
 . Cloud Manager에서 계정 -> 계정 관리 를 클릭한 다음 AWX 변수에 사용할 계정 ID를 복사합니다.
 
 
-image:account_id.JPG["클라이언트 ID입니다"]
+image:account_id.jpg["클라이언트 ID입니다"]

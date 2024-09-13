@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
-permalink: /cyber-vault/ontap-cyber-vault-sizing.html 
+permalink: cyber-vault/ontap-cyber-vault-sizing.html 
 summary: ONTAP 사이버 레질리언스 공간의 크기를 파악하는 데 도움이 되는 지침을 제공합니다 
 ---
 = ONTAP를 사용한 사이버 소산 크기 조정

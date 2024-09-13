@@ -231,7 +231,7 @@ secret/astra-registry-cred created
 . 원근 표시 드롭다운에서 관리자 를 선택합니다.
 . Operators > OperatorHub 로 이동하여 Astra 를 검색합니다.
 +
-image:redhat_openshift_image45.JPG["OpenShift Operator Hub를 참조하십시오"]
+image:redhat_openshift_image45.jpg["OpenShift Operator Hub를 참조하십시오"]
 
 . 'NetApp-acc-operator' 타일을 선택하고 '설치'를 클릭합니다.
 +

@@ -95,7 +95,7 @@ SRM 어플라이언스 및 SRA 어댑터를 구성하려면 다음 단계를 완
 ====
 운영 사이트와 보조 사이트 모두에 대해 다음 단계를 완료해야 합니다.
 
-. 웹 브라우저에서 로 이동하고 https://<SRM_appliance_IP>:5480*[] 로그인합니다. * Configure Appliance * 를 클릭하여 시작합니다.
+. 웹 브라우저에서 로 이동하고 `https://<SRM_appliance_IP>:5480` 로그인합니다. * Configure Appliance * 를 클릭하여 시작합니다.
 +
 image:vmware-nfs-srm-image01.png["어플라이언스를 구성합니다"]
 

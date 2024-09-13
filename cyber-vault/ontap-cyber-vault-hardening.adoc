@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, hardening 
-permalink: /cyber-vault/ontap-cyber-vault-hardening.html 
+permalink: cyber-vault/ontap-cyber-vault-hardening.html 
 summary: ONTAP의 사이버 보관소를 강화하기 위해 권장되는 추가 단계 
 ---
 = 사이버 소산 강화
@@ -33,4 +33,4 @@ ONTAP 사이버 보관소를 강화하기 위한 추가 권장사항입니다. �
 * 스크립트 및 REST API 호출에 토큰 기반 인증을 사용합니다
 
 
-link:../../ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 강화 가이드"]link:../../ontap/multi-admin-verify/index.html["다중 관리 검증 개요"^]link:https://www.netapp.com/media/17055-tr4647.pdf["ONTAP 다단계 인증 가이드 를 참조하십시오"^]이러한 강화 단계를 수행하는 방법은,  및 을 참조하십시오.
+link:https://docs.netapp.com/us-en/ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 강화 가이드"]link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html["다중 관리 검증 개요"^]link:https://www.netapp.com/media/17055-tr4647.pdf["ONTAP 다단계 인증 가이드 를 참조하십시오"^]이러한 강화 단계를 수행하는 방법은,  및 을 참조하십시오.

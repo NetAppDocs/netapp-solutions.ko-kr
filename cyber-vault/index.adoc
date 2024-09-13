@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP 
-permalink: /cyber-vault/index.html 
+permalink: cyber-vault/index.html 
 summary: 'SnapLock Compliance에서 제공하는 NetApp ONTAP 사이버 소산: 변경 및 삭제가 불가능한 데이터 보존' 
 ---
 = ONTAP 사이버 소산
