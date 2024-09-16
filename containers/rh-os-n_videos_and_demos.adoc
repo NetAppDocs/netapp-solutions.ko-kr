@@ -16,6 +16,14 @@ summary:
 [role="lead"]
 다음 비디오는 이 문서에 설명되어 있는 몇 가지 기능을 보여 줍니다.
 
+.Ansible 자동화로 Trident을 구축하고 OpenShift 클러스터에 스토리지 클래스를 생성
+video::fae6605f-b61a-4a34-a97f-b1ed00d2de93[panopto,width=360]
+link:https://github.com/NetApp/trident-install["Ansible을 사용하여 NetApp Trident, StorageClasses 및 백엔드를 설치하는 데 사용되는 플레이북은 github 에서 확인할 수 있습니다."]
+
+.ONTAP SAN(iSCSI) 스토리지 클래스를 사용하여 OpenShift 가상화에서 새 VM을 배포합니다
+video::2e2c6fdb-4651-46dd-b028-b1ed00d37da3[panopto,width=360]
+.ONTAP NAS 스토리지 클래스를 사용하여 PostgreSQL 컨테이너 앱을 배포합니다
+video::d3eacf8c-888f-4028-a695-b1ed00d28dee[panopto,width=360]
 .OpenShift 가상화와의 Cloud Insights 통합
 video::29ed6938-eeaf-4e70-ae7b-b15d011d75ff[panopto,width=360]
 .Red Hat MTV를 사용하여 NetApp ONTAP 스토리지를 통해 VM을 OpenShift 가상화로 마이그레이션합니다

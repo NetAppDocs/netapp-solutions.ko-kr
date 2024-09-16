@@ -16,7 +16,7 @@ summary: Red Hat OpenShift Virtualization의 VM에 대한 모범 사례 권장 �
 저자: 바누 선다, NetApp
 
 [role="lead"]
-이 섹션에서는 새 VM을 배포하거나 VMware 환경에서 OpenShift Container Platform의 OpenShift 가상화로 기존 VM을 가져올 때 고려해야 할 여러 가지 요소에 대해 설명합니다.
+이 섹션에서는 새 VM을 배포하거나 VMware vSphere에서 OpenShift Container Platform의 OpenShift 가상화로 기존 VM을 가져올 때 고려해야 할 여러 가지 요소에 대해 설명합니다.
 
 
 
@@ -31,7 +31,7 @@ VM 디스크에 대해 선택할 스토리지 유형은 다음 요소의 영향�
 * 워크로드에 필요한 성능 특성
 
 
-자세한 내용은 스토리지 구성 섹션을 참조하십시오.
+자세한 내용은 아래의 스토리지 구성 섹션을 참조하십시오.
 
 
 
@@ -39,21 +39,23 @@ VM 디스크에 대해 선택할 스토리지 유형은 다음 요소의 영향�
 
 OpenShift Virtualization은 VM의 실시간 마이그레이션을 지원합니다. 라이브 마이그레이션을 사용하면 실행 중인 VMI(Virtual Machine Instance)를 워크로드를 중단하지 않고 다른 노드로 이동할 수 있습니다. 마이그레이션은 클러스터 업그레이드 중에 또는 유지보수 또는 구성 변경을 위해 노드를 비워야 할 때마다 원활한 전환을 위해 유용할 수 있습니다. 실시간 마이그레이션에는 ReadWriteMany(rwx) 액세스 모드를 제공하는 공유 스토리지 솔루션을 사용해야 합니다. VM 디스크는 rwx 액세스 모드를 제공하는 스토리지 옵션을 통해 백업되어야 합니다. OpenShift Virtualization은 VMI가 **라이브 마이그레이션 가능**인지 확인합니다. 이 경우 **evictionStrategy**가 **LiveMigrate**로 설정됩니다. 자세한 내용은 을 link:https://docs.openshift.com/container-platform/latest/virt/live_migration/virt-about-live-migration.html["Red Hat 설명서의 실시간 마이그레이션 정보 섹션을 참조하십시오"] 참조하십시오.
 
-**rwx** 액세스 모드를 지원하는 드라이버를 사용하는 것이 중요합니다. rwx 액세스 모드를 지원하는 드라이버에 대한 자세한 내용은 스토리지 구성 섹션을 참조하십시오.
+**rwx** 액세스 모드를 지원하는 드라이버를 사용하는 것이 중요합니다. rwx 액세스 모드를 지원하는 ONTAP 드라이버에 대한 자세한 내용은 아래의 스토리지 구성 섹션을 참조하십시오.
 
 
 
 == 스토리지 구성
 
-Trident CSI Provisioner는 NetApp 스토리지 옵션을 통한 스토리지 프로비저닝에 필요한 여러 가지 드라이버(NAS, NAS 경제, NAS-FlexGroup, SAN 및 SAN 경제)를 제공합니다. **사용된 프로토콜: ** NAS 드라이버는 NAS 프로토콜(NFS 및 SMB)을 사용합니다. * SAN 드라이버는 iSCSI 또는 NVMe/TCP 프로토콜을 사용합니다
+Trident CSI Provisioner는 NetApp 스토리지 옵션을 통한 스토리지 프로비저닝에 필요한 여러 가지 드라이버(NAS, NAS 경제, NAS-FlexGroup, SAN 및 SAN 경제)를 제공합니다.
+
+**사용된 프로토콜: ** NAS 드라이버는 NAS 프로토콜(NFS 및 SMB)을 사용합니다. * SAN 드라이버는 iSCSI 또는 NVMe/TCP 프로토콜을 사용합니다
 
 다음은 워크로드 요구 사항 및 스토리지 활용도를 기준으로 스토리지 구성 방식을 결정하는 데 도움이 됩니다.
 
-* NAS 드라이버는 하나의 FlexVolume에 하나의 영구 볼륨(PV)을 생성합니다.
-* NAS-Economy 드라이버는 공유 FlexVolume의 qtree에 PV를 하나 생성합니다. (200PVS당 FlexVolume 1개, 50 ~ 300개 구성 가능)
-* NAS-FlexGroup 드라이버는 하나의 FlexGroup에서 하나의 PV에 을 생성합니다
+* ** NAS** 드라이버는 하나의 FlexVolume에 하나의 영구 볼륨(PV)을 생성합니다.
+* ** NAS-Economy** 드라이버는 공유 FlexVolume의 qtree에 PV 1개를 생성합니다. (200PVS당 FlexVolume 1개, 50 ~ 300개 구성 가능)
+* ** NAS-FlexGroup** 드라이버는 하나의 FlexGroup에서 하나의 PV에 생성합니다
 * SAN 드라이버는 전용 FlexVolume의 LUN에 PV를 하나씩 생성합니다
-* SAN 경제형 드라이버가 공유 FlexVolume에서 LUN에 PV 1개 생성(100개 PVS당 FlexVolume 1개, 50개~200개 구성 가능)
+* ** SAN-Economy** 드라이버는 공유 FlexVolume에서 LUN에 PV 1개를 생성합니다(100개의 PVS당 FlexVolume 1개, 50과 200개 사이에서 구성 가능).
 
 
 다음 다이어그램에서 이를 확인할 수 있습니다.
@@ -62,12 +64,12 @@ image::redhat_openshift_bpg_image1.png[드라이버]
 
 또한 드라이버에서 지원하는 액세스 모드도 다릅니다.
 
-ONTAP NAS 드라이버 지원
+** ONTAP NAS 드라이버 지원**
 
 * 파일 시스템 액세스 및 RWO, ROX, rwx, RWOP 액세스 모드
 
 
-ONTAP SAN 드라이버는 원시 블록과 파일 시스템 모드를 지원합니다.
+**ONTAP SAN 드라이버는 파일 시스템 모드뿐만 아니라 원시 블록을 지원합니다**
 
 * RAW 블록 모드에서는 RWO, ROX, rwx, RWOP 액세스 모드를 지원할 수 있습니다.
 * 파일 시스템 모드에서는 RWO, RWOP 액세스 모드만 허용됩니다.
@@ -197,6 +199,37 @@ OpenShift에서 VM을 실행할 때 지원되는 한도에 따라 테스트된 �
 
 === ** VMware 환경에서 VM 마이그레이션**
 
-VMware 환경에서 VM을 마이그레이션하는 방법에 대한 자세한 내용은 에서 확인할 수 있습니다 link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["워크플로 및 GT, NetApp ONTAP를 사용한 Red Hat OpenShift Virtualization"]
+Migration Toolkit for OpenShift Virtualization은 OpenShift Container Platform의 OperatorHub에서 제공하는 Red Hat의 운영자입니다. 이 도구는 vSphere, Red Hat Virtualization, OpenStack 및 OpenShift Virtualization에서 VM을 마이그레이션하는 데 사용할 수 있습니다.
 
-동일한 마이그레이션 계획의 ESXi 호스트에서 10개 이상의 VM을 마이그레이션하는 경우 호스트의 NFC 서비스 메모리를 늘려야 합니다. 그렇지 않으면 NFC 서비스 메모리가 10개의 병렬 연결로 제한되어 마이그레이션이 실패합니다. 자세한 내용은 Red Hat 설명서를 참조하십시오. link: https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.6/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites_mtv#increasing-nfc-memory-vmware-host_mtv[Increasing ESXi 호스트의 NFC 서비스 메모리]
+vSphere에서 VM을 마이그레이션하는 방법에 대한 자세한 내용은 에서 확인할 수 있습니다 link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["워크플로 및 GT, NetApp ONTAP를 사용한 Red Hat OpenShift Virtualization"]
+
+CLI 또는 마이그레이션 웹 콘솔에서 다양한 매개 변수에 대한 제한을 구성할 수 있습니다. 일부 샘플은 아래에 나와 있습니다
+
+. 최대 동시 가상 머신 마이그레이션은 동시에 마이그레이션할 수 있는 최대 VM 수를 설정합니다. 기본값은 20개의 가상 머신입니다.
+. 사전 복제 간격(분) 웜 마이그레이션을 시작하기 전에 새 스냅샷이 요청되는 간격을 제어합니다. 기본값은 60분입니다.
+. 스냅샷 폴링 간격(초) oVirt 웜 마이그레이션 중 시스템에서 스냅샷 생성 또는 제거 상태를 확인하는 빈도를 결정합니다. 기본값은 10초입니다.
+
+
+동일한 마이그레이션 계획의 ESXi 호스트에서 10개 이상의 VM을 마이그레이션하는 경우 호스트의 NFC 서비스 메모리를 늘려야 합니다. 그렇지 않으면 NFC 서비스 메모리가 10개의 병렬 연결로 제한되어 마이그레이션이 실패합니다. 자세한 내용은 다음 Red Hat 문서를 참조하십시오. link:https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.6/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites_mtv#increasing-nfc-memory-vmware-host_mtv["ESXi 호스트의 NFC 서비스 메모리 늘리기"]
+
+다음은 Migration Toolkit for Virtualization을 사용하여 vSphere의 동일한 호스트에서 OpenShift Virtualization으로 10대의 VM을 성공적으로 마이그레이션하는 방법입니다.
+
+** 동일한 ESXi 호스트에 있는 VM**
+
+image::redhat_openshift_bpg_image2-a.png[VM-on-same-host의 약어입니다]
+
+** VMware에서 10개의 VM을 마이그레이션하기 위한 계획이 먼저 생성됩니다**
+
+image::redhat_openshift_bpg_image2.png[마이그레이션 - 계획]
+
+** 마이그레이션 계획 실행이 시작되었습니다**
+
+image::redhat_openshift_bpg_image3.png[마이그레이션 계획 실행 중]
+
+** 모든 10개의 VM이 성공적으로 마이그레이션되었습니다**
+
+image::redhat_openshift_bpg_image4.png[마이그레이션 계획 - 성공]
+
+** 모든 10개의 VM이 OpenShift Virtualization에서 실행 중입니다**
+
+image::redhat_openshift_bpg_image5.png[마이그레이션됨 - VM - 실행 중]
