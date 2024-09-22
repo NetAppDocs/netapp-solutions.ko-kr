@@ -1,6 +1,6 @@
 ---
 section: vmware
-title: VMware를 통한 가상화
+title: VMware 가상화
 url: "/vmware/index.html"
 entries:
 - title: ONTAP용 VMware 가상화
@@ -52,7 +52,7 @@ entries:
     - title: 워크로드 도메인의 기본 스토리지로서 NFS입니다
       url: "/vmware/vmware_vcf_aff_principal_nfs.html"
     - title: 워크로드 도메인의 보조 스토리지로서 NFS 및 VVOL이 사용됩니다
-      url: "/vmware/vmware_vcf_aff_supp_wkld"
+      url: "/vmware/vmware_vcf_aff_supp_wkld_nfs.html"
 - title: VM 마이그레이션
   entries:
   - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다

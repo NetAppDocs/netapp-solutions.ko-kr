@@ -4,7 +4,7 @@ permalink: ai/aipod_nv_validation_sizing.html
 keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
 summary: NVIDIA DGX 시스템이 지원되는 NetApp AIPod - 솔루션 검증 및 사이징 지침 
 ---
-= NVIDIA DGX 시스템이 지원되는 NetApp AIPod - 솔루션 검증 및 사이징 지침
+= NVA-1173 NetApp AIPod 및 NVIDIA DGX 시스템 - 솔루션 검증 및 사이징 지침
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -68,7 +68,7 @@ summary: NVIDIA DGX 시스템이 지원되는 NetApp AIPod - 솔루션 검증 �
 
 == 스토리지 시스템의 사이징 지침
 
-NetApp은 DGX BasePOD 인증을 성공적으로 완료했으며, 테스트 결과 두 A900 HA 쌍은 8개 DGX H100 시스템 클러스터를 쉽게 지원할 수 있습니다. 스토리지 성능 요구사항이 더 높은 대규모 구축의 경우 단일 클러스터에서 최대 12개의 HA 쌍(24개 노드)까지 AFF 시스템을 NetApp ONTAP 클러스터에 추가할 수 있습니다. 이 솔루션에 설명된 FlexGroup 기술을 사용하여 24노드 클러스터는 단일 네임스페이스에서 40PB 이상의 처리량과 최대 300GBps 처리량을 제공할 수 있습니다. AFF A400, A250 및 C800 같은 다른 NetApp 스토리지 시스템은 낮은 비용으로 소규모 구축을 위한 낮은 성능 및/또는 더 높은 용량 옵션을 제공합니다. ONTAP 9에서 혼합 모델 클러스터가 지원되므로, 고객은 초기 설치 공간을 작게 시작한 후 용량 및 성능 요구사항이 증가함에 따라 클러스터에 규모가 더 큰 스토리지 시스템을 더 추가할 수 있습니다. 아래 표는 각 AFF 모델에서 지원되는 A100 및 H100 GPU의 수를 대략적으로 보여줍니다.
+NetApp은 DGX BasePOD 인증을 성공적으로 완료했으며, 테스트 결과 A90 HA 쌍 2개는 16개의 DGX H100 시스템 클러스터를 손쉽게 지원할 수 있습니다. 스토리지 성능 요구사항이 더 높은 대규모 구축의 경우 단일 클러스터에서 최대 12개의 HA 쌍(24개 노드)까지 AFF 시스템을 NetApp ONTAP 클러스터에 추가할 수 있습니다. 이 솔루션에 설명된 FlexGroup 기술을 사용하여 24노드 클러스터는 단일 네임스페이스에서 40PB 이상의 처리량과 최대 300GBps 처리량을 제공할 수 있습니다. AFF A400, A250 및 C800 같은 다른 NetApp 스토리지 시스템은 낮은 비용으로 소규모 구축을 위한 낮은 성능 및/또는 더 높은 용량 옵션을 제공합니다. ONTAP 9에서 혼합 모델 클러스터가 지원되므로, 고객은 초기 설치 공간을 작게 시작한 후 용량 및 성능 요구사항이 증가함에 따라 클러스터에 규모가 더 큰 스토리지 시스템을 더 추가할 수 있습니다. 아래 표는 각 AFF 모델에서 지원되는 A100 및 H100 GPU의 수를 대략적으로 보여줍니다.
 
 _NetApp 스토리지 시스템 사이징 지침 _
 

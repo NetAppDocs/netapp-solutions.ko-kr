@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/dremio-lakehouse-solution-verification.html 
+keywords: performance, tests, dremio 
+summary: TPC-DS 테스트는 5개 노드에서 SQL 워크로드를 위해 ONTAP 및 StorageGRID와 같은 NetApp 오브젝트 스토리지를 사용하여 테스트했습니다. 
+---
+= 솔루션 검증 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 여러 소스에서 SQL 테스트 쿼리를 실행하여 기능을 검증하고 NetApp 스토리지로의 스필오버를 테스트 및 확인했습니다.
+
+
+
+=== 객체 스토리지에 대한 SQL 쿼리
+
+. dremio.env에서 서버당 250GB로 메모리를 설정합니다
++
+....
+root@hadoopmaster:~# for i in hadoopmaster hadoopnode1 hadoopnode2 hadoopnode3 hadoopnode4; do ssh $i "hostname; grep -i  DREMIO_MAX_MEMORY_SIZE_MB /opt/dremio/conf/dremio-env; cat /proc/meminfo  | grep -i memtotal"; done
+hadoopmaster
+#DREMIO_MAX_MEMORY_SIZE_MB=120000
+DREMIO_MAX_MEMORY_SIZE_MB=250000
+MemTotal:       263515760 kB
+hadoopnode1
+#DREMIO_MAX_MEMORY_SIZE_MB=120000
+DREMIO_MAX_MEMORY_SIZE_MB=250000
+MemTotal:       263515860 kB
+hadoopnode2
+#DREMIO_MAX_MEMORY_SIZE_MB=120000
+DREMIO_MAX_MEMORY_SIZE_MB=250000
+MemTotal:       263515864 kB
+hadoopnode3
+#DREMIO_MAX_MEMORY_SIZE_MB=120000
+DREMIO_MAX_MEMORY_SIZE_MB=250000
+MemTotal:       264004556 kB
+node4
+#DREMIO_MAX_MEMORY_SIZE_MB=120000
+DREMIO_MAX_MEMORY_SIZE_MB=250000
+MemTotal:       263515484 kB
+root@hadoopmaster:~#
+....
+. dremio.conf 파일 및 저장소 세부 정보에서 위치(${dremio_home}"/dremiocache)를 통한 유출 여부를 확인하십시오.
++
+....
+paths: {
+  # the local path for dremio to store data.
+  local: ${DREMIO_HOME}"/dremiocache"
+
+  # the distributed path Dremio data including job results, downloads, uploads, etc
+  #dist: "hdfs://hadoopmaster:9000/dremiocache"
+  dist: "dremioS3:///dremioconf"
+}
+
+services: {
+  coordinator.enabled: true,
+  coordinator.master.enabled: true,
+  executor.enabled: false,
+  flight.use_session_service: false
+}
+
+zookeeper: "10.63.150.130:2181,10.63.150.153:2181,10.63.150.151:2181"
+services.coordinator.master.embedded-zookeeper.enabled: false
+....
+. 위치에 따른 Dremio 유출 사고를 NetApp NFS 스토리지로 안내합니다
++
+....
+root@hadoopnode1:~# ls -ltrh /dremiocache
+total 4.0K
+drwx------ 3 nobody nogroup 4.0K Sep 13 16:00 spilling_stlrx2540m4-12-10g_45678
+root@hadoopnode1:~# ls -ltrh /opt/dremio/dremiocache/
+total 8.0K
+drwxr-xr-x 3 dremio dremio 4.0K Aug 22 18:19 spill_old
+drwxr-xr-x 4 dremio dremio 4.0K Aug 22 18:19 cm
+lrwxrwxrwx 1 root   root     12 Aug 22 19:03 spill -> /dremiocache
+root@hadoopnode1:~# ls -ltrh /dremiocache
+total 4.0K
+drwx------ 3 nobody nogroup 4.0K Sep 13 16:00 spilling_stlrx2540m4-12-10g_45678
+root@hadoopnode1:~# df -h /dremiocache
+Filesystem                              Size  Used Avail Use% Mounted on
+10.63.150.159:/dremiocache_hadoopnode1  2.1T  209M  2.0T   1% /dremiocache
+root@hadoopnode1:~#
+....
+. 컨텍스트를 선택합니다. 이 테스트에서는 ONTAP S3에 상주하는 TPCDS 생성 파케 파일에 대해 테스트를 실행했습니다. Dremio 대시보드 -> SQL runner -> context -> NetAppONTAPS3 -> Parquet1TB
+
+
+image:ontaps3-context.png["Contex를 ontaps3 Parquet 폴더로 설정합니다"]
+
+. Dremio 대시보드에서 TPC-DS query67을 실행합니다
+
+
+image:TPCDS-Q67.png["TPC-DS에서 99개의 쿼리 중 하나인 쿼리 67을 실행합니다"]
+
+. 모든 실행기에서 작업이 실행되고 있는지 확인하십시오. Dremio 대시보드 -> jobs -> <jobid> -> raw 프로필 -> select external_sort -> 호스트 이름
+
+
+image:node-in-query.png["Q67 쿼리의 노드 목록입니다"]
+
+. SQL 쿼리가 실행되면 NetApp 스토리지 컨트롤러에서 분할 폴더의 데이터 캐싱을 확인할 수 있습니다.
++
+....
+root@hadoopnode1:~# ls -ltrh /dremiocache
+total 4.0K
+drwx------ 3 nobody nogroup 4.0K Sep 13 16:00 spilling_stlrx2540m4-12-10g_45678
+root@hadoopnode1:~# ls -ltrh /dremiocache/spilling_stlrx2540m4-12-10g_45678/
+total 4.0K
+drwxr-xr-x 2 root daemon 4.0K Sep 13 16:23 1726243167416
+....
+. SQL 쿼리가 유출과 함께 완료되었습니다 image:spinover.png["쿼리 67이 완료되면 세부 정보를 덮어씁니다"]
+. 작업 완료 요약. image:jobsummary.png["완료된 쿼리의 작업 요약 67"]
+. 유출된 데이터 크기를 확인하십시오 image:splleddata.png["쿼리 결과의 분할 데이터 세부 정보입니다"]
+
+
+NAS 및 StorageGRID 오브젝트 스토리지에도 적용되는 동일한 절차입니다.

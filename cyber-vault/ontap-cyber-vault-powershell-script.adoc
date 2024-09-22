@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: cyber-vault/ontap-cyber-vault-powershell-script.html 
+keywords: Cyber vault, powershell, script, configuration, validation, hardening 
+summary: 이 NetApp ONTAP 솔루션은 ONTAP 기반 사이버 볼트를 구성, 강화 및 검증하는 데 사용됩니다 
+---
+= 구성, 분석, cron 스크립트
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media
+
+
+[role="lead"]
+NetApp는 다운로드하여 사이버 볼트 관계를 구성, 확인 및 예약하는 데 사용할 수 있는 단일 스크립트를 만들었습니다.
+
+
+
+== 이 스크립트의 기능
+
+* 클러스터 피어링
+* SVM 피어링
+* DP 볼륨 생성
+* SnapMirror 관계 및 초기화
+* 사이버 보관소에 사용되는 ONTAP 시스템을 강화합니다
+* 전송 일정에 따라 관계를 중지하고 재개합니다
+* 보안 설정을 주기적으로 확인하고 이상 징후를 보여 주는 보고서를 생성합니다
+
+
+
+
+== 이 스크립트를 사용하는 방법
+
+스크립트를 다운로드하고 스크립트를 사용하려면 다음 단계를 따르십시오.
+
+* 관리자 권한으로 Windows PowerShell을 시작합니다.
+* 스크립트가 포함된 디렉터리로 이동합니다.
+*  `.\`필요한 매개 변수와 함께 구문을 사용하여 스크립트를 실행합니다
+
+
+
+NOTE: 모든 정보를 입력했는지 확인하십시오. 첫 실행(구성 모드)에서 운영 및 새 사이버 볼트 시스템에 대한 자격 증명을 요구합니다. 그 후 SVM 피어링(존재하지 않는 경우), 시스템 간에 볼륨과 SnapMirror를 생성하여 초기화합니다.
+
+
+NOTE: cron 모드를 사용하여 데이터 전송 일시 중지 및 다시 시작을 예약할 수 있습니다.
+
+
+
+== 작동 모드
+
+자동화 스크립트는 실행 모드 - `configure`, `analyze` 를 `cron`제공합니다.
+
+[source, powershell]
+----
+if($SCRIPT_MODE -eq "configure") {
+        configure
+    } elseif ($SCRIPT_MODE -eq "analyze") {
+        analyze
+    } elseif ($SCRIPT_MODE -eq "cron") {
+        runCron
+    }
+----
+* Configure(구성) - 유효성 검사를 수행하고 시스템을 에어 갭(air-gapped)으로 구성합니다.
+* 분석 - 자동화된 모니터링 및 보고 기능을 통해 모니터링 그룹에 정보를 보내 이상 징후와 의심스러운 활동이 있는지 확인하고 구성이 표류되지 않도록 합니다.
+* cron - 연결이 끊긴 인프라를 사용하기 위해 cron 모드는 LIF를 자동으로 비활성화하고 전송 관계를 중지합니다.
+
+
+시스템 성능과 데이터 양에 따라 선택한 볼륨의 데이터를 전송하는 데 시간이 걸립니다.
+
+[source, powershell]
+----
+./script.ps1 -SOURCE_ONTAP_CLUSTER_MGMT_IP "172.21.166.157" -SOURCE_ONTAP_CLUSTER_NAME "NTAP915_Src" -SOURCE_VSERVER "svm_NFS" -SOURCE_VOLUME_NAME "Src_RP_Vol01" -DESTINATION_ONTAP_CLUSTER_MGMT_IP "172.21.166.159" -DESTINATION_ONTAP_CLUSTER_NAME "NTAP915_Destn" -DESTINATION_VSERVER "svm_nim_nfs" -DESTINATION_AGGREGATE_NAME "NTAP915_Destn_01_VM_DISK_1" -DESTINATION_VOLUME_NAME "Dst_RP_Vol01_Vault" -DESTINATION_VOLUME_SIZE "5g" -SNAPLOCK_MIN_RETENTION "15minutes" -SNAPLOCK_MAX_RETENTION "30minutes" -SNAPMIRROR_PROTECTION_POLICY "XDPDefault" -SNAPMIRROR_SCHEDULE "5min" -DESTINATION_CLUSTER_USERNAME "admin" -DESTINATION_CLUSTER_PASSWORD "PASSWORD123"
+----

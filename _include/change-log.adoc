@@ -4,7 +4,13 @@
 
 [cols="10%, 30%, 60%"]
 |===
-| * 날짜 * | * 솔루션 영역 * | * 변경에 대한 설명 * 
+| * 날짜 * | * 솔루션 영역 * | * 변경 설명 * /tag: ent-db[] 
+
+
+| 2024년 09월 20일 | 데이터베이스 | 새로운 TR-4998: AWS EC2의 Oracle HA - 심장박동기 클러스터링 및 FSx ONTAP 
+
+
+| 2025년 09월 17일 | 포함되었습니다 | Hyper-V용 솔루션 추가: 확장 클러스터를 사용한 SnapMirror Active Sync 
 
 
 | 2024년 09월 13일 | Red Hat OpenShift Virtualization | OpenShift VM에 대한 모범 사례 가이드 추가 

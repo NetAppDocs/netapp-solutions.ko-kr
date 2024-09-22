@@ -16,7 +16,7 @@ summary: ONTAP 사이버 보관소에 대한 추가 리소스
 [role="lead"]
 이 사이버 볼트 정보에 설명된 정보에 대한 자세한 내용은 다음 추가 정보 및 보안 개념을 참조하십시오.
 
-* link:https://www.netapp.com/pdf.html?item=/media/108397-sb-4289-netapp-cyber-vaulting.pdf["NetApp 사이버 보관: 다계층 데이터 보호 솔루션 개요"^]
+* link:https://www.netapp.com/pdf.html?item=/media/108397-sb-4289-netapp-cyber-vaulting.pdf["NetApp 사이버 소산: 멀티레이어 데이터 보호 솔루션 개요"^]
 * link:https://www.netapp.com/newsroom/press-releases/news-rel-20240626-477898/["NetApp, 업계 최초의 AI 기반 온박스 랜섬웨어 감지 솔루션에서 AAA 등급 획득"^]
 * link:https://www.netapp.com/blog/unified-data-storage-for-the-ai-era/#article3["지구 상의 가장 안전한 스토리지로 사이버 레질리언스를 높일 수 있습니다"^]
 * link:https://docs.netapp.com/us-en/ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 보안 강화 가이드 를 참조하십시오"^]

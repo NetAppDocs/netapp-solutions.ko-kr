@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: cyber-vault/ontap-cyber-vault-powershell-validation.html 
+keywords: Cyber vault, powershell, script, configuration, validation, hardening 
+summary: 이 NetApp ONTAP 솔루션은 ONTAP 기반 사이버 볼트를 구성, 강화 및 검증하는 데 사용됩니다 
+---
+= PowerShell로 ONTAP 사이버 소산 검증
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media
+
+
+[role="lead"]
+강력한 사이버 저장소는 공격자가 상승된 Privileges로 환경에 액세스할 수 있는 자격 증명을 가지고 있더라도 정교한 공격을 견딜 수 있어야 합니다.
+
+규칙이 수립되면 공격자가 볼트 측에서 스냅샷을 삭제하려는 시도(공격자가 침입할 수 있다고 가정함)가 실패합니다. 필요한 제한 사항을 적용하고 시스템을 보호함으로써 모든 강화 설정에도 동일하게 적용됩니다.
+
+일정에 따라 구성을 검증하는 PowerShell 코드 예제입니다.
+
+[source, powershell]
+----
+function analyze {
+
+    for($i = 0; $i -lt $DESTINATION_VOLUME_NAMES.Length; $i++) {
+        try {
+            # checking if volume is of type SnapLock Compliance
+            logMessage -message "Checking if SnapLock Compliance volume $($DESTINATION_VOLUME_NAMES[$i]) exists in vServer $DESTINATION_VSERVER"
+            $volume = Get-NcVol -Vserver $DESTINATION_VSERVER -Volume $DESTINATION_VOLUME_NAMES[$i] | Select-Object -Property Name, State, TotalSize, Aggregate, Vserver, Snaplock | Where-Object { $_.Snaplock.Type -eq "compliance" }
+            if($volume) {
+                $volume
+                logMessage -message "SnapLock Compliance volume $($DESTINATION_VOLUME_NAMES[$i]) exists in vServer $DESTINATION_VSERVER" -type "SUCCESS"
+            } else {
+                handleError -errorMessage "SnapLock Compliance volume $($DESTINATION_VOLUME_NAMES[$i]) does not exist in vServer $DESTINATION_VSERVER. Recommendation: Run the script with SCRIPT_MODE `"configure`" to create and configure the cyber vault SnapLock Compliance volume"
+            }
+
+            # checking SnapMirror relationship
+            logMessage -message "Checking if SnapMirror relationship exists between source volume $($SOURCE_VOLUME_NAMES[$i]) and destination SnapLock Compliance volume $($DESTINATION_VOLUME_NAMES[$i])"
+            $snapmirror = Get-NcSnapmirror | Select-Object SourceCluster, SourceLocation, DestinationCluster, DestinationLocation, Status, MirrorState | Where-Object { $_.SourceCluster -eq $SOURCE_ONTAP_CLUSTER_NAME -and $_.SourceLocation -eq "$($SOURCE_VSERVER):$($SOURCE_VOLUME_NAMES[$i])" -and $_.DestinationCluster -eq $DESTINATION_ONTAP_CLUSTER_NAME -and $_.DestinationLocation -eq "$($DESTINATION_VSERVER):$($DESTINATION_VOLUME_NAMES[$i])" -and $_.Status -eq "snapmirrored" }
+            if($snapmirror) {
+                $snapmirror
+                logMessage -message "SnapMirror relationship successfully configured and in healthy state" -type "SUCCESS"
+            } else {
+                handleError -errorMessage "SnapMirror relationship does not exist between the source volume $($SOURCE_VOLUME_NAMES[$i]) and destination SnapLock Compliance volume $($DESTINATION_VOLUME_NAMES[$i]) (or) SnapMirror status uninitialized/unhealthy. Recommendation: Run the script with SCRIPT_MODE `"configure`" to create and configure the cyber vault SnapLock Compliance volume and configure the SnapMirror relationship"
+            }
+        }
+        catch {
+            handleError -errorMessage $_.Exception.Message
+        }
+    }
+
+    try {
+
+        # checking NFS service is disabled
+        logMessage -message "Checking if NFS service is disabled on vServer $DESTINATION_VSERVER"
+        $nfsService = Get-NcNfsService
+        if($nfsService) {
+            handleError -errorMessage "NFS service running on vServer $DESTINATION_VSERVER. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable NFS on vServer $DESTINATION_VSERVER"
+        } else {
+            logMessage -message "NFS service is disabled on vServer $DESTINATION_VSERVER" -type "SUCCESS"
+        }
+
+        # checking CIFS/SMB server is disabled
+        logMessage -message "Checking if CIFS/SMB server is disabled on vServer $DESTINATION_VSERVER"
+        $cifsServer = Get-NcCifsServer
+        if($cifsServer) {
+            handleError -errorMessage "CIFS/SMB server running on vServer $DESTINATION_VSERVER. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable CIFS/SMB on vServer $DESTINATION_VSERVER"
+        } else {
+            logMessage -message "CIFS/SMB server is disabled on vServer $DESTINATION_VSERVER" -type "SUCCESS"
+        }
+
+        # checking iSCSI service is disabled
+        logMessage -message "Checking if iSCSI service is disabled on vServer $DESTINATION_VSERVER"
+        $iscsiService = Get-NcIscsiService
+        if($iscsiService) {
+            handleError -errorMessage "iSCSI service running on vServer $DESTINATION_VSERVER. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable iSCSI on vServer $DESTINATION_VSERVER"
+        } else {
+            logMessage -message "iSCSI service is disabled on vServer $DESTINATION_VSERVER" -type "SUCCESS"
+        }
+
+        # checking FCP service is disabled
+        logMessage -message "Checking if FCP service is disabled on vServer $DESTINATION_VSERVER"
+        $fcpService = Get-NcFcpService
+        if($fcpService) {
+            handleError -errorMessage "FCP service running on vServer $DESTINATION_VSERVER. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable FCP on vServer $DESTINATION_VSERVER"
+        } else {
+            logMessage -message "FCP service is disabled on vServer $DESTINATION_VSERVER" -type "SUCCESS"
+        }
+
+        # checking if all data lifs are disabled on vServer
+        logMessage -message "Finding all data lifs on vServer : $DESTINATION_VSERVER"
+        $dataLifs = Get-NcNetInterface -Vserver $DESTINATION_VSERVER | Where-Object { $_.Role -contains "data_core" }
+        $dataLifs | Select-Object -Property InterfaceName, OpStatus, DataProtocols, Vserver, Address
+
+        logMessage -message "Checking if all data lifs are disabled for vServer : $DESTINATION_VSERVER"
+        # Disable the filtered data LIFs
+        foreach ($lif in $dataLifs) {
+            $checkLif = Get-NcNetInterface -Vserver $DESTINATION_VSERVER -Name $lif.InterfaceName | Where-Object { $_.OpStatus -eq "down" }
+            if($checkLif) {
+                logMessage -message "Data lif $($lif.InterfaceName) disabled for vServer $DESTINATION_VSERVER" -type "SUCCESS"
+            } else {
+                handleError -errorMessage "Data lif $($lif.InterfaceName) is enabled. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable Data lifs for vServer $DESTINATION_VSERVER"
+            }
+        }
+        logMessage -message "All data lifs are disabled for vServer : $DESTINATION_VSERVER" -type "SUCCESS"
+
+        # check if multi-admin verification is enabled
+        logMessage -message "Checking if multi-admin verification is enabled"
+        $maaConfig = Invoke-NcSsh -Name $DESTINATION_ONTAP_CLUSTER_MGMT_IP -Credential $DESTINATION_ONTAP_CREDS -Command "set -privilege advanced; security multi-admin-verify show"
+        if ($maaConfig.Value -match "Enabled" -and $maaConfig.Value -match "true") {
+            $maaConfig
+            logMessage -message "Multi-admin verification is configured and enabled" -type "SUCCESS"
+        } else {
+            handleError -errorMessage "Multi-admin verification is not configured or not enabled. Recommendation: Run the script with SCRIPT_MODE `"configure`" to enable and configure Multi-admin verification"
+        }
+
+        # check if telnet is disabled
+        logMessage -message "Checking if telnet is disabled"
+        $telnetConfig = Invoke-NcSsh -Name $DESTINATION_ONTAP_CLUSTER_MGMT_IP -Credential $DESTINATION_ONTAP_CREDS -Command "set -privilege advanced; security protocol show -application telnet"
+        if ($telnetConfig.Value -match "enabled" -and $telnetConfig.Value -match "false") {
+            logMessage -message "Telnet is disabled" -type "SUCCESS"
+        } else {
+            handleError -errorMessage "Telnet is enabled. Recommendation: Run the script with SCRIPT_MODE `"configure`" to disable telnet"
+        }
+
+        # check if network https is restricted to allowed IP addresses
+        logMessage -message "Checking if HTTPS is restricted to allowed IP addresses $ALLOWED_IPS"
+        $networkServicePolicy = Invoke-NcSsh -Name $DESTINATION_ONTAP_CLUSTER_MGMT_IP -Credential $DESTINATION_ONTAP_CREDS -Command "set -privilege advanced; network interface service-policy show"
+        if ($networkServicePolicy.Value -match "management-https: $($ALLOWED_IPS)") {
+            logMessage -message "HTTPS is restricted to allowed IP addresses $ALLOWED_IPS" -type "SUCCESS"
+        } else {
+            handleError -errorMessage "HTTPS is not restricted to allowed IP addresses $ALLOWED_IPS. Recommendation: Run the script with SCRIPT_MODE `"configure`" to restrict allowed IP addresses for HTTPS management"
+        }
+    }
+    catch {
+        handleError -errorMessage $_.Exception.Message
+    }
+}
+
+----
+이 스크린샷은 볼트 컨트롤러에 연결이 없음을 보여 줍니다.
+
+image:ontap-cyber-vault-connections.png["사이버 저장소에 대한 연결이 없는지 확인합니다"]
+
+이 스크린샷은 스냅샷을 변조하는 기능이 없음을 보여 줍니다.
+
+image:ontap-cyber-vault-tamperproof-snapshots.png["스냅샷 복사본을 변조하는 기능이 없는지 확인합니다"]
+
+에어 갭 기능을 검증하고 확인하려면 다음 단계를 수행하십시오.
+
+* 네트워크 격리 기능을 테스트하고 데이터가 전송되지 않을 때 연결을 중지하는 기능을 테스트합니다.
+* 허용된 IP 주소 이외의 엔터티에서 관리 인터페이스에 액세스할 수 없는지 확인합니다.
+* 추가 승인 레이어를 제공하기 위해 다중 관리자 확인이 있는지 확인합니다.
+* CLI 및 REST API를 통한 액세스 기능을 검증합니다
+* 원본에서 볼트로 전송 작업을 트리거하고 볼트로 저장된 복사본을 수정할 수 없도록 합니다.
+* 볼트로 전송된 변경 불가능한 스냅샷 복사본을 삭제해 보십시오.
+* 시스템 클록을 변조하여 보존 기간을 수정하십시오.
+

@@ -4,7 +4,7 @@ permalink: ai/aipod_nv_conclusion_add_info.html
 keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, NVIDIA AI Enterprise, NVIDIA BasePOD, NVIDIA DGX 
 summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 수 있는 곳 
 ---
-= NVIDIA DGX 시스템 및 NetApp AIPod - 결론 및 추가 정보
+= NVA-1173 NVIDIA DGX 시스템 및 NetApp AIPod - 결론 및 추가 정보
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 �
 
 == 결론
 
-차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합할 경우, NetApp AIPod와 DGX 시스템 아키텍처를 사용하면 24노드 AFF A900 클러스터에서 최대 48개 DGX H100 시스템까지 거의 모든 규모로 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
+차세대 딥 러닝 플랫폼인 DGX BasePOD 아키텍처는 우수한 스토리지 및 데이터 관리 기능이 필요합니다. DGX BasePOD와 NetApp AFF 시스템을 결합하여 NetApp AIPod와 DGX 시스템 아키텍처를 함께 구현하면 거의 모든 규모로 구현할 수 있습니다. NetApp ONTAP의 뛰어난 클라우드 통합 및 소프트웨어 정의 기능과 결합하여 AFF은 에지, 코어 및 클라우드를 아우르는 다양한 데이터 파이프라인을 지원하여 성공적인 DL 프로젝트를 지원합니다.
 
 
 
@@ -64,7 +64,7 @@ https://www.nvidia.com/en-us/data-center/dgx-h100/["https://www.nvidia.com/en-us
 +
 https://www.nvidia.com/en-us/networking/["https://www.nvidia.com/en-us/networking/"^]
 
-* NVIDIA Magnum IO GPUDirect 스토리지
+* NVIDIA Magnum IO &#8482;GPUDirect 및 #174;스토리지
 +
 https://docs.nvidia.com/gpudirect-storage["https://docs.nvidia.com/gpudirect-storage"]
 
@@ -86,4 +86,4 @@ https://www.nvidia.com/en-us/data-center/products/ai-enterprise/["https://www.nv
 
 == 감사의 말
 
-이 문서는 NetApp 솔루션 및 ONTAP 엔지니어링 팀의 작업이며, David Arnette, Olga Kornievskaia, Dustin Fischer, Srikanth Kaligotla, Mohit Kumar 및 Rajeev Badrinath입니다. 저자는 지속적인 지원에 대해 NVIDIA 및 NVIDIA DGX BasePOD 엔지니어링 팀에 감사의 말을 전합니다.
+이 문서는 NetApp 솔루션 및 ONTAP 엔지니어링 팀(David Arnette, Olga Kornievskaia, Dustin Fischer, Srikanth Kaligotla, Mohit Kumar 및 Raghuram Sudhaakar)의 작품입니다. 저자는 지속적인 지원에 대해 NVIDIA 및 NVIDIA DGX BasePOD 엔지니어링 팀에 감사의 말을 전합니다.

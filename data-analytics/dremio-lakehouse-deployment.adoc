@@ -1,0 +1,298 @@
+---
+sidebar: sidebar 
+permalink: data-analytics/dremio-lakehouse-deployment.html 
+keywords: certification, setup, configuration, benchmark 
+summary: NetApp 오브젝트 스토리지에서 Lakehouse 검증과 함께 Dremio 플랫폼 인증을 수행했습니다. 
+---
+= 구현 절차
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 레퍼런스 아키텍처 검증에서는 하나의 코디네이터와 4개의 실행자로 구성된 Dremio 구성을 사용했습니다 image:dremio-lakehouse-architecture.png["NetApp 스토리지 컨트롤러를 사용한 dremio 아키텍처를 보여 주는 그림"]
+
+
+
+=== NetApp 설정
+
+* 스토리지 시스템 초기화
+* 스토리지 가상 시스템(SVM) 생성
+* 논리적 네트워크 인터페이스 할당
+* NFS, S3 구성 및 라이센스
+
+
+NFS(네트워크 파일 시스템)에 대해 아래 단계를 따르십시오. 1. NFSv4 또는 NFSv3용 Flex Group 볼륨을 생성합니다. 이 검증을 위한 설정에서는 48개의 SSD, 컨트롤러의 루트 볼륨 전용 SSD 1개, NFSv4에 두루 퍼진 SSD 47개]를 사용했습니다. Flex Group 볼륨에 대한 NFS 내보내기 정책에 Dremio 서버 네트워크에 대한 읽기/쓰기 권한이 있는지 확인합니다.
+
+. 모든 Dremio 서버에서 폴더를 생성하고 각 Dremio 서버의 논리 인터페이스(LIF)를 통해 Flex Group 볼륨을 이 폴더에 마운트합니다.
+
+
+S3(Simple Storage Service)에 대해 아래 단계를 따르십시오.
+
+. "vserver object-store-server create" 명령을 사용하여 HTTP가 활성화되고 admin 상태가 'up'으로 설정된 Object-store-server를 설정하십시오. HTTPS를 활성화하고 사용자 지정 수신기 포트를 설정할 수 있습니다.
+. "vserver object-store-server user create-user <username>" 명령을 사용하여 object-store-server 사용자를 생성합니다.
+. 액세스 키와 비밀 키를 얻으려면 "set diag; vserver object-store-server user show -user <username>" 명령을 실행할 수 있습니다. 그러나 앞으로 이러한 키는 사용자 생성 프로세스 중에 제공되거나 REST API 호출을 사용하여 검색할 수 있습니다.
+. 2단계에서 만든 사용자를 사용하여 object-store-server 그룹을 설정하고 액세스 권한을 부여합니다. 이 예에서는 "FullAccess"를 제공합니다.
+. 유형을 "S3"로 설정하여 두 개의 S3 버킷을 생성합니다. 하나는 Dremio 구성용이고 다른 하나는 고객 데이터용입니다.
+
+
+
+
+=== ZooKeeper 설정
+
+Dremio에서 제공하는 zookeeper 구성을 사용할 수 있습니다. 이 검증에서는 별도의 동물보호기를 사용했습니다. 이 웹 블로그에 언급된 단계를 따랐습니다 https://medium.com/@ahmetfurkandemir/distributed-hadoop-cluster-1-spark-with-all-dependincies-03c8ec616166[]
+
+
+
+=== Dremio 설정
+
+우리는 타르 볼을 통해 Dremio를 설치하기 위해 이 웹 블링크 를 따랐다.
+
+. Dremio 그룹을 만듭니다.
++
+....
+sudo groupadd -r dremio
+....
+. dremio 사용자를 생성합니다.
++
+....
+sudo useradd -r -g dremio -d /var/lib/dremio -s /sbin/nologin dremio
+....
+. Dremio 디렉토리를 생성합니다.
++
+....
+sudo mkdir /opt/dremio
+sudo mkdir /var/run/dremio && sudo chown dremio:dremio /var/run/dremio
+sudo mkdir /var/log/dremio && sudo chown dremio:dremio /var/log/dremio
+sudo mkdir /var/lib/dremio && sudo chown dremio:dremio /var/lib/dremio
+....
+. 에서 tar 파일을 다운로드합니다 https://download.dremio.com/community-server/[]
+. Dremio의 압축을 /opt/dremio 디렉토리에 풉니다.
++
+....
+sudo tar xvf dremio-enterprise-25.0.3-202405170357270647-d2042e1b.tar.gz -C /opt/dremio --strip-components=1
+....
+. 구성 폴더에 대한 심볼 링크를 생성합니다.
++
+....
+sudo ln -s /opt/dremio/conf /etc/dremio
+....
+. 서비스 구성을 설정합니다(systemd 설정).
++
+.. dremio 데몬의 단위 파일을 /opt/dremio/share/dremio.service 에서 /etc/systemd/system/dremio.service 로 복사합니다.
+.. 시스템을 다시 시작합니다
++
+....
+sudo systemctl daemon-reload
+....
+.. 부팅 시 dremio를 활성화합니다.
++
+....
+sudo systemctl enable dremio
+....
+
+
+. Coordinator에서 Dremio를 구성합니다. 자세한 내용은 Dremio 구성을 참조하십시오
++
+.. Dremio.conf를 클릭합니다
++
+....
+root@hadoopmaster:/usr/src/tpcds# cat /opt/dremio/conf/dremio.conf
+
+paths: {
+  # the local path for dremio to store data.
+  local: ${DREMIO_HOME}"/dremiocache"
+
+  # the distributed path Dremio data including job results, downloads, uploads, etc
+  #dist: "hdfs://hadoopmaster:9000/dremiocache"
+  dist: "dremioS3:///dremioconf"
+}
+
+services: {
+  coordinator.enabled: true,
+  coordinator.master.enabled: true,
+  executor.enabled: false,
+  flight.use_session_service: false
+}
+
+zookeeper: "10.63.150.130:2181,10.63.150.153:2181,10.63.150.151:2181"
+services.coordinator.master.embedded-zookeeper.enabled: false
+root@hadoopmaster:/usr/src/tpcds#
+....
+.. Core-site.xml
++
+....
+root@hadoopmaster:/usr/src/tpcds# cat /opt/dremio/conf/core-site.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		<name>fs.dremioS3.impl</name>
+		<value>com.dremio.plugins.s3.store.S3FileSystem</value>
+	</property>
+	<property>
+                <name>fs.s3a.access.key</name>
+                <value>24G4C1316APP2BIPDE5S</value>
+	</property>
+	<property>
+                <name>fs.s3a.endpoint</name>
+                <value>10.63.150.69:80</value>
+        </property>
+	<property>
+       		<name>fs.s3a.secret.key</name>
+       		<value>Zd28p43rgZaU44PX_ftT279z9nt4jBSro97j87Bx</value>
+   	</property>
+   	<property>
+       		<name>fs.s3a.aws.credentials.provider</name>
+       		<description>The credential provider type.</description>
+       		<value>org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider</value>
+   	</property>
+	<property>
+                <name>fs.s3a.path.style.access</name>
+                <value>false</value>
+        </property>
+	<property>
+    		<name>hadoop.proxyuser.dremio.hosts</name>
+    		<value>*</value>
+  	</property>
+  	<property>
+    		<name>hadoop.proxyuser.dremio.groups</name>
+    		<value>*</value>
+  	</property>
+  	<property>
+    		<name>hadoop.proxyuser.dremio.users</name>
+    		<value>*</value>
+	</property>
+	<property>
+		<name>dremio.s3.compat</name>
+		<description>Value has to be set to true.</description>
+		<value>true</value>
+	</property>
+	<property>
+		<name>fs.s3a.connection.ssl.enabled</name>
+		<description>Value can either be true or false, set to true to use SSL with a secure Minio server.</description>
+		<value>false</value>
+	</property>
+</configuration>
+root@hadoopmaster:/usr/src/tpcds#
+....
+
+
+. Dremio 구성은 NetApp 오브젝트 스토리지에 저장됩니다. 당사의 검증에서 "dremioconf" 버킷은 ONTAP S3 버킷에 상주합니다. 아래 그림은 "dremioconf" S3 버킷의 "스크래치" 및 "업로드" 폴더의 몇 가지 세부 정보를 보여줍니다.
+
+
+image:dremio-lakehouse-objectstorage.png["NetApp 오브젝트 스토리지가 있는 dremio를 보여 주는 그림"]
+
+. 실행 프로그램에서 Dremio를 구성합니다. 우리 셋업에는 3개의 실행자가 있습니다.
++
+.. dremio.conf를 클릭합니다
++
+....
+paths: {
+  # the local path for dremio to store data.
+  local: ${DREMIO_HOME}"/dremiocache"
+
+  # the distributed path Dremio data including job results, downloads, uploads, etc
+  #dist: "hdfs://hadoopmaster:9000/dremiocache"
+  dist: "dremioS3:///dremioconf"
+}
+
+services: {
+  coordinator.enabled: false,
+  coordinator.master.enabled: false,
+  executor.enabled: true,
+  flight.use_session_service: true
+}
+
+zookeeper: "10.63.150.130:2181,10.63.150.153:2181,10.63.150.151:2181"
+services.coordinator.master.embedded-zookeeper.enabled: false
+....
+.. Core-site.xml – Coordinator 구성과 동일합니다.
+
+
+
+
+
+NOTE: NetApp은 데이터 레이크 및 레이크하우스 환경에 StorageGRID을 기본 오브젝트 스토리지 솔루션으로 권장합니다. 또한 NetApp ONTAP는 파일/오브젝트 이중성을 위해 사용됩니다. 이 문서의 맥락에서 당사는 고객의 요청에 따라 ONTAP S3를 대상으로 테스트를 실시했으며 데이터 소스 역할을 성공적으로 수행하고 있습니다.
+
+
+
+=== 다중 소스 설정
+
+. Dremio에서 ONTAP S3 및 StorageGRID를 S3 소스로 구성합니다.
++
+.. Dremio 대시보드 -> 데이터세트 -> 소스 -> 소스를 추가합니다.
+.. 일반 섹션에서 AWS 액세스 및 비밀 키를 업데이트하십시오
+.. 고급 옵션에서 호환성 모드를 활성화하고 아래 세부 정보로 연결 속성을 업데이트합니다. ONTAP S3 또는 StorageGRID의 NetApp 스토리지 컨트롤러의 엔드포인트 IP/이름입니다.
++
+....
+fs.s3a.endoint = 10.63.150.69
+fs.s3a.path.style.access = true
+fs.s3a.connection.maximum=1000
+....
+.. 가능한 경우 로컬 캐싱을 사용하도록 설정합니다. 가능한 경우 사용할 수 있는 총 캐시의 최대 비율 = 100입니다
+.. 그런 다음 NetApp 오브젝트 스토리지의 버킷 목록을 확인합니다. image:dremio-lakehouse-objectstorage-list.png["NetApp 오브젝트 스토리지의 파일 목록을 보여 주는 그림"]
+.. StorageGRID 버킷 세부 정보의 샘플 보기 image:dremio-lakehouse-storagegrid-list.png["NetApp 오브젝트 스토리지의 파일 목록을 보여 주는 그림"]
+
+
+. NAS(특히 NFS)를 Dremio에서 소스로 구성합니다.
++
+.. Dremio 대시보드 -> 데이터세트 -> 소스 -> 소스를 추가합니다.
+.. 일반 섹션에 이름과 NFS 마운트 경로를 입력합니다. NFS 마운트 경로가 Dremio 클러스터의 모든 노드에서 동일한 폴더에 마운트되어 있는지 확인하십시오.
+
+
+
+
+image:dremio-lakehouse-NAS-list.png["NetApp 오브젝트 스토리지의 파일 목록을 보여 주는 그림"]
+
+를 누릅니다
+
+....
+root@hadoopmaster:~# for i in hadoopmaster hadoopnode1 hadoopnode2 hadoopnode3 hadoopnode4; do ssh $i "date;hostname;du -hs /opt/dremio/data/spill/ ; df -h //dremionfsdata "; done
+Fri Sep 13 04:13:19 PM UTC 2024
+hadoopmaster
+du: cannot access '/opt/dremio/data/spill/': No such file or directory
+Filesystem                   Size  Used Avail Use% Mounted on
+10.63.150.69:/dremionfsdata  2.1T  921M  2.0T   1% /dremionfsdata
+Fri Sep 13 04:13:19 PM UTC 2024
+hadoopnode1
+12K	/opt/dremio/data/spill/
+Filesystem                   Size  Used Avail Use% Mounted on
+10.63.150.69:/dremionfsdata  2.1T  921M  2.0T   1% /dremionfsdata
+Fri Sep 13 04:13:19 PM UTC 2024
+hadoopnode2
+12K	/opt/dremio/data/spill/
+Filesystem                   Size  Used Avail Use% Mounted on
+10.63.150.69:/dremionfsdata  2.1T  921M  2.0T   1% /dremionfsdata
+Fri Sep 13 16:13:20 UTC 2024
+hadoopnode3
+16K	/opt/dremio/data/spill/
+Filesystem                   Size  Used Avail Use% Mounted on
+10.63.150.69:/dremionfsdata  2.1T  921M  2.0T   1% /dremionfsdata
+Fri Sep 13 04:13:21 PM UTC 2024
+node4
+12K	/opt/dremio/data/spill/
+Filesystem                   Size  Used Avail Use% Mounted on
+10.63.150.69:/dremionfsdata  2.1T  921M  2.0T   1% /dremionfsdata
+root@hadoopmaster:~#
+....

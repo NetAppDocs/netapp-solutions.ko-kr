@@ -142,4 +142,4 @@ NetApp 시스템은 SAS, iSCSI, FCP, InfiniBand를 비롯한 대부분의 Hadoop
 
 === 운영 및 지원 솔루션
 
-이 문서에 설명된 Hadoop 솔루션은 NetApp에서 지원됩니다. 또한 이러한 솔루션은 주요 Hadoop 총판에서도 인증되었습니다. 자세한 내용은 를 참조하십시오 https://www.mapr.com/partners/partner/netapp["MapR"^] 사이트 http://hortonworks.com/partner/netapp/["Hortonworks의"^] 사이트 및 Cloudera http://www.cloudera.com/partners/partners-listing.html?q=netapp["인증"^] 및 http://www.cloudera.com/partners/solutions/netapp.html["파트너"^] 있습니다.
+이 문서에 설명된 Hadoop 솔루션은 NetApp에서 지원됩니다. 또한 이러한 솔루션은 주요 Hadoop 총판에서도 인증되었습니다. 자세한 내용은 http://hortonworks.com/partner/netapp/["Hortonworks의"^] 사이트, Cloudera http://www.cloudera.com/partners/partners-listing.html?q=netapp["인증"^] 및 http://www.cloudera.com/partners/solutions/netapp.html["파트너"^] 사이트를 참조하십시오.

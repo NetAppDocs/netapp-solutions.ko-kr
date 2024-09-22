@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: cyber-vault/ontap-cyber-vault-powershell-data-recovery.html 
+keywords: Cyber vault, powershell, script, configuration, validation, hardening 
+summary: 이 NetApp ONTAP 솔루션은 ONTAP 기반 사이버 볼트를 구성, 강화 및 검증하는 데 사용됩니다 
+---
+= ONTAP 사이버 소산 데이터 복구
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media
+
+
+[role="lead"]
+프로덕션 데이터 센터에서 데이터가 파괴되면 사이버 볼트의 데이터를 선택한 환경에 안전하게 복구할 수 있습니다. 물리적으로 에어갭 솔루션과 달리, 에어갭 ONTAP 사이버 소산은 SnapLock Compliance 및 SnapMirror과 같은 네이티브 ONTAP 기능을 사용하여 구축됩니다. 그 결과 복구 프로세스가 빠르고 쉽게 실행됩니다.
+
+랜섬웨어 공격이 발생하고 사이버 보관소로부터 복구해야 할 경우, 사이버 저장소에 포함된 스냅샷 복사본을 사용하여 암호화된 데이터를 복원하므로 복구 프로세스가 간단하고 쉽습니다.
+
+image:ontap-cyber-vault-data-recovery.png["관계 복원"]
+
+필요한 경우 데이터를 신속하게 검증하고, 격리하고, 복구용 데이터를 분석하기 위해 필요한 경우 데이터를 다시 온라인으로 되돌릴 수 있는 빠른 방법을 제공해야 합니다. SnapLock-type 옵션을 non-SnapLock 유형으로 설정한 FlexClone와 함께 사용하면 이러한 작업을 쉽게 수행할 수 있습니다.
+
+
+NOTE: .13.1부터 SnapLock 소산 관계의 대상 SnapLock 볼륨에서 잠긴 스냅샷 복사본을 복원합니다. SnapLock-type 옵션이 "non-SnapLock"로 설정된 FlexClone를 생성하면 ONTAP 9를 즉시 복원할 수 있습니다. 볼륨 클론 생성 작업을 실행할 때 스냅샷 복사본을 "상위 스냅샷"으로 지정합니다. SnapLock 유형으로 FlexClone 볼륨을 생성하는 방법에 대한 자세한 정보 link:https://docs.netapp.com/us-en/ontap/volumes/create-flexclone-task.html?q=volume+clone["여기."]
+
+
+NOTE: 사이버 볼트에서 복구 절차를 연습하면 사이버 볼트에 연결하고 데이터를 검색하기 위한 적절한 단계가 수립됩니다. 사이버 공격 이벤트 중 복구를 위해서는 절차를 계획하고 테스트하는 것이 중요합니다.

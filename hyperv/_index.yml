@@ -26,6 +26,10 @@ indexpage:
       url: hyperv-deploy-conclusion.html
     - title: FlexClone 및 Powershell을 사용한 마이그레이션
       url: hyperv-deploy-script.html
+  - title: 확장성을 확보할 수 있습니다 NetApp
+    links:
+    - title: 확장 클러스터를 사용한 SnapMirror Active Sync
+      url: hyperv-smas.html
   - title: 추가 리소스
     links:
     - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례

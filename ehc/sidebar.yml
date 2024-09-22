@@ -107,6 +107,8 @@ entries:
       url: "/ehc/gcp-app-dr-sc-cvs-veeam.html"
     - title: Veeam을 통한 재해 복구(게스트 연결 스토리지)
       url: "/ehc/gcp-app-dr-sc-cvo-veeam.html"
+    - title: GCVE로의 재해 복구에 Veeam Replication 및 Google Cloud NetApp 볼륨 데이터 저장소를 사용합니다
+      url: "/ehc/veeam-gcnv-dr-to-gcve.html"
   - title: GCP/GCVE에서 워크로드를 마이그레이션하는 중입니다
     entries:
     - title: VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다

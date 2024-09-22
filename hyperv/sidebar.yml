@@ -18,6 +18,10 @@ entries:
     url: "/hyperv/hyperv-deploy-conclusion.html"
   - title: FlexClone 및 Powershell을 사용한 마이그레이션
     url: "/hyperv/hyperv-deploy-script.html"
+- title: 확장성을 확보할 수 있습니다 NetApp
+  entries:
+  - title: 확장 클러스터를 사용한 SnapMirror Active Sync
+    url: "/hyperv/hyperv-smas.html"
 - title: 추가 리소스
   entries:
   - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례

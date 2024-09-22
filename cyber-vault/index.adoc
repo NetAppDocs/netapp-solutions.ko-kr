@@ -1,20 +1,8 @@
 ---
-sidebar: sidebar 
-keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP 
 permalink: cyber-vault/index.html 
-summary: 'SnapLock Compliance에서 제공하는 NetApp ONTAP 사이버 소산: 변경 및 삭제가 불가능한 데이터 보존' 
+redirect: netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html 
 ---
-= ONTAP 사이버 소산
-:hardbreaks:
+= 
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ../media/
 
 
-[role="lead"]
-NetApp의 ONTAP 기반 사이버 저장소는 가장 중요한 데이터 자산을 보호하는 포괄적이고 유연한 솔루션을 제공합니다. ONTAP은 강력한 강화 방법론을 통해 논리적 공기 흐름을 활용하여 진화하는 사이버 위협에 맞서 복원력을 갖춘 격리된 보안 스토리지 환경을 만들 수 있도록 지원합니다. ONTAP을 사용하면 스토리지 인프라의 민첩성과 효율성을 유지하면서 데이터의 기밀성, 무결성, 가용성을 보장할 수 있습니다.
-
-
-NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐츠가 ONTAP 제품 설명서와 통합되었습니다. 또한 이 문서와 같은 새로운 기술 보고서(TR)에는 더 이상 TR 번호가 부여되지 않습니다.

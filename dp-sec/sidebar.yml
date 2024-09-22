@@ -18,6 +18,24 @@ entries:
     url: "/cyber-vault/ontap-cyber-vault-interoperability.html"
   - title: 사이버 소산 리소스
     url: "/cyber-vault/ontap-cyber-vault-resources.html"
+  - title: PowerShell로 ONTAP 사이버 소산 생성, 강화 및 검증
+    entries:
+    - title: 개요
+      url: "/cyber-vault/ontap-cyber-vault-powershell-overview.html"
+    - title: 사이버 볼트 생성
+      url: "/cyber-vault/ontap-cyber-vault-powershell-creation.html"
+    - title: 사이버 소산 강화
+      url: "/cyber-vault/ontap-cyber-vault-powershell-hardening.html"
+    - title: 사이버 볼트 검증
+      url: "/cyber-vault/ontap-cyber-vault-powershell-validation.html"
+    - title: 사이버 소산 데이터 복구
+      url: "/cyber-vault/ontap-cyber-vault-powershell-data-recovery.html"
+    - title: 추가 고려 사항
+      url: "/cyber-vault/ontap-cyber-vault-powershell-considerations.html"
+    - title: 구성, 분석, cron 스크립트
+      url: "/cyber-vault/ontap-cyber-vault-powershell-script.html"
+    - title: 사이버 볼트 결론
+      url: "/cyber-vault/ontap-cyber-vault-powershell-conclusion.html"
 - title: 데이터 마이그레이션
   entries:
   - title: NetApp XCP의 모범 사례 지침

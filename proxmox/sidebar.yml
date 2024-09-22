@@ -1,0 +1,8 @@
+---
+section: proxmox
+title: Proxmox 가상화
+entries:
+- title: 개요
+  url: "/proxmox/proxmox-overview.html"
+- title: Proxmox VE용 NetApp 스토리지
+  url: "/proxmox/proxmox-ontap.html"

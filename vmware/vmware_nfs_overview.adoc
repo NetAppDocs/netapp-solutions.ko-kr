@@ -4,7 +4,7 @@ permalink: vmware/vmware_nfs_overview.html
 keywords: netapp, vmware, cloud, foundation, vcf, asa, all-flash, san, nfs, vvol, vvols, array, ontap tools, otv, sddc, iscsi, fc, fibre channel, nvme 
 summary:  
 ---
-= vSphere 8용 NFS 3.1 참조 가이드
+= vSphere 8용 NFS v3 참조 가이드
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ VMware VF(vSphere Foundation)는 다양한 가상화 워크로드를 제공할 �
 
 
 
-== vSphere 8 및 ONTAP 스토리지 시스템에서 NFS 3.1 사용
+== vSphere 8 및 ONTAP 스토리지 시스템에서 NFS v3 사용
 
 이 문서에서는 NetApp All-Flash 스토리지를 사용하여 VMware Cloud vSphere Foundation에서 사용할 수 있는 스토리지 옵션에 대한 정보를 제공합니다. 지원되는 스토리지 옵션은 NFS 데이터 저장소 구축에 대한 특정 지침에서 다룹니다. 또한 NFS 데이터 저장소의 재해 복구를 위한 VMware Live Site Recovery도 시연됩니다. 마지막으로 NetApp의 NFS 스토리지에 대한 자율적 랜섬웨어 방어 기능이 검토되었습니다.
 
@@ -52,7 +52,7 @@ VMware VF(vSphere Foundation)는 다양한 가상화 워크로드를 제공할 �
 
 == 기술 개요
 
-vSphere 8용 NFS 3.1 VCF 참조 가이드는 다음과 같은 주요 구성 요소로 이루어져 있습니다.
+vSphere 8용 NFS v3 VVF 참조 가이드는 다음과 같은 주요 구성 요소로 이루어져 있습니다.
 
 
 

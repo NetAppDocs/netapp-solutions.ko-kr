@@ -7,6 +7,8 @@ entries:
   entries:
   - title: AWS 클라우드
     entries:
+    - title: 페이스 메이커 클러스터링 및 FSx ONTAP를 사용하는 AWS EC2의 Oracle HA
+      url: "/databases/aws_ora_ha_pacemaker.html"
     - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
       url: "/databases/automation_ora_aws-fsx_iscsi.html"
     - title: 게스트가 마운트되는 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 Oracle
