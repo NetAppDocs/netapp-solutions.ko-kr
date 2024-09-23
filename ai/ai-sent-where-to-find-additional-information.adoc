@@ -30,7 +30,7 @@ https://www.netapp.com/pdf.html?item=/media/32792-DS-4145-NVIDIA-Base-Command-Pl
 
 * AI를 위한 NetApp 10가지 이유 인포그래픽
 +
-https://www.netapp.com/us/media/netapp-ai-10-good-reasons.pdf["https://www.netapp.com/us/media/netapp-ai-10-good-reasons.pdf"^]
+https://www.netapp.com/us/media/netapp-ai-10-good-reasons.pdf["https://www.netapp.com/pdf.html?item=/media/16147-netapp-ai-10-good-reasonspdf.pdf"^]
 
 * 의료 부문의 AI: 폐 CT 스캔에서 COVID-19 병변을 식별하는 딥 러닝 백서
 +
@@ -62,7 +62,7 @@ https://www.netapp.com/pdf.html?item=/media/6737-sb-4055.pdf["https://www.netapp
 
 * 데이터 드라이브를 통한 산업 혁신 AI eBook
 +
-https://www.netapp.com/us/media/na-337.pdf["https://www.netapp.com/us/media/na-337.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/16968-na-337pdf.pdf["https://www.netapp.com/us/media/na-337.pdf"^]
 
 * NetApp EF-Series AI 솔루션 개요
 +

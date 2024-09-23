@@ -22,7 +22,7 @@ image:osrunai_image2.png["입력/출력 대화 상자 또는 작성된 내용을
 
 == 이 솔루션에 사용된 하드웨어
 
-이 솔루션은 ONTAP AI 참조 아키텍처 2개의 DGX-1 노드 및 1개의 AFF A800 스토리지 시스템을 사용하여 검증되었습니다. 을 참조하십시오 https://www.netapp.com/us/media/nva-1121-design.pdf["NVA-1121"^] 이 검증에 사용된 인프라에 대한 자세한 내용은 를 참조하십시오.
+이 솔루션은 ONTAP AI 참조 아키텍처 2개의 DGX-1 노드 및 1개의 AFF A800 스토리지 시스템을 사용하여 검증되었습니다.  https://www.netapp.com/pdf.html?item=/media/7677-nva1121designpdf.pdf["NVA-1121"^]이 검증에 사용된 인프라에 대한 자세한 내용은 을 참조하십시오.
 
 다음 표에는 솔루션을 테스트하는 데 필요한 하드웨어 구성요소가 나와 있습니다.
 

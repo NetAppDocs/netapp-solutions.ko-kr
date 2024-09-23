@@ -38,7 +38,7 @@ IBM의 GPFS는 HDFS에 대한 대안을 제공하는 엔터프라이즈 파일 �
 
 === NetApp 데이터 이동 없는 분석 모듈
 
-NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 https://www.netapp.com/us/media/tr-4382.pdf[]참조하십시오.
+NetApp NIPAM(In-Place Analytics Module)은 NFS 데이터에 액세스하기 위한 Hadoop 클러스터의 역할을 합니다. 이 스트림에는 연결 풀, NFS InputStream, 파일 핸들 캐시 및 NFS OutputStream의 네 가지 구성 요소가 있습니다. 자세한 내용은 을 https://www.netapp.com/pdf.html?item=/media/16351-tr-4382pdf.pdf[]참조하십시오.
 
 
 

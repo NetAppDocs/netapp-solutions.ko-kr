@@ -14,6 +14,6 @@ summary:
 
 
 [role="lead"]
-ONTAP AI를 배포하려면 네트워킹, 컴퓨팅 및 스토리지 하드웨어를 설치하고 구성해야 합니다. ONTAP AI 인프라 구축에 대한 구체적인 지침은 이 문서의 범위를 벗어납니다. 자세한 배포 정보는 를 참조하십시오 https://www.netapp.com/us/media/nva-1121-deploy.pdf["NVA-1121-deploy: NetApp ONTAP AI, NVIDIA 구현"^].
+ONTAP AI를 배포하려면 네트워킹, 컴퓨팅 및 스토리지 하드웨어를 설치하고 구성해야 합니다. ONTAP AI 인프라 구축에 대한 구체적인 지침은 이 문서의 범위를 벗어납니다. 자세한 배포 정보는 을 참조하십시오 https://www.netapp.com/pdf.html?item=/media/7674-nva-1121-deploypdf.pdf["NVA-1121-deploy: NetApp ONTAP AI, NVIDIA 구현"^].
 
 이 솔루션 검증에서 단일 볼륨이 생성되어 DGX-1 시스템에 마운트되었습니다. 그런 다음 이 마운트 지점을 컨테이너에 마운트하여 데이터를 교육에 액세스할 수 있도록 했습니다. 대규모 배포의 경우 NetApp Trident는 볼륨의 생성 및 마운트를 자동화하여 관리 오버헤드를 제거하고 최종 사용자 리소스 관리를 지원합니다.

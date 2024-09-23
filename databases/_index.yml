@@ -37,7 +37,7 @@ indexpage:
     - title: Azure NetApp Files 기반 SQL Server
       url: "/sql-srv-anf_overview.html"
     - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
-      url: https://www.netapp.com/us/media/tr-4467.pdf
+      url: https://www.netapp.com/pdf.html?item=/media/16865-tr-4467pdf.pdf
     - title: Microsoft SQL Server 현대화
       url: https://www.netapp.com/pdf.html?item=/media/15613-na-446.
     - title: ONTAP 지원 Microsoft SQL Server를 위한 모범 사례 가이드
@@ -63,7 +63,7 @@ indexpage:
     - title: 자동화된 Oracle 데이터 보호
       url: "/db_protection_overview.html"
     - title: FlexPod 데이터 센터의 Oracle 19c RAC 데이터베이스
-      url: https://www.netapp.com/pdf.html?item=/media/25782-nva-1155.pdf
+      url: https://www.netapp.com/pdf.html?item=/media/19525-tr-4250.pdf
     - title: ONTAP에 Oracle 데이터베이스를 구현합니다
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html
     - title: Oracle Databases on NetApp EF-Series 를 참조하십시오

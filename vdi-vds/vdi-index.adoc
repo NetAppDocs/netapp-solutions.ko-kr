@@ -33,8 +33,8 @@ VDS에 사용 가능한 솔루션:
 
 NetApp은 다양한 컴퓨팅 구성을 포괄하는 VMware Horizon용 아키텍처를 검증했습니다. 사용 가능한 솔루션은 다음과 같습니다.
 
-* link:https://www.netapp.com/pdf.html?item=/media/7121-nva1132design.pdf["VMware를 통한 최종 사용자 컴퓨팅(설계 가이드)"]
+* link:https://www.netapp.com/pdf.html?item=/media/7123-nva1129designpdf.pdf["VMware를 통한 최종 사용자 컴퓨팅(설계 가이드)"]
 * link:https://www.netapp.com/us/media/nva-1129-design.pdf["VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(설계 가이드)"]
-* link:https://www.netapp.com/us/media/nva-1129-deploy.pdf["VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)"]
-* link:https://www.netapp.com/us/media/tr-4792.pdf["3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅"]
+* link:https://www.netapp.com/pdf.html?item=/media/7124-nva-1129-deploy.pdf["VMware 및 NVIDIA GPU를 이용하는 최종 사용자 컴퓨팅(구축 가이드)"]
+* link:https://www.netapp.com/pdf.html?item=/media/7125-tr4792pdf.pdf["3D 그래픽용 VMware를 통한 최종 사용자 컴퓨팅"]
 

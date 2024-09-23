@@ -21,7 +21,7 @@ entries:
     - title: 검증 및 사이징 지침
       url: "/ai/aipod_nv_validation_sizing.html"
     - title: 결론 및 추가 정보
-      url: "/ai/aipod_nv_conclusion_add_info.html"
+      url: https://docs.netapp.com/us-en/beegfs/index.html
   - title: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
     entries:
     - title: 소개

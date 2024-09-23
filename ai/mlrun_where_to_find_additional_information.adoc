@@ -16,14 +16,6 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* NetApp AI 컨트롤 플레인:
-+
-** NetApp AI Control Plane 기술 보고서
-+
-https://www.netapp.com/us/media/tr-4798.pdf["https://www.netapp.com/us/media/tr-4798.pdf"^]
-
-
-
 * 컨테이너용 NetApp 영구 스토리지:
 +
 ** NetApp 트라이던트
@@ -87,13 +79,9 @@ https://www.nvidia.com/en-us/gpu-cloud/["https://www.nvidia.com/en-us/gpu-cloud/
 
 * NetApp AFF 시스템
 +
-** AFF 데이터시트 를 참조하십시오
-+
-https://www.netapp.com/us/media/ds-3582.pdf["https://www.netapp.com/us/media/ds-3582.pdf"^]
-
 ** AFF용 NetApp 플래시의 이점
 +
-https://www.netapp.com/us/media/ds-3733.pdf["https://www.netapp.com/us/media/ds-3733.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/19894-ds-3733.pdf["https://www.netapp.com/us/media/ds-3733.pdf"^]
 
 ** ONTAP 9.x 설명서
 +
@@ -101,7 +89,7 @@ https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=6
 
 ** NetApp FlexGroup 기술 보고서
 +
-https://www.netapp.com/us/media/tr-4557.pdf["https://www.netapp.com/us/media/tr-4557.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/7337-tr4557pdf.pdf["https://www.netapp.com/us/media/tr-4557.pdf"^]
 
 
 
@@ -113,11 +101,11 @@ https://www.netapp.com/us/media/nva-1121-design.pdf["https://www.netapp.com/us/m
 
 ** DGX-1 및 Cisco 네트워킹 지원 ONTAP AI 배포 가이드
 +
-https://www.netapp.com/us/media/nva-1121-deploy.pdf["https://www.netapp.com/us/media/nva-1121-deploy.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/7677-nva1121designpdf.pdf["https://www.netapp.com/us/media/nva-1121-deploy.pdf"^]
 
 ** DGX-1 및 Mellanox 네트워킹 설계 가이드를 지원하는 ONTAP AI
 +
-https://www.netapp.com/us/media/nva-1138-design.pdf["https://www.netapp.com/us/media/nva-1138-design.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/17122-nva1138designpdf.pdf["https://www.netapp.com/us/media/nva-1138-design.pdf"^]
 
 
 
