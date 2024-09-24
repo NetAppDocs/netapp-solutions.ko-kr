@@ -14,9 +14,6 @@ summary: 이 NetApp 검증 아키텍처에서는 NetApp ® BeeGFS ® 구성 요�
 
 
 [role="lead"]
-이 NetApp 검증 아키텍처에서는 NetApp ® BeeGFS 구성 요소를 사용하는 NVIDIA DGX SuperPOD의 설계에 대해 설명합니다. 이 솔루션은 NVIDIA의 전용 승인 클러스터에서 검증되는 전체 스택 데이터 센터 플랫폼입니다.
-
-[role="lead"]
 이 NetApp 검증 아키텍처에서는 NetApp ® BeeGFS ® 구성 요소를 사용하는 NVIDIA DGX SuperPOD의 설계에 대해 설명합니다. 이 솔루션은 NVIDIA의 전용 승인 클러스터에서 검증된 전체 스택 데이터 센터 플랫폼입니다.
 
 image:NVIDIAlogo.png["200,200명"]
@@ -50,7 +47,7 @@ NVIDIA DGX SuperPOD는 오늘날의 기업에서 직면한 가장 복잡한 AI �
 
 _ 솔루션에 대한 고급 보기 _
 
-image:EF_SuperPOD_HighLevel.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+image:EF_SuperPOD_HighLevel.png["NVIDIA DGX SuperPOD를 사용하는 NetApp BeeGFS 솔루션에 대한 개략적인 설명을 보여 주는 그림."]
 
 * NetApp BeeGFS 구성 요소는 2개의 NetApp EF600 어레이와 2개의 x86 서버로 구성되어 있습니다.
 +
@@ -64,7 +61,7 @@ image:EF_SuperPOD_HighLevel.png["입력/출력 대화 상자 또는 작성된 �
 
 _NetApp BeeGFS 구성 요소 _
 
-image:EF_SuperPOD_buildingblock.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+image:EF_SuperPOD_buildingblock.png["단일 NetApp BeeGFS 구성 요소를 보여 주는 그림"]
 
 
 

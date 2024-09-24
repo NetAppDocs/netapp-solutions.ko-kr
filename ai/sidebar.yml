@@ -21,7 +21,7 @@ entries:
     - title: 검증 및 사이징 지침
       url: "/ai/aipod_nv_validation_sizing.html"
     - title: 결론 및 추가 정보
-      url: https://docs.netapp.com/us-en/beegfs/index.html
+      url: "/ai/aipod_nv_conclusion_add_info.html"
   - title: AI 및 ML 모델 교육을 위한 Lenovo ThinkSystem SR670 V2 기반 NetApp AFF A400
     entries:
     - title: 소개
@@ -40,6 +40,35 @@ entries:
       url: "/ai/a400-thinksystem-architecture-adjustments.html"
     - title: 결론
       url: "/ai/a400-thinksystem-conclusion.html"
+  - title: NVIDIA 지원 NetApp AIPod
+    pdf-filename: NVIDIA 지원 NetApp AIPod
+    entries:
+    - title: 개요
+      url: "/ai/ontap-ai-overview.html"
+    - title: NVIDIA DGX 시스템 및 NetApp AIPod
+      url: "/ai/aipod_nv_intro.html"
+      entries:
+      - title: 소개
+        url: "/ai/aipod_nv_intro.html"
+      - title: 하드웨어 구성 요소
+        url: "/ai/aipod_nv_hw_components.html"
+      - title: 소프트웨어 구성 요소
+        url: "/ai/aipod_nv_sw_components.html"
+      - title: 있습니다
+        url: "/ai/aipod_nv_architecture.html"
+      - title: 검증 및 사이징 지침
+        url: "/ai/aipod_nv_validation_sizing.html"
+      - title: 결론 및 추가 정보
+        url: "/ai/aipod_nv_conclusion_add_info.html"
+    - title: NVIDIA DGX A100 시스템 설계 가이드를 지원하는 ONTAP AI
+      url: "/ai/nva-1151-design.html"
+    - title: NVIDIA DGX A100 시스템 탑재 ONTAP AI 구축 가이드
+      url: "/ai/nva-1151-deploy.html"
+    - title: NVIDIA DGX A100 시스템과 Mellanox Spectrum 이더넷 스위치 설계 가이드를 지원하는 ONTAP AI
+      url: "/ai/nva-1153-design.html"
+    - title: NVIDIA DGX A100 Systems 및 Mellanox Spectrum 이더넷 스위치 포함 ONTAP AI 구축 가이드
+        를 참조하십시오
+      url: "/ai/nva-1153-deploy.html"
   - title: NVIDIA를 통한 EF-Series AI
     url: "/ai/ef-series-ai-overview.html"
     entries:

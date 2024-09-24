@@ -30,7 +30,7 @@ NetApp ONTAP 데이터 관리 소프트웨어 기반의 NetApp AFF A90은 기본
 
 _NetApp AFF A90 스토리지 시스템 _
 
-image:aipod_nv_A90.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_A90.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
 

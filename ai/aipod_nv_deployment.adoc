@@ -20,7 +20,7 @@ summary: NVIDIA DGX 시스템 및 NetApp AIPod - 배포
 
 _NetApp AIPOD 네트워크 구성 _
 
-image:aipod_nv_a90_netdetail.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_a90_netdetail.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 다음 표는 최대 16개의 DGX 시스템 및 2개의 AFF A90 HA 쌍에 대한 케이블 연결 할당의 예를 보여줍니다.
 
@@ -189,7 +189,7 @@ SN4600 스위치를 구성하는 데 사용되는 기본 단계는 다음과 같
 
 _NetApp A90 스토리지 클러스터 논리적 구성 _
 
-image:aipod_nv_a90_logical.png["오류: 그래픽 이미지가 없습니다"]
+image:aipod_nv_a90_logical.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 스토리지 시스템을 구성하는 데 사용되는 기본 단계는 다음과 같습니다. 이 프로세스에서는 기본 스토리지 클러스터 설치가 완료된 것으로 가정합니다.
 

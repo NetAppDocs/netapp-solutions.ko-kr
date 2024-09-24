@@ -10,7 +10,7 @@ summary: 이 NetApp ONTAP 솔루션은 ONTAP 기반 사이버 볼트를 구성, 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ai/aicp_example_notebooks_and_pipelines.html 
+permalink: ai/mlflow-finetune-phi2.html 
 keywords: Jupyter Notebook, MLFlow, NetApp DataOps Toolkit, LLM, 
 summary: Jupyter Hub에서 MLFlow로 대형 언어 모델을 미세 조정합니다 
 ---
@@ -59,5 +59,3 @@ image:phi2-results.png["Phi-2에 대한 교육 손실 및 검증 손실"]
 이러한 응답을 통해 미세 조정된 모델은 기본 모델에 비해 훈련된 데이터 세트의 컨텍스트가 풍부하고 보다 관련성이 높은 결과를 도출했음을 알 수 있습니다.
 
 이 예제는 적은 양의 컴퓨터 리소스를 사용하는 사용자 정의/독점 데이터에 대한 언어 모델을 교육하는 것이 여전히 가능함을 보여주기 위한 것입니다. 향후 작업에는 훨씬 더 큰 GPU 설정(GPU의 분산 시스템 네트워크)을 활용하여 조직 전체의 데이터에 대한 더 큰 언어 모델(10B 이상의 매개 변수 주문)을 교육하는 것이 포함됩니다.
-
-link:mlrun_configure_working_environment.adoc["다음: ML 작업 환경 실행"]
