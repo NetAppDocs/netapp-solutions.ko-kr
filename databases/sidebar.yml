@@ -75,8 +75,9 @@ entries:
       - title: NetApp ONTAP에 Oracle 데이터베이스 구축
         url: "/../../../ontap-apps-dbs/oracle/oracle-overview.html"
       - title: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
-        url: "/databases/marketing_overview.html"
         entries:
+        - title: 개요
+          url: "/databases/marketing_overview.html"
         - title: 시작하기 및 요구 사항
           url: "/databases/getting_started_requirements.html"
         - title: Oracle 19c AWX/Tower 구축 자동화
@@ -84,8 +85,9 @@ entries:
         - title: 자동화된 Oracle 19c CLI 구축
           url: "/databases/cli_automation.html"
     - title: 자동화된 Oracle 데이터 보호
-      url: "/databases/db_protection_overview.html"
       entries:
+      - title: 개요
+        url: "/databases/db_protection_overview.html"
       - title: 시작하기 및 요구 사항
         url: "/databases/db_protection_getting_started.html"
       - title: AWX/Tower를 위한 자동화된 Oracle 데이터 보호
@@ -99,8 +101,9 @@ entries:
   - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
     url: "/databases/sql-aws-ec2.html"
   - title: Azure NetApp Files 기반 SQL Server
-    url: "/databases/sql-srv-anf_overview.html"
     entries:
+    - title: 개요
+      url: "/databases/sql-srv-anf_overview.html"
     - title: 고려해야 할 요소
       url: "/databases/sql-srv-anf_factors_to_consider.html"
     - title: 참조 디자인(실시간 고급 디자인)
@@ -142,15 +145,17 @@ entries:
     - title: 솔루션 요구 사항
       url: "/databases/hybrid_dbops_snapcenter_requirements.html"
     - title: 사전 요구 사항 구성
-      url: "/databases/hybrid_dbops_snapcenter_prerequisite.html"
       entries:
+      - title: 개요
+        url: "/databases/hybrid_dbops_snapcenter_prerequisite.html"
       - title: 사전 요구 사항 온-프레미스
         url: "/databases/hybrid_dbops_snapcenter_prereq_onprem.html"
       - title: 퍼블릭 클라우드의 사전 요구사항
         url: "/databases/hybrid_dbops_snapcenter_prereq_cloud.html"
     - title: 시작 개요
-      url: "/databases/hybrid_dbops_snapcenter_getting_started.html"
       entries:
+      - title: 개요
+        url: "/databases/hybrid_dbops_snapcenter_getting_started.html\\"
       - title: 온-프레미스로 시작 중입니다
         url: "/databases/hybrid_dbops_snapcenter_getting_started_onprem.html"
       - title: AWS 퍼블릭 클라우드 시작하기

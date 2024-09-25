@@ -17,10 +17,6 @@ indexpage:
     - title: 지원되는 솔루션
       url: "/ehc-solutions.html"
     - title: 요약
-      url: "/ehc-summary.html"
-    - title: NFS 데이터 저장소에 대한 지역 지원
-      url: "/ehc-regions.html"
-    - title: 비디오 및 데모
       url: "../videos.html#hmc"
   - title: AWS 기반 NetApp(VMC)
     links:
@@ -36,8 +32,6 @@ indexpage:
       url: "/aws-guest.html#aws-cvo"
     - title: VMC용 하이브리드 멀티 클라우드 솔루션
       url: "/aws-solutions.html"
-    - title: AWS에서 NFS 데이터 저장소에 대한 지역 지원
-      url: "/aws-regions.html"
   - title: Azure 기반 NetApp(AVS)
     links:
     - title: AVS용 VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
@@ -52,38 +46,24 @@ indexpage:
       url: "/azure-guest.html#azure-cvo"
     - title: AVS용 하이브리드 멀티 클라우드 솔루션
       url: "/azure-solutions.html"
-    - title: Azure에서 NFS 데이터 저장소에 대한 지역 지원
-      url: "/azure-regions.html"
   - title: Google Cloud Platform의 NetApp(GCVE)
     links:
     - title: GCVE를 위한 VMware의 NetApp 하이브리드 멀티 클라우드
       url: "/gcp-gcve.html"
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
-    - title: NetApp CVS를 보조 NFS 데이터 저장소로서 소개합니다
-      url: "/gcp-ncvs-datastore.html"
     - title: CVO를 게스트 연결 스토리지로 사용
       url: "/gcp-guest.html#gcp-cvo"
-    - title: CVS를 게스트 연결 스토리지로
-      url: "/gcp-guest.html#cvs"
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
       url: "/gcp-solutions.html"
-    - title: Google Cloud에서 NetApp CVS NFS 데이터 저장소에 대한 지역 지원
-      url: "/gcp-regions.html"
     - title: 보안 개요 - Google Cloud의 NetApp CVS
       url: "/ncvs-gc-overview.html"
-  - title: 도구
+  - title: 시뮬레이터
     links:
-    - title: ONTAP+ VMC TCO 계산기에 대한 FSX
-      url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
     - title: ONTAP + VMC 시뮬레이터의 FSX
       url: https://netapp-automation.github.io/FSx-VMC-Simulator
-    - title: ANF + AVS TCO 계산기
-      url: https://bluexp.netapp.com/anf-avs/tcoestimator
     - title: ANF + AVS 시뮬레이터
       url: https://netapp-automation.github.io/ANF-AVS-Simulator
-    - title: GCVE+ CVS TCO 계산기
-      url: https://bluexp.netapp.com/gcve-cvs/roi
     - title: AWS용 DRO 및 VMC 시뮬레이터
       url: https://netapp-automation.github.io/dro-simulator/?intro-1
     - title: AVS 시뮬레이터가 있는 ANF용 DRO
@@ -92,6 +72,14 @@ indexpage:
       url: https://netapp-automation.github.io/DRaaS_Simulator/?0.1
     - title: BlueXP - VM을 위한 백업 및 복구 시뮬레이터
       url: https://netapp-automation.github.io/Backup_and_Recovery_for_VMs_Simulator/?0.1
+  - title: TCO 계산기
+    links:
+    - title: ONTAP+ VMC TCO 계산기에 대한 FSX
+      url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
+    - title: ANF + AVS TCO 계산기
+      url: https://bluexp.netapp.com/anf-avs/tcoestimator
+    - title: GCVE+ CVS TCO 계산기
+      url: https://bluexp.netapp.com/gcve-cvs/roi
   - title: BlueXP  재해 복구
     links:
     - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호

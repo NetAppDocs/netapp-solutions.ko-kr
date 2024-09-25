@@ -6,7 +6,6 @@ entries:
 - title: AI 통합 인프라
   entries:
   - title: NVA-1173 NVIDIA DGX 시스템이 지원되는 NetApp AIPod
-    url: "/ai/aipod_nv_intro.html"
     entries:
     - title: 소개
       url: "/ai/aipod_nv_intro.html"
@@ -46,7 +45,6 @@ entries:
     - title: 개요
       url: "/ai/ontap-ai-overview.html"
     - title: NVIDIA DGX 시스템 및 NetApp AIPod
-      url: "/ai/aipod_nv_intro.html"
       entries:
       - title: 소개
         url: "/ai/aipod_nv_intro.html"
@@ -70,8 +68,9 @@ entries:
         를 참조하십시오
       url: "/ai/nva-1153-deploy.html"
   - title: NVIDIA를 통한 EF-Series AI
-    url: "/ai/ef-series-ai-overview.html"
     entries:
+    - title: 개요
+      url: "/ai/ef-series-ai-overview.html"
     - title: NVIDIA DGX SuperPOD 및 NetApp EF-series
       url: "/ai/ai-dgx-superpod.html"
     - title: NVIDIA DGX A100 Systems 및 BeeGFS 설계를 지원하는 EF-Series AI
@@ -128,10 +127,10 @@ entries:
     - title: 초기 설정
       url: "/ai/nvaie_initial_setup.html"
     - title: NVIDIA NGC 소프트웨어를 활용합니다
-      url: "/ai/nvaie_ngc.html"
       entries:
+      - title: 개요
+        url: "/ai/nvaie_ngc.html"
       - title: 설정
-        pdf-filename: HGC 설정
         url: "/ai/nvaie_ngc_setup.html"
       - title: 사용 사례 - TensorFlow 교육 작업 예
         url: "/ai/nvaie_ngc_tensorflow.html"
@@ -204,16 +203,17 @@ entries:
     - title: 네트워크 장치 오류 예측 사용 사례 요약
       url: "/ai/mlrun_network_device_failure_prediction_use_case_summary.html"
     - title: 설정
-      pdf-filename: MLRun 설정
-      url: "/ai/mlrun_setup_overview.html"
       entries:
+      - title: 개요
+        url: "/ai/mlrun_setup_overview.html"
       - title: Kubernetes 클러스터 구성 중
         url: "/ai/mlrun_configuring_kubernetes_cluster.html"
       - title: 영구 볼륨 클레임을 정의합니다
         url: "/ai/mlrun_define_persistent_volume_claim.html"
-    - title: 응용 프로그램 배포
-      url: "/ai/mlrun_deploying_the_application.html"
+    - title: 구축
       entries:
+      - title: 응용 프로그램 배포
+        url: "/ai/mlrun_deploying_the_application.html"
       - title: GitHub에서 코드를 가져옵니다
         url: "/ai/mlrun_get_code_from_github.html"
       - title: 작업 환경을 구성합니다
@@ -243,9 +243,10 @@ entries:
       url: "/ai/vector-database-technology-requirement.html"
     - title: 구현 절차
       url: "/ai/vector-database-deployment-procedure.html"
-    - title: 솔루션 검증 개요
-      url: "/ai/vector-database-solution-verification-overview.html"
+    - title: 솔루션 검증
       entries:
+      - title: 개요
+        url: "/ai/vector-database-solution-verification-overview.html"
       - title: 온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정
         url: "/ai/vector-database-milvus-cluster-setup.html"
       - title: NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화
@@ -392,8 +393,9 @@ entries:
     - title: 하드웨어 및 소프트웨어 요구 사항
       url: "/ai/hcaios_hardware_and_software_requirements.html"
     - title: 솔루션 배포 및 검증 세부 정보
-      url: "/ai/hcaios_solution_deployment_and_validation_details.html"
       entries:
+      - title: 개요
+        url: "/ai/hcaios_solution_deployment_and_validation_details.html"
       - title: ONTAP AI 배포
         url: "/ai/hcaios_ontap_ai_deployment.html"
       - title: Kubernetes 구축
@@ -435,8 +437,9 @@ entries:
     - title: 솔루션 기술
       url: "/ai/cainvidia_solution_technology.html"
     - title: Jarvis, BlueXP Copy and Sync, Nemo를 사용하여 가상 어시스턴트를 구축합니다
-      url: "/ai/cainvidia_build_a_virtual_assistant_using_jarvis_cloud_sync_and_nemo_overview.html"
       entries:
+      - title: 개요
+        url: "/ai/cainvidia_build_a_virtual_assistant_using_jarvis_cloud_sync_and_nemo_overview.html"
       - title: Jarvis 배포
         url: "/ai/cainvidia_jarvis_deployment.html"
       - title: 소매 사용 사례에 대한 상태 및 흐름을 사용자 지정합니다
@@ -465,8 +468,9 @@ entries:
     - title: 솔루션 기술
       url: "/ai/osrunai_solution_technology_overview.html"
     - title: AI 실행을 통한 최적의 클러스터 및 GPU 활용률
-      url: "/ai/osrunai_optimal_cluster_and_gpu_utilization_with_run_ai_overview.html"
       entries:
+      - title: 개요
+        url: "/ai/osrunai_optimal_cluster_and_gpu_utilization_with_run_ai_overview.html"
       - title: AI 설치 실행
         url: "/ai/osrunai_run_ai_installation.html"
       - title: AI 대시보드 및 뷰 실행

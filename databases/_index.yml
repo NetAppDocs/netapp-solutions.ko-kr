@@ -6,14 +6,10 @@ indexpage:
   lead: NetApp 엔터프라이즈 데이터베이스 솔루션은 주요 엔터프라이즈 데이터베이스에서 NetApp 스토리지의 기능을 시연하는 전략적 및 기술
     기능 집합입니다.
   tiles:
-  - title: 오라클
+  - title: AWS/FSx ONTAP을 위한 Oracle
     links:
     - title: 페이스 메이커 클러스터링 및 FSx ONTAP를 사용하는 AWS EC2의 Oracle HA
       url: "/aws_ora_ha_pacemaker.html"
-    - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
-      url: "/azure_ora_anf_inc_merge.html"
-    - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
-      url: "/automation_ora_anf_nfs.html"
     - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
       url: "/automation_ora_aws-fsx_iscsi.html"
     - title: 게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하고 자가 관리형 Oracle을 제공합니다
@@ -26,9 +22,15 @@ indexpage:
       url: "/aws_ora_fsx_ec2_nfs_asm.html"
     - title: iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 구축 및 보호
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
+  - title: Azure/ANF를 위한 Oracle
+    links:
+    - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
+      url: "/azure_ora_anf_inc_merge.html"
+    - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
+      url: "/automation_ora_anf_nfs.html"
     - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
       url: "/azure_ora_nfile_usecase.html"
-  - title: SQL 서버
+  - title: 클라우드 공급자용 SQL Server
     links:
     - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
       url: "/sqlsb-backup-restore-aws-fsxn.html"
@@ -36,6 +38,8 @@ indexpage:
       url: "/sql-aws-ec2.html"
     - title: Azure NetApp Files 기반 SQL Server
       url: "/sql-srv-anf_overview.html"
+  - title: SQL Server for On-Premises
+    links:
     - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
       url: https://www.netapp.com/pdf.html?item=/media/16865-tr-4467pdf.pdf
     - title: Microsoft SQL Server 현대화
