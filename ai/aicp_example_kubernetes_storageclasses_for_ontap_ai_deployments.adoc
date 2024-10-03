@@ -14,7 +14,7 @@ summary: NetApp를 지원하는 오픈 소스 MLOps - NetApp AIPod 구축을 위
 
 
 [role="lead"]
-Astra Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Kubernetes StorageClasses를 생성해야 합니다. 다음 예제는 에서 이 솔루션의 구성 요소를 배포할 때 만들 수 있는 다양한 유형의 StorageClasses를 나타냅니다 link:https://docs.netapp.com/us-en/netapp-solutions/ai/aipod_nv_intro.html["NetApp AIPod"^]. StorageClasses에 대한 자세한 내용과 다른 플랫폼/환경에 대한 StorageClasses에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"^].
+Astra Trident를 사용하여 Kubernetes 클러스터 내에서 스토리지 리소스를 동적으로 프로비저닝하려면 먼저 하나 이상의 Kubernetes StorageClasses를 생성해야 합니다. 다음 예제는 에서 이 솔루션의 구성 요소를 배포할 때 만들 수 있는 다양한 유형의 StorageClasses를 나타냅니다 link:aipod_nv_intro.html["NetApp AIPod"^]. StorageClasses에 대한 자세한 내용과 다른 플랫폼/환경에 대한 StorageClasses에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"^].
 
 . NetApp은 섹션에서 생성한 FlexGroup 지원 Trident 백엔드에 대한 StorageClass를 생성할 것을 권장합니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예"], 1단계. 다음 예제 명령은 섹션에서 만든 두 예제 백엔드에 해당하는 여러 StorageClasses를 만드는 방법을 보여 줍니다 link:aicp_example_trident_backends_for_ontap_ai_deployments.html["NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예"], 단계 1 - 를 활용하는 단계 link:https://docs.netapp.com/us-en/ontap/nfs-rdma/["RDMA 상의 NFS"] 그리고 그렇지 않은 것.
 +

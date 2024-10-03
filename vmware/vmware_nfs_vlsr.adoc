@@ -82,7 +82,7 @@ VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설�
 
  https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-workflow-concept.html["여기를 클릭하십시오"]ONTAP 볼륨에 대한 SnapMirror 관계를 생성하는 방법에 대한 자세한 내용은 ONTAP 설명서를 참조하십시오.
 
-단계별 지침은 다음 문서의 개요를 참조하십시오. https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-guest-dr-solution-overview.html#assumptions-pre-requisites-and-component-overview["여기를 클릭하십시오"] 이 단계에서는 클러스터 피어 및 SVM 피어 관계를 생성한 다음 각 볼륨의 SnapMirror 관계를 생성하는 방법을 개략적으로 설명합니다. 이러한 단계는 ONTAP System Manager 또는 ONTAP CLI를 사용하여 수행할 수 있습니다.
+단계별 지침은 다음 문서의 개요를 참조하십시오.link:../ehc/aws-guest-dr-solution-overview.html#assumptions-pre-requisites-and-component-overview["여기를 클릭하십시오"] 이 단계에서는 클러스터 피어 및 SVM 피어 관계를 생성한 다음 각 볼륨의 SnapMirror 관계를 생성하는 방법을 개략적으로 설명합니다. 이러한 단계는 ONTAP System Manager 또는 ONTAP CLI를 사용하여 수행할 수 있습니다.
 
 
 

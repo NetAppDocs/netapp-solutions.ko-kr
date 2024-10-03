@@ -60,7 +60,7 @@ VMFS 데이터 저장소를 프로비저닝하려면 다음 단계를 수행하�
 
 === ONTAP 작업
 
-. link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-cmpr-980/system__license__show.html++["FCP에 대한 ONTAP 라이센스가 있는지 확인합니다."]
+. link:https://docs.netapp.com/us-en/ontap-cli-98/system-license-show.html["FCP에 대한 ONTAP 라이센스가 있는지 확인합니다."]
 +
 .. 'system license show' 명령을 사용하여 FCP가 나열되는지 확인합니다.
 .. 라이센스를 추가하려면 "licen se add-license-code <license code>"를 사용합니다.

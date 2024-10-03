@@ -148,7 +148,7 @@ image:vcf_ora_si_vvols_architecture.png["이 이미지는 iSCSI 및 ASM이 포�
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
 . VMware VCF가 설정되었습니다. VCF를 생성하는 방법에 대한 정보 또는 지침은 VMware 설명서를 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"^]참조하십시오.
-. VCF 워크로드 도메인 내 Ansible 컨트롤러용 Linux VM 3개, Oracle 데이터베이스용 VM 2개, Ansible 컨트롤러용 VM 1개를 프로비저닝합니다. NetApp SnapCenter Server를 실행하기 위해 하나의 Windows 서버 VM을 프로비저닝합니다. 자동화된 Oracle 데이터베이스 구축을 위해 Ansible 컨트롤러를 설정하는 방법에 대한 자세한 내용은 다음 리소스를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^].
+. VCF 워크로드 도메인 내 Ansible 컨트롤러용 Linux VM 3개, Oracle 데이터베이스용 VM 2개, Ansible 컨트롤러용 VM 1개를 프로비저닝합니다. NetApp SnapCenter Server를 실행하기 위해 하나의 Windows 서버 VM을 프로비저닝합니다. 자동화된 Oracle 데이터베이스 구축을 위해 Ansible 컨트롤러를 설정하는 방법에 대한 자세한 내용은 다음 리소스를 참조하십시오 link:../automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^].
 . VMware vSphere용 SnapCenter 플러그인 버전 6.0이 VCF에 배포되었습니다. 플러그인 배포는 다음 리소스를 참조하십시오 link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere용 SnapCenter 플러그인 설명서"^].
 . VMware vSphere용 ONTAP 툴이 VCF에 배포되었습니다. VMware vSphere 구축용 ONTAP 툴은 다음 리소스를 참조하십시오. link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴 설명서"^]
 
@@ -434,7 +434,7 @@ UUID=aff942c4-b224-4b62-807d-6a5c22f7b623 /boot                   xfs     defaul
 
 [%collapsible]
 ====
-NetApp 자동화 툴킷을 활용하여 VCF에 Oracle을 구축할 것을 권장합니다. xfs 파일 시스템에서 Oracle 자동 배포를 실행하는 방법에 대한 자세한 내용은 TR-4992: link:https://docs.netapp.com/us-en/netapp-solutions/databases/automation_ora_c-series_nfs.html["NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축"^] TR-4992에서는 NFS를 사용하는 NetApp C-Series에서의 자동 Oracle 구축에 적용되지만, 데이터베이스 VM에 NFS 파일 시스템이 마운트되는 것을 우회할 경우 VVOL을 통한 VCF의 Oracle 구현과 동일합니다. 특정 태그로 건너뛰면 됩니다. 다음은 단계별 절차입니다.
+NetApp 자동화 툴킷을 활용하여 VCF에 Oracle을 구축할 것을 권장합니다. xfs 파일 시스템에서 Oracle 자동 배포를 실행하는 방법에 대한 자세한 내용은 TR-4992: link:automation_ora_c-series_nfs.html["NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축"^] TR-4992에서는 NFS를 사용하는 NetApp C-Series에서의 자동 Oracle 구축에 적용되지만, 데이터베이스 VM에 NFS 파일 시스템이 마운트되는 것을 우회할 경우 VVOL을 통한 VCF의 Oracle 구현과 동일합니다. 특정 태그로 건너뛰면 됩니다. 다음은 단계별 절차입니다.
 
 . ssh를 통해 Ansible 컨트롤러 VM에 관리자 사용자로 로그인하고 NFS에서 Oracle용 자동화 툴킷 복사본을 복제합니다.
 +
@@ -449,7 +449,7 @@ LINUX.X64_193000_db_home.zip
 p34765931_190000_Linux-x86-64.zip
 p6880880_190000_Linux-x86-64.zip
 ....
-. TR-4992: 섹션의 지침에 따라 배포 대상 파일 호스트, 글로벌 변수 파일 -vars/vars.yml 및 로컬 DB VM 변수 file-host_vars/host_name.yml을 link:https://docs.netapp.com/us-en/netapp-solutions/databases/automation_ora_c-series_nfs.html#parameter-files-configuration["매개 변수 파일 구성"^]구성합니다. 로컬 DB VM 변수 파일에서 nfs_lif 변수를 주석 처리합니다.
+. TR-4992: 섹션의 지침에 따라 배포 대상 파일 호스트, 글로벌 변수 파일 -vars/vars.yml 및 로컬 DB VM 변수 file-host_vars/host_name.yml을 link:automation_ora_c-series_nfs.html#parameter-files-configuration["매개 변수 파일 구성"^]구성합니다. 로컬 DB VM 변수 파일에서 nfs_lif 변수를 주석 처리합니다.
 . Ansible 컨트롤러와 데이터베이스 VM 간에 ssh 키리스 인증을 설정합니다. 이 경우 ssh 키 쌍을 생성하고 공개 키를 데이터베이스 VM 관리자 사용자 루트 디렉터리 .ssh 폴더 authorized_keys 파일에 복사해야 합니다.
 +
 [source, cli]
@@ -852,16 +852,7 @@ SQL>
 
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
-* VMware 클라우드 기반
-+
-link:https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation["https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation"^]
-
-* NetApp 엔터프라이즈 데이터베이스 솔루션
-+
-link:https://docs.netapp.com/us-en/netapp-solutions/databases/index.html["https://docs.netapp.com/us-en/netapp-solutions/databases/index.html"^]
-
-* SnapCenter 소프트웨어 6.0
-+
-link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html"^]
-
+* link:https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation["VMware 클라우드 기반"^]
+* link:index.html["NetApp 엔터프라이즈 데이터베이스 솔루션"^]
+* link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["SnapCenter 소프트웨어 6.0"^]
 

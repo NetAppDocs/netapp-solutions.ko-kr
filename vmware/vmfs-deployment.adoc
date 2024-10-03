@@ -382,7 +382,7 @@ image:vmfs-deploy-image37.png["입력/출력 대화 상자 또는 작성된 내�
 
 요약하자면, ONTAP ASA 스토리지를 사용하여 VMware 구축에 대한 TCO를 최적화하는 경우 VM 백업을 위한 간단하고 효율적인 방법으로 VMware용 SnapCenter 플러그인을 사용합니다. 스냅샷 백업이 완료되는 데 문자 그대로 몇 초가 걸리므로 VM을 원활하고 신속하게 백업 및 복원할 수 있습니다.
 
-이 문서를 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/bxp-scv-hybrid-solution.html#restoring-virtual-machines-in-the-case-of-data-loss["솔루션 가이드를 참조하십시오"] link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["제품 설명서"]참조하여 SnapCenter 구성, 백업, 운영 또는 2차 스토리지 시스템으로부터 복원 또는 장기 보존을 위한 오브젝트 스토리지에 저장된 백업에서 복원하는 방법에 대해 알아보십시오.
+이 문서를 link:../ehc/bxp-scv-hybrid-solution.html#restoring-virtual-machines-in-the-case-of-data-loss["솔루션 가이드를 참조하십시오"] link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["제품 설명서"]참조하여 SnapCenter 구성, 백업, 운영 또는 2차 스토리지 시스템으로부터 복원 또는 장기 보존을 위한 오브젝트 스토리지에 저장된 백업에서 복원하는 방법에 대해 알아보십시오.
 
 스토리지 비용을 줄이기 위해 FabricPool 볼륨 계층화를 사용하면 스냅샷 복사본의 데이터를 저비용 스토리지 계층으로 자동으로 이동할 수 있습니다. Snapshot 복사본은 일반적으로 할당된 스토리지의 10% 이상을 사용합니다. 데이터 보호 및 재해 복구에 중요하지만 이러한 시점 복제본은 거의 사용되지 않으며 고성능 스토리지를 효율적으로 사용할 수는 없습니다. FabricPool의 "스냅샷 전용" 정책을 통해 고성능 스토리지의 공간을 쉽게 확보할 수 있습니다. 이 정책을 설정하면 활성 파일 시스템에서 사용하지 않는 볼륨의 비활성 스냅샷 복사본 블록이 오브젝트 계층으로 이동하고 읽으면 스냅샷 복사본이 로컬 계층으로 이동되어 VM 또는 전체 데이터 저장소를 복구합니다. 이 오브젝트 계층은 프라이빗 클라우드(예: NetApp StorageGRID) 또는 퍼블릭 클라우드(예: AWS 또는 Azure)의 형태일 수 있습니다.
 
@@ -412,9 +412,9 @@ MAV와 보호 기능을 구성하는 방법에 대한 자세한 내용은 를 �
 
 조직은 각 하이퍼스케일 서비스 에서 NetApp이 제공하는 1P 서비스와 통합하여 플랫폼 재구성, IP 변경, 아키텍처 변경 없이 간단한 마이그레이션 접근 방식으로 vSphere 기반의 클라우드 솔루션을 실현할 수 있습니다. 또한 이러한 최적화를 통해 vSphere에서 호스트 수를 최소한으로 유지하면서 스토리지 설치 공간을 확장할 수 있으며, 스토리지 계층, 보안 또는 사용 가능한 파일은 변경되지 않습니다.
 
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/aws-migrate-vmware-hcx.html["워크로드를 FSx for ONTAP 데이터 저장소로 마이그레이션합니다"]봅니다.
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/azure-migrate-vmware-hcx.html["워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]봅니다.
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-migrate-vmware-hcx.html["워크로드를 Google Cloud NetApp 볼륨 데이터 저장소로 마이그레이션합니다"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/aws-migrate-vmware-hcx.html["워크로드를 FSx for ONTAP 데이터 저장소로 마이그레이션합니다"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/azure-migrate-vmware-hcx.html["워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/gcp-migrate-vmware-hcx.html["워크로드를 Google Cloud NetApp 볼륨 데이터 저장소로 마이그레이션합니다"]봅니다.
 
 
 
@@ -433,9 +433,9 @@ MAV와 보호 기능을 구성하는 방법에 대한 자세한 내용은 를 �
 
 하이퍼스케일러의 VMware Cloud를 재해 복구 타겟으로 사용하려는 고객의 경우 ONTAP 스토리지 기반 데이터 저장소(Azure NetApp Files, FSx for ONTAP, Google Cloud NetApp 볼륨)를 사용하여 VM 복제 기능을 제공하는 검증된 타사 솔루션을 사용하여 온프레미스에서 데이터를 복제할 수 있습니다. ONTAP 스토리지 기반 데이터 저장소를 추가하면 더 적은 수의 ESXi 호스트로 타겟에 최적화된 재해 복구를 수행할 수 있습니다. 또한 온프레미스 환경에서 2차 사이트를 폐기할 수 있으므로 비용을 크게 절감할 수 있습니다.
 
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/veeam-fsxn-dr-to-vmc.html["FSx for ONTAP 데이터 저장소로 재해 복구"]봅니다.
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/azure-native-dr-jetstream.html["Azure NetApp Files 데이터 저장소로 재해 복구"]봅니다.
-* 에 대한 자세한 지침을 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/gcp-app-dr-sc-cvs-veeam.html["Google Cloud NetApp 볼륨 데이터 저장소로 재해 복구"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/veeam-fsxn-dr-to-vmc.html["FSx for ONTAP 데이터 저장소로 재해 복구"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/azure-native-dr-jetstream.html["Azure NetApp Files 데이터 저장소로 재해 복구"]봅니다.
+* 에 대한 자세한 지침을 link:../ehc/gcp-app-dr-sc-cvs-veeam.html["Google Cloud NetApp 볼륨 데이터 저장소로 재해 복구"]봅니다.
 
 
 

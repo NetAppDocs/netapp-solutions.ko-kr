@@ -24,7 +24,7 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 VVol(VMware vSphere Virtual Volumes)은 가상 디스크를 네이티브 스토리지 개체로 노출하고 가상 디스크 수준에서 어레이 기반 작업을 가능하게 하는 SAN/NAS 관리 및 통합 프레임워크입니다. 다시 말해, VVOL은 SAN/NAS 장치를 VM을 인식하여 단일 가상 디스크의 세부적인 수준에서 VM 중심 접근 방식으로 어레이 기반 데이터 서비스를 활용할 수 있게 합니다. 고객은 VVOL을 통해 현재 스토리지 투자의 고유한 기능을 활용하며 운영 중단 없이 모든 스토리지 유형 전반에서 작동하는 가상 환경에 최적화된 더욱 단순하고 효율적인 운영 모델로 전환할 수 있습니다.
 
-에서 link:https://docs.netapp.com/us-en/netapp-solutions/databases/vcf_ora_si_vvol.html["TR-4996를 참조하십시오"^]NetApp은 VVOL을 통해 VCF에서 단일 인스턴스 Oracle 데이터베이스 구축 및 보호를 입증했습니다. 이 문서에서는 NetApp ONTAP 스토리지 클러스터에서 VVOL을 기본 데이터베이스 스토리지로 사용하는 VMware Cloud Foundation 환경에서 Oracle RAC 데이터베이스를 구축하고 보호하는 방법을 설명합니다. Oracle RAC 데이터베이스는 로컬 스토리지 시스템의 로컬 파일 시스템에 구축된 것처럼 구성됩니다. 이 기술 보고서에서는 Oracle RAC 구축을 위해 VCF에서 VVOL을 생성하는 단계를 중점적으로 다룹니다. 또한 NetApp 자동화 툴킷 및 NetApp SnapCenter UI 툴을 통한 RAC 데이터베이스 보호를 통해 VVOL의 VCF에서 Oracle RAC 데이터베이스 구현을 보여줍니다.
+에서 link:vcf_ora_si_vvol.html["TR-4996를 참조하십시오"^]NetApp은 VVOL을 통해 VCF에서 단일 인스턴스 Oracle 데이터베이스 구축 및 보호를 입증했습니다. 이 문서에서는 NetApp ONTAP 스토리지 클러스터에서 VVOL을 기본 데이터베이스 스토리지로 사용하는 VMware Cloud Foundation 환경에서 Oracle RAC 데이터베이스를 구축하고 보호하는 방법을 설명합니다. Oracle RAC 데이터베이스는 로컬 스토리지 시스템의 로컬 파일 시스템에 구축된 것처럼 구성됩니다. 이 기술 보고서에서는 Oracle RAC 구축을 위해 VCF에서 VVOL을 생성하는 단계를 중점적으로 다룹니다. 또한 NetApp 자동화 툴킷 및 NetApp SnapCenter UI 툴을 통한 RAC 데이터베이스 보호를 통해 VVOL의 VCF에서 Oracle RAC 데이터베이스 구현을 보여줍니다.
 
 이 솔루션은 다음과 같은 사용 사례를 해결합니다.
 
@@ -151,7 +151,7 @@ image:vcf_orarac_vvol_architecture.png["이 이미지는 iSCSI 및 ASM이 포함
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
 . VMware VCF가 설정되었습니다. VCF를 생성하는 방법에 대한 정보 또는 지침은 VMware 설명서를 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"^]참조하십시오.
-. VCF 워크로드 도메인 내 Ansible 컨트롤러용 Linux VM 3개, Oracle RAC 데이터베이스 클러스터용 VM 2개, Ansible 컨트롤러용 VM 1개를 프로비저닝합니다. NetApp SnapCenter Server를 실행하기 위해 하나의 Windows 서버 VM을 프로비저닝합니다. 자동화된 Oracle 데이터베이스 구축을 위해 Ansible 컨트롤러를 설정하는 방법에 대한 자세한 내용은 다음 리소스를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^].
+. VCF 워크로드 도메인 내 Ansible 컨트롤러용 Linux VM 3개, Oracle RAC 데이터베이스 클러스터용 VM 2개, Ansible 컨트롤러용 VM 1개를 프로비저닝합니다. NetApp SnapCenter Server를 실행하기 위해 하나의 Windows 서버 VM을 프로비저닝합니다. 자동화된 Oracle 데이터베이스 구축을 위해 Ansible 컨트롤러를 설정하는 방법에 대한 자세한 내용은 다음 리소스를 참조하십시오 link:../automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^].
 . Oracle RAC 데이터베이스 VM은 Oracle RAC 전용 상호 연결용과 애플리케이션 또는 공용 데이터 트래픽용 네트워크 인터페이스를 적어도 두 개 프로비저닝해야 합니다.
 . VMware vSphere용 SnapCenter 플러그인 버전 6.0이 VCF에 배포되었습니다. 플러그인 배포는 다음 리소스를 참조하십시오 link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere용 SnapCenter 플러그인 설명서"^].
 . VMware vSphere용 ONTAP 툴이 VCF에 배포되었습니다. VMware vSphere 구축용 ONTAP 툴은 다음 리소스를 참조하십시오. link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴 설명서"^]
@@ -1203,20 +1203,8 @@ Version 19.18.0.0.0
 
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
-* VMware 클라우드 기반
-+
-link:https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation["https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation"^]
-
-* NetApp 엔터프라이즈 데이터베이스 솔루션
-+
-link:https://docs.netapp.com/us-en/netapp-solutions/databases/index.html["https://docs.netapp.com/us-en/netapp-solutions/databases/index.html"^]
-
-* SnapCenter 소프트웨어 6.0
-+
-link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html"^]
-
-* VMware vSphere용 ONTAP 툴 설명서
-+
-link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html"^]
-
+* link:https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation["VMware 클라우드 기반"^]
+* link:index.html["NetApp 엔터프라이즈 데이터베이스 솔루션"^]
+* link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["SnapCenter 소프트웨어 6.0"^]
+* link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴 설명서"^]
 

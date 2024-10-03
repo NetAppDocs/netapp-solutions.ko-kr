@@ -1827,20 +1827,8 @@ NetApp에서는 AWS EC2 및 Amazon FSx ONTAP에 구축된 Oracle 데이터베이
 
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
-* 고가용성 클러스터 구성 및 관리
-+
-link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/index["https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/index"^]
-
-* NetApp 엔터프라이즈 데이터베이스 솔루션
-+
-link:https://docs.netapp.com/us-en/netapp-solutions/databases/index.html["https://docs.netapp.com/us-en/netapp-solutions/databases/index.html"^]
-
-* NetApp ONTAP용 Amazon FSx
-+
-link:https://aws.amazon.com/fsx/netapp-ontap/?refid=3c5ce89c-8865-47a3-bec3-f6820351aa6d["https://aws.amazon.com/fsx/netapp-ontap/?refid=3c5ce89c-8865-47a3-bec3-f6820351aa6d"^]
-
-* Oracle Direct NFS 구축
-+
-link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/deploying-dnfs.html#GUID-D06079DB-8C71-4F68-A1E3-A75D7D96DCE2["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/deploying-dnfs.html#GUID-D06079DB-8C71-4F68-A1E3-A75D7D96DCE2"^]
-
+* link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/index["고가용성 클러스터 구성 및 관리"^]
+* link:index.html["NetApp 엔터프라이즈 데이터베이스 솔루션"^]
+* link:https://aws.amazon.com/fsx/netapp-ontap/?refid=3c5ce89c-8865-47a3-bec3-f6820351aa6d["NetApp ONTAP용 Amazon FSx"^]
+* link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/deploying-dnfs.html#GUID-D06079DB-8C71-4F68-A1E3-A75D7D96DCE2["Oracle Direct NFS 구축"^]
 

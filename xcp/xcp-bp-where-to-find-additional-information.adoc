@@ -18,5 +18,5 @@ summary:
 
 * link:https://blog.netapp.com/tag/netapp-xcp/["NetApp XCP 블로그"]
 * link:https://docs.netapp.com/us-en/xcp/["NetApp XCP 설명서"]
-* link:https://docs.netapp.com/us-en/netapp-solutions/data-analytics/bda-ai-introduction.html["인공 지능에 빅 데이터 분석 데이터"]
+* link:../data-analytics/bda-ai-introduction.html["인공 지능에 빅 데이터 분석 데이터"]
 

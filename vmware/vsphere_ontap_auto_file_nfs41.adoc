@@ -54,7 +54,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에 NetApp ONTAP NFS 버전
 
 == ONTAP 작업
 
-. link:++https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-cmpr-980/system__license__show.html++["NFS에 대한 ONTAP 라이센스를 확인합니다"]
+. link:https://docs.netapp.com/us-en/ontap-cli-98/system-license-show.html["NFS에 대한 ONTAP 라이센스를 확인합니다"]
 +
 .. system license show 명령을 사용하여 NFS가 나열되는지 확인합니다.
 .. 사용권을 추가하려면 'license add-license-code <license code>'를 사용하십시오.

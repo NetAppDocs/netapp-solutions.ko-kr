@@ -212,4 +212,4 @@ image::aicp_jhub_mlrun-mlflow-tags.png[입력/출력 대화 상자 또는 작성
 
 image::aicp_jhub_dotk_nb_cvs_usrWsVol.png[입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림]
 
-업계에서 검증된 NetApp의 Snapshot ® 및 기타 기술을 사용하여 엔터프라이즈급 데이터 보호, 이동, 효율적인 압축을 보장했습니다. 다른 AI 사용 사례는 link:https://docs.netapp.com/us-en/netapp-solutions/ai/aipod_nv_intro.html["NetApp AIPod"^]문서 를 참조하십시오.
+업계에서 검증된 NetApp의 Snapshot ® 및 기타 기술을 사용하여 엔터프라이즈급 데이터 보호, 이동, 효율적인 압축을 보장했습니다. 다른 AI 사용 사례는 link:aipod_nv_intro.html["NetApp AIPod"^]문서 를 참조하십시오.

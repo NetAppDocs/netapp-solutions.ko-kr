@@ -154,13 +154,13 @@ link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_attach_vmdk
 
 == 기존 데이터 저장소에서 VVOL 데이터 저장소로 VM 마이그레이션
 
-다른 데이터 저장소에서 VVOL 데이터 저장소로 VM을 마이그레이션하기 위해 시나리오에 따라 다양한 옵션을 사용할 수 있습니다. 간단한 스토리지 vMotion 작업부터 HCX를 사용한 마이그레이션까지 다양합니다. link:https://docs.netapp.com/us-en/netapp-solutions/vmware/migrate-vms-to-ontap-datastore.html["VM을 ONTAP 데이터 저장소로 마이그레이션합니다"]자세한 내용은 을 참조하십시오.
+다른 데이터 저장소에서 VVOL 데이터 저장소로 VM을 마이그레이션하기 위해 시나리오에 따라 다양한 옵션을 사용할 수 있습니다. 간단한 스토리지 vMotion 작업부터 HCX를 사용한 마이그레이션까지 다양합니다. link:migrate-vms-to-ontap-datastore.html["VM을 ONTAP 데이터 저장소로 마이그레이션합니다"]자세한 내용은 을 참조하십시오.
 
 
 
 == VVOL 데이터 저장소 간의 VM 마이그레이션
 
-VVOL 데이터 저장소 간에 VM을 대량 마이그레이션하는 경우 link:https://docs.netapp.com/us-en/netapp-solutions/vmware/migrate-vms-to-ontap-datastore.html["VM을 ONTAP 데이터 저장소로 마이그레이션합니다"]확인하십시오.
+VVOL 데이터 저장소 간에 VM을 대량 마이그레이션하는 경우 link:migrate-vms-to-ontap-datastore.html["VM을 ONTAP 데이터 저장소로 마이그레이션합니다"]을 확인하십시오.
 
 
 

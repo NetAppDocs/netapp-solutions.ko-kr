@@ -35,7 +35,7 @@ OpenShift 클러스터에서 가상 머신을 신속하게 생성하려면 다�
 
 가상 머신이 생성되고 시작되며 * 실행 * 상태가 됩니다. 기본 저장소 클래스를 사용하여 부팅 디스크에 대한 PVC 및 해당 PV를 자동으로 생성합니다. 나중에 VM을 라이브 마이그레이션하려면 디스크에 사용되는 스토리지 클래스가 rwx 볼륨을 지원할 수 있는지 확인해야 합니다. 실시간 마이그레이션을 위한 요구 사항입니다. ONTAP-NAS 및 ONTAP-SAN(iSCSI 및 NVMe/TCP 프로토콜을 위한 볼륨 모드 블록)은 해당 스토리지 클래스를 사용하여 생성된 볼륨에 대해 rwx 액세스 모드를 지원할 수 있습니다.
 
-클러스터에서 ONTAP-SAN 스토리지 클래스를 구성하려면 를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["VMware에서 OpenShift 가상화로 VM 마이그레이션 섹션"].
+클러스터에서 ONTAP-SAN 스토리지 클래스를 구성하려면 를 참조하십시오link:rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["VMware에서 OpenShift 가상화로 VM 마이그레이션 섹션"].
 
 
 NOTE: ONTAP NAS 또는 iSCSI를 클러스터의 기본 스토리지 클래스로 설정할 수 있습니다. Quick create VirtualMachine을 클릭하면 기본 저장소 클래스를 사용하여 VM에 대한 부팅 가능한 루트 디스크에 대한 PVC 및 PV를 생성합니다. 기본 스토리지 클래스가 ONTAP-NAS 또는 ONTAP-SAN이 아닌 경우, 가상머신 사용자 지정 > 가상머신 매개 변수 사용자 지정 > 디스크를 선택한 다음, 필요한 스토리지 클래스를 사용하도록 디스크를 편집하여 디스크의 스토리지 클래스를 선택할 수 있습니다.

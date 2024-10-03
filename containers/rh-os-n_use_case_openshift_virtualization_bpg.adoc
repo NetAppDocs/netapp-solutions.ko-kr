@@ -201,7 +201,7 @@ OpenShift에서 VM을 실행할 때 지원되는 한도에 따라 테스트된 �
 
 Migration Toolkit for OpenShift Virtualization은 OpenShift Container Platform의 OperatorHub에서 제공하는 Red Hat의 운영자입니다. 이 도구는 vSphere, Red Hat Virtualization, OpenStack 및 OpenShift Virtualization에서 VM을 마이그레이션하는 데 사용할 수 있습니다.
 
-vSphere에서 VM을 마이그레이션하는 방법에 대한 자세한 내용은 에서 확인할 수 있습니다 link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["워크플로 및 GT, NetApp ONTAP를 사용한 Red Hat OpenShift Virtualization"]
+vSphere에서 VM을 마이그레이션하는 방법에 대한 자세한 내용은 에서 확인할 수 있습니다 link:rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html["워크플로 및 GT, NetApp ONTAP를 사용한 Red Hat OpenShift Virtualization"]
 
 CLI 또는 마이그레이션 웹 콘솔에서 다양한 매개 변수에 대한 제한을 구성할 수 있습니다. 일부 샘플은 아래에 나와 있습니다
 
