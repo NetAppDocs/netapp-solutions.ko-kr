@@ -112,7 +112,7 @@ NetApp Astra 제품군은 온프레미스 및 퍼블릭 클라우드에서 Kuber
 
 
 
-== NetApp Astra Trident
+== NetApp 트라이던트
 
 아스트라 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["트라이던트"^] NetApp은 Docker 및 Kubernetes용 오픈 소스 동적 스토리지 오케스트레이터로서 영구 스토리지의 생성, 관리 및 사용을 단순화합니다. Kubernetes 네이티브 애플리케이션인 Trident는 Kubernetes 클러스터 내에서 직접 실행됩니다. Trident를 사용하면 고객이 DL 컨테이너 이미지를 NetApp 스토리지에 원활하게 배포하고 AI 컨테이너 배포를 위한 엔터프라이즈급 경험을 제공할 수 있습니다. Kubernetes 사용자(ML 개발자, 데이터 과학자 등)는 오케스트레이션 및 클론 복제를 생성, 관리 및 자동화하여 NetApp 기술이 제공하는 고급 데이터 관리 기능을 활용할 수 있습니다.
 

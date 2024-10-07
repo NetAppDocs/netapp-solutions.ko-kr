@@ -94,9 +94,9 @@ Amazon FSx for NetApp ONTAP는 완전 관리형 AWS 서비스로서, NetApp의 �
 
 
 
-== NetApp Astra Trident
+== NetApp 트라이던트
 
-Astra Trident를 사용하면 ONTAP(AFF, NetApp FAS, Select, 클라우드, NetApp ONTAP용 Amazon FSx), Element 소프트웨어(NetApp HCI, SolidFire), Azure NetApp Files 서비스 및 Google Cloud 기반 Cloud Volumes Service Astra Trident는 Kubernetes와 기본적으로 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
+Trident을 사용하면 ONTAP(AFF, FAS, Select, Cloud, Amazon FSx for NetApp ONTAP), Element 소프트웨어(NetApp HCI, SolidFire), Azure NetApp Files Service 및 Google Cloud on Cloud Volumes Service를 비롯하여 퍼블릭 클라우드 또는 온프레미스의 모든 주요 NetApp 스토리지 플랫폼에서 스토리지 리소스를 사용하고 관리할 수 있습니다. Trident는 기본적으로 Kubernetes와 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
 
 
 

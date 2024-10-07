@@ -110,7 +110,7 @@ video::255640f5-4dff-438c-8d50-b01200f017d1[panopto,width=360]
 video::36ecf505-5d1d-4e99-a6f8-b11c00341793[panopto,width=360]
 .Astra Control Service를 사용한 Rosa DR
 video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto,width=360]
-.FSxN과 Astra Trident의 통합
+.FSxN과 Trident의 통합
 video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto,width=360]
 .FSxN이 있는 Rosa에서 애플리케이션의 장애 복구 및 장애 복구
 video::e9a07d79-42a1-4480-86be-b01200fa62f5[panopto,width=360]

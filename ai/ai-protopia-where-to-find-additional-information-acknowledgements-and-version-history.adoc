@@ -28,7 +28,7 @@ https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp
 +
 https://github.com/NetApp/netapp-dataops-toolkit["https://github.com/NetApp/netapp-dataops-toolkit"^]
 
-* 컨테이너용 NetApp 영구 스토리지 - NetApp Astra Trident
+* 컨테이너용 NetApp 영구 스토리지 - NetApp Trident
 +
 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["https://netapp.io/persistent-storage-provisioner-for-kubernetes/"^]
 

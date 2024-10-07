@@ -26,7 +26,7 @@ entries:
     entries:
     - title: 개요
       url: "/containers/a-w-n_overview_storint.html"
-    - title: NetApp Astra Trident 개요
+    - title: NetApp Trident 개요
       url: "/containers/a-w-n_overview_trident.html"
   - title: 고급 구성 옵션
     entries:
@@ -67,7 +67,7 @@ entries:
       url: "/containers/dwn_overview_storint.html"
     - title: NetApp Astra Control Center 개요
       url: "/containers/dwn_overview_astra.html"
-    - title: NetApp Astra Trident 개요
+    - title: NetApp Trident 개요
       url: "/containers/dwn_overview_trident.html"
   - title: 사용 사례 검증
     entries:
@@ -122,7 +122,7 @@ entries:
         url: "/containers/rh-os-n_astra_applications.html"
       - title: 애플리케이션 보호
         url: "/containers/rh-os-n_astra_protect.html"
-    - title: NetApp Astra Trident 개요
+    - title: NetApp Trident 개요
       entries:
       - title: 개요
         url: "/containers/rh-os-n_overview_trident.html"
@@ -279,7 +279,7 @@ entries:
         url: "/containers/vtwn_astra_applications.html"
       - title: 애플리케이션 보호
         url: "/containers/vtwn_astra_protect.html"
-    - title: NetApp Astra Trident 개요
+    - title: NetApp Trident 개요
       entries:
       - title: 개요
         url: "/containers/vtwn_overview_trident.html"

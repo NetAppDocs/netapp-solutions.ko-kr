@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
 = NetApp ONTAP를 사용하여 Red Hat OpenShift Virtualization 배포
@@ -24,9 +24,9 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 * 설치 관리자가 제공한 인프라(IPI)를 통해 OpenShift 클러스터를 설치해야 합니다.
 * VM에 대한 HA를 유지하기 위해 시스템 상태 점검을 구축합니다
 * NetApp ONTAP 클러스터
-* OpenShift 클러스터에 설치된 Astra Trident
+* Trident가 OpenShift 클러스터에 설치되어 있습니다
 * ONTAP 클러스터에서 SVM으로 구성된 Trident 백엔드
-* OpenShift 클러스터에 구성된 StorageClass로, Astra Trident를 프로비저닝자로 사용합니다
+* Trident를 Provisioner로 사용하여 OpenShift 클러스터에 구성된 StorageClass
 * Red Hat OpenShift 클러스터에 대한 클러스터 관리자 액세스
 * NetApp ONTAP 클러스터에 대한 관리 액세스
 * tridentctl 및 OC 도구가 설치되고 $PATH에 추가된 관리 워크스테이션

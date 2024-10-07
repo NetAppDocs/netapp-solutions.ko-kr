@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_multitenancy_architecture.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
 summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
 ---
 = 있습니다
@@ -14,13 +14,13 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 
 
 [role="lead"]
-NetApp ONTAP에서 지원하는 Red Hat OpenShift 및 Astra Trident는 기본적으로 워크로드 간 격리를 제공하지 않지만 멀티 테넌시를 구성하는 데 사용할 수 있는 다양한 기능을 제공합니다. NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터에서 멀티테넌트 솔루션을 설계하는 방법을 잘 이해하기 위해 일련의 요구 사항이 있는 예제를 고려하고 이 솔루션에 대한 구성을 개략적으로 설명합니다.
+NetApp ONTAP를 통한 Red Hat OpenShift 및 Trident은 기본적으로 워크로드 간 격리를 제공하지 않지만, 멀티 테넌시 구성에 사용할 수 있는 광범위한 기능을 제공합니다. NetApp ONTAP에서 지원하는 Trident를 사용하여 Red Hat OpenShift 클러스터에서 멀티 테넌트 솔루션을 설계하는 방법을 더 잘 이해하려면 일련의 요구 사항을 포함하는 예제를 검토하고 이에 대한 구성을 간략히 살펴보겠습니다.
 
-한 조직이 Red Hat OpenShift 클러스터에서 두 개의 다른 팀이 진행 중인 두 프로젝트의 일부로 두 개의 워크로드를 실행하는 것으로 가정해 보겠습니다. 이러한 워크로드의 데이터는 NetApp ONTAP NAS 백엔드의 Astra Trident가 동적으로 프로비저닝한 PVC에 있습니다. 조직은 이러한 두 워크로드를 위한 멀티테넌트 솔루션을 설계하고 이러한 프로젝트에 사용되는 리소스를 격리하여 보안 및 성능이 유지되도록 해야 합니다. 이러한 애플리케이션은 주로 해당 애플리케이션을 지원하는 데이터에 초점을 맞춥니다.
+한 조직이 Red Hat OpenShift 클러스터에서 두 개의 다른 팀이 진행 중인 두 프로젝트의 일부로 두 개의 워크로드를 실행하는 것으로 가정해 보겠습니다. 이러한 워크로드의 데이터는 Trident이 NetApp ONTAP NAS 백엔드에서 동적으로 프로비저닝한 PVC에 상주합니다. 조직은 이러한 두 워크로드를 위한 멀티테넌트 솔루션을 설계하고 이러한 프로젝트에 사용되는 리소스를 격리하여 보안 및 성능이 유지되도록 해야 합니다. 이러한 애플리케이션은 주로 해당 애플리케이션을 지원하는 데이터에 초점을 맞춥니다.
 
-다음 그림은 NetApp ONTAP가 지원하는 Astra Trident가 있는 Red Hat OpenShift 클러스터의 멀티 테넌트 솔루션을 보여줍니다.
+다음 그림에서는 NetApp ONTAP에서 지원하는 Trident가 포함된 Red Hat OpenShift 클러스터의 멀티테넌트 솔루션을 보여 줍니다.
 
-image:redhat_openshift_image40.jpg["NetApp ONTAP에서 지원하는 Astra Trident와 Red Hat OpenShift 클러스터의 멀티 테넌시"]
+image:redhat_openshift_image40.jpg["NetApp ONTAP에서 지원하는 Trident를 사용하는 Red Hat OpenShift 클러스터의 멀티 테넌시"]
 
 
 
@@ -28,7 +28,7 @@ image:redhat_openshift_image40.jpg["NetApp ONTAP에서 지원하는 Astra Triden
 
 . NetApp ONTAP 스토리지 클러스터
 . Red Hat OpenShift 클러스터
-. 아스트라 트리덴트
+. 트라이던트
 
 
 
@@ -47,7 +47,7 @@ Red Hat OpenShift 클러스터의 관점에서 볼 때 가장 먼저 해야 할 
 
 
 
-== 아스트라 트리덴트
+== 트라이던트
 
 NetApp ONTAP에서 생성된 다양한 프로젝트에 대해 서로 다른 SVM을 생성한 후 각 SVM을 다른 Trident 백엔드에 매핑해야 합니다. Trident의 백엔드 구성은 OpenShift 클러스터 리소스에 영구 스토리지를 할당하는 역할을 하므로 SVM에 매핑할 세부 정보가 필요합니다. 이 드라이버는 최소한 백엔드의 프로토콜 드라이버여야 합니다. 선택적으로, 볼륨에 스토리지의 용량을 할당하는 방법을 정의하고 볼륨 크기 또는 애그리게이트 사용량 등에 대한 제한을 설정할 수 있습니다. Trident 백엔드의 정의와 관련된 세부 정보를 찾을 수 있습니다 https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"^].
 

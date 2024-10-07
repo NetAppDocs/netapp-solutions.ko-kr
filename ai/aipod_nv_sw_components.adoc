@@ -100,7 +100,7 @@ ONTAP은 다음과 같은 기능을 통해 끊임없이 변화하는 까다로�
 
 === NetApp DataOps 툴킷
 
-NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원하는 개발/교육 작업 공간 및 추론 서버의 관리를 단순화하는 Python 기반 툴입니다. DataOps 툴킷은 독립 실행형 유틸리티로 작동할 수 있으며, NetApp Astra Trident를 활용하여 스토리지 운영을 자동화하는 Kubernetes 환경에서 더 효과적입니다. 주요 기능은 다음과 같습니다.
+NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원하는 개발/교육 작업 공간 및 추론 서버의 관리를 단순화하는 Python 기반 툴입니다. DataOps 툴킷은 독립 실행형 유틸리티로 작동할 수 있으며, NetApp Trident를 활용하여 스토리지 운영을 자동화하는 Kubernetes 환경에서 더 효과적입니다. 주요 기능은 다음과 같습니다.
 
 * 고성능 스케일아웃 NetApp 스토리지를 기반으로 하는 새로운 고용량 JupyterLab 작업 공간을 빠르게 프로비저닝합니다.
 * 엔터프라이즈급 NetApp 스토리지를 통해 지원되는 새로운 NVIDIA Triton Inference Server 인스턴스를 빠르게 프로비저닝합니다.
@@ -111,6 +111,6 @@ NetApp DataOps 툴킷은 고성능 스케일아웃 NetApp 스토리지가 지원
 
 
 
-=== NetApp Astra Trident
+=== NetApp 트라이던트
 
-Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP를 비롯한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS, NVMe/TCP, iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.
+Trident는 Anthos를 포함한 컨테이너 및 Kubernetes 배포를 위한 완전 지원 오픈 소스 스토리지 오케스트레이터입니다. Trident는 NetApp ONTAP를 비롯한 전체 NetApp 스토리지 포트폴리오와 연동되며 NFS, NVMe/TCP, iSCSI 연결도 지원합니다. Trident는 최종 사용자가 스토리지 관리자의 개입 없이 NetApp 스토리지 시스템에서 스토리지를 프로비저닝 및 관리할 수 있도록 하여 DevOps 워크플로우를 가속합니다.

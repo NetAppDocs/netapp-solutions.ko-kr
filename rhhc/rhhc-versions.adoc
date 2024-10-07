@@ -34,7 +34,7 @@ summary:
 | * 소스 및 대상 클러스터 * | OpenShift 4.12.9 사내 및 AWS 
 
 
-| * NetApp Astra Trident * | Trident 서버 및 클라이언트 23.04.0 
+| * NetApp Trident * | Trident 서버 및 클라이언트 23.04.0 
 
 
 | * NetApp Astra Control Center * 에서 확인할 수 있습니다 | ACC 22.11.0-82 
@@ -65,7 +65,7 @@ VMware ESXi, 8.0.2, 22380479
 데이터를 더 많이 활용하십시오 
 
 
-| * NetApp Astra Trident * | Trident 서버 및 클라이언트 23.07.0 
+| * NetApp Trident * | Trident 서버 및 클라이언트 23.07.0 
 
 
 | * NetApp Astra Control Center * 에서 확인할 수 있습니다 | ACC 23.07.0-25 
@@ -93,7 +93,7 @@ VMware ESXi, 8.0.2, 22380479
 데이터를 더 많이 활용하십시오 
 
 
-| * NetApp Astra Trident * | Trident Server, Client 및 Astra Control Provisioner 23.10.0 을 참조하십시오 
+| * NetApp Trident * | Trident Server, Client 및 Astra Control Provisioner 23.10.0 을 참조하십시오 
 
 
 | * NetApp Astra Control Center * 에서 확인할 수 있습니다 | ACC 23.10 

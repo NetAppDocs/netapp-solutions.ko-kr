@@ -16,7 +16,7 @@ summary: 이 페이지에는 이 문서에 설명된 일부 기능을 시연하�
 [role="lead"]
 다음 비디오에서는 이 문서에 설명된 몇 가지 기능을 설명합니다.
 
-.Astra Trident를 사용하여 NetApp를 통해 VMware Tanzu-VMware Tanzu에서 영구 스토리지를 프로비저닝할 수 있습니다
+.Trident를 사용하여 NetApp를 통해 VMware Tanzu-VMware Tanzu의 영구 스토리지를 프로비저닝할 수 있습니다
 video::8db3092b-3468-4754-b2d7-b01200fbb38d[panopto,width=360]
 .Astra Control Center를 사용하여 NetApp를 사용하여 VMware Tanzu-VMware Tanzu에서 애플리케이션을 복제합니다
 video::01aff358-a0a2-4c4f-9062-b01200fb9abd[panopto,width=360]

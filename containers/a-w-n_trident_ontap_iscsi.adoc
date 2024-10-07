@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: containers/a-w-n_trident_ontap_iscsi.html 
 summary: NetApp ONTAP 스토리지 시스템과의 Trident 통합을 활성화하려면 스토리지 시스템과의 통신을 지원하는 백엔드를 생성해야 합니다. 
-keywords: Trident, Astra Trident, ONTAP, AFF, FAS, iSCSI 
+keywords: Trident, Trident, ONTAP, AFF, FAS, iSCSI 
 ---
 = NetApp ONTAP iSCSI 구성
 :hardbreaks:

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai/aicp_example_trident_operations_overview.html 
 keywords: Trident 
-summary: NetApp를 지원하는 오픈 소스 MLOps - Astra Trident 운영의 예 
+summary: NetApp를 사용한 오픈 소스 MLOps - Trident 작업의 예 
 ---
-= Astra Trident 운영의 예
+= Trident 작업의 예
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp를 지원하는 오픈 소스 MLOps - Astra Trident 운영의 �
 
 
 [role="lead"]
-이 섹션에는 Astra Trident에서 수행할 수 있는 다양한 작업의 예가 포함되어 있습니다.
+이 섹션에는 Trident를 사용하여 수행할 수 있는 다양한 작업의 예가 포함되어 있습니다.
 
 
 

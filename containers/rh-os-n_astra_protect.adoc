@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: containers/rh-os-n_astra_protect.html 
 summary: Astra Control Center에서 애플리케이션 워크로드를 관리하고 나면 해당 워크로드에 대한 보호 설정을 구성할 수 있습니다. 
-keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
+keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
 ---
 = 애플리케이션 보호
 :hardbreaks:

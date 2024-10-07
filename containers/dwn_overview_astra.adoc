@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/dwn_overview_astra.html 
-keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
+keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
 summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 기술을 기반으로 하는 온프레미스 환경에 구축된 상태 저장 Kubernetes 작업 부하를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다. 
 ---
 = NetApp Astra Control 개요
@@ -22,9 +22,9 @@ NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 �
 
 image:redhat_openshift_image44.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 사용하여 구축 및 구성된 Astra Trident 스토리지 오케스트레이터가 있는 {k8s_distribution_name} 클러스터에 설치할 수 있습니다.
+NetApp Astra Control Center는 Trident 스토리지 오케스트레이터를 NetApp ONTAP 스토리지 시스템에 구축하고 스토리지 클래스와 스토리지 백엔드를 구성하는 {k8s_Distribution_name} 클러스터에 설치할 수 있습니다.
 
-Astra Trident에 대한 자세한 내용은 을 참조하십시오 link:dwn_overview_trident.html["이 문서는 여기 에서 확인할 수 있습니다"^].
+Trident에 대한 자세한 내용은 을 link:dwn_overview_trident.html["이 문서는 여기 에서 확인할 수 있습니다"^]참조하십시오.
 
 클라우드 연결 환경에서 Astra Control Center는 Cloud Insights를 사용하여 고급 모니터링 및 원격 측정 기능을 제공합니다. Cloud Insights 연결이 없을 경우 제한된 모니터링 및 원격 측정(7일 메트릭)을 사용할 수 있으며 개방형 메트릭 엔드포인트를 통해 Kubernetes 기본 모니터링 툴(Prometheus 및 Grafana)으로 내보낼 수 있습니다.
 

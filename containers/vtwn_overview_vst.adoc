@@ -31,6 +31,6 @@ image:vtwn_image28.png["네임스페이스"]
 현재 Tanzu 및 vSphere Pod를 사용하는 VMware vSphere는 로컬 vSphere CSI 드라이버만 지원합니다. 이 작업은 vSphere Client에서 관리자가 vSphere 데이터 저장소로 사용할 수 있는 스토리지 타겟 중에서 선택할 스토리지 정책을 생성하도록 하는 방식으로 수행할 수 있습니다. 이러한 정책은 컨테이너화된 애플리케이션을 위한 영구 볼륨을 생성하는 데 사용됩니다.
 
 
-NOTE: 현재 NetApp Astra Trident CSI 드라이버는 외부 ONTAP 및 Element 스토리지 어레이에 직접 연결할 수 있도록 지원하지만, 이러한 NetApp 스토리지 시스템은 vSphere 환경의 기본 스토리지를 지원하는 데 주로 사용됩니다. 또한 NetApp 고급 데이터 관리 및 스토리지 효율성 툴을 이러한 방식으로 사용할 수 있습니다.
+NOTE: 현재 외부 ONTAP 및 Element 스토리지 어레이에 직접 연결할 수 있는 NetApp Trident CSI 드라이버는 지원되지 않지만 이러한 NetApp 스토리지 시스템은 vSphere 환경의 운영 스토리지를 지원하는 데 사용되는 경우가 많으며 NetApp 고급 데이터 관리 및 스토리지 효율성 툴을 이 방법으로 사용할 수 있습니다.
 
 Tanzu를 사용하는 VMware vSphere에 대한 자세한 내용은 설명서를 참조하십시오 link:https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html["여기"^].

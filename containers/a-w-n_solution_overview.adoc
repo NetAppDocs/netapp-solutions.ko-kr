@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/a-w-n_solution_overview.html 
-keywords: NVA-1165, Anthos, GKE, Netapp, Astra Trident 
+keywords: NVA-1165, Anthos, GKE, Netapp, Trident 
 summary: 이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 바와 같이 여러 데이터 센터 환경에 구축된 Anthos with NetApp 솔루션의 배포 검증을 제공합니다. 
 ---
 = NVA-1165: NetApp의 Anthos
@@ -16,7 +16,7 @@ summary: 이 참조 문서는 NetApp 및 엔지니어링 파트너가 검증한 
 Banu Sundhar와 NetApp의 Suresh Thoppay가 있습니다
 
 [role="lead"]
-이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션에 대한 배포 검증을 제공합니다. 또한, 영구 스토리지 관리를 위한 Astra Trident 스토리지 오케스트레이터를 사용하여 NetApp 스토리지 시스템과의 스토리지 통합에 대해 자세히 설명합니다. 마지막으로 여러 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
+이 참조 문서는 여러 데이터 센터 환경에 배포될 NetApp 및 엔지니어링 파트너가 NetApp Anthos with NetApp 솔루션에 대한 배포 검증을 제공합니다. 또한 Trident 스토리지 오케스트레이터를 사용하여 영구 스토리지 관리를 통해 NetApp 스토리지 시스템과의 스토리지 통합에 대해서도 자세히 설명합니다. 마지막으로 여러 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
 
 
 
@@ -26,7 +26,7 @@ NetApp 솔루션의 Anthos는 다음과 같은 사용 사례를 통해 고객에
 
 * VMware vSphere의 "gkectl" 툴 또는 베어 메탈에 제공된 "bmctl" 툴을 사용하여 배포된 Anthos 환경을 쉽게 배포 및 관리할 수 있습니다.
 * 엔터프라이즈 컨테이너 및 가상화된 워크로드의 힘을 합쳐 Anthos와 함께 vSphere 또는 베어 메탈에 가상으로 배포 https://cloud.google.com/anthos/clusters/docs/bare-metal/1.9/how-to/vm-workloads["쿠버바이러스"^].
-* Kubernetes용 오픈 소스 스토리지 오케스트레이터인 NetApp 스토리지와 Astra Trident와 함께 Anthos의 기능을 강조하는 실제 구성 및 사용 사례
+* NetApp 스토리지와 Kubernetes용 오픈 소스 스토리지 오케스트레이터인 Trident과 함께 사용했을 때 Anthos 기능을 강조한 실제 구성 및 사용 사례
 
 
 
@@ -72,9 +72,9 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 === NetApp 스토리지 통합
 
-Astra Trident는 Anthos를 비롯한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완벽하게 지원되는 스토리지 오케스트레이터입니다.
+Trident는 Anthos를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원되는 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
 
 
 

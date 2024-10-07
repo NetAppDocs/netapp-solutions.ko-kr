@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
 = 워크플로우: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
@@ -20,7 +20,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 == 스냅샷으로부터 VM을 생성하십시오
 
-Astra Trident와 Red Hat OpenShift를 사용하면 IT에서 프로비저닝한 스토리지 클래스에서 영구 볼륨의 스냅샷을 생성할 수 있습니다. 이 기능을 사용하면 사용자는 볼륨의 시점 복사본을 만들어 새 볼륨을 생성하거나 동일한 볼륨을 이전 상태로 복원할 수 있습니다. 이를 통해 롤백에서 클론, 데이터 복원에 이르기까지 다양한 활용 사례를 지원하거나 지원할 수 있습니다.
+Trident 및 Red Hat OpenShift를 사용하면 IT 부서에서 프로비저닝한 스토리지 클래스에서 영구 볼륨의 스냅샷을 생성할 수 있습니다. 이 기능을 사용하면 사용자는 볼륨의 시점 복사본을 만들어 새 볼륨을 생성하거나 동일한 볼륨을 이전 상태로 복원할 수 있습니다. 이를 통해 롤백에서 클론, 데이터 복원에 이르기까지 다양한 활용 사례를 지원하거나 지원할 수 있습니다.
 
 OpenShift의 스냅샷 작업의 경우 VolumeSnapshotClass, VolumeSnapshot 및 VolumeSnapshotContent 리소스를 정의해야 합니다.
 

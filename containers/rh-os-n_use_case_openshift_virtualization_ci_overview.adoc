@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization, cloud Insights 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization, cloud Insights 
 summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용하여 모니터링 
 ---
 = Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용하여 모니터링

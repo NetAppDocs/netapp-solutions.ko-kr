@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/vtwn_solution_overview.html 
-keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Astra Trident, Astra Control, Astra 
+keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Trident, Astra Control, Astra 
 summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다.' 
 ---
 = NVA-1166: NetApp을 사용하는 VMware Tanzu
@@ -16,7 +16,7 @@ summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터
 NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
 
 [role="lead"]
-이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템과의 스토리지 통합 및 영구 스토리지를 위한 Astra Trident 스토리지 오케스트레이터와 해당 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 복제를 위한 Astra Control Center에 대해 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
+이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템 및 Trident 스토리지 오케스트레이터와의 스토리지 통합에 대해 설명하고, 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 클론 복제를 위한 Astra Control Center에 대해서도 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
 
 
 
@@ -69,7 +69,7 @@ VMware Tanzu는 NetApp의 솔루션 엔지니어링 팀이 연구소에서 검�
 * Windows 또는 Linux 작업자 노드(Ubuntu/Photon)를 사용할 수 있습니다.
 * NSX-T, HA 프록시, AVI 네트워킹 또는 로드 밸런서를 컨트롤 플레인에 사용할 수 있습니다.
 * TKG는 애플리케이션/데이터 평면에 대해 MetalLB를 지원합니다.
-* vSphere CSI와 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다.
+* vSphere CSI는 물론 NetApp Trident와 같은 타사 CSIS를 사용할 수 있습니다.
 
 
 * VMware Tanzu Kubernetes Grid Service(TKGS) *
@@ -80,7 +80,7 @@ VMware Tanzu는 NetApp의 솔루션 엔지니어링 팀이 연구소에서 검�
 * Windows 또는 Linux 작업자 노드(Ubuntu/Photon)를 사용할 수 있습니다.
 * NSX-T, HA 프록시, AVI 네트워킹 또는 로드 밸런서를 컨트롤 플레인에 사용할 수 있습니다.
 * TKGS는 애플리케이션/데이터 평면에 대해 MetalLB를 지원합니다.
-* vSphere CSI와 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다.
+* vSphere CSI는 물론 NetApp Trident와 같은 타사 CSIS를 사용할 수 있습니다.
 * 는 vSphere Pod와 Tanzu를 지원하므로 Pod가 환경의 활성화된 ESXi 호스트에서 직접 실행될 수 있습니다.
 
 
@@ -91,7 +91,7 @@ VMware Tanzu는 NetApp의 솔루션 엔지니어링 팀이 연구소에서 검�
 * vSphere 6.7U3 이상, AWS, Azure 및 GCP에서 지원됩니다.
 * 마법사를 통해 설정을 하면 배포가 용이합니다.
 * Bosh에서 관리하는 제어된 불변 VM에서 Tanzu를 실행합니다.
-* vSphere CSI 및 NetApp Astra Trident와 같은 타사 CSIS를 사용할 수 있습니다(일부 조건이 적용됨).
+* NetApp Trident와 같은 타사 CSIS뿐만 아니라 vSphere CSI도 사용할 수 있습니다(일부 조건이 적용됨).
 
 
 * vSphere 및 Tanzu(vSphere Pod) *
@@ -120,9 +120,9 @@ NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 �
 
 자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 
-Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를 위한 완전히 지원되는 오픈 소스 스토리지 오케스트레이터입니다.
+Trident는 VMware Tanzu를 포함한 컨테이너 및 Kubernetes 배포를 위한 완전 지원되는 오픈 소스 스토리지 오케스트레이터입니다.
 
-자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
 
 
 
@@ -140,7 +140,7 @@ Astra Trident는 VMware Tanzu를 비롯한 컨테이너 및 Kubernetes 배포를
 | NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 22.04 
 
 
-| NetApp Astra Trident | 스토리지 오케스트레이션 | 22.04.0 
+| NetApp 트라이던트 | 스토리지 오케스트레이션 | 22.04.0 
 
 
 | VMware Tanzu Kubernetes Grid를 참조하십시오 | 컨테이너 오케스트레이션 | 1.4 이상 

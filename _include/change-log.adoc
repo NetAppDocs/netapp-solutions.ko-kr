@@ -313,7 +313,7 @@
 | 2021년 6월 14일 | 데이터베이스 | Azure NetApp Files 기반 Microsoft SQL Server 솔루션 추가 
 
 
-| 2021년 6월 11일 | 컨테이너 | 새로운 비디오 데모 추가: NVA-1160에 Astra Trident 및 SnapMirror를 사용한 워크로드 마이그레이션 
+| 2021년 6월 11일 | 컨테이너 | Trident 및 SnapMirror를 사용하여 NVA-1160 으로 워크로드 마이그레이션 라는 새로운 비디오 추가 
 
 
 | 2021년 6월 9일 | 컨테이너 | NetApp OpenShift에서 NVA-1160-Advanced Cluster Management for Kubernetes에 새로운 사용 사례를 추가했습니다 

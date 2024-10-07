@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_multitenancy_overview.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, Multitenancy, Multi-tenancy 
 summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성 
 ---
 = NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시를 구성합니다
@@ -28,4 +28,4 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 * 리소스 경합으로 인해 예기치 않은 성능 저하로부터 워크로드 보호
 
 
-완전히 실현된 멀티테넌트 OpenShift 클러스터의 경우 컴퓨팅, 스토리지, 네트워킹, 보안 등과 같은 다양한 리소스 버킷에 속하는 클러스터 리소스에 대해 할당량 및 제한을 구성해야 합니다. 이 솔루션에서 모든 리소스 버킷의 특정 측면을 다루지만, NetApp은 NetApp ONTAP가 지원하는 Astra Trident에 의해 동적으로 할당된 스토리지 리소스에서 멀티테넌시를 구성하여 동일한 Red Hat OpenShift 클러스터에서 여러 워크로드에서 제공 또는 소비되는 데이터를 격리하고 보호하는 모범 사례에 초점을 맞춥니다.
+완전히 실현된 멀티테넌트 OpenShift 클러스터의 경우 컴퓨팅, 스토리지, 네트워킹, 보안 등과 같은 다양한 리소스 버킷에 속하는 클러스터 리소스에 대해 할당량 및 제한을 구성해야 합니다. 이 솔루션의 모든 리소스 버킷의 특정 측면을 다루지만, Trident NetApp ONTAP에서 동적으로 할당하는 스토리지 리소스에 대한 멀티 테넌시를 구성하여 동일한 Red Hat OpenShift 클러스터에서 여러 워크로드에서 제공되거나 소비하는 데이터를 격리하고 보호하는 모범 사례를 집중 조명합니다.

@@ -20,7 +20,7 @@ summary:
 +
 https://docs.netapp.com/["https://docs.netapp.com/"^]
 
-* Astra Trident 문서
+* Trident 설명서
 +
 https://docs.netapp.com/us-en/trident/["https://docs.netapp.com/us-en/trident/"^]
 

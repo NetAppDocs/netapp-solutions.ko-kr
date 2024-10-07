@@ -23,7 +23,7 @@ summary: 오픈 소스 MLOps 및 NetApp-Kubeflow 배포
 이 섹션에 요약된 배포 연습을 수행하기 전에 이미 다음 작업을 수행했다고 가정합니다.
 
 . 이미 작동 중인 Kubernetes 클러스터가 있으며, 구축하려는 Kubeflow 버전에서 지원하는 Kubernetes 버전을 실행하고 있습니다. 지원되는 Kubernetes 버전 목록은 에서 Kubeflow 버전에 대한 종속성을 참조하십시오 link:https://www.kubeflow.org/docs/releases/["Kubeflow 공식 문서"^].
-. Kubernetes 클러스터에 NetApp Astra Trident를 이미 설치하고 구성했습니다. Astra Trident에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 문서"].
+. Kubernetes 클러스터에 NetApp Trident를 이미 설치하고 구성했습니다. Trident에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/trident/index.html["Trident 문서"]참조하십시오.
 
 
 

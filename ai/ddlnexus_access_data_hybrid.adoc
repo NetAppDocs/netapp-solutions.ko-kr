@@ -61,7 +61,7 @@ NOTE: Amazon FSx for NetApp ONTAP에서는 System Manager를 사용할 수 없�
 
 === FlexCache 볼륨을 Domino에 표시합니다
 
-다음으로 FlexCache 볼륨을 Domino MLOps 플랫폼에 노출해야 합니다. FlexCache 볼륨을 Domino에 표시하려면 의 'Astra Trident에서 프로비저닝하지 않은 기존 NFS 볼륨 노출' 하위 섹션에 설명된 지침을 따르십시오 link:ddlnexus_expose_netapp_vols.html["'기존 NetApp 볼륨을 Domino에 노출' 섹션을 참조하십시오"] 있습니다.
+다음으로 FlexCache 볼륨을 Domino MLOps 플랫폼에 노출해야 합니다. FlexCache 볼륨을 Domino에 표시하려면 이 솔루션의 'Trident에서 프로비저닝하지 않은 기존 NFS 볼륨 노출' 하위 섹션에 설명된 지침을 link:ddlnexus_expose_netapp_vols.html["'기존 NetApp 볼륨을 Domino에 노출' 섹션을 참조하십시오"]따르십시오.
 
 이제 다음 스크린샷과 같이 대상 데이터 평면에서 작업 및 작업 공간을 시작할 때 FlexCache 볼륨을 마운트할 수 있습니다.
 
@@ -117,7 +117,7 @@ BlueXP를 사용하지 않으려는 경우 ONTAP System Manager 또는 ONTAP CLI
 
 === Domino에 대상 볼륨을 표시합니다
 
-다음으로 대상 볼륨을 Domino MLOps 플랫폼에 노출해야 합니다. 대상 볼륨을 Domino에 노출하려면 의 'Astra Trident에서 프로비저닝하지 않은 기존 NFS 볼륨 노출' 하위 섹션에 설명된 지침을 따르십시오 link:ddlnexus_expose_netapp_vols.html["'기존 NetApp 볼륨을 Domino에 노출' 섹션을 참조하십시오"] 있습니다.
+다음으로 대상 볼륨을 Domino MLOps 플랫폼에 노출해야 합니다. 대상 볼륨을 Domino에 표시하려면 이 솔루션의 'Trident에서 프로비저닝하지 않은 기존 NFS 볼륨 노출' 하위 섹션에 설명된 지침을 따르십시오link:ddlnexus_expose_netapp_vols.html["'기존 NetApp 볼륨을 Domino에 노출' 섹션을 참조하십시오"].
 
 이제 다음 스크린샷과 같이 대상 데이터 평면에서 작업 및 작업 공간을 시작할 때 대상 볼륨을 마운트할 수 있습니다.
 

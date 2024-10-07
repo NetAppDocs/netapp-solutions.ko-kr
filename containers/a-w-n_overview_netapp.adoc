@@ -14,7 +14,7 @@ summary: NetApp은 Trident Storage Orchestrator를 사용하여 Anthos에 구축
 
 
 [role="lead"]
-NetApp은 Astra Trident Storage Orchestrator를 사용하여 컨테이너로 배포된 애플리케이션의 스토리지를 프로비저닝할 수 있는 여러 스토리지 플랫폼을 제공합니다.
+NetApp에는 컨테이너로 구축된 애플리케이션용 스토리지를 프로비저닝하기 위해 Trident Storage Orchestrator와 호환되는 여러 스토리지 플랫폼이 있습니다.
 
 image:a-w-n_netapp_overview.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

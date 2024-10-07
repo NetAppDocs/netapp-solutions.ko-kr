@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
 summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화 
 ---
 = 워크플로우: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
@@ -20,7 +20,7 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 == Migration Toolkit for Virtualization을 사용하여 VMware에서 OpenShift 가상화로 VM 마이그레이션
 
-이 섹션에서는 MTV(Migration Toolkit for Virtualization)를 사용하여 가상 머신을 VMware에서 OpenShift Container 플랫폼에서 실행되고 Astra Trident를 사용하여 NetApp ONTAP 스토리지와 통합된 OpenShift 가상화로 마이그레이션하는 방법을 알아봅니다.
+이 섹션에서는 MTV(Migration Toolkit for Virtualization)를 사용하여 VMware에서 OpenShift Container 플랫폼에서 실행되고 Trident를 사용하여 NetApp ONTAP 스토리지와 통합된 OpenShift 가상화로 가상 머신을 마이그레이션하는 방법을 알아봅니다.
 
 다음 비디오에서는 영구 스토리지를 위해 ONTAP-SAN 스토리지 클래스를 사용하여 RHEL VM을 VMware에서 OpenShift Virtualization으로 마이그레이션하는 과정을 보여 줍니다.
 
@@ -69,7 +69,7 @@ NOTE: PostgreSQL 서버를 시작하고 부팅 시 서비스가 시작되도록 
 MTV를 설치하기 전에 다음 설치가 완료되었습니다.
 
 * OpenShift 클러스터 4.13.34
-* link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident 23.10"]
+* link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Trident 23.10 을 참조하십시오"]
 * iSCSI를 위해 클러스터 노드의 다중 경로를 설정합니다(ONTAP-SAN 스토리지 클래스의 경우). 제공된 YAML을 참조하여 클러스터의 각 노드에서 iSCSI를 활성화하는 데몬 세트를 생성합니다.
 * iSCSI를 사용하는 ONTAP SAN용 Trident 백엔드 및 스토리지 클래스 트라이덴트 백엔드 및 스토리지 클래스에 대해 제공된 YAML 파일을 참조하십시오.
 * link:https://docs.openshift.com/container-platform/4.13/virt/install/installing-virt-web.html["OpenShift 가상화"]

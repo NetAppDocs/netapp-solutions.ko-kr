@@ -26,10 +26,10 @@ summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드
 | MLOps 플랫폼 컴퓨팅 환경 | link:https://docs.dominodatalab.com/en/latest/admin_guide/5781ea/data-planes/["Domino Nexus 데이터 플레인"] | AWS, 온프레미스 데이터 센터에 있습니다 
 
 
-| 온프레미스 컴퓨팅 플랫폼 | link:https://kubernetes.io["쿠버네티스"] 와 함께 link:https://docs.netapp.com/us-en/trident/index.html["NetApp Astra Trident"] | 온프레미스 데이터 센터 
+| 온프레미스 컴퓨팅 플랫폼 | link:https://kubernetes.io["쿠버네티스"] 및 link:https://docs.netapp.com/us-en/trident/index.html["NetApp 트라이던트"] | 온프레미스 데이터 센터 
 
 
-| 클라우드 컴퓨팅 플랫폼 | link:https://aws.amazon.com/eks/["Amazon Elastic Kubernetes Service(EKS)"] 와 함께 link:https://docs.netapp.com/us-en/trident/index.html["NetApp Astra Trident"] | 설치하고 
+| 클라우드 컴퓨팅 플랫폼 | link:https://aws.amazon.com/eks/["Amazon Elastic Kubernetes Service(EKS)"] 및 link:https://docs.netapp.com/us-en/trident/index.html["NetApp 트라이던트"] | 설치하고 
 
 
 | 온프레미스 데이터 플랫폼 | link:https://www.netapp.com/data-storage/["NetApp 스토리지 어플라이언스"] 에서 제공 link:https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP를 참조하십시오"] | 온프레미스 데이터 센터 

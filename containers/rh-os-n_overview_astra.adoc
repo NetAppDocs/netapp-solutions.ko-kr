@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_overview_astra.html 
-keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Astra Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
+keywords: NetApp Astra Control, Astra Control Center, Application, Trident, Trident, Helm, Operator, ONTAP, OpenShift, Kubernetes, Red Hat OpenShift 
 summary: NetApp Astra Control Center는 NetApp의 신뢰할 수 있는 데이터 보호 기술을 기반으로 하는 온프레미스 환경에 구축된 상태 저장 Kubernetes 작업 부하를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다. 
 ---
 = NetApp Astra Control Center 개요
@@ -19,9 +19,9 @@ NetApp Astra Control Center는 사내 환경에 구축되어 NetApp 데이터 �
 
 image:redhat_openshift_image44.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 스토리지 클래스 및 스토리지 백엔드를 구축하고 구성하는 Astra Trident 스토리지 오케스트레이터가 구축된 Red Hat OpenShift 클러스터에 설치할 수 있습니다.
+NetApp Astra Control Center는 NetApp ONTAP 스토리지 시스템에 대한 스토리지 클래스와 스토리지 백엔드를 통해 구축 및 구성된 Trident 스토리지 오케스트레이터를 사용하는 Red Hat OpenShift 클러스터에 설치할 수 있습니다.
 
-Astra Control Center를 지원하는 Astra Trident의 설치 및 구성은 를 참조하십시오 link:rh-os-n_overview_trident.html["이 문서는 여기 에서 확인할 수 있습니다"^].
+Astra Control Center를 지원하기 위한 Trident의 설치 및 구성은 를 참조하십시오link:rh-os-n_overview_trident.html["이 문서는 여기 에서 확인할 수 있습니다"^].
 
 클라우드 연결 환경에서 Astra Control Center는 Cloud Insights를 사용하여 고급 모니터링 및 원격 측정 기능을 제공합니다. Cloud Insights 연결이 없을 경우 제한된 모니터링 및 원격 측정(7일 메트릭)을 사용할 수 있으며 개방형 메트릭 엔드포인트를 통해 Kubernetes 기본 모니터링 툴(Prometheus 및 Grafana)으로 내보낼 수 있습니다.
 
@@ -36,14 +36,14 @@ NetApp Astra Control Center를 시작하려면 을 방문하십시오 link:https
 == Astra Control Center 설치 필수 구성 요소
 
 . 하나 이상의 Red Hat OpenShift 클러스터 버전 4.6 EUS 및 4.7이 현재 지원됩니다.
-. 각 Red Hat OpenShift 클러스터에 이미 Astra Trident가 설치 및 구성되어 있어야 합니다.
+. Trident는 각 Red Hat OpenShift 클러스터에 이미 설치되어 있고 구성해야 합니다.
 . ONTAP 9.5 이상을 실행 중인 NetApp ONTAP 스토리지 시스템 하나 이상
 +
 
 NOTE: 단일 사이트에 OpenShift를 설치할 때마다 전용 SVM을 설치하여 영구 스토리지로 사용하는 것이 가장 좋습니다. 다중 사이트 배포에는 추가 스토리지 시스템이 필요합니다.
 
 . Trident 스토리지 백엔드는 각 OpenShift 클러스터에서 ONTAP 클러스터에서 지원하는 SVM과 함께 구성해야 합니다.
-. 스토리지 프로비저닝자로 Astra Trident가 있는 각 OpenShift 클러스터에 구성된 기본 StorageClass입니다.
+. Trident를 스토리지 프로비저닝기로 사용하여 각 OpenShift 클러스터에 구성된 기본 StorageClass
 . 부하 분산 및 OpenShift 서비스 노출을 위해 각 OpenShift 클러스터에 로드 밸런서를 설치하고 구성해야 합니다.
 +
 

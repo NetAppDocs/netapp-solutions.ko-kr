@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/rh-os-n_overview_storint.html 
-keywords: Astra, Astra Control Center, Trident, Astra Trident, persistent storage 
+keywords: Astra, Astra Control Center, Trident, Trident, persistent storage 
 summary: NetApp은 Red Hat OpenShift와 같은 컨테이너 기반 환경에서 지속적인 데이터를 오케스트레이션하고 관리할 수 있도록 고객을 지원하는 다양한 제품을 제공합니다. 
 ---
 = NetApp 스토리지 통합 개요
@@ -20,10 +20,10 @@ image:redhat_openshift_image108.jpg["입력/출력 대화 상자 또는 작성�
 
 NetApp Astra Control은 NetApp 데이터 보호 기술을 기반으로 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다. Astra Control Service는 클라우드 네이티브 Kubernetes 구축에서 상태 저장 워크로드를 지원할 수 있습니다. Astra Control Center는 Red Hat OpenShift와 같은 온프레미스 배포에서 상태 저장 워크로드를 지원할 수 있습니다. 자세한 내용은 NetApp Astra Control 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 
-NetApp Astra Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원 스토리지 오케스트레이터입니다. 자세한 내용은 Astra Trident 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/trident/index.html["여기"].
+NetApp Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원되는 스토리지 오케스트레이터입니다. 자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
 
 다음 페이지는 NetApp OpenShift with NetApp 솔루션에서 애플리케이션 및 영구 스토리지 관리를 위해 검증된 NetApp 제품에 대한 추가 정보를 제공합니다.
 
 * link:rh-os-n_overview_astra.html["NetApp Astra Control Center를 참조하십시오"]
-* link:rh-os-n_overview_trident.html["NetApp Astra Trident"]
+* link:rh-os-n_overview_trident.html["NetApp 트라이던트"]
 

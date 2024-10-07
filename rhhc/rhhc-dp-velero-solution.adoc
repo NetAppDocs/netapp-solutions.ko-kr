@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rhhc/rhhc-dp-velero-solution.html 
-keywords: OpenShift, OCP, Astra Trident, NetApp ONTAP, Red Hat OpenShift, OADP operator, Openshift Data Protection Application operator, Velero, app data protection, Containers 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OADP operator, Openshift Data Protection Application operator, Velero, app data protection, Containers 
 summary: NetApp ONTAP를 사용한 Red Hat OpenShift Container 애플리케이션 데이터 보호 
 ---
 = OpenShift API for Data Protection(OADP)을 사용하여 OpenShift 컨테이너 플랫폼의 컨테이너 앱에 대한 데이터 보호
@@ -16,9 +16,9 @@ summary: NetApp ONTAP를 사용한 Red Hat OpenShift Container 애플리케이�
 저자: 바누 선다, NetApp
 
 [role="lead"]
-참조 문서의 이 섹션에서는 NetApp ONTAP S3 또는 NetApp StorageGRID S3의 Velero와 함께 OADP(OpenShift API for Data Protection)를 사용하여 컨테이너 애플리케이션의 백업을 생성하는 방법에 대해 자세히 설명합니다. 앱의 영구 볼륨(PVS)을 비롯한 네임스페이스 범위 리소스 백업은 CSI Astra Trident Snapshots을 사용하여 생성됩니다.
+참조 문서의 이 섹션에서는 NetApp ONTAP S3 또는 NetApp StorageGRID S3의 Velero와 함께 OADP(OpenShift API for Data Protection)를 사용하여 컨테이너 애플리케이션의 백업을 생성하는 방법에 대해 자세히 설명합니다. 앱의 영구 볼륨(PVS)을 포함한 네임스페이스 범위 리소스의 백업은 CSI Trident 스냅샷을 사용하여 생성됩니다.
 
-컨테이너 앱의 영구 스토리지는 을 사용하여 OpenShift 클러스터에 통합된 ONTAP 스토리지를 통해 뒷받침할 수 link:https://docs.netapp.com/us-en/trident/["Astra Trident CSI"]있습니다. 이 섹션에서는 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/installing/installing-oadp-ocs.html["데이터 보호를 위한 OpenShift API(OADP)"] 데이터 볼륨을 포함한 앱의 백업을 에 수행하는 데 사용합니다
+컨테이너 앱의 영구 스토리지는 을 사용하여 OpenShift 클러스터에 통합된 ONTAP 스토리지를 통해 뒷받침할 수 link:https://docs.netapp.com/us-en/trident/["Trident CSI입니다"]있습니다. 이 섹션에서는 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/installing/installing-oadp-ocs.html["데이터 보호를 위한 OpenShift API(OADP)"] 데이터 볼륨을 포함한 앱의 백업을 에 수행하는 데 사용합니다
 
 * ONTAP 오브젝트 스토리지
 * StorageGRID
@@ -41,11 +41,9 @@ OADP 1.3은 OpenShift 클러스터 4.12 이상의 운영자 허브에서 사용�
 * OpenShift 클러스터 4.14
 * Red Hat에서 제공하는 OADP Operator 1.13
 * Linux용 Velero CLI 1.13
-* Astra Trident 24.02
+* Trident 24.02 를 참조하십시오
 * ONTAP 9.12 를 참조하십시오
 * Helm을 사용하여 PostgreSQL을 설치했습니다.
 
 
-link:https://docs.netapp.com/us-en/trident/["Astra Trident CSI"]
-link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/installing/installing-oadp-ocs.html["데이터 보호를 위한 OpenShift API(OADP)"]
-link:https://velero.io/["벨레로"]
+link:https://docs.netapp.com/us-en/trident/["Trident CSI입니다"] link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/installing/installing-oadp-ocs.html["데이터 보호를 위한 OpenShift API(OADP)"] link:https://velero.io/["벨레로"]

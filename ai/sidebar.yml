@@ -147,9 +147,9 @@ entries:
       url: "/ai/aicp_concepts_and_components.html"
     - title: 있습니다
       url: "/ai/aicp_hardware_and_software_requirements.html"
-    - title: NetApp Astra Trident 구성
+    - title: NetApp Trident 구성
       entries:
-      - title: NetApp AIPod 구축을 위한 Astra Trident 백엔드의 예
+      - title: NetApp AIPod 구축을 위한 Trident 백엔드의 예
         url: "/ai/aicp_example_trident_backends_for_ontap_ai_deployments.html"
       - title: NetApp AIPod 구축을 위한 Kubernetes StorageClasses 예
         url: "/ai/aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html"
@@ -183,7 +183,7 @@ entries:
           url: "/ai/aicp_example_notebooks_and_pipelines.html"
         - title: 워크플로 예 - 이미지 인식 모델 교육
           url: "/ai/aicp_kubeflow_train_image_recognition.html"
-    - title: Astra Trident 운영의 예
+    - title: Trident 작업의 예
       url: "/ai/aicp_example_trident_operations_overview.html"
     - title: AIPod 구축을 위한 고성능 작업의 예
       entries:

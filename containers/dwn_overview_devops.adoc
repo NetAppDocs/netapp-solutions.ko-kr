@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/dwn_overview_devops.html 
-keywords: DevOps, Netapp, Astra Trident, Astra Control, Astra 
+keywords: DevOps, Netapp, Trident, Astra Control, Astra 
 summary: DevOps 및 이 기술 보고서의 잠재적 사용 사례에 대한 개요 
 ---
 = DevOps 개요

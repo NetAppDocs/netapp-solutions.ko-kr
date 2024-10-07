@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: containers/vtwn_overview_netapp.html 
 keywords: NetApp, ONTAP, Element, Storage, Tanzu, VMware Tanzu with NetApp ONTAP 
-summary: NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격을 갖춘 여러 스토리지 플랫폼을 보유하고 있으므로 DevOps 처리량을 정의하고 극대화하는 데 도움이 됩니다. 
+summary: NetApp에는 컨테이너식 애플리케이션에 대한 데이터를 프로비저닝, 보호 및 관리하는 Trident 및 Astra Control에 적합한 여러 스토리지 플랫폼이 있어 DevOps 처리량을 정의하고 극대화하는 데 도움이 됩니다. 
 ---
 = NetApp 스토리지 시스템 개요
 :hardbreaks:
@@ -16,10 +16,10 @@ summary: NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 
 
 
 [role="lead"]
-NetApp은 컨테이너화된 애플리케이션에 대한 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격을 갖춘 여러 스토리지 플랫폼을 보유하고 있으므로 DevOps 처리량을 정의하고 극대화하는 데 도움이 됩니다.
+NetApp에는 컨테이너식 애플리케이션에 대한 데이터를 프로비저닝, 보호 및 관리하는 Trident 및 Astra Control에 적합한 여러 스토리지 플랫폼이 있어 DevOps 처리량을 정의하고 극대화하는 데 도움이 됩니다.
 
 [role="normal"]
-NetApp은 컨테이너화된 애플리케이션을 위해 데이터를 프로비저닝, 보호 및 관리할 수 있는 Astra Trident 및 Astra Control과 함께 자격이 있는 여러 스토리지 플랫폼을 제공합니다.
+NetApp에는 컨테이너식 애플리케이션의 데이터를 프로비저닝, 보호 및 관리하는 Trident 및 Astra Control에 적합한 몇 가지 스토리지 플랫폼이 있습니다.
 
 image:redhat_openshift_image43.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
