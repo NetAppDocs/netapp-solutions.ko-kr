@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: vmware/migrate-vms-to-ec2-fsxn-deploy.html 
 keywords: netapp, vmware, amazon, ec2, fsxn, migration, iscsi, deploy 
-summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOps "코드형 이동성" 기능을 사용하여 FSx for ONTAP iSCSI LUN에 배치된 데이터 디스크를 사용하여 온프레미스 VMware vSphere VM을 Amazon EC2 인스턴스로 마이그레이션하는 방법을 설명합니다.' 
+summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOps "코드형 이동성" 기능을 사용하여 FSx ONTAP iSCSI LUN에 배치된 데이터 디스크가 있는 온프레미스 VMware vSphere VM을 Amazon EC2 인스턴스로 마이그레이션하는 방법을 설명합니다.' 
 ---
-= FSxN:Deployment Guide를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+= Amazon FSx for ONTAP: 배포 가이드를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,26 +18,26 @@ summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOp
 
 
 
-== 마이그레이션 작업을 위해 FSx for ONTAP 및 Cirrus 데이터를 구성합니다
+== 마이그레이션 작업을 위해 FSx ONTAP 및 Cirrus 데이터를 구성합니다
 
-여기 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["단계별 구축 가이드"] 에는 FSx for ONTAP 볼륨을 VPC에 추가하는 방법이 나와 있습니다. 이러한 단계는 본질적으로 순차적이므로 순서대로 다루어야 합니다.
+다음은 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["단계별 구축 가이드"] FSx ONTAP 볼륨을 VPC에 추가하는 방법을 보여 줍니다. 이러한 단계는 본질적으로 순차적이므로 순서대로 다루어야 합니다.
 
 이 데모에서 "DRaaSDemo"는 생성된 파일 시스템의 이름입니다.
 
 image:migrate-ec2-fsxn-image02.png["데모 파일 시스템 사용자 인터페이스 이미지"]
 
-AWS VPC를 구성하고 성능 요구사항에 따라 FSx for ONTAP를 프로비저닝하면 에 로그인합니다 link:http://cloud.cirrusdata.com/["cloud.cirrusdata.com"] 및 link:https://customer.cirrusdata.com/cdc/kb/articles/get-started-with-cirrus-data-cloud-4eDqjIxQpg["새 프로젝트를 만듭니다"] 기존 프로젝트에 액세스할 수 있습니다.
+AWS VPC를 구성하고 성능 요구사항에 따라 FSx ONTAP를 프로비저닝하면  link:https://customer.cirrusdata.com/cdc/kb/articles/get-started-with-cirrus-data-cloud-4eDqjIxQpg["새 프로젝트를 만듭니다"]기존 프로젝트에 로그인하거나 link:http://cloud.cirrusdata.com/["cloud.cirrusdata.com"]기존 프로젝트에 액세스합니다.
 
 image:migrate-ec2-fsxn-image03.png["Cirrus Data projects 사용자 인터페이스 이미지"]
 
-MigrationOps 방법을 생성하기 전에 AWS 클라우드를 통합으로 추가해야 합니다. CMC는 FSx for ONTAP 및 AWS와의 통합 기능을 기본적으로 제공합니다. FSx for ONTAP의 통합은 다음과 같은 자동화 기능을 제공합니다.
+MigrationOps 방법을 생성하기 전에 AWS 클라우드를 통합으로 추가해야 합니다. CMC는 FSx ONTAP 및 AWS와의 통합 기능을 기본적으로 제공합니다. FSx ONTAP의 통합은 다음과 같은 자동화 기능을 제공합니다.
 
-* ONTAP용 FSx 파일 시스템 준비: *
+* FSx ONTAP 파일 시스템 준비: *
 
 * 소스 볼륨과 일치하는 새 볼륨 및 LUN을 생성합니다
 
 
-* 참고 *: FSx for ONTAP FS 모델의 대상 디스크는 "볼륨"에서 생성된 "LUN"이며, 이 디스크는 LUN을 포함할 수 있는 충분한 용량과 스냅샷 및 메타 데이터를 용이하게 하는 데 필요한 상당한 양의 오버헤드가 있습니다. CMC 자동화는 이러한 모든 세부 사항을 처리하여 적절한 볼륨 및 선택적 사용자 정의 매개 변수를 사용하여 LUN을 생성합니다.
+* 참고 *: FSx ONTAP FS 모델의 대상 디스크는 "볼륨"에서 생성된 "LUN"이며, 이 디스크는 LUN을 포함할 수 있는 충분한 용량과 스냅샷 및 메타 데이터를 용이하게 하는 데 필요한 상당한 양의 오버헤드가 있습니다. CMC 자동화는 이러한 모든 세부 사항을 처리하여 적절한 볼륨 및 선택적 사용자 정의 매개 변수를 사용하여 LUN을 생성합니다.
 
 * 호스트 이니시에이터 IQN을 사용하여 호스트 엔티티(FSx에서는 iGroups라고 함)를 생성합니다
 * 매핑을 사용하여 새로 생성된 볼륨을 적절한 호스트 엔티티에 매핑합니다
@@ -52,12 +52,12 @@ MigrationOps 방법을 생성하기 전에 AWS 클라우드를 통합으로 추�
 * Windows에서 영구/즐겨찾는 iSCSI 타겟과 같은 iSCSI 연결을 생성하고 관리합니다.
 
 
-FSx for ONTAP 및 AWS에 대한 CMC 통합을 구성하려면 다음 단계를 수행하십시오.
+FSx ONTAP 및 AWS에 대한 CMC 통합을 구성하려면 다음 단계를 수행하십시오.
 
 . Cirrus Data Cloud 포털에 로그인합니다.
 . 통합을 사용할 프로젝트로 이동합니다.
 . 통합 -> Goodies로 이동합니다.
-. FSx for NetApp ONTAP를 찾아 Add Integration을 클릭합니다.
+. FSx ONTAP를 찾아 통합 추가를 클릭합니다.
 +
 image:migrate-ec2-fsxn-image04.png["Cirrus 데이터 '통합 추가' 사용자 인터페이스 이미지"]
 
@@ -65,7 +65,7 @@ image:migrate-ec2-fsxn-image04.png["Cirrus 데이터 '통합 추가' 사용자 �
 +
 image:migrate-ec2-fsxn-image05.png["Cirrus 데이터 '통합 추가' 사용자 인터페이스 이미지"]
 
-. 통합이 생성되면 새 마이그레이션 세션을 생성할 때 대상 볼륨 자동 할당 을 선택하여 FSx for ONTAP에 새 볼륨을 자동으로 할당합니다.
+. 통합이 생성되면 새 마이그레이션 세션을 생성할 때 대상 볼륨 자동 할당 을 선택하여 FSx ONTAP에 새 볼륨을 자동으로 할당합니다.
 +
 * 참고 *: 마이그레이션에 대해 "Migrate to small volume"이 활성화되지 않은 경우 소스 볼륨의 크기와 동일한 크기로 새 LUN이 생성됩니다.
 
@@ -80,7 +80,7 @@ image:migrate-ec2-fsxn-image05.png["Cirrus 데이터 '통합 추가' 사용자 �
 image:migrate-ec2-fsxn-image06.png["Cirrus 데이터 '통합 추가' 사용자 인터페이스 이미지"]
 
 +
-* 참고 *: 이 통합은 FSx for ONTAP 통합과 함께 온프레미스 스토리지에서 AWS로 가상 머신을 마이그레이션하는 동안 사용됩니다.
+* 참고 *: 이 통합은 FSx ONTAP 통합과 함께 온프레미스 스토리지에서 AWS로 가상 머신을 마이그레이션하는 동안 사용됩니다.
 
 +
 * 참고 *: 마이그레이션할 프로덕션 인스턴스에 대한 직접 아웃바운드 연결이 없는 경우 관리 릴레이를 사용하여 Cirrus Data Cloud와 통신합니다.
@@ -104,7 +104,7 @@ image:migrate-ec2-fsxn-image06.png["Cirrus 데이터 '통합 추가' 사용자 �
 
 image:migrate-ec2-fsxn-image07.png["마이그레이션할 VMware 가상 머신 이미지"]
 
-이 데모에서는 각 VM의 애플리케이션 VMDK를 FSx for ONTAP에서 자동으로 프로비저닝되고 매핑된 iSCSI 볼륨으로 마이그레이션합니다. Amazon EC2 인스턴스가 이 Amazon EBS를 부팅 디스크로만 지원하기 때문에 이 경우 OS VMDK는 Amazon EBS 볼륨으로 마이그레이션됩니다.
+이 데모에서는 각 VM의 애플리케이션 VMDK를 FSx ONTAP에서 자동으로 프로비저닝되고 매핑된 iSCSI 볼륨으로 마이그레이션합니다. Amazon EC2 인스턴스가 이 Amazon EBS를 부팅 디스크로만 지원하기 때문에 이 경우 OS VMDK는 Amazon EBS 볼륨으로 마이그레이션됩니다.
 
 * 참고 *: 이 마이그레이션 접근 방식의 축척 요인은 네트워크 대역폭과 사내에서 AWS VPC에 연결하는 파이프입니다. 각 VM에 1:1 호스트 세션이 구성되어 있기 때문에 전체 마이그레이션 성능은 다음 두 가지 요소에 따라 달라집니다.
 
@@ -139,7 +139,7 @@ YAML은 조리법 이름과 함께 작업 이름, 참고 사항(설명)을 제�
 ----
 operations:
     -   name: Win2016 SQL server to AWS
-        notes: Migrate OS to AWS with EBS and Data to FSx for ONTAP
+        notes: Migrate OS to AWS with EBS and Data to FSx ONTAP
         recipe: MIGRATEOPS_AWS_COMPUTE
         config:
             system_name: Win2016-123
@@ -163,7 +163,7 @@ operations:
                             netapp:
                                 qos_policy_name: ""
                 migration:
-                    session_description: Migrate OS to AWS with EBS and Data to FSx for ONTAP
+                    session_description: Migrate OS to AWS with EBS and Data to FSx ONTAP
                     qos_level: MODERATE
                 cutover:
                     stop_applications:
@@ -243,7 +243,7 @@ Windows Server OS를 실행하는 마이그레이션된 Amazon EC2 인스턴스�
 . 이전 저장소가 이제 오프라인 상태입니다.
 
 
-* 참고 *: 단 한 번의 클릭으로 데이터 이동성 작업을 코드로 제출하고 클릭 한 번으로 컷오버를 승인함으로써 VM은 FSx for ONTAP 및 iSCSI 기능을 사용하여 온프레미스 VMware에서 Amazon EC2 인스턴스로 성공적으로 마이그레이션되었습니다.
+* 참고 *: 단 한 번의 클릭으로 데이터 이동성 작업을 코드로 제출하고 클릭 한 번으로 컷오버를 승인함으로써 VM은 FSx ONTAP 및 iSCSI 기능을 사용하여 온프레미스 VMware에서 Amazon EC2 인스턴스로 성공적으로 마이그레이션되었습니다.
 
 * 참고 *: AWS API 제한으로 인해 변환된 VM은 "Ubuntu"로 표시됩니다. 이는 표시 문제일 뿐이며 마이그레이션된 인스턴스의 기능에는 영향을 주지 않습니다. 다음 릴리스에서 이 문제를 해결할 예정입니다.
 

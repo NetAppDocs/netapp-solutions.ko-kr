@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ehc/veeam-fsxn-dr-to-vmc.html 
-keywords: disaster recovery, vmc, vmware cloud, aws, amazon web services, fsxn, fsx for ontap, fsx for netapp ontap, disaster recovery, dr, veeam, replication 
+keywords: disaster recovery, vmc, vmware cloud, aws, amazon web services, fsxn, FSx ONTAP, FSx ONTAP, disaster recovery, dr, veeam, replication 
 summary:  
 ---
-= Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
+= Veeam Replication 및 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Amazon FSx for NetApp ONTAP와 AWS의 VMware Cloud의 통합은 SDDC의 클러스터에 연결할 수 있는 NetApp ONTAP 파일 시스템 기반의 AWS 관리형 외부 NFS 데이터 저장소입니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 가상화 스토리지 인프라를 고객에게 제공합니다.
+Amazon FSx ONTAP과 AWS의 VMware Cloud 통합은 SDDC의 클러스터에 연결할 수 있는 NetApp의 ONTAP 파일 시스템을 기반으로 구축된 AWS 관리형 외부 NFS 데이터 저장소입니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 가상화 스토리지 인프라를 고객에게 제공합니다.
 
 저자: Niyaz Mohamed-NetApp Solutions Engineering
 
@@ -22,15 +22,15 @@ Amazon FSx for NetApp ONTAP와 AWS의 VMware Cloud의 통합은 SDDC의 클러�
 
 == 개요
 
-AWS SDDC 기반 VMware Cloud를 재해 복구 타겟으로 사용하려는 고객은 VM 복제 기능을 제공하는 검증된 타사 솔루션을 사용하여 온프레미스에서 데이터를 복제하는 데 FSx for ONTAP 데이터 저장소를 사용할 수 있습니다. FSx for ONTAP 데이터 저장소를 추가하면 스토리지를 수용하기 위해 엄청난 양의 ESXi 호스트를 사용하여 AWS SDDC에 VMware 클라우드를 구축하는 것보다 비용 최적화된 배포를 실현할 수 있습니다.
+AWS SDDC 기반 VMware Cloud를 재해 복구 타겟으로 사용하려는 고객은 VM 복제 기능을 제공하는 검증된 타사 솔루션을 사용하여 온프레미스에서 데이터를 복제하는 데 FSx ONTAP 데이터 저장소를 사용할 수 있습니다. FSx ONTAP 데이터 저장소를 추가하면 스토리지를 수용하기 위한 엄청난 양의 ESXi 호스트를 사용하여 AWS SDDC에 VMware 클라우드를 구축하는 것보다 비용 최적화된 배포를 실현할 수 있습니다.
 
-또한 이 접근 방식은 고객이 VMC에서 FSx for ONTAP 데이터 저장소와 함께 파일럿 라이트 클러스터를 사용하여 VM 복제본을 호스팅할 수 있도록 지원합니다. 복제 계획을 정상적으로 페일오버하여 AWS 기반 VMware Cloud로의 마이그레이션 옵션으로 같은 프로세스를 확장할 수도 있습니다.
+또한 이 접근 방식은 고객이 VMC에서 FSx ONTAP 데이터 저장소와 함께 파일럿 라이트 클러스터를 사용하여 VM 복제본을 호스팅할 수 있도록 지원합니다. 복제 계획을 정상적으로 페일오버하여 AWS 기반 VMware Cloud로의 마이그레이션 옵션으로 같은 프로세스를 확장할 수도 있습니다.
 
 
 
 == 문제 설명
 
-이 문서에서는 FSx for ONTAP 데이터 저장소와 Veeam 백업 및 복제를 사용하여 VM 복제 기능을 사용하여 온프레미스 VMware VM의 재해 복구를 AWS 기반의 VMware Cloud로 설정하는 방법을 설명합니다.
+이 문서에서는 FSx ONTAP 데이터 저장소와 Veeam 백업 및 복제를 사용하여 VM 복제 기능을 사용하여 온프레미스 VMware VM의 재해 복구를 AWS 기반의 VMware Cloud로 설정하는 방법을 설명합니다.
 
 Veeam Backup & Replication을 사용하면 재해 복구(DR)를 위해 온사이트 및 원격 복제를 수행할 수 있습니다. 가상 머신을 복제할 때 Veeam Backup & Replication은 타겟 VMware Cloud on AWS SDDC 클러스터에 기본 VMware vSphere 형식으로 VM의 정확한 복제본을 생성하고 복제본을 원래 VM과 동기화된 상태로 유지합니다.
 
@@ -51,7 +51,7 @@ image:dr-veeam-fsx-image1.png["Veeam Replication 및 FSx ONTAP for VMC를 사용
 === 고급 단계
 
 . Veeam Backup and Replication 소프트웨어는 적절한 네트워크 연결을 통해 사내 환경에서 실행됩니다.
-. VMware Cloud on AWS 구성 에 대한 자세한 내용은 VMware Cloud Tech Zone 문서를 참조하십시오 link:https://vmc.techzone.vmware.com/fsx-guide["AWS 기반 VMware Cloud와 Amazon FSx for NetApp ONTAP 구축 가이드 의 통합"] 구축하려면 AWS SDDC에 VMware Cloud를, FSx for ONTAP를 NFS 데이터 저장소로 구성합니다. (최소 구성으로 설정된 파일럿 라이트 환경을 DR 목적으로 사용할 수 있습니다. 장애 발생 시 VM이 이 클러스터로 페일오버되고 추가 노드를 추가할 수 있습니다.)
+. AWS에서 VMware Cloud 구성 을 참조하십시오. link:https://vmc.techzone.vmware.com/fsx-guide["VMware Cloud on AWS와 Amazon FSx ONTAP 구축 가이드 의 통합"]AWS SDDC에 VMware Cloud를 구축, 구성하고 FSx ONTAP를 NFS 데이터 저장소로 구성할 수 있습니다. (최소 구성으로 설정된 파일럿 라이트 환경을 DR 목적으로 사용할 수 있습니다. 장애 발생 시 VM이 이 클러스터로 페일오버되고 추가 노드를 추가할 수 있습니다.)
 . Veeam Backup and Replication을 사용하여 VM 복제본을 생성하도록 복제 작업을 설정합니다.
 . 페일오버 계획을 만들고 페일오버를 수행합니다.
 . 재해 이벤트가 완료되고 운영 사이트가 가동되면 운영 VM으로 다시 전환합니다.
@@ -59,11 +59,11 @@ image:dr-veeam-fsx-image1.png["Veeam Replication 및 FSx ONTAP for VMC를 사용
 
 
 
-=== Veeam VM을 VMC 및 FSx for ONTAP 데이터 저장소로 복제하기 위한 사전 요구 사항
+=== Veeam VM을 VMC 및 FSx ONTAP 데이터 저장소로 복제하기 위한 사전 요구 사항
 
 . Veeam Backup & Replication 백업 VM이 소스 vCenter와 AWS SDDC 클러스터의 타겟 VMware 클라우드에 연결되어 있는지 확인합니다.
 . 백업 서버는 짧은 이름을 확인하고 소스 및 타겟 vCenter에 연결할 수 있어야 합니다.
-. 대상 FSx for ONTAP 데이터 저장소에는 복제된 VM의 VMDK를 저장할 수 있는 충분한 여유 공간이 있어야 합니다
+. 대상 FSx ONTAP 데이터 저장소에는 복제된 VM의 VMDK를 저장할 수 있는 충분한 여유 공간이 있어야 합니다
 
 
 자세한 내용은 "고려 사항 및 제한 사항"을 참조하십시오 link:https://helpcenter.veeam.com/docs/backup/vsphere/replica_limitations.html?ver=120["여기"].
@@ -91,11 +91,11 @@ image:dr-veeam-fsx-image2.png["입력/출력 대화 상자 또는 작성된 내�
 
 
 
-. AWS SDDC 기반 VMware Cloud에 연결된 FSx for ONTAP 데이터 저장소에 복제해야 하는 VM을 * 가상 머신 * 단계에서 선택합니다. vSAN에 가상 머신을 배치하여 사용 가능한 vSAN 데이터스토어 용량을 채울 수 있습니다. 파일럿 라이트 클러스터에서는 3노드 클러스터의 가용 용량이 제한됩니다. 나머지 데이터를 FSx for ONTAP 데이터 저장소에 복제할 수 있습니다. Add * 를 클릭한 다음 * Add Object * 창에서 필요한 VM 또는 VM 컨테이너를 선택하고 * Add * 를 클릭합니다. 다음 * 을 클릭합니다.
+. AWS SDDC 기반 VMware Cloud에 연결된 FSx ONTAP 데이터 저장소에 복제해야 하는 VM을 * 가상 머신 * 단계에서 선택합니다. vSAN에 가상 머신을 배치하여 사용 가능한 vSAN 데이터스토어 용량을 채울 수 있습니다. 파일럿 라이트 클러스터에서는 3노드 클러스터의 가용 용량이 제한됩니다. 나머지 데이터를 FSx ONTAP 데이터 저장소에 복제할 수 있습니다. Add * 를 클릭한 다음 * Add Object * 창에서 필요한 VM 또는 VM 컨테이너를 선택하고 * Add * 를 클릭합니다. 다음 * 을 클릭합니다.
 +
 image:dr-veeam-fsx-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. 그런 다음 대상을 AWS SDDC 클러스터/호스트의 VMware Cloud 및 VM 복제본용 적절한 리소스 풀, VM 폴더 및 FSx for ONTAP 데이터 저장소로 선택합니다. 그런 다음 * 다음 * 을 클릭합니다.
+. 그런 다음 대상을 AWS SDDC 클러스터/호스트의 VMware Cloud 및 적절한 리소스 풀, VM 폴더 및 VM 복제본용 FSx ONTAP 데이터 저장소로 선택합니다. 그런 다음 * 다음 * 을 클릭합니다.
 +
 image:dr-veeam-fsx-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -221,7 +221,7 @@ image:dr-veeam-fsx-image19.png["입력/출력 대화 상자 또는 작성된 내
 
 == 결론
 
-FSx for ONTAP 데이터 저장소 기능을 통해 Veeam 또는 검증된 타사 툴이 파일럿 라이트 클러스터를 사용하고, 클러스터에 VM 복제 복사본을 수용하기 위해 다수의 호스트를 보유하지 않고 경제적인 DR 솔루션을 제공할 수 있습니다. 이 제품은 맞춤형 재해 복구 계획을 처리할 수 있는 강력한 솔루션을 제공합니다. 또한 기존 백업 제품을 사내에서 재사용하여 DR 요구사항을 충족할 수 있으므로, 사내에서 DR 데이터 센터를 종료하여 클라우드 기반 재해 복구가 가능합니다. 재해가 발생한 경우 버튼 클릭 한 번으로 계획된 페일오버 또는 페일오버로 페일오버를 수행할 수 있으며 DR 사이트를 활성화하기로 결정합니다.
+FSx ONTAP 데이터 저장소 기능을 통해 Veeam 또는 검증된 타사 도구가 파일럿 라이트 클러스터를 사용하고 VM 복제 복사본을 수용하기 위해 클러스터에 대량의 호스트를 보유하지 않고 경제적인 DR 솔루션을 제공할 수 있습니다. 이 제품은 맞춤형 재해 복구 계획을 처리할 수 있는 강력한 솔루션을 제공합니다. 또한 기존 백업 제품을 사내에서 재사용하여 DR 요구사항을 충족할 수 있으므로, 사내에서 DR 데이터 센터를 종료하여 클라우드 기반 재해 복구가 가능합니다. 재해가 발생한 경우 버튼 클릭 한 번으로 계획된 페일오버 또는 페일오버로 페일오버를 수행할 수 있으며 DR 사이트를 활성화하기로 결정합니다.
 
 이 프로세스에 대해 자세히 알아보려면 자세한 단계별 안내 비디오를 참조하십시오.
 

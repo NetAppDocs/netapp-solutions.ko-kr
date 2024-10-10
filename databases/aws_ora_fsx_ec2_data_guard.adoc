@@ -54,7 +54,7 @@ Oracle 데이터베이스 작업의 비용 절감에 관심이 있고 AWS에서 
 
 === 있습니다
 
-image:aws_ora_fsx_data_guard_architecture.png["이 이미지는 FSxN이 포함된 AWS에서 Oracle Data Guard를 구현한 모습을 자세히 보여 줍니다."]
+image:aws_ora_fsx_data_guard_architecture.png["이 이미지는 FSx ONTAP를 지원하는 AWS의 Oracle Data Guard 구현에 대한 자세한 그림을 제공합니다."]
 
 
 
@@ -117,7 +117,7 @@ image:aws_ora_fsx_data_guard_architecture.png["이 이미지는 FSxN이 포함�
 * * 데이터베이스 스토리지 관리. * 운영을 단순화하기 위해 Oracle Data Guard 구성에서 Oracle 자동 스토리지 관리(Oracle ASM) 및 Oracle 관리 파일(OMF)을 설정할 때 기본 및 대기 데이터베이스에 대칭적으로 설정할 것을 권장합니다.
 * * EC2 컴퓨팅 인스턴스 * 이러한 테스트 및 검증에서는 AWS EC2 T2.xLarge 인스턴스를 Oracle 데이터베이스 컴퓨팅 인스턴스로 사용했습니다. NetApp은 운영 구축 시 데이터베이스 워크로드에 최적화되어 있는 M5 유형 EC2 인스턴스를 Oracle의 컴퓨팅 인스턴스로 사용할 것을 권장합니다. 실제 워크로드 요구 사항에 따라 vCPU 수와 RAM 양에 따라 EC2 인스턴스를 적절하게 사이징해야 합니다.
 * * FSx 스토리지 HA 클러스터 단일 또는 다중 영역 배포. * 이러한 테스트 및 검증에서는 단일 AWS 가용성 영역에 FSx HA 클러스터를 구축했습니다. 프로덕션 배포를 위해 FSx HA 쌍을 두 가지 가용성 영역에 배포하는 것이 좋습니다. FSx 클러스터는 스토리지 레벨 이중화를 제공하기 위해 액티브-패시브 파일 시스템 쌍으로 동기화되는 HA 쌍으로 프로비저닝됩니다. 다중 영역 구축을 통해 단일 AWS 영역에서 장애가 발생할 경우 고가용성을 더욱 강화할 수 있습니다.
-* * FSx 스토리지 클러스터 크기 조정 * ONTAP 스토리지 파일 시스템용 Amazon FSx는 최대 160,000개의 원시 SSD IOPS, 최대 4Gbps 처리량 및 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.
+* * FSx 스토리지 클러스터 사이징. * Amazon FSx ONTAP 스토리지 파일 시스템은 최대 160,000 물리적 SSD IOPS, 최대 4GBps 처리량, 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.
 
 
 
@@ -143,7 +143,7 @@ Data Guard를 설정하기 위한 시작점으로 VPC 내의 AWS EC2 환경에 �
 
 . AWS 계정이 설정되었으며 AWS 계정 내에 필요한 VPC 및 네트워크 세그먼트가 생성되었습니다.
 . AWS EC2 콘솔에서 최소 3개의 EC2 Linux 인스턴스를 구축해야 합니다. 하나는 운영 Oracle DB 인스턴스로, 하나는 대기 Oracle DB 인스턴스로, 또 다른 하나는 보고, 개발, 테스트를 위한 클론 타겟 DB 인스턴스로 구축됩니다 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 AWS에 대해서도 검토합니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html["Linux 인스턴스에 대한 사용자 가이드"^] 를 참조하십시오.
-. AWS EC2 콘솔에서 Amazon FSx for ONTAP 스토리지 HA 클러스터를 구축하여 Oracle 대기 데이터베이스를 저장하는 Oracle 볼륨을 호스팅합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["ONTAP 파일 시스템용 FSx 생성"^] 을 참조하십시오.
+. AWS EC2 콘솔에서 Amazon FSx ONTAP 스토리지 HA 클러스터를 구축하여 Oracle 대기 데이터베이스를 저장하는 Oracle 볼륨을 호스팅합니다. FSx 스토리지 구축에 익숙하지 않은 경우 설명서에서 단계별 지침을 참조하십시오link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["FSx ONTAP 파일 시스템 생성"^].
 . 2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다 `ora_01` 이라는 FSx 파일 시스템이 있습니다 `fsx_01`. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오. 사용자 고유의 배포 요구 사항에 맞게 템플릿을 쉽게 수정할 수 있습니다.
 +
 [source, cli]
@@ -998,7 +998,7 @@ link:https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/index.h
 +
 link:aws_ora_fsx_ec2_deploy_intro.html["소개"]
 
-* NetApp ONTAP용 Amazon FSx
+* Amazon FSx ONTAP을 소개합니다
 +
 link:https://aws.amazon.com/fsx/netapp-ontap/["https://aws.amazon.com/fsx/netapp-ontap/"^]
 

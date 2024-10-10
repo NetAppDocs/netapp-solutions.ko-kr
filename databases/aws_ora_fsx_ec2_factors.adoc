@@ -50,7 +50,7 @@ image:aws_ora_fsx_ec2_stor_13.png["입력/출력 대화 상자 또는 작성된 
 
 
 
-를 검토합니다 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["NetApp ONTAP 성능을 위한 Amazon FSx"^] 처리량 및 IOPS 사이징 관련 문서
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["Amazon FSx ONTAP 성능"^]처리량과 IOPS를 사이징할 때 설명서를 검토하십시오.
 
 
 

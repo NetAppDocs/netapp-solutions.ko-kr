@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ai/ddlnexus_architecture.html 
-keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
 summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드 멀티 클라우드 MLOps 
 ---
 = 있습니다
@@ -35,6 +35,6 @@ summary: Domino Data Lab 및 NetApp-Architecture를 지원하는 하이브리드
 | 온프레미스 데이터 플랫폼 | link:https://www.netapp.com/data-storage/["NetApp 스토리지 어플라이언스"] 에서 제공 link:https://www.netapp.com/data-management/ontap-data-management-software/["NetApp ONTAP를 참조하십시오"] | 온프레미스 데이터 센터 
 
 
-| 클라우드 데이터 플랫폼 | link:https://aws.amazon.com/fsx/netapp-ontap/["NetApp ONTAP용 Amazon FSx"] | 설치하고 
+| 클라우드 데이터 플랫폼 | link:https://aws.amazon.com/fsx/netapp-ontap/["Amazon FSx ONTAP을 소개합니다"] | 설치하고 
 |===
 image:ddlnexus_image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

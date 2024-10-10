@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ai/mlops_fsxn_s3_integration.html 
-keywords: FSxN, MLOps, NetApp ONTAP, SageMaker, AWS S3 
-summary: 이 게시물에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 버킷으로 구성하는 방법에 대한 지침을 제공합니다. 
+keywords: FSx ONTAP, MLOps, NetApp ONTAP, SageMaker, AWS S3 
+summary: 이 게시물에서는 AWS SageMaker를 사용하여 FSx ONTAP를 프라이빗 S3 버킷으로 구성하는 방법에 대해 설명합니다. 
 ---
-= 1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
+= 1부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 이 게시물에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 
 
 
 [role="lead"]
-이 섹션에서는 AWS SageMaker를 사용하여 FSxN을 전용 S3 버킷으로 구성하는 방법에 대해 설명합니다.
+이 섹션에서는 AWS SageMaker를 사용하여 FSx ONTAP를 프라이빗 S3 버킷으로 구성하는 방법에 대해 설명합니다.
 
 * 작성자: *
 Jian Jian(Ken), NetApp 수석 데이터 및 응용 과학자
@@ -23,9 +23,9 @@ Jian Jian(Ken), NetApp 수석 데이터 및 응용 과학자
 
 == 소개
 
-SageMaker를 예로 사용하는 이 페이지에서는 FSxN을 전용 S3 버킷으로 구성하는 방법에 대한 지침을 제공합니다.
+SageMaker를 예로 들어 보겠습니다. 이 페이지에서는 FSx ONTAP을 프라이빗 S3 버킷으로 구성하는 방법에 대한 지침을 제공합니다.
 
-FSxN에 대한 자세한 내용은 이 프레젠테이션(link:http://youtube.com/watch?v=mFN13R6JuUk["비디오 링크"])
+FSx ONTAP에 대한 자세한 내용은 이 프레젠테이션()을 참조하십시오link:http://youtube.com/watch?v=mFN13R6JuUk["비디오 링크"].
 
 
 
@@ -47,11 +47,7 @@ image:mlops_fsxn_s3_integration_0.png["AWS 콘솔을 엽니다"]
 +
 image:mlops_fsxn_s3_integration_1.png["AWS SageMaker 노트북 인스턴스 콘솔"]
 
-. 생성 페이지에서
-노트북 인스턴스 이름 * 을 입력합니다
-네트워크 * 패널을 확장합니다
-다른 항목을 기본값으로 두고 * VPC *, * 서브넷 * 및 * 보안 그룹 * 을 선택합니다. (이 * VPC * 및 * 서브넷 * 은 나중에 FSxN 파일 시스템을 생성하는 데 사용됩니다.)
-오른쪽 아래에 있는 주황색 버튼 * 노트북 인스턴스 만들기 * 를 클릭합니다.
+. 생성 페이지에서 * Notebook instance name * 을 입력합니다. * Network * 패널을 확장하면 다른 항목은 기본값으로 두고 * VPC *, * Subnet * 및 * Security group(s) * 을 선택합니다. (이 * VPC * 및 * 서브넷 * 은 나중에 FSx ONTAP 파일 시스템을 생성하는 데 사용됩니다.) 오른쪽 하단에 있는 주황색 버튼 * 노트북 인스턴스 생성 * 을 클릭합니다.
 +
 image:mlops_fsxn_s3_integration_2.png["전자 필기장 인스턴스를 만듭니다"]
 
@@ -59,7 +55,7 @@ image:mlops_fsxn_s3_integration_2.png["전자 필기장 인스턴스를 만듭�
 
 
 
-==== FSxN 파일 시스템을 생성합니다
+==== FSx ONTAP 파일 시스템을 생성합니다
 
 . AWS 콘솔을 엽니다. 검색 패널에서 FSX를 검색하고 서비스 * FSx * 를 클릭합니다.
 +
@@ -69,7 +65,7 @@ image:mlops_fsxn_s3_integration_3.png["FSX 패널"]
 +
 image:mlops_fsxn_s3_integration_4.png["파일 시스템을 생성합니다"]
 
-. 첫 번째 카드 * FSx for NetApp ONTAP * 를 선택하고 * Next * 를 클릭합니다.
+. 첫 번째 카드 * FSx ONTAP * 를 선택하고 * Next * 를 클릭합니다.
 +
 image:mlops_fsxn_s3_integration_5.png["파일 시스템 유형을 선택합니다"]
 
@@ -131,14 +127,11 @@ image:mlops_fsxn_s3_integration_15.png["AWS SageMaker 노트북 인스턴스 콘
 +
 image:mlops_fsxn_s3_integration_16.png["Jupyter Lab 시작 페이지"]
 
-. ssh 명령 ssh <admin 사용자 이름>@<ONTAP 서버 IP> 를 입력하여 FSxN ONTAP 파일 시스템에 로그인합니다. (2단계에서 사용자 이름과 IP 주소를 조회한다.)
-스토리지 가상 머신 * 을 생성할 때 사용한 암호를 사용하십시오.
+. ssh 명령 ssh <admin 사용자 이름> @ <ONTAP server IP> 를 입력하여 FSx ONTAP 파일 시스템에 로그인합니다. (사용자 이름 및 IP 주소는 2단계에서 검색됨) * 스토리지 가상 시스템 * 을 생성할 때 사용한 암호를 사용하십시오.
 +
 image:mlops_fsxn_s3_integration_17.png["Jupyter Lab 터미널"]
 
-. 명령을 다음 순서로 실행합니다.
-FSxN 개인 S3 버킷 이름 * 의 이름으로 * fsxn-ONTAP * 을 사용합니다.
-vserver * 인수에 * 스토리지 가상 머신 이름 * 을 사용하십시오.
+. 명령을 다음 순서로 실행합니다. FSx ONTAP 전용 S3 버킷 이름 * 의 이름으로 * fsxn-ONTAP * 을 사용합니다. vserver * 인수에 * 스토리지 가상 머신 이름 * 을 사용하십시오.
 +
 [source, bash]
 ----
@@ -153,7 +146,7 @@ vserver object-store-server bucket create fsxn-ontap -vserver fsxn-svm-demo -typ
 +
 image:mlops_fsxn_s3_integration_18.png["Jupyter Lab 터미널 출력"]
 
-. FSxN private S3에 대한 엔드포인트 IP 및 자격 증명을 검색하려면 다음 명령을 실행합니다.
+. 아래 명령을 실행하여 FSx ONTAP 프라이빗 S3에 대한 엔드포인트 IP 및 자격 증명을 검색합니다.
 +
 [source, bash]
 ----
@@ -177,9 +170,7 @@ image:mlops_fsxn_s3_integration_19.png["Jupyter Lab 터미널"]
 +
 image:mlops_fsxn_s3_integration_20.png["새 Jupyter 노트북을 엽니다"]
 
-. FSxN 프라이빗 S3 버킷에 파일을 업로드하는 해결 방법으로 아래 코드를 사용하십시오.
-포괄적인 코드 예제는 이 노트북을 참조하십시오.
-link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/mlops_fsxn_s3_integration_0.ipynb["fsxn_demo.ipynb 를 참조하십시오"]
+. 아래 코드를 사용하여 FSx ONTAP 프라이빗 S3 버킷에 파일을 업로드하는 해결 방법으로 사용하십시오. 포괄적인 코드 예제는 이 노트북을 참조하십시오. link:https://nbviewer.jupyter.org/github/NetAppDocs/netapp-solutions/blob/main/media/mlops_fsxn_s3_integration_0.ipynb["fsxn_demo.ipynb 를 참조하십시오"]
 +
 [source, python]
 ----
@@ -189,7 +180,7 @@ seed: int = 77                                              # Random seed
 bucket_name: str = 'fsxn-ontap'                             # The bucket name in ONTAP
 aws_access_key_id = '<Your ONTAP bucket key id>'            # Please get this credential from ONTAP
 aws_secret_access_key = '<Your ONTAP bucket access key>'    # Please get this credential from ONTAP
-fsx_endpoint_ip: str = '<Your FSxN IP address>'             # Please get this IP address from FSXN
+fsx_endpoint_ip: str = '<Your FSx ONTAP IP address>'        # Please get this IP address from FSx ONTAP
 # -------- Manual configurations --------
 
 # Workaround
@@ -198,17 +189,17 @@ fsx_endpoint_ip: str = '<Your FSxN IP address>'             # Please get this IP
 !sudo mount -t nfs $fsx_endpoint_ip:/vol1 /home/ec2-user/SageMaker/vol1
 !sudo chmod 777 /home/ec2-user/SageMaker/vol1
 
-## Authentication for FSxN as a Private S3 Bucket
+## Authentication for FSx ONTAP as a Private S3 Bucket
 !aws configure set aws_access_key_id $aws_access_key_id
 !aws configure set aws_secret_access_key $aws_secret_access_key
 
-## Upload file to the FSxN Private S3 Bucket
+## Upload file to the FSx ONTAP Private S3 Bucket
 %%capture
 local_file_path: str = <Your local file path>
 
 !aws s3 cp --endpoint-url http://$fsx_endpoint_ip /home/ec2-user/SageMaker/$local_file_path  s3://$bucket_name/$local_file_path
 
-# Read data from FSxN Private S3 bucket
+# Read data from FSx ONTAP Private S3 bucket
 ## Initialize a s3 resource client
 import boto3
 
@@ -239,13 +230,13 @@ binary_data = bucket.Object(data.filename).get()['Body']
 ----
 
 
-이제 FSxN 및 SageMaker 인스턴스 간의 통합을 마치겠습니다.
+이것으로 FSx ONTAP와 SageMaker 인스턴스 간의 통합을 마치겠습니다.
 
 
 
 == 유용한 디버깅 체크리스트
 
-* SageMaker Notebook 인스턴스와 FSxN 파일 시스템이 동일한 VPC에 있는지 확인합니다.
+* SageMaker 노트북 인스턴스와 FSx ONTAP 파일 시스템이 동일한 VPC에 있는지 확인합니다.
 * ONTAP에서 * set dev * 명령을 실행하여 권한 수준을 * dev * 로 설정해야 합니다.
 
 
@@ -253,14 +244,14 @@ binary_data = bucket.Object(data.filename).get()['Body']
 
 == FAQ(2023년 9월 27일 기준)
 
-Q: FSxN에 파일을 업로드할 때 "* CreateMultipartUpload 작업을 호출할 때 오류가 발생했습니다(NotImplemented). 요청한 S3 명령이 구현되지 않았습니다 * " 오류가 발생하는 이유는 무엇입니까?
+Q: 파일을 FSx ONTAP에 업로드할 때 "* CreateMultipartUpload 작업을 호출할 때 오류가 발생했습니다(구현되지 않음). 요청한 S3 명령이 구현되지 않았습니다 * " 오류가 발생하는 이유는 무엇입니까?
 
-A: FSxN은 전용 S3 버킷으로 최대 100MB의 파일 업로드를 지원합니다. S3 프로토콜을 사용할 때는 100MB 이상의 파일을 100MB 청크로 나누고 'CreateMultipartUpload' 기능을 호출한다. 그러나 현재 FSxN 프라이빗 S3의 구현에서는 이 기능이 지원되지 않습니다.
+A: 전용 S3 버킷으로, FSx ONTAP는 최대 100MB의 파일 업로드를 지원합니다. S3 프로토콜을 사용할 때는 100MB 이상의 파일을 100MB 청크로 나누고 'CreateMultipartUpload' 기능을 호출한다. 그러나 현재 FSx ONTAP 프라이빗 S3의 구현에서는 이 기능을 지원하지 않습니다.
 
-Q: FSxN에 파일을 업로드할 때 "* PutObject 작업: 액세스 거부 * 를 호출할 때 오류가 발생했습니다(AccessDenied)" 오류가 발생하는 이유는 무엇입니까?
+Q: 파일을 FSx ONTAP에 업로드할 때 "* PutObject 작업을 호출할 때 오류가 발생했습니다(액세스 거부). * " 오류가 발생하는 이유는 무엇입니까?
 
-A: SageMaker Notebook 인스턴스에서 FSxN 전용 S3 버킷에 액세스하려면 AWS 자격 증명을 FSxN 자격 증명으로 전환합니다. 그러나 인스턴스에 쓰기 권한을 부여하려면 버킷을 마운트하고 'chmod' 셸 명령을 실행하여 권한을 변경하는 해결 방법이 필요합니다.
+A: SageMaker 노트북 인스턴스에서 FSx ONTAP 프라이빗 S3 버킷에 액세스하려면 AWS 자격 증명을 FSx ONTAP 자격 증명으로 전환합니다. 그러나 인스턴스에 쓰기 권한을 부여하려면 버킷을 마운트하고 'chmod' 셸 명령을 실행하여 권한을 변경하는 해결 방법이 필요합니다.
 
-Q: FSxN 전용 S3 버킷을 다른 SageMaker ML 서비스와 어떻게 통합할 수 있습니까?
+Q: FSx ONTAP 전용 S3 버킷을 다른 SageMaker ML 서비스와 어떻게 통합할 수 있습니까?
 
-A: 안타깝게도 SageMaker 서비스 SDK는 전용 S3 버킷의 끝점을 지정하는 방법을 제공하지 않습니다. 따라서 FSxN S3는 Sagemaker Data Wrangler, Sagemaker Clarify, Sagemaker Glue, Sagemaker Athena, Sagemaker AutoML 등의 SageMaker 서비스와 호환되지 않습니다. 있습니다.
+A: 안타깝게도 SageMaker 서비스 SDK는 전용 S3 버킷의 끝점을 지정하는 방법을 제공하지 않습니다. 따라서 FSx ONTAP S3는 Sagemaker 데이터 랭글러, Sagemaker Clarify, Sagemaker 글루, Sagemaker Athena, Sagemaker AutoML 등의 SageMaker 서비스와 호환되지 않습니다.

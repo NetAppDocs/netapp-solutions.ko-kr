@@ -27,8 +27,8 @@ entries:
     url: "/data-analytics/kafka-nfs-why-netapp-nfs-for-kafka-workloads.html"
   - title: AWS-Cloud Volume ONTAP의 성능 개요 및 검증
     url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws.html"
-  - title: AWS-FSxN NetApp ONTAP의 성능 개요 및 검증
-    url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws-FSxN.html"
+  - title: AWS-FSx for NetApp ONTAP의 성능 개요 및 검증
+    url: "/data-analytics/kafka-nfs-performance-overview-and-validation-in-aws-fsxn.html"
   - title: AFF On-Premises를 통한 성능 개요 및 검증
     url: "/data-analytics/kafka-nfs-performance-overview-and-validation-with-aff-on-premises.html"
   - title: 결론

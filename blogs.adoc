@@ -28,7 +28,7 @@ keywords: netapp, solutions, blogs
 
 == 엔터프라이즈 데이터베이스
 
-* link:https://aws.amazon.com/blogs/storage/using-netapp-snapcenter-with-amazon-fsx-for-netapp-ontap-to-protect-your-sql-server-workloads/["NetApp ONTAP용 Amazon FSx와 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호합니다"]
+* link:https://aws.amazon.com/blogs/storage/using-netapp-snapcenter-with-amazon-fsx-for-netapp-ontap-to-protect-your-sql-server-workloads/["Amazon FSx ONTAP과 함께 NetApp SnapCenter를 사용하여 SQL Server 워크로드를 보호하십시오"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Modernize-your-Oracle-database-operation-in-hybrid-cloud-with-Amazon-FSx-storage/ba-p/437554["Amazon FSx 스토리지를 사용하여 하이브리드 클라우드에서 Oracle 데이터베이스 운영을 현대화하십시오"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Hybrid-cloud-database-solutions-with-SnapCenter/ba-p/171061#M5["SnapCenter 기반의 하이브리드 클라우드 데이터베이스 솔루션"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Automate-Your-Oracle-Database-Infrastructure-in-the-Hybrid-Cloud/ba-p/167046["하이브리드 클라우드에서 Oracle 데이터베이스 인프라를 자동화합니다"]
@@ -38,10 +38,10 @@ keywords: netapp, solutions, blogs
 
 == VMware를 사용하는 하이브리드 멀티 클라우드
 
-* link:https://bluexp.netapp.com/blog/aws-fsxn-blg-migrate-vmware-to-amazon-ec2-iscsi-based-fsx-for-ontap["Amazon EC2 및 Amazon FSx for NetApp ONTAP iSCSI 프로토콜을 사용하여 VMware VM을 AWS로 마이그레이션합니다"]
+* link:https://bluexp.netapp.com/blog/aws-fsxn-blg-migrate-vmware-to-amazon-ec2-iscsi-based-fsx-for-ontap["Amazon EC2 및 Amazon FSx ONTAP iSCSI 프로토콜을 사용하여 VMware VM을 AWS로 마이그레이션합니다"]
 * link:https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments["클라우드 기반 VMware 구축을 위한 스토리지 최적화"]
 * link:https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution["NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오"]
-* link:https://cloud.netapp.com/blog/aws-fsxo-blg-configure-hybrid-cloud-with-fsx-for-netapp-ontap-and-vmware-cloud-on-aws-sddc-using-vmware-hcx["VMware HCX를 사용하여 NetApp ONTAP용 FSx 및 AWS SDDC 기반 VMware 클라우드를 구성할 수 있습니다"]
+* link:https://cloud.netapp.com/blog/aws-fsxo-blg-configure-hybrid-cloud-with-fsx-for-netapp-ontap-and-vmware-cloud-on-aws-sddc-using-vmware-hcx["VMware HCX를 사용하여 FSx ONTAP 및 AWS SDDC 기반 VMware Cloud를 사용하여 하이브리드 클라우드를 구성합니다"]
 * link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["Google Cloud VMware Engine(NetApp)에 대한 NetApp Cloud Volumes Service 데이터 저장소 지원"]
 * link:https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine["NetApp CVS를 Google Cloud VMware Engine(Google)용 데이터 저장소로 사용하는 방법"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]

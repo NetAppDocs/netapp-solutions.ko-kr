@@ -43,7 +43,7 @@ summary:
 | * NetApp ONTAP * | ONTAP 9.12.1 
 
 
-| NetApp ONTAP * 용 * AWS FSx | 싱글 AZ 
+| * AWS FSx ONTAP * | 싱글 AZ 
 |===
 솔루션의 시나리오 4는 아래 표에 표시된 버전을 사용하여 검증되었습니다.
 

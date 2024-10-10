@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ai/mlops_fsxn_intro.html 
-keywords: FSxN, AWS S3, SageMaker, MLOps, NetApp ONTAP 
-summary: FSxN MLOps 섹션의 소개 페이지입니다. 
+keywords: FSx ONTAP, FSx ONTAP, AWS S3, SageMaker, MLOps, NetApp ONTAP 
+summary: 이 페이지는 FSx ONTAP MLOps 섹션의 소개 페이지입니다. 
 ---
-= MLOps용 AWS FSx for NetApp ONTAP(FSxN
+= MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: FSxN MLOps 섹션의 소개 페이지입니다.
 
 
 [role="lead"]
-이 섹션에서는 FSxN을 사용한 MLOps 파이프라인 구축에 대한 종합적인 단계별 안내를 제공하여 AI 인프라 개발의 실제 적용 사례를 자세히 설명합니다. 세 가지 포괄적인 예시로 구성된 이 강력한 데이터 관리 플랫폼을 통해 MLOps 요구 사항을 충족할 수 있습니다.
+이 섹션에서는 FSx ONTAP를 사용하여 MLOps 파이프라인을 구축하는 방법에 대한 포괄적인 단계별 안내를 제공하여 AI 인프라 개발의 실제 적용 사례를 알아봅니다. 세 가지 포괄적인 예시로 구성된 이 강력한 데이터 관리 플랫폼을 통해 MLOps 요구 사항을 충족할 수 있습니다.
 
 * 작성자: *
 Jian Jian(Ken), NetApp 수석 데이터 및 응용 과학자
 
 이 문서에서는 다음 사항에 중점을 둡니다.
 
-. link:./mlops_fsxn_s3_integration.html["1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"]
-. link:./mlops_fsxn_sagemaker_integration_training.html["2부 - AWS FSx for NetApp ONTAP(FSxN)를 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용"]
+. link:./mlops_fsxn_s3_integration.html["1부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합"]
+. link:./mlops_fsxn_sagemaker_integration_training.html["2부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)을 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용"]
 . link:./mlops_fsxn_cictcd.html["3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)"]
 
 
-이 섹션을 마치면 FSxN을 사용하여 MLOps 프로세스를 간소화하는 방법을 확실히 이해할 수 있게 됩니다.
+이 섹션을 마치면 FSx ONTAP를 사용하여 MLOps 프로세스를 간소화하는 방법을 심층적으로 이해하게 될 것입니다.

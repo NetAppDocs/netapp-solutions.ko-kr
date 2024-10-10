@@ -30,7 +30,7 @@ indexpage:
       url: ai-dgx-superpod.html
   - title: 데이터 레이크 및 데이터 파이프라인
     links:
-    - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
+    - title: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
       url: mlops_fsxn_intro.html
     - title: 자율 주행 워크로드를 위한 StorageGRID 데이터 레이크
       url: tr-4851.html

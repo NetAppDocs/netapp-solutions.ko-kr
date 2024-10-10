@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ai/ddlnexus_expose_netapp_vols.html 
-keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
 summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우드 MLOps - 기존 NetApp 볼륨을 Domino에 노출 
 ---
 = 기존 NetApp 볼륨을 Domino에 표시합니다
@@ -39,7 +39,7 @@ NetApp 볼륨을 Domino와 함께 사용하면 다음과 같은 이점이 있습
 === Kubernetes에서 PV 및 PVC를 생성합니다
 
 
-NOTE: 온프레미스 볼륨의 경우 온프레미스 Kubernetes 클러스터에 PV 및 PVC를 생성합니다. Amazon FSx for NetApp ONTAP 볼륨의 경우 Amazon EKS에서 PV 및 PVC를 생성합니다.
+NOTE: 온프레미스 볼륨의 경우 온프레미스 Kubernetes 클러스터에 PV 및 PVC를 생성합니다. Amazon FSx ONTAP 볼륨의 경우 Amazon EKS에서 PV 및 PVC를 생성합니다.
 
 먼저 Kubernetes 클러스터에 영구 볼륨(PV) 및 영구 볼륨 클레임(PVC)을 생성해야 합니다. PV 및 PVC를 생성하려면 를 사용합니다 link:https://docs.dominodatalab.com/en/latest/admin_guide/4cdae9/set-up-kubernetes-pv-and-pvc/#_nfs_pvpvc_example["NFS PV/PVC 예"] Domino 관리 가이드에서 값을 업데이트하여 환경에 맞게 업데이트합니다. 에 올바른 값을 지정해야 합니다 `namespace`, `nfs.path`, 및 `nfs.server` 필드를 선택합니다. 또한 해당 ONTAP NFS 볼륨에 저장된 데이터의 특성을 나타내는 PV 및 PVC 고유 이름을 지정하는 것이 좋습니다. 예를 들어, 볼륨에 제조 결함의 이미지가 포함되어 있으면 PV, `pv-mfg-defect-images`및 PVC, `pvc-mfg-defect-images`.
 

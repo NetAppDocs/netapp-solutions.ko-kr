@@ -165,7 +165,7 @@ NVIDIA AI Enterprise는 NVIDIA 인증 시스템과 함께 VMware vSphere에서 �
 
 === * 1P 클라우드 플랫폼 *
 
-완전 관리형 클라우드 스토리지 오퍼링은 Microsoft Azure As ANF(Azure NetApp Files), AWS FSxN(Amazon FSx for NetApp ONTAP), Google GNCV(Google Cloud NetApp Volumes)로 기본 제공됩니다. 1P는 고객이 퍼블릭 클라우드의 향상된 데이터 보안으로 고가용성 AI 워크로드를 실행하고 AWS SageMaker, Azure-OpenAI Services, Google의 Vertex AI와 같은 클라우드 네이티브 ML 플랫폼으로 LLM/FMS를 미세 조정할 수 있도록 지원하는 고성능 파일 관리 시스템입니다.
+완전 관리형 클라우드 스토리지 오퍼링은 Microsoft Azure As Azure NetApp Files(ANF), AWS ONTAP(Amazon FSx for NetApp ONTAP), Google GNCV(Google Cloud NetApp Volumes)로 기본 제공됩니다. 1P는 고객이 퍼블릭 클라우드의 향상된 데이터 보안으로 고가용성 AI 워크로드를 실행하고 AWS SageMaker, Azure-OpenAI Services, Google의 Vertex AI와 같은 클라우드 네이티브 ML 플랫폼으로 LLM/FMS를 미세 조정할 수 있도록 지원하는 고성능 파일 관리 시스템입니다.
 
 
 

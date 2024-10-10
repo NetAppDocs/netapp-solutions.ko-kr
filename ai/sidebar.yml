@@ -87,14 +87,16 @@ entries:
     url: "/ai/tr-4815.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
-  - title: MLOps용 AWS FSx for NetApp ONTAP(FSxN
-    pdf-filename: MLOps용 AWS FSx for NetApp ONTAP(FSxN
+  - title: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
+    pdf-filename: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
     entries:
     - title: 개요
       url: "/ai/mlops_fsxn_intro.html"
-    - title: 1부 - AWS FSx for NetApp ONTAP(FSxN)를 프라이빗 S3 버킷으로 AWS SageMaker에 통합
+    - title: 1부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)를 프라이빗 S3 버킷으로 AWS SageMaker에
+        통합
       url: "/ai/mlops_fsxn_s3_integration.html"
-    - title: 2부 - AWS FSx for NetApp ONTAP(FSxN)를 SageMaker에서 모델 훈련을 위한 데이터 소스로 활용
+    - title: 2부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)을 SageMaker에서 모델 훈련을 위한 데이터
+        소스로 활용
       url: "/ai/mlops_fsxn_sagemaker_integration_training.html"
     - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
       url: "/ai/mlops_fsxn_cictcd.html"
@@ -249,8 +251,8 @@ entries:
         url: "/ai/vector-database-solution-verification-overview.html"
       - title: 온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정
         url: "/ai/vector-database-milvus-cluster-setup.html"
-      - title: NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화
-        url: "/ai/vector-database-milvus-with-Amazon-FSxN-for-NetApp-ONTAP.html"
+      - title: Amazon FSx ONTAP for NetApp ONTAP를 사용하는 Milvus – 파일 및 오브젝트 이중화
+        url: "/ai/vector-database-milvus-with-Amazon-FSx ONTAP-for-NetApp-ONTAP.html"
       - title: NetApp SnapCenter를 사용한 벡터 데이터베이스 보호
         url: "/ai/vector-database-protection-using-snapcenter.html"
       - title: NetApp SnapMirror를 사용한 재해 복구

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ai/ddlnexus_access_data_hybrid.html 
-keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
 summary: Domino Data Lab 및 NetApp이 포함된 하이브리드 멀티 클라우드 MLOps - 다양한 환경에서 동일한 데이터에 액세스합니다 
 ---
 = 서로 다른 환경에서 동일한 데이터에 액세스합니다
@@ -44,7 +44,7 @@ summary: Domino Data Lab 및 NetApp이 포함된 하이브리드 멀티 클라�
 === 대상 환경에 FlexCache 볼륨을 생성합니다
 
 
-NOTE: 대상 환경이 온프레미스 데이터 센터인 경우 온프레미스 ONTAP 시스템에 FlexCache 볼륨을 생성합니다. 대상 환경이 AWS인 경우 Amazon FSx for NetApp ONTAP 인스턴스에 FlexCache 볼륨을 생성합니다.
+NOTE: 대상 환경이 온프레미스 데이터 센터인 경우 온프레미스 ONTAP 시스템에 FlexCache 볼륨을 생성합니다. 대상 환경이 AWS인 경우 Amazon FSx ONTAP 인스턴스에 FlexCache 볼륨을 생성합니다.
 
 먼저 대상 환경에 FlexCache 볼륨을 생성해야 합니다.
 
@@ -55,7 +55,7 @@ BlueXP를 사용하지 않으려는 경우, ONTAP System Manager 또는 ONTAP CL
 이 프로세스를 자동화하려면 을 사용할 수 있습니다 link:https://docs.netapp.com/us-en/bluexp-automation/["BlueXP API"], link:https://devnet.netapp.com/restapi.php["ONTAP REST API를 참조하십시오"]또는 을 누릅니다 link:https://docs.ansible.com/ansible/latest/collections/netapp/ontap/index.html["ONTAP Ansible 컬렉션"].
 
 
-NOTE: Amazon FSx for NetApp ONTAP에서는 System Manager를 사용할 수 없습니다.
+NOTE: Amazon FSx ONTAP에서는 System Manager를 사용할 수 없습니다.
 
 
 
@@ -96,7 +96,7 @@ BlueXP를 사용하지 않으려는 경우 ONTAP System Manager 또는 ONTAP CLI
 이 프로세스를 자동화하려면 을 사용할 수 있습니다 link:https://docs.netapp.com/us-en/bluexp-automation/["BlueXP API"], link:https://devnet.netapp.com/restapi.php["ONTAP REST API를 참조하십시오"]또는 을 누릅니다 link:https://docs.ansible.com/ansible/latest/collections/netapp/ontap/index.html["ONTAP Ansible 컬렉션"].
 
 
-NOTE: Amazon FSx for NetApp ONTAP에서는 System Manager를 사용할 수 없습니다.
+NOTE: Amazon FSx ONTAP에서는 System Manager를 사용할 수 없습니다.
 
 
 

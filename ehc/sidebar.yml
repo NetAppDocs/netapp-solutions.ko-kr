@@ -62,15 +62,15 @@ entries:
     entries:
     - title: AWS에서 VMC를 사용한 재해 복구(게스트 연결)
       url: "/ehc/aws-guest-dr-solution-overview.html"
-    - title: NetApp ONTAP용 AWS FSx를 사용하여 VMware Cloud에서 Veeam 백업 및 복원
+    - title: AWS FSx ONTAP를 사용한 VMware 클라우드에서 Veeam 백업 및 복원
       url: "/ehc/aws-vmc-veeam-fsx-solution.html"
-    - title: ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO
+    - title: FSx ONTAP 및 VMC를 통한 DRO(재해 복구)
       url: "/ehc/aws-dro-overview.html"
-    - title: Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
+    - title: Veeam Replication 및 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구
       url: "/ehc/veeam-fsxn-dr-to-vmc.html"
   - title: AWS/VMC에서 워크로드 마이그레이션
     entries:
-    - title: VMware HCX를 사용하여 워크로드를 ONTAP 데이터 저장소용 FSx로 마이그레이션
+    - title: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션
       url: "/ehc/aws-migrate-vmware-hcx.html"
   - title: NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/aws-regions.html"

@@ -61,7 +61,7 @@ entries:
   entries:
   - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
     url: "/vmware/migrate-vms-to-ontap-datastore.html"
-  - title: FSxN을 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+  - title: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
     entries:
     - title: 개요
       url: "/vmware/migrate-vms-to-ec2-fsxn.html"

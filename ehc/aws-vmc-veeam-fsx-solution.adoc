@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ehc/aws-vmc-veeam-fsx-solution.html 
-keywords: disaster recovery, vmc, vmware cloud, aws, amazon web services, nfs datastore, fsxn, fsx for ontap, fsx for netapp ontap, backup, restore, sql server, oracle 
+keywords: disaster recovery, vmc, vmware cloud, aws, amazon web services, nfs datastore, fsxn, FSx ONTAP, FSx ONTAP, backup, restore, sql server, oracle 
 summary:  
 ---
-= Amazon FSx for ONTAP를 사용한 VMware 클라우드에서 Veeam 백업 및 복원
+= Amazon FSx ONTAP를 사용한 VMware 클라우드에서 Veeam 백업 및 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Veeam Backup & Replication은 VMware Cloud의 데이터를 보호하는 효과적이고 안정적인 솔루션입니다. 이 솔루션은 Veeam 백업 및 복제를 사용하여 VMware 클라우드의 ONTAP NFS 데이터 저장소용 FSx에 상주하는 애플리케이션 VM을 백업 및 복원하기 위한 적절한 설정 및 구성을 보여 줍니다.
+Veeam Backup & Replication은 VMware Cloud의 데이터를 보호하는 효과적이고 안정적인 솔루션입니다. 이 솔루션은 Veeam 백업 및 복제를 사용하여 VMware Cloud의 FSx ONTAP NFS 데이터 저장소에 있는 애플리케이션 VM을 백업 및 복원하기 위한 적절한 설정 및 구성을 보여줍니다.
 
 저자: Josh Powell - NetApp 솔루션 엔지니어링
 
@@ -22,7 +22,7 @@ Veeam Backup & Replication은 VMware Cloud의 데이터를 보호하는 효과�
 
 == 개요
 
-VMware Cloud(AWS의 경우)는 NFS 데이터 저장소를 보조 스토리지로 사용할 수 있도록 지원하며, FSx for NetApp ONTAP는 SDDC 클러스터의 ESXi 호스트 수에 관계없이 확장할 수 있는 클라우드 애플리케이션에 대량의 데이터를 저장해야 하는 고객을 위한 안전한 솔루션입니다. 이 통합 AWS 스토리지 서비스는 기존의 모든 NetApp ONTAP 기능을 갖춘 고효율 스토리지를 제공합니다.
+AWS(VMware Cloud)는 NFS 데이터 저장소를 보조 스토리지로 사용할 수 있도록 지원하며, FSx ONTAP는 SDDC 클러스터의 ESXi 호스트 수에 관계없이 확장할 수 있는 클라우드 애플리케이션에 대해 대량의 데이터를 저장해야 하는 고객을 위한 안전한 솔루션입니다. 이 통합 AWS 스토리지 서비스는 기존의 모든 NetApp ONTAP 기능을 갖춘 고효율 스토리지를 제공합니다.
 
 
 
@@ -30,16 +30,16 @@ VMware Cloud(AWS의 경우)는 NFS 데이터 저장소를 보조 스토리지로
 
 이 솔루션은 다음과 같은 사용 사례를 해결합니다.
 
-* NetApp ONTAP용 FSx를 백업 저장소로 사용하여 VMC에서 호스팅되는 Windows 및 Linux 가상 머신의 백업 및 복원
-* NetApp ONTAP용 FSx를 백업 저장소로 사용하여 Microsoft SQL Server 애플리케이션 데이터를 백업 및 복원합니다.
-* NetApp ONTAP용 FSx를 백업 저장소로 사용하여 Oracle 애플리케이션 데이터를 백업 및 복원합니다.
+* FSx ONTAP를 백업 저장소로 사용하여 VMC에서 호스팅되는 Windows 및 Linux 가상 머신의 백업 및 복원
+* FSx ONTAP을 백업 저장소로 사용하여 Microsoft SQL Server 애플리케이션 데이터를 백업 및 복원합니다.
+* FSx ONTAP을 백업 저장소로 사용하여 Oracle 애플리케이션 데이터를 백업 및 복원합니다.
 
 
 
 
-=== ONTAP용 Amazon FSx를 사용하는 NFS 데이터 저장소입니다
+=== Amazon FSx ONTAP 을 사용하는 NFS 데이터 저장소
 
-이 솔루션의 모든 가상 머신은 ONTAP 보조 NFS 데이터 저장소용 FSx에 상주합니다. ONTAP용 FSx를 보조 NFS 데이터 저장소로 사용하면 여러 가지 이점을 얻을 수 있습니다. 예를 들어, 다음을 수행할 수 있습니다.
+이 솔루션의 모든 가상 머신은 FSx ONTAP 보조 NFS 데이터 저장소에 상주합니다. FSx ONTAP을 보조 NFS 데이터 저장소로 사용하면 여러 가지 이점이 있습니다. 예를 들어, 다음을 수행할 수 있습니다.
 
 * 복잡한 설정 및 관리 없이도 확장 가능하고 가용성이 높은 파일 시스템을 클라우드에서 생성할 수 있습니다.
 * 기존 VMware 환경과 통합되므로 친숙한 툴 및 프로세스를 사용하여 클라우드 리소스를 관리할 수 있습니다.
@@ -49,10 +49,10 @@ VMware Cloud(AWS의 경우)는 NFS 데이터 저장소를 보조 스토리지로
 .솔루션 구축 개요
 [%collapsible]
 ====
-이 목록에는 Veeam 백업 및 복제를 구성하고, ONTAP용 FSx를 백업 저장소로 사용하여 백업 및 복원 작업을 실행하고, SQL Server 및 Oracle VM 및 데이터베이스의 복원을 수행하는 데 필요한 높은 수준의 단계가 나와 있습니다.
+이 목록에는 Veeam 백업 및 복제를 구성하고, FSx ONTAP를 백업 저장소로 사용하여 백업 및 복원 작업을 실행하고, SQL Server 및 Oracle VM 및 데이터베이스 복원을 수행하는 데 필요한 고급 단계가 나와 있습니다.
 
-. Veeam 백업 및 복제를 위한 iSCSI 백업 저장소로 사용할 ONTAP 파일 시스템용 FSx를 생성합니다.
-. Veeam 프록시를 구축하여 백업 워크로드를 분산하고 ONTAP용 FSx에서 호스팅되는 iSCSI 백업 저장소를 마운트합니다.
+. Veeam 백업 및 복제용 iSCSI 백업 저장소로 사용할 FSx ONTAP 파일 시스템을 생성합니다.
+. Veeam 프록시를 구축하여 백업 워크로드를 분산하고 FSx ONTAP에 호스팅된 iSCSI 백업 저장소를 마운트합니다.
 . SQL Server, Oracle, Linux 및 Windows 가상 머신을 백업하도록 Veeam 백업 작업을 구성합니다.
 . SQL Server 가상 머신 및 개별 데이터베이스를 복구합니다.
 . Oracle 가상 머신 및 개별 데이터베이스를 복원합니다.
@@ -62,22 +62,22 @@ VMware Cloud(AWS의 경우)는 NFS 데이터 저장소를 보조 스토리지로
 .필수 구성 요소
 [%collapsible]
 ====
-이 솔루션의 목적은 VMware Cloud에서 실행되고 NetApp ONTAP용 FSx에서 호스팅하는 NFS 데이터 저장소에 있는 가상 머신의 데이터 보호를 시연하는 것입니다. 이 솔루션에서는 다음 구성 요소가 구성되어 사용할 준비가 되어 있다고 가정합니다.
+이 솔루션의 목적은 VMware Cloud에서 실행되고 FSx ONTAP에서 호스팅하는 NFS 데이터 저장소에 있는 가상 머신의 데이터 보호를 입증하는 것입니다. 이 솔루션에서는 다음 구성 요소가 구성되어 사용할 준비가 되어 있다고 가정합니다.
 
-. VMware 클라우드에 연결된 NFS 데이터 저장소가 하나 이상 있는 ONTAP 파일 시스템용 FSX
+. VMware Cloud에 연결된 하나 이상의 NFS 데이터 저장소가 있는 FSx ONTAP 파일 시스템
 . Veeam Backup & Replication 소프트웨어가 설치된 Microsoft Windows Server VM
 +
 ** Veeam Backup & Replication 서버에서 IP 주소 또는 정규화된 도메인 이름을 사용하여 vCenter 서버를 검색했습니다.
 
 
 . 솔루션을 구축하는 동안 Veeam Backup Proxy 구성 요소와 함께 Microsoft Windows Server VM이 설치됩니다.
-. ONTAP NFS 데이터 저장소용 FSx에 상주하는 VMDK 및 애플리케이션 데이터가 있는 Microsoft SQL Server VM 이 솔루션에서는 두 개의 별도 VMDK에 두 개의 SQL 데이터베이스를 구축했습니다.
+. FSx ONTAP NFS 데이터 저장소에 상주하는 VMDK 및 애플리케이션 데이터를 포함하는 Microsoft SQL Server VM 이 솔루션에서는 두 개의 별도 VMDK에 두 개의 SQL 데이터베이스를 구축했습니다.
 +
 ** 참고: 최상의 데이터베이스 및 트랜잭션 로그 파일은 성능 및 안정성을 향상시키기 위해 별도의 드라이브에 배치됩니다. 이는 트랜잭션 로그가 순차적으로 작성되는 반면 데이터베이스 파일은 무작위로 작성되기 때문에 발생합니다.
 
 
-. ONTAP NFS 데이터 저장소용 FSx에 상주하는 VMDK 및 애플리케이션 데이터가 있는 Oracle 데이터베이스 VM
-. ONTAP NFS 데이터 저장소용 FSx에 상주하는 VMDK가 있는 Linux 및 Windows 파일 서버 VM
+. FSx ONTAP NFS 데이터 저장소에 상주하는 VMDK 및 애플리케이션 데이터를 포함하는 Oracle 데이터베이스 VM
+. FSx ONTAP NFS 데이터 저장소에 상주하는 VMDK의 Linux 및 Windows 파일 서버 VM
 . Veeam을 사용하려면 백업 환경의 서버와 구성 요소 간 통신에 특정 TCP 포트가 필요합니다. Veeam 백업 인프라 구성 요소에서 필요한 방화벽 규칙이 자동으로 생성됩니다. 네트워크 포트 요구 사항의 전체 목록은 의 포트 섹션을 참조하십시오 https://helpcenter.veeam.com/docs/backup/vsphere/used_ports.html?zoom_highlight=network+ports&ver=120["Veeam Backup and Replication User Guide for VMware vSphere를 참조하십시오"].
 
 
@@ -93,16 +93,16 @@ image:aws-vmc-veeam-00.png["솔루션 아키텍처 다이어그램"]
 .하드웨어/소프트웨어 구성 요소
 [%collapsible]
 ====
-이 솔루션의 목적은 VMware Cloud에서 실행되고 NetApp ONTAP용 FSx에서 호스팅하는 NFS 데이터 저장소에 있는 가상 머신의 데이터 보호를 시연하는 것입니다. 이 솔루션에서는 다음 구성 요소가 이미 구성되어 있고 사용할 준비가 되어 있다고 가정합니다.
+이 솔루션의 목적은 VMware Cloud에서 실행되고 FSx ONTAP에서 호스팅하는 NFS 데이터 저장소에 있는 가상 머신의 데이터 보호를 입증하는 것입니다. 이 솔루션에서는 다음 구성 요소가 이미 구성되어 있고 사용할 준비가 되어 있다고 가정합니다.
 
-* Microsoft Windows VM은 ONTAP NFS 데이터 저장소용 FSx에 있습니다
-* Linux(CentOS) VM은 ONTAP NFS 데이터 저장소용 FSx에 있습니다
-* Microsoft SQL Server VM은 ONTAP NFS 데이터 저장소용 FSx에 있습니다
+* Microsoft Windows VM은 FSx ONTAP NFS 데이터 저장소에 있습니다
+* Linux(CentOS) VM은 FSx ONTAP NFS 데이터 저장소에 있습니다
+* Microsoft SQL Server VM은 FSx ONTAP NFS 데이터 저장소에 있습니다
 +
 ** 두 개의 데이터베이스가 별도의 VMDK에서 호스팅됩니다
 
 
-* ONTAP NFS 데이터 저장소용 FSx에 있는 Oracle VM
+* Oracle VM은 FSx ONTAP NFS 데이터 저장소에 있습니다
 
 
 ====
@@ -110,11 +110,11 @@ image:aws-vmc-veeam-00.png["솔루션 아키텍처 다이어그램"]
 
 == 솔루션 구축
 
-이 솔루션에서는 Veeam Backup and Replication 소프트웨어를 사용하여 AWS 기반 VMware Cloud SDDC에서 SQL Server, Oracle, Windows 및 Linux 파일 서버 가상 시스템의 백업 및 복구를 수행하는 솔루션을 구축 및 검증하는 방법에 대한 자세한 지침을 제공합니다. 이 솔루션의 가상 머신은 FSx for ONTAP에서 호스팅하는 보조 NFS 데이터 저장소에 상주합니다. 또한 Veeam 백업 저장소에 사용할 iSCSI 볼륨을 호스팅하기 위해 ONTAP 파일 시스템용 별도의 FSx가 사용됩니다.
+이 솔루션에서는 Veeam Backup and Replication 소프트웨어를 사용하여 AWS 기반 VMware Cloud SDDC에서 SQL Server, Oracle, Windows 및 Linux 파일 서버 가상 시스템의 백업 및 복구를 수행하는 솔루션을 구축 및 검증하는 방법에 대한 자세한 지침을 제공합니다. 이 솔루션의 가상 머신은 FSx ONTAP에서 호스팅하는 보조 NFS 데이터 저장소에 상주합니다. 또한 Veeam 백업 저장소에 사용될 iSCSI 볼륨을 호스팅하는 데 별도의 FSx ONTAP 파일 시스템이 사용됩니다.
 
-ONTAP 파일 시스템 생성을 위한 FSx, 백업 저장소로 사용할 iSCSI 볼륨 마운트, 백업 작업 생성 및 실행, VM 및 데이터베이스 복원 수행 등을 살펴보겠습니다.
+FSx ONTAP 파일 시스템 생성, 백업 저장소로 사용할 iSCSI 볼륨 마운트, 백업 작업 생성 및 실행, VM 및 데이터베이스 복원 수행에 대해 살펴봅니다.
 
-NetApp ONTAP용 FSx에 대한 자세한 내용은 를 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^].
+FSx ONTAP에 대한 자세한 내용은 을 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["FSx ONTAP 사용자 가이드"^]참조하십시오.
 
 Veeam Backup and Replication에 대한 자세한 내용은 을 참조하십시오 https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^] 사이트.
 
@@ -182,22 +182,22 @@ image:aws-vmc-veeam-10.png["네트워크 트래픽 규칙을 구성합니다"]
 
 === 스토리지 및 백업 리포지토리를 구성합니다
 
-Primary Veeam Backup 서버와 Veeam Proxy 서버는 직접 연결된 스토리지의 형태로 백업 저장소에 액세스할 수 있습니다. 이 섹션에서는 ONTAP 파일 시스템용 FSx 생성, Veeam 서버에 iSCSI LUN 마운트 및 백업 저장소 생성에 대해 설명합니다.
+Primary Veeam Backup 서버와 Veeam Proxy 서버는 직접 연결된 스토리지의 형태로 백업 저장소에 액세스할 수 있습니다. 이 섹션에서는 FSx ONTAP 파일 시스템 생성, iSCSI LUN을 Veeam 서버에 마운트하고 백업 리포지토리를 생성하는 방법에 대해 설명합니다.
 
-.ONTAP 파일 시스템용 FSx를 생성합니다
+.FSx ONTAP 파일 시스템을 생성합니다
 [%collapsible]
 ====
-Veeam 백업 리포지토리를 위한 iSCSI 볼륨을 호스팅하는 데 사용할 ONTAP 파일 시스템용 FSx를 생성합니다.
+Veeam 백업 리포지토리의 iSCSI 볼륨을 호스팅하는 데 사용할 FSx ONTAP 파일 시스템을 생성합니다.
 
 . AWS 콘솔에서 FSx로 이동한 다음 * 파일 시스템 생성 * 으로 이동합니다
 +
-image:aws-vmc-veeam-01.png["ONTAP 파일 시스템용 FSx를 생성합니다"]
+image:aws-vmc-veeam-01.png["FSx ONTAP 파일 시스템을 생성합니다"]
 
-. 계속하려면 * Amazon FSx for NetApp ONTAP * 를 선택하고 * Next * 를 선택합니다.
+. 계속하려면 * Amazon FSx ONTAP * 를 선택한 후 * 다음 * 을 선택하십시오.
 +
-image:aws-vmc-veeam-02.png["NetApp ONTAP용 Amazon FSx 를 선택합니다"]
+image:aws-vmc-veeam-02.png["Amazon FSx ONTAP을 선택합니다"]
 
-. ONTAP 클러스터용 FSx가 상주할 파일 시스템 이름, 구축 유형, SSD 스토리지 용량 및 VPC를 입력합니다. VMware Cloud에서 가상 머신 네트워크와 통신하도록 VPC를 구성해야 합니다. 다음 * 을 클릭합니다.
+. 파일 시스템 이름, 구축 유형, SSD 스토리지 용량 및 FSx ONTAP 클러스터가 상주할 VPC를 입력합니다. VMware Cloud에서 가상 머신 네트워크와 통신하도록 VPC를 구성해야 합니다. 다음 * 을 클릭합니다.
 +
 image:aws-vmc-veeam-03.png["파일 시스템 정보를 입력합니다"]
 
@@ -208,13 +208,13 @@ image:aws-vmc-veeam-03.png["파일 시스템 정보를 입력합니다"]
 .iSCSI LUN을 구성 및 마운트합니다
 [%collapsible]
 ====
-FSx for ONTAP에서 iSCSI LUN을 생성 및 구성하고 Veeam 백업 및 프록시 서버에 마운트합니다. 나중에 이러한 LUN을 사용하여 Veeam 백업 저장소를 생성할 수 있습니다.
+FSx ONTAP에서 iSCSI LUN을 생성하고 구성한 후 Veeam 백업 및 프록시 서버에 마운트합니다. 나중에 이러한 LUN을 사용하여 Veeam 백업 저장소를 생성할 수 있습니다.
 
 
-NOTE: ONTAP용 FSx에서 iSCSI LUN을 생성하는 과정은 여러 단계로 이루어집니다. 볼륨을 생성하는 첫 번째 단계는 Amazon FSx 콘솔 또는 NetApp ONTAP CLI에서 수행할 수 있습니다.
+NOTE: FSx ONTAP에서 iSCSI LUN을 생성하는 과정은 여러 단계로 구성됩니다. 볼륨을 생성하는 첫 번째 단계는 Amazon FSx 콘솔 또는 NetApp ONTAP CLI에서 수행할 수 있습니다.
 
 
-NOTE: ONTAP용 FSx 사용에 대한 자세한 내용은 를 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^].
+NOTE: FSx ONTAP 사용에 대한 자세한 내용은 을 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["FSx ONTAP 사용자 가이드"^] 참조하십시오.
 
 . NetApp ONTAP CLI에서 다음 명령을 사용하여 초기 볼륨을 생성합니다.
 +
@@ -449,7 +449,7 @@ image:aws-vmc-veeam-36.png["목록에서 복원 지점을 선택합니다"]
 
 VMware Cloud는 비즈니스 크리티컬 애플리케이션을 실행하고 중요한 데이터를 저장할 수 있는 강력한 플랫폼입니다. 비즈니스 연속성을 보장하고 사이버 위협 및 데이터 손실을 방지하기 위해 VMware Cloud를 사용하는 기업에게 보안 데이터 보호 솔루션은 필수적입니다. 안정적이고 강력한 데이터 보호 솔루션을 선택함으로써 기업은 중요한 데이터가 무엇에 관계없이 안전하고 안전하다는 확신을 가질 수 있습니다.
 
-이 문서에 제공된 사용 사례는 NetApp, VMware, Veeam의 통합을 강조하는 검증된 데이터 보호 기술에 중점을 둡니다. ONTAP용 FSX는 AWS에서 VMware Cloud를 위한 보조 NFS 데이터 저장소로 지원되며 모든 가상 머신 및 애플리케이션 데이터에 사용됩니다. Veeam Backup & Replication은 기업이 백업 및 복구 프로세스를 개선, 자동화 및 간소화할 수 있도록 설계된 포괄적인 데이터 보호 솔루션입니다. Veeam을 ONTAP용 FSx에서 호스팅되는 iSCSI 백업 타겟 볼륨과 함께 사용하면 VMware Cloud에 상주하는 애플리케이션 데이터를 안전하고 쉽게 관리할 수 있는 데이터 보호 솔루션을 제공할 수 있습니다.
+이 문서에 제공된 사용 사례는 NetApp, VMware, Veeam의 통합을 강조하는 검증된 데이터 보호 기술에 중점을 둡니다. FSx ONTAP은 AWS에서 VMware Cloud용 보조 NFS 데이터 저장소로 지원되며 모든 가상 머신 및 애플리케이션 데이터에 사용됩니다. Veeam Backup & Replication은 기업이 백업 및 복구 프로세스를 개선, 자동화 및 간소화할 수 있도록 설계된 포괄적인 데이터 보호 솔루션입니다. Veeam은 FSx ONTAP에서 호스팅되는 iSCSI 백업 타겟 볼륨과 함께 사용하여 VMware 클라우드에 상주하는 애플리케이션 데이터를 위한 안전하고 관리하기 쉬운 데이터 보호 솔루션을 제공합니다.
 
 
 
@@ -457,7 +457,7 @@ VMware Cloud는 비즈니스 크리티컬 애플리케이션을 실행하고 중
 
 이 솔루션에 제공되는 기술에 대한 자세한 내용은 다음 추가 정보를 참조하십시오.
 
-* https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 FSX 사용 설명서"^]
+* https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["FSx ONTAP 사용자 가이드"^]
 * https://www.veeam.com/documentation-guides-datasheets.html?productId=8&version=product%3A8%2F221["Veeam Help Center 기술 문서"^]
 * https://www.veeam.com/kb2414["AWS의 VMware Cloud 지원: 고려 사항 및 제한 사항"]
 

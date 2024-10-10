@@ -419,7 +419,7 @@ $targetvm, $targetvmdisk | Get-SPBMEntityConfiguration
 
 
 
-TIP: 소스 VM이 블록 VVOL 데이터 저장소에 상주하면 SnapMirror를 통해 Amazon FSx for NetApp ONTAP 또는 다른 지원 클라우드 공급자의 CVO(Cloud Volumes ONTAP)로 복제되고 클라우드 네이티브 VM에서 iSCSI 볼륨으로 사용할 수 있습니다.
+TIP: 소스 VM이 블록 VVOL 데이터 저장소에 상주하는 경우 SnapMirror를 통해 다른 지원 클라우드 공급자의 Amazon FSx ONTAP 또는 Cloud Volumes ONTAP(CVO)에 복제되고 클라우드 네이티브 VM에서 iSCSI 볼륨으로 사용할 수 있습니다.
 
 ====
 

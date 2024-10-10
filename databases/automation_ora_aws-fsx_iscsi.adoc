@@ -22,7 +22,7 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 == 목적
 
-Amazon FSx for NetApp ONTAP은 AWS 클라우드에서 완전 관리형 NetApp ONTAP 파일 시스템을 시작하고 실행할 수 있는 스토리지 서비스입니다. NetApp 파일 시스템의 익숙한 특징, 성능, 기능 및 API와 함께 완전 관리형 AWS 서비스의 민첩성, 확장성 및 단순성을 제공합니다. Oracle과 같이 가장 까다로운 데이터베이스 워크로드를 AWS 클라우드에서 안심하고 실행할 수 있습니다.
+Amazon FSx ONTAP은 AWS 클라우드에서 완전 관리형 NetApp ONTAP 파일 시스템을 시작하고 실행할 수 있는 스토리지 서비스입니다. NetApp 파일 시스템의 익숙한 특징, 성능, 기능 및 API와 함께 완전 관리형 AWS 서비스의 민첩성, 확장성 및 단순성을 제공합니다. Oracle과 같이 가장 까다로운 데이터베이스 워크로드를 AWS 클라우드에서 안심하고 실행할 수 있습니다.
 
 이 문서에서는 Ansible 자동화를 사용하여 Amazon FSx ONTAP 파일 시스템에 Oracle 데이터베이스를 간편하게 구축하는 방법을 설명합니다. Oracle 데이터베이스는 데이터 액세스를 위한 iSCSI 프로토콜 및 데이터베이스 스토리지 디스크 관리를 위한 Oracle ASM이 포함된 독립 실행형 재시작 구성으로 구축됩니다. 또한 AWS Cloud에서 스토리지 효율적인 데이터베이스 작업을 위해 NetApp SnapCenter UI 툴을 사용하여 Oracle 데이터베이스 백업, 복원 및 클론에 대한 정보를 제공합니다.
 
@@ -143,7 +143,7 @@ image:automation_ora_aws-fsx_iscsi_archit.png["이 이미지는 iSCSI 및 ASM이
 
 . AWS 계정이 설정되었으며 AWS 계정 내에 필요한 VPC 및 네트워크 세그먼트가 생성되었습니다.
 . AWS EC2 콘솔에서 EC2 Linux 인스턴스를 Oracle DB 서버로 배포합니다. EC2-user에 대해 SSH 개인/공개 키 인증을 사용합니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 를 검토합니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html["Linux 인스턴스에 대한 사용자 가이드"^] 를 참조하십시오.
-. AWS FSx 콘솔에서 요구사항을 충족하는 Amazon FSx ONTAP 파일 시스템을 프로비저닝합니다. 문서를 검토합니다 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["ONTAP 파일 시스템용 FSx 생성"^] 을 참조하십시오.
+. AWS FSx 콘솔에서 요구사항을 충족하는 Amazon FSx ONTAP 파일 시스템을 프로비저닝합니다. 단계별 지침은 설명서를 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["FSx ONTAP 파일 시스템 생성"^]참조하십시오.
 . 2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다 `ora_01` 이라는 FSx 파일 시스템이 있습니다 `fsx_01`. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오. 사용자 고유의 배포 요구 사항에 맞게 템플릿을 쉽게 수정할 수 있습니다.
 +
 [source, cli]
@@ -585,7 +585,7 @@ TR-4979를 참조하십시오 link:aws_ora_fsx_vmc_guestmount.html#oracle-backup
 
 이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
 
-* NetApp ONTAP용 Amazon FSx
+* Amazon FSx ONTAP을 소개합니다
 +
 link:https://aws.amazon.com/fsx/netapp-ontap/["https://aws.amazon.com/fsx/netapp-ontap/"^]
 

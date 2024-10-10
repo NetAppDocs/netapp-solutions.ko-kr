@@ -24,11 +24,11 @@ Allen Cao, Niyaz Mohamed, NetApp
 
 ASM(Automatic Storage Management)은 많은 Oracle 설치에 사용되는 일반적인 Oracle 스토리지 볼륨 관리자입니다. 또한 Oracle에서 권장하는 스토리지 관리 솔루션이기도 합니다. 기존 볼륨 관리자 및 파일 시스템을 대체할 수 있습니다. Oracle 버전 11g부터 ASM은 데이터베이스가 아닌 그리드 인프라와 함께 패키지로 제공됩니다. 따라서 RAC를 사용하지 않는 스토리지 관리에 Oracle ASM을 활용하려면 Oracle Restart라고도 하는 독립 실행형 서버에 Oracle 그리드 인프라를 설치해야 합니다. 이렇게 하면 더욱 단순한 Oracle 데이터베이스 구축에 따르는 복잡성이 더욱 증가합니다. 그러나 이름에서 알 수 있듯이 Oracle이 재시작 모드로 구축되면 사용자 개입 없이 호스트를 재부팅한 후 오류가 발생한 Oracle 서비스가 다시 시작됩니다. 이를 통해 특정 수준의 고가용성 또는 HA 기능을 제공할 수 있습니다.
 
-Oracle ASM은 일반적으로 FC, iSCSI 스토리지 프로토콜 및 LUN에 원시 스토리지 디바이스로 구축됩니다. 하지만, NFS 프로토콜의 ASM과 NFS 파일 시스템은 Oracle의 구성도 지원합니다. 이 문서에서는 EC2 컴퓨팅 인스턴스가 있는 ONTAP 스토리지 환경을 위한 Amazon FSx에서 NFS 프로토콜과 Oracle ASM을 사용하여 Oracle 19c 데이터베이스를 구축하는 방법을 보여 줍니다. 또한 NetApp BlueXP 콘솔을 통해 NetApp SnapCenter 서비스를 사용하여 개발/테스트 또는 기타 사용 사례에서 AWS 퍼블릭 클라우드에서 스토리지 효율적인 데이터베이스 작업을 위해 Oracle 데이터베이스를 백업, 복원, 복제하는 방법을 보여줍니다.
+Oracle ASM은 일반적으로 FC, iSCSI 스토리지 프로토콜 및 LUN에 원시 스토리지 디바이스로 구축됩니다. 하지만, NFS 프로토콜의 ASM과 NFS 파일 시스템은 Oracle의 구성도 지원합니다. 이 문서에서는 EC2 컴퓨팅 인스턴스가 있는 Amazon FSx ONTAP 스토리지 환경에 NFS 프로토콜 및 Oracle ASM을 사용하여 Oracle 19c 데이터베이스를 구축하는 방법을 보여줍니다. 또한 NetApp BlueXP 콘솔을 통해 NetApp SnapCenter 서비스를 사용하여 개발/테스트 또는 기타 사용 사례에서 AWS 퍼블릭 클라우드에서 스토리지 효율적인 데이터베이스 작업을 위해 Oracle 데이터베이스를 백업, 복원, 복제하는 방법을 보여줍니다.
 
 이 솔루션은 다음과 같은 사용 사례를 해결합니다.
 
-* ONTAP 스토리지용 Amazon FSx 및 NFS/ASM을 사용하는 EC2 컴퓨팅 인스턴스에 Oracle 데이터베이스 구축
+* Amazon FSx ONTAP 스토리지에 Oracle 데이터베이스를 구축하고 NFS/ASM을 사용한 EC2 컴퓨팅 인스턴스
 * NFS/ASM을 사용하여 퍼블릭 AWS 클라우드에서 Oracle 워크로드 테스트 및 검증
 * AWS에 구축된 Oracle 데이터베이스 재시작 기능의 테스트 및 검증
 
@@ -97,7 +97,7 @@ image:aws_ora_fsx_ec2_nfs_asm_architecture.png["이 이미지는 iSCSI 및 ASM�
 
 * * EC2 컴퓨팅 인스턴스 * 이러한 테스트 및 검증에서는 Oracle 데이터베이스 컴퓨팅 인스턴스에 AWS EC2 T2.xLarge 인스턴스 유형을 사용했습니다. 운영 구축 환경에서는 데이터베이스 워크로드에 최적화된 M5 유형 EC2 인스턴스를 Oracle의 컴퓨팅 인스턴스로 사용하는 것이 좋습니다. 실제 워크로드 요구 사항에 따라 vCPU 수와 RAM 양에 따라 EC2 인스턴스를 적절하게 사이징해야 합니다.
 * * FSx 스토리지 HA 클러스터 단일 또는 다중 영역 배포. * 이러한 테스트 및 검증에서는 단일 AWS 가용성 영역에 FSx HA 클러스터를 구축했습니다. 프로덕션 배포를 위해 FSx HA 쌍을 두 가지 가용성 영역에 배포하는 것이 좋습니다. FSx HA 클러스터는 스토리지 레벨 이중화를 제공하기 위해 액티브-패시브 파일 시스템 쌍으로 미러링되는 HA 쌍으로 프로비저닝됩니다. 다중 영역 구축을 통해 단일 AWS 영역에서 장애가 발생할 경우 고가용성을 더욱 강화할 수 있습니다.
-* * FSx 스토리지 클러스터 크기 조정 * ONTAP 스토리지 파일 시스템용 Amazon FSx는 최대 160,000개의 원시 SSD IOPS, 최대 4Gbps 처리량 및 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.
+* * FSx 스토리지 클러스터 사이징. * Amazon FSx ONTAP 스토리지 파일 시스템은 최대 160,000 물리적 SSD IOPS, 최대 4GBps 처리량, 최대 192TiB 용량을 제공합니다. 그러나 구현 시 실제 요구 사항에 따라 프로비저닝된 IOPS, 처리량 및 스토리지 제한(최소 1,024GiB)을 기준으로 클러스터 크기를 조정할 수 있습니다. 애플리케이션 가용성에 영향을 주지 않고 용량을 즉각적으로 동적으로 조정할 수 있습니다.
 * * Oracle 데이터 및 로그 레이아웃 * 테스트 및 검증에서 각각 데이터 및 로그용 ASM 디스크 그룹 2개를 구축했습니다. DATA ASM 디스크 그룹 내에서 데이터 NFS 파일 시스템 마운트 지점에 4개의 디스크를 프로비저닝했습니다. logs ASM 디스크 그룹 내에서 로그 NFS 파일 시스템 마운트 지점에 디스크 2개를 프로비저닝했습니다. 대규모 데이터베이스 배포의 경우 ASM 디스크 그룹을 구축하여 여러 FSx 파일 시스템에 ASM NFS 디스크를 분산하고 FSx 파일 시스템에 고정된 여러 NFS 마운트 지점을 통해 분산할 수 있습니다. 이 설정은 4Gbps 이상의 처리량과 160,000개의 원시 SSD IOPS 요구 사항을 충족하도록 설계되었습니다.
 * * dNFS 구성. * dNFS는 Oracle 커널에 내장되어 있으며 Oracle을 NFS 스토리지에 구축할 때 Oracle 데이터베이스 성능을 크게 향상시키는 것으로 알려져 있습니다. dNFS는 Oracle 바이너리로 패키징되지만 기본적으로 활성화되어 있지 않습니다. NFS 기반 Oracle 데이터베이스 구축 시 이 기능을 설정해야 합니다. 대형 데이터베이스에 여러 FSx 파일 시스템을 구축하는 경우 dNFS 다중 경로를 올바르게 구성해야 합니다.
 * * 사용자가 생성한 각 Oracle ASM 디스크 그룹에 사용할 Oracle ASM 이중화 레벨 * FSx는 이미 FSx 클러스터 레벨에서 스토리지를 미러링하므로 반드시 필요합니다 `ONLY` External Redundancy(외부 이중화 사용): 이 옵션을 사용하면 Oracle ASM이 디스크 그룹의 내용을 미러링할 수 없습니다. 이는 Oracle 데이터베이스 데이터 스토리지용 NFS의 경우 Oracle 수준에서 ASM 콘텐츠를 미러링할 필요가 없는 하드 NFS 마운트 옵션이 필요하므로 특히 중요합니다.
@@ -120,7 +120,7 @@ image:aws_ora_fsx_ec2_nfs_asm_architecture.png["이 이미지는 iSCSI 및 ASM�
 
 . AWS 계정이 설정되었으며 AWS 계정 내에 필요한 VPC 및 네트워크 세그먼트가 생성되었습니다.
 . AWS EC2 콘솔에서 2개의 EC2 Linux 인스턴스를 구축해야 합니다. 하나는 운영 Oracle DB 서버로, 다른 하나는 선택적 대체 클론 타겟 DB 서버입니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 또한 를 검토합니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html["Linux 인스턴스에 대한 사용자 가이드"^] 를 참조하십시오.
-. AWS EC2 콘솔에서 ONTAP 스토리지 HA 클러스터용 Amazon FSx를 구축하여 Oracle 데이터베이스 볼륨을 호스팅합니다. FSx 저장소 배포에 익숙하지 않은 경우 설명서를 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["ONTAP 파일 시스템용 FSx 생성"^] 을 참조하십시오.
+. AWS EC2 콘솔에서 Amazon FSx ONTAP 스토리지 HA 클러스터를 구축하여 Oracle 데이터베이스 볼륨을 호스팅합니다. FSx 스토리지 구축에 익숙하지 않은 경우 설명서에서 단계별 지침을 참조하십시오link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/creating-file-systems.html["FSx ONTAP 파일 시스템 생성"^].
 . 2단계와 3단계는 라는 EC2 인스턴스를 만드는 다음 Terraform 자동화 툴킷을 사용하여 수행할 수 있습니다 `ora_01` 이라는 FSx 파일 시스템이 있습니다 `fsx_01`. 실행 전에 지침을 주의 깊게 검토하고 환경에 맞게 변수를 변경하십시오.
 +
 ....
@@ -886,7 +886,7 @@ NAME                           STATE       ALLOCATION_UNIT_SIZE   TOTAL_MB    FR
 DATA                           MOUNTED                  4194304      81920      73536
 LOGS                           MOUNTED                  4194304      81920      81640
 
-This completes Oracle 19c version 19.18 Restart deployment on an Amazon FSx for ONTAP and EC2 compute instance with NFS/ASM. If desired, NetApp recommends relocating the Oracle control file and online log files to the +LOGS disk group.
+This completes Oracle 19c version 19.18 Restart deployment on an Amazon FSx ONTAP and EC2 compute instance with NFS/ASM. If desired, NetApp recommends relocating the Oracle control file and online log files to the +LOGS disk group.
 ....
 
 
@@ -917,7 +917,7 @@ link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/install
 +
 link:https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7["https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/installing-and-configuring-oracle-database-using-response-files.html#GUID-D53355E9-E901-4224-9A2A-B882070EDDF7"^]
 
-* NetApp ONTAP용 Amazon FSx
+* Amazon FSx ONTAP을 소개합니다
 +
 link:https://aws.amazon.com/fsx/netapp-ontap/["https://aws.amazon.com/fsx/netapp-ontap/"^]
 

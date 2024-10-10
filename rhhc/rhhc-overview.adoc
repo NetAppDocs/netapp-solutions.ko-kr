@@ -41,7 +41,7 @@ NetApp은 기존 엔터프라이즈 애플리케이션을 현대화하고 Kubern
 
 * 클라우드 내 공급자 관리 스토리지:
 +
-** Cloud Volumes Service for Google Cloud(CVS), Azure NetApp Files(ANF), Amazon FSx for NetApp ONTAP는 하이퍼스케일러에 완전 관리형 스토리지를 제공합니다
+** CVS(Cloud Volumes Service for Google Cloud), ANF(Azure NetApp Files), Amazon FSx ONTAP는 하이퍼스케일러에서 완전 관리형 스토리지를 제공합니다
 
 
 
@@ -63,4 +63,4 @@ NOTE: 애플리케이션 데이터에는 사용자 데이터 외에도 Kubernete
 
 ** NetApp Astra Control**, 완전 관리형 및 자가 관리 소프트웨어로 모두 사용 가능하며, 강력한 애플리케이션 데이터 관리를 위한 오케스트레이션을 제공합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-family/["Astra 문서"] Astra 제품군에 대한 자세한 내용은
 
-이 참조 문서는 NetApp Astra Control Center를 사용하여 RedHat OpenShift 컨테이너 플랫폼에 배포된 컨테이너 기반 애플리케이션의 마이그레이션 및 보호를 검증합니다. 또한 이 솔루션은 컨테이너 플랫폼 관리를 위한 Red Hat Advanced Cluster Management(ACM)의 배포 및 사용에 대한 자세한 정보를 제공합니다. 또한 이 문서에서는 Trident CSI Provisioner를 사용하여 NetApp 스토리지와 Red Hat OpenShift 컨테이너 플랫폼의 통합에 대한 세부 정보도 설명합니다. Astra Control Center는 허브 클러스터에 구축되며 컨테이너 애플리케이션 및 영구 스토리지 라이프사이클을 관리하는 데 사용됩니다. 마지막으로, NetApp FSx for NetApp ONTAP(FSxN)를 영구 스토리지로 사용하는 AWS(Rosa)의 관리되는 Red Hat OpenShift 클러스터에서 복제, 페일오버 및 컨테이너 워크로드에 대한 페일백용 솔루션을 제공합니다.
+이 참조 문서는 NetApp Astra Control Center를 사용하여 RedHat OpenShift 컨테이너 플랫폼에 배포된 컨테이너 기반 애플리케이션의 마이그레이션 및 보호를 검증합니다. 또한 이 솔루션은 컨테이너 플랫폼 관리를 위한 Red Hat Advanced Cluster Management(ACM)의 배포 및 사용에 대한 자세한 정보를 제공합니다. 또한 이 문서에서는 Trident CSI Provisioner를 사용하여 NetApp 스토리지와 Red Hat OpenShift 컨테이너 플랫폼의 통합에 대한 세부 정보도 설명합니다. Astra Control Center는 허브 클러스터에 구축되며 컨테이너 애플리케이션 및 영구 스토리지 라이프사이클을 관리하는 데 사용됩니다. 마지막으로 Amazon FSx for NetApp ONTAP(FSx ONTAP)를 영구 스토리지로 사용하여 AWS(ROSA)의 관리형 Red Hat OpenShift 클러스터에서 컨테이너 워크로드에 대한 복제, 페일오버 및 페일백을 위한 솔루션을 제공합니다.

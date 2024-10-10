@@ -2,14 +2,14 @@
 :allow-uri-read: 
 
 
-AWS/VMC에서 보조 NFS 데이터 저장소를 사용할 수 있는 가용성은 Amazon에서 정의합니다. 먼저, VMC와 FSxN을 모두 지정된 지역에서 사용할 수 있는지 확인해야 합니다. 그런 다음 해당 지역에서 FSxN 보조 NFS 데이터 저장소가 지원되는지 여부를 확인해야 합니다.
+AWS/VMC에서 보조 NFS 데이터 저장소를 사용할 수 있는 가용성은 Amazon에서 정의합니다. 먼저 VMC와 FSx ONTAP를 모두 지정된 지역에서 사용할 수 있는지 확인해야 합니다. 그런 다음 FSx ONTAP 보조 NFS 데이터 저장소가 해당 지역에서 지원되는지 확인해야 합니다.
 
 * VMC의 가용성을 확인합니다 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-19FB6A08-B1DA-4A6F-88A3-50ED445CFFCF.html["여기"].
-* 아마존의 가격 책정 가이드에서는 FSxN(FSx ONTAP)을 사용할 수 있는 위치에 대한 정보를 제공합니다. 해당 정보를 찾을 수 있습니다 link:https://aws.amazon.com/fsx/netapp-ontap/pricing/["여기"].
-* VMC에 대한 FSxN 보조 NFS 데이터 저장소의 가용성이 곧 제공될 예정입니다.
+* Amazon의 가격 책정 가이드에서는 FSx ONTAP를 사용할 수 있는 위치에 대한 정보를 제공합니다. 해당 정보를 찾을 수 link:https://aws.amazon.com/fsx/netapp-ontap/pricing/["여기"]있습니다.
+* VMC용 FSx ONTAP 보조 NFS 데이터 저장소가 곧 제공될 예정입니다.
 
 
-정보가 아직 릴리즈되는 동안 다음 차트는 VMC, FSxN 및 FSxN에 대한 현재 지원을 보조 NFS 데이터 저장소로 식별합니다.
+정보가 아직 릴리즈되고 있지만 다음 차트에서는 VMC, FSx ONTAP 및 FSx ONTAP에 대한 현재 보조 NFS 데이터 저장소로 사용되고 있습니다.
 
 [role="tabbed-block"]
 ====

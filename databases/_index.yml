@@ -6,7 +6,7 @@ indexpage:
   lead: NetApp 엔터프라이즈 데이터베이스 솔루션은 주요 엔터프라이즈 데이터베이스에서 NetApp 스토리지의 기능을 시연하는 전략적 및 기술
     기능 집합입니다.
   tiles:
-  - title: AWS/FSx ONTAP을 위한 Oracle
+  - title: Amazon FSx for NetApp ONTAP(FSx ONTAP)용 Oracle
     links:
     - title: 페이스 메이커 클러스터링 및 FSx ONTAP를 사용하는 AWS EC2의 Oracle HA
       url: "/aws_ora_ha_pacemaker.html"
@@ -30,9 +30,9 @@ indexpage:
       url: "/azure_ora_nfile_usecase.html"
   - title: 클라우드 공급자용 SQL Server
     links:
-    - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+    - title: AWS FSx ONTAP 기반 Microsoft SQL Server를 위한 백업 및 복구
       url: "/sqlsb-backup-restore-aws-fsxn.html"
-    - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
+    - title: Amazon FSx ONTAP을 사용하는 AWS EC2의 SQL Server
       url: "/sql-aws-ec2.html"
     - title: Azure NetApp Files 기반 SQL Server
       url: "/sql-srv-anf_overview.html"
@@ -84,9 +84,9 @@ indexpage:
       url: "/automation_ora_clone_lifecycle.html"
     - title: PDB Relocation을 통한 Oracle 마이그레이션
       url: "/automation_ora_migration.html"
-    - title: AWS FSx ONTAP을 사용한 Oracle HA/DR
+    - title: Amazon FSx for NetApp ONTAP을 사용한 Oracle HA/DR
       url: "/automation_ora_hadr_fsx.html"
-    - title: AWS FSx ONTAP 및 EC2 프로비저닝
+    - title: Amazon FSx for NetApp ONTAP 및 EC2 프로비저닝이 있습니다
       url: "/automation_fsx_ec2_provision.html"
     - title: AWS에서 PostgreSQL 배포
       url: https://github.com/NetApp/na_postgresql_aws_deploy_hadr

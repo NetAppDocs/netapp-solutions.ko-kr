@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ai/ddlnexus_technology_overview.html 
-keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx for NetApp ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
+keywords: NetApp AI, AI, Artificial Intelligence, ML, Machine Learning, NVIDIA, Hybrid, Hybrid Cloud, Hybrid Multicloud, Cloud, AWS, Amazon, Amazon Web Services, FSx ONTAP, FSx, NetApp ONTAP, FlexCache, SnapMirror, BlueXP 
 summary: Domino Data Lab 및 NetApp 기반의 하이브리드 멀티 클라우드 MLOps - 기술 개요 
 ---
 = 기술 개요
@@ -88,15 +88,15 @@ ONTAP은 다음과 같은 기능을 통해 끊임없이 변화하는 까다로�
 
 
 
-== NetApp ONTAP용 Amazon FSx
+== Amazon FSx for NetApp ONTAP(FSx ONTAP)
 
-Amazon FSx for NetApp ONTAP는 완전 관리형 AWS 서비스로서, NetApp의 인기 ONTAP 파일 시스템을 기반으로 구축되어 매우 안정적이고 확장 가능하며 성능이 우수하며 풍부한 파일 스토리지를 제공합니다. ONTAP용 FSX는 NetApp 파일 시스템의 친숙한 기능, 성능, 기능 및 API 작업을 완벽하게 관리되는 AWS 서비스의 민첩성, 확장성 및 간편성과 결합합니다.
+Amazon FSx ONTAP는 완전 관리형 AWS 서비스로서, NetApp의 인기 있는 ONTAP 파일 시스템을 기반으로 구축된 매우 안정적이고 확장 가능하며 성능이 우수하고 풍부한 기능을 갖춘 파일 스토리지를 제공합니다. FSx ONTAP은 NetApp 파일 시스템의 익숙한 특징, 성능, 기능 및 API 운영과 완전 관리형 AWS 서비스의 민첩성, 확장성 및 단순성을 결합합니다.
 
 
 
 == NetApp 트라이던트
 
-Trident을 사용하면 ONTAP(AFF, FAS, Select, Cloud, Amazon FSx for NetApp ONTAP), Element 소프트웨어(NetApp HCI, SolidFire), Azure NetApp Files Service 및 Google Cloud on Cloud Volumes Service를 비롯하여 퍼블릭 클라우드 또는 온프레미스의 모든 주요 NetApp 스토리지 플랫폼에서 스토리지 리소스를 사용하고 관리할 수 있습니다. Trident는 기본적으로 Kubernetes와 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
+Trident을 사용하면 ONTAP(AFF, FAS, Select, Cloud, Amazon FSx ONTAP), Element 소프트웨어(NetApp HCI, SolidFire), Azure NetApp Files Service 및 Google Cloud on Cloud Volumes Service를 비롯하여 퍼블릭 클라우드 또는 온프레미스의 모든 인기 NetApp 스토리지 플랫폼에서 스토리지 리소스를 사용하고 관리할 수 있습니다. Trident는 기본적으로 Kubernetes와 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
 
 
 

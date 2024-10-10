@@ -141,14 +141,14 @@ VMware Cloud on AWS는 기본 AWS 서비스에 최적화된 액세스를 통해 
 AWS 기반 VMware Cloud에 대한 자세한 내용은 를 참조하십시오 https://docs.vmware.com/en/VMware-Cloud-on-AWS/index.html["이 링크"^].
 
 ====
-.NetApp ONTAP용 Amazon FSx
+.Amazon FSx ONTAP을 소개합니다
 [%collapsible]
 ====
-NetApp ONTAP용 Amazon FSx는 모든 기능을 갖추고 있으며 완벽하게 관리되는 ONTAP 시스템으로, 기본 AWS 서비스로 제공됩니다. NetApp ONTAP을 기반으로 구축된 이 제품은 친숙한 기능을 제공하는 동시에 완전 관리형 클라우드 서비스의 단순성을 제공합니다.
+Amazon FSx ONTAP는 네이티브 AWS 서비스로 제공되는 모든 기능을 갖춘 완전 관리형 ONTAP 시스템입니다. NetApp ONTAP을 기반으로 구축된 이 제품은 친숙한 기능을 제공하는 동시에 완전 관리형 클라우드 서비스의 단순성을 제공합니다.
 
-ONTAP용 Amazon FSx는 퍼블릭 클라우드 또는 온프레미스의 VMware를 비롯한 다양한 컴퓨팅 유형에 대한 멀티 프로토콜 지원을 제공합니다. 현재 게스트 연결 사용 사례 및 기술 미리 보기의 NFS 데이터 저장소에 사용할 수 있는 Amazon FSx for ONTAP를 사용하면 기업은 사내 환경과 클라우드에서 익숙한 기능을 활용할 수 있습니다.
+Amazon FSx ONTAP은 퍼블릭 클라우드 또는 온프레미스의 VMware를 비롯한 다양한 컴퓨팅 유형에 대한 멀티 프로토콜을 지원합니다. 현재 게스트 연결 사용 사례와 기술 미리 보기의 NFS 데이터 저장소에 사용할 수 있는 Amazon FSx ONTAP를 사용하면 기업은 온프레미스 환경과 클라우드의 익숙한 기능을 활용할 수 있습니다.
 
-NetApp ONTAP용 Amazon FSx에 대한 자세한 내용은 를 참조하십시오 https://aws.amazon.com/fsx/netapp-ontap/["이 링크"].
+Amazon FSx ONTAP에 대한 자세한 내용은 를 https://aws.amazon.com/fsx/netapp-ontap/["이 링크"]참조하십시오.
 
 ====
 
@@ -188,7 +188,7 @@ VMware 및 ONTAP On-Premises와 VMware Cloud on AWS 및 FSx ONTAP를 사용하�
 
 * 사내 VMware 환경 및 ONTAP 프로비저닝
 * VMware 클라우드 환경
-* ONTAP 파일 시스템용 FSx에 대한 Amazon
+* Amazon for FSx ONTAP 파일 시스템
 * 사내 환경과 AWS 간의 연결
 * AWS VPC 연결
 
@@ -319,7 +319,7 @@ NetApp Cloud Manager로 리소스를 구축할 수 있어야 합니다. 다음 �
 
 
 =====
-.NetApp ONTAP용 Amazon FSx
+.Amazon FSx ONTAP을 소개합니다
 [%collapsible]
 =====
 AWS 계정이 있는 후에는 다음 작업을 수행할 수 있어야 합니다.
@@ -440,7 +440,7 @@ NOTE: vCloud Director를 사용하는 경우 기본 vCenter Server에서 포트 
 
 == 네트워킹
 
-이 솔루션을 사용하려면 NetApp SyncMirror 작업을 수행하기 위해 사내 ONTAP 클러스터에서 NetApp ONTAP 인터커넥트 클러스터 네트워크 주소용 AWS FSx와 성공적으로 통신해야 합니다. 또한 Veeam 백업 서버가 AWS S3 버킷에 액세스할 수 있어야 합니다. 인터넷 전송을 사용하는 대신 기존 VPN 또는 Direct Connect 링크를 S3 버킷에 대한 전용 링크로 사용할 수 있습니다.
+이 솔루션에서 NetApp SyncMirror 작업을 수행하려면 온프레미스 ONTAP 클러스터에서 AWS FSx ONTAP 인터커넥트 클러스터 네트워크 주소로 성공적으로 통신해야 합니다. 또한 Veeam 백업 서버가 AWS S3 버킷에 액세스할 수 있어야 합니다. 인터넷 전송을 사용하는 대신 기존 VPN 또는 Direct Connect 링크를 S3 버킷에 대한 전용 링크로 사용할 수 있습니다.
 
 .온프레미스
 [%collapsible]
@@ -484,7 +484,7 @@ LIF(논리 인터페이스)는 클러스터의 노드에 대한 네트워크 액
 .VPN(가상 사설망)
 [%collapsible]
 =====
-VPN(가상 사설망)은 인터넷 기반 또는 사설 MPLS 네트워크를 통해 안전한 IPSec 터널을 만드는 데 주로 사용됩니다. VPN은 설치가 쉽지만 안정성(인터넷 기반) 및 속도가 부족합니다. 종료 지점은 AWS VPC 또는 VMware Cloud SDDC에서 종료할 수 있습니다. 이 재해 복구 솔루션을 위해 사내 네트워크에서 NetApp ONTAP용 AWS FSx에 대한 연결을 만들었습니다. NetApp ONTAP용 FSx가 연결되어 있는 AWS VPC(가상 프라이빗 게이트웨이 또는 전송 게이트웨이)에서 종료할 수 있습니다.
+VPN(가상 사설망)은 인터넷 기반 또는 사설 MPLS 네트워크를 통해 안전한 IPSec 터널을 만드는 데 주로 사용됩니다. VPN은 설치가 쉽지만 안정성(인터넷 기반) 및 속도가 부족합니다. 종료 지점은 AWS VPC 또는 VMware Cloud SDDC에서 종료할 수 있습니다. 이 재해 복구 솔루션을 위해 온프레미스 네트워크에서 AWS FSx ONTAP에 대한 연결을 만들었습니다. 따라서 FSx ONTAP이 연결된 AWS VPC(가상 프라이빗 게이트웨이 또는 전송 게이트웨이)에서 종료할 수 있습니다.
 
 VPN 설정은 경로 기반 또는 정책 기반일 수 있습니다. 라우팅 기반 설정을 사용하면 끝점이 자동으로 라우트를 교환하며, 셋업은 새로 생성된 서브넷으로 가는 경로를 학습한다. 정책 기반 설정을 사용하면 로컬 및 원격 서브넷을 정의해야 하며, 새 서브넷이 추가되고 IPSec 터널에서 통신할 수 있게 되면 경로를 업데이트해야 합니다.
 
@@ -501,7 +501,7 @@ image:dr-vmc-aws-image3.png["입력/출력 대화 상자 또는 작성된 내용
 =====
 Direct Connect는 AWS 네트워크에 대한 전용 링크를 제공합니다. 전용 연결은 1Gbps, 10Gbps 또는 100Gbps 이더넷 포트를 사용하여 AWS에 대한 링크를 생성합니다. AWS Direct Connect 파트너는 자신과 AWS 간의 사전 설정된 네트워크 링크를 사용하여 호스팅된 연결을 제공하며, 50Mbps~10GBps까지 이용할 수 있습니다. 기본적으로 트래픽은 암호화되지 않습니다. 그러나 MACsec 또는 IPsec을 사용하여 트래픽을 보호하는 옵션을 사용할 수 있습니다. MACsec는 레이어 2 암호화를 제공하고 IPsec은 레이어 3 암호화를 제공합니다. MACsec은 통신 중인 장치를 은폐하여 보안을 강화합니다.
 
-고객은 라우터 장비를 AWS Direct Connect 위치에 두어야 합니다. 이를 설정하기 위해 AWS APN(Partner Network)과 협력할 수 있습니다. 해당 라우터와 AWS 라우터 간에 물리적 연결이 이루어집니다. VPC에서 NetApp ONTAP용 FSx에 대한 액세스를 활성화하려면 전용 가상 인터페이스 또는 Direct Connect에서 VPC로 전송 가상 인터페이스가 있어야 합니다. 프라이빗 가상 인터페이스를 사용하는 경우 Direct Connect to VPC 연결 확장성이 제한됩니다.
+고객은 라우터 장비를 AWS Direct Connect 위치에 두어야 합니다. 이를 설정하기 위해 AWS APN(Partner Network)과 협력할 수 있습니다. 해당 라우터와 AWS 라우터 간에 물리적 연결이 이루어집니다. FSx ONTAP on VPC에 액세스할 수 있도록 하려면 프라이빗 가상 인터페이스 또는 Direct Connect에서 VPC로 전송되는 가상 인터페이스가 있어야 합니다. 프라이빗 가상 인터페이스를 사용하는 경우 Direct Connect to VPC 연결 확장성이 제한됩니다.
 
 다음 그림은 Direct Connect 인터페이스 옵션을 보여 줍니다.
 
@@ -520,7 +520,7 @@ image:dr-vmc-aws-image4.png["입력/출력 대화 상자 또는 작성된 내용
 ====
 클라우드에서 기본 네트워크 인프라는 클라우드 서비스 공급자가 관리하는 반면, 고객은 AWS에서 VPC 네트워크, 서브넷, 라우팅 테이블 등을 관리해야 합니다. 또한 컴퓨팅 엣지에서 NSX 네트워크 세그먼트를 관리해야 합니다. SDDC는 외부 VPC 및 Transit Connect에 대한 경로를 그룹화합니다.
 
-Multi-AZ 가용성을 지원하는 NetApp ONTAP용 FSx가 VMware Cloud에 연결된 VPC에 배포되면 iSCSI 트래픽에서 필요한 라우트 테이블 업데이트를 수신하여 통신을 가능하게 합니다. 기본적으로 Multi-AZ 구축을 위해 연결된 VPC에서 VMware Cloud에서 FSx ONTAP NFS/SMB 서브넷으로 연결되는 라우트는 없습니다. 이 경로를 정의하기 위해 VMware에서 관리하는 전송 게이트웨이인 VMware Cloud SDDC 그룹을 사용하여 같은 지역의 VMware Cloud SDDC와 외부 VPC 및 기타 전송 게이트웨이 간에 통신을 허용했습니다.
+Multi-AZ 가용성을 지원하는 FSx ONTAP를 VMware Cloud에 연결된 VPC에 구축하면 iSCSI 트래픽에서 통신을 지원하는 데 필요한 경로 테이블 업데이트를 받습니다. 기본적으로 Multi-AZ 구축을 위해 연결된 VPC에서 VMware Cloud에서 FSx ONTAP NFS/SMB 서브넷으로 연결되는 라우트는 없습니다. 이 경로를 정의하기 위해 VMware에서 관리하는 전송 게이트웨이인 VMware Cloud SDDC 그룹을 사용하여 같은 지역의 VMware Cloud SDDC와 외부 VPC 및 기타 전송 게이트웨이 간에 통신을 허용했습니다.
 
 
 NOTE: 전송 게이트웨이 사용과 관련된 데이터 전송 비용이 있습니다. 특정 지역의 비용 세부 정보는 를 참조하십시오 https://aws.amazon.com/transit-gateway/pricing/["이 링크"^].
@@ -611,12 +611,12 @@ ONTAP 볼륨은 애플리케이션 VM을 위한 iSCSI 및 NFS 게스트 연결 �
 ====
 이 솔루션에는 페일오버 프로세스의 일부로 복원되는 가상 머신을 호스팅하기 위한 AWS 기반 VMware Cloud가 포함되어 있습니다. 이 쓰기 작업을 통해 VMware는 VM 및 VMDK를 호스팅하는 데이터 저장소에 대해 vSAN 스토리지를 지원합니다.
 
-ONTAP용 FSX는 SnapCenter 및 SyncMirror를 사용하여 미러링되는 애플리케이션 데이터의 보조 스토리지로 사용됩니다. 페일오버 프로세스의 일환으로 ONTAP 클러스터용 FSx는 운영 스토리지로 변환되고 데이터베이스 애플리케이션은 FSx 스토리지 클러스터에서 실행되는 일반 기능을 재개할 수 있습니다.
+FSx ONTAP은 SnapCenter 및 SyncMirror를 사용하여 미러링되는 애플리케이션 데이터용 보조 스토리지로 사용됩니다. 페일오버 프로세스의 일부로서 FSx ONTAP 클러스터는 운영 스토리지로 변환되고 데이터베이스 애플리케이션은 FSx 스토리지 클러스터에서 실행되는 정상 기능을 다시 시작할 수 있습니다.
 
-.NetApp ONTAP용 Amazon FSx 설정
+.Amazon FSx ONTAP 설정
 [%collapsible]
 =====
-Cloud Manager를 사용하여 NetApp ONTAP용 AWS FSx를 배포하려면 의 지침을 따르십시오 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/task-getting-started-fsx.html["이 링크"^].
+Cloud Manager를 사용하여 AWS FSx ONTAP을 배포하려면 의 지침을 따르십시오. https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/task-getting-started-fsx.html["이 링크"^]
 
 FSx ONTAP를 배포한 후 온-프레미스 ONTAP 인스턴스를 FSx ONTAP로 끌어서 놓아 볼륨의 복제 설정을 시작합니다.
 
@@ -628,7 +628,7 @@ image:dr-vmc-aws-image8.png["입력/출력 대화 상자 또는 작성된 내용
 .네트워크 인터페이스가 생성되었습니다
 [%collapsible]
 =====
-NetApp ONTAP용 FSX에는 iSCSI, NFS, SMB 및 클러스터 간 네트워크에 사용할 수 있도록 미리 구성되고 준비된 네트워크 인터페이스가 있습니다.
+FSx ONTAP은 iSCSI, NFS, SMB 및 클러스터 간 네트워크를 위해 미리 구성되어 있으며 즉시 사용할 수 있는 네트워크 인터페이스를 제공합니다.
 
 =====
 .VM 데이터 저장소 스토리지

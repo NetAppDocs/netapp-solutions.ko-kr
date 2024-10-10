@@ -49,7 +49,7 @@ Kubernetes는 Google에서 원래 설계한 개방형 소스, 분산형 컨테�
 
 == NetApp 트라이던트
 
-link:https://docs.netapp.com/us-en/trident/index.html["트라이던트"^] ONTAP(AFF, FAS, Select, Cloud, 클라우드 등)를 포함하여 퍼블릭 클라우드 또는 온프레미스의 모든 인기 NetApp 스토리지 플랫폼에서 스토리지 리소스를 소비 및 관리할 수 있습니다. Amazon FSx for NetApp ONTAP), Azure NetApp Files 서비스 및 Google Cloud NetApp Volumes의 네 가지 주요 버전이 있습니다. Trident는 기본적으로 Kubernetes와 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
+link:https://docs.netapp.com/us-en/trident/index.html["트라이던트"^] ONTAP(AFF, FAS, Select, Cloud, Amazon FSx ONTAP), Azure NetApp Files 서비스 및 Google Cloud NetApp Volumes를 포함하여 퍼블릭 클라우드 또는 온프레미스의 모든 인기 NetApp 스토리지 플랫폼에서 스토리지 리소스를 사용하고 관리할 수 있습니다. Trident는 기본적으로 Kubernetes와 통합되는 CSI(컨테이너 스토리지 인터페이스) 호환 동적 스토리지 오케스트레이터입니다.
 
 
 

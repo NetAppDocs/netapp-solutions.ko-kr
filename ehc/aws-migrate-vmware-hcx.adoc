@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-AWS(Amazon Web Services)의 VMware 클라우드(VMC)에 대한 일반적인 사용 사례로서, NetApp ONTAP용 Amazon FSx의 보조 NFS 데이터 저장소가 포함된 VMware 워크로드를 마이그레이션합니다. VMware HCX가 선호되는 옵션이며, VMware에서 지원하는 모든 데이터 저장소에서 실행되는 사내 VM(가상 머신)과 해당 데이터를 ONTAP용 FSx의 보조 NFS 데이터 저장소를 포함하는 VMC 데이터 저장소로 이동하는 다양한 마이그레이션 방법을 제공합니다.
+Amazon FSx ONTAP의 보완 NFS 데이터 저장소를 포함하는 AWS(Amazon Web Services)의 VMware Cloud(VMC)의 일반적인 사용 사례는 VMware 워크로드 마이그레이션입니다. VMware HCX는 권장되는 옵션이며 VMware 지원 데이터 저장소에서 실행되는 VM(가상 머신)과 데이터를 FSx ONTAP의 보조 NFS 데이터 저장소를 포함한 VMC 데이터 저장소로 이동하는 다양한 마이그레이션 방법을 제공합니다.
 
 저자: NetApp 솔루션 엔지니어링
 
@@ -54,7 +54,7 @@ HCX 활성화 및 배포를 진행하기 전에 다음 설치 단계를 완료�
 . 기존 VMC SDDC를 사용하거나 다음 새 SDDC를 생성합니다 link:aws-setup.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-EF198D55-03E3-44D1-AC48-6E2ABA31FF02.html["VMware 링크"^].
 . 사내 vCenter 환경에서 VMC SDDC로의 네트워크 경로는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
 . 필수 를 확인하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다.
-. ONTAP NFS 볼륨용 FSx는 VMC SDDC에 보조 데이터 저장소로 마운트되어야 합니다.  NFS 데이터 저장소를 적절한 클러스터에 연결하려면 여기에 설명된 단계를 따르십시오 link:aws-native-overview.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware 링크"^].
+. FSx ONTAP NFS 볼륨은 VMC SDDC의 보조 데이터 저장소로 마운트되어야 합니다. NFS 데이터 저장소를 적절한 클러스터에 연결하려면 이  또는 여기에 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware 링크"^] 설명된 단계를 link:aws-native-overview.html["NetApp 링크"^]따릅니다.
 
 
 ====
@@ -315,14 +315,14 @@ HCX 마이그레이션 옵션 및 HCX를 사용하여 워크로드를 온프레�
 NOTE: VMware HCX vMotion에는 100Mbps 이상의 처리량 기능이 필요합니다.
 
 
-NOTE: ONTAP 데이터 저장소용 타겟 VMC FSx에 마이그레이션을 수용할 수 있는 충분한 공간이 있어야 합니다.
+NOTE: 타겟 VMC FSx ONTAP 데이터 저장소에 마이그레이션을 수용하기에 충분한 공간이 있어야 합니다.
 
 ====
 
 
 == 결론
 
-사내 모든 유형/공급업체 스토리지에 상주하는 데이터를 클라우드 또는 하이브리드 클라우드에 배치하든, AWS ONTAP용 Amazon FSx와 HCX는 애플리케이션 계층에 대한 데이터 요구 사항을 원활하게 만들어 워크로드를 구축 및 마이그레이션하는 동시에 TCO를 절감하는 탁월한 옵션을 제공합니다. 어떤 사용 사례에서든 VMC와 FSx for ONTAP 데이터 저장소를 함께 사용하여 사내 및 멀티 클라우드 전체의 클라우드 이점, 일관된 인프라 및 운영을 빠르게 실현하고, 워크로드의 양방향 이동성을 실현하며, 엔터프라이즈급 용량과 성능을 실현할 수 있습니다. VMware vSphere 복제, VMware vMotion 또는 NFC 복사를 사용하여 스토리지를 연결하고 VM을 마이그레이션하는 데 사용되는 익숙한 프로세스와 절차가 동일합니다.
+All-Cloud 또는 하이브리드 클라우드와 사내 모든 유형/공급업체 스토리지에 상주하는 데이터를 타겟으로 하는 경우, Amazon FSx ONTAP와 HCX는 애플리케이션 계층에서 데이터 요구사항을 원활하게 충족하여 TCO를 절감하는 동시에 워크로드를 구축 및 마이그레이션할 수 있는 탁월한 옵션을 제공합니다. 어떤 사용 사례에서든 VMC를 FSx ONTAP 데이터 저장소와 함께 사용하여 온프레미스 및 다중 클라우드 전반에서 클라우드의 이점, 일관된 인프라, 운영, 워크로드의 양방향 이동성, 엔터프라이즈급 용량 및 성능을 빠르게 실현할 수 있습니다. VMware vSphere 복제, VMware vMotion 또는 NFC 복사를 사용하여 스토리지를 연결하고 VM을 마이그레이션하는 데 사용되는 익숙한 프로세스와 절차가 동일합니다.
 
 
 
@@ -331,7 +331,7 @@ NOTE: ONTAP 데이터 저장소용 타겟 VMC FSx에 마이그레이션을 수�
 이 문서의 핵심 사항은 다음과 같습니다.
 
 * 이제 Amazon FSx ONTAP를 VMC SDDC의 데이터 저장소로 사용할 수 있습니다.
-* 모든 사내 데이터 센터에서 FSx for ONTAP 데이터 저장소를 사용하여 실행 중인 VMC로 데이터를 쉽게 마이그레이션할 수 있습니다
+* 모든 온프레미스 데이터 센터에서 FSx ONTAP 데이터 저장소를 실행 중인 VMC로 데이터를 손쉽게 마이그레이션할 수 있습니다
 * 마이그레이션 작업 중에 용량 및 성능 요구 사항을 충족하도록 FSx ONTAP 데이터 저장소를 쉽게 확장 및 축소할 수 있습니다.
 
 
@@ -345,7 +345,7 @@ NOTE: ONTAP 데이터 저장소용 타겟 VMC FSx에 마이그레이션을 수�
 +
 https://docs.vmware.com/en/VMware-Cloud-on-AWS/["https://docs.vmware.com/en/VMware-Cloud-on-AWS/"^]
 
-* NetApp ONTAP용 Amazon FSx 문서
+* Amazon FSx ONTAP 설명서
 +
 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide["https://docs.aws.amazon.com/fsx/latest/ONTAPGuide"^]
 

@@ -75,7 +75,7 @@ VMware Cloud Foundation 및 NetApp ONTAP All-Flash 아키텍처는 비접촉식 
 
 * 고객 과제: * 최신 애플리케이션 개발을 위해 클라우드로 확장하려는 기존 NetApp 및 VMware 고객 클라우드 네이티브 스토리지에는 엔터프라이즈 기능이 부족함
 
-* 솔루션: * NetApp Cloud Volumes ONTAP VMware Tanzu 및 RedHat OpenShift를 모두 지원하는 AWS의 일관된 엔터프라이즈 하이브리드 클라우드를 위한 FSxN 및 SnapMirror
+* 솔루션: * VMware Tanzu 및 RedHat OpenShift를 모두 지원하는 AWS의 일관된 엔터프라이즈 하이브리드 클라우드를 위한 NetApp Cloud Volumes ONTAP(CVO), FSx ONTAP 및 SnapMirror.
 
 * 결과: * 동일한 ONTAP 엔터프라이즈 스토리지 기능을 활용하는 GovCloud용 일관된 엔터프라이즈 Kubernetes 및 파일 서비스 스토리지
 
@@ -85,7 +85,7 @@ image:vmware-story3a.png["너비 = 600"]
 
 * VMware Tanzu 및 RedHat Kubernetes 워크로드를 모두 지원합니다
 * 고객이 관리하는 Cloud Volumes ONTAP
-* 완전 관리형 AWS 네이티브 서비스를 위한 FSxN
+* FSx ONTAP for 완전 관리형 AWS 네이티브 서비스
 * 애플리케이션 개발 및 엔터프라이즈 파일 서비스
 
 

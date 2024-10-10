@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: automation/fsxn_monitoring_resizing_automation.html 
-keywords: AWS, FSX, FSxN, automation, FSxN monitoring, FSxN automation, FSxN resizing, FSx for NetApp ONTAP monitoring, FSx for ONTAP monitoring 
-summary: 이 페이지에서는 AWS FSxN 모니터링 및 임계값에 따른 자동 크기 조정에 대한 자동화를 설명합니다. 
+keywords: AWS, FSX, FSx ONTAP, automation, FSx ONTAP monitoring, FSx ONTAP automation, FSx ONTAP resizing, FSx ONTAP monitoring, FSx ONTAP monitoring 
+summary: 이 페이지에서는 AWS FSx ONTAP 모니터링과 임계값 기반 자동 크기 조정을 통한 자동화에 대해 설명합니다. 
 ---
-= ONTAP용 FSX 모니터링 및 자동 리사이징은 AWS Lambda 함수를 사용합니다
+= AWS Lambda 기능을 사용한 FSx ONTAP 모니터링 및 자동 크기 조정
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: 이 페이지에서는 AWS FSxN 모니터링 및 임계값에 따른 �
 
 
 [role="lead"]
-이 페이지에서는 AWS FSxN 모니터링 및 임계값에 따른 자동 크기 조정에 대한 자동화를 설명합니다.
+이 페이지에서는 AWS FSx ONTAP 모니터링과 임계값 기반 자동 크기 조정을 통한 자동화에 대해 설명합니다.
 
 
 
-== 개요: AWS Lambda 함수를 통해 ONTAP용 FSx 모니터링 및 자동 크기 조정
+== 개요: AWS Lambda 함수를 통한 FSx ONTAP 모니터링 및 자동 크기 조정
 
-FSx for ONTAP은 AWS에서 제공되는 퍼스트 파티 엔터프라이즈급 클라우드 스토리지 서비스로서, 인기 있는 NetApp ONTAP 파일 시스템을 기반으로 구축되어 매우 안정적이고 확장 가능하며 고성능의 풍부한 기능을 갖춘 파일 스토리지를 제공합니다.
+FSx ONTAP은 AWS에서 제공되는 퍼스트 파티 엔터프라이즈급 클라우드 스토리지 서비스로서, 주요 NetApp ONTAP 파일 시스템을 기반으로 구축되어 매우 안정적이고 확장 가능하며 풍부한 기능을 갖춘 고성능 파일 스토리지를 제공합니다.
 
-ONTAP용 FSX는 원활한 배포 및 관리 환경을 제공합니다. 스토리지 전문 지식이 없어도 시작할 수 있습니다. 모니터링을 간소화하기 위해 AWS Lambda 함수(임계값을 기준으로 총 스토리지 용량, 볼륨 크기 또는 LUN 크기의 크기를 자동으로 조정)를 사용할 수 있습니다.  이 문서에서는 FSx for ONTAP를 정기적으로 모니터링하고, 사용자가 지정한 임계값이 초과되면 알림 및 크기를 조정하고, 관리자에게 크기 조정 작업을 알리는 자동 설정을 생성하는 단계별 가이드를 제공합니다.
+FSx ONTAP은 원활한 배포 및 관리 경험을 제공합니다. 스토리지 전문 지식이 없어도 시작할 수 있습니다. 모니터링을 간소화하기 위해 AWS Lambda 함수(임계값을 기준으로 총 스토리지 용량, 볼륨 크기 또는 LUN 크기의 크기를 자동으로 조정)를 사용할 수 있습니다.  이 문서는 FSx ONTAP를 정기적으로 모니터링하고, 사용자가 지정한 임계값에 도달했을 때 알림 및 크기를 조정하고, 관리자에게 크기 조정 작업을 알리는 자동 설정을 생성하는 단계별 가이드를 제공합니다.
 
 .피처
 [%collapsible]
@@ -31,7 +31,7 @@ ONTAP용 FSX는 원활한 배포 및 관리 환경을 제공합니다. 스토리
 
 * 모니터링 기능:
 +
-** ONTAP용 FSx의 전체 스토리지 용량 사용
+** FSx ONTAP의 전체 스토리지 용량 사용
 ** 각 볼륨의 사용(씬 프로비저닝/일반 프로비저닝)
 ** 각 LUN의 사용(씬 프로비저닝/일반 프로비저닝)
 
@@ -43,7 +43,7 @@ ONTAP용 FSX는 원활한 배포 및 관리 환경을 제공합니다. 스토리
 * 정기적으로 점검을 모니터링하는 기능
 * 인터넷 액세스 유무에 관계없이 솔루션을 사용할 수 있습니다
 * 수동으로 구축하거나 AWS CloudFormation Template을 사용하여 구축할 수 있습니다
-* 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 수 있습니다
+* 단일 VPC에서 여러 FSx ONTAP 파일 시스템을 모니터링할 수 있습니다
 
 
 ====
@@ -52,16 +52,16 @@ ONTAP용 FSX는 원활한 배포 및 관리 환경을 제공합니다. 스토리
 ====
 시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오.
 
-* ONTAP용 FSX가 구축됩니다
-* ONTAP용 FSx에 대한 연결이 있는 전용 서브넷입니다
-* ONTAP용 FSx에 대해 "fsxadmin" 암호가 설정되었습니다
+* FSx ONTAP이 배포됩니다
+* FSx ONTAP에 연결되는 프라이빗 서브넷입니다
+* FSx ONTAP에 대해 "fsxadmin" 암호가 설정되었습니다
 
 
 ====
 .고급 아키텍처
 [%collapsible]
 ====
-* AWS Lambda Function은 ONTAP용 FSx에 API 호출을 하여 스토리지 용량, 볼륨 및 LUN의 크기를 검색하고 업데이트합니다.
+* AWS Lambda 함수는 FSx ONTAP에 대한 API 호출을 수행하여 스토리지 용량, 볼륨 및 LUN의 크기를 검색하고 업데이트합니다.
 * 보안 계층을 추가하기 위해 AWS SSM 매개변수 저장소에 보안 문자열로 저장된 "fsxadmin" 암호
 * AWS SES(Simple Email Service)는 크기 조정 이벤트가 발생할 때 최종 사용자에게 알리는 데 사용됩니다.
 * 인터넷 액세스 없이 VPC에 솔루션을 구축하는 경우 Lambda가 AWS 내부 네트워크를 통해 이러한 서비스에 연결할 수 있도록 AWS SSM, FSx 및 SES용 VPC 엔드포인트를 설정합니다.
@@ -79,7 +79,7 @@ image:fsxn-monitoring-resizing-architecture.png["이 이미지는 이 솔루션�
 === 자동화된 배포
 
 
-NOTE: 단일 FSx for ONTAP 파일 시스템을 다룹니다.
+NOTE: 단일 FSx ONTAP 파일 시스템을 다룹니다.
 
 이 솔루션의 자동 배포를 완료하려면 다음 단계를 따르십시오.
 
@@ -171,7 +171,7 @@ image:fsxn-monitoring-resizing-email-2.png["이 이미지는 알림을 사용할
 === 수동 배포
 
 
-NOTE: 단일 VPC에서 여러 FSx for ONTAP 파일 시스템을 모니터링할 수 있습니다.
+NOTE: 단일 VPC에서 여러 FSx ONTAP 파일 시스템의 모니터링을 지원합니다.
 
 이 솔루션의 수동 배포를 완료하려면 다음 단계를 따르십시오.
 
@@ -210,10 +210,9 @@ Tier: Standard
 Type: SecureString
 KMS key source: My current account
   KMS Key ID: <Use the default one selected>
-Value: <Enter the password for "fsxadmin" user configured on FSx for ONTAP>
+Value: <Enter the password for "fsxadmin" user configured on FSx ONTAP>
 ----
-Create Parameter * 를 클릭합니다.
-모니터링할 모든 FSx for ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
+Create Parameter * 를 클릭합니다. 모니터링할 모든 FSx ONTAP 파일 시스템에 대해 위 단계를 반복합니다.
 
 image:fsxn-monitoring-resizing-ssm-parameter.png["이 이미지는 AWS 콘솔의 SSM 매개 변수 생성 창을 보여 줍니다."]
 
@@ -271,7 +270,7 @@ image:fsxn-monitoring-resizing-vpc-endpoint-create-2.png["이 이미지는 VPC �
 .6단계: AWS Lambda 함수를 생성하고 설정합니다
 [%collapsible]
 ====
-. AWS 콘솔 > * AWS Lambda * > * Functions * 로 이동하고 FSx for ONTAP와 동일한 영역에서 * Create Function * 을 클릭합니다
+. AWS 콘솔 > * AWS Lambda * > * Functions * 로 이동하고 FSx ONTAP과 동일한 영역에서 * Create Function * 을 클릭합니다
 . 기본 * Author from scratch * 를 사용하고 다음 필드를 업데이트합니다.
 +
 [listing]
@@ -282,7 +281,7 @@ Architecture: x86_64
 Permissions: Select "Create a new role with basic Lambda permissions"
 Advanced Settings:
   Enable VPC: Checked
-    VPC: <Choose either the same VPC as FSx for ONTAP or a VPC that can access both FSx for ONTAP and the internet via a private subnet>
+    VPC: <Choose either the same VPC as FSx ONTAP or a VPC that can access both FSx ONTAP and the internet via a private subnet>
     Subnets: <Choose 2 private subnets that have NAT gateway attached pointing to public subnets with internet gateway and subnets that have internet access>
     Security Group: <Choose a Security Group>
 ----
@@ -328,17 +327,16 @@ image:fsxn-monitoring-resizing-layers-added.png["이 이미지는 AWS 람다 기
 | * 이름 * | * 유형 * | * 설명 * 
 
 
-| * fsxList * | 목록 | (필수) 모니터링할 모든 FSx for ONTAP 파일 시스템 목록입니다.
-모니터링 및 자동 크기 조정을 위해 목록에 모든 파일 시스템을 포함합니다. 
+| * fsxList * | 목록 | (필수) 모니터링할 모든 FSx ONTAP 파일 시스템 목록입니다. 모니터링 및 자동 크기 조정을 위해 목록에 모든 파일 시스템을 포함합니다. 
 
 
-| fsxMgmtIp * | 문자열 | (필수) AWS의 ONTAP 콘솔용 FSx에서 "Management EndPoint-IP address"를 입력합니다. 
+| fsxMgmtIp * | 문자열 | (필수) AWS의 FSx ONTAP 콘솔에서 "관리 엔드포인트 - IP 주소"를 입력합니다. 
 
 
-| fsxId * 입니다 | 문자열 | (필수) AWS의 ONTAP 콘솔용 FSx에서 "파일 시스템 ID"를 입력합니다. 
+| fsxId * 입니다 | 문자열 | (필수) AWS의 FSx ONTAP 콘솔에서 "파일 시스템 ID"를 입력합니다. 
 
 
-| * 사용자 이름 * | 문자열 | (필수) ONTAP의 FSx for ONTAP 콘솔에서 "ONTAP administrator username"을 입력합니다. 
+| * 사용자 이름 * | 문자열 | (필수) AWS의 FSx ONTAP 콘솔에서 FSx ONTAP "ONTAP 관리자 사용자 이름"을 입력합니다. 
 
 
 | * resize_threshold * (크기 조정 임계값 * | 정수 | (필수) 0-100의 임계값 비율을 입력합니다. 이 임계값은 스토리지 용량, 볼륨 및 LUN 사용을 측정하는 데 사용되며 사용율이 이 임계값 이상으로 증가하면 크기 조정 작업이 수행됩니다. 
@@ -400,4 +398,4 @@ image:fsxn-monitoring-resizing-eventbridge.png["이 이미지는 AWS 람다 기�
 
 == 결론
 
-제공된 솔루션을 사용하면 FSx for ONTAP 스토리지를 정기적으로 모니터링하고, 사용자가 지정한 임계값에 따라 크기를 조정하고, 알림 메커니즘을 제공하는 모니터링 솔루션을 쉽게 설정할 수 있습니다. 따라서 FSx for ONTAP를 사용하고 모니터링하는 프로세스가 원활하게 진행되므로 관리자는 필요에 따라 스토리지가 자동으로 증가하는 동시에 업무상 중요한 작업에 집중할 수 있습니다.
+제공된 솔루션을 사용하여 FSx ONTAP 스토리지를 정기적으로 모니터링하고 사용자가 지정한 임계값에 따라 크기를 조정하며 경고 메커니즘을 제공하는 모니터링 솔루션을 쉽게 설정할 수 있습니다. 따라서 FSx ONTAP를 사용하고 모니터링하는 프로세스가 원활해지면 관리자는 스토리지를 자동으로 확장하는 동시에 비즈니스 크리티컬 활동에 집중할 수 있습니다.

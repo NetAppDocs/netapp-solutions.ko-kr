@@ -60,7 +60,7 @@ indexpage:
       url: "/ncvs-gc-overview.html"
   - title: 시뮬레이터
     links:
-    - title: ONTAP + VMC 시뮬레이터의 FSX
+    - title: FSx ONTAP + VMC 시뮬레이터
       url: https://netapp-automation.github.io/FSx-VMC-Simulator
     - title: ANF + AVS 시뮬레이터
       url: https://netapp-automation.github.io/ANF-AVS-Simulator
@@ -74,7 +74,7 @@ indexpage:
       url: https://netapp-automation.github.io/Backup_and_Recovery_for_VMs_Simulator/?0.1
   - title: TCO 계산기
     links:
-    - title: ONTAP+ VMC TCO 계산기에 대한 FSX
+    - title: FSx ONTAP + VMC TCO 계산기
       url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
     - title: ANF + AVS TCO 계산기
       url: https://bluexp.netapp.com/anf-avs/tcoestimator

@@ -30,15 +30,15 @@ VMware는 클라우드 워크로드를 다음 세 가지 범주 중 하나로 �
 .보호
 --
 * link:aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
-* link:aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 복구. ONTAP용 FSx로 VMC에서 복원"]
-* link:aws-dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
-* link:veeam-fsxn-dr-to-vmc.html["Veeam Replication 및 FSx for ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구"]
+* link:aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 앰프, FSx ONTAP로 VMC에서 복원"]
+* link:aws-dro-overview.html["FSx ONTAP 및 VMC를 통한 DRO(재해 복구)"]
+* link:veeam-fsxn-dr-to-vmc.html["Veeam Replication 및 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud로 재해 복구"]
 
 
 --
 .마이그레이션
 --
-* link:aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSxN 데이터 저장소로 마이그레이션합니다"]
+* link:aws-migrate-vmware-hcx.html["VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다"]
 
 
 --

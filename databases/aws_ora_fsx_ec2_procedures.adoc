@@ -107,15 +107,15 @@ ssh -i ora-db1v2.pem ec2-user@54.80.114.77
 
 
 
-== Oracle 데이터베이스 스토리지용 ONTAP 파일 시스템용 FSx를 프로비저닝합니다
+== Oracle 데이터베이스 스토리지용 FSx ONTAP 파일 시스템 프로비저닝
 
-EC2 인스턴스 구축은 운영 체제에 EBS 루트 볼륨을 할당합니다. ONTAP 파일 시스템용 FSX는 Oracle 바이너리, 데이터 및 로그 볼륨을 비롯한 Oracle 데이터베이스 스토리지 볼륨을 제공합니다. FSx 스토리지 NFS 볼륨은 AWS FSx 콘솔 또는 Oracle 설치에서 프로비저닝될 수 있으며 사용자가 자동화 매개 변수 파일에서 구성할 때 볼륨을 할당하는 구성 자동화도 가능합니다.
+EC2 인스턴스 구축은 운영 체제에 EBS 루트 볼륨을 할당합니다. FSx ONTAP 파일 시스템은 Oracle 바이너리, 데이터 및 로그 볼륨을 비롯한 Oracle 데이터베이스 스토리지 볼륨을 제공합니다. FSx 스토리지 NFS 볼륨은 AWS FSx 콘솔 또는 Oracle 설치에서 프로비저닝될 수 있으며 사용자가 자동화 매개 변수 파일에서 구성할 때 볼륨을 할당하는 구성 자동화도 가능합니다.
 
 
 
-=== ONTAP 파일 시스템용 FSx 생성
+=== FSx ONTAP 파일 시스템 생성
 
-이 문서를 참조했습니다 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-file-systems.html["ONTAP 파일 시스템용 FSx 관리"^] ONTAP 파일 시스템용 FSx를 생성하는 데 사용됩니다.
+FSx ONTAP 파일 시스템 생성에 대해서는 이 설명서를 참조했습니다. https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-file-systems.html["FSx ONTAP 파일 시스템 관리"^]
 
 주요 고려 사항:
 
@@ -136,7 +136,7 @@ image:aws_rds_custom_deploy_fsx_01.png["입력/출력 대화 상자 또는 작�
 +
 image:aws_ora_fsx_ec2_stor_01.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. NetApp ONTAP용 Amazon FSx 를 선택합니다. 다음 을 클릭합니다.
+. Amazon FSx ONTAP을 선택합니다. 다음 을 클릭합니다.
 +
 image:aws_ora_fsx_ec2_stor_02.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -170,7 +170,7 @@ image:aws_ora_fsx_ec2_stor_08.png["입력/출력 대화 상자 또는 작성된 
 
 === Oracle 데이터베이스용 데이터베이스 볼륨 프로비저닝
 
-을 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html["ONTAP 볼륨용 FSx 관리 - 볼륨 생성"^] 를 참조하십시오.
+자세한 내용은 을 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html["FSx ONTAP 볼륨 관리 - 볼륨 생성"^] 참조하십시오.
 
 주요 고려 사항:
 

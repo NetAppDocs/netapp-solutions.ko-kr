@@ -75,7 +75,7 @@ summary: 데이터는 NFS에서 사용 가능하며 AWS SageMaker에서 S3에서
 
 BlueXP에서 Cloud Volumes ONTAP 인스턴스를 만들려면 다음 단계를 수행하십시오.
 
-. 새 작업 환경을 생성하고 클라우드 공급자를 선택한 다음 Cloud Volumes ONTAP 인스턴스 유형(예: ONTAP의 경우 단일 CVO, HA 또는 Amazon FSxN)을 선택합니다.
+. 새로운 작업 환경을 생성하고 클라우드 공급자를 선택하고 Cloud Volumes ONTAP 인스턴스의 유형(예: single-CVO, HA 또는 Amazon FSx ONTAP for ONTAP)을 선택합니다.
 . Cloud Volumes ONTAP 클러스터 이름 및 자격 증명과 같은 세부 정보를 제공합니다. 이 검증에서 라는 Cloud Volumes ONTAP 인스턴스를 만들었습니다 `svm_sagemaker_cvo_sn1`.
 . Cloud Volumes ONTAP에 필요한 서비스를 선택합니다. 이 검증에서는 모니터링만 하기로 선택했으므로 * 데이터 감지 및 규정 준수 * 와 * 클라우드 서비스로 백업 * 을 비활성화했습니다.
 . Location & Connectivity * 섹션에서 AWS 지역, VPC, 서브넷, 보안 그룹, SSH 인증 방법을 선택합니다. 암호 또는 키 쌍 중 하나를 입력합니다.

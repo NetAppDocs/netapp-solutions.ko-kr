@@ -57,7 +57,7 @@ SnapCenter는 장기간 아카이브 및 보존을 위해 운영 스토리지 �
 온프레미스 ONTAP 시스템과 FSx ONTAP 간에 SnapMirror 관계를 설정하려면 다음 단계가 필요합니다.
 
 
-NOTE: 을 참조하십시오 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/ONTAPGuide.pdf["ONTAP용 FSX – ONTAP 사용 설명서"^] FSx를 사용하여 SnapMirror 관계를 만드는 방법에 대한 자세한 내용은 를 참조하십시오.
+NOTE: FSx와 SnapMirror 관계를 생성하는 방법에 대한 자세한 내용은 을 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/ONTAPGuide.pdf["FSx ONTAP – ONTAP 사용자 가이드"^] 참조하십시오.
 
 .소스 및 대상 클러스터간 논리 인터페이스를 기록합니다
 [%collapsible]
@@ -289,7 +289,7 @@ Oracle 백업에 대한 정책을 생성하는 방법에 대한 자세한 내용
 
 * 정책 생성 마법사를 진행하는 동안 복제 섹션을 특별히 기록해 둡니다. 이 섹션에서는 백업 프로세스 중에 사용할 보조 SnapMirror 복사본의 유형을 설명합니다.
 * “로컬 스냅샷 복사본을 생성한 후 SnapMirror 업데이트” 설정은 동일한 클러스터에 상주하는 두 스토리지 가상 시스템 사이에 SnapMirror 관계가 존재하는 경우 SnapMirror 관계를 업데이트하는 것을 의미합니다.
-* “로컬 스냅샷 복사본을 만든 후 SnapVault 업데이트” 설정은 두 개의 개별 클러스터와 온-프레미스 ONTAP 시스템과 Cloud Volumes ONTAP 또는 FSxN 사이에 존재하는 SnapMirror 관계를 업데이트하는 데 사용됩니다.
+* "로컬 스냅샷 복사본을 생성한 후 SnapVault 업데이트" 설정은 두 개의 별도 클러스터 간과 온프레미스 ONTAP 시스템과 Cloud Volumes ONTAP 또는 FSx ONTAP 간에 존재하는 SnapMirror 관계를 업데이트하는 데 사용됩니다.
 
 
 다음 이미지는 이전 옵션과 백업 정책 마법사에서 이러한 옵션이 표시되는 방식을 보여 줍니다.
@@ -872,7 +872,7 @@ image:dr-vmc-aws-image76.png["입력/출력 대화 상자 또는 작성된 내�
 .Oracle 복원을 위해 FSx 구성 - SnapMirror 관계를 끊습니다
 [%collapsible]
 ====
-FSxN 인스턴스에서 호스팅되는 보조 스토리지 볼륨을 Oracle 서버에서 액세스할 수 있도록 하려면 먼저 기존 SnapMirror 관계를 해제해야 합니다.
+FSx ONTAP 인스턴스에서 호스트되는 보조 스토리지 볼륨을 Oracle 서버에서 액세스할 수 있도록 하려면 먼저 기존 SnapMirror 관계를 해제해야 합니다.
 
 . FSx CLI에 로그인한 후 다음 명령을 실행하여 올바른 이름으로 필터링된 볼륨을 확인합니다.
 +
@@ -938,9 +938,9 @@ NOTE: 재부팅 시 NFS 마운트를 영구적으로 만들려면 '/etc/fstab' �
 
 === 장애 복구
 
-이 솔루션에 설명된 페일오버 프로세스가 성공적으로 완료되면 SnapCenter 및 Veeam이 AWS에서 백업 기능을 재개합니다. 이제 ONTAP용 FSx는 원래 사내 데이터 센터와 SnapMirror 관계가 없는 기본 스토리지로 지정됩니다. 정상적인 기능을 사내에서 다시 시작한 후 이 설명서에 나와 있는 것과 동일한 프로세스를 사용하여 데이터를 사내 ONTAP 스토리지 시스템에 다시 미러링할 수 있습니다.
+이 솔루션에 요약된 페일오버 프로세스를 성공적으로 완료한 후 SnapCenter 및 Veeam은 AWS에서 백업 기능을 재개합니다. 이제 FSx ONTAP는 원래의 사내 데이터 센터와 기존 SnapMirror 관계가 없는 운영 스토리지로 지정됩니다. 정상적인 기능을 사내에서 다시 시작한 후 이 설명서에 나와 있는 것과 동일한 프로세스를 사용하여 데이터를 사내 ONTAP 스토리지 시스템에 다시 미러링할 수 있습니다.
 
-또한 이 설명서에 나와 있는 것처럼 SnapCenter를 구성하여 ONTAP용 FSx에서 온프레미스에 있는 ONTAP 스토리지 시스템으로 애플리케이션 데이터 볼륨을 미러링할 수 있습니다. 마찬가지로, Veeam을 구성하여 스케일아웃 백업 저장소를 사용하여 Amazon S3에 백업 복사본을 복제함으로써 사내 데이터 센터에 상주하는 Veeam 백업 서버에 액세스할 수 있습니다.
+이 설명서에 설명된 것처럼 SnapCenter를 구성하여 FSx ONTAP의 애플리케이션 데이터 볼륨을 온프레미스에 있는 ONTAP 스토리지 시스템으로 미러링할 수 있습니다. 마찬가지로, Veeam을 구성하여 스케일아웃 백업 저장소를 사용하여 Amazon S3에 백업 복사본을 복제함으로써 사내 데이터 센터에 상주하는 Veeam 백업 서버에 액세스할 수 있습니다.
 
 페일백은 이 문서의 범위를 벗어나지만 장애 복구는 여기에 설명된 세부 프로세스와 거의 차이가 없습니다.
 
@@ -950,7 +950,7 @@ NOTE: 재부팅 시 NFS 마운트를 영구적으로 만들려면 '/etc/fstab' �
 
 이 문서에 제공된 사용 사례는 NetApp과 VMware의 통합을 강조하는 검증된 재해 복구 기술에 초점을 맞춥니다. NetApp ONTAP 스토리지 시스템은 검증된 데이터 미러링 기술을 제공하므로 조직이 주요 클라우드 공급자와 함께 상주하면서 사내 및 ONTAP 기술을 아우르는 재해 복구 솔루션을 설계할 수 있습니다.
 
-AWS 기반 ONTAP용 FSX는 SnapCenter 및 SyncMirror와 원활하게 통합되어 애플리케이션 데이터를 클라우드로 복제할 수 있는 솔루션 중 하나입니다. Veeam 백업 및 복제는 NetApp ONTAP 스토리지 시스템과 긴밀하게 통합되며 vSphere 기본 스토리지에 대한 페일오버를 제공할 수 있는 또 다른 잘 알려진 기술입니다.
+FSx ONTAP on AWS는 SnapCenter 및 SyncMirror와 원활하게 통합하여 애플리케이션 데이터를 클라우드로 복제할 수 있는 솔루션 중 하나입니다. Veeam 백업 및 복제는 NetApp ONTAP 스토리지 시스템과 긴밀하게 통합되며 vSphere 기본 스토리지에 대한 페일오버를 제공할 수 있는 또 다른 잘 알려진 기술입니다.
 
 이 솔루션은 SQL Server 및 Oracle 애플리케이션 데이터를 호스팅하는 ONTAP 시스템의 게스트 연결 스토리지를 사용하는 재해 복구 솔루션을 제공합니다. SnapCenter with SnapMirror를 사용하면 ONTAP 시스템에서 애플리케이션 볼륨을 보호하고 클라우드에 있는 FSx 또는 CVO로 복제할 수 있는 관리가 쉬운 솔루션을 제공할 수 있습니다. SnapCenter는 모든 애플리케이션 데이터를 AWS의 VMware 클라우드로 페일오버하는 DR 지원 솔루션입니다.
 

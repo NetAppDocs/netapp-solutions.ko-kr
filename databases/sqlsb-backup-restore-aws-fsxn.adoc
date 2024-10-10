@@ -4,7 +4,7 @@ permalink: databases/sqlsb-backup-restore-aws-fsxn.html
 keywords: SQL server, SQL, backup, recover, AWS, aws, sql 
 summary:  
 ---
-= TR-4951: ONTAP용 AWS FSx에서 Microsoft SQL Server용 백업 및 복구
+= TR-4951: AWS FSx ONTAP 기반 Microsoft SQL Server를 위한 백업 및 복구
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary:
 저자: Niyaz Mohammed, Carine Ngwekwe - NetApp 솔루션 엔지니어링
 
 [role="lead"]
-이 문서에서는 ONTAP with SnapCenter용 AWS FSx에서 Microsoft SQL Server에 대한 백업 및 복구를 수행하는 데 필요한 단계에 대해 설명합니다. 여기에는 다음 정보가 포함됩니다.
+이 문서에서는 AWS FSx ONTAP with SnapCenter에서 Microsoft SQL Server에 대해 백업 및 복구를 수행하는 데 필요한 단계를 설명합니다. 여기에는 다음 정보가 포함됩니다.
 
 * NetApp SnapCenter 구성
 * SnapCenter 백업 작업
@@ -32,7 +32,7 @@ summary:
 SnapCenter 구성 및 Microsoft SQL Server 리소스 보호를 위해 다음 단계를 수행해야 합니다. 다음 각 단계는 다음 섹션에 자세히 설명되어 있습니다.
 
 . SQL Server 백업 및 복구 사용자에 대한 sysadmin 자격 증명을 구성합니다.
-. 스토리지 설정을 구성합니다. AWS(Amazon Web Services) 관리 자격 증명을 제공하여 SnapCenter에서 SVM(NetApp ONTAP Storage Virtual Machine)용 Amazon FSx에 액세스할 수 있습니다.
+. 스토리지 설정을 구성합니다. AWS(Amazon Web Services) 관리 자격 증명을 제공하여 SnapCenter에서 Amazon FSx ONTAP SVM(스토리지 가상 머신)에 액세스합니다.
 . SnapCenter에 SQL Server 호스트를 추가합니다. 필요한 SnapCenter 플러그인을 구축 및 설치합니다.
 . 정책을 구성합니다. 백업 작업 유형, 보존 및 선택적 스냅샷 백업 복제를 정의합니다.
 . Microsoft SQL Server 데이터베이스를 구성하고 보호합니다.
@@ -72,7 +72,7 @@ SnapCenter에서 스토리지를 구성하려면 다음 단계를 수행하십�
 +
 image:sqlsb-aws-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. ONTAP 관리 * 엔드포인트용 * FSx를 제공합니다.
+. FSx ONTAP 관리 * 엔드포인트를 제공합니다.
 +
 image:sqlsb-aws-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -107,7 +107,7 @@ SQL Server 패키지가 설치됩니다.
 
 image:sqlsb-aws-image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. 설치가 완료되면 * 리소스 * 탭으로 이동하여 ONTAP iSCSI 볼륨의 모든 FSx가 있는지 확인합니다.
+. 설치가 완료되면 * 리소스 * 탭으로 이동하여 모든 FSx ONTAP iSCSI 볼륨이 있는지 확인합니다.
 +
 image:sqlsb-aws-image10.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

@@ -65,9 +65,9 @@ image:rhhc-self-managed-aws.png["입력/출력 대화 상자 또는 작성된 �
 
 == 시나리오 3: 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션
 
-** 온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**** AWS Cloud: 공급자 관리 OpenShift 클러스터(Rosa) 및 공급자 관리 스토리지(FSxN)**
+** 사내: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지** AWS 클라우드: ROSA(Provider-managed OpenShift cluster) 및 FSx ONTAP(Provider-managed storage)**
 
-* BlueXP를 사용하여 영구 볼륨(FSxN)의 복제를 수행합니다.
+* BlueXP 를 사용하여 영구 볼륨(FSx ONTAP)의 복제를 수행합니다.
 * OpenShift GitOps를 사용하여 애플리케이션 메타데이터를 다시 생성합니다.
 
 

@@ -96,9 +96,9 @@ entries:
       url: "/databases/tr-4794.html"
 - title: Microsoft SQL Server를 참조하십시오
   entries:
-  - title: ONTAP용 AWS FSx의 Microsoft SQL Server용 백업 및 복구
+  - title: AWS FSx ONTAP 기반 Microsoft SQL Server를 위한 백업 및 복구
     url: "/databases/sqlsb-backup-restore-aws-fsxn.html"
-  - title: NetApp ONTAP용 Amazon FSx를 사용하는 AWS EC2의 SQL Server
+  - title: Amazon FSx ONTAP을 사용하는 AWS EC2의 SQL Server
     url: "/databases/sql-aws-ec2.html"
   - title: Azure NetApp Files 기반 SQL Server
     entries:

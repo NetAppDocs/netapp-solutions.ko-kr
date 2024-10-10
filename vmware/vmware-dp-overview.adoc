@@ -30,8 +30,8 @@ VMware에서는 데이터 보호 솔루션을 다음 세 가지 범주 중 하�
 .NetApp for AWS/VMC
 --
 * link:../ehc/aws-guest-dr-solution-overview.html["AWS에서 VMC를 사용한 재해 복구(게스트 연결)"]
-* link:../ehc/aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 복구. ONTAP용 FSx로 VMC에서 복원"]
-* link:../ehc/aws-dro-overview.html["ONTAP 및 VMC용 FSx를 통한 재해 복구(DRO"]
+* link:../ehc/aws-vmc-veeam-fsx-solution.html["Veeam 백업 및 앰프, FSx ONTAP로 VMC에서 복원"]
+* link:../ehc/aws-dro-overview.html["FSx ONTAP 및 VMC를 통한 DRO(재해 복구)"]
 
 
 --

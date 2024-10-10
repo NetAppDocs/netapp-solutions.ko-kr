@@ -96,7 +96,7 @@ image:dr-veeam-anf-image2.png["입력/출력 대화 상자 또는 작성된 내�
 +
 image:dr-veeam-anf-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. 그런 다음 대상을 Azure VMware Solution SDDC 클러스터/호스트와 적절한 리소스 풀, VM 폴더 및 VM 복제본용 FSx for ONTAP 데이터 저장소로 선택합니다. 그런 다음 * 다음 * 을 클릭합니다.
+. 그런 다음 대상을 Azure VMware Solution SDDC 클러스터/호스트와 적절한 리소스 풀, VM 폴더 및 VM 복제본용 FSx ONTAP 데이터 저장소로 선택합니다. 그런 다음 * 다음 * 을 클릭합니다.
 +
 image:dr-veeam-anf-image4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

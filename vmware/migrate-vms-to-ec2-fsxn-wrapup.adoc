@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: vmware/migrate-vms-to-ec2-fsxn-wrapup.html 
 keywords: netapp, vmware, amazon, ec2, fsxn, migration, iscsi, 
-summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOps "코드형 이동성" 기능을 사용하여 FSx for ONTAP iSCSI LUN에 배치된 데이터 디스크를 사용하여 온프레미스 VMware vSphere VM을 Amazon EC2 인스턴스로 마이그레이션하는 방법을 설명합니다.' 
+summary: '이 기술 보고서에서는 CMC(Cirrus Migration Cloud)의 MigrateOps "코드형 이동성" 기능을 사용하여 FSx ONTAP iSCSI LUN에 배치된 데이터 디스크가 있는 온프레미스 VMware vSphere VM을 Amazon EC2 인스턴스로 마이그레이션하는 방법을 설명합니다.' 
 ---
-= FSxN: 기타 가능성 및 결론 을 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+= Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다. 다른 가능성 및 결론
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -28,13 +28,13 @@ image:migrate-ec2-fsxn-image13.png["이 마이그레이션 솔루션의 추가 �
 
 == 결론
 
-이 문서에서는 CMC의 MigrateOps 기능을 사용하여 온프레미스 VMware 저장소에 저장된 데이터를 Amazon EC2 인스턴스 및 FSx for ONTAP를 사용하여 AWS로 마이그레이션하는 방법에 대한 전체 연습을 제공합니다.
+이 문서에서는 CMC의 MigrateOps 기능을 사용하여 온프레미스 VMware 리포지토리에 저장된 데이터를 Amazon EC2 인스턴스 및 FSx ONTAP를 사용하여 AWS로 마이그레이션하는 방법에 대한 전체 연습을 제공합니다.
 
 다음 비디오에서는 마이그레이션 프로세스를 처음부터 끝까지 보여 줍니다.
 
 .VMware VM을 Amazon EC2로 마이그레이션합니다
 video::317a0758-cba9-4bd8-a08b-b17000d88ae9[panopto]
-GUI 및 기본 Amazon EBS를 FSx for ONTAP 로컬 마이그레이션에서 확인하십시오. 이 5분 데모 동영상은 다음과 같습니다.
+GUI 및 기본 Amazon EBS를 FSx ONTAP로 로컬 마이그레이션을 확인하려면 다음 5분 데모 비디오를 시청하십시오.
 
 .Cirrus Migrate Cloud로 모든 스토리지에서 확장 가능한 스토리지로 마이그레이션
 video::PeFNZxXeQAU[youtube]

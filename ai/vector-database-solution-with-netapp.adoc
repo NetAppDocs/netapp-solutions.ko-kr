@@ -16,7 +16,7 @@ summary: NetApp를 사용하는 벡터 datbase 솔루션에 대한 요약 페이
 카르티키안 나가링감(Karthikean Nagalingam)과 로드리고 나시멘토(NetApp)
 
 [role="lead"]
-이 문서에서는 NetApp의 스토리지 솔루션을 사용하여 Milvus, pgvecto 오픈 소스 PostgreSQL 확장과 같은 벡터 데이터베이스의 구축과 관리에 대해 자세히 살펴봅니다. NetApp ONTAP 및 StorageGRID 오브젝트 스토리지를 사용하기 위한 인프라 지침을 자세히 살펴보고 AWS FSx for NetApp ONTAP에서 Milvus 데이터베이스 애플리케이션을 검증합니다. 이 문서는 NetApp의 파일 오브젝트 이중화와 벡터 임베드 기능을 지원하는 벡터 데이터베이스 및 애플리케이션에 대한 해당 유틸리티를 활용하고자 합니다. 또한 벡터 데이터베이스에 대한 백업 및 복원 기능을 제공하여 데이터 무결성과 가용성을 보장하는 NetApp의 엔터프라이즈 관리 제품인 SnapCenter의 기능을 강조합니다. 본 문서에서는 NetApp의 하이브리드 클라우드 솔루션에 대해 자세히 알아보고 온프레미스 및 클라우드 환경 전반에 걸쳐 데이터 복제 및 보호의 역할에 대해 설명합니다. NetApp ONTAP 기반 벡터 데이터베이스의 성능 검증에 대한 통찰력을 포함하고 있으며, 생성 AI에 대한 두 가지 실용적인 사용 사례인 LLM과 NetApp의 내부 ChatAI로 결론을 맺습니다. 이 문서는 벡터 데이터베이스 관리를 위한 NetApp의 스토리지 솔루션을 활용하기 위한 포괄적인 가이드입니다.
+이 문서에서는 NetApp의 스토리지 솔루션을 사용하여 Milvus, pgvecto 오픈 소스 PostgreSQL 확장과 같은 벡터 데이터베이스의 구축과 관리에 대해 자세히 살펴봅니다. NetApp ONTAP 및 StorageGRID 오브젝트 스토리지 사용에 대한 인프라 지침을 자세히 소개하고 AWS FSx ONTAP에서 Milvus 데이터베이스의 적용을 검증합니다. 이 문서는 NetApp의 파일 오브젝트 이중화와 벡터 임베드 기능을 지원하는 벡터 데이터베이스 및 애플리케이션에 대한 해당 유틸리티를 활용하고자 합니다. 또한 벡터 데이터베이스에 대한 백업 및 복원 기능을 제공하여 데이터 무결성과 가용성을 보장하는 NetApp의 엔터프라이즈 관리 제품인 SnapCenter의 기능을 강조합니다. 본 문서에서는 NetApp의 하이브리드 클라우드 솔루션에 대해 자세히 알아보고 온프레미스 및 클라우드 환경 전반에 걸쳐 데이터 복제 및 보호의 역할에 대해 설명합니다. NetApp ONTAP 기반 벡터 데이터베이스의 성능 검증에 대한 통찰력을 포함하고 있으며, 생성 AI에 대한 두 가지 실용적인 사용 사례인 LLM과 NetApp의 내부 ChatAI로 결론을 맺습니다. 이 문서는 벡터 데이터베이스 관리를 위한 NetApp의 스토리지 솔루션을 활용하기 위한 포괄적인 가이드입니다.
 
 레퍼런스 아키텍처는 다음 사항에 중점을 둡니다.
 
@@ -28,7 +28,7 @@ summary: NetApp를 사용하는 벡터 datbase 솔루션에 대한 요약 페이
 . link:./vector-database-solution-verification-overview.html["솔루션 검증 개요"]
 +
 ** link:./vector-database-milvus-cluster-setup.html["온프레미스에서 Kubernetes를 사용하여 Milvus 클러스터 설정"]
-** link:./vector-database-milvus-with-Amazon-FSxN-for-NetApp-ONTAP.html["NetApp ONTAP용 Amazon FSxN을 사용하는 Milvus – 파일 및 오브젝트 이중화"]
+** 링크:./vector-database-milvus-with-amazon-FSx ONTAP-for-NetApp-ONTAP.html[NetApp ONTAP용 Amazon FSx ONTAP – 파일 및 오브젝트 이중화]
 ** link:./vector-database-protection-using-snapcenter.html["NetApp SnapCenter를 사용한 벡터 데이터베이스 보호."]
 ** link:./vector-database-disaster-recovery-using-netapp-snapmirror.html["NetApp SnapMirror를 사용한 재해 복구"]
 ** link:./vector-database-performance-validation.html["성능 검증"]

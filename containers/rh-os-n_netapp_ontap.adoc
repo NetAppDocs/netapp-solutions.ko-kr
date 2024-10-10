@@ -76,9 +76,9 @@ Cloud Volumes ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 
 
 
 
-=== NetApp ONTAP용 Amazon FSx
+=== Amazon FSx ONTAP을 소개합니다
 
-Amazon FSx for NetApp ONTAP은 AWS 클라우드에서 완전 관리형 공유 스토리지를 제공하며, ONTAP의 인기 데이터 액세스 및 관리 기능을 제공합니다. Amazon FSx for NetApp ONTAP에 대한 자세한 내용을 보려면 을 클릭합니다 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["여기"].
+Amazon FSx ONTAP은 AWS 클라우드에서 널리 사용되는 ONTAP의 인기 데이터 액세스 및 관리 기능과 함께 완전 관리형 공유 스토리지를 제공합니다. Amazon FSx ONTAP에 대한 자세한 내용을 보려면 을 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["여기"]클릭합니다.
 
 
 

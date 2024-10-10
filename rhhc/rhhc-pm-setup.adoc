@@ -14,14 +14,14 @@ summary:
 
 
 [role="lead"]
-이 섹션에서는 AWS(Rosa)에서 관리되는 Red Hat OpenShift 클러스터를 설정하는 고급 워크플로우를 설명합니다. 영구 볼륨을 제공하기 위해 Trident에서 FSxN(Managed FSx for NetApp ONTAP)을 스토리지 백엔드로 사용하는 것을 보여 줍니다. BlueXP를 사용하는 AWS에서 FSxN을 배포하는 방법에 대한 자세한 정보가 제공됩니다. 또한 Rosa 클러스터의 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 BlueXP 및 OpenShift GitOps(Argo CD)를 사용하는 방법에 대한 세부 정보도 제공됩니다.
+이 섹션에서는 AWS(Rosa)에서 관리되는 Red Hat OpenShift 클러스터를 설정하는 고급 워크플로우를 설명합니다. 영구 볼륨을 제공하기 위해 Trident에서 관리형 Amazon FSx for NetApp ONTAP(FSx ONTAP)을 스토리지 백엔드로 사용하는 것을 보여 줍니다. BlueXP 를 사용하여 AWS에서 FSx ONTAP를 배포하는 방법에 대해 자세히 설명합니다. 또한 Rosa 클러스터의 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 BlueXP 및 OpenShift GitOps(Argo CD)를 사용하는 방법에 대한 세부 정보도 제공됩니다.
 
-다음은 AWS에 배포되고 FSxN을 백엔드 스토리지로 사용하는 Rosa 클러스터를 보여 주는 다이어그램입니다.
+이 다이어그램은 AWS에 구축되어 FSx ONTAP을 백엔드 스토리지로 사용하는 Rosa 클러스터를 보여 줍니다.
 
 image:rhhc-rosa-with-fsxn.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 
-NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터를 사용하여 검증되었습니다. 각 ROSA 클러스터는 Trident를 사용하여 FSxN과 통합되었습니다. AWS에서 Rosa 클러스터와 FSxN을 구축하는 방법은 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 link:rhhc-resources.html["리소스 섹션을 참조하십시오"]있습니다.
+NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터를 사용하여 검증되었습니다. 각 Rosa 클러스터는 Trident를 사용하여 FSx ONTAP에 통합되었습니다. AWS에 Rosa 클러스터와 FSx ONTAP를 구축하는 방법에는 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 link:rhhc-resources.html["리소스 섹션을 참조하십시오"]있습니다.
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
@@ -33,11 +33,11 @@ NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터�
 
 
 ====
-.FSxN을 설치합니다
+.FSx ONTAP을 설치합니다
 [%collapsible]
 ====
-* BlueXP에서 VPC에 FSxN을 설치합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"] BlueXP 계정 생성 및 시작 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/index.html["여기"] FSxN 설치용. 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"] FSxN을 관리하기 위해 AWS에 커넥터를 생성하는 데 사용됩니다.
-* AWS를 사용하여 FSxN을 구축합니다. 을 참조하십시오 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["여기"] AWS 콘솔을 사용하여 구축
+* BlueXP 의 VPC에 FSx ONTAP을 설치합니다. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"]시작하려면 BlueXP  계정 생성 및 을 참조하십시오. FSx ONTAP 설치에 대해서는 을 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/index.html["여기"]참조하십시오. AWS에서 커넥터를 생성하여 FSx ONTAP를 관리하는 방법은 을 참조하십시오link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"].
+* AWS를 사용하여 FSx ONTAP 구축 AWS 콘솔을 사용한 구축은 을 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["여기"]참조하십시오.
 
 
 ====
@@ -47,7 +47,7 @@ NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터�
 * 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 제어 차트 URL: https://netapp.github.io/trident-helm-chart[]
 
 
-.FSxN과 Trident for Rosa 클러스터의 통합
+.FSx ONTAP와 Trident for Rosa 클러스터의 통합
 video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto]
 
 NOTE: OpenShift GitOps는 ApplicationSet을 사용하여 ArgoCD에 등록될 때 모든 관리되는 클러스터에 Trident CSI를 배포하는 데 사용할 수 있습니다.
@@ -55,7 +55,7 @@ NOTE: OpenShift GitOps는 ApplicationSet을 사용하여 ArgoCD에 등록될 때
 image:rhhc-trident-helm.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ====
-.Trident(FSxN용)를 사용하여 백엔드 및 스토리지 클래스 생성
+.Trident(FSx ONTAP용)를 사용하여 백엔드 및 스토리지 클래스 생성
 [%collapsible]
 ====
 * 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"] 백엔드 및 스토리지 클래스 생성에 대한 자세한 내용은 을 참조하십시오.
