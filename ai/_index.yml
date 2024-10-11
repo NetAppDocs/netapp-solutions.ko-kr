@@ -10,7 +10,7 @@ indexpage:
       url: "/../videos.html#ai"
     - title: 블로그
       url: "/../blogs.html#ai"
-  - title: AI 워크로드를 위한 통합 인프라
+  - title: NVIDIA 사용 AI 워크로드를 위한 통합 인프라
     links:
     - title: NVIDIA DGX 시스템 및 NetApp AIPod
       url: aipod_nv_intro.html
@@ -18,6 +18,10 @@ indexpage:
       url: ontap-ai-overview.html
     - title: NVIDIA SuperPOD 및 NetApp EF-Series
       url: ef-series-ai-overview.html
+    - title: NVIDIA DGX SuperPOD 및 NetApp AIPod
+      url: ai-dgx-superpod.html
+  - title: 다른 공급업체의 AI 워크로드를 위한 컨버지드 인프라
+    links:
     - title: NetApp E-Series 스토리지를 통한 IBM Spectrum Scale
       url: tr-4859.html
     - title: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론
@@ -26,8 +30,6 @@ indexpage:
       url: a400-thinksystem-introduction.html
     - title: AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
       url: tr-4815.html
-    - title: NVIDIA DGX SuperPOD 및 NetApp AIPod
-      url: ai-dgx-superpod.html
   - title: 데이터 레이크 및 데이터 파이프라인
     links:
     - title: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
@@ -58,10 +60,6 @@ indexpage:
     links:
     - title: 감정 분석
       url: ai-sent-support-center-analytics.html
-    - title: 클릭률 예측 - Azure에서 제공되는 분산 교육
-      url: aks-anf_introduction.html
-    - title: 차선 감지 - Azure에서 분산된 교육
-      url: runai-ld_executive_summary.html
     - title: NVIDIA Jarvis를 사용하는 대화형 AI
       url: cainvidia_executive_summary.html
     - title: 자율 주행
@@ -70,6 +68,12 @@ indexpage:
       url: tr-4811.html
     - title: 신용 카드 사기 감지
       url: tr-4807.html
+  - title: Azure 사용 사례
+    links:
+    - title: 클릭률 예측 - Azure에서 제공되는 분산 교육
+      url: aks-anf_introduction.html
+    - title: 차선 감지 - Azure에서 분산된 교육
+      url: runai-ld_executive_summary.html
   - title: 'SuperPOD: NetApp 및 NVIDIA 솔루션'
     links:
     - title: NetApp 기반 BeeGFS(설계 가이드)

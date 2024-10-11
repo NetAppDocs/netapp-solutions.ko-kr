@@ -19,6 +19,8 @@ indexpage:
       url: "/rhhc-versions.html"
     - title: 지원되는 스토리지 옵션
       url: "/rhhc-storage-options.html"
+  - title: 리소스
+    links:
     - title: 추가 문서
       url: "/rhhc-resources.html"
     - title: 비디오 및 데모

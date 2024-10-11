@@ -177,14 +177,14 @@ entries:
       entries:
       - title: Kubeflow 구축
         url: "/ai/aicp_kubeflow_deployment_overview.html"
-      - title: Kubeflow 작업 및 작업 예
-        entries:
-        - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
-          url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
-        - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
-          url: "/ai/aicp_example_notebooks_and_pipelines.html"
-        - title: 워크플로 예 - 이미지 인식 모델 교육
-          url: "/ai/aicp_kubeflow_train_image_recognition.html"
+    - title: Kubeflow 작업 및 작업 예
+      entries:
+      - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
+        url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
+      - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
+        url: "/ai/aicp_example_notebooks_and_pipelines.html"
+      - title: 워크플로 예 - 이미지 인식 모델 교육
+        url: "/ai/aicp_kubeflow_train_image_recognition.html"
     - title: Trident 작업의 예
       url: "/ai/aicp_example_trident_operations_overview.html"
     - title: AIPod 구축을 위한 고성능 작업의 예
