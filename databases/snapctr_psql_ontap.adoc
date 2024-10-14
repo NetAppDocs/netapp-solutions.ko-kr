@@ -1,0 +1,494 @@
+---
+sidebar: sidebar 
+permalink: databases/snapctr_psql_ontap.html 
+keywords: Database, PostgreSQL, ONTAP, backup, recovery, clone, SnapCenter 
+summary: 이 솔루션은 NetApp SnapCenter 데이터베이스 관리 UI 툴을 통해 퍼블릭 클라우드 또는 온프레미스의 ONTAP 스토리지에서 PostgreSQL 데이터베이스 백업, 복구 및 클론에 대한 개요 및 세부 정보를 제공합니다. 
+---
+= TR-5000: SnapCenter를 사용하는 ONTAP에서 PostgreSQL 데이터베이스 백업, 복구 및 클론 복제
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+Allen Cao, Niyaz Mohamed, NetApp
+
+[role="lead"]
+이 솔루션은 NetApp SnapCenter 데이터베이스 관리 UI 툴을 통해 퍼블릭 클라우드 또는 온프레미스의 ONTAP 스토리지에서 PostgreSQL 데이터베이스 백업, 복구 및 클론에 대한 개요 및 세부 정보를 제공합니다.
+
+
+
+== 목적
+
+NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다. 스토리지 시스템의 활동 감독 및 규제 범주에는 영향을 주지 않으면서 이러한 작업을 애플리케이션 소유자에게 넘겨 백업, 복원 및 클론 라이프사이클 관리를 간소화합니다. 또한 스토리지 기반 데이터 관리를 활용하여 성능 및 가용성을 향상하고 테스트 및 개발 시간을 단축합니다.
+
+이 설명서에서는 사용이 매우 친숙한 SnapCenter UI 툴을 사용하여 퍼블릭 클라우드 또는 온프레미스의 NetApp ONTAP 스토리지에서 PostgreSQL 데이터베이스 보호 및 관리를 보여 줍니다.
+
+이 솔루션은 다음과 같은 사용 사례를 해결합니다.
+
+* 퍼블릭 클라우드 또는 온프레미스의 NetApp ONTAP 스토리지에 배포된 PostgreSQL 데이터베이스의 백업 및 복구
+* PostgreSQL 데이터베이스 스냅샷 및 클론 복제본을 관리하여 애플리케이션 개발을 가속화하고 데이터 수명 주기 관리를 개선합니다.
+
+
+
+
+== 대상
+
+이 솔루션은 다음과 같은 사용자를 대상으로 합니다.
+
+* NetApp ONTAP 스토리지에 PostgreSQL 데이터베이스를 구축하려는 DBA
+* NetApp ONTAP 스토리지에서 PostgreSQL 워크로드를 테스트하려는 데이터베이스 솔루션 설계자입니다.
+* NetApp ONTAP 스토리지에 PostgreSQL 데이터베이스를 구축하고 관리하고자 하는 스토리지 관리자
+* NetApp ONTAP 스토리지에 PostgreSQL 데이터베이스를 설치하려는 애플리케이션 소유자
+
+
+
+
+== 솔루션 테스트 및 검증 환경
+
+이 솔루션의 테스트 및 검증은 최종 구축 환경과 일치하지 않을 수 있는 랩 설정에서 수행되었습니다. 섹션을 참조하십시오 <<구축 시 고려해야 할 주요 요소>> 를 참조하십시오.
+
+
+
+=== 있습니다
+
+image:snapctr_psql_brc_architecture.png["이 이미지는 SnapCenter를 사용한 PostgreSQL 백업, 복구 및 클론에 대한 자세한 그림을 제공합니다."]
+
+
+
+=== 하드웨어 및 소프트웨어 구성 요소
+
+[cols="33%, 33%, 33%"]
+|===
+
+
+3+| * 하드웨어 * 
+
+
+| NetApp AFF A220을 참조하십시오 | 버전 9.12.1P2 | 디스크 쉘프 DS224-12, IOM12E 모듈, 24개 디스크/12TiB 용량입니다 
+
+
+| VMware vSphere 클러스터 | 버전 6.7 | 4 NetApp HCI H410C 컴퓨팅 ESXi 노드 
+
+
+3+| * 소프트웨어 * 
+
+
+| RedHat Linux | RHEL Linux 8.6(LVM) - x64 Gen2 | 테스트를 위해 RedHat 서브스크립션을 배포했습니다 
+
+
+| Windows Server를 선택합니다 | 2022 데이터 센터; AE 핫패치 - x64 Gen2 | 호스팅 SnapCenter 서버 
+
+
+| PostgreSQL 데이터베이스 | 버전 14.13 | PostgreSQL DB 클러스터를 HammerDB tpcc 스키마로 채웠습니다 
+
+
+| SnapCenter 서버 | 버전 6.0 | 작업 그룹 배포 
+
+
+| JDK를 엽니다 | 버전 java-11-openjdk | DB VM에 대한 SnapCenter 플러그인 요구 사항 
+
+
+| NFS 를 참조하십시오 | 버전 3.0 | 데이터와 로그를 서로 다른 마운트 지점으로 분리합니다 
+
+
+| Ansible | 코어 2.16.2 | 파이썬 3.6.8 
+|===
+
+
+=== 실습 환경의 PostgreSQL 데이터베이스 구성
+
+[cols="33%, 33%, 33%"]
+|===
+
+
+3+|  
+
+
+| * 서버 * | * 데이터베이스 * | * DB 스토리지 * 
+
+
+| psql01 을 참조하십시오 | 1차 데이터베이스 서버 | /pgdata, /pglogs NFS 볼륨은 ONTAP 스토리지에 마운트됩니다 
+
+
+| psql02 를 참조하십시오 | 데이터베이스 서버를 복제합니다 | /pgdata_clone, /pglogs_clone NFS 씬 클론 볼륨이 ONTAP 스토리지에 마운트됩니다 
+|===
+
+
+=== 구축 시 고려해야 할 주요 요소
+
+* * SnapCenter 배포. * SnapCenter는 Windows 도메인 또는 작업 그룹 환경에 배포할 수 있습니다. 도메인 기반 배포의 경우 도메인 사용자 계정은 도메인 관리자 계정이거나 도메인 사용자가 SnapCenter 호스팅 서버의 로컬 관리자 그룹에 속해야 합니다.
+* * 이름 확인. * SnapCenter 서버는 각 관리되는 대상 데이터베이스 서버 호스트의 IP 주소로 이름을 확인해야 합니다. 각 타겟 데이터베이스 서버 호스트는 SnapCenter 서버 이름을 IP 주소로 확인해야 합니다. DNS 서버를 사용할 수 없는 경우 확인을 위해 로컬 호스트 파일에 이름을 추가합니다.
+* * 리소스 그룹 구성. * SnapCenter의 리소스 그룹은 함께 백업할 수 있는 유사한 리소스의 논리적 그룹입니다. 따라서 대규모 데이터베이스 환경에서 백업 작업 수를 간소화하고 줄일 수 있습니다.
+* * 전체 데이터베이스 및 아카이브 로그 백업을 분리합니다. * 전체 데이터베이스 백업에는 데이터 볼륨 및 로그 볼륨 정합성 보장 그룹 스냅샷이 포함됩니다. 전체 데이터베이스 스냅샷을 자주 사용하면 스토리지 소비가 증가하지만 RTO는 향상됩니다. 그 대안은 전체 데이터베이스 스냅샷의 빈도가 낮고 아카이브 로그 백업을 더 자주 수행하므로 스토리지 사용량이 적고 RPO는 향상되지만 RTO가 확장될 수 있습니다. 백업 체계를 설정할 때 RTO 및 RPO 목표를 고려하십시오. 또한 볼륨에 대한 스냅샷 백업 수는 1023개로 제한됩니다.
+* * 권한 위임. * SnapCenter UI에 내장된 역할 기반 액세스 제어를 활용하여 필요한 경우 응용 프로그램 및 데이터베이스 팀에 권한을 위임합니다.
+
+
+
+
+== 솔루션 구축
+
+다음 섹션에서는 퍼블릭 클라우드 또는 온프레미스의 NetApp ONTAP 스토리지에서 SnapCenter 구축, 구성 및 PostgreSQL 데이터베이스 백업, 복구 및 클론을 위한 단계별 절차를 제공합니다.
+
+
+
+=== 배포를 위한 사전 요구 사항
+
+[%collapsible]
+====
+. 구축 시에는 ONTAP 스토리지에서 실행되는 두 개의 기존 PostgreSQL 데이터베이스가 필요합니다. 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 사용됩니다. ONTAP에서 PostgreSQL 데이터베이스 구축에 대한 참조는 TR-4956: 참조, link:aws_postgres_fsx_ec2_hadr.html["AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구"^]기본 인스턴스에서 PostgreSQL 자동 배포 플레이북 찾기.
+. NetApp SnapCenter UI 도구를 최신 버전으로 실행할 Windows 서버를 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오link:https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^].
+
+
+====
+
+
+=== SnapCenter 설치 및 설정
+
+[%collapsible]
+====
+SnapCenter 설치 및 구성을 진행하기 전에 온라인 상태로 전환하는 link:https://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 소프트웨어 설명서"^]것이 좋습니다. 다음은 ONTAP에서 PostgreSQL용 SnapCenter 소프트웨어의 설치 및 설정 단계를 개괄적으로 요약한 것입니다.
+
+. SnapCenter Windows 서버에서 에서 최신 Java JDK를 다운로드하여 설치합니다link:https://www.java.com/en/["데스크톱 응용 프로그램용 Java를 다운로드하십시오"^]. Windows 방화벽을 끕니다.
+. SnapCenter windows 서버에서 SnapCenter 6.0 Windows 필수 구성 요소: powershell-powershell-7.4.3-win-x64.msi 및 .Net 호스팅 패키지 -dotNet-hosting-8.0.6-win을 다운로드하고 설치하거나 업데이트합니다.
+. SnapCenter Windows 서버에서 NetApp 지원 사이트 에서 SnapCenter 설치 실행 파일의 최신 버전(현재 6.0)을 다운로드하여 설치합니다link:https://mysupport.netapp.com/site/["NetApp | 지원"^].
+. 데이터베이스 DB VM에서 관리자 사용자 및 암호 없이 ssh 암호 없는 sudo Privileges를 사용하도록 `admin` 설정합니다.
+. 데이터베이스 DB VM에서 Linux 방화벽 데몬을 중지하고 비활성화합니다. java-11-openjdk를 설치합니다.
+. SnapCenter Windows 서버에서 브라우저를 실행하여 포트 8146을 통해 Windows 로컬 관리자 사용자 또는 도메인 사용자 자격 증명으로 SnapCenter에 로그인합니다.
++
+image:snapctr_ora_azure_anf_setup_01.png["이 이미지는 SnapCenter 서버의 로그인 화면을 제공합니다"]
+
+. 검토 `Get Started` 온라인 메뉴.
++
+image:snapctr_ora_azure_anf_setup_02.png["이 이미지는 SnapCenter 서버에 대한 온라인 메뉴를 제공합니다"]
+
+. 인치 `Settings-Global Settings`을 클릭합니다 `Hypervisor Settings` 업데이트 를 클릭합니다.
++
+image:snapctr_ora_azure_anf_setup_03.png["이 이미지는 SnapCenter 서버에 대한 하이퍼바이저 설정을 제공합니다"]
+
+. 필요한 경우 를 조정합니다 `Session Timeout` SnapCenter UI를 원하는 간격으로 설정합니다.
++
+image:snapctr_ora_azure_anf_setup_04.png["이 이미지는 SnapCenter 서버에 대한 세션 시간 제한을 제공합니다"]
+
+. 필요한 경우 SnapCenter에 사용자를 추가합니다.
++
+image:snapctr_ora_azure_anf_setup_06.png["이 이미지는 SnapCenter 서버에 대한 설정 - 사용자 및 액세스를 제공합니다"]
+
+. 를 클릭합니다 `Roles` 탭에 여러 SnapCenter 사용자에게 할당할 수 있는 기본 제공 역할이 나열됩니다. 원하는 권한을 가진 관리자 사용자가 사용자 지정 역할을 만들 수도 있습니다.
++
+image:snapctr_ora_azure_anf_setup_07.png["이 이미지는 SnapCenter 서버의 역할을 제공합니다"]
+
+. 에서 `Settings-Credential` SnapCenter 관리 대상에 대한 자격 증명을 생성합니다. 이 데모 활용 사례에서는 DB 서버 VM에 로그인하기 위한 Linux 사용자 관리자 및 PostgreSQL 액세스를 위한 postgres 자격 증명입니다.
++
+image:snapctr_psql_setup_host_01.png["이 이미지는 SnapCenter 서버에 대한 자격 증명을 제공합니다"]
+
++
+
+NOTE: 자격 증명을 생성하기 전에 PostgreSQL 사용자 postgres 암호를 재설정합니다.
+
+.  `Storage Systems`탭에서 ONTAP 클러스터 관리자 자격 증명을 사용하여 추가합니다 `ONTAP cluster`. Azure NetApp Files의 경우 용량 풀 액세스를 위한 특정 자격 증명을 생성해야 합니다.
++
+image:snapctr_psql_setup_ontap_01.png["이 이미지는 SnapCenter 서버용 Azure NetApp Files를 제공합니다"] image:snapctr_psql_setup_ontap_02.png["이 이미지는 SnapCenter 서버용 Azure NetApp Files를 제공합니다"]
+
+.  `Hosts`탭에서 Linux에 PostgreSQL용 SnapCenter 플러그인을 설치하는 PostgreSQL DB VM을 추가합니다.
++
+image:snapctr_psql_setup_host_02.png["이 이미지는 SnapCenter 서버의 호스트를 제공합니다"] image:snapctr_psql_setup_host_03.png["이 이미지는 SnapCenter 서버의 호스트를 제공합니다"] image:snapctr_psql_setup_host_05.png["이 이미지는 SnapCenter 서버의 호스트를 제공합니다"]
+
+. 호스트 플러그인이 DB 서버 VM에 설치되면 호스트의 데이터베이스가 자동으로 검색되고 탭에 표시됩니다 `Resources`.
++
+image:snapctr_psql_bkup_01.png["이 이미지는 SnapCenter 서버에 대한 설정 - 정책을 제공합니다"]
+
+
+
+====
+
+
+=== 데이터베이스 백업
+
+[%collapsible]
+====
+초기 자동 검색된 PostgreSQL 클러스터에서 해당 클러스터 이름 옆에 빨간색 잠금이 표시됩니다. 이전 섹션의 SnapCenter 설정 중에 생성된 PostgreSQL 데이터베이스 자격 증명을 사용하여 잠금을 해제해야 합니다. 그런 다음 데이터베이스를 보호하기 위해 백업 정책을 만들고 적용해야 합니다. 마지막으로 백업을 수동으로 실행하거나 스케줄러에 의해 실행하여 스냅샷 백업을 생성합니다. 다음 섹션에서는 단계별 절차를 보여 줍니다.
+
+* PostgreSQL 클러스터의 잠금을 해제합니다.
++
+.. 탭으로 `Resources` 이동하면 데이터베이스 VM에 SnapCenter 플러그인이 설치된 후 검색된 PostgreSQL 클러스터가 나열됩니다. 처음에는 잠겨 있고 데이터베이스 클러스터의 가 `Overall Status` 로 표시됩니다 `Not protected`.
++
+image:snapctr_psql_bkup_01.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 클러스터 이름을 클릭한 다음 `Configure Credentials` 를 클릭하여 자격 증명 구성 페이지를 엽니다.
++
+image:snapctr_psql_bkup_02.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 이전 SnapCenter 설정 중에 생성된 자격 증명을 선택합니다 `postgres`.
++
+image:snapctr_psql_bkup_03.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 자격 증명이 적용되면 클러스터의 잠금이 해제됩니다.
++
+image:snapctr_psql_bkup_04.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+
+
+* PostgreSQL 백업 정책을 생성합니다.
++
+.. 로 이동한 `Setting` `Polices` 후 를 `New` 클릭하여 백업 정책을 생성합니다.
++
+image:snapctr_psql_bkup_06.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 백업 정책의 이름을 지정합니다.
++
+image:snapctr_psql_bkup_07.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 스토리지 유형을 선택하십시오. 대부분의 시나리오에서 기본 백업 설정은 괜찮습니다.
++
+image:snapctr_psql_bkup_08.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 백업 빈도 및 스냅샷 보존을 정의합니다.
++
+image:snapctr_psql_bkup_09.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 데이터베이스 볼륨이 보조 위치에 복제되는 경우 보조 복제를 선택하는 옵션입니다.
++
+image:snapctr_psql_bkup_10.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 요약을 검토하고 `Finish` 백업 정책을 생성합니다.
++
+image:snapctr_psql_bkup_11.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"] image:snapctr_psql_bkup_12.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+
+
+* 백업 정책을 적용하여 PostgreSQL 데이터베이스를 보호합니다.
++
+..  `Resource`탭으로 돌아가 클러스터 이름을 클릭하여 PostgreSQL 클러스터 보호 워크플로우를 시작합니다.
++
+image:snapctr_psql_bkup_05.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 기본값을 `Application Settings`적용합니다. 이 페이지의 대부분의 옵션은 자동 검색 대상에 적용되지 않습니다.
++
+image:snapctr_psql_bkup_13.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 방금 생성한 백업 정책을 적용합니다. 필요한 경우 백업 일정을 추가합니다.
++
+image:snapctr_psql_bkup_14.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 백업 알림이 필요한 경우 이메일 설정을 제공합니다.
++
+image:snapctr_psql_bkup_15.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 요약을 검토하고 `Finish` 백업 정책을 구현합니다. 이제 PostgreSQL 클러스터가 보호됩니다.
++
+image:snapctr_psql_bkup_16.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 백업은 백업 스케줄에 따라 실행되거나 클러스터 백업 토폴로지에서 실행됩니다. On을 클릭하여 `Backup Now` 수동 주문형 백업을 트리거합니다.
++
+image:snapctr_psql_bkup_17_1.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"] image:snapctr_psql_bkup_17.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+.. 탭에서 백업 작업을 `Monitor` 모니터링합니다. 일반적으로 대규모 데이터베이스를 백업하는 데 몇 분이 걸리며 테스트 사례에서는 1TB에 가까운 데이터베이스 볼륨을 백업하는 데 4분이 걸렸습니다.
++
+image:snapctr_psql_bkup_19.png["이 이미지는 SnapCenter 서버에 대한 데이터베이스 백업을 제공합니다"]
+
+
+
+
+
+====
+
+
+=== 데이터베이스 복구
+
+[%collapsible]
+====
+이 데이터베이스 복구 데모에서는 PostgreSQL 데이터베이스 클러스터의 시점 복구를 보여 줍니다. 먼저 SnapCenter를 사용하여 ONTAP 스토리지에 데이터베이스 볼륨의 스냅샷 백업을 생성합니다. 그런 다음 데이터베이스에 로그인하여 테스트 테이블을 만들고 시간 스탬프를 기록한 다음 테스트 테이블을 삭제합니다. 이제 삭제된 테이블을 복구하기 위해 테스트 테이블을 만들 때 타임 스탬프까지 백업에서 복구를 시작합니다. 다음은 SnapCenter UI를 사용한 PostgreSQL 데이터베이스 시점 복구의 워크플로우와 유효성 검사에 대한 세부 정보를 캡처한 것입니다.
+
+. PostgreSQL에 `postgres` 사용자로 로그인합니다. 테스트 테이블을 만든 후 삭제합니다.
++
+....
+postgres=# \dt
+Did not find any relations.
+
+
+postgres=# create table test (id integer, dt timestamp, event varchar(100));
+CREATE TABLE
+postgres=# \dt
+        List of relations
+ Schema | Name | Type  |  Owner
+--------+------+-------+----------
+ public | test | table | postgres
+(1 row)
+
+postgres=# insert into test values (1, now(), 'test PostgreSQL point in time recovery with SnapCenter');
+INSERT 0 1
+
+postgres=# select * from test;
+ id |             dt             |                         event
+----+----------------------------+--------------------------------------------------------
+  1 | 2024-10-08 17:55:41.657728 | test PostgreSQL point in time recovery with SnapCenter
+(1 row)
+
+postgres=# drop table test;
+DROP TABLE
+postgres=# \dt
+Did not find any relations.
+
+postgres=# select current_time;
+    current_time
+--------------------
+ 17:59:20.984144+00
+
+....
+.  `Resources`탭에서 데이터베이스 백업 페이지를 엽니다. 복구할 스냅샷 백업을 선택합니다. 그런 다음 `Restore` 버튼을 클릭하여 데이터베이스 복구 워크플로우를 실행합니다. 시점 복구를 수행할 때 백업의 타임스탬프를 확인합니다.
++
+image:snapctr_psql_restore_01.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 을 `Restore scope`선택합니다. 현재 완전한 자원은 옵션일 뿐입니다.
++
+image:snapctr_psql_restore_02.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 의 경우 `Recovery Scope` 복구가 롤포워드되는 타임스탬프를 선택하고 `Recover to point in time` 입력합니다.
++
+image:snapctr_psql_restore_03.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 를 `PreOps` 사용하면 복구/복구 작업 전에 데이터베이스에 대해 스크립트를 실행하거나 검은색으로 유지할 수 있습니다.
++
+image:snapctr_psql_restore_04.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 는 `PostOps` 복원/복구 작업 후 데이터베이스에 대해 스크립트를 실행하거나 검은색으로 둡니다.
++
+image:snapctr_psql_restore_05.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 원하는 경우 이메일을 통해 알립니다.
++
+image:snapctr_psql_restore_06.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 작업 요약을 검토하고 `Finish` 복원 작업을 시작합니다.
++
+image:snapctr_psql_restore_07.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 실행 중인 작업을 클릭하여 엽니다 `Job Details` 창을 엽니다. 작업 상태는 에서 열고 볼 수도 있습니다 `Monitor` 탭을 클릭합니다.
++
+image:snapctr_psql_restore_08.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. PostgreSQL에 사용자로 `postgres` 로그인하여 테스트 테이블이 복구되었는지 확인합니다.
++
+....
+
+[postgres@psql01 ~]$ psql
+psql (14.13)
+Type "help" for help.
+
+postgres=# \dt
+        List of relations
+ Schema | Name | Type  |  Owner
+--------+------+-------+----------
+ public | test | table | postgres
+(1 row)
+
+postgres=# select * from test;
+ id |             dt             |                         event
+----+----------------------------+--------------------------------------------------------
+  1 | 2024-10-08 17:55:41.657728 | test PostgreSQL point in time recovery with SnapCenter
+(1 row)
+
+postgres=# select now();
+              now
+-------------------------------
+ 2024-10-08 18:22:33.767208+00
+(1 row)
+
+
+....
+
+
+====
+
+
+=== 데이터베이스 클론
+
+[%collapsible]
+====
+SnapCenter를 통한 PostgreSQL 데이터베이스 클러스터 클론은 소스 데이터베이스 데이터 볼륨의 스냅샷 백업에서 새로운 씬 클론 볼륨을 생성합니다. 더 중요한 것은 개발 또는 테스트를 지원하기 위해 운영 데이터베이스의 클론 복사본을 만드는 다른 방법과 비교할 때 빠르고(몇 분) 효율적입니다. 따라서 스토리지 비용을 크게 줄이고 데이터베이스 애플리케이션 라이프사이클 관리를 개선합니다. 다음 섹션에서는 SnapCenter UI를 사용하는 PostgreSQL 데이터베이스 클론의 워크플로우를 보여 줍니다.
+
+. 클론 프로세스를 검증합니다. 다시 테스트 테이블에 행을 삽입합니다. 그런 다음 백업을 실행하여 테스트 데이터를 캡처합니다.
++
+....
+postgres=# insert into test values (2, now(), 'test PostgreSQL clone to a different DB server host');
+INSERT 0 1
+postgres=# select * from test;
+ id |             dt             |                        event
+----+----------------------------+-----------------------------------------------------
+  2 | 2024-10-11 20:15:04.252868 | test PostgreSQL clone to a different DB server host
+(1 row)
+
+....
+.  `Resources`탭에서 데이터베이스 클러스터 백업 페이지를 엽니다. 테스트 데이터가 포함된 데이터베이스 백업의 스냅샷을 선택합니다. 그런 다음 `clone` 버튼을 클릭하여 데이터베이스 복제 워크플로우를 실행합니다.
++
+image:snapctr_psql_clone_01.png["이 이미지는 SnapCenter 서버의 데이터베이스 클론을 제공합니다"]
+
+. 소스 DB 서버가 아닌 다른 DB 서버 호스트를 선택합니다. 타겟 호스트에서 사용되지 않는 TCP 포트 543x를 선택합니다.
++
+image:snapctr_psql_clone_02.png["이 이미지는 SnapCenter 서버의 데이터베이스 클론을 제공합니다"]
+
+. 클론 작업 전후에 실행할 스크립트를 입력합니다.
++
+image:snapctr_psql_clone_03.png["이 이미지는 SnapCenter 서버의 데이터베이스 클론을 제공합니다"]
+
+. 원하는 경우 이메일을 통해 알립니다.
++
+image:snapctr_psql_clone_04.png["이 이미지는 SnapCenter 서버의 데이터베이스 클론을 제공합니다"]
+
+. 요약을 검토하고 `Finish` 클론 프로세스를 시작합니다.
++
+image:snapctr_psql_clone_05.png["이 이미지는 SnapCenter 서버의 데이터베이스 클론을 제공합니다"]
+
+. 실행 중인 작업을 클릭하여 엽니다 `Job Details` 창을 엽니다. 작업 상태는 에서 열고 볼 수도 있습니다 `Monitor` 탭을 클릭합니다.
++
+image:snapctr_psql_clone_06.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 복제된 데이터베이스는 즉시 SnapCenter에 등록됩니다.
++
+image:snapctr_psql_clone_07.png["이 이미지는 SnapCenter 서버의 데이터베이스 복원을 제공합니다"]
+
+. 타겟 DB 서버 호스트에서 복제된 데이터베이스 클러스터를 검증합니다.
++
+....
+
+[postgres@psql01 ~]$ psql -d postgres -h 10.61.186.7 -U postgres -p 5433
+Password for user postgres:
+psql (14.13)
+Type "help" for help.
+
+postgres=# select * from test;
+ id |             dt             |                        event
+----+----------------------------+-----------------------------------------------------
+  2 | 2024-10-11 20:15:04.252868 | test PostgreSQL clone to a different DB server host
+(1 row)
+
+postgres=# select pg_read_file('/etc/hostname') as hostname;
+ hostname
+----------
+ psql02  +
+
+(1 row)
+
+
+....
+
+
+====
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+이 문서에 설명된 정보에 대한 자세한 내용은 다음 문서 및/또는 웹 사이트를 참조하십시오.
+
+* SnapCenter 소프트웨어 설명서
++
+link:https://docs.netapp.com/us-en/snapcenter/index.html["https://docs.netapp.com/us-en/snapcenter/index.html"^]
+
+* TR-4956: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구
++
+link:https://docs.netapp.com/us-en/netapp-solutions/databases/aws_postgres_fsx_ec2_hadr.html["TR-4956: AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구"^]
+
+

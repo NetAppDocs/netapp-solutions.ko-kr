@@ -126,6 +126,8 @@ entries:
     url: "/databases/tr-4722.html"
 - title: 데이터베이스용 SnapCenter
   entries:
+  - title: ONTAP에서 PostgreSQL 백업, 복구 및 클론 생성
+    url: "/databases/snapctr_psql_ontap.html"
   - title: SnapCenter Oracle 클론 수명주기
     url: "/databases/automation_ora_clone_lifecycle.html"
   - title: ANF에서 Oracle Database 백업, 복구 및 클론
@@ -162,6 +164,10 @@ entries:
       url: "/databases/hybrid_dbops_snapcenter_devtest.html"
     - title: 재해 복구 워크플로우
       url: "/databases/hybrid_dbops_snapcenter_dr.html"
+- title: 실제 고객 사례 연구
+  entries:
+  - title: 의료 제품 기업이 온프레미스 SQL 워크로드를 Amazon FSx ONTAP로 마이그레이션하여 비용을 절감합니다
+    url: "/databases/customer_usecase_mssql_fsx1.html"
 - title: DB Automation 툴킷
   entries:
   - title: SnapCenter Oracle 클론 수명주기
