@@ -144,7 +144,7 @@ image:vmware-vcf-aff-image26.png["OTV 템플릿 사용자 지정 2"]
 ====
 Swagger-UI를 사용하여 여러 단계를 완료해야 합니다. 첫 번째는 VCF 어플라이언스-API-토큰을 가져오는 것입니다.
 
-. 로 이동하여 Swagger 사용자 인터페이스에 액세스합니다 https://otv_ip:8143/api/rest/swagger-ui.html[] 웹 브라우저에서.
+. 웹 브라우저에서 로 이동하여 Swagger 사용자 인터페이스에 `https://<otv_ip>:8143/api/rest/swagger-ui.html` 액세스합니다.
 . 아래로 스크롤하여 * 사용자 인증: 사용자 인증을 위한 API * 로 이동한 후 * Post/2.0/VCF/user/login * 을 선택합니다.
 +
 image:vmware-vcf-aff-image27.png["post/2.0/vcf/user/login"]
