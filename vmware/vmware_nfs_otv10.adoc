@@ -196,7 +196,7 @@ image:vmware-nfs-otv10-image06.png["VMkernel 선택 사항을 검토합니다"]
 
 다음 단계는 vSphere Client를 사용하는 vSphere 8 클러스터에서 수행되며 OTV 구축, ONTAP Tools Manager 구성, VVol NFS 데이터 저장소 생성과 관련됩니다.
 
-VMware vSphere 10용 ONTAP 툴 구축 및 사용에 대한 전체 설명서는 를 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/prepare-deployment.html["VMware vSphere용 ONTAP 툴을 구축할 준비를 합니다"]참조하십시오.
+VMware vSphere 10용 ONTAP 툴 구축 및 사용에 대한 전체 설명서는 를 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/ontap-tools-deployment.html["VMware vSphere용 ONTAP 툴을 구축합니다"]참조하십시오.
 
 .VMware vSphere 10용 ONTAP 툴을 구축합니다
 [%collapsible]
@@ -242,7 +242,7 @@ image:vmware-nfs-otv10-image09.png["네트워크를 선택합니다"]
 . 구성 페이지에서 사용할 배포 구성을 선택합니다. 이 시나리오에서는 쉬운 배포 방법을 사용합니다.
 +
 
-NOTE: ONTAP 툴 10은 다중 노드를 사용한 고가용성 구축을 포함하여 다양한 구축 구성을 제공합니다. 모든 배포 구성에 대한 설명은 을 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/prepare-deployment.html["VMware vSphere용 ONTAP 툴을 구축할 준비를 합니다"]참조하십시오.
+NOTE: ONTAP 툴 10은 다중 노드를 사용한 고가용성 구축을 포함하여 다양한 구축 구성을 제공합니다. 모든 배포 구성 및 사전 요구 사항에 대한 문서는 을 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/prerequisites.html["VMware vSphere용 ONTAP 툴을 구축하기 위한 사전 요구 사항"]참조하십시오.
 
 +
 image:vmware-nfs-otv10-image10.png["네트워크를 선택합니다"]
