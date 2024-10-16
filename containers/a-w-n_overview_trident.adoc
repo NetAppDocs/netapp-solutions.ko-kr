@@ -34,22 +34,22 @@ Trident 설치에 대한 자세한 내용은 을 https://docs.netapp.com/us-en/t
 
 == 스토리지 시스템 백엔드를 생성합니다
 
-Trident 운영자 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Trident의 설치 및 구성을 계속하려면 아래 링크를 따르십시오. link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-1-create-a-backend["백엔드를 생성합니다."]
+Trident 운영자 설치를 완료한 후에는 사용 중인 특정 NetApp 스토리지 플랫폼에 대한 백엔드를 구성해야 합니다. Trident의 설치 및 구성을 계속하려면 아래 링크를 따르십시오. link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["백엔드를 생성합니다."]
 
 
 
 == 스토리지 클래스를 생성합니다
 
-백엔드를 생성한 후 Kubernetes 사용자가 볼륨을 생성할 때 지정할 스토리지 클래스를 생성해야 합니다. Kubernetes 사용자는 이름으로 스토리지 클래스를 지정하는 PVC(영구적 볼륨 클레임)를 사용하여 볼륨을 프로비저닝합니다. 아래 링크를 따라 스토리지 클래스를 생성합니다.link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-2-create-a-storage-class["스토리지 클래스를 생성합니다"]
+백엔드를 생성한 후 Kubernetes 사용자가 볼륨을 생성할 때 지정할 스토리지 클래스를 생성해야 합니다. Kubernetes 사용자는 이름으로 스토리지 클래스를 지정하는 PVC(영구적 볼륨 클레임)를 사용하여 볼륨을 프로비저닝합니다. 아래 링크를 따라 스토리지 클래스를 생성합니다. link:https://docs.netapp.com/us-en/trident/trident-use/create-stor-class.html["스토리지 클래스를 생성합니다"]
 
 
 
 == 볼륨을 동적으로 프로비저닝
 
-스토리지 클래스를 사용하여 볼륨을 동적으로 프로비저닝하는 Kubernetes 영구 볼륨 클레임(PVC) 객체를 생성해야 합니다. 아래 링크를 따라 PVC 객체를 만듭니다.link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-3-provision-your-first-volume["PVC를 작성합니다"]
+스토리지 클래스를 사용하여 볼륨을 동적으로 프로비저닝하는 Kubernetes 영구 볼륨 클레임(PVC) 객체를 생성해야 합니다. 아래 링크를 따라 PVC 객체를 만드십시오. link:https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html["PVC를 작성합니다"]
 
 
 
 == 볼륨을 사용합니다
 
-위 단계에서 프로비저닝된 볼륨은 POD에 볼륨을 마운트하여 응용 프로그램에서 사용할 수 있습니다. 아래 링크는 예를 보여줍니다.link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-4-mount-the-volumes-in-a-pod["POD에 볼륨을 마운트합니다"]
+위 단계에서 프로비저닝한 볼륨은 애플리케이션이 Pod에 볼륨을 마운트하여 사용할 수 있습니다. 아래 링크는 예를 보여줍니다. link:https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html#sample-manifests["POD에 볼륨을 마운트합니다"]

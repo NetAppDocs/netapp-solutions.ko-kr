@@ -48,41 +48,6 @@ entries:
     url: "/containers/a-w-n_videos_and_demos.html"
   - title: 추가 정보
     url: "/containers/a-w-n_additional_information.html"
-- title: NetApp Astra와 DevOps
-  pdf-filename: NetApp Astra와 DevOps
-  entries:
-  - title: 솔루션 개요
-    url: "/containers/dwn_solution_overview.html"
-  - title: DevOps 개요
-    url: "/containers/dwn_overview_devops.html"
-  - title: NetApp 스토리지 시스템 개요
-    entries:
-    - title: 개요
-      url: "/containers/dwn_overview_netapp.html"
-    - title: NetApp ONTAP를 참조하십시오
-      url: "/containers/dwn_netapp_ontap.html"
-  - title: NetApp 스토리지 통합 개요
-    entries:
-    - title: 개요
-      url: "/containers/dwn_overview_storint.html"
-    - title: NetApp Astra Control Center 개요
-      url: "/containers/dwn_overview_astra.html"
-    - title: NetApp Trident 개요
-      url: "/containers/dwn_overview_trident.html"
-  - title: 사용 사례 검증
-    entries:
-    - title: 개요
-      url: "/containers/dwn_use_cases_overview.html"
-    - title: NetApp Astra Control을 통해 CI/CD 파이프라인에 보호 기능을 통합합니다
-      url: "/containers/dwn_use_case_integrated_data_protection.html"
-    - title: Astra Control을 활용하여 사후 분석 및 애플리케이션 복원을 용이하게 합니다
-      url: "/containers/dwn_use_case_postmortem_with_restore.html"
-    - title: NetApp FlexClone으로 소프트웨어 개발 가속화
-      url: "/containers/dwn_use_case_flexclone.html"
-  - title: 비디오/데모
-    url: "/containers/dwn_videos_and_demos.html"
-  - title: 추가 정보
-    url: "/containers/dwn_additional_information.html"
 - title: NetApp의 Red Hat OpenShift
   pdf-filename: NetApp의 Red Hat OpenShift
   entries:
