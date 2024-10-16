@@ -177,7 +177,7 @@ NOTE: 위 내용에 액세스하려면 유효한 Red Hat 서브스크립션이 �
 
 * 매개 변수를 튜닝하여 한 번에 여러 VM을 생성하거나 여러 VM을 대규모로 일괄 생성합니다
 * VM의 실시간 마이그레이션
-* link:https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-dedicated-network-live-migration.htm["라이브 마이그레이션을 위한 전용 네트워크 구성"]
+* link:https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-dedicated-network-live-migration.html["라이브 마이그레이션을 위한 전용 네트워크 구성"]
 * 워크로드 유형을 포함하여 VM 템플릿 사용자 지정
 
 
