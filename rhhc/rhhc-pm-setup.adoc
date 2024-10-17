@@ -44,7 +44,7 @@ NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터�
 .Rosa 클러스터에 Trident 설치(제어 차트 사용)
 [%collapsible]
 ====
-* 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 제어 차트 URL: https://netapp.github.io/trident-helm-chart[]
+* 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 문서 링크: https://docs.NetApp.com/us-en/Trident/Trident-get-started/kubernetes-deploy-helm.html[여기] 을 참조하십시오.
 
 
 .FSx ONTAP와 Trident for Rosa 클러스터의 통합

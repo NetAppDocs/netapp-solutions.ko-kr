@@ -139,7 +139,6 @@ video::1546191b-bc46-42eb-ac34-b0d60142c58d[panopto,width=360]
 ====
 * link:containers/a-w-n_videos_and_demos.html["NetApp 및 Google Anthos 비디오"]
 * link:containers/vtwn_videos_and_demos.html["NetApp with VMware Tanzu 비디오"]
-* link:containers/dwn_videos_and_demos.html["NetApp for DevOps 비디오"]
 * link:containers/rh-os-n_videos_and_demos.html["NetApp 및 Red Hat OpenShift 비디오"]
 
 

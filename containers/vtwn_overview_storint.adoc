@@ -28,6 +28,5 @@ NetApp Trident는 {k8s_distribution_name}과 같은 컨테이너 및 Kubernetes 
 
 다음 페이지에서는 {solution_name} 솔루션의 애플리케이션 및 영구 스토리지 관리에 대해 검증된 NetApp 제품에 대한 추가 정보를 제공합니다.
 
-* link:{astra_control_overview_page_link}["NetApp Astra Control Center를 참조하십시오"]
 * link:vtwn_overview_trident.html["NetApp 트라이던트"]
 
