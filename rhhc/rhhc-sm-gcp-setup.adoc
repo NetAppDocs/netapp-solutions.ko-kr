@@ -63,7 +63,7 @@ NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하�
 ====
 * 그림과 같이 Trident를 구축하는 방법은 여러 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["여기"] 가지가 있습니다.
 * 이 프로젝트의 경우 지침에 따라 Trident 운영자를 수동으로 배포하여 Trident를 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"] 설치했습니다.
-* 백엔드 및 스토리지 클래스를 생성합니다. 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"].
+* 백엔드 및 스토리지 클래스를 생성합니다. 지침을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.
 
 
 ====

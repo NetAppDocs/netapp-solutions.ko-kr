@@ -58,7 +58,7 @@ image:rhhc-trident-helm.png["입력/출력 대화 상자 또는 작성된 내용
 .Trident(FSx ONTAP용)를 사용하여 백엔드 및 스토리지 클래스 생성
 [%collapsible]
 ====
-* 을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"] 백엔드 및 스토리지 클래스 생성에 대한 자세한 내용은 을 참조하십시오.
+* 백엔드 및 스토리지 클래스 생성에 대한 자세한 내용은 을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.
 * OpenShift Console에서 Trident CSI로 FsxN에 대해 생성한 스토리지 클래스를 기본값으로 설정합니다. 아래 스크린샷을 참조하십시오.
 
 
@@ -72,7 +72,7 @@ image:rhhc-default-storage-class.png["입력/출력 대화 상자 또는 작성�
 * 클러스터에 대한 새 Argo CD 인스턴스를 설정합니다. 지침을 참조하십시오 link:https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html["여기"].
 
 
-Argo CD 콘솔을 열고 앱을 배포합니다. 예를 들어, Argo CD와 H제어 차트를 사용하여 Jenkins 앱을 배포할 수 있습니다. 응용 프로그램을 생성할 때 다음과 같은 세부 정보가 제공됩니다. Project: 기본 클러스터: https://kubernetes.default.svc[]네임스페이스: Jenkins 제어 차트의 URL: https://charts.bitnami.com/bitnami[]
+Argo CD 콘솔을 열고 앱을 배포합니다. 예를 들어, Argo CD와 H제어 차트를 사용하여 Jenkins 앱을 배포할 수 있습니다. 응용 프로그램을 만들 때 다음과 같은 세부 정보가 제공되었습니다. Project:default cluster'https://kubernetes.default.svc'[]: (따옴표 제외) 네임스페이스: Jenkins Helm Chart의 URL: 'https://charts.bitnami.com/bitnami'[] (따옴표 제외)
 
 Helm Parameters:global.storageClass:fsxn-nas
 

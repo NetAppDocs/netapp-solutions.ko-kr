@@ -113,7 +113,7 @@ pullSecret:
 [%collapsible]
 ====
 * 이 프로젝트를 위해 Astra Control Provisioner(ACP)가 모든 클러스터(Astra Control Center가 구축된 온프레미스 클러스터 및 Azure의 클러스터)에 설치되었습니다. Astra Control Provisioner에 대해 자세히 알아보십시오 link:https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html#7-november-2023-23-10-0["여기"].
-* 백엔드 및 스토리지 클래스를 생성합니다. 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"].
+* 백엔드 및 스토리지 클래스를 생성합니다. 지침을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.
 
 
 ====

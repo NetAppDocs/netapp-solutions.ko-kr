@@ -37,10 +37,10 @@ image:rhhc-on-premises.png["입력/출력 대화 상자 또는 작성된 내용�
 .VMware vSphere(허브 클러스터)에서 OpenShift Container Platform 클러스터 배포 및 구성
 [%collapsible]
 ====
-의 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html/assisted_installer_for_openshift_container_platform/installing-on-vsphere#doc-wrapper/["보조 배포"] OCP 클러스터 구축 방법
+ 지침을 link:https://docs.openshift.com/container-platform/4.17/installing/installing_vsphere/installing-vsphere-assisted-installer.html["보조 배포"]OCP 클러스터를 구축하는 방법은참조하십시오.
 
 
-TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성하여 설치 프로그램에 제공합니다. 이러한 키는 필요한 경우 마스터 및 작업자 노드에 로그인하는 데 사용됩니다. - 지원되는 설치 프로그램에서 설치 프로그램을 다운로드합니다. 이 프로그램은 마스터 노드와 작업자 노드에 대해 VMware vSphere 환경에서 생성한 VM을 부팅하는 데 사용됩니다. VM에는 최소 CPU, 메모리 및 하드 디스크 요구 사항이 있어야 합니다. (에서 VM create 명령을 참조하십시오 link:https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html/assisted_installer_for_openshift_container_platform/installing-on-vsphere#doc-wrapper/["여기"] 마스터 및 이 정보를 제공하는 작업자 노드에 대한 페이지) - 모든 VM에서 diskUUID를 활성화해야 합니다. - 마스터에 대해 최소 3개의 노드를 만들고 작업자에 대해 3개의 노드를 만듭니다. 설치 관리자가 검색한 후 VMware vSphere 통합 전환 버튼을 설정합니다.
+TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성하여 설치 프로그램에 제공합니다. 이러한 키는 필요한 경우 마스터 및 작업자 노드에 로그인하는 데 사용됩니다. - 지원되는 설치 프로그램에서 설치 프로그램을 다운로드합니다. 이 프로그램은 마스터 노드와 작업자 노드에 대해 VMware vSphere 환경에서 생성한 VM을 부팅하는 데 사용됩니다. VM에는 최소 CPU, 메모리 및 하드 디스크 요구 사항이 있어야 합니다. (이 정보를 제공하는 마스터 및 작업자 노드에 대해서는 페이지의 VM 생성 명령 참조link:https://docs.redhat.com/en/documentation/assisted_installer_for_openshift_container_platform/2024/html/installing_openshift_container_platform_with_the_assisted_installer/installing-on-vsphere["여기"]) - 모든 VM에서 diskUUID를 활성화해야 합니다. - 마스터에 대해 최소 3개의 노드를 만들고 작업자에 대해 3개의 노드를 만듭니다. 설치 관리자가 검색한 후 VMware vSphere 통합 전환 버튼을 설정합니다.
 
 ====
 .허브 클러스터에 고급 클러스터 관리를 설치합니다
@@ -81,7 +81,7 @@ TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성�
 * 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"].
 * ONTAP-NAS에 대한 스토리지 백엔드를 생성합니다.
 * ONTAP-NAS의 스토리지 클래스를 생성합니다.
-* 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html["여기"].
+* 지침을 link:https://docs.netapp.com/us-en/trident/trident-use/create-stor-class.html["여기"]참조하십시오.
 
 
 ====
