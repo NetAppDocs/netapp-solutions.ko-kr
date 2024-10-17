@@ -4,16 +4,16 @@ permalink: rhhc/rhhc-sm-gcp-setup.html
 keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshift container platform, ocp, openshift container platform, Advanced Cluster Management, ACM, Hub Cluster, containers, container workloads, VMware, customer managed storage, ONTAP, Google Cloud Platform, Google Cloud, GCP 
 summary:  
 ---
-= GCP에서 Red Hat OpenShift Container 플랫폼을 구축하고 구성합니다
+= Google Cloud에서 Red Hat OpenShift Container Platform을 배포 및 구성합니다
 :allow-uri-read: 
 
 
 
 
-== GCP에서 Red Hat OpenShift Container 플랫폼을 구축하고 구성합니다
+== Google Cloud에서 Red Hat OpenShift Container Platform을 배포 및 구성합니다
 
 [role="lead"]
-이 섹션에서는 GCP에서 OpenShift 클러스터를 설정 및 관리하고 stateful 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. Trident를 통해 NetApp Cloud Volumes ONTAP 스토리지를 사용하여 영구 볼륨을 제공하는 것을 보여 줍니다. 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 Astra Control Center를 사용하는 방법에 대한 세부 정보가 제공됩니다.
+이 섹션에서는 GCP에서 OpenShift 클러스터를 설정 및 관리하고 stateful 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. 여기에는 Google Cloud NetApp Volumes 및 NetApp Cloud Volumes ONTAP 스토리지를 Trident와 함께 사용하여 영구 볼륨을 제공하는 것이 나와 있습니다.
 
 다음은 GCP에 구축되고 VPN을 사용하여 데이터 센터에 연결된 클러스터를 보여 주는 다이어그램입니다.
 
@@ -24,9 +24,7 @@ NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하�
 
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
-.CLI에서 GCP에 OCP 클러스터를 설치합니다.
-[%collapsible]
-====
+.CLI에서 GCP에 OCP 클러스터를 설치합니다
 * 명시된 모든 사전 요구 사항을 충족했는지 확인합니다 link:https://docs.openshift.com/container-platform/4.13/installing/installing_gcp/installing-gcp-default.html["여기"].
 * 온프레미스와 GCP 간 VPN 연결을 위해 pfSense VM을 생성 및 구성했습니다. 자세한 내용은 을 참조하십시오 https://docs.netgate.com/pfsense/en/latest/recipes/ipsec-s2s-psk.html["여기"].
 +
@@ -49,34 +47,28 @@ NOTE: GCP에서 Red Hat OpenShift Container Platform 클러스터를 배포하�
 
 
 
-====
-.BlueXP를 사용하여 GCP에 Cloud Volumes ONTAP을 구축합니다.
-[%collapsible]
-====
+.Google Cloud NetApp Volumes를 배포합니다
+* 설명된 대로 프로젝트에 Google Cloud NetApp Volumes를 추가할 수 link:https://cloud.google.com/netapp/volumes/docs/discover/overview["여기"]있습니다.
+
+
+.BlueXP 를 사용하여 GCP에 Cloud Volumes ONTAP을 배포합니다
 * Google Cloud에 커넥터를 설치합니다. 지침을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-bluexp-gcloud.html["여기"].
 * 커넥터를 사용하여 Google Cloud에 CVO 인스턴스를 배포합니다. 여기 에서 지침을 참조하십시오. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html[]
 
 
-====
 .GCP의 OCP 클러스터에 Trident을 설치합니다
-[%collapsible]
-====
 * 그림과 같이 Trident를 구축하는 방법은 여러 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["여기"] 가지가 있습니다.
 * 이 프로젝트의 경우 지침에 따라 Trident 운영자를 수동으로 배포하여 Trident를 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"] 설치했습니다.
 * 백엔드 및 스토리지 클래스를 생성합니다. 지침을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.
 
 
-====
-.GCP의 OCP 클러스터를 Astra Control Center에 추가합니다.
-[%collapsible]
-====
+.GCP의 OCP 클러스터를 Astra Control Center에 추가합니다
 * Astra Control에서 관리하는 클러스터를 관리하는 데 필요한 최소 권한이 포함된 클러스터 역할을 사용하여 별도의 KubeConfig 파일을 생성합니다. 지침을 찾을 수 있습니다
 link:https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html#create-a-cluster-role-kubeconfig["여기"].
 * 지침에 따라 Astra Control Center에 클러스터를 추가합니다
 link:https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html#add-cluster["여기"]
 
 
-====
 .멀티 존 아키텍처용 Trident의 CSI 토폴로지 기능 사용
 현재 클라우드 공급자는 Kubernetes/OpenShift 클러스터 관리자가 영역 기반 클러스터의 노드를 생성할 수 있도록 지원합니다. 노드는 지역 내 또는 여러 지역의 여러 가용성 영역에 위치할 수 있습니다. Trident는 다중 영역 아키텍처에서 워크로드용 볼륨을 간편하게 프로비저닝할 수 있도록 CSI 토폴로지를 사용합니다. CSI 토폴로지 기능을 사용하면 지역 및 가용성 영역에 따라 볼륨에 대한 액세스가 노드의 하위 집합으로 제한될 수 있습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html["여기"]참조하십시오.
 

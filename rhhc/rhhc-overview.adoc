@@ -41,7 +41,7 @@ NetApp은 기존 엔터프라이즈 애플리케이션을 현대화하고 Kubern
 
 * 클라우드 내 공급자 관리 스토리지:
 +
-** CVS(Cloud Volumes Service for Google Cloud), ANF(Azure NetApp Files), Amazon FSx ONTAP는 하이퍼스케일러에서 완전 관리형 스토리지를 제공합니다
+** Amazon FSx for NetApp ONTAP, Azure NetApp Files 및 Google Cloud NetApp Volumes는 클라우드의 파일 기반 스토리지를 제공합니다.
 
 
 

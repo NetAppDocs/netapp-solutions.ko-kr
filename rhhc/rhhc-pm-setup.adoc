@@ -26,24 +26,16 @@ NOTE: 이 솔루션은 AWS의 두 대의 VPC에서 두 개의 Rosa 클러스터�
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .Rosa 클러스터를 설치합니다
-[%collapsible]
-====
 * 2개의 VPC를 생성하고 VPC 간 VPC 피어링 연결을 설정합니다.
 * 을 참조하십시오 link:https://docs.openshift.com/rosa/welcome/index.html["여기"] Rosa 클러스터를 설치하는 지침은 를 참조하십시오.
 
 
-====
 .FSx ONTAP을 설치합니다
-[%collapsible]
-====
 * BlueXP 의 VPC에 FSx ONTAP을 설치합니다. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"]시작하려면 BlueXP  계정 생성 및 을 참조하십시오. FSx ONTAP 설치에 대해서는 을 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/index.html["여기"]참조하십시오. AWS에서 커넥터를 생성하여 FSx ONTAP를 관리하는 방법은 을 참조하십시오link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["여기"].
 * AWS를 사용하여 FSx ONTAP 구축 AWS 콘솔을 사용한 구축은 을 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["여기"]참조하십시오.
 
 
-====
 .Rosa 클러스터에 Trident 설치(제어 차트 사용)
-[%collapsible]
-====
 * 제어 차트를 사용하여 Rosa 클러스터에 Trident를 설치합니다. 문서 링크: https://docs.NetApp.com/us-en/Trident/Trident-get-started/kubernetes-deploy-helm.html[여기] 을 참조하십시오.
 
 
@@ -54,20 +46,14 @@ NOTE: OpenShift GitOps는 ApplicationSet을 사용하여 ArgoCD에 등록될 때
 
 image:rhhc-trident-helm.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-====
 .Trident(FSx ONTAP용)를 사용하여 백엔드 및 스토리지 클래스 생성
-[%collapsible]
-====
 * 백엔드 및 스토리지 클래스 생성에 대한 자세한 내용은 을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.
 * OpenShift Console에서 Trident CSI로 FsxN에 대해 생성한 스토리지 클래스를 기본값으로 설정합니다. 아래 스크린샷을 참조하십시오.
 
 
 image:rhhc-default-storage-class.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-====
 .OpenShift GitOps(Argo CD)를 사용하여 애플리케이션 배포
-[%collapsible]
-====
 * 클러스터에 OpenShift GitOps 운영자를 설치합니다. 지침을 참조하십시오 link:https://docs.openshift.com/container-platform/4.10/cicd/gitops/installing-openshift-gitops.html["여기"].
 * 클러스터에 대한 새 Argo CD 인스턴스를 설정합니다. 지침을 참조하십시오 link:https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html["여기"].
 
@@ -75,5 +61,3 @@ image:rhhc-default-storage-class.png["입력/출력 대화 상자 또는 작성�
 Argo CD 콘솔을 열고 앱을 배포합니다. 예를 들어, Argo CD와 H제어 차트를 사용하여 Jenkins 앱을 배포할 수 있습니다. 응용 프로그램을 만들 때 다음과 같은 세부 정보가 제공되었습니다. Project:default cluster'https://kubernetes.default.svc'[]: (따옴표 제외) 네임스페이스: Jenkins Helm Chart의 URL: 'https://charts.bitnami.com/bitnami'[] (따옴표 제외)
 
 Helm Parameters:global.storageClass:fsxn-nas
-
-====

@@ -22,11 +22,9 @@ image:redhat_openshift_image2.png["입력/출력 대화 상자 또는 작성된 
 
 Trident는 개발 주기가 빠르므로 Kubernetes와 마찬가지로 연간 4회 릴리즈됩니다.
 
-최신 버전의 Trident는 2022년 1월에 22.01에 출시되었습니다. 어떤 Trident 버전에 대해 테스트되었으며 어떤 Kubernetes 배포를 확인할 수 있는지에 대한 지원 매트릭스입니다. https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"]
+어떤 Trident 버전에 대해 테스트되었으며 어떤 Kubernetes 배포를 확인할 수 있는지에 대한 지원 매트릭스입니다. https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html#supported-frontends-orchestrators["여기"]
 
-20.04 릴리즈부터 Trident 운영자가 Trident 설정을 수행합니다. 운영자는 대규모 구축을 용이하게 하고 Trident 설치의 일부로 배포된 Pod에 대한 자동 복구를 포함한 추가 지원을 제공합니다.
-
-21.01 릴리즈를 통해 Trident Operator의 설치를 용이하게 하는 제어 차트를 사용할 수 있게 되었습니다.
+설치 및 구성에 대한 자세한 내용은 을 link:https://docs.netapp.com/us-en/trident/index.html["Trident 제품 설명서"]참조하십시오.
 
 
 
