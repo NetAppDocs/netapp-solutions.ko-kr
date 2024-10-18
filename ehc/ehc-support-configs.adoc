@@ -29,5 +29,5 @@ summary:
 | * Azure * | CVO ANFlink:azure/azure-guest.html["세부 정보"] | ANFlink:azure/azure-native-overview.html["세부 정보"] 
 
 
-| * GCP * | CVO CVSlink:gcp/gcp-guest.html["세부 정보"] | CVlink:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["세부 정보"] 
+| * GCP * | CVO link:gcp/gcp-guest.html["세부 정보"] | GCNV입니다 
 |===
