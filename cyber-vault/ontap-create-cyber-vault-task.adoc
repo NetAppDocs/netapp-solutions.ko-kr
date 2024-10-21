@@ -42,7 +42,7 @@ image:ontap-cyber-vault-air-gap.png["NetApp ONTAP를 사용한 에어갭 사이�
 +
 `cluster2::> volume create -vserver SVM2 -volume dstvolB -aggregate node01_aggr -snaplock-type compliance -type DP -size 2GG`
 
-. 대상 클러스터에서 AIR-GAP를 생성하려면 에 설명된 대로 기본 보존 기간을 link:https://docs.netapp.com/us-en/ontap/snaplock/set-default-retention-period-task.html["기본 보존 기간을 설정합니다"^]설정합니다. 볼트 대상인 SnapLock 볼륨에 기본 보존 기간이 할당되어 있습니다. 이 기간의 값은 SnapLock Compliance 볼륨의 경우 처음에는 최소 0년, 최대 30년으로 설정됩니다. 각 NetApp 스냅샷 복사본은 처음에 이 기본 보존 기간을 사용하여 커밋됩니다. 기본 보존 기간을 변경해야 합니다. 보존 기간은 나중에 필요할 경우 연장할 수 있지만 줄일 수는 없습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html["보존 시간 개요를 설정합니다"^]참조하십시오.
+. 대상 클러스터에서 AIR-GAP를 생성하려면 에 설명된 대로 기본 보존 기간을 link:https://docs.netapp.com/us-en/ontap/snaplock/set-default-retention-period-task.html["기본 보존 기간을 설정합니다"^]설정합니다. 볼트 대상인 SnapLock 볼륨에 기본 보존 기간이 할당되어 있습니다. 이 기간의 값은 처음에는 최소 0년, 최대 100년으로 설정됩니다(ONTAP 9.10.1부터 시작). 이전 ONTAP 릴리즈의 경우 SnapLock Compliance 볼륨의 값은 0~70입니다. 각 NetApp 스냅샷 복사본은 처음에 이 기본 보존 기간을 사용하여 커밋됩니다. 기본 보존 기간을 변경해야 합니다. 보존 기간은 나중에 필요할 경우 연장할 수 있지만 줄일 수는 없습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html["보존 시간 개요를 설정합니다"^]참조하십시오.
 . link:https://docs.netapp.com/us-en/ontap/data-protection/create-replication-relationship-task.html["새 복제 관계를 생성합니다"^] 비 SnapLock 소스와 3단계에서 만든 새 SnapLock 대상 간
 +
 이 예에서는 매일 및 매주 레이블이 지정된 스냅샷 복사본을 시간별 일정에 따라 보관하기 위해 XDPDefault 정책을 사용하여 대상 SnapLock 볼륨 dstvolB와 새로운 SnapMirror 관계를 생성합니다.
