@@ -16,7 +16,7 @@ entries:
     url: "/blogs.html#containers-osv"
   - title: 비디오
     url: "/containers/rh-os-n_videos_and_demos.html"
-- title: 구축
+- title: 온프레미스 구축
   pdf-filename: Red Hat OpenShift 배포
   entries:
   - title: 개요
@@ -33,6 +33,18 @@ entries:
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
   - title: 스냅샷에서 VM 생성
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
+- title: ROSA에 배포
+  entries:
+  - title: 필수 구성 요소
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_prerequisites.html"
+  - title: 초기 설정
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_rosa_initial_setup.html"
+  - title: 워크플로우
+    entries:
+    - title: VM을 다시 시작합니다
+      url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_restart_vm.html"
+    - title: VM 실시간 마이그레이션
+      url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_vm_live_migration.html"
 - title: 타사 도구를 사용한 데이터 보호
   pdf-filename: Red Hat OpenShift Virtualization Data Protection의 약어입니다
   entries:

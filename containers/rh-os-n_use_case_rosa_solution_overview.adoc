@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_rosa_solution_overview.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift Service on AWS, 
+summary: NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service 
+---
+= NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 Rosa에서 실행되는 애플리케이션의 영구 스토리지 계층으로 FSx for ONTAP을 활용하는 방법을 알아봅니다. Rosa 클러스터에 NetApp Trident CSI 드라이버 설치, FSx for ONTAP 파일 시스템 프로비저닝 및 샘플 상태 저장 애플리케이션 배포를 보여 줍니다. 또한 응용 프로그램 데이터를 백업하고 복원하기 위한 전략도 보여 줍니다. 이 통합 솔루션을 사용하면 AZ 간에 손쉽게 확장되는 공유 스토리지 프레임워크를 구축하여 Trident CSI 드라이버를 사용하여 데이터 크기 조정, 보호 및 복원 프로세스를 간소화할 수 있습니다.

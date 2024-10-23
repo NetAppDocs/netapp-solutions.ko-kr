@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_deployment_rosa_initial_setup.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, ROSA, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: ROSA의 Red Hat OpenShift Virtualization 
+---
+= 초기 설정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 기본 스토리지 클래스를 Trident-CSI로 설정하고 기본 VolumeSnapshotClass를 FSx 볼륨 스냅샷 클래스로 설정하는 방법을 보여 줍니다. 그런 다음 템플릿에서 VM을 생성한 다음 게스트 자격 증명을 사용하여 VM에 연결하고 로그인하는 방법을 보여 줍니다.
+
+기본 스토리지 클래스가 Trident-CSI로 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image1.png["OCP -v 기본 저장소 클래스"]
+
+기본 VolumeSnapShotClasses가 그림과 같이 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image2.png["OCP -v 기본 VolumeSnapshot 클래스"]
+
+기본값이 설정되어 있지 않으면 콘솔 또는 명령줄에서 설정할 수 있습니다
+
+[source]
+----
+$ oc patch storageclass trident-csi -p '{"metadata": {"annotations": {"storageclass.kubernetes.io/is-default-class": "true"}}}'
+----
+[source]
+----
+$ oc patch VolumeSnapshotClasses fsx-snapclass -p '{"metadata": {"annotations": {"snapshot.storage.kubernetes.io/is-default-class": "true"}}}'
+----
+
+
+= 템플릿에서 VM을 생성합니다
+
+웹 콘솔을 사용하여 템플릿에서 VM을 생성합니다. AWS 콘솔의 RedHat OpenShiftService에서 가상 머신을 생성합니다. 클러스터에서 VM을 생성하는 데 사용할 수 있는 템플릿이 있습니다. 아래 스크린샷에서는 이 목록에서 Fedora VM을 선택합니다. VM에 이름을 지정한 다음 **가상 시스템 사용자 정의**를 클릭합니다. ** 디스크** 탭을 선택하고 ** 디스크 추가** 를 클릭합니다. 디스크의 이름을 의미 있는 이름으로 변경하는 것이 좋습니다. 스토리지 클래스에 대해 **Trident-CSI** 가 선택되어 있는지 확인합니다. 저장**을 클릭합니다. Create VirtualMachine**을 클릭합니다
+
+몇 분 후 VM이 실행 중입니다 image:redhat_openshift_ocpv_rosa_image3.png["OCP-v 템플릿에서 VM을 생성합니다"]
+
+image:redhat_openshift_ocpv_rosa_image4.png["OCP-v 템플릿 소스를 사용할 수 있습니다"]
+
+image:redhat_openshift_ocpv_rosa_image5.png["OCP-v VM 사용자 지정"]
+
+image:redhat_openshift_ocpv_rosa_image6.png["OCP-v 디스크 탭"]
+
+image:redhat_openshift_ocpv_rosa_image7.png["OCP -v 디스크 추가"]
+
+image:redhat_openshift_ocpv_rosa_image8.png["OCP-v VM이 실행 중입니다"]
+
+
+
+= VM에 대해 생성된 모든 객체를 검토합니다
+
+스토리지 디스크 image:redhat_openshift_ocpv_rosa_image9.png["OCP-v 스토리지 디스크"]
+
+VM의 파일 시스템에는 파티션, 파일 시스템 유형 및 마운트 지점이 표시됩니다. image:redhat_openshift_ocpv_rosa_image10.png["OCP-v 파일 시스템"]
+
+VM에 대해 2개의 PVC가 생성됩니다. 하나는 부팅 디스크에서, 다른 하나는 핫 플러그 디스크용입니다. image:redhat_openshift_ocpv_rosa_image11.png["OCP-v VM PVC"]
+
+부팅 디스크의 PVC는 액세스 모드가 ReadWriteMany이고 스토리지 클래스는 Trident-CSI로 표시됩니다. image:redhat_openshift_ocpv_rosa_image12.png["OCP-v VM 부팅 디스크 PVC"]
+
+마찬가지로 핫 플러그 디스크의 PVC는 액세스 모드가 ReadWriteMany이고 스토리지 클래스는 Trident-CSI로 표시됩니다. image:redhat_openshift_ocpv_rosa_image13.png["OCP-v VM 핫플러그 디스크 PVC"]
+
+아래 스크린샷에서 VM의 Pod가 실행 중 상태임을 확인할 수 있습니다. image:redhat_openshift_ocpv_rosa_image14.png["OCP-v VM이 실행 중입니다"]
+
+여기서 VM Pod와 연결된 두 개의 볼륨 및 이와 연결된 두 개의 PVC를 볼 수 있습니다. image:redhat_openshift_ocpv_rosa_image15.png["OCP-v VM PVC 및 PVS"]
+
+
+
+= VM에 연결합니다
+
+'Open web console' 버튼을 클릭하고 Guest Credentials를 사용하여 로그인합니다 image:redhat_openshift_ocpv_rosa_image16.png["OCP-v VM 연결"]
+
+image:redhat_openshift_ocpv_rosa_image17.png["OCP-v 로그인"]
+
+다음 명령을 실행합니다
+
+[source]
+----
+$ df (to display information about the disk space usage on a file system).
+----
+[source]
+----
+$ dd if=/dev/urandom of=random.dat bs=1M count=10240 (to create a file called random.dat in the home dir and fill it with random data).
+----
+디스크가 11GB의 데이터로 가득 찼습니다. image:redhat_openshift_ocpv_rosa_image18.png["OCP-v VM이 디스크를 채웁니다"]
+
+vi를 사용하여 테스트에 사용할 샘플 텍스트 파일을 만듭니다. image:redhat_openshift_ocpv_rosa_image19.png["OCP -v 파일을 만듭니다"]

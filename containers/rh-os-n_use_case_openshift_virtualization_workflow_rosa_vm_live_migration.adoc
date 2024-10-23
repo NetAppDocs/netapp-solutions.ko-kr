@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_vm_live_migration.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, ROSA, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: ROSA의 Red Hat OpenShift Virtualization 
+---
+= VM 라이브 마이그레이션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 VM 실시간 마이그레이션을 수행한 다음 디스크의 내용을 살펴봅니다. 실시간 마이그레이션은 정상 작업을 중단하거나 가동 중지 시간 또는 최종 사용자에게 부정적인 영향을 주지 않고 실행 중인 가상 머신(VM)을 하나의 물리적 호스트에서 다른 호스트로 이동하는 프로세스를 말합니다. 실시간 마이그레이션은 가상화의 주요 단계로 간주됩니다. 실행 중인 운영 체제(OS), 메모리, 스토리지 및 네트워크 연결을 통해 전체 VM을 현재 노드에서 대상으로 이동할 수 있습니다. 아래에서는 현재 노드에서 새 노드로 VM의 실시간 마이그레이션을 수행하는 방법을 보여 줍니다.
+
+VM이 실행 중인 노드를 확인합니다 image:redhat_openshift_ocpv_rosa_image24.png["OCP-v VM 현재 노드입니다"]
+
+세 개의 점을 클릭하고 Migrate를 선택합니다 image:redhat_openshift_ocpv_rosa_image25.png["OCP-v VM 라이브 마이그레이션"]
+
+개요 페이지에서 마이그레이션이 성공했으며 상태가 성공으로 변경되었음을 확인할 수 있습니다. image:redhat_openshift_ocpv_rosa_image26.png["OCP-v VM 마이그레이션 성공"]
+
+실시간 마이그레이션이 완료된 후 VM은 이제 다른 노드에 배치됩니다. image:redhat_openshift_ocpv_rosa_image27.png["OCP-v VM이 다른 노드에 있습니다"]
+
+웹 콘솔을 열고 디스크의 내용을 봅니다. Live Migration 이전에 생성한 파일 2개는 그대로 유지됩니다. image:redhat_openshift_ocpv_rosa_image28.png["실시간 마이그레이션 후 OCP-v VM 동일한 파일1"] image:redhat_openshift_ocpv_rosa_image29.png["실시간 마이그레이션 후 OCP-v VM 동일한 파일2"]
+
+새 노드의 VM용 스토리지에는 여전히 동일한 디스크가 표시됩니다 image:redhat_openshift_ocpv_rosa_image30.png["실시간 마이그레이션 후 OCP-v VM 동일한 디스크"]
+
+또한 PVC도 동일합니다. image:redhat_openshift_ocpv_rosa_image31.png["실시간 마이그레이션 후 OCP-v VM 동일한 PVC"]
+
+VM Pod와 연결된 볼륨도 이전과 동일합니다(2 PVC). image:redhat_openshift_ocpv_rosa_image32.png["실시간 마이그레이션 후 OCP-v VM 동일한 PVC"]

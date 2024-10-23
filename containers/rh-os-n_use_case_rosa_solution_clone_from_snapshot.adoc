@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_rosa_solution_clone_from_snapshot.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift Service on AWS, 
+summary: NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service 
+---
+= NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+** 1. 스냅샷에서 복원** 이 섹션에서는 앱 볼륨의 Trident 스냅샷에서 응용 프로그램을 복원하는 방법을 보여 줍니다.
+
+** a. 스냅샷에서 볼륨 클론을 생성합니다**
+
+볼륨을 이전 상태로 복원하려면 스냅샷의 데이터를 기반으로 새 PVC를 생성해야 합니다. 이렇게 하려면 다음 매니페스트를 pvc-clone.yaml이라는 파일에 저장합니다
+
+[source]
+----
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: postgresql-volume-clone
+spec:
+ accessModes:
+   - ReadWriteOnce
+ storageClassName: trident-csi
+ resources:
+   requests:
+     storage: 8Gi
+ dataSource:
+   name: postgresql-volume-snap-01
+   kind: VolumeSnapshot
+   apiGroup: snapshot.storage.k8s.io
+----
+위의 매니페스트를 사용하여 스냅샷을 소스로 사용하여 PVC를 생성하여 볼륨의 클론을 생성합니다. 매니페스트를 적용하고 클론이 생성되었는지 확인합니다.
+
+image:redhat_openshift_container_rosa_image24.png["스냅샷에서 PostgreSQL 클론"]
+
+** b. 원래 PostgreSQL 설치를 삭제합니다**
+
+image:redhat_openshift_container_rosa_image25.png["PostgreSQL 앱 삭제"]
+
+** C. 새 클론 PVC**를 사용하여 새 PostgreSQL 애플리케이션을 생성합니다
+
+[source]
+----
+$ helm install postgresql bitnami/postgresql --set primary.persistence.enabled=true --set primary.persistence.existingClaim=postgresql-volume-clone -n postgresql
+----
+image:redhat_openshift_container_rosa_image26.png["PostgreSQL 신규 설치"]
+
+** d. 응용 프로그램 포드가 실행 중인지 확인합니다**
+
+image:redhat_openshift_container_rosa_image27.png["PostgreSQL 신규 설치"]
+
+** 예 포드가 클론을 PVC**로 사용하는지 확인합니다
+
+image:redhat_openshift_container_rosa_image28.png["PostgreSQL 신규 설치 설명"]
+
+image:redhat_openshift_container_rosa_image29.png["새로운 PVC는 클론입니다"]
+
+f) 데이터베이스가 예상대로 복원되었는지 확인하려면 컨테이너 콘솔로 돌아가 기존 데이터베이스를 표시합니다
+
+image:redhat_openshift_container_rosa_image30.png["데이터베이스가 복원되었습니다"]

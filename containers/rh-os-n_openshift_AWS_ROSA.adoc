@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_openshift_AWS_ROSA.html 
+keywords: OpenShift, AWS, ROSA 
+summary: AWS 기반 Red Hat OpenShift Service는 개발자가 AWS 클라우드에서 애플리케이션을 빌드하고 배포할 수 있도록 하는 완전 관리형 Kubernetes 플랫폼입니다. 
+---
+= AWS 기반 Red Hat OpenShift Service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ROSA(Red Hat OpenShift Service on AWS)는 AWS 기반 Red Hat OpenShift 엔터프라이즈 Kubernetes 플랫폼을 사용하여 컨테이너화된 애플리케이션을 구축, 확장, 배포하는 데 사용할 수 있는 관리형 서비스입니다. ROSA는 사내 Red Hat OpenShift 워크로드를 AWS로 이동하는 작업을 간소화하고 다른 AWS 서비스와의 긴밀한 통합을 제공합니다.
+
+ROSA에 대한 자세한 내용은 여기 에서 설명서를 link:https://docs.aws.amazon.com/rosa/latest/userguide/what-is-rosa.html["AWS 기반 Red Hat OpenShift Service(AWS 설명서)"]참조하십시오. link:https://docs.openshift.com/rosa/rosa_architecture/rosa-understanding.html["AWS 기반 Red Hat OpenShift Service(Red Hat 설명서)"]..

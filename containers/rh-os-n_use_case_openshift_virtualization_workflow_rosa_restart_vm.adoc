@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_restart_vm.html 
+keywords: OpenShift, OCP, Trident, NetApp ONTAP, Red Hat OpenShift, OpenShift Virtualization, ROSA, CNV, Container Native Virtualization, Red Hat OpenShift Virtualization 
+summary: ROSA의 Red Hat OpenShift Virtualization 
+---
+= VM을 다시 시작합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 VM 재시작을 수행한 다음 디스크의 내용을 살펴봅니다.
+
+다시 시작 단추를 클릭합니다. image:redhat_openshift_ocpv_rosa_image20.png["OCP-v VM 다시 시작"]
+
+VM은 파일 시스템의 파일 시스템, PVC 및 파일이 정확하게 동일한 실행 상태로 돌아갑니다 image:redhat_openshift_ocpv_rosa_image21.png["OCP-v VM 재시작 파일 시스템"]
+
+image:redhat_openshift_ocpv_rosa_image22.png["OCP-v VM 재시작 디스크"]
+
+image:redhat_openshift_ocpv_rosa_image23.png["OCP -v VM 재시작 파일"]
