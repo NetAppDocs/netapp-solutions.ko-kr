@@ -110,7 +110,7 @@ image:snapctr_svcs_azure_architect.png["이 이미지에서는 UI, 커넥터, �
 
 시작하려면 다음 단계를 완료하십시오.
 
-* 일반 지침을 읽으십시오 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html#architecture["클라우드 네이티브 애플리케이션 데이터 보호"^] Oracle 및 Azure NetApp Files 관련 섹션도 있습니다.
+*  일반 지침 link:https://docs.netapp.com/us-en/bluexp-backup-recovery/["클라우드 네이티브 애플리케이션 데이터 보호"^]Oracle 및 Azure NetApp Files와 관련된 및 섹션을 읽어보십시오.
 * 다음 비디오 연습을 시청하십시오
 +
 .Oracle 및 ANF 구축 비디오
@@ -424,7 +424,7 @@ image:snapctr_svcs_clone_07-azure.png["입력/출력 대화 상자 또는 작성
 
 * BlueXP 설정 및 관리
 +
-link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.htmll["https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html"^]
+link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html["https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html"^]
 
 * BlueXP 백업 및 복구 설명서
 +

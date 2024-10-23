@@ -69,7 +69,7 @@ Oracle 데이터베이스 재배치를 용이하게 하기 위해 일반 백업 
 
 SnapCenter은 NetApp의 라이센스 소프트웨어입니다. 일반적으로 사내 ONTAP 라이센스에 포함됩니다. 하지만 하이브리드 클라우드를 구축할 경우, SnapCenter용 클라우드 라이센스를 통해 SnapCenter에 CVO를 타겟 데이터 복제 대상으로 추가해야 합니다. 자세한 내용은 SnapCenter 표준 용량 기반 라이센스에 대한 다음 링크를 참조하십시오.
 
-link:https://docs.netapp.com/us-en/snapcenter/install/concept_snapcenter_standard_capacity_based_licenses.html["SnapCenter 표준 용량 기반 라이센스"^]
+link:https://docs.netapp.com/us-en/snapcenter/install/concept_snapcenter_licenses.html["SnapCenter 표준 용량 기반 라이센스"^]
 
 
 
