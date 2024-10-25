@@ -16,6 +16,8 @@ summary:
 [role="lead"]
 다음 비디오는 이 문서에 설명되어 있는 몇 가지 기능을 보여 줍니다.
 
+.Amazon FSx for NetApp ONTAP를 사용하여 ROSA의 OpenShift 가상화에서 가상 머신을 실시간으로 마이그레이션할 수 있습니다
+video::4b3ef03d-7d65-4637-9dab-b21301371d7d[panopto,width=360]
 .Ansible 자동화로 Trident을 구축하고 OpenShift 클러스터에 스토리지 클래스를 생성
 video::fae6605f-b61a-4a34-a97f-b1ed00d2de93[panopto,width=360]
 link:https://github.com/NetApp/trident-install["Ansible을 사용하여 NetApp Trident, StorageClasses 및 백엔드를 설치하는 데 사용되는 플레이북은 github 에서 확인할 수 있습니다."]
