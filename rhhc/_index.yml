@@ -57,6 +57,8 @@ indexpage:
       url: "/rhhc-pm-data-protection.html"
     - title: BlueXP를 사용한 데이터 마이그레이션
       url: "/rhhc-pm-data-migration.html"
+    - title: 추가 해결 방법
+      url: "/rhhc-pm-additional.html"
   - title: 타사 툴을 사용한 컨테이너 애플리케이션의 데이터 보호
     links:
     - title: 개요

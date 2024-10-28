@@ -14,8 +14,10 @@ summary:
 
 
 [role="lead"]
-다음 비디오는 이 문서에 설명되어 있는 몇 가지 기능을 보여 줍니다.
+다음 비디오는 이 문서에서 설명하는 일부 기능을 보여 줍니다
 
+.Amazon FSx for NetApp ONTAP은 호스팅된 Control Plane을 사용하는 AWS 기반 Red Hat OpenShift Service를 제공합니다
+video::213061d2-53e6-4762-a68f-b21401519023[panopto,width=360]
 .Amazon FSx for NetApp ONTAP를 사용하여 ROSA의 OpenShift 가상화에서 가상 머신을 실시간으로 마이그레이션할 수 있습니다
 video::4b3ef03d-7d65-4637-9dab-b21301371d7d[panopto,width=360]
 .Ansible 자동화로 Trident을 구축하고 OpenShift 클러스터에 스토리지 클래스를 생성

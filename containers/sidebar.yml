@@ -161,7 +161,7 @@ entries:
     url: "/containers/rh-os-n_videos_and_demos.html"
   - title: 추가 정보
     url: "/containers/rh-os-n_additional_information.html"
-- title: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
+- title: NetApp ONTAP/FSxN을 사용한 Red Hat OpenShift 가상화
   pdf-filename: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
   entries:
   - title: 개요
@@ -186,16 +186,10 @@ entries:
         url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html"
   - title: ROSA의 OpenShift Virtualization
     entries:
-    - title: 필수 구성 요소
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_prerequisites.html"
-    - title: 초기 설정
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_rosa_initial_setup.html"
+    - title: 개요
+      url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_overview.html"
     - title: 워크플로우
-      entries:
-      - title: VM을 다시 시작합니다
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_restart_vm.html"
-      - title: VM 실시간 마이그레이션
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_rosa_vm_live_migration.html"
+      url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_workflows.html"
   - title: 타사 도구를 사용하여 VM의 데이터 보호
     entries:
     - title: 개요
@@ -218,20 +212,12 @@ entries:
       url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
     - title: 모범 사례 가이드 를 참조하십시오
       url: "/containers/rh-os-n_use_case_openshift_virtualization_bpg.html"
-- title: NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service
+- title: FSxN이 포함된 AWS 기반 Red Hat OpenShift Service
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_rosa_solution_overview.html"
-  - title: 필수 구성 요소
-    url: "/containers/rh-os-n_use_case_rosa_solution_prerequisites.html"
-  - title: 초기 설정
-    url: "/containers/rh-os-n_use_case_rosa_solution_initial_setup.html"
   - title: 워크플로우
-    entries:
-    - title: 스냅샷 생성
-      url: "/containers/rh-os-n_use_case_rosa_solution_snapshot_app.html"
-    - title: 스냅샷에서 클론 생성
-      url: "/containers/rh-os-n_use_case_rosa_solution_clone_from_snapshot.html"
+    url: "/containers/rh-os-n_use_case_rosa_solution_app_workflows.html"
 - title: NetApp의 VMware Tanzu
   pdf-filename: NetApp의 VMware Tanzu
   entries:
