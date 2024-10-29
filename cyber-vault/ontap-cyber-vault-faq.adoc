@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+keywords: Cyber vault, cybervault, cyber-vault, data protection, security, ransomware, ONTAP, FAQ 
+permalink: cyber-vault/ontap-cyber-vault-faq.html 
+summary: 이 문서에는 NetApp ONTAP 사이버 소산 솔루션에 대한 FAQ가 포함되어 있습니다. 
+---
+= Cyber Vault 질문과 대답
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 FAQ는 NetApp 고객 및 파트너를 위한 것입니다. NetApp의 ONTAP 기반 사이버 볼트 참조 아키텍처에 대한 질문과 대답을 제공합니다.
+
+
+
+== NetApp 사이버 보관소란?
+
+사이버 보관은 데이터를 기본 IT 인프라와 분리된 환경에 저장하는 특정 데이터 보호 기술입니다.
+
+사이버 보관소는 맬웨어, 랜섬웨어 또는 내부자 위협과 같은 기본 데이터에 영향을 미치는 위협의 영향을 받는, 변경 불가능하며 지울 수 없는 데이터 저장소입니다. 변경 불가능한 NetApp ONTAP Snapshot 복사본으로 사이버 레질리언스를 실현할 수 있으며 NetApp SnapLock Compliance로 지워지지 않습니다. SnapLock Compliance 보호에서는 ONTAP 관리자나 NetApp 지원팀이 데이터를 수정하거나 삭제할 수 없습니다.
+
+기존 방식을 사용한 공기 교환 백업에는 공간을 생성하고 운영 미디어와 보조 미디어를 물리적으로 분리하는 작업이 포함됩니다. 사이버 저장고를 이용한 에어 가핑에는 표준 데이터 액세스 네트워크 외부에 있는 별도의 데이터 복제 네트워크를 사용하여 스냅샷 복사본을 지울 수 없는 대상에 복제하는 작업이 포함됩니다.
+
+방송국 심화 네트워크 이외에도 별도의 단계가 필요할 때 사이버 저장소에서 모든 데이터 액세스와 복제 프로토콜을 비활성화하는 것도 포함됩니다. 이렇게 하면 대상 사이트에서 데이터 액세스 또는 데이터 유출을 방지할 수 있습니다. SnapLock Compliance를 사용할 경우 물리적인 분리가 필요하지 않습니다. SnapLock Compliance는 저장된 시점 및 읽기 전용 Snapshot 복사본을 보호하므로 데이터를 신속하게 복구하고 삭제 작업을 안전하게 중단하며 변경 불가능한 상태가 될 수 있습니다.
+
+
+
+== 사이버 보관에 대한 NetApp의 접근 방식
+
+SnapLock 기반의 NetApp 사이버 보관소는 가장 중요한 데이터 자산을 보호할 수 있는 포괄적이고 유연한 솔루션을 제공합니다. NetApp은 ONTAP의 강화 기술을 활용하여 진화하는 사이버 위협에 맞서 싸울 수 있는 안전하고 격리된 사이버 저장소를 만들 수 있습니다. NetApp을 사용하면 스토리지 인프라의 민첩성과 효율성을 유지하면서 데이터의 기밀성, 무결성, 가용성을 보장할 수 있습니다.
+
+사이버 보관용 NetApp 참조 아키텍처의 주요 기능은 다음과 같습니다.
+
+* 안전하고 격리된 스토리지 인프라(예: 에어갭 스토리지 시스템)
+* 데이터 백업 복사본은 변경할 수 없고 지울 수 없습니다
+* 엄격한 개별 액세스 제어, 다중 관리자 검증 및 다중 요소 인증
+* 빠른 데이터 복원 기능
+
+
+
+
+== Cyber Vault 질문과 대답
+
+.사이버 보관소는 NetApp의 제품입니까?
+[%collapsible%open]
+====
+아니요, "사이버 볼트"는 업계 전반의 용어입니다. NetApp은 고객이 자체 사이버 보관소를 손쉽게 구축하고 수십 개의 ONTAP 보안 기능을 활용하여 사이버 위협으로부터 데이터를 보호할 수 있도록 참조 아키텍처를 만들었습니다. 자세한 내용은 를 link:https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html["ONTAP 설명서 사이트"^]참조하십시오.
+
+====
+.NetApp가 포함된 사이버 소산 기능은 LockVault나 SnapVault의 또 다른 이름입니까?
+[%collapsible%open]
+====
+LockVault는 현재 버전의 ONTAP에서 사용할 수 없는 Data ONTAP 7-Mode의 기능입니다.
+
+SnapVault는 현재 SnapMirror의 볼트 정책을 통해 달성된 것을 의미하는 레거시 용어였습니다. 이 정책을 통해 대상에 소스 볼륨과 다른 양의 스냅샷 복사본을 유지할 수 있습니다.
+
+사이버 볼트는 소산 정책에 SnapMirror를, SnapLock Compliance를 함께 사용하여 수정과 삭제가 불가능한 데이터 복사본을 만듭니다.
+
+====
+.사이버 소산, FAS, 용량 플래시 또는 성능 플래시에 사용할 수 있는 NetApp 하드웨어는 무엇입니까?
+[%collapsible%open]
+====
+이러한 사이버 보관을 위한 참조 아키텍처는 전체 ONTAP 하드웨어 포트폴리오에 적용됩니다. 고객은 AFF A-Series, AFF C-Series 또는 FAS 플랫폼을 소산 으로 사용할 수 있습니다. 플래시 기반 플랫폼은 가장 빠른 복구 시간을 제공하는 반면, 디스크 기반 플랫폼은 가장 비용 효율적인 솔루션을 제공합니다. 복구되는 데이터의 양과 여러 복구를 동시에 수행하는 경우 FAS(디스크 기반 시스템)를 사용하는 데 며칠이 걸릴 수 있습니다. 비즈니스 요구사항을 충족하도록 사이버 소산 솔루션의 크기를 적절하게 조정하려면 NetApp 또는 파트너 담당자에게 문의하십시오.
+
+====
+.Cloud Volumes ONTAP를 사이버 소산 소스로 사용할 수 있습니까?
+[%collapsible%open]
+====
+예. 그러나 SnapLock Compliance는 ONTAP 사이버 볼트의 요구사항이므로 CVO를 소스로 사용하려면 데이터를 온프레미스 사이버 소산 대상에 복제해야 합니다. 하이퍼스케일러 기반 CVO 인스턴스에서 데이터 복제으로 인해 송신 비용이 발생할 수 있습니다.
+
+====
+.Cloud Volumes ONTAP를 사이버 소산 대상으로 사용할 수 있습니까?
+[%collapsible%open]
+====
+Cyber Vault 아키텍처는 ONTAP의 SnapLock Compliance의 불완전성에 의존하며 온프레미스 구현을 위해 설계되었습니다. 클라우드 기반 Cyber Vault 아키텍처는 향후 출시에 대해 조사 중입니다.
+
+====
+.ONTAP Select를 사이버 소산 소스로 사용할 수 있습니까?
+[%collapsible%open]
+====
+예, ONTAP Select를 온프레미스 하드웨어 기반 사이버 소산 대상의 소스로 사용할 수 있습니다.
+
+====
+.ONTAP Select를 사이버 소산 대상으로 사용할 수 있습니까?
+[%collapsible%open]
+====
+아니요. ONTAP Select는 SnapLock Compliance를 사용할 수 없으므로 사이버 소산 대상으로 사용해서는 안 됩니다.
+
+====
+.NetApp의 사이버 보관소에는 SnapMirror만 사용하고 있습니까?
+[%collapsible%open]
+====
+아니요. NetApp 사이버 소산 아키텍처는 많은 ONTAP 기능을 활용하여 안전하고 격리된 에어갭 고성능 데이터 복사본을 만듭니다. 사용할 수 있는 추가 기술에 대한 자세한 내용은 다음 질문을 참조하십시오.
+
+====
+.사이버 볼트에 사용되는 다른 기술 또는 구성이 있습니까?
+[%collapsible%open]
+====
+NetApp 사이버 저장소의 기반은 SnapMirror과 SnapLock Compliance 이지만 변조 방지 스냅샷 복사본, 다중 인증(MFA), 다중 관리자 확인, 역할 기반 액세스 제어, 원격 및 로컬 감사 로깅 등의 추가 ONTAP 기능을 사용하면 데이터의 보안 및 안전성이 향상됩니다.
+
+====
+.ONTAP Snapshot 복사본이 사이버 보관용 사본보다 더 좋은 이유는 무엇입니까?
+[%collapsible%open]
+====
+ONTAP 스냅샷 복사본은 기본적으로 변경 불가능하므로 SnapLock Compliance로 지워지지 않을 수 있습니다. NetApp도 지원하지 않으므로 SnapLock 스냅샷 복사본을 삭제할 수 있습니다. 가장 좋은 질문은 NetApp 사이버 보관소가 업계의 다른 사이버 보관소보다 더 좋은 이유는 무엇일까요? 첫째, ONTAP은 지구상에서 가장 안전한 스토리지로, 하드웨어 계층 및 소프트웨어 계층 모두에서 비밀 데이터와 중요 기밀 데이터를 저장할 수 있는 CSfC 검증을 받았습니다. 자세한 내용은 을 link:https://www.netapp.com/esg/trust-center/compliance/CSfC-Program/["CSfC는 여기에서 찾을 수 있습니다"^]참조하십시오. 또한, ONTAP은 스토리지 계층에서 에어갭 분석을 통해 사이버 소산 시스템이 복제를 제어하여 사이버 소산 네트워크 내에 틈새를 만들 수 있습니다.
+
+====
+.사이버 소산의 소스 볼륨이 ONTAP Fabric Pool 지원 볼륨(계층화된 볼륨을 ONTAP S3 또는 StorageGRID로)이 될 수 있습니까?
+[%collapsible%open]
+====
+아니요. 사용된 정책에 관계없이 Fabric Pool 소스 볼륨을 SnapLock Compliance 대상에 복제할 수 없습니다.
+
+====
+.NetApp 사이버 볼트는 ONTAP 개인 정보 또는 프로필에서 실행됩니까?
+[%collapsible%open]
+====
+아니요, 참조 아키텍처입니다. 고객은 를  사용하여 사이버 볼트를 구축하거나 사이버 볼트를 사용할 수 link:ontap-create-cyber-vault-task.html["명확히 설명하십시오"]있습니다link:ontap-cyber-vault-powershell-overview.html["생성, 강화 및 검증을 위한 PowerShell 스크립트"].
+
+====
+.사이버 보관소에서 NFS, SMB, S3와 같은 데이터 프로토콜을 사용할 수 있습니까?
+[%collapsible%open]
+====
+기본적으로 사이버 볼트에서 데이터 프로토콜을 비활성화하여 보안을 유지해야 합니다. 그러나 사이버 볼트에서 데이터 프로토콜을 활성화하여 복구를 위해 또는 필요할 때 데이터에 액세스할 수 있습니다. 이 작업은 임시로 수행해야 하며 복구가 완료된 후에는 비활성화해야 합니다.
+
+====
+.기존 SnapVault 환경을 사이버 저장소로 전환할 수 있습니까? 아니면 모든 것을 다시 시드해야 합니까?
+[%collapsible%open]
+====
+예. 즉, SnapMirror 대상 시스템(소산 정책 사용)을 선택하고, 데이터 프로토콜을 비활성화하고link:https://docs.netapp.com/us-en/ontap/ontap-security-hardening/security-hardening-overview.html["ONTAP 강화 가이드"^], 에 따라 시스템을 강화하고, 안전한 위치로 격리하고, 참조 아키텍처의 다른 절차에 따라 대상을 다시 시드하지 않고도 사이버 저장소로 만들 수 있습니다.
+
+====
+* 추가 질문이 있으십니까? * mailto:ng-cyber-vault @NetApp.com[ng-cyber-vault @NetApp.com, 사이버 볼트 문의 사항:]에 대해 자세히 알고 싶습니다. 답변하고 귀하의 질문을 FAQ에 추가합니다.
