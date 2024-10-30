@@ -51,6 +51,8 @@ entries:
     url: "/rhhc/rhhc-pm-solution.html"
   - title: AWS에서 Red Hat OpenShift Container 워크로드 구성
     url: "/rhhc/rhhc-pm-setup.html"
+  - title: Google Cloud 전용 Red Hat OpenShift를 구성합니다
+    url: "/rhhc/rhhc-pm-gcnv-setup.html"
   - title: AWS에서 컨테이너 워크로드를 보호합니다
     url: "/rhhc/rhhc-pm-data-protection.html"
   - title: AWS에서 컨테이너 워크로드를 마이그레이션합니다
