@@ -511,7 +511,7 @@ SnapCenter 백업에 필요한 사전 요구 사항은 다음과 같습니다.
 .SnapCenter 데이터베이스 및 구성을 백업합니다
 [%collapsible]
 ====
-SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["이 링크"^].
+SnapCenter는 REST API 명령을 실행하기 위한 웹 클라이언트 인터페이스를 제공합니다. Swagger를 통해 REST API에 액세스하는 방법에 대한 자세한 내용은 에서 SnapCenter 설명서를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_rest_apis.html["이 링크"^].
 
 .Swagger에 로그인하고 인증 토큰을 얻습니다
 [%collapsible]

@@ -13,6 +13,9 @@ summary: NetApp ONTAP가 포함된 AWS 기반 Red Hat OpenShift Service
 :imagesdir: ../media/
 
 
+[role="lead"]
+이 문서에서는 NetApp ONTAP를 AWS(ROSA)에서 Red Hat OpenShift Service와 함께 사용하는 방법에 대해 설명합니다.
+
 
 
 == 볼륨 스냅샷을 생성합니다

@@ -312,7 +312,7 @@ MS SQL 및 NetApp ONTAP의 모범 사례에 대한 자세한 내용은 다음 �
 =====
 NetApp Cloud Manager로 리소스를 구축할 수 있어야 합니다. 다음 작업을 완료할 수 있는지 확인합니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-signing-up.html["Cloud Central에 가입하십시오"^] 아직 없는 경우
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Cloud Central에 가입하십시오"^] 아직 찾지 못하셨다면,
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Cloud Manager에 로그인합니다"^].
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["작업 영역 및 사용자를 설정합니다"^].
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터를 작성합니다"^].
