@@ -152,17 +152,17 @@ NetApp 및 VMware 클라우드 솔루션을 사용하면 대부분의 사용 사
 ====
 .AWS/VMC
 --
-link:aws/aws-solutions.html["AWS/VMC용 NetApp 솔루션을 찾아보십시오"]
+link:aws-solutions.html["AWS/VMC용 NetApp 솔루션을 찾아보십시오"]
 
 --
 .Azure/AVS
 --
-link:azure/azure-solutions.html["Azure/AVS용 NetApp 솔루션을 찾아보십시오"]
+link:azure-solutions.html["Azure/AVS용 NetApp 솔루션을 찾아보십시오"]
 
 --
 .GCP/GCVE
 --
-link:gcp/gcp-solutions.html["Google Cloud Platform (GCP)/GCVE용 NetApp 솔루션을 찾아보십시오"]
+link:gcp-solutions.html["Google Cloud Platform (GCP)/GCVE용 NetApp 솔루션을 찾아보십시오"]
 
 --
 ====

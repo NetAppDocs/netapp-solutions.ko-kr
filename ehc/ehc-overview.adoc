@@ -28,19 +28,19 @@ summary:
 
 === Azure VMware 솔루션
 
-image:avs-logo.png["AVS, 60,60, 플로트 = 왼쪽, 정렬 = 중앙"] Azure VMware Solution은 Microsoft Azure 퍼블릭 클라우드 내에서 VMware SDDC가 완벽하게 작동하도록 지원하는 하이브리드 클라우드 서비스입니다. Azure VMware 솔루션은 Microsoft에서 완벽하게 관리 및 지원하는 타사 솔루션으로, Azure 인프라를 활용하는 VMware에서 검증되었습니다. 즉, Azure VMware 솔루션을 구축할 때 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN을 얻게 됩니다. 네트워킹 및 보안을 위한 NSX는 물론, Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설을 활용하고 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접합니다.
+Azure VMware 솔루션은 Microsoft Azure 퍼블릭 클라우드 내에서 VMware DC를 완벽하게 작동하는 하이브리드 클라우드 서비스입니다. Azure VMware 솔루션은 Microsoft에서 완벽하게 관리 및 지원하는 타사 솔루션으로, Azure 인프라를 활용하는 VMware에서 검증되었습니다. 즉, Azure VMware 솔루션을 구축할 때 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN을 얻게 됩니다. 네트워킹 및 보안을 위한 NSX는 물론, Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설을 활용하고 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접합니다.
 
 
 
 === AWS 기반 VMware 클라우드
 
-image:vmc-logo.png["VMC, 60,60, 부동 = 왼쪽, 정렬 = 가운데"] VMware Cloud on AWS는 네이티브 AWS 서비스에 최적화된 액세스를 통해 VMware의 엔터프라이즈급 SDDC 소프트웨어를 AWS Cloud에 제공합니다. VMware Cloud Foundation을 기반으로 하는 AWS 기반 VMware Cloud는 VMware의 컴퓨팅, 스토리지 및 네트워크 가상화 제품(VMware vSphere, VMware vSAN 및 VMware NSX)을 VMware vCenter Server 관리 기능과 통합하여 유연하고 전용 베어 메탈 AWS 인프라에서 실행되도록 최적화되었습니다.
+VMware Cloud on AWS는 기본 AWS 서비스에 최적화된 액세스를 통해 VMware의 엔터프라이즈급 SDDC 소프트웨어를 AWS 클라우드에 제공합니다. VMware Cloud Foundation을 기반으로 하는 AWS 기반 VMware Cloud는 VMware의 컴퓨팅, 스토리지 및 네트워크 가상화 제품(VMware vSphere, VMware vSAN 및 VMware NSX)을 VMware vCenter Server 관리 기능과 통합하여 유연하고 전용 베어 메탈 AWS 인프라에서 실행되도록 최적화되었습니다.
 
 
 
 === Google Cloud VMware 엔진
 
-image:gcve-logo.png["gcve,60,60,float=left,align=center"] Google Cloud VMware Engine은 Google Cloud의 고성능 확장형 인프라 및 VMware Cloud Foundation 스택 – VMware vSphere, vCenter, vSAN 및 NSX-T를 기반으로 구축된 서비스형 인프라(IaaS) 오퍼링입니다. 이 서비스를 사용하면 애플리케이션 재구성 또는 재설계 작업 없이 온프레미스 환경에서 Google Cloud Platform으로 기존 VMware 워크로드를 원활하게 마이그레이션 또는 확장할 수 있습니다. Google에서 판매 및 지원하는 서비스로서 VMware와 긴밀하게 협력하고 있습니다.
+Google Cloud VMware Engine은 Google Cloud의 고성능 확장형 인프라 및 VMware Cloud Foundation 스택 – VMware vSphere, vCenter, vSAN 및 NSX-T를 기반으로 구축된 서비스형 인프라(IaaS) 오퍼링입니다. 이 서비스를 사용하면 애플리케이션 재구성 또는 재설계 작업 없이 온프레미스 환경에서 Google Cloud Platform으로 기존 VMware 워크로드를 원활하게 마이그레이션 또는 확장할 수 있습니다. Google에서 판매 및 지원하는 서비스로서 VMware와 긴밀하게 협력하고 있습니다.
 
 
 NOTE: SDDC 프라이빗 클라우드 및 NetApp Cloud Volumes 코로케이션을 통해 최소한의 네트워크 지연 시간으로 최상의 성능을 제공합니다.
