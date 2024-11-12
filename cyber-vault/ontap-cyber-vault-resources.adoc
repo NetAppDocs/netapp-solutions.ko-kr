@@ -25,4 +25,5 @@ summary: ONTAP 사이버 보관소에 대한 추가 리소스
 * link:https://www.netapp.com/cyber-resilience/data-protection/["NetApp 데이터 보호"^]
 * link:https://docs.netapp.com/us-en/ontap/peering/index.html["CLI를 통한 클러스터 및 SVM 피어링 개요"^]
 * link:https://docs.netapp.com/us-en/ontap/concepts/snapvault-archiving-concept.html["SnapVault 아카이빙"^]
+* link:https://github.com/NetApp/ransomeware-cybervault-automation["구성, 분석, cron 스크립트"^]
 
