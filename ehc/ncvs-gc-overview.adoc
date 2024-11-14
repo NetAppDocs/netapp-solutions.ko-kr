@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ehc/ncvs-gc-overview.html 
 keywords: 4918, tr4918, overview, introduction, scope, audience, abbreviation, definition 
-summary: 특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp Cloud Volumes Service이 Google Cloud에 제공하는 보안 제품에 대한 개요입니다. 
+summary: 특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 Google Cloud NetApp Volumes가 Google Cloud에 제공하는 보안 오퍼링에 대해 간략하게 소개합니다. 
 ---
-= TR-4918: 보안 개요 - Google Cloud의 NetApp Cloud Volumes Service
+= TR-4918: 보안 개요 - Google Cloud의 Google Cloud NetApp 볼륨
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: 특히, 인프라가 스토리지 관리자의 제어 범위를 벗어�
 Oliver Krause, Justin Parisi, NetApp
 
 [role="lead"]
-특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 NetApp의 보안 제품에 대한 개요입니다 https://cloud.netapp.com/cloud-volumes-service-for-gcp["Cloud Volumes Service는 Google Cloud에서 제공합니다"^].
+특히, 인프라가 스토리지 관리자의 제어 범위를 벗어난 클라우드의 경우 보안은 데이터를 클라우드 공급자가 제공하는 서비스 제공에 맡기는 것이 무엇보다 중요합니다. 이 문서는 이러한 보안 서비스에 대한 개요입니다. https://cloud.netapp.com/cloud-volumes-service-for-gcp["Google Cloud NetApp Volumes는 Google Cloud에서 제공합니다"^]
 
 
 
@@ -37,10 +37,10 @@ Oliver Krause, Justin Parisi, NetApp
 | 약어 | 정의 
 
 
-| CVS-SW | Cloud Volumes Service, 서비스 유형 CVS 
+| NetApp 볼륨 - SW | Google Cloud NetApp 볼륨 및 서비스 유형 NetApp 볼륨 
 
 
-| CVS - 성능 | 클라우드 볼륨 서비스, 서비스 유형 CVS - 성능 
+| NetApp 볼륨 - 성능 | Cloud Volume Service, 서비스 유형 NetApp 볼륨 - 성능 
 
 
 | PSA |  

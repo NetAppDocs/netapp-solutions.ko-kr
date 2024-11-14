@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ehc/ncvs-gc-firewall.html 
 keywords: tcp, nfs, smb share, kerberos, active directory, dns 
-summary: Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP 포트를 노출합니다. 
+summary: Google Cloud NetApp 볼륨은 여러 TCP 포트를 제공하여 NFS 및 SMB 공유를 지원합니다. 
 ---
 = 방화벽
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여�
 
 
 [role="lead"]
-Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP 포트를 노출합니다.
+Google Cloud NetApp 볼륨은 여러 TCP 포트를 제공하여 NFS 및 SMB 공유를 지원합니다.
 
 * https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["NFS 액세스에 필요한 포트 수"^]
 * https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["SMB 액세스에 필요한 포트"^]
@@ -22,6 +22,6 @@ Cloud Volumes Service는 NFS 및 SMB 공유를 지원하기 위해 여러 TCP �
 
 또한 Kerberos를 비롯한 LDAP를 지원하는 SMB, NFS 및 이중 프로토콜 구성을 사용하려면 Windows Active Directory 도메인에 대한 액세스가 필요합니다. Active Directory 연결은 이어야 합니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/creating-smb-volumes?hl=en_US["구성됨"^] 지역별로 제공됩니다. Active Directory 도메인 컨트롤러(DC)는 를 사용하여 식별합니다 https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/7fcdce70-5205-44d6-9c3a-260e616a2f04["DNS 기반 DC 검색"^] 지정된 DNS 서버를 사용합니다. 반환된 DC 중 하나가 사용됩니다. Active Directory 사이트를 지정하면 자격 있는 DC 목록을 제한할 수 있습니다.
 
-Cloud Volumes Service는 와 함께 할당된 CIDR 범위의 IP 주소를 사용하여 에 도달합니다 `gcloud compute address` 명령을 실행하는 동안 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en_US["Cloud Volumes Service에 대한 온보딩"^]. 이 CIDR을 소스 주소로 사용하여 Active Directory 도메인 컨트롤러에 대한 인바운드 방화벽을 구성할 수 있습니다.
+Google Cloud NetApp 볼륨은 동안 명령을 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en_US["Google Cloud NetApp 볼륨에 대해 온보딩합니다"^] 통해 할당된 CIDR 범위의 IP 주소를 사용하여 `gcloud compute address` 처리됩니다. 이 CIDR을 소스 주소로 사용하여 Active Directory 도메인 컨트롤러에 대한 인바운드 방화벽을 구성할 수 있습니다.
 
-Active Directory 도메인 컨트롤러가 필요합니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["여기에 설명된 대로 Cloud Volumes Service CIDR에 포트를 노출합니다"^].
+Active Directory 도메인 컨트롤러가 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["여기에 설명된 대로 포트를 Google Cloud NetApp 볼륨 CIDR에 표시합니다"^] 필요합니다.

@@ -304,10 +304,10 @@ GCP의 HA 쌍에 있는 NetApp CVO 인스턴스에 대한 Terraform 변수.
 | * GCP_cvo_GCP_volume_size_unit * | 문자열 | (선택 사항) ['GB' 또는 'TB']. 기본값은 'TB'입니다. 
 |===
 --
-.CVS 볼륨
+.NetApp 볼륨 볼륨
 --
-.GCP 기반 NetApp CVS 볼륨 구축을 위한 Terraform 구성 파일
-이 섹션에는 GCP(Google Cloud Platform)에서 NetApp CVS(Cloud Volumes Services) 볼륨을 구축/구성하기 위한 다양한 Terraform 구성 파일이 포함되어 있습니다.
+.GCP에 NetApp 볼륨 배포를 위한 Terraform 구성 파일
+이 섹션에는 GCP(Google Cloud Platform)에서 NetApp 볼륨(Google Cloud NetApp 볼륨) 볼륨을 배포/구성하는 다양한 Terraform 구성 파일이 포함되어 있습니다.
 
 Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/latest/docs[]
 
@@ -361,25 +361,25 @@ Terraform 문서: https://registry.terraform.io/providers/NetApp/netapp-gcp/late
     terraform destroy
 ----
 .수취인:
-CVS 볼륨
+`NetApp Volumes Volume`
 
-NetApp GCP CVS 볼륨에 대한 Terraform 변수
+NetApp GCP NetApp 볼륨 볼륨에 대한 Terraform 변수
 
 [cols="20%, 10%, 70%"]
 |===
 | * 이름 * | * 유형 * | * 설명 * 
 
 
-| * GCP_cvs_name * | 문자열 | (필수) NetApp CVS 볼륨의 이름입니다. 
+| * GCP_cvs_name * | 문자열 | (필수) NetApp 볼륨 볼륨의 이름입니다. 
 
 
-| * GCP_CV_PROJECT_ID * | 문자열 | (필수) CVS 볼륨을 생성할 GCP 프로젝트_ID입니다. 
+| * GCP_CV_PROJECT_ID * | 문자열 | (필수) NetApp 볼륨 볼륨을 생성할 GCP project_id입니다. 
 
 
-| * GCP_CV_GCP_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 CVS 볼륨을 생성하는 데 사용됩니다. 
+| * GCP_CV_GCP_SERVICE_ACCOUNT_PATH * | 문자열 | (필수) GCP 인증 목적을 위한 service_account JSON 파일의 로컬 경로입니다. 이 서비스 계정은 GCP에서 NetApp 볼륨 볼륨을 생성하는 데 사용됩니다. 
 
 
-| * GCP_cvs_region * | 문자열 | (필수) CVS 볼륨을 생성할 GCP 영역 
+| * GCP_cvs_region * | 문자열 | (필수) NetApp 볼륨 볼륨을 생성할 GCP 영역입니다. 
 
 
 | * GCP_cvs_network * | 문자열 | (필수) 볼륨의 네트워크 VPC 

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: ehc/gcp-migrate-veeam.html 
-keywords: gcp, gcve, cvs, migrate , dr, disaster recovery, veeam, replication, proxy, re-ip 
-summary: 현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은 이 솔루션을 사용하여 워크로드를 GCVE로 마이그레이션하고 NetApp Cloud Volume Service NFS 데이터 저장소의 이점을 계속 누릴 수 있습니다. 
+keywords: gcp, gcve, gcnv, migrate , dr, disaster recovery, veeam, replication, proxy, re-ip 
+summary: 데이터 보호 요구사항에 현재 Veeam을 사용하고 있는 고객은 이 솔루션을 사용하여 워크로드를 GCVE로 마이그레이션하고 Google Cloud NetApp Volumes NFS 데이터 저장소의 이점을 누릴 수 있습니다. 
 ---
-= Veeam 복제 기능을 사용하여 Google Cloud VMware Engine에서 NetApp Cloud Volume Service NFS 데이터 저장소로 VM 마이그레이션
+= Veeam 복제 기능을 사용하여 Google Cloud VMware Engine에서 Google Cloud NetApp 볼륨 NFS 데이터 저장소로 VM 마이그레이션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은
 
 
 [role="lead"]
-현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은 이 솔루션을 사용하여 워크로드를 GCVE로 마이그레이션하고 NetApp Cloud Volume Service NFS 데이터 저장소의 이점을 계속 누릴 수 있습니다.
+데이터 보호 요구사항에 현재 Veeam을 사용하고 있는 고객은 이 솔루션을 사용하여 워크로드를 GCVE로 마이그레이션하고 Google Cloud NetApp Volumes NFS 데이터 저장소의 이점을 누릴 수 있습니다.
 
 
 
@@ -24,7 +24,7 @@ summary: 현재 데이터 보호 요구사항에 Veeam을 사용하는 고객은
 
 VMware vSphere에서 실행되는 VM 워크로드는 Veeam Replication 기능을 활용하여 Google Cloud VMware Engine(GCVE)으로 마이그레이션할 수 있습니다.
 
-이 문서에서는 NetApp Cloud Volume Service, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 VM 마이그레이션을 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
+이 문서는 Google Cloud NetApp Volumes, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 VM 마이그레이션을 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
 
 image:gcp_migration_veeam_01.png["Veeam VM 복제 아키텍처"]
 
@@ -46,7 +46,7 @@ NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에
 
 === 솔루션 구축 개요
 
-. NetApp 클라우드 볼륨 서비스의 NFS 데이터 저장소가 GCVE vCenter에 마운트되어 있는지 확인합니다.
+. Google Cloud NetApp 볼륨의 NFS 데이터 저장소가 GCVE vCenter에 마운트되어 있는지 확인합니다.
 . Veeam Backup Recovery를 기존 VMware vSphere 환경에 구축했는지 확인합니다
 . 복제 작업을 생성하여 가상 시스템을 Google Cloud VMware Engine 인스턴스로 복제를 시작합니다.
 . Veeam 복제 작업의 페일오버를 수행합니다.
@@ -59,10 +59,9 @@ NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에
 
 
 
-==== NetApp 클라우드 볼륨 서비스의 NFS 데이터 저장소가 GCVE vCenter에 마운트되어 있는지 확인합니다
+==== Google Cloud NetApp 볼륨의 NFS 데이터 저장소가 GCVE vCenter에 마운트되어 있는지 확인합니다
 
-GCVE vCenter에 로그인하고 공간이 충분한 NFS 데이터 저장소를 사용할 수 있는지 확인합니다.
-그렇지 않은 경우 을 참조하십시오 link:gcp-ncvs-datastore.html["GCVE에서 NetApp CVS를 NFS 데이터 저장소로 마운트합니다"]
+GCVE vCenter에 로그인하고 공간이 충분한 NFS 데이터 저장소를 사용할 수 있는지 확인합니다. 그렇지 않은 경우 을 참조하십시오 link:gcp-ncvs-datastore.html["NetApp 볼륨을 GCVE에 NFS 데이터 저장소로 마운트합니다"]
 
 
 

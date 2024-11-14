@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-GCP는 CVO(Cloud Volumes ONTAP) 또는 CVS(Cloud Volumes Service)를 통해 게스트 연결 NetApp 스토리지를 지원합니다.
+GCP는 CVO(Cloud Volumes ONTAP) 또는 Google Cloud NetApp 볼륨(NetApp Volumes)을 사용하여 게스트 연결된 NetApp 스토리지를 지원합니다.
 
 
 
@@ -216,27 +216,27 @@ image:gcve-cvo-guest-26.png["입력/출력 대화 상자 또는 작성된 내용
 ====
 
 
-== CVS(Cloud Volumes Service)
+== Google Cloud NetApp 볼륨(NetApp 볼륨)
 
-CVS(Cloud Volumes Services)는 고급 클라우드 솔루션을 제공하는 완벽한 데이터 서비스 포트폴리오입니다. Cloud Volumes Services는 주요 클라우드 공급자를 위한 여러 파일 액세스 프로토콜(NFS 및 SMB 지원)을 지원합니다.
+Google Cloud NetApp Volumes(NetApp Volumes)는 고급 클라우드 솔루션을 제공하는 완벽한 데이터 서비스 포트폴리오입니다. NetApp Volumes는 주요 클라우드 공급자를 위해 다중 파일 액세스 프로토콜을 지원합니다(NFS 및 SMB 지원).
 
 그 밖의 이점 및 기능: Snapshot을 통한 데이터 보호 및 복원, 온프레미스 또는 클라우드의 데이터 대상을 복제, 동기화, 마이그레이션할 수 있는 특별한 기능, 전용 플래시 스토리지 시스템 레벨에서 일관된 고성능 제공
 
 
 
-=== CVS(Cloud Volumes Service)를 게스트 연결 스토리지로 사용합니다
+=== 게스트 연결 스토리지로 사용되는 Google Cloud NetApp 볼륨(NetApp 볼륨
 
-.VMware 엔진을 사용하여 Cloud Volumes Service를 구성합니다
+.VMware 엔진을 사용하여 NetApp 볼륨을 구성합니다
 [%collapsible]
 ====
-Cloud Volumes Service 공유는 VMware 엔진 환경에서 생성된 VM에서 마운트할 수 있습니다. Cloud Volumes Service는 SMB 및 NFS 프로토콜을 지원하므로 Linux 클라이언트에 볼륨을 마운트하고 Windows 클라이언트에 매핑할 수도 있습니다. Cloud Volumes Service 볼륨은 간단한 단계를 통해 설정할 수 있습니다.
+Google Cloud NetApp 볼륨 공유는 VMware Engine 환경에 생성된 VM에서 마운트할 수 있습니다. Google Cloud NetApp Volumes는 SMB 및 NFS 프로토콜을 지원하므로 볼륨을 Linux 클라이언트에 마운트하고 Windows 클라이언트에 매핑할 수도 있습니다. Google Cloud NetApp 볼륨을 간단한 단계로 설정할 수 있습니다.
 
-Cloud Volume Service 및 Google Cloud VMware Engine 프라이빗 클라우드는 같은 지역에 있어야 합니다.
+Google Cloud NetApp Volumes 및 Google Cloud VMware Engine 프라이빗 클라우드는 같은 지역에 있어야 합니다.
 
-Google Cloud Marketplace에서 NetApp Cloud Volumes Service for Google Cloud를 구매, 활성화 및 구성하려면 다음 세부 정보를 따르십시오 link:https://cloud.google.com/vmware-engine/docs/quickstart-prerequisites["가이드"].
+Google Cloud 마켓플레이스에서 Google Cloud용 Google Cloud NetApp 볼륨을 구매, 활성화 및 구성하려면 이 세부 사항을 link:https://cloud.google.com/vmware-engine/docs/quickstart-prerequisites["가이드"]따르십시오.
 
 ====
-.CVS NFS 볼륨을 GCVE 프라이빗 클라우드에 생성합니다
+.GCVE 프라이빗 클라우드에 NetApp 볼륨 NFS 볼륨을 생성합니다
 [%collapsible]
 ====
 NFS 볼륨을 생성 및 마운트하려면 다음 단계를 수행하십시오.
@@ -253,7 +253,7 @@ image:gcve-cvs-guest-2.png["입력/출력 대화 상자 또는 작성된 내용�
 +
 image:gcve-cvs-guest-3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. 적절한 서비스를 선택합니다. GCVE의 경우 애플리케이션 워크로드 요구 사항에 따라 지연 시간 및 성능 향상을 위해 CVS 성능 및 원하는 서비스 수준을 선택합니다.
+. 적절한 서비스를 선택합니다. GCVE의 경우, NetApp 볼륨 - 성능 및 애플리케이션 워크로드 요구사항에 따라 지연 시간이 개선되고 성능을 향상하기 위해 원하는 서비스 수준을 선택합니다.
 +
 image:gcve-cvs-guest-4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -271,7 +271,7 @@ image:gcve-cvs-guest-7.png["입력/출력 대화 상자 또는 작성된 내용�
 
 . 이 단계에서는 볼륨에 액세스할 수 있는 VPC 네트워크를 선택합니다. VPC 피어링을 제자리에 배치했는지 확인합니다.
 +
-힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Cloud Volumes Service 생산자와 동종합니다. 사전에 VPC 피어링을 준비하려는 경우 다음 지침을 참조하십시오.
+힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Google Cloud NetApp Volumes Producer로 피어링합니다. 사전에 VPC 피어링을 준비하려는 경우 다음 지침을 참조하십시오.
 
 +
 image:gcve-cvs-guest-8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
@@ -345,7 +345,7 @@ AD 연결이 설정되면 원하는 서비스 수준으로 볼륨을 생성합�
 +
 image:gcve-cvs-guest-31.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-. 적절한 서비스를 선택합니다. GCVE의 경우 워크로드 요구 사항에 따라 지연 시간을 개선하고 성능을 향상시키하려면 CVS 성능 및 원하는 서비스 수준을 선택합니다.
+. 적절한 서비스를 선택합니다. GCVE의 경우 NetApp 볼륨 - 워크로드 요구사항에 따라 지연 시간이 개선되고 성능을 높이기 위해 성능 및 원하는 서비스 수준을 선택합니다.
 +
 image:gcve-cvs-guest-32.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -363,7 +363,7 @@ image:gcve-cvs-guest-35.png["입력/출력 대화 상자 또는 작성된 내용
 
 . 이 단계에서는 볼륨에 액세스할 수 있는 VPC 네트워크를 선택합니다. VPC 피어링을 제자리에 배치했는지 확인합니다.
 +
-힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Cloud Volumes Service 생산자와 동종합니다. 미리 VPC 피어링을 준비하려는 경우 이를 참조하십시오 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en["지침"].
+힌트: VPC 피어링을 수행하지 않은 경우 피어링 명령을 안내하는 팝업 버튼이 표시됩니다. 클라우드 셸 세션을 열고 적절한 명령을 실행하여 VPC를 Google Cloud NetApp Volumes Producer로 피어링합니다. 사전에 VPC 피어링을 준비하기로 결정한 경우 다음을 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/setting-up-private-services-access?hl=en["지침"]참조하십시오.
 
 +
 image:gcve-cvs-guest-36.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]

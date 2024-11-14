@@ -20,7 +20,7 @@ image:a-w-n_netapp_overview.png["입력/출력 대화 상자 또는 작성된 �
 
 * AFF 및 FAS 시스템에서 NetApp ONTAP를 실행하고 파일 기반(NFS) 및 블록 기반(iSCSI) 사용 사례에 대한 스토리지를 제공합니다.
 * Cloud Volumes ONTAP와 ONTAP Select는 각각 클라우드 및 가상 공간에서도 동일한 이점을 제공합니다.
-* NetApp Cloud Volumes Service(GCP) 및 Azure NetApp Files는 클라우드에서 파일 기반 스토리지를 제공합니다.
+* Google Cloud GCP(NetApp Volumes) 및 Azure NetApp Files는 클라우드에서 파일 기반 스토리지를 제공합니다.
 * Amazon FSx ONTAP은 AWS 기반의 완전 관리형 서비스로, 파일 기반 사용 사례를 위한 스토리지를 제공합니다.
 
 

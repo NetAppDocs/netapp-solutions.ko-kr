@@ -111,7 +111,7 @@ https://docs.netapp.com/us-en/occm/concept_cloud_sync.html["BlueXP 복사 및 �
 
 * NetApp StorageGRID를 참조하십시오
 * NetApp ONTAP S3
-* NetApp Cloud Volumes Service를 참조하십시오
+* Google Cloud NetApp 볼륨
 * Azure NetApp Files
 * Amazon Simple Storage Service(Amazon S3)
 * Amazon Elastic File System(Amazon EFS)

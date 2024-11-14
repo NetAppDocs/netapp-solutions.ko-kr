@@ -29,5 +29,5 @@ summary:
 | * Azure * | CVO ANF link:azure-guest.html["세부 정보"] | ANF입니다 link:azure-native-overview.html["세부 정보"] 
 
 
-| * GCP * | CVO link:gcp-guest.html["세부 정보"] | GCNV입니다 
+| * GCP * | CVO NetApp 볼륨 link:gcp-guest.html["세부 정보"] | NetApp 볼륨 link:gcp-ncvs-datastore.html["세부 정보"] 
 |===

@@ -411,7 +411,7 @@ $targetvm, $targetvmdisk | Get-SPBMEntityConfiguration
 +
 ** 링크:./EHC/aws-migrate-vmware-hcx.html [TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션]
 ** 링크:../EHC/azure-migrate-vmware-hcx.html [TR-4940: VMware HCX-Quickstart Guide를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션]
-** link:../EHC/gcp-migrate-vmware-hcx.html [VMware HCX-Quickstart Guide를 사용하여 Google Cloud VMware Engine의 NetApp Cloud Volume Service 데이터 저장소로 워크로드 마이그레이션]
+** link:../EHC/gcp-migrate-vmware-hcx.html [VMware HCX-Quickstart Guide를 사용하여 Google Cloud VMware Engine의 Google Cloud NetApp Volumes 데이터 저장소로 워크로드 마이그레이션]
 
 
 * https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["BlueXP 서비스형 재해 복구(DRaaS)"] 스토리지 시스템 기반 복제를 활용하고 특정 작업을 자동화하여 타겟 사이트에서 VM을 복구합니다.

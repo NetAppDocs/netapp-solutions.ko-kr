@@ -202,7 +202,7 @@ image::dr-veeam-gcnv-image08.png[복제할 VM을 선택합니다]
 +
 {nbsp}
 
-. Destination * 페이지에서 대상을 GCVE SDDC 클러스터/호스트 및 VM 복제본에 대한 적절한 리소스 풀, VM 폴더 및 GCNV 데이터 저장소로 선택합니다. 계속하려면 * 다음 * 을 클릭합니다.
+. 대상 * 페이지에서 대상을 GCVE SDDC 클러스터/호스트 및 VM 복제본에 대한 적절한 리소스 풀, VM 폴더 및 NetApp 볼륨 데이터 저장소로 선택합니다. 계속하려면 * 다음 * 을 클릭합니다.
 +
 image::dr-veeam-gcnv-image09.png[대상 세부 정보를 선택합니다]
 

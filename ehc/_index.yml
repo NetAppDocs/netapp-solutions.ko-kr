@@ -52,11 +52,15 @@ indexpage:
       url: "/gcp-gcve.html"
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
+    - title: '보조 NFS 데이터 저장소로서의 NetApp 볼륨: 개요'
+      url: "/gcp-ncvs-datastore.html"
     - title: CVO를 게스트 연결 스토리지로 사용
       url: "/gcp-guest.html#gcp-cvo"
+    - title: 게스트 연결 스토리지로 사용되는 NetApp 볼륨
+      url: "/gcp-guest.html#gcnv"
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
       url: "/gcp-solutions.html"
-    - title: 보안 개요 - Google Cloud의 NetApp CVS
+    - title: 보안 개요 - Google Cloud의 NetApp 볼륨
       url: "/ncvs-gc-overview.html"
   - title: 시뮬레이터
     links:
@@ -78,7 +82,7 @@ indexpage:
       url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
     - title: ANF + AVS TCO 계산기
       url: https://bluexp.netapp.com/anf-avs/tcoestimator
-    - title: GCVE+ CVS TCO 계산기
+    - title: GCVE+ NetApp 볼륨 TCO 추정기
       url: https://bluexp.netapp.com/gcve-cvs/roi
   - title: BlueXP  재해 복구
     links:

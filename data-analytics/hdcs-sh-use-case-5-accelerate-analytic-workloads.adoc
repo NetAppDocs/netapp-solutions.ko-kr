@@ -40,4 +40,4 @@ image:hdcs-sh-image13.png["입력/출력 대화 상자 또는 작성된 내용�
 
 고객의 기존 환경에서 DAS(직접 연결 스토리지) 솔루션을 사용할 경우 컴퓨팅과 스토리지를 독립적으로 확장한다는 단점이 있었습니다. Spark용 NetApp ONTAP 솔루션을 통해 은행의 재무 분석 사업부에서 스토리지를 컴퓨팅에서 분리하여 필요에 따라 인프라 리소스를 보다 효율적으로 제공할 수 있게 되었습니다.
 
-NFS와 함께 ONTAP를 사용함으로써 컴퓨팅 서버 CPU는 Spark SQL 작업에 거의 전적으로 활용되었고 I/O 대기 시간이 약 70% 감소되어 스파크 워크로드에 더 나은 컴퓨팅 성능과 성능 향상을 제공했습니다. 또한 CPU 활용률을 높임으로써 고객이 GPUDirect와 같은 GPU를 활용하여 플랫폼을 더욱 현대화할 수 있도록 했습니다. 또한 StorageGRID는 스파크 워크로드를 위한 저렴한 스토리지 옵션을 제공하며 MinIO 게이트웨이는 S3 프로토콜을 통해 NFS 데이터에 대한 안전한 액세스를 제공합니다. 클라우드의 데이터에 대해 NetApp은 Cloud Volumes ONTAP, Azure NetApp Files 및 NetApp Cloud Volumes Service를 권장합니다.
+NFS와 함께 ONTAP를 사용함으로써 컴퓨팅 서버 CPU는 Spark SQL 작업에 거의 전적으로 활용되었고 I/O 대기 시간이 약 70% 감소되어 스파크 워크로드에 더 나은 컴퓨팅 성능과 성능 향상을 제공했습니다. 또한 CPU 활용률을 높임으로써 고객이 GPUDirect와 같은 GPU를 활용하여 플랫폼을 더욱 현대화할 수 있도록 했습니다. 또한 StorageGRID는 스파크 워크로드를 위한 저렴한 스토리지 옵션을 제공하며 MinIO 게이트웨이는 S3 프로토콜을 통해 NFS 데이터에 대한 안전한 액세스를 제공합니다. 클라우드 데이터의 경우 NetApp에서 Cloud Volumes ONTAP, Azure NetApp Files 및 Google Cloud NetApp 볼륨을 권장합니다.

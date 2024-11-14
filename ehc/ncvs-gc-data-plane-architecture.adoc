@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ehc/ncvs-gc-data-plane-architecture.html 
 keywords: cloud volumes service, google cloud, service networking, vpc peering 
-summary: Cloud Volumes Service for Google Cloud는 Google Cloud 프라이빗 서비스 액세스 프레임워크를 활용합니다. 이 프레임워크에서는 사용자가 Cloud Volumes Service에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다. 
+summary: Google Cloud NetApp Volumes for Google Cloud는 Google Cloud 프라이빗 서비스 액세스 프레임워크를 활용합니다. 이 프레임워크에서 사용자는 Google Cloud NetApp 볼륨에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다. 
 ---
 = 데이터 플레인 아키텍처
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: Cloud Volumes Service for Google Cloud는 Google Cloud 프라이빗 서
 
 
 [role="lead"]
-Cloud Volumes Service for Google Cloud는 Google Cloud를 활용합니다 https://cloud.google.com/vpc/docs/configure-private-services-access["프라이빗 서비스 액세스"^] 프레임워크: 이 프레임워크에서는 사용자가 Cloud Volumes Service에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다.
+Google Cloud NetApp Volumes for Google Cloud는 Google Cloud https://cloud.google.com/vpc/docs/configure-private-services-access["프라이빗 서비스 액세스"^] 프레임워크를 활용합니다. 이 프레임워크에서 사용자는 Google Cloud NetApp 볼륨에 연결할 수 있습니다. 이 프레임워크는 다른 Google Cloud 서비스와 같은 서비스 네트워킹 및 VPC 피어링 구조를 사용하여 테넌트 간의 완전한 격리를 보장합니다.
 
-Google Cloud용 Cloud Volumes Service의 아키텍처 개요는 를 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/architecture["Cloud Volumes Service용 아키텍처"^].
+Google Cloud NetApp Volumes for Google Cloud의 아키텍처 개요는 를 참조하십시오. https://cloud.google.com/architecture/partners/netapp-cloud-volumes/architecture["Google Cloud NetApp 볼륨에 대한 아키텍처"^]
 
-사용자 VPC(독립 실행형 또는 공유)는 볼륨을 호스팅하는 Cloud Volumes Service 관리 테넌트 프로젝트 내의 VPC에 대해 자세히 살펴봅니다.
+사용자 VPC(독립 실행형 또는 공유)는 볼륨을 호스팅하는 Google Cloud NetApp 볼륨 관리형 테넌트 프로젝트 내의 VPC에 피어링됩니다.
 
 image:ncvs-gc-image5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
-위 그림에서는 Cloud Volumes Service에 연결된 VPC 네트워크 3개와 볼륨을 공유하는 GCE1-7(다중 컴퓨팅 엔진 VM)이 포함된 프로젝트(중간 CVS 소비자 프로젝트)를 보여 줍니다.
+이전 그림은 Google Cloud NetApp 볼륨에 연결된 3개의 VPC 네트워크와 볼륨을 공유하는 여러 컴퓨팅 엔진 VM(GCE1-7)이 있는 프로젝트(중간에 NetApp Volumes 소비자 프로젝트)를 보여줍니다.
 
 * VPC1을 사용하면 GCE1이 볼륨 A와 B에 액세스할 수 있습니다
 * VPC2는 GCE2와 GCE4가 볼륨 C에 액세스할 수 있도록 합니다
-* 세 번째 VPC 네트워크는 공유 VPC로, 두 개의 서비스 프로젝트와 공유됩니다. GCE3, GCE4, GCE5 및 GCE6에서 D 및 E 볼륨에 액세스할 수 있습니다 공유 VPC 네트워크는 CVS 성능 서비스 유형의 볼륨에만 지원됩니다.
+* 세 번째 VPC 네트워크는 공유 VPC로, 두 개의 서비스 프로젝트와 공유됩니다. GCE3, GCE4, GCE5 및 GCE6에서 볼륨 D 및 E에 액세스할 수 있습니다. 공유 VPC 네트워크는 NetApp 볼륨 - 성능 서비스 유형의 볼륨에 대해서만 지원됩니다.
 
 
 
 NOTE: GCE7은 어떤 볼륨에도 액세스할 수 없습니다.
 
-데이터는 전송 중(Kerberos 및/또는 SMB 암호화 사용) 및 Cloud Volumes Service에 저장된 데이터를 모두 암호화할 수 있습니다.
+전송 중(Kerberos 및/또는 SMB 암호화 사용)과 Google Cloud NetApp 볼륨에서 유휴 데이터를 암호화할 수 있습니다.

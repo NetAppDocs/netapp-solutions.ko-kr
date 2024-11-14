@@ -42,8 +42,8 @@ keywords: netapp, solutions, blogs
 * link:https://cloud.netapp.com/blog/azure-blg-optimize-storage-for-cloud-based-vmware-deployments["클라우드 기반 VMware 구축을 위한 스토리지 최적화"]
 * link:https://cloud.netapp.com/blog/azure-blg-netapp-cloud-offerings-with-azure-vmware-solution["NetApp 기반 클라우드 오퍼링을 사용하여 Azure VMware 솔루션을 시작하십시오"]
 * link:https://cloud.netapp.com/blog/aws-fsxo-blg-configure-hybrid-cloud-with-fsx-for-netapp-ontap-and-vmware-cloud-on-aws-sddc-using-vmware-hcx["VMware HCX를 사용하여 FSx ONTAP 및 AWS SDDC 기반 VMware Cloud를 사용하여 하이브리드 클라우드를 구성합니다"]
-* link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["Google Cloud VMware Engine(NetApp)에 대한 NetApp Cloud Volumes Service 데이터 저장소 지원"]
-* link:https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine["NetApp CVS를 Google Cloud VMware Engine(Google)용 데이터 저장소로 사용하는 방법"]
+* link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/["Google Cloud NetApp NetApp(Cloud VMware Engine)를 위한 볼륨 데이터 저장소 지원"]
+* link:https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine["NetApp 볼륨을 Google Cloud VMware Engine(Google)용 데이터 저장소로 사용하는 방법"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/3-2-1-Data-Protection-for-VMware-with-SnapCenter-Plug-in-and-BlueXP-Backup-and/ba-p/446180["3-2-1 SnapCenter 플러그인과 BlueXP VM 백업 및 복구를 통한 VMware 데이터 보호"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Observability-for-the-Modern-Datacenter-with-NetApp-Cloud-Insights/ba-p/447495["NetApp Cloud Insights을 지원하는 최신 데이터 센터에 대한 관측성"]
 

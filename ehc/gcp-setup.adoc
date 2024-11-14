@@ -25,7 +25,7 @@ summary:
 ====
 GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.
 
-“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. “위치”에서 CVS/CVO가 배포된 동일한 지역/영역에 프라이빗 클라우드를 배포하여 최상의 성능과 최저 지연 시간을 보장해야 합니다.
+“새 사설 클라우드” 버튼을 클릭하고 GCVE 프라이빗 클라우드에 대해 원하는 구성을 입력합니다. "위치"에서 NetApp 볼륨/CVO가 구축되는 동일한 지역/영역에 프라이빗 클라우드를 구축하여 최고의 성능과 최저 지연 시간을 보장해야 합니다.
 
 전제 조건:
 
@@ -44,7 +44,7 @@ image:gcve-deploy-1.png["입력/출력 대화 상자 또는 작성된 내용을 
 ====
 프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.
 
-이렇게 하면 Cloud Volumes ONTAP 인스턴스가 실행 중인 VPC 네트워크가 GCVE 프라이빗 클라우드와 통신할 수 있습니다. 이렇게 하려면 를 따르십시오 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart["GCP 문서"]. 클라우드 볼륨 서비스의 경우 테넌트 호스트 프로젝트 간에 일회성 피어링을 수행하여 VMware 엔진과 Cloud Volumes Service 간에 연결을 설정합니다. 자세한 단계는 다음과 같습니다 link:https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-cloud-volumes-service["링크"].
+이렇게 하면 Cloud Volumes ONTAP 인스턴스가 실행 중인 VPC 네트워크가 GCVE 프라이빗 클라우드와 통신할 수 있습니다. 이렇게 하려면 를 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart["GCP 문서"]따릅니다. 클라우드 볼륨 서비스의 경우 테넌트 호스트 프로젝트 간에 일회성 피어링을 수행하여 VMware Engine과 Google Cloud NetApp 볼륨 간에 연결을 설정합니다. 자세한 단계를 보려면 다음 link:https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-cloud-volumes-service["링크"]단계를 따르십시오.
 
 image:gcve-access-1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -61,9 +61,9 @@ image:gcve-access-3.png["입력/출력 대화 상자 또는 작성된 내용을 
 image:gcve-access-4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 ====
-.NetApp Cloud Volume Service 보조 데이터 저장소를 GCVE에 배포합니다
+.Google Cloud NetApp 볼륨 보조 데이터 저장소를 GCVE에 배포
 [%collapsible]
 ====
-을 참조하십시오 link:gcp-ncvs-datastore.html["NetApp CVS to GCVE를 사용하여 보조 NFS 데이터 저장소를 배포하는 절차"]
+을 참조하십시오 link:gcp-ncvs-datastore.html["NetApp 볼륨이 포함된 보조 NFS 데이터 저장소를 GCVE에 배포하는 절차"]
 
 ====

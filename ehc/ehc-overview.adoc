@@ -62,7 +62,7 @@ NOTE: SDDC 프라이빗 클라우드 및 NetApp Cloud Volumes 코로케이션을
 
 스토리지 집약적인 워크로드를 호스팅하거나 클라우드 호스팅 VMware 솔루션에서 스케일아웃하려는 고객의 경우 기본 하이퍼 컨버지드 인프라는 확장이 컴퓨팅 및 스토리지 리소스 모두에 있어야 한다는 것을 나타냅니다.
 
-Azure NetApp Files, Amazon FSx ONTAP, Cloud Volumes ONTAP(3가지 주요 하이퍼스케일러에서 모두 사용 가능), Cloud Volumes Service for Google Cloud와 같은 NetApp Cloud Volumes를 통합하여 고객은 스토리지를 독립적으로 확장하고 필요에 따라 컴퓨팅 노드를 SDDC 클러스터에 추가할 수 있습니다.
+Azure NetApp Files, Amazon FSx ONTAP, Cloud Volumes ONTAP(3가지 주요 하이퍼스케일러에서 사용 가능) 및 Google Cloud NetApp Volumes for Google Cloud와 같은 NetApp Cloud Volumes를 통합하여 스토리지를 개별적으로 독립적으로 확장하고 필요에 따라 컴퓨팅 노드만 SDDC 클러스터에 추가할 수 있습니다.
 
 
 
@@ -74,7 +74,7 @@ Azure NetApp Files, Amazon FSx ONTAP, Cloud Volumes ONTAP(3가지 주요 하이�
 * 클러스터 호스트 위에 구축된 vSAN의 스토리지 용량 제한에 매우 쉽게 도달할 수 있습니다. NetApp Cloud Volumes를 사용하여 액티브 데이터 세트를 호스트하거나 영구 스토리지로 계층 쿨러 데이터를 계층화하도록 스토리지를 확장할 수 있습니다.
 
 
-Azure NetApp Files, Amazon FSx ONTAP, Cloud Volumes ONTAP(3가지 주요 하이퍼스케일러에서 모두 사용 가능) 및 Cloud Volumes Service for Google Cloud를 게스트 VM과 함께 사용할 수 있습니다. 이 하이브리드 스토리지 아키텍처는 게스트 운영 체제 및 애플리케이션 바이너리 데이터를 보관하는 vSAN 데이터스토어로 구성됩니다. 애플리케이션 데이터는 게스트 기반 iSCSI 이니시에이터 또는 Amazon FSx ONTAP, Cloud Volume ONTAP, Azure NetApp Files 및 Cloud Volumes Service for Google Cloud와 직접 통신하는 NFS/SMB 마운트를 통해 VM에 연결됩니다. 이 구성을 사용하면 vSAN과 같이 스토리지 용량과 관련된 문제를 쉽게 해결할 수 있습니다. 사용 가능한 여유 공간은 사용된 여유 공간 및 스토리지 정책에 따라 달라집니다.
+Azure NetApp Files, Amazon FSx ONTAP, Cloud Volumes ONTAP(3가지 주요 하이퍼스케일러에서 모두 사용 가능) 및 Google Cloud NetApp Volumes for Google Cloud를 게스트 VM과 함께 사용할 수 있습니다. 이 하이브리드 스토리지 아키텍처는 게스트 운영 체제 및 애플리케이션 바이너리 데이터를 보관하는 vSAN 데이터스토어로 구성됩니다. 애플리케이션 데이터는 게스트 기반 iSCSI 이니시에이터 또는 Amazon FSx ONTAP, Cloud Volume ONTAP, Azure NetApp Files 및 Google Cloud NetApp Volumes for Google Cloud와 직접 통신하는 NFS/SMB 마운트를 통해 VM에 연결됩니다. 이 구성을 사용하면 vSAN과 같이 스토리지 용량과 관련된 문제를 쉽게 해결할 수 있습니다. 사용 가능한 여유 공간은 사용된 여유 공간 및 스토리지 정책에 따라 달라집니다.
 
 AWS의 VMware Cloud에서 3노드 SDDC 클러스터를 살펴보겠습니다.
 
@@ -103,7 +103,7 @@ NOTE: 이 문서가 작성된 시점에서 게스트 내 저장소가 유일하�
 === 기억해야 할 사항
 
 * 하이브리드 스토리지 모델에서는 Tier 1 또는 높은 우선 순위의 워크로드를 vSAN 데이터 저장소에 배치하여 호스트 자체의 일부이고 근접하기 때문에 특정 지연 시간 요구 사항을 처리합니다. 트랜잭션 지연 시간이 허용되는 워크로드 VM에 대해 게스트 내 메커니즘을 사용합니다.
-* NetApp SnapMirror ® 기술을 사용하면 온프레미스 ONTAP 시스템에서 Cloud Volumes ONTAP 또는 Amazon FSx ONTAP로 워크로드 데이터를 복제하여 블록 레벨 메커니즘을 사용하여 쉽게 마이그레이션할 수 있습니다. Azure NetApp Files 및 Cloud Volumes Services에는 적용되지 않습니다. 데이터를 Azure NetApp Files 또는 Cloud Volumes Services로 마이그레이션하는 경우 사용되는 파일 프로토콜에 따라 NetApp XCP, BlueXP Copy and Sync, rysnc 또는 Robocopy를 사용합니다.
+* NetApp SnapMirror ® 기술을 사용하면 온프레미스 ONTAP 시스템에서 Cloud Volumes ONTAP 또는 Amazon FSx ONTAP로 워크로드 데이터를 복제하여 블록 레벨 메커니즘을 사용하여 쉽게 마이그레이션할 수 있습니다. Azure NetApp Files 및 Google Cloud NetApp 볼륨에는 적용되지 않습니다. 데이터를 Azure NetApp Files 또는 Google Cloud NetApp 볼륨으로 마이그레이션하는 경우 사용되는 파일 프로토콜에 따라 NetApp XCP, BlueXP  Copy 및 Sync, rysnc 또는 robocopy를 사용합니다.
 * 테스트 결과, 각 SDDC에서 스토리지에 액세스하는 동안 지연 시간이 2-4ms로 더 길어집니다. 스토리지를 매핑할 때 애플리케이션 요구 사항에 이러한 추가 지연 시간을 고려하십시오.
 * 테스트 페일오버 및 실제 페일오버 중에 게스트 연결 스토리지를 마운트하려면 iSCSI 이니시에이터가 재구성되고 DNS가 SMB 공유용으로 업데이트되며 NFS 마운트 지점이 fstab에서 업데이트되도록 합니다.
 * 게스트 내 Microsoft MPIO(Multipath I/O), 방화벽 및 디스크 시간 초과 레지스트리 설정이 VM 내에서 올바르게 구성되어 있는지 확인합니다.
@@ -144,6 +144,6 @@ NOTE: 스토리지 계획 및 사이징과 필요한 호스트 수에 대해서�
 
 == 상세 아키텍처
 
-개략적인 관점에서 볼 때 이 아키텍처(아래 그림에 표시)에서는 NetApp Cloud Volumes ONTAP, Cloud Volumes Service for Google Cloud 및 Azure NetApp Files를 추가 게스트 스토리지 옵션으로 사용하여 여러 클라우드 공급자 간에 하이브리드 멀티 클라우드 연결 및 애플리케이션 이동성을 달성하는 방법을 설명합니다.
+개략적인 관점에서 보면, 이 아키텍처(아래 그림에 표시)에서는 NetApp Cloud Volumes ONTAP, Google Cloud NetApp Volumes for Google Cloud 및 Azure NetApp Files를 추가 게스트 내 스토리지 옵션으로 사용하는 여러 클라우드 공급자 전반에서 하이브리드 멀티 클라우드 연결과 앱 이동성을 달성하는 방법을 다룹니다.
 
 image:ehc-architecture.png["엔터프라이즈 하이브리드 클라우드 아키텍처"]

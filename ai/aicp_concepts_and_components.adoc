@@ -197,7 +197,7 @@ SnapMirror 소프트웨어는 변경된 블록만 네트워크를 통해 전송�
 
 == NetApp BlueXP 복사 및 동기화
 
-link:https://bluexp.netapp.com/cloud-sync-service["BlueXP 복사 및 동기화"^] 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유 간에 파일을 전송해야 하는 경우, NetApp StorageGRID, NetApp ONTAP S3, NetApp Cloud Volumes Service, Azure NetApp Files, AWS S3, AWS EFS, Azure Blob, Google Cloud Storage, 즉 IBM Cloud Object Storage, BlueXP Copy and Sync는 필요한 파일을 빠르고 안전하게 이동합니다.
+link:https://bluexp.netapp.com/cloud-sync-service["BlueXP 복사 및 동기화"^] 빠르고 안전한 데이터 동기화를 제공하는 NetApp 서비스입니다. 온프레미스 NFS 또는 SMB 파일 공유, NetApp StorageGRID, NetApp ONTAP S3, Google Cloud NetApp Volumes, Azure NetApp Files, AWS S3, AWS EFS, Azure Blob, Google Cloud Storage 또는 IBM Cloud Object Storage 간에 파일을 전송해야 하는 경우 BlueXP  복사본 및 동기화를 통해 필요한 파일을 빠르고 안전하게 이동합니다.
 
 데이터가 전송되면 소스와 타겟 모두에서 사용할 수 있습니다. BlueXP 복사 및 동기화는 업데이트가 트리거되거나 미리 정의된 일정에 따라 데이터가 지속적으로 동기화되는 경우 필요 시 데이터를 동기화할 수 있습니다. BlueXP Copy 및 Sync는 변경된 부분만 이동하므로 데이터 복제에 소비되는 시간과 비용이 최소화됩니다.
 

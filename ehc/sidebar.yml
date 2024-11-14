@@ -113,9 +113,10 @@ entries:
     entries:
     - title: VMware HCX를 사용하여 워크로드를 Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
       url: "/ehc/gcp-migrate-vmware-hcx.html"
-    - title: Veeam 복제를 사용하여 VM 워크로드를 NetApp Cloud Volume Service NFS 데이터 저장소로 마이그레이션합니다
+    - title: Veeam Replication을 사용하여 VM 워크로드를 Google Cloud NetApp Volumes NFS 데이터
+        저장소로 마이그레이션합니다
       url: "/ehc/gcp-migrate-veeam.html"
-  - title: NetApp CVS NFS 데이터 저장소에 대한 지역 지원
+  - title: NetApp 볼륨 NFS 데이터 저장소에 대한 지역 지원
     url: "/ehc/gcp-regions.html"
 - title: BlueXP  재해 복구
   entries:

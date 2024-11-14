@@ -79,7 +79,7 @@ image:hdcs-sh-image3.png["입력/출력 대화 상자 또는 작성된 내용을
 위 그림의 구성 요소는 다음과 같습니다.
 
 * * NetApp NFS 직접 액세스 * 는 추가 소프트웨어 또는 드라이버 요구사항 없이 최신 Hadoop 및 Spark 클러스터를 NetApp NFS 볼륨에 직접 액세스할 수 있도록 지원합니다.
-* * NetApp Cloud Volumes ONTAP 및 클라우드 볼륨 서비스. * Microsoft Azure 클라우드 서비스의 AWS(Amazon Web Services) 또는 ANF(Azure NetApp Files)에서 실행되는 ONTAP를 기반으로 하는 소프트웨어 정의 연결형 스토리지.
+* * NetApp Cloud Volumes ONTAP 및 Google Cloud NetApp 볼륨. * Microsoft Azure 클라우드 서비스의 AWS(Amazon Web Services) 또는 ANF(Azure NetApp Files)에서 실행되는 ONTAP 기반의 소프트웨어 정의 연결형 스토리지
 * NetApp SnapMirror 기술 *. 사내 및 ONTAP 클라우드 또는 NPS 인스턴스 간에 데이터 보호 기능을 제공합니다.
 * * 클라우드 서비스 공급자 * 이러한 공급자에는 AWS, Microsoft Azure, Google Cloud 및 IBM Cloud가 포함됩니다.
 * * PaaS. * AWS의 EMR(Amazon Elastic MapReduce) 및 Databricks와 같은 클라우드 기반 분석 서비스와 Microsoft Azure HDInsight 및 Azure Databricks

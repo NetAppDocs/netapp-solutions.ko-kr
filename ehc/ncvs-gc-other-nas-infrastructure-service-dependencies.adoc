@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ehc/ncvs-gc-other-nas-infrastructure-service-dependencies.html 
 keywords: kerberos keytab rotation, ldap, network ports, bind, asymmetric name mapping, antivirus 
-summary: NAS 공유에 Cloud Volumes Service를 사용하는 경우 적절한 기능을 위해 외부 종속성이 필요할 수 있습니다. 이러한 종속성은 특정 상황에서 적용됩니다. 
+summary: NAS 공유에 Google Cloud NetApp Volumes를 사용할 때 적절한 기능을 사용하려면 외부 종속성이 필요할 수 있습니다. 이러한 종속성은 특정 상황에서 적용됩니다. 
 ---
 = 기타 NAS 인프라스트럭처 서비스 종속성(KDC, LDAP 및 DNS)
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NAS 공유에 Cloud Volumes Service를 사용하는 경우 적절한 �
 
 
 [role="lead"]
-NAS 공유에 Cloud Volumes Service를 사용하는 경우 적절한 기능을 위해 외부 종속성이 필요할 수 있습니다. 이러한 종속성은 특정 상황에서 적용됩니다. 다음 표에는 다양한 구성 옵션과 종속 항목이 필요한 항목이 나와 있습니다.
+NAS 공유에 Google Cloud NetApp Volumes를 사용할 때 적절한 기능을 사용하려면 외부 종속성이 필요할 수 있습니다. 이러한 종속성은 특정 상황에서 적용됩니다. 다음 표에는 다양한 구성 옵션과 종속 항목이 필요한 항목이 나와 있습니다.
 
 |===
 | 구성 | 종속성이 필요합니다 
@@ -49,23 +49,23 @@ NAS 공유에 Cloud Volumes Service를 사용하는 경우 적절한 기능을 �
 
 == 시스템 계정 개체에 대한 Kerberos 키 탭 회전/암호 재설정
 
-SMB 시스템 계정의 경우 Cloud Volumes Service는 SMB 시스템 계정에 대한 주기적인 암호 재설정을 예약합니다. 이러한 암호 재설정은 Kerberos 암호화를 사용하여 발생하며, 오후 11시부터 오전 1시 사이에 임의 시간에 매주 일요일 일정에 따라 작동합니다. 이러한 암호 재설정은 Kerberos 키 버전을 변경하고, Cloud Volumes Service 시스템에 저장된 키 탭을 회전하며, Cloud Volumes Service에서 실행되는 SMB 서버의 보안을 더욱 강화할 수 있도록 도와줍니다. 시스템 계정 암호는 무작위배정되며 관리자에게 알려져 있지 않습니다.
+Google Cloud NetApp 볼륨은 SMB 머신 계정을 사용하여 SMB 머신 계정에 대해 정기적으로 암호 재설정을 예약합니다. 이러한 암호 재설정은 Kerberos 암호화를 사용하여 발생하며, 오후 11시부터 오전 1시 사이에 임의 시간에 매주 일요일 일정에 따라 작동합니다. 암호를 재설정하면 Kerberos 키 버전을 변경하고, Google Cloud NetApp Volumes 시스템에 저장된 키탭을 회전하고, Google Cloud NetApp 볼륨에서 실행되는 SMB 서버의 보안을 강화하는 데 도움이 됩니다. 시스템 계정 암호는 무작위배정되며 관리자에게 알려져 있지 않습니다.
 
-NFS Kerberos 시스템 계정의 경우 KDC와 새 키 탭이 생성/교환될 때만 암호 재설정이 적용됩니다. 현재 Cloud Volumes Service에서는 이 작업을 수행할 수 없습니다.
+NFS Kerberos 시스템 계정의 경우 KDC와 새 키 탭이 생성/교환될 때만 암호 재설정이 적용됩니다. 현재 Google Cloud NetApp 볼륨에서는 씬 LUN을 사용할 수 없습니다.
 
 
 
 == LDAP 및 Kerberos와 함께 사용할 네트워크 포트
 
-LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. 에서 Cloud Volumes Service에서 사용 중인 포트의 전체 목록을 찾을 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["보안 고려 사항에 대한 Cloud Volumes Service 문서"^].
+LDAP 및 Kerberos를 사용하는 경우 이러한 서비스에서 사용 중인 네트워크 포트를 확인해야 합니다. Google Cloud NetApp 볼륨에서 사용 중인 포트의 전체 목록을 에서 확인할 수 있습니다 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/security-considerations?hl=en_US["보안 고려사항에 대한 Google Cloud NetApp Volumes 설명서"^].
 
 
 
 == LDAP를 지원합니다
 
-Cloud Volumes Service는 LDAP 클라이언트 역할을 하며 UNIX ID에 대한 사용자 및 그룹 조회를 위해 표준 LDAP 검색 쿼리를 사용합니다. Cloud Volumes Service에서 제공하는 표준 기본 사용자 이외의 사용자 및 그룹을 사용하려면 LDAP가 필요합니다. NFS Kerberos를 사용자 보안 주체(예: user1@domain.com 사용할 계획이라면 LDAP도 필요합니다. 현재 Microsoft Active Directory를 사용하는 LDAP만 지원됩니다.
+Google Cloud NetApp 볼륨은 LDAP 클라이언트 역할을 하며 UNIX ID에 대한 사용자 및 그룹 조회에 표준 LDAP 검색 쿼리를 사용합니다. Google Cloud NetApp 볼륨에서 제공하는 표준 기본 사용자 이외의 사용자와 그룹을 사용하려는 경우 LDAP가 필요합니다. NFS Kerberos를 사용자 보안 주체(예: user1@domain.com 사용할 계획이라면 LDAP도 필요합니다. 현재 Microsoft Active Directory를 사용하는 LDAP만 지원됩니다.
 
-Active Directory를 UNIX LDAP 서버로 사용하려면 UNIX ID에 사용할 사용자 및 그룹에 필요한 UNIX 속성을 채워야 합니다. Cloud Volumes Service에서는 에 따라 특성을 쿼리하는 기본 LDAP 스키마 템플릿을 사용합니다 https://tools.ietf.org/id/draft-howard-rfc2307bis-01.txt["RFC-2307-bis"^]. 따라서 다음 표에서는 사용자 및 그룹에 채울 최소 필수 Active Directory 속성과 각 속성이 사용되는 특성을 보여 줍니다.
+Active Directory를 UNIX LDAP 서버로 사용하려면 UNIX ID에 사용할 사용자 및 그룹에 필요한 UNIX 속성을 채워야 합니다. Google Cloud NetApp 볼륨은 다음을 기반으로 속성을 쿼리하는 기본 LDAP 스키마 템플릿을 https://tools.ietf.org/id/draft-howard-rfc2307bis-01.txt["RFC-2307-bis"^] 사용합니다. 따라서 다음 표에서는 사용자 및 그룹에 채울 최소 필수 Active Directory 속성과 각 속성이 사용되는 특성을 보여 줍니다.
 
 Active Directory에서 LDAP 속성을 설정하는 방법에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/managing-dual-protocol-access["이중 프로토콜 액세스 관리."^]
 
@@ -82,7 +82,7 @@ Active Directory에서 LDAP 속성을 설정하는 방법에 대한 자세한 �
 | gidNumber * | UNIX 사용자의 기본 그룹 숫자 ID를 지정합니다 
 
 
-| objectClass * | 사용 중인 개체 유형을 지정합니다. Cloud Volumes Service에서는 "사용자"를 개체 클래스 목록에 포함해야 합니다(기본적으로 대부분의 Active Directory 배포에는 포함됨). 
+| objectClass * | 사용 중인 오브젝트의 유형을 지정합니다. Google Cloud NetApp Volumes는 오브젝트 클래스 목록에 "사용자"를 포함해야 합니다(기본적으로 대부분의 Active Directory 배포에 포함됨). 
 
 
 | 이름 | 계정에 대한 일반 정보(실제 이름, 전화 번호 등, gecos라고도 함) 
@@ -96,40 +96,40 @@ Active Directory에서 LDAP 속성을 설정하는 방법에 대한 자세한 �
 
 | LoginShell입니다 | 사용자가 LDAP에 대해 인증할 때 Linux 클라이언트의 bash/profile 셸에 대한 경로를 정의합니다. 
 |===
-* 는 Cloud Volumes Service의 적절한 기능을 위해 특성이 필요함을 나타냅니다. 나머지 속성은 클라이언트 측 전용입니다.
+* 는 Google Cloud NetApp 볼륨에서 제대로 작동하는 데 필요한 속성을 나타냅니다. 나머지 속성은 클라이언트 측 전용입니다.
 
 |===
 | 속성 | 기능 
 
 
-| CN * | UNIX 그룹 이름을 지정합니다. LDAP에 Active Directory를 사용하는 경우 개체를 처음 만들 때 설정되지만 나중에 변경할 수 있습니다. 이 이름은 다른 개체와 같을 수 없습니다. 예를 들어, user1이라는 UNIX 사용자가 Linux 클라이언트의 user1이라는 그룹에 속해 있는 경우 Windows에서는 cn 특성이 같은 두 개체를 허용하지 않습니다. 이 문제를 해결하려면 Windows 사용자의 이름을 고유한 이름(예: user1-UNIX)으로 바꿉니다. Cloud Volumes Service의 LDAP는 UNIX 사용자 이름에 uid 속성을 사용합니다. 
+| CN * | UNIX 그룹 이름을 지정합니다. LDAP에 Active Directory를 사용하는 경우 개체를 처음 만들 때 설정되지만 나중에 변경할 수 있습니다. 이 이름은 다른 개체와 같을 수 없습니다. 예를 들어, user1이라는 UNIX 사용자가 Linux 클라이언트의 user1이라는 그룹에 속해 있는 경우 Windows에서는 cn 특성이 같은 두 개체를 허용하지 않습니다. 이 문제를 해결하려면 Windows 사용자의 이름을 고유한 이름(예: user1-UNIX)으로 바꾸고, Google Cloud의 LDAP NetApp 볼륨은 UNIX 사용자 이름에 uid 속성을 사용합니다. 
 
 
 | gidNumber * | UNIX 그룹 숫자 ID를 지정합니다. 
 
 
-| objectClass * | 사용 중인 개체 유형을 지정합니다. Cloud Volumes Service에서는 개체 클래스 목록에 그룹을 포함해야 합니다. 이 특성은 기본적으로 대부분의 Active Directory 배포에 포함됩니다. 
+| objectClass * | 사용 중인 오브젝트의 유형을 지정합니다. Google Cloud NetApp 볼륨에서는 오브젝트 클래스 목록에 그룹을 포함해야 합니다(이 속성은 기본적으로 대부분의 Active Directory 배포에 포함됨). 
 
 
-| memberUid | UNIX 그룹의 구성원인 UNIX 사용자를 지정합니다. Cloud Volumes Service에서 Active Directory LDAP를 사용할 경우 이 필드는 필요하지 않습니다. Cloud Volumes Service LDAP 스키마는 그룹 구성원 자격에 구성원 필드를 사용합니다. 
+| memberUid | UNIX 그룹의 구성원인 UNIX 사용자를 지정합니다. Google Cloud NetApp 볼륨에서 Active Directory LDAP를 사용할 때는 이 필드가 필요하지 않습니다. Google Cloud NetApp 볼륨 LDAP 스키마는 그룹 멤버쉽에 구성원 필드를 사용합니다. 
 
 
 | 구성원 * | 그룹 구성원 자격/보조 UNIX 그룹에 필요합니다. 이 필드는 Windows 그룹에 Windows 사용자를 추가하여 채워집니다. 그러나 Windows 그룹에 채워진 UNIX 특성이 없는 경우 UNIX 사용자의 그룹 구성원 목록에는 포함되지 않습니다. NFS에서 사용할 수 있어야 하는 모든 그룹은 이 표에 나열된 필수 UNIX 그룹 속성을 채워야 합니다. 
 |===
-* 는 Cloud Volumes Service의 적절한 기능을 위해 특성이 필요함을 나타냅니다. 나머지 속성은 클라이언트 측 전용입니다.
+* 는 Google Cloud NetApp 볼륨에서 제대로 작동하는 데 필요한 속성을 나타냅니다. 나머지 속성은 클라이언트 측 전용입니다.
 
 
 
 === LDAP 바인딩 정보
 
-LDAP에서 사용자를 쿼리하려면 Cloud Volumes Service가 LDAP 서비스에 바인딩(로그인)해야 합니다. 이 로그인에는 읽기 전용 권한이 있으며 디렉토리 조회를 위해 LDAP UNIX 속성을 쿼리하는 데 사용됩니다. 현재 LDAP 바인딩은 SMB 컴퓨터 계정을 통해서만 가능합니다.
+LDAP에서 사용자를 쿼리하려면 Google Cloud NetApp 볼륨을 LDAP 서비스에 바인딩(로그인)해야 합니다. 이 로그인에는 읽기 전용 권한이 있으며 디렉토리 조회를 위해 LDAP UNIX 속성을 쿼리하는 데 사용됩니다. 현재 LDAP 바인딩은 SMB 컴퓨터 계정을 통해서만 가능합니다.
 
-'CVS 성능' 인스턴스에만 LDAP를 사용하도록 설정하고 NFSv3, NFSv4.1 또는 이중 프로토콜 볼륨에는 LDAP를 사용할 수 있습니다. LDAP 지원 볼륨을 성공적으로 배포하려면 Cloud Volumes Service 볼륨과 동일한 영역에 Active Directory 연결을 설정해야 합니다.
+인스턴스에 대해 LDAP만 활성화하고 NFSv3, NFSv4.1 또는 이중 프로토콜 볼륨에 사용할 수 있습니다 `NetApp Volumes-Performance`. LDAP 지원 볼륨을 성공적으로 구축하려면 Google Cloud NetApp 볼륨 볼륨과 동일한 지역에 Active Directory 연결을 설정해야 합니다.
 
 LDAP가 활성화된 경우 특정 시나리오에서 다음이 발생합니다.
 
-* Cloud Volumes Service 프로젝트에 NFSv3이나 NFSv4.1만 사용되는 경우 Active Directory 도메인 컨트롤러에서 새 컴퓨터 계정이 생성되고 Cloud Volumes Service의 LDAP 클라이언트는 시스템 계정 자격 증명을 사용하여 Active Directory에 바인딩됩니다. NFS 볼륨 및 숨겨진 기본 관리 공유에 대해 SMB 공유가 생성되지 않습니다(섹션 참조) link:ncvs-gc-smb.html#default-hidden-shares["“숨겨진 기본 공유”"])의 공유 ACL이 제거되었습니다.
-* Cloud Volumes Service 프로젝트에 이중 프로토콜 볼륨을 사용하는 경우 SMB 액세스용으로 생성된 단일 컴퓨터 계정만 Cloud Volumes Service의 LDAP 클라이언트를 Active Directory에 바인딩하는 데 사용됩니다. 추가 컴퓨터 계정이 생성되지 않습니다.
+* Google Cloud NetApp Volumes 프로젝트에 NFSv3 또는 NFSv4.1만 사용되는 경우, Active Directory 도메인 컨트롤러에 새 머신 계정이 생성되고 Google Cloud NetApp 볼륨의 LDAP 클라이언트는 머신 계정 자격 증명을 사용하여 Active Directory에 바인딩됩니다. NFS 볼륨에 대해 SMB 공유가 생성되지 않고 숨겨진 기본 관리 공유(섹션 참조link:ncvs-gc-smb.html#default-hidden-shares["“숨겨진 기본 공유”"])에 공유 ACL이 제거되었습니다.
+* Google Cloud NetApp Volumes 프로젝트에 이중 프로토콜 볼륨을 사용하는 경우, SMB 액세스를 위해 생성된 단일 머신 계정만 Google Cloud NetApp 볼륨의 LDAP 클라이언트를 Active Directory에 바인딩하는 데 사용됩니다. 추가 컴퓨터 계정이 생성되지 않습니다.
 * 전용 SMB 볼륨이 별도로 생성된 경우(LDAP가 설정된 NFS 볼륨 이전 또는 이후에) LDAP 바인딩의 컴퓨터 계정이 SMB 시스템 계정과 공유됩니다.
 * NFS Kerberos도 사용하도록 설정된 경우 두 개의 시스템 계정이 생성됩니다. 하나는 SMB 공유 및/또는 LDAP 바인드이고 다른 하나는 NFS Kerberos 인증입니다.
 
@@ -138,119 +138,119 @@ LDAP가 활성화된 경우 특정 시나리오에서 다음이 발생합니다.
 
 === LDAP 쿼리입니다
 
-LDAP 바인딩은 암호화되지만 일반 LDAP 포트 389를 사용하여 LDAP 쿼리가 일반 텍스트로 회선을 통해 전달됩니다. 이 잘 알려진 포트는 현재 Cloud Volumes Service에서 변경할 수 없습니다. 따라서 네트워크에서 패킷 스니핑에 액세스할 수 있는 사용자는 사용자 및 그룹 이름, 숫자 ID 및 그룹 구성원 자격을 볼 수 있습니다.
+LDAP 바인딩은 암호화되지만 일반 LDAP 포트 389를 사용하여 LDAP 쿼리가 일반 텍스트로 회선을 통해 전달됩니다. 잘 알려진 이 포트는 현재 Google Cloud NetApp 볼륨에서 변경할 수 없습니다. 따라서 네트워크에서 패킷 스니핑에 액세스할 수 있는 사용자는 사용자 및 그룹 이름, 숫자 ID 및 그룹 구성원 자격을 볼 수 있습니다.
 
-그러나 Google Cloud VM은 다른 VM의 유니캐스트 트래픽을 스니프할 수 없습니다. LDAP 트래픽에 활성 중인 VM(즉, 바인딩 가능)만 LDAP 서버의 트래픽을 볼 수 있습니다. Cloud Volumes Service의 패킷 스니핑에 대한 자세한 내용은 섹션을 참조하십시오 link:ncvs-gc-cloud-volumes-service-architecture.html#packet-sniffing["“패킷 감지/추적 고려 사항”"]
+그러나 Google Cloud VM은 다른 VM의 유니캐스트 트래픽을 스니프할 수 없습니다. LDAP 트래픽에 활성 중인 VM(즉, 바인딩 가능)만 LDAP 서버의 트래픽을 볼 수 있습니다. Google Cloud NetApp Volumes의 패킷 스니핑에 대한 자세한 내용은 섹션을 참조하십시오 link:ncvs-gc-cloud-volumes-service-architecture.html#packet-sniffing["“패킷 감지/추적 고려 사항”"]
 
 
 
 === LDAP 클라이언트 구성 기본값
 
-Cloud Volumes Service 인스턴스에서 LDAP가 활성화되면 기본적으로 특정 구성 세부 정보를 사용하여 LDAP 클라이언트 구성이 생성됩니다. 경우에 따라 옵션이 Cloud Volumes Service(지원되지 않음)에 적용되지 않거나 구성할 수 없습니다.
+Google Cloud NetApp 볼륨 인스턴스에서 LDAP가 활성화된 경우, 기본적으로 특정 구성 세부 정보를 사용하여 LDAP 클라이언트 구성이 생성됩니다. 경우에 따라, Google Cloud NetApp 볼륨에 옵션이 적용되지 않거나(지원되지 않음) 구성할 수 없습니다.
 
 |===
 | LDAP 클라이언트 옵션입니다 | 기능 | 기본값 | 변경할 수 있습니까? 
 
 
-| LDAP 서버 목록 | 쿼리에 사용할 LDAP 서버 이름 또는 IP 주소를 설정합니다. Cloud Volumes Service에는 사용되지 않습니다. 대신 Active Directory 도메인을 사용하여 LDAP 서버를 정의합니다. | 설정되지 않았습니다 | 아니요 
+| LDAP 서버 목록 | 쿼리에 사용할 LDAP 서버 이름 또는 IP 주소를 설정합니다. Google Cloud NetApp 볼륨에는 사용되지 않습니다. 대신 Active Directory 도메인을 사용하여 LDAP 서버를 정의합니다. | 설정되지 않았습니다 | 아니요 
 
 
-| Active Directory 도메인 | LDAP 쿼리에 사용할 Active Directory 도메인을 설정합니다. Cloud Volumes Service는 DNS의 LDAP에 대한 SRV 레코드를 활용하여 도메인에서 LDAP 서버를 찾습니다. | Active Directory 연결에 지정된 Active Directory 도메인으로 설정합니다. | 아니요 
+| Active Directory 도메인 | LDAP 쿼리에 사용할 Active Directory 도메인을 설정합니다. Google Cloud NetApp 볼륨은 DNS에서 LDAP에 SRV 레코드를 활용하여 도메인에서 LDAP 서버를 찾습니다. | Active Directory 연결에 지정된 Active Directory 도메인으로 설정합니다. | 아니요 
 
 
-| 기본 Active Directory 서버 | LDAP에 사용할 기본 Active Directory 서버를 설정합니다. Cloud Volumes Service에서 지원되지 않습니다. 대신 Active Directory 사이트를 사용하여 LDAP 서버 선택을 제어할 수 있습니다. | 설정되지 않았습니다. | 아니요 
+| 기본 Active Directory 서버 | LDAP에 사용할 기본 Active Directory 서버를 설정합니다. Google Cloud NetApp 볼륨에서 지원되지 않습니다. 대신 Active Directory 사이트를 사용하여 LDAP 서버 선택을 제어할 수 있습니다. | 설정되지 않았습니다. | 아니요 
 
 
-| SMB 서버 자격 증명을 사용하여 바인딩합니다 | SMB 시스템 계정을 사용하여 LDAP에 바인딩합니다. 현재 Cloud Volumes Service에서 지원되는 유일한 LDAP 바인딩 방법입니다. | 참 | 아니요 
+| SMB 서버 자격 증명을 사용하여 바인딩합니다 | SMB 시스템 계정을 사용하여 LDAP에 바인딩합니다. 현재 Google Cloud NetApp 볼륨에서 지원되는 유일한 LDAP 바인드 방법입니다. | 참 | 아니요 
 
 
 | 스키마 템플릿 | LDAP 쿼리에 사용되는 스키마 템플릿입니다. | MS-AD-BIS | 아니요 
 
 
-| LDAP 서버 포트입니다 | LDAP 쿼리에 사용되는 포트 번호입니다. Cloud Volumes Service는 현재 표준 LDAP 포트 389만 사용합니다. LDAPS/포트 636은 현재 지원되지 않습니다. | 389 | 아니요 
+| LDAP 서버 포트입니다 | LDAP 쿼리에 사용되는 포트 번호입니다. Google Cloud NetApp 볼륨은 현재 표준 LDAP 포트 389만 사용합니다. LDAPS/포트 636은 현재 지원되지 않습니다. | 389 | 아니요 
 
 
-| LDAPS가 활성화되어 있습니다 | SSL(Secure Sockets Layer)을 통한 LDAP가 쿼리 및 바인딩에 사용되는지 여부를 제어합니다. 현재 Cloud Volumes Service에서 지원되지 않습니다. | 거짓 | 아니요 
+| LDAPS가 활성화되어 있습니다 | SSL(Secure Sockets Layer)을 통한 LDAP가 쿼리 및 바인딩에 사용되는지 여부를 제어합니다. 현재 Google Cloud NetApp 볼륨에서 지원되지 않습니다. | 거짓 | 아니요 
 
 
 | 쿼리 시간 제한(초) | 쿼리 시간이 초과되었습니다. 쿼리가 지정된 값보다 오래 걸면 쿼리가 실패합니다. | 3 | 아니요 
 
 
-| 최소 바인딩 인증 레벨 | 지원되는 최소 바인딩 레벨입니다. Cloud Volumes Service는 LDAP 바인딩에 컴퓨터 계정을 사용하고 Active Directory는 기본적으로 익명 바인딩을 지원하지 않으므로 이 옵션은 보안을 위해 사용되지 않습니다. | 익명 | 아니요 
+| 최소 바인딩 인증 레벨 | 지원되는 최소 바인딩 레벨입니다. Google Cloud NetApp 볼륨은 LDAP 바인딩에 시스템 계정을 사용하고 Active Directory는 기본적으로 익명 바인딩을 지원하지 않으므로 이 옵션은 보안을 위해 제공되지 않습니다. | 익명 | 아니요 
 
 
-| DN 바인딩 | 단순 바인딩이 사용될 때 바인딩에 사용되는 사용자/고유 이름(DN)입니다. Cloud Volumes Service는 LDAP 바인딩에 시스템 계정을 사용하며 현재 단순 바인딩 인증을 지원하지 않습니다. | 설정되지 않았습니다 | 아니요 
+| DN 바인딩 | 단순 바인딩이 사용될 때 바인딩에 사용되는 사용자/고유 이름(DN)입니다. Google Cloud NetApp 볼륨은 LDAP 바인딩에 시스템 계정을 사용하며 현재 간단한 바인딩 인증을 지원하지 않습니다. | 설정되지 않았습니다 | 아니요 
 
 
 | 기본 DN | LDAP 검색에 사용되는 기본 DN입니다. | Windows 도메인이 DN 형식(즉, DC=domain, DC=local)으로 Active Directory 연결에 사용됩니다. | 아니요 
 
 
-| 기본 검색 범위 | 기본 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service는 하위 트리 검색만 지원합니다. | 하위 트리 | 아니요 
+| 기본 검색 범위 | 기본 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Google Cloud NetApp 볼륨은 하위 트리 검색만 지원합니다. | 하위 트리 | 아니요 
 
 
-| 사용자 DN | 사용자가 LDAP 쿼리를 검색하는 DN을 정의합니다. 현재 Cloud Volumes Service에서는 지원되지 않으므로 모든 사용자 검색은 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
+| 사용자 DN | 사용자가 LDAP 쿼리를 검색하는 DN을 정의합니다. 현재 Google Cloud NetApp 볼륨에는 지원되지 않으므로 모든 사용자 검색은 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
 
 
-| 사용자 검색 범위 | 사용자 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service는 사용자 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
+| 사용자 검색 범위 | 사용자 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Google Cloud NetApp Volumes는 사용자 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
 
 
-| 그룹 DN | 그룹 검색이 LDAP 쿼리를 시작하는 DN을 정의합니다. 현재 Cloud Volumes Service에 대해 지원되지 않으므로 모든 그룹 검색이 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
+| 그룹 DN | 그룹 검색이 LDAP 쿼리를 시작하는 DN을 정의합니다. 현재 Google Cloud NetApp 볼륨에는 지원되지 않으므로 모든 그룹 검색은 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
 
 
-| 그룹 검색 범위 | 그룹 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service는 그룹 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
+| 그룹 검색 범위 | 그룹 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Google Cloud NetApp Volumes는 그룹 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
 
 
-| 넷그룹 DN입니다 | 넷그룹이 LDAP 쿼리를 검색하는 DN을 정의합니다. 현재 Cloud Volumes Service에 대해 지원되지 않으므로 모든 넷그룹 검색은 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
+| 넷그룹 DN입니다 | 넷그룹이 LDAP 쿼리를 검색하는 DN을 정의합니다. 현재 Google Cloud NetApp 볼륨에는 지원되지 않으므로 모든 넷그룹 검색은 기본 DN에서 시작됩니다. | 설정되지 않았습니다 | 아니요 
 
 
-| 넷그룹 검색 범위입니다 | 넷그룹 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service에서는 넷그룹 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
+| 넷그룹 검색 범위입니다 | 넷그룹 DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Google Cloud NetApp Volumes는 넷그룹 검색 범위 설정을 지원하지 않습니다. | 하위 트리 | 아니요 
 
 
-| LDAP를 통해 start_tls를 사용합니다 | 포트 389를 통한 인증서 기반 LDAP 연결에 Start TLS를 활용합니다. 현재 Cloud Volumes Service에서 지원되지 않습니다. | 거짓 | 아니요 
+| LDAP를 통해 start_tls를 사용합니다 | 포트 389를 통한 인증서 기반 LDAP 연결에 Start TLS를 활용합니다. 현재 Google Cloud NetApp 볼륨에서 지원되지 않습니다. | 거짓 | 아니요 
 
 
-| Netgroup-by-host 조회를 설정합니다 | 넷그룹을 확장하여 모든 구성원을 나열하는 대신 호스트 이름별로 넷그룹 조회를 설정합니다. 현재 Cloud Volumes Service에서 지원되지 않습니다. | 거짓 | 아니요 
+| Netgroup-by-host 조회를 설정합니다 | 넷그룹을 확장하여 모든 구성원을 나열하는 대신 호스트 이름별로 넷그룹 조회를 설정합니다. 현재 Google Cloud NetApp 볼륨에서 지원되지 않습니다. | 거짓 | 아니요 
 
 
-| Netgroup-by-host DN입니다 | 넷그룹별 검색이 LDAP 쿼리를 시작하는 DN을 정의합니다. Cloud Volumes Service에 대해 현재 호스트별 넷그룹이 지원되지 않습니다. | 설정되지 않았습니다 | 아니요 
+| Netgroup-by-host DN입니다 | 넷그룹별 검색이 LDAP 쿼리를 시작하는 DN을 정의합니다. 현재 Google Cloud NetApp 볼륨에 대해 netgroup-by-host가 지원되지 않습니다. | 설정되지 않았습니다 | 아니요 
 
 
-| Netgroup-by-host 검색 범위입니다 | Netgroup-by-host DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. Cloud Volumes Service에 대해 현재 호스트별 넷그룹이 지원되지 않습니다. | 하위 트리 | 아니요 
+| Netgroup-by-host 검색 범위입니다 | Netgroup-by-host DN 검색에 대한 검색 범위입니다. 값은 기본, onelevel 또는 하위 트리를 포함할 수 있습니다. 현재 Google Cloud NetApp 볼륨에 대해 netgroup-by-host가 지원되지 않습니다. | 하위 트리 | 아니요 
 
 
-| 클라이언트 세션 보안 | LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. LDAP 서명은 Active Directory에서 요청하는 경우 CVS - 성능에서 지원됩니다. CVS-SW는 LDAP 서명을 지원하지 않습니다. 두 서비스 유형 모두에서 봉인은 현재 지원되지 않습니다. | 없음 | 아니요 
+| 클라이언트 세션 보안 | LDAP에서 사용하는 세션 보안 수준(서명, 봉인 또는 없음)을 정의합니다. LDAP 서명은 NetApp 볼륨에서 지원됩니다(Active Directory에서 요청하는 경우). NetApp 볼륨 - SW는 LDAP 서명을 지원하지 않습니다. 두 서비스 유형 모두에서 봉인은 현재 지원되지 않습니다. | 없음 | 아니요 
 
 
-| LDAP 조회 추적 | 여러 LDAP 서버를 사용하는 경우 조회 추적을 통해 첫 번째 서버에서 항목을 찾을 수 없을 때 클라이언트가 목록의 다른 LDAP 서버를 참조할 수 있습니다. 현재 Cloud Volumes Service에서는 지원되지 않습니다. | 거짓 | 아니요 
+| LDAP 조회 추적 | 여러 LDAP 서버를 사용하는 경우 조회 추적을 통해 첫 번째 서버에서 항목을 찾을 수 없을 때 클라이언트가 목록의 다른 LDAP 서버를 참조할 수 있습니다. 이는 현재 Google Cloud NetApp 볼륨에서 지원되지 않습니다. | 거짓 | 아니요 
 
 
-| 그룹 구성원 필터 | LDAP 서버에서 그룹 구성원을 검색할 때 사용할 사용자 지정 LDAP 검색 필터를 제공합니다. 현재 Cloud Volumes Service에서는 지원되지 않습니다. | 설정되지 않았습니다 | 아니요 
+| 그룹 구성원 필터 | LDAP 서버에서 그룹 구성원을 검색할 때 사용할 사용자 지정 LDAP 검색 필터를 제공합니다. 현재 Google Cloud NetApp 볼륨에서는 지원되지 않습니다. | 설정되지 않았습니다 | 아니요 
 |===
 
 
 === 비대칭 이름 매핑에 LDAP를 사용합니다
 
-Cloud Volumes Service는 기본적으로 특별한 구성 없이 양방향으로 동일한 사용자 이름을 가진 Windows 사용자와 UNIX 사용자를 매핑합니다. Cloud Volumes Service가 유효한 UNIX 사용자(LDAP 사용)를 찾을 수 있는 한 1:1 이름 매핑이 발생합니다. 예를 들어, 윈도우 사용자인 ‘johnsmith’를 사용하는 경우, Cloud Volumes Service가 LDAP에서 johnsmith라는 UNIX 사용자를 찾을 수 있다면, 해당 사용자에 대한 이름 매핑이 성공하면, johnsmith로 생성된 모든 파일/폴더에 올바른 사용자 소유권이 표시됩니다. 또한 사용 중인 NAS 프로토콜에 관계없이 "johnsmith"에 영향을 주는 모든 ACL이 적용됩니다. 이것을 대칭 이름 매핑이라고 합니다.
+Google Cloud NetApp 볼륨은 기본적으로 Windows 사용자와 UNIX 사용자를 특수 구성 없이 동일한 사용자 이름을 가진 양방향으로 매핑합니다. Google Cloud NetApp 볼륨에서 유효한 UNIX 사용자(LDAP 사용)를 찾을 수 있는 한 1:1 이름 매핑이 발생합니다. 예를 들어, Windows 사용자를 사용하는 경우 `johnsmith` Google Cloud NetApp 볼륨에서 LDAP에 이름이 지정된 UNIX 사용자를 찾을 수 있으면 `johnsmith` 해당 사용자에 대한 이름 매핑이 성공하고 에서 만든 모든 파일/폴더가 `johnsmith` 올바른 사용자 소유권을 표시하며 사용 중인 NAS 프로토콜에 관계없이 영향을 주는 모든 ACL이 `johnsmith` 적용됩니다. 이것을 대칭 이름 매핑이라고 합니다.
 
-비대칭 이름 매핑은 Windows 사용자 및 UNIX 사용자 ID가 일치하지 않는 경우를 나타냅니다. 예를 들어, 윈도우 사용자인 주스미스(jsmith)가 유닉스의 ID를 갖고 있다면, Cloud Volumes Service는 그 변이에 대한 정보를 얻을 수 있는 방법이 필요합니다. Cloud Volumes Service는 현재 정적 이름 매핑 규칙 생성을 지원하지 않으므로, LDAP를 사용하여 Windows 및 UNIX ID 모두의 사용자 ID를 조회하여 파일 및 폴더의 올바른 소유권과 예상되는 권한을 확인해야 합니다.
+비대칭 이름 매핑은 Windows 사용자 및 UNIX 사용자 ID가 일치하지 않는 경우를 나타냅니다. 예를 들어, Windows 사용자의 UNIX ID가 있는 `jsmith` 경우 `johnsmith` Google Cloud NetApp Volumes에서는 이러한 변경 사항을 전달할 방법이 필요합니다. Google Cloud NetApp 볼륨은 현재 정적 이름 매핑 규칙 생성을 지원하지 않으므로, 파일 및 폴더와 예상 권한을 올바르게 소유하려면 LDAP를 사용하여 Windows와 UNIX ID 모두에 대한 사용자 ID를 조회해야 합니다.
 
-기본적으로 Cloud Volumes Service는 이름 맵 데이터베이스 인스턴스의 ns-switch에 LDAP를 포함하므로 비대칭 이름에 LDAP를 사용하여 이름 매핑 기능을 제공하려면 Cloud Volumes Service의 모양을 반영하기 위해 일부 사용자/그룹 속성만 수정하면 됩니다.
+기본적으로 Google Cloud NetApp 볼륨에는 이름 맵 데이터베이스의 인스턴스의 ns-스위치에 포함되어 `LDAP` 있으므로 비대칭 이름에 LDAP를 사용하여 이름 매핑 기능을 제공하려면 Google Cloud NetApp 볼륨이 검색되는 항목을 반영하도록 사용자/그룹 특성 중 일부만 수정하면 됩니다.
 
 다음 표에서는 비대칭 이름 매핑 기능을 위해 LDAP에 채워야 하는 특성을 보여 줍니다. 대부분의 경우 Active Directory는 이미 이 작업을 수행하도록 구성되어 있습니다.
 
 |===
-| Cloud Volumes Service 특성입니다 | 기능 | Cloud Volumes Service에서 이름 매핑에 사용하는 값입니다 
+| Google Cloud NetApp 볼륨 특성 | 기능 | Google Cloud NetApp 볼륨에서 이름 매핑에 사용되는 값입니다 
 
 
 | Windows에서 UNIX로의 객체 클래스 | 사용 중인 개체의 형식을 지정합니다. (즉, 사용자, 그룹, posixAccount 등) | 사용자를 포함해야 합니다(필요한 경우 다른 값을 여러 개 포함할 수 있음). 
 
 
-| Windows에서 UNIX로의 속성 | 그러면 생성 시 Windows 사용자 이름이 정의됩니다. Cloud Volumes Service는 Windows에서 UNIX로의 조회에 이 기능을 사용합니다. | 여기에서 변경할 필요가 없습니다. sAMAccountName은 Windows 로그인 이름과 동일합니다. 
+| Windows에서 UNIX로의 속성 | 그러면 생성 시 Windows 사용자 이름이 정의됩니다. Google Cloud NetApp 볼륨은 Windows to UNIX 조회에 이 정보를 사용합니다. | 여기에서 변경할 필요가 없습니다. sAMAccountName은 Windows 로그인 이름과 동일합니다. 
 
 
 | UID | UNIX 사용자 이름을 정의합니다. | 원하는 UNIX 사용자 이름입니다. 
 |===
-Cloud Volumes Service는 현재 LDAP 조회에서 도메인 접두사를 사용하지 않으므로 LDAP 이름 맵 조회에서 여러 도메인 LDAP 환경이 제대로 작동하지 않습니다.
+Google Cloud NetApp 볼륨은 현재 LDAP 조회에서 도메인 접두사를 사용하지 않으므로 여러 도메인 LDAP 환경이 LDAP 이름 맵 조회에서 제대로 작동하지 않습니다.
 
 다음 예에서는 Windows 이름 "비대칭", UNIX 이름 "UNIX-user"를 가진 사용자와 SMB 및 NFS에서 파일을 쓸 때 나타나는 동작을 보여 줍니다.
 
@@ -305,31 +305,31 @@ TEXT
 
 Windows Active Directory 도메인 컨트롤러의 취약점으로 인해 https://msrc.microsoft.com/update-guide/vulnerability/ADV190023["Microsoft 보안 권고 ADV190023"^] DC에서 LDAP 바인드를 허용하는 방법을 변경합니다.
 
-Cloud Volumes Service에 미치는 영향은 모든 LDAP 클라이언트와 동일합니다. Cloud Volumes Service는 현재 채널 바인딩을 지원하지 않습니다. Cloud Volumes Service는 협상을 통해 기본적으로 LDAP 서명을 지원하므로 LDAP 채널 바인딩은 문제가 되지 않습니다. 채널 바인딩이 설정된 LDAP에 바인딩하는 데 문제가 있는 경우 ADV190023의 개선 단계를 수행하여 Cloud Volumes Service에서 LDAP 바인딩이 성공하도록 허용합니다.
+Google Cloud NetApp 볼륨에 대한 영향은 모든 LDAP 클라이언트와 동일합니다. Google Cloud NetApp Volumes는 현재 채널 바인딩을 지원하지 않습니다. Google Cloud NetApp 볼륨은 협상을 통해 기본적으로 LDAP 서명을 지원하므로 LDAP 채널 바인딩은 문제가 되지 않습니다. 채널 바인딩이 활성화된 상태에서 LDAP에 바인딩하는 데 문제가 있는 경우 ADV190023의 해결 단계를 따라 Google Cloud NetApp 볼륨의 LDAP 바인딩이 성공할 수 있도록 하십시오.
 
 
 
 == DNS
 
-Active Directory와 Kerberos 모두 호스트 이름 대 IP/IP 대 호스트 이름 확인에 대한 DNS에 대한 종속성을 가집니다. DNS를 열려면 포트 53이 열려 있어야 합니다. Cloud Volumes Service는 DNS 레코드를 수정하지 않으며 현재 의 사용을 지원하지 않습니다 https://support.google.com/domains/answer/6147083?hl=en["다이나믹 DNS"^] 네트워크 인터페이스.
+Active Directory와 Kerberos 모두 호스트 이름 대 IP/IP 대 호스트 이름 확인에 대한 DNS에 대한 종속성을 가집니다. DNS를 열려면 포트 53이 열려 있어야 합니다. Google Cloud NetApp 볼륨은 DNS 레코드를 수정하지 않으며 현재 네트워크 인터페이스에서 의 사용을 지원하지 않습니다. https://support.google.com/domains/answer/6147083?hl=en["다이나믹 DNS"^]
 
 DNS 레코드를 업데이트할 수 있는 서버를 제한하도록 Active Directory DNS를 구성할 수 있습니다. 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/learn/modules/secure-windows-server-domain-name-system/["Windows DNS 보안"^].
 
-Google 프로젝트 내의 리소스는 기본적으로 Active Directory DNS와 연결되지 않은 Google Cloud DNS를 사용합니다. 클라우드 DNS를 사용하는 클라이언트는 Cloud Volumes Service에서 반환하는 UNC 경로를 확인할 수 없습니다. Active Directory 도메인에 참가한 Windows 클라이언트는 Active Directory DNS를 사용하도록 구성되어 있으며 이러한 UNC 경로를 확인할 수 있습니다.
+Google 프로젝트 내의 리소스는 기본적으로 Active Directory DNS와 연결되지 않은 Google Cloud DNS를 사용합니다. Cloud DNS를 사용하는 클라이언트는 Google Cloud NetApp 볼륨에서 반환하는 UNC 경로를 확인할 수 없습니다. Active Directory 도메인에 참가한 Windows 클라이언트는 Active Directory DNS를 사용하도록 구성되어 있으며 이러한 UNC 경로를 확인할 수 있습니다.
 
 Active Directory에 클라이언트를 연결하려면 Active Directory DNS를 사용하도록 해당 DNS 구성을 구성해야 합니다. 필요에 따라 Active Directory DNS로 요청을 전달하도록 Cloud DNS를 구성할 수 있습니다. 을 참조하십시오 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/faqs-netapp["클라이언트가 SMB NetBIOS 이름을 확인할 수 없는 이유는 무엇입니까?"^]를 참조하십시오.
 
 
-NOTE: Cloud Volumes Service는 현재 DNSSEC를 지원하지 않으며 DNS 쿼리는 일반 텍스트로 수행됩니다.
+NOTE: Google Cloud NetApp Volumes는 현재 DNSSEC를 지원하지 않으며 DNS 쿼리는 일반 텍스트로 수행됩니다.
 
 
 
 == 파일 액세스 감사
 
-현재 Cloud Volumes Service에서 지원되지 않습니다.
+현재 Google Cloud NetApp 볼륨에는 지원되지 않습니다.
 
 
 
 == 안티바이러스 보호
 
-클라이언트의 Cloud Volumes Service에서 NAS 공유에 대한 바이러스 백신 검사를 수행해야 합니다. 현재 Cloud Volumes Service와 통합된 기본 바이러스 백신이 없습니다.
+클라이언트의 Google Cloud NetApp Volumes에서 NAS 공유에 대한 바이러스 백신 검사를 수행해야 합니다. 현재 Google Cloud NetApp 볼륨과의 기본 바이러스 백신 통합은 제공하지 않습니다.

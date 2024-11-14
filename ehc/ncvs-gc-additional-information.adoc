@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* Cloud Volumes Service용 Google Cloud 설명서
+* Google Cloud NetApp 볼륨에 대한 Google Cloud 설명서
 +
 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/["https://cloud.google.com/architecture/partners/netapp-cloud-volumes/"^]
 
