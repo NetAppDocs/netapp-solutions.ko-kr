@@ -59,7 +59,7 @@ entries:
     url: "/data-analytics/apache-spark-solution-overview.html"
   - title: 대상
     url: "/data-analytics/apache-spark-target-audience.html"
-  - title: S "솔루션 기술"
+  - title: 솔루션 기술
     url: "/data-analytics/apache-spark-solution-technology.html"
   - title: NetApp Spark 솔루션 개요
     url: "/data-analytics/apache-spark-netapp-spark-solutions-overview.html"

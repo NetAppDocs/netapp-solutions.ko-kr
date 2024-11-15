@@ -23,9 +23,6 @@ summary: 이 검증 결과에 따라 데이터 과학자와 엔지니어는 NetA
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
 * SageMaker BlazingText를 사용한 텍스트 분류
-+
-https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/blazingtext_text_classification_dbpedia/blazingtext_text_classification_dbpedia.html["https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/blazingtext_text_classification_dbpedia/blazingtext_text_classification_dbpedia.html"^]
-
 * S3 오브젝트 스토리지를 위한 ONTAP 버전 지원
 +
 https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html["https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html"^]
