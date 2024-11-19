@@ -27,7 +27,7 @@ indexpage:
     - title: OpenShift 가상화
       url: osv/index.html
     - title: Proxmox 가상화
-      url: proxmox/proxmox-overview.html
+      url: proxmox/index.html
   - title: 클라우드 및 하이브리드 클라우드 솔루션
     links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
