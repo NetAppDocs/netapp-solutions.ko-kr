@@ -1,6 +1,7 @@
 ---
 section: proxmox
 title: Proxmox 가상화
+url: "/proxmox/index.html"
 entries:
 - title: 개요
   url: "/proxmox/proxmox-overview.html"
