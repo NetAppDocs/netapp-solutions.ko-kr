@@ -1,10 +1,9 @@
 ---
 indexpage:
   title: Proxmox 가상화를 위한 NetApp 솔루션
-  summary: 와 함께 제공되는 NetApp 가상화 솔루션은 Proxmox를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여 주는
-    일련의 전략적 및 기술 기능입니다.
-  lead: 와 함께 제공되는 NetApp 가상화 솔루션은 Proxmox를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여 주는 일련의
-    전략적 및 기술 기능입니다.
+  summary: NetApp 가상화 솔루션은 Proxmox를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여 주는 전략적 및 기술 기능
+    집합입니다.
+  lead: NetApp 가상화 솔루션은 Proxmox를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여 주는 전략적 및 기술 기능 집합입니다.
   tiles:
   - title: 해결하세요
     links:
