@@ -24,12 +24,8 @@ indexpage:
       url: "/aws-vmc.html"
     - title: 가상화 환경을 구성합니다
       url: "/aws-setup.html"
-    - title: '보충 NFS 데이터 저장소로서의 FSX ONTAP: 개요'
-      url: "/aws-native-overview.html"
-    - title: FSX ONTAP를 게스트 연결 스토리지로 사용합니다
-      url: "/aws-guest.html#fsx-ontap"
-    - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/aws-guest.html#aws-cvo"
+    - title: NetApp 스토리지 연결 옵션
+      url: "/aws-storage-options.html"
     - title: VMC용 하이브리드 멀티 클라우드 솔루션
       url: "/aws-solutions.html"
   - title: Azure 기반 NetApp(AVS)
@@ -38,12 +34,8 @@ indexpage:
       url: "/azure-avs.html"
     - title: 가상화 환경을 구성합니다
       url: "/azure-setup.html"
-    - title: '보조 NFS 데이터 저장소로서의 ANF: 개요'
-      url: "/azure-native-overview.html"
-    - title: 게스트 연결 스토리지로서의 ANF
-      url: "/azure-guest.html#anf"
-    - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/azure-guest.html#azure-cvo"
+    - title: NetApp 스토리지 연결 옵션
+      url: "/azure-storage-options.html"
     - title: AVS용 하이브리드 멀티 클라우드 솔루션
       url: "/azure-solutions.html"
   - title: Google Cloud Platform의 NetApp(GCVE)
@@ -52,12 +44,8 @@ indexpage:
       url: "/gcp-gcve.html"
     - title: 가상화 환경을 구성합니다
       url: "/gcp-setup.html"
-    - title: '보조 NFS 데이터 저장소로서의 NetApp 볼륨: 개요'
-      url: "/gcp-ncvs-datastore.html"
-    - title: CVO를 게스트 연결 스토리지로 사용
-      url: "/gcp-guest.html#gcp-cvo"
-    - title: 게스트 연결 스토리지로 사용되는 NetApp 볼륨
-      url: "/gcp-guest.html#gcnv"
+    - title: NetApp 스토리지 연결 옵션
+      url: "/gcp-storage-options.html"
     - title: GCVE용 하이브리드 멀티 클라우드 솔루션
       url: "/gcp-solutions.html"
     - title: 보안 개요 - Google Cloud의 NetApp 볼륨

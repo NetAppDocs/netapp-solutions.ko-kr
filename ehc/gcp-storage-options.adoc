@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: ehc/gcp-storage-options.html 
+keywords: gcp, gcve, gcnv, nfs, supplemental, datastore, vcenter, vmware, cvo, storage, options 
+summary: NetApp 스토리지는 게스트 연결 또는 보조 스토리지로 Google Cloud 가상화 엔진에 연결할 수 있습니다. 
+---
+= Google Cloud VMware Engine: NetApp 스토리지 사용 옵션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp 스토리지는 게스트 연결 또는 보조 스토리지로 Google Cloud 가상화 엔진에 연결할 수 있습니다.
+
+
+
+== Google Cloud NetApp 볼륨(NetApp Volumes)을 보조 NFS 데이터 저장소로 사용할 수 있습니다
+
+Google Cloud VMware Engine(GCVE) 환경에서 추가 스토리지 용량이 필요한 고객은 Google Cloud NetApp 볼륨을 활용하여 보조 NFS 데이터 저장소로 마운트할 수 있습니다. Google Cloud NetApp 볼륨에 데이터를 저장하면 고객은 지역 간 복제를 통해 디어터를 보호할 수 있습니다.
+
+자세한 내용은 를 참조하십시오 link:gcp-ncvs-datastore.html["Google Cloud NetApp 볼륨(NetApp Volumes)을 보조 NFS 데이터 저장소로 사용할 수 있습니다"]
+
+
+
+== 게스트 연결 스토리지로 NetApp CVO
+
+Cloud Volumes ONTAP, 즉 CVO는 NetApp의 ONTAP 스토리지 소프트웨어를 기반으로 하는 업계 최고의 클라우드 데이터 관리 솔루션으로, AWS(Amazon Web Services), Microsoft Azure 및 GCP(Google Cloud Platform)에서 기본적으로 제공됩니다.
+
+ONTAP의 소프트웨어 정의 버전이며 클라우드 네이티브 스토리지를 사용합니다. 따라서 클라우드와 사내에서 동일한 스토리지 소프트웨어를 사용할 수 있으므로 데이터를 관리하는 새로운 방법을 통해 IT 직원을 재교육할 필요가 없습니다.
+
+CVO를 사용하면 데이터를 에지에서 데이터 센터, 클라우드로 원활하게 이동하고 다시 가져올 수 있습니다. 또한 단일 창 관리 콘솔인 NetApp Cloud Manager를 사용하여 하이브리드 클라우드를 통합할 수 있습니다.
+
+설계상 CVO는 클라우드에서 가장 까다로운 애플리케이션도 충족할 수 있도록 최고의 성능과 고급 데이터 관리 기능을 제공합니다.
+
+자세한 내용은 를 참조하십시오 link:gcp-guest.html#gcp-cvo["게스트 연결 스토리지로 NetApp CVO"]
+
+
+
+== 게스트 연결 스토리지로 사용되는 Google Cloud NetApp 볼륨(NetApp 볼륨
+
+Google Cloud NetApp 볼륨 공유는 VMware Engine 환경에 생성된 VM에서 마운트할 수 있습니다. Google Cloud NetApp Volumes는 SMB 및 NFS 프로토콜을 지원하므로 볼륨을 Linux 클라이언트에 마운트하고 Windows 클라이언트에 매핑할 수도 있습니다. Google Cloud NetApp 볼륨을 간단한 단계로 설정할 수 있습니다.
+
+Google Cloud NetApp Volumes 및 Google Cloud VMware Engine 프라이빗 클라우드는 같은 지역에 있어야 합니다.
+
+자세한 내용은 를 참조하십시오 link:gcp-guest.html#gcnv["게스트 연결 스토리지로 사용되는 Google Cloud NetApp 볼륨(NetApp 볼륨"]
