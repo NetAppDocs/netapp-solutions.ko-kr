@@ -16,7 +16,7 @@ summary: 'Proxmox VE(Virtual Environment)의 공유 스토리지를 사용하면
 [role="lead"]
 Proxmox VE(Virtual Environment)의 공유 스토리지를 사용하면 VM 실시간 마이그레이션 시간이 단축되고, 환경 전체에서 백업 및 정합성 보장 템플릿을 위한 타겟이 향상됩니다. ONTAP 스토리지는 Proxmox VE 호스트 환경의 요구 사항은 물론 게스트 파일, 블록 및 객체 스토리지 요구 사항도 충족할 수 있습니다.
 
-Proxmox VE 호스트에는 FC, 이더넷 또는 기타 지원 인터페이스가 스위치에 케이블로 연결되어 있고 ONTAP 논리 인터페이스에 대한 통신이 있어야 합니다.
+Proxmox VE 호스트에는 FC, 이더넷 또는 기타 지원 인터페이스가 스위치에 케이블로 연결되어 있고 ONTAP 논리 인터페이스에 대한 통신이 있어야 합니다.  항상 https://mysupport.netapp.com/matrix/#welcome["상호 운용성 매트릭스 툴"]지원되는 구성을 확인하십시오.
 
 
 
@@ -142,6 +142,8 @@ SMB/CIFS 파일 공유를 사용하려면 스토리지 관리자가 수행해야
 
 NOTE: 암호는 일반 텍스트 파일에 저장되며 루트 사용자만 액세스할 수 있습니다. 을 link:https://pve.proxmox.com/pve-docs/chapter-pvesm.html#storage_cifs["Proxmox VE 설명서"]참조하십시오.
 
+.ONTAP가 있는 SMB 공유 스토리지 풀
+video::5b4ae54a-08d2-4f7d-95ec-b22d015f6035[panopto,width=360]
 .<strong> 스토리지 관리 작업 </strong>
 [%collapsible]
 ====
@@ -200,6 +202,8 @@ ONTAP는 Proxmox VE가 지원하는 모든 NFS 버전을 지원합니다. 내결
 
 ONTAP를 처음 사용하는 경우 시스템 관리자 인터페이스를 사용하여 이러한 작업을 완료함으로써 더 나은 환경을 조성할 수 있습니다.
 
+.ONTAP의 NFS nconnect 옵션
+video::f6c9aba3-b070-45d6-8048-b22e001acfd4[panopto,width=360]
 .<strong> 스토리지 관리 작업 </strong>
 [%collapsible]
 ====
@@ -248,12 +252,14 @@ image:proxmox-ontap-image12.png["NFS용 스토리지 구성 파일입니다"]
 
 == iSCSI를 사용하는 LVM
 
+.ONTAP를 사용하는 iSCSI가 있는 LVM 공유 풀
+video::d66ef67f-bcc2-4ced-848e-b22e01588e8c[panopto,width=360]
 Proxmox 호스트에서 공유 스토리지에 대해 Logical Volume Manager를 구성하려면 다음 작업에 대해 완료합니다.
 
 .<strong> 가상화 관리 작업 </strong>
 [%collapsible]
 ====
-. 각각의 이더넷 NIC에 두 개의 Linux 브리지가 구성되어 있는지 확인합니다(다른 VLAN에 이상적으로 있음).
+. 두 개의 Linux VLAN 인터페이스를 사용할 수 있는지 확인합니다.
 . 모든 Proxmox VE 호스트에 다중 경로 툴이 설치되어 있는지 확인합니다. 부팅 시 시작되는지 확인합니다.
 +
 [source, shell]
@@ -319,14 +325,16 @@ image:proxmox-ontap-image19.png["LVM iSCSI 구성"]
 ====
 
 
-=== NVMe/TCP가 있는 LVM
+== NVMe/TCP가 있는 LVM
 
+.ONTAP를 사용하는 NVMe/TCP가 있는 LVM 공유 풀
+video::80164fe4-06db-4c21-a25d-b22e0179c3d2[panopto,width=360]
 Proxmox 호스트에서 공유 스토리지에 대해 Logical Volume Manager를 구성하려면 다음 작업을 수행합니다.
 
 .<strong> 가상화 관리 작업 </strong>
 [%collapsible]
 ====
-. 각각의 이더넷 장치가 있는 두 개의 Linux 브리지가 구성되어 있는지 확인합니다(다른 VLAN에 이상적으로 있음).
+. 두 개의 Linux VLAN 인터페이스를 사용할 수 있는지 확인합니다.
 . 클러스터의 모든 Proxmox 호스트에서 다음 명령을 실행하여 호스트 이니시에이터 정보를 수집합니다.
 +
 [source, shell]
