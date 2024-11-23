@@ -26,7 +26,7 @@ VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 
 
 이 문서에서는 모든 주요 구성 요소, 온프레미스 및 클라우드 데이터 센터 측 등 다양한 VM 마이그레이션 메커니즘을 지원하는 VMware HCX를 구축 및 구성하기 위한 단계별 지침을 제공합니다.
 
-자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-getting-started/GUID-DE0AD0AE-A6A6-4769-96ED-4D200F739A68.html["HCX 구축 소개"^] 및 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-getting-started/GUID-70F9C40C-804C-4FC8-9FBD-77F9B2FA77CA.html["AWS SDDC 대상 환경에서 VMware 클라우드를 사용하여 체크리스트 B-HCX를 설치합니다"^].
+자세한 내용은 및 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/getting-started-with-vmware-hcx-4-10/install-checklist-b-hcx-with-a-vmc-sddc-instance.html["AWS SDDC 대상 환경에서 VMware 클라우드를 사용하여 체크리스트 B-HCX를 설치합니다"^] 을 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10.html["VMware HCX 사용자 가이드"^] 참조하십시오.
 
 .높은 수준의 단계
 [%collapsible]
@@ -47,13 +47,13 @@ VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 
 .필수 구성 요소
 [%collapsible]
 ====
-시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["HCX 설치 준비 중"^]. 연결을 포함하여 사전 요구 사항이 충족되면 VMC의 VMware HCX 콘솔에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. HCX가 활성화되면 vCenter 플러그인이 구축되며 관리를 위해 vCenter 콘솔을 사용하여 액세스할 수 있습니다.
+시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 을 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/preparing-for-hcx-installations.html["설치 준비 중"^]참조하십시오. 연결을 포함하여 사전 요구 사항이 충족되면 VMC의 VMware HCX 콘솔에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. HCX가 활성화되면 vCenter 플러그인이 구축되며 관리를 위해 vCenter 콘솔을 사용하여 액세스할 수 있습니다.
 
 HCX 활성화 및 배포를 진행하기 전에 다음 설치 단계를 완료해야 합니다.
 
 . 기존 VMC SDDC를 사용하거나 다음 새 SDDC를 생성합니다 link:aws-setup.html["NetApp 링크"^] 또는 이 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.getting-started/GUID-EF198D55-03E3-44D1-AC48-6E2ABA31FF02.html["VMware 링크"^].
 . 사내 vCenter 환경에서 VMC SDDC로의 네트워크 경로는 vMotion을 사용하여 VM 마이그레이션을 지원해야 합니다.
-. 필수 를 확인하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-A631101E-8564-4173-8442-1D294B731CEB.html["방화벽 규칙 및 포트"^] 온-프레미스 vCenter Server와 SDDC vCenter 간에 vMotion 트래픽이 허용됩니다.
+. 온-프레미스 vCenter Server와 SDDC vCenter 간의 vMotion 트래픽에 대해 필요한 항목이 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/preparing-for-hcx-installations/network-port-and-protocol-requirements.html["방화벽 규칙 및 포트"^] 허용되는지 확인합니다.
 . FSx ONTAP NFS 볼륨은 VMC SDDC의 보조 데이터 저장소로 마운트되어야 합니다. NFS 데이터 저장소를 적절한 클러스터에 연결하려면 이  또는 여기에 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware 링크"^] 설명된 단계를 link:aws-native-overview.html["NetApp 링크"^]따릅니다.
 
 
@@ -198,7 +198,7 @@ VMware HCX-IX(HCX Interconnect) 어플라이언스는 인터넷을 통해 보안
 NOTE: 컴퓨팅 프로파일에는 상호 연결 가상 어플라이언스를 구축하는 데 필요한 컴퓨팅, 스토리지 및 네트워크 구축 매개 변수가 포함됩니다. 또한 VMware 데이터 센터의 어떤 부분을 HCX 서비스에 액세스할 수 있는지도 지정합니다.
 
 +
-자세한 지침은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BBAC979E-8899-45AD-9E01-98A132CE146E.html["컴퓨팅 프로파일 생성"^].
+자세한 지침은 을 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/configuring-and-managing-the-hcx-interconnect/configuring-the-hcx-service-mesh/create-a-compute-profile.html["컴퓨팅 프로파일 생성"^].
 
 +
 image:fsx-hcx-image13.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
@@ -213,7 +213,7 @@ NOTE: 이 경우 두 개 이상의 IP 주소가 필요합니다. 이러한 IP �
 image:fsx-hcx-image14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 +
-자세한 지침은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-184FCA54-D0CB-4931-B0E8-A81CD6120C52.html["네트워크 프로파일 만들기"^].
+자세한 지침은 을 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/configuring-and-managing-the-hcx-interconnect/configuring-the-hcx-service-mesh/create-a-network-profile.html["네트워크 프로파일 만들기"^].
 
 +
 
@@ -254,7 +254,7 @@ image:fsx-hcx-image18.png["입력/출력 대화 상자 또는 작성된 내용�
 ====
 HCX는 사내 및 VMC SDDC와 같은 둘 이상의 서로 다른 환경 간에 양방향 마이그레이션 서비스를 제공합니다. HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 다양한 마이그레이션 기술을 사용하여 HCX 활성 사이트로 애플리케이션 워크로드를 마이그레이션할 수 있습니다.
 
-사용 가능한 HCX 마이그레이션 기술에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["VMware HCX 마이그레이션 유형"^]
+사용 가능한 HCX 마이그레이션 기술에 대한 자세한 내용은 을 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx/vmware-hcx-migration-types.html["VMware HCX 마이그레이션 유형"^]
 
 HCX-IX 어플라이언스는 Mobility Agent 서비스를 사용하여 vMotion, Cold 및 RAV(Replication Assisted vMotion) 마이그레이션을 수행합니다.
 
@@ -286,7 +286,7 @@ image:fsx-hcx-image22.png["입력/출력 대화 상자 또는 작성된 내용�
 . 유효성 검사가 완료된 후 이동을 클릭하여 마이그레이션을 시작합니다.
 +
 
-NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다. HCX vMotion의 요구 사항 및 제한 사항에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.1/hcx-user-guide/GUID-517866F6-AF06-4EFC-8FAE-DA067418D584.html["VMware HCX vMotion 및 콜드 마이그레이션 이해"^].
+NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다. HCX vMotion의 요구 사항 및 제한 사항에 대한 자세한 내용은 를 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx/understanding-vmware-hcx-vmotion-and-cold-migration.html#GUID-517866F6-AF06-4EFC-8FAE-DA067418D584-en["VMware HCX vMotion 및 콜드 마이그레이션 이해"^].
 
 . HCX > 마이그레이션 대시보드에서 vMotion의 진행 상황과 완료 상태를 모니터링할 수 있습니다.
 +
@@ -309,7 +309,7 @@ image:fsx-hcx-image24.png["입력/출력 대화 상자 또는 작성된 내용�
 image:fsx-hcx-image25.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 =====
-HCX 마이그레이션 옵션 및 HCX를 사용하여 워크로드를 온프레미스에서 VMware Cloud on AWS로 마이그레이션하는 방법에 대한 자세한 내용은 를 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-14D48C15-3D75-485B-850F-C5FCB96B5637.html["VMware HCX 사용자 가이드"^].
+HCX 마이그레이션 옵션 및 HCX를 사용하여 온프레미스에서 VMware Cloud on AWS로 워크로드를 마이그레이션하는 방법에 대한 자세한 내용은 를 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx.html["VMware HCX 사용자 가이드"^].
 
 
 NOTE: VMware HCX vMotion에는 100Mbps 이상의 처리량 기능이 필요합니다.
@@ -352,5 +352,5 @@ https://docs.aws.amazon.com/fsx/latest/ONTAPGuide["https://docs.aws.amazon.com/f
 +
 VMware HCX 사용자 가이드
 
-* https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html["https://docs.vmware.com/en/VMware-HCX/4.4/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html"^]
+* https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10.html["https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10.html"^]
 

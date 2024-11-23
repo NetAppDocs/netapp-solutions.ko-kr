@@ -31,7 +31,7 @@ Niyaz Mohamed, NetApp
 이 문서에서는 AWS 기반 VMware Cloud용 NFS 데이터 저장소로 FSx ONTAP을 프로비저닝하고 연결하는 데 필요한 단계를 안내합니다.
 
 
-NOTE: 이 솔루션은 VMware에서도 사용할 수 있습니다. 를 방문하십시오 link:https://vmc.techzone.vmware.com/resource/vmware-cloud-aws-integration-amazon-fsx-netapp-ontap-deployment-guide["VMware 클라우드 기술 영역"] 를 참조하십시오.
+NOTE: 이 솔루션은 VMware에서도 사용할 수 있습니다. 자세한 내용은 을 link:https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-D55294A3-7C40-4AD8-80AA-B33A25769CCA.html["VMware Cloud on AWS 설명서 를 참조하십시오"]참조하십시오.
 
 
 

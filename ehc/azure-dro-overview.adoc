@@ -36,7 +36,7 @@ image:azure-dro-image1.png["입력/출력 대화 상자 또는 작성된 내용�
 * 소스 클라우드와 타겟 Azure VMware 솔루션 프라이빗 클라우드 간에 ExpressRoute Global Reach를 구성해야 합니다.
 * 리소스에 액세스할 수 있는 서비스 보안 주체가 있어야 합니다.
 * 기본 AVS 사이트에서 보조 AVS 사이트로 연결되는 토폴로지는 다음과 같습니다.
-* 를 구성합니다 https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction["복제"^] 비즈니스 요구 및 데이터 변경률에 따라 각 볼륨에 대한 일정을 적절히 조정합니다.
+*  https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure["복제"^]비즈니스 요구 사항 및 데이터 변경률에 따라 각 볼륨의 일정을 적절하게 구성합니다.
 
 
 
@@ -334,7 +334,7 @@ https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replicat
 
 * Azure NetApp Files 볼륨의 교차 지역 복제
 +
-https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction%23service-level-objectives["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction#service-level-objectives"^]
+https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction#service-level-objectives["https://learn.microsoft.com/en-us/azure/azure-netapp-files/cross-region-replication-introduction#service-level-objectives"^]
 
 * https://learn.microsoft.com/en-us/azure/azure-vmware/introduction["Azure VMware 솔루션"^]
 +

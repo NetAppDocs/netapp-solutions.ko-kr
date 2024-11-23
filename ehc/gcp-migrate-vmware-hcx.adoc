@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ehc/gcp-migrate-vmware-hcx.html 
-keywords: gcp, gcve, hybrid multicloud, migrate, vmware hcx, hcx, google cloud, enterprise, hybrid, cloud, migration 
+keywords: gcp, gcve, hybrid, multicloud, migrate, vmware, hcx, google, cloud, enterprise, hybrid, cloud, migration 
 summary:  
 ---
 = VMware HCX-Quickstart Guide를 사용하여 워크로드를 Google Cloud VMware Engine의 Google Cloud NetApp Volumes 데이터 저장소로 마이그레이션합니다
@@ -68,7 +68,7 @@ NOTE: HCX Advanced가 기본 옵션이며 VMware HCX Enterprise Edition도 지�
 
 image:gcpd-hcx-image1.png["이 이미지는 이 솔루션에 사용된 고급 아키텍처를 보여 줍니다."]
 
-HCX에 대한 자세한 다이어그램은 을 참조하십시오 https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vmw-google-cloud-vmware-engine-logical-design-poster-for-workload-mobility.pdf["VMware 링크"^]
+Google에서 VMware HCX를 사용하는 방법에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/vmware-engine/docs/workloads/howto-migrate-vms-using-hcx["VMware 링크"^]
 
 ====
 
@@ -111,7 +111,7 @@ NOTE: 가상 어플라이언스의 전원을 수동으로 켭니다.
 
 
 
-단계별 지침은 를 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-47774FEA-6BDA-48E5-9D5F-ABEAD64FDDF7.html["VMware HCX 사용자 가이드"^].
+단계별 지침은 을 참조하십시오 https://cloud.google.com/vmware-engine/docs/workloads/howto-migrate-vms-using-hcx#prepare-for-hcx-manager-installation["Google HCX 문서"^].
 
 ====
 .3단계: 라이센스 키로 HCX 커넥터를 활성화합니다
@@ -230,7 +230,7 @@ image:gcpd-hcx-image14.png["vSphere Client Interconnect 페이지의 HCX 어플�
 ====
 다양한 VMware HCX 마이그레이션 기술을 사용하여 온프레미스 및 GCVE SDDC 간에 워크로드를 양방향으로 마이그레이션할 수 있습니다. VM은 HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 여러 마이그레이션 기술을 사용하여 VMware HCX 활성 엔터티로 또는 VMware에서 이동할 수 있습니다.
 
-다양한 HCX 마이그레이션 메커니즘에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["VMware HCX 마이그레이션 유형"^].
+다양한 HCX 마이그레이션 메커니즘에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/vmware-engine/docs/workloads/howto-migrate-vms-using-hcx["VMware HCX 설명서를 사용하여 VMware VM 마이그레이션"^].
 
 HCX-IX 어플라이언스는 Mobility Agent 서비스를 사용하여 vMotion, Cold 및 RAV(Replication Assisted vMotion) 마이그레이션을 수행합니다.
 
@@ -259,7 +259,7 @@ image:gcpd-hcx-image17.png["입력/출력 대화 상자 또는 작성된 내용�
 . 유효성 검사가 완료된 후 이동을 클릭하여 마이그레이션을 시작합니다.
 +
 
-NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다. HCX vMotion의 요구 사항 및 제한 사항에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-HCX/4.5/hcx-user-guide/GUID-517866F6-AF06-4EFC-8FAE-DA067418D584.html["VMware HCX vMotion 및 콜드 마이그레이션 이해"^].
+NOTE: vMotion 전송은 VM 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다. HCX vMotion의 요구 사항 및 제한 사항에 대한 자세한 내용은 를 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/migrating-virtual-machines-with-vmware-hcx/understanding-vmware-hcx-vmotion-and-cold-migration.html#GUID-517866F6-AF06-4EFC-8FAE-DA067418D584-en["VMware HCX vMotion 및 콜드 마이그레이션 이해"^].
 
 . HCX > 마이그레이션 대시보드에서 vMotion의 진행 상황과 완료 상태를 모니터링할 수 있습니다.
 +

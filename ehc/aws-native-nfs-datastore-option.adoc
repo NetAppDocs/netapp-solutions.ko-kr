@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 VMware Cloud 준비 및 AWS VPC에 연결한 후에는 원래 연결 또는 기존 기본 VPC가 아닌, 새로 지정된 VPC에 Amazon FSx ONTAP을 구축해야 합니다.
 
-시작하려면 SDDC가 상주하는 동일한 지역 및 가용 영역에 추가 VPC를 구축한 다음 Amazon FSx ONTAP을 새 VPC에 구축합니다. https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-6B20CA3B-ABCD-4939-9176-BCEA44473C2B.html["VMware Cloud에서 SDDC 그룹 구성"^] 콘솔을 사용하면 FSx ONTAP를 구축할 새로 지정된 VPC에 연결하는 데 필요한 네트워킹 구성 옵션을 사용할 수 있습니다.
+시작하려면 SDDC가 상주하는 동일한 지역 및 가용 영역에 추가 VPC를 구축한 다음 Amazon FSx ONTAP을 새 VPC에 구축합니다. https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-networking-security/GUID-C957DBA7-16F5-412B-BB72-15B49B714723.html["VMware Cloud에서 SDDC 그룹 구성"^] 콘솔을 사용하면 FSx ONTAP를 구축할 새로 지정된 VPC에 연결하는 데 필요한 네트워킹 구성 옵션을 사용할 수 있습니다.
 
 
 NOTE: AWS SDDC 기반 VMware Cloud와 동일한 가용성 영역에 FSx ONTAP을 구축합니다.
@@ -171,7 +171,7 @@ image:fsx-nfs-image13.png["입력/출력 대화 상자 또는 작성된 내용�
 .3단계: VMware Transit 접속 구성
 [%collapsible]
 ====
-. 새로 생성된 지정된 VPC를 SDDC 그룹에 연결합니다. External VPC * 탭을 선택하고 를 따릅니다 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-A3D03968-350E-4A34-A53E-C0097F5F26A9.html["그룹에 외부 VPC를 연결하는 지침"^]. 이 프로세스를 완료하는 데 10-15분 정도 걸릴 수 있습니다.
+. 새로 생성된 지정된 VPC를 SDDC 그룹에 연결합니다. External VPC * 탭을 선택하고 를 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-networking-security/GUID-A3D03968-350E-4A34-A53E-C0097F5F26A9.html["그룹에 외부 VPC를 연결하는 지침"^]따릅니다. 이 프로세스를 완료하는 데 10-15분 정도 걸릴 수 있습니다.
 +
 image:fsx-nfs-image14.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
