@@ -60,6 +60,8 @@ indexpage:
       url: https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc
   - title: 추가 리소스
     links:
+    - title: 가상 머신 데이터 수집기
+      url: "/vmdc.html"
     - title: VMware vSphere용 ONTAP 툴
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
     - title: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자(SRM

@@ -101,6 +101,8 @@ entries:
       url: "/vmware/vsphere_ontap_auto_file_nfs.html"
     - title: NFS-v4.1
       url: "/vmware/vsphere_ontap_auto_file_nfs41.html"
+  - title: VM 데이터 수집기
+    url: "/vmware/vmdc.html"
 - title: 데모 및 자습서
   entries:
   - title: 비디오
