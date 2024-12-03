@@ -20,7 +20,7 @@ VMDC(Virtual Machine Data Collector)는 VMware 환경을 위한 가볍고 간편
 
 == 개요
 
-VMDC의 주요 기능은 클러스터 구성, 네트워킹, 스토리지, 스냅샷 및 성능 데이터를 비롯하여 vSphere 환경에 상주하는 vCenter, ESXi 서버 및 가상 머신(VM)의 구성에 대한 보고입니다. 그런 다음 환경에 대해 수집된 세부 정보를 사용하여 인프라에 대한 가치 있는 통찰력을 얻을 수 있습니다. 보고 출력 표시는 다양한 섹션에 대한 탭이 있는 스프레드시트 형식의 GUI입니다. 또한 읽기 쉬운 보고서를 제공하고 문제를 식별하고 리소스 사용을 최적화하며 용량을 계획하는 데 도움을 줍니다.
+VMDC의 주요 기능은 클러스터 구성, 네트워킹, 스토리지 및 성능 데이터를 비롯하여 vSphere 환경에 상주하는 vCenter, ESXi 서버 및 가상 머신(VM)의 구성에 대해 보고하는 것입니다. 종합적인 환경 데이터가 수집되면 이를 활용하여 인프라에 대한 통찰력 있는 정보를 생성할 수 있습니다. 보고 출력 표시는 다양한 섹션에 여러 탭이 있는 스프레드시트 형식의 GUI입니다. 또한 읽기 쉬운 보고서를 제공하고 리소스 사용을 최적화하고 용량을 계획할 수 있도록 지원합니다.
 
 VMDC는 vCPU 및 RAM과 함께 VMware 코어 라이센싱의 최적화 가능성을 예측하기 위한 빠르고 즉각적인 통계를 수집하는 데 있어 매우 중요한 역할을 합니다. link:https://docs.netapp.com/us-en/data-infrastructure-insights/["NetApp 데이터 인프라 인사이트"] 따라서 AUS 및 데이터 수집기를 설치해야 하는 것은 상세한 VM 토폴로지, 주석을 사용하여 VM 그룹화 등을 이해함으로써 워크로드의 크기를 적절하게 조정하고 인프라의 미래를 대비할 수 있는 확실한 다음 단계입니다.
 
@@ -30,7 +30,7 @@ VMDC는 다운로드할 수 link:https://mysupport.netapp.com/site/tools/tool-eu
 
 == VMDC 설치 및 설정
 
-VMDC는 .NET 4.7이 설치되어 있는 경우 에서 실행되는 Windows 2019, 2022 버전에서 실행할 수 있습니다. 확인되면 에서 VMDC 패키지를 다운로드한 link:https://mysupport.netapp.com/site/tools/tool-eula/vm-data-collector["NetApp 도구 상자"]다음 패키지의 압축을 풀고 배치 파일을 실행하여 서비스를 설치 및 시작합니다.
+VMDC는 Windows 2019, 2022 버전에서 실행될 수 있습니다. VMDC 인스턴스에서 지정된 vCenter 서버로의 네트워크 연결이 필요합니다. 확인되면 에서 VMDC 패키지를 다운로드한 link:https://mysupport.netapp.com/site/tools/tool-eula/vm-data-collector["NetApp 도구 상자"]다음 패키지의 압축을 풀고 배치 파일을 실행하여 서비스를 설치 및 시작합니다.
 
 VMDC가 설치되면 설치 중에 언급된 IP 주소를 사용하여 UI에 액세스합니다. 그러면 VMDC 로그인 인터페이스가 표시되며, 여기서 vCenter Server의 IP 주소 또는 DNS 이름과 자격 증명을 입력하여 vCenter를 추가할 수 있습니다.
 
