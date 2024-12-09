@@ -40,7 +40,7 @@ image:aipod_nv_a90_netdetail.png["입력/출력 대화 상자 또는 작성된 �
 | 스위치 1 포트 37-40 | AFF-A90-01 ~ -04 | 포트 e11a 
 
 
-| 스위치 1 포트 41-44 | AFF-A90-01 ~ -04 | 포트 e8a 
+| 스위치 1 포트 41-44 | AFF-A90-01 ~ -04 | 포트 e2a 
 
 
 | 스위치 1 포트 57-64 | ISL에서 switch2로 | 포트 57-64 
@@ -61,7 +61,7 @@ image:aipod_nv_a90_netdetail.png["입력/출력 대화 상자 또는 작성된 �
 | 스위치 2 포트 37-40 | AFF-A90-01 ~ -04 | 포트 e11b 
 
 
-| 스위치 2 포트 41-44 | AFF-A90-01 ~ -04 | 포트 e8b 
+| 스위치 2 포트 41-44 | AFF-A90-01 ~ -04 | 포트 e2b 
 
 
 | 스위치 2 포트 57-64 | ISL에서 switch1로 | 포트 57-64 
@@ -100,7 +100,7 @@ SN4600 스위치를 구성하는 데 사용되는 기본 단계는 다음과 같
 . 두 스위치의 각 클라이언트 포트 및 스토리지 포트 쌍에 대해 LACP MLAG를 구성합니다
 +
 ** DGX-H100-01의 각 스위치의 포트 swp17(enp170s0f1np1 및 enp41s0f1np1), DGX-H100-02의 포트 swp18 등(bond1-16)
-** AFF-A90-01(e8a 및 e8b)용 각 스위치의 포트 swp41, AFF-A90-02용 포트 swp42 등(bond17-20)
+** AFF-A90-01(e2a 및 e2b)용 각 스위치의 포트 swp41, AFF-A90-02용 포트 swp42 등(bond17-20)
 ** NV set interface bondX bond 멤버 swpX
 ** NV set interface bondx bond MLAG id X
 
@@ -201,7 +201,7 @@ image:aipod_nv_a90_logical.png["입력/출력 대화 상자 또는 작성된 내
 . 각 컨트롤러에서 ifgrp를 구성합니다
 +
 ** NET 포트 ifgrp create-node <node>-ifgrp A1A-mode multimode_LACP-Distr-Function 포트
-** NET 포트 ifgrp add-port-node <node>-ifgrp <ifgrp>-ports <node>:e8a, <node>:e8b
+** NET 포트 ifgrp add-port-node <node>-ifgrp <ifgrp>-ports <node>:e2a, <node>:e2b
 
 
 . 각 컨트롤러의 ifgrp에서 관리 VLAN 포트를 구성합니다
@@ -245,7 +245,7 @@ image:aipod_nv_a90_logical.png["입력/출력 대화 상자 또는 작성된 내
 +
 ** RDMA 지원을 위해 SVM을 구성합니다
 +
-*** vserver modify -vserver basePOD -data-RDMA가 활성화되었습니다
+*** SVM NFS 수정 - vserver basePOD - 데이터 - RDMA가 활성화되었습니다
 
 
 ** LIF 생성

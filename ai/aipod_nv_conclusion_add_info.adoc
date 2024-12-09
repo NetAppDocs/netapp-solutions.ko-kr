@@ -32,9 +32,9 @@ summary: NVIDIA DGX 시스템 지원 NetApp AIPod - 추가 정보를 확인할 �
 +
 https://docs.netapp.com/us-en/ontap-family/["https://docs.netapp.com/us-en/ontap-family/"^]
 
-* NetApp AFF A900 스토리지 시스템 -
+* NetApp AFF A90 스토리지 시스템 -
 +
-https://www.netapp.com/data-storage/aff-a-series/aff-a900/["https://www.netapp.com/data-storage/aff-a-series/aff-a900/"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf"]
 
 * NetApp ONTAP RDMA 정보 -
 +
