@@ -110,10 +110,27 @@ NetApp 사이버 저장소의 기반은 SnapMirror과 SnapLock Compliance 이지
 ONTAP 스냅샷 복사본은 기본적으로 변경 불가능하므로 SnapLock Compliance로 지워지지 않을 수 있습니다. NetApp도 지원하지 않으므로 SnapLock 스냅샷 복사본을 삭제할 수 있습니다. 가장 좋은 질문은 NetApp 사이버 보관소가 업계의 다른 사이버 보관소보다 더 좋은 이유는 무엇일까요? 첫째, ONTAP은 지구상에서 가장 안전한 스토리지로, 하드웨어 계층 및 소프트웨어 계층 모두에서 비밀 데이터와 중요 기밀 데이터를 저장할 수 있는 CSfC 검증을 받았습니다. 자세한 내용은 을 link:https://www.netapp.com/esg/trust-center/compliance/CSfC-Program/["CSfC는 여기에서 찾을 수 있습니다"^]참조하십시오. 또한, ONTAP은 스토리지 계층에서 에어갭 분석을 통해 사이버 소산 시스템이 복제를 제어하여 사이버 소산 네트워크 내에 틈새를 만들 수 있습니다.
 
 ====
-.사이버 소산의 소스 볼륨이 ONTAP Fabric Pool 지원 볼륨(계층화된 볼륨을 ONTAP S3 또는 StorageGRID로)이 될 수 있습니까?
+.사이버 볼트의 볼륨에서 ONTAP Fabric Pool을 사용할 수 있습니까?
 [%collapsible%open]
 ====
-아니요. 사용된 정책에 관계없이 Fabric Pool 소스 볼륨을 SnapLock Compliance 대상에 복제할 수 없습니다.
+아니요. 사이버 소산 볼륨(SnapLock Compliance SnapMirror 대상)은 정책과 관계없이 Fabric Pool을 사용하여 계층화할 수 없습니다.
+
+image:ontap-cyber-vault-fabric-pool-configurations.png["Cyber Vault Fabric Pool 지원 구성"]
+
+
+NOTE: Fabric pool * 을 사이버 볼트와 함께 사용할 수 없는 * 시나리오가 여러 개 있습니다.
+
+. Fabric Pool 콜드 계층 * 은 사이버 소산 클러스터를 사용할 수 없습니다 *. S3 프로토콜을 활성화하면 사이버 소산 참조 아키텍처의 보안 특성이 무효화되기 때문입니다. 또한 패브릭 풀에 사용되는 S3 버킷은 보호되지 않습니다.
+. 데이터가 볼륨에 잠겨 있기 때문에 사이버 저장소의 SnapLock Compliance 볼륨을 S3 버킷으로 계층화할 수 없음 *.
+
+
+image:ontap-cyber-vault-fabric-pool-configurations-p-s-cv.png["다중 구간 관계를 위한 Cyber Vault Fabric Pool 지원 구성"]
+
+====
+.ONTAP S3 웜은 사이버 보관소에서 사용할 수 있습니까?
+[%collapsible%open]
+====
+아니요. S3는 참조 아키텍처의 보안 특성을 무효화하는 데이터 액세스 프로토콜입니다.
 
 ====
 .NetApp 사이버 볼트는 ONTAP 개인 정보 또는 프로필에서 실행됩니까?
