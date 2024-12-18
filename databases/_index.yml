@@ -22,6 +22,8 @@ indexpage:
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
   - title: Azure/ANF를 위한 Oracle
     links:
+    - title: Azure NetApp Files를 통한 Oracle Active Data Guard 비용 절감
+      url: "/azure_ora_anf_data_guard.html"
     - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
       url: "/azure_ora_anf_inc_merge.html"
     - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축

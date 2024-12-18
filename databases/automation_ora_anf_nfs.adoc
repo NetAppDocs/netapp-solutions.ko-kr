@@ -150,7 +150,7 @@ image:automation_ora_anf_nfs_archit.png["이 이미지는 iSCSI 및 ASM이 포�
 . Azure 클라우드 포털에서 Azure Linux VM을 Oracle DB 서버로 구축합니다. Oracle 데이터베이스용 Azure NetApp Files 용량 풀 및 데이터베이스 볼륨을 생성합니다. DB 서버에 대한 azureuser에 대한 VM SSH 개인/공개 키 인증을 활성화합니다. 환경 설정에 대한 자세한 내용은 이전 섹션의 아키텍처 다이어그램을 참조하십시오. 참조됩니다 link:azure_ora_nfile_procedures.html["Azure VM 및 Azure NetApp Files에 대한 단계별 Oracle 구축 절차"^] 을 참조하십시오.
 +
 
-NOTE: 로컬 디스크 이중화를 통해 구축된 Azure VM의 경우 Oracle 설치 파일을 준비하고 OS 스왑 파일을 추가할 수 있는 충분한 공간을 확보하기 위해 VM 루트 디스크에 128G 이상을 할당해야 합니다. /tmplv 및 /rootlv OS 파티션을 적절하게 확장합니다. 데이터베이스 볼륨 이름이 vmName-u01, vmName-u02 및 vmName-u03 규칙을 따르는지 확인합니다.
+NOTE: 로컬 디스크 이중화를 통해 구축된 Azure VM의 경우 Oracle 설치 파일을 준비하고 OS 스왑 파일을 추가할 수 있는 충분한 공간을 확보하기 위해 VM 루트 디스크에 128G 이상을 할당해야 합니다. /tmplv 및 /rootlv OS 파티션을 적절하게 확장합니다. 1G 미만이면 rootvg-homelv에 1G의 여유 공간을 추가합니다. 데이터베이스 볼륨 이름이 vmName-u01, vmName-u02 및 vmName-u03 규칙을 따르는지 확인합니다.
 
 +
 [source, cli]
@@ -161,6 +161,11 @@ sudo lvresize -r -L +20G /dev/mapper/rootvg-rootlv
 [source, cli]
 ----
 sudo lvresize -r -L +10G /dev/mapper/rootvg-tmplv
+----
++
+[source, cli]
+----
+sudo lvresize -r -L +1G /dev/mapper/rootvg-homelv
 ----
 . Azure 클라우드 포털에서 최신 버전으로 NetApp SnapCenter UI 툴을 실행할 Windows 서버를 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^]
 . 최신 버전의 Ansible 및 Git가 설치된 Ansible 컨트롤러 노드로 Linux VM을 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오. link:../automation/getting-started.html["NetApp 솔루션 자동화 시작하기"^] 섹션 -
