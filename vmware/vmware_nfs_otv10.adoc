@@ -56,7 +56,7 @@ NetApp은 NFS에 대한 이중 네트워크 설계를 추천하여 스토리지 
 
 ONTAP를 VMware vSphere와 함께 사용하는 방법에 대한 네트워크 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-network.html#nfs["네트워크 구성 - NFS"] 섹션을 NetApp 참조하십시오.
 
-포괄적인 ONTAP 도구 10 리소스를 찾을 수 https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/["VMware vSphere용 ONTAP 툴 설명서 리소스"] 있습니다.
+포괄적인 ONTAP 도구 10 리소스를 찾을 수 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/index.html["VMware vSphere용 ONTAP 툴 설명서 리소스"] 있습니다.
 
 
 
@@ -439,6 +439,6 @@ image:vmware-nfs-otv10-image32.png["최근 작업 창"]
 
 == 추가 정보
 
-VMware vSphere 10용 ONTAP 툴 리소스의 전체 목록은 을 참조하십시오 https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/["VMware vSphere용 ONTAP 툴 설명서 리소스"].
+VMware vSphere 10용 ONTAP 툴 리소스의 전체 목록은 을 참조하십시오 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/index.html["VMware vSphere용 ONTAP 툴 설명서 리소스"].
 
 ONTAP 스토리지 시스템 구성에 대한 자세한 link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/["ONTAP 10 설명서"]내용은 센터를 참조하십시오.

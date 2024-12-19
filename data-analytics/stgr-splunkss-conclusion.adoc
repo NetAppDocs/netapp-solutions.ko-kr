@@ -26,7 +26,7 @@ Splunk SmartStore와 NetApp StorageGRID의 결합을 통해 조직은 확장 가
 
 * NetApp StorageGRID 문서 리소스
 +
-https://www.netapp.com/data-storage/storagegrid/documentation/["https://www.netapp.com/data-storage/storagegrid/documentation/"^]
+https://docs.netapp.com/us-en/storagegrid-family/["https://docs.netapp.com/us-en/storagegrid-family/"^]
 
 * NetApp 제품 설명서
 +
