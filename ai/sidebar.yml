@@ -29,19 +29,59 @@ entries:
     url: "/ai/tr-4859.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
-  - title: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
-    pdf-filename: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
+  - title: 오픈 소스 MLOps 및 NetApp
+    pdf-filename: 오픈 소스 MLOps 및 NetApp
     entries:
-    - title: 개요
-      url: "/ai/mlops_fsxn_intro.html"
-    - title: 1부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)를 프라이빗 S3 버킷으로 AWS SageMaker에
-        통합
-      url: "/ai/mlops_fsxn_s3_integration.html"
-    - title: 2부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)을 SageMaker에서 모델 훈련을 위한 데이터
-        소스로 활용
-      url: "/ai/mlops_fsxn_sagemaker_integration_training.html"
-    - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
-      url: "/ai/mlops_fsxn_cictcd.html"
+    - title: 소개
+      url: "/ai/aicp_introduction.html"
+    - title: 기술 개요
+      url: "/ai/aicp_concepts_and_components.html"
+    - title: 있습니다
+      url: "/ai/aicp_hardware_and_software_requirements.html"
+    - title: NetApp Trident 구성
+      entries:
+      - title: NetApp AIPod 구축을 위한 Trident 백엔드의 예
+        url: "/ai/aicp_example_trident_backends_for_ontap_ai_deployments.html"
+      - title: NetApp AIPod 구축을 위한 Kubernetes StorageClasses 예
+        url: "/ai/aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html"
+    - title: 아파치 기류
+      entries:
+      - title: Apache Airflow Deployment
+        url: "/ai/aicp_apache_airflow_deployment.html"
+      - title: NetApp DataOps 툴킷을 공기 흐름과 함께 사용하십시오
+        url: "/ai/aicp_example_apache_airflow_workflows_overview.html"
+    - title: 주피터허브
+      entries:
+      - title: JupyterHub 배포
+        url: "/ai/aicp_jupyterhub_deployment.html"
+      - title: JupyterHub와 함께 NetApp DataOps 툴킷을 사용할 수 있습니다
+        url: "/ai/aicp_example_jupyterhub_workflows_overview.html"
+    - title: MLflow(최소
+      entries:
+      - title: MLflow 전개
+        url: "/ai/aicp_mlflow_deployment.html"
+      - title: NetApp 및 MLflow를 통한 데이터 세트 대 모델 추적성
+        url: "/ai/aicp_example_mlflow_traceability.html"
+    - title: Kubeflow
+      entries:
+      - title: Kubeflow 구축
+        url: "/ai/aicp_kubeflow_deployment_overview.html"
+      - title: Kubeflow 작업 및 작업 예
+        entries:
+        - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
+          url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
+        - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
+          url: "/ai/aicp_example_notebooks_and_pipelines.html"
+        - title: 워크플로 예 - 이미지 인식 모델 교육
+          url: "/ai/aicp_kubeflow_train_image_recognition.html"
+    - title: Trident 작업의 예
+      url: "/ai/aicp_example_trident_operations_overview.html"
+    - title: AIPod 구축을 위한 고성능 작업의 예
+      entries:
+      - title: 단일 노드 AI 워크로드 실행
+        url: "/ai/aicp_execute_a_single-node_ai_workload.html"
+      - title: 동기식 분산 AI 워크로드 실행
+        url: "/ai/aicp_execute_a_synchronous_distributed_ai_workload.html"
   - title: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
     pdf-filename: Domino Data Lab 및 NetApp의 하이브리드 멀티 클라우드 MLOps
     entries:
@@ -80,61 +120,21 @@ entries:
         url: "/ai/nvaie_ngc_tensorflow.html"
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/nvaie_additional_information.html"
+  - title: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
+    pdf-filename: MLOps용 Amazon FSx for NetApp ONTAP(FSx ONTAP
+    entries:
+    - title: 개요
+      url: "/ai/mlops_fsxn_intro.html"
+    - title: 1부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)를 프라이빗 S3 버킷으로 AWS SageMaker에
+        통합
+      url: "/ai/mlops_fsxn_s3_integration.html"
+    - title: 2부 - Amazon FSx for NetApp ONTAP(FSx ONTAP)을 SageMaker에서 모델 훈련을 위한 데이터
+        소스로 활용
+      url: "/ai/mlops_fsxn_sagemaker_integration_training.html"
+    - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
+      url: "/ai/mlops_fsxn_cictcd.html"
   - title: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
     url: "/ai/tr-4851.html"
-  - title: 오픈 소스 MLOps 및 NetApp
-    pdf-filename: 오픈 소스 MLOps 및 NetApp
-    entries:
-    - title: 소개
-      url: "/ai/aicp_introduction.html"
-    - title: 기술 개요
-      url: "/ai/aicp_concepts_and_components.html"
-    - title: 있습니다
-      url: "/ai/aicp_hardware_and_software_requirements.html"
-    - title: NetApp Trident 구성
-      entries:
-      - title: NetApp AIPod 구축을 위한 Trident 백엔드의 예
-        url: "/ai/aicp_example_trident_backends_for_ontap_ai_deployments.html"
-      - title: NetApp AIPod 구축을 위한 Kubernetes StorageClasses 예
-        url: "/ai/aicp_example_kubernetes_storageclasses_for_ontap_ai_deployments.html"
-    - title: 아파치 기류
-      entries:
-      - title: Apache Airflow Deployment
-        url: "/ai/aicp_apache_airflow_deployment.html"
-      - title: NetApp DataOps 툴킷을 공기 흐름과 함께 사용하십시오
-        url: "/ai/aicp_example_apache_airflow_workflows_overview.html"
-    - title: 주피터허브
-      entries:
-      - title: JupyterHub 배포
-        url: "/ai/aicp_jupyterhub_deployment.html"
-      - title: JupyterHub와 함께 NetApp DataOps 툴킷을 사용할 수 있습니다
-        url: "/ai/aicp_example_jupyterhub_workflows_overview.html"
-    - title: MLflow(최소
-      entries:
-      - title: MLflow 전개
-        url: "/ai/aicp_mlflow_deployment.html"
-      - title: NetApp 및 MLflow를 통한 데이터 세트 대 모델 추적성
-        url: "/ai/aicp_example_mlflow_workflows_overview.html"
-    - title: Kubeflow
-      entries:
-      - title: Kubeflow 구축
-        url: "/ai/aicp_kubeflow_deployment_overview.html"
-    - title: Kubeflow 작업 및 작업 예
-      entries:
-      - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
-        url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
-      - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
-        url: "/ai/aicp_example_notebooks_and_pipelines.html"
-      - title: 워크플로 예 - 이미지 인식 모델 교육
-        url: "/ai/aicp_kubeflow_train_image_recognition.html"
-    - title: Trident 작업의 예
-      url: "/ai/aicp_example_trident_operations_overview.html"
-    - title: AIPod 구축을 위한 고성능 작업의 예
-      entries:
-      - title: 단일 노드 AI 워크로드 실행
-        url: "/ai/aicp_execute_a_single-node_ai_workload.html"
-      - title: 동기식 분산 AI 워크로드 실행
-        url: "/ai/aicp_execute_a_synchronous_distributed_ai_workload.html"
   - title: Iguazio를 사용한 MLRun 파이프라인
     pdf-filename: Iguazio를 사용한 MLRun 파이프라인
     entries:

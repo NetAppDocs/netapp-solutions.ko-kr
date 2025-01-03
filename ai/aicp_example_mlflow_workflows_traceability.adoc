@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_example_mlflow_traceability.html 
+keywords: AI, control plane, MLOps, MLflow 
+summary: 오픈 소스 MLOps with NetApp - NetApp 및 MLflow를 통한 데이터 세트-모델 추적성 
+---
+= NetApp 및 MLflow를 통한 데이터 세트 대 모델 추적성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+은 https://github.com/NetApp/netapp-dataops-toolkit/tree/main/netapp_dataops_k8s["Kubernetes용 NetApp DataOps 툴킷"^] MLflow의 실험 추적 기능과 함께 데이터 세트 대 모델 또는 작업 공간 대 모델 추적 기능을 구현할 수 있습니다.
+
+데이터 세트-모델 또는 작업 공간-모델 추적 기능을 구현하려면 다음 코드 조각과 같이 교육 실행의 일부로 DataOps Toolkit을 사용하여 데이터 세트 또는 작업 공간 볼륨의 스냅샷을 생성하기만 하면 됩니다. 이 코드는 데이터 볼륨 이름 및 스냅샷 이름을 MLflow Experiment Tracking Server에 로깅하는 특정 교육 실행과 관련된 태그로 저장합니다.
+
+[source]
+----
+...
+from netapp_dataops.k8s import create_volume_snapshot
+
+with mlflow.start_run() :
+    ...
+
+    namespace = "my_namespace" # Kubernetes namespace in which dataset volume PVC resides
+    dataset_volume_name = "project1" # Name of PVC corresponding to dataset volume
+    snapshot_name = "run1" # Name to assign to your new snapshot
+
+    # Create snapshot
+    create_volume_snapshot(
+        namespace=namespace,
+        pvc_name=dataset_volume_name,
+        snapshot_name=snapshot_name,
+        printOutput=True
+    )
+
+    # Log data volume name and snapshot name as "tags"
+    # associated with this training run in mlflow.
+    mlflow.set_tag("data_volume_name", dataset_volume_name)
+    mlflow.set_tag("snapshot_name", snapshot_name)
+
+    ...
+----
