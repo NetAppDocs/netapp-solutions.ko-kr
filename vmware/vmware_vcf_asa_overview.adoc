@@ -16,9 +16,9 @@ summary:
 [role="lead"]
 VCF(VMware Cloud Foundation)는 하이브리드 클라우드 환경에서 엔터프라이즈 애플리케이션을 실행할 수 있는 완전한 소프트웨어 정의 인프라 스택을 제공하는 통합 소프트웨어 정의 데이터 센터(SDDC) 플랫폼입니다. 컴퓨팅, 스토리지, 네트워킹 및 관리 기능을 통합 플랫폼에 결합하여 프라이빗 및 퍼블릭 클라우드 전반에서 일관된 운영 경험을 제공합니다.
 
-저자: 조시 파월
+저자: 조쉬 파월, 수레시 토프페이입니다
 
-이 문서에서는 NetApp All-Flash SAN 어레이를 사용하여 VMware Cloud Foundation에서 사용할 수 있는 스토리지 옵션에 대한 정보를 제공합니다. 지원되는 스토리지 옵션은 iSCSI 데이터 저장소를 관리 도메인의 보조 스토리지로, VVol(iSCSI) 및 NVMe/TCP 데이터 저장소를 워크로드 도메인의 보조 데이터 저장소로 구축하는 특정 지침에 대해 설명합니다. VMware vSphere용 SnapCenter를 사용하는 VM 및 데이터 저장소의 데이터 보호에 대해서도 설명합니다.
+이 문서에서는 NetApp All-Flash SAN 어레이를 사용하여 VMware Cloud Foundation에서 사용할 수 있는 스토리지 옵션에 대한 정보를 제공합니다. 지원되는 스토리지 옵션은 VMFS 데이터 저장소(FC/iSCSI)를 관리 및 워크로드 도메인을 위한 주 저장소 및 보조 저장소(FC/iSCSI/NVMe-oF/VVol)로 구축하는 방법에 대한 구체적인 지침에서 다룹니다. VMware vSphere용 SnapCenter를 사용하는 VM 및 데이터 저장소의 데이터 보호에 대해서도 설명합니다.
 
 
 
@@ -71,16 +71,50 @@ VCF 아키텍처 및 계획에 대한 자세한 내용은 을 참조하십시오
 
 ==== VCF 스토리지 옵션
 
-VMware는 VCF에 대한 스토리지 옵션을 * principal * 및 * supplementary * 스토리지로 나눕니다. VCF 관리 도메인은 vSAN을 기본 스토리지로 사용해야 합니다. 하지만 관리 도메인을 위한 다양한 보조 스토리지 옵션과 VI 워크로드 도메인에 사용할 수 있는 주요 스토리지 및 보조 스토리지 옵션이 있습니다.
+VMware는 VCF에 대한 스토리지 옵션을 * principal * 및 * supplementary * 스토리지로 나눕니다. ONTAP 스토리지는 VCF 5.2부터 관리 및 워크로드 도메인을 위한 주 스토리지와 보조 스토리지로 사용할 수 있습니다. VCF 5.2부터는 기존 vSphere 환경을 VCF 관리 도메인으로 변환하거나 워크로드 도메인으로 기존 VCF 환경으로 가져올 수 있습니다.
 
 image:vmware-vcf-aff-image01.png["VCF 스토리지 옵션"]
 
-* 워크로드 도메인의 기본 저장소 *
-주 스토리지란 SDDC Manager 내의 설정 프로세스 중에 VI 워크로드 도메인에 직접 연결할 수 있는 모든 유형의 스토리지를 말합니다. 주 스토리지는 클러스터 생성 오케스트레이션의 일부로 SDDC 관리자를 통해 구축되며 워크로드 도메인에 대해 구성된 첫 번째 데이터 저장소입니다. 파이버 채널의 vSAN, VVOL(VMFS), NFS 및 VMFS가 포함됩니다.
+* 관리 및 워크로드 도메인을 위한 기본 스토리지 * 기본 스토리지는 도메인 설정 프로세스의 일부로 배포하거나 가져올 수 있는 모든 유형의 스토리지를 의미합니다. ONTAP 스토리지를 관리 도메인의 주요 스토리지로 사용하려면 기존 vSphere 환경에서 변환해야 합니다. FC 또는 NFS v3 데이터 저장소의 VMFS가 지원됩니다.
+
+[cols="20% 20% 20% 20% 20%"]
+|===
+| 스토리지 유형 | 관리 도메인 - 기본 클러스터입니다 | 관리 도메인 - 추가 클러스터 | VI 워크로드 도메인 - 기본 클러스터 | VI 워크로드 도메인 - 추가 클러스터 
+
+
+| FC의 VMFS | * 가져오기 도구 * | * SDDC API * | 예 | 예 
+
+
+| iSCSI의 VMFS | 해당 없음 | 해당 없음 | 해당 없음 | 해당 없음 
+
+
+| VVOL, FC 포함 | 해당 없음 | 해당 없음 | 아니요 | 예 
+
+
+| VVOL은 iSCSI를 지원합니다 | 해당 없음 | 해당 없음 | 아니요 | 예 
+|===
+* NA - VCF에서 지원되지 않습니다.
+
 
 * 관리 및 워크로드 도메인을 위한 추가 스토리지 *
 보조 스토리지는 클러스터가 생성된 후 언제든지 관리 또는 워크로드 도메인에 추가할 수 있는 스토리지 유형입니다. 보조 스토리지는 NetApp ASA 스토리지에서 지원되는 가장 광범위한 스토리지 옵션을 나타냅니다. 대부분의 스토리지 프로토콜 유형에 대해 VMware vSphere용 ONTAP 툴을 사용하여 보충 스토리지를 구축할 수 있습니다.
 
+[cols="25% 25% 25% 25%"]
+|===
+| 스토리지 유형 | 관리 도메인 - 기본 클러스터입니다 | 관리 도메인 - 추가 클러스터 | VI 워크로드 도메인 
+
+
+| FC의 VMFS | 예 | 예 | 예 
+
+
+| iSCSI의 VMFS | 예 | 예 | 예 
+
+
+| VVOL, FC 포함 | 예 | 예 | 예 
+
+
+| VVOL은 iSCSI를 지원합니다 | 예 | 예 | 예 
+|===
 VMware Cloud Foundation에 대한 추가 설명서 리소스:
 * link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"]
 * link:https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/vcf-design/GUID-2156EC66-BBBB-4197-91AD-660315385D2E.html["VMware Cloud Foundation에 지원되는 스토리지 유형"]
@@ -194,12 +228,14 @@ BlueXP를 이용하는 3-2-1 백업 전략에 대한 자세한 내용은 를 참
 
 == 솔루션 개요
 
-이 설명서에 나와 있는 시나리오에서는 ONTAP 스토리지 시스템을 관리 및 워크로드 도메인의 보조 스토리지로 사용하는 방법을 보여 줍니다. 또한 VMware vSphere용 SnapCenter 플러그인은 VM 및 데이터 저장소를 보호하는 데 사용됩니다.
+이 설명서에 나와 있는 시나리오에서는 ONTAP 스토리지 시스템을 관리 및 워크로드 도메인을 위한 주요/보조 스토리지로 사용하는 방법을 보여 줍니다. 또한 VMware vSphere용 SnapCenter 플러그인은 VM 및 데이터 저장소를 보호하는 데 사용됩니다.
 
 이 설명서에서 다루는 시나리오:
 
 * * ONTAP 도구를 사용하여 VCF 관리 도메인에 iSCSI 데이터 저장소를 구축합니다 *. 을 클릭합니다 link:vmware_vcf_asa_supp_mgmt_iscsi.html["* 여기 *"] 배포 단계를 참조하십시오.
 * * ONTAP 도구를 사용하여 VVol(iSCSI) 데이터 저장소를 VI 워크로드 도메인에 배포합니다 *. 을 클릭합니다 link:vmware_vcf_asa_supp_wkld_vvols.html["* 여기 *"] 배포 단계를 참조하십시오.
 * * VI 워크로드 도메인에서 사용할 TCP 데이터 저장소를 통한 NVMe 구성 *. 을 클릭합니다 link:vmware_vcf_asa_supp_wkld_nvme.html["* 여기 *"] 배포 단계를 참조하십시오.
-* * VMware vSphere용 SnapCenter 플러그인을 배포하고 사용하여 VI 워크로드 도메인에서 VM을 보호하고 복구합니다. * 을 클릭합니다 link:vmware_vcf_asa_scv_wkld.html["* 여기 *"] 배포 단계를 참조하십시오.
+* * VMware vSphere용 SnapCenter 플러그인을 구축하여 VI 워크로드 도메인에서 VM을 보호하고 복구합니다. * 구축 단계를 보려면 클릭하십시오.link:vmware_vcf_asa_scv_wkld.html["* 여기 *"]
+* * 관리 도메인의 VMFS 데이터 저장소와 함께 확장 클러스터 사용 * 구축 단계를 보려면 클릭하십시오.link:vmware_vcf_asa_mgmt_stretchcluster.html["* 여기 *"]
+* * VI 워크로드 도메인의 VMFS 데이터 저장소와 함께 확장 클러스터 사용 * 구축 단계를 보려면 클릭하십시오.link:vmware_vcf_asa_wkld_stretchcluster.html["* 여기 *"]
 
