@@ -14,7 +14,10 @@ summary: 'VMDC(Virtual Machine Data Collector)는 VMware 환경을 위한 가볍
 
 
 [role="lead"]
-VMDC(Virtual Machine Data Collector)는 VMware 환경을 위한 가볍고 간편한 무료 GUI 기반 툴킷으로, 사용자가 가상 머신(VM), 호스트, 스토리지 및 네트워크에 대한 자세한 인벤토리 정보를 수집할 수 있습니다.
+VMDC(Virtual Machine Data Collector)는 VMware 환경을 위한 가볍고 간편한 무료 GUI 기반 툴킷으로, 사용자가 VM(가상 머신), 호스트, 스토리지 및 네트워크에 대한 자세한 인벤토리 정보를 수집할 수 있습니다.
+
+
+NOTE: * 이것은 VMDC의 미리보기 릴리스입니다. *
 
 
 
