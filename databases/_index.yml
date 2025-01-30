@@ -22,13 +22,15 @@ indexpage:
       url: "/aws_ora_fsx_ec2_iscsi_asm.html"
   - title: Azure/ANF를 위한 Oracle
     links:
+    - title: ANF에서 높은 처리량 Oracle VLDB 구현
+      url: "/azure_ora_anf_vldb_dg.html"
     - title: Azure NetApp Files를 통한 Oracle Active Data Guard 비용 절감
       url: "/azure_ora_anf_data_guard.html"
     - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
       url: "/azure_ora_anf_inc_merge.html"
     - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
       url: "/automation_ora_anf_nfs.html"
-    - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
+    - title: ANF에 대한 Oracle 데이터베이스 구축 및 마이그레이션 모범 사례
       url: "/azure_ora_nfile_usecase.html"
   - title: Google Cloud용 Oracle
     links:

@@ -37,13 +37,15 @@ entries:
         url: "/databases/aws_ora_fsx_ec2_migration.html"
   - title: Azure 클라우드
     entries:
+    - title: ANF에서 높은 처리량 Oracle VLDB 구현
+      url: "/databases/azure_ora_anf_vldb_dg.html"
     - title: Azure NetApp Files를 통한 Oracle Active Data Guard 비용 절감
       url: "/databases/azure_ora_anf_data_guard.html"
     - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
       url: "/databases/azure_ora_anf_inc_merge.html"
     - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
       url: "/databases/automation_ora_anf_nfs.html"
-    - title: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
+    - title: ANF에 대한 Oracle 데이터베이스 구축 및 마이그레이션 모범 사례
       entries:
       - title: 사용 사례
         url: "/databases/azure_ora_nfile_usecase.html"
@@ -53,8 +55,6 @@ entries:
         url: "/databases/azure_ora_nfile_factors.html"
       - title: 구현 절차
         url: "/databases/azure_ora_nfile_procedures.html"
-      - title: 데이터베이스 보호
-        url: "/databases/azure_ora_nfile_protection.html"
       - title: 데이터베이스 마이그레이션
         url: "/databases/azure_ora_nfile_migration.html"
   - title: Google 클라우드

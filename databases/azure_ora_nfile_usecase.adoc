@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: databases/azure_ora_nfile_usecase.html 
-summary: 이 모범 사례 가이드에서는 Azure NetApp 파일 스토리지 및 Azure VM에서 Oracle 데이터베이스를 구축하고 보호하기 위한 솔루션에 대해 자세히 설명합니다. 
+summary: 이 모범 사례 가이드에서는 Azure NetApp 파일 스토리지와 Azure VM에서 Oracle 데이터베이스를 구축하고 마이그레이션하기 위한 솔루션을 자세히 소개합니다. 
 keywords: database, Oracle, Azure NetApp files, Azure 
 ---
-= TR-4954: Azure NetApp Files에서 Oracle 데이터베이스 구축 및 보호
+= TR-4954: ANF에 대한 Oracle 데이터베이스 구축 및 마이그레이션 모범 사례
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: database, Oracle, Azure NetApp files, Azure
 
 
 [role="lead"]
-이 모범 사례 가이드에서는 Azure NetApp 파일 스토리지 및 Azure VM에서 Oracle 데이터베이스를 구축하고 보호하기 위한 솔루션에 대해 자세히 설명합니다.
+이 모범 사례 가이드에서는 Azure NetApp 파일 스토리지와 Azure VM에서 Oracle 데이터베이스를 구축하고 마이그레이션하기 위한 솔루션을 자세히 소개합니다.
 
 저자: Allen Cao, Niyaz Mohamed, NetApp
 
@@ -40,4 +40,4 @@ Azure NetApp Files는 데이터베이스 워크로드를 이전보다 더 빠르
 
 == 결론
 
-이 문서에서는 온프레미스 시스템과 비슷한 성능과 내구성을 제공하는 Azure 가상 머신 및 Azure NetApp Files 스토리지 서비스를 사용하여 Oracle 데이터베이스를 구축, 구성 및 보호하는 방법에 대해 자세히 설명합니다. 모범 사례 지침은 TR-4780을 참조하십시오 link:https://www.netapp.com/media/17105-tr4780.pdf["Oracle Databases on Microsoft Azure 를 참조하십시오"^]. 더 중요한 것은 NetApp이 Azure 퍼블릭 클라우드에서 Oracle 데이터베이스 워크로드의 구현, 구성, 데이터 보호, 마이그레이션 및 관리에 필요한 대부분의 작업을 자동화하는 자동화 툴툴킷을 제공하는 것입니다. 자동화 툴킷을 NetApp 퍼블릭 GitHub 사이트에서 다운로드할 수 있습니다. link:https://github.com/NetApp-Automation/["NetApp - 자동화"^].
+이 문서에서는 사내 시스템과 비슷한 성능과 내구성을 제공하는 Azure 가상 머신 및 Azure NetApp Files 스토리지 서비스를 사용하여 Oracle 데이터베이스를 구축, 구성, 마이그레이션하는 방법을 자세히 설명합니다. 모범 사례 지침은 TR-4780 을 참조하십시오link:https://www.netapp.com/media/17105-tr4780.pdf["Oracle Databases on Microsoft Azure 를 참조하십시오"^]. 더 중요한 것은 NetApp이 Azure 퍼블릭 클라우드에서 Oracle 데이터베이스 워크로드의 구현, 구성, 데이터 보호, 마이그레이션 및 관리에 필요한 대부분의 작업을 자동화하는 자동화 툴툴킷을 제공하는 것입니다. 자동화 툴킷은 NetApp 공용 GitHub 사이트 에서 다운로드할 수 있습니다link:https://github.com/NetApp-Automation/["NetApp - 자동화"^].
