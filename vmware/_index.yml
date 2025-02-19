@@ -22,6 +22,8 @@ indexpage:
     links:
     - title: NetApp 스토리지 및 VMware Cloud Foundation
       url: "/vmware-vcf-overview.html"
+    - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
+      url: "/vmware_vcf_aff_multi_wkld_scv.html"
     - title: VMware Cloud Foundation으로 FlexPod 하이브리드 클라우드를 확장하십시오
       url: https://www.netapp.com/blog/expanding-flexpod-hybrid-cloud-with-vmware-cloud-foundation/
     - title: VMware Cloud Foundation용 FlexPod 설계 가이드

@@ -63,6 +63,8 @@ entries:
       url: "/vmware/vmware_vcf_aff_supp_wkld_nfs.html"
     - title: vSphere 클러스터(NFS 데이터 저장소)를 VCF 관리 도메인으로 변환합니다
       url: "/vmware/vmware_vcf_import_nfs.html"
+    - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
+      url: "/vmware/vmware_vcf_aff_multi_wkld_scv.html"
 - title: VM 마이그레이션
   entries:
   - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
