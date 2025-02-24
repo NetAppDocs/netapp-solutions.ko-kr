@@ -59,6 +59,10 @@ entries:
     url: "/rhhc/rhhc-pm-data-migration.html"
   - title: 컨테이너 및 가상화를 위한 추가 ROSA 솔루션
     url: "/rhhc/rhhc-pm-additional.html"
+- title: Trident Protect를 사용하여 컨테이너 애플리케이션의 데이터 보호
+  entries:
+  - title: 개요
+    url: "/rhhc/rhhc-dp-tp-solution.html"
 - title: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
   entries:
   - title: 개요
