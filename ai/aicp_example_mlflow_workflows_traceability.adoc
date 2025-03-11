@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ai/aicp_example_mlflow_traceability.html 
+permalink: ai/aicp_example_mlflow_workflows_traceability.html 
 keywords: AI, control plane, MLOps, MLflow 
 summary: 오픈 소스 MLOps with NetApp - NetApp 및 MLflow를 통한 데이터 세트-모델 추적성 
 ---

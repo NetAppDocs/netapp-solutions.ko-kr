@@ -17,7 +17,7 @@ entries:
   - title: 비디오
     url: "/containers/rh-os-n_videos_and_demos.html"
 - title: 온프레미스 구축
-  pdf-filename: Red Hat OpenShift 배포
+  pdf-filename: Red Hat OpenShift Virtualization 배포
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
@@ -34,6 +34,7 @@ entries:
   - title: 스냅샷에서 VM 생성
     url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
 - title: FSxN으로 ROSA에 배포
+  pdf-filename: Amazon FSx for ONTAP를 사용하여 ROSA에 Red Hat OpenShift Virtuzluation 배포
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_overview.html"
@@ -62,6 +63,7 @@ entries:
   - title: 샘플 모니터링
     url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
 - title: 모범 사례 권장사항
+  pdf-filename: NetApp 기반 Red Hat OpenShift 가상화의 모범 사례
   entries:
   - title: 모범 사례 가이드
     url: "/containers/rh-os-n_use_case_openshift_virtualization_bpg.html"

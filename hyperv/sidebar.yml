@@ -21,8 +21,9 @@ entries:
 - title: 확장성을 확보할 수 있습니다 NetApp
   entries:
   - title: 확장 클러스터를 사용한 SnapMirror Active Sync
+    pdf-filename: 확장 클러스터를 사용한 SnapMirror Active Sync
     url: "/hyperv/hyperv-smas.html"
 - title: 추가 리소스
   entries:
   - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례
-    url: "/../ontap-apps-dbs/microsoft/win_overview.html"
+    url: https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html

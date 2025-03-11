@@ -6,6 +6,7 @@ entries:
 - title: Sovereign Cloud를 위한 VMware 리소스
   url: "/vmw-sc/vmware-resources.html"
 - title: NetApp와 VMware Sovereign Cloud의 약어입니다
+  pdf-filename: NetApp와 VMware Sovereign Cloud의 약어입니다
   entries:
   - title: Soverior Cloud 개요
     url: "/vmw-sc/sc-overview.html"

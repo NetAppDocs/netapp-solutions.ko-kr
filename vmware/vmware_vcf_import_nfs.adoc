@@ -160,7 +160,7 @@ image:vmware-vcf-import-nfs-05.png["스토리지 백엔드를 추가합니다"]
 
 
 
-NOTE: 여기서 스토리지 백엔드는 클러스터 IP 주소를 사용하여 vSphere Client UI에 추가됩니다. 따라서 스토리지 시스템의 모든 SVM을 완벽하게 관리할 수 있습니다. 또는 에서 ONTAP tools Manager를 사용하여 스토리지 백엔드를 추가하고 vCenter 인스턴스와 연결할 수 있습니다 https://loadBalanceIP:8443/virtualization/ui/[]. 이 방법을 사용하면 vSphere Client UI에 SVM 자격 증명만 추가할 수 있으므로 스토리지 액세스를 더 세부적으로 제어할 수 있습니다.
+NOTE: 여기서 스토리지 백엔드는 클러스터 IP 주소를 사용하여 vSphere Client UI에 추가됩니다. 따라서 스토리지 시스템의 모든 SVM을 완벽하게 관리할 수 있습니다. 또는 에서 ONTAP tools Manager를 사용하여 스토리지 백엔드를 추가하고 vCenter 인스턴스와 연결할 수 있습니다 `https://loadBalanceIP:8443/virtualization/ui/`. 이 방법을 사용하면 vSphere Client UI에 SVM 자격 증명만 추가할 수 있으므로 스토리지 액세스를 더 세부적으로 제어할 수 있습니다.
 
 ====
 .ONTAP 툴을 사용하여 NFS 데이터 저장소를 프로비저닝합니다

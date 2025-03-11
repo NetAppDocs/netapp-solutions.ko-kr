@@ -8,20 +8,28 @@ entries:
   - title: AWS 클라우드
     entries:
     - title: 페이스 메이커 클러스터링 및 FSx ONTAP를 사용하는 AWS EC2의 Oracle HA
+      pdf-filename: 페이스 메이커 클러스터링 및 FSx ONTAP를 사용하는 AWS EC2의 Oracle HA
       url: "/databases/aws_ora_ha_pacemaker.html"
     - title: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
+      pdf-filename: iSCSI를 사용하여 Amazon FSx ONTAP에서 간편하고 자동화된 Oracle 구축
       url: "/databases/automation_ora_aws-fsx_iscsi.html"
     - title: 게스트가 마운트되는 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 Oracle
+      pdf-filename: 게스트가 마운트되는 FSx ONTAP를 사용하는 AWS 기반 VMware Cloud의 Oracle
       url: "/databases/aws_ora_fsx_vmc_guestmount.html"
     - title: Amazon FSx ONTAP을 통한 Oracle Active Data Guard 비용 절감
+      pdf-filename: Amazon FSx ONTAP을 통한 Oracle Active Data Guard 비용 절감
       url: "/databases/aws_ora_fsx_ec2_data_guard.html"
     - title: Amazon FSx ONTAP을 사용하여 Oracle VLDB를 빠르게 복구 및 복제합니다
+      pdf-filename: Amazon FSx ONTAP을 사용하여 Oracle VLDB를 빠르게 복구 및 복제합니다
       url: "/databases/aws_ora_fsx_ec2_inc_merge.html"
     - title: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
+      pdf-filename: NFS/ASM을 사용하는 AWS FSx/EC2에서 독립 실행형 재시작 시 Oracle 19c
       url: "/databases/aws_ora_fsx_ec2_nfs_asm.html"
     - title: iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 배포 및 보호
+      pdf-filename: iSCSI/ASM이 포함된 AWS FSx/EC2에서 Oracle 데이터베이스 배포 및 보호
       url: "/databases/aws_ora_fsx_ec2_iscsi_asm.html"
     - title: AWS EC2 및 FSx Best Practices에 Oracle Database 구축
+      pdf-filename: AWS EC2 및 FSx Best Practices에 Oracle Database 구축
       entries:
       - title: 사용 사례
         url: "/databases/aws_ora_fsx_ec2_deploy_intro.html"
@@ -38,14 +46,19 @@ entries:
   - title: Azure 클라우드
     entries:
     - title: ANF에서 높은 처리량 Oracle VLDB 구현
+      pdf-filename: ANF에서 높은 처리량 Oracle VLDB 구현
       url: "/databases/azure_ora_anf_vldb_dg.html"
     - title: Azure NetApp Files를 통한 Oracle Active Data Guard 비용 절감
+      pdf-filename: Azure NetApp Files를 통한 Oracle Active Data Guard 비용 절감
       url: "/databases/azure_ora_anf_data_guard.html"
     - title: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
+      pdf-filename: ANF에서 증분 병합을 사용한 Oracle VLDB의 빠른 복구
       url: "/databases/azure_ora_anf_inc_merge.html"
     - title: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
+      pdf-filename: NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축
       url: "/databases/automation_ora_anf_nfs.html"
     - title: ANF에 대한 Oracle 데이터베이스 구축 및 마이그레이션 모범 사례
+      pdf-filename: ANF에 대한 Oracle 데이터베이스 구축 및 마이그레이션 모범 사례
       entries:
       - title: 사용 사례
         url: "/databases/azure_ora_nfile_usecase.html"
@@ -60,25 +73,35 @@ entries:
   - title: Google 클라우드
     entries:
     - title: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스'
+      pdf-filename: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스'
       url: "/databases/gcp-oracle-gcnv-overview.html"
   - title: 온프레미스/하이브리드 클라우드
     entries:
     - title: VVol을 통한 VCF의 Oracle RAC 배포 및 보호
+      pdf-filename: VVol을 통한 VCF의 Oracle RAC 배포 및 보호
       url: "/databases/vcf_ora_rac_vvol.html"
     - title: VVol을 통한 VCF의 Oracle SI 배포 및 보호
+      pdf-filename: VVol을 통한 VCF의 Oracle SI 배포 및 보호
       url: "/databases/vcf_ora_si_vvol.html"
     - title: NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축
+      pdf-filename: NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축
       url: "/databases/automation_ora_c-series_nfs.html"
     - title: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
+      pdf-filename: iSCSI를 통해 NetApp ASA에서 간편하고 자동화된 Oracle 구축
       url: "/databases/automation_ora_asa_iscsi.html"
     - title: FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle 19c
         RAC 데이터베이스
+      pdf-filename: FC를 통해 Cisco UCS 및 NetApp AFF A800을 사용하는 FlexPod 데이터 센터에서 Oracle
+        19c RAC 데이터베이스
       url: "/databases/nva-1155.html"
     - title: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
+      pdf-filename: UNIX 기반의 Oracle과 SAP, NetApp Clustered Data ONTAP 기반의 NFS
       url: "/databases/tr-4250.html"
     - title: NetApp ONTAP에 Oracle 데이터베이스 구축
-      url: "/../../../ontap-apps-dbs/oracle/oracle-overview.html"
+      pdf-filename: NetApp ONTAP에 Oracle 데이터베이스 구축
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html
     - title: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
+      pdf-filename: NFS 기반 ONTAP용 Oracle 19c의 자동 구축
       entries:
       - title: 개요
         url: "/databases/marketing_overview.html"
@@ -89,6 +112,7 @@ entries:
       - title: 자동화된 Oracle 19c CLI 구축
         url: "/databases/cli_automation.html"
     - title: 자동화된 Oracle 데이터 보호
+      pdf-filename: 자동화된 Oracle 데이터 보호
       entries:
       - title: 개요
         url: "/databases/db_protection_overview.html"
@@ -101,10 +125,13 @@ entries:
 - title: Microsoft SQL Server를 참조하십시오
   entries:
   - title: AWS FSx ONTAP 기반 Microsoft SQL Server를 위한 백업 및 복구
+    pdf-filename: AWS FSx ONTAP 기반 Microsoft SQL Server를 위한 백업 및 복구
     url: "/databases/sqlsb-backup-restore-aws-fsxn.html"
   - title: Amazon FSx ONTAP을 사용하는 AWS EC2의 SQL Server
+    pdf-filename: Amazon FSx ONTAP을 사용하는 AWS EC2의 SQL Server
     url: "/databases/sql-aws-ec2.html"
   - title: Azure NetApp Files 기반 SQL Server
+    pdf-filename: Azure NetApp Files 기반 SQL Server
     entries:
     - title: 개요
       url: "/databases/sql-srv-anf_overview.html"
@@ -117,32 +144,44 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/databases/sql-srv-anf_where_to_find_additional_information.html"
   - title: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
+    pdf-filename: Clustered Data ONTAP을 사용하는 Windows 기반 Microsoft SQL Server와 SAP
     url: "/databases/tr-4467.html"
   - title: Microsoft SQL Server 현대화
+    pdf-filename: Microsoft SQL Server 현대화
     url: "/databases/na-446.html"
   - title: ONTAP 지원 Microsoft SQL Server를 위한 모범 사례 가이드
+    pdf-filename: ONTAP 지원 Microsoft SQL Server를 위한 모범 사례 가이드
     url: "/databases/tr-4590.html"
   - title: Microsoft SQL Server with NetApp EF-Series 모범 사례 가이드 를 참조하십시오
+    pdf-filename: Microsoft SQL Server with NetApp EF-Series 모범 사례 가이드 를 참조하십시오
     url: "/databases/tr-4764.html"
 - title: 오픈 소스 데이터베이스
   entries:
   - title: AWS FSx/EC2에서 PostgreSQL HA 구축 및 DR 자동화
+    pdf-filename: AWS FSx/EC2에서 PostgreSQL HA 구축 및 DR 자동화
     url: "/databases/aws_postgres_fsx_ec2_hadr.html"
   - title: NetApp ONTAP의 MySQL 데이터베이스
+    pdf-filename: NetApp ONTAP의 MySQL 데이터베이스
     url: "/databases/tr-4722.html"
 - title: 데이터베이스용 SnapCenter
   entries:
   - title: ONTAP에서 PostgreSQL 백업, 복구 및 클론 생성
+    pdf-filename: ONTAP에서 PostgreSQL 백업, 복구 및 클론 생성
     url: "/databases/snapctr_psql_ontap.html"
   - title: SnapCenter Oracle 클론 수명주기
+    pdf-filename: SnapCenter Oracle 클론 수명주기
     url: "/databases/automation_ora_clone_lifecycle.html"
   - title: ANF에서 Oracle Database 백업, 복구 및 클론
+    pdf-filename: ANF에서 Oracle Database 백업, 복구 및 클론
     url: "/databases/snapctr_ora_azure_anf.html"
   - title: Oracle-Azure용 BlueXP SaaS
+    pdf-filename: Oracle-Azure용 BlueXP SaaS
     url: "/databases/snapctr_svcs_ora_azure.html"
   - title: Oracle-AWS용 BlueXP SaaS
+    pdf-filename: Oracle-AWS용 BlueXP SaaS
     url: "/databases/snapctr_svcs_ora.html"
   - title: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
+    pdf-filename: SnapCenter을 사용한 하이브리드 클라우드 데이터베이스 솔루션
     entries:
     - title: 소개
       url: "/databases/hybrid_dbops_snapcenter_usecases.html"

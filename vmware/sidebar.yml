@@ -4,10 +4,12 @@ title: VMware 가상화
 url: "/vmware/index.html"
 entries:
 - title: ONTAP용 VMware 가상화
+  pdf-filename: ONTAP용 VMware 가상화
   url: "/vmware/vmware-for-ontap.html"
 - title: VMware vSphere 기반
   entries:
   - title: vSphere 8용 NFS 참조 가이드
+    pdf-filename: vSphere 8용 NFS 참조 가이드
     entries:
     - title: 개요
       url: "/vmware/vmware_nfs_overview.html"
@@ -19,11 +21,14 @@ entries:
       url: "/vmware/vmware_nfs_vlsr.html"
     - title: NFS 스토리지에 대한 자율적인 랜섬웨어 방어
       url: "/vmware/vmware_nfs_arp.html"
-  - title: vSphere 8용 VVOL 참조 가이드
+  - title: vSphere 8용 VVol 참조 가이드
+    pdf-filename: vSphere 8용 VVol 참조 가이드
     url: "/vmware/vmware-vvol-overview.html"
   - title: vSphere 8용 VMFS 구축 가이드
+    pdf-filename: vSphere 8용 VMFS 구축 가이드
     url: "/vmware/vmfs-deployment.html"
   - title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
+    pdf-filename: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
     entries:
     - title: 개요
       url: "/vmware/vsphere_ontap_asa_overview.html"
@@ -36,8 +41,10 @@ entries:
 - title: VMware 클라우드 기반
   entries:
   - title: NetApp 스토리지 및 VMware Cloud Foundation
+    pdf-filename: NetApp 스토리지 및 VMware Cloud Foundation
     url: "/vmware/vmware-vcf-overview.html"
   - title: NetApp ASA 어레이가 있는 VCF
+    pdf-filename: NetApp ASA 어레이가 있는 VCF
     entries:
     - title: 개요
       url: "/vmware/vmware_vcf_asa_overview.html"
@@ -54,6 +61,7 @@ entries:
     - title: VMware vSphere용 SnapCenter 플러그인을 사용하여 워크로드 도메인을 보호하십시오
       url: "/vmware/vmware_vcf_asa_scv_wkld.html"
   - title: NetApp AFF 어레이가 있는 VCF
+    pdf-filename: NetApp AFF 어레이가 있는 VCF
     entries:
     - title: 개요
       url: "/vmware/vmware_vcf_aff_overview.html"
@@ -68,8 +76,10 @@ entries:
 - title: VM 마이그레이션
   entries:
   - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
+    pdf-filename: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
     url: "/vmware/migrate-vms-to-ontap-datastore.html"
   - title: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+    pdf-filename: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
     entries:
     - title: 개요
       url: "/vmware/migrate-vms-to-ec2-fsxn.html"

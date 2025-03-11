@@ -6,6 +6,7 @@ entries:
 - title: AI 통합 인프라
   entries:
   - title: NVA-1173 NVIDIA DGX 시스템이 지원되는 NetApp AIPod
+    pdf-filename: NVA-1173 NVIDIA DGX 시스템이 지원되는 NetApp AIPod
     entries:
     - title: 소개
       url: "/ai/aipod_nv_intro.html"
@@ -22,10 +23,13 @@ entries:
     - title: 결론 및 추가 정보
       url: "/ai/aipod_nv_conclusion_add_info.html"
   - title: 'NVA-1172-디자인: NVIDIA OVX용 Lenovo가 장착된 NetApp AIPod'
+    pdf-filename: 'NVA-1172-디자인: NVIDIA OVX용 Lenovo가 장착된 NetApp AIPod'
     url: "/ai/aipod_lenovo_NVA1172.html"
   - title: E-Series 스토리지를 지원하는 NetApp 기반 BeeGFS
+    pdf-filename: E-Series 스토리지를 지원하는 NetApp 기반 BeeGFS
     url: "/ai/ai_beegfs_eseries.html"
   - title: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
+    pdf-filename: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
     url: "/ai/tr-4859.html"
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
@@ -66,14 +70,12 @@ entries:
       entries:
       - title: Kubeflow 구축
         url: "/ai/aicp_kubeflow_deployment_overview.html"
-      - title: Kubeflow 작업 및 작업 예
-        entries:
-        - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
-          url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
-        - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
-          url: "/ai/aicp_example_notebooks_and_pipelines.html"
-        - title: 워크플로 예 - 이미지 인식 모델 교육
-          url: "/ai/aicp_kubeflow_train_image_recognition.html"
+      - title: 데이터 과학자 또는 개발자 사용을 위한 Jupyter Notebook Workspace를 제공합니다
+        url: "/ai/aicp_provision_a_jupyter_notebook_workspace_for_data_scientist_or_developer_use.html"
+      - title: Kubeflow와 함께 NetApp DataOps 툴킷 사용
+        url: "/ai/aicp_example_notebooks_and_pipelines.html"
+      - title: 워크플로 예 - 이미지 인식 모델 교육
+        url: "/ai/aicp_kubeflow_train_image_recognition.html"
     - title: Trident 작업의 예
       url: "/ai/aicp_example_trident_operations_overview.html"
     - title: AIPod 구축을 위한 고성능 작업의 예
@@ -134,6 +136,7 @@ entries:
     - title: 3부 - 간소화된 MLOps 파이프라인 구축(CI/CT/CD)
       url: "/ai/mlops_fsxn_cictcd.html"
   - title: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
+    pdf-filename: 자율 주행 워크로드를 위한 NetApp StorageGRID 데이터 레이크
     url: "/ai/tr-4851.html"
   - title: Iguazio를 사용한 MLRun 파이프라인
     pdf-filename: Iguazio를 사용한 MLRun 파이프라인
@@ -171,6 +174,7 @@ entries:
   - title: NetApp DataOps 툴킷
     url: "/ai/dataops-toolkit.html"
   - title: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
+    pdf-filename: AI 및 분석 워크플로우를 위한 E-Series 및 BeeGFS로 데이터 이동
     url: "/ai/tr-4915.html"
   - title: NetApp를 사용한 벡터 데이터베이스 솔루션
     pdf-filename: NetApp를 사용한 벡터 데이터베이스 솔루션
@@ -351,6 +355,7 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/hcaios_where_to_find_additional_information.html"
   - title: 빅 데이터 환경에서 AI 환경으로 데이터 이동
+    pdf-filename: 빅 데이터 환경에서 AI 환경으로 데이터 이동
     url: "/data-analytics/bda-ai-introduction.html"
   - title: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론 - 솔루션 설계
     pdf-filename: Edge-NetApp에서 Lenovo ThinkSystem을 사용한 AI 추론 - 솔루션 설계
@@ -446,16 +451,23 @@ entries:
     - title: 추가 정보를 찾을 수 있는 위치
       url: "/ai/osrunai_where_to_find_additional_information.html"
   - title: 자율 주행 워크로드를 위한 NetApp ONTAP AI 솔루션 설계
+    pdf-filename: 자율 주행 워크로드를 위한 NetApp ONTAP AI 솔루션 설계
     url: "/ai/tr-4799.html"
   - title: '의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징'
+    pdf-filename: '의료 서비스를 위한 NetApp ONTAP AI 참조 아키텍처: 진단 이미징'
     url: "/ai/tr-4811.html"
   - title: 금융 서비스 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처
+    pdf-filename: 금융 서비스 워크로드를 위한 NetApp ONTAP AI 참조 아키텍처
     url: "/ai/tr-4807.html"
   - title: Generative AI 및 NetApp 가치
+    pdf-filename: Generative AI 및 NetApp 가치
     url: "/ai/wp-genai.html"
   - title: NetApp E-Series 및 BeeGFS를 통해 AI 배포
+    pdf-filename: NetApp E-Series 및 BeeGFS를 통해 AI 배포
     url: "/ai/tr-4785.html"
   - title: NetApp E-Series 시스템을 사용한 Quantum StorNext 설계 가이드 를 참조하십시오
+    pdf-filename: NetApp E-Series 시스템을 사용한 Quantum StorNext 설계 가이드 를 참조하십시오
     url: "/ai/nva-1150-design.html"
   - title: NetApp E-Series 시스템을 사용하는 Quantum StorNext 구축 가이드 를 참조하십시오
+    pdf-filename: NetApp E-Series 시스템을 사용하는 Quantum StorNext 구축 가이드 를 참조하십시오
     url: "/ai/nva-1150-deploy.html"

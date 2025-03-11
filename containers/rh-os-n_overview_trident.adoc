@@ -32,7 +32,7 @@ Trident는 개발 주기가 빠르므로 Kubernetes와 마찬가지로 연간 4�
 
 구축된 사용자 클러스터에 Trident를 설치하고 영구 볼륨을 프로비저닝하려면 다음 단계를 완료하십시오.
 
-. 설치 아카이브를 관리 워크스테이션에 다운로드하고 압축을 풉니다. Trident의 현재 버전은 22.01이며 다운로드할 수 있습니다 https://github.com/NetApp/trident/releases/download/v22.01.0/trident-installer-22.01.0.tar.gz["여기"].
+. 설치 아카이브를 관리 워크스테이션에 다운로드하고 압축을 풉니다. Trident의 현재 버전을 다운로드할 https://github.com/NetApp/trident/releases?q=25.&expanded=true["여기"]수 있습니다.
 . 다운로드한 번들에서 Trident 설치를 추출합니다.
 +
 [listing]

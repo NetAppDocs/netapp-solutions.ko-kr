@@ -3,4 +3,5 @@ section: migration
 title: 가상 머신 마이그레이션 유틸리티
 entries:
 - title: 가상 머신 마이그레이션(Shift 툴킷)
+  pdf-filename: 가상 머신 마이그레이션(Shift 툴킷)
   url: "/vm-migrate/migrate-overview.html"

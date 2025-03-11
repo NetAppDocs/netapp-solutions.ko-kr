@@ -143,62 +143,8 @@ entries:
     url: "/containers/rh-os-n_videos_and_demos.html"
   - title: 추가 정보
     url: "/containers/rh-os-n_additional_information.html"
-- title: NetApp ONTAP/FSxN을 사용한 Red Hat OpenShift 가상화
-  pdf-filename: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
-  entries:
-  - title: 개요
-    url: "/containers/rh-os-n_use_case_openshift_virtualization_overview.html"
-  - title: 사내 OpenShift Virtualization
-    entries:
-    - title: 필수 구성 요소
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html"
-    - title: 운영자를 통해 구축
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_deployment.html"
-    - title: 워크플로우
-      entries:
-      - title: VM을 생성합니다
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_create_vm.html"
-      - title: VM 실시간 마이그레이션
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_live_migration.html"
-      - title: VM 클로닝
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_clone_vm.html"
-      - title: 스냅샷으로부터 VM을 생성하십시오
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_from_snapshot.html"
-      - title: VMware에서 OpenShift 가상화로 VM 마이그레이션
-        url: "/containers/rh-os-n_use_case_openshift_virtualization_workflow_vm_migration_using_mtv.html"
-  - title: ROSA의 OpenShift Virtualization
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_overview.html"
-    - title: 워크플로우
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_workflows.html"
-  - title: Trident Protect를 사용한 VM의 데이터 보호
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dp_trident_protect.html"
-  - title: 타사 도구를 사용하여 VM의 데이터 보호
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"
-    - title: OADP 설치
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_installation.html"
-    - title: 백업
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_backup.html"
-    - title: 복원
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_restore.html"
-    - title: 백업 및 복원을 삭제합니다
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_delete.html"
-  - title: Cloud Insights를 사용한 모니터링
-    entries:
-    - title: 개요
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_overview.html"
-    - title: Cloud Insights와의 통합
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_integration.html"
-    - title: 샘플 모니터링 기능
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_ci_samples.html"
-    - title: 모범 사례 가이드 를 참조하십시오
-      url: "/containers/rh-os-n_use_case_openshift_virtualization_bpg.html"
 - title: FSxN이 포함된 AWS 기반 Red Hat OpenShift Service
+  pdf-filename: FSxN이 포함된 AWS 기반 Red Hat OpenShift Service
   entries:
   - title: 개요
     url: "/containers/rh-os-n_use_case_rosa_solution_overview.html"
@@ -251,22 +197,3 @@ entries:
     url: "/containers/vtwn_videos_and_demos.html"
   - title: 추가 정보
     url: "/containers/vtwn_additional_information.html"
-- title: 아카이빙 솔루션
-  entries:
-  - title: Anthos의 Bare Metal
-    pdf-filename: Anthos의 Bare Metal
-    entries:
-    - title: 소개
-      url: "/containers/baremetal-anthos/bmanthos_introduction.html"
-    - title: 솔루션 개요
-      url: "/containers/baremetal-anthos/bmanthos_solution_overview.html"
-    - title: 솔루션 요구 사항
-      url: "/containers/baremetal-anthos/bmanthos_solution_requirements.html"
-    - title: 구축 요약
-      url: "/containers/baremetal-anthos/bmanthos_deployment_summary.html"
-    - title: 솔루션 검증
-      url: "/containers/baremetal-anthos/bmanthos_solution_validation.html"
-    - title: 결론
-      url: "/containers/baremetal-anthos/bmanthos_conclusion.html"
-    - title: 추가 정보를 찾을 수 있는 위치
-      url: "/containers/baremetal-anthos/bmanthos_where_to_find_additional_information.html"

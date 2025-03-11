@@ -62,7 +62,8 @@ VCF 워크로드 도메인은 하나 이상의 vSphere 클러스터가 있는 �
 +
 {nbsp}
 
-. 배포 시 설정된 관리자 사용자 이름과 암호 및 유지 관리 콘솔을 사용하여 생성된 MFA 토큰을 사용하여 SCV 관리 GUI에 로그인합니다. https://<appliance-IP-address>:8080 to[] 관리 GUI에 액세스합니다.
+. 배포 시 설정된 관리자 사용자 이름과 암호 및 유지 관리 콘솔을 사용하여 생성된 MFA 토큰을 사용하여 SCV 관리 GUI에 로그인합니다.
+`https://<appliance-IP-address>:8080` 관리 GUI에 액세스합니다.
 +
 image:vmware-vcf-aff-image54.png["NetApp SnapCenter for VMware vSphere 웹 구성"]
 

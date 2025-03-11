@@ -4,6 +4,7 @@ title: Red Hat OpenShift를 포함하는 NetApp 하이브리드 멀티 클라우
 url: "/rhhc/index.html"
 entries:
 - title: 개요
+  pdf-filename: 하이브리드 멀티 클라우드용 Red Hat OpenShift
   entries:
   - title: 개요
     url: "/rhhc/rhhc-overview.html"
@@ -16,6 +17,7 @@ entries:
   - title: 지원되는 스토리지 옵션
     url: "/rhhc/rhhc-storage-options.html"
 - title: 온프레미스
+  pdf-filename: Red Hat OpenShift for On-Premises
   entries:
   - title: 개요
     url: "/rhhc/rhhc-overview.html"
@@ -28,6 +30,8 @@ entries:
   - title: VMware에서 컨테이너 워크로드를 마이그레이션합니다
     url: "/rhhc/rhhc-op-data-migration.html"
 - title: 자체 관리형 구성요소(온프레미스/AWS/GCP/Azure)를 포함하는 하이브리드 클라우드
+  pdf-filename: Red Hat OpenShift Self-Managed Components(사내/AWS/GCP/Azure)를 포함하는
+    하이브리드 클라우드
   entries:
   - title: 개요
     url: "/rhhc/rhhc-overview.html"
@@ -44,6 +48,7 @@ entries:
   - title: 컨테이너 워크로드를 AWS/GCP/Azure로 마이그레이션
     url: "/rhhc/rhhc-sm-data-migration.html"
 - title: 공급자 관리 구성 요소를 지원하는 하이브리드 클라우드
+  pdf-filename: Red Hat OpenShift Provider - Managed Components를 사용한 하이브리드 클라우드
   entries:
   - title: 개요
     url: "/rhhc/rhhc-overview.html"
@@ -60,10 +65,12 @@ entries:
   - title: 컨테이너 및 가상화를 위한 추가 ROSA 솔루션
     url: "/rhhc/rhhc-pm-additional.html"
 - title: Trident Protect를 사용하여 컨테이너 애플리케이션의 데이터 보호
+  pdf-filename: Trident Protect를 사용하여 컨테이너 애플리케이션의 데이터 보호
   entries:
   - title: 개요
     url: "/rhhc/rhhc-dp-tp-solution.html"
 - title: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
+  pdf-filename: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
   entries:
   - title: 개요
     url: "/rhhc/rhhc-dp-velero-solution.html"

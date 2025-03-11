@@ -4,6 +4,8 @@ title: Proxmox 가상화
 url: "/proxmox/index.html"
 entries:
 - title: 개요
+  pdf-filename: NetApp 기반 Proxmox 가상화 개요
   url: "/proxmox/proxmox-overview.html"
 - title: Proxmox VE용 NetApp 스토리지
+  pdf-filename: Proxmox VE용 NetApp 스토리지
   url: "/proxmox/proxmox-ontap.html"

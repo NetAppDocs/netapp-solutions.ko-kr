@@ -3,6 +3,7 @@ section: data-access
 title: 데이터 마이그레이션 및 데이터 보호
 entries:
 - title: ONTAP 사이버 소산
+  pdf-filename: ONTAP 사이버 소산
   entries:
   - title: ONTAP 사이버 소산 개요
     url: "/cyber-vault/ontap-cyber-vault-overview.html"
@@ -41,6 +42,7 @@ entries:
 - title: 데이터 마이그레이션
   entries:
   - title: NetApp XCP의 모범 사례 지침
+    pdf-filename: NetApp XCP의 모범 사례 지침
     entries:
     - title: 소개
       url: "/xcp/xcp-bp-introduction.html"
@@ -87,13 +89,18 @@ entries:
 - title: 데이터 보호
   entries:
   - title: NetApp E-Series 및 Commvault 데이터 플랫폼 V11
+    pdf-filename: NetApp E-Series 및 Commvault 데이터 플랫폼 V11
     url: "/dp-sec/tr-4320.html"
   - title: Veeam Backup Replication 9.5의 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지 모범
       사례
+    pdf-filename: Veeam Backup Replication 9.5의 E-Series 및 EF-Series 레퍼런스 아키텍처 및 스토리지
+      모범 사례
     url: "/dp-sec/tr-4471.html"
   - title: NetApp E-Series 스토리지를 사용한 Veritas NetBackup 구축
+    pdf-filename: NetApp E-Series 스토리지를 사용한 Veritas NetBackup 구축
     url: "/dp-sec/tr-4704.html"
 - title: 보안
   entries:
   - title: NIST Multitenant Infrastructure용 HyTrust를 사용한 FISMA 보안 제어
+    pdf-filename: NIST Multitenant Infrastructure용 HyTrust를 사용한 FISMA 보안 제어
     url: "/dp-sec/nva-1143.html"

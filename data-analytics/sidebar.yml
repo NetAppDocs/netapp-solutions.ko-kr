@@ -164,10 +164,14 @@ entries:
   - title: 결론
     url: "/data-analytics/dremio-lakehouse-conclusion.html"
 - title: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
+  pdf-filename: 다양한 분석 전략을 위한 다양한 솔루션 솔루션 솔루션 개요
   url: "/data-analytics/sb-4154.html"
 - title: Splunk SmartStore가 포함된 NetApp StorageGRID
+  pdf-filename: Splunk SmartStore가 포함된 NetApp StorageGRID
   url: "/data-analytics/stgr-splunks-introduction.html"
 - title: NetApp E-Series E5700 및 Splunk Enterprise
+  pdf-filename: NetApp E-Series E5700 및 Splunk Enterprise
   url: "/data-analytics/tr-4623.html"
 - title: NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)
+  pdf-filename: NetApp 스토리지 솔루션을 이용한 Apache Spark 워크로드(구축 가이드)
   url: "/data-analytics/nva-1157-deploy.html"
