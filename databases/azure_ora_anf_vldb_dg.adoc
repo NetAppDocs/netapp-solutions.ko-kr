@@ -122,6 +122,7 @@ image:azure_ora_anf_vldb_dg_architecture.png["이 이미지는 ANF의 Azure Clou
 * * Azure NetApp Files 구성. * Azure NetApp Files는 Azure NetApp 스토리지 계정에서 로 `Capacity Pools`할당됩니다. 이러한 테스트 및 검증에서 우리는 동부 지역에서 Oracle 주 볼륨을 호스팅하기 위해 2TiB 용량 풀을 구축하고 서부 2 지역에서 대기 데이터베이스 및 DB 클론을 호스팅하기 위해 4TiB 용량 풀을 구축했습니다. ANF 용량 풀에는 Standard, Premium 및 Ultra의 3가지 서비스 수준이 있습니다. ANF 용량 풀의 IO 용량은 용량 풀의 크기와 서비스 수준을 기준으로 합니다. 용량 풀을 생성할 때 QoS를 자동 또는 수동으로 설정하고 유휴 시 데이터 암호화를 단일 또는 이중으로 설정할 수 있습니다.
 * * 데이터베이스 볼륨 사이징. * 운영 구축을 위해 NetApp은 Oracle AWR 보고서에서 Oracle 데이터베이스 처리량 요구사항을 전체적으로 평가할 것을 권장합니다. 데이터베이스의 ANF 볼륨을 사이징할 때 데이터베이스 크기와 처리량 요구사항을 모두 고려하십시오. ANF의 자동 QoS 구성을 사용하면 Ultra 서비스 레벨을 통해 할당된 TiB 볼륨 용량당 128MiB/s로 대역폭이 보장됩니다. 높은 처리량의 경우 요구 사항을 충족하기 위해 더 큰 볼륨 크기 조정이 필요할 수 있습니다.
 * * 단일 볼륨 또는 다중 볼륨. * 단일 큰 볼륨은 애그리게이트 크기가 동일한 여러 볼륨과 유사한 성능 수준을 제공할 수 있습니다. QoS가 볼륨 사이징 및 용량 풀 서비스 수준에 따라 엄격하게 적용되기 때문입니다. 공유 백엔드 ANF 스토리지 리소스 풀을 보다 효과적으로 활용하려면 Oracle VLDB에 여러 볼륨(여러 NFS 마운트 지점)을 구축하는 것이 좋습니다. 여러 NFS 볼륨에서 IO 로드 밸런싱을 위해 Oracle ASM을 구현합니다.
+* * 응용 프로그램 볼륨 그룹. * Oracle용 AVG(Application Volume Group)를 구축하여 성능 최적화 애플리케이션 볼륨 그룹에 의해 배포된 볼륨은 애플리케이션 VM에 대해 최적화된 지연 시간 및 처리량을 얻기 위해 지역 또는 영역 인프라에 배치됩니다.
 * * Azure VM 고려 사항 * 이러한 테스트 및 검증에서 Azure VM-Standard_B4ms를 vCPU 4개와 16GiB 메모리를 사용했습니다. 높은 처리량을 요구하는 Oracle VDB에 맞게 Azure DB VM을 적절하게 선택해야 합니다. vCPU 수와 RAM 용량 외에도 데이터베이스 스토리지 용량에 도달하기 전에 VM 네트워크 대역폭(수신 및 송신 또는 NIC 처리량 제한)에 병목 현상이 발생할 수 있습니다.
 * * dNFS 구성. * DNFS를 사용하면 ANF 스토리지가 있는 Azure 가상 머신에서 실행되는 Oracle 데이터베이스가 네이티브 NFS 클라이언트보다 훨씬 많은 I/O를 구동할 수 있습니다. 잠재적 버그를 해결하기 위해 Oracle dNFS 패치 p32931941이 적용되었는지 확인합니다.
 
@@ -168,6 +169,7 @@ VNet Gateway 연결 상태: image:azure_ora_anf_dg_vnet_03.png["Azure 환경 구
 +
 트래픽 흐름이 설정되어 있는지 확인합니다(세 개의 점을 클릭하여 페이지를 엽니다). image:azure_ora_anf_dg_vnet_04.png["Azure 환경 구성을 보여 주는 스크린샷"]
 
+. Oracle용 애플리케이션 볼륨 그룹을 배포하려면 이 설명서를 link:https://learn.microsoft.com/en-us/azure/azure-netapp-files/application-volume-group-oracle-deploy-volumes["Oracle용 애플리케이션 볼륨 그룹을 구축합니다"^]참조하십시오.
 
 
 ====

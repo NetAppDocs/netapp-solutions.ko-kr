@@ -56,12 +56,12 @@ entries:
       url: "/vmware/vmware_vcf_asa_supp_mgmt_iscsi.html"
     - title: VVOL을 워크로드 도메인의 보조 스토리지로 사용할 수 있습니다
       url: "/vmware/vmware_vcf_asa_supp_wkld_vvols.html"
-    - title: 워크로드 도메인을 위한 보조 스토리지로서의 NVMe/TCP
-      url: "/vmware/vmware_vcf_asa_supp_wkld_nvme.html"
     - title: 기본 스토리지로서의 FC
       url: "/vmware/vmware_vcf_asa_prin_fc.html"
     - title: 보조 스토리지로서의 FC
       url: "/vmware/vmware_vcf_asa_supp_fc.html"
+    - title: 워크로드 도메인을 위한 보조 스토리지로서의 NVMe/TCP
+      url: "/vmware/vmware_vcf_asa_supp_wkld_nvme.html"
     - title: VMware vSphere용 SnapCenter 플러그인을 사용하여 워크로드 도메인을 보호하십시오
       url: "/vmware/vmware_vcf_asa_scv_wkld.html"
   - title: NetApp AFF 어레이가 있는 VCF
@@ -83,6 +83,10 @@ entries:
       url: "/vmware/vmware_vcf_aff_supp_fc.html"
     - title: vSphere 클러스터(NFS 데이터 저장소)를 VCF 관리 도메인으로 변환합니다
       url: "/vmware/vmware_vcf_import_nfs.html"
+    - title: 관리 도메인에서 클러스터(FC/iSCSI)를 확장합니다
+      url: "/vmware/vmware_vcf_asa_mgmt_stretchcluster.html"
+    - title: VI 워크로드 도메인에서 클러스터(FC/iSCSI)를 확장합니다
+      url: "/vmware/vmware_vcf_asa_wkld_stretchcluster.html"
     - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
       url: "/vmware/vmware_vcf_aff_multi_wkld_scv.html"
     - title: NVMe 기반 NetApp 스토리지를 사용하는 VMware VCF를 위한 효율적이고 확장 가능하며 단순한 데이터 보호

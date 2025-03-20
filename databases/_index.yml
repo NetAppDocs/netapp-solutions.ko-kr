@@ -88,6 +88,8 @@ indexpage:
       url: "/hybrid_dbops_snapcenter_usecases.html"
   - title: DB Automation 툴킷
     links:
+    - title: ASM을 사용하여 ANF에서 Oracle Clone Lifecycle 자동화
+      url: "/automation_ora_clone_anf_asm.html"
     - title: PDB Relocation을 통한 Oracle 마이그레이션
       url: "/automation_ora_migration.html"
     - title: Amazon FSx for NetApp ONTAP을 사용한 Oracle HA/DR
