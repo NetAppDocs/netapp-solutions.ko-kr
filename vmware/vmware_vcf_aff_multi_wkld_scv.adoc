@@ -32,7 +32,7 @@ SCV는 OVA 파일을 사용하여 Linux 가상 어플라이언스로 구축되�
 
 ONTAP FAS, AFF 또는 ASA(All SAN Array) 운영 시스템에 있으며 ONTAP FAS, AFF 또는 ASA 보조 시스템에 복제된 데이터입니다. 또한 SCV는 SnapCenter 서버와 연동하여 VMware 환경에서 SnapCenter 애플리케이션별 플러그인을 위한 애플리케이션 기반 백업 및 복원 작업을 지원합니다. 자세한 내용은 다음을 참조하십시오. link:https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["VMware vSphere용 SnapCenter 플러그인 설명서"]
 
-image:vmware-vcf-aff-image50.png["SCV를 사용하는 VCF 다중 워크로드 도메인"]
+image:vmware-vcf-aff-image64.png["SCV를 사용하는 VCF 다중 워크로드 도메인"]
 
 3-2-1 백업 규칙은  데이터 복사본 3개를 만들고 서로 다른 두 가지 유형의 미디어에 저장하며 복사본 하나를 오프사이트에 유지하는 데이터 보호 전략입니다. BlueXP 백업 및 복구는 데이터 관리를 위한 클라우드 기반 툴로서 온프레미스와 클라우드 환경 모두에서 다양한 백업 및 복구 작업을 위한 단일 제어 플레인을 제공합니다. NetApp BlueXP  백업 및 복구 제품군의 일부는 사내 SCV(사내)와 통합되어 데이터 복사본을 클라우드의 오브젝트 스토리지로 확장하는 기능입니다. 이렇게 하면 운영 또는 보조 스토리지 백업에서 가져온 세 번째 오프사이트 데이터 복제본이 설정됩니다. BlueXP 백업 및 복구를 사용하면 두 개의 온프레미스 위치 중 하나에서 데이터 복사본을 전송하는 스토리지 정책을 쉽게 설정할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/netapp-solutions/ehc/bxp-scv-hybrid-solution.html["SnapCenter 플러그인 및 VM용 BlueXP  백업 및 복구를 통해 VMware를 위한 3-2-1 데이터 보호."]
 

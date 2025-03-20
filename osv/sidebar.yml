@@ -40,6 +40,12 @@ entries:
     url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_overview.html"
   - title: 워크플로우
     url: "/containers/rh-os-n_use_case_openshift_virtualization_rosa_workflows.html"
+- title: Trident Protect를 사용한 데이터 보호
+  entries:
+  - title: 스냅샷 및 백업
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_tp_dp_overview.html"
+  - title: 재해 복구
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_dataprotection_overview.html"
 - title: 타사 도구를 사용한 데이터 보호
   pdf-filename: Red Hat OpenShift Virtualization Data Protection의 약어입니다
   entries:

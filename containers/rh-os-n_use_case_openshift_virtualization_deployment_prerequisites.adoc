@@ -21,7 +21,6 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 == 필수 구성 요소
 
 * RHCOS 작업자 노드가 있는 베어 메탈 인프라에 설치된 Red Hat OpenShift 클러스터(버전 4.6 이상
-* 설치 관리자가 제공한 인프라(IPI)를 통해 OpenShift 클러스터를 설치해야 합니다.
 * VM에 대한 HA를 유지하기 위해 시스템 상태 점검을 구축합니다
 * NetApp ONTAP 클러스터
 * Trident가 OpenShift 클러스터에 설치되어 있습니다

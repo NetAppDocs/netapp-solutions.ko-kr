@@ -85,6 +85,8 @@ entries:
       url: "/vmware/vmware_vcf_import_nfs.html"
     - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
       url: "/vmware/vmware_vcf_aff_multi_wkld_scv.html"
+    - title: NVMe 기반 NetApp 스토리지를 사용하는 VMware VCF를 위한 효율적이고 확장 가능하며 단순한 데이터 보호
+      url: "/vmware/vmware_vcf_nvme_scv.html"
 - title: VM 마이그레이션
   entries:
   - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
