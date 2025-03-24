@@ -21,8 +21,4 @@ summary:
 
 Red Hat OpenShift Container 솔루션은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_solution_overview.html["여기"].
 
-FSxN Container 솔루션을 사용하는 AWS 기반 Red Hat OpenShift Service에 대한 내용은 을 참조하십시오.link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_rosa_solution_overview.html["여기"]
-
 온-프레미스 Red Hat OpenShift Virtualization 솔루션에 대한 자세한 내용은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_deployment_prerequisites.html["여기"].
-
-FSxN 솔루션을 사용하는 AWS 기반 Red Hat OpenShift Service Virtualization에 대해서는 을 참조하십시오.link:https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_use_case_openshift_virtualization_rosa_overview.html["여기"]

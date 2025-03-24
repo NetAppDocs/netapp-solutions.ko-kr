@@ -10,10 +10,6 @@ entries:
     url: "/rhhc/rhhc-overview.html"
   - title: 가치 제안
     url: "/rhhc/rhhc-value-prop.html"
-  - title: 검증된 솔루션
-    url: "/rhhc/rhhc-solutions.html"
-  - title: 검증된 버전
-    url: "/rhhc/rhhc-versions.html"
   - title: 지원되는 스토리지 옵션
     url: "/rhhc/rhhc-storage-options.html"
 - title: 온프레미스
@@ -25,10 +21,6 @@ entries:
     url: "/rhhc/rhhc-op-solution.html"
   - title: VMware에서 Red Hat OpenShift Container 워크로드를 구성합니다
     url: "/rhhc/rhhc-op-setup.html"
-  - title: VMware에서 컨테이너 워크로드를 보호합니다
-    url: "/rhhc/rhhc-op-data-protection.html"
-  - title: VMware에서 컨테이너 워크로드를 마이그레이션합니다
-    url: "/rhhc/rhhc-op-data-migration.html"
 - title: 자체 관리형 구성요소(온프레미스/AWS/GCP/Azure)를 포함하는 하이브리드 클라우드
   pdf-filename: Red Hat OpenShift Self-Managed Components(사내/AWS/GCP/Azure)를 포함하는
     하이브리드 클라우드
@@ -43,10 +35,6 @@ entries:
     url: "/rhhc/rhhc-sm-gcp-setup.html"
   - title: Azure에서 Red Hat OpenShift Container 워크로드를 구성합니다
     url: "/rhhc/rhhc-sm-azure-setup.html"
-  - title: AWS/GCP/Azure에서 컨테이너 워크로드 보호
-    url: "/rhhc/rhhc-sm-data-protection.html"
-  - title: 컨테이너 워크로드를 AWS/GCP/Azure로 마이그레이션
-    url: "/rhhc/rhhc-sm-data-migration.html"
 - title: 공급자 관리 구성 요소를 지원하는 하이브리드 클라우드
   pdf-filename: Red Hat OpenShift Provider - Managed Components를 사용한 하이브리드 클라우드
   entries:
@@ -58,10 +46,6 @@ entries:
     url: "/rhhc/rhhc-pm-setup.html"
   - title: Google Cloud 전용 Red Hat OpenShift를 구성합니다
     url: "/rhhc/rhhc-pm-gcnv-setup.html"
-  - title: AWS에서 컨테이너 워크로드를 보호합니다
-    url: "/rhhc/rhhc-pm-data-protection.html"
-  - title: AWS에서 컨테이너 워크로드를 마이그레이션합니다
-    url: "/rhhc/rhhc-pm-data-migration.html"
   - title: 컨테이너 및 가상화를 위한 추가 ROSA 솔루션
     url: "/rhhc/rhhc-pm-additional.html"
 - title: Trident Protect를 사용하여 컨테이너 애플리케이션의 데이터 보호
@@ -69,6 +53,11 @@ entries:
   entries:
   - title: 개요
     url: "/rhhc/rhhc-dp-tp-solution.html"
+- title: Trident Protect를 사용한 VM의 데이터 보호
+  pdf-filename: Trident Protect를 사용한 VM의 데이터 보호
+  entries:
+  - title: 개요
+    url: "/containers/rh-os-n_use_case_openshift_virtualization_tp_dp_overview.html"
 - title: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
   pdf-filename: 타사 도구를 사용하여 컨테이너 앱의 데이터 보호
   entries:
