@@ -71,19 +71,24 @@ keywords: netapp, solutions, blogs
 == 컨테이너
 
 [[containers-osv]]
-* OpenShift 가상화:
+* OpenShift 컨테이너 및 가상화:
 +
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlock-Seamless-iSCSI-Storage-Integration-A-Guide-to-FSxN-on-ROSA-Clusters-for/ba-p/459124["완벽한 iSCSI 스토리지 통합의 실현: iSCSI용 Rosa Cluster의 FSxN에 대한 가이드"]
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Crash-Consistent-Backup-and-Restore-Operations-for-OpenShift-Virtualization-VMs/ba-p/459417["Trident 25.02를 사용한 OpenShift 가상화 VM에 대해 충돌 시에도 정합성이 보장되는 백업 및 복원 작업"]
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Live-Migration-of-VMs-with-OpenShift-Virtualization-on-ROSA-and-Amazon-FSx-for/ba-p/456213["ROSA 및 Amazon FSx for NetApp ONTAP의 OpenShift 가상화를 통해 VM을 실시간으로 마이그레이션할 수 있습니다"]
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Amazon-FSx-for-NetApp-ONTAP-with-Red-Hat-OpenShift-Service-on-AWS-ROSA-using/ba-p/456167["Hosted Control Plane을 사용하는 AWS(ROSA)에서 Amazon FSx for NetApp ONTAP 및 Red Hat OpenShift Service 지원"]
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Using-NVMe-TCP-to-consume-ONTAP-storage-for-your-modern-containerized-apps-on/ba-p/453706["NVMe/TCP를 사용하여 VMware에서 최신 컨테이너식 앱에 ONTAP 스토리지를 사용합니다"]
+** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/ONTAP-as-backend-storage-for-the-integrated-image-registry-in-OpenShift/ba-p/453142["ONTAP를 OpenShift Container 플랫폼의 통합 이미지 레지스트리용 백엔드 스토리지로 사용합니다"]
 ** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/A-Backup-and-Restore-option-for-VM-data-protection-in-OpenShift-Virtualization/ba-p/452279["OpenShift Virtualization의 VM 데이터 보호를 위한 백업 및 복원 옵션"]
+
+
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/NetApp-ONTAP-doubles-up-as-storage-for-logs-in-Red-Hat-OpenShift-Container/ba-p/449280["NetApp ONTAP은 Red Hat OpenShift Container Platform에서 로그용 스토리지로도 사용됩니다 "]
++
 ** link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/ONTAP-for-OpenShift-Virtualization-VMs-non-disruptive-volume-move-operation-is/ba-p/451941["OpenShift 가상화 VM용 ONTAP: 무중단 볼륨 이동 작업 지원"]
 
 
-* Astra DevOps 사용 사례:
-+
-** link:https://cloud.netapp.com/blog/astra-blg-easily-integrate-protection-into-your-kubernetes-ci/cd-pipeline-with-netapp-astra-control["NetApp Astra Control을 통해 Kubernetes CI/CD 파이프라인에 보호를 쉽게 통합합니다"]
-** link:https://cloud.netapp.com/blog/astra-blg-restore-business-operations-quicker-with-devops-and-astra["NetApp의 DevOps: Astra Control을 사용하여 사후 분석을 수행하고 애플리케이션을 복원합니다"]
 
 
-* link:https://cloud.netapp.com/blog/astra-blg-astra-control-center-the-easy-button-for-application-data-management["NetApp Astra Control Center: 어플리케이션 데이터 관리를 위한 간편한 버튼"]
 * link:https://netapp.io/2021/05/21/docker-rate-limit-issue/["Red Hat OpenShift에 NetApp Trident 설치 – Docker의 'toomanyrequest' 문제를 해결하는 방법!"]
 * link:https://blog.netapp.com/accelerate-your-k8s-journey["ONTAP와 함께 VMware Tanzu를 사용하여 Kubernetes 여정을 가속화하십시오"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Kubernetes-on-vSphere-Part-1/ba-p/445634["vSphere 기반 Kubernetes(1부)"]
@@ -95,5 +100,4 @@ keywords: netapp, solutions, blogs
 == Red Hat OpenShift Container 워크로드를 지원하는 NetApp 하이브리드 멀티 클라우드
 
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/NetApp-ONTAP-doubles-up-as-storage-for-logs-in-Red-Hat-OpenShift-Container/ba-p/449280["NetApp ONTAP은 Red Hat OpenShift Container Platform에서 로그용 스토리지로도 사용됩니다 "]
-* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Using-Astra-Control-Service-for-data-management-of-apps-on-ROSA-clusters-with/ba-p/450903["Amazon FSx 스토리지가 탑재된 Rosa 클러스터에서 앱의 데이터를 관리하는 데 Astra Control Service를 사용합니다 "]
 
