@@ -87,6 +87,10 @@ entries:
       url: "/vmware/vmware_vcf_asa_mgmt_stretchcluster.html"
     - title: VI 워크로드 도메인에서 클러스터(FC/iSCSI)를 확장합니다
       url: "/vmware/vmware_vcf_asa_wkld_stretchcluster.html"
+    - title: MetroCluster를 사용하여 관리 도메인용 클러스터 확장
+      url: "/vmware/vmw-vcf-vmsc-mgmt-mcc.html"
+    - title: MetroCluster를 사용하여 VI 워크로드 도메인용 클러스터 확장
+      url: "/vmware/vmw-vcf-vmsc-viwld-mcc.html"
     - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
       url: "/vmware/vmware_vcf_aff_multi_wkld_scv.html"
     - title: NVMe 기반 NetApp 스토리지를 사용하는 VMware VCF를 위한 효율적이고 확장 가능하며 단순한 데이터 보호
