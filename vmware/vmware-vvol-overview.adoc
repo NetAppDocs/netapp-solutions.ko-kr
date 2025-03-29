@@ -14,7 +14,13 @@ summary:
 
 
 [role="lead"]
-VVol(VMware Virtual Volumes)은 스토리지 어레이에서 제공하는 다양한 기능을 활용하는 동시에 스토리지 프로비저닝 결정을 내리기 위한 애플리케이션별 요구사항을 지원합니다. VASA(vSphere API for Storage Awareness)를 사용하면 VM 관리자가 스토리지 팀과 상호 작용하지 않고도 VM을 프로비저닝하는 데 필요한 스토리지 기능을 쉽게 사용할 수 있습니다. VASA 이전에는 VM 관리자가 VM 스토리지 정책을 정의할 수 있었지만 대개 문서 또는 명명 규칙을 사용하여 스토리지 관리자와 협력하여 적절한 데이터 저장소를 식별해야 했습니다. VASA를 사용하면 vCenter 관리자가 적절한 사용 권한을 사용하여 vCenter 사용자가 VM을 프로비저닝하는 데 사용할 수 있는 다양한 스토리지 기능을 정의할 수 있습니다. VM 스토리지 정책과 데이터 저장소 스토리지 기능 프로필 간의 매핑을 통해 vCenter는 선택을 위해 호환 가능한 데이터 저장소 목록을 표시할 수 있을 뿐 아니라 Aria(이전의 vRealize) Automation 또는 Tanzu Kubernetes Grid와 같은 다른 기술을 사용하여 할당된 정책에서 스토리지를 자동으로 선택할 수 있습니다. 이러한 접근 방식을 스토리지 정책 기반 관리라고 합니다. 스토리지 기능 프로파일과 정책은 기존 데이터 저장소에도 사용할 수 있지만 여기서는 VVOL 데이터 저장소에 초점을 맞춥니다. ONTAP용 VASA 공급자는 VMware vSphere용 ONTAP 툴의 일부로 포함됩니다.
+VVol(VMware Virtual Volumes)은 스토리지 어레이에서 제공하는 다양한 기능을 활용하는 동시에 스토리지 프로비저닝 결정을 내리기 위한 애플리케이션별 요구사항을 지원합니다.
+
+
+
+== 개요
+
+VASA(vSphere API for Storage Awareness)를 사용하면 VM 관리자가 스토리지 팀과 상호 작용하지 않고도 VM을 프로비저닝하는 데 필요한 스토리지 기능을 쉽게 사용할 수 있습니다. VASA 이전에는 VM 관리자가 VM 스토리지 정책을 정의할 수 있었지만 대개 문서 또는 명명 규칙을 사용하여 스토리지 관리자와 협력하여 적절한 데이터 저장소를 식별해야 했습니다. VASA를 사용하면 vCenter 관리자가 적절한 사용 권한을 사용하여 vCenter 사용자가 VM을 프로비저닝하는 데 사용할 수 있는 다양한 스토리지 기능을 정의할 수 있습니다. VM 스토리지 정책과 데이터 저장소 스토리지 기능 프로필 간의 매핑을 통해 vCenter는 선택을 위해 호환 가능한 데이터 저장소 목록을 표시할 수 있을 뿐 아니라 Aria(이전의 vRealize) Automation 또는 Tanzu Kubernetes Grid와 같은 다른 기술을 사용하여 할당된 정책에서 스토리지를 자동으로 선택할 수 있습니다. 이러한 접근 방식을 스토리지 정책 기반 관리라고 합니다. 스토리지 기능 프로파일과 정책은 기존 데이터 저장소에도 사용할 수 있지만 여기서는 VVOL 데이터 저장소에 초점을 맞춥니다. ONTAP용 VASA 공급자는 VMware vSphere용 ONTAP 툴의 일부로 포함됩니다.
 
 VASA Provider를 스토리지 시스템 외부에서 사용할 경우 다음과 같은 이점이 있습니다.
 
@@ -84,7 +90,9 @@ VVol(VMware Virtual Volumes)은 다음과 같은 이점을 제공합니다.
 
 이중 패브릭 환경은 일반적으로 스토리지 네트워크에서 고가용성, 성능 및 내결함성을 해결하는 데 권장됩니다. VVOL은 iSCSI, FC, NFSv3 및 NVMe/FC에서 지원됩니다. 참고: link:https://imt.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"]지원되는 ONTAP 도구 버전은 을 참조하십시오
 
-접속 옵션은 VMFS 데이터 저장소 또는 NFS 데이터 저장소 옵션과 동일하게 유지됩니다. iSCSI 및 NFS에 대한 vSphere 네트워크 샘플이 아래에 나와 있습니다. image:vmware-vvol-overview-image03.png["iSCSI 네트워크"]
+접속 옵션은 VMFS 데이터 저장소 또는 NFS 데이터 저장소 옵션과 동일하게 유지됩니다. iSCSI 및 NFS에 대한 vSphere 네트워크 샘플이 아래에 나와 있습니다.
+
+image:vmware-vvol-overview-image03.png["iSCSI 네트워크"]
 
 image:vmware-vvol-overview-image04.png["NFS 네트워크"]
 

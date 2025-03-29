@@ -13,8 +13,6 @@ summary: NetApp ONTAP를 통한 Red Hat OpenShift 가상화 데이터 보호
 :imagesdir: ../media/
 
 
-저자: 바누 선다, NetApp
-
 [role="lead"]
 참조 문서의 이 섹션에서는 NetApp ONTAP S3 또는 NetApp StorageGRID S3의 Velero를 사용하여 OADP(OpenShift API for Data Protection)를 사용하여 VM의 백업을 생성하는 방법에 대해 자세히 설명합니다. VM 디스크의 영구 볼륨(PVS) 백업은 CSI Trident 스냅샷을 사용하여 생성됩니다.
 

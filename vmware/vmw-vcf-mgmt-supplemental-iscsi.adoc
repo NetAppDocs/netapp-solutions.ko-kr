@@ -1,0 +1,358 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-vcf-mgmt-supplemental-iscsi.html 
+keywords: netapp, vmware, cloud, foundation, vcf, aff, all-flash, array, ontap tools, otv, sddc, iscsi 
+summary:  
+---
+= VMware용 ONTAP 툴을 사용하여 관리 도메인의 보조 스토리지로서 iSCSI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 시나리오에서는 VMware vSphere용 ONTAP 툴(OTV)을 배포하고 사용하여 VCF 관리 도메인에 대한 iSCSI 데이터 저장소를 구성하는 방법을 보여 줍니다.
+
+
+
+== iSCSI의 이점
+
+* 고성능: * 빠르고 효율적인 데이터 전송 속도와 짧은 지연 시간을 제공하는 우수한 성능을 제공합니다. 까다로운 엔터프라이즈 애플리케이션 및 가상 환경에 적합합니다.
+
+* 관리 용이성: * 친숙한 IP 기반 툴과 프로토콜을 사용하여 스토리지 관리를 간소화합니다.
+
+* 비용 효율성: * 기존 이더넷 인프라를 활용하여 특수 하드웨어의 필요성을 줄이고 조직이 안정적이고 확장 가능한 스토리지 솔루션을 구현할 수 있습니다.
+
+NetApp 스토리지 시스템에서 iSCSI를 사용하는 방법에 대한 자세한 내용은 을 https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html["iSCSI를 사용한 SAN 프로비저닝"]참조하십시오.
+
+
+
+== 시나리오 개요
+
+이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
+
+* iSCSI 트래픽에 논리 인터페이스(LIF)를 사용하여 SVM(스토리지 가상 머신)을 생성합니다.
+* VCF 관리 도메인에서 iSCSI 네트워크에 대한 분산 포트 그룹을 생성합니다.
+* VCF 관리 도메인의 ESXi 호스트에서 iSCSI용 vmkernel 어댑터를 생성합니다.
+* VCF 관리 도메인에 ONTAP 도구를 배포합니다.
+* VCF 관리 도메인에서 새 VMFS 데이터 저장소를 생성합니다.
+
+
+
+
+== 필수 구성 요소
+
+이 시나리오에는 다음과 같은 구성 요소 및 구성이 필요합니다.
+
+* 스토리지 트래픽 전용 이더넷 스위치에 물리적 데이터 포트가 있는 ONTAP AFF 또는 ASA 스토리지 시스템
+* VCF 관리 도메인 구축이 완료되고 vSphere Client에 액세스할 수 있습니다.
+
+
+NetApp은 iSCSI에 대해 완전히 이중화된 네트워크 설계를 적용할 것을 권장합니다. 다음 다이어그램은 스토리지 시스템, 스위치, 네트워크 어댑터 및 호스트 시스템에 대한 내결함성을 제공하는 중복 구성의 예를 보여 줍니다. NetApp를 참조하십시오 link:https://docs.netapp.com/us-en/ontap/san-config/index.html["SAN 구성 참조"] 자세한 내용은 를 참조하십시오.
+
+image:vmware-vcf-asa-image74.png["iSCSI 네트워크 설계"] {nbsp}
+
+NetApp은 여러 경로에 걸친 다중 경로 및 페일오버의 경우, iSCSI 구성의 모든 SVM에 대해 스토리지 노드당 최소 2개의 LIF를 별도의 이더넷 네트워크에 두는 것이 좋습니다.
+
+이 문서에서는 새로운 SVM을 생성하고 IP 주소 정보를 지정하여 iSCSI 트래픽에 대한 여러 LIF를 생성하는 프로세스를 보여줍니다. 기존 SVM에 새 LIF를 추가하려면 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF(네트워크 인터페이스) 생성"].
+
+VMware에서 VMFS iSCSI 데이터 저장소를 사용하는 방법에 대한 자세한 내용은 을 참조하십시오 link:vsphere_ontap_auto_block_iscsi.html["vSphere VMFS 데이터 저장소 - ONTAP를 사용하는 iSCSI 스토리지 백엔드"].
+
+
+TIP: 여러 VMkernel 어댑터가 동일한 IP 네트워크에 구성되어 있는 경우에는 ESXi 호스트에서 소프트웨어 iSCSI 포트 바인딩을 사용하여 어댑터 간에 로드 밸런싱이 수행되도록 하는 것이 좋습니다. KB 문서를 link:https://knowledge.broadcom.com/external/article?legacyId=2038869["ESX/ESXi에서 소프트웨어 iSCSI 포트 바인딩 사용 시 고려 사항(2038869)"]참조하십시오.
+
+
+
+== 배포 단계
+
+ONTAP 툴을 구축하고 이 툴을 사용하여 VCF 관리 도메인에 VMFS 데이터 저장소를 생성하려면 다음 단계를 완료합니다.
+
+
+
+=== ONTAP 스토리지 시스템에서 SVM 및 LIF를 생성합니다
+
+다음 단계는 ONTAP System Manager에서 수행합니다.
+
+.스토리지 VM 및 LIF를 생성합니다
+[%collapsible%open]
+====
+iSCSI 트래픽용 여러 LIF와 함께 SVM을 생성하려면 다음 단계를 완료하십시오.
+
+. ONTAP 시스템 관리자에서 왼쪽 메뉴의 * 스토리지 VM * 으로 이동한 다음 * + 추가 * 를 클릭하여 시작합니다.
++
+image:vmware-vcf-asa-image01.png["Add를 클릭하여 SVM 생성을 시작합니다"]
+
++
+{nbsp}
+
+. 스토리지 VM 추가 * 마법사에서 SVM에 * 이름 * 을 입력하고 * IP 공간 * 을 선택한 다음 * 액세스 프로토콜 아래에서 * iSCSI * 탭을 클릭하고 * iSCSI * 활성화 * 확인란을 선택합니다.
++
+image:vmware-vcf-asa-image02.png["스토리지 VM 추가 마법사 - iSCSI를 설정합니다"]
+
+. 네트워크 인터페이스 * 섹션에서 첫 번째 LIF에 대한 * IP 주소 *, * 서브넷 마스크 * 및 * 브로드캐스트 도메인 및 포트 * 를 입력합니다. 이후 LIF의 경우 나머지 모든 LIF에 공통 설정을 사용하거나 별도의 설정을 사용하도록 확인란을 설정할 수 있습니다.
++
+
+NOTE: NetApp은 여러 경로에 걸친 다중 경로 및 페일오버의 경우, iSCSI 구성의 모든 SVM에 대해 스토리지 노드당 최소 2개의 LIF를 별도의 이더넷 네트워크에 두는 것이 좋습니다.
+
++
+image:vmware-vcf-asa-image03.png["LIF에 대한 네트워크 정보를 입력합니다"]
+
+. 스토리지 VM 관리 계정(멀티 테넌시 환경의 경우)의 활성화 여부를 선택하고 * Save * 를 클릭하여 SVM을 생성합니다.
++
+image:vmware-vcf-asa-image04.png["SVM 계정을 사용하고 Finish를 사용합니다"]
+
+
+
+====
+
+
+=== ESXi 호스트에서 iSCSI에 대한 네트워킹을 설정합니다
+
+다음 단계는 vSphere Client를 사용하여 VCF 관리 도메인 클러스터에서 수행됩니다.
+
+.iSCSI 트래픽에 대한 분산 포트 그룹을 생성합니다
+[%collapsible%open]
+====
+각 iSCSI 네트워크에 대해 새 분산 포트 그룹을 생성하려면 다음을 수행하십시오.
+
+. 관리 도메인 클러스터의 vSphere 클라이언트에서 * Inventory > Networking * 으로 이동합니다. 기존 분산 스위치로 이동하여 * 새 분산 포트 그룹... * 을 만들 작업을 선택합니다.
++
+image:vmware-vcf-asa-image05.png["새 포트 그룹을 생성하도록 선택합니다"]
+
++
+{nbsp}
+
+. 새 분산 포트 그룹* 마법사에서 새 포트 그룹의 이름을 입력하고 * 다음 * 을 클릭하여 계속합니다.
+. 설정 구성 * 페이지에서 모든 설정을 입력합니다. VLAN을 사용하는 경우 올바른 VLAN ID를 제공해야 합니다. 계속하려면 * 다음 * 을 클릭하십시오.
++
+image:vmware-vcf-asa-image06.png["VLAN ID를 입력합니다"]
+
++
+{nbsp}
+
+. 완료 준비 * 페이지에서 변경 사항을 검토하고 * 마침 * 을 클릭하여 새 분산 포트 그룹을 생성합니다.
+. 이 프로세스를 반복하여 사용 중인 두 번째 iSCSI 네트워크에 대한 분산 포트 그룹을 만들고 올바른 * VLAN ID * 를 입력했는지 확인합니다.
+. 두 포트 그룹이 모두 생성되면 첫 번째 포트 그룹으로 이동하여 * Edit settings... * (설정 편집... *) 작업을 선택합니다.
++
+image:vmware-vcf-asa-image27.png["DPG - 설정을 편집합니다"]
+
++
+{nbsp}
+
+. Distributed Port Group - Edit Settings * 페이지에서 왼쪽 메뉴의 * Teaming and Failover * 로 이동한 후 * Uplink2 * 를 클릭하여 * Unused 업링크 * 로 이동합니다.
++
+image:vmware-vcf-asa-image28.png["업링크2를 사용하지 않음으로 이동합니다"]
+
+. 두 번째 iSCSI 포트 그룹에 대해 이 단계를 반복합니다. 그러나 이번에는 * Uplink1 * 아래로 * 미사용 업링크 * 로 이동합니다.
++
+image:vmware-vcf-asa-image29.png["업링크1을 사용하지 않음으로 이동합니다"]
+
+
+
+====
+.각 ESXi 호스트에서 VMkernel 어댑터를 생성합니다
+[%collapsible%open]
+====
+관리 도메인의 각 ESXi 호스트에서 이 프로세스를 반복합니다.
+
+. vSphere Client에서 관리 도메인 인벤토리에서 ESXi 호스트 중 하나로 이동합니다. Configure * 탭에서 * VMkernel Adapters * 를 선택하고 * Add Networking... * 을 클릭하여 시작합니다.
++
+image:vmware-vcf-asa-image07.png["네트워킹 추가 마법사를 시작합니다"]
+
++
+{nbsp}
+
+. Select connection type * 창에서 * VMkernel Network Adapter * 를 선택하고 * Next * 를 클릭하여 계속합니다.
++
+image:vmware-vcf-asa-image08.png["VMkernel Network Adapter를 선택합니다"]
+
++
+{nbsp}
+
+. Select target device * 페이지에서 이전에 생성된 iSCSI에 대한 분산 포트 그룹 중 하나를 선택합니다.
++
+image:vmware-vcf-asa-image09.png["대상 포트 그룹을 선택합니다"]
+
++
+{nbsp}
+
+. Port properties * 페이지에서 기본값을 유지하고 *Next * 를 클릭하여 계속합니다.
++
+image:vmware-vcf-asa-image10.png["VMkernel 포트 속성입니다"]
+
++
+{nbsp}
+
+. IPv4 설정 * 페이지에서 * IP 주소 *, * 서브넷 마스크 * 를 입력하고 새 게이트웨이 IP 주소를 입력합니다(필요한 경우에만 해당). 계속하려면 * 다음 * 을 클릭하십시오.
++
+image:vmware-vcf-asa-image11.png["VMkernel IPv4 설정"]
+
++
+{nbsp}
+
+. Ready to Complete * 페이지에서 선택 사항을 검토하고 * Finish * 를 클릭하여 VMkernel 어댑터를 생성합니다.
++
+image:vmware-vcf-asa-image12.png["VMkernel 선택 사항을 검토합니다"]
+
++
+{nbsp}
+
+. 이 프로세스를 반복하여 두 번째 iSCSI 네트워크에 대한 VMkernel 어댑터를 생성합니다.
+
+
+====
+
+
+=== ONTAP 툴을 구축하고 사용하여 스토리지를 구성합니다
+
+다음 단계는 vSphere 클라이언트를 사용하여 VCF 관리 도메인 클러스터에서 수행되며, OTV 구축, VMFS iSCSI 데이터 저장소 생성, 관리 VM을 새 데이터 저장소로 마이그레이션하는 작업이 포함됩니다.
+
+.VMware vSphere용 ONTAP 툴을 구축합니다
+[%collapsible%open]
+====
+OTV(VMware vSphere)용 ONTAP 툴은 VM 어플라이언스로 구축되며, ONTAP 스토리지 관리를 위한 통합 vCenter UI를 제공합니다.
+
+VMware vSphere용 ONTAP 툴을 구축하려면 다음을 완료하십시오.
+
+. 에서 ONTAP 도구 OVA 이미지를 가져옵니다 link:https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support 사이트"] 로컬 폴더에 다운로드합니다.
+. VCF 관리 도메인의 vCenter 어플라이언스에 로그인합니다.
+. vCenter 어플라이언스 인터페이스에서 관리 클러스터를 마우스 오른쪽 버튼으로 클릭하고 * Deploy OVF Template ....를 선택합니다
++
+image:vmware-vcf-aff-image21.png["OVF 템플릿 배포..."]
+
++
+{nbsp}
+
+. Deploy OVF Template * 마법사에서 * Local file * 라디오 버튼을 클릭하고 이전 단계에서 다운로드한 ONTAP tools OVA 파일을 선택합니다.
++
+image:vmware-vcf-aff-image22.png["OVA 파일을 선택합니다"]
+
++
+{nbsp}
+
+. 마법사의 2-5단계에서 VM의 이름과 폴더를 선택하고 컴퓨팅 리소스를 선택하고 세부 정보를 검토한 후 라이센스 계약에 동의합니다.
+. 구성 및 디스크 파일의 스토리지 위치로 VCF 관리 도메인 클러스터의 vSAN 데이터 저장소를 선택합니다.
++
+image:vmware-vcf-aff-image23.png["OVA 파일을 선택합니다"]
+
++
+{nbsp}
+
+. 네트워크 선택 페이지에서 관리 트래픽에 사용되는 네트워크를 선택합니다.
++
+image:vmware-vcf-aff-image24.png["네트워크를 선택합니다"]
+
++
+{nbsp}
+
+. 템플릿 사용자 지정 페이지에서 필요한 모든 정보를 입력합니다.
++
+** OTV에 대한 관리 액세스에 사용할 암호입니다.
+** NTP 서버 IP 주소입니다.
+** OTV 유지 관리 계정 암호.
+** OTV Derby DB 암호.
+** VCF(VMware Cloud Foundation) 활성화 * 확인란을 선택하지 마십시오. VCF 모드는 추가 스토리지를 구축하는 데 필요하지 않습니다.
+** vCenter 어플라이언스의 FQDN 또는 IP 주소와 vCenter에 대한 자격 증명을 제공합니다.
+** 필수 네트워크 속성 필드를 입력합니다.
++
+계속하려면 * 다음 * 을 클릭하십시오.
+
++
+image:vmware-vcf-aff-image25.png["OTV 템플릿 사용자 지정 1"]
+
++
+image:vmware-vcf-asa-image13.png["OTV 템플릿 사용자 지정 2"]
+
++
+{nbsp}
+
+
+
+. 완료 준비 페이지에서 모든 정보를 검토하고 마침 을 클릭하여 OTV 어플라이언스 배포를 시작합니다.
+
+
+====
+.OTV를 사용하여 관리 도메인에서 VMFS iSCSI 데이터 저장소를 구성합니다
+[%collapsible%open]
+====
+OTV를 사용하여 VMFS iSCSI 데이터 저장소를 관리 도메인의 보조 스토리지로 구성하려면 다음을 완료하십시오.
+
+. vSphere Client에서 기본 메뉴로 이동하여 * NetApp ONTAP Tools * 를 선택합니다.
++
+image:vmware-vcf-asa-image14.png["ONTAP 도구로 이동합니다"]
+
+. ONTAP 툴 * 의 시작 페이지( 또는 * 스토리지 시스템 * 에서)에서 * 추가 * 를 클릭하여 새 스토리지 시스템을 추가합니다.
++
+image:vmware-vcf-asa-image15.png["스토리지 시스템을 추가합니다"]
+
++
+{nbsp}
+
+. ONTAP 스토리지 시스템의 IP 주소와 자격 증명을 입력하고 * 추가 * 를 클릭합니다.
++
+image:vmware-vcf-asa-image16.png["ONTAP 시스템의 IP 및 자격 증명을 제공합니다"]
+
++
+{nbsp}
+
+. 클러스터 인증서를 인증하고 스토리지 시스템을 추가하려면 * Yes * 를 클릭합니다.
++
+image:vmware-vcf-asa-image17.png["클러스터 인증서를 승인합니다"]
+
+
+
+====
+.관리 VM 및 #8217;을 iSCSI 데이터 저장소로 마이그레이션합니다
+[%collapsible%open]
+====
+ONTAP 스토리지를 사용하여 VCF 관리 VM을 보호하는 것이 선호되는 경우 VM의 vMotion을 사용하여 VM을 새로 생성된 iSCSI 데이터 저장소로 마이그레이션할 수 있습니다.
+
+VCF 관리 VM을 iSCSI 데이터 저장소로 마이그레이션하려면 다음 단계를 완료하십시오.
+
+. vSphere Client에서 관리 도메인 클러스터로 이동하고 * VMS * 탭을 클릭합니다.
+. iSCSI 데이터 저장소로 마이그레이션할 VM을 선택하고 마우스 오른쪽 버튼을 클릭한 후 * Migrate.. * 를 선택합니다.
++
+image:vmware-vcf-asa-image18.png["마이그레이션할 VM을 선택합니다"]
+
++
+{nbsp}
+
+. 가상 머신 - 마이그레이션 * 마법사에서 마이그레이션 유형으로 * 스토리지 전용 변경 * 을 선택하고 * 다음 * 을 클릭하여 계속합니다.
++
+image:vmware-vcf-asa-image19.png["마이그레이션 유형을 선택합니다"]
+
++
+{nbsp}
+
+. Select storage * 페이지에서 iSCSI 데이터 저장소를 선택하고 * Next * 를 선택하여 계속합니다.
++
+image:vmware-vcf-asa-image20.png["대상 데이터 저장소를 선택합니다"]
+
++
+{nbsp}
+
+. 선택 사항을 검토하고 * Finish * 를 클릭하여 마이그레이션을 시작합니다.
+. 재배치 상태는 * Recent Tasks * 창에서 볼 수 있습니다.
++
+image:vmware-vcf-asa-image21.png["vSphere Client 최근 작업 창"]
+
+
+
+====
+
+
+== 추가 정보
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 link:https://techdocs.broadcom.com/us/en/vmware-cis/vcf.html["VMware Cloud Foundation 설명서"]참조하십시오.
+
+
+
+== 이 솔루션에 대한 비디오 데모입니다
+
+.VCF 관리 도메인에 대한 보조 스토리지로서의 iSCSI 데이터 저장소
+video::1d0e1af1-40ae-483a-be6f-b156015507cc[panopto,width=360]

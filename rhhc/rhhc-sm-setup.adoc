@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이 섹션에서는 AWS에서 OpenShift 클러스터를 설정 및 관리하고 stateful 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. Trident를 통해 NetApp Cloud Volumes ONTAP 스토리지를 사용하여 영구 볼륨을 제공하는 것을 보여 줍니다. 상태 저장 애플리케이션에 대한 데이터 보호 및 마이그레이션 작업을 수행하기 위해 Astra Control Center를 사용하는 방법에 대한 세부 정보가 제공됩니다.
+이 섹션에서는 AWS에서 OpenShift 클러스터를 설정 및 관리하고 stateful 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. Trident를 통해 NetApp Cloud Volumes ONTAP 스토리지를 사용하여 영구 볼륨을 제공하는 것을 보여 줍니다. Trident Protect를 사용하여 상태 저장 애플리케이션에 대한 데이터 보호와 마이그레이션 작업을 수행하는 방법에 대해 자세히 나와 있습니다.
 
 
 NOTE: AWS에서 Red Hat OpenShift Container 플랫폼 클러스터를 배포하는 방법은 여러 가지가 있습니다. 설정에 대한 이 고급 설명은 사용된 특정 방법에 대한 설명서 링크를 제공합니다. 에 제공된 관련 링크에서 다른 방법을 참조할 수 link:rhhc-resources.html["리소스 섹션을 참조하십시오"]있습니다.
@@ -26,7 +26,7 @@ image:rhhc-self-managed-aws.png["입력/출력 대화 상자 또는 작성된 �
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .고급 클러스터 관리 에서 AWS에 OCP 클러스터를 설치합니다.
-[%collapsible]
+[%collapsible%open]
 ====
 * pfSense를 사용하여 사이트 간 VPN 연결을 통해 VPC를 생성하여 온-프레미스 네트워크에 연결합니다.
 * 온-프레미스 네트워크에는 인터넷 연결이 있습니다.
@@ -44,7 +44,7 @@ TIP: ACM을 사용하여 클러스터를 생성할 때 양식 보기에서 세�
 
 ====
 .BlueXP를 사용하여 AWS에 Cloud Volumes ONTAP를 구축합니다.
-[%collapsible]
+[%collapsible%open]
 ====
 * 사내 VMware 환경에 커넥터를 설치합니다. 지침을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html#install-the-connector["여기"].
 * 커넥터를 사용하여 AWS에 CVO 인스턴스를 구축합니다. 지침을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["여기"].
@@ -55,7 +55,7 @@ NOTE: 커넥터는 클라우드 환경에도 설치할 수 있습니다. 을 참
 
 ====
 .OCP 클러스터에 Trident를 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 * Hrom을 사용하여 Trident 연산자 배포 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-helm.html["여기"]
 * 백엔드 및 스토리지 클래스를 생성합니다. 지침을 link:https://docs.netapp.com/us-en/trident/trident-use/backends.html["여기"]참조하십시오.

@@ -137,7 +137,7 @@ Oracle Data Guard를 설정하기 위한 시작점으로 VNet 내의 Azure 클�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -177,7 +177,7 @@ VNet Gateway 연결 상태: image:azure_ora_anf_dg_vnet_03.png["Azure 환경 구
 
 === Data Guard용 기본 Oracle VLDB 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 데모에서는 운영 Azure DB 서버에 ntap이라는 기본 Oracle 데이터베이스를 설정합니다. 6개의 NFS 마운트 지점인 Oracle 바이너리의 경우 /u01, Oracle 데이터 파일의 경우 /u02, /u04, /u05 및 /u06, Oracle 제어 파일의 경우 /u03, Oracle 활성 로그, 보관된 로그 파일 및 중복 Oracle 제어 파일을 설정합니다. 이 설정은 참조 구성으로 사용됩니다. 실제 구축에서는 용량 풀 사이징, 서비스 수준, 데이터베이스 볼륨 수 및 각 볼륨의 크기 지정과 관련된 특정 요구 사항 및 요구 사항을 고려해야 합니다.
 
@@ -505,7 +505,7 @@ DIRNAME
 
 === Data Guard용 대기 Oracle VLDB 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard를 사용하려면 운영 DB 서버와 일치시키기 위해 대기 DB 서버의 패치 세트를 포함한 Oracle 소프트웨어 스택과 OS 커널 구성이 필요합니다. 간편한 관리와 간소화를 위해 스탠바이 DB 서버의 데이터베이스 스토리지 구성은 데이터베이스 디렉토리 레이아웃 및 NFS 마운트 지점 크기 등 운영 DB 서버와도 이상적으로 일치해야 합니다.
 
@@ -825,7 +825,7 @@ DIRNAME
 
 === Data Guard Broker를 설정합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard Broker는 Oracle Data Guard 구성의 생성, 유지 관리 및 모니터링을 자동화하고 중앙 집중화하는 분산 관리 프레임워크입니다. 다음 섹션에서는 Data Guard Broker를 설정하여 Data Guard 환경을 관리하는 방법을 보여 줍니다.
 
@@ -922,7 +922,7 @@ DGMGRL>
 
 === 자동화를 통해 다른 사용 사례에 대한 대기 데이터베이스 복제
 
-[%collapsible]
+[%collapsible%open]
 ====
 전체 클론 라이프사이클 관리를 위한 클론을 생성 및 교체하기 위한 자동화 툴킷은 NetApp 솔루션 엔지니어링 팀에 문의하십시오.
 

@@ -20,7 +20,7 @@ NetApp Cloud Volumes ONTAP 스토리지는 AWS, Azure 및 Google Cloud의 컨테
 
 
 
-== Astra Control Center를 사용하는 하이브리드 클라우드의 OpenShift Container 워크로드를 위한 데이터 보호 및 마이그레이션 솔루션
+== Trident Protect를 사용한 하이브리드 클라우드의 OpenShift Container 워크로드용 데이터 보호 및 마이그레이션 솔루션입니다
 
 온프레미스 및 AWS image:rhhc-self-managed-aws.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

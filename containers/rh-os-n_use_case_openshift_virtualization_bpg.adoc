@@ -13,8 +13,6 @@ summary: Red Hat OpenShift Virtualization의 VM에 대한 모범 사례 권장 �
 :imagesdir: ../media/
 
 
-저자: 바누 선다, NetApp
-
 [role="lead"]
 이 섹션에서는 새 VM을 배포하거나 VMware vSphere에서 OpenShift Container Platform의 OpenShift 가상화로 기존 VM을 가져올 때 고려해야 할 여러 가지 요소에 대해 설명합니다.
 

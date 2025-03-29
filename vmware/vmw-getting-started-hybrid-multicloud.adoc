@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-getting-started-hybrid-multicloud.html 
+keywords: vmware, getting, started, overview, netapp, hybrid, multicloud, multi, cloud 
+summary:  
+---
+= 하이브리드 멀티 클라우드
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp가 포함된 VMware 하이브리드 멀티 클라우드 아키텍처를 사용하면 온프레미스 인프라와 퍼블릭 클라우드 서비스 간의 원활한 통합을 지원하여 유연성과 확장성을 제공합니다.
+
+
+
+== 소개
+
+기업은 이 접근 방식을 통해 워크로드를 손쉽게 마이그레이션하고, 리소스 사용을 최적화하며, 두 환경 모두에서 일관된 운영을 유지할 수 있습니다.
+
+VMware 및 NetApp의 하이브리드 클라우드 시나리오에 대한 자세한 내용은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/ehc/ehc-overview.html#vmware-cloud-options-in-public-cloud["VMware를 사용하는 NetApp 하이브리드 멀티 클라우드 개요"].
+
+
+
+== NetApp를 사용한 VMware 배포 시나리오
+
+이 섹션에서는 온프레미스 및 퍼블릭 클라우드 전반에 걸쳐 VMware 환경을 위한 다양한 구축 옵션에 대해 설명합니다. 각 클라우드 공급자는 해당 퍼블릭 클라우드 오퍼링 내에서 SDDC(VMware Software Defined Data Center) 및/또는 VCF(VMware Cloud Foundation) 스택을 지원합니다.
+
+* * VMware 온프레미스 *
+
+
+온프레미스 NetApp 스토리지와 함께 VMware를 사용하면 강력하고 확장 가능하며 유연한 가상화 환경을 구축할 수 있습니다. 데이터 중복 제거, 압축 및 효율적인 스냅샷과 같은 NetApp의 고급 데이터 관리 기능을 ONTAP 기반의 적절한 스토리지 시스템과 결합하여 고객이 가장 적합한 플랫폼을 선택할 수 있습니다. 이러한 결합을 통해 가상화된 워크로드에 대한 고성능, 안정성 및 간소화된 관리를 보장하여 전체 데이터 센터 효율성을 높일 수 있습니다.
+
+* * Azure VMware 솔루션 *
+
+
+Azure VMware 솔루션은 Microsoft Azure 퍼블릭 클라우드 내에서 VMware DC를 완벽하게 작동하는 하이브리드 클라우드 서비스입니다. Azure VMware 솔루션은 Microsoft에서 완벽하게 관리 및 지원하는 타사 솔루션으로, Azure 인프라를 활용하는 VMware에서 검증되었습니다. 즉, Azure VMware 솔루션을 구축할 때 고객은 컴퓨팅 가상화를 위한 VMware ESXi, 하이퍼 컨버지드 스토리지를 위한 vSAN을 얻게 됩니다. 네트워킹 및 보안을 위한 NSX는 물론, Microsoft Azure의 세계적인 입지, 동급 최고의 데이터 센터 시설을 활용하고 네이티브 Azure 서비스 및 솔루션의 풍부한 에코시스템에 근접합니다.
+
+* * VMware Cloud on AWS *
+
+
+VMware Cloud on AWS는 기본 AWS 서비스에 최적화된 액세스를 통해 VMware의 엔터프라이즈급 SDDC 소프트웨어를 AWS 클라우드에 제공합니다. VMware Cloud Foundation을 기반으로 하는 AWS 기반 VMware Cloud는 VMware의 컴퓨팅, 스토리지 및 네트워크 가상화 제품(VMware vSphere, VMware vSAN 및 VMware NSX)을 VMware vCenter Server 관리 기능과 통합하여 유연하고 전용 베어 메탈 AWS 인프라에서 실행되도록 최적화되었습니다.
+
+* * Google Cloud VMware Engine *
+
+
+Google Cloud VMware Engine은 Google Cloud의 고성능 확장형 인프라 및 VMware Cloud Foundation 스택 – VMware vSphere, vCenter, vSAN 및 NSX-T를 기반으로 구축된 서비스형 인프라(IaaS) 오퍼링입니다. 이 서비스를 사용하면 애플리케이션 재구성 또는 재설계 작업 없이 온프레미스 환경에서 Google Cloud Platform으로 기존 VMware 워크로드를 원활하게 마이그레이션 또는 확장할 수 있습니다. Google에서 판매 및 지원하는 서비스로서 VMware와 긴밀하게 협력하고 있습니다.

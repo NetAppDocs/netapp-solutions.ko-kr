@@ -14,4 +14,4 @@ summary:
 
 
 [role="lead"]
-이 참조 문서는 NetApp에서 검증한 바와 같이 여러 데이터 센터 환경에서 IPI(Installer provisioned Infrastructure)를 통해 배포된 Red Hat OpenShift 솔루션의 배포 검증을 제공합니다. 또한 Trident 스토리지 오케스트레이터를 사용하여 영구 스토리지 관리와 NetApp Astra Control Center를 사용하여 상태 저장 애플리케이션의 관리 및 보호를 지원함으로써 NetApp 스토리지 시스템과의 스토리지 통합에 대해 자세히 설명합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.
+이 참조 문서는 NetApp에서 검증한 바와 같이 여러 데이터 센터 환경에서 IPI(Installer provisioned Infrastructure)를 통해 배포된 Red Hat OpenShift 솔루션의 배포 검증을 제공합니다. 또한 Trident 스토리지 오케스트레이터를 사용하여 영구 스토리지 관리, NetApp Trident Protect의 상태 저장 애플리케이션과 상태 저장 애플리케이션의 관리 및 보호에 관한 기능을 제공함으로써 NetApp 스토리지 시스템과의 스토리지 통합에 대한 세부 정보를 제공합니다. 마지막으로, 다양한 솔루션 검증 및 실제 사용 사례를 살펴보고 문서화합니다.

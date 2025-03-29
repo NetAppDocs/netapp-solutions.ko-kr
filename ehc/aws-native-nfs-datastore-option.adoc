@@ -25,7 +25,7 @@ NOTE: AWS SDDC 기반 VMware Cloud와 동일한 가용성 영역에 FSx ONTAP을
 NOTE: 연결된 VPC에 FSx ONTAP을 구축할 수 없습니다. 대신 새로 지정된 VPC에 구축한 다음 SDDC 그룹을 통해 VPC를 vTGW(VMware Managed Transit Gateway)에 연결해야 합니다.
 
 .1단계: 새 지정된 VPC에서 Amazon FSx ONTAP을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 Amazon FSx ONTAP 파일 시스템을 생성하고 마운트하려면 다음 단계를 완료하십시오.
 
@@ -150,7 +150,7 @@ Amazon FSx ONTAP의 성능에 대한 자세한 내용은 을 참조하십시오 
 
 ====
 .2단계: SDDC 그룹 만들기
-[%collapsible]
+[%collapsible%open]
 ====
 파일 시스템 및 SVM을 생성한 후 VMware Console을 사용하여 SDDC 그룹을 생성하고 VMware Transit Connect를 구성합니다. 이렇게 하려면 다음 단계를 완료하고 VMware Cloud Console과 AWS 콘솔 간에 이동해야 합니다.
 
@@ -169,7 +169,7 @@ image:fsx-nfs-image13.png["입력/출력 대화 상자 또는 작성된 내용�
 
 ====
 .3단계: VMware Transit 접속 구성
-[%collapsible]
+[%collapsible%open]
 ====
 . 새로 생성된 지정된 VPC를 SDDC 그룹에 연결합니다. External VPC * 탭을 선택하고 를 https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-networking-security/GUID-A3D03968-350E-4A34-A53E-C0097F5F26A9.html["그룹에 외부 VPC를 연결하는 지침"^]따릅니다. 이 프로세스를 완료하는 데 10-15분 정도 걸릴 수 있습니다.
 +
@@ -198,7 +198,7 @@ image:fsx-nfs-image16.png["입력/출력 대화 상자 또는 작성된 내용�
 
 ====
 .4단계: 전송 게이트웨이 접속 장치를 작성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 . AWS 콘솔에서 VPC 서비스 페이지로 이동하여 FSx 파일 시스템 프로비저닝에 사용된 VPC로 이동합니다. 여기에서 오른쪽의 탐색 창에 있는 * Transit Gateway Attachment * 를 클릭하여 전송 게이트웨이 첨부 파일을 만듭니다.
 . VPC 첨부 * 에서 DNS 지원이 선택되어 있는지 확인하고 FSx ONTAP이 구축된 VPC를 선택합니다.
@@ -236,7 +236,7 @@ image:fsx-nfs-image22.png["입력/출력 대화 상자 또는 작성된 내용�
 
 ====
 .5단계: 라우팅(AWS VPC 및 SDDC) 및 보안 그룹을 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 . AWS 콘솔에서 VPC 서비스 페이지에서 VPC를 찾아 SDDC로 돌아가는 경로를 생성하고 VPC에 대한 * main * route 테이블을 선택합니다.
 . 하단 패널에서 라우팅 테이블을 찾아 * 라우트 편집 * 을 클릭합니다.
@@ -266,7 +266,7 @@ NOTE: NFS 트래픽을 허용하도록 보안 그룹을 업데이트합니다.
 
 ====
 .6단계: NFS 볼륨을 SDDC 클러스터에 데이터 저장소로 연결합니다
-[%collapsible]
+[%collapsible%open]
 ====
 파일 시스템이 프로비저닝되고 접속이 완료되면 VMware Cloud Console에 액세스하여 NFS 데이터 저장소를 마운트합니다.
 

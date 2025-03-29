@@ -17,13 +17,13 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 이 섹션에서는 Red Hat OpenShift Virtualization 마이그레이션 툴킷을 사용하여 VMware에서 OpenShift Cluster로 가상 머신을 마이그레이션하는 방법을 보여 줍니다. 다음 마이그레이션 유형에 대해 설명합니다.
 
 .콜드 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 기본 마이그레이션 유형입니다. 데이터가 복제되는 동안 소스 가상 머신이 종료됩니다.
 
 ====
 .웜 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 이 유형의 마이그레이션에서는 소스 가상 머신(VM)이 실행되는 동안 대부분의 데이터가 사전 복제 단계에서 복제됩니다. 그런 다음 VM이 종료되고 나머지 데이터가 컷오버 단계 동안 복사됩니다.
 

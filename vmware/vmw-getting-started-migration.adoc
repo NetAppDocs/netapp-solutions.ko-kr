@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-getting-started-migration.html 
+keywords: vmware, getting, started, overview, netapp 
+summary:  
+---
+= VM을 ONTAP 지원 데이터 저장소로 마이그레이션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware 워크로드를 NetApp ONTAP로 마이그레이션하면 데이터 관리가 간소화되고 데이터 중복 제거, 압축, 효율적인 스냅샷과 같은 ONTAP의 고급 스토리지 기능을 통해 성능이 향상됩니다.
+
+
+
+== 소개
+
+이러한 마이그레이션을 통해 가상화 환경 관리의 원활한 통합, 향상된 데이터 보호, 유연성 향상을 실현하여 가동 중지 시간을 최소화하면서 원활하게 전환할 수 있습니다.
+
+VMware 워크로드를 ONTAP 지원 데이터 저장소로 마이그레이션하는 방법에 대한 자세한 내용은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/vmware/migrate-vms-to-ontap-datastore.html["VM을 ONTAP 데이터 저장소로 마이그레이션"].
+
+
+
+== 사용 사례
+
+ONTAP 지원 데이터 저장소로 이동을 고려할 때 소스와 대상에서 다양한 마이그레이션 옵션이 있습니다.
+
+* 타사 스토리지 시스템(vSAN 포함)에서 ONTAP 데이터 저장소로 마이그레이션
+* 동일한 vSphere 클러스터에서 VM 마이그레이션
+* 여러 vSphere 클러스터에서 VM 마이그레이션
+* 동일한 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션
+* 서로 다른 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션
+* 데이터 센터 위치 간 VM 마이그레이션
+* 타사 스토리지 시스템(vSAN 포함)에서 ONTAP 데이터 저장소로 마이그레이션
+* 하이브리드 클라우드 환경에서 VM 마이그레이션
+

@@ -13,8 +13,6 @@ summary: NetApp ONTAP를 통한 Red Hat OpenShift 가상화 데이터 보호
 :imagesdir: ../media/
 
 
-저자: 바누 선다, NetApp
-
 [role="lead"]
 참조 문서의 이 섹션에서는 Trident Protect를 사용하여 VM의 스냅샷 및 백업을 생성하는 방법에 대한 세부 정보를 제공합니다.
 
@@ -36,7 +34,7 @@ Trident Protect는 OpenShift 클러스터에서 애플리케이션 및 VM의 스
 
 
 .AppVault 작성
-[%collapsible]
+[%collapsible%open]
 ====
 애플리케이션 또는 VM에 대한 스냅샷과 백업을 생성하기 전에 Trident Protect에서 스냅샷과 백업을 저장할 객체 스토리지를 구성해야 합니다. 이 작업은 Bucket CR을 사용하여 수행합니다. 관리자만 Bucket CR을 생성하고 구성할 수 있습니다. 버킷 CR은 Trident Protect에서 AppVault로 알려져 있습니다. AppVault 개체는 스토리지 버킷의 선언적 Kubernetes 워크플로우 표현입니다. AppVault CR에는 백업, 스냅샷, 복원 작업 및 SnapMirror 복제와 같은 보호 작업에 사용되는 버킷에 필요한 구성이 포함되어 있습니다.
 
@@ -102,7 +100,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_8.png["ONTAP S3 Appvault가 생성되었습니
 
 ====
 .OpenShift Virtualization에서 VM을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 다음 스크린 샷은 템플릿을 사용하여 콘솔에서 VM(demo - powerror in namespace demo)을 생성하는 것을 보여줍니다. 루트 디스크는 기본 스토리지 클래스를 자동으로 선택하므로 기본 스토리지 클래스가 적절하게 설정되어 있는지 확인합니다. 이 설정에서 기본 저장소 클래스는 **SC-ZoneA-SAN**입니다. 추가 디스크를 만들 때 SC-ZoneA-SAN 스토리지 클래스를 선택하고 "** Optimized storage settings** 적용" 확인란을 선택합니다. 그러면 액세스 모드가 rwx로 설정되고 볼륨 모드가 Block으로 설정됩니다.
 
@@ -125,7 +123,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_7.png["VM, Pod 및 PVC가 생성되었습니�
 
 ====
 .앱을 만듭니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** VM용 Trident 보호 앱을 만듭니다**
 
@@ -152,7 +150,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_9.png["앱이 생성되었습니다"]
 
 ====
 .백업을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 주문형 백업 생성**
 
@@ -202,7 +200,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_17.png["필요 시 및 일정에 따라 생성
 
 ====
 .백업에서 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** VM을 동일한 네임스페이스로 복원합니다**
 
@@ -282,7 +280,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_23.png["새 네임스페이스의 VM입니다"
 
 ====
 .스냅샷을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 주문형 스냅샷 생성** 앱에 대한 스냅샷을 생성하고 저장할 appvault를 지정합니다.
 
@@ -350,7 +348,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_26.png["예약된 스냅샷"]
 
 ====
 .스냅샷에서 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 스냅샷에서 동일한 네임스페이스로 VM 복원** demo2 네임스페이스에서 VM demo-Fedora를 삭제합니다.
 
@@ -428,7 +426,7 @@ image:rh-os-n_use_case_ocpv_tp_dp_32.png["VM이 새 네임스페이스에서 복
 
 ====
 .네임스페이스에서 특정 VM을 선택하여 스냅샷/백업 및 복구 생성
-[%collapsible]
+[%collapsible%open]
 ====
 이전 예에서는 네임스페이스 내에 단일 VM이 있었습니다. 백업에 전체 네임스페이스를 포함함으로써 해당 VM과 관련된 모든 리소스를 캡처했습니다. 다음 예에서는 동일한 네임스페이스에 다른 VM을 추가하고 레이블 선택기를 사용하여 이 새 VM에 대한 앱을 만듭니다.
 
@@ -489,9 +487,9 @@ image:rh-os-n_use_case_ocpv_tp_dp_18.png["특정 VM의 백업이 생성되었습
 
 ** 특정 VM을 동일한 네임스페이스로 복원** 특정 VM(CentOS)의 백업이 해당 앱을 사용하여 생성되었습니다. 이 위치에서 백업 위치 복원 또는 백업 복원이 생성된 경우 이 특정 VM만 복원됩니다. CentOS VM을 삭제합니다.
 
-image:rh-os-n_use_case_ocpv_tp_dp_33["CentOS VM이 있습니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_33.png["CentOS VM이 있습니다"]
 
-image:rh-os-n_use_case_ocpv_tp_dp_34["CentOS VM이 삭제되었습니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_34.png["CentOS VM이 삭제되었습니다"]
 
 demo-CentOS-backup-on-demand에서 백업 데이터 이동 없이 복구를 생성하고 CentOS VM이 다시 생성되었는지 확인합니다.
 
@@ -500,9 +498,9 @@ demo-CentOS-backup-on-demand에서 백업 데이터 이동 없이 복구를 생�
 #tp create bir demo-centos-restore --backup demo/demo-centos-backup-on-demand -n demo
 BackupInplaceRestore "demo-centos-restore" created.
 ----
-image:rh-os-n_use_case_ocpv_tp_dp_35["CentOS VM Bir을 생성합니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_35.png["CentOS VM Bir을 생성합니다"]
 
-image:rh-os-n_use_case_ocpv_tp_dp_36["CentOS VM이 생성되었습니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_36.png["CentOS VM이 생성되었습니다"]
 
 ** 특정 VM을 다른 네임스페이스로 복원** demo-CentOS-backup-on-demand에서 다른 네임스페이스(demo3)로 백업 복구를 생성하고 CentOS VM이 다시 생성되었는지 확인합니다.
 
@@ -511,8 +509,8 @@ image:rh-os-n_use_case_ocpv_tp_dp_36["CentOS VM이 생성되었습니다"]
 # tp create br demo2-centos-restore --backup demo/demo-centos-backup-on-demand --namespace-mapping demo:demo3 -n demo3
 BackupRestore "demo2-centos-restore" created.
 ----
-image:rh-os-n_use_case_ocpv_tp_dp_37["CentOS VM Bir을 생성합니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_37.png["CentOS VM Bir을 생성합니다"]
 
-image:rh-os-n_use_case_ocpv_tp_dp_38["CentOS VM이 생성되었습니다"]
+image:rh-os-n_use_case_ocpv_tp_dp_38.png["CentOS VM이 생성되었습니다"]
 
 ====

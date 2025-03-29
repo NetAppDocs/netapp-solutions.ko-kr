@@ -16,8 +16,6 @@ summary: 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중�
 [role="lead"]
 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중단 및 데이터 손상 이벤트로부터 워크로드를 보호하는 복원력이 있는 비용 효율적인 방법입니다. NetApp SnapMirror를 사용하면 게스트 연결 스토리지를 사용하는 사내 VMware 워크로드를 Google Cloud에서 실행 중인 NetApp Cloud Volumes ONTAP로 복제할 수 있습니다.
 
-저자: NetApp Suesh Thoppay
-
 
 
 == 개요
@@ -76,7 +74,7 @@ NOTE: 온프레미스 데이터 센터를 Google Cloud에 연결하는 옵션에
 === 배포 세부 정보
 
 .Google Cloud에서 CVO를 구성하고 볼륨을 CVO로 복제합니다
-[%collapsible]
+[%collapsible%open]
 ====
 첫 번째 단계는 Cloud Volumes ONTAP Google Cloud(link:gcp-guest.html["CVO"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
 
@@ -88,7 +86,7 @@ SnapCenter 설정 및 데이터 복제에 대한 단계별 지침은 을 참조�
 video::395e33db-0d63-4e48-8898-b01200f006ca[panopto]
 ====
 .GCVE 호스트 및 CVO 데이터 액세스를 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 SDDC를 배포할 때 고려해야 할 두 가지 중요한 요소는 GCVE 솔루션의 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간 입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.
 
@@ -100,7 +98,7 @@ Cloud Volumes ONTAP 및 GCVE가 올바르게 구성된 후에는 Veeam 복제 �
 
 ====
 .Veeam 구성 요소를 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 Veeam 백업 서버, 백업 저장소 및 구축해야 하는 백업 프록시가 구축 시나리오에 기반을 두고 있습니다. 이 경우 Veeam 및 스케일아웃 저장소에도 오브젝트 저장소를 구축할 필요가 없습니다.
 https://helpcenter.veeam.com/docs/backup/vsphere/replication_components.html?ver=120["설치 절차는 Veeam 설명서를 참조하십시오"]
@@ -108,14 +106,14 @@ https://helpcenter.veeam.com/docs/backup/vsphere/replication_components.html?ver
 
 ====
 .Veeam으로 VM 복제를 설정합니다
-[%collapsible]
+[%collapsible%open]
 ====
 사내 vCenter와 GCVE vCenter를 모두 Veeam에 등록해야 합니다. https://helpcenter.veeam.com/docs/backup/vsphere/replica_job.html?ver=120["vSphere VM 복제 작업을 설정합니다"] 마법사의 게스트 처리 단계에서 애플리케이션 인식 백업 및 복구를 위해 SnapCenter를 활용할 예정이므로 애플리케이션 처리 비활성화 를 선택합니다.
 
 video::8b7e4a9b-7de1-4d48-a8e2-b01200f00692[panopto,width=360]
 ====
 .Microsoft SQL Server VM의 페일오버
-[%collapsible]
+[%collapsible%open]
 ====
 video::9762dc99-081b-41a2-ac68-b01200f00ac0[panopto,width=360]
 ====

@@ -5,3 +5,15 @@ entries:
 - title: 가상 머신 마이그레이션(Shift 툴킷)
   pdf-filename: 가상 머신 마이그레이션(Shift 툴킷)
   url: "/vm-migrate/migrate-overview.html"
+- title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
+  url: "/vmware/migrate-vms-to-ontap-datastore.html"
+- title: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+  entries:
+  - title: 개요
+    url: "/vmware/migrate-vms-to-ec2-fsxn.html"
+  - title: 아키텍처 및 사전 요구 사항
+    url: "/vmware/migrate-vms-to-ec2-fsxn-arch.html"
+  - title: 구현 절차
+    url: "/vmware/migrate-vms-to-ec2-fsxn-deploy.html"
+  - title: 결론
+    url: "/vmware/migrate-vms-to-ec2-fsxn-wrapup.html"

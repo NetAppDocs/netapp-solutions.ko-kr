@@ -17,7 +17,7 @@ summary:
 VMware vSphere 8.0 U1(Tech-preview)부터 nconnect 기능을 사용하면 NFS v3 데이터 저장소 볼륨에 대해 여러 TCP 연결을 활성화하여 처리량을 늘릴 수 있습니다. NFS 데이터 저장소를 사용하는 고객은 이제 NFS 서버에 대한 연결 수를 늘려 고속 네트워크 인터페이스 카드의 활용도를 극대화할 수 있습니다.
 
 
-NOTE: 이 기능은 일반적으로 8.0 U2가 설치된 NFS v3에서 사용할 수 있습니다. 의 스토리지 섹션을 참조하십시오.link:https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-802-release-notes/index.html["VMware vSphere 8.0 Update 2 릴리즈 노트"] vSphere 8.0 U3에 NFS v4.1 지원이 추가되었습니다. 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-803-release-notes/index.html["vSphere 8.0 업데이트 3 릴리즈 노트"]
+NOTE: 이 기능은 일반적으로 8.0 U2가 설치된 NFS v3에서 사용할 수 있습니다. 의 스토리지 섹션을 참조하십시오.link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/release-notes/esxi-update-and-patch-release-notes/vsphere-esxi-802-release-notes.html["VMware vSphere 8.0 Update 2 릴리즈 노트"] vSphere 8.0 U3에 NFS v4.1 지원이 추가되었습니다. 자세한 내용은 을 참조하십시오 link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/release-notes/esxi-update-and-patch-release-notes/vsphere-esxi-803-release-notes.html["vSphere 8.0 업데이트 3 릴리즈 노트"]
 
 
 
@@ -137,7 +137,7 @@ govc host.esxcli storage nfs list
 
 ONTAP에서 지원되는 최대 연결 수는 스토리지 플랫폼 모델에 따라 다릅니다. 에서 Exec_CTX를 찾습니다 link:https://www.netapp.com/media/10720-tr-4067.pdf["NFS 모범 사례 및 구축 가이드"] 를 참조하십시오.
 
-NFSv3 데이터 저장소당 연결 수가 증가하면 해당 vSphere 호스트에 마운트할 수 있는 NFS 데이터 저장소의 수가 감소합니다. vSphere 호스트당 지원되는 총 연결 수는 256개입니다. 확인합니다 link:https://kb.vmware.com/s/article/91481["VMware 기술 자료 문서 91481"] vSphere 호스트당 데이터 저장소 제한이 있는 경우
+NFSv3 데이터 저장소당 연결 수가 증가하면 해당 vSphere 호스트에 마운트할 수 있는 NFS 데이터 저장소의 수가 감소합니다. vSphere 호스트당 지원되는 총 연결 수는 256개입니다. link:https://knowledge.broadcom.com/external/article?legacyId=91481["VMware 기술 자료 문서 91481"]vSphere 호스트당 데이터 저장소 제한이 있는지 확인합니다.
 
 
 NOTE: VVOL 데이터 저장소는 nConnect 기능을 지원하지 않습니다. 그러나 프로토콜 엔드포인트는 연결 한도에 카운트됩니다. VVOL 데이터 저장소가 생성될 때 SVM의 각 데이터 lif에 대해 프로토콜 엔드포인트가 생성됩니다.

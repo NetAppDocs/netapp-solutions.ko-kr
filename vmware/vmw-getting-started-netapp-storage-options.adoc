@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-getting-started-netapp-storage-options.html 
+keywords: vmware, getting, started, overview, netapp, storage 
+summary:  
+---
+= NetApp 스토리지 옵션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp의 FAS(패브릭 연결 스토리지), AFF(All Flash FAS), ASA(All SAN 어레이) 및 클라우드 솔루션은 VMware Cloud Foundation, VMware vSphere Foundation 구축을 포함하여 VMware 환경에 매우 유용한 다양한 기능을 제공합니다.
+
+
+
+== 소개
+
+이러한 오퍼링은 VMware 관리자의 성능, 확장성 및 데이터 관리를 향상시킵니다. 또한 ONTAP는 이러한 플랫폼 전체에서 활용되며, 다양한 스토리지 프로토콜을 지원하고, 데이터 보호 기능을 강화하며, 다양한 워크로드에 맞게 성능을 최적화하는 확장 가능하고 효율적인 유니파이드 데이터 관리 솔루션을 제공합니다.
+
+
+
+== NetApp 플랫폼 전반의 공통 이점
+
+* * VMware 통합: * 모든 NetApp 플랫폼은 VMware와의 긴밀한 통합을 제공하여 스토리지 환경의 효율성을 향상시킵니다. 온프레미스 솔루션은 플러그인, API, VAAI 및 VASA를 활용하여 전반적인 데이터 관리를 개선하는 동시에 인프라의 다양성을 향상시킬 수 있습니다.
+* * 비용 최적화 및 스토리지 효율성: * NetApp 스토리지를 활용하면 데이터 중복 제거, 압축 및 씬 프로비저닝과 같은 기본 효율성 기술을 활용하여 스토리지 사용량과 비용을 대폭 절감하는 동시에 용량 활용도와 성능을 극대화할 수 있습니다. 또한 이러한 스토리지 절감으로 컴퓨팅 리소스의 부담이 줄어듭니다.
+* * 통합 데이터 관리: * ONTAP는 온프레미스 및 클라우드 기반 스토리지를 위한 단일 관리 인터페이스를 제공하여 관리를 단순화하고 복잡성을 줄입니다. 따라서 사내와 클라우드 환경에서 데이터를 원활하게 이동하고 관리할 수 있어 VMware 워크로드에 유연성과 확장성을 제공합니다.
+* * 멀티 프로토콜 지원: * ONTAP는 NFS, CIFS/SMB, iSCSI, FC 및 NVMe를 비롯한 광범위한 스토리지 프로토콜을 지원하므로, 조직은 단일 플랫폼에서 워크로드를 통합하거나 데이터 사일로를 생성하지 않고 특별 제작된 SAN 제품을 활용할 수 있습니다.
+* * 자동화 및 오케스트레이션: * VMware Cloud Foundation Automation(이전 명칭: VMware Aria Automation)과 같은 자동화 툴을 지원하고 Ansible 및 기타 자동화 프레임워크와의 통합을 통해 운영을 간소화하고 관리 오버헤드를 줄입니다.
+* * 보안: * 저장 시 암호화, 전송 중 암호화, 보안 멀티 테넌시, 역할 기반 액세스 제어 등의 강력한 보안 기능을 통해 VMware 환경의 보안을 유지할 수 있습니다.
+* * VMware용 ONTAP 툴: * VMware용 NetApp ONTAP 툴은 원활한 통합 및 관리 기능을 제공하며, 통합된 직관적인 인터페이스를 통해 VMware 환경을 위한 효율적인 스토리지 프로비저닝, 데이터 보호 및 향상된 성능을 제공합니다.
+* * SnapCenter for VMware vSphere: * NetApp SnapCenter for VMware vSphere는 VMware 환경에 대한 데이터 보호, 백업 및 복구 작업을 간소화하고 중앙 집중화하여 가상 머신 데이터를 안정적이고 효율적으로 관리할 수 있도록 보장합니다.
+* * 고가용성 및 복원력: * RAID-TEC 및 RAID-DP와 같은 기능은 VMware 환경에 매우 중요한 강력한 데이터 보호 및 고가용성을 제공합니다.
+* * QoS(Quality of Service): * 관리자가 여러 VM에 대해 성능 보장을 설정하여 중요한 워크로드에 필요한 리소스를 제공하도록 보장합니다.
+
+
+참고: NetApp 클라우드 솔루션은 클라우드 공급자가 제공하는 기능이 제한적일 수 있지만 게스트 연결 및 네이티브 NFS 데이터 저장소 지원을 위해 매우 강력합니다.
+
+
+
+== NetApp ASA(All SAN 어레이)의 이점
+
+* * SAN에 최적화: * SAN 워크로드에 맞게 특별히 설계되었으며, 블록 스토리지를 사용하는 VMware 환경에 높은 성능과 짧은 지연 시간을 제공합니다.
+* * 향상된 고가용성: * 액티브-액티브 컨트롤러 및 동기식 복제와 같은 기능은 무중단 가용성과 데이터 보호를 보장합니다.
+
+
+ASA 제품군은 A-Series 모델과 C-Series 모델로 구성됩니다.
+
+NetApp A-Series All-NVMe 플래시 어레이는 고성능 워크로드를 위해 설계되었으며, 매우 낮은 지연 시간과 높은 복원력을 제공하여 미션 크리티컬 애플리케이션에 적합합니다.
+
+image:vmware-asa-image1.png["너비 = 800"]
+
+C-Series QLC 플래시 어레이는 용량을 더 많이 사용하는 사례를 목표로 구축되었으며 하이브리드 플래시의 경제성과 플래시의 속도를 제공합니다.
+
+image:vmware-asa-image2.png["너비 = 800"]
+
+
+
+=== 스토리지 프로토콜 지원
+
+ASA는 iSCSI, 파이버 채널(FC), FCoE(Fibre Channel over Ethernet) 및 NVMe over Fabrics를 비롯한 모든 표준 SAN 프로토콜을 지원합니다.
+
+* iSCSI * - NetApp ASA는 iSCSI에 대한 강력한 지원을 제공하여 IP 네트워크를 통해 스토리지 장치에 블록 수준 액세스를 허용합니다. iSCSI 이니시에이터와의 원활한 통합을 제공하여 iSCSI LUN의 효율적인 프로비저닝 및 관리를 지원합니다. 다중 경로, CHAP 인증 및 ALUA 지원과 같은 ONTAP의 고급 기능을 제공합니다.
+
+iSCSI 구성에 대한 설계 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap/san-config/configure-iscsi-san-hosts-ha-pairs-reference.html["SAN 구성 참조 설명서"].
+
+* 파이버 채널 * - NetApp ASA는 SAN(Storage Area Network)에서 일반적으로 사용되는 고속 네트워크 기술인 파이버 채널(FC)에 대한 포괄적인 지원을 제공합니다. ONTAP는 FC 인프라와 원활하게 통합되어 스토리지 장치에 대한 안정적이고 효율적인 블록 레벨 액세스를 제공합니다. FC 환경에서 성능을 최적화하고 보안을 강화하고 원활한 연결을 보장하는 조닝, 다중 경로 지정 및 FLOGI(Fabric Login) 등의 기능을 제공합니다.
+
+Fibre Channel 구성에 대한 설계 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap/san-config/fc-config-concept.html["SAN 구성 참조 설명서"].
+
+* NVMe over Fabrics * - NetApp ONTAP 및 ASA는 NVMe over Fabrics를 지원합니다. NVMe/FC를 사용하면 파이버 채널 인프라 및 스토리지 IP 네트워크를 통해 NVMe 스토리지 장치를 사용할 수 있습니다.
+
+NVMe에 대한 설계 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap/nvme/support-limitations.html["NVMe 구성, 지원 및 제한 사항"]
+{nbsp}
+
+
+
+=== 액티브-액티브 기술
+
+NetApp All-Flash SAN 어레이를 사용하면 두 컨트롤러를 통해 액티브-액티브 경로를 사용할 수 있으므로 호스트 운영 체제에서 대체 경로를 활성화하기 전에 액티브 경로가 실패할 때까지 기다릴 필요가 없습니다. 즉, 호스트가 모든 컨트롤러에서 사용 가능한 경로를 모두 활용할 수 있으므로 시스템이 안정 상태에 있는지 또는 컨트롤러 페일오버 작업을 진행 중인지에 관계없이 활성 경로가 항상 존재하도록 보장합니다.
+
+게다가 NetApp ASA는 SAN 페일오버 속도를 크게 개선하는 고유한 기능을 제공합니다. 각 컨트롤러는 필수 LUN 메타데이터를 파트너에 지속적으로 복제합니다. 따라서 각 컨트롤러는 파트너가 갑작스러운 장애가 발생할 경우 데이터 서비스 책임을 전가할 준비가 되어 있습니다. 이러한 준비는 컨트롤러가 이전에 장애가 발생한 컨트롤러에서 관리했던 드라이브를 활용하기 시작하는 데 필요한 정보를 이미 보유하고 있기 때문에 가능합니다.
+
+액티브-액티브 경로를 사용하면 계획된 페일오버와 계획되지 않은 테이크오버의 IO 재시작 시간은 2~3초입니다.
+
+자세한 내용은 을 참조하십시오 https://www.netapp.com/pdf.html?item=/media/85671-tr-4968.pdf["TR-4968, NetApp All-SAS 어레이 - NetApp ASA와의 데이터 가용성 및 무결성"].
+{nbsp}
+
+자세한 내용은 를 참조하십시오 https://www.netapp.com/data-storage/all-flash-san-storage-array["NetApp ASA 랜딩 페이지"].
+{nbsp}
+
+
+
+== NetApp AFF(All Flash FAS)의 이점
+
+* * 최고의 성능: * All-Flash 스토리지를 활용하여 밀리초 미만의 지연 시간과 높은 IOPS를 제공하며 성능에 민감한 VMware 워크로드에 이상적입니다.
+* * 일관된 낮은 지연 시간: * SLA 유지에 중요한 애플리케이션 및 VM에 대해 예측 가능한 성능을 보장합니다.
+
+
+NetApp AFF A-Series 스토리지 어레이에 대한 자세한 내용은 을 참조하십시오 link:https://www.netapp.com/data-storage/aff-a-series/["NetApp AFF A 시리즈"] 랜딩 페이지:
+
+NetApp C-Series 스토리지 어레이에 대한 자세한 내용은 을 참조하십시오 link:https://www.netapp.com/data-storage/aff-c-series/["NetApp AFF C-Series로 문의하십시오"] 랜딩 페이지:
+
+{nbsp}
+
+
+
+== NetApp FAS(Fabric-Attached Storage)의 이점
+
+* * 유니파이드 스토리지 아키텍처: * SAN(블록 레벨) 및 NAS(파일 레벨) 프로토콜을 모두 지원하므로 다양한 VMware 워크로드를 처리할 수 있습니다.
+* * 비용 효율적: * HDD와 SSD를 결합하여 성능과 비용 간의 균형이 필요한 환경에 적합
+
+
+
+
+== 클라우드 솔루션의 이점
+
+* * 클라우드 네이티브 데이터 관리: * 클라우드 네이티브 오퍼링을 활용하여 VMware 워크로드의 데이터 이동성, 백업 및 재해 복구를 개선합니다. VMware 클라우드 워크로드를 위한 기본 NFS 데이터 저장소 지원은 다음과 같습니다.
++
+** AWS 기반 VMware Cloud 및 Amazon FSx for NetApp ONTAP를 사용합니다
+** Azure VMware 서비스 및 Azure NetApp Files
+** Google Cloud NetApp 볼륨이 포함된 Google Cloud VMware Engine -
+
+
+* * 하이브리드 클라우드 유연성: * 온프레미스와 클라우드 환경 간의 원활한 통합을 통해 여러 위치에 걸쳐 있는 VMware 워크로드에 유연성을 제공합니다.
+
+
+
+
+== 요약
+
+요약하면, ONTAP 및 NetApp 플랫폼은 VMware 워크로드에 대해 성능, 확장성, 데이터 관리를 개선하면서 포괄적인 이점을 제공합니다. 공통 기능은 견고한 기반을 제공하지만, 각 플랫폼은 FAS를 사용하는 비용 효율적인 스토리지, AFF의 고성능, ASA를 통해 최적화된 SAN 성능, NetApp 클라우드 오퍼링의 하이브리드 클라우드 유연성 등 특정 요구사항에 맞는 차별화된 이점을 제공합니다.

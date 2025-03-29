@@ -17,17 +17,15 @@ keywords: netapp, solutions, videos, demos
 NetApp 솔루션의 다양한 기능을 소개하는 비디오 및 데모를 소개합니다.
 
 .인공 지능(AI) 및 최신 데이터 분석
-[#ai%collapsible]
+[#ai%collapsible%open]
 ====
 * link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7nSrRhuolRPYqvSlGLuTOAO["NetApp AI 솔루션"^]
 * link:https://www.youtube.com/playlist?list=PLdXI3bZJEw7n1sWK-QGq4QMI1VBJS-ZZW["MLOps를 참조하십시오"^]
 
 
-.DataOps Toolkit과 Astra Control Center 클라우드 버스트로 DevOps 가속
-video::e87773e3-dc53-4195-83ed-b0d50100a788[panopto,width=360]
 ====
 .엔터프라이즈 애플리케이션 및 데이터베이스
-[#db%collapsible]
+[#db%collapsible%open]
 ====
 [underline]# * 오픈 소스 데이터베이스용 동영상 * #
 
@@ -72,7 +70,7 @@ video::VcQMJIRzhoY[youtube,width=360]
 
 ====
 .하이브리드 멀티 클라우드(HMC)
-[#hmc%collapsible]
+[#hmc%collapsible%open]
 ====
 [underline]# * AWS/VMC * #에 대한 동영상
 
@@ -104,38 +102,24 @@ video::986bb505-6f3d-4a5a-b016-b01200f03f18[panopto,width=360]
 video::255640f5-4dff-438c-8d50-b01200f017d1[panopto,width=360]
 ====
 .Red Hat OpenShift를 사용한 하이브리드 멀티 클라우드
-[#rhhc%collapsible]
+[#rhhc%collapsible%open]
 ====
 .Amazon FSx ONTAP 스토리지를 사용하는 AWS(ROSA) 기반 Red Hat OpenShift Service의 애플리케이션을 위한 스냅샷/복원
 video::36ecf505-5d1d-4e99-a6f8-b11c00341793[panopto,width=360]
-.Astra Control Service를 사용한 Rosa DR
-video::01dd455e-7f5a-421c-b501-b01200fa91fd[panopto,width=360]
 .FSx ONTAP과 Trident의 통합
 video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto,width=360]
 .ROSA에서 FSx ONTAP를 사용하여 앱의 장애 조치 및 장애 조치
 video::e9a07d79-42a1-4480-86be-b01200fa62f5[panopto,width=360]
-[밑줄]# * Astra Control Center를 사용한 DR * #
-
-link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["NetAppTV를 시청해 보십시오"]
-
-.Google Cloud Platform에 OpenShift Cluster 설치
-video::4efc68f1-d37f-4cdd-874a-b09700e71da9[panopto,width=360]
-.OpenShift 클러스터를 Astra Control Center로 가져오기
-video::57b63822-6bf0-4d7b-b844-b09700eac6ac[panopto,width=360]
-.Astra Control Center를 통한 데이터 보호
-video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
-.Astra Control Center를 사용한 페일오버 페일백
-video::1546191b-bc46-42eb-ac34-b0d60142c58d[panopto,width=360]
 ====
 .포함되었습니다
-[#virtualization%collapsible]
+[#virtualization%collapsible%open]
 ====
 * link:vmware/vsphere_demos_videos.html["VMware 비디오 컬렉션"]
 
 
 ====
 .컨테이너/Kubernetes
-[#containers%collapsible]
+[#containers%collapsible%open]
 ====
 * link:containers/a-w-n_videos_and_demos.html["NetApp 및 Google Anthos 비디오"]
 * link:containers/vtwn_videos_and_demos.html["NetApp with VMware Tanzu 비디오"]
@@ -144,7 +128,7 @@ video::1546191b-bc46-42eb-ac34-b0d60142c58d[panopto,width=360]
 
 ====
 .솔루션 자동화
-[#automation%collapsible]
+[#automation%collapsible%open]
 ====
 .Ansible을 사용하여 FlexPod에 Oracle 19c RAC 구축 자동화
 video::VcQMJIRzhoY[youtube,width=360]

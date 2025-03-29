@@ -13,8 +13,6 @@ summary: Red Hat OpenShift Virtualization에서 VM용 Cloud Insights를 사용�
 :imagesdir: ../media/
 
 
-저자: 바누 선다, NetApp
-
 [role="lead"]
 참조 문서의 이 섹션에서는 NetApp Cloud Insights를 Red Hat OpenShift Cluster와 통합하여 OpenShift 가상화 VM을 모니터링하는 방법에 대해 자세히 설명합니다.
 

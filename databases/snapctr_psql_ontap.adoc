@@ -136,7 +136,7 @@ image:snapctr_psql_brc_architecture.png["이 이미지는 SnapCenter를 사용�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 . 구축 시에는 ONTAP 스토리지에서 실행되는 두 개의 기존 PostgreSQL 데이터베이스가 필요합니다. 하나는 운영 DB 서버로, 다른 하나는 클론 DB 서버로 사용됩니다. ONTAP에서 PostgreSQL 데이터베이스 구축에 대한 참조는 TR-4956: 참조, link:aws_postgres_fsx_ec2_hadr.html["AWS FSx/EC2에서 자동화된 PostgreSQL 고가용성 구축 및 재해 복구"^]기본 인스턴스에서 PostgreSQL 자동 배포 플레이북 찾기.
 . NetApp SnapCenter UI 도구를 최신 버전으로 실행할 Windows 서버를 프로비저닝합니다. 자세한 내용은 다음 링크를 참조하십시오link:https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^].
@@ -147,7 +147,7 @@ image:snapctr_psql_brc_architecture.png["이 이미지는 SnapCenter를 사용�
 
 === SnapCenter 설치 및 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter 설치 및 구성을 진행하기 전에 온라인 상태로 전환하는 link:https://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 소프트웨어 설명서"^]것이 좋습니다. 다음은 ONTAP에서 PostgreSQL용 SnapCenter 소프트웨어의 설치 및 설정 단계를 개괄적으로 요약한 것입니다.
 
@@ -207,7 +207,7 @@ image:snapctr_psql_bkup_01.png["이 이미지는 SnapCenter 서버에 대한 설
 
 === 데이터베이스 백업
 
-[%collapsible]
+[%collapsible%open]
 ====
 초기 자동 검색된 PostgreSQL 클러스터에서 해당 클러스터 이름 옆에 빨간색 잠금이 표시됩니다. 이전 섹션의 SnapCenter 설정 중에 생성된 PostgreSQL 데이터베이스 자격 증명을 사용하여 잠금을 해제해야 합니다. 그런 다음 데이터베이스를 보호하기 위해 백업 정책을 만들고 적용해야 합니다. 마지막으로 백업을 수동으로 실행하거나 스케줄러에 의해 실행하여 스냅샷 백업을 생성합니다. 다음 섹션에서는 단계별 절차를 보여 줍니다.
 
@@ -298,7 +298,7 @@ image:snapctr_psql_bkup_19.png["이 이미지는 SnapCenter 서버에 대한 데
 
 === 데이터베이스 복구
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 데이터베이스 복구 데모에서는 PostgreSQL 데이터베이스 클러스터의 시점 복구를 보여 줍니다. 먼저 SnapCenter를 사용하여 ONTAP 스토리지에 데이터베이스 볼륨의 스냅샷 백업을 생성합니다. 그런 다음 데이터베이스에 로그인하여 테스트 테이블을 만들고 시간 스탬프를 기록한 다음 테스트 테이블을 삭제합니다. 이제 삭제된 테이블을 복구하기 위해 테스트 테이블을 만들 때 타임 스탬프까지 백업에서 복구를 시작합니다. 다음은 SnapCenter UI를 사용한 PostgreSQL 데이터베이스 시점 복구의 워크플로우와 유효성 검사에 대한 세부 정보를 캡처한 것입니다.
 
@@ -406,7 +406,7 @@ postgres=# select now();
 
 === 데이터베이스 클론
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter를 통한 PostgreSQL 데이터베이스 클러스터 클론은 소스 데이터베이스 데이터 볼륨의 스냅샷 백업에서 새로운 씬 클론 볼륨을 생성합니다. 더 중요한 것은 개발 또는 테스트를 지원하기 위해 운영 데이터베이스의 클론 복사본을 만드는 다른 방법과 비교할 때 빠르고(몇 분) 효율적입니다. 따라서 스토리지 비용을 크게 줄이고 데이터베이스 애플리케이션 라이프사이클 관리를 개선합니다. 다음 섹션에서는 SnapCenter UI를 사용하는 PostgreSQL 데이터베이스 클론의 워크플로우를 보여 줍니다.
 

@@ -21,7 +21,7 @@ summary:
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .GCVE 배포 및 구성
-[%collapsible]
+[%collapsible%open]
 ====
 GCP에서 GCVE 환경을 구성하려면 GCP 콘솔에 로그인하고 VMware Engine 포털에 액세스합니다.
 
@@ -40,7 +40,7 @@ image:gcve-deploy-1.png["입력/출력 대화 상자 또는 작성된 내용을 
 
 ====
 .GCVE에 대한 개인 액세스를 활성화합니다
-[%collapsible]
+[%collapsible%open]
 ====
 프라이빗 클라우드가 프로비저닝되면 높은 처리량과 짧은 지연 시간의 데이터 경로 연결을 위해 프라이빗 클라우드에 대한 프라이빗 액세스를 구성합니다.
 
@@ -62,7 +62,7 @@ image:gcve-access-4.png["입력/출력 대화 상자 또는 작성된 내용을 
 
 ====
 .Google Cloud NetApp 볼륨 보조 데이터 저장소를 GCVE에 배포
-[%collapsible]
+[%collapsible%open]
 ====
 을 참조하십시오 link:gcp-ncvs-datastore.html["NetApp 볼륨이 포함된 보조 NFS 데이터 저장소를 GCVE에 배포하는 절차"]
 

@@ -16,8 +16,6 @@ summary:
 [role="lead"]
 Amazon FSx ONTAP과 AWS의 VMware Cloud 통합은 SDDC의 클러스터에 연결할 수 있는 NetApp의 ONTAP 파일 시스템을 기반으로 구축된 AWS 관리형 외부 NFS 데이터 저장소입니다. 컴퓨팅 리소스와 독립적으로 확장이 가능한 유연한 고성능 가상화 스토리지 인프라를 고객에게 제공합니다.
 
-저자: Niyaz Mohamed-NetApp Solutions Engineering
-
 
 
 == 개요
@@ -73,7 +71,7 @@ image:dr-veeam-fsx-image1.png["Veeam Replication 및 FSx ONTAP for VMC를 사용
 === 배포 세부 정보
 
 .1단계: VM 복제
-[%collapsible]
+[%collapsible%open]
 ====
 Veeam Backup & Replication은 VMware vSphere 스냅샷 기능을 활용하며, 복제하는 동안 Veeam Backup & Replication은 VMware vSphere에 VM 스냅샷을 생성하도록 요청합니다. VM 스냅샷은 가상 디스크, 시스템 상태, 구성 등을 포함하는 VM의 시점 복제본입니다. Veeam Backup & Replication은 이 스냅샷을 복제용 데이터 소스로 사용합니다.
 
@@ -124,7 +122,7 @@ Veeam 복제에 대한 자세한 내용은 을 참조하십시오 link:https://h
 
 ====
 .2단계: 장애 조치 계획을 만듭니다
-[%collapsible]
+[%collapsible%open]
 ====
 초기 복제 또는 시드가 완료되면 페일오버 계획을 생성합니다. 페일오버 계획은 종속 VM에 대해 하나씩 또는 그룹으로 자동 페일오버를 수행하는 데 도움이 됩니다. 페일오버 계획은 부팅 지연을 포함하여 VM이 처리되는 순서에 대한 청사진입니다. 또한 페일오버 계획은 중요한 종속 VM이 이미 실행 중인지 확인하는 데 도움이 됩니다.
 
@@ -156,7 +154,7 @@ image:dr-veeam-fsx-image10.png["입력/출력 대화 상자 또는 작성된 내
 
 ====
 .3단계: 페일오버 계획을 실행합니다
-[%collapsible]
+[%collapsible%open]
 ====
 페일오버 중에 프로덕션 사이트의 소스 VM이 재해 복구 사이트의 해당 복제본으로 전환됩니다. 페일오버 프로세스의 일부로 Veeam Backup & Replication은 VM 복제본을 필요한 복구 지점으로 복구하고 소스 VM의 모든 입출력 작업을 해당 복제본으로 이동합니다. 복제본은 재해 발생 시에만 사용할 수 있으며 DR 드릴을 시뮬레이션하는 데도 사용할 수 있습니다. 페일오버 시뮬레이션 중에는 소스 VM이 계속 실행 중입니다. 필요한 모든 테스트가 수행되면 페일오버를 취소하고 정상 작업으로 돌아갈 수 있습니다.
 
@@ -184,7 +182,7 @@ NOTE: Veeam Backup & Replication은 소스 VM의 복제본이 준비 상태로 �
 
 ====
 .4단계: 프로덕션 사이트로 페일백합니다
-[%collapsible]
+[%collapsible%open]
 ====
 장애 조치 계획이 실행 중인 경우 중간 단계로 간주되며 요구 사항에 따라 확정되어야 합니다. 다음과 같은 옵션이 있습니다.
 

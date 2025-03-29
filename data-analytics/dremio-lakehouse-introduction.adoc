@@ -15,7 +15,3 @@ summary: 이 문서에서는 NetApp 스토리지 컨트롤러에서 Dremio를 �
 
 [role="lead"]
 이 문서에서는 ONTAP S3, NAS 및 StorageGRID를 포함한 NetApp 스토리지 컨트롤러의 다양한 데이터 소스를 사용하여 Dremio의 구축 세부 사항에 대해 설명합니다. 구축 과정에서 TPC-DS 벤치마킹 도구를 사용하여 다양한 소스에서 99개의 SQL 쿼리를 실행했습니다. 또한 이 문서에서는 NetApp 내의 고객 활용 사례와 자동차 부품 판매 고객을 포함하는 활용 사례에 대해서도 알아봅니다.
-
-* 작성자 *
-
-Karthikean Nagalingam, NetApp, Inc. 수석 설계자 Roger Frey, Dremio Corporation의 Alliances, 부사장 Mark Shainman, Dremio Corporation 수석 제품 마케팅 매니저.

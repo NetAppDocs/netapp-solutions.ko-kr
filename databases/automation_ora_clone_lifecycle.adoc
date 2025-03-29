@@ -58,7 +58,7 @@ NOTE: 이 GitHub 저장소의 컨텐츠와 파생 저작물을 제작 및/또는
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -91,7 +91,7 @@ NOTE: 간소화를 위해 클론 타겟 Oracle 서버는 Oracle 소프트웨어 
 
 === 툴킷을 다운로드합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 [source, cli]
 ----
@@ -105,7 +105,7 @@ NOTE: 이 툴킷은 현재 BitBucket 액세스 권한이 있는 NetApp 내부 �
 
 === Ansible 타겟 호스트 파일 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 툴킷에는 Ansible 플레이북이 실행되는 타겟을 정의하는 HOSTS 파일이 포함되어 있습니다. 일반적으로 대상 Oracle 클론 호스트입니다. 다음은 예제 파일입니다. 호스트 항목에는 타겟 호스트 IP 주소와 관리자 사용자가 호스트에 액세스하여 클론 또는 새로 고침 명령을 실행하기 위한 ssh 키가 포함됩니다.
 
@@ -122,7 +122,7 @@ ora_04.cie.netapp.com ansible_host=10.61.180.29 ansible_ssh_private_key_file=ora
 
 === 글로벌 변수 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 Ansible 플레이북은 여러 가변 파일에서 다양한 입력을 사용합니다. 다음은 전역 변수 파일 vars.yml의 예입니다.
 
@@ -140,7 +140,7 @@ snapctr_pwd: 'xxxxxxxx'
 
 === 호스트 변수 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 호스트 변수는 이름이 {{host_name}}.yml인 host_vars 디렉토리에 정의됩니다. 다음은 일반적인 구성을 보여 주는 대상 Oracle 호스트 변수 파일 ora_04.cie.netapp.com.yml 예입니다.
 
@@ -160,7 +160,7 @@ clone_db_sid: NTAP1DEV
 
 === 추가 클론 대상 Oracle 서버 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 클론 타겟 Oracle 서버는 소스 Oracle 서버와 동일한 Oracle 소프트웨어 스택을 설치 및 패치해야 합니다. Oracle user.bash_profile에 $ORACLE_BASE 및 $ORACLE_HOME이 구성되어 있습니다. 또한 $ORACLE_HOME 변수는 소스 Oracle 서버 설정과 일치해야 합니다. 다음은 예제입니다.
 
@@ -181,7 +181,7 @@ export ORACLE_HOME=/u01/app/oracle/product/19.0.0/NTAP1
 
 === 플레이북 실행
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter CLI 유틸리티를 사용하여 Oracle 데이터베이스 클론 라이프사이클을 실행하기 위한 플레이북은 총 3개입니다.
 

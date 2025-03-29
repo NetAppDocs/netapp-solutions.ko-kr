@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/vtwn_overview_storint.html 
-keywords: Astra, Astra Control Center, Trident, Trident, persistent storage, Tanzu, VMware Tanzu with NetApp Storage 
+keywords: Trident, Trident Protect, persistent storage, Tanzu, VMware Tanzu with NetApp Storage 
 summary: NetApp은 컨테이너 기반 환경에서 영구 데이터를 오케스트레이션하고 관리하는 데 도움이 되는 다양한 제품을 제공합니다. 
 ---
 = NetApp 스토리지 통합 개요
@@ -21,8 +21,6 @@ summary: NetApp은 컨테이너 기반 환경에서 영구 데이터를 오케�
 NetApp은 상태 저장 컨테이너 애플리케이션 및 데이터를 오케스트레이션, 관리, 보호 및 마이그레이션하는 데 유용한 다양한 제품을 제공합니다.
 
 image:devops_with_netapp_image1.jpg["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
-
-NetApp Astra Control은 NetApp 데이터 보호 기술을 기반으로 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공합니다. Astra Control Service는 클라우드 네이티브 Kubernetes 구축에서 상태 저장 워크로드를 지원할 수 있습니다. Astra Control Center는 {k8s_distribution_name}과 같은 엔터프라이즈 Kubernetes 플랫폼의 온프레미스 구축에서 상태 저장 워크로드를 지원할 수 있습니다. 자세한 내용은 NetApp Astra Control 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
 
 NetApp Trident는 {k8s_distribution_name}과 같은 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원되는 스토리지 오케스트레이터입니다. 자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
 

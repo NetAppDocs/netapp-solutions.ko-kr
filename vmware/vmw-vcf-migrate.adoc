@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-vcf-migrate.html 
+keywords: vmware, vcf, migrate, import 
+summary:  
+---
+= 기존 인프라를 VCF로 마이그레이션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP에서 실행 중인 기존 데이터 저장소가 있는 vSphere 환경을 VCF(VMware Cloud Foundation) 환경으로 변환하려면 기존 인프라를 최신 프라이빗 클라우드 아키텍처로 통합해야 합니다.
+
+이 프로세스는 ONTAP 스토리지의 유연성을 활용하여 데이터에 원활하게 액세스하고 관리합니다. VCF 관리 도메인이 설정되면 관리자는 추가 vSphere 환경을 VCF 에코시스템으로 효율적으로 가져올 수 있습니다. 이 통합을 통해 리소스 활용률이 향상되고 프라이빗 클라우드 관리가 간소화되며 기존 워크로드의 운영 중단을 최소화하면서 원활하게 전환할 수 있습니다.
+
+vCenter 인스턴스 변환에 대한 자세한 기술 정보는 다음 솔루션을 참조하십시오.
+
+* link:vmw-vcf-mgmt-nfs.html["기존 vCenter 인스턴스를 VCF 관리 도메인(NFS)으로 변환"]
+* link:vmw-vcf-mgmt-fc.html["vCenter 인스턴스(FC 데이터 저장소)를 VCF 관리 도메인으로 변환합니다"]
+

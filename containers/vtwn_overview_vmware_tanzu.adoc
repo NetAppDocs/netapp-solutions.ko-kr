@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/vtwn_overview_vmware_tanzu.html 
-keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Trident, Astra Control, Astra 
+keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Trident, Trident Protect 
 summary: VMware Tanzu는 기업이 애플리케이션과 인프라를 현대화할 수 있도록 지원하는 제품 포트폴리오입니다. VMware Tanzu의 전체 기능 스택은 개발 및 IT 운영 팀을 단일 플랫폼으로 통합하여 사내 및 하이브리드 클라우드 환경 전반에서 애플리케이션과 인프라의 현대화를 일관되게 수용함으로써 더 나은 소프트웨어를 지속적으로 운영 환경에 제공합니다. 
 ---
 = VMware Tanzu 개요

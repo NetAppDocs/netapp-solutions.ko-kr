@@ -101,8 +101,8 @@ Aria Automation Orchestrator Client의 편집기는 미리 정의된 워크플�
 
 Aria는 운영 관련 작업을 수행할 수 있을 뿐 아니라 관리자가 인프라에 대한 실시간 가시성을 확보할 수 있도록 지원합니다. NetApp FAS/AFF용 VMware Aria 관리 팩은 VMware Aria Operations용 내장 어댑터입니다. 이와 같은 통합을 통해 분석 및 인프라에 대한 최신 정보를 얻을 수 있으므로 문제가 발생하거나 발생 가능성이 있는 경우 신속하게 파악할 수 있습니다.
 
-* link:https://www.vmware.com/products/aria.html["VMware Aria 설명서"]
-* link:https://docs.vmware.com/en/VMware-Aria-Operations-for-Integrations/4.2/Management-Pack-for-NetApp-FAS-AFF/GUID-9B9C2353-3975-403A-8803-EBF6CDB62D2C.html["NetApp FAS/AFF용 VMware Aria 운영 관리 팩"]
+* link:https://techdocs.broadcom.com/us/en/vmware-cis/aria.html["VMware Aria 설명서"]
+* link:https://techdocs.broadcom.com/us/en/vmware-cis/aria/aria-operations-for-integrations/4-2/management-pack-for-netapp-fas-aff-4-2/management-pack-for-netapp-storage-fas-aff.html["NetApp FAS/AFF용 VMware Aria 운영 관리 팩"]
 
 
 

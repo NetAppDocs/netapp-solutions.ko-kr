@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-getting-started-ontap-tools-for-vmware.html 
+keywords: vmware, getting, started, overview, netapp, otv, ontap, tools 
+summary:  
+---
+= VMware용 ONTAP 툴(OTV)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere용 ONTAP 툴은 NetApp 스토리지 시스템을 사용하는 VMware 환경에서 가상 머신에 대한 엔드 투 엔드 라이프사이클 관리를 제공합니다.
+
+
+
+== 소개
+
+관리자는 vCenter Server 내의 스토리지를 직접 관리하고 VMware 환경의 스토리지 및 데이터 관리를 간소화할 수 있습니다. VMware vSphere Client 플러그인 툴은 vCenter Server 내에서 실행할 필요 없이 플러그인 기능을 vSphere Client에 통합하도록 설계되었습니다. 따라서 플러그인을 격리하고 대규모 vSphere 환경에서 작동하는 플러그인을 스케일아웃할 수 있습니다.
+
+
+
+== ONTAP 도구 구성 요소
+
+* * VSC(가상 스토리지 콘솔) * VSC에는 vSphere Client와 통합된 인터페이스가 포함되어 있으며, 여기에서 스토리지 컨트롤러 추가, 데이터 저장소 프로비저닝, 데이터 저장소 성능 모니터링, ESXi 호스트 설정 확인 및 업데이트를 수행할 수 있습니다.
+* * VASA Provider * VASA(VMware vSphere APIs for Storage Awareness) Provider for ONTAP는 VMware vSphere에서 사용하는 스토리지에 대한 정보를 vCenter Server로 전송하여 VVol(VMware 가상 볼륨) 데이터 저장소의 프로비저닝, 스토리지 기능 프로파일 생성 및 사용, 규정 준수 확인 및 성능 모니터링을 지원합니다.
+* * SRA(Storage Replication Adapter) * VMware SRM(Site Recovery Manager)과 함께 사용 시 SRA는 장애 발생 시 vCenter Server 데이터 저장소 및 가상 시스템의 복구를 촉진하여 재해 복구를 위해 보호된 사이트 및 복구 사이트를 구성할 수 있습니다.
+
+
+VMware용 NetApp ONTAP 툴에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴 설명서"].

@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이 페이지에는 Astra Control Center(ACC)를 사용하여 VMware vSphere에서 실행되는 Red Hat OpenShift Container 기반 애플리케이션에 대한 데이터 보호 옵션이 나와 있습니다.
+이 페이지에는 ACC(Trident Protect)를 사용하여 VMware vSphere에서 실행되는 Red Hat OpenShift Container 기반 애플리케이션에 대한 데이터 보호 옵션이 나와 있습니다.
 
 사용자가 Red Hat OpenShift를 사용하여 애플리케이션을 현대화하는 과정에서 실수로 인한 삭제나 기타 인적 오류로부터 애플리케이션을 보호하기 위한 데이터 보호 전략이 마련되어야 합니다. 규정 또는 규정 준수 목적으로도 데이터 마스터를 보호하기 위해 보호 전략이 필요한 경우가 많습니다.
 
@@ -34,13 +34,13 @@ ACC의 Snapshot을 사용하여 데이터의 시점 복제본을 캡처할 수 �
 
 === ACC로 스냅샷 구성
 
-image:rhhc-onprem-dp-snap.png["Astra Control Center 스냅샷 뷰"]
+image:rhhc-onprem-dp-snap.png["Trident 보호 스냅샷 뷰"]
 
 
 
 == ACC를 사용한 백업 및 복구
 
-백업은 스냅샷을 기반으로 합니다. ACC는 CSI를 사용하여 스냅샷 복사본을 생성하고 시점 스냅샷 복사본을 사용하여 백업을 수행할 수 있습니다. 백업은 외부 오브젝트 저장소(ONTAP S3를 비롯한 다른 위치의 호환 S3)에 저장됩니다. 예약된 백업과 유지할 백업 버전 수에 대해 보호 정책을 구성할 수 있습니다. 최소 RPO는 1시간입니다.
+백업은 스냅샷을 기반으로 합니다. Trident Protect는 CSI를 사용하여 스냅샷 복사본을 작성하고 시점 스냅샷 복사본을 사용하여 백업을 수행할 수 있습니다. 백업은 외부 오브젝트 저장소(ONTAP S3를 비롯한 다른 위치의 호환 S3)에 저장됩니다. 예약된 백업과 유지할 백업 버전 수에 대해 보호 정책을 구성할 수 있습니다. 최소 RPO는 1시간입니다.
 
 
 
@@ -48,7 +48,7 @@ image:rhhc-onprem-dp-snap.png["Astra Control Center 스냅샷 뷰"]
 
 ACC는 백업이 저장되는 S3 버킷에서 애플리케이션을 복구합니다.
 
-image:rhhc-onprem-dp-br.png["Astra Control Center 복구 옵션"]
+image:rhhc-onprem-dp-br.png["Trident 보호 복원 옵션"]
 
 
 
@@ -64,13 +64,13 @@ https://github.com/NetApp/Verda["NetApp Verda GitHub 프로젝트"] 널리 사�
 
 == redis 애플리케이션의 사전 스냅샷을 위한 샘플 실행 후크
 
-image:rhhc-onprem-dp-br-hook.png["Astra Control Center 실행 후크"]
+image:rhhc-onprem-dp-br-hook.png["Trident protect 실행 후크"]
 
 
 
 == ACC를 통한 복제
 
-지역 보호를 위해 또는 낮은 RPO 및 RTO 솔루션을 위해 애플리케이션을 다른 지역의 가급적이면 다른 지역에서 실행되는 다른 Kubernetes 인스턴스로 복제할 수 있습니다. ACC는 5분 이내에 ONTAP 비동기식 SnapMirror를 사용합니다. 복제는 ONTAP로 복제하여 수행되면 페일오버로 타겟 클러스터에 Kubernetes 리소스를 생성합니다.
+지역 보호를 위해 또는 낮은 RPO 및 RTO 솔루션을 위해 애플리케이션을 다른 지역의 가급적이면 다른 지역에서 실행되는 다른 Kubernetes 인스턴스로 복제할 수 있습니다. Trident Protect는 5분 최저 RPO로 ONTAP 비동기식 SnapMirror를 활용합니다. 복제는 ONTAP로 복제하여 수행되면 페일오버로 타겟 클러스터에 Kubernetes 리소스를 생성합니다.
 
 
 NOTE: 복제는 백업이 S3로 수행되고 복원이 수행되는 백업 및 복원과 다릅니다. 두 가지 데이터 보호 유형 간의 차이점에 대한 자세한 내용은 https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html#replication-to-a-remote-cluster[here] 참조하십시오.
@@ -81,7 +81,7 @@ NOTE: 복제는 백업이 S3로 수행되고 복원이 수행되는 백업 및 �
 
 === ACC가 장착된 SnapMirror
 
-image:rhhc-onprem-dp-rep.png["Astra Control Center 복제"]
+image:rhhc-onprem-dp-rep.png["Trident 보호 복제"]
 
 
 NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능을 지원하지 않습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/get-started/requirements.html#astra-trident-requirements["여기"] 를 참조하십시오.
@@ -90,9 +90,9 @@ NOTE: SAN 경제형 및 NAS 경제형 스토리지 드라이버는 복제 기능
 
 === 데모 비디오:
 
-link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Astra Control Center를 사용한 재해 복구 데모 비디오"]
+link:https://www.netapp.tv/details/29504?mcid=35609780286441704190790628065560989458["Trident Protect를 사용한 재해 복구 데모 비디오"]
 
-.Astra Control Center를 통한 데이터 보호
+.Trident Protect를 통한 데이터 보호
 video::0cec0c90-4c6f-4018-9e4f-b09700eefb3a[panopto,width=360]
 
 
@@ -109,4 +109,4 @@ image:rhhc-onprem-dp-bc.png["MetroCluster를 사용한 비즈니스 연속성 �
 
 TIP: Trident 백엔드 구성(TBC)의 경우 MetroCluster 구성을 사용할 때 데이터 LIF 및 SVM을 지정하지 마십시오. 관리 LIF에 SVM 관리 IP를 지정하고 vsadmin 역할 자격 증명을 사용합니다.
 
-Astra Control Center 데이터 보호 기능에 대한 자세한 내용을 확인할 수 있습니다 link:https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html["여기"]
+Trident 데이터 보호 기능에 대한 자세한 내용을 참조하십시오 link:https://docs.netapp.com/us-en/astra-control-center/concepts/data-protection.html["여기"]

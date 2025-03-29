@@ -30,7 +30,7 @@ AWS 기반 Red Hat OpenShift 서비스와 Amazon FSx for NetApp ONTAP(FSx ONTAP)
 video::621ae20d-7567-4bbf-809d-b01200fa7a68[panopto]
 컨테이너 애플리케이션 마이그레이션에는 다음이 포함됩니다.
 
-* 영구 볼륨: BlueXP를 사용하여 이 작업을 수행할 수 있습니다. 또 다른 옵션은 Astra Control Center를 사용하여 사내에서 클라우드 환경으로 컨테이너 애플리케이션 마이그레이션을 처리하는 것입니다. 자동화는 같은 용도로 사용할 수 있습니다.
+* 영구 볼륨: BlueXP를 사용하여 이 작업을 수행할 수 있습니다. 또 다른 옵션은 Trident Protect를 이용하여 사내에서 클라우드 환경으로 컨테이너 애플리케이션 마이그레이션을 처리하는 것입니다. 자동화는 같은 용도로 사용할 수 있습니다.
 * 애플리케이션 메타데이터: OpenShift GitOps(Argo CD)를 사용하여 이 작업을 수행할 수 있습니다.
 
 

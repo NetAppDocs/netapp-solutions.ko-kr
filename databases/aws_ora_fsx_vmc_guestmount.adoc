@@ -151,7 +151,7 @@ image:aws_ora_fsx_vmc_architecture.png["이 이미지는 iSCSI 및 ASM이 포함
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -178,7 +178,7 @@ NOTE: Oracle 설치 파일을 스테이징할 수 있는 충분한 공간을 확
 
 === DB VM 커널 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 사전 요구 사항이 프로비저닝되면 SSH를 통해 Oracle VM에 관리자 사용자로 로그인하고 루트 사용자에게 sudo를 사용하여 Oracle 설치를 위한 Linux 커널을 구성합니다. Oracle 설치 파일은 AWS S3 버킷에서 스테이징된 후 VM으로 전송할 수 있습니다.
 
@@ -398,7 +398,7 @@ chmod 440 /etc/sudoers
 
 === FSx ONTAP LUN을 DB VM에 프로비저닝하고 매핑합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 SSH 및 FSx 클러스터 관리 IP를 통해 FSx 클러스터에 fsxadmin 사용자로 로그인하여 명령줄에서 세 개의 볼륨을 프로비저닝합니다. Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅할 볼륨 내에 LUN을 생성합니다.
 
@@ -530,7 +530,7 @@ nim        /vol/ora_02_logs/ora_02_u03_02            ora_02        6  iscsi
 
 === DB VM 스토리지 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 이제 VMC 데이터베이스 VM에 Oracle 그리드 인프라 및 데이터베이스 설치용 FSx ONTAP 스토리지를 가져오고 설정합니다.
 
@@ -823,7 +823,7 @@ systemctl restart multipathd
 
 === Oracle 그리드 인프라 설치
 
-[%collapsible]
+[%collapsible%open]
 ====
 . SSH를 통해 관리자 사용자로 DB VM에 로그인하고 주석 처리를 해제하여 암호 인증을 활성화합니다 `PasswordAuthentication yes` 그런 다음 의견을 남기기 바랍니다 `PasswordAuthentication no`.
 +
@@ -1084,7 +1084,7 @@ CRS-4638: Oracle High Availability Services is online
 
 === Oracle 데이터베이스 설치
 
-[%collapsible]
+[%collapsible%open]
 ====
 . Oracle 사용자로 로그인하고 설정을 해제합니다 `$ORACLE_HOME` 및 `$ORACLE_SID` 설정되어 있는지 확인합니다.
 +
@@ -1475,7 +1475,7 @@ alter database open;
 
 ==== SnapCenter 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 호스트 측 플러그인을 데이터베이스 VM에 사용하여 애플리케이션 인식 데이터 보호 관리 작업을 수행합니다. Oracle용 NetApp SnapCenter 플러그인에 대한 자세한 내용은 이 설명서를 참조하십시오 link:https://docs.netapp.com/us-en/snapcenter/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html["Oracle 데이터베이스용 플러그인을 사용하여 수행할 수 있는 작업"^]. 다음은 Oracle 데이터베이스 백업, 복구 및 클론 생성을 위해 SnapCenter를 설정하는 상위 단계입니다.
 
@@ -1516,7 +1516,7 @@ NOTE: SnapCenter 서버 이름을 DB VM의 IP 주소로 확인할 수 있고 DB 
 
 ==== 데이터베이스 백업
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 FSx ONTAP 볼륨 스냅샷을 활용하여 기존의 RMAN 기반 방법론에 비해 훨씬 더 빠른 데이터베이스 백업, 복원 또는 복제를 수행합니다. 스냅샷은 데이터베이스가 스냅샷 전에 Oracle 백업 모드로 전환되므로 애플리케이션 정합성이 보장됩니다.
 
@@ -1551,7 +1551,7 @@ image:aws_ora_fsx_vmc_snapctr_11.png["SnapCenter 구성을 보여 주는 스크�
 
 ==== 데이터베이스 복구
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 스냅샷 백업을 통해 Oracle 데이터베이스를 위한 다양한 복원 및 복구 옵션을 제공합니다. 이 예에서는 삭제된 테이블을 실수로 복구하는 시점 복원을 보여 줍니다. VM ora_02에서 두 개의 데이터베이스 cdb3, cdb4는 동일한 + 데이터 및 + 로그 디스크 그룹을 공유합니다. 한 데이터베이스에 대한 데이터베이스 복원은 다른 데이터베이스의 가용성에 영향을 주지 않습니다.
 
@@ -1748,7 +1748,7 @@ SQL>
 
 ==== 데이터베이스 클론
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 예에서는 동일한 백업 세트를 사용하여 다른 ORACLE_HOME의 동일한 VM에 있는 데이터베이스를 복제합니다. 이 절차는 필요한 경우 백업에서 VMC의 개별 VM으로 데이터베이스를 복제하는 경우에도 동일하게 적용됩니다.
 

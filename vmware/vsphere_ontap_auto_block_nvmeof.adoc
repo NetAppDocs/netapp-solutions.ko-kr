@@ -21,7 +21,7 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저�
 == 필요한 것
 
 * vSphere 환경 및 ONTAP를 관리하는 데 필요한 기본 기술
-* link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-059DDF49-2A0C-49F5-BB3B-907A21EC94D6.html++["NVMe/FC에 대한 기본 이해"].
+* link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/vmware-nvme-concepts/basic-vmware-nvme-architecture.html++["NVMe/FC에 대한 기본 이해"]..
 * {ONTAP_VERSION}을 실행하는 ONTAP 스토리지 시스템(FAS/AFF/CVO/ONTAP Select/ASA
 * ONTAP 자격 증명(SVM 이름, userID 및 암호)
 * 호스트, 타겟, SVM 및 LUN 정보를 위한 ONTAP WWPN
@@ -73,5 +73,5 @@ summary: 이 페이지에서는 VMware vSphere 환경에서 VMFS 데이터 저�
 
 . HBA 드라이버가 설치되어 있는지 확인합니다. VMware 지원 HBA에는 드라이버가 즉시 배포되어 있으며 에서 볼 수 있습니다 link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-ED20B7BE-0D1C-4BF7-85C9-631D45D96FEC.html++["스토리지 어댑터 정보"]
 . link:++https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_7.html++["vSphere Host NVMe 드라이버 설치 및 검증 작업을 수행합니다"]
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-5AC611E0-7CEB-4604-A03C-F600B1BA2D23.html++["VMFS 데이터 저장소를 생성합니다"]
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/working-with-datastores-in-vsphere-storage-environment/creating-vsphere-datastores/create-a-vsphere-vmfs-datastore.html++["VMFS 데이터 저장소를 생성합니다"]
 

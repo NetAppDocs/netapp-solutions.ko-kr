@@ -72,10 +72,6 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 === NetApp 스토리지 통합
 
-NetApp Astra Control은 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 온프레미스 환경에 구축되고 상태 저장형 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스를 제공합니다.
-
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://docs.netapp.com/us-en/astra-family/["여기"].
-
 Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 위한 오픈 소스 및 완전 지원되는 스토리지 오케스트레이터입니다.
 
 자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
@@ -100,9 +96,6 @@ Trident는 Red Hat OpenShift를 포함한 컨테이너 및 Kubernetes 배포를 
 
 
 | NetApp Element | 스토리지 | 12.3 
-
-
-| NetApp Astra Control | 애플리케이션 인식 데이터 관리 | 21.12.60, 23.04, 23.07, 23.10, 24.02 
 
 
 | NetApp 트라이던트 | 스토리지 오케스트레이션 | 22.01.0, 23.04, 23.07, 23.10, 24.02 

@@ -25,7 +25,7 @@ summary: NetApp ONTAP를 사용한 Red Hat OpenShift Container 애플리케이�
 image:redhat_openshift_OADP_app_deleted_image1.png["앱이 삭제되었습니다"]
 
 .동일한 네임스페이스로 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 방금 만든 백업에서 복원하려면 CR(사용자 지정 리소스 복원)을 만들어야 합니다. 이름을 지정하고 복원할 백업 이름을 지정한 다음 restorePV를 true로 설정해야 합니다. 에 표시된 대로 추가 매개변수를 설정할 수 있습니다 link:https://docs.openshift.com/container-platform/4.14/backup_and_restore/application_backup_and_restore/backing_up_and_restoring/restoring-applications.html["문서화"]. 생성 버튼을 클릭합니다.
 
@@ -48,7 +48,7 @@ image:redhat_openshift_OADP_restore_image2.jpg["복원이 완료되었습니다"
 
 ====
 .다른 네임스페이스로 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 앱을 다른 네임스페이스로 복원하려면 Restore CR의 YAML 정의에 namespaceMapping을 제공할 수 있습니다.
 
@@ -74,7 +74,7 @@ image:redhat_openshift_OADP_restore_image3.png["새 네임스페이스로 복원
 
 ====
 .다른 저장소 클래스로 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 Velero는 복구 중에 json 패치를 지정하여 리소스를 수정할 수 있는 일반 기능을 제공합니다. json 패치는 복구되기 전에 리소스에 적용됩니다. json 패치는 configmap에 지정되고 configmap은 restore 명령에서 참조됩니다. 이 기능을 사용하면 다른 저장소 클래스를 사용하여 복원할 수 있습니다.
 

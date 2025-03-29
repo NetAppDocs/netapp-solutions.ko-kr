@@ -72,5 +72,5 @@ NOTE: Kubernetes는 두 가지 볼륨 바인딩 모드를 지원합니다. -**_V
 
 .Google Cloud Platform에 OpenShift Cluster 설치
 video::4efc68f1-d37f-4cdd-874a-b09700e71da9[panopto,width=360]
-.OpenShift 클러스터를 Astra Control Center로 가져오기
+.OpenShift 클러스터를 Trident Protect로 가져오기
 video::57b63822-6bf0-4d7b-b844-b09700eac6ac[panopto,width=360]

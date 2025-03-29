@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-getting-started-metro-storage-cluster.html 
+keywords: vmware, getting, started, overview, netapp, storage, metro, cluster 
+summary:  
+---
+= vSphere Metro 스토리지 클러스터
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+한 개 이상의 장애 도메인에서 운영 중단이 발생하는 경우 VMware 환경을 보호하려는 조직에 고급 비즈니스 연속성은 매우 중요합니다.
+
+
+
+== 소개
+
+VMware 및 NetApp는 제품에 내장된 가용성 외에도 랙, 건물, 캠퍼스 또는 도시와 같은 장애 도메인 전체에 분산된 워크로드를 추가적으로 보호하는 고급 구성을 제공합니다.
+
+
+
+== NetApp MetroCluster
+
+NetApp MetroCluster는 NetApp의 고가용성(HA) 기능을 사용하여 컨트롤러 장애로부터 보호합니다. 또한 MetroCluster에는 SyncMirror 기술, CFOD(클러스터 페일오버 온디맨드), 하드웨어 이중화 및 고가용성을 위한 지리적 분리 기능도 포함되어 있습니다. SyncMirror는 데이터를 동기식으로 미러링합니다. 즉, 로컬 플렉스는 데이터를 능동적으로 제공하고 원격 플렉스는 대기 모드입니다. 컨트롤러, 스토리지, 케이블, 스위치, 어댑터와 같은 모든 MetroCluster 구성요소에는 하드웨어 이중화가 있습니다.
+
+
+
+== NetApp SnapMirror 활성 동기화
+
+NetApp SnapMirror Active Sync는 FCP 및 iSCSI SAN 프로토콜을 통해 데이터 저장소의 세부 보호 기능을 제공하여 우선 순위가 높은 워크로드 토폴로지를 선택적으로 보호합니다. Active-Standby MetroCluster과 달리 로컬 및 원격 사이트 모두에 대한 액티브-액티브 액세스를 제공합니다. ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 대칭 액티브/액티브 기능을 지원하므로 양방향 동기식 복제를 사용하는 보호된 LUN의 두 복사본에서 읽기 및 쓰기 I/O 작업을 수행할 수 있습니다.
+
+
+
+== VMware vSphere Metro 스토리지 클러스터
+
+VMware vMSC(vSphere Metro Storage Cluster)는 액티브-액티브 확장 스토리지를 통해 VMware HA를 개선합니다. 이 인증 구성은 VM 및 컨테이너를 장애로부터 보호합니다. 이 작업은 vSphere 호스트 클러스터와 함께 확장된 스토리지 개념을 사용하여 수행됩니다. 이러한 호스트는 서로 다른 장애 도메인에 분산됩니다. NetApp MetroCluster 및 SnapMirror 액티브 동기화 스토리지 기술은 보호 및 지원되는 스토리지 오퍼링을 제공하는 데 사용됩니다. vMSC를 활용하면 NetApp 인증 솔루션을 통해 장애 도메인 전반에 걸쳐 강력하고 탄력적인 IT 운영을 제공할 수 있습니다.
+
+자세한 내용은 를 https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html#continuous-availability-solutions-for-vsphere-environments["ONTAP이 포함된 vSphere Metro 스토리지 클러스터"]참조하십시오. {nbsp}

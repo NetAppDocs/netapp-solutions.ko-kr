@@ -52,7 +52,7 @@ image:vmware-nfs-otv10-image29.png["otv10 아키텍처"]
 
 NetApp은 NFS에 대한 이중 네트워크 설계를 추천하여 스토리지 시스템, 스위치, 네트워크 어댑터 및 호스트 시스템에 대한 내결함성을 제공합니다. 아키텍처 요구 사항에 따라 단일 서브넷이나 여러 서브넷으로 NFS를 구축하는 것이 일반적입니다.
 
-을 참조하십시오 https://core.vmware.com/resource/best-practices-running-nfs-vmware-vsphere["VMware vSphere에서 NFS를 실행하는 모범 사례"] VMware vSphere에 대한 자세한 내용은
+VMware vSphere에 대한 자세한 내용은 를 https://www.vmware.com/docs/vmw-best-practices-running-nfs-vmware-vsphere["VMware vSphere에서 NFS를 실행하는 모범 사례"] 참조하십시오.
 
 ONTAP를 VMware vSphere와 함께 사용하는 방법에 대한 네트워크 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-network.html#nfs["네트워크 구성 - NFS"] 섹션을 NetApp 참조하십시오.
 
@@ -71,7 +71,7 @@ ONTAP 툴 10 을 구축하고 이 툴을 사용하여 VCF 관리 도메인에 NF
 다음 단계는 ONTAP System Manager에서 수행합니다.
 
 .스토리지 VM 및 LIF를 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 NFS 트래픽용 여러 LIF와 함께 SVM을 생성하려면 다음 단계를 완료하십시오.
 
@@ -111,7 +111,7 @@ image:vmware-vcf-asa-image04.png["SVM 계정을 사용하고 Finish를 사용합
 vSphere 클라이언트를 사용하여 VI 워크로드 도메인 클러스터에서 다음 단계를 수행합니다. 이 경우 vCenter Single Sign-On이 사용되므로 vSphere Client는 관리 및 워크로드 도메인 전체에서 공통적으로 사용됩니다.
 
 .NFS 트래픽에 대한 분산 포트 그룹을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 NFS 트래픽을 전달하는 네트워크에 대한 새 분산 포트 그룹을 생성하려면 다음을 수행하십시오.
 
@@ -150,7 +150,7 @@ image:vmware-nfs-otv10-image02.png["DPG 팀 업링크"]
 
 ====
 .각 ESXi 호스트에 VMkernel 어댑터를 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 워크로드 도메인의 각 ESXi 호스트에서 이 프로세스를 반복합니다.
 
@@ -199,7 +199,7 @@ image:vmware-nfs-otv10-image06.png["VMkernel 선택 사항을 검토합니다"]
 VMware vSphere 10용 ONTAP 툴 구축 및 사용에 대한 전체 설명서는 를 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/ontap-tools-deployment.html["VMware vSphere용 ONTAP 툴을 구축합니다"]참조하십시오.
 
 .VMware vSphere 10용 ONTAP 툴을 구축합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VMware vSphere 10용 ONTAP 툴은 VM 어플라이언스로 구축되며 ONTAP 스토리지 관리를 위한 통합 vCenter UI를 제공합니다. ONTAP Tools 10에는 여러 vCenter 서버 및 ONTAP 스토리지 백엔드에 대한 연결을 관리할 수 있는 새로운 글로벌 관리 포털이 있습니다.
 
@@ -282,7 +282,7 @@ image:vmware-nfs-otv10-image12.png["OTV 템플릿 사용자 지정 2"]
 
 ====
 .스토리지 백엔드 및 vCenter Server를 ONTAP 툴에 연결합니다. 10.
-[%collapsible]
+[%collapsible%open]
 ====
 ONTAP 도구 관리자는 ONTAP 도구 10의 전역 설정을 구성하는 데 사용됩니다.
 
@@ -360,7 +360,7 @@ image:vmware-nfs-otv10-image22.png["ONTAP 도구 대시보드"]
 
 ====
 .ONTAP 툴을 사용하여 NFS 데이터 저장소를 생성합니다 10
-[%collapsible]
+[%collapsible%open]
 ====
 ONTAP 툴 10 을 사용하여 NFS에서 실행되는 ONTAP 데이터 저장소를 구축하려면 다음 단계를 완료하십시오.
 
@@ -407,7 +407,7 @@ image:vmware-nfs-otv10-image28.png["요약을 검토하고 마칩니다"]
 
 ====
 .ONTAP 툴을 사용하여 NFS 데이터 저장소 크기 조정 10
-[%collapsible]
+[%collapsible%open]
 ====
 ONTAP 툴 10 을 사용하여 기존 NFS 데이터 저장소의 크기를 조정하려면 다음 단계를 완료하십시오.
 

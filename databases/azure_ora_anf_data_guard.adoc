@@ -13,8 +13,6 @@ summary: '이 솔루션은 Microsoft ANF(Azure NetApp Files)를 기본 및 대�
 :imagesdir: ../media/
 
 
-Allen Cao, Niyaz Mohamed, NetApp
-
 [role="lead"]
 이 솔루션은 Microsoft ANF(Azure NetApp Files)를 기본 및 대기 데이터베이스 스토리지로 사용하여 Oracle Data Guard를 구성하여 Azure 클라우드에서 Oracle Data Guard HA/DR 솔루션의 라이센스 및 운영 비용을 절감하는 개요와 세부 정보를 제공합니다.
 
@@ -115,7 +113,7 @@ image:azure_ora_anf_data_guard_architecture.png["이 이미지는 ANF의 Azure C
 === 구축 시 고려해야 할 주요 요소
 
 * * 대기 데이터베이스 복제. * 기본 데이터베이스에서 트랜잭션 로그를 수신하고 적용하는 동안 물리적 대기 데이터베이스를 DB VM에 복제하고 마운트하여 개발, 테스트 또는 보고서와 같은 다른 워크로드를 지원할 수 있습니다. 클론은 씬 또는 일반 클론일 수 있습니다. 현재 ANF는 대기 데이터베이스의 전체 복사본인 일반 클론만 지원합니다. ANF 씬 클론 옵션이 곧 릴리즈될 예정입니다. 데이터베이스 볼륨의 씬 클론 복제본의 경우 대기 데이터베이스의 동일한 DB 볼륨을 공유하고 쓰기 시 복사 기술을 활용하여 쓰기 입출력을 처리합니다. 따라서 클론은 스토리지 효율성이 매우 뛰어나 새로운 쓰기 입출력에 대해 최소한의 증분 새 스토리지 할당으로 다른 많은 활용 사례에서 사용할 수 있습니다. 따라서 Active Data Guard 스토리지 설치 공간을 크게 줄여 스토리지 비용을 크게 절감할 수 있습니다. 데이터베이스를 운영 스토리지에서 대기 ANF 스토리지로 전환할 경우 Oracle 성능을 최고 수준으로 유지하기 위해 FlexClone 작업을 최소화하는 것이 좋습니다 NetApp.
-* * Oracle 소프트웨어 요구 사항. * 일반적으로 물리적 대기 데이터베이스는 패치 세트 예외(PSE), 중요 패치 업데이트(CPU), 및 패치 세트 업데이트(PSU)(의 My Oracle Support Note 1265700.1 에 설명된 대로 Oracle Data Guard Standby-First Patch Apply 프로세스가 진행 중인 경우 제외 link:http://support.oracle.com.["support.oracle.com"^]
+* * Oracle 소프트웨어 요구 사항. * 일반적으로 Oracle Data Guard 대기-첫 번째 패치 적용 프로세스가 진행 중인 경우(의 My Oracle Support Note 1265700.1 에 설명된 대로) 물리적 대기 데이터베이스는 패치 세트 예외link:https://support.oracle.com["support.oracle.com"^](PSE), 중요 패치 업데이트(CPU) 및 패치 세트 업데이트(PSU)를 포함한 기본 데이터베이스와 동일한 Database Home 버전을 가져야 합니다.
 * *대기 데이터베이스 디렉터리 구조 고려 사항.* 가능한 경우 기본 및 대기 시스템의 데이터 파일, 로그 파일 및 제어 파일은 이름과 경로 이름이 같아야 하며 OFA(Optimal Flexible Architecture) 명명 규칙을 사용해야 합니다. 대기 데이터베이스의 보관 디렉터리도 크기 및 구조를 포함하여 사이트 간에 동일해야 합니다. 이 전략을 통해 백업, 스위치오버 및 페일오버 같은 다른 작업에서 동일한 단계를 실행할 수 있으므로 유지 관리의 복잡성이 줄어듭니다.
 * * 강제 로깅 모드. * 대기 데이터베이스로 전파할 수 없는 기본 데이터베이스에서 로깅되지 않은 직접 쓰기로부터 보호하려면 대기 생성을 위한 데이터 파일 백업을 수행하기 전에 기본 데이터베이스에서 강제 로깅을 켜십시오.
 * * Azure VM 사이징. * 이러한 테스트 및 검증에서 Azure VM-Standard_B4ms를 vCPU 4개와 16GiB 메모리를 사용했습니다. 실제 워크로드 요구 사항에 따라 vCPU 수와 RAM 양에 따라 Azure DB VM의 크기를 적절하게 조정해야 합니다.
@@ -135,7 +133,7 @@ Oracle Data Guard를 설정하기 위한 시작점으로 VNet 내의 Azure 클�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -174,7 +172,7 @@ VNet Gateway 연결 상태: image:azure_ora_anf_dg_vnet_03.png["Azure 환경 구
 
 === Data Guard용 기본 데이터베이스를 준비합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 데모에서는 Oracle 바이너리의 경우 /u01, Oracle 데이터 파일의 경우 /u02, Oracle 제어 파일의 경우 /u03, Oracle 액티브 로그, 보관된 로그 파일, 이중화된 Oracle 제어 파일의 경우 세 가지 NFS 마운트 지점으로 운영 Azure DB 서버에 NTAP이라는 운영 Oracle 데이터베이스를 설정합니다. 다음은 Oracle Data Guard 보호를 위한 기본 데이터베이스를 설정하는 자세한 절차를 보여 줍니다. 모든 단계는 Oracle 데이터베이스 소유자 또는 기본 사용자로 `oracle` 실행해야 합니다.
 
@@ -484,7 +482,7 @@ log_archive_dest_21                  string
 
 === 대기 데이터베이스를 준비하고 Data Guard를 활성화합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard를 사용하려면 운영 DB 서버와 일치시키기 위해 대기 DB 서버의 패치 세트를 포함한 Oracle 소프트웨어 스택과 OS 커널 구성이 필요합니다. 간편한 관리와 간소화를 위해 스탠바이 DB 서버의 데이터베이스 스토리지 구성은 데이터베이스 디렉토리 레이아웃 및 NFS 마운트 지점 크기 등 운영 DB 서버와도 이상적으로 일치해야 합니다. 다음은 대기 Oracle DB 서버를 설정하고 HA/DR 보호를 위해 Oracle DataGuard를 활성화하는 절차입니다. 모든 명령은 기본 Oracle 소유자 사용자 ID로 `oracle`실행해야 합니다.
 
@@ -846,7 +844,7 @@ SQL>
 
 === Data Guard Broker를 설정합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard Broker는 Oracle Data Guard 구성의 생성, 유지 관리 및 모니터링을 자동화하고 중앙 집중화하는 분산 관리 프레임워크입니다. 다음 섹션에서는 Data Guard Broker를 설정하여 Data Guard 환경을 관리하는 방법을 보여 줍니다.
 
@@ -943,7 +941,7 @@ DGMGRL>
 
 === 다른 활용 사례에 대한 복제 스탠바이 데이터베이스
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard 설정에서 ANF에서 Oracle 대기 데이터베이스를 호스팅할 때의 주요 이점은 씬 클론이 설정된 경우 최소한의 추가 스토리지 투자로 다른 많은 사용 사례를 지원하도록 빠르게 복제할 수 있다는 것입니다. NetApp는 SnapCenter UI 도구를 사용하여 Oracle DataGuard 데이터베이스를 관리할 것을 권장합니다. 다음 섹션에서는 NetApp SnapCenter 툴을 사용하여 ANF에서 마운트된 복구 대기 데이터베이스 볼륨과 복구 중인 데이터베이스 볼륨을 개발, 테스트, 보고서 등의 다른 목적으로 스냅샷 생성 및 복제하는 방법을 보여 줍니다.
 

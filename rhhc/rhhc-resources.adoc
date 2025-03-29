@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rhhc/rhhc-resources.html 
-keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Astra Control Center, Advanced Cluster Management, ACM, Hub Cluster 
+keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Trident Protect, Advanced Cluster Management, ACM, Hub Cluster 
 summary:  
 ---
 = 추가 문서
@@ -23,8 +23,6 @@ summary:
 . link:https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.4/html/clusters/managing-your-clusters#creating-a-cluster["ACM을 사용하여 클러스터 생성"]
 . link:https://access.redhat.com/documentation/en-us/red_hat_quay/2.9/html-single/deploy_red_hat_quay_on_openshift/index["OpenShift에 Red Hat Quay 배포"]
 . link:https://docs.netapp.com/us-en/trident/["트라이던트"]
-. link:https://docs.netapp.com/us-en/astra-control-center/index.html["Astra 제어 센터"]
-. link:https://docs.netapp.com/us-en/astra-control-service/index.html["Astra 제어 서비스"]
 . link:https://docs.netapp.com/us-en/ontap/["ONTAP 9"]
 . link:https://github.com/NetApp/Verda["NetApp 버다"] - Verda(오픈 소스)는 널리 사용되는 클라우드 네이티브 데이터 집약적인 애플리케이션을 위한 참조 실행 후크 모음을 갖추고 있습니다
 . link:https://docs.netapp.com/us-en/cloud-manager-family/["NetApp BlueXP"]

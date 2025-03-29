@@ -85,19 +85,19 @@ TIP: 노드당 두 개의 iSCSI 네트워크 인터페이스를 사용하는 것
 == VMware vSphere 작업
 
 . iSCSI VLAN에 사용할 수 있는 NIC가 하나 이상 있는지 확인합니다. 성능 및 내결함성을 향상시키기 위해 2개의 NIC가 선호됩니다.
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.networking.doc/GUID-B2AA3EEE-2334-45FE-9A0F-1172FDDCC6A8.html++["vSphere 호스트에서 사용할 수 있는 물리적 NIC의 수를 확인합니다."]
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-C476065E-C02F-47FA-A5F7-3B3F2FD40EA8.html++["iSCSI 이니시에이터를 구성합니다."] 일반적인 사용 사례는 소프트웨어 iSCSI 이니시에이터입니다.
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.networking.doc/GUID-660423B1-3D35-4F85-ADE5-FE1D6BF015CF.html++["iSCSI에 대한 TCPIP 스택을 사용할 수 있는지 확인합니다"].
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-0D31125F-DC9D-475B-BC3D-A3E131251642.html++["iSCSI 포트 그룹을 사용할 수 있는지 확인합니다"].
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-single-host-management-vmware-host-client-7-0/networking-in-the-vsphere-host-client-vSphereSingleHostManagementVMwareHostClient/managing-physical-network-adapters-in-the-vsphere-host-client-vSphereSingleHostManagementVMwareHostClient/view-physical-network-adapter-information-in-the-vsphere-host-client-vSphereSingleHostManagementVMwareHostClient.html++["vSphere 호스트에서 사용할 수 있는 물리적 NIC의 수를 확인합니다."]
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi.html++["iSCSI 이니시에이터를 구성합니다."] 일반적인 활용 사례는 소프트웨어 iSCSI 이니시에이터입니다.
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsan/vsan/8-0/vsan-network-design/ip-network-transport-configuration/vsphere-tcp-ip-stacks.html++["iSCSI에 대한 TCPIP 스택을 사용할 수 있는지 확인합니다"]..
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/assign-a-port-group-or-network-to-a-network-protocol-profile.html++["iSCSI 포트 그룹을 사용할 수 있는지 확인합니다"]..
 +
 ** 일반적으로 업링크 포트가 여러 개인 단일 가상 스위치를 사용합니다.
 ** 1:1 어댑터 매핑을 사용합니다.
 
 
 . iSCSI VMkernel 어댑터가 NIC 수와 일치하도록 설정되어 있고 IP가 할당되어 있는지 확인합니다.
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D9B862DF-476A-4BCB-8CA5-DE6DB2A1A981.html++["iSCSI 소프트웨어 어댑터를 iSCSI VMkernel 어댑터에 바인딩합니다."]
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi.html++["iSCSI 소프트웨어 어댑터를 iSCSI VMkernel 어댑터에 바인딩합니다."]
 . link:++https://docs.netapp.com/vapp-98/topic/com.netapp.doc.vsc-iag/GUID-D7CAD8AF-E722-40C2-A4CB-5B4089A14B00.html++["ONTAP 툴을 사용하여 VMFS 데이터 저장소를 프로비저닝합니다"]. 모든 데이터 저장소에 대해 이 단계를 반복합니다.
-. link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-0520FD37-D7AD-4FBA-9A2E-E5F8211FCBBB.html++["하드웨어 가속 지원을 확인합니다."]
+. link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/storage-hardware-acceleration-in-vsphere/vsphere-hardware-acceleration-on-block-storage/managing-hardware-acceleration-filter-and-plug-ins/verify-hardware-acceleration-support-status.html++["하드웨어 가속 지원을 확인합니다."]
 
 
 

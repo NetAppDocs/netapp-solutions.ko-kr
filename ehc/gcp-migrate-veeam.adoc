@@ -20,8 +20,6 @@ summary: 데이터 보호 요구사항에 현재 Veeam을 사용하고 있는 �
 
 == 개요
 
-저자: NetApp Suesh Thoppay
-
 VMware vSphere에서 실행되는 VM 워크로드는 Veeam Replication 기능을 활용하여 Google Cloud VMware Engine(GCVE)으로 마이그레이션할 수 있습니다.
 
 이 문서는 Google Cloud NetApp Volumes, Veeam 및 Google Cloud VMware Engine(GCVE)을 사용하는 VM 마이그레이션을 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.

@@ -13,8 +13,6 @@ summary: Trident Protect with NetApp ONTAP를 사용한 Red Hat OpenShift 컨테
 :imagesdir: ../media/
 
 
-저자: 바누 선다, NetApp
-
 [role="lead"]
 참조 문서의 이 섹션에서는 Trident Protect를 사용하여 컨테이너 애플리케이션의 스냅샷 및 백업을 생성하는 방법에 대해 자세히 설명합니다. NetApp Trident Protect는 NetApp ONTAP 스토리지 시스템과 NetApp Trident CSI 스토리지 프로비저닝 프로그램을 통해 상태 저장 Kubernetes 애플리케이션의 기능과 가용성을 개선하는 고급 애플리케이션 데이터 관리 기능을 제공합니다. Trident Protect는 애플리케이션 스냅샷과 백업을 만들 수 있습니다. 즉, 영구 볼륨에서 애플리케이션 데이터의 스냅샷과 백업이 생성될 뿐만 아니라 애플리케이션 메타데이터의 스냅샷과 백업도 생성됩니다. Trident Protect로 생성된 스냅샷과 백업은 다음 객체 스토리지 중 하나에 저장하고 나중에 복구할 수 있습니다.
 
@@ -36,7 +34,7 @@ NOTE: 클러스터 관리자는 기본 Trident-Protect 네임스페이스의 리
 Trident Protect는 문서에 제공된 지침을 사용하여 설치할 수 link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-installation.html["여기"]있습니다. 이 섹션에서는 Trident Protect를 사용하여 컨테이너 응용 프로그램의 데이터 보호 및 응용 프로그램의 복원을 위한 워크플로를 보여 줍니다. 1. 스냅샷 생성(일정에 따라 필요 시) 2. 스냅샷에서 복원(동일하고 다른 네임스페이스로 복원) 3. 백업 생성 4. 백업에서 복원합니다
 
 .전제 조건
-[%collapsible]
+[%collapsible%open]
 ====
 애플리케이션에 대한 스냅샷 및 백업을 생성하기 전에 Trident Protect에서 스냅샷 및 백업을 저장하도록 오브젝트 스토리지를 구성해야 합니다. 이 작업은 Bucket CR을 사용하여 수행합니다. 관리자만 Bucket CR을 생성하고 구성할 수 있습니다. 버킷 CR은 Trident Protect에서 AppVault로 알려져 있습니다. AppVault 개체는 스토리지 버킷의 선언적 Kubernetes 워크플로우 표현입니다. AppVault CR에는 백업, 스냅샷, 복원 작업 및 SnapMirror 복제와 같은 보호 작업에 사용되는 버킷에 필요한 구성이 포함되어 있습니다.
 
@@ -178,7 +176,7 @@ image:rhhc_dp_tp_solution_container_image2.png["앱이 생성되었습니다"]
 
 ====
 .스냅샷을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 주문형 스냅샷 생성**
 
@@ -243,7 +241,7 @@ image:rhhc_dp_tp_solution_container_image8.png["PVC 스냅이 일정에 따라 �
 
 ====
 .응용 프로그램을 삭제하여 응용 프로그램 손실을 시뮬레이션합니다
-[%collapsible]
+[%collapsible%open]
 ====
 [source, yaml]
 ----
@@ -253,7 +251,7 @@ No resources found in postgres namespace.
 ----
 ====
 .스냅샷에서 동일한 네임스페이스로 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 [source, yaml]
 ----
@@ -268,7 +266,7 @@ image:rhhc_dp_tp_solution_container_image10.png["App이 복원되었습니다"]
 
 ====
 .스냅샷에서 다른 네임스페이스로 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 [source, yaml]
 ----
@@ -283,7 +281,7 @@ image:rhhc_dp_tp_solution_container_image12.png["앱이 복원되었습니다, S
 
 ====
 .백업을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 주문형 백업 생성**
 
@@ -307,7 +305,7 @@ image:rhhc_dp_tp_solution_container_image13a.png["일정이 이전에 생성되�
 
 ====
 .백업에서 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 ** 데이터 손실을 시뮬레이션하려면 응용 프로그램과 PVC를 삭제합니다.**
 
@@ -327,7 +325,7 @@ image:rhhc_dp_tp_solution_container_image17.png["다른 네임스페이스로 �
 
 ====
 .애플리케이션 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 애플리케이션을 다른 클러스터로 클론 복제하거나 마이그레이션하려면(클러스터 간 클론 수행) 소스 클러스터에서 백업을 생성한 다음 다른 클러스터에 백업을 복원합니다. 대상 클러스터에 Trident Protect가 설치되어 있는지 확인하십시오.
 

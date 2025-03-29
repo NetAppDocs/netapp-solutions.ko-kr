@@ -35,9 +35,9 @@ NOTE: 비균일 호스트 액세스 모드에서는 vSphere HA에 의해 다른 
 
 == 필수 구성 요소
 
-* link:vmware_vcf_asa_supp_mgmt_iscsi.html#deployment-steps["호스트당 이중 스토리지 패브릭(HBA 2개 또는 iSCSI용 이중 VLAN)으로 구축된 VMware vSphere 호스트"]..
+* link:vmw-vcf-mgmt-supplemental-iscsi.html["호스트당 이중 스토리지 패브릭(HBA 2개 또는 iSCSI용 이중 VLAN)으로 구축된 VMware vSphere 호스트"]..
 * link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html["스토리지 배열은 데이터 포트를 위한 Link Aggregation으로 구축됩니다(iSCSI용)."]..
-* link:vmware_vcf_asa_supp_mgmt_iscsi.html#deployment-steps["스토리지 VM 및 LIF를 사용할 수 있습니다"]
+* link:vmw-vcf-mgmt-supplemental-iscsi.html["스토리지 VM 및 LIF를 사용할 수 있습니다"]
 * link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html#networking-environment["클러스터 간 지연 왕복 시간은 10밀리초 미만이어야 합니다"]..
 * link:https://docs.netapp.com/us-en/ontap/mediator/index.html["ONTAP 중재자 VM은 다른 장애 도메인에 배포됩니다"]
 * link:https://docs.netapp.com/us-en/ontap/task_dp_prepare_mirror.html["클러스터 피어 관계가 설정되었습니다"]

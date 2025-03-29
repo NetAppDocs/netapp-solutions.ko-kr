@@ -3,146 +3,120 @@ section: vmware
 title: VMware 가상화
 url: "/vmware/index.html"
 entries:
-- title: ONTAP용 VMware 가상화
-  pdf-filename: ONTAP용 VMware 가상화
-  url: "/vmware/vmware-for-ontap.html"
-- title: VMware vSphere 기반
+- title: NetApp 및 VMware 시작하기
+  pdf-filename: NetApp 및 VMware 시작하기
   entries:
-  - title: vSphere 8용 NFS 참조 가이드
-    pdf-filename: vSphere 8용 NFS 참조 가이드
-    entries:
-    - title: 개요
-      url: "/vmware/vmware_nfs_overview.html"
-    - title: NetApp 및 VMware의 NFS nConnect 기능
-      url: "/vmware/vmware-vsphere8-nfs-nconnect.html"
-    - title: OTV 10을 사용하여 NFS 데이터 저장소를 관리합니다
-      url: "/vmware/vmware_nfs_otv10.html"
-    - title: VMware Site Recovery Manager를 사용한 NFS 데이터 저장소 재해 복구
-      url: "/vmware/vmware_nfs_vlsr.html"
-    - title: NFS 스토리지에 대한 자율적인 랜섬웨어 방어
-      url: "/vmware/vmware_nfs_arp.html"
-  - title: vSphere 8용 VVol 참조 가이드
-    pdf-filename: vSphere 8용 VVol 참조 가이드
-    url: "/vmware/vmware-vvol-overview.html"
-  - title: vSphere 8용 VMFS 구축 가이드
-    pdf-filename: vSphere 8용 VMFS 구축 가이드
-    url: "/vmware/vmfs-deployment.html"
-  - title: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
-    pdf-filename: VMware vSphere 8을 탑재한 NetApp All-Flash SAN 어레이
-    entries:
-    - title: 개요
-      url: "/vmware/vsphere_ontap_asa_overview.html"
-    - title: VMware vSphere용 ONTAP 툴
-      url: "/vmware/vsphere_ontap_asa_otv.html"
-    - title: Cloud Insights
-      url: "/vmware/vsphere_ontap_asa_insights.html"
-    - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
-      url: "/vmware/vmware-vmsc-with-smas.html"
-- title: VMware 클라우드 기반
+  - title: 개요
+    url: "/vmware/vmw-getting-started-overview.html"
+  - title: NetApp 스토리지 옵션
+    url: "/vmware/vmw-getting-started-netapp-storage-options.html"
+  - title: vSphere Metro 스토리지 클러스터
+    url: "/vmware/vmw-getting-started-metro-storage-cluster.html"
+  - title: VMware용 ONTAP 툴(OTV)
+    url: "/vmware/vmw-getting-started-ontap-tools-for-vmware.html"
+  - title: ONTAP를 활용한 VMware 자동화
+    url: "/vmware/vmw-getting-started-ontap-apis-automation.html"
+  - title: SnapCenter
+    url: "/vmware/vmw-getting-started-snapcenter.html"
+  - title: 하이브리드 멀티 클라우드
+    url: "/vmware/vmw-getting-started-hybrid-multicloud.html"
+  - title: VMware 워크로드에 대한 보안 및 랜섬웨어 문제 해결
+    url: "/vmware/vmw-getting-started-security-ransomware.html"
+  - title: VM 워크로드를 ONTAP로 마이그레이션
+    url: "/vmware/vmw-getting-started-migration.html"
+  - title: BlueXP  재해 복구(DRaaS)
+    url: "/vmware/vmw-getting-started-bluexp-disaster-recovery.html"
+  - title: 데이터 인프라 인사이트(DII)
+    url: "/vmware/vmw-getting-started-data-infrastructure-insights.html"
+  - title: VM 데이터 수집기(VMDC)
+    url: "/vmware/vmw-getting-started-vm-data-collector.html"
+- title: NetApp 기반의 VCF(VMware Cloud Foundation
+  pdf-filename: NetApp 기반의 VCF(VMware Cloud Foundation
   entries:
-  - title: NetApp 스토리지 및 VMware Cloud Foundation
-    pdf-filename: NetApp 스토리지 및 VMware Cloud Foundation
-    url: "/vmware/vmware-vcf-overview.html"
-  - title: NetApp ASA 어레이가 있는 VCF
-    pdf-filename: NetApp ASA 어레이가 있는 VCF
+  - title: 개요
+    url: "/vmware/vmw-vcf-overview.html"
+  - title: 기존 인프라를 VCF로 마이그레이션
     entries:
-    - title: 개요
-      url: "/vmware/vmware_vcf_asa_overview.html"
-    - title: 관리 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_mgmt_stretchcluster.html"
-    - title: VI 워크로드 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_wkld_stretchcluster.html"
-    - title: 관리 도메인의 보조 스토리지로서 iSCSI
-      url: "/vmware/vmware_vcf_asa_supp_mgmt_iscsi.html"
-    - title: VVOL을 워크로드 도메인의 보조 스토리지로 사용할 수 있습니다
-      url: "/vmware/vmware_vcf_asa_supp_wkld_vvols.html"
-    - title: 기본 스토리지로서의 FC
-      url: "/vmware/vmware_vcf_asa_prin_fc.html"
-    - title: 보조 스토리지로서의 FC
-      url: "/vmware/vmware_vcf_asa_supp_fc.html"
-    - title: 워크로드 도메인을 위한 보조 스토리지로서의 NVMe/TCP
-      url: "/vmware/vmware_vcf_asa_supp_wkld_nvme.html"
-    - title: VMware vSphere용 SnapCenter 플러그인을 사용하여 워크로드 도메인을 보호하십시오
-      url: "/vmware/vmware_vcf_asa_scv_wkld.html"
-  - title: NetApp AFF 어레이가 있는 VCF
-    pdf-filename: NetApp AFF 어레이가 있는 VCF
+    - title: 기존 vCenter 인스턴스를 VCF 관리 도메인(NFS)으로 변환
+      url: "/vmware/vmw-vcf-mgmt-nfs.html"
+    - title: vCenter 인스턴스(FC 데이터 저장소)를 VCF 관리 도메인으로 변환합니다
+      url: "/vmware/vmw-vcf-mgmt-fc.html"
+  - title: Principal Storage를 사용하여 VCF 환경을 프로비저닝합니다
     entries:
-    - title: 개요
-      url: "/vmware/vmware_vcf_aff_overview.html"
-    - title: 워크로드 도메인의 기본 스토리지로서 NFS입니다
-      url: "/vmware/vmware_vcf_aff_principal_nfs."
-    - title: 관리 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_mgmt_stretchcluster.html"
-    - title: VI 워크로드 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_wkld_stretchcluster.html"
-    - title: 워크로드 도메인의 보조 스토리지로서 NFS 및 VVOL이 사용됩니다
-      url: "/vmware/vmware_vcf_aff_supp_wkld_nfs.html"
-    - title: 기본 스토리지로서의 FC
-      url: "/vmware/vmware_vcf_aff_prin_fc.html"
-    - title: 보조 스토리지로서의 FC
-      url: "/vmware/vmware_vcf_aff_supp_fc.html"
-    - title: vSphere 클러스터(NFS 데이터 저장소)를 VCF 관리 도메인으로 변환합니다
-      url: "/vmware/vmware_vcf_import_nfs.html"
-    - title: 관리 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_mgmt_stretchcluster.html"
-    - title: VI 워크로드 도메인에서 클러스터(FC/iSCSI)를 확장합니다
-      url: "/vmware/vmware_vcf_asa_wkld_stretchcluster.html"
+    - title: FC를 사용하는 관리 도메인입니다
+      url: "/vmware/vmw-vcf-mgmt-principal-fc.html"
+    - title: NFS를 사용하는 관리 도메인입니다
+      url: "/vmware/vmw-vcf-mgmt-principal-nfs.html"
+    - title: FC가 있는 가상 인프라스트럭처 워크로드 도메인
+      url: "/vmware/vmw-vcf-viwld-principal-fc.html"
+    - title: NFS를 사용하는 가상 인프라스트럭처 워크로드 도메인입니다
+      url: "/vmware/vmw-vcf-viwld-principal-nfs.html"
+  - title: Supplemental Storage로 VCF 환경을 확장합니다
+    entries:
+    - title: iSCSI를 사용하는 관리 도메인입니다
+      url: "/vmware/vmw-vcf-mgmt-supplemental-iscsi.html"
+    - title: FC를 사용하는 관리 도메인입니다
+      url: "/vmware/vmw-vcf-mgmt-supplemental-fc.html"
+    - title: VVol이 있는 가상 인프라 워크로드 도메인(iSCSI)
+      url: "/vmware/vmw-vcf-viwld-supplemental-vvols.html"
+    - title: VVol이 있는 가상 인프라 워크로드 도메인(NFS)
+      url: "/vmware/vmw-vcf-viwld-supplemental-nfs-vvols.html"
+    - title: NVMe/TCP가 있는 가상 인프라 워크로드 도메인
+      url: "/vmware/vmw-vcf-viwld-supplemental-nvme.html"
+    - title: FC가 있는 가상 인프라스트럭처 워크로드 도메인
+      url: "/vmware/vmw-vcf-viwld-supplemental-fc.html"
+  - title: NetApp SnapCenter로 워크로드를 보호하십시오
+    entries:
+    - title: VCF 워크로드 도메인을 보호합니다
+      url: "/vmware/vmw-vcf-scv-wkld.html"
+    - title: VCF 다중 워크로드 도메인 보호
+      url: "/vmware/vmw-vcf-scv-multiwkld.html"
+    - title: NVMe로 VCF 워크로드 도메인을 보호합니다
+      url: "/vmware/vmw-vcf-scv-nvme.html"
+    - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
+      url: "/vmware/vmw-vcf-scv-321.html"
+  - title: VMware vMSC(vSphere Metro Storage Cluster)를 통한 고가용성
+    entries:
+    - title: SnapMirror 활성 동기화를 사용하여 관리 도메인용 클러스터 확장
+      url: "/vmware/vmw-vcf-vmsc-mgmt-smas.html"
     - title: MetroCluster를 사용하여 관리 도메인용 클러스터 확장
       url: "/vmware/vmw-vcf-vmsc-mgmt-mcc.html"
+    - title: SnapMirror 활성 동기화를 사용하여 VI 워크로드 도메인용 클러스터 확장
+      url: "/vmware/vmw-vcf-vmsc-viwld-smas.html"
     - title: MetroCluster를 사용하여 VI 워크로드 도메인용 클러스터 확장
       url: "/vmware/vmw-vcf-vmsc-viwld-mcc.html"
-    - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
-      url: "/vmware/vmware_vcf_aff_multi_wkld_scv.html"
-    - title: NVMe 기반 NetApp 스토리지를 사용하는 VMware VCF를 위한 효율적이고 확장 가능하며 단순한 데이터 보호
-      url: "/vmware/vmware_vcf_nvme_scv.html"
-- title: VM 마이그레이션
-  entries:
-  - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
-    pdf-filename: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
+  - title: VM 마이그레이션
     url: "/vmware/migrate-vms-to-ontap-datastore.html"
-  - title: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
-    pdf-filename: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다
+  - title: BlueXP  DRaaS를 통한 재해 복구
     entries:
-    - title: 개요
-      url: "/vmware/migrate-vms-to-ec2-fsxn.html"
-    - title: 아키텍처 및 사전 요구 사항
-      url: "/vmware/migrate-vms-to-ec2-fsxn-arch.html"
-    - title: 구현 절차
-      url: "/vmware/migrate-vms-to-ec2-fsxn-deploy.html"
-    - title: 결론
-      url: "/vmware/migrate-vms-to-ec2-fsxn-wrapup.html"
-- title: VMware - 퍼블릭 클라우드
-  url: "/ehc/index.html"
-- title: VMware 하이브리드 멀티 클라우드 사용 사례
+    - title: VMFS 데이터 저장소에 BlueXP  DRaaS를 사용한 DR
+      url: "/vmware/vmw-dr-draas-vmfs.html"
+    - title: NFS 데이터 저장소용 BlueXP  DRaaS를 사용하는 DR
+      url: "/vmware/vmw-dr-draas-nfs.html"
+  - title: 랜섬웨어 보호
+    url: "/vmware/vmware_nfs_arp.html"
+  - title: DII(Data Infrastructure Insights)로 워크로드 모니터링
+    url: "/vmware/vmw-dii.html"
+- title: NetApp 기반의 VF(VMware vSphere Foundation
+  pdf-filename: NetApp 기반의 VF(VMware vSphere Foundation
   entries:
-  - title: 사용 사례 개요
-    url: "/ehc/ehc-use-cases.html"
-- title: VMware vSphere 자동화
+  - title: 개요
+    url: "/vmware/vmware_nfs_overview.html"
+  - title: 'ONTAP용 VMware 가상화: 모범 사례'
+    url: "/vmware/vmware-for-ontap.html"
+  - title: vSphere 8용 VMFS 구축 가이드
+    url: "/vmware/vmfs-deployment.html"
+  - title: NetApp 및 VMware의 NFS nConnect 기능
+    url: "/vmware/vmware-vsphere8-nfs-nconnect.html"
+  - title: OTV 10을 사용하여 NFS 데이터 저장소를 관리합니다
+    url: "/vmware/vmware_nfs_otv10.html"
+  - title: VMware Site Recovery Manager를 사용한 NFS 데이터 저장소 재해 복구
+    url: "/vmware/vmware_nfs_vlsr.html"
+- title: NetApp 기반 VVOL(VMware 가상 볼륨
+  pdf-filename: NetApp 기반 VVOL(VMware 가상 볼륨
   entries:
-  - title: 소개
-    url: "/vmware/vsphere_auto_introduction.html"
-  - title: 기존 블록 스토리지 용량 할당
-    entries:
-    - title: 개요
-      url: "/vmware/vsphere_ontap_auto_block.html"
-    - title: VMFS - Fibre Channel
-      url: "/vmware/vsphere_ontap_auto_block_fc.html"
-    - title: VMFS - Fibre Channel over Ethernet
-      url: "/vmware/vsphere_ontap_auto_block_fcoe.html"
-    - title: VMFS-iSCSI
-      url: "/vmware/vsphere_ontap_auto_block_iscsi.html"
-    - title: VMFS-NVMe over Fabric을 참조하십시오
-      url: "/vmware/vsphere_ontap_auto_block_nvmeof.html"
-  - title: 기존 파일 스토리지 용량 할당
-    entries:
-    - title: 개요
-      url: "/vmware/vsphere_ontap_auto_file.html"
-    - title: NFS-v3
-      url: "/vmware/vsphere_ontap_auto_file_nfs.html"
-    - title: NFS-v4.1
-      url: "/vmware/vsphere_ontap_auto_file_nfs41.html"
-  - title: VM 데이터 수집기
-    url: "/vmware/vmdc.html"
+  - title: ONTAP에서 VVOL 사용
+    url: "/vmware/vmware-vvol-overview.html"
 - title: 데모 및 자습서
   entries:
   - title: 비디오

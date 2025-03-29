@@ -24,10 +24,6 @@ https://docs.netapp.com/["https://docs.netapp.com/"^]
 +
 https://docs.netapp.com/us-en/trident/index.html["https://docs.netapp.com/us-en/trident/index.html"]
 
-* NetApp Astra Control Center 문서
-+
-https://docs.netapp.com/us-en/astra-control-center/["https://docs.netapp.com/us-en/astra-control-center/"^]
-
 * VMware 문서의 Anthos 클러스터
 +
 https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview["https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview"^]

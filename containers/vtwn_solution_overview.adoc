@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: containers/vtwn_solution_overview.html 
-keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Trident, Astra Control, Astra 
+keywords: VMware Tanzu, Tanzu, DevOps, Netapp, Trident, Trident Protect 
 summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다.' 
 ---
 = NVA-1166: NetApp을 사용하는 VMware Tanzu
@@ -16,7 +16,7 @@ summary: '이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터
 NetApp의 Alan Cowles와 Nikhil M Kulkarni입니다
 
 [role="lead"]
-이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템 및 Trident 스토리지 오케스트레이터와의 스토리지 통합에 대해 설명하고, 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 클론 복제를 위한 Astra Control Center에 대해서도 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
+이 참조 문서는 NetApp에서 검증된 다양한 데이터 센터 환경에서 Tanzu Kubernetes Grid(TKG), Tanzu Kubernetes Grid Service(TKGS) 또는 Tanzu Kubernetes Grid Integrated(TKGI) 방식으로 구축된 VMware Tanzu Kubernetes 솔루션의 다양한 배포 유효성 검사를 제공합니다. 또한 NetApp 스토리지 시스템 및 스토리지 오케스트레이터와의 스토리지 통합에 대해 설명합니다. 영구 스토리지를 관리하는 데 사용되는 Trident Protect와 해당 영구 스토리지를 사용하는 상태 저장 애플리케이션의 백업 및 클론 복제를 위한 Trident Protect에 대해서도 설명합니다. 마지막으로 솔루션 통합 및 검증에 대한 비디오 데모를 제공합니다.
 
 
 
@@ -26,8 +26,8 @@ NetApp 솔루션을 사용하는 VMware Tanzu는 다음과 같은 사용 사례�
 
 * VMware vSphere에 구축되어 NetApp 스토리지 시스템과 통합된 VMware Tanzu Kubernetes Grid 제품을 손쉽게 구축 및 관리할 수 있습니다.
 * 엔터프라이즈 컨테이너 및 가상화 워크로드를 VMware Tanzu Kubernetes Grid 오퍼링과 함께 사용할 수 있습니다.
-* NetApp 스토리지 및 NetApp Astra 제품군과 함께 사용할 경우 VMware Tanzu의 기능을 강조하는 실제 구성 및 사용 사례를 소개합니다.
-* Astra Control Center를 사용하여 NetApp 스토리지 시스템에 데이터가 상주하는 VMware Tanzu Kubernetes Grid 클러스터에 구축된 컨테이너식 워크로드를 애플리케이션 정합성이 보장된 방식으로 보호 또는 마이그레이션할 수 있습니다.
+* NetApp 스토리지 및 NetApp Trident 제품군과 함께 사용할 경우 VMware Tanzu의 기능을 강조하는 실제 구성 및 활용 사례
+* Trident Protect를 사용하는 NetApp 스토리지 시스템에 데이터가 상주하는 VMware Tanzu Kubernetes 그리드 클러스터에 배포된 컨테이너식 워크로드의 애플리케이션 정합성을 보장하거나 마이그레이션 합니다.
 
 
 
@@ -116,10 +116,6 @@ NetApp은 엔터프라이즈 데이터 센터 및 하이브리드 클라우드 �
 
 === NetApp 스토리지 통합
 
-NetApp Astra Control Center는 상태 저장 Kubernetes 워크로드를 위한 풍부한 스토리지 및 애플리케이션 인식 데이터 관리 서비스 세트를 제공하며, 온프레미스 환경에 구축되며, 신뢰할 수 있는 NetApp 데이터 보호 기술을 기반으로 합니다.
-
-자세한 내용은 NetApp Astra 웹 사이트를 참조하십시오 https://cloud.netapp.com/astra["여기"].
-
 Trident는 VMware Tanzu를 포함한 컨테이너 및 Kubernetes 배포를 위한 완전 지원되는 오픈 소스 스토리지 오케스트레이터입니다.
 
 자세한 내용은 Trident 웹 사이트 를 https://docs.netapp.com/us-en/trident/index.html["여기"] 참조하십시오.
@@ -135,9 +131,6 @@ Trident는 VMware Tanzu를 포함한 컨테이너 및 Kubernetes 배포를 위�
 
 
 | NetApp ONTAP를 참조하십시오 | 스토리지 | 9.9.1 
-
-
-| NetApp Astra Control Center를 참조하십시오 | 애플리케이션 인식 데이터 관리 | 22.04 
 
 
 | NetApp 트라이던트 | 스토리지 오케스트레이션 | 22.04.0 

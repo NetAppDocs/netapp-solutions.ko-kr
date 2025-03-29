@@ -139,7 +139,7 @@ image:aws_ora_fsx_ec2_pcs_architecture.png["이 이미지는 AWS EC2의 심장�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -157,7 +157,7 @@ Ansible 컨트롤러와 EC2 인스턴스 DB VM 간에 ssh 퍼블릭/프라이빗
 
 === EC2 인스턴스 및 Amazon FSx ONTAP 스토리지 클러스터를 프로비저닝합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 AWS 콘솔에서 EC2 인스턴스와 Amazon FSx ONTAP를 수동으로 프로비저닝할 수 있지만 NetApp Terraform 기반 자동화 툴킷을 사용하여 EC2 인스턴스 및 FSx ONTAP 스토리지 클러스터의 프로비저닝을 자동화하는 것이 좋습니다. 자세한 절차는 다음과 같습니다.
 
@@ -253,7 +253,7 @@ terraform apply main.plan
 
 === 심장박동기 클러스터 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 RHEL용 고가용성 애드온은 Oracle 데이터베이스 서비스와 같은 중요한 운영 서비스에 안정성, 확장성 및 가용성을 제공하는 클러스터 시스템입니다. 이 사용 사례 데모에서는 액티브/패시브 클러스터링 시나리오에서 Oracle 데이터베이스의 고가용성을 지원하도록 2노드 페이스 메이커 클러스터가 설정 및 구성되어 있습니다.  
 
@@ -486,7 +486,7 @@ Daemon Status:
 
 === 심장박동기 클러스터 펜싱 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 운영 클러스터의 경우 심장박동기 펜싱 구성이 필수입니다. 이 서비스는 AWS EC2 클러스터의 오작동 노드가 자동으로 격리되므로 노드가 클러스터 리소스를 소모하여 클러스터의 기능을 손상하거나 공유 데이터가 손상되지 않도록 합니다. 이 섹션에서는 Fence_AWS 펜싱 에이전트를 사용한 클러스터 펜싱 구성을 보여 줍니다.
 
@@ -599,7 +599,7 @@ NOTE:  `pcs stonith refresh`중지된 STONITH FENCE 에이전트를 새로 고�
 
 === PCS 클러스터에 Oracle 데이터베이스를 구축합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp이 제공하는 Ansible 플레이북을 활용하여 PCS 클러스터에 사전 정의된 매개 변수를 사용하여 데이터베이스 설치 및 구성 작업을 실행하는 것이 좋습니다. 이 자동화된 Oracle 구축을 위해서는 Playbook을 실행하기 전에 사용자 정의 매개 변수 파일 3개를 입력해야 합니다.
 
@@ -1026,7 +1026,7 @@ The command completed successfully
 
 === PCS 관리를 위한 Oracle 리소스 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 심장박동기 클러스터링을 구성하는 목적은 장애가 발생할 경우 최소한의 사용자 개입으로 AWS EC2 및 FSx ONTAP 환경에서 Oracle을 실행하기 위한 Active/Passive 고가용성 솔루션을 설정하는 것입니다. 다음은 PCS 관리를 위한 Oracle 리소스 구성을 보여 줍니다.
 
@@ -1382,7 +1382,7 @@ Daemon Status:
 
 === 사후 배포 HA 검증
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포 후에는 PCS Oracle 데이터베이스 장애 조치 클러스터가 올바르게 구성되고 예상대로 작동하는지 확인하기 위해 몇 가지 테스트 및 검증을 실행하는 것이 중요합니다. 테스트 검증에는 관리형 페일오버, 시뮬레이션된 예기치 않은 리소스 장애 및 클러스터 보호 메커니즘에 의한 복구가 포함됩니다.
 
@@ -1816,7 +1816,7 @@ SQL>
 
 === SnapCenter를 사용하여 Oracle 백업, 복원 및 클론 복제를 수행합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp에서는 AWS EC2 및 Amazon FSx ONTAP에 구축된 Oracle 데이터베이스를 관리하기 위해 SnapCenter UI 툴을 사용하는 것이 좋습니다. link:aws_ora_fsx_vmc_guestmount.html#oracle-backup-restore-and-clone-with-snapcenter["게스트 마운트 FSx ONTAP를 사용하여 AWS 기반 VMware Cloud에서 간편하고 자가 관리형 Oracle을 제공합니다"^] `Oracle backup, restore, and clone with SnapCenter`SnapCenter를 설정하고 데이터베이스 백업, 복원 및 클론 복제 워크플로우를 실행하는 방법에 대한 자세한 내용은 TR-4979  섹션을 참조하십시오.
 

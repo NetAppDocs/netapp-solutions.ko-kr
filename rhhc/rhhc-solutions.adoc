@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rhhc/rhhc-solutions.html 
-keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Astra Control Center, Advanced Cluster Management, ACM, Hub Cluster 
+keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, VMware, ROSA, ACC, Trident Protect, Advanced Cluster Management, ACM, Hub Cluster 
 summary:  
 ---
 = Red Hat OpenShift Container 워크로드를 위한 NetApp 하이브리드 멀티 클라우드 지원 솔루션
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이 솔루션은 OpenShift 컨테이너 플랫폼(OCP), OpenShift Advanced Cluster Manager(ACM), NetApp ONTAP, NetApp BlueXP, NetApp Astra Control Center(ACC)를 사용해 마이그레이션 및 중앙 집중식 데이터 보호를 테스트하고 검증합니다.
+이 솔루션은 OCP(OpenShift Container Platform), ACM(OpenShift Advanced Cluster Manager), NetApp ONTAP, NetApp BlueXP  및 ACC(NetApp Trident Protect)를 통해 마이그레이션 및 중앙 집중식 데이터 보호를 테스트하고 검증합니다.
 
 이 솔루션의 경우 다음 시나리오가 NetApp에서 테스트 및 검증되었습니다. 이 솔루션은 다음과 같은 특성을 기반으로 여러 시나리오로 구분됩니다.
 
@@ -31,7 +31,7 @@ summary:
 
 
 
-== 시나리오 1: ACC를 사용하여 사내 환경 내에서 데이터 보호 및 마이그레이션
+== 시나리오 1: Trident Protect를 사용한 사내 환경 내의 데이터 보호 및 마이그레이션
 
 ** 사내: 자체 관리형 OpenShift 클러스터와 자가 관리형 NetApp 스토리지**
 
@@ -47,7 +47,7 @@ image:rhhc-on-premises.png["입력/출력 대화 상자 또는 작성된 내용�
 
 
 
-== 시나리오 2: ACC를 사용하여 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션
+== 시나리오 2: Trident Protect를 사용하여 사내 환경에서 AWS 환경으로 데이터 보호 및 마이그레이션
 
 온프레미스: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지** AWS 클라우드: 자체 관리되는 OpenShift 클러스터와 자체 관리되는 스토리지**
 
@@ -79,7 +79,7 @@ image:rhhc-rosa-with-fsxn.png["입력/출력 대화 상자 또는 작성된 내�
 
 
 
-=== 시나리오 4: ACC를 사용하여 온프레미스 환경에서 GCP 환경으로 데이터 보호 및 마이그레이션
+=== 시나리오 4: Trident Protect를 사용하여 온프레미스 환경에서 GCP 환경으로 데이터 보호 및 마이그레이션
 
 ** 온프레미스: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
 ** Google Cloud: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
@@ -94,7 +94,7 @@ MetroCluster 구성에서 ONTAP를 사용할 때의 고려 사항은 을 참조�
 
 
 
-=== 시나리오 5: ACC를 사용하여 온프레미스 환경에서 Azure 환경으로 데이터 보호 및 마이그레이션
+=== 시나리오 5: Trident Protect를 사용하여 사내 환경에서 Azure 환경으로 데이터 보호 및 마이그레이션
 
 ** 온프레미스: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**
 ** Azure Cloud: 자체 관리형 OpenShift 클러스터 및 자체 관리형 스토리지**

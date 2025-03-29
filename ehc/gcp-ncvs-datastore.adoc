@@ -20,8 +20,6 @@ summary: 고객은 Google Cloud NetApp 볼륨과 함께 NFS 보조 데이터 저
 
 == 개요
 
-저자: NetApp Suesh Thoppay
-
 Google Cloud VMware Engine(GCVE) 환경에서 추가 스토리지 용량이 필요한 고객은 NetApp Cloud Volume Service를 활용하여 보조 NFS 데이터 저장소로 마운트할 수 있습니다. Google Cloud NetApp 볼륨에 데이터를 저장하면 고객은 지역 간 복제를 통해 디어터를 보호할 수 있습니다.
 
 image:gcp_ncvs_ds01.png["GCVE의 Google Cloud NetApp 볼륨 NFS 데이터 저장소"]
@@ -31,25 +29,25 @@ image:gcp_ncvs_ds01.png["GCVE의 Google Cloud NetApp 볼륨 NFS 데이터 저장
 == GCVE에 Google Cloud NetApp 볼륨(NetApp Volumes)에서 NFS 데이터 저장소를 마운트하는 배포 단계
 
 .NetApp 볼륨 프로비저닝 - 성능 볼륨
-[%collapsible]
+[%collapsible%open]
 ====
 Google Cloud NetApp 볼륨 볼륨은 에서 프로비저닝할 수 있습니다 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/workflow["Google Cloud Console 사용"] link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-service-gcp/task-create-volumes.html["NetApp BlueXP 포털 또는 API 사용"]
 
 ====
 .해당 NetApp 볼륨 볼륨을 삭제할 수 없는 볼륨으로 표시합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VM이 실행되는 동안 실수로 볼륨이 삭제되는 것을 방지하려면 아래 스크린샷과 같이 볼륨이 삭제할 수 없는 것으로 표시되어 있는지 확인합니다. image:gcp_ncvs_ds02.png["NetApp 볼륨 삭제할 수 없는 옵션입니다"] 자세한 내용은 link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/creating-nfs-volumes#creating_an_nfs_volume["NFS 볼륨 생성 중"]설명서를 참조하십시오.
 
 ====
 .NetApp 볼륨 테넌트 VPC에 대한 GCVE의 전용 연결이 존재하는지 확인합니다.
-[%collapsible]
+[%collapsible%open]
 ====
 NFS 데이터 저장소를 마운트하려면 GCVE 및 NetApp 볼륨 프로젝트 사이에 전용 연결이 있어야 합니다. 자세한 내용은 을 참조하십시오 link:https://cloud.google.com/vmware-engine/docs/networking/howto-setup-private-service-access["개인 서비스 액세스를 설정하는 방법"]
 
 ====
 .NFS 데이터 저장소를 마운트합니다
-[%collapsible]
+[%collapsible%open]
 ====
 GCVE에서 NFS 데이터 저장소를 마운트하는 방법에 대한 지침은 을 참조하십시오 link:https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-cloud-volumes-service-datastores["NetApp 볼륨을 사용하여 NFS 데이터 저장소를 생성하는 방법"]
 

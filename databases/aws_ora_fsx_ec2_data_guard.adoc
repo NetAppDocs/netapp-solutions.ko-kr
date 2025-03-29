@@ -137,7 +137,7 @@ Data Guard를 설정하기 위한 시작점으로 VPC 내의 AWS EC2 환경에 �
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -160,7 +160,7 @@ NOTE: Oracle 설치 파일을 스테이징할 충분한 공간을 확보하기 �
 
 === Data Guard용 기본 데이터베이스를 준비합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 데모에서는 기본 EC2 DB 인스턴스에 db1이라는 기본 Oracle 데이터베이스를 설정했습니다. 독립 실행형 Restart 구성의 ASM 디스크 그룹 2개와 ASM 디스크 그룹 + 데이터 및 ASM 디스크 그룹 + 로그의 플래시 복구 영역에 있는 데이터 파일이 포함된 ASM 디스크 그룹을 사용했습니다. 다음은 Data Guard용 기본 데이터베이스를 설정하는 자세한 절차를 보여 줍니다. 모든 단계는 데이터베이스 소유자인 Oracle 사용자로 실행해야 합니다.
 
@@ -404,7 +404,7 @@ srvctl start database -d db1
 
 === 대기 데이터베이스를 준비하고 Data Guard를 활성화합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard를 사용하려면 운영 EC2 DB 인스턴스와 일치하도록 대기 EC2 DB 인스턴스의 패치 세트를 포함한 Oracle 소프트웨어 스택과 OS 커널 구성이 필요합니다. 손쉬운 관리와 간소화를 위해 대기 EC2 DB 인스턴스 데이터베이스 스토리지 구성은 ASM 디스크 그룹의 이름, 수 및 크기 등 기본 EC2 DB 인스턴스와 이상적으로 일치해야 합니다. 다음은 Data Guard용 Standby EC2 DB 인스턴스를 설정하는 세부 절차입니다. 모든 명령은 Oracle 소유자 사용자 ID로 실행해야 합니다.
 
@@ -704,7 +704,7 @@ SQL>
 
 === Data Guard Broker를 설정합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle Data Guard Broker는 Oracle Data Guard 구성의 생성, 유지 관리 및 모니터링을 자동화하고 중앙 집중화하는 분산 관리 프레임워크입니다. 다음 섹션에서는 Data Guard Broker를 설정하여 Data Guard 환경을 관리하는 방법을 보여 줍니다.
 
@@ -799,7 +799,7 @@ DGMGRL>
 
 === 다른 활용 사례에 대한 복제 스탠바이 데이터베이스
 
-[%collapsible]
+[%collapsible%open]
 ====
 Data Guard의 AWS FSx ONTAP에서 대기 데이터베이스를 스테이징할 때의 주요 이점은 최소한의 추가 스토리지 투자로 다른 많은 사용 사례를 지원할 수 있도록 FlexCloned를 사용할 수 있다는 것입니다. 다음 섹션에서는 개발, 테스트, 보고서 등과 같은 다른 목적으로 FSx ONTAP에서 마운트된 복구 대기 데이터베이스 볼륨을 스냅샷하고 복제하는 방법을 보여 줍니다. NetApp SnapCenter 도구를 사용합니다.
 

@@ -59,7 +59,7 @@ NOTE: 이 GitHub 저장소의 컨텐츠와 파생 저작물을 제작 및/또는
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -86,7 +86,7 @@ Network configuration
 
 === 툴킷을 다운로드합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 [source, cli]
 ----
@@ -97,7 +97,7 @@ git clone https://github.com/NetApp/na_aws_fsx_ec2_deploy.git
 
 === 연결 및 인증
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 툴킷은 AWS 클라우드 쉘에서 실행되어야 합니다. AWS 클라우드 쉘은 AWS 리소스를 손쉽게 관리, 탐색, 상호 작용할 수 있는 브라우저 기반 쉘입니다. CloudShell은 콘솔 자격 증명으로 사전 인증됩니다. 공통 개발 및 운영 도구가 사전 설치되어 있으므로 로컬 설치 또는 구성이 필요하지 않습니다.
 
@@ -106,7 +106,7 @@ git clone https://github.com/NetApp/na_aws_fsx_ec2_deploy.git
 
 === Terraform 공급자 .tf 및 기본 .tf 파일 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 provider.tf는 Terraform이 API 호출을 통해 리소스를 프로비저닝하는 공급자를 정의합니다. main.tf는 프로비저닝할 리소스의 리소스와 속성을 정의합니다. 몇 가지 세부 정보는 다음과 같습니다.
 
@@ -143,7 +143,7 @@ main.tf:
 
 === Terraform 변수 .tf 및 Terraform.tfvars 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 variables.tf 는 main.tf 에서 사용할 변수를 선언합니다. Terraform.tfvars에는 변수의 실제 값이 들어 있습니다. 다음은 몇 가지 예입니다.
 
@@ -182,7 +182,7 @@ root_volume_size        = 30
 
 === 단계별 절차 - 순서대로 실행
 
-[%collapsible]
+[%collapsible%open]
 ====
 . AWS 클라우드 쉘에 Terraform을 설치합니다.
 +

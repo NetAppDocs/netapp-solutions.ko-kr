@@ -58,7 +58,7 @@ terraform {
 == 특정 모듈 실행
 
 .설치하고
-[%collapsible]
+[%collapsible%open]
 ====
 [role="tabbed-block"]
 =====
@@ -530,7 +530,7 @@ NetApp ONTAP FSx 인스턴스에 대한 Terraform 변수
 =====
 ====
 .Azure를 지원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 [role="tabbed-block"]
 =====
@@ -1394,7 +1394,7 @@ HA 쌍 Cloud Volumes ONTAP(CVO)에 대한 Terraform 변수
 =====
 ====
 .GCP
-[%collapsible]
+[%collapsible%open]
 ====
 [role="tabbed-block"]
 =====

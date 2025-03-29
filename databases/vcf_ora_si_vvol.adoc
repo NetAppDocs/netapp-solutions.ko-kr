@@ -143,7 +143,7 @@ image:vcf_ora_si_vvols_architecture.png["이 이미지는 iSCSI 및 ASM이 포�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -161,7 +161,7 @@ NOTE: Oracle 설치 파일을 스테이징할 수 있는 충분한 공간을 확
 
 === 스토리지 기능 프로필을 생성합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 먼저 VVol 데이터 저장소를 호스팅하는 밑줄이 그어진 ONTAP 스토리지에 대한 사용자 지정 스토리지 기능 프로필을 생성합니다.
 
@@ -200,7 +200,7 @@ image:vcf_ora_vvol_scp_07.png["사용자 지정 스토리지 기능 프로필 �
 
 === VVOL 데이터 저장소를 생성하고 구성합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 사전 요구 사항이 완료되면 vSphere Client를 통해 VCF에 관리자로 로그인하여 워크로드 도메인으로 이동합니다. 내장 VMware 스토리지 옵션을 사용하여 VVOL을 생성하지 마십시오. 대신 NetApp ONTAP 툴을 사용하여 VVOL을 생성하십시오. 다음은 VVol을 생성하고 구성하는 절차를 보여 줍니다.
 
@@ -245,7 +245,7 @@ NOTE: Oracle 데이터베이스의 클론이 생성되면 추가 데이터 VVOL�
 
 === 스토리지 기능 프로필을 기반으로 VM 스토리지 정책을 생성합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 VVol 데이터 저장소에서 데이터베이스 VM으로 스토리지를 프로비저닝하기 전에 이전 단계에서 생성한 스토리지 기능 프로필을 기반으로 VM 스토리지 정책을 추가합니다. 절차는 다음과 같습니다.
 
@@ -288,7 +288,7 @@ image:vcf_ora_vvol_vm_policy_07.png["VM 스토리지 정책 구성을 보여 주
 
 === VVol 데이터 저장소에서 DB VM에 디스크를 할당하고 DB 스토리지를 구성합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 vSphere Client에서 VM 설정을 편집하여 VVOL 데이터 저장소에서 데이터베이스 VM으로 디스크 3개를 추가합니다. 그런 다음 VM에 로그인하여 디스크를 포맷하고 마운트 지점 /u01, /u02 및 /u03에 마운트합니다. 다음은 정확한 단계와 작업을 보여 줍니다.
 
@@ -432,7 +432,7 @@ UUID=aff942c4-b224-4b62-807d-6a5c22f7b623 /boot                   xfs     defaul
 
 === VCF에서 Oracle 데이터베이스 구축
 
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp 자동화 툴킷을 활용하여 VCF에 Oracle을 구축할 것을 권장합니다. xfs 파일 시스템에서 Oracle 자동 배포를 실행하는 방법에 대한 자세한 내용은 TR-4992: link:automation_ora_c-series_nfs.html["NetApp C-Series와 NFS를 통해 Oracle을 간편하고 자동화된 방식으로 구축"^] TR-4992에서는 NFS를 사용하는 NetApp C-Series에서의 자동 Oracle 구축에 적용되지만, 데이터베이스 VM에 NFS 파일 시스템이 마운트되는 것을 우회할 경우 VVOL을 통한 VCF의 Oracle 구현과 동일합니다. 특정 태그로 건너뛰면 됩니다. 다음은 단계별 절차입니다.
 
@@ -501,7 +501,7 @@ ansible-playbook -i hosts 5-destroy.yml -u admin -e @vars/vars.yml
 
 ==== SnapCenter 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter 버전 6은 버전 5에 비해 VMware VVOL 데이터 저장소 지원을 포함하여 여러 가지 기능이 향상되었습니다. SnapCenter는 데이터베이스 VM의 호스트측 플러그인을 사용하여 애플리케이션 인식 데이터 보호 관리 작업을 수행합니다. Oracle용 NetApp SnapCenter 플러그인에 대한 자세한 내용은 이 설명서를 link:https://docs.netapp.com/us-en/snapcenter/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html["Oracle 데이터베이스용 플러그인을 사용하여 수행할 수 있는 작업"^]참조하십시오. 다음은 VCF에서 Oracle 데이터베이스 백업, 복구 및 클론을 위해 SnapCenter 버전 6을 설정하는 상위 단계를 설명합니다.
 
@@ -557,7 +557,7 @@ NOTE: SnapCenter 서버 이름을 DB VM 및 vSphere 플러그인 VM에서 IP 주
 
 ==== 데이터베이스 백업
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 ONTAP 볼륨 스냅샷을 활용하여 기존의 RMAN 기반 방법론에 비해 훨씬 더 빠른 데이터베이스 백업, 복원 또는 복제를 수행합니다. 스냅샷은 데이터베이스가 스냅샷 전에 Oracle 백업 모드로 전환되므로 애플리케이션 정합성이 보장됩니다.
 
@@ -600,7 +600,7 @@ image:vcf_ora_vvol_snapctr_bkup_10.png["SnapCenter 구성을 보여 주는 스�
 
 ==== 데이터베이스 복원/복구
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 스냅샷 백업을 통해 Oracle 데이터베이스를 위한 다양한 복원 및 복구 옵션을 제공합니다. 이 예에서는 이전 스냅샷 백업에서 복원한 다음 데이터베이스를 사용 가능한 마지막 로그로 롤포워딩하는 방법을 보여 줍니다.
 
@@ -741,7 +741,7 @@ SQL>
 
 ==== 데이터베이스 클론
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 예에서는 최신 백업 세트를 사용하여 다른 소프트웨어 설치의 DB VM ora_02와 VCF의 ORACLE_HOME에 데이터베이스를 복제합니다.
 

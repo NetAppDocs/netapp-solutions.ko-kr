@@ -142,7 +142,7 @@ image:automation_ora_anf_nfs_archit.png["이 이미지는 iSCSI 및 ASM이 포�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 구축을 위해서는 Azure에서 ANF에서 실행되는 기존 Oracle 데이터베이스가 필요합니다. 그렇지 않은 경우 아래 단계에 따라 솔루션 검증을 위해 두 개의 Oracle 데이터베이스를 생성합니다. 자동화를 통해 Azure 클라우드에서 ANF에 Oracle 데이터베이스를 구축하는 방법에 대한 자세한 내용은 TR-4987: link:automation_ora_anf_nfs.html["NFS를 통해 Azure NetApp Files에서 Oracle을 간편하고 자동화된 방식으로 구축"^]
 
@@ -196,7 +196,7 @@ video::960fb370-c6e0-4406-b6d5-b110014130e8[panopto,width=360]
 
 === SnapCenter 설치 및 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 온라인으로 진행하는 것이 좋습니다 link:https://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 소프트웨어 설명서"^] SnapCenter 설치 및 구성을 진행하기 전에: 다음은 Azure ANF에서 Oracle용 SnapCenter 소프트웨어를 설치 및 설정하는 단계를 간략하게 요약한 것입니다.
 
@@ -249,7 +249,7 @@ image:snapctr_ora_azure_anf_setup_05.png["이 이미지는 SnapCenter 서버에 
 
 === 데이터베이스 백업
 
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp 스냅샷 백업은 시스템 장애 또는 데이터 손실 시 복원할 수 있는 데이터베이스 볼륨의 시점 이미지를 생성합니다. 스냅샷 백업은 일반적으로 1분 내에 매우 짧은 시간을 걸립니다. 백업 이미지는 마지막 스냅샷 복사본이 생성된 이후 파일의 변경 사항만 기록하기 때문에 최소한의 스토리지 공간을 사용하며 성능 오버헤드가 거의 발생하지 않습니다. 다음 섹션에서는 SnapCenter에서 Oracle 데이터베이스 백업을 위한 스냅샷 구현을 보여 줍니다.
 
@@ -308,7 +308,7 @@ image:snapctr_ora_azure_anf_bkup_13.png["이 이미지는 SnapCenter 서버에 �
 
 === 데이터베이스 복구
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter를 통한 데이터베이스 복구로 데이터베이스 볼륨 이미지 시점의 스냅샷 복사본이 복원됩니다. 그런 다음 SCN/타임스탬프를 통해 원하는 지점으로 데이터베이스를 롤포워드하거나 백업 세트의 사용 가능한 아카이브 로그에서 허용하는 지점으로 롤포워드합니다. 다음 섹션에서는 SnapCenter UI를 사용한 데이터베이스 복구 워크플로우를 보여 줍니다.
 
@@ -351,7 +351,7 @@ image:snapctr_ora_azure_anf_restore_08.png["이 이미지는 SnapCenter 서버�
 
 === 데이터베이스 클론
 
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter를 통한 데이터베이스 복제는 볼륨의 스냅샷으로부터 새 볼륨을 생성하여 수행합니다. 시스템은 스냅샷 정보를 사용하여 스냅샷을 생성할 때 볼륨의 데이터를 사용하여 새 볼륨을 복제합니다. 더 중요한 것은 개발 또는 테스트를 지원하기 위해 운영 데이터베이스의 클론 복사본을 만드는 다른 방법과 비교할 때 빠르고(몇 분) 효율적입니다. 따라서 데이터베이스 애플리케이션 라이프사이클 관리를 획기적으로 개선할 수 있습니다. 다음 섹션에서는 SnapCenter UI를 사용한 데이터베이스 클론 워크플로우를 보여 줍니다.
 

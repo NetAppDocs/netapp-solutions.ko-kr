@@ -45,7 +45,7 @@ indexpage:
   - title: 타사를 사용한 데이터 보호
     links:
     - title: 개요
-      url: "../containers/rh-os-n_use_case_openshift_virtualization_tp-dp_overview.html"
+      url: "../containers/rh-os-n_use_case_openshift_virtualization_tp_dp_overview.html"
     - title: OADP 설치
       url: "../containers/rh-os-n_use_case_openshift_virtualization_dataprotection_installation.html"
     - title: Velero를 사용하여 백업합니다

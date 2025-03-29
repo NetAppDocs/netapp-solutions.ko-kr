@@ -26,16 +26,16 @@ image:rhhc-on-premises.png["입력/출력 대화 상자 또는 작성된 내용�
 설치 프로세스는 다음 단계로 나눌 수 있습니다.
 
 .CentOS VM 배포 및 구성
-[%collapsible]
+[%collapsible%open]
 ====
 * VMware vSphere 환경에 구축됩니다.
-* 이 VM은 이 솔루션용 NetApp Trident 및 NetApp Astra Control Center와 같은 일부 구성 요소를 구축하는 데 사용됩니다.
+* 이 VM은 NetApp Trident 및 NetApp Trident Protect와 같은 일부 구성 요소를 배포하는 데 사용됩니다.
 * 설치 중에 이 VM에 루트 사용자가 구성됩니다.
 
 
 ====
 .VMware vSphere(허브 클러스터)에서 OpenShift Container Platform 클러스터 배포 및 구성
-[%collapsible]
+[%collapsible%open]
 ====
  지침을 link:https://docs.openshift.com/container-platform/4.17/installing/installing_vsphere/installing-vsphere-assisted-installer.html["보조 배포"]OCP 클러스터를 구축하는 방법은참조하십시오.
 
@@ -44,13 +44,13 @@ TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성�
 
 ====
 .허브 클러스터에 고급 클러스터 관리를 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 허브 클러스터의 고급 클러스터 관리 운영자를 사용하여 설치됩니다. 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.7/html/install/installing#doc-wrapper["여기"].
 
 ====
 .추가 OCP 클러스터 2개 설치(소스 및 대상)
-[%collapsible]
+[%collapsible%open]
 ====
 * 허브 클러스터의 ACM을 사용하여 추가 클러스터를 구축할 수 있습니다.
 * 지침을 참조하십시오 link:https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.7/html/clusters/cluster_mce_overview#vsphere_prerequisites["여기"].
@@ -58,7 +58,7 @@ TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성�
 
 ====
 .NetApp ONTAP 스토리지를 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 * VMware 환경에서 OCP VM에 연결된 ONTAP 클러스터를 설치합니다.
 * SVM을 생성합니다.
@@ -67,7 +67,7 @@ TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성�
 
 ====
 .OCP 클러스터에 NetApp Trident를 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 * 허브, 소스, 타겟 클러스터의 3개 클러스터 모두에 NetApp Trident를 설치합니다
 * 지침을 참조하십시오 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["여기"].
@@ -78,9 +78,9 @@ TIP: 다음 사항을 기억하십시오. - ssh 공용 및 개인 키를 생성�
 
 ====
 .소스 클러스터에 애플리케이션을 배포합니다
-[%collapsible]
+[%collapsible%open]
 ====
 OpenShift GitOps를 사용하여 애플리케이션을 배포합니다. (예: Postgres, 고스트)
 
 ====
-다음 단계는 소스에서 타겟 클러스터로의 데이터 보호와 Trident Protect를 사용하는 것입니다. 자세한 내용은 을 link:rhhc/rhhc-dp-tp-solution.html["여기"]참조하십시오.
+다음 단계는 소스에서 타겟 클러스터로의 데이터 보호와 Trident Protect를 사용하는 것입니다. 자세한 내용은 을 link:rhhc-dp-tp-solution.html["여기"]참조하십시오.

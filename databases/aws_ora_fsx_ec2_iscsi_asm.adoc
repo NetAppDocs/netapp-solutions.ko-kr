@@ -114,7 +114,7 @@ image:aws_ora_fsx_ec2_iscsi_asm_architecture.png["이 이미지는 iSCSI 및 ASM
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -136,7 +136,7 @@ NOTE: Oracle 설치 파일을 스테이징할 충분한 공간을 확보하기 �
 
 === EC2 인스턴스 커널 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 사전 요구 사항이 용량 할당된 상태에서 EC2 인스턴스에 EC2-USER 및 sudo로 로그인하여 Oracle 설치를 위한 Linux 커널을 구성합니다.
 
@@ -277,7 +277,7 @@ systemctl disable firewalld
 
 === 데이터베이스 볼륨 및 LUN을 EC2 인스턴스 호스트에 프로비저닝 및 매핑합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 FSx 클러스터 관리 IP를 사용하여 ssh를 통해 FSx 클러스터에 로그인하여 Oracle 데이터베이스 바이너리, 데이터 및 로그 파일을 호스팅하여 명령줄에서 세 개의 볼륨을 프로비저닝합니다.
 
@@ -369,7 +369,7 @@ svm_ora    /vol/ora_01_logs/ora_01_logs_02           ora_01        6  iscsi
 
 === 데이터베이스 스토리지 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 이제 EC2 인스턴스 호스트에서 Oracle 그리드 인프라 및 데이터베이스 설치를 위한 FSx 스토리지를 가져와서 설정합니다.
 
@@ -640,7 +640,7 @@ systemctl restart multipathd
 
 === Oracle 그리드 인프라 설치
 
-[%collapsible]
+[%collapsible%open]
 ====
 . SSH를 통해 EC2 인스턴스로 로그인하고 주석 처리를 해제하여 암호 인증을 활성화합니다 `PasswordAuthentication yes` 그런 다음 의견을 남기기 바랍니다 `PasswordAuthentication no`.
 +
@@ -818,7 +818,7 @@ ASMCMD-9526: The AFD state is 'LOADED' and filtering is 'ENABLED' on host 'ip-17
 
 === Oracle 데이터베이스 설치
 
-[%collapsible]
+[%collapsible%open]
 ====
 . Oracle 사용자로 로그인하고 설정을 해제합니다 `$ORACLE_HOME` 및 `$ORACLE_SID` 설정되어 있는지 확인합니다.
 +

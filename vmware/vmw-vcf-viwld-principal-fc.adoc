@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-vcf-viwld-principal-fc.html 
+keywords: netapp, vmware, cloud, foundation, vcf, asa, all-flash, array, ontap tools, otv, sddc, fc 
+summary:  
+---
+= VI 워크로드 도메인의 기본 스토리지로 사용되는 FC의 VMFS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 시나리오에서는 VCF에서 VI 워크로드 도메인을 구축하기 위해 FC(Fibre Channel)를 기본 스토리지로 사용하는 VMFS 데이터 저장소를 구성하는 방법을 검토합니다. 필요한 경우 VCF의 SDDC Manager에서 수행해야 하는 단계에 대한 외부 설명서를 참조하고 스토리지 구성 부분에 해당하는 단계를 설명합니다.
+
+
+
+== 파이버 채널의 이점
+
+* 고성능: * FC는 고속 데이터 전송률을 제공하므로 대량의 데이터에 빠르고 안정적으로 액세스해야 하는 애플리케이션에 이상적입니다.
+
+* 낮은 지연 시간: * 매우 짧은 지연 시간으로, 데이터베이스 및 가상화 환경과 같이 성능에 민감한 애플리케이션에 매우 중요합니다.
+
+*안정성:* FC 네트워크는 내장된 이중화 및 오류 수정 등의 기능을 통해 견고성과 신뢰성으로 잘 알려져 있습니다.
+
+* 전용 대역폭: * FC는 스토리지 트래픽에 전용 대역폭을 제공하여 네트워크 혼잡 위험을 줄입니다.
+
+NetApp 스토리지 시스템에서 파이버 채널을 사용하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/ontap/san-admin/san-provisioning-fc-concept.html["FC를 사용한 SAN 프로비저닝"].
+
+
+
+== 시나리오 개요
+
+이 시나리오에서는 다음과 같은 상위 단계를 다룹니다.
+
+* FC 트래픽에 논리 인터페이스(LIF)를 사용하여 SVM(스토리지 가상 머신)을 생성합니다.
+* 구축할 호스트의 WWPN 정보를 수집하고 ONTAP 스토리지 시스템에 해당 이니시에이터 그룹을 생성합니다.
+* ONTAP 스토리지 시스템에 FC 볼륨을 생성합니다.
+* 이니시에이터 그룹을 매핑하여 FC 볼륨을 생성합니다
+* FC 스위치에서 단일 이니시에이터-Target 조닝을 활용합니다. 각 이니시에이터에 대해 하나의 존(Zone)을 생성합니다(단일 이니시에이터 존).
++
+** 각 존에 SVM을 위한 ONTAP FC 논리 인터페이스(WWPN)인 타겟을 포함합니다. SVM당 노드당 논리 인터페이스는 2개 이상 있어야 합니다. 물리적 포트의 WWPN을 사용하지 마십시오.
+
+
+* SDDC Manager에서 vMotion 트래픽에 대한 네트워크 풀을 생성합니다.
+* VI 워크로드 도메인에서 사용할 VCF의 커미션 호스트
+* FC 데이터 저장소를 기본 스토리지로 사용하여 VCF에 VI 워크로드 도메인을 구축합니다.
+
+
+
+NOTE: 이 솔루션은 NetApp AFF 및 FAS 등 NFS 스토리지를 지원하는 ONTAP 플랫폼에 적용할 수 있습니다.
+
+
+
+== 필수 구성 요소
+
+이 시나리오에서는 다음과 같은 구성 요소 및 구성이 사용됩니다.
+
+* FC 스위치에 연결된 FC 포트가 있는 ONTAP AFF 또는 ASA 스토리지 시스템
+* FC 라이프를 사용하여 생성된 SVM
+* FC HBA가 있는 vSphere를 FC 스위치에 연결합니다.
+* 단일 이니시에이터 - 대상 조닝은 FC 스위치에 대해 구성됩니다.
+
+
+
+NOTE: NetApp은 FC LUN에 대해 다중 경로를 권장합니다.
+
+
+
+== 배포 단계
+
+
+
+=== 관리 도메인 - 기본 클러스터입니다
+
+초기 클러스터의 FC Principal 스토리지는 VCF brownfield 가져오기 툴에서만 지원됩니다. 클라우드 빌더 툴(버전 5.2.x까지)을 사용하여 VCF를 구축하는 경우 VSAN만 지원됩니다. 자세한 내용은 을 https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/map-for-administering-vcf-5-2/importing-existing-vsphere-environments-admin/convert-or-import-a-vsphere-environment-into-vmware-cloud-foundation-admin.html["기존 vSphere 환경을 관리 도메인으로 변환"] 참조하십시오.
+
+
+
+=== 관리 도메인 - 추가 클러스터
+
+관리 도메인의 추가 vSphere 클러스터는 다음 옵션을 사용하여 구축할 수 있습니다. * vSphere 환경에 추가 클러스터를 설치하고 VCF Brownfield 가져오기 툴을 사용하여 vSphere 환경을 관리 도메인으로 변환합니다. https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/configure/create-vvols-datastore.html["VMware vSphere용 ONTAP 툴"], https://docs.netapp.com/us-en/ontap/san-admin/provision-storage.html["ONTAP API 또는 System Manager"] VMFS 데이터 저장소를 vSphere 클러스터에 구축하는 데 사용할 수 있습니다. * SDDC API를 사용하여 추가 클러스터를 구축합니다. vSphere 호스트에 VMFS 데이터 저장소가 구성되어 있어야 합니다.  https://docs.netapp.com/us-en/ontap/san-admin/provision-storage.html["ONTAP API 또는 System Manager"]vSphere 호스트에 LUN을 구축하는 데 사용합니다. * SDDC Manager UI를 사용하여 추가 클러스터를 구축합니다. 그러나 이 옵션은 버전 5.2.x까지 VSAN 데이터 저장소만 생성합니다
+
+
+
+=== VI 워크로드 도메인 - 기본 클러스터
+
+관리 도메인이 가동되어 실행 중인 후 VI 워크로드 도메인을 생성할 수 있습니다.
+
+* SDDC Manager UI 사용 vSphere 호스트에 VMFS 데이터 저장소가 구성되어 있어야 합니다. System Manager 또는 ONTAP API를 사용하여 LUN을 vSphere 호스트에 구축합니다.
+* 기존 vSphere 환경을 새로운 VI 워크로드 도메인으로 가져옵니다. VMware vSphere, System Manager 또는 ONTAP API용 ONTAP 툴을 사용하여 VMFS 데이터 저장소를 vSphere 클러스터에 구축할 수 있습니다.
+
+
+
+
+=== VI 워크로드 도메인 - 추가 클러스터
+
+VI 워크로드가 가동되어 실행되면 다음 옵션을 사용하여 FC LUN에 VMFS를 사용하여 클러스터를 추가로 구축할 수 있습니다.
+
+* VCF brownfield 가져오기 툴을 사용하여 vSphere 환경에서 추가 클러스터를 가져왔습니다. VMware vSphere, System Manager 또는 ONTAP API용 ONTAP 툴을 사용하여 VMFS 데이터 저장소를 vSphere 클러스터에 구축할 수 있습니다.
+* SDDC Manager UI 또는 API를 사용하여 추가 클러스터 구축 vSphere 호스트에 VMFS 데이터 저장소가 구성되어 있어야 합니다. System Manager 또는 ONTAP API를 사용하여 LUN을 vSphere 호스트에 구축합니다.
+
+
+
+
+== 추가 정보
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 link:https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2.html["VMware Cloud Foundation 설명서"]참조하십시오.

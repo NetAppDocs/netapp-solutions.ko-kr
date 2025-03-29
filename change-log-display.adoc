@@ -289,7 +289,7 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | 2022년 3월 8일 | 컨테이너 | 새로운 비디오 데모 추가: Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오 
 
 
-| 2022-03/01/05 | 컨테이너 | NVA-1160: OperatorHub 및 Ansible을 통해 Astra Control Center 설치 에 새 섹션 추가 
+| 2022-03/01/05 | 컨테이너 | NVA-1160: OperatorHub 및 Ansible을 통한 Trident Protect 설치 섹션에 새 섹션이 추가되었습니다 
 
 
 | 2022년 2월 2일 | 일반 | AI 및 최신 데이터 분석을 위한 콘텐츠를 더 효과적으로 구성하기 위한 랜딩 페이지를 생성했습니다 
@@ -331,7 +331,7 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | 2021년 10월 14일 | 포함되었습니다 | VMware VCF 블로그 시리즈를 통해 NetApp의 1-4부 추가 
 
 
-| 2021년 4월 10일 | 컨테이너 | 새로운 비디오 데모 추가: NVA-1160에 Astra Control Center를 사용한 워크로드 마이그레이션 
+| 2021년 4월 10일 | 컨테이너 | Trident Protect를 NVA-1160 으로 워크로드 마이그레이션 이라는 새로운 비디오 데모가 추가되었습니다 
 
 
 | 2021년 9월 23일 | 데이터 마이그레이션 | 새로운 콘텐츠: NetApp XCP 모범 사례 
@@ -343,7 +343,7 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | 2021년 9월 9일 | 컨테이너 | F5 BIG-IP 로드 밸런서와 OpenShift와의 통합 NVA-1160을 추가했습니다 
 
 
-| 2021년 8월 5일 | 컨테이너 | Red Hat OpenShift에 NVA-1160-NetApp Astra Control Center에 새로운 기술 통합 추가 
+| 2021년 8월 5일 | 컨테이너 | Red Hat OpenShift에서 NVA-1160-NetApp Trident Protect에 새로운 기술 통합 추가 
 
 
 | 2021년 7월 21일 | 데이터베이스 | NFS에서 ONTAP용 Oracle19c의 자동 배포 
@@ -709,7 +709,7 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | 2022년 3월 8일 | 컨테이너 | 새로운 비디오 데모 추가: Astra Control 및 NetApp FlexClone 기술을 사용하여 소프트웨어 개발을 가속화하십시오 
 
 
-| 2022-03/01/05 | 컨테이너 | NVA-1160: OperatorHub 및 Ansible을 통해 Astra Control Center 설치 에 새 섹션 추가 
+| 2022-03/01/05 | 컨테이너 | NVA-1160: OperatorHub 및 Ansible을 통한 Trident Protect 설치 섹션에 새 섹션이 추가되었습니다 
 
 
 | 2021년 12월 21일 | 컨테이너 | 새로운 비디오 데모 추가: NetApp Astra Control을 활용하여 사후 분석 수행 및 NVA-1160에 애플리케이션 복원 
@@ -718,13 +718,13 @@ NetApp 솔루션 자료에 대한 최근 변경 사항. 가장 최근의 변경 
 | 2021년 11월 15일 | 컨테이너 | 새 비디오 데모 추가: Astra Control을 사용하여 CI/CD 파이프라인에서 데이터 보호 NVA-1160에 추가 
 
 
-| 2021년 4월 10일 | 컨테이너 | 새로운 비디오 데모 추가: NVA-1160에 Astra Control Center를 사용한 워크로드 마이그레이션 
+| 2021년 4월 10일 | 컨테이너 | Trident Protect를 NVA-1160 으로 워크로드 마이그레이션 이라는 새로운 비디오 데모가 추가되었습니다 
 
 
 | 2021년 9월 9일 | 컨테이너 | F5 BIG-IP 로드 밸런서와 OpenShift와의 통합 NVA-1160을 추가했습니다 
 
 
-| 2021년 8월 5일 | 컨테이너 | Red Hat OpenShift에 NVA-1160-NetApp Astra Control Center에 새로운 기술 통합 추가 
+| 2021년 8월 5일 | 컨테이너 | Red Hat OpenShift에서 NVA-1160-NetApp Trident Protect에 새로운 기술 통합 추가 
 
 
 | 2021년 6월 16일 | 컨테이너 | OpenShift Virtualization 설치: NetApp과 함께 Red Hat OpenShift 라는 새 비디오 데모 추가 

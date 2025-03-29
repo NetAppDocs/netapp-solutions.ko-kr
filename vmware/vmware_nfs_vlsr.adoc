@@ -62,7 +62,7 @@ image:vmware-nfs-srm-image05.png["어플라이언스를 구성합니다"] {nbsp}
 
 NetApp은 NFS에 대한 이중 네트워크 설계를 추천하여 스토리지 시스템, 스위치, 네트워크 어댑터 및 호스트 시스템에 대한 내결함성을 제공합니다. 아키텍처 요구 사항에 따라 단일 서브넷이나 여러 서브넷으로 NFS를 구축하는 것이 일반적입니다.
 
-을 참조하십시오 https://core.vmware.com/resource/best-practices-running-nfs-vmware-vsphere["VMware vSphere에서 NFS를 실행하는 모범 사례"] VMware vSphere에 대한 자세한 내용은
+VMware vSphere에 대한 자세한 내용은 를 https://www.vmware.com/docs/vmw-best-practices-running-nfs-vmware-vsphere["VMware vSphere에서 NFS를 실행하는 모범 사례"] 참조하십시오.
 
 ONTAP를 VMware vSphere와 함께 사용하는 방법에 대한 네트워크 지침은 을 참조하십시오 https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-network.html#nfs["네트워크 구성 - NFS"] 섹션을 NetApp 참조하십시오.
 
@@ -91,7 +91,7 @@ VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설�
 SRM 어플라이언스 및 SRA 어댑터를 구성하려면 다음 단계를 완료하십시오.
 
 .기본 및 보조 사이트의 SRM 어플라이언스를 연결합니다
-[%collapsible]
+[%collapsible%open]
 ====
 운영 사이트와 보조 사이트 모두에 대해 다음 단계를 완료해야 합니다.
 
@@ -122,7 +122,7 @@ image:vmware-nfs-srm-image03.png["어플라이언스를 구성합니다"]
 
 ====
 .SRM 어플라이언스에 SRA를 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 SRM 어플라이언스에 SRA를 구성하려면 다음 단계를 수행하십시오.
 
@@ -145,7 +145,7 @@ image:vmware-nfs-srm-image04.png["새 SRM 어댑터를 추가합니다"]
 사이트 페어링을 구성하고 보호 그룹을 생성하려면 다음 단계를 완료하십시오.
 
 .SRM에 대한 사이트 페어링을 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 다음 단계는 운영 사이트의 vCenter 클라이언트에서 완료됩니다.
 
@@ -193,7 +193,7 @@ image:vmware-nfs-srm-image11.png["사이트 쌍 요약"]
 
 ====
 .SRM용 어레이 쌍을 추가합니다
-[%collapsible]
+[%collapsible%open]
 ====
 다음 단계는 기본 사이트의 사이트 복구 인터페이스에서 완료됩니다.
 
@@ -237,7 +237,7 @@ image:vmware-nfs-srm-image16.png["스토리지 쌍"]
 
 ====
 .SRM에 대한 보호 그룹을 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 다음 단계는 기본 사이트의 사이트 복구 인터페이스에서 완료됩니다.
 
@@ -284,7 +284,7 @@ image:vmware-nfs-srm-image22.png["복구 계획"]
 
 ====
 .SRM에 대한 복구 계획을 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 다음 단계는 기본 사이트의 사이트 복구 인터페이스에서 완료됩니다.
 
@@ -329,7 +329,7 @@ image:vmware-nfs-srm-image26.png["네트워크를 테스트합니다"]
  https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-operational_best_practices.html["운영 모범 사례"]SRM 재해 복구 작업에 ONTAP 스토리지를 사용하는 방법에 대한 자세한 내용은 을 참조하십시오.
 
 .SRM을 사용한 장애 조치 테스트
-[%collapsible]
+[%collapsible%open]
 ====
 다음 단계는 사이트 복구 인터페이스에서 완료됩니다.
 
@@ -362,7 +362,7 @@ image:vmware-nfs-srm-image30.png["새로 마운트된 데이터 저장소입니�
 
 ====
 .SRM에서 복구 계획을 실행합니다
-[%collapsible]
+[%collapsible%open]
 ====
 보조 사이트에 대한 전체 복구 및 장애 조치를 수행합니다.
 
@@ -394,4 +394,4 @@ VMware SRM에서 ONTAP 스토리지를 사용하는 방법에 대한 NetApp 설�
 
 ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
 
-VCF 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"].
+VCF 구성에 대한 자세한 내용은 을 link:https://techdocs.broadcom.com/us/en/vmware-cis/vcf.html["VMware Cloud Foundation 설명서"]참조하십시오.

@@ -58,7 +58,7 @@ NOTE: 이 GitHub 저장소의 컨텐츠와 파생 저작물을 제작 및/또는
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -85,7 +85,7 @@ NOTE: 간소화를 위해 클론 타겟 Oracle 서버는 Oracle 소프트웨어 
 
 === 툴킷을 다운로드합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 [source, cli]
 ----
@@ -99,7 +99,7 @@ NOTE: 이 툴킷은 현재 BitBucket 액세스 권한이 있는 NetApp 내부 �
 
 === Ansible 소스 및 타겟 호스트의 파일 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 툴킷에는 Ansible 플레이북이 실행되는 Oracle 호스트의 소스와 대상을 정의하는 hosts 파일이 포함되어 있습니다. 일반적으로 Data Guard 설정의 대기 DB 호스트와 대상 Oracle 클론 호스트가 포함됩니다. 다음은 예제 파일입니다. 호스트 항목에는 타겟 호스트 IP 주소와 클론 또는 새로 고침 명령을 실행하기 위해 호스트에 대한 사용자 액세스를 위한 ssh 키가 포함됩니다. Azure NetApp Files 스토리지는 API를 통해 구성됩니다. 따라서 ANF 연결은 HTTP 프로토콜을 통해 로컬 호스트를 통해 연결됩니다.
 
@@ -120,7 +120,7 @@ localhost ansible_connection=local
 
 === 글로벌 변수 설정
 
-[%collapsible]
+[%collapsible%open]
 ====
 다음은 전역 수준에서 적용 가능한 변수를 포함하는 일반적인 전역 변수 파일 vars.yml의 예입니다.
 
@@ -196,7 +196,7 @@ sys_pwd: "xxxxxxxx"
 
 === 호스트 변수 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 호스트 변수는 특정 호스트에만 적용되는 {{host_name}}.yml로 명명된 host_vars 디렉토리에 정의됩니다. 이 솔루션에서는 타겟 클론 DB 호스트 매개 변수 파일만 구성됩니다. Oracle 스탠바이 DB 매개 변수는 글로벌 VAR 파일로 구성됩니다. 다음은 일반적인 구성을 보여 주는 타겟 Oracle 클론 DB 호스트 변수 파일 Orac.yml의 예입니다.
 
@@ -219,7 +219,7 @@ asm_sid: +ASM
 
 === 추가 클론 대상 Oracle 서버 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 클론 대상 Oracle 서버는 소스 Oracle 서버와 동일한 Oracle 소프트웨어 스택을 설치 및 패치해야 합니다. Oracle user.bash_profile에 $ORACLE_BASE 및 $ORACLE_HOME이 구성되어 있습니다. 또한 $ORACLE_HOME 변수는 소스 Oracle 서버 설정과 일치해야 합니다. 대상 ORACLE_HOME 설정이 대기 Oracle 서버 구성과 다른 경우 심볼 링크를 생성하여 차이점을 해결하십시오. 다음은 예제입니다.
 
@@ -242,7 +242,7 @@ alias asm='export ORACLE_HOME=$GRID_HOME;export PATH=$PATH:$GRID_HOME/bin;export
 
 === 플레이북 실행
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle 데이터베이스 클론 수명주기를 실행하기 위한 플레이북은 총 2개입니다. DB 클론 또는 새로 고침은 필요에 따라 실행하거나 crontab 작업으로 예약할 수 있습니다.
 

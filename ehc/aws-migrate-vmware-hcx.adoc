@@ -16,8 +16,6 @@ summary:
 [role="lead"]
 Amazon FSx ONTAP의 보완 NFS 데이터 저장소를 포함하는 AWS(Amazon Web Services)의 VMware Cloud(VMC)의 일반적인 사용 사례는 VMware 워크로드 마이그레이션입니다. VMware HCX는 권장되는 옵션이며 VMware 지원 데이터 저장소에서 실행되는 VM(가상 머신)과 데이터를 FSx ONTAP의 보조 NFS 데이터 저장소를 포함한 VMC 데이터 저장소로 이동하는 다양한 마이그레이션 방법을 제공합니다.
 
-저자: NetApp 솔루션 엔지니어링
-
 
 
 == 개요: VMware HCX, FSx ONTAP 보조 데이터 저장소 및 VMware Cloud를 사용하여 가상 시스템 마이그레이션
@@ -29,7 +27,7 @@ VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 
 자세한 내용은 및 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/getting-started-with-vmware-hcx-4-10/install-checklist-b-hcx-with-a-vmc-sddc-instance.html["AWS SDDC 대상 환경에서 VMware 클라우드를 사용하여 체크리스트 B-HCX를 설치합니다"^] 을 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10.html["VMware HCX 사용자 가이드"^] 참조하십시오.
 
 .높은 수준의 단계
-[%collapsible]
+[%collapsible%open]
 ====
 이 목록에는 VMware HCX를 설치하고 구성하는 단계가 수록되어 있습니다.
 
@@ -45,7 +43,7 @@ VMware HCX는 주로 클라우드 전반에서 워크로드 마이그레이션, 
 
 ====
 .필수 구성 요소
-[%collapsible]
+[%collapsible%open]
 ====
 시작하기 전에 다음 필수 구성 요소가 충족되었는지 확인하십시오. 자세한 내용은 을 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-10/vmware-hcx-user-guide-4-10/preparing-for-hcx-installations.html["설치 준비 중"^]참조하십시오. 연결을 포함하여 사전 요구 사항이 충족되면 VMC의 VMware HCX 콘솔에서 라이센스 키를 생성하여 HCX를 구성하고 활성화합니다. HCX가 활성화되면 vCenter 플러그인이 구축되며 관리를 위해 vCenter 콘솔을 사용하여 액세스할 수 있습니다.
 
@@ -59,7 +57,7 @@ HCX 활성화 및 배포를 진행하기 전에 다음 설치 단계를 완료�
 
 ====
 .고급 아키텍처
-[%collapsible]
+[%collapsible%open]
 ====
 테스트 목적으로, 이 검증에 사용된 온프레미스 랩 환경은 사이트 간 VPN을 통해 AWS VPC에 연결되었으며, 외부 전송 게이트웨이를 통해 AWS와 VMware 클라우드 SDDC에 사내 연결을 가능하게 했습니다. HCX 마이그레이션 및 네트워크 확장 트래픽은 온프레미스 및 VMware 클라우드 대상 SDDC 사이에서 인터넷을 통해 흐릅니다. Direct Connect 프라이빗 가상 인터페이스를 사용하도록 이 아키텍처를 수정할 수 있습니다.
 
@@ -75,7 +73,7 @@ image:fsx-hcx-image1.png["입력/출력 대화 상자 또는 작성된 내용을
 이 솔루션의 배포를 완료하려면 다음 단계를 따르십시오.
 
 .1단계: 애드온 옵션을 사용하여 VMC SDDC를 통해 HCX를 활성화합니다
-[%collapsible]
+[%collapsible%open]
 ====
 설치를 수행하려면 다음 단계를 수행하십시오.
 
@@ -95,7 +93,7 @@ image:fsx-hcx-image2.png["입력/출력 대화 상자 또는 작성된 내용을
 
 ====
 .2단계: 온-프레미스 vCenter Server에 설치 관리자 OVA를 구축합니다
-[%collapsible]
+[%collapsible%open]
 ====
 온프레미스 커넥터가 VMC의 HCX Manager와 통신하려면 적절한 방화벽 포트가 온-프레미스 환경에서 열려 있는지 확인합니다.
 
@@ -110,7 +108,7 @@ image:fsx-hcx-image5.png["입력/출력 대화 상자 또는 작성된 내용을
 
 ====
 .3단계: 라이센스 키로 HCX 커넥터를 활성화합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VMware HCX 커넥터 OVA를 온-프레미스로 배포하고 어플라이언스를 시작한 후 다음 단계를 수행하여 HCX 커넥터를 활성화하십시오. VMC의 VMware HCX 콘솔에서 라이센스 키를 생성하고 VMware HCX Connector 설정 중에 라이센스를 입력합니다.
 
@@ -158,7 +156,7 @@ image:fsx-hcx-image8.png["입력/출력 대화 상자 또는 작성된 내용을
 
 ====
 .4단계: 사내 VMware HCX Connector와 VMC HCX Cloud Manager를 페어링합니다
-[%collapsible]
+[%collapsible%open]
 ====
 . 온-프레미스 vCenter Server와 VMC SDDC 간에 사이트 쌍을 생성하려면 온-프레미스 vCenter Server에 로그인하고 HCX vSphere Web Client 플러그인에 액세스합니다.
 +
@@ -188,7 +186,7 @@ NOTE: VMware HCX Connector는 포트 443을 통해 HCX Cloud Manager IP와 통�
 
 ====
 .5단계: 네트워크 프로파일, 컴퓨팅 프로파일 및 서비스 메시를 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VMware HCX-IX(HCX Interconnect) 어플라이언스는 인터넷을 통해 보안 터널 기능을 제공하고 타겟 사이트에 대한 프라이빗 연결을 통해 복제 및 vMotion 기반 기능을 지원합니다. 상호 연결은 암호화, 트래픽 엔지니어링 및 SD-WAN을 제공합니다. HCI-IX 상호 연결 어플라이언스를 생성하려면 다음 단계를 수행하십시오.
 
@@ -250,7 +248,7 @@ image:fsx-hcx-image18.png["입력/출력 대화 상자 또는 작성된 내용�
 
 ====
 .6단계: 워크로드 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 HCX는 사내 및 VMC SDDC와 같은 둘 이상의 서로 다른 환경 간에 양방향 마이그레이션 서비스를 제공합니다. HCX 대량 마이그레이션, HCX vMotion, HCX 콜드 마이그레이션, HCX Replication Assisted vMotion(HCX Enterprise Edition에서 사용 가능) 및 HCX OS 지원 마이그레이션(HCX Enterprise Edition에서 사용 가능)과 같은 다양한 마이그레이션 기술을 사용하여 HCX 활성 사이트로 애플리케이션 워크로드를 마이그레이션할 수 있습니다.
 
@@ -264,7 +262,7 @@ NOTE: HCX-IX 어플라이언스는 vCenter Server에서 Mobility Agent 서비스
 image:fsx-hcx-image19.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 .VMware HCX vMotion
-[%collapsible]
+[%collapsible%open]
 =====
 이 섹션에서는 HCX vMotion 메커니즘을 설명합니다. 이 마이그레이션 기술은 VMware vMotion 프로토콜을 사용하여 VM을 VMC SDDC로 마이그레이션합니다. vMotion 마이그레이션 옵션은 한 번에 하나의 VM의 VM 상태를 마이그레이션하는 데 사용됩니다. 이 마이그레이션 방법 중에는 서비스가 중단되지 않습니다.
 
@@ -296,7 +294,7 @@ image:fsx-hcx-image23.png["입력/출력 대화 상자 또는 작성된 내용�
 
 =====
 .VMware Replication Assisted vMotion을 참조하십시오
-[%collapsible]
+[%collapsible%open]
 =====
 VMware 문서에서 이미 알아보았듯이 VMware HCX RAV(Replication Assisted vMotion)는 대량 마이그레이션과 vMotion의 이점을 결합합니다. 대량 마이그레이션에서는 vSphere Replication을 사용하여 여러 VM을 병렬로 마이그레이션합니다. 전환 중에 VM이 재부팅됩니다. HCX vMotion은 다운타임 없이 마이그레이션되지만 복제 그룹에서 한 번에 한 VM에 대해 순차적으로 수행됩니다. RAV는 VM을 병렬로 복제하며 절체 윈도우가 될 때까지 동기화 상태를 유지합니다. 전환 프로세스 중에 VM의 다운타임 없이 한 번에 하나의 VM을 마이그레이션합니다.
 

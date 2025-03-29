@@ -62,7 +62,7 @@ NOTE: 이 GitHub 저장소의 컨텐츠와 파생 저작물을 제작 및/또는
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -91,7 +91,7 @@ Network connectivity
 
 === 툴킷을 다운로드합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 [source, cli]
 ----
@@ -102,7 +102,7 @@ git clone https://github.com/NetApp/na_ora_aws_migration.git
 
 === 호스트 변수 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 호스트 변수는 이름이 {{host_name}}.yml인 host_vars 디렉토리에 정의됩니다. 일반적인 구성을 보여 주는 호스트 변수 파일 HOST_NAME.yml 예가 포함되어 있습니다. 주요 고려 사항은 다음과 같습니다.
 
@@ -131,7 +131,7 @@ Target Oracle CDB - define host specific variables for the target CDB including 
 
 === DB 서버 호스트 파일 구성
 
-[%collapsible]
+[%collapsible%open]
 ====
 AWS EC2 인스턴스는 기본적으로 호스트 이름 지정을 위해 IP 주소를 사용합니다. Ansible용 hosts 파일에서 다른 이름을 사용하는 경우 소스 및 대상 서버에 대해 /etc/hosts 파일에서 호스트 이름 확인을 설정합니다. 다음은 예제입니다.
 
@@ -146,7 +146,7 @@ AWS EC2 인스턴스는 기본적으로 호스트 이름 지정을 위해 IP 주
 
 === Playbook 실행 - 순서대로 실행
 
-[%collapsible]
+[%collapsible%open]
 ====
 . Ansible 컨트롤러 사전 요구사항을 설치합니다.
 +

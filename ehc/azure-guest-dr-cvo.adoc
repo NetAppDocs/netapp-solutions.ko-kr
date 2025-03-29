@@ -20,8 +20,6 @@ summary: 클라우드로 재해 복구는 랜섬웨어 등 사이트 운영 중�
 
 == 개요
 
-저자: Ravi BCB, Niyaz Mohamed, NetApp
-
  This covers application data; however, what about the actual VMs themselves. Disaster recovery should cover all dependent components, including virtual machines, VMDKs, application data, and more. To accomplish this, SnapMirror along with Jetstream can be used to seamlessly recover workloads replicated from on-premises to Cloud Volumes ONTAP while using vSAN storage for VM VMDKs.
 이 문서에서는 NetApp SnapMirror, Jetstream 및 AVS(Azure VMware Solution)를 사용하여 재해 복구를 설정하고 수행하기 위한 단계별 접근 방식을 제공합니다.
 
@@ -71,7 +69,7 @@ NOTE: 온프레미스 데이터 센터를 Azure에 연결하는 여러 가지 �
 === 배포 세부 정보
 
 .Azure에서 CVO를 구성하고 볼륨을 CVO로 복제합니다
-[%collapsible]
+[%collapsible%open]
 ====
 첫 번째 단계는 Cloud Volumes ONTAP Azure(link:azure-guest.html["링크"^])를 사용하여 원하는 볼륨을 Cloud Volumes ONTAP에 복제하고 원하는 빈도와 스냅샷 보존 기능을 사용할 수 있습니다.
 
@@ -79,7 +77,7 @@ image:dr-cvo-avs-image2.png["입력/출력 대화 상자 또는 작성된 내용
 
 ====
 .AVS 호스트 및 CVO 데이터 액세스를 구성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 SDDC를 구축할 때 고려해야 할 두 가지 중요한 요소는 Azure VMware 솔루션에서 SDDC 클러스터의 크기와 SDDC를 사용할 수 있는 기간을 결정하는 것입니다. 재해 복구 솔루션의 두 가지 주요 고려 사항은 전체 운영 비용을 절감하는 데 도움이 됩니다. SDDC는 최대 3개의 호스트까지 구성할 수 있으며, 전체 구축 환경에서 다중 호스트 클러스터까지 가능합니다.
 
@@ -93,7 +91,7 @@ Cloud Volumes ONTAP 및 AVS를 올바르게 구성한 후에는 VAIO 메커니�
 
 ====
 .사내 데이터 센터에 Jetstream DR을 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 Jetstream DR 소프트웨어는 Jetstream DR Management Server Virtual Appliance(MSA), DR 가상 어플라이언스(DRVA) 및 호스트 구성 요소(I/O 필터 패키지)의 세 가지 주요 구성 요소로 구성됩니다. MSA는 컴퓨팅 클러스터에 호스트 구성 요소를 설치 및 구성한 다음 Jetstream DR 소프트웨어를 관리하는 데 사용됩니다. 설치 프로세스는 다음과 같습니다.
 
@@ -201,7 +199,7 @@ image:dr-cvo-avs-image20.png["입력/출력 대화 상자 또는 작성된 내�
 
 ====
 .프라이빗 클라우드에 AVS용 Jetstream DR을 설치합니다
-[%collapsible]
+[%collapsible%open]
 ====
 복구 사이트(AVS)의 모범 사례는 3노드 파일럿 라이트 클러스터를 미리 생성하는 것입니다. 이를 통해 다음을 포함하여 복구 사이트 인프라를 사전 구성할 수 있습니다.
 
@@ -274,7 +272,7 @@ image:dr-cvo-avs-image26.png["입력/출력 대화 상자 또는 작성된 내�
 
 ====
 .페일오버 및 페일백
-[%collapsible]
+[%collapsible%open]
 ====
 . 사내 환경의 보호된 클러스터에서 재해가 발생한 후(일부 또는 전체 장애) 해당 애플리케이션 볼륨에 대한 SnapMirror 관계를 끊은 후 Jetstream을 사용하여 VM에 대한 페일오버를 트리거할 수 있습니다.
 +

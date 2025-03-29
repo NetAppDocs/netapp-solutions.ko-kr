@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vmware/vmware_nfs_arp.html 
-keywords: netapp, vmware, cloud, foundation, vcf, aff, all-flash, nfs, vvol, vvols, array, ontap tools, otv, ransomeware 
+keywords: netapp, vmware, cloud, foundation, vcf, aff, all-flash, nfs, vvol, vvols, array, ontap tools, otv, ransomware 
 summary:  
 ---
 = NFS 스토리지에 대한 자율적 랜섬웨어 방어
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-랜섬웨어를 최대한 빨리 감지하는 것은 확산을 방지하고 비용이 많이 드는 다운타임을 방지하는 데 매우 중요합니다. 효과적인 랜섬웨어 감지 전략에서는 ESXi 호스트 및 게스트 VM 레벨에 여러 계층의 보호를 통합해야 합니다. 랜섬웨어 공격에 대한 포괄적인 방어 체계를 구축하기 위해 여러 보안 수단을 구현하지만, ONTAP를 사용하면 전체 방어 방식에 보호 계층을 더 추가할 수 있습니다. 몇 가지 기능을 소개하려면 Snapshots, 자율적 랜섬웨어 Protection, 무단 변경 방지 스냅샷 등으로 시작합니다.
+랜섬웨어를 최대한 빨리 감지하는 것은 확산을 방지하고 비용이 많이 드는 다운타임을 방지하는 데 매우 중요합니다. 효과적인 랜섬웨어 감지 전략에서는 ESXi 호스트 및 게스트 VM 레벨에 여러 계층의 보호를 통합해야 합니다. 랜섬웨어 공격에 대한 포괄적인 방어 체계를 구축하기 위해 여러 보안 수단을 구현하지만, ONTAP를 사용하면 전체 방어 방식에 보호 계층을 더 추가할 수 있습니다. 몇 가지 기능을 소개하려면 Snapshots, 자율적 랜섬웨어 Protection, 무단 조작 방지 스냅샷 등으로 시작합니다.
 
 위에서 언급한 기능이 VMware와 함께 작동하여 랜섬웨어로부터 데이터를 보호하고 복구하는 방법을 살펴보겠습니다. 공격으로부터 vSphere 및 게스트 VM을 보호하려면 엔드포인트에 대한 EDR/XDR/SIEM 분리, 보안 업데이트 설치, 적절한 강화 지침 준수 등 여러 가지 조치를 취해야 합니다. 데이터 저장소에 상주하는 각 가상 머신도 표준 운영 체제를 호스팅합니다. 엔터프라이즈 서버 맬웨어 방지 제품군이 설치되어 있고 정기적으로 업데이트되도록 하십시오. 이는 다계층 랜섬웨어 방어 전략의 필수 구성 요소입니다. 이와 함께 데이터 저장소를 지원하는 NFS 볼륨에서 ARP(Autonomous Ransomware Protection)를 활성화하십시오. ARP는 볼륨 워크로드 활동과 데이터 엔트로피를 조사하여 랜섬웨어를 자동으로 탐지하는 온박스 ML을 활용합니다. ARP는 ONTAP 내장 관리 인터페이스 또는 시스템 관리자를 통해 구성할 수 있으며 볼륨별로 활성화됩니다.
 
@@ -34,7 +34,7 @@ image:nfs-arp-image2.png["입력/출력 대화 상자 또는 작성된 내용을
 
 자세한 내용은 의 "ARP 및 가상 머신" 섹션을 link:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html#supported-configurations["ARP 사용 및 고려 사항"]참조하십시오.
 
-파일에서 백업 데이터로 이동하는 랜섬웨어 공격은 파일 암호화를 시작하기 전에 삭제를 시도하여 백업 및 스냅샷 복구 지점을 점점 더 많이 타겟으로 삼습니다. 그러나 ONTAP를 사용하면 를 사용하여 기본 또는 보조 시스템에서 변조 방지 스냅샷을 생성하여 이 문제를 방지할 수 link:https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html["NetApp Snapshot ™ 복사본 잠금"]있습니다.
+파일에서 백업 데이터로 이동하는 랜섬웨어 공격은 파일 암호화를 시작하기 전에 삭제를 시도하여 백업 및 스냅샷 복구 지점을 점점 더 많이 타겟으로 삼습니다. 그러나 ONTAP를 사용하면 의 기본 또는 보조 시스템에서 무단 변경 방지 스냅샷을 생성하여 이를 방지할 수 있습니다link:https://docs.netapp.com/us-en/ontap/snaplock/snapshot-lock-concept.html["NetApp Snapshot ™ 복사본 잠금"].
 
 image:nfs-arp-image3.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

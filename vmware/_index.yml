@@ -4,7 +4,43 @@ indexpage:
   summary: NetApp은 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 다수의 모범 사례와 솔루션을 제공합니다.
   lead: NetApp은 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 다수의 모범 사례와 솔루션을 제공합니다.
   tiles:
-  - title: VMware vSphere 기반
+  - title: NetApp 및 VMware 시작하기
+    links:
+    - title: 'VMware와 NetApp: 협력의 시너지 효과'
+      url: "/vmware-netapp.html"
+    - title: 개요
+      url: "/vmw-getting-started-overview.html"
+    - title: NetApp 스토리지 옵션
+      url: "/vmw-getting-started-netapp-storage-options.html"
+    - title: 비디오
+      url: "/vsphere_demos_videos.html"
+    - title: 블로그
+      url: "/../blogs.html#vmware"
+  - title: NetApp에서 VCF(VMware Cloud Foundation) 설정
+    links:
+    - title: 개요
+      url: "/vmw-vcf-overview.html"
+    - title: 기존 인프라를 VCF로 마이그레이션
+      url: "/vmw-vcf-migrate.html"
+    - title: Principal Storage를 사용하여 VCF 환경을 프로비저닝합니다
+      url: "/vmw-vcf-provision.html"
+    - title: Supplemental Storage로 VCF 환경을 확장합니다
+      url: "/vmw-vcf-expand.html"
+  - title: NetApp에서 VCF 관리
+    links:
+    - title: VM 마이그레이션
+      url: "/migrate-vms-to-ontap-datastore.html"
+    - title: SnapCenter로 워크로드를 보호하십시오
+      url: "/vmw-vcf-protect-sc.html"
+    - title: VMware vMSC(vSphere Metro Storage Cluster)로 워크로드 보호
+      url: "/vmw-vcf-protect-vmsc.html"
+    - title: BlueXP  DRaaS를 사용한 재해 복구
+      url: "/vmw-vcf-draas-bxp.html"
+    - title: 랜섬웨어 보호
+      url: "/vmware_nfs_arp.html"
+    - title: DII(Data Infrastructure Insights)로 워크로드 모니터링
+      url: "/vmw-dii.html"
+  - title: VMware vSphere Foundation(VVF)
     links:
     - title: ONTAP를 사용하는 VMware vSphere 모범 사례
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
@@ -18,16 +54,6 @@ indexpage:
       url: "/vmware-vsphere8-intro.html"
     - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
       url: "/vmware-vmsc-with-smas.html"
-  - title: VMware 클라우드 기반
-    links:
-    - title: NetApp 스토리지 및 VMware Cloud Foundation
-      url: "/vmware-vcf-overview.html"
-    - title: NetApp SnapCenter로 워크로드 도메인을 보호하십시오
-      url: "/vmware_vcf_aff_multi_wkld_scv.html"
-    - title: VMware Cloud Foundation으로 FlexPod 하이브리드 클라우드를 확장하십시오
-      url: https://www.netapp.com/blog/expanding-flexpod-hybrid-cloud-with-vmware-cloud-foundation/
-    - title: VMware Cloud Foundation용 FlexPod 설계 가이드
-      url: https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html?flt0_general-table0=vmware%20cloud%20foundation
   - title: VMware 클라우드 오퍼링
     links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
@@ -38,29 +64,7 @@ indexpage:
       url: "/../ehc/azure-avs.html"
     - title: Google Cloud VMware Engine의 NetApp(GCVE)
       url: "/../ehc/gcp-gcve.html"
-  - title: 'VMware와 NetApp: 협력의 시너지 효과'
-    links:
-    - title: VMware와 NetApp를 선택해야 하는 이유
-      url: "/vmware-netapp.html"
-    - title: VMware를 위한 NetApp 솔루션 개요
-      url: "/vmware-on-netapp.html"
-    - title: 고객 사례
-      url: "/vmware-customer-stories.html"
-    - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
-      url: "/migrate-vms-to-ontap-datastore.html"
-    - title: Amazon FSx for ONTAP를 사용하여 VM을 EC2로 마이그레이션합니다
-      url: "/migrate-vms-to-ec2-fsxn.html"
-  - title: VMware 포트폴리오에 대한 NetApp 지원
-    links:
-    - title: 비디오
-      url: "/vsphere_demos_videos.html"
-    - title: 블로그
-      url: "/../blogs.html#vmware"
-    - title: NetApp 상호 운용성 매트릭스 툴
-      url: https://mysupport.netapp.com/matrix/#welcome
-    - title: VMware 하드웨어 호환성 가이드 를 참조하십시오
-      url: https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc
-  - title: 추가 리소스
+  - title: 도구 및 유틸리티
     links:
     - title: 가상 머신 데이터 수집기
       url: "/vmdc.html"
@@ -68,7 +72,7 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
     - title: NetApp ONTAP 9를 사용하는 VMware 사이트 복구 관리자(SRM
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html
-    - title: VMware vSphere용 NetApp SnapCenter 플러그인
-      url: "/vmware-scv-overview.html"
-    - title: NetApp BlueXP
-      url: https://docs.netapp.com/us-en/bluexp-family/
+    - title: NetApp 상호 운용성 매트릭스 툴
+      url: https://mysupport.netapp.com/matrix/#welcome
+    - title: VMware 하드웨어 호환성 가이드 를 참조하십시오
+      url: https://www.vmware.com/resources/compatibility/search.php?deviceCategory=san&details=1&partner=64&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc

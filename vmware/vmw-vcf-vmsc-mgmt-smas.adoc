@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-vcf-vmsc-mgmt-smas.html 
+keywords: netapp, vmware, cloud, foundation, vcf, asa, all-flash, array, ontap tools, otv, sddc, iscsi 
+summary:  
+---
+= SnapMirror 활성 동기화를 사용하여 관리 도메인용 클러스터 확장
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 시나리오에서는 VMware vSphere(OTV)용 ONTAP 툴을 사용하여 VCF 관리 도메인에 대한 확장 클러스터를 구성하는 방법을 보여 줍니다. 이는 단일 인스턴스 - 다중 가용성 영역으로 간주됩니다.
+
+image:vmware_vcf_asa_mgmt_stretchcluster_image01.jpg["단일 인스턴스 - 다중 가용성 영역"]
+
+
+
+== 시나리오 개요
+
+확장 클러스터 솔루션은 기본 클러스터 또는 VCF 관리 또는 워크로드 도메인의 추가 클러스터에 구축할 수 있습니다. FC의 VMFS는 기본 데이터 저장소와 보조 데이터 저장소 모두에서 지원됩니다. iSCSI의 VMFS는 보조 데이터 저장소에서만 지원됩니다. SnapMirror Active Sync를 사용하는 NVMe-oF의 VMFS 지원에 대해서는 IMT를 참조하십시오.
+
+image:vmware_vcf_asa_mgmt_stretchcluster_image02.jpg["VCF 관리 도메인에 대해 ONTAP를 사용하여 클러스터 확장"]
+
+.관리 도메인의 기본 스토리지
+[%collapsible%open]
+====
+VCF 5.2 이상에서는 VCF 가져오기 도구를 사용하여 VSAN 없이 관리 도메인을 배포할 수 있습니다. VCF 가져오기 도구의 변환 옵션을 사용할 수 link:vmw-vcf-mgmt-fc.html["관리 도메인에 기존 vCenter 구축"]있습니다. vCenter의 모든 클러스터가 관리 도메인의 일부가 됩니다.
+
+. vSphere 호스트 구축
+. 로컬 데이터 저장소에 vCenter 서버 구축(관리 도메인으로 변환될 vSphere 호스트에 vCenter가 공존해야 함)
+. VMware vSphere용 ONTAP 툴을 구축합니다
+. VMware vSphere용 SnapCenter 플러그인 배포(선택 사항)
+. 데이터 저장소 생성(FC 존 구성이 제자리에 있어야 함)
+. vSphere 클러스터를 보호합니다
+. VM을 새로 생성된 데이터 저장소로 마이그레이션합니다
+
+
+
+NOTE: 클러스터가 확장되거나 축소될 때마다 소스 또는 타겟의 변경 사항을 나타내려면 클러스터에 대한 ONTAP 툴의 호스트 클러스터 관계를 업데이트해야 합니다.
+
+====
+.관리 도메인의 보충 스토리지
+[%collapsible%open]
+====
+관리 도메인이 가동되어 실행 중이면 ONTAP 툴을 사용하여 추가 데이터 저장소를 생성할 수 있습니다. 이렇게 하면 정합성 보장 그룹 확장이 트리거됩니다.
+
+
+TIP: vSphere 클러스터가 보호되는 경우 클러스터의 모든 데이터 저장소가 보호됩니다.
+
+Cloud Builder 툴을 사용하여 VCF 환경을 구축하는 경우 iSCSI를 통해 보충 스토리지를 생성하려면 ONTAP 툴을 구축하여 iSCSI 데이터 저장소를 생성하고 vSphere 클러스터를 보호합니다.
+
+
+NOTE: 클러스터가 확장되거나 축소될 때마다 소스 또는 타겟의 변경 사항을 나타내려면 클러스터에 대한 ONTAP 툴의 호스트 클러스터 관계를 업데이트해야 합니다.
+
+====
+
+
+== 추가 정보
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 link:https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2.html["VMware Cloud Foundation 5.2 설명서"]참조하십시오.
+
+
+
+== 이 솔루션에 대한 비디오 데모입니다
+
+.ONTAP 툴을 사용하여 VCF용 클러스터 확장
+video::569a91a9-2679-4414-b6dc-b25d00ff0c5a[panopto,width=360]

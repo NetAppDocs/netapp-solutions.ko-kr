@@ -121,7 +121,7 @@ Oracle VLDB는 FSx ONTAP 또는 AWS EC2 에코시스템 내에서 선택 가능�
 
 === 배포를 위한 사전 요구 사항
 
-[%collapsible]
+[%collapsible%open]
 ====
 배포에는 다음과 같은 사전 요구 사항이 필요합니다.
 
@@ -143,7 +143,7 @@ NOTE: Oracle 설치 파일을 스테이징할 충분한 공간을 확보하기 �
 
 === EC2 DB 인스턴스 호스트에 마운트할 NFS 볼륨을 프로비저닝하고 내보냅니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 이 데모에서는 FSx 클러스터 관리 IP를 통해 ssh를 통해 fsxadmin 사용자로 FSx 클러스터에 로그인하여 명령줄에서 NFS 볼륨을 프로비저닝하는 방법을 보여 줍니다. 또는 AWS FSx 콘솔을 사용하여 볼륨을 할당할 수도 있습니다. 데이터베이스 크기를 수용하도록 둘 이상의 FSx 파일 시스템이 설정된 경우 다른 FSx 파일 시스템에서 이 절차를 반복합니다.
 
@@ -202,7 +202,7 @@ sudo chown oracle:oinstall /nfsfsxn
 
 === FSx에서 이미지 복사본에 대한 Oracle RMAN 증분 병합을 설정합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 RMAN 증분 병합은 증분 백업/병합 간격마다 스테이징 데이터베이스 데이터 파일 이미지 복제본을 지속적으로 업데이트합니다. 데이터베이스 백업의 이미지 복사본은 증분 백업/병합을 실행하는 빈도만큼 최신 상태가 됩니다. 따라서 RMAN 증분 백업 및 병합의 빈도를 결정할 때 데이터베이스 성능, RTO 및 RPO 목표를 고려해야 합니다.
 
@@ -639,7 +639,7 @@ total 70585148
 
 === 빠른 복구를 위해 Oracle DB를 이미지 복제본으로 전환합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 데이터 손실 또는 손상과 같은 운영 스토리지 문제로 인해 장애가 발생할 경우 데이터베이스를 FSx ONTAP NFS 마운트의 이미지 복제본으로 신속하게 전환하며 데이터베이스 복구 없이 현재 상태로 복구할 수 있습니다. 미디어 복원을 제거하면 VLDB의 데이터베이스 복구 속도가 엄청나게 빨라집니다. 이 활용 사례에서는 데이터베이스 호스트 인스턴스가 온전하고 데이터베이스 제어 파일, 아카이브된 로그 및 현재 로그를 모두 복구에 사용할 수 있다고 가정합니다.
 
@@ -922,7 +922,7 @@ SQL>
 
 === 이미지 복사본에서 다른 EC2 DB 인스턴스 호스트로 Oracle DB 복구
 
-[%collapsible]
+[%collapsible%open]
 ====
 운영 스토리지와 EC2 DB 인스턴스 호스트가 모두 손실되는 경우 원래 서버에서 복구를 수행할 수 없습니다. 다행히 아직 이중화된 FSx ONTAP NFS 파일 시스템에 Oracle 데이터베이스 백업 이미지 복사본이 있습니다. 동일한 EC2 DB 인스턴스를 다시 빠르게 프로비저닝하고 NFS를 통해 VLDB의 이미지 복사본을 새 EC2 DB 호스트에 쉽게 마운트하여 복구를 실행할 수 있습니다. 이 섹션에서는 이러한 작업을 위한 단계별 절차를 시연합니다.
 
@@ -1664,7 +1664,7 @@ Update the Oracle init file from primary databse init file backup that is restor
 
 === 다른 활용 사례를 위해 Oracle 대기 이미지 복제본을 복제합니다
 
-[%collapsible]
+[%collapsible%open]
 ====
 Oracle VLDB 이미지 복제본을 스테이징하기 위해 AWS FSx ONTAP를 사용하는 또 다른 이점은 FlexCluned가 최소한의 추가 스토리지 투자로 다른 많은 용도로 사용할 수 있다는 것입니다. 다음 활용 사례에서는 FSx ONTAP에서 DEV, UAT 등과 같은 다른 Oracle 활용 사례에 대해 스테이징 NFS 볼륨을 스냅샷 및 복제하는 방법을 시연합니다
 

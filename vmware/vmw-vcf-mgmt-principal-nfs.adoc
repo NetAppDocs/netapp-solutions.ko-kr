@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: vmware/vmw-vcf-mgmt-principal-nfs.html 
+keywords: netapp, vmware, cloud, foundation, vcf, asa, all-flash, array, ontap tools, otv, sddc, nfs 
+summary:  
+---
+= 관리 도메인의 주 스토리지로서 NFS입니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 시나리오에서는 VMware VCF(Cloud Foundation) 관리 도메인의 기본 스토리지로 사용하기 위해 ONTAP에서 기존 NFS 데이터 저장소를 사용하는 경우의 사용 사례를 검토합니다.
+
+
+
+== 소개
+
+필요한 경우 VCF의 SDDC Manager에서 수행해야 하는 단계에 대한 외부 설명서를 참조하고 스토리지 구성 부분에 해당하는 단계를 참조합니다.
+
+ONTAP를 사용하여 기존 NFS 기반 vSphere 환경을 변환하는 방법에 대한 자세한 내용은 을 참조하십시오link:vmw-vcf-mgmt-nfs.html["vSphere 환경(NFS 데이터 저장소)을 VCF 관리 도메인으로 변환합니다"].
+
+
+NOTE: VCF 릴리즈 5.2에는 기존 vSphere 8 환경을 VCF 관리 도메인으로 변환하거나 VCF VI 워크로드 도메인으로 가져오는 기능이 도입되었습니다. 이 릴리스 이전에는 VMware vSAN이 VCF 관리 도메인의 기본 스토리지에 대한 유일한 옵션이었습니다.
+
+
+NOTE: 이 솔루션은 NetApp AFF 및 FAS 등 NFS 스토리지를 지원하는 ONTAP 플랫폼에 적용할 수 있습니다.
+
+
+
+== 필수 구성 요소
+
+이 시나리오에서는 다음과 같은 구성 요소 및 구성이 사용됩니다.
+
+* NetApp 트래픽을 허용하도록 구성된 SVM(Storage Virtual Machine)이 있는 스토리지 시스템입니다.
+* IP 네트워크에서 NFS 트래픽을 전달하는 논리 인터페이스(LIF)가 생성되었으며 SVM과 연결됩니다.
+* ESXi 호스트가 4개인 vSphere 8 클러스터와 vCenter 어플라이언스가 클러스터에 콜로세션됨
+* 이 목적으로 설정된 VLAN 또는 네트워크 세그먼트의 vMotion 및 NFS 스토리지 트래픽에 대해 구성된 분산 포트 그룹입니다.
+* VCF 변환에 필요한 소프트웨어를 다운로드합니다.
+
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.vmware.com/en/VMware-Cloud-Foundation/index.html["VMware Cloud Foundation 설명서"].
+
+
+
+== 배포 단계
+
+
+
+=== 관리 도메인 - 기본 클러스터입니다
+
+초기 클러스터의 NFS Principal 스토리지는 VCF brownfield 가져오기 툴에서만 지원됩니다. VCF가 Cloud Builder 툴(버전 5.2.x까지)을 사용하여 배포된 경우 VSAN만 지원됩니다.
+
+기존 vSphere 환경 사용에 대한 자세한 내용은 을 https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/map-for-administering-vcf-5-2/importing-existing-vsphere-environments-admin/convert-or-import-a-vsphere-environment-into-vmware-cloud-foundation-admin.html["기존 vSphere 환경을 관리 도메인으로 변환"] 참조하십시오.
+
+
+
+=== 관리 도메인 - 추가 클러스터
+
+관리 도메인에 추가 vSphere 클러스터를 구축할 수 있는 옵션은 다음과 같습니다.
+
+* vSphere 환경에 추가 클러스터를 설치하고 VCF brownfield 가져오기 툴을 사용하여 vSphere 환경을 관리 도메인으로 변환합니다. https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/configure/create-vvols-datastore.html["VMware vSphere용 ONTAP 툴"] https://docs.netapp.com/us-en/ontap/san-admin/provision-storage.html["ONTAP API 또는 System Manager"] NFS 데이터 저장소를 vSphere 클러스터에 구축하는 데 사용할 수 있습니다.
+* SDDC API를 사용하여 추가 클러스터를 구축합니다. vSphere 호스트에 NFS 데이터 저장소가 구성되어 있어야 합니다.  https://docs.netapp.com/us-en/ontap/san-admin/provision-storage.html["ONTAP API 또는 System Manager"]vSphere 호스트에 LUN을 구축하는 데 사용합니다.
+* SDDC Manager UI를 사용하여 추가 클러스터를 구축합니다. 그러나 이 옵션은 5.2.x 이전 릴리즈의 vSAN 데이터스토어만 생성합니다
+
+
+
+
+== 추가 정보
+
+ONTAP 스토리지 시스템 구성에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap["ONTAP 9 설명서"] 가운데.
+
+VCF 구성에 대한 자세한 내용은 을 link:https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2.html["VMware Cloud Foundation 설명서"]참조하십시오.

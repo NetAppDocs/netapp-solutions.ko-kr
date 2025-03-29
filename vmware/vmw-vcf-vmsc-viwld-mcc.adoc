@@ -16,7 +16,11 @@ summary:
 [role="lead"]
 VCF의 워크로드는 vMSC(vSphere Metro Storage Cluster)로 보호됩니다. FC 또는 IP 구축 방식의 ONTAP MetroCluster는 일반적으로 VMFS 및 NFS 데이터 저장소의 내결함성을 제공하는 데 사용됩니다.
 
-image:vmw-vcf-vmsc-viwld-mcc-image01.png["vMSC가 있는 VCF VI 워크로드 도메인입니다"]
+image:vmw-vcf-vmsc-viwld-mcc-image01.png["vMSC, 너비=500의 VCF VI 워크로드 도메인"]
+
+
+
+== 소개
 
 이 솔루션에서는 ONTAP MetroCluster를 사용하여 NFS를 운영 데이터 저장소로 사용하는 Stetched VCF VI 워크로드 도메인을 구축하는 방법을 보여 줍니다. VI 워크로드 도메인은 SDDC Manager를 사용하여 구축하거나 기존 vSphere 환경을 VI 워크로드 도메인으로 가져올 수 있습니다.
 
@@ -97,7 +101,7 @@ NFS를 운영 데이터 저장소로 사용하는 VCF 확장 관리 도메인을
 Broadcom 지원 포털에서 다운로드한 ISO를 사용하여 호스트에 vSphere를 배포하거나 vSphere 호스트에 대한 기존 배포 옵션을 사용하십시오.
 
 .NFS 데이터 저장소를 호스트 VM에 마운트합니다
-[%collapsible]
+[%collapsible%open]
 ====
 이 단계에서는 NFS 볼륨을 생성하고 이를 호스트 VM에 데이터 저장소로 마운트합니다.
 
@@ -137,7 +141,7 @@ VMware by Broadcom의 VCF Import Tool은 vCenter 어플라이언스와 SDDC 관�
 자세한 내용은 을 https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/vcf-admin/GUID-44CBCB85-C001-41B2-BBB4-E71928B8D955.html["VCF 가져오기 도구 옵션 및 매개 변수"]참조하십시오.
 
 .VCF 가져오기 도구를 복사하고 추출합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VCF Import Tool은 vCenter 어플라이언스에서 vSphere 클러스터가 VCF 변환 또는 가져오기 프로세스에 대해 양호한 상태인지 확인하는 데 사용됩니다.
 
@@ -153,7 +157,7 @@ tar -xvf vcf-brownfield-import-<buildnumber>.tar.gz
 
 ====
 .vCenter 어플라이언스를 확인합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VCF Import 툴을 사용하여 VI 워크로드 도메인으로 가져오기 전에 vCenter 어플라이언스를 검증합니다.
 
@@ -162,7 +166,7 @@ VCF Import 툴을 사용하여 VI 워크로드 도메인으로 가져오기 전�
 
 ====
 .NSX 구축을 위한 JSON 파일을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 vSphere 환경을 VMware Cloud Foundation으로 가져오거나 변환하는 동안 NSX Manager를 구축하려면 NSX 구축 사양을 생성합니다. NSX 구축에는 최소 3개의 호스트가 필요합니다.
 
@@ -206,7 +210,7 @@ JSON 파일을 SDDC Manager의 vCF 사용자 홈 폴더에 복사합니다.
 
 ====
 .SDDC Manager에 소프트웨어를 업로드합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VCF 가져오기 도구를 vCF 사용자의 홈 폴더에 복사하고 NSX 배포 번들을 SDDC Manager의 /nfs/vmware/vcf/nfs-mount/bundle/ 폴더에 복사합니다.
 
@@ -214,7 +218,7 @@ VCF 가져오기 도구를 vCF 사용자의 홈 폴더에 복사하고 NSX 배�
 
 ====
 .변환 전에 vCenter에 대한 자세한 확인
-[%collapsible]
+[%collapsible%open]
 ====
 관리 도메인 변환 작업 또는 VI 워크로드 도메인 가져오기 작업을 수행하기 전에 기존 vSphere 환경의 구성이 변환 또는 가져오기에 지원되는지 자세히 확인해야 합니다. . SDDC Manager 어플라이언스에 SSH를 통해 사용자 vCF로 연결합니다. . VCF 가져오기 도구를 복사한 디렉터리로 이동합니다. . 다음 명령을 실행하여 vSphere 환경을 변환할 수 있는지 확인합니다
 
@@ -225,7 +229,7 @@ image:vmw-vcf-vmsc-viwld-mcc-image08.png["VCF 확인 VC"]
 
 ====
 .vSphere 클러스터를 VCF VI 워크로드 도메인으로 변환합니다
-[%collapsible]
+[%collapsible%open]
 ====
 VCF Import Tool은 변환 프로세스를 수행하는 데 사용됩니다.
 
@@ -246,7 +250,7 @@ SDDC Manager에는 제공된 이름으로 생성된 VI 워크로드 도메인이
 
 ====
 .VCF에 라이센스를 추가합니다
-[%collapsible]
+[%collapsible%open]
 ====
 변환을 완료한 후 라이센스를 환경에 추가해야 합니다.
 

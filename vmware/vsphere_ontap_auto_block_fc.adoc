@@ -87,6 +87,6 @@ VMFS 데이터 저장소를 프로비저닝하려면 다음 단계를 수행하�
 
 === VMware vSphere 작업
 
-. HBA 드라이버가 설치되어 있는지 확인합니다. VMware 지원 HBA에는 드라이버가 기본적으로 배포되어 있으며 에서 볼 수 있어야 합니다 link:++https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-ED20B7BE-0D1C-4BF7-85C9-631D45D96FEC.html++["스토리지 어댑터 정보"].
+. HBA 드라이버가 설치되어 있는지 확인합니다. VMware 지원 HBA에는 드라이버를 즉시 배포하므로 에서 볼 수 link:++https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/getting-started-with-a-traditional-storage-model-in-vsphere-environment/supported-storage-adapters/view-storage-adapters-available-on-an-esxi-host.html++["스토리지 어댑터 정보"]있습니다.
 . link:++https://docs.netapp.com/vapp-98/topic/com.netapp.doc.vsc-iag/GUID-D7CAD8AF-E722-40C2-A4CB-5B4089A14B00.html++["ONTAP 툴을 사용하여 VMFS 데이터 저장소를 프로비저닝합니다"].
 

@@ -16,8 +16,6 @@ summary:
 [role="lead"]
 이 솔루션은 Amazon FSx ONTAP를 사용하여 AWS EC2에 SQL Server를 구축하는 것을 포함합니다.
 
-저자: Pat Sinth두산, Niyaz Mohamed, NetApp
-
 
 
 == 소개
@@ -70,7 +68,7 @@ Amazon FSx ONTAP와 EC2 인스턴스의 SQL Server를 결합하여 오늘날 가
 또한 최적의 스토리지 구성을 보장하기 위해 SQL Server 환경에 대한 NetApp 모범 사례 를 참조하십시오.
 
 .EC2의 SQL Server 환경에 대한 모범 사례 구성
-[%collapsible]
+[%collapsible%open]
 ====
 FSx ONTAP를 사용하면 스토리지를 조달하는 것이 가장 쉬우므로 파일 시스템을 업데이트하여 수행할 수 있습니다. 이 간단한 프로세스를 통해 필요에 따라 동적인 비용 및 성능 최적화를 수행할 수 있으며, SQL 워크로드의 균형을 유지하는 데 도움이 되며, 씬 프로비저닝을 위한 훌륭한 원동력이기도 합니다. FSX ONTAP 씬 프로비저닝은 SQL Server를 실행하는 EC2 인스턴스에 파일 시스템에서 프로비저닝되는 것보다 더 많은 논리적 스토리지를 제공하도록 설계되었습니다. 공간을 미리 할당하는 대신 데이터가 기록될 때 스토리지 공간이 각 볼륨 또는 LUN에 동적으로 할당됩니다. 대부분의 구성에서는 볼륨 또는 LUN의 데이터가 삭제되고 스냅샷 복사본이 보류되지 않는 경우에도 사용 가능한 공간이 다시 해제됩니다. 다음 표에는 스토리지를 동적으로 할당할 수 있는 구성 설정이 나와 있습니다.
 
@@ -140,7 +138,7 @@ NOTE: SQL Server와 같은 미션 크리티컬 애플리케이션에 대해 스�
 SnapCenter를 사용하여 SQL Server 작업을 수행하려면 먼저 SQL Server용 볼륨 및 LUN을 생성해야 합니다.
 
 .SQL Server용 볼륨 및 LUN을 생성합니다
-[%collapsible]
+[%collapsible%open]
 ====
 SQL Server용 볼륨 및 LUN을 생성하려면 다음 단계를 수행하십시오.
 
@@ -288,13 +286,13 @@ Format-Volume -DriveLetter G -FileSystem NTFS -AllocationUnitSize 65536
 볼륨 및 LUN을 정의한 후에는 SnapCenter를 설정하여 데이터베이스 작업을 수행할 수 있어야 합니다.
 
 .SnapCenter 개요
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 차세대 데이터 보호 소프트웨어입니다. SnapCenter는 단일 창 방식의 관리 인터페이스를 통해, 여러 데이터베이스와 기타 애플리케이션 워크로드의 백업, 복구 및 클론 복제와 관련된 시간 소모적이고 복잡한 수동 프로세스를 자동화 및 단순화합니다. SnapCenter는 NetApp Snapshot, NetApp SnapMirror, SnapRestore 및 NetApp FlexClone을 비롯한 NetApp 기술을 활용합니다. 이와 같은 통합을 통해 IT 조직은 스토리지 인프라를 확장하고, 점점 엄격해지는 SLA 규정을 충족하고, 기업 전체에서 관리자의 생산성을 향상시킬 수 있습니다.
 
 ====
 .SnapCenter 서버 요구 사항
-[%collapsible]
+[%collapsible%open]
 ====
 다음 표에는 Microsoft Windows Server에 SnapCenter Server 및 플러그인을 설치하기 위한 최소 요구 사항이 나열되어 있습니다.
 
@@ -346,7 +344,7 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 
 ====
 .데이터베이스 스토리지 레이아웃
-[%collapsible]
+[%collapsible%open]
 ====
 다음 그림에서는 SnapCenter를 사용하여 백업할 때 Microsoft SQL Server 데이터베이스 스토리지 레이아웃을 생성할 때 고려해야 할 몇 가지 사항을 보여 줍니다.
 
@@ -375,7 +373,7 @@ NOTE: 새 데이터베이스를 만들 때는 데이터와 로그에 대해 별�
 
 ====
 .SnapCenter 설치 및 설정
-[%collapsible]
+[%collapsible%open]
 ====
 를 따릅니다 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["SnapCenter 서버를 설치합니다"^] 및 https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html["Microsoft SQL Server용 SnapCenter 플러그인 설치"^] SnapCenter를 설치하고 설정합니다.
 
@@ -423,7 +421,7 @@ image:sql-awsec2-image18.png["입력/출력 대화 상자 또는 작성된 내�
 이제 SQL Server에 대한 백업, 복원 및 클론 작업을 수행할 준비가 되었습니다.
 
 .SnapCenter를 사용하여 데이터베이스를 백업합니다
-[%collapsible]
+[%collapsible%open]
 ====
 데이터베이스와 로그 파일을 FSx ONTAP LUN에 배치한 후 SnapCenter를 사용하여 데이터베이스를 백업할 수 있습니다. 다음 프로세스를 사용하여 전체 백업을 생성합니다.
 
@@ -465,7 +463,7 @@ image:sql-awsec2-image23.png["입력/출력 대화 상자 또는 작성된 내�
 
 ====
 .SnapCenter를 사용하여 데이터베이스를 복원합니다
-[%collapsible]
+[%collapsible%open]
 ====
 EC2에서 FSx ONTAP와 SQL Server를 함께 사용할 경우 얻을 수 있는 주요 이점 중 하나는 각 데이터베이스 레벨에서 신속하고 세분화된 복원을 수행할 수 있다는 것입니다.
 
@@ -485,7 +483,7 @@ image:sql-awsec2-image25.png["입력/출력 대화 상자 또는 작성된 내�
 
 ====
 .크기가 작은 데이터베이스를 여러 개 사용하는 인스턴스에 대한 고려 사항입니다
-[%collapsible]
+[%collapsible%open]
 ====
 SnapCenter는 리소스 그룹 내의 인스턴스 또는 인스턴스 그룹에서 상당히 많은 수의 데이터베이스를 백업할 수 있습니다. 데이터베이스의 크기는 백업 시간의 주요 요인이 아닙니다. 백업 기간은 볼륨당 LUN 수, Microsoft SQL Server의 로드, 인스턴스당 총 데이터베이스 수, 특히 I/O 대역폭 및 사용량에 따라 달라질 수 있습니다. 인스턴스 또는 리소스 그룹에서 데이터베이스를 백업하도록 정책을 구성하는 동안에는 스냅샷 복사본당 백업된 최대 데이터베이스를 호스트당 100개로 제한하는 것이 좋습니다. 총 스냅샷 복사본 수가 1,023개 복사본 제한을 초과하지 않도록 해야 합니다.
 
@@ -516,7 +514,7 @@ SnapCenter는 리소스 그룹 내의 인스턴스 또는 인스턴스 그룹에
 
 ====
 .SnapCenter를 사용하여 데이터베이스 클론 생성
-[%collapsible]
+[%collapsible%open]
 ====
 개발 또는 테스트 환경의 다른 위치로 데이터베이스를 복원하거나 비즈니스 분석을 위해 복사본을 생성하기 위해 NetApp 모범 사례는 클론 복제 방법을 활용하여 동일한 인스턴스 또는 대체 인스턴스에서 데이터베이스 복사본을 생성하는 것입니다.
 
@@ -527,7 +525,7 @@ SnapCenter는 리소스 그룹 내의 인스턴스 또는 인스턴스 그룹에
 SnapCenter를 사용하면 필요한 디스크에 클론 복제본을 마운트하여 보조 인스턴스에서 폴더 구조의 형식을 유지하고 백업 작업 스케줄을 계속 지정할 수 있습니다.
 
 .동일한 인스턴스에서 새 데이터베이스 이름으로 데이터베이스 클론 생성
-[%collapsible]
+[%collapsible%open]
 =====
 다음 단계를 사용하여 EC2에서 실행되는 동일한 SQL Server 인스턴스에서 데이터베이스를 새 데이터베이스 이름으로 복제할 수 있습니다.
 
@@ -539,7 +537,7 @@ SnapCenter를 사용하면 필요한 디스크에 클론 복제본을 마운트�
 
 =====
 .EC2에서 실행 중인 새 SQL Server 인스턴스로 데이터베이스 클론 생성
-[%collapsible]
+[%collapsible%open]
 =====
 다음 단계는 EC2에서 실행되는 새 SQL Server 인스턴스에 데이터베이스를 복제하는 데 사용됩니다.
 
@@ -570,7 +568,7 @@ video::27f28284-433d-4273-8748-b01200fb3cd7[panopto]
 == 부록
 
 .부록 A: 클라우드 형성 템플릿에 사용할 YAML 파일
-[%collapsible]
+[%collapsible%open]
 ====
 다음 .YAML 파일은 AWS 콘솔의 Cloud formation Template과 함께 사용할 수 있습니다.
 
@@ -581,7 +579,7 @@ PowerShell을 사용하여 iSCSI LUN 생성 및 NetApp SnapCenter 설치를 자�
 
 ====
 .부록 B: 볼륨 및 LUN 프로비저닝을 위한 Powershell 스크립트
-[%collapsible]
+[%collapsible%open]
 ====
 다음 스크립트는 볼륨 및 LUN을 프로비저닝하는 데 사용되며, 위에 제공된 지침에 따라 iSCSI를 설정하는 데도 사용됩니다. 두 개의 PowerShell 스크립트가 있습니다.
 

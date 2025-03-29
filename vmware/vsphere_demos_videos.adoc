@@ -17,7 +17,7 @@ summary: 이 페이지에서는 비디오 및 자습서에 대한 소개 및 설
 하이브리드 클라우드, 가상화 및 컨테이너 솔루션의 특정 기능을 소개하는 다음 비디오 및 데모를 참조하십시오.
 
 .VMware vSphere용 NetApp ONTAP 툴
-[%collapsible]
+[%collapsible%open]
 ====
 .VMware용 ONTAP 툴 - 개요
 video::e8071955-f6f1-45a0-a868-b12a010bba44[panopto]
@@ -27,7 +27,7 @@ video::5c047271-aecc-437c-a444-b01200f9671a[panopto]
 video::a34bcd1c-3aaa-4917-9a5d-b01200f97f08[panopto]
 ====
 .VMware vSphere용 SnapCenter 플러그인
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp SnapCenter 소프트웨어는 애플리케이션, 데이터베이스 및 파일 시스템 전반에서 데이터 보호를 안전하게 조율하고 관리하는 사용하기 쉬운 엔터프라이즈 플랫폼입니다.
 
@@ -47,7 +47,7 @@ video::ed41002e-585c-445d-a60c-b01200fb1188[panopto,width=360]
 video::8df4ad1f-83ad-448b-9405-b01200fb2567[panopto,width=360]
 ====
 .3-2-1 데이터 보호 솔루션
-[%collapsible]
+[%collapsible%open]
 ====
 3-2-1 데이터 보호 솔루션은 SnapMirror 기술을 사용하여 온프레미스 운영 및 보조 백업과 BlueXP 백업 및 복구를 사용하여 오브젝트 스토리지에 복제된 복사본을 결합합니다.
 
@@ -55,7 +55,7 @@ video::8df4ad1f-83ad-448b-9405-b01200fb2567[panopto,width=360]
 video::7c21f3fc-4025-4d8f-b54c-b0e001504c76[panopto,width=360]
 ====
 .AWS FSx ONTAP을 사용하는 AWS 기반 VMware Cloud를 참조하십시오
-[%collapsible]
+[%collapsible%open]
 ====
 .iSCSI를 사용하는 FSx ONTAP가 있는 Windows 게스트 연결 스토리지
 video::0d03e040-634f-4086-8cb5-b01200fb8515[panopto,width=360]
@@ -73,7 +73,7 @@ video::52661f10-3f90-4f3d-865a-b01200f06d31[panopto,width=360]
 video::685c0dc2-9d8a-42ff-b46d-b01200f056b0[panopto,width=360]
 ====
 .ANF(Azure NetApp Files)가 있는 Azure 기반 Azure VMware 서비스
-[%collapsible]
+[%collapsible%open]
 ====
 .Azure VMware 솔루션 Azure NetApp Files의 데이터 저장소 보충 개요
 video::8c5ddb30-6c31-4cde-86e2-b01200effbd6[panopto,width=360]
@@ -87,7 +87,7 @@ video::986bb505-6f3d-4a5a-b016-b01200f03f18[panopto,width=360]
 video::255640f5-4dff-438c-8d50-b01200f017d1[panopto,width=360]
 ====
 .NetApp ONTAP를 포함한 VMware 클라우드 기반
-[%collapsible]
+[%collapsible%open]
 ====
 .VCF 워크로드 도메인의 주 스토리지로 사용되는 NFS 데이터 저장소입니다
 video::9b66ac8d-d2b1-4ac4-a33c-b16900f67df6[panopto]
@@ -95,7 +95,7 @@ video::9b66ac8d-d2b1-4ac4-a33c-b16900f67df6[panopto]
 video::1d0e1af1-40ae-483a-be6f-b156015507cc[panopto]
 ====
 .NetApp과 VMware Tanzu
-[%collapsible]
+[%collapsible%open]
 ====
 VMware Tanzu를 사용하면 vSphere 또는 VMware Cloud Foundation을 통해 Kubernetes 환경을 구축, 관리 및 관리할 수 있습니다. 고객은 VMware의 이 제품 포트폴리오를 통해 요구사항에 가장 적합한 VMware Tanzu 에디션을 선택하여 단일 제어 플레인에서 모든 관련 Kubernetes 클러스터를 관리할 수 있습니다.
 
@@ -109,7 +109,7 @@ video::FVRKjWH7AoE[youtube,width=360]
 video::Y-34SUtTTtU[youtube,width=360]
 ====
 .NetApp Cloud Insights를 참조하십시오
-[%collapsible]
+[%collapsible%open]
 ====
 NetApp Cloud Insights는 온프레미스 및 클라우드 인프라에 대한 가시성과 제어를 제공하도록 설계된 포괄적인 모니터링 및 분석 플랫폼입니다.
 

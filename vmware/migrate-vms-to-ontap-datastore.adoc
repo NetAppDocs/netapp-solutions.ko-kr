@@ -13,10 +13,8 @@ summary:
 :imagesdir: ../media/
 
 
-저자: Suresh Thoppay
-
 [role="lead"]
-VMware vSphere by Broadcom은 가상 머신 호스팅을 위한 VMFS, NFS 및 VVOL 데이터 저장소를 지원합니다. 고객은 하이퍼 컨버지드 인프라 또는 중앙 집중식 공유 스토리지 시스템으로 이러한 데이터 저장소를 만들 수 있습니다. 고객은 ONTAP 기반 스토리지 시스템을 호스팅하여 가상 머신의 공간 효율적인 스냅샷과 클론을 제공하고, 데이터 센터와 클라우드 전반에서 다양한 배포 모델을 선택할 수 있는 유연성, 모니터링 및 경고 툴을 통한 운영 효율성, 보안, 거버넌스, VM 데이터를 검사하는 선택적 규정 준수 툴을 활용할 수 있다는 점을 종종 보게 됩니다. 기타
+VMware vSphere by Broadcom은 가상 머신 호스팅을 위한 VMFS, NFS 및 VVOL 데이터 저장소를 지원합니다. 고객은 하이퍼 컨버지드 인프라 또는 중앙 집중식 공유 스토리지 시스템으로 이러한 데이터 저장소를 만들 수 있습니다. 고객은 ONTAP 기반 스토리지 시스템에서 호스팅하여 가상 머신의 공간 효율적인 스냅샷 및 클론 복제를 제공하고, 데이터 센터와 클라우드 전반에서 다양한 구축 모델을 유연하게 선택할 수 있는 유연성, 모니터링 및 경고 툴을 통한 운영 효율성, 보안, 거버넌스, VM 데이터를 검사하는 규정 준수 툴 등의 가치를 종종 보게 됩니다.
 
 ONTAP 데이터 저장소에 호스팅된 VM은 SCV(SnapCenter Plugin for VMware vSphere)를 사용하여 보호할 수 있습니다. SCV는 스토리지 기반 스냅샷을 생성하고 원격 ONTAP 스토리지 시스템에도 복제합니다. 운영 또는 보조 스토리지 시스템에서 복구를 수행할 수 있습니다.
 
@@ -25,14 +23,14 @@ ONTAP 데이터 저장소에 호스팅된 VM은 SCV(SnapCenter Plugin for VMware
 고객은 ONTAP 툴 vCenter 플러그인을 사용하여 데이터 저장소를 쉽게 프로비저닝할 수 있으며, VM은 전원이 켜져 있는 동안에도 ONTAP 데이터 저장소로 마이그레이션할 수 있습니다.
 
 
-NOTE: Aria Automation, Tanzu(또는 기타 Kubernetes 버전)와 같은 외부 관리 툴과 함께 배포된 일부 VM은 일반적으로 VM 스토리지 정책에 따라 다릅니다. 동일한 VM 스토리지 정책 내의 데이터 저장소 간에 마이그레이션하는 경우 애플리케이션에 미치는 영향이 적어야 합니다. 애플리케이션 소유자에게 문의하여 해당 VM을 새 데이터 저장소로 올바르게 마이그레이션하십시오. vSphere 8이 도입되었습니다 https://core.vmware.com/resource/vsphere-vmotion-notifications["VMotion 알림"] vMotion을 위한 애플리케이션 준비
+NOTE: Aria Automation, Tanzu(또는 기타 Kubernetes 버전)와 같은 외부 관리 툴과 함께 배포된 일부 VM은 일반적으로 VM 스토리지 정책에 따라 다릅니다. 동일한 VM 스토리지 정책 내의 데이터 저장소 간에 마이그레이션하는 경우 애플리케이션에 미치는 영향이 적어야 합니다. 애플리케이션 소유자와 함께 VM을 새 데이터 저장소로 올바르게 마이그레이션하십시오. vMotion용 애플리케이션을 준비하기 위해 vSphere 8이 도입되었습니다. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/how-to-prepare-an-application-for-vsphere-vmotion.html#:~:text=vSphere%208.0%20introduces%20a%20notification,the%20necessary%20steps%20to%20prepare.["지연 시간에 민감한 애플리케이션에 대한 vSphere vMotion 알림"]
 
 
 
 == 네트워크 요구 사항
 
 .vMotion을 사용한 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 ONTAP 데이터 저장소가 접속 구성, 내결함성 및 성능 향상을 제공할 수 있도록 이중 스토리지 네트워크가 이미 구축되어 있다고 가정합니다.
 
@@ -55,10 +53,10 @@ TIP: vMotion 및 Provisioning VMkernel 인터페이스에서 사용하는 포트
 vMotion은 전원 상태와 관계없이 VM을 마이그레이션하는 데 주로 사용됩니다. 특정 시나리오에 대한 추가 고려 사항 및 마이그레이션 절차는 아래에서 확인할 수 있습니다.
 
 
-NOTE: 이해하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-0540DF43-9963-4AF9-A4DB-254414DC00DA.html["VM 상태 및 vSphere vMotion 제한"] VM 마이그레이션 옵션을 진행하기 전에
+NOTE: VM 마이그레이션 옵션을 진행하기 전에 먼저 이해해야 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/virtual-machine-conditions-and-limitation-for-vmotion-host-management.html["VM 상태 및 vSphere vMotion 제한"] 합니다.
 
 .특정 vSphere 데이터 저장소에서 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 아래 절차를 따르십시오.
 
@@ -111,7 +109,7 @@ $vm, $vmdisk | Get-SPBMEntityConfiguration
 ----
 ====
 .동일한 vSphere 클러스터에서 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 아래 절차를 따르십시오.
 
@@ -167,10 +165,10 @@ TIP: 데이터 저장소 클러스터를 완전 자동화된 스토리지 DRS(Dy
 
 ====
 .여러 vSphere 클러스터에서 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 
-NOTE: 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-03E7E5F9-06D9-463F-A64F-D4EC20DAF22E.html["CPU 호환성 및 vSphere Enhanced vMotion 호환성"] 소스 호스트와 타겟 호스트가 서로 다른 CPU 제품군 또는 모델인 경우
+NOTE: 소스 호스트와 타겟 호스트가 서로 다른 CPU 제품군 또는 모델인 경우 을 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/cpu-compatibility-and-evc-host-management.html["CPU 호환성 및 vSphere Enhanced vMotion 호환성"] 참조하십시오.
 
 UI를 사용하여 VM을 새 데이터 저장소로 마이그레이션하려면 아래 절차를 따르십시오.
 
@@ -238,12 +236,12 @@ $vm, $vmdisk | Get-SPBMEntityConfiguration
 ----
 ====
 .동일한 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션
-[#vmotion-same-sso%collapsible]
+[#vmotion-same-sso%collapsible%open]
 ====
 아래 절차에 따라 VM을 동일한 vSphere Client UI에 나열된 새 vCenter Server로 마이그레이션합니다.
 
 
-NOTE: 소스 및 타겟 vCenter 버전 등과 같은 추가 요구 사항은 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-DAD0C40A-7F66-44CF-B6E8-43A0153ABE81.html["vCenter Server 인스턴스 간의 vMotion 요구 사항에 대한 vSphere 설명서"]
+NOTE: 소스 및 타겟 vCenter 버전 등과 같은 추가 요구 사항은 을 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/vmotion-across-vcenter-server-systems-host-management/requirements-for-migration-across-vcenter-servers-host-management.html["vCenter Server 인스턴스 간의 vMotion 요구 사항에 대한 vSphere 설명서"]
 
 . vSphere Web Client를 사용하는 경우 호스트 및 클러스터 인벤토리에서 클러스터를 선택하고 VM 탭을 클릭합니다.
 +
@@ -309,7 +307,7 @@ $targetvm, $targetvmdisk | Get-SPBMEntityConfiguration
 ----
 ====
 .서로 다른 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 
 NOTE: 이 시나리오에서는 vCenter 서버 간에 통신이 존재한다고 가정합니다. 그렇지 않으면 아래 나열된 전체 데이터 센터 위치 시나리오를 확인하십시오. 필수 구성 요소를 확인하려면 을 선택합니다 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-1960B6A6-59CD-4B34-8FE5-42C19EE8422A.html["Advanced Cross vCenter vMotion에 대한 vSphere 설명서"]
@@ -330,7 +328,7 @@ image:migrate-vms-to-ontap-image11.png["vCenter Server 간 내보내기"]
 
 +
 
-TIP: 타겟 vCenter Server에서 VM을 가져올 수도 있습니다. 이 절차는 를 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-ED703E35-269C-48E0-A34D-CCBB26BFD93E.html["Advanced Cross vCenter vMotion을 사용하여 가상 머신 가져오기 또는 복제"]
+TIP: 타겟 vCenter Server에서 VM을 가져올 수도 있습니다. 이 절차는 를 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/vmotion-across-vcenter-server-systems-host-management/migrate-a-virtual-machine-from-an-external-vcenter-server-instance-host-management.html["Advanced Cross vCenter vMotion을 사용하여 가상 머신 가져오기 또는 복제"]
 
 . vCenter 자격 증명 세부 정보를 제공하고 Login 을 클릭합니다.
 +
@@ -392,30 +390,30 @@ $targetvm, $targetvmdisk | Get-SPBMEntityConfiguration
 ----
 ====
 .데이터 센터 위치 간 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 * NSX Federation 또는 기타 옵션을 사용하여 계층 2 트래픽이 데이터 센터 간에 늘어나면 vCenter Server 간에 VM을 마이그레이션하는 절차를 따르십시오.
-* HCX는 다양한 기능을 제공합니다 https://docs.vmware.com/en/VMware-HCX/4.8/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["마이그레이션 유형"] Replication Assisted vMotion을 사용하여 다운타임 없이 VM을 이동할 수 있습니다.
+* HCX는 데이터센터 간에 Replication Assisted vMotion을 포함하여 다운타임 없이 VM을 이동할 수 있는 다양한 https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-11/vmware-hcx-user-guide-4-11/migrating-virtual-machines-with-vmware-hcx/vmware-hcx-migration-types.html["마이그레이션 유형"] 기능을 제공합니다.
 * https://docs.vmware.com/en/Site-Recovery-Manager/index.html["SRM(사이트 복구 관리자)"] 는 일반적으로 재해 복구를 위한 것이며 스토리지 어레이 기반 복제를 사용하는 계획된 마이그레이션에도 종종 사용됩니다.
-* CDP(Continous Data Protection) 제품이 사용됩니다 https://core.vmware.com/resource/vmware-vsphere-apis-io-filtering-vaio#section1["IO용 vSphere API(VAIO)"] 0에 가까운 RPO 솔루션을 위해 데이터를 가로채고 원격 위치로 복제본을 전송합니다.
+* CDP(Continous Data Protection) 제품은 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/filtering-virtual-machine-i-o-in-vsphere/about-i-o-filters/classes-of-vaio-filters.html["IO용 vSphere API(VAIO)"] 데이터를 가로채고 RPO가 0에 가까운 솔루션을 위해 원격 위치로 복제본을 전송하는 데 사용합니다.
 * 백업 및 복구 제품도 사용할 수 있습니다. 하지만 RTO가 더 길어지는 경우가 종종 있습니다.
 * https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["BlueXP 서비스형 재해 복구(DRaaS)"] 스토리지 시스템 기반 복제를 활용하고 특정 작업을 자동화하여 타겟 사이트에서 VM을 복구합니다.
 
 
 ====
 .하이브리드 클라우드 환경에서 VM 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
-* https://docs.vmware.com/en/VMware-Cloud/services/vmware-cloud-gateway-administration/GUID-91C57891-4D61-4F4C-B580-74F3000B831D.html["하이브리드 연결 모드를 구성합니다"] 의 절차를 따릅니다 link:#vmotion-same-sso["동일한 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/cloud/vmware-cloud/cloud/vmware-cloud-gateway-administration/about-hybrid-linked-mode.html["하이브리드 연결 모드를 구성합니다"] 의 절차를 따릅니다 link:#vmotion-same-sso["동일한 SSO 도메인에 있는 vCenter 서버 간에 VM 마이그레이션"]
 * HCX는 다양한 기능을 제공합니다 https://docs.vmware.com/en/VMware-HCX/4.8/hcx-user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html["마이그레이션 유형"] VM이 켜져 있는 동안 VM을 이동하기 위해 데이터 센터 간에 Replication Assisted vMotion을 포함합니다.
 +
-** 링크:./EHC/aws-migrate-vmware-hcx.html [TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션]
-** 링크:../EHC/azure-migrate-vmware-hcx.html [TR-4940: VMware HCX-Quickstart Guide를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션]
-** link:../EHC/gcp-migrate-vmware-hcx.html [VMware HCX-Quickstart Guide를 사용하여 Google Cloud VMware Engine의 Google Cloud NetApp Volumes 데이터 저장소로 워크로드 마이그레이션]
+** link:../ehc/aws-migrate-vmware-hcx.html["TR 4942: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션합니다"]
+** link:../ehc/azure-migrate-vmware-hcx.html["TR-4940: VMware HCX-Quickstart 가이드를 사용하여 워크로드를 Azure NetApp Files 데이터 저장소로 마이그레이션합니다"]
+** link:../ehc/gcp-migrate-vmware-hcx.html["VMware HCX-Quickstart Guide를 사용하여 워크로드를 Google Cloud VMware Engine의 Google Cloud NetApp Volumes 데이터 저장소로 마이그레이션합니다"]
 
 
 * https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["BlueXP 서비스형 재해 복구(DRaaS)"] 스토리지 시스템 기반 복제를 활용하고 특정 작업을 자동화하여 타겟 사이트에서 VM을 복구합니다.
-* 를 사용하는 지원되는 CDP(Continous Data Protection) 제품 사용 https://core.vmware.com/resource/vmware-vsphere-apis-io-filtering-vaio#section1["IO용 vSphere API(VAIO)"] 0에 가까운 RPO 솔루션을 위해 데이터를 가로채고 원격 위치로 복제본을 전송합니다.
+* 를 사용하여 데이터를 가로채고 RPO가 거의 0에 가까운 솔루션을 위해 원격 위치로 복제본을 전송하는 지원되는 CDP(Continous Data Protection) 제품 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/filtering-virtual-machine-i-o-in-vsphere/about-i-o-filters/classes-of-vaio-filters.html["IO용 vSphere API(VAIO)"] 사용
 
 
 
@@ -434,7 +432,7 @@ VM 템플릿은 vCenter Server 또는 컨텐츠 라이브러리를 통해 관리
 
 
 .데이터 저장소에 호스팅된 VM 템플릿의 마이그레이션
-[%collapsible]
+[%collapsible%open]
 ====
 . vSphere Web Client에서 VM and Templates 폴더 보기 아래의 VM 템플릿을 마우스 오른쪽 버튼으로 클릭하고 옵션을 선택하여 VM으로 변환합니다.
 +
@@ -445,7 +443,7 @@ image:migrate-vms-to-ontap-image16.png["VM 템플릿을 VM으로 변환합니다
 
 ====
 .콘텐츠 라이브러리 항목의 복제입니다
-[%collapsible]
+[%collapsible%open]
 ====
 . vSphere Web Client에서 Content Libraries를 선택합니다
 +
@@ -483,7 +481,7 @@ Get-ContentLibaryItem -ContentLibary (Get-ContentLibary 'CL01' -Server $sourcevc
 ----
 ====
 .콘텐츠 라이브러리에 VM을 템플릿으로 추가
-[%collapsible]
+[%collapsible%open]
 ====
 . vSphere Web Client에서 VM을 선택하고 마우스 오른쪽 버튼을 클릭하여 Clone as Template in Library를 선택합니다
 +
@@ -499,7 +497,7 @@ image:migrate-vms-to-ontap-image22.png["템플릿 유형 선택"]
 
 +
 
-NOTE: 콘텐츠 라이브러리의 VM 템플릿에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vm-administration/GUID-E9EAF7AC-1C08-441A-AB80-0BAA1EAF9F0A.html["vSphere VM 관리 가이드"]
+NOTE: 콘텐츠 라이브러리의 VM 템플릿에 대한 자세한 내용은 을 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0.html["vSphere VM 관리 가이드"]
 
 
 
@@ -521,7 +519,7 @@ NOTE: 콘텐츠 라이브러리의 VM 템플릿에 대한 자세한 내용은 �
 * 전체 업그레이드가 불가능한 경우 는 새 환경을 시작하고 위의 마이그레이션 옵션을 사용할 수 있습니다.
 +
 
-TIP: 크로스 vCenter 마이그레이션 옵션에서 소스에서 내보내기 옵션을 사용할 수 없는 경우 타겟에서 가져옵니다. 이 절차는 를 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-ED703E35-269C-48E0-A34D-CCBB26BFD93E.html["Advanced Cross vCenter vMotion을 사용하여 가상 머신 가져오기 또는 복제"]
+TIP: 크로스 vCenter 마이그레이션 옵션에서 소스에서 내보내기 옵션을 사용할 수 없는 경우 타겟에서 가져옵니다. 이 절차는 를 참조하십시오 link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/vmotion-across-vcenter-server-systems-host-management/migrate-a-virtual-machine-from-an-external-vcenter-server-instance-host-management.html["Advanced Cross vCenter vMotion을 사용하여 가상 머신 가져오기 또는 복제"]
 
 
 
@@ -532,7 +530,7 @@ TIP: 크로스 vCenter 마이그레이션 옵션에서 소스에서 내보내기
 * 각 vSphere 클러스터에서 타겟 워크로드 도메인으로 VM 마이그레이션
 +
 
-NOTE: 소스 vCenter의 다른 클러스터에 있는 기존 VM과 네트워크 통신을 허용하려면 전송 영역에 소스 vCenter vSphere 호스트를 추가하여 NSX 세그먼트를 확장하거나, 엣지에서 L2 브리지를 사용하여 VLAN에서 L2 통신을 허용하십시오. 의 NSX 설명서를 참조하십시오 https://docs.vmware.com/en/VMware-NSX/4.1/administration/GUID-0E28AC86-9A87-47D4-BE25-5E425DAF7585.html["브리징을 위해 Edge VM을 구성합니다"]
+NOTE: 소스 vCenter의 다른 클러스터에 있는 기존 VM과 네트워크 통신을 허용하려면 전송 영역에 소스 vCenter vSphere 호스트를 추가하여 NSX 세그먼트를 확장하거나, 엣지에서 L2 브리지를 사용하여 VLAN에서 L2 통신을 허용하십시오. 의 NSX 설명서를 참조하십시오 https://techdocs.broadcom.com/us/en/vmware-cis/nsx/vmware-nsx/4-2/administration-guide/segments/edge-bridging-extending-overlay-segments-to-vlan/configure-an-edge-vm-for-bridging.html["브리징을 위해 Edge VM을 구성합니다"]
 
 
 
@@ -541,11 +539,10 @@ NOTE: 소스 vCenter의 다른 클러스터에 있는 기존 VM과 네트워크 
 
 == 추가 리소스
 
-* https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-esxi-management/GUID-FE2B516E-7366-4978-B75C-64BF0AC676EB.html["vSphere 가상 머신 마이그레이션"]
-* https://core.vmware.com/blog/whats-new-vsphere-8-vmotion["vMotion용 vSphere 8의 새로운 기능"]
-* https://core.vmware.com/vmotion["vSphere vMotion 리소스"]
-* https://docs.vmware.com/en/VMware-NSX/4.1/administration/GUID-47F34658-FA46-4160-B2E0-4EAE722B43F0.html["NSX Federation의 Tier-0 게이트웨이 구성"]
-* https://docs.vmware.com/en/VMware-HCX/4.8/hcx-user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html["HCX 4.8 사용 설명서"]
-* https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager 설명서"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management.html["vSphere 가상 머신 마이그레이션"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management.html["vSphere vMotion을 사용하여 가상 머신 마이그레이션"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/nsx/vmware-nsx/4-2/administration-guide/managing-nsx-t-in-multiple-locations/nsx-t-federation/networking-topologies-in-nsx-federation/tier-0-in-federation.html["NSX Federation의 Tier-0 게이트웨이 구성"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-11/vmware-hcx-user-guide-4-11.html["HCX 4.8 사용 설명서"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery.html["VMware Live Recovery 설명서"]
 * https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["VMware용 BlueXP 재해 복구"]
 
