@@ -84,20 +84,50 @@ image:redhat_openshift_container_rosa_image2.png["FSxN이 생성되었습니다"
 
 ** 2. Rosa 클러스터용 Trident CSI 드라이버를 설치 및 구성합니다**
 
-** a. Trident Helm 리포지토리를 추가합니다**
+** b. Trident를 설치합니다.**
 
-[source]
-----
-$ helm repo add netapp-trident https://netapp.github.io/trident-helm-chart
-----
-** b. Helm**을 사용하여 Trident를 설치합니다
+ROSA 클러스터 작업자 노드는 스토리지 프로비저닝 및 액세스에 NAS 프로토콜을 사용할 수 있는 NFS 툴과 함께 사전 구성되어 있습니다.
 
-[source]
-----
-$ helm install trident netapp-trident/trident-operator --version 100.2406.0 --create-namespace --namespace trident
-----
+iSCSI를 대신 사용하려면 iSCSI를 위해 작업자 노드를 준비해야 합니다. Trident 25.02 릴리스부터 Rosa 클러스터(또는 모든 OpenShift 클러스터)의 작업자 노드를 쉽게 준비하여 FSxN 스토리지에서 iSCSI 작업을 수행할 수 있습니다. iSCSI에 대한 작업자 노드 준비를 자동화하는 Trident 25.02(또는 이상)를 설치하는 두 가지 간단한 방법이 있습니다. 1.tridentctl 도구를 사용하여 명령줄에서 node-prep-flag를 사용합니다. 2. 운영자 허브에서 Red Hat 공인 Trident 운영자를 사용하여 사용자 정의 3.Helm 사용
 
-NOTE: 설치하는 버전에 따라 표시된 명령에서 version 매개 변수를 변경해야 합니다. 올바른 버전 번호는 를 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-helm.html["문서화"]참조하십시오. Trident를 설치하는 추가 방법은 Trident를 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["문서화"]참조하십시오.
+
+NOTE: 노드 준비를 활성화하지 않고 위의 방법 중 하나를 사용하면 FSxN에서 스토리지를 프로비저닝하는 데 NAS 프로토콜만 사용할 수 있습니다.
+
+** 방법 1: tridentctl 도구** 사용
+
+그림과 같이 node-prep 플래그를 사용하고 Trident를 설치합니다. 설치 명령을 실행하기 전에 설치 프로그램 패키지를 다운로드해야 합니다. 을 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html#step-1-download-the-trident-installer-package["문서를 참조하십시오"]참조하십시오.
+
+[source, yaml]
+----
+#./tridentctl install trident -n trident --node-prep=iscsi
+----
+** 방법 2: Red Hat 공인 Trident 오퍼레이터를 사용하고 사용자 정의** OperatorHub에서 Red Hat 공인 Trident 오퍼레이터를 찾아 설치합니다.
+
+image:rh-os-n_use_case_operator_img1.png["오퍼레이터 허브의 오퍼레이터"]
+
+image:rh-os-n_use_case_operator_img2.png["작업자 1 을 장착합니다"]
+
+image:rh-os-n_use_case_operator_img3.png["작업자 2를 장착합니다"]
+
+image:rh-os-n_use_case_operator_img4.png["운영자가 설치되었습니다"]
+
+그런 다음 Trident Orchestrator 인스턴스를 생성합니다. YAML 보기를 사용하여 사용자 지정 값을 설정하거나 설치 중에 iSCSI 노드 준비를 활성화합니다.
+
+image:rh-os-n_use_case_operator_img5.png["Orchestrator 생성"]
+
+image:rh-os-n_use_case_operator_img6.png["NodePrep을 활성화합니다"]
+
+image:rh-os-n_use_case_operator_img7.png["Orchestrator가 설치되었습니다"]
+
+image:rh-os-n_use_case_operator_img8.png["Trident가 설치되었습니다"]
+
+위의 방법 중 하나를 사용하여 Trident를 설치하면 iscsid 및 multipathd 서비스를 시작하고 /etc/multipath.conf 파일에 다음을 설정하여 iSCSI용 ROSA 클러스터 작업자 노드를 준비할 수 있습니다
+
+image:rh-os-n_use_case_iscsi_node_prep1.png["ISCSID 활성"]
+
+image:rh-os-n_use_case_iscsi_node_prep2.png["Multipathd 활성"]
+
+image:rh-os-n_use_case_iscsi_node_prep3.png["multipath.conf 파일"]
 
 **C. 모든 Trident Pod가 실행 중인지 확인합니다**
 
@@ -208,6 +238,47 @@ spec:
  You can issue the following commands to create a pvc and verify that it has been created.
 image:redhat_openshift_container_rosa_image11.png["Trident를 사용하여 테스트 PVC를 생성합니다"]
 
+
+NOTE: iSCSI를 사용하려면 앞에서 설명한 대로 작업자 노드에서 iSCSI를 사용하도록 설정해야 하며 iSCSI 백엔드 및 스토리지 클래스를 생성해야 합니다. 다음은 YAML 샘플 파일입니다.
+
+[source, yaml]
+----
+cat tbc.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-tbc-ontap-san-secret
+type: Opaque
+stringData:
+  username: fsxadmin
+  password: <password for the fsxN filesystem>
+---
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: backend-tbc-ontap-san
+spec:
+  version: 1
+  storageDriverName: ontap-san
+  managementLIF: <management lif of fsxN filesystem>
+  backendName: backend-tbc-ontap-san
+  svm: svm_FSxNForROSAiSCSI
+  credentials:
+    name: backend-tbc-ontap-san-secret
+
+cat sc.yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: trident-csi
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "ontap-san"
+  media: "ssd"
+  provisioningType: "thin"
+  snapshots: "true"
+allowVolumeExpansion: true
+----
 ** 5. 샘플 PostgreSQL 상태 저장 응용 프로그램을 배포합니다**
 
 ** a. helm을 사용하여 PostgreSQL**를 설치합니다

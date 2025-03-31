@@ -21,8 +21,6 @@ summary: ROSA의 Red Hat OpenShift Virtualization
 
 게스트 자격 증명을 사용하여 가상 머신에 연결하고 VM을 다시 시작하는 방법도 살펴봅니다. 마지막으로 현재 노드에서 새 노드로 가상 시스템의 실시간 마이그레이션을 수행합니다. VM 재시작 및 실시간 마이그레이션 후 디스크 스토리지의 내용을 살펴봅니다.
 
-추가 리소스로 블로그 읽기: link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlock-Seamless-iSCSI-Storage-Integration-A-Guide-to-FSxN-on-ROSA-Clusters-for/ba-p/459124["완벽한 iSCSI 스토리지 통합의 실현: iSCSI용 Rosa Cluster의 FSxN에 대한 가이드"]
-
 
 
 == 필수 구성 요소
@@ -37,13 +35,44 @@ summary: ROSA의 Red Hat OpenShift Virtualization
 * link:https://docs.openshift.com/rosa/rosa_hcp/rosa-hcp-sts-creating-a-cluster-quickly.html["HCP ROSA 클러스터"] (베어 메탈 작업자 노드 3개 이상 포함)
 * link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/virtualization/installing#virt-aws-bm_preparing-cluster-for-virt["ROSA 클러스터에 설치된 OpenShift Virtualization"]
 * link:https://console.redhat.com/openshift/overview["Red Hat OpenShift 웹 콘솔에 액세스합니다"]
-* Trident 25.02 이상 Trident 25.02 이상 릴리스를 활용하여 ROSA 클러스터의 작업자 노드를 쉽게 설정하여 FSxN 스토리지에서 iSCSI 작업을 수행할 수 있습니다. node-prep-flag를 사용하여 Rosa 클러스터에 Trident 25.02 이상을 설치합니다
+* Trident 25.02 이상 Trident 25.02 릴리스부터 Rosa 클러스터(또는 모든 OpenShift 클러스터)의 작업자 노드를 쉽게 준비하여 FSxN 스토리지에서 iSCSI 작업을 수행할 수 있습니다. iSCSI에 대한 작업자 노드 준비를 자동화하는 Trident 25.02(또는 이상)를 설치하는 두 가지 간단한 방법이 있습니다.
++
+.. tridentctl 도구를 사용하여 명령줄에서 node-prep-flag를 사용합니다.
+.. 운영자 허브에서 Red Hat 공인 Trident 운영자를 사용하여 사용자 정의
+.. Helm 사용
 
 
-....
+
+
+** 방법 1: tridentctl 도구** 사용
+
+그림과 같이 node-prep 플래그를 사용하고 Trident를 설치합니다. 설치 명령을 실행하기 전에 설치 프로그램 패키지를 다운로드해야 합니다. 을 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html#step-1-download-the-trident-installer-package["문서를 참조하십시오"]참조하십시오.
+
+[source, yaml]
+----
 #./tridentctl install trident -n trident --node-prep=iscsi
-....
-이렇게 하면 iscsid 및 multipathd 서비스를 시작하고 /etc/multipath.conf 파일에서 다음을 설정하여 iSCSI에 대한 Rosa 클러스터 작업자 노드를 준비할 수 있습니다
+----
+** 방법 2: Red Hat 공인 Trident 오퍼레이터를 사용하고 사용자 정의** OperatorHub에서 Red Hat 공인 Trident 오퍼레이터를 찾아 설치합니다.
+
+image:rh-os-n_use_case_operator_img1.png["오퍼레이터 허브의 오퍼레이터"]
+
+image:rh-os-n_use_case_operator_img2.png["작업자 1 을 장착합니다"]
+
+image:rh-os-n_use_case_operator_img3.png["작업자 2를 장착합니다"]
+
+image:rh-os-n_use_case_operator_img4.png["운영자가 설치되었습니다"]
+
+그런 다음 Trident Orchestrator 인스턴스를 생성합니다. YAML 보기를 사용하여 사용자 지정 값을 설정하거나 설치 중에 iSCSI 노드 준비를 활성화합니다.
+
+image:rh-os-n_use_case_operator_img5.png["Orchestrator 생성"]
+
+image:rh-os-n_use_case_operator_img6.png["NodePrep을 활성화합니다"]
+
+image:rh-os-n_use_case_operator_img7.png["Orchestrator가 설치되었습니다"]
+
+image:rh-os-n_use_case_operator_img8.png["Trident가 설치되었습니다"]
+
+위의 방법 중 하나를 사용하여 Trident를 설치하면 iscsid 및 multipathd 서비스를 시작하고 /etc/multipath.conf 파일에 다음을 설정하여 iSCSI용 ROSA 클러스터 작업자 노드를 준비할 수 있습니다
 
 image:rh-os-n_use_case_iscsi_node_prep1.png["ISCSID 활성"]
 
@@ -55,13 +84,61 @@ image:rh-os-n_use_case_iscsi_node_prep3.png["multipath.conf 파일"]
 
 == 초기 설정
 
-이 섹션에서는 기본 스토리지 클래스를 Trident-CSI로 설정하고 기본 VolumeSnapshotClass를 FSx 볼륨 스냅샷 클래스로 설정하는 방법을 보여 줍니다. 그런 다음 템플릿에서 VM을 생성한 다음 게스트 자격 증명을 사용하여 VM에 연결하고 로그인하는 방법을 보여 줍니다.
+이 섹션에서는 Trident 백엔드 및 기본 스토리지 클래스와 기본 VolumeSnapshotClass를 설정하는 방법을 보여 줍니다. 그런 다음 템플릿에서 VM을 생성한 다음 게스트 자격 증명을 사용하여 VM에 연결하고 로그인하는 방법을 보여 줍니다.
 
-기본 스토리지 클래스가 Trident-CSI로 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image1.png["OCP -v 기본 저장소 클래스"]
+다음을 사용하여 Trident 백엔드 객체를 생성합니다
 
-기본 VolumeSnapShotClasses가 그림과 같이 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image2.png["OCP -v 기본 VolumeSnapshot 클래스"]
+[source, yaml]
+----
+cat tbc.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-tbc-ontap-san-secret
+type: Opaque
+stringData:
+  username: fsxadmin
+  password: <password for the fsxN filesystem>
+---
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: backend-tbc-ontap-san
+spec:
+  version: 1
+  storageDriverName: ontap-san
+  managementLIF: <management lif of fsxN filesystem>
+  backendName: backend-tbc-ontap-san
+  svm: svm_FSxNForROSAiSCSI
+  credentials:
+    name: backend-tbc-ontap-san-secret
 
-기본값이 설정되어 있지 않으면 콘솔 또는 명령줄에서 설정할 수 있습니다
+cat sc.yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: trident-csi
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "ontap-san"
+  media: "ssd"
+  provisioningType: "thin"
+  snapshots: "true"
+allowVolumeExpansion: true
+
+cat snapshot-class.yaml
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshotClass
+metadata:
+  name: fsx-snapclass
+driver: csi.trident.netapp.io
+deletionPolicy: Retain
+
+#oc create -f tbc,yaml -n trident
+#oc create -f sc.yaml
+#oc create -f snapshot-class.yaml
+----
+콘솔 또는 명령줄에서 스토리지 클래스와 위에서 생성한 volumeSnapshot 클래스를 기본값으로 설정할 수 있습니다
 
 [source]
 ----
@@ -71,6 +148,10 @@ $ oc patch storageclass trident-csi -p '{"metadata": {"annotations": {"storagecl
 ----
 $ oc patch VolumeSnapshotClasses fsx-snapclass -p '{"metadata": {"annotations": {"snapshot.storage.kubernetes.io/is-default-class": "true"}}}'
 ----
+기본 스토리지 클래스가 Trident-CSI로 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image1.png["OCP -v 기본 저장소 클래스"]
+
+기본 VolumeSnapShotClasses가 그림과 같이 설정되어 있는지 확인합니다 image:redhat_openshift_ocpv_rosa_image2.png["OCP -v 기본 VolumeSnapshot 클래스"]
+
 
 
 === ** 템플릿에서 VM 생성**
@@ -129,4 +210,8 @@ $ dd if=/dev/urandom of=random.dat bs=1M count=10240 (to create a file called ra
 
 vi를 사용하여 테스트에 사용할 샘플 텍스트 파일을 만듭니다. image:redhat_openshift_ocpv_rosa_image19.png["OCP -v 파일을 만듭니다"]
 
-추가 리소스로 블로그 읽기: link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlock-Seamless-iSCSI-Storage-Integration-A-Guide-to-FSxN-on-ROSA-Clusters-for/ba-p/459124["완벽한 iSCSI 스토리지 통합의 실현: iSCSI용 Rosa Cluster의 FSxN에 대한 가이드"]
+** 관련 블로그**
+
+link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlock-Seamless-iSCSI-Storage-Integration-A-Guide-to-FSxN-on-ROSA-Clusters-for/ba-p/459124["완벽한 iSCSI 스토리지 통합의 실현: iSCSI용 Rosa Cluster의 FSxN에 대한 가이드"]
+
+link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Simplifying-Trident-Installation-on-Red-Hat-OpenShift-with-the-New-Certified/ba-p/459710["새로운 공인 Trident 운영자를 통해 Red Hat OpenShift에서 Trident 설치를 간소화합니다"]
