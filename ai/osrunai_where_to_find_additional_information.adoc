@@ -31,7 +31,7 @@ https://docs.run.ai/Administrator/Researcher-Setup/Installing-the-Run-AI-Command
 ** Run:AI CLI에서 작업 제출https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Launch-Unattended-Training-Workloads-/[]
 https://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Start-and-Use-Interactive-Build-Workloads-/[]
 ** 실행 시 GPU 분할 할당: AI CLIhttps://docs.run.ai/Researcher/Walkthroughs/Walkthrough-Using-GPU-Fractions/[]
-** 간단한 데모https://youtu.be/gfr_sO27Rvo[]
+** 간단한 데모 https://youtu.be/sFBWMrMqg3g[]
 ** GitHub 리포지토리https://github.com/NetApp/kubeflow_jupyter_pipeline[]
 
 

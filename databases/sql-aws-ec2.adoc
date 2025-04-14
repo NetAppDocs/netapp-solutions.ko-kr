@@ -716,7 +716,7 @@ https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["https://
 * SnapCenter 인터페이스의 개요입니다
 
 
-https://www.youtube.com/watch?v=lVEBF4kV6Ag&t=0s["https://www.youtube.com/watch?v=lVEBF4kV6Ag&t=0s"^]
+https://www.youtube.com/watch?v=8s-rV5X43iQ&t=0s["https://www.youtube.com/watch?v=8s-rV5X43iQ&t=0s"^]
 
 * SnapCenter 탐색 창 옵션을 둘러봅니다
 
@@ -726,14 +726,14 @@ https://www.youtube.com/watch?v=_lDKt-koySQ["https://www.youtube.com/watch?v=_lD
 * SQL Server용 SnapCenter 4.0 플러그인을 설치합니다
 
 
-https://www.youtube.com/watch?v=MopbUFSdHKE["https://www.youtube.com/watch?v=MopbUFSdHKE"^]
+https://www.youtube.com/watch?v=6jgjIx276no["https://www.youtube.com/watch?v=6jgjIx276no"^]
 
 * SnapCenter with SQL Server 플러그인을 사용하여 데이터베이스를 백업 및 복원하는 방법
 
 
-https://www.youtube.com/watch?v=K343qPD5_Ys["https://www.youtube.com/watch?v=K343qPD5_Ys"^]
+https://www.youtube.com/watch?v=unKwtT-BSsc["https://www.youtube.com/watch?v=unKwtT-BSsc"^]
 
 * SnapCenter with SQL Server 플러그인을 사용하여 데이터베이스를 복제하는 방법
 
 
-https://www.youtube.com/watch?v=ogEc4DkGv1E["https://www.youtube.com/watch?v=ogEc4DkGv1E"^]
+https://www.youtube.com/watch?v=Od6QWYgpFFc["https://www.youtube.com/watch?v=Od6QWYgpFFc"^]
