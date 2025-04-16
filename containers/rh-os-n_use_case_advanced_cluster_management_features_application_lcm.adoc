@@ -5,12 +5,13 @@ keywords: OpenShift, OCP, Trident, NetApp ONTAP, ONTAP, Trident, Red Hat OpenShi
 summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리 
 ---
 = 애플리케이션 라이프사이클 관리
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
-
-
-
-== 애플리케이션 라이프사이클 관리
 
 [role="lead"]
 애플리케이션을 생성하고 클러스터 세트 전반에서 관리하려면,

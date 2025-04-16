@@ -5,12 +5,13 @@ keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshif
 summary:  
 ---
 = Azure에서 Red Hat OpenShift Container 플랫폼을 배포 및 구성합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
-
-
-
-== Azure에서 Red Hat OpenShift Container 플랫폼을 배포 및 구성합니다
 
 [role="lead"]
 이 섹션에서는 Azure에서 OpenShift 클러스터를 설정 및 관리하고 이러한 클러스터에 상태 저장 애플리케이션을 배포하는 방법에 대한 고급 워크플로를 설명합니다. Trident를 통해 NetApp Cloud Volumes ONTAP 스토리지를 사용하여 영구 볼륨을 제공하는 것을 보여 줍니다. Trident Protect를 사용하여 상태 저장 애플리케이션에 대한 데이터 보호와 마이그레이션 작업을 수행하는 방법에 대해 자세히 나와 있습니다.

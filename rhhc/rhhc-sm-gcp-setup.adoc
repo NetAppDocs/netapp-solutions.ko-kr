@@ -5,12 +5,13 @@ keywords: NetApp Solutions, redhat OpenShift, red hat OpenShift, redhat openshif
 summary:  
 ---
 = Google Cloud에서 Red Hat OpenShift Container Platform을 배포 및 구성합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
-
-
-
-== Google Cloud에서 Red Hat OpenShift Container Platform을 배포 및 구성합니다
 
 [role="lead"]
 이 섹션에서는 GCP에서 OpenShift 클러스터를 설정 및 관리하고 stateful 애플리케이션을 배포하는 방법에 대한 고급 워크플로우를 설명합니다. 여기에는 Google Cloud NetApp Volumes 및 NetApp Cloud Volumes ONTAP 스토리지를 Trident와 함께 사용하여 영구 볼륨을 제공하는 것이 나와 있습니다.

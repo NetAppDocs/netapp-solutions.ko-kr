@@ -4,7 +4,7 @@ permalink: ai/mlflow-finetune-phi2.html
 keywords: Jupyter Notebook, MLFlow, NetApp DataOps Toolkit, LLM, 
 summary: Jupyter Hub에서 MLFlow로 대형 언어 모델을 미세 조정합니다 
 ---
-= 필수 구성 요소
+= Jupyter Hub에서 MLFlow로 대형 언어 모델을 미세 조정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,9 @@ summary: Jupyter Hub에서 MLFlow로 대형 언어 모델을 미세 조정합니
 
 
 [role="lead"]
-이 섹션에서는 Jupyter Hub를 사용하여 MLFlow를 사용하여 LLM(Large Language Model)을 미세 조정하는 단계를 설명합니다. 이 슬라이드의 목적은 RAG(검색 증강 생성)와 같은 고객 사용 사례를 위해 NetApp 스토리지와 NetApp 지능형 데이터 인프라를 통합하는 교육 작업을 보여주는 예입니다.
+이 섹션에서는 Jupyter Hub를 사용하여 MLFlow를 사용하여 LLM(Large Language Model)을 미세 조정하는 단계를 설명합니다.
+
+이 슬라이드의 목적은 RAG(검색 증강 생성)와 같은 고객 사용 사례를 위해 NetApp 스토리지와 NetApp 지능형 데이터 인프라를 통합하는 교육 작업을 보여주는 예입니다.
 
 
 
