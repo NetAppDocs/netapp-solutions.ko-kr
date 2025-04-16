@@ -96,6 +96,76 @@ VPN 터널을 통해 사내 데이터 센터에서 VPC로의 연결을 보호할
 
 Ansible 컨트롤러의 자동화 기능도 SnapMirror 인스턴스를 확장하여 운영 시 DR 데이터 복사본을 활성화하는 등 특정 작업에 SnapCenter를 보강할 수 있습니다.
 
-다음 지침에 따라 RedHat 또는 CentOS 시스템에 대한 Ansible 제어 노드를 설정합니다. include/automation_rhel_CentOS_setup.adoc [ ]
+다음 지침에 따라 RedHat 또는 CentOS 시스템에 대한 Ansible 제어 노드를 설정합니다.
 
-다음 지침에 따라 Ubuntu 또는 Debian 컴퓨터에 대한 Ansible 제어 노드를 설정합니다. include/automation_Ubuntu_debian_setup.adoc [ ]
+. Ansible 제어 노드 요구사항:
++
+.. 다음 패키지가 설치된 RHEL/CentOS 시스템:
++
+... 3장
+... Pip3
+... Ansible(버전 2.10.0 이상)
+... 기트
+
+
+
+
+
+
+위의 요구사항을 설치하지 않은 새로운 RHEL/CentOS 시스템을 사용하는 경우 다음 단계를 따라 해당 시스템을 Ansible 제어 노드로 설정하십시오.
+
+. RHEL-8/RHEL-7용 Ansible 리포지토리를 지원합니다
++
+.. RHEL-8의 경우(아래 명령을 루트로 실행)
++
+[source, cli]
+----
+subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
+----
+.. RHEL-7의 경우(아래 명령을 루트로 실행)
++
+[source, cli]
+----
+subscription-manager repos --enable rhel-7-server-ansible-2.9-rpms
+----
+
+
+. 터미널에 아래 콘텐츠를 붙여 넣습니다
++
+[source, cli]
+----
+sudo yum -y install python3 >> install.log
+sudo yum -y install python3-pip >> install.log
+python3 -W ignore -m pip --disable-pip-version-check install ansible >> install.log
+sudo yum -y install git >> install.log
+----
+
+
+다음 지침에 따라 Ubuntu 또는 Debian 시스템용 Ansible 제어 노드를 설정합니다.
+
+. Ansible 제어 노드 요구사항:
++
+.. 다음 패키지가 설치된 Ubuntu/Debian 시스템:
++
+... 3장
+... Pip3
+... Ansible(버전 2.10.0 이상)
+... 기트
+
+
+
+
+
+
+위 요구 사항이 설치되지 않은 새 Ubuntu/Debian 시스템이 있는 경우 다음 단계에 따라 해당 시스템을 Ansible 제어 노드로 설정합니다.
+
+. 단말기에 아래 콘텐츠를 붙여 넣습니다
++
+[source, cli]
+----
+sudo apt-get -y install python3 >> outputlog.txt
+sudo apt-get -y install python3-pip >> outputlog.txt
+python3 -W ignore -m pip --disable-pip-version-check install ansible >> outputlog.txt
+sudo apt-get -y install git >> outputlog.txt
+----
+
