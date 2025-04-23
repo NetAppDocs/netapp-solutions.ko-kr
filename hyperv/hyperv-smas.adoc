@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: hyperv/hyperv-smas.html 
 keywords: hyperv, hyper-v, snapmirror, active, sync, stretch, cluster, netapp, virtualization 
-summary: 이 백서에서는 Microsoft 간의 SnapMirror 액티브 동기화 기술 동기식 양방향 복제를 통해 장애 조치 클러스터를 확장함으로써 MSSQL 및 Oracle과 같은 다중 사이트 응용 프로그램 데이터를 두 사이트 간에 능동적으로 액세스하고 동기화할 수 있도록 합니다. 
+summary: 이 백서에서는 Microsoft 확장 클러스터 간의 SnapMirror 액티브 동기화 기술 동기식 양방향 복제에 대해 설명하고, MSSQL 및 Oracle과 같은 다중 사이트 애플리케이션 데이터를 두 사이트 간에 활발하게 액세스하고 동기화할 수 있도록 합니다. 
 ---
 = Microsoft 확장 클러스터와 SnapMirror Active Sync
 :hardbreaks:
@@ -269,7 +269,7 @@ image:hyperv-smas-image13.png["입력/출력 대화 상자 또는 작성된 내�
 
 
 .한 사이트에 스토리지 장애 발생
-* 운영 사이트에서 SVM 중지 조치: iSCSI SVM 중지 예상 결과: Hyper-v 운영 클러스터가 이미 미러링된 사이트에 연결되었으며 SnapMirror 액티브 동기식 대칭 액티브/액티브를 통해 RPO 및 RTO가 0인 경우 워크로드에 영향을 미치지 않습니다.
+* 운영 사이트에서 SVM 중지 조치: iSCSI SVM 중지 예상 결과: Hyper-V 운영 클러스터가 이미 미러링된 사이트에 연결되었으며 SnapMirror 액티브 동기식 대칭 액티브/액티브를 통해 RPO 및 RTO가 0인 경우 워크로드에 영향을 미치지 않습니다.
 
 
 .성공 기준
@@ -288,4 +288,4 @@ image:hyperv-smas-image13.png["입력/출력 대화 상자 또는 작성된 내�
 
 == 요약
 
-SnapMirror 활성 동기화는 다중 사이트 애플리케이션 데이터(예: MSSQL 및 Oracle)에 능동적으로 액세스하고 두 사이트 간에 동기화할 수 있도록 도와줍니다. 장애가 발생할 경우 데이터 손실이나 액세스 손실 없이 애플리케이션이 즉시 나머지 활성 사이트로 리디렉션됩니다.
+SnapMirror 활성 동기화는 MSSQL 및 Oracle과 같은 다중 사이트 응용 프로그램 데이터를 두 사이트 간에 활발하게 액세스하고 동기화할 수 있도록 도와줍니다. 장애가 발생할 경우 데이터 손실이나 액세스 손실 없이 애플리케이션이 즉시 나머지 활성 사이트로 리디렉션됩니다.
