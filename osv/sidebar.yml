@@ -16,6 +16,9 @@ entries:
     url: "/blogs.html#containers-osv"
   - title: 비디오
     url: "/containers/rh-os-n_videos_and_demos.html"
+- title: Trident 설치
+  pdf-filename: Trident 설치
+  url: "/containers/rh-os-n_use_case_openshift_virtualization_trident_install.html"
 - title: 온프레미스 구축
   pdf-filename: Red Hat OpenShift Virtualization 배포
   entries:

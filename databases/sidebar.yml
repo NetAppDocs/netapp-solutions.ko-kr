@@ -72,6 +72,9 @@ entries:
         url: "/databases/azure_ora_nfile_migration.html"
   - title: Google 클라우드
     entries:
+    - title: GCNV 기반의 높은 처리량 Oracle VLDB 구현(Data Guard 포함)
+      pdf-filename: GCNV 기반의 높은 처리량 Oracle VLDB 구현(Data Guard 포함)
+      url: "/databases/gcp_ora_gcnv_vldb_dg.html"
     - title: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스'
       pdf-filename: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스'
       url: "/databases/gcp-oracle-gcnv-overview.html"
