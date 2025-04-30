@@ -30,6 +30,8 @@ indexpage:
     links:
     - title: 확장 클러스터를 사용한 SnapMirror Active Sync
       url: hyperv-smas.html
+    - title: Microsoft Hyper-V에 대한 NetApp SMI-S Provider 지원
+      url: hyperv-smis.html
   - title: 추가 리소스
     links:
     - title: Hyper-V에 대한 배포 지침 및 스토리지 모범 사례
