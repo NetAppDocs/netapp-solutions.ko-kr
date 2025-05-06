@@ -22,10 +22,14 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 * RHCOS 작업자 노드가 있는 베어 메탈 인프라에 설치된 Red Hat OpenShift 클러스터(버전 4.6 이상
 * VM에 대한 HA를 유지하기 위해 시스템 상태 점검을 구축합니다
-* NetApp ONTAP 클러스터
+* NetApp ONTAP 클러스터, SVM이 올바른 프로토콜로 구성되어 있습니다.
 * Trident가 OpenShift 클러스터에 설치되어 있습니다
-* ONTAP 클러스터에서 SVM으로 구성된 Trident 백엔드
+* Trident 백엔드 구성이 생성되었습니다
 * Trident를 Provisioner로 사용하여 OpenShift 클러스터에 구성된 StorageClass
+
+
+위의 Trident 필수 구성 요소에 대한 자세한 내용은 을 link:rh-os-n_use_case_openshift_virtualization_trident_install.html["Trident 설치 섹션을 참조하십시오"]참조하십시오.
+
 * Red Hat OpenShift 클러스터에 대한 클러스터 관리자 액세스
 * NetApp ONTAP 클러스터에 대한 관리 액세스
 * tridentctl 및 OC 도구가 설치되고 $PATH에 추가된 관리 워크스테이션

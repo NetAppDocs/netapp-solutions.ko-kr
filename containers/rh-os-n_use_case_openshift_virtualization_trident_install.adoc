@@ -14,19 +14,33 @@ summary: NetApp ONTAP 기반의 Red Hat OpenShift 가상화
 
 
 [role="lead"]
-이 섹션에서는 블록 액세스를 위해 작업자 노드를 준비하기 위해 Trident를 설치하는 방법에 대해 자세히 설명합니다. Trident 백엔드 및 스토리지 클래스 객체를 생성하는 단계별 지침을 제공합니다. Trident 백엔드 개체에는 백엔드 ONTAP 스토리지 시스템에 접속하고 지정된 프로토콜에 대해 ONTAP에서 볼륨을 동적으로 프로비저닝하는 데 필요한 모든 세부 정보가 포함되어 있습니다. 스토리지 클래스 객체를 사용하면 컨테이너 애플리케이션 및 VM이 유형 및 용량만 사용하여 스토리지를 요청할 수 있으며 접속 및 기타 백엔드 세부 정보가 필요하지 않습니다.
+이 섹션에서는 OpenShift 클러스터에서 Red Hat Certified Trident Operator를 사용하여 Trident를 설치하고 Trident 설치 시 블록 액세스를 위해 작업자 노드를 준비하는 방법에 대해 자세히 설명합니다. 사내 OpenShift 클러스터에서와 클라우드에서 FSxN(FSx for NetApp ONTAP) 스토리지를 사용하는 AWS(ROSA)의 관리형 Red OpenShift Cluster에서도 절차는 동일합니다. 또한 이 섹션에서는 ONTAP 또는 FSxN을 OpenShift 클러스터의 컨테이너 및 VM에 대한 백업 저장소로 사용할 때 Trident 백엔드 및 스토리지 클래스 객체를 생성하는 단계별 지침을 제공합니다. Trident 백엔드 객체에는 백엔드 ONTAP 또는 FSxN 스토리지 시스템에 접속하고 지정된 프로토콜을 사용하여 동적으로 볼륨을 프로비저닝하는 데 필요한 모든 세부 정보가 포함되어 있습니다. 스토리지 클래스 객체를 사용하면 컨테이너 애플리케이션 및 VM이 유형 및 용량만 사용하여 스토리지를 요청할 수 있으며 접속 및 기타 백엔드 세부 정보가 필요하지 않습니다.
 
 
-NOTE: OpenShift 가상화에서 VM을 생성해야 하는 경우, 클러스터에 OpenShift 가상화를 설치하기 전에 Trident를 설치하고 백엔드 객체와 스토리지 클래스 객체를 OpenShift 클러스터에 생성해야 합니다. 기본 스토리지 클래스와 기본 볼륨 스냅샷 클래스는 클러스터의 Trident 스토리지 및 스냅샷 클래스로 설정해야 합니다. 이 기능이 구성된 경우에만 OpenShift 가상화에서 중요 이미지를 다운로드하여 템플릿을 사용하여 VM 생성에 사용할 수 있습니다.
+NOTE: OpenShift 가상화에서 VM을 생성해야 하는 경우, OpenShift 가상화를 클러스터(온-프레미스 및 ROSA)에 설치하기 전에 Trident를 설치하고 백엔드 객체와 스토리지 클래스 객체를 OpenShift 클러스터에 생성해야 합니다. 기본 스토리지 클래스와 기본 볼륨 스냅샷 클래스는 클러스터의 Trident 스토리지 및 스냅샷 클래스로 설정해야 합니다. 이 기능이 구성된 경우에만 OpenShift Virtualization은 템플릿을 사용하여 VM 생성에 황금색 이미지를 로컬로 사용할 수 있도록 합니다.
+
+
+NOTE: Trident를 설치하기 전에 OpenShift 가상화 운영자를 설치한 경우 다음 명령을 사용하여 다른 스토리지 클래스를 사용하여 생성된 골든 이미지를 삭제한 다음 Trident 스토리지 및 볼륨 스냅샷 클래스 기본값을 설정하여 OpenShift 가상화에서 Trident 스토리지 클래스를 사용하여 골든 이미지를 생성하도록 할 수 있습니다.
+
+[source, yaml]
+----
+oc delete dv,VolumeSnapshot -n openshift-virtualization-os-images --selector=cdi.kubevirt.io/dataImportCron
+----
+
+NOTE: ROSA 클러스터용 FSxN 스토리지용 Trident 객체를 생성하는 샘플 YAML 파일을 가져오고 VolumeSnapshotClass의 샘플 YAML 파일을 가져오려면 이 페이지를 아래로 스크롤하십시오.
 
 ** Trident 설치**
 
 .Red Hat 공인 오퍼레이터를 사용하여 Trident 설치
 [%collapsible%open]
 ====
-이 섹션에서는 Red Hat Certified Trident Operator를 사용하여 Trident를 설치하는 방법에 대해 자세히 설명합니다. link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Trident 설명서를 참조하십시오"] Trident를 설치하는 다른 방법. Trident 25.02 릴리즈를 통해 온프레미스, 클라우드 및 AWS 기반 Red Hat OpenShift Service와 같은 관리 서비스의 Trident 사용자는 이제 운영자 허브에서 Trident 인증 운영자를 사용하여 Trident를 설치할 수 있습니다. 이는 Trident가 이전에 커뮤니티 운영자로만 제공되었던 OpenShift 사용자 커뮤니티에서 중요한 기능입니다.
+이 섹션에서는 Trident Red Hat Certified Trident Operator를 사용하여 Trident를 설치하는 방법에 대한 자세한 내용을 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Trident 설명서를 참조하십시오"]제공합니다. Trident 25.02 릴리즈를 통해 온프레미스, 클라우드 및 AWS 기반 Red Hat OpenShift Service와 같은 관리 서비스의 Trident 사용자는 이제 운영자 허브에서 Trident 인증 운영자를 사용하여 Trident를 설치할 수 있습니다. 이는 Trident가 이전에 커뮤니티 운영자로만 제공되었던 OpenShift 사용자 커뮤니티에서 중요한 기능입니다.
 
-Red Hat Certified Trident 운영자의 장점은 사내, 클라우드 또는 관리형 서비스 등 OpenShift와 함께 사용할 경우 NetApp에서 운영자와 컨테이너의 기반을 완벽하게 지원한다는 점입니다. 또한 NetApp Trident는 고객에게 무료로 제공되므로 Red Hat OpenShift와 원활하게 작동하도록 검증되고 간편한 라이프사이클 관리를 위해 패키지화된 공인 운영자를 사용하여 설치하기만 하면 됩니다.
+Red Hat Certified Trident 운영자의 이점은 OpenShift와 함께 사용할 경우(온프레미스, 클라우드 또는 ROSA를 통한 관리형 서비스)를 통해 NetApp에서 운영자와 컨테이너의 기반을 완벽하게 지원한다는 점입니다. 또한 NetApp Trident는 고객에게 무료로 제공되므로 Red Hat OpenShift와 원활하게 작동하도록 검증되고 간편한 라이프사이클 관리를 위해 패키지화된 공인 운영자를 사용하여 설치하기만 하면 됩니다.
+
+또한 Trident 25.02 운영자(및 향후 버전)는 iSCSI용 작업자 노드를 준비할 수 있는 선택적 이점을 제공합니다. 이 기능은 ROSA 클러스터에 워크로드를 배포할 계획이고 FSxN과 함께 iSCSI 프로토콜을 사용하려는 경우 특히 OpenShift Virtualization VM 워크로드에 유용합니다. FSxN을 사용하는 ROSA 클러스터에서 iSCSI를 위한 작업자 노드 준비의 문제는 클러스터에 Trident를 설치할 때 이 기능으로 완화되었습니다.
+
+운영자를 사용하는 설치 단계는 온-프레미스 클러스터에 설치하든 ROSA에 설치하든 동일합니다.
 
 오퍼레이터를 사용하여 Trident를 설치하려면 오퍼레이터 허브를 클릭하고 Certified NetApp Trident를 선택합니다. 설치 페이지에서 기본적으로 최신 버전이 선택됩니다. 설치 를 클릭합니다. image:rh-os-n_use_case_openshift_virtualization_trident_install_img1.png["오퍼레이터 허브"]
 
@@ -47,7 +61,17 @@ image:rh-os-n_use_case_openshift_virtualization_trident_install_img6.png["멀티
 image:rh-os-n_use_case_openshift_virtualization_trident_install_img7.png["multipathconf 파일이 실행 중입니다"]
 
 ====
-** 온프레미스 OpenShift 클러스터에 대한 Trident 구성**
+
+
+== 비디오 데모
+
+다음 비디오에서는 Red Hat Certified Trident Operator를 사용하여 Trident를 설치하는 방법을 보여 줍니다
+
+.OpenShift에서 인증된 Trident 운영자를 사용하여 Trident 25.02.1 설치
+video::15c225f3-13ef-41ba-b255-b2d500f927c0[panopto,width=360]
+
+
+== 온프레미스 OpenShift 클러스터를 위한 Trident 구성
 
 .NAS용 Trident 백엔드 및 스토리지 클래스
 [%collapsible%open]
@@ -235,7 +259,9 @@ parameters:
 allowVolumeExpansion: true
 ----
 ====
-** FSxN 스토리지를 사용하는 Rosa 클러스터에 대한 Trident 구성**
+
+
+== FSxN 스토리지를 사용하는 ROSA 클러스터에 대한 Trident 구성
 
 .FSxN NAS용 Trident 백엔드 및 스토리지 클래스
 [%collapsible%open]
@@ -328,7 +354,9 @@ parameters:
 allowVolumeExpansion: true
 ----
 ====
-** Trident 볼륨 스냅샷 클래스**
+
+
+== Trident 볼륨 스냅샷 클래스를 생성하는 중입니다
 
 .Trident 볼륨 스냅샷 클래스입니다
 [%collapsible%open]
@@ -352,14 +380,16 @@ oc create -f <backend-filename.yaml> -n trident
 oc create -f < storageclass-filename.yaml>
 oc create -f <snapshotclass-filename.yaml>
 ----
-**Trident 저장소 및 스냅샷 클래스를 사용하여 기본값 설정**
+
+
+== Trident 스토리지 및 스냅샷 클래스로 기본값을 설정합니다
 
 .Trident 스토리지 및 스냅샷 클래스로 기본값을 설정합니다
 [%collapsible%open]
 ====
-이제 필요한 Trident 스토리지 클래스와 볼륨 스냅샷 클래스를 OpenShift 클러스터에서 기본값으로 설정할 수 있습니다. 앞에서 설명한 것처럼 OpenShift 가상화에서 기본 템플릿에서 VM을 생성하는 데 골든 이미지 소스를 사용할 수 있도록 하려면 스토리지 클래스와 볼륨 스냅샷 클래스를 설정해야 합니다.
+이제 필요한 Trident 스토리지 클래스와 볼륨 스냅샷 클래스를 OpenShift 클러스터에서 기본값으로 설정할 수 있습니다. 앞에서 설명한 것처럼, 기본 스토리지 클래스와 볼륨 스냅샷 클래스를 설정해야 OpenShift Virtualization이 기본 템플릿에서 VM을 생성할 수 있도록 골든 이미지 소스를 사용할 수 있습니다.
 
-콘솔에서 주석을 편집하거나 다음을 사용하여 명령줄에서 패치를 실행하여 스토리지 클래스와 스냅샷 클래스를 기본값으로 설정할 수 있습니다.
+콘솔에서 주석을 편집하거나 다음을 사용하여 명령줄에서 패치를 실행하여 Trident 스토리지 클래스와 스냅샷 클래스를 기본값으로 설정할 수 있습니다.
 
 [source, yaml]
 ----
@@ -370,5 +400,11 @@ kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storagecla
 storageclass.kubevirt.io/is-default-virt-class: true
 or
 kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubevirt.io/is-default-virt-class": "true"}}}'
+----
+이 설정을 마치면 다음 명령을 사용하여 기존 dv 및 VolumeSnapShot 개체를 삭제할 수 있습니다.
+
+[source, yaml]
+----
+oc delete dv,VolumeSnapshot -n openshift-virtualization-os-images --selector=cdi.kubevirt.io/dataImportCron
 ----
 ====

@@ -63,3 +63,12 @@ image:rh-os-n_use_case_vm_create_3.png["입력/출력 대화 상자 또는 작�
 image:rh-os-n_use_case_vm_create_4.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 image:rh-os-n_use_case_vm_create_5.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+
+
+== 비디오 데모
+
+다음 비디오에서는 iSCSI 스토리지를 사용하여 OpenShift Virtualization에서 VM을 생성하는 방법을 보여 줍니다.
+
+.블록 스토리지를 사용하여 OpenShift 가상화에서 VM을 생성합니다
+video::497b868d-2917-4824-bbaa-b2d500f92dda[panopto,width=360]

@@ -33,6 +33,10 @@ Trident Protect는 OpenShift 클러스터에서 애플리케이션 및 VM의 스
 * link:https://docs.netapp.com/us-en/ontap/["ONTAP 9.16 를 참조하십시오"]
 
 
+
+
+== 객체 스토리지용 App Vault를 생성합니다
+
 .AppVault 작성
 [%collapsible%open]
 ====
@@ -99,6 +103,10 @@ spec:
 image:rh-os-n_use_case_ocpv_tp_dp_8.png["ONTAP S3 Appvault가 생성되었습니다"]
 
 ====
+
+
+== OpenShift Virtualization에서 VM을 생성합니다
+
 .OpenShift Virtualization에서 VM을 생성합니다
 [%collapsible%open]
 ====
@@ -122,6 +130,10 @@ image:rh-os-n_use_case_ocpv_tp_dp_6.png["디스크가 추가되었습니다"]
 image:rh-os-n_use_case_ocpv_tp_dp_7.png["VM, Pod 및 PVC가 생성되었습니다"]
 
 ====
+
+
+== 앱을 만듭니다
+
 .앱을 만듭니다
 [%collapsible%open]
 ====
@@ -149,6 +161,10 @@ spec:
 image:rh-os-n_use_case_ocpv_tp_dp_9.png["앱이 생성되었습니다"]
 
 ====
+
+
+== 백업을 생성하여 앱을 보호합니다
+
 .백업을 생성합니다
 [%collapsible%open]
 ====
@@ -199,6 +215,10 @@ image:rh-os-n_use_case_ocpv_tp_dp_16.png["백업 일정이 생성되었습니다
 image:rh-os-n_use_case_ocpv_tp_dp_17.png["필요 시 및 일정에 따라 생성된 백업"]
 
 ====
+
+
+== 백업에서 복원합니다
+
 .백업에서 복원합니다
 [%collapsible%open]
 ====
@@ -279,6 +299,10 @@ VM, Pod 및 PVC가 새 네임스페이스 demo2에 생성되었는지 확인합�
 image:rh-os-n_use_case_ocpv_tp_dp_23.png["새 네임스페이스의 VM입니다"]
 
 ====
+
+
+== 스냅샷을 사용하여 앱을 보호합니다
+
 .스냅샷을 생성합니다
 [%collapsible%open]
 ====
@@ -347,6 +371,10 @@ image:rh-os-n_use_case_ocpv_tp_dp_25.png["스냅샷에 대한 스케줄입니다
 image:rh-os-n_use_case_ocpv_tp_dp_26.png["예약된 스냅샷"]
 
 ====
+
+
+== 스냅샷에서 복원합니다
+
 .스냅샷에서 복원합니다
 [%collapsible%open]
 ====
@@ -425,6 +453,10 @@ VM 및 해당 PVC가 새 네임스페이스 demo2에서 복구되었는지 확�
 image:rh-os-n_use_case_ocpv_tp_dp_32.png["VM이 새 네임스페이스에서 복원되었습니다"]
 
 ====
+
+
+== 특정 VM을 복원합니다
+
 .네임스페이스에서 특정 VM을 선택하여 스냅샷/백업 및 복구 생성
 [%collapsible%open]
 ====
@@ -514,3 +546,11 @@ image:rh-os-n_use_case_ocpv_tp_dp_37.png["CentOS VM Bir을 생성합니다"]
 image:rh-os-n_use_case_ocpv_tp_dp_38.png["CentOS VM이 생성되었습니다"]
 
 ====
+
+
+== 비디오 데모
+
+다음 비디오에서는 스냅샷을 사용하여 VM을 보호하는 방법을 보여 줍니다
+
+.VM 보호
+video::4670e188-3d67-4207-84c5-b2d500f934a0[panopto,width=360]
