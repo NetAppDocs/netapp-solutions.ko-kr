@@ -387,7 +387,9 @@ oc create -f <snapshotclass-filename.yaml>
 .Trident 스토리지 및 스냅샷 클래스로 기본값을 설정합니다
 [%collapsible%open]
 ====
-이제 필요한 Trident 스토리지 클래스와 볼륨 스냅샷 클래스를 OpenShift 클러스터에서 기본값으로 설정할 수 있습니다. 앞에서 설명한 것처럼, 기본 스토리지 클래스와 볼륨 스냅샷 클래스를 설정해야 OpenShift Virtualization이 기본 템플릿에서 VM을 생성할 수 있도록 골든 이미지 소스를 사용할 수 있습니다.
+이제 필요한 Trident 스토리지 클래스와 볼륨 스냅샷 클래스를 OpenShift 클러스터에서 기본값으로 설정할 수 있습니다.
+
+앞에서 설명한 것처럼, 기본 스토리지 클래스와 볼륨 스냅샷 클래스를 설정해야 OpenShift Virtualization이 기본 템플릿에서 VM을 생성할 수 있도록 골든 이미지 소스를 사용할 수 있습니다.
 
 콘솔에서 주석을 편집하거나 다음을 사용하여 명령줄에서 패치를 실행하여 Trident 스토리지 클래스와 스냅샷 클래스를 기본값으로 설정할 수 있습니다.
 

@@ -34,7 +34,7 @@ indexpage:
       url: "/azure_ora_nfile_usecase.html"
   - title: Google Cloud용 Oracle
     links:
-    - title: GCNV 기반의 높은 처리량 Oracle VLDB 구현(Data Guard 포함)
+    - title: Data Guard를 사용하여 Google Cloud에서 높은 처리량 Oracle VLDB 구현 NetApp 볼륨
       url: "/gcp_ora_gcnv_vldb_dg.html"
     - title: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스 스토리지 솔루션'
       url: "/gcp-oracle-gcnv-overview.html"
@@ -90,6 +90,8 @@ indexpage:
       url: "/hybrid_dbops_snapcenter_usecases.html"
   - title: DB Automation 툴킷
     links:
+    - title: ASM을 사용하여 GCNV에서 Oracle Clone Lifecycle 자동화
+      url: "/automation_ora_clone_gcnv_asm.html"
     - title: ASM을 사용하여 ANF에서 Oracle Clone Lifecycle 자동화
       url: "/automation_ora_clone_anf_asm.html"
     - title: PDB Relocation을 통한 Oracle 마이그레이션
@@ -100,5 +102,3 @@ indexpage:
       url: "/automation_fsx_ec2_provision.html"
     - title: AWS에서 PostgreSQL 배포
       url: https://github.com/NetApp/na_postgresql_aws_deploy_hadr
-    - title: Oracle 데이터 보호
-      url: https://github.com/NetApp/na_oracle19c_data_protection

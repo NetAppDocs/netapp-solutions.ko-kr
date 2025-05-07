@@ -72,7 +72,7 @@ entries:
         url: "/databases/azure_ora_nfile_migration.html"
   - title: Google 클라우드
     entries:
-    - title: GCNV 기반의 높은 처리량 Oracle VLDB 구현(Data Guard 포함)
+    - title: Data Guard를 사용하여 Google Cloud에서 높은 처리량 Oracle VLDB 구현 NetApp 볼륨
       pdf-filename: GCNV 기반의 높은 처리량 Oracle VLDB 구현(Data Guard 포함)
       url: "/databases/gcp_ora_gcnv_vldb_dg.html"
     - title: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스'
@@ -218,6 +218,8 @@ entries:
     url: "/databases/customer_usecase_mssql_fsx1.html"
 - title: DB Automation 툴킷
   entries:
+  - title: ASM을 사용하여 GCNV에서 Oracle Clone Lifecycle 자동화
+    url: "/databases/automation_ora_clone_gcnv_asm.html"
   - title: ASM을 사용하여 ANF에서 Oracle Clone Lifecycle 자동화
     url: "/databases/automation_ora_clone_anf_asm.html"
   - title: SnapCenter Oracle 클론 수명주기
