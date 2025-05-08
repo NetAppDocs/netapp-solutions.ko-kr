@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: vm-migrate/shift-toolkit-overview.html 
+keywords: netapp, vmware, esxi, vm, migration, openshift, virtualization, hyper-v, proxmox 
+summary:  
+---
+= 가상화 환경 간 가상 머신(VM) 마이그레이션(Shift Toolkit)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Shift 툴킷을 사용하면 가상 머신(VM)의 마이그레이션이 더 이상 관심사가 아닙니다. 이 독립 실행형 제품을 사용하면 VMware ESXi에서 Microsoft Hyper-V로 VM을 빠르고 효율적으로 마이그레이션할 수 있습니다. 또한 다양한 가상 디스크 형식 간의 디스크 레벨 변환을 지원합니다.
+
+
+
+== 사용 사례
+
+이제 모든 조직에서 멀티 하이퍼바이저 환경을 사용할 경우 얻을 수 있는 이점이 있습니다. 최근 시장의 변화에 따라 모든 조직은 워크로드 VM을 다른 하이퍼바이저로의 마이그레이션과 비즈니스 정의 목표 달성, 벤더 종속 관리 등 기술적 및 상업적 위험을 평가하여 최상의 행동 방침을 결정하고 있습니다. 이를 통해 최적화된 방식으로 운영되며 특정 하이퍼바이저에 사용하지 않은 코어를 사용하는 것보다 적절한 영역에 IT 예산을 확장할 수 있습니다. 그러나 마이그레이션 시간과 관련 다운타임은 항상 문제가 됩니다.
+
+NetApp Shift 툴킷을 사용하면 가상 머신(VM)의 마이그레이션이 더 이상 관심사가 아닙니다. 이 독립 실행형 제품을 사용하면 VMware ESXi에서 Microsoft Hyper-V로 VM을 빠르고 효율적으로 마이그레이션할 수 있습니다. 또한 다양한 가상 디스크 형식 간의 디스크 레벨 변환을 지원합니다. ONTAP에서 제공하는 즉시 사용 가능 기능 덕분에 다운타임을 최소화하면서 마이그레이션을 매우 빠르게 수행할 수 있습니다. 예를 들어 1TB VMDK 파일을 변환하는 데는 일반적으로 몇 시간이 걸리지만 Shift 툴킷을 사용하면 몇 초 만에 완료할 수 있습니다.
+
+
+
+== 툴킷 개요
+
+NetApp Shift 툴킷은 여러 하이퍼바이저 간에 가상 머신(VM)을 마이그레이션하고 가상 디스크 형식을 변환할 수 있는 사용하기 쉬운 그래픽 사용자 인터페이스(GUI) 솔루션입니다. 이 솔루션은 NetApp FlexClone ® 기술을 활용하여 VM 하드 디스크를 빠르게 변환합니다. 또한 이 툴킷은 대상 VM의 생성 및 구성을 관리합니다.
+
+Shift 툴킷은 다음 하이퍼바이저 간의 양방향 전환을 지원하므로 멀티 하이퍼바이저 환경에서 유연성을 제공합니다.
+
+* VMware ESXi에서 Microsoft Hyper-V로
+* Microsoft Hyper-V에서 VMware ESXi로(출시 예정)
+
+
+Shift 툴킷은 다음과 같은 디스크 형식을 위해 하이퍼바이저 간에 가상 디스크를 디스크 수준으로 변환할 수 있도록 지원합니다.
+
+* VMware ESX에서 Microsoft Hyper-V(가상 머신 디스크[VMDK]에서 가상 하드 디스크 형식[VHDX])으로
+* VMware ESX에서 KVM과 호환되는 하이퍼바이저(VMDK에서 QCOW2로)
+
+
+image:shift-toolkit-image1.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+이동 도구 키트는 다운로드할 수 link:https://mysupport.netapp.com/site/tools/tool-eula/netapp-shift-toolkit["여기"]있으며 Windows 시스템에서만 사용할 수 있습니다.
+
+
+
+=== VM 이동의 이점
+
+ONTAP은 모든 하이퍼바이저 및 모든 하이퍼스케일러에 적합합니다. FlexClone 기술 활용. VM 휴대성은 가동 중지 시간을 더 오래 기다리거나 패스스루 옵션으로 정착하는 것보다 몇 분 내에 가능합니다.
+
+시프트 툴킷:
+
+* 가동 중지 시간을 최소화하고 비즈니스 생산성을 향상시킵니다.
+* 단일 공급업체에 대한 라이센스 비용, 종속 및 약정을 줄여 다양한 옵션과 유연성을 제공합니다.
+* VM 라이센스 비용을 최적화하고 IT 예산을 확장할 수 있습니다.
+* VM 이식성을 통해 가상화 비용을 절감하고 NetApp에서 무료로 제공됩니다.
+
+
+
+
+=== Shift 툴킷의 작동 방식
+
+변환 시 Shift 툴킷은 VMware ESXi 및 Microsoft Hyper-V 호스트 및 공유 NetApp 스토리지에 연결됩니다. Shift 툴킷은 FlexClone를 활용하여 다음과 같은 세 가지 핵심 NetApp 기술을 사용하여 VM 하드 드라이브를 하나의 하이퍼바이저에서 다른 하이퍼바이저로 변환합니다.
+
+* 단일 볼륨 및 다중 프로토콜
++
+NetApp ONTAP를 사용하면 여러 프로토콜을 손쉽게 사용하여 단일 볼륨에 액세스할 수 있습니다. 예를 들어, VMware ESXi에서 NFS(Network File System) 프로토콜을 통해 설정된 볼륨에 액세스할 수 있고 Microsoft Hyper-V는 CIFS/SMB 프로토콜을 사용하여 동일한 볼륨에 액세스할 수 있습니다.
+
+* FlexClone 기술
++
+FlexClone를 사용하면 데이터 복사본 없이 전체 파일 또는 볼륨을 빠르게 클론 복제할 수 있습니다. 스토리지 시스템의 공통 블록은 여러 파일 또는 볼륨 간에 공유됩니다. 그 결과 대용량 VM 디스크를 매우 빠르게 복제할 수 있습니다.
+
+* VM 디스크 변환
++
+NetApp PowerShell 툴킷 및 Shift 툴킷에는 NetApp 스토리지 컨트롤러에서 여러 작업을 수행하는 데 사용할 수 있는 많은 워크플로우가 포함되어 있습니다. 가상 디스크를 다른 형식으로 변환하는 PowerShell cmdlet이 포함되어 있습니다. 예를 들어, VMware VMDK를 Microsoft VHDX로 변환하거나 그 반대로 변환할 수 있습니다. 이러한 전환은 FlexClone에서 수행되므로 디스크 형식을 한 번에 매우 빠르게 클론 복제하고 변환할 수 있습니다.
+
+
+
+image:shift-toolkit-image2.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+
+
+==== 프로토콜 및 통신 방법
+
+변환 툴킷은 변환 또는 마이그레이션 작업 중에 다음 프로토콜을 사용합니다.
+
+* HTTPS - Data ONTAP 클러스터와 통신하기 위해 Shift 툴킷에 사용됩니다.
+* VI Java(OpenJDK), VMware PowerCLI - VMware ESXi와 통신하는 데 사용됩니다.
+* Windows PowerShell 모듈 - Microsoft Hyper-V와 통신하는 데 사용됩니다
+

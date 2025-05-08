@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: vm-migrate/shift-toolkit-conversion.html 
+keywords: netapp, vmware, esxi, vm, migration, openshift, virtualization, hyper-v, proxmox 
+summary:  
+---
+= Shift 툴킷을 사용하여 VM 변환을 수행합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 Shift 툴킷을 사용하여 VM 변환을 수행하는 방법에 대해 자세히 설명합니다.
+
+
+
+== 변환
+
+클론 기반 변환 옵션을 사용하면 다음과 같은 디스크 형식에 대해 하이퍼바이저 간에 가상 디스크를 간단히 변환할 수 있습니다.
+
+* VMware ESX에서 Microsoft Hyper-V로(VMDK에서 VHDX로)
+* VMware ESX에서 Red Hat KVM으로 전환(VMDK에서 QCOW2로 전환)
+
+
+변환된 qcow2 파일은 모든 KVM 하이퍼바이저와 호환됩니다. 예를 들어 qcow2 파일은 virt-manager를 사용하여 RHEL 기반 KVM과 함께 사용하여 VM을 만들 수 있으며 Ubuntu KVM, Rocky Linux 기반 KVM 등을 사용할 수 있습니다. NetApp Trident를 사용하여 가져온 후 Oracle Linux 가상화 관리자를 조정하고 OpenShift 가상화를 사용할 때도 동일한 기능을 사용할 수 있습니다. 목표는 디스크(초 단위로 분 단위로 변환)를 제공한 다음 조직에서 VM을 프로비저닝하고 네트워크를 할당하는 데 사용하는 기존 자동화 스크립트에 통합할 수 있도록 하는 것입니다. 이 접근 방식은 Shift 툴킷 API에서 디스크 변환을 처리하고 나머지 스크립트에서 VM을 생성하므로 전체 마이그레이션 시간을 줄이는 데 도움이 됩니다.
+
+향후 릴리스에서 Shift 툴킷은 VMware에서 호환되는 다른 KVM 하이퍼바이저로의 엔드 투 엔드 마이그레이션을 지원합니다. 그러나 현재 릴리즈에서는 UI 또는 API를 통해 변환을 수행할 수 있습니다.
+
+
+
+=== QCOW2 형식으로 변환합니다
+
+NetApp Shift 툴킷을 사용하여 가상 디스크를 QCOW2 형식으로 변환하려면 다음 상위 단계를 따르십시오.
+
+* KVM을 하이퍼바이저로 지정하여 대상 사이트 유형을 생성합니다.
++
+
+NOTE: KVM에는 하이퍼바이저 세부 정보가 필요하지 않습니다.
+
++
+image:shift-toolkit-image57.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 디스크 변환이 필요한 VM이 있는 리소스 그룹을 생성합니다
++
+image:shift-toolkit-image58.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+image:shift-toolkit-image59.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+image:shift-toolkit-image60.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 청사진을 만들어 가상 디스크를 QCOW2 형식으로 변환합니다.
++
+image:shift-toolkit-image61.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+image:shift-toolkit-image62.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+image:shift-toolkit-image63.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 스케줄링 옵션을 사용하여 슬롯을 지정합니다. 변환을 임시로 수행하는 경우 일정 옵션을 선택하지 않은 상태로 두십시오.
++
+image:shift-toolkit-image64.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 청사진이 생성되면 준비 VM 작업이 시작되고 소스 VM에서 스크립트가 자동으로 실행되어 변환을 준비합니다.
++
+image:shift-toolkit-image65.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* PrepareVM 작업이 성공적으로 완료되면(아래 스크린샷에 표시됨) VM과 연결된 VM 디스크가 변환될 준비가 되고 청사진 상태가 "활성"으로 업데이트됩니다.
+* VM에 필요한 가동 중지 시간을 예약한 후 "변환"을 클릭합니다.
++
+image:shift-toolkit-image66.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 변환 작업은 시점 스냅샷을 사용합니다. 필요한 경우 VM의 전원을 끈 다음 작업을 다시 트리거합니다.
++
+image:shift-toolkit-image67.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+** 변환 작업은 VM 및 해당 디스크에 대해 각 작업을 실행하여 적절한 형식을 생성합니다.
++
+image:shift-toolkit-image68.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+
+
+* VM을 수동으로 생성하고 디스크를 VM에 연결하여 변환된 디스크를 사용합니다.
++
+image:shift-toolkit-image69.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+
+
+
+NOTE: Shift 툴킷은 qcow2 형식에 대해서만 디스크 변환을 지원합니다. VM 생성 또는 등록은 지원하지 않습니다. 변환된 디스크를 사용하려면 VM을 수동으로 만들고 디스크를 연결합니다.
+
+
+
+=== VHDX 형식으로 변환합니다
+
+NetApp Shift 툴킷을 사용하여 가상 디스크를 VHDX 형식으로 변환하려면 다음 상위 단계를 따르십시오.
+
+* Hyper-V를 하이퍼바이저로 지정하여 대상 사이트 유형을 생성합니다.
+* 디스크 변환이 필요한 VM이 있는 리소스 그룹을 생성합니다
++
+image:shift-toolkit-image70.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
++
+image:shift-toolkit-image71.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 가상 디스크를 VHDX 형식으로 변환하는 청사진을 생성합니다. 청사진이 생성되면 준비 작업이 자동으로 시작됩니다.
++
+image:shift-toolkit-image72.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* VM에 필요한 가동 중지 시간이 예약되면 "변환"을 선택합니다.
++
+image:shift-toolkit-image73.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* 변환 작업은 VM 및 해당 디스크에 대해 각 작업을 실행하여 적절한 VHDX 형식을 생성합니다.
++
+image:shift-toolkit-image74.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+* VM을 수동으로 생성하고 디스크를 VM에 연결하여 변환된 디스크를 사용합니다.
++
+image:shift-toolkit-image75.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+
+
+
+NOTE: 변환된 VHDX 디스크를 VM에서 사용하려면 Hyper-V Manager 또는 PowerShell 명령을 통해 VM을 수동으로 생성해야 하며 디스크를 VM에 연결해야 합니다. 이와 함께 네트워크는 수동으로 매핑되어야 합니다.

@@ -4,7 +4,19 @@ title: 가상 머신 마이그레이션 유틸리티
 entries:
 - title: 가상 머신 마이그레이션(Shift 툴킷)
   pdf-filename: 가상 머신 마이그레이션(Shift 툴킷)
-  url: "/vm-migrate/migrate-overview.html"
+  entries:
+  - title: 개요
+    url: "/vm-migrate/shift-toolkit-overview.html"
+  - title: Shift 툴킷 설치
+    url: "/vm-migrate/shift-toolkit-install.html"
+  - title: Shift 툴킷 사용자 인터페이스 사용
+    url: "/vm-migrate/shift-toolkit-ui.html"
+  - title: Shift 툴킷을 사용한 VM 마이그레이션
+    url: "/vm-migrate/shift-toolkit-migration.html"
+  - title: Shift 툴킷을 사용한 VM 변환
+    url: "/vm-migrate/shift-toolkit-conversion.html"
+  - title: 결론 및 추가 정보
+    url: "/vm-migrate/shift-toolkit-wrapup.html"
 - title: VM을 ONTAP 데이터 저장소로 마이그레이션합니다
   url: "/vmware/migrate-vms-to-ontap-datastore.html"
 - title: Amazon FSx for ONTAP를 사용하여 VM을 Amazon EC2로 마이그레이션합니다

@@ -4,7 +4,7 @@ permalink: databases/gcp_ora_gcnv_vldb_dg.html
 keywords: Database, VLDB, Oracle, Data Guard, Google, GCNV, 
 summary: '이 솔루션은 Google Cloud에서 Oracle Data Guard를 사용하여 Google Cloud NetApp 볼륨(GCNV)에 높은 처리량 Oracle VLDB(Very Large Database)를 구성하는 방법에 대한 개요와 세부 정보를 제공합니다.' 
 ---
-= TR-5006: Data Guard를 사용하여 GCNV에 높은 처리량 Oracle VLDB 구현
+= TR-5006: Data Guard를 사용하여 Google Cloud NetApp 볼륨에 높은 처리량 Oracle VLDB 구현
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -1340,7 +1340,7 @@ NOTE: 데이터 손실을 없애려면 Oracle Data Guard 보호 모드를 또는
 https://bitbucket.ngage.netapp.com/projects/NS-BB/repos/na_oracle_clone_gcnv/browse
 ----
 
-NOTE: 이 툴킷은 현재 BitBucket 액세스 권한이 있는 NetApp 내부 사용자만 액세스할 수 있습니다. 외부 사용자에 관심이 있는 경우, 어카운트 팀에서 액세스 권한을 요청하거나 NetApp 솔루션 엔지니어링 팀에 문의하십시오. 전체 클론 라이프사이클 관리를 위한 클론을 생성 및 교체하기 위한 자동화 툴킷은 NetApp 솔루션 엔지니어링 팀에 문의하십시오.
+NOTE: 이 툴킷은 현재 BitBucket 액세스 권한이 있는 NetApp 내부 사용자만 액세스할 수 있습니다. 외부 사용자에 관심이 있는 경우, 어카운트 팀에서 액세스 권한을 요청하거나 NetApp 솔루션 엔지니어링 팀에 문의하십시오.
 
 ====
 

@@ -475,7 +475,7 @@ ONTAP은 온프레미스 또는 클라우드의 모든 워크로드에 적합한
 
 NetApp Shift 툴킷은 여러 하이퍼바이저 간에 가상 머신(VM)을 마이그레이션하고 가상 디스크 형식을 변환할 수 있는 사용하기 쉬운 그래픽 사용자 인터페이스(GUI) 솔루션입니다. 이 솔루션은 NetApp FlexClone ® 기술을 활용하여 VM 하드 디스크를 빠르게 변환합니다. 또한 이 툴킷은 대상 VM의 생성 및 구성을 관리합니다.
 
-자세한 내용은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/vm-migrate/migrate-overview.html["가상화 환경 간 가상 머신(VM) 마이그레이션(Shift Toolkit)"].
+자세한 내용은 을 참조하십시오link:https://docs.netapp.com/us-en/netapp-solutions/vm-migrate/shift-toolkit-overview.html["가상화 환경 간 가상 머신(VM) 마이그레이션(Shift Toolkit)"].
 
 image:virt-options-image3.png["Shift Toolkit의 기능 다이어그램"]
 

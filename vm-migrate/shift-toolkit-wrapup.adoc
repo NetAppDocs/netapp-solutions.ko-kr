@@ -1,0 +1,161 @@
+---
+sidebar: sidebar 
+permalink: vm-migrate/shift-toolkit-wrapup.html 
+keywords: netapp, vmware, esxi, vm, migration, openshift, virtualization, hyper-v, proxmox 
+summary:  
+---
+= 결론 및 추가 정보
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 Shift 툴킷 사용에 대한 다음 단계 및 문제 해결을 제공합니다.
+
+
+
+== 결론
+
+관리자는 NetApp Shift 툴킷을 사용하여 VM을 VMware에서 Hyper-V로 빠르고 원활하게 전환할 수 있습니다. 또한 여러 하이퍼바이저 간에 가상 디스크만 변환할 수도 있습니다. 따라서 Shift 툴킷을 사용하면 하나의 하이퍼바이저에서 다른 하이퍼바이저로 워크로드를 이동할 때마다 몇 시간의 노력을 줄일 수 있습니다. 이제 조직에서는 워크로드가 단일 하이퍼바이저에 연결되는지 걱정할 필요 없이 멀티 하이퍼바이저 환경을 호스팅할 수 있습니다. 이 기능을 사용하면 유연성이 향상되고 단일 공급업체에 대한 라이센스 비용, 종속 및 약정이 줄어듭니다.
+
+
+
+== 다음 단계
+
+Data ONTAP에서 Shift 툴킷 패키지를 다운로드하여 잠재력을 최대한 발휘하고 마이그레이션 또는 가상 머신이나 디스크 파일을 변환하여 마이그레이션을 간소화하고 간소화할 수 있습니다.
+
+이 프로세스에 대해 자세히 알아보려면 자세한 단계별 안내를 따르세요.
+
+.교대 근무 툴킷 연습
+video::dc0d9627-0399-45d9-a843-b1d8010fff80[panopto,width=360]
+
+
+== 문제 해결 및 알려진 문제
+
+. Windows VM에서 IP 주소 설정 및 제거를 위한 트리거 스크립트가 실패하고 다음 오류가 발생합니다. 자격 증명이 잘못되었습니다
++
+[listing]
+----
+Error message:
+
+Enter-PSSession : The credential is invalid.
+
+Potential causes:
+
+The guest credentials couldn't be validated
+
+a. The supplied credentials were incorrect
+b. There are no user accounts in the guest
+----
+. Windows 가상 시스템에서 BSOD 오류가 발생합니다
++
+*참고:* 이것은 Shift 툴킷 문제가 아니지만 환경과 관련된 문제입니다.
+
++
+[listing]
+----
+Error message:
+
+Bluescreen error during initial boot after migration.
+
+Potential cause:
+
+Local group policy setup to block the installation of applications including new drivers for Microsoft Hyper-V.
+
+a. Update the policy to allow installation of drivers.
+----
+. 리소스 그룹을 생성하는 동안 데이터 저장소가 나열되지 않았습니다
++
+[listing]
+----
+Error message:
+
+Mount paths are empty while getting volumes for mountpaths for site.
+
+Potential causes:
+
+The NFS volume used as a datastore is using v4.1
+
+a. Shift toolkit filters out NFS v3 datastores during the resource group creation. NFS 4.1 or 4.2 is not supported in the current release.
+----
+. SSL을 활성화한 후 Shift 툴킷 UI에 액세스할 수 없습니다.
++
+[listing]
+----
+Error message:
+
+Login failed, Network error
+
+Potential causes:
+
+MongoDB service not running
+Using Firefox browser to access Shift UI
+
+a. Ensure Mongo service is running
+b. Use Google Chrome or IE to access Shift UI.
+----
+. 암호화가 설정된 VM을 마이그레이션할 수 없습니다.
++
+[listing]
+----
+Error message:
+
+Boot failure on Hyper-V side
+
+Potential causes:
+
+VMDK encrytped using vSphere encryption
+
+a. Decrypt the VMDK inside VMware and retry the operation.
+----
+
+
+
+
+== 부록
+
+
+
+=== Shift 툴킷을 위한 맞춤형 ONTAP 역할
+
+ONTAP 관리 역할을 사용하여 Shift 툴킷에서 작업을 수행할 필요가 없도록 Privileges를 최소로 사용하여 ONTAP 역할을 생성합니다. ONTAP 스토리지의 SVM 레벨에서 이러한 최소 역할이 필요합니다.
+
+
+NOTE: vsadmin도 사용할 수 있습니다.
+
+image:shift-toolkit-image84.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+
+ONTAP 시스템 관리자를 사용하여 역할을 생성합니다.
+
+ONTAP System Manager에서 다음 단계를 수행하십시오.
+
+* 사용자 지정 역할 만들기: *
+
+* SVM 레벨에서 사용자 지정 역할을 생성하려면 스토리지 > 스토리지 VM > 필요한 SVM > 설정 > 사용자 및 역할을 선택합니다.
+* 사용자 및 역할 옆에 있는 화살표 아이콘( →)을 선택합니다.
+* 역할 에서 + 추가 를 선택합니다.
+* 역할에 대한 규칙을 정의하고 저장을 클릭합니다.
+
+
+* 역할을 시프트 툴킷 사용자에게 매핑: *
+
+사용자 및 역할 페이지에서 다음 단계를 수행합니다.
+
+* 사용자 아래에서 추가 아이콘 + 를 선택합니다.
+* 필요한 사용자 이름을 선택하고 Role(역할) 드롭다운 메뉴에서 이전 단계에서 생성한 역할을 선택합니다.
+* 저장 을 클릭합니다.
+
+
+완료되면 위에서 생성한 사용자를 사용하여 Shift 툴킷 UI 내에서 소스 및 대상 사이트를 구성합니다.
+
+
+
+=== VMware에 필요한 최소 권한 역할
+
+Shift 툴킷을 사용하여 VMware vSphere에서 가상 머신을 마이그레이션하려면 아래에 설명된 Privileges를 사용하여 관리 > 액세스 제어 > 역할을 사용하여 RBAC 사용자를 생성합니다.
+
+image:shift-toolkit-image85.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
