@@ -43,7 +43,9 @@ entries:
       - title: 시소 부하 밸런서 설치
         url: "/containers/a-w-n_LB_SeeSaw.html"
   - title: 솔루션 검증 및 사용 사례
-    url: "/containers/a-w-n_use_cases.html"
+    entries:
+    - title: Google Cloud Console을 사용하여 응용 프로그램을 설치합니다
+      url: "/containers/a-w-n_use_case_deploy_app_with_cloud_console.html"
   - title: 비디오/데모
     url: "/containers/a-w-n_videos_and_demos.html"
   - title: 추가 정보
@@ -175,6 +177,8 @@ entries:
       url: "/containers/vtwn_overview_tkgs.html"
     - title: VMware TKGI(Tanzu Kubernetes Grid Integrated Edition) 개요
       url: "/containers/vtwn_overview_tkgi.html"
+    - title: VMware vSphere 및 Tanzu(vSphere Pod)
+      url: "/containers/vtwn_overview_vst.html"
   - title: NetApp 스토리지 시스템 개요
     entries:
     - title: 개요

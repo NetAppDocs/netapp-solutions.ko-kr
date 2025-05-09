@@ -2,6 +2,9 @@
 section: virtualization
 title: 포함되었습니다
 entries:
+- title: 모든 가상화 솔루션에 NetApp 사용
+  pdf-filename: 모든 가상화 솔루션에 NetApp 사용
+  url: "/virtualization/virt-options-on-netapp.html"
 - title: 가상화 개요
   url: "/virtualization/virt-overview.html"
 - section: vmware

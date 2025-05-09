@@ -30,6 +30,10 @@ sidebar:
     url: https://docs.netapp.com/us-en/netapp-solutions-sap/
   - title: FlexPod 솔루션
     url: https://docs.netapp.com/us-en/flexpod/
+  - title: 비디오 컬렉션
+    url: "/videos.html"
+  - title: 블로그
+    url: "/blogs.html"
   - title: Change Log(로그 변경)
     url: "/change-log-display.html"
   - title: NetApp 솔루션 정보

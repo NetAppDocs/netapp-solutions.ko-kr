@@ -31,6 +31,12 @@ entries:
   - title: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
     pdf-filename: NetApp E-Series 스토리지로 IBM Spectrum Scale 구축
     url: "/ai/tr-4859.html"
+  - title: AI용 NetApp ONTAP 및 Lenovo ThinkSystem SR670
+    pdf-filename: AI용 NetApp ONTAP 및 Lenovo ThinkSystem SR670
+    url: a400-thinksystem-introduction.html
+  - title: AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
+    pdf-filename: AI용 NetApp AFF A800 및 Fujitsu Server PRIMERGY GX2570 M5
+    url: tr-4815.html
 - title: 데이터 파이프라인, 데이터 레이크 및 관리
   entries:
   - title: 오픈 소스 MLOps 및 NetApp
@@ -430,6 +436,8 @@ entries:
         url: "/ai/osrunai_submitting_jobs_in_run_ai_cli.html"
       - title: 높은 클러스터 사용률 달성
         url: "/ai/osrunai_achieving_high_cluster_utilization.html"
+      - title: ImageNet 데이터 세트 벤치마크 요약을 통한 ResNet-50
+        url: "/ai/osrunai_resnet-50_with_imagenet_dataset_benchmark_summary.html"
       - title: 덜 까다로운 워크로드 또는 대화형 워크로드에 대한 부분 GPU 할당
         url: "/ai/osrunai_fractional_gpu_allocation_for_less_demanding_or_interactive_workloads.html"
       - title: Over-uota GPU 할당을 통한 높은 클러스터 활용률 달성
