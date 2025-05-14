@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 이 시나리오에서는 VMware vSphere(OTV)용 ONTAP 툴을 사용하여 VCF VI 워크로드 도메인에 대한 확장 클러스터를 구성하는 방법을 보여 줍니다.
 
-image:vmware_vcf_asa_mgmt_stretchcluster_image01.jpg["단일 인스턴스 - 다중 가용성 영역"]
+image:vmware_vcf_asa_mgmt_stretchcluster_image01.png["단일 인스턴스 - 다수의 가용 영역"]
 
 
 

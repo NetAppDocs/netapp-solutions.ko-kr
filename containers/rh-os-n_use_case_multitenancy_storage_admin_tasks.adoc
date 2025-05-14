@@ -20,7 +20,7 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 . Storage > Storage VMs 로 이동하고 Add 를 클릭합니다. 필요한 세부 정보를 제공하여 프로젝트-1과 프로젝트-2에 각각 필요한 SVM 2개를 생성합니다. SVM 및 리소스를 관리하는 vsadmin 계정도 생성합니다.
 
 
-image:redhat_openshift_image41.jpg["ONTAP에서 SVM 생성"]
+image:redhat_openshift_image41.png["ONTAP에서 SVM 생성"]
 
 . 스토리지 관리자로 Red Hat OpenShift 클러스터에 로그인합니다.
 . 프로젝트-1의 백엔드를 생성하여 프로젝트 전용 SVM에 매핑합니다. ONTAP 클러스터 관리자를 사용하는 대신 SVM의 vsadmin 계정을 사용하여 백엔드를 SVM에 연결하는 것이 좋습니다.

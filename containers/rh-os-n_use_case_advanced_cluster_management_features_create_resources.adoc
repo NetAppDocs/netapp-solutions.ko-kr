@@ -16,4 +16,4 @@ summary: NetApp OpenShift를 사용한 Kubernetes용 고급 클러스터 관리
 [role="lead"]
 Kubernetes의 고급 클러스터 관리를 사용하면 콘솔에서 하나 이상의 관리되는 클러스터에 리소스를 동시에 생성할 수 있습니다. 예를 들어, 서로 다른 NetApp ONTAP 클러스터로 백업된 여러 사이트에 OpenShift 클러스터를 사용하고 두 사이트에서 PVC를 프로비저닝하고 싶은 경우 상단 표시줄에서 (+) 기호를 클릭할 수 있습니다. 그런 다음 PVC를 생성할 클러스터를 선택하고 YAML 리소스를 붙여 넣은 다음 생성 을 클릭합니다.
 
-image:redhat_openshift_image86.jpg["리소스를 생성합니다"]
+image:redhat_openshift_image86.png["리소스를 생성합니다"]

@@ -62,19 +62,19 @@ NOTE: F5 BIG-IP 시스템은 전용 하드웨어, 클라우드 또는 12.x 이�
 . F5 BIG-IP 시스템에 로그인하고 iApps > 패키지 관리 LX 로 이동한 다음 가져오기 를 클릭합니다.
 . 파일 선택 을 클릭하고 다운로드한 AS3 RPM 파일을 선택한 다음 확인 을 클릭하고 업로드 를 클릭합니다.
 +
-image:redhat_openshift_image109.jpg["iApps 업로드"]
+image:redhat_openshift_image109.png["iApps 업로드"]
 
 . AS3 확장 프로그램이 성공적으로 설치되었는지 확인합니다.
 +
-image:redhat_openshift_image110.jpg["AS3 설치 검증"]
+image:redhat_openshift_image110.png["AS3 설치 검증"]
 
 . 그런 다음 OpenShift와 BIG-IP 시스템 간의 통신에 필요한 리소스를 구성합니다. 먼저 OpenShift SDN용 BIG-IP 시스템에서 VXLAN 터널 인터페이스를 생성하여 OpenShift와 BIG-IP 서버 간에 터널을 생성합니다. 네트워크 > 터널 > 프로필 로 이동하고 생성 을 클릭한 다음 부모 프로필을 VXLAN 으로 설정하고 플러딩 유형 을 멀티캐스트 로 설정합니다. 프로파일 이름을 입력하고 마침 을 클릭합니다.
 +
-image:redhat_openshift_image111.jpg["VXLAN 프로필을 생성합니다"]
+image:redhat_openshift_image111.png["VXLAN 프로필을 생성합니다"]
 
 . 네트워크 > 터널 > 터널 목록 으로 이동하고 생성 을 클릭한 다음 터널의 이름과 로컬 IP 주소를 입력합니다. 이전 단계에서 만든 터널 프로필을 선택하고 마침 을 클릭합니다.
 +
-image:redhat_openshift_image112.jpg["VXLAN 터널을 생성합니다"]
+image:redhat_openshift_image112.png["VXLAN 터널을 생성합니다"]
 
 . 클러스터 관리자 권한으로 Red Hat OpenShift 클러스터에 로그인합니다.
 . OpenShift에서 F5 BIG-IP 서버용 hostsubnet을 생성합니다. 그러면 서브넷이 OpenShift 클러스터에서 F5 BIG-IP 서버로 확장됩니다. 호스트 서브넷 YAML 정의를 다운로드합니다.
@@ -132,11 +132,11 @@ ocp-vmw-nszws-worker-wtgfw   ocp-vmw-nszws-worker-wtgfw   10.63.172.17    10.128
 ----
 . F5 BIG-IP 서버에 해당하는 OpenShift의 호스트 서브넷 범위에서 IP를 사용하여 OpenShift VXLAN에서 셀프 IP를 생성합니다. F5 BIG-IP 시스템에 로그인하고 네트워크 > Self IP 로 이동한 다음 생성 을 클릭합니다. F5 BIG-IP 호스트 서브넷용으로 생성된 클러스터 IP 서브넷의 IP를 입력하고 VXLAN 터널을 선택한 다음 다른 세부 정보를 입력합니다. 그런 다음 마침 을 클릭합니다.
 +
-image:redhat_openshift_image113.jpg["VXLAN에 대한 셀프 IP를 생성합니다"]
+image:redhat_openshift_image113.png["VXLAN에 대한 셀프 IP를 생성합니다"]
 
 . CIS에서 구성 및 사용할 F5 BIG-IP 시스템에 파티션을 생성합니다. 시스템 > 사용자 > 파티션 목록 으로 이동하고 생성 을 클릭한 다음 세부 정보를 입력합니다. 그런 다음 마침 을 클릭합니다.
 +
-image:redhat_openshift_image114.jpg["BIG-IP 파티션을 생성합니다"]
+image:redhat_openshift_image114.png["BIG-IP 파티션을 생성합니다"]
 
 +
 
@@ -164,24 +164,24 @@ customresourcedefinition.apiextensions.k8s.io/ingresslinks.cis.f5.com created
 ----
 . Operators > OperatorHub 로 이동하고 키워드 F5 를 검색한 다음 F5 Container Ingress Service 타일을 클릭합니다.
 +
-image:redhat_openshift_image115.jpg["OperatorHub의 F5 CIS"]
+image:redhat_openshift_image115.png["OperatorHub의 F5 CIS"]
 
 . 운영자 정보를 읽고 설치를 클릭하십시오.
 +
-image:redhat_openshift_image116.jpg["OperatorHub의 F5 CIS 정보 타일"]
+image:redhat_openshift_image116.png["OperatorHub의 F5 CIS 정보 타일"]
 
 . Install operator(설치 작업자) 화면에서 모든 기본 매개변수를 그대로 두고 Install(설치) 을 클릭합니다.
 +
-image:redhat_openshift_image117.jpg["F5 CIS 연산자를 설치합니다"]
+image:redhat_openshift_image117.png["F5 CIS 연산자를 설치합니다"]
 
 . 운전자를 설치하는 데 시간이 걸립니다.
 +
-image:redhat_openshift_image118.jpg["F5 CIS 작동자 설치 진행"]
+image:redhat_openshift_image118.png["F5 CIS 작동자 설치 진행"]
 
 . 운용자 설치 후 Installation Successful 메시지가 출력된다.
 . Operators > Installed Operators 로 이동하고 F5 Container Ingress Service 를 클릭한 다음 F5BigIpCtlr 타일에서 Create instance 를 클릭합니다.
 +
-image:redhat_openshift_image119.jpg["F5BigIpCtlr을 생성합니다"]
+image:redhat_openshift_image119.png["F5BigIpCtlr을 생성합니다"]
 
 . YAML View(YAML 보기) 를 클릭하고 필요한 매개변수를 업데이트한 후 다음 내용을 붙여 넣습니다.
 +
@@ -225,7 +225,7 @@ spec:
 ----
 . 이 콘텐츠를 붙여 넣은 후 만들기 를 클릭합니다. 그러면 kubbe-system 네임스페이스에 CIS 포드가 설치됩니다.
 +
-image:redhat_openshift_image120.jpg["F5 CIS Pod를 확인합니다"]
+image:redhat_openshift_image120.png["F5 CIS Pod를 확인합니다"]
 
 +
 
@@ -461,6 +461,6 @@ f5-demo-test-57c46f6f98-cl2m8   1/1     Running   0          27s
 ----
 . OpenShift에서 loadbalancer 유형의 서비스를 위해 BIG-IP 시스템에 해당 가상 서버가 생성되었는지 확인한다. Local Traffic > Virtual Servers > Virtual Server List로 이동합니다.
 +
-image:redhat_openshift_image121.jpg["해당 서비스 유형 로드 밸런싱 장치에 대한 BIG-IP 가상 서버 생성을 확인합니다"]
+image:redhat_openshift_image121.png["해당 서비스 유형 로드 밸런싱 장치에 대한 BIG-IP 가상 서버 생성을 확인합니다"]
 
 

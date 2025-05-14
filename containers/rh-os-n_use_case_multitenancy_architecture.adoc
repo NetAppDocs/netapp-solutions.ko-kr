@@ -20,7 +20,7 @@ NetApp ONTAP를 통한 Red Hat OpenShift 및 Trident은 기본적으로 워크�
 
 다음 그림에서는 NetApp ONTAP에서 지원하는 Trident가 포함된 Red Hat OpenShift 클러스터의 멀티테넌트 솔루션을 보여 줍니다.
 
-image:redhat_openshift_image40.jpg["NetApp ONTAP에서 지원하는 Trident를 사용하는 Red Hat OpenShift 클러스터의 멀티 테넌시"]
+image:redhat_openshift_image40.png["NetApp ONTAP에서 지원하는 Trident를 사용하는 Red Hat OpenShift 클러스터의 멀티 테넌시"]
 
 
 

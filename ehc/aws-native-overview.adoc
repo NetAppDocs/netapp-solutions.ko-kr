@@ -16,8 +16,6 @@ summary:
 [role="lead"]
 이 문서에서는 AWS 기반 VMware Cloud를 통해 Amazon FSx ONTAP을 NFS 데이터 저장소로 마운트하는 방법에 대해 간략하게 설명합니다.
 
-Niyaz Mohamed, NetApp
-
 
 
 == 소개

@@ -17,7 +17,7 @@ indexpage:
     - title: 지원되는 솔루션
       url: "/ehc-solutions.html"
     - title: 요약
-      url: "../videos.html#hmc"
+      url: "/ehc-summary.html"
   - title: AWS 기반 NetApp(VMC)
     links:
     - title: VMC를 위한 VMware로 NetApp 하이브리드 멀티 클라우드 실행

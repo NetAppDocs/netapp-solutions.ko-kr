@@ -40,6 +40,18 @@
 | 2025년 04월 23일 | 데이터베이스 | 새로운 TR-5006: "Data Guard를 사용하여 GCNV에 높은 처리량 Oracle VLDB 구현" 
 
 
+| 2025년 05월 12일 | 데이터베이스 | ASM을 사용하는 GCNV에서 DataGuard 대기 상태에서 Oracle 데이터베이스 클론 생성을 위한 데모 비디오를 추가합니다 
+
+
+| 2025년 05월 08일 | 포함되었습니다 | Shift Toolkit의 GA 버전을 게시합니다 
+
+
+| 2025년 05월 07일 | 데이터베이스 | 새로운 DB 자동화 툴킷: "ASM을 사용한 GCNV의 자동화된 Oracle 클론 수명주기" 
+
+
+| 2025년 04월 23일 | 데이터베이스 | 새로운 TR-5006: "Data Guard를 사용하여 GCNV에 높은 처리량 Oracle VLDB 구현" 
+
+
 | 2025년 03월 28일 | 데이터베이스 | ANF 지원을 위한 자동화 툴킷 "SnapCenter Oracle Clone Lifecycle Automation" 업데이트 
 
 

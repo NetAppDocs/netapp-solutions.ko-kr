@@ -59,7 +59,7 @@ VMware vSphere는 물리적 리소스를 고객의 워크로드 및 애플리케
 
 VMware vSphere에 대한 자세한 내용은 을 참조하십시오 https://docs.vmware.com/en/VMware-vSphere/index.html["이 링크"^].
 
-VMware와 함께 제공되는 NetApp 솔루션에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오 link:../vmware/vmware-on-netapp.html["이 링크"^].
+VMware와 함께 NetApp 솔루션에 대한 자세한 내용은 를 link:../vmware/index.html["이 링크"^]참조하십시오.
 
 ====
 .VMware NSX

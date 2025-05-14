@@ -33,15 +33,15 @@ ONTAP에서 SVM을 생성하려면 다음 단계를 완료하십시오.
 . ONTAP System Manager에 로그인하고 스토리지 > 스토리지 VM으로 이동한 다음 추가를 클릭합니다.
 . SVM의 이름을 입력하고 iSCSI 프로토콜을 설정한 다음 데이터 LIF에 대한 세부 정보를 제공합니다.
 +
-image:vtwn_image25.jpg["iSCSI SVM 데이터 LIF"]
+image:vtwn_image25.png["iSCSI SVM 데이터 LIF"]
 
 . SVM 관리 계정의 세부 정보를 입력한 다음 저장을 클릭합니다.
 +
-image:vtwn_image26.jpg["iSCSI SVM 관리"]
+image:vtwn_image26.png["iSCSI SVM 관리"]
 
 . SVM에 애그리게이트를 할당하려면 스토리지 > 스토리지 VM으로 이동하고, 새로 생성한 SVM 옆의 줄임표를 클릭한 다음 편집 을 클릭합니다. Limit Volume Creation to Preferred Local Tiers 확인란을 선택하고 필요한 애그리게이트를 이 체크박스에 연결합니다.
 +
-image:vtwn_image27.jpg["SVM 애그리게이트 할당"]
+image:vtwn_image27.png["SVM 애그리게이트 할당"]
 
 
 

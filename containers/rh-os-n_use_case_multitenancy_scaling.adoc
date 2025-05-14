@@ -20,7 +20,7 @@ summary: NetApp과 함께 Red Hat OpenShift에서 멀티 테넌시 구성
 . 스토리지 -> 스토리지 VM으로 이동한 후 추가 를 클릭합니다. PROJECT-3 전용 SVM을 새로 생성합니다. SVM 및 리소스를 관리하는 vsadmin 계정도 생성합니다.
 
 
-image:redhat_openshift_image42.jpg["확장을 위한 SVM 생성"]
+image:redhat_openshift_image42.png["확장을 위한 SVM 생성"]
 
 . Red Hat OpenShift 클러스터에 클러스터 관리자로 로그인합니다.
 . 새 프로젝트를 만듭니다.

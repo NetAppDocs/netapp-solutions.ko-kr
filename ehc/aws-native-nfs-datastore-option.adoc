@@ -4,7 +4,7 @@ permalink: ehc/aws-native-nfs-datastore-option.html
 keywords:  
 summary:  
 ---
-= AWS의 보충 NFS 데이터 저장소 옵션
+= AWS에서 보조 NFS 데이터 저장소 생성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

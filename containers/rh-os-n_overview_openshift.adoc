@@ -53,11 +53,11 @@ OpenShift의 설치 관리자 프로비저닝 인프라(IPI) 배포에는 다음
 . Red Hat OpenShift를 방문하십시오 link:https://www.openshift.com["웹 사이트"^] SSO 자격 증명을 사용하여 로그인합니다.
 . Red Hat OpenShift를 배포할 환경을 선택하십시오.
 +
-image:redhat_openshift_image8.jpeg["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+image:redhat_openshift_image8.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 다음 화면에서 설치 관리자, 고유한 풀 암호 및 관리용 CLI 툴을 다운로드합니다.
 +
-image:redhat_openshift_image9.jpeg["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
+image:redhat_openshift_image9.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
 . 를 따릅니다 link:https://docs.openshift.com/container-platform/4.7/installing/index.html["설치 지침"] Red Hat이 선택한 환경에 배포할 수 있도록 제공합니다.
 

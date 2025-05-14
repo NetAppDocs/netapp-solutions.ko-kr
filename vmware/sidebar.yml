@@ -32,6 +32,35 @@ entries:
     url: "/vmware/vmw-getting-started-vm-data-collector.html"
 - title: NetApp 기반의 VCF(VMware Cloud Foundation
   pdf-filename: NetApp 기반의 VCF(VMware Cloud Foundation
+- title: NetApp 및 VMware 시작하기
+  pdf-filename: NetApp 및 VMware 시작하기
+  entries:
+  - title: 개요
+    url: "/vmware/vmw-getting-started-overview.html"
+  - title: NetApp 스토리지 옵션
+    url: "/vmware/vmw-getting-started-netapp-storage-options.html"
+  - title: vSphere Metro 스토리지 클러스터
+    url: "/vmware/vmw-getting-started-metro-storage-cluster.html"
+  - title: VMware용 ONTAP 툴(OTV)
+    url: "/vmware/vmw-getting-started-ontap-tools-for-vmware.html"
+  - title: ONTAP를 활용한 VMware 자동화
+    url: "/vmware/vmw-getting-started-ontap-apis-automation.html"
+  - title: SnapCenter
+    url: "/vmware/vmw-getting-started-snapcenter.html"
+  - title: 하이브리드 멀티 클라우드
+    url: "/vmware/vmw-getting-started-hybrid-multicloud.html"
+  - title: VMware 워크로드에 대한 보안 및 랜섬웨어 문제 해결
+    url: "/vmware/vmw-getting-started-security-ransomware.html"
+  - title: VM 워크로드를 ONTAP로 마이그레이션
+    url: "/vmware/vmw-getting-started-migration.html"
+  - title: BlueXP  재해 복구(DRaaS)
+    url: "/vmware/vmw-getting-started-bluexp-disaster-recovery.html"
+  - title: 데이터 인프라 인사이트(DII)
+    url: "/vmware/vmw-getting-started-data-infrastructure-insights.html"
+  - title: VM 데이터 수집기(VMDC)
+    url: "/vmware/vmw-getting-started-vm-data-collector.html"
+- title: NetApp 기반의 VCF(VMware Cloud Foundation
+  pdf-filename: NetApp 기반의 VCF(VMware Cloud Foundation
   entries:
   - title: 개요
     url: "/vmware/vmw-vcf-overview.html"
@@ -43,6 +72,8 @@ entries:
       url: "/vmware/vmw-vcf-mgmt-fc.html"
   - title: Principal Storage를 사용하여 VCF 환경을 프로비저닝합니다
     entries:
+    - title: 개요
+      url: "/vmware/vmw-vcf-provision.html"
     - title: FC를 사용하는 관리 도메인입니다
       url: "/vmware/vmw-vcf-mgmt-principal-fc.html"
     - title: NFS를 사용하는 관리 도메인입니다
@@ -53,6 +84,8 @@ entries:
       url: "/vmware/vmw-vcf-viwld-principal-nfs.html"
   - title: Supplemental Storage로 VCF 환경을 확장합니다
     entries:
+    - title: 개요
+      url: "/vmware/vmw-vcf-expand.html"
     - title: iSCSI를 사용하는 관리 도메인입니다
       url: "/vmware/vmw-vcf-mgmt-supplemental-iscsi.html"
     - title: FC를 사용하는 관리 도메인입니다
@@ -73,6 +106,12 @@ entries:
       url: "/vmware/vmw-vcf-scv-multiwkld.html"
     - title: NVMe로 VCF 워크로드 도메인을 보호합니다
       url: "/vmware/vmw-vcf-scv-nvme.html"
+    - title: SnapCenter로 VCF 워크로드 보호
+      url: "/vmware/vmw-vcf-protect-sc.html"
+    - title: VMware vMSC(vSphere Metro Storage Cluster)로 VCF 워크로드 보호
+      url: "/vmware/vmw-vcf-protect-vmsc.html"
+    - title: BlueXP  DRaaS를 사용한 재해 복구
+      url: "/vmware/vmw-vcf-draas-bxp.html"
     - title: VM용 SnapCenter 플러그인 및 BlueXP 백업 및 복구를 통한 VMware용 3-2-1 데이터 보호
       url: "/vmware/vmw-vcf-scv-321.html"
   - title: VMware vMSC(vSphere Metro Storage Cluster)를 통한 고가용성
@@ -104,14 +143,20 @@ entries:
     url: "/vmware/vmware_nfs_overview.html"
   - title: 'ONTAP용 VMware 가상화: 모범 사례'
     url: "/vmware/vmware-for-ontap.html"
+  - title: VMware vSphere 8의 새로운 기능
+    url: "/vmware/vmware-vsphere8-intro.html"
   - title: vSphere 8용 VMFS 구축 가이드
     url: "/vmware/vmfs-deployment.html"
+  - title: vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
+    url: "/vmware/netapp-vsphere8.html"
   - title: NetApp 및 VMware의 NFS nConnect 기능
     url: "/vmware/vmware-vsphere8-nfs-nconnect.html"
   - title: OTV 10을 사용하여 NFS 데이터 저장소를 관리합니다
     url: "/vmware/vmware_nfs_otv10.html"
   - title: VMware Site Recovery Manager를 사용한 NFS 데이터 저장소 재해 복구
     url: "/vmware/vmware_nfs_vlsr.html"
+  - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
+    url: "/vmware-vmsc-with-smas.html"
 - title: NetApp 기반 VVOL(VMware 가상 볼륨
   pdf-filename: NetApp 기반 VVOL(VMware 가상 볼륨
   entries:
