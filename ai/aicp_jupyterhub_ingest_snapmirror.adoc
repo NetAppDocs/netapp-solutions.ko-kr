@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: ai/aicp_jupyterhub_ingest_snapmirror.html 
+keywords: AI, control plane, MLOps, JupyterHub 
+summary: NetApp SnapMirror으로 데이터 수집 
+---
+= NetApp SnapMirror 를 사용하여 JupyterHub에 데이터를 수집하십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp SnapMirror는 NetApp 스토리지 시스템 간에 데이터를 복제할 수 있는 복제 기술입니다. SnapMirror를 사용하여 원격 환경에서 JupyterHub로 데이터를 수집할 수 있습니다.
+
+
+
+== Worklfow 및 Demo의 예
+
+NetApp SnapMirror를 사용하여 JupyterHub에 데이터를 수집하는 방법의 자세한 워크플로 및 데모는 를 link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Accelerating-Data-Ingestion-and-AI-ML-Experimentation-with-NetApp-SnapMirror-and/ba-p/457814["Tech OnTap 블로그 게시물입니다"]참조하십시오.

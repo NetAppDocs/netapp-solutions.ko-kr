@@ -66,12 +66,14 @@ entries:
         url: "/ai/aicp_jupyterhub_deployment.html"
       - title: JupyterHub와 함께 NetApp DataOps 툴킷을 사용할 수 있습니다
         url: "/ai/aicp_example_jupyterhub_workflows_overview.html"
+      - title: NetApp SnapMirror으로 데이터 수집
+        url: "/ai/aicp_jupyterhub_ingest_snapmirror.html"
     - title: MLflow(최소
       entries:
       - title: MLflow 전개
         url: "/ai/aicp_mlflow_deployment.html"
       - title: NetApp 및 MLflow를 통한 데이터 세트 대 모델 추적성
-        url: "/ai/aicp_example_mlflow_traceability.html"
+        url: "/ai/aicp_example_mlflow_workflows_traceability.html"
     - title: Kubeflow
       entries:
       - title: Kubeflow 구축
