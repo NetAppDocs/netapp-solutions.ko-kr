@@ -32,35 +32,6 @@ entries:
     url: "/vmware/vmw-getting-started-vm-data-collector.html"
 - title: NetApp 기반의 VCF(VMware Cloud Foundation
   pdf-filename: NetApp 기반의 VCF(VMware Cloud Foundation
-- title: NetApp 및 VMware 시작하기
-  pdf-filename: NetApp 및 VMware 시작하기
-  entries:
-  - title: 개요
-    url: "/vmware/vmw-getting-started-overview.html"
-  - title: NetApp 스토리지 옵션
-    url: "/vmware/vmw-getting-started-netapp-storage-options.html"
-  - title: vSphere Metro 스토리지 클러스터
-    url: "/vmware/vmw-getting-started-metro-storage-cluster.html"
-  - title: VMware용 ONTAP 툴(OTV)
-    url: "/vmware/vmw-getting-started-ontap-tools-for-vmware.html"
-  - title: ONTAP를 활용한 VMware 자동화
-    url: "/vmware/vmw-getting-started-ontap-apis-automation.html"
-  - title: SnapCenter
-    url: "/vmware/vmw-getting-started-snapcenter.html"
-  - title: 하이브리드 멀티 클라우드
-    url: "/vmware/vmw-getting-started-hybrid-multicloud.html"
-  - title: VMware 워크로드에 대한 보안 및 랜섬웨어 문제 해결
-    url: "/vmware/vmw-getting-started-security-ransomware.html"
-  - title: VM 워크로드를 ONTAP로 마이그레이션
-    url: "/vmware/vmw-getting-started-migration.html"
-  - title: BlueXP  재해 복구(DRaaS)
-    url: "/vmware/vmw-getting-started-bluexp-disaster-recovery.html"
-  - title: 데이터 인프라 인사이트(DII)
-    url: "/vmware/vmw-getting-started-data-infrastructure-insights.html"
-  - title: VM 데이터 수집기(VMDC)
-    url: "/vmware/vmw-getting-started-vm-data-collector.html"
-- title: NetApp 기반의 VCF(VMware Cloud Foundation
-  pdf-filename: NetApp 기반의 VCF(VMware Cloud Foundation
   entries:
   - title: 개요
     url: "/vmware/vmw-vcf-overview.html"
