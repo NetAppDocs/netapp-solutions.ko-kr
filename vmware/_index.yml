@@ -54,6 +54,9 @@ indexpage:
       url: "/vmware-vsphere8-intro.html"
     - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
       url: "/vmware-vmsc-with-smas.html"
+    - title: VMware vSphere Metro Storage Cluster를 사용하여 SM 활성 동기화를 비대칭에서 대칭형 액티브/액티브로
+        변환합니다
+      url: "/vmware-smbc-cvt-smas.html"
   - title: VMware 클라우드 오퍼링
     links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드
