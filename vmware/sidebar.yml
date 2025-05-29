@@ -128,8 +128,7 @@ entries:
     url: "/vmware/vmware_nfs_vlsr.html"
   - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
     url: "/vmware-vmsc-with-smas.html"
-  - title: VMware vSphere Metro Storage Cluster를 사용하여 SM 활성 동기화를 비대칭에서 대칭형 액티브/액티브로
-      변환합니다
+  - title: VMSC를 사용하여 SnapMirror 액티브 동기화 비대칭 액티브/액티브를 대칭 액티브/액티브로 변환
     url: "/vmware-smbc-cvt-smas.html"
 - title: NetApp 기반 VVOL(VMware 가상 볼륨
   pdf-filename: NetApp 기반 VVOL(VMware 가상 볼륨

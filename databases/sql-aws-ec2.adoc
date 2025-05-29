@@ -43,7 +43,7 @@ Amazon FSx ONTAP은 AWS의 SQL Server 구축에 이상적인 파일 스토리지
 * 주요 릴리스 또는 패치 업데이트 후 근본 원인을 찾아 MTTR 감소
 
 
-iSCSI 프로토콜을 사용하여 FSx ONTAP에 SQL Server 데이터베이스를 배포하면 일반적으로 사내에서 사용되는 것처럼 탁월한 성능, 스토리지 효율성 및 데이터 관리 기능을 갖춘 이상적인 데이터베이스 스토리지 환경을 제공합니다. 작업 세트 크기가 5%라고 가정하여 여러 iSCSI 세션을 사용하는 경우 Flash Cache를 fitting 하면 FSx ONTAP 서비스에 100K IOPS 이상이 제공됩니다. 이 구성을 통해 가장 까다로운 애플리케이션의 성능을 완벽하게 제어할 수 있습니다. FSx ONTAP에 연결된 작은 EC2 인스턴스에서 실행되는 SQL Server는 네트워크 대역폭 제한만 FSx ONTAP에 적용되기 때문에 훨씬 큰 EC2 인스턴스에서 실행되는 SQL Server와 동일한 성능을 수행할 수 있습니다. 또한 인스턴스 크기를 줄이면 컴퓨팅 비용도 절감되므로 TCO에 최적화된 구축이 가능합니다. iSCSI를 사용하는 SQL, SMB3.0과 FSx ONTAP의 멀티채널 지속적인 가용성 공유를 결합하여 SQL 워크로드에 탁월한 이점을 제공합니다.
+iSCSI 프로토콜을 사용하여 FSx ONTAP에 SQL Server 데이터베이스를 배포하면 일반적으로 사내에서 사용되는 것처럼 탁월한 성능, 스토리지 효율성 및 데이터 관리 기능을 갖춘 이상적인 데이터베이스 스토리지 환경을 제공합니다. 작업 세트 크기가 5%라고 가정하여 여러 iSCSI 세션을 사용하는 경우 Flash Cache를 fitting 하면 FSx ONTAP 서비스에 100K IOPS 이상이 제공됩니다. 이 구성을 통해 가장 까다로운 애플리케이션의 성능을 완벽하게 제어할 수 있습니다. FSx ONTAP에 연결된 작은 EC2 인스턴스에서 실행되는 SQL Server는 네트워크 대역폭 제한만 FSx ONTAP에 적용되기 때문에 훨씬 큰 EC2 인스턴스에서 실행되는 SQL Server와 동일한 성능을 수행할 수 있습니다. 인스턴스 크기를 줄이면 컴퓨팅 비용도 줄어들어 TCO 최적화된 배포가 가능합니다. iSCSI를 사용하는 SQL, SMB3.0과 FSx ONTAP의 멀티채널 지속적인 가용성 공유를 결합하여 SQL 워크로드에 탁월한 이점을 제공합니다.
 
 
 
@@ -338,7 +338,7 @@ NetApp SnapCenter는 계층 1 엔터프라이즈 애플리케이션을 위한 �
 
 
 |===
-자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/snapcenter/install/reference_space_and_sizing_requirements.html["요구사항을 충족해야 합니다"].
+자세한 내용은 을 link:https://docs.netapp.com/us-en/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html["요구사항을 충족해야 합니다"]참조하십시오.
 
 버전 호환성은 를 참조하십시오 https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^].
 

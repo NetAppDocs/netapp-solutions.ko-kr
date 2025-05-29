@@ -46,17 +46,12 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html
     - title: NetApp ONTAP을 사용하는 VMware VVOL(vSphere 가상 볼륨
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html
-    - title: ONTAP 툴을 이용한 VVOL(VMware vSphere 가상 볼륨
-      url: "/vmware-vvol-overview.html"
     - title: vSphere 8을 위한 최신 및 클라우드 연결 All-Flash
       url: "/netapp-vsphere8.html"
     - title: VMware vSphere 8의 새로운 기능
       url: "/vmware-vsphere8-intro.html"
     - title: SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터
       url: "/vmware-vmsc-with-smas.html"
-    - title: VMware vSphere Metro Storage Cluster를 사용하여 SM 활성 동기화를 비대칭에서 대칭형 액티브/액티브로
-        변환합니다
-      url: "/vmware-smbc-cvt-smas.html"
   - title: VMware 클라우드 오퍼링
     links:
     - title: VMware를 사용하는 NetApp 하이브리드 멀티 클라우드

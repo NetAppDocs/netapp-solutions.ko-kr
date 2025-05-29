@@ -5,12 +5,30 @@ keywords: NetApp Solutions, vMSC, Metro Storage Cluster, SnapMirror active sync,
 summary:  
 ---
 = VMware vSphere Metro Storage Cluster를 사용하여 SM 활성 동기화를 비대칭에서 대칭형 액티브/액티브로 변환합니다
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
-link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/["NetApp SnapMirror 활성 동기화(SM 활성 동기화)"] 는 가상화된 환경에서 RTO(복구 시간 목표)와 RPO(복구 시점 목표)를 0으로 달성하기 위한 강력한 솔루션입니다. link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html["VMware vMSC(vSphere Metro Storage Cluster)"] 는 서로 다른 장애 도메인에 걸쳐 확장 클러스터 솔루션으로, 지리적으로 분리된 두 사이트 간에 VM(가상 머신)을 분산하여 한 사이트에 장애가 발생해도 지속적인 가용성을 제공합니다. vMSC를 SM 활성 동기화와 결합하면 두 사이트 간에 데이터 일관성과 즉각적인 페일오버 기능이 보장됩니다. 이 설정은 데이터 손실이나 다운타임이 허용되지 않는 미션 크리티컬 애플리케이션에 특히 중요합니다.
+[role="lead"]
+이 문서에서는 VMware vSphere Metro Storage Cluster(VMSC)를 사용하여 SnapMirror 액티브 동기화를 비대칭에서 대칭 액티브/액티브로 변환하는 방법을 자세히 설명합니다.
 
-이전에 SMBC(SnapMirror Business Continuity)라고 알려진 SM 활성 동기화는 전체 사이트 장애 시에도 비즈니스 서비스를 계속 운영할 수 있으므로 보조 복사본을 사용하여 애플리케이션을 투명하게 페일오버할 수 있습니다. ONTAP 9.15.1부터 SM 액티브 동기화는 대칭 액티브/액티브 기능을 지원합니다. 대칭 액티브/액티브를 사용하면 양방향 동기식 복제를 통해 보호된 LUN의 두 복사본에서 읽기 및 쓰기 I/O 작업을 수행할 수 있습니다. 따라서 두 LUN 복사본이 모두 로컬에서 I/O 작업을 제공할 수 있습니다. 이 문서는 VMware 확장 클러스터 환경에서 SM 액티브 동기화 비대칭 액티브/액티브를 SM 액티브 동기식 대칭 액티브/액티브로 변환하는 단계를 보여줍니다. 즉, SM 액티브 동기화를 자동 페일오버 정책에서 자동 페일오버-이중 정책으로 변환합니다. System Manager 및 ONTAP 툴을 사용하여 vMSC(SnapMirror Active sync)(SM-AS)를 설정하는 방법에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터"]참조하십시오.
+
+
+== 개요
+
+link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/["NetApp SnapMirror 활성 동기화(SM 활성 동기화)"] 는 가상화된 환경에서 RTO(복구 시간 목표)와 RPO(복구 시점 목표)를 0으로 달성하기 위한 강력한 솔루션입니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html["VMware vMSC(vSphere Metro Storage Cluster)"] 는 서로 다른 장애 도메인에 걸쳐 확장 클러스터 솔루션으로, 지리적으로 분리된 두 사이트 간에 VM(가상 머신)을 분산하여 한 사이트에 장애가 발생해도 지속적인 가용성을 제공합니다.
+
+vMSC를 SM 활성 동기화와 결합하면 두 사이트 간에 데이터 일관성과 즉각적인 페일오버 기능이 보장됩니다. 이 설정은 데이터 손실이나 다운타임이 허용되지 않는 미션 크리티컬 애플리케이션에 특히 중요합니다.
+
+이전에 SMBC(SnapMirror Business Continuity)라고 알려진 SM 활성 동기화는 전체 사이트 장애 시에도 비즈니스 서비스를 계속 운영할 수 있으므로 보조 복사본을 사용하여 애플리케이션을 투명하게 페일오버할 수 있습니다. ONTAP 9.15.1부터 SM 액티브 동기화는 대칭 액티브/액티브 기능을 지원합니다. 대칭 액티브/액티브를 사용하면 양방향 동기식 복제를 통해 보호된 LUN의 두 복사본에서 읽기 및 쓰기 I/O 작업을 수행할 수 있습니다. 따라서 두 LUN 복사본이 모두 로컬에서 I/O 작업을 제공할 수 있습니다.
+
+이 문서는 VMware 확장 클러스터 환경에서 SM 액티브 동기화 비대칭 액티브/액티브를 SM 액티브 동기식 대칭 액티브/액티브로 변환하는 단계를 보여줍니다. 즉, SM 액티브 동기화를 자동 페일오버 정책에서 자동 페일오버-이중 정책으로 변환합니다. System Manager 및 ONTAP 툴을 사용하여 vMSC(SnapMirror Active sync)(SM-AS)를 설정하는 방법에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["SnapMirror 활성 동기화가 포함된 VMware vSphere Metro 스토리지 클러스터"]참조하십시오.
 
 
 
