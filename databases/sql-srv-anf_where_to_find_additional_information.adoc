@@ -24,8 +24,4 @@ https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-sol
 +
 https://docs.microsoft.com/en-us/azure/azure-netapp-files/solutions-benefits-azure-netapp-files-sql-server["https://docs.microsoft.com/en-us/azure/azure-netapp-files/solutions-benefits-azure-netapp-files-sql-server"^]
 
-* Azure NetApp Files의 내결함성, 고가용성 및 복구 기능
-+
-https://cloud.netapp.com/blog/azure-anf-blg-fault-tolerance-high-availability-and-resilience-with-azure-netapp-files["https://cloud.netapp.com/blog/azure-anf-blg-fault-tolerance-high-availability-and-resilience-with-azure-netapp-files"^]
-
 

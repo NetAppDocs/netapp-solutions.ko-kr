@@ -8,7 +8,7 @@ indexpage:
   tiles:
   - title: 시작하기
     links:
-    - title: Windows 10의 Hyper-V 소개
+    - title: Windows Server의 Hyper-V 소개
       url: https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
     - title: Hyper-V 기술 개요
       url: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview

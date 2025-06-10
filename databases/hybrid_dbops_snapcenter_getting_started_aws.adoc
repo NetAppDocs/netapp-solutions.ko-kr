@@ -47,7 +47,7 @@ NOTE: Cloud Manager와 Cloud Volumes ONTAP를 구축하는 방법은 매우 간�
 
 ==== Cloud Manager 커넥터를 배포합니다
 
-. 로 이동합니다 https://cloud.netapp.com/cloud-manager["NetApp Cloud Central에서"^] 로그인 또는 가입
+. 로 이동  https://www.netapp.com/bluexp/?utm_campaign=b2d-port-all-na-amer-digi-wepp-brand-amer-1745924643379&utm_source=google&utm_medium=paidsearch&utm_content=nativead&gad_source=1&gad_campaignid=21281798861&gclid=EAIaIQobChMIv_GU0KDJjQMVEXRHAR2A2hJzEAAYASAAEgKAZ_D_BwE["NetApp BlueXP"^] 로그인하거나 회원가입하세요.
 +
 image:cloud_central_login_page.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 
@@ -153,7 +153,7 @@ image:cloud_central_add_we_10.png["입력/출력 대화 상자 또는 작성된 
 
 
 
-. 구축할 추가 서비스를 선택하십시오. 이러한 서비스에 대한 자세한 내용은 를 참조하십시오 https://cloud.netapp.com["NetApp Cloud 홈 페이지"^].
+. 구축할 추가 서비스를 선택하십시오. 이러한 서비스에 대해 자세히 알아보려면 다음을 방문하세요.  https://bluexp.netapp.com/["BlueXP: 최신 데이터 자산 운영을 간편하게"^] .
 +
 image:cloud_central_add_we_11.png["입력/출력 대화 상자 또는 작성된 내용을 표시하는 그림"]
 

@@ -1205,6 +1205,6 @@ Version 19.18.0.0.0
 
 * link:https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation["VMware 클라우드 기반"^]
 * link:index.html["NetApp 엔터프라이즈 데이터베이스 솔루션"^]
-* link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["SnapCenter 소프트웨어 6.0"^]
+* link:https://docs.netapp.com/us-en/snapcenter/["SnapCenter 소프트웨어 설명서"^]
 * link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴 설명서"^]
 

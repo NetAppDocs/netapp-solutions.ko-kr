@@ -34,6 +34,8 @@ indexpage:
       url: "/azure_ora_nfile_usecase.html"
   - title: Google Cloud용 Oracle
     links:
+    - title: Google Cloud NetApp Volumes에서 서버 내 증분 병합을 통해 Oracle VLDB 백업 및 복구 최적화
+      url: "/gcp_ora_gcnv_inc_merge.html"
     - title: Data Guard를 사용하여 Google Cloud에서 높은 처리량 Oracle VLDB 구현 NetApp 볼륨
       url: "/gcp_ora_gcnv_vldb_dg.html"
     - title: '개요: Google Cloud NetApp 볼륨을 사용하는 Oracle 데이터베이스 스토리지 솔루션'
