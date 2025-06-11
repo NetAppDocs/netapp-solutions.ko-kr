@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/stgr-splunkss-single-site-smartstore-performance.html 
-keywords: configuration, warm data, cold data, cache storage, indexer, eventgen, event generator, search head 
-summary: 이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. Splunk SmartStore는 성능 검증에서 StorageGRID 오브젝트 스토리지인 원격 스토리지로 웜 데이터를 이동합니다. 
+permalink: data-analytics/stgr-splunkss-single-site-perf.html 
+keywords: configuration, warm data, cold data, cache storage, indexer, event, generator 
+summary: 이 페이지에서는 NetApp StorageGRID 컨트롤러의 Splunk SmartStore 성능을 설명합니다. 
 ---
 = 단일 사이트 SmartStore 성능
 :hardbreaks:

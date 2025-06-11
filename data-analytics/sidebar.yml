@@ -168,7 +168,23 @@ entries:
   url: "/data-analytics/sb-4154.html"
 - title: Splunk SmartStore가 포함된 NetApp StorageGRID
   pdf-filename: Splunk SmartStore가 포함된 NetApp StorageGRID
-  url: "/data-analytics/stgr-splunks-introduction.html"
+  entries:
+  - title: 소개
+    url: "/data-analytics/stgr-splunkss-introduction.html"
+  - title: 솔루션 개요
+    url: "/data-analytics/stgr-splunkss-solution-overview.html"
+  - title: 이 솔루션의 이점
+    url: "/data-analytics/stgr-splunkss-solution-benefits.html"
+  - title: Splunk 아키텍처
+    url: "/data-analytics/stgr-splunkss-splunk-architecture.html"
+  - title: Splunk SmartStore의 StorageGRID 기능
+    url: "/data-analytics/stgr-splunkss-flexible-storagegrid-features.html"
+  - title: 계층화 및 비용 절감
+    url: "/data-analytics/stgr-splunkss-tiering-cost-savings.html"
+  - title: 단일 사이트 SmartStore 성능
+    url: "/data-analytics/stgr-splunkss-single-site-perf.html"
+  - title: 결론
+    url: "/data-analytics/stgr-splunkss-conclusion.html"
 - title: NetApp E-Series E5700 및 Splunk Enterprise
   pdf-filename: NetApp E-Series E5700 및 Splunk Enterprise
   url: "/data-analytics/tr-4623.html"

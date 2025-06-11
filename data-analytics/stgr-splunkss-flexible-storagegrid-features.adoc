@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/stgr-splunkss-flexible-storagegrid-features-for-splunk-smartstore.html 
+permalink: data-analytics/stgr-splunkss-flexible-storagegrid-features.html 
 keywords: ILM policies, Grid Manager, performance, Load Balancer, endpoint configuration 
-summary: 'StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 구축하여 확장하는 데 이르기까지, 환경의 변화에 빠르게 대처해야 하며 Splunk를 중단하지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.' 
+summary: StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. 
 ---
 = Splunk SmartStore를 위한 유연한 StorageGRID 기능
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게
 
 
 [role="lead"]
-StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 구축하여 확장하는 데 이르기까지, 환경의 변화에 빠르게 대처해야 하며 Splunk를 중단하지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.
+StorageGRID는 사용자가 끊임없이 변화하는 환경에 맞게 활용하고 사용자 지정할 수 있는 다양한 기능을 제공합니다. Splunk SmartStore를 배포하거나 확장하는 과정에서 환경에는 변화에 대한 신속한 적응이 필요하며 Splunk를 중단시키지 않아야 합니다. StorageGRID의 유연한 데이터 관리 정책(ILM)과 트래픽 분류자(QoS)를 사용하여 사용자 환경을 계획하고 조정할 수 있습니다.
 
 
 

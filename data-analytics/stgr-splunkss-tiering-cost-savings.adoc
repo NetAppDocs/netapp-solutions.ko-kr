@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: data-analytics/stgr-splunkss-intelligent-tiering-and-cost-savings.html 
+permalink: data-analytics/stgr-splunkss-tiering-cost-savings.html 
 keywords: tiering, scaling, data-access patterns 
 summary: 고객은 Splunk 데이터 분석을 더욱 쉽고 원활하게 사용할 수 있다는 것을 알게 되므로 당연히 계속해서 증가하는 데이터를 인덱싱하기를 원합니다. 데이터의 양이 증가할수록 서비스를 제공하는 데 필요한 컴퓨팅 및 스토리지 인프라도 증가합니다. 
 ---

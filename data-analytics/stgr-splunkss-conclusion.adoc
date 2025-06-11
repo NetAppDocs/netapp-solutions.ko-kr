@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-analytics/stgr-splunkss-conclusion.html 
 keywords: conclusion, references 
-summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 고객 조직 전반에서 Splunk를 사용할 때 성능이 크게 향상되었습니다. 따라서 더 많은 데이터 소스를 추가해야 할 뿐만 아니라 데이터를 더 오래 보관해야 하므로 Splunk 인프라가 강조됩니다. 
+summary: Splunk Enterprise는 업계 최고의 SIEM 솔루션으로 보안, IT 및 DevOps 팀 전반에서 결과를 주도하고 있습니다. 
 ---
 = 결론
 :hardbreaks:
@@ -24,28 +24,10 @@ Splunk SmartStore와 NetApp StorageGRID의 결합을 통해 조직은 확장 가
 
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* NetApp StorageGRID 문서 리소스
-+
-https://docs.netapp.com/us-en/storagegrid-family/["https://docs.netapp.com/us-en/storagegrid-family/"^]
-
-* NetApp 제품 설명서
-+
-https://docs.netapp.com["https://docs.netapp.com"^]
-
-* Splunk Enterprise 문서
-+
-https://docs.splunk.com/Documentation/Splunk["https://docs.splunk.com/Documentation/Splunk"^]
-
-* Splunk Enterprise는 SmartStore를 기반으로 합니다
-+
-https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore"^]
-
-* Splunk Enterprise Distributed Deployment Manual을 참조하십시오
-+
-https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview["https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview"^]
-
-* Splunk Enterprise 인덱서 및 인덱서 클러스터 관리
-+
-https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers["https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers"^]
-
+* https://docs.netapp.com/us-en/storagegrid-family/["NetApp StorageGRID 문서 리소스"^]
+* https://docs.netapp.com["NetApp 제품 설명서"^]
+* https://docs.splunk.com/Documentation/Splunk["Splunk Enterprise 문서"^]
+* https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/AboutSmartStore["Splunk Enterprise는 SmartStore를 기반으로 합니다"^]
+* https://docs.splunk.com/Documentation/Splunk/8.0.6/Deploy/Distributedoverview["Splunk Enterprise Distributed Deployment Manual을 참조하십시오"^]
+* https://docs.splunk.com/Documentation/Splunk/8.0.6/Indexer/Aboutindexesandindexers["Splunk Enterprise 인덱서 및 인덱서 클러스터 관리"^]
 
