@@ -73,7 +73,8 @@ SMI-S Provider 구축을 시작하기 전에 를 구축해야 합니다
 
 . NetApp 다운로드 사이트에서 SMI-S를 다운로드하여 지원되는 버전의 Windows 서버에 설치합니다.
 . SMI-S 서버가 실행 중인지 확인합니다. image:hyperv-smis-image3.png["SMI-S 서버가 실행 중인지 확인합니다"]
-. NetApp 스토리지 시스템을 추가하려면 SVM(Storage Virtual Machine)에 대한 관리 IP 주소의 호스트 이름과 vsadmin 사용자에 대한 자격 증명이 있어야 합니다. image:hyperv-smis-image4.png["SVM 등록"]
+. CIM 서버 사용자를 추가합니다. 이 SIM 사용자는 Windows SMIS 서버에서 관리자 권한이 있어야 하며, SCVMM에 등록하려면 이 사용자를 사용해야 합니다. image:hyperv-smis-image13.png["CIM 사용자 추가"]
+. NetApp 스토리지 시스템을 추가하려면 SVM(스토리지 가상 머신)의 호스트 이름과 관리 IP 주소, 그리고 vsadmin 사용자의 자격 증명이 있어야 합니다. 참고: SMI-S는 SVM 관리 IP 주소는 지원하지 않고 호스트 이름만 지원합니다. image:hyperv-smis-image4.png["SVM 등록"]
 
 
 

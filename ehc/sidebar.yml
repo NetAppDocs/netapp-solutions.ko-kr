@@ -26,7 +26,7 @@ entries:
     entries:
     - title: 소개
       url: "/ehc/ehc-datastore-intro.html"
-    - title: AWS에서 VM을 위한 스토리지 옵션 을 참조하십시오
+    - title: AWS의 VMC에 대한 스토리지 옵션
       url: "/ehc/aws-storage-options.html"
     - title: VMC를 위한 보조 NFS 데이터 저장소(개요)
       url: "/ehc/aws-native-overview.html"
@@ -87,6 +87,18 @@ entries:
     - title: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션
       pdf-filename: VMware HCX를 사용하여 워크로드를 FSx ONTAP 데이터 저장소로 마이그레이션
       url: "/ehc/aws-migrate-vmware-hcx.html"
+- title: NetApp for AWS/EVS
+  entries:
+  - title: EVS의 외부 데이터 저장소로 FSx ONTAP 마운트
+    entries:
+    - title: 소개
+      url: "/ehc/evs-mount-fsxn-intro.html"
+    - title: NFS 데이터 저장소로 배포
+      url: "/ehc/evs-mount-fsxn-nfs.html"
+    - title: iSCSI 데이터 저장소로 배포
+      url: "/ehc/evs-mount-fsxn-iscsi.html"
+    - title: 결론
+      url: "/ehc/evs-mount-fsxn-conclusion.html"
 - title: NetApp for Azure/AVS
   entries:
   - title: 개요
