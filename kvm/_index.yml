@@ -1,0 +1,24 @@
+---
+indexpage:
+  title: KVM/libvirt 가상화를 위한 NetApp 솔루션
+  summary: NetApp 가상화 솔루션은 KVM과 libvirt를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여주는 전략적 및
+    기술적 역량의 집합입니다.
+  lead: NetApp 가상화 솔루션은 KVM과 libvirt를 사용하여 가상화를 위한 NetApp 스토리지의 기능을 보여주는 전략적 및 기술적
+    역량의 집합입니다.
+  tiles:
+  - title: 해결하세요
+    links:
+    - title: 개요
+      url: "/kvm-overview.html"
+    - title: KVM/Libvirt용 NetApp 스토리지
+      url: "/kvm-ontap.html"
+  - title: 추가 리소스
+    links:
+    - title: Rocky Linux에서 libvirt 설정
+      url: https://docs.rockylinux.org/guides/virtualization/libvirt-rocky/
+    - title: Ubuntu에서 libvirt 설정
+      url: https://documentation.ubuntu.com/server/how-to/virtualisation/libvirt/index.html
+    - title: SUSE Linux 가상화 가이드
+      url: https://documentation.suse.com/sles/15-SP6/html/SLES-all/book-virtualization.html
+    - title: Arch Linux와 함께하는 Libvirt
+      url: https://wiki.archlinux.org/title/Libvirt

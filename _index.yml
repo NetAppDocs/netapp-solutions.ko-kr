@@ -28,6 +28,8 @@ indexpage:
       url: osv/index.html
     - title: Proxmox 가상화
       url: proxmox/index.html
+    - title: KVM/libvirt 가상화
+      url: kvm/index.html
     - title: 가상 머신 마이그레이션(Shift 툴킷)
       url: vm-migrate/shift-toolkit-overview.html
   - title: 클라우드 및 하이브리드 클라우드 솔루션
