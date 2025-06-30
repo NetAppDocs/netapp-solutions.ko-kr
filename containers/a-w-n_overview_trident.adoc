@@ -53,3 +53,11 @@ Trident 운영자 설치를 완료한 후에는 사용 중인 특정 NetApp 스�
 == 볼륨을 사용합니다
 
 위 단계에서 프로비저닝한 볼륨은 애플리케이션이 Pod에 볼륨을 마운트하여 사용할 수 있습니다. 아래 링크는 예를 보여줍니다. link:https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html#sample-manifests["POD에 볼륨을 마운트합니다"]
+
+
+
+== 샘플 프로비저닝
+
+link:a-w-n_trident_ontap_iscsi.html["iSCSI 프로토콜에 대한 샘플 매니페스트, window=_blank"]
+
+link:a-w-n_trident_ontap_nfs.html["nfs 프로토콜에 대한 샘플 매니페스트, window=_blank"]

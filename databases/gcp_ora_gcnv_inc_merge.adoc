@@ -4056,11 +4056,11 @@ NAME
 ====
 GCNV의 백업 이미지 사본에서 새 Oracle VLDB를 복제하는 것은 기본 데이터베이스를 새 DB 서버로 특정 시점 복구하는 것과 유사합니다. NetApp Solutions 엔지니어링 팀은 전체 프로세스를 신속하고 간편하게 구현할 수 있도록 자동화 툴킷을 제공합니다.
 
-다음 자동화 툴킷에는 NFS 마운트를 통해 GCNV 스토리지에 저장된 기본 데이터베이스 백업 이미지 사본에서 Oracle VLDB의 복제본을 만들거나 새로 고치는 데 사용할 수 있는 플레이북이 포함되어 있어 완전한 복제 수명 주기를 관리할 수 있습니다.
+다음 자동화 툴킷에는 NFS 마운트를 통해 GCNV 스토리지에 저장된 기본 데이터베이스 백업 이미지 사본에서 Oracle VLDB의 복제본을 만들거나 새로 고치는 데 사용할 수 있는 플레이북이 포함되어 있어 완전한 복제 수명 주기를 관리할 수 있습니다. 자세한 내용은 다음 문서를 참조하세요. link:https://docs.netapp.com/us-en/netapp-solutions/databases/automation_ora_bkup_clone.html["서버 내 이미지 백업을 통한 자동화된 Oracle VLDB 복제 수명 주기"^] .
 
 [source, cli]
 ----
-https://bitbucket.ngage.netapp.com/projects/NS-BB/repos/na_oracle_clone_gcnv/browse
+https://bitbucket.ngage.netapp.com/mvc/projects/NS-BB/repos/na_oracle_bkup_clone/browse
 ----
 
 NOTE: 이 툴킷은 현재 BitBucket 액세스 권한이 있는 NetApp 내부 사용자만 액세스할 수 있습니다. 외부 사용자에 관심이 있는 경우, 어카운트 팀에서 액세스 권한을 요청하거나 NetApp 솔루션 엔지니어링 팀에 문의하십시오.

@@ -229,6 +229,11 @@ entries:
       url: "/ai/vector-database-docker-compose-xml.html"
 - title: 사용 사례
   entries:
+  - title: Intel 기반 엔터프라이즈 RAG 추론을 위한 NetApp AIPod Mini
+    pdf-filename: RAG 추론을 위한 NetApp AIPod Mini
+    entries:
+    - title: Intel이 탑재된 NetApp AIPod Mini
+      url: "/ai/ai-minipod.html"
   - title: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
     pdf-filename: 책임 AI 및 기밀 추론 - NetApp AI 및 Protopia 이미지 변환
     entries:

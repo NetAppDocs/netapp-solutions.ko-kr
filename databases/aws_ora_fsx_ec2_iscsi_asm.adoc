@@ -694,7 +694,7 @@ unzip -q /tmp/archive/p6880880_190000_Linux-x86-64.zip
 ....
 vi cv/admin/cvu_config
 ....
-. 를 준비합니다 `gridsetup.rsp` 자동 설치용 파일 및 RSP 파일을 에 배치합니다 `/tmp/archive` 디렉토리. RSP 파일은 다음 정보를 사용하여 섹션 A, B 및 G를 포함해야 합니다.
+. 업데이트  `gridsetup.rsp` 자동 설치를 위한 파일을 만들고 rsp 파일을 다음 위치에 두십시오.  `/tmp/archive` 예배 규칙서. RSP 파일은 다음 정보를 사용하여 섹션 A, B 및 G를 포함해야 합니다.
 +
 ....
 INVENTORY_LOCATION=/u01/app/oraInventory
@@ -774,7 +774,7 @@ systemctl restart multipathd
 ....
 /u01/app/oracle/product/19.0.0/grid/gridSetup.sh -executeConfigTools -responseFile /tmp/archive/gridsetup.rsp -silent
 ....
-. Oracle 사용자로 로그 디스크 그룹을 생성합니다.
+. Oracle 사용자로 $GRID_HOME에서 LOGS 디스크 그룹을 만듭니다.
 +
 ....
 bin/asmca -silent -sysAsmPassword 'yourPWD' -asmsnmpPassword 'yourPWD' -createDiskGroup -diskGroupName LOGS -disk 'AFD:LOGS*' -redundancy EXTERNAL -au_size 4
@@ -857,7 +857,7 @@ vi cv/admin/cvu_config
 ....
 unzip p34765931_190000_Linux-x86-64.zip
 ....
-. 에서 DB 자동 설치 RSP 파일을 준비합니다 `/tmp/archive/dbinstall.rsp` 다음 값이 있는 디렉터리:
+. DB 자동 설치 표준 rsp 파일을 업데이트합니다.  `/tmp/archive/dbinstall.rsp` 다음 값을 해당 섹션에 포함하는 디렉토리:
 +
 ....
 oracle.install.option=INSTALL_DB_SWONLY
@@ -884,7 +884,7 @@ oracle.install.db.rootconfig.executeRootScript=false
 ....
 /u01/app/oracle/product/19.0.0/db1/root.sh
 ....
-. Oracle 사용자로 을 생성합니다 `dbca.rsp` 다음 항목이 있는 파일:
+. Oracle 사용자로서 표준을 업데이트하세요  `dbca.rsp` 해당 섹션에 다음 항목이 포함된 파일:
 +
 ....
 gdbName=db1.demo.netapp.com
@@ -909,7 +909,7 @@ databaseType=MULTIPURPOSE
 automaticMemoryManagement=false
 totalMemory=8192
 ....
-. Oracle 사용자로 dbca를 사용하여 DB 생성을 시작합니다.
+. Oracle 사용자로서 $ORACLE_HOME 디렉토리에서 dbca를 사용하여 DB 생성을 시작합니다.
 +
 ....
 bin/dbca -silent -createDatabase -responseFile /tmp/archive/dbca.rsp
@@ -984,7 +984,7 @@ alias asm='export ORACLE_HOME=/u01/app/oracle/product/19.0.0/grid;export ORACLE_
 . 생성된 CDB/PDB를 검증합니다.
 +
 ....
-/home/oracle/.bash_profile
+source /home/oracle/.bash_profile
 
 sqlplus / as sysdba
 

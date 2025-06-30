@@ -222,6 +222,8 @@ entries:
     url: "/databases/customer_usecase_mssql_fsx1.html"
 - title: DB Automation 툴킷
   entries:
+  - title: 서버 내 이미지 백업을 통한 자동화된 Oracle VLDB 복제 수명 주기
+    url: "/databases/automation_ora_bkup_clone.html"
   - title: ASM을 사용하여 GCNV에서 Oracle Clone Lifecycle 자동화
     url: "/databases/automation_ora_clone_gcnv_asm.html"
   - title: ASM을 사용하여 ANF에서 Oracle Clone Lifecycle 자동화
